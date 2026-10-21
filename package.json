@@ -1,0 +1,16 @@
+{
+  "name": "trolyhoctaptoan10-12",
+  "version": "1.0.0",
+  "description": "Trợ lý học tập môn Toán THPT - Chương trình GDPT 2018 Kết nối tri thức",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "toan-thpt",
+    "tro-ly-hoc-tap",
+    "kntt"
+  ],
+  "author": "",
+  "license": "ISC"
+}
