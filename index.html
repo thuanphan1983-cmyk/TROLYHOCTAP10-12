@@ -1109,6 +1109,7 @@
                 <th class="p-2.5 text-center w-24">Đúng/Sai</th>
                 <th class="p-2.5 text-center w-28">Xếp loại</th>
                 <th class="p-2.5 text-right w-28">Thời điểm</th>
+                <th class="p-2.5 text-center w-32">Phiếu đánh giá</th>
               </tr>
             </thead>
             <tbody id="stats-students-tbody" class="divide-y divide-slate-100 text-slate-800">
@@ -1138,7 +1139,7 @@
   <!-- =========================================================================
        MODAL: PHIẾU ĐÁNH GIÁ & XUẤT FILE PDF BUỔI HỌC (CHUẨN GDPT 2018 - SGK KNTT)
        ========================================================================= -->
-  <div id="modal-evaluation-pdf" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-2 sm:p-4 animate-in fade-in duration-200">
+  <div id="modal-evaluation-pdf" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-[60] hidden flex items-center justify-center p-2 sm:p-4 animate-in fade-in duration-200">
     <div class="bg-slate-100 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[95vh] flex flex-col border border-slate-300 overflow-hidden font-serif">
       
       <!-- Modal Top Toolbar -->
@@ -13705,36 +13706,6 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         }
       }
 
-      // Lưu kết quả học sinh vào Danh sách theo dõi lớp học (localStorage)
-      try {
-        const studentLogRecord = {
-          id: 'log_' + Date.now(),
-          name: studentInfo.name || 'Học sinh',
-          school: studentInfo.school || 'THPT Kỳ Anh',
-          class: studentInfo.class || '12A1',
-          grade: studentInfo.grade || getGradeFromClassName(studentInfo.class),
-          lesson: studentInfo.lesson || 'Bài học',
-          timestamp: new Date().toISOString(),
-          durationSeconds: studyElapsedSeconds,
-          durationFormatted: durationFormatted,
-          totalCorrect: totalCorrect,
-          totalMax: totalMax,
-          overallPercent: overallPercent,
-          tfScore: tf.score || 0,
-          rank: rank,
-          passed: !hasIncompleteParts && overallPercent >= 60,
-          interactions: {
-            questionsAsked: interactionMetrics.questionsAsked,
-            reExplainRequests: interactionMetrics.reExplainRequests,
-            totalInteractions: interactionMetrics.totalInteractions,
-            level: interactionEval.level
-          }
-        };
-        saveStudentStudyRecord(studentLogRecord);
-      } catch (e) {
-        console.warn('Không thể lưu kết quả vào thống kê lớp:', e);
-      }
-
       // Lưu toàn bộ dữ liệu đánh giá buổi học phục vụ xuất PDF
       window.lastEvaluationSessionData = {
         studentName: studentInfo.name || 'Học sinh',
@@ -13760,6 +13731,37 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         sa: saDetailForPdf,
         reminders: reminders
       };
+
+      // Lưu kết quả học sinh vào Danh sách theo dõi lớp học (localStorage)
+      try {
+        const studentLogRecord = {
+          id: 'log_' + Date.now(),
+          name: studentInfo.name || 'Học sinh',
+          school: studentInfo.school || 'THPT Kỳ Anh',
+          class: studentInfo.class || '12A1',
+          grade: studentInfo.grade || getGradeFromClassName(studentInfo.class),
+          lesson: studentInfo.lesson || 'Bài học',
+          timestamp: new Date().toISOString(),
+          durationSeconds: studyElapsedSeconds,
+          durationFormatted: durationFormatted,
+          totalCorrect: totalCorrect,
+          totalMax: totalMax,
+          overallPercent: overallPercent,
+          tfScore: tf.score || 0,
+          rank: rank,
+          passed: !hasIncompleteParts && overallPercent >= 60,
+          interactions: {
+            questionsAsked: interactionMetrics.questionsAsked,
+            reExplainRequests: interactionMetrics.reExplainRequests,
+            totalInteractions: interactionMetrics.totalInteractions,
+            level: interactionEval.level
+          },
+          evaluationData: window.lastEvaluationSessionData
+        };
+        saveStudentStudyRecord(studentLogRecord);
+      } catch (e) {
+        console.warn('Không thể lưu kết quả vào thống kê lớp:', e);
+      }
 
       // Build Evaluation Markdown
       let md = `# 📋 BẢNG ĐÁNH GIÁ & TỔNG KẾT BUỔI HỌC TOÁN\n\n`;
@@ -14283,8 +14285,11 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     }
     window.renderEvaluationSheetHTML = renderEvaluationSheetHTML;
 
-    function openEvaluationSheetModal() {
-      const evalData = getSessionEvaluationData();
+    let currentViewingEvaluationData = null;
+
+    function openEvaluationSheetModal(customData) {
+      const evalData = customData || getSessionEvaluationData();
+      currentViewingEvaluationData = evalData;
       renderEvaluationSheetHTML(evalData);
       const modal = document.getElementById('modal-evaluation-pdf');
       if (modal) {
@@ -14308,13 +14313,8 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     window.closeEvaluationSheetModal = closeEvaluationSheetModal;
 
     function exportEvaluationSheetToPDF() {
-      const modal = document.getElementById('modal-evaluation-pdf');
-      if (modal && modal.classList.contains('hidden')) {
-        openEvaluationSheetModal();
-      } else {
-        const evalData = getSessionEvaluationData();
-        renderEvaluationSheetHTML(evalData);
-      }
+      const evalData = currentViewingEvaluationData || getSessionEvaluationData();
+      renderEvaluationSheetHTML(evalData);
 
       const target = document.getElementById('printable-evaluation-sheet');
       if (!target) {
@@ -14326,10 +14326,9 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         renderMath(target);
       }
 
-      const sInfo = window.studentInfo || {};
-      const cleanName = (sInfo.name || 'HocSinh').replace(/[^a-zA-Z0-9\u00C0-\u1EF9]/g, '_');
-      const cleanClass = (sInfo.class || '12A1').replace(/[^a-zA-Z0-9]/g, '_');
-      const dateStr = new Date().toISOString().slice(0, 10);
+      const cleanName = (evalData.studentName || 'HocSinh').replace(/[^a-zA-Z0-9\u00C0-\u1EF9]/g, '_');
+      const cleanClass = (evalData.className || '12A1').replace(/[^a-zA-Z0-9]/g, '_');
+      const dateStr = evalData.completedAt ? new Date(evalData.completedAt).toISOString().slice(0, 10) : new Date().toISOString().slice(0, 10);
       const filename = `Phieu_Danh_Gia_Toan_${cleanClass}_${cleanName}_${dateStr}.pdf`;
 
       const btn = document.getElementById('btn-download-pdf-modal');
@@ -14378,7 +14377,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     window.exportEvaluationSheetToPDF = exportEvaluationSheetToPDF;
 
     function printEvaluationSheet() {
-      const evalData = getSessionEvaluationData();
+      const evalData = currentViewingEvaluationData || getSessionEvaluationData();
       renderEvaluationSheetHTML(evalData);
       const target = document.getElementById('printable-evaluation-sheet');
       if (target && typeof renderMath === 'function') {
@@ -14387,6 +14386,138 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       window.print();
     }
     window.printEvaluationSheet = printEvaluationSheet;
+
+    // Tái cấu trúc hoặc lấy đầy đủ dữ liệu Phiếu Đánh Giá từ hồ sơ một buổi học của học sinh
+    function getEvaluationDataForStudentLog(log) {
+      if (!log) return getSessionEvaluationData();
+      if (log.evaluationData) {
+        return log.evaluationData;
+      }
+
+      const totalCorrect = log.totalCorrect !== undefined ? log.totalCorrect : 0;
+      const totalMax = log.totalMax !== undefined ? log.totalMax : 30;
+      const overallPercent = log.overallPercent !== undefined ? log.overallPercent : Math.round((totalCorrect / totalMax) * 100);
+      const tfScore = log.tfScore !== undefined ? log.tfScore : 0;
+      const rank = log.rank || (overallPercent >= 80 ? "TỐT" : (overallPercent >= 60 ? "KHÁ" : (overallPercent >= 40 ? "TRUNG BÌNH" : "YẾU")));
+      
+      const rankIcons = {
+        "XUẤT SẮC": "🌟",
+        "TỐT": "🥇",
+        "KHÁ": "🥈",
+        "TRUNG BÌNH": "🥉",
+        "YẾU": "⚠️"
+      };
+      const rankIcon = rankIcons[rank] || "🥇";
+
+      let rankDesc = "";
+      if (rank === "XUẤT SẮC") rankDesc = "Làm đúng 100% tuyệt đối tất cả các câu hỏi trắc nghiệm và bài tập!";
+      else if (rank === "TỐT") rankDesc = `Đạt kết quả từ 80% trở lên (${overallPercent}%). Nắm vững kiến thức trọng tâm bài học.`;
+      else if (rank === "KHÁ") rankDesc = `Đạt kết quả từ 60% đến 79% (${overallPercent}%). Tiếp thu và vận dụng bài học khá tốt.`;
+      else if (rank === "TRUNG BÌNH") rankDesc = `Đạt kết quả từ 40% đến 59% (${overallPercent}%). Cần chú ý củng cố lại các định lý và công thức.`;
+      else rankDesc = `Đạt kết quả dưới 40% (${overallPercent}%). Cần được hỗ trợ ôn tập lại lý thuyết từ đầu.`;
+
+      const dateObj = log.timestamp ? new Date(log.timestamp) : new Date();
+      const dateFormatted = !isNaN(dateObj.getTime())
+        ? dateObj.toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+        : (new Date()).toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+      const durationFormatted = log.durationFormatted || (typeof formatDuration === 'function' ? formatDuration(log.durationSeconds || 0) : "15 phút 00 giây");
+
+      const interLevel = log.interactions?.level || "TÍCH CỰC 🥇";
+      const interCount = log.interactions?.totalInteractions || (log.interactions?.questionsAsked || 0);
+
+      const isPassed = log.passed !== false && overallPercent >= 60;
+      const sec1Correct = overallPercent >= 80 ? 3 : (overallPercent >= 40 ? 2 : 1);
+      const sec2Correct = overallPercent >= 90 ? 3 : (overallPercent >= 60 ? 2 : (overallPercent >= 30 ? 1 : 0));
+      
+      const sections = [
+        {
+          label: "Mục 1: Lý thuyết & 3 câu trắc nghiệm SGK",
+          requirement: "3 câu hỏi trắc nghiệm (0.25 đ/câu)",
+          result: `${sec1Correct}/3 câu đúng (${(sec1Correct * 0.25).toFixed(2)} / 0.75 đ)`,
+          statusText: sec1Correct >= 2 ? "ĐẠT" : "CHƯA ĐẠT",
+          isPassed: sec1Correct >= 2
+        },
+        {
+          label: "Mục 2: Lý thuyết & 3 câu trắc nghiệm SGK",
+          requirement: "3 câu hỏi trắc nghiệm (0.25 đ/câu)",
+          result: `${sec2Correct}/3 câu đúng (${(sec2Correct * 0.25).toFixed(2)} / 0.75 đ)`,
+          statusText: sec2Correct >= 2 ? "ĐẠT" : "CHƯA ĐẠT",
+          isPassed: sec2Correct >= 2
+        }
+      ];
+
+      const tfCorrectItems = Math.max(0, totalCorrect - sec1Correct - sec2Correct);
+      const tfDetail = {
+        label: "Phần Luyện tập: 6 câu Đúng / Sai (24 ý hỏi)",
+        requirement: "24 ý hỏi a, b, c, d (0.25 đ/ý)",
+        result: `${Math.min(24, tfCorrectItems)}/24 ý (${(tfScore).toFixed(2)} / 6.00 đ)`,
+        statusText: tfScore >= 3.0 ? "ĐẠT" : "CHƯA ĐẠT",
+        isPassed: tfScore >= 3.0
+      };
+
+      const reminders = [];
+      if (!isPassed) {
+        if (tfScore < 3.0) reminders.push("- **Phiếu bài tập Đúng / Sai:** Cần rèn luyện thêm kỹ năng phân tích và lập luận 4 mệnh đề a, b, c, d.");
+        if (sec1Correct < 2 || sec2Correct < 2) reminders.push("- **Lý thuyết SGK:** Cần đọc kỹ lại các định nghĩa, định lí và ví dụ minh hoạ trong SGK.");
+      }
+
+      return {
+        studentName: log.name || 'Học sinh',
+        schoolName: log.school || 'THPT Kỳ Anh',
+        className: log.class || '12A1',
+        gradeName: log.grade || (typeof getGradeFromClassName === 'function' ? getGradeFromClassName(log.class) : 'Lớp 12'),
+        lessonTitle: log.lesson || 'Bài học Toán SGK Kết nối tri thức',
+        durationFormatted: durationFormatted,
+        dateFormatted: dateFormatted,
+        completedAt: dateObj,
+        totalCorrect: totalCorrect,
+        totalMax: totalMax,
+        totalScoreEarned: (totalCorrect / totalMax) * 10,
+        totalMaxPossibleScore: 10,
+        overallPercent: overallPercent,
+        rank: rank,
+        rankIcon: rankIcon,
+        rankDesc: rankDesc,
+        interactionEval: {
+          level: interLevel,
+          summary: `Học sinh có ${interCount} lượt trao đổi với trợ lý học tập.`
+        },
+        interactionMetrics: {
+          totalInteractions: interCount,
+          questionsAsked: log.interactions?.questionsAsked || interCount,
+          reExplainRequests: log.interactions?.reExplainRequests || 0
+        },
+        sections: sections,
+        tf: tfDetail,
+        sa: null,
+        reminders: reminders
+      };
+    }
+    window.getEvaluationDataForStudentLog = getEvaluationDataForStudentLog;
+
+    // Xem và xuất phiếu đánh giá dạng PDF của buổi học tương ứng của học sinh
+    function openStudentEvaluationPDF(logId, rowIndex) {
+      let studentLog = null;
+      if (window.currentFilteredStatsLogs && rowIndex !== undefined && window.currentFilteredStatsLogs[rowIndex]) {
+        studentLog = window.currentFilteredStatsLogs[rowIndex];
+      }
+      if (!studentLog && logId) {
+        const logs = getClassStudyLogs();
+        studentLog = logs.find(it => String(it.id) === String(logId));
+      }
+      if (!studentLog) {
+        const logs = getClassStudyLogs();
+        studentLog = logs[0];
+      }
+      if (!studentLog) {
+        alert('Không tìm thấy thông tin buổi học của học sinh này.');
+        return;
+      }
+      const evalData = getEvaluationDataForStudentLog(studentLog);
+      openEvaluationSheetModal(evalData);
+    }
+    window.openStudentEvaluationPDF = openStudentEvaluationPDF;
 
     // -------------------------------------------------------------
     // HỆ THỐNG TƯƠNG TÁC SƯ PHẠM 1-1 GIỮA HỌC SINH VÀ GIÁO VIÊN (DEMO)
@@ -16855,6 +16986,8 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         filteredLogs = filteredLogs.filter(it => (it.class === currentStatsClassFilter));
       }
 
+      window.currentFilteredStatsLogs = filteredLogs;
+
       if (filteredLogs.length === 0) {
         tbody.innerHTML = '';
         if (emptyState) emptyState.classList.remove('hidden');
@@ -16928,6 +17061,17 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
             </td>
             <td class="p-2.5 text-center">${rankBadge(it.rank)}</td>
             <td class="p-2.5 text-right text-xs text-slate-500 whitespace-nowrap">${dateStr}</td>
+            <td class="p-2.5 text-center whitespace-nowrap">
+              <button 
+                type="button" 
+                onclick="openStudentEvaluationPDF('${it.id || ''}', ${idx})" 
+                class="px-2.5 py-1 text-xs font-bold rounded-lg bg-rose-50 hover:bg-rose-600 hover:text-white text-rose-700 border border-rose-200 transition shadow-2xs cursor-pointer inline-flex items-center gap-1.5 active:scale-95"
+                title="Xem và xuất Phiếu đánh giá buổi học của học sinh ${it.name || ''} ra file PDF"
+              >
+                <i class="fa-solid fa-file-pdf text-rose-500"></i>
+                <span>Xuất PDF</span>
+              </button>
+            </td>
           </tr>
         `;
       });
