@@ -350,108 +350,25 @@
 </head>
 <body class="bg-slate-100 h-screen flex flex-col font-serif text-slate-800">
 
-  <!-- Header Tối Ưu Thông Minh (PC & Mobile) -->
-  <header class="bg-indigo-700 text-white shadow-md px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between z-10 shrink-0">
-    <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
-      <div class="bg-white/20 p-1.5 sm:p-2 rounded-xl backdrop-blur-sm shrink-0">
-        <i class="fa-solid fa-graduation-cap text-xl sm:text-2xl text-amber-300"></i>
-      </div>
-      <div class="min-w-0">
-        <div class="flex items-center gap-1.5 sm:gap-2">
-          <h1 class="text-sm sm:text-lg font-bold leading-tight truncate">Trợ lý Thầy Thuấn Phan</h1>
-          <span id="mobile-class-badge" class="bg-amber-400 text-indigo-950 text-[10px] uppercase font-black px-1.5 py-0.2 rounded-full tracking-wider shadow-sm shrink-0">12A1</span>
-        </div>
-        <p class="text-xs text-indigo-100 hidden sm:block">Dạy từng Mục SGK • 3 trắc nghiệm củng cố • Phiếu 24 ý Đúng/Sai</p>
-      </div>
-    </div>
-    
-    <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
-      <!-- Session Badge (Desktop) -->
-      <!-- NÃºt báº¥m ná»•i báº­t: Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N -->
-      <button 
-        id="btn-on-thi-tot-nghiep" 
-        onclick="openExamPracticeModal()" 
-        class="relative group overflow-hidden bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 hover:from-amber-300 hover:via-orange-300 hover:to-amber-400 text-slate-950 font-black px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs sm:text-[12pt] shadow-md hover:shadow-xl ring-2 ring-amber-300/80 transition-all duration-300 transform hover:scale-[1.03] active:scale-95 flex items-center gap-1.5 sm:gap-2 cursor-pointer shrink-0"
-        title="Báº¥m Ä‘á»ƒ má»Ÿ kho luyá»‡n Ä‘á» thi thá»­ tá»‘t nghiá»‡p THPT chuáº©n cáº¥u trÃºc Bá»™ GD&ÄT 2025"
-      >
-        <span class="absolute inset-0 bg-white/25 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
-        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-indigo-950 text-amber-300 flex items-center justify-center text-xs shrink-0 shadow-inner">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-        <span class="tracking-wide uppercase font-black drop-shadow-xs whitespace-nowrap">Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N</span>
-        <span class="hidden xl:inline-flex bg-red-600 text-white text-[10px] uppercase font-bold px-1.5 py-0.2 rounded-full shadow-xs animate-pulse">Hot 2025</span>
-      </button>
-      <div id="session-badge" class="hidden md:flex items-center bg-indigo-800/80 text-xs px-3 py-1.5 rounded-full border border-indigo-400/30">
-        <i class="fa-regular fa-user mr-1.5 text-amber-300"></i>
-        <span id="badge-name" class="font-medium mr-1.5">Học sinh</span>
-        <span id="badge-school" class="text-indigo-200 text-[10px] mr-1.5 hidden xl:inline max-w-[130px] truncate" title="Trường THPT">THPT Kỳ Anh</span>
-        <span id="badge-class" class="bg-amber-400 text-indigo-950 font-bold px-2 py-0.5 rounded-full text-[10px]">12A1</span>
-      </div>
-
-      <!-- Auth Status Badge & Switch Button -->
-      <button id="btn-auth-badge" onclick="openAuthGatekeeperModal(true)" class="flex items-center bg-indigo-950/80 hover:bg-indigo-900 text-xs px-2.5 py-1.5 rounded-xl border border-amber-400/50 shadow-xs cursor-pointer transition" title="Xác thực API Key / Mã VIP - Bấm để thay đổi">
-        <i id="auth-badge-icon" class="fa-solid fa-lock text-amber-400 mr-1.5 text-xs"></i>
-        <span id="auth-badge-label" class="text-white font-bold text-[11px] whitespace-nowrap">Chưa xác thực</span>
-      </button>
-
-      <!-- Logout / Change Code Button (ÄÄƒng xuáº¥t / Äá»•i mÃ£) -->
-      <button id="btn-logout-auth" onclick="handleLogoutAuth()" class="flex items-center bg-rose-950/70 hover:bg-rose-900 text-rose-200 hover:text-white text-xs px-2.5 py-1.5 rounded-xl border border-rose-400/40 shadow-xs cursor-pointer transition font-bold" title="XÃ³a dá»¯ liá»‡u lÆ°u trÃªn mÃ¡y vÃ  Äá»•i mÃ£ VIP / API Key">
-        <i class="fa-solid fa-arrow-right-from-bracket mr-1.5 text-xs text-rose-300"></i>
-        <span class="hidden sm:inline">Äá»•i mÃ£ / ÄÄƒng xuáº¥t</span>
-        <span class="sm:hidden">Äá»•i mÃ£</span>
-      </button>
-
-      <!-- Mode indicator (Desktop) -->
-      <div id="mode-badge" class="hidden sm:flex items-center bg-indigo-900/60 text-xs px-2.5 py-1 rounded-lg border border-indigo-500/30">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
-        <span id="mode-text" class="text-[11px] font-medium text-indigo-200">Demo KNTT</span>
-      </div>
-
-      <!-- Study Timer Badge (Desktop) -->
-      <div id="study-timer-badge" class="hidden sm:flex items-center bg-indigo-950/70 text-xs px-2.5 py-1.5 rounded-xl border border-indigo-400/40 font-mono shadow-xs" title="Thời gian học thực tế">
-        <i class="fa-regular fa-clock mr-1.5 text-amber-300 animate-pulse"></i>
-        <span id="study-timer-text" class="text-white font-bold tracking-wider">00:00</span>
-      </div>
-
-      <!-- Quick Change Lesson Button -->
-      <button id="btn-header-change-lesson" onclick="document.getElementById('modal-setup').classList.remove('hidden'); document.getElementById('modal-setup').classList.add('flex');" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-1.5 px-2.5 rounded-xl text-xs transition flex items-center gap-1 shadow cursor-pointer" title="Đổi bài học SGK">
-        <i class="fa-solid fa-book text-amber-300"></i>
-        <span class="text-xs">Đổi bài</span>
-      </button>
-
-      <!-- Quick Open 24-Item Sheet Button -->
-      <button id="btn-toggle-sheet" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-1.5 px-2.5 sm:px-3 rounded-xl text-xs transition flex items-center gap-1 sm:gap-1.5 shadow cursor-pointer" title="Mở phiếu làm bài 6 câu Đúng/Sai (24 ý)">
-        <i class="fa-solid fa-list-check text-slate-900"></i>
-        <span class="hidden sm:inline">Phiếu 24 ý</span>
-        <span id="header-progress-count" class="bg-slate-900 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">0/24</span>
-      </button>
-
-      <!-- Class Statistics Button (Desktop) -->
-      <button id="btn-class-stats" class="hidden sm:flex bg-indigo-600 hover:bg-indigo-500 text-white font-bold p-2 px-3 rounded-xl text-xs transition items-center gap-1.5 shadow cursor-pointer" title="Xem thống kê số học sinh theo từng lớp">
-        <i class="fa-solid fa-chart-pie text-amber-300"></i>
-        <span class="hidden md:inline">Thống kê</span>
-      </button>
-
-      <!-- Settings Button (Desktop) -->
-      <button id="btn-settings" class="hidden sm:flex bg-indigo-600 hover:bg-indigo-500 p-2 rounded-xl text-sm transition items-center gap-1.5 shadow cursor-pointer" title="Cài đặt API">
-        <i class="fa-solid fa-sliders text-amber-300"></i>
-      </button>
-
-      <!-- New Session Button (Desktop) -->
-      <button id="btn-new-session" class="hidden sm:flex bg-indigo-800 hover:bg-indigo-900 p-2 rounded-xl text-sm transition shadow cursor-pointer" title="Bắt đầu buổi học mới">
-        <i class="fa-solid fa-rotate-right"></i>
-      </button>
-
-      <!-- Mobile Menu Button (3-dots) -->
-      <button id="btn-mobile-more-menu" onclick="toggleMobileMoreMenu()" class="sm:hidden bg-indigo-800 hover:bg-indigo-900 text-white p-1.5 px-2.5 rounded-xl text-sm transition shadow cursor-pointer" title="Tùy chọn khác">
-        <i class="fa-solid fa-ellipsis-vertical"></i>
-      </button>
-    </div>
-  </header>
+  <!-- Hidden compatibility elements to support internal JS hooks safely -->
+  <div class="hidden" style="display:none !important;" aria-hidden="true">
+    <div id="session-badge"><span id="badge-name">Học sinh</span><span id="badge-school">THPT Kỳ Anh</span><span id="badge-class">12A1</span></div>
+    <span id="mobile-class-badge">12A1</span>
+    <button id="btn-auth-badge"><i id="auth-badge-icon"></i><span id="auth-badge-label"></span></button>
+    <button id="btn-logout-auth"></button>
+    <div id="mode-badge"><span id="mode-text"></span></div>
+    <div id="study-timer-badge"><span id="study-timer-text">00:00</span></div>
+    <button id="btn-header-change-lesson"></button>
+    <button id="btn-toggle-sheet"><span id="header-progress-count">0/24</span></button>
+    <button id="btn-class-stats"></button>
+    <button id="btn-settings"></button>
+    <button id="btn-new-session"></button>
+    <button id="btn-mobile-more-menu"></button>
+  </div>
 
   <!-- Study Navigation Tabs (Tối ưu tuyệt đối cho Điện Thoại & Máy Tính) -->
   <div id="study-mode-tabs" class="bg-indigo-900 text-white px-2 py-1.5 shrink-0 flex items-center justify-between gap-1 shadow-sm border-b border-indigo-950/40 font-serif z-10">
-    <div class="flex items-center gap-1 sm:gap-2 flex-1 max-w-4xl mx-auto">
+    <div class="flex items-center gap-1 sm:gap-2 flex-1 max-w-7xl mx-auto overflow-x-auto no-scrollbar">
       <button 
         id="tab-btn-theory" 
         onclick="switchStudyTab('theory')" 
@@ -521,6 +438,17 @@
       >
         <i class="fa-solid fa-file-pdf text-rose-300 text-sm"></i>
         <span class="hidden lg:inline">Xuất Phiếu PDF</span>
+      </button>
+
+      <!-- Nút nổi bật: 🎯 ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN -->
+      <button 
+        id="btn-on-thi-tot-nghiep" 
+        onclick="openExamPracticeModal()" 
+        class="py-2 px-2.5 sm:px-3.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black shadow-xs cursor-pointer whitespace-nowrap border border-amber-300/60 shrink-0"
+        title="Bấm để mở kho luyện đề thi thử tốt nghiệp THPT chuẩn cấu trúc Bộ GD&ĐT 2025"
+      >
+        <span class="text-sm">🎯</span>
+        <span class="font-black">ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN</span>
       </button>
     </div>
   </div>
@@ -872,8 +800,8 @@
   </div>
 
   <!-- =========================================================================
-       MODAL: Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N
-       Kho Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT MÃ´n ToÃ¡n Chuáº©n Ma Tráº­n 2025 Bá»™ GD&ÄT
+       MODAL: ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN
+       Kho Đề Thi Thử Tốt Nghiệp THPT Môn Toán Chuẩn Ma Trận 2025 Bộ GD&ĐT
        ========================================================================= -->
   <div id="modal-exam-practice" class="fixed inset-0 bg-slate-950/75 backdrop-blur-md z-50 hidden items-center justify-center p-3 sm:p-5 font-serif animate-in fade-in">
     <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full flex flex-col max-h-[92vh] border border-amber-200 overflow-hidden font-serif">
@@ -887,16 +815,16 @@
           <div>
             <div class="flex items-center gap-2">
               <h3 class="font-black text-[14pt] sm:text-[16pt] leading-tight text-white drop-shadow-sm uppercase">
-                Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N
+                🎯 ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN
               </h3>
-              <span class="bg-amber-300 text-indigo-950 text-[10px] uppercase font-black px-2 py-0.5 rounded-full shadow-xs">Chuáº©n 2025</span>
+              <span class="bg-amber-300 text-indigo-950 text-[10px] uppercase font-black px-2 py-0.5 rounded-full shadow-xs">Chuẩn 2025</span>
             </div>
             <p class="text-xs sm:text-[11pt] text-amber-100 mt-0.5">
-              Há»‡ thá»‘ng luyá»‡n Ä‘á» thi thá»­ Tá»‘t nghiá»‡p THPT mÃ´n ToÃ¡n theo chuáº©n cáº¥u trÃºc 3 pháº§n cá»§a Bá»™ GD&ÄT
+              Hệ thống luyện đề thi thử Tốt nghiệp THPT môn Toán theo chuẩn cấu trúc 3 phần của Bộ GD&ĐT
             </p>
           </div>
         </div>
-        <button onclick="closeExamPracticeModal()" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center text-lg transition cursor-pointer" title="ÄÃ³ng">
+        <button onclick="closeExamPracticeModal()" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center text-lg transition cursor-pointer" title="Đóng">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
@@ -905,9 +833,9 @@
       <div class="bg-amber-50 border-b border-amber-200 px-5 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-[11.5pt] text-amber-950 shrink-0">
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
-          <span><b>Cáº¥u trÃºc Ä‘á» thi má»›i:</b> Pháº§n 1: 12 tráº¯c nghiá»‡m (3Ä‘) â€¢ Pháº§n 2: 4 cÃ¢u ÄÃºng/Sai 16 Ã½ (4Ä‘) â€¢ Pháº§n 3: 6 cÃ¢u Tráº£ lá»i ngáº¯n (3Ä‘)</span>
+          <span><b>Cấu trúc đề thi mới:</b> Phần 1: 12 trắc nghiệm (3đ) • Phần 2: 4 câu Đúng/Sai 16 ý (4đ) • Phần 3: 6 câu Trả lời ngắn (3đ)</span>
         </div>
-        <span class="bg-indigo-900 text-amber-300 px-2.5 py-0.5 rounded-full font-bold text-xs shadow-xs">Thá»i gian: 90 phÃºt</span>
+        <span class="bg-indigo-900 text-amber-300 px-2.5 py-0.5 rounded-full font-bold text-xs shadow-xs">Thời gian: 90 phút</span>
       </div>
 
       <!-- Exam List Container (Scrollable) -->
@@ -920,14 +848,15 @@
       <!-- Modal Footer -->
       <div class="p-4 bg-white border-t border-slate-200 flex items-center justify-between shrink-0">
         <div class="text-xs text-slate-500 italic">
-          ðŸ’¡ Chá»n má»™t Ä‘á» báº¥t ká»³ Ä‘á»ƒ báº¯t Ä‘áº§u lÃ m bÃ i vÃ  nháº­n hÆ°á»›ng dáº«n chi tiáº¿t tá»«ng bÆ°á»›c tá»« Tháº§y Thuáº¥n!
+          💡 Chọn một đề bất kỳ để bắt đầu làm bài và nhận hướng dẫn chi tiết từng bước từ Thầy Thuấn!
         </div>
         <button onclick="closeExamPracticeModal()" class="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl text-xs transition cursor-pointer">
-          ÄÃ³ng
+          Đóng
         </button>
       </div>
     </div>
   </div>
+
   <!-- Modal: Initial Student Setup (SGK Kết nối tri thức) -->
   <div id="modal-setup" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-100 animate-in fade-in zoom-in duration-200 font-serif">
@@ -1793,117 +1722,116 @@
     // HÃ m kiá»ƒm tra vÃ  cháº·n má»i chá»©c nÄƒng náº¿u chÆ°a xÃ¡c thá»±c
     // HÃ m kiá»ƒm tra vÃ  cháº·n má»i chá»©c nÄƒng náº¿u chÆ°a xÃ¡c thá»±c
     function enforceAuthentication(actionName) {
-      const act = actionName || 'sá»­ dá»¥ng chá»©c nÄƒng';
+      const act = actionName || 'sử dụng chức năng';
       if (!isUserAuthenticated()) {
         openAuthGatekeeperModal(false);
-        showAuthAlert('Vui lÃ²ng xÃ¡c thá»±c API Key hoáº·c nháº­p MÃ£ VIP trÆ°á»›c khi ' + act + '!', 'error');
+        showAuthAlert('Vui lòng xác thực API Key hoặc nhập Mã VIP trước khi ' + act + '!', 'error');
         return false;
       }
       return true;
     }
 
-    // Xá»­ lÃ½ ÄÄƒng xuáº¥t / Äá»•i mÃ£: XÃ³a sáº¡ch dá»¯ liá»‡u lÆ°u trong LocalStorage vÃ  má»Ÿ láº¡i MÃ n hÃ¬nh Cháº·n Cá»­a
+    // Xử lý Đăng xuất / Đổi mã: Xóa sạch dữ liệu lưu trong LocalStorage và mở lại màn hình đăng nhập
     function handleLogoutAuth() {
-      if (confirm('Em/Tháº§y CÃ´ cÃ³ cháº¯c cháº¯n muá»‘n ÄÄƒng xuáº¥t vÃ  xÃ³a MÃ£ VIP / API Key Ä‘Ã£ lÆ°u trÃªn trÃ¬nh duyá»‡t nÃ y khÃ´ng?')) {
+      if (confirm('Em/Thầy Cô có chắc chắn muốn Đăng xuất và xóa Mã VIP / API Key đã lưu trên trình duyệt này không?')) {
         localStorage.removeItem('THUAN_AUTH_MODE');
         localStorage.removeItem('THUAN_AUTH_VALUE');
         localStorage.removeItem('GEMINI_API_KEY');
         apiKey = '';
 
-        // Reset Ã´ nháº­p trong modal
-        const inputKey = document.getElementById('input-personal-key');
-        if (inputKey) inputKey.value = '';
-        const inputVip = document.getElementById('input-vip-code');
-        if (inputVip) inputVip.value = '';
+        // Reset ô nhập trong modal
+        const inpKey = document.getElementById('auth-input-apikey');
+        if (inpKey) inpKey.value = '';
+        const inpVip = document.getElementById('auth-input-vipcode');
+        if (inpVip) inpVip.value = '';
 
-        // Cáº­p nháº­t huy hiá»‡u
+        // Cập nhật huy hiệu
         updateAuthUIBadge();
 
-        // ÄÃ³ng cÃ¡c modal khÃ¡c náº¿u cÃ³
-        const modalSettings = document.getElementById('modal-settings');
-        if (modalSettings) modalSettings.classList.add('hidden');
-        const modalSetup = document.getElementById('modal-setup');
-        if (modalSetup) {
-          modalSetup.classList.add('hidden');
-          modalSetup.classList.remove('flex');
-        }
+        // Đóng các modal khác nếu có
+        const ms = document.getElementById('modal-settings');
+        if (ms) ms.classList.add('hidden');
+        const ma = document.getElementById('modal-answer-sheet');
+        if (ma) ma.classList.add('hidden');
+        const me = document.getElementById('modal-exam-practice');
+        if (me) me.classList.add('hidden');
 
-        // Má»Ÿ láº¡i mÃ n hÃ¬nh cháº·n cá»­a
+        // Mở lại màn hình chặn cửa
         openAuthGatekeeperModal(false);
-        showAuthAlert('ÄÃ£ Ä‘Äƒng xuáº¥t vÃ  xÃ³a mÃ£ thÃ nh cÃ´ng! Vui lÃ²ng nháº­p API Key hoáº·c MÃ£ VIP má»›i.', 'info');
+        showAuthAlert('Đã đăng xuất và xóa mã thành công! Vui lòng nhập API Key hoặc Mã VIP mới.', 'success');
       }
     }
     window.handleLogoutAuth = handleLogoutAuth;
 
     // =========================================================================
-    // Há»† THá»NG: Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N
-    // Danh sÃ¡ch bá»™ Ä‘á» thi thá»­ chuáº©n cáº¥u trÃºc 2025 Bá»™ GD&ÄT (ToÃ¡n 12)
+    // HỆ THỐNG: ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN
+    // Danh sách bộ đề thi thử chuẩn cấu trúc 2025 Bộ GD&ĐT (Toán 12)
     // =========================================================================
     const GRADUATION_EXAMS_DB = [
       {
         id: "de-01",
-        code: "Äá»€ Sá» 01",
-        title: "Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT 2025 - ToÃ n Diá»‡n Khá»‘i 12 (Äá» Chuáº©n Ma Tráº­n Bá»™ GD&ÄT)",
-        tags: ["Kháº£o sÃ¡t hÃ m sá»‘", "VectÆ¡ & Tá»a Ä‘á»™ Oxyz", "TÃ­ch phÃ¢n", "XÃ¡c suáº¥t cÃ³ Ä‘iá»u kiá»‡n"],
-        badge: "Äá» phÃ¡t triá»ƒn chÃ­nh thá»©c",
+        code: "ĐỀ SỐ 01",
+        title: "Đề Thi Thử Tốt Nghiệp THPT 2025 - Toàn Diện Khối 12 (Đề Chuẩn Ma Trận Bộ GD&ĐT)",
+        tags: ["Khảo sát hàm số", "Vectơ & Tọa độ Oxyz", "Tích phân", "Xác suất có điều kiện"],
+        badge: "Đề phát triển chính thức",
         badgeColor: "bg-red-100 text-red-800 border-red-200",
-        description: "Bao quÃ¡t toÃ n bá»™ kiáº¿n thá»©c 6 chÆ°Æ¡ng ToÃ¡n 12 theo chÆ°Æ¡ng trÃ¬nh GDPT 2018. RÃ¨n luyá»‡n pháº£n xáº¡ cho cáº£ 3 pháº§n tráº¯c nghiá»‡m, Ä‘Ãºng sai vÃ  tráº£ lá»i ngáº¯n.",
-        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng I: á»¨ng dá»¥ng Ä‘áº¡o hÃ m Ä‘á»ƒ kháº£o sÃ¡t vÃ  váº½ Ä‘á»“ thá»‹ hÃ m sá»‘"
+        description: "Bao quát toàn bộ kiến thức 6 chương Toán 12 theo chương trình GDPT 2018. Rèn luyện phản xạ cho cả 3 phần trắc nghiệm, đúng sai và trả lời ngắn.",
+        lessonRef: "Bài tập cuối chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị hàm số"
       },
       {
         id: "de-02",
-        code: "Äá»€ Sá» 02",
-        title: "Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT 2025 - ChuyÃªn SÃ¢u Tá»a Äá»™ Oxyz & HÃ¬nh Há»c KhÃ´ng Gian",
-        tags: ["Máº·t pháº³ng", "ÄÆ°á»ng tháº³ng Oxyz", "Máº·t cáº§u", "GÃ³c & Khoáº£ng cÃ¡ch"],
-        badge: "Chinh phá»¥c hÃ¬nh há»c 9+",
+        code: "ĐỀ SỐ 02",
+        title: "Đề Thi Thử Tốt Nghiệp THPT 2025 - Chuyên Sâu Tọa Độ Oxyz & Hình Học Không Gian",
+        tags: ["Mặt phẳng", "Đường thẳng Oxyz", "Mặt cầu", "Góc & Khoảng cách"],
+        badge: "Chinh phục hình học 9+",
         badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
-        description: "Táº­p trung cÃ¡c cÃ¢u há»i ÄÃºng/Sai vÃ  Äiá»n káº¿t quáº£ thá»±c táº¿ gáº¯n liá»n vá»›i hÃ¬nh há»c khÃ´ng gian Oxyz vÃ  á»©ng dá»¥ng Ä‘á»‹nh vá»‹ khÃ´ng gian 3 chiá»u.",
-        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng V: PhÆ°Æ¡ng phÃ¡p toáº¡ Ä‘á»™ trong khÃ´ng gian"
+        description: "Tập trung các câu hỏi Đúng/Sai và Điền kết quả thực tế gắn liền với hình học không gian Oxyz và ứng dụng định vị không gian 3 chiều.",
+        lessonRef: "Bài tập cuối chương V: Phương pháp toạ độ trong không gian"
       },
       {
         id: "de-03",
-        code: "Äá»€ Sá» 03",
-        title: "Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT 2025 - NguyÃªn HÃ m, TÃ­ch PhÃ¢n & á»¨ng Dá»¥ng Thá»±c Tiá»…n",
-        tags: ["Äá»•i biáº¿n sá»‘", "TÃ­ch phÃ¢n tá»«ng pháº§n", "Diá»‡n tÃ­ch & Thá»ƒ tÃ­ch", "BÃ i toÃ¡n váº­n tá»‘c"],
-        badge: "Trá»ng tÃ¢m Giáº£i tÃ­ch",
+        code: "ĐỀ SỐ 03",
+        title: "Đề Thi Thử Tốt Nghiệp THPT 2025 - Nguyên Hàm, Tích Phân & Ứng Dụng Thực Tiễn",
+        tags: ["Đổi biến số", "Tích phân từng phần", "Diện tích & Thể tích", "Bài toán vận tốc"],
+        badge: "Trọng tâm Giải tích",
         badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
-        description: "Bá»™ cÃ¢u há»i tráº¯c nghiá»‡m vÃ  Ä‘Ãºng sai bÃ¡m sÃ¡t Ä‘á» minh há»a má»›i nháº¥t cá»§a Bá»™ GD&ÄT, kÃ¨m hÆ°á»›ng dáº«n báº¥m mÃ¡y vÃ  giáº£i tá»± luáº­n chuáº©n má»±c.",
-        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng IV: NguyÃªn hÃ m vÃ  tÃ­ch phÃ¢n"
+        description: "Bộ câu hỏi trắc nghiệm và đúng sai bám sát đề minh họa mới nhất của Bộ GD&ĐT, kèm hướng dẫn bấm máy và giải tự luận chuẩn mực.",
+        lessonRef: "Bài tập cuối chương IV: Nguyên hàm và tích phân"
       },
       {
         id: "de-04",
-        code: "Äá»€ Sá» 04",
-        title: "Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT 2025 - XÃ¡c Suáº¥t CÃ³ Äiá»u Kiá»‡n & CÃ´ng Thá»©c Bayes",
-        tags: ["XÃ¡c suáº¥t Bayes", "XÃ¡c suáº¥t toÃ n pháº§n", "Thá»‘ng kÃª ghÃ©p nhÃ³m", "PhÆ°Æ¡ng sai"],
-        badge: "Äiá»ƒm 9+ XÃ¡c suáº¥t",
+        code: "ĐỀ SỐ 04",
+        title: "Đề Thi Thử Tốt Nghiệp THPT 2025 - Xác Suất Có Điều Kiện & Công Thức Bayes",
+        tags: ["Xác suất Bayes", "Xác suất toàn phần", "Thống kê ghép nhóm", "Phương sai"],
+        badge: "Điểm 9+ Xác suất",
         badgeColor: "bg-purple-100 text-purple-800 border-purple-200",
-        description: "ChuyÃªn Ä‘á» hoÃ n toÃ n má»›i trong chÆ°Æ¡ng trÃ¬nh GDPT 2018. GiÃºp há»c sinh phÃ¢n biá»‡t rÃ nh rá»t cÃ´ng thá»©c Bayes vÃ  xÃ¡c suáº¥t Ä‘iá»u kiá»‡n.",
-        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng VI: XÃ¡c suáº¥t cÃ³ Ä‘iá»u kiá»‡n"
+        description: "Chuyên đề hoàn toàn mới trong chương trình GDPT 2018. Giúp học sinh phân biệt rành rọt công thức Bayes và xác suất điều kiện.",
+        lessonRef: "Bài tập cuối chương VI: Xác suất có điều kiện"
       },
       {
         id: "de-05",
-        code: "Äá»€ Sá» 05",
-        title: "Äá» Kháº£o SÃ¡t NÄƒng Lá»±c ToÃ n Diá»‡n - Má»¥c TiÃªu 9+ Tá»‘t Nghiá»‡p THPT CÃ¹ng Tháº§y Thuáº¥n",
-        tags: ["Tá»•ng há»£p toÃ n khÃ³a", "Váº­n dá»¥ng cao", "Báº«y Ä‘á» thi", "Tá»‘i Æ°u thá»i gian"],
-        badge: "Äáº·c biá»‡t: PhÃ¢n loáº¡i cao",
+        code: "ĐỀ SỐ 05",
+        title: "Đề Khảo Sát Năng Lực Toàn Diện - Mục Tiêu 9+ Tốt Nghiệp THPT Cùng Thầy Thuấn",
+        tags: ["Tổng hợp toàn khóa", "Vận dụng cao", "Bẫy đề thi", "Tối ưu thời gian"],
+        badge: "Đặc biệt: Phân loại cao",
         badgeColor: "bg-indigo-100 text-indigo-800 border-indigo-200",
-        description: "Äá» thi phÃ¢n loáº¡i cao cÃ³ lá»i giáº£i chi tiáº¿t vÃ  gá»£i Ã½ phÆ°Æ¡ng phÃ¡p giáº£i nhanh Ä‘á»™c quyá»n tá»« Tháº§y Thuáº¥n Phan.",
-        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng II: VectÆ¡ vÃ  há»‡ trá»¥c toáº¡ Ä‘á»™ trong khÃ´ng gian"
+        description: "Đề thi phân loại cao có lời giải chi tiết và gợi ý phương pháp giải nhanh độc quyền từ Thầy Thuấn Phan.",
+        lessonRef: "Bài tập cuối chương II: Vectơ và hệ trục toạ độ trong không gian"
       },
       {
         id: "de-06",
-        code: "Äá»€ Sá» 06",
-        title: "Äá» Kháº£o SÃ¡t Sá»‘ Liá»‡u GhÃ©p NhÃ³m & CÃ¡c Sá»‘ Äáº·c TrÆ°ng Äo Má»©c Äá»™ PhÃ¢n TÃ¡n",
-        tags: ["Khoáº£ng biáº¿n thiÃªn", "Khoáº£ng tá»© phÃ¢n vá»‹", "PhÆ°Æ¡ng sai", "Äá»™ lá»‡ch chuáº©n"],
-        badge: "Ã”n táº­p thá»±c hÃ nh",
+        code: "ĐỀ SỐ 06",
+        title: "Đề Khảo Sát Số Liệu Ghép Nhóm & Các Số Đặc Trưng Đo Mức Độ Phân Tán",
+        tags: ["Khoảng biến thiên", "Khoảng tứ phân vị", "Phương sai", "Độ lệch chuẩn"],
+        badge: "Ôn tập thực hành",
         badgeColor: "bg-sky-100 text-sky-800 border-sky-200",
-        description: "RÃ¨n luyá»‡n ká»¹ nÄƒng xá»­ lÃ½ báº£ng sá»‘ liá»‡u thá»‘ng kÃª thá»±c táº¿, tÃ­nh toÃ¡n nhanh vÃ  chuáº©n xÃ¡c cÃ¡c sá»‘ Ä‘áº·c trÆ°ng.",
-        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng III: CÃ¡c sá»‘ Ä‘áº·c trÆ°ng Ä‘o má»©c Ä‘á»™ phÃ¢n tÃ¡n cá»§a máº«u sá»‘ liá»‡u ghÃ©p nhÃ³m"
+        description: "Rèn luyện kỹ năng xử lý bảng số liệu thống kê thực tế, tính toán nhanh và chuẩn xác các số đặc trưng.",
+        lessonRef: "Bài tập cuối chương III: Các số đặc trưng đo mức độ phân tán của mẫu số liệu ghép nhóm"
       }
     ];
 
     function openExamPracticeModal() {
-      if (!enforceAuthentication('Ã”n thi tá»‘t nghiá»‡p cÃ¹ng Tháº§y Thuáº¥n')) return;
+      if (!enforceAuthentication('Ôn thi tốt nghiệp cùng Thầy Thuấn')) return;
       const modal = document.getElementById('modal-exam-practice');
       if (modal) {
         renderExamCards();
@@ -1951,13 +1879,13 @@
           </div>
 
           <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
-            <span class="text-[10pt] text-slate-500 font-medium">90 phÃºt â€¢ 3 Pháº§n</span>
+            <span class="text-[10pt] text-slate-500 font-medium">90 phút • 3 Phần</span>
             <button 
               type="button" 
               onclick="startGraduationExam('${exam.id}')" 
               class="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black rounded-xl text-xs sm:text-[11.5pt] shadow-sm hover:shadow transition flex items-center gap-1.5 cursor-pointer active:scale-95"
             >
-              <span>VÃ o LÃ m Äá» Ngay</span>
+              <span>Vào Làm Đề Ngay</span>
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </button>
           </div>
@@ -1968,16 +1896,16 @@
     function startGraduationExam(examId) {
       const exam = GRADUATION_EXAMS_DB.find(e => e.id === examId) || GRADUATION_EXAMS_DB[0];
 
-      // Thiáº¿t láº­p há»c sinh sang Lá»›p 12 vÃ  bÃ i thi tÆ°Æ¡ng á»©ng
+      // Thiết lập học sinh sang Lớp 12 và bài thi tương ứng
       studentInfo.class = "12A1";
-      studentInfo.grade = "Lá»›p 12";
+      studentInfo.grade = "Lớp 12";
       studentInfo.lesson = exam.title;
 
       localStorage.setItem('STUDENT_CLASS', "12A1");
-      localStorage.setItem('STUDENT_GRADE', "Lá»›p 12");
+      localStorage.setItem('STUDENT_GRADE', "Lớp 12");
       localStorage.setItem('STUDENT_LESSON', exam.title);
 
-      // Cáº­p nháº­t Header
+      // Cập nhật Header & Info nếu có
       const badgeClass = document.getElementById('badge-class');
       if (badgeClass) badgeClass.textContent = "12A1";
       const mobClassBadge = document.getElementById('mobile-class-badge');
@@ -1987,9 +1915,9 @@
       const chatCurrentClass = document.getElementById('chat-current-class');
       if (chatCurrentClass) chatCurrentClass.textContent = "12A1";
 
-      // Náº¡p giÃ¡o Ã¡n bÃ i táº­p tÆ°Æ¡ng á»©ng
+      // Nạp giáo án bài tập tương ứng
       if (typeof resolveKNTTLesson === 'function') {
-        activeLesson = resolveKNTTLesson(exam.lessonRef, "Lá»›p 12");
+        activeLesson = resolveKNTTLesson(exam.lessonRef, "Lớp 12");
         if (activeLesson) {
           activeLesson.lessonTitle = exam.title;
           activeTFQuestions = activeLesson.tfQuestions || [];
@@ -1997,20 +1925,20 @@
         }
       }
 
-      // Render láº¡i giao diá»‡n há»c táº­p
+      // Render lại giao diện học tập
       if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
       if (typeof renderTheoryPanel === 'function') renderTheoryPanel();
       if (typeof renderMCQPanel === 'function') renderMCQPanel();
       if (typeof renderTFPanel === 'function') renderTFPanel();
       if (typeof renderMath === 'function') renderMath(document.body);
 
-      // ÄÃ³ng modal chá»n Ä‘á»
+      // Đóng modal chọn đề
       closeExamPracticeModal();
 
-      // Má»Ÿ Tab 1 (LÃ½ thuyáº¿t / SÆ¡ Ä‘á»“ tÆ° duy) hoáº·c Tab 2 (Tráº¯c nghiá»‡m)
+      // Mở Tab 1 (Lý thuyết / Sơ đồ tư duy)
       if (typeof switchStudyTab === 'function') switchStudyTab('theory');
 
-      // Cuá»™n lÃªn Ä‘áº§u trang
+      // Cuộn lên đầu trang
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -11648,7 +11576,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
 
       sheetProgressText.textContent = count;
       sheetProgressBarText.textContent = `${count}/${totalTFItems} ý`;
-      headerProgressCount.textContent = `${count}/${totalTFItems}`;
+      if (headerProgressCount) headerProgressCount.textContent = `${count}/${totalTFItems}`;
       sheetProgressBarFill.style.width = `${(count / totalTFItems) * 100}%`;
       const tabBadgeTf = document.getElementById('tab-badge-tf');
       if (tabBadgeTf) tabBadgeTf.textContent = `${count}/${totalTFItems}`;
@@ -13999,7 +13927,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       buildAnswerSheetUI();
       modalAnswerSheet.classList.remove('hidden');
     }
-    btnToggleSheet.addEventListener('click', openAnswerSheetModal);
+    if (btnToggleSheet) btnToggleSheet.addEventListener('click', openAnswerSheetModal);
     btnCloseSheet.addEventListener('click', () => modalAnswerSheet.classList.add('hidden'));
 
     // Clear Answer Sheet
@@ -17070,7 +16998,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
     }
 
     // Settings Modal Handlers
-    btnSettings.addEventListener('click', () => modalSettings.classList.remove('hidden'));
+    if (btnSettings) btnSettings.addEventListener('click', () => modalSettings.classList.remove('hidden'));
     btnCloseSettings.addEventListener('click', () => modalSettings.classList.add('hidden'));
     
     btnSaveKey.addEventListener('click', () => {
@@ -17119,7 +17047,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
     });
 
     // New Session
-    btnNewSession.addEventListener('click', () => {
+    if (btnNewSession) btnNewSession.addEventListener('click', () => {
       if (confirm('Em có chắc chắn muốn bắt đầu một buổi học mới không?')) {
         messagesContainer.innerHTML = '';
         conversationHistory = [];
@@ -17911,7 +17839,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
     const btnResetStatsLogs = document.getElementById('btn-reset-stats-logs');
 
     if (btnClassStats) {
-      btnClassStats.addEventListener('click', () => {
+      if (btnClassStats) btnClassStats.addEventListener('click', () => {
         openClassStatsModal('all', 'school');
       });
     }
@@ -17974,28 +17902,9 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         updateAuthUIBadge();
 
         // Màn hình Chặn cửa (Modal Authentication): Xuất hiện ngay lập tức khi tải trang web nếu chưa xác thực
-        // Tá»± Ä‘á»™ng kiá»ƒm tra bá»™ nhá»› cá»¥c bá»™ (localStorage):
-        if (isUserAuthenticated()) {
-          // ÄÃ£ cÃ³ mÃ£ há»£p lá»‡: Tá»± Ä‘á»™ng bá» qua mÃ n hÃ¬nh cháº·n cá»­a vÃ  Ä‘Æ°a há»c sinh vÃ o THáº²NG giao diá»‡n há»c táº­p chÃ­nh
-          closeAuthGatekeeperModal();
-          const modalSetup = document.getElementById('modal-setup');
-          if (modalSetup) {
-            modalSetup.classList.add('hidden');
-            modalSetup.classList.remove('flex');
-          }
-
-          // Cáº­p nháº­t thÃ´ng tin há»c sinh lÃªn Header
-          if (badgeName) badgeName.textContent = studentInfo.name;
-          const badgeSchool = document.getElementById('badge-school');
-          if (badgeSchool) badgeSchool.textContent = studentInfo.school;
-          if (badgeClass) badgeClass.textContent = studentInfo.class;
-          if (sessionBadge) sessionBadge.classList.remove('hidden');
-          const mobClassBadge = document.getElementById('mobile-class-badge');
-          if (mobClassBadge) mobClassBadge.textContent = studentInfo.class;
-          if (chatCurrentLesson) chatCurrentLesson.textContent = studentInfo.lesson;
-          if (chatCurrentClass) chatCurrentClass.textContent = studentInfo.class;
-        } else {
-          // ChÆ°a lÆ°u mÃ£: Láº­p tá»©c hiá»ƒn thá»‹ MÃ n hÃ¬nh Cháº·n cá»­a Ä‘á»ƒ yÃªu cáº§u nháº­p mÃ£
+        // Tự động kiểm tra bộ nhớ cục bộ (localStorage):
+      // Đã có mã hợp lệ: Tự động bỏ qua màn hình chặn cửa và đưa học sinh vào giao diện chính
+      // Chưa lưu mã: Lập tức hiển thị Màn hình Chặn cửa để yêu cầu nhập mã
           openAuthGatekeeperModal(false);
           const modalSetup = document.getElementById('modal-setup');
           if (modalSetup) {
