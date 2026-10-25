@@ -1,0 +1,39 @@
+name: CI/CD Sync & Vercel Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-verify:
+    name: Verify Code & Prepare Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 🔍 Validate Project Structure
+        run: |
+          echo "Kiểm tra cấu trúc dự án Trợ lý học tập Thầy Thuấn Phan..."
+          test -f index.html || (echo "Thiếu file index.html!" && exit 1)
+          test -f vercel.json || (echo "Thiếu file vercel.json!" && exit 1)
+          echo "✅ Tất cả các file cốt lõi đã sẵn sàng!"
+
+      - name: 🚀 Deploy to Vercel (Auto via Vercel GitHub Integration)
+        run: |
+          echo "=========================================================="
+          echo "Code đã được đồng bộ lên nhánh main trên GitHub thành công!"
+          echo "Vercel GitHub Integration sẽ tự động kích hoạt Build & Deploy"
+          echo "trực tiếp lên link production trong vòng 15-30 giây."
+          echo "=========================================================="

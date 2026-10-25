@@ -380,6 +380,13 @@
         <span id="auth-badge-label" class="text-white font-bold text-[11px] whitespace-nowrap">Chưa xác thực</span>
       </button>
 
+      <!-- Logout / Change Code Button (ÄÄƒng xuáº¥t / Äá»•i mÃ£) -->
+      <button id="btn-logout-auth" onclick="handleLogoutAuth()" class="flex items-center bg-rose-950/70 hover:bg-rose-900 text-rose-200 hover:text-white text-xs px-2.5 py-1.5 rounded-xl border border-rose-400/40 shadow-xs cursor-pointer transition font-bold" title="XÃ³a dá»¯ liá»‡u lÆ°u trÃªn mÃ¡y vÃ  Äá»•i mÃ£ VIP / API Key">
+        <i class="fa-solid fa-arrow-right-from-bracket mr-1.5 text-xs text-rose-300"></i>
+        <span class="hidden sm:inline">Äá»•i mÃ£ / ÄÄƒng xuáº¥t</span>
+        <span class="sm:hidden">Äá»•i mÃ£</span>
+      </button>
+
       <!-- Mode indicator (Desktop) -->
       <div id="mode-badge" class="hidden sm:flex items-center bg-indigo-900/60 text-xs px-2.5 py-1 rounded-lg border border-indigo-500/30">
         <span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
@@ -836,12 +843,22 @@
           <span>Xác nhận & Bắt đầu học</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </button>
+
+          <button 
+            type="button" 
+            id="btn-modal-logout" 
+            onclick="handleLogoutAuth()" 
+            class="w-full bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 font-bold py-2.5 px-3 rounded-xl border border-slate-200 hover:border-rose-300 text-xs flex items-center justify-center gap-1.5 transition cursor-pointer mt-2"
+          >
+            <i class="fa-solid fa-arrow-right-from-bracket text-rose-500"></i>
+            <span>ÄÄƒng xuáº¥t / XÃ³a mÃ£ Ä‘Ã£ lÆ°u trÃªn thiáº¿t bá»‹ nÃ y</span>
+          </button>
       </div>
     </div>
   </div>
 
   <!-- Modal: Initial Student Setup (SGK Kết nối tri thức) -->
-  <div id="modal-setup" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+  <div id="modal-setup" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-100 animate-in fade-in zoom-in duration-200 font-serif">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-2xl shadow-inner shrink-0">
@@ -1702,14 +1719,50 @@
     }
 
     // Hàm kiểm tra và chặn mọi chức năng nếu chưa xác thực
-    function enforceAuthentication(actionName = 'sử dụng chức năng') {
+    // HÃ m kiá»ƒm tra vÃ  cháº·n má»i chá»©c nÄƒng náº¿u chÆ°a xÃ¡c thá»±c
+    // HÃ m kiá»ƒm tra vÃ  cháº·n má»i chá»©c nÄƒng náº¿u chÆ°a xÃ¡c thá»±c
+    function enforceAuthentication(actionName) {
+      const act = actionName || 'sá»­ dá»¥ng chá»©c nÄƒng';
       if (!isUserAuthenticated()) {
         openAuthGatekeeperModal(false);
-        showAuthAlert(`Vui lòng xác thực API Key hoặc nhập Mã VIP trước khi ${actionName}!`, 'error');
+        showAuthAlert('Vui lÃ²ng xÃ¡c thá»±c API Key hoáº·c nháº­p MÃ£ VIP trÆ°á»›c khi ' + act + '!', 'error');
         return false;
       }
       return true;
     }
+
+    // Xá»­ lÃ½ ÄÄƒng xuáº¥t / Äá»•i mÃ£: XÃ³a sáº¡ch dá»¯ liá»‡u lÆ°u trong LocalStorage vÃ  má»Ÿ láº¡i MÃ n hÃ¬nh Cháº·n Cá»­a
+    function handleLogoutAuth() {
+      if (confirm('Em/Tháº§y CÃ´ cÃ³ cháº¯c cháº¯n muá»‘n ÄÄƒng xuáº¥t vÃ  xÃ³a MÃ£ VIP / API Key Ä‘Ã£ lÆ°u trÃªn trÃ¬nh duyá»‡t nÃ y khÃ´ng?')) {
+        localStorage.removeItem('THUAN_AUTH_MODE');
+        localStorage.removeItem('THUAN_AUTH_VALUE');
+        localStorage.removeItem('GEMINI_API_KEY');
+        apiKey = '';
+
+        // Reset Ã´ nháº­p trong modal
+        const inputKey = document.getElementById('input-personal-key');
+        if (inputKey) inputKey.value = '';
+        const inputVip = document.getElementById('input-vip-code');
+        if (inputVip) inputVip.value = '';
+
+        // Cáº­p nháº­t huy hiá»‡u
+        updateAuthUIBadge();
+
+        // ÄÃ³ng cÃ¡c modal khÃ¡c náº¿u cÃ³
+        const modalSettings = document.getElementById('modal-settings');
+        if (modalSettings) modalSettings.classList.add('hidden');
+        const modalSetup = document.getElementById('modal-setup');
+        if (modalSetup) {
+          modalSetup.classList.add('hidden');
+          modalSetup.classList.remove('flex');
+        }
+
+        // Má»Ÿ láº¡i mÃ n hÃ¬nh cháº·n cá»­a
+        openAuthGatekeeperModal(false);
+        showAuthAlert('ÄÃ£ Ä‘Äƒng xuáº¥t vÃ  xÃ³a mÃ£ thÃ nh cÃ´ng! Vui lÃ²ng nháº­p API Key hoáº·c MÃ£ VIP má»›i.', 'info');
+      }
+    }
+    window.handleLogoutAuth = handleLogoutAuth;
     let storedModel = localStorage.getItem('GEMINI_MODEL');
     let selectedModel = (storedModel && storedModel !== 'gemini-1.5-flash') ? storedModel : 'gemini-3.8-flash';
     let isDemoMode = false;
@@ -17667,7 +17720,28 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         updateAuthUIBadge();
 
         // Màn hình Chặn cửa (Modal Authentication): Xuất hiện ngay lập tức khi tải trang web nếu chưa xác thực
-        if (!isUserAuthenticated()) {
+        // Tá»± Ä‘á»™ng kiá»ƒm tra bá»™ nhá»› cá»¥c bá»™ (localStorage):
+        if (isUserAuthenticated()) {
+          // ÄÃ£ cÃ³ mÃ£ há»£p lá»‡: Tá»± Ä‘á»™ng bá» qua mÃ n hÃ¬nh cháº·n cá»­a vÃ  Ä‘Æ°a há»c sinh vÃ o THáº²NG giao diá»‡n há»c táº­p chÃ­nh
+          closeAuthGatekeeperModal();
+          const modalSetup = document.getElementById('modal-setup');
+          if (modalSetup) {
+            modalSetup.classList.add('hidden');
+            modalSetup.classList.remove('flex');
+          }
+
+          // Cáº­p nháº­t thÃ´ng tin há»c sinh lÃªn Header
+          if (badgeName) badgeName.textContent = studentInfo.name;
+          const badgeSchool = document.getElementById('badge-school');
+          if (badgeSchool) badgeSchool.textContent = studentInfo.school;
+          if (badgeClass) badgeClass.textContent = studentInfo.class;
+          if (sessionBadge) sessionBadge.classList.remove('hidden');
+          const mobClassBadge = document.getElementById('mobile-class-badge');
+          if (mobClassBadge) mobClassBadge.textContent = studentInfo.class;
+          if (chatCurrentLesson) chatCurrentLesson.textContent = studentInfo.lesson;
+          if (chatCurrentClass) chatCurrentClass.textContent = studentInfo.class;
+        } else {
+          // ChÆ°a lÆ°u mÃ£: Láº­p tá»©c hiá»ƒn thá»‹ MÃ n hÃ¬nh Cháº·n cá»­a Ä‘á»ƒ yÃªu cáº§u nháº­p mÃ£
           openAuthGatekeeperModal(false);
           const modalSetup = document.getElementById('modal-setup');
           if (modalSetup) {
