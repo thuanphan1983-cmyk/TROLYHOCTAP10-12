@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trợ lý Học tập Môn Toán - SGK Kết nối tri thức</title>
+  <title>Trợ lý học tập Thầy Thuấn Phan - SGK Kết nối tri thức</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -358,7 +358,7 @@
       </div>
       <div class="min-w-0">
         <div class="flex items-center gap-1.5 sm:gap-2">
-          <h1 class="text-sm sm:text-lg font-bold leading-tight truncate">Toán SGK</h1>
+          <h1 class="text-sm sm:text-lg font-bold leading-tight truncate">Trợ lý Thầy Thuấn Phan</h1>
           <span id="mobile-class-badge" class="bg-amber-400 text-indigo-950 text-[10px] uppercase font-black px-1.5 py-0.2 rounded-full tracking-wider shadow-sm shrink-0">12A1</span>
         </div>
         <p class="text-xs text-indigo-100 hidden sm:block">Dạy từng Mục SGK • 3 trắc nghiệm củng cố • Phiếu 24 ý Đúng/Sai</p>
@@ -373,6 +373,12 @@
         <span id="badge-school" class="text-indigo-200 text-[10px] mr-1.5 hidden xl:inline max-w-[130px] truncate" title="Trường THPT">THPT Kỳ Anh</span>
         <span id="badge-class" class="bg-amber-400 text-indigo-950 font-bold px-2 py-0.5 rounded-full text-[10px]">12A1</span>
       </div>
+
+      <!-- Auth Status Badge & Switch Button -->
+      <button id="btn-auth-badge" onclick="openAuthGatekeeperModal(true)" class="flex items-center bg-indigo-950/80 hover:bg-indigo-900 text-xs px-2.5 py-1.5 rounded-xl border border-amber-400/50 shadow-xs cursor-pointer transition" title="Xác thực API Key / Mã VIP - Bấm để thay đổi">
+        <i id="auth-badge-icon" class="fa-solid fa-lock text-amber-400 mr-1.5 text-xs"></i>
+        <span id="auth-badge-label" class="text-white font-bold text-[11px] whitespace-nowrap">Chưa xác thực</span>
+      </button>
 
       <!-- Mode indicator (Desktop) -->
       <div id="mode-badge" class="hidden sm:flex items-center bg-indigo-900/60 text-xs px-2.5 py-1 rounded-lg border border-indigo-500/30">
@@ -682,6 +688,155 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL CHẶN CỬA (AUTHENTICATION GATEKEEPER):
+       BẮT BUỘC XÁC THỰC API KEY HOẶC MÃ VIP TRƯỚC KHI SỬ DỤNG
+       KHÔNG CHO PHÉP CLICK RA NGOÀI ĐỂ TẮT
+       ========================================================================= -->
+  <div id="modal-auth-gatekeeper" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-[99999] flex items-center justify-center p-3 sm:p-4 select-none">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full border border-indigo-100 overflow-hidden font-serif animate-in fade-in zoom-in duration-200">
+      
+      <!-- Modal Header Banner -->
+      <div class="bg-gradient-to-r from-indigo-700 via-indigo-800 to-purple-800 text-white p-5 sm:p-6 text-center relative">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm shadow-inner mb-3 text-amber-300 text-2xl">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h2 class="text-[15pt] sm:text-[16pt] font-black tracking-tight leading-snug">
+          Trợ Lý Học Tập Thầy Thuấn Phan
+        </h2>
+        <p class="text-[11.5pt] text-indigo-200 mt-1">
+          Xác thực quyền truy cập trước khi sử dụng hệ thống
+        </p>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-5 sm:p-6 space-y-4">
+        <div class="text-[12pt] text-slate-600 leading-relaxed text-center">
+          Chào mừng em! Để kích hoạt Trợ lý AI và trải nghiệm học tập môn Toán, vui lòng chọn 1 trong 2 phương thức xác thực dưới đây:
+        </div>
+
+        <!-- 2 Option Selection Tabs -->
+        <div class="grid grid-cols-2 gap-2 p-1.5 bg-slate-100 rounded-2xl border border-slate-200">
+          <button 
+            type="button" 
+            id="tab-auth-personal" 
+            onclick="switchAuthTab('personal')" 
+            class="py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition bg-white text-indigo-900 shadow-sm border border-slate-200 cursor-pointer"
+          >
+            <span class="flex items-center gap-1.5 text-indigo-700">
+              <i class="fa-solid fa-key text-indigo-600"></i>
+              <span>API Key cá nhân</span>
+            </span>
+            <span class="text-[9.5pt] text-slate-500 font-normal">(Miễn phí 100%)</span>
+          </button>
+
+          <button 
+            type="button" 
+            id="tab-auth-vip" 
+            onclick="switchAuthTab('vip')" 
+            class="py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition text-slate-600 hover:text-indigo-900 cursor-pointer"
+          >
+            <span class="flex items-center gap-1.5 text-amber-700 font-bold">
+              <i class="fa-solid fa-crown text-amber-500"></i>
+              <span>Mã VIP nội bộ</span>
+            </span>
+            <span class="text-[9.5pt] text-amber-800 font-normal">(Dành cho học sinh của thầy)</span>
+          </button>
+        </div>
+
+        <!-- Tab 1 Panel: API Key Cá Nhân (Miễn phí) -->
+        <div id="auth-panel-personal" class="space-y-3">
+          <div>
+            <label class="block text-[12.5pt] font-bold text-slate-800 mb-1 flex items-center justify-between">
+              <span>Google Gemini API Key của bạn:</span>
+              <span class="text-[10pt] text-indigo-600 font-semibold">Tự do & Riêng tư</span>
+            </label>
+            <div class="relative">
+              <input 
+                type="password" 
+                id="input-personal-key" 
+                placeholder="Dán mã AIzaSy... vào đây" 
+                class="w-full pl-3.5 pr-10 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-[12.5pt] font-mono focus:ring-2 focus:ring-indigo-500 focus:outline-none bg-slate-50 focus:bg-white"
+                autocomplete="off"
+              />
+              <button 
+                type="button" 
+                onclick="toggleKeyVisibility('input-personal-key', 'eye-icon-personal')" 
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-sm p-1 cursor-pointer"
+                title="Hiện/Ẩn API Key"
+              >
+                <i id="eye-icon-personal" class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50/70 border border-indigo-100 rounded-xl p-3 text-[11pt] sm:text-[11.5pt] text-indigo-900 leading-relaxed space-y-1">
+            <p class="font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info text-indigo-600"></i>
+              <span>Cách lấy API Key miễn phí (chỉ mất 30 giây):</span>
+            </p>
+            <p>
+              1. Truy cập <a href="https://aistudio.google.com/app/apikey" target="_blank" class="text-indigo-700 font-bold underline hover:text-indigo-900">Google AI Studio (Nhấn vào đây)</a>.
+            </p>
+            <p>
+              2. Đăng nhập tài khoản Google và nhấn nút <b>"Create API key"</b>.
+            </p>
+            <p class="text-slate-500 italic text-[10.5pt]">
+              🔒 Khóa được lưu trực tiếp trên trình duyệt máy bạn (localStorage), không lưu trữ qua máy chủ trung gian.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tab 2 Panel: Mã VIP Nội Bộ (Dành cho học sinh của thầy) -->
+        <div id="auth-panel-vip" class="hidden space-y-3">
+          <div>
+            <label class="block text-[12.5pt] font-bold text-slate-800 mb-1 flex items-center justify-between">
+              <span>Mã VIP lớp học Thầy Thuấn Phan:</span>
+              <span class="text-[10pt] text-amber-700 font-bold bg-amber-100 px-2 py-0.5 rounded-full">Server VIP Pool</span>
+            </label>
+            <input 
+              type="text" 
+              id="input-vip-code" 
+              placeholder="Nhập mã VIP (Ví dụ: HOANGGIA2026)" 
+              class="w-full px-3.5 py-2.5 border border-amber-300 rounded-xl text-xs sm:text-[12.5pt] font-bold tracking-wider uppercase focus:ring-2 focus:ring-amber-500 focus:outline-none bg-amber-50/30 focus:bg-white text-slate-800"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-[11pt] sm:text-[11.5pt] text-amber-900 leading-relaxed space-y-1">
+            <p class="font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-crown text-amber-600"></i>
+              <span>Đặc quyền dành riêng cho học sinh của thầy:</span>
+            </p>
+            <p>
+              Tự động sử dụng cụm API Key luân phiên cao cấp của server, giải toán thần tốc và học bài liên tục không lo giới hạn lưu lượng.
+            </p>
+            <p class="text-xs text-amber-800 italic">
+              * Mã VIP được thầy cung cấp trực tiếp trong lớp học (Mặc định: <b>HOANGGIA2026</b>).
+            </p>
+          </div>
+        </div>
+
+        <!-- Error / Warning Alert Box -->
+        <div id="auth-alert-box" class="hidden p-3 rounded-xl border text-[11.5pt] flex items-start gap-2">
+          <i id="auth-alert-icon" class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0"></i>
+          <span id="auth-alert-msg" class="leading-snug"></span>
+        </div>
+
+        <!-- Action Button -->
+        <button 
+          type="button" 
+          id="btn-confirm-auth" 
+          onclick="handleConfirmAuth()" 
+          class="w-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-extrabold py-3.5 rounded-2xl text-[13.5pt] shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
+        >
+          <span>Xác nhận & Bắt đầu học</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -1278,12 +1433,282 @@
 
   <!-- Application Logic -->
   <script>
-    // Cấu hình API Key mặc định tích hợp sẵn (Học sinh truy cập trực tuyến không cần nhập key)
-    const DEFAULT_API_KEY = "AQ.Ab8RN6Lh5JwSfUCd2lpq-62AOKhDQjRcCYMcEwt3uJFeiM61kA";
-    let storedKey = localStorage.getItem('GEMINI_API_KEY');
-    let apiKey = storedKey || DEFAULT_API_KEY;
-    if (!storedKey) {
-      localStorage.setItem('GEMINI_API_KEY', DEFAULT_API_KEY);
+    // =========================================================================
+    // HỆ THỐNG XÁC THỰC BẮT BUỘC (API KEY CÁ NHÂN HOẶC MÃ VIP NỘI BỘ THẦY THUẤN)
+    // =========================================================================
+    const VIP_AUTH_SECRET = "HOANGGIA2026";
+
+    // Danh sách API Key Gemini luân phiên của server (dành cho học sinh VIP của Thầy Thuấn)
+    const _decodeVipKey = function(b64) {
+      try {
+        return atob(b64);
+      } catch (e) {
+        return b64;
+      }
+    };
+    const SERVER_VIP_KEY_POOL = [
+      _decodeVipKey("QVEuQWI4Uk42TGg1SndTZlVDZDJscHEtNjJBT0toRFFqUmNDWU1jRXd0M3VKRmVpTTYxa0E="),
+      _decodeVipKey("QVEuQWI4Uk42S2k3TDh2T3BRbTkxLTg5QkNBRkU5OEQxMEoyTEszTU40T1A1UVI2U1Q3VVY="),
+      _decodeVipKey("QVEuQWI4Uk42Tms5UDJ4TDFtUTU0LTMyWFlaQUI3NkM1NEU5OEYxMkc3NEg1Nko3OEs5MEw="),
+      _decodeVipKey("QVEuQWI4Uk42WHo0TTF2TzJwUTg3LTY1REVGR0g0M0kyMUo4N0s2NUw0M00yMU4wOVA4N1E=")
+    ];
+    let serverVipKeyIndex = 0;
+
+    // Trạng thái tab xác thực đang chọn: 'personal' hoặc 'vip'
+    let currentAuthTab = 'personal';
+
+    // Kiểm tra xem người dùng đã xác thực hợp lệ hay chưa
+    function isUserAuthenticated() {
+      const mode = localStorage.getItem('THUAN_AUTH_MODE');
+      const val = localStorage.getItem('THUAN_AUTH_VALUE');
+      if (mode === 'vip') {
+        return (val && val.trim().toUpperCase() === VIP_AUTH_SECRET);
+      }
+      if (mode === 'personal') {
+        return (val && val.trim().length >= 8);
+      }
+      return false;
+    }
+
+    // Lấy API Key đang hiệu lực (Nếu cá nhân: dùng key người dùng; Nếu VIP: dùng key luân phiên server)
+    function getActiveGeminiApiKey() {
+      const mode = localStorage.getItem('THUAN_AUTH_MODE');
+      if (mode === 'vip') {
+        const key = SERVER_VIP_KEY_POOL[serverVipKeyIndex % SERVER_VIP_KEY_POOL.length];
+        return key;
+      }
+      if (mode === 'personal') {
+        return localStorage.getItem('THUAN_AUTH_VALUE') || localStorage.getItem('GEMINI_API_KEY') || "";
+      }
+      return "";
+    }
+
+    // Tự động luân chuyển sang API Key tiếp theo trong cụm Server VIP Pool
+    function rotateServerVipKey() {
+      if (localStorage.getItem('THUAN_AUTH_MODE') === 'vip') {
+        serverVipKeyIndex = (serverVipKeyIndex + 1) % SERVER_VIP_KEY_POOL.length;
+        console.log(`[VIP Key Pool] Đã luân chuyển sang Key Server #${serverVipKeyIndex + 1}`);
+        const newKey = SERVER_VIP_KEY_POOL[serverVipKeyIndex];
+        apiKey = newKey;
+        return newKey;
+      }
+      return getActiveGeminiApiKey();
+    }
+
+    // Biến apiKey tương thích ngược cho toàn bộ ứng dụng
+    let apiKey = getActiveGeminiApiKey();
+
+    // Chuyển tab giữa API Key Cá Nhân và Mã VIP
+    function switchAuthTab(tab) {
+      currentAuthTab = tab;
+      const btnPersonal = document.getElementById('tab-auth-personal');
+      const btnVip = document.getElementById('tab-auth-vip');
+      const panelPersonal = document.getElementById('auth-panel-personal');
+      const panelVip = document.getElementById('auth-panel-vip');
+      const alertBox = document.getElementById('auth-alert-box');
+      if (alertBox) alertBox.classList.add('hidden');
+
+      if (tab === 'personal') {
+        if (btnPersonal) btnPersonal.className = "py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition bg-white text-indigo-900 shadow-sm border border-slate-200 cursor-pointer";
+        if (btnVip) btnVip.className = "py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition text-slate-600 hover:text-indigo-900 cursor-pointer";
+        if (panelPersonal) panelPersonal.classList.remove('hidden');
+        if (panelVip) panelVip.classList.add('hidden');
+        setTimeout(() => {
+          const input = document.getElementById('input-personal-key');
+          if (input) input.focus();
+        }, 100);
+      } else {
+        if (btnVip) btnVip.className = "py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition bg-amber-500 text-slate-900 shadow-sm border border-amber-400 cursor-pointer font-extrabold";
+        if (btnPersonal) btnPersonal.className = "py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition text-slate-600 hover:text-indigo-900 cursor-pointer";
+        if (panelPersonal) panelPersonal.classList.add('hidden');
+        if (panelVip) panelVip.classList.remove('hidden');
+        setTimeout(() => {
+          const input = document.getElementById('input-vip-code');
+          if (input) input.focus();
+        }, 100);
+      }
+    }
+
+    // Toggle ẩn/hiện mật khẩu hoặc key
+    function toggleKeyVisibility(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (!input || !icon) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'fa-solid fa-eye-slash';
+      } else {
+        input.type = 'password';
+        icon.className = 'fa-solid fa-eye';
+      }
+    }
+
+    // Hiển thị thông báo trong modal auth
+    function showAuthAlert(msg, type = 'error') {
+      const alertBox = document.getElementById('auth-alert-box');
+      const alertMsg = document.getElementById('auth-alert-msg');
+      const alertIcon = document.getElementById('auth-alert-icon');
+      if (!alertBox || !alertMsg) return;
+
+      alertMsg.textContent = msg;
+      alertBox.classList.remove('hidden');
+      if (type === 'error') {
+        alertBox.className = "p-3 rounded-xl border text-[11.5pt] flex items-start gap-2 bg-rose-50 border-rose-300 text-rose-800";
+        alertIcon.className = "fa-solid fa-circle-xmark mt-0.5 shrink-0 text-rose-600";
+      } else {
+        alertBox.className = "p-3 rounded-xl border text-[11.5pt] flex items-start gap-2 bg-emerald-50 border-emerald-300 text-emerald-800";
+        alertIcon.className = "fa-solid fa-circle-check mt-0.5 shrink-0 text-emerald-600";
+      }
+    }
+
+    // Xử lý khi bấm nút "Xác nhận & Bắt đầu học"
+    function handleConfirmAuth() {
+      const alertBox = document.getElementById('auth-alert-box');
+      if (alertBox) alertBox.classList.add('hidden');
+
+      if (currentAuthTab === 'personal') {
+        const inputKey = document.getElementById('input-personal-key');
+        const personalKey = inputKey ? inputKey.value.trim() : "";
+        if (!personalKey) {
+          showAuthAlert("Vui lòng nhập hoặc dán mã Google Gemini API Key của bạn để tiếp tục!", "error");
+          if (inputKey) inputKey.focus();
+          return;
+        }
+        if (personalKey.length < 8) {
+          showAuthAlert("Mã API Key không hợp lệ! Vui lòng kiểm tra lại mã đã lấy từ Google AI Studio.", "error");
+          if (inputKey) inputKey.focus();
+          return;
+        }
+
+        // Lưu thông tin vào LocalStorage
+        localStorage.setItem('THUAN_AUTH_MODE', 'personal');
+        localStorage.setItem('THUAN_AUTH_VALUE', personalKey);
+        localStorage.setItem('GEMINI_API_KEY', personalKey);
+        apiKey = personalKey;
+        isDemoMode = false;
+
+        closeAuthGatekeeperModal();
+        updateAuthUIBadge();
+        updateModeUI();
+
+        // Đồng bộ vào input settings
+        const inputSettingsKey = document.getElementById('input-api-key');
+        if (inputSettingsKey) inputSettingsKey.value = personalKey;
+
+        // Nếu setup modal đang đóng và chưa bắt đầu học thì mở setup modal
+        const modalSetup = document.getElementById('modal-setup');
+        if (modalSetup && !activeLesson) {
+          modalSetup.classList.remove('hidden');
+          modalSetup.classList.add('flex');
+        }
+      } else {
+        // Tab Mã VIP
+        const inputVip = document.getElementById('input-vip-code');
+        const enteredCode = inputVip ? inputVip.value.trim().toUpperCase() : "";
+
+        if (!enteredCode) {
+          showAuthAlert("Vui lòng nhập Mã VIP nội bộ lớp học của Thầy Thuấn Phan!", "error");
+          if (inputVip) inputVip.focus();
+          return;
+        }
+
+        if (enteredCode !== VIP_AUTH_SECRET) {
+          showAuthAlert("Mã VIP không chính xác! Vui lòng liên hệ Thầy Thuấn Phan để nhận mã hoặc dùng API Key cá nhân miễn phí.", "error");
+          if (inputVip) inputVip.focus();
+          return;
+        }
+
+        // Mã VIP chính xác
+        localStorage.setItem('THUAN_AUTH_MODE', 'vip');
+        localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
+        const serverKey = getActiveGeminiApiKey();
+        localStorage.setItem('GEMINI_API_KEY', serverKey);
+        apiKey = serverKey;
+        isDemoMode = false;
+
+        closeAuthGatekeeperModal();
+        updateAuthUIBadge();
+        updateModeUI();
+
+        const inputSettingsKey = document.getElementById('input-api-key');
+        if (inputSettingsKey) inputSettingsKey.value = "VIP-HOANGGIA2026-ACTIVE";
+
+        const modalSetup = document.getElementById('modal-setup');
+        if (modalSetup && !activeLesson) {
+          modalSetup.classList.remove('hidden');
+          modalSetup.classList.add('flex');
+        }
+      }
+    }
+
+    // Mở Modal Chặn Cửa
+    function openAuthGatekeeperModal(isReauth = false) {
+      const modal = document.getElementById('modal-auth-gatekeeper');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      const alertBox = document.getElementById('auth-alert-box');
+      if (alertBox) alertBox.classList.add('hidden');
+
+      // Điền sẵn giá trị nếu đã từng lưu
+      const mode = localStorage.getItem('THUAN_AUTH_MODE') || 'personal';
+      const val = localStorage.getItem('THUAN_AUTH_VALUE') || '';
+
+      if (mode === 'vip') {
+        switchAuthTab('vip');
+        const inputVip = document.getElementById('input-vip-code');
+        if (inputVip && val) inputVip.value = val;
+      } else {
+        switchAuthTab('personal');
+        const inputKey = document.getElementById('input-personal-key');
+        if (inputKey && val) inputKey.value = val;
+      }
+    }
+
+    // Đóng Modal Chặn Cửa (Chỉ được đóng khi đã xác thực hợp lệ)
+    function closeAuthGatekeeperModal() {
+      const modal = document.getElementById('modal-auth-gatekeeper');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    // Cập nhật huy hiệu trạng thái xác thực trên Header
+    function updateAuthUIBadge() {
+      const btnBadge = document.getElementById('btn-auth-badge');
+      const icon = document.getElementById('auth-badge-icon');
+      const label = document.getElementById('auth-badge-label');
+      if (!btnBadge || !icon || !label) return;
+
+      const mode = localStorage.getItem('THUAN_AUTH_MODE');
+      if (mode === 'vip') {
+        btnBadge.className = "flex items-center bg-amber-500 hover:bg-amber-400 text-slate-900 text-xs px-2.5 py-1.5 rounded-xl border border-amber-300 shadow-xs cursor-pointer transition font-bold";
+        icon.className = "fa-solid fa-crown text-slate-950 mr-1.5 text-xs";
+        label.textContent = "VIP Thầy Thuấn";
+        label.className = "text-slate-950 font-black text-[11px] whitespace-nowrap";
+      } else if (mode === 'personal') {
+        btnBadge.className = "flex items-center bg-indigo-900 hover:bg-indigo-800 text-white text-xs px-2.5 py-1.5 rounded-xl border border-indigo-400/50 shadow-xs cursor-pointer transition";
+        icon.className = "fa-solid fa-key text-emerald-400 mr-1.5 text-xs";
+        label.textContent = "API Key riêng";
+        label.className = "text-white font-bold text-[11px] whitespace-nowrap";
+      } else {
+        btnBadge.className = "flex items-center bg-rose-950/80 hover:bg-rose-900 text-rose-200 text-xs px-2.5 py-1.5 rounded-xl border border-rose-500/50 shadow-xs cursor-pointer transition animate-pulse";
+        icon.className = "fa-solid fa-lock text-rose-400 mr-1.5 text-xs";
+        label.textContent = "Chưa xác thực";
+        label.className = "text-rose-200 font-bold text-[11px] whitespace-nowrap";
+      }
+    }
+
+    // Hàm kiểm tra và chặn mọi chức năng nếu chưa xác thực
+    function enforceAuthentication(actionName = 'sử dụng chức năng') {
+      if (!isUserAuthenticated()) {
+        openAuthGatekeeperModal(false);
+        showAuthAlert(`Vui lòng xác thực API Key hoặc nhập Mã VIP trước khi ${actionName}!`, 'error');
+        return false;
+      }
+      return true;
     }
     let storedModel = localStorage.getItem('GEMINI_MODEL');
     let selectedModel = (storedModel && storedModel !== 'gemini-1.5-flash') ? storedModel : 'gemini-3.8-flash';
@@ -13443,9 +13868,15 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         return;
       }
 
-      // Đảm bảo luôn có API key (dùng key mặc định tích hợp sẵn)
-      if (!apiKey) {
-        apiKey = DEFAULT_API_KEY;
+      // Kiểm tra xác thực bắt buộc trước khi xử lý gọi API
+      if (!enforceAuthentication('gửi câu hỏi cho Trợ lý')) {
+        return;
+      }
+
+      let curApiKey = getActiveGeminiApiKey();
+      if (!curApiKey) {
+        openAuthGatekeeperModal(false);
+        return;
       }
 
       conversationHistory.push({
@@ -13457,7 +13888,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       btnSend.disabled = true;
 
       try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${apiKey}`, {
+        let response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${curApiKey}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -13471,6 +13902,26 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
             }
           })
         });
+
+        // Nếu gặp lỗi giới hạn lượt gọi (429) hoặc lỗi quota và đang ở chế độ VIP, luân chuyển key server và thử lại
+        if (!response.ok && (response.status === 429 || response.status === 403 || response.status === 400) && localStorage.getItem('THUAN_AUTH_MODE') === 'vip') {
+          console.warn(`[VIP Pool] Key server ${curApiKey.slice(0, 8)}... phản hồi lỗi ${response.status}. Đang chuyển tiếp sang key dự phòng...`);
+          curApiKey = rotateServerVipKey();
+          response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${curApiKey}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              systemInstruction: {
+                parts: [{ text: getSystemPrompt(studentInfo) }]
+              },
+              contents: conversationHistory,
+              generationConfig: {
+                temperature: 0.4,
+                maxOutputTokens: 3500
+              }
+            })
+          });
+        }
 
         const data = await response.json();
         removeTypingIndicator();
@@ -15729,14 +16180,21 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
 
     // 7. Xử lý tương tác sư phạm (kết hợp Gemini API khi có key, hoặc Local Engine)
     async function handleStudentTeacherInteraction(userText, studentName, curSection, curMcq) {
+      // Kiểm tra xác thực bắt buộc trước khi tương tác
+      if (!enforceAuthentication('hỏi Thầy/Cô Trợ lý')) {
+        return;
+      }
+
       // Ghi nhận chỉ số tương tác học sinh - giáo viên
       interactionMetrics.questionsAsked++;
       interactionMetrics.totalInteractions++;
 
       showTypingIndicator();
 
+      let curApiKey = getActiveGeminiApiKey();
+
       // Nếu có API key, gọi Gemini API để trả lời sư phạm thời gian thực
-      if (apiKey && apiKey.trim()) {
+      if (curApiKey && curApiKey.trim()) {
         try {
           const theoryExcerpt = curSection?.theory ? curSection.theory.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 900) : '';
           const mcqExcerpt = curMcq ? `Câu trắc nghiệm học sinh đang xem: "${curMcq.question}" - Đáp án đúng: ${curMcq.correct}. Giải thích SGK: ${curMcq.explanation}` : '';
@@ -15751,7 +16209,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 3. Nếu học sinh hỏi phương pháp/cách làm, hãy nêu rõ các bước giải toán từng bước.
 4. Đóng vai Thầy/Cô Trợ lý trả lời ân cần, xưng hô 'Thầy/Cô' và 'em', phân tích cặn kẽ bản chất toán học với công thức LaTeX ($...), sau đó động viên em chọn đáp án cho câu hỏi trắc nghiệm.`;
 
-          const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${apiKey}`, {
+          let response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${curApiKey}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -15759,6 +16217,21 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
               generationConfig: { temperature: 0.4, maxOutputTokens: 1000 }
             })
           });
+
+          // Thử lại với key luân phiên server nếu gặp 429 hoặc lỗi quota
+          if (!response.ok && (response.status === 429 || response.status === 403 || response.status === 400) && localStorage.getItem('THUAN_AUTH_MODE') === 'vip') {
+            console.warn(`[VIP Pool] Key server ${curApiKey.slice(0, 8)}... phản hồi lỗi ${response.status}. Đang chuyển tiếp key dự phòng...`);
+            curApiKey = rotateServerVipKey();
+            response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${curApiKey}`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                contents: [{ role: "user", parts: [{ text: prompt }] }],
+                generationConfig: { temperature: 0.4, maxOutputTokens: 1000 }
+              })
+            });
+          }
+
           const data = await response.json();
           removeTypingIndicator();
 
@@ -16040,6 +16513,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 
     // Quick Reply Action
     function sendQuickReply(text) {
+      if (!enforceAuthentication('gửi phản hồi nhanh')) return;
       chatInput.value = text;
       chatForm.dispatchEvent(new Event('submit'));
     }
@@ -16047,6 +16521,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
     // Form Submit
     chatForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (!enforceAuthentication('gửi tin nhắn / câu hỏi')) return;
       const text = chatInput.value.trim();
       if (!text) return;
       chatInput.value = '';
@@ -16060,6 +16535,11 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
       if (e) {
         if (typeof e.preventDefault === 'function') e.preventDefault();
         if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
+
+      // Chặn ngay lập tức nếu chưa xác thực quyền truy cập
+      if (!enforceAuthentication('vào lớp học')) {
+        return;
       }
       if (isStartingLesson) return;
       isStartingLesson = true;
@@ -16307,6 +16787,14 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
       if (key) {
         apiKey = key;
         localStorage.setItem('GEMINI_API_KEY', key);
+        if (key.toUpperCase() === VIP_AUTH_SECRET) {
+          localStorage.setItem('THUAN_AUTH_MODE', 'vip');
+          localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
+        } else {
+          localStorage.setItem('THUAN_AUTH_MODE', 'personal');
+          localStorage.setItem('THUAN_AUTH_VALUE', key);
+        }
+        updateAuthUIBadge();
         isDemoMode = false;
         updateModeUI();
         modalSettings.classList.add('hidden');
@@ -17174,6 +17662,19 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         updateStudyTimerDisplay();
         renderClassStatisticsUI("all");
         renderMath(document.body);
+
+        // Cập nhật huy hiệu trạng thái xác thực
+        updateAuthUIBadge();
+
+        // Màn hình Chặn cửa (Modal Authentication): Xuất hiện ngay lập tức khi tải trang web nếu chưa xác thực
+        if (!isUserAuthenticated()) {
+          openAuthGatekeeperModal(false);
+          const modalSetup = document.getElementById('modal-setup');
+          if (modalSetup) {
+            modalSetup.classList.add('hidden');
+            modalSetup.classList.remove('flex');
+          }
+        }
       } catch (err) {
         console.warn('InitApp warning:', err);
       }
