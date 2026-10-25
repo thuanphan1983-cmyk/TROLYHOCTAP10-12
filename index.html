@@ -367,6 +367,20 @@
     
     <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
       <!-- Session Badge (Desktop) -->
+      <!-- NÃºt báº¥m ná»•i báº­t: Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N -->
+      <button 
+        id="btn-on-thi-tot-nghiep" 
+        onclick="openExamPracticeModal()" 
+        class="relative group overflow-hidden bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 hover:from-amber-300 hover:via-orange-300 hover:to-amber-400 text-slate-950 font-black px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs sm:text-[12pt] shadow-md hover:shadow-xl ring-2 ring-amber-300/80 transition-all duration-300 transform hover:scale-[1.03] active:scale-95 flex items-center gap-1.5 sm:gap-2 cursor-pointer shrink-0"
+        title="Báº¥m Ä‘á»ƒ má»Ÿ kho luyá»‡n Ä‘á» thi thá»­ tá»‘t nghiá»‡p THPT chuáº©n cáº¥u trÃºc Bá»™ GD&ÄT 2025"
+      >
+        <span class="absolute inset-0 bg-white/25 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-indigo-950 text-amber-300 flex items-center justify-center text-xs shrink-0 shadow-inner">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <span class="tracking-wide uppercase font-black drop-shadow-xs whitespace-nowrap">Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N</span>
+        <span class="hidden xl:inline-flex bg-red-600 text-white text-[10px] uppercase font-bold px-1.5 py-0.2 rounded-full shadow-xs animate-pulse">Hot 2025</span>
+      </button>
       <div id="session-badge" class="hidden md:flex items-center bg-indigo-800/80 text-xs px-3 py-1.5 rounded-full border border-indigo-400/30">
         <i class="fa-regular fa-user mr-1.5 text-amber-300"></i>
         <span id="badge-name" class="font-medium mr-1.5">Học sinh</span>
@@ -857,6 +871,63 @@
     </div>
   </div>
 
+  <!-- =========================================================================
+       MODAL: Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N
+       Kho Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT MÃ´n ToÃ¡n Chuáº©n Ma Tráº­n 2025 Bá»™ GD&ÄT
+       ========================================================================= -->
+  <div id="modal-exam-practice" class="fixed inset-0 bg-slate-950/75 backdrop-blur-md z-50 hidden items-center justify-center p-3 sm:p-5 font-serif animate-in fade-in">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full flex flex-col max-h-[92vh] border border-amber-200 overflow-hidden font-serif">
+      
+      <!-- Modal Header Banner -->
+      <div class="px-5 py-4 bg-gradient-to-r from-amber-500 via-orange-600 to-indigo-800 text-white flex items-center justify-between shrink-0 shadow-md">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-2xl shadow-inner text-amber-200 shrink-0">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-black text-[14pt] sm:text-[16pt] leading-tight text-white drop-shadow-sm uppercase">
+                Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N
+              </h3>
+              <span class="bg-amber-300 text-indigo-950 text-[10px] uppercase font-black px-2 py-0.5 rounded-full shadow-xs">Chuáº©n 2025</span>
+            </div>
+            <p class="text-xs sm:text-[11pt] text-amber-100 mt-0.5">
+              Há»‡ thá»‘ng luyá»‡n Ä‘á» thi thá»­ Tá»‘t nghiá»‡p THPT mÃ´n ToÃ¡n theo chuáº©n cáº¥u trÃºc 3 pháº§n cá»§a Bá»™ GD&ÄT
+            </p>
+          </div>
+        </div>
+        <button onclick="closeExamPracticeModal()" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center text-lg transition cursor-pointer" title="ÄÃ³ng">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Quick Info / Matrix Banner -->
+      <div class="bg-amber-50 border-b border-amber-200 px-5 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-[11.5pt] text-amber-950 shrink-0">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
+          <span><b>Cáº¥u trÃºc Ä‘á» thi má»›i:</b> Pháº§n 1: 12 tráº¯c nghiá»‡m (3Ä‘) â€¢ Pháº§n 2: 4 cÃ¢u ÄÃºng/Sai 16 Ã½ (4Ä‘) â€¢ Pháº§n 3: 6 cÃ¢u Tráº£ lá»i ngáº¯n (3Ä‘)</span>
+        </div>
+        <span class="bg-indigo-900 text-amber-300 px-2.5 py-0.5 rounded-full font-bold text-xs shadow-xs">Thá»i gian: 90 phÃºt</span>
+      </div>
+
+      <!-- Exam List Container (Scrollable) -->
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-4 bg-slate-50 flex-1">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="exam-cards-grid">
+          <!-- Populated dynamically via JS renderExamCards() -->
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-white border-t border-slate-200 flex items-center justify-between shrink-0">
+        <div class="text-xs text-slate-500 italic">
+          ðŸ’¡ Chá»n má»™t Ä‘á» báº¥t ká»³ Ä‘á»ƒ báº¯t Ä‘áº§u lÃ m bÃ i vÃ  nháº­n hÆ°á»›ng dáº«n chi tiáº¿t tá»«ng bÆ°á»›c tá»« Tháº§y Thuáº¥n!
+        </div>
+        <button onclick="closeExamPracticeModal()" class="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl text-xs transition cursor-pointer">
+          ÄÃ³ng
+        </button>
+      </div>
+    </div>
+  </div>
   <!-- Modal: Initial Student Setup (SGK Kết nối tri thức) -->
   <div id="modal-setup" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-100 animate-in fade-in zoom-in duration-200 font-serif">
@@ -1763,6 +1834,189 @@
       }
     }
     window.handleLogoutAuth = handleLogoutAuth;
+
+    // =========================================================================
+    // Há»† THá»NG: Ã”N THI Tá»T NGHIá»†P CÃ™NG THáº¦Y THUáº¤N
+    // Danh sÃ¡ch bá»™ Ä‘á» thi thá»­ chuáº©n cáº¥u trÃºc 2025 Bá»™ GD&ÄT (ToÃ¡n 12)
+    // =========================================================================
+    const GRADUATION_EXAMS_DB = [
+      {
+        id: "de-01",
+        code: "Äá»€ Sá» 01",
+        title: "Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT 2025 - ToÃ n Diá»‡n Khá»‘i 12 (Äá» Chuáº©n Ma Tráº­n Bá»™ GD&ÄT)",
+        tags: ["Kháº£o sÃ¡t hÃ m sá»‘", "VectÆ¡ & Tá»a Ä‘á»™ Oxyz", "TÃ­ch phÃ¢n", "XÃ¡c suáº¥t cÃ³ Ä‘iá»u kiá»‡n"],
+        badge: "Äá» phÃ¡t triá»ƒn chÃ­nh thá»©c",
+        badgeColor: "bg-red-100 text-red-800 border-red-200",
+        description: "Bao quÃ¡t toÃ n bá»™ kiáº¿n thá»©c 6 chÆ°Æ¡ng ToÃ¡n 12 theo chÆ°Æ¡ng trÃ¬nh GDPT 2018. RÃ¨n luyá»‡n pháº£n xáº¡ cho cáº£ 3 pháº§n tráº¯c nghiá»‡m, Ä‘Ãºng sai vÃ  tráº£ lá»i ngáº¯n.",
+        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng I: á»¨ng dá»¥ng Ä‘áº¡o hÃ m Ä‘á»ƒ kháº£o sÃ¡t vÃ  váº½ Ä‘á»“ thá»‹ hÃ m sá»‘"
+      },
+      {
+        id: "de-02",
+        code: "Äá»€ Sá» 02",
+        title: "Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT 2025 - ChuyÃªn SÃ¢u Tá»a Äá»™ Oxyz & HÃ¬nh Há»c KhÃ´ng Gian",
+        tags: ["Máº·t pháº³ng", "ÄÆ°á»ng tháº³ng Oxyz", "Máº·t cáº§u", "GÃ³c & Khoáº£ng cÃ¡ch"],
+        badge: "Chinh phá»¥c hÃ¬nh há»c 9+",
+        badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
+        description: "Táº­p trung cÃ¡c cÃ¢u há»i ÄÃºng/Sai vÃ  Äiá»n káº¿t quáº£ thá»±c táº¿ gáº¯n liá»n vá»›i hÃ¬nh há»c khÃ´ng gian Oxyz vÃ  á»©ng dá»¥ng Ä‘á»‹nh vá»‹ khÃ´ng gian 3 chiá»u.",
+        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng V: PhÆ°Æ¡ng phÃ¡p toáº¡ Ä‘á»™ trong khÃ´ng gian"
+      },
+      {
+        id: "de-03",
+        code: "Äá»€ Sá» 03",
+        title: "Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT 2025 - NguyÃªn HÃ m, TÃ­ch PhÃ¢n & á»¨ng Dá»¥ng Thá»±c Tiá»…n",
+        tags: ["Äá»•i biáº¿n sá»‘", "TÃ­ch phÃ¢n tá»«ng pháº§n", "Diá»‡n tÃ­ch & Thá»ƒ tÃ­ch", "BÃ i toÃ¡n váº­n tá»‘c"],
+        badge: "Trá»ng tÃ¢m Giáº£i tÃ­ch",
+        badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+        description: "Bá»™ cÃ¢u há»i tráº¯c nghiá»‡m vÃ  Ä‘Ãºng sai bÃ¡m sÃ¡t Ä‘á» minh há»a má»›i nháº¥t cá»§a Bá»™ GD&ÄT, kÃ¨m hÆ°á»›ng dáº«n báº¥m mÃ¡y vÃ  giáº£i tá»± luáº­n chuáº©n má»±c.",
+        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng IV: NguyÃªn hÃ m vÃ  tÃ­ch phÃ¢n"
+      },
+      {
+        id: "de-04",
+        code: "Äá»€ Sá» 04",
+        title: "Äá» Thi Thá»­ Tá»‘t Nghiá»‡p THPT 2025 - XÃ¡c Suáº¥t CÃ³ Äiá»u Kiá»‡n & CÃ´ng Thá»©c Bayes",
+        tags: ["XÃ¡c suáº¥t Bayes", "XÃ¡c suáº¥t toÃ n pháº§n", "Thá»‘ng kÃª ghÃ©p nhÃ³m", "PhÆ°Æ¡ng sai"],
+        badge: "Äiá»ƒm 9+ XÃ¡c suáº¥t",
+        badgeColor: "bg-purple-100 text-purple-800 border-purple-200",
+        description: "ChuyÃªn Ä‘á» hoÃ n toÃ n má»›i trong chÆ°Æ¡ng trÃ¬nh GDPT 2018. GiÃºp há»c sinh phÃ¢n biá»‡t rÃ nh rá»t cÃ´ng thá»©c Bayes vÃ  xÃ¡c suáº¥t Ä‘iá»u kiá»‡n.",
+        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng VI: XÃ¡c suáº¥t cÃ³ Ä‘iá»u kiá»‡n"
+      },
+      {
+        id: "de-05",
+        code: "Äá»€ Sá» 05",
+        title: "Äá» Kháº£o SÃ¡t NÄƒng Lá»±c ToÃ n Diá»‡n - Má»¥c TiÃªu 9+ Tá»‘t Nghiá»‡p THPT CÃ¹ng Tháº§y Thuáº¥n",
+        tags: ["Tá»•ng há»£p toÃ n khÃ³a", "Váº­n dá»¥ng cao", "Báº«y Ä‘á» thi", "Tá»‘i Æ°u thá»i gian"],
+        badge: "Äáº·c biá»‡t: PhÃ¢n loáº¡i cao",
+        badgeColor: "bg-indigo-100 text-indigo-800 border-indigo-200",
+        description: "Äá» thi phÃ¢n loáº¡i cao cÃ³ lá»i giáº£i chi tiáº¿t vÃ  gá»£i Ã½ phÆ°Æ¡ng phÃ¡p giáº£i nhanh Ä‘á»™c quyá»n tá»« Tháº§y Thuáº¥n Phan.",
+        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng II: VectÆ¡ vÃ  há»‡ trá»¥c toáº¡ Ä‘á»™ trong khÃ´ng gian"
+      },
+      {
+        id: "de-06",
+        code: "Äá»€ Sá» 06",
+        title: "Äá» Kháº£o SÃ¡t Sá»‘ Liá»‡u GhÃ©p NhÃ³m & CÃ¡c Sá»‘ Äáº·c TrÆ°ng Äo Má»©c Äá»™ PhÃ¢n TÃ¡n",
+        tags: ["Khoáº£ng biáº¿n thiÃªn", "Khoáº£ng tá»© phÃ¢n vá»‹", "PhÆ°Æ¡ng sai", "Äá»™ lá»‡ch chuáº©n"],
+        badge: "Ã”n táº­p thá»±c hÃ nh",
+        badgeColor: "bg-sky-100 text-sky-800 border-sky-200",
+        description: "RÃ¨n luyá»‡n ká»¹ nÄƒng xá»­ lÃ½ báº£ng sá»‘ liá»‡u thá»‘ng kÃª thá»±c táº¿, tÃ­nh toÃ¡n nhanh vÃ  chuáº©n xÃ¡c cÃ¡c sá»‘ Ä‘áº·c trÆ°ng.",
+        lessonRef: "BÃ i táº­p cuá»‘i chÆ°Æ¡ng III: CÃ¡c sá»‘ Ä‘áº·c trÆ°ng Ä‘o má»©c Ä‘á»™ phÃ¢n tÃ¡n cá»§a máº«u sá»‘ liá»‡u ghÃ©p nhÃ³m"
+      }
+    ];
+
+    function openExamPracticeModal() {
+      if (!enforceAuthentication('Ã”n thi tá»‘t nghiá»‡p cÃ¹ng Tháº§y Thuáº¥n')) return;
+      const modal = document.getElementById('modal-exam-practice');
+      if (modal) {
+        renderExamCards();
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        renderMath(modal);
+      }
+    }
+
+    function closeExamPracticeModal() {
+      const modal = document.getElementById('modal-exam-practice');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function renderExamCards() {
+      const container = document.getElementById('exam-cards-grid');
+      if (!container) return;
+
+      container.innerHTML = GRADUATION_EXAMS_DB.map((exam, idx) => `
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-amber-400 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-black px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-mono tracking-wider shadow-xs">
+                ${exam.code}
+              </span>
+              <span class="text-[10pt] font-bold px-2 py-0.5 rounded-full border ${exam.badgeColor}">
+                ${exam.badge}
+              </span>
+            </div>
+            
+            <h4 class="font-extrabold text-[12.5pt] sm:text-[13.5pt] text-slate-900 group-hover:text-amber-800 transition line-clamp-2 leading-snug mb-2">
+              ${exam.title}
+            </h4>
+
+            <p class="text-xs sm:text-[11pt] text-slate-600 line-clamp-2 leading-relaxed mb-3">
+              ${exam.description}
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              ${exam.tags.map(t => `<span class="bg-slate-100 text-slate-700 text-[10px] sm:text-xs font-medium px-2 py-0.5 rounded-md border border-slate-200">${t}</span>`).join('')}
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+            <span class="text-[10pt] text-slate-500 font-medium">90 phÃºt â€¢ 3 Pháº§n</span>
+            <button 
+              type="button" 
+              onclick="startGraduationExam('${exam.id}')" 
+              class="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black rounded-xl text-xs sm:text-[11.5pt] shadow-sm hover:shadow transition flex items-center gap-1.5 cursor-pointer active:scale-95"
+            >
+              <span>VÃ o LÃ m Äá» Ngay</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function startGraduationExam(examId) {
+      const exam = GRADUATION_EXAMS_DB.find(e => e.id === examId) || GRADUATION_EXAMS_DB[0];
+
+      // Thiáº¿t láº­p há»c sinh sang Lá»›p 12 vÃ  bÃ i thi tÆ°Æ¡ng á»©ng
+      studentInfo.class = "12A1";
+      studentInfo.grade = "Lá»›p 12";
+      studentInfo.lesson = exam.title;
+
+      localStorage.setItem('STUDENT_CLASS', "12A1");
+      localStorage.setItem('STUDENT_GRADE', "Lá»›p 12");
+      localStorage.setItem('STUDENT_LESSON', exam.title);
+
+      // Cáº­p nháº­t Header
+      const badgeClass = document.getElementById('badge-class');
+      if (badgeClass) badgeClass.textContent = "12A1";
+      const mobClassBadge = document.getElementById('mobile-class-badge');
+      if (mobClassBadge) mobClassBadge.textContent = "12A1";
+      const chatCurrentLesson = document.getElementById('chat-current-lesson');
+      if (chatCurrentLesson) chatCurrentLesson.textContent = exam.title;
+      const chatCurrentClass = document.getElementById('chat-current-class');
+      if (chatCurrentClass) chatCurrentClass.textContent = "12A1";
+
+      // Náº¡p giÃ¡o Ã¡n bÃ i táº­p tÆ°Æ¡ng á»©ng
+      if (typeof resolveKNTTLesson === 'function') {
+        activeLesson = resolveKNTTLesson(exam.lessonRef, "Lá»›p 12");
+        if (activeLesson) {
+          activeLesson.lessonTitle = exam.title;
+          activeTFQuestions = activeLesson.tfQuestions || [];
+          activeSAQuestions = activeLesson.saQuestions || [];
+        }
+      }
+
+      // Render láº¡i giao diá»‡n há»c táº­p
+      if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
+      if (typeof renderTheoryPanel === 'function') renderTheoryPanel();
+      if (typeof renderMCQPanel === 'function') renderMCQPanel();
+      if (typeof renderTFPanel === 'function') renderTFPanel();
+      if (typeof renderMath === 'function') renderMath(document.body);
+
+      // ÄÃ³ng modal chá»n Ä‘á»
+      closeExamPracticeModal();
+
+      // Má»Ÿ Tab 1 (LÃ½ thuyáº¿t / SÆ¡ Ä‘á»“ tÆ° duy) hoáº·c Tab 2 (Tráº¯c nghiá»‡m)
+      if (typeof switchStudyTab === 'function') switchStudyTab('theory');
+
+      // Cuá»™n lÃªn Ä‘áº§u trang
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.openExamPracticeModal = openExamPracticeModal;
+    window.closeExamPracticeModal = closeExamPracticeModal;
+    window.startGraduationExam = startGraduationExam;
     let storedModel = localStorage.getItem('GEMINI_MODEL');
     let selectedModel = (storedModel && storedModel !== 'gemini-1.5-flash') ? storedModel : 'gemini-3.8-flash';
     let isDemoMode = false;
