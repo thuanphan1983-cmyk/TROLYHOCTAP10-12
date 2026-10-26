@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -48,7 +48,8 @@
     body {
       font-family: var(--font-times) !important;
       font-size: var(--size-13pt);
-      line-height: var(--line-height-edu);
+      line-height: var(--line-height-edu); }
+    .fa, .fas, .far, .fal, .fad, .fab, .fa-solid, .fa-regular, .fa-brands, [class*="fa-"], [class^="fa-"], i.fa-solid, i.fa-regular, i.fa-brands { font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome, sans-serif !important;
     }
 
     /* Chuẩn cỡ chữ 13pt cho toàn bộ nội dung học tập, tin nhắn chat, đề bài, lời giải, phiếu trả lời và bảng biểu (bảo vệ các phần tử con của KaTeX) */
@@ -831,6 +832,9 @@
       
       <!-- Modal Header Banner -->
       <div class="bg-gradient-to-r from-indigo-700 via-indigo-800 to-purple-800 text-white p-5 sm:p-6 text-center relative">
+        <button type="button" onclick="closeAuthGatekeeperModal()" class="absolute top-4 right-4 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center transition cursor-pointer text-base" title="Đóng bảng và vào trang học tập">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
         <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm shadow-inner mb-3 text-amber-300 text-2xl">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
@@ -960,7 +964,7 @@
         <button 
           type="button" 
           id="btn-confirm-auth" 
-          onclick="handleConfirmAuth()" 
+          onclick="const m=document.getElementById('modal-auth-gatekeeper'); if(m){m.style.setProperty('display','none','important'); m.classList.add('hidden'); m.classList.remove('flex');} handleConfirmAuth();" 
           class="w-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-extrabold py-3.5 rounded-2xl text-[13.5pt] shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
         >
           <span>Xác nhận & Bắt đầu học</span>
@@ -984,7 +988,7 @@
        MODAL: ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN
        Kho Đề Thi Thử Tốt Nghiệp THPT Môn Toán Chuẩn Ma Trận 2025 Bộ GD&ĐT
        ========================================================================= -->
-  <div   <!-- =========================================================================
+  <!-- =========================================================================
        MODAL: ĐĂNG KÝ THÔNG TIN HỌC SINH (Bắt buộc trước khi vào các mục học)
        ========================================================================= -->
   <div id="modal-student-info" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99995] hidden items-center justify-center p-3 sm:p-4 select-none font-serif animate-in fade-in">
@@ -1846,6 +1850,29 @@
     ];
     let serverVipKeyIndex = 0;
 
+    // Primary Global Application State (khai báo sớm tránh lỗi Temporal Dead Zone)
+    let activeLesson = null, activeTFQuestions = [], currentTFIndex = 0, tfViewMode = 'single', conversationHistory = [], tfAnswers = {}, activeSAQuestions = [], currentSAIndex = 0, saAnswers = {}, saScores = {}, saAttempts = {};
+    let isDemoMode = false;
+    let currentAppMode = localStorage.getItem('CURRENT_APP_MODE') || 'sgk';
+    let studentInfo = {
+      name: localStorage.getItem('STUDENT_NAME') || 'Minh Anh',
+      school: localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh',
+      class: localStorage.getItem('STUDENT_CLASS') || '12A1',
+      grade: localStorage.getItem('STUDENT_GRADE') || 'Lớp 12',
+      lesson: localStorage.getItem('STUDENT_LESSON') || 'Bài 1: Tính đơn điệu và cực trị của hàm số'
+    };
+    activeLesson = null;
+    activeTFQuestions = [];
+    currentTFIndex = 0;
+    tfViewMode = 'single';
+    conversationHistory = [];
+    tfAnswers = {};
+    activeSAQuestions = [];
+    currentSAIndex = 0;
+    saAnswers = {};
+    saScores = {};
+    saAttempts = {};
+
     // Trạng thái tab xác thực đang chọn: 'personal' hoặc 'vip'
     let currentAuthTab = 'personal';
 
@@ -1952,6 +1979,7 @@
 
     // Xử lý khi bấm nút "Xác nhận & Bắt đầu học"
     function handleConfirmAuth() {
+      closeAuthGatekeeperModal();
       try {
         const alertBox = document.getElementById('auth-alert-box');
         if (alertBox) alertBox.classList.add('hidden');
@@ -2054,7 +2082,7 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        modal.style.display = 'none';
+        modal.style.setProperty('display', 'none', 'important');
       }
       document.body.classList.remove('overflow-hidden');
     }
@@ -3179,7 +3207,7 @@
     // QUẢN LÝ LUỒNG TRANG CHỦ (2 HƯỚNG HỌC TẬP CHÍNH)
     // 1. Ôn Thi Tốt Nghiệp THPT | 2. Học Kiến Thức SGK
     // =========================================================================
-    let currentAppMode = localStorage.getItem('CURRENT_APP_MODE') || 'sgk'; // 'sgk' hoặc 'exam'
+    currentAppMode = localStorage.getItem('CURRENT_APP_MODE') || 'sgk'; // 'sgk' hoặc 'exam'
     let examCountdownSeconds = 5400; // 90 phút = 5400s
     let examCountdownInterval = null;
 
@@ -3197,7 +3225,7 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        modal.style.display = 'none';
+        modal.style.setProperty('display', 'none', 'important');
       }
     }
 
@@ -3269,7 +3297,7 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        modal.style.display = 'none';
+        modal.style.setProperty('display', 'none', 'important');
       }
     }
 
@@ -3490,7 +3518,7 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        modal.style.display = 'none';
+        modal.style.setProperty('display', 'none', 'important');
       }
     }
 
@@ -14655,7 +14683,7 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        modal.style.display = 'none';
+        modal.style.setProperty('display', 'none', 'important');
       }
     }
 
@@ -14769,7 +14797,7 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        modal.style.display = 'none';
+        modal.style.setProperty('display', 'none', 'important');
       }
     }
 
@@ -15033,7 +15061,7 @@
     window.startGraduationExam = startGraduationExam;
     let storedModel = localStorage.getItem('GEMINI_MODEL');
     let selectedModel = (storedModel && storedModel !== 'gemini-1.5-flash') ? storedModel : 'gemini-3.8-flash';
-    let isDemoMode = false;
+    isDemoMode = false;
     
     // Demo progression state
     let demoState = {
@@ -15065,26 +15093,26 @@
     }
     window.getGradeFromClassName = getGradeFromClassName;
 
-    let studentInfo = {
+    studentInfo = studentInfo || {
       name: 'Minh Anh',
       school: 'THPT Kỳ Anh',
       class: '12A1',
       grade: 'Lớp 12',
       lesson: 'Bài 1: Tính đơn điệu và cực trị của hàm số'
     };
-    let activeLesson = null;
-    let activeTFQuestions = [];
-    let currentTFIndex = 0; // 0 to 5 cho 6 câu Đúng / Sai (hoặc 0 to 3 cho 4 câu ôn tập chương)
-    let tfViewMode = 'single'; // 'single' (trọn 1 trang) hoặc 'all' (danh sách)
-    let conversationHistory = [];
-    let tfAnswers = {};
+    activeLesson = null;
+    activeTFQuestions = [];
+    currentTFIndex = 0; // 0 to 5 cho 6 câu Đúng / Sai (hoặc 0 to 3 cho 4 câu ôn tập chương)
+    tfViewMode = 'single'; // 'single' (trọn 1 trang) hoặc 'all' (danh sách)
+    conversationHistory = [];
+    tfAnswers = {};
 
     // Short-Answer Questions State (Phần 3: 4 câu trả lời ngắn - Chuẩn Đề thi 2025)
-    let activeSAQuestions = [];
-    let currentSAIndex = 0; // 0 to 3 cho 4 câu trả lời ngắn
-    let saAnswers = {};
-    let saScores = {};
-    let saAttempts = {};
+    activeSAQuestions = [];
+    currentSAIndex = 0; // 0 to 3 cho 4 câu trả lời ngắn
+    saAnswers = {};
+    saScores = {};
+    saAttempts = {};
 
     // Chapter Review Exam State (Bài kiểm tra ôn tập chương - Làm độc lập không gợi ý, nộp cả 3 phần mới chấm điểm & cho đáp án chi tiết)
     let chapterExamState = {
