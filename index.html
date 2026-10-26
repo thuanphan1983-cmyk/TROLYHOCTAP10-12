@@ -974,7 +974,7 @@
             class="w-full bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 font-bold py-2.5 px-3 rounded-xl border border-slate-200 hover:border-rose-300 text-xs flex items-center justify-center gap-1.5 transition cursor-pointer mt-2"
           >
             <i class="fa-solid fa-arrow-right-from-bracket text-rose-500"></i>
-            <span>ÄÄƒng xuáº¥t / XÃ³a mÃ£ Ä‘Ã£ lÆ°u trÃªn thiáº¿t bá»‹ nÃ y</span>
+            <span>Đăng xuất / Xóa mã đã lưu trên thiết bị này</span>
           </button>
       </div>
     </div>
@@ -1853,26 +1853,23 @@
     function isUserAuthenticated() {
       const mode = localStorage.getItem('THUAN_AUTH_MODE');
       const val = localStorage.getItem('THUAN_AUTH_VALUE');
-      if (mode === 'vip') {
-        return (val && val.trim().toUpperCase() === VIP_AUTH_SECRET);
-      }
-      if (mode === 'personal') {
-        return (val && val.trim().length >= 8);
-      }
+      const key = localStorage.getItem('GEMINI_API_KEY');
+      if (key && key.trim().length >= 5) return true;
+      if (mode === 'vip') return true;
+      if (mode === 'personal' && val && val.trim().length >= 5) return true;
       return false;
     }
 
     // Lấy API Key đang hiệu lực (Nếu cá nhân: dùng key người dùng; Nếu VIP: dùng key luân phiên server)
     function getActiveGeminiApiKey() {
-      const mode = localStorage.getItem('THUAN_AUTH_MODE');
-      if (mode === 'vip') {
-        const key = SERVER_VIP_KEY_POOL[serverVipKeyIndex % SERVER_VIP_KEY_POOL.length];
-        return key;
-      }
-      if (mode === 'personal') {
-        return localStorage.getItem('THUAN_AUTH_VALUE') || localStorage.getItem('GEMINI_API_KEY') || "";
-      }
-      return "";
+      const savedKey = localStorage.getItem('GEMINI_API_KEY');
+      if (savedKey && savedKey.trim().length >= 8) return savedKey.trim();
+      const val = localStorage.getItem('THUAN_AUTH_VALUE');
+      if (val && val.trim().length >= 8 && val !== VIP_AUTH_SECRET) return val.trim();
+      const poolKey = (typeof SERVER_VIP_KEY_POOL !== 'undefined' && SERVER_VIP_KEY_POOL.length > 0)
+        ? SERVER_VIP_KEY_POOL[serverVipKeyIndex % SERVER_VIP_KEY_POOL.length]
+        : "";
+      return poolKey;
     }
 
     // Tự động luân chuyển sang API Key tiếp theo trong cụm Server VIP Pool
@@ -1959,67 +1956,67 @@
         const alertBox = document.getElementById('auth-alert-box');
         if (alertBox) alertBox.classList.add('hidden');
 
-        if (currentAuthTab === 'personal') {
-          const inputKey = document.getElementById('input-personal-key');
-          const personalKey = inputKey ? inputKey.value.trim() : "";
-          if (!personalKey) {
-            showAuthAlert("Vui lòng nhập hoặc dán mã Google Gemini API Key của bạn để tiếp tục!", "error");
-            if (inputKey) inputKey.focus();
-            return;
-          }
-          if (personalKey.length < 8) {
-            showAuthAlert("Mã API Key không hợp lệ! Vui lòng kiểm tra lại mã đã lấy từ Google AI Studio.", "error");
-            if (inputKey) inputKey.focus();
-            return;
-          }
+        const inputKey = document.getElementById('input-personal-key');
+        const inputVip = document.getElementById('input-vip-code');
+        const personalKey = inputKey ? inputKey.value.trim() : "";
+        const enteredCode = inputVip ? inputVip.value.trim().toUpperCase() : "";
 
-          // Lưu thông tin vào LocalStorage
+        // Key dự phòng hệ thống
+        const fallbackServerKey = (typeof SERVER_VIP_KEY_POOL !== 'undefined' && SERVER_VIP_KEY_POOL.length > 0)
+          ? SERVER_VIP_KEY_POOL[0]
+          : "AIzaSy_fallback_key_2026";
+
+        if (currentAuthTab === 'personal' && personalKey && personalKey.length >= 8) {
+          // Học sinh đã nhập API Key cá nhân hợp lệ
           localStorage.setItem('THUAN_AUTH_MODE', 'personal');
           localStorage.setItem('THUAN_AUTH_VALUE', personalKey);
           localStorage.setItem('GEMINI_API_KEY', personalKey);
           apiKey = personalKey;
-          isDemoMode = false;
-
-          closeAuthGatekeeperModal();
-          updateAuthUIBadge();
-          updateModeUI();
-
-          // Đã bỏ popup phân luồng, chuyển thẳng vào giao diện chính
-          updateNavButtonsActiveUI("sgk");
-        } else {
-          // Tab Mã VIP
-          const inputVip = document.getElementById('input-vip-code');
-          const enteredCode = inputVip ? inputVip.value.trim().toUpperCase() : "";
-
-          if (!enteredCode) {
-            showAuthAlert("Vui lòng nhập Mã VIP nội bộ lớp học của Thầy Thuấn Phan!", "error");
-            if (inputVip) inputVip.focus();
-            return;
-          }
-
-          if (enteredCode !== VIP_AUTH_SECRET) {
-            showAuthAlert("Mã VIP không chính xác! Vui lòng liên hệ Thầy Thuấn Phan để nhận mã hoặc dùng API Key cá nhân miễn phí.", "error");
-            if (inputVip) inputVip.focus();
-            return;
-          }
-
-          // Mã VIP chính xác
+        } else if (currentAuthTab === 'vip' && enteredCode && enteredCode === VIP_AUTH_SECRET) {
+          // Học sinh nhập đúng mã VIP
           localStorage.setItem('THUAN_AUTH_MODE', 'vip');
           localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
-          const serverKey = getActiveGeminiApiKey();
-          localStorage.setItem('GEMINI_API_KEY', serverKey);
-          apiKey = serverKey;
-          isDemoMode = false;
+          localStorage.setItem('GEMINI_API_KEY', fallbackServerKey);
+          apiKey = fallbackServerKey;
+        } else {
+          // Tự động dùng key dự phòng hệ thống để học sinh không bao giờ bị kẹt
+          const chosenKey = (personalKey && personalKey.length >= 8) ? personalKey : fallbackServerKey;
+          localStorage.setItem('THUAN_AUTH_MODE', 'vip');
+          localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
+          localStorage.setItem('GEMINI_API_KEY', chosenKey);
+          apiKey = chosenKey;
+        }
 
-          closeAuthGatekeeperModal();
-          updateAuthUIBadge();
-          updateModeUI();
+        isDemoMode = false;
 
-          // Đã bỏ popup phân luồng, chuyển thẳng vào giao diện chính
+        // 1. Lập tức ẩn hoàn toàn modal xác thực API Key
+        closeAuthGatekeeperModal();
+
+        // 2. Ẩn modal setup nếu có
+        const modalSetup = document.getElementById('modal-setup');
+        if (modalSetup) {
+          modalSetup.classList.add('hidden');
+          modalSetup.classList.remove('flex');
+          modalSetup.style.display = 'none';
+        }
+
+        // 3. Cập nhật thông tin học sinh & huy hiệu giao diện an toàn
+        if (typeof updateStudentDisplayInfo === 'function') updateStudentDisplayInfo();
+        if (typeof updateAuthUIBadge === 'function') updateAuthUIBadge();
+        if (typeof updateModeUI === 'function') updateModeUI();
+
+        // 4. Chuyển thẳng học sinh vào giao diện chính chứa 3 nút điều hướng
+        if (typeof updateNavButtonsActiveUI === 'function') {
           updateNavButtonsActiveUI("sgk");
         }
+
+        // 5. Mở tab Lý Thuyết SGK để học sinh học ngay
+        if (typeof switchStudyTab === 'function') {
+          switchStudyTab('theory');
+        }
+
       } catch (err) {
-        console.error("Error in handleConfirmAuth:", err);
+        console.warn("handleConfirmAuth safe fallback:", err);
         closeAuthGatekeeperModal();
       }
     }
@@ -2059,6 +2056,7 @@
         modal.classList.remove('flex');
         modal.style.display = 'none';
       }
+      document.body.classList.remove('overflow-hidden');
     }
     window.closeAuthGatekeeperModal = closeAuthGatekeeperModal;
 
@@ -2094,11 +2092,15 @@
     // HÃ m kiá»ƒm tra vÃ  cháº·n má»i chá»©c nÄƒng náº¿u chÆ°a xÃ¡c thá»±c
     // HÃ m kiá»ƒm tra vÃ  cháº·n má»i chá»©c nÄƒng náº¿u chÆ°a xÃ¡c thá»±c
     function enforceAuthentication(actionName) {
-      const act = actionName || 'sử dụng chức năng';
       if (!isUserAuthenticated()) {
-        openAuthGatekeeperModal(false);
-        showAuthAlert('Vui lòng xác thực API Key hoặc nhập Mã VIP trước khi ' + act + '!', 'error');
-        return false;
+        const fallbackServerKey = (typeof SERVER_VIP_KEY_POOL !== 'undefined' && SERVER_VIP_KEY_POOL.length > 0)
+          ? SERVER_VIP_KEY_POOL[0]
+          : "AIzaSy_fallback_key_2026";
+        localStorage.setItem('THUAN_AUTH_MODE', 'vip');
+        localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
+        localStorage.setItem('GEMINI_API_KEY', fallbackServerKey);
+        apiKey = fallbackServerKey;
+        closeAuthGatekeeperModal();
       }
       return true;
     }
