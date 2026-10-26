@@ -818,7 +818,7 @@
        MODAL: TRANG CHỦ CHỌN HƯỚNG HỌC TẬP (ENTRY SELECTION HUB)
        Phân chia 2 luồng: 1. Ôn Thi Tốt Nghiệp THPT | 2. Học Kiến Thức SGK
        ========================================================================= -->
-  <div id="modal-entry-hub" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-[99990] flex items-center justify-center p-3 sm:p-5 font-serif select-none animate-in fade-in">
+  <div id="modal-entry-hub" class="mode-modal fixed inset-0 bg-slate-950/85 backdrop-blur-md z-[99990] flex items-center justify-center p-3 sm:p-5 font-serif select-none animate-in fade-in" data-modal="mode-select">
     <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full border border-indigo-100 overflow-hidden font-serif flex flex-col max-h-[95vh]">
       
       <!-- Hub Header Banner -->
@@ -850,7 +850,12 @@
       <div class="p-5 sm:p-7 overflow-y-auto bg-slate-50 flex-1 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6">
         
         <!-- NÚT 1: ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN -->
-        <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-amber-400 hover:border-amber-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+        <div 
+          id="card-mode-exam"
+          onclick="handleSelectMode('exam')" 
+          style="cursor: pointer;"
+          class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-amber-400 hover:border-amber-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
+        >
           <div class="absolute top-0 right-0 bg-gradient-to-l from-amber-500 to-orange-500 text-slate-950 text-[10.5pt] uppercase font-black px-3.5 py-1 rounded-bl-2xl shadow-xs tracking-wider">
             🔥 Khối 12 • Mục tiêu 9+
           </div>
@@ -890,7 +895,8 @@
 
           <button 
             type="button" 
-            onclick="handleSelectExamFlow()" 
+            onclick="event.stopPropagation(); handleSelectMode('exam');" 
+            style="cursor: pointer;"
             class="w-full py-3.5 px-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:via-orange-400 hover:to-amber-400 text-slate-950 font-black rounded-2xl text-[12.5pt] sm:text-[13.5pt] shadow-md hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-95 uppercase tracking-wide border border-amber-300"
           >
             <span>Vào Luyện Đề Tốt Nghiệp</span>
@@ -899,7 +905,12 @@
         </div>
 
         <!-- NÚT 2: HỌC KIẾN THỨC SÁCH GIÁO KHOA -->
-        <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-indigo-300 hover:border-indigo-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+        <div 
+          id="card-mode-curriculum"
+          onclick="handleSelectMode('curriculum')" 
+          style="cursor: pointer;"
+          class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-indigo-300 hover:border-indigo-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
+        >
           <div class="absolute top-0 right-0 bg-gradient-to-l from-indigo-600 to-blue-600 text-white text-[10.5pt] uppercase font-bold px-3.5 py-1 rounded-bl-2xl shadow-xs tracking-wider">
             📚 Toán 10 • 11 • 12 KNTT
           </div>
@@ -939,7 +950,8 @@
 
           <button 
             type="button" 
-            onclick="handleSelectSgkFlow()" 
+            onclick="event.stopPropagation(); handleSelectMode('curriculum');" 
+            style="cursor: pointer;"
             class="w-full py-3.5 px-4 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-extrabold rounded-2xl text-[12.5pt] sm:text-[13.5pt] shadow-md hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-95 uppercase tracking-wide border border-indigo-400"
           >
             <span>Vào Học Bài SGK</span>
@@ -2045,10 +2057,98 @@
       }
     }
 
-    // Chọn luồng 1: Ôn Thi Tốt Nghiệp THPT
+    // =========================================================================
+    // HÀM ĐIỀU HƯỚNG CHỌN CHẾ ĐỘ HỌC: ÔN THI TỐT NGHIỆP HOẶC HỌC SGK
+    // =========================================================================
+    function handleSelectMode(mode) {
+      try {
+        // 1. Đóng/ẩn hoàn toàn popup phân luồng
+        const modal = document.getElementById('modal-entry-hub') || document.getElementById('mode-select-modal') || document.querySelector('.mode-modal') || document.getElementById('auth-modal');
+        if (modal) {
+          modal.style.display = 'none';
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+
+        // Ẩn tất cả overlay/backdrop nếu có
+        document.querySelectorAll('#modal-entry-hub, #modal-exam-register, .mode-modal').forEach(el => {
+          if (!el.classList.contains('permanent-bg')) {
+            el.style.display = 'none';
+            el.classList.add('hidden');
+            el.classList.remove('flex');
+          }
+        });
+
+        // 2. Chuyển giao diện theo lựa chọn
+        if (mode === 'exam') {
+          currentAppMode = 'exam';
+          localStorage.setItem('CURRENT_APP_MODE', 'exam');
+          applyExamModeTabsUI();
+
+          // Nạp đề thi mặc định nếu chưa có
+          if (!activeLesson || !activeLesson.isGraduationExam) {
+            if (typeof startGraduationExam === 'function') {
+              startGraduationExam('de-2025');
+            }
+          }
+
+          // Kích hoạt tab Đề ôn thi tốt nghiệp
+          if (typeof switchStudyTab === 'function') {
+            switchStudyTab('exam');
+          } else if (typeof showExamSection === 'function') {
+            showExamSection();
+          }
+
+          // Mở kho đề thi chuẩn để học sinh có thể đổi đề thi nếu muốn
+          if (typeof openExamPracticeModal === 'function') {
+            openExamPracticeModal();
+          }
+        } else {
+          currentAppMode = 'sgk';
+          localStorage.setItem('CURRENT_APP_MODE', 'sgk');
+          applySgkModeTabsUI();
+
+          // Mở bộ chọn SGK (Khối - Chương - Bài) hoặc vào giao diện học SGK
+          if (typeof openCurriculumPicker === 'function') {
+            openCurriculumPicker();
+          } else if (typeof switchStudyTab === 'function') {
+            switchStudyTab('theory');
+          }
+
+          const modalSetup = document.getElementById('modal-setup');
+          if (modalSetup) {
+            modalSetup.classList.remove('hidden');
+            modalSetup.classList.add('flex');
+            modalSetup.style.display = 'flex';
+          }
+        }
+      } catch (err) {
+        console.error("Error in handleSelectMode:", err);
+      }
+    }
+
+    function showExamSection() {
+      if (typeof switchStudyTab === 'function') {
+        switchStudyTab('mcq');
+      }
+    }
+
+    function openCurriculumPicker() {
+      const modalSetup = document.getElementById('modal-setup');
+      if (modalSetup) {
+        modalSetup.classList.remove('hidden');
+        modalSetup.classList.add('flex');
+        modalSetup.style.display = 'flex';
+      }
+    }
+
+    window.handleSelectMode = handleSelectMode;
+    window.showExamSection = showExamSection;
+    window.openCurriculumPicker = openCurriculumPicker;
+
+    // Chọn luồng 1: Ôn Thi Tốt Nghiệp THPT (Alias)
     function handleSelectExamFlow() {
-      closeEntryHubModal();
-      openExamRegisterModal();
+      handleSelectMode('exam');
     }
 
     // Mở form đăng ký nhanh Ôn thi tốt nghiệp
@@ -12049,7 +12149,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       const pChat = document.getElementById('panel-chat');
 
       if (pTheory) pTheory.classList.toggle('hidden', tab !== 'theory');
-      if (pMcq) pMcq.classList.toggle('hidden', tab !== 'mcq');
+      if (pMcq) pMcq.classList.toggle('hidden', (tab !== 'mcq' && tab !== 'exam'));
       if (pTf) pTf.classList.toggle('hidden', tab !== 'tf');
       if (pSa) pSa.classList.toggle('hidden', tab !== 'sa');
       if (pChat) pChat.classList.toggle('hidden', tab !== 'chat');
