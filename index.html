@@ -369,6 +369,17 @@
   <!-- Study Navigation Tabs (Tối ưu tuyệt đối cho Điện Thoại & Máy Tính) -->
   <div id="study-mode-tabs" class="bg-indigo-900 text-white px-2 py-1.5 shrink-0 flex items-center justify-between gap-1 shadow-sm border-b border-indigo-950/40 font-serif z-10">
     <div class="flex items-center gap-1 sm:gap-2 flex-1 max-w-7xl mx-auto overflow-x-auto no-scrollbar">
+      <!-- Nút chuyển đổi luồng học tập: Chọn chế độ học khác -->
+      <button 
+        id="btn-switch-entry-mode" 
+        onclick="openEntryHubModal()" 
+        class="py-2 px-3 sm:px-3.5 rounded-xl font-black text-xs sm:text-[11.5pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-sky-500 via-indigo-600 to-sky-600 hover:from-sky-400 hover:to-indigo-500 text-white shadow-md border border-sky-300/40 cursor-pointer whitespace-nowrap shrink-0"
+        title="Bấm để đổi giữa Ôn thi tốt nghiệp THPT và Học SGK"
+      >
+        <i class="fa-solid fa-arrows-rotate text-sky-200"></i>
+        <span>Chọn chế độ học khác</span>
+      </button>
+
       <button 
         id="tab-btn-theory" 
         onclick="switchStudyTab('theory')" 
@@ -803,7 +814,209 @@
        MODAL: ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN
        Kho Đề Thi Thử Tốt Nghiệp THPT Môn Toán Chuẩn Ma Trận 2025 Bộ GD&ĐT
        ========================================================================= -->
-  <div id="modal-exam-practice" class="fixed inset-0 bg-slate-950/75 backdrop-blur-md z-50 hidden items-center justify-center p-3 sm:p-5 font-serif animate-in fade-in">
+  <div   <!-- =========================================================================
+       MODAL: TRANG CHỦ CHỌN HƯỚNG HỌC TẬP (ENTRY SELECTION HUB)
+       Phân chia 2 luồng: 1. Ôn Thi Tốt Nghiệp THPT | 2. Học Kiến Thức SGK
+       ========================================================================= -->
+  <div id="modal-entry-hub" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-[99990] flex items-center justify-center p-3 sm:p-5 font-serif select-none animate-in fade-in">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full border border-indigo-100 overflow-hidden font-serif flex flex-col max-h-[95vh]">
+      
+      <!-- Hub Header Banner -->
+      <div class="bg-gradient-to-r from-indigo-800 via-indigo-900 to-slate-900 text-white p-5 sm:p-6 text-center relative shrink-0">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm shadow-inner mb-3 text-amber-300 text-3xl border border-amber-300/30">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h2 class="text-[16pt] sm:text-[18pt] font-black tracking-tight leading-snug uppercase">
+          Trợ Lý Học Tập Toán Thầy Thuấn Phan
+        </h2>
+        <p class="text-[12pt] sm:text-[13pt] text-amber-200 mt-1 font-semibold">
+          CHỌN HƯỚNG HỌC TẬP PHÙ HỢP VỚI BẠN
+        </p>
+
+        <!-- Current Student Info Badge -->
+        <div class="mt-3 inline-flex flex-wrap items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-[11pt] text-indigo-100">
+          <span>👤 Học sinh: <b id="hub-student-name" class="text-white font-bold">Minh Anh</b></span>
+          <span class="text-white/40">•</span>
+          <span>🏫 <span id="hub-student-school">THPT Kỳ Anh</span></span>
+          <span class="text-white/40">•</span>
+          <span class="bg-amber-400 text-indigo-950 font-black px-2 py-0.2 rounded-full text-[10pt]" id="hub-student-class">12A1</span>
+          <button type="button" onclick="openStudentQuickEditModal()" class="text-amber-300 hover:text-white underline ml-1 cursor-pointer text-xs" title="Chỉnh sửa thông tin học sinh">
+            <i class="fa-solid fa-pen-to-square"></i> Đổi
+          </button>
+        </div>
+      </div>
+
+      <!-- 2 Major Entry Mode Cards -->
+      <div class="p-5 sm:p-7 overflow-y-auto bg-slate-50 flex-1 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6">
+        
+        <!-- NÚT 1: ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-amber-400 hover:border-amber-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-gradient-to-l from-amber-500 to-orange-500 text-slate-950 text-[10.5pt] uppercase font-black px-3.5 py-1 rounded-bl-2xl shadow-xs tracking-wider">
+            🔥 Khối 12 • Mục tiêu 9+
+          </div>
+
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center text-2xl shadow-md mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-bullseye text-2xl"></i>
+            </div>
+
+            <h3 class="font-black text-[15pt] sm:text-[16.5pt] text-slate-900 leading-snug group-hover:text-amber-700 transition mb-2 uppercase">
+              🎯 ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN
+            </h3>
+
+            <p class="text-[11.5pt] text-slate-600 leading-relaxed mb-4">
+              Luyện đề thi thử Tốt nghiệp THPT bám sát đề thi chính thức và cấu trúc mới của Bộ GD&ĐT.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-[11pt] text-slate-700 mb-6 bg-amber-50/60 p-3.5 rounded-2xl border border-amber-200/60 font-sans">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-600 mt-1 shrink-0"></i>
+                <span><b>Đề 1:</b> Đề thi chính thức tốt nghiệp THPT 2024 (Toán)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-600 mt-1 shrink-0"></i>
+                <span><b>Đề 2:</b> Đề thi tốt nghiệp THPT cấu trúc mới 2025 (3 Phần)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-600 mt-1 shrink-0"></i>
+                <span><b>Đề 3:</b> Đề thi minh họa / tốt nghiệp THPT 2026 (Xác suất Bayes, Tối ưu hóa)</span>
+              </li>
+              <li class="flex items-start gap-2 text-amber-900 font-semibold">
+                <i class="fa-solid fa-stopwatch text-amber-600 mt-1 shrink-0"></i>
+                <span>Bấm giờ 90 phút • Chấm điểm tự động • Lời giải chi tiết LaTeX</span>
+              </li>
+            </ul>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="handleSelectExamFlow()" 
+            class="w-full py-3.5 px-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:via-orange-400 hover:to-amber-400 text-slate-950 font-black rounded-2xl text-[12.5pt] sm:text-[13.5pt] shadow-md hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-95 uppercase tracking-wide border border-amber-300"
+          >
+            <span>Vào Luyện Đề Tốt Nghiệp</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- NÚT 2: HỌC KIẾN THỨC SÁCH GIÁO KHOA -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-indigo-300 hover:border-indigo-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-gradient-to-l from-indigo-600 to-blue-600 text-white text-[10.5pt] uppercase font-bold px-3.5 py-1 rounded-bl-2xl shadow-xs tracking-wider">
+            📚 Toán 10 • 11 • 12 KNTT
+          </div>
+
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-2xl shadow-md mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <h3 class="font-black text-[15pt] sm:text-[16.5pt] text-slate-900 leading-snug group-hover:text-indigo-700 transition mb-2 uppercase">
+              📖 HỌC KIẾN THỨC SÁCH GIÁO KHOA
+            </h3>
+
+            <p class="text-[11.5pt] text-slate-600 leading-relaxed mb-4">
+              Học chuẩn theo từng bài mục SGK Kết nối tri thức với cuộc sống từ cơ bản đến nâng cao.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-[11pt] text-slate-700 mb-6 bg-indigo-50/60 p-3.5 rounded-2xl border border-indigo-200/60 font-sans">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-indigo-600 mt-1 shrink-0"></i>
+                <span>Học theo chuẩn 3 khối lớp: <b>Lớp 10, Lớp 11, Lớp 12</b></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-indigo-600 mt-1 shrink-0"></i>
+                <span>Từng mục lý thuyết sư phạm, sơ đồ tư duy & ví dụ</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-indigo-600 mt-1 shrink-0"></i>
+                <span>3 câu trắc nghiệm củng cố ngay sau từng mục học</span>
+              </li>
+              <li class="flex items-start gap-2 text-indigo-950 font-semibold">
+                <i class="fa-solid fa-list-check text-indigo-600 mt-1 shrink-0"></i>
+                <span>Phiếu kiểm tra 24 ý Đúng/Sai • Trợ lý AI hỏi đáp 24/7</span>
+              </li>
+            </ul>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="handleSelectSgkFlow()" 
+            class="w-full py-3.5 px-4 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-extrabold rounded-2xl text-[12.5pt] sm:text-[13.5pt] shadow-md hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-95 uppercase tracking-wide border border-indigo-400"
+          >
+            <span>Vào Học Bài SGK</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Hub Footer -->
+      <div class="px-6 py-3 bg-white border-t border-slate-200 flex items-center justify-between text-xs sm:text-[11pt] text-slate-500 shrink-0">
+        <span class="italic">💡 Học sinh có thể bấm nút "Chọn chế độ học khác" ở thanh điều hướng trên cùng để chuyển đổi bất kỳ lúc nào.</span>
+        <button type="button" onclick="closeEntryHubModal()" class="px-4 py-1.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold transition cursor-pointer">
+          Đóng
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: ĐĂNG KÝ NHANH THÔNG TIN ÔN THI TỐT NGHIỆP
+       [Họ và tên], [Trường], [Lớp]
+       ========================================================================= -->
+  <div id="modal-exam-register" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99992] hidden items-center justify-center p-3 sm:p-4 select-none font-serif animate-in fade-in">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full border border-amber-200 overflow-hidden font-serif">
+      <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 p-5 text-center">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-indigo-950 text-amber-300 text-xl shadow mb-2">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3 class="text-[15pt] font-black uppercase">Đăng Ký Ôn Thi Tốt Nghiệp</h3>
+        <p class="text-xs text-slate-900 font-medium mt-0.5">Xác nhận thông tin học sinh để ghi danh vào bảng điểm</p>
+      </div>
+
+      <form id="form-exam-register" onsubmit="handleConfirmExamRegister(event); return false;" class="p-5 space-y-3.5">
+        <div>
+          <label class="block text-[12pt] font-bold text-slate-800 mb-1">Họ và tên thí sinh:</label>
+          <input type="text" id="exam-reg-name" required placeholder="Ví dụ: Nguyễn Minh Anh" value="Minh Anh" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-[12pt] focus:ring-2 focus:ring-amber-500 focus:outline-none font-bold text-slate-900" />
+        </div>
+
+        <div>
+          <label class="block text-[12pt] font-bold text-slate-800 mb-1">Trường THPT:</label>
+          <input type="text" id="exam-reg-school" required placeholder="Ví dụ: THPT Kỳ Anh" value="THPT Kỳ Anh" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-[12pt] focus:ring-2 focus:ring-amber-500 focus:outline-none font-medium text-slate-800" />
+        </div>
+
+        <div>
+          <label class="block text-[12pt] font-bold text-slate-800 mb-1">Lớp học (Khối 12):</label>
+          <select id="exam-reg-class" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-[12pt] focus:ring-2 focus:ring-amber-500 focus:outline-none font-bold bg-white text-slate-900">
+            <option value="12A1" selected>Lớp 12A1</option>
+            <option value="12A2">Lớp 12A2</option>
+            <option value="12A3">Lớp 12A3</option>
+            <option value="12A4">Lớp 12A4</option>
+            <option value="12A5">Lớp 12A5</option>
+            <option value="12A6">Lớp 12A6</option>
+            <option value="12A7">Lớp 12A7</option>
+            <option value="12A8">Lớp 12A8</option>
+            <option value="12A9">Lớp 12A9</option>
+            <option value="12A10">Lớp 12A10</option>
+            <option value="12A11">Lớp 12A11</option>
+            <option value="12A12">Lớp 12A12</option>
+          </select>
+        </div>
+
+        <div class="pt-2 flex items-center gap-2">
+          <button type="button" onclick="closeExamRegisterModal()" class="w-1/3 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer">
+            Quay lại
+          </button>
+          <button type="submit" class="w-2/3 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black rounded-xl text-xs sm:text-[12pt] shadow transition flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>Xác nhận & Chọn Đề</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+   id="modal-exam-practice" class="fixed inset-0 bg-slate-950/75 backdrop-blur-md z-50 hidden items-center justify-center p-3 sm:p-5 font-serif animate-in fade-in">
     <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full flex flex-col max-h-[92vh] border border-amber-200 overflow-hidden font-serif">
       
       <!-- Modal Header Banner -->
@@ -1609,17 +1822,8 @@
           updateAuthUIBadge();
           updateModeUI();
 
-          // Đồng bộ vào input settings
-          const inputSettingsKey = document.getElementById('input-api-key');
-          if (inputSettingsKey) inputSettingsKey.value = personalKey;
-
-          // Nếu setup modal đang đóng và chưa bắt đầu học thì mở setup modal
-          const modalSetup = document.getElementById('modal-setup');
-          if (modalSetup && !activeLesson) {
-            modalSetup.classList.remove('hidden');
-            modalSetup.classList.add('flex');
-            modalSetup.style.display = 'flex';
-          }
+          // Mở màn hình chọn 2 luồng học tập trung tâm
+          openEntryHubModal();
         } else {
           // Tab Mã VIP
           const inputVip = document.getElementById('input-vip-code');
@@ -1649,15 +1853,8 @@
           updateAuthUIBadge();
           updateModeUI();
 
-          const inputSettingsKey = document.getElementById('input-api-key');
-          if (inputSettingsKey) inputSettingsKey.value = "VIP-HOANGGIA2026-ACTIVE";
-
-          const modalSetup = document.getElementById('modal-setup');
-          if (modalSetup && !activeLesson) {
-            modalSetup.classList.remove('hidden');
-            modalSetup.classList.add('flex');
-            modalSetup.style.display = 'flex';
-          }
+          // Mở màn hình chọn 2 luồng học tập trung tâm
+          openEntryHubModal();
         }
       } catch (err) {
         console.error("Error in handleConfirmAuth:", err);
@@ -1782,66 +1979,176 @@
     // =========================================================================
     const GRADUATION_EXAMS_DB = [
       {
-        id: "de-01",
+        id: "de-2024",
         code: "ĐỀ SỐ 01",
-        title: "Đề Thi Thử Tốt Nghiệp THPT 2025 - Toàn Diện Khối 12 (Đề Chuẩn Ma Trận Bộ GD&ĐT)",
-        tags: ["Khảo sát hàm số", "Vectơ & Tọa độ Oxyz", "Tích phân", "Xác suất có điều kiện"],
-        badge: "Đề phát triển chính thức",
-        badgeColor: "bg-red-100 text-red-800 border-red-200",
-        description: "Bao quát toàn bộ kiến thức 6 chương Toán 12 theo chương trình GDPT 2018. Rèn luyện phản xạ cho cả 3 phần trắc nghiệm, đúng sai và trả lời ngắn.",
+        title: "Đề thi chính thức tốt nghiệp THPT năm 2024 (Toán)",
+        year: "2024",
+        badge: "Chính thức Bộ GD&ĐT 2024",
+        badgeColor: "bg-red-100 text-red-800 border-red-300",
+        structure: "50 câu trắc nghiệm 4 lựa chọn (Chuẩn đề chính thức Bộ GD&ĐT)",
+        durationMinutes: 90,
+        tags: ["Khảo sát hàm số", "Mũ & Logarit", "Tích phân", "Tọa độ Oxyz", "Khối đa diện", "Xác suất"],
+        description: "Đề thi tốt nghiệp THPT chính thức năm 2024 của Bộ Giáo dục & Đào tạo. 50 câu trắc nghiệm khách quan bao quát toàn bộ chương trình Toán 12, phân hóa từ nhận biết, thông hiểu đến vận dụng cao 9+.",
         lessonRef: "Bài tập cuối chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị hàm số"
       },
       {
-        id: "de-02",
+        id: "de-2025",
         code: "ĐỀ SỐ 02",
-        title: "Đề Thi Thử Tốt Nghiệp THPT 2025 - Chuyên Sâu Tọa Độ Oxyz & Hình Học Không Gian",
-        tags: ["Mặt phẳng", "Đường thẳng Oxyz", "Mặt cầu", "Góc & Khoảng cách"],
-        badge: "Chinh phục hình học 9+",
-        badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
-        description: "Tập trung các câu hỏi Đúng/Sai và Điền kết quả thực tế gắn liền với hình học không gian Oxyz và ứng dụng định vị không gian 3 chiều.",
+        title: "Đề thi tốt nghiệp THPT theo cấu trúc mới năm 2025 (Toán)",
+        year: "2025",
+        badge: "Cấu trúc mới 2025 Bộ GD&ĐT",
+        badgeColor: "bg-amber-100 text-amber-800 border-amber-300",
+        structure: "Cấu trúc mới 3 phần: Phần 1 (12 TN) • Phần 2 (4 Đúng/Sai 16 ý) • Phần 3 (6 Trả lời ngắn)",
+        durationMinutes: 90,
+        tags: ["GDPT 2018", "Cấu trúc 3 phần", "Vectơ Oxyz", "Xác suất điều kiện", "Toán thực tế"],
+        description: "Đề thi theo chuẩn cấu trúc định dạng mới nhất của Bộ GD&ĐT áp dụng từ kỳ thi Tốt nghiệp THPT 2025. Đầy đủ cả 3 phần: Trắc nghiệm 4 lựa chọn, câu hỏi Đúng/Sai đa ý và câu hỏi Trả lời ngắn.",
         lessonRef: "Bài tập cuối chương V: Phương pháp toạ độ trong không gian"
       },
       {
-        id: "de-03",
+        id: "de-2026",
         code: "ĐỀ SỐ 03",
-        title: "Đề Thi Thử Tốt Nghiệp THPT 2025 - Nguyên Hàm, Tích Phân & Ứng Dụng Thực Tiễn",
-        tags: ["Đổi biến số", "Tích phân từng phần", "Diện tích & Thể tích", "Bài toán vận tốc"],
-        badge: "Trọng tâm Giải tích",
-        badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
-        description: "Bộ câu hỏi trắc nghiệm và đúng sai bám sát đề minh họa mới nhất của Bộ GD&ĐT, kèm hướng dẫn bấm máy và giải tự luận chuẩn mực.",
-        lessonRef: "Bài tập cuối chương IV: Nguyên hàm và tích phân"
-      },
-      {
-        id: "de-04",
-        code: "ĐỀ SỐ 04",
-        title: "Đề Thi Thử Tốt Nghiệp THPT 2025 - Xác Suất Có Điều Kiện & Công Thức Bayes",
-        tags: ["Xác suất Bayes", "Xác suất toàn phần", "Thống kê ghép nhóm", "Phương sai"],
-        badge: "Điểm 9+ Xác suất",
-        badgeColor: "bg-purple-100 text-purple-800 border-purple-200",
-        description: "Chuyên đề hoàn toàn mới trong chương trình GDPT 2018. Giúp học sinh phân biệt rành rọt công thức Bayes và xác suất điều kiện.",
+        title: "Đề thi minh họa / tốt nghiệp THPT năm 2026 (Toán - Cấu trúc 3 phần)",
+        year: "2026",
+        badge: "Đón đầu xu hướng 2026",
+        badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+        structure: "Cấu trúc 3 phần: 12 trắc nghiệm 4 lựa chọn, 4 câu Đúng/Sai 16 ý, 6 câu Trả lời ngắn thực tế",
+        durationMinutes: 90,
+        tags: ["Công thức Bayes", "Mô hình hóa thực tế", "Tối ưu hóa kinh tế", "Vận dụng cao 9+"],
+        description: "Đề thi minh họa phát triển toàn diện năm 2026 môn Toán với các bài toán mô hình hóa thực tế, kinh tế, công thức xác suất toàn phần và định lý Bayes chuẩn mực.",
         lessonRef: "Bài tập cuối chương VI: Xác suất có điều kiện"
-      },
-      {
-        id: "de-05",
-        code: "ĐỀ SỐ 05",
-        title: "Đề Khảo Sát Năng Lực Toàn Diện - Mục Tiêu 9+ Tốt Nghiệp THPT Cùng Thầy Thuấn",
-        tags: ["Tổng hợp toàn khóa", "Vận dụng cao", "Bẫy đề thi", "Tối ưu thời gian"],
-        badge: "Đặc biệt: Phân loại cao",
-        badgeColor: "bg-indigo-100 text-indigo-800 border-indigo-200",
-        description: "Đề thi phân loại cao có lời giải chi tiết và gợi ý phương pháp giải nhanh độc quyền từ Thầy Thuấn Phan.",
-        lessonRef: "Bài tập cuối chương II: Vectơ và hệ trục toạ độ trong không gian"
-      },
-      {
-        id: "de-06",
-        code: "ĐỀ SỐ 06",
-        title: "Đề Khảo Sát Số Liệu Ghép Nhóm & Các Số Đặc Trưng Đo Mức Độ Phân Tán",
-        tags: ["Khoảng biến thiên", "Khoảng tứ phân vị", "Phương sai", "Độ lệch chuẩn"],
-        badge: "Ôn tập thực hành",
-        badgeColor: "bg-sky-100 text-sky-800 border-sky-200",
-        description: "Rèn luyện kỹ năng xử lý bảng số liệu thống kê thực tế, tính toán nhanh và chuẩn xác các số đặc trưng.",
-        lessonRef: "Bài tập cuối chương III: Các số đặc trưng đo mức độ phân tán của mẫu số liệu ghép nhóm"
       }
     ];
+
+    // =========================================================================
+    // QUẢN LÝ LUỒNG TRANG CHỦ (2 HƯỚNG HỌC TẬP CHÍNH)
+    // 1. Ôn Thi Tốt Nghiệp THPT | 2. Học Kiến Thức SGK
+    // =========================================================================
+    let currentAppMode = localStorage.getItem('CURRENT_APP_MODE') || 'sgk'; // 'sgk' hoặc 'exam'
+    let examCountdownSeconds = 5400; // 90 phút = 5400s
+    let examCountdownInterval = null;
+
+    function openEntryHubModal() {
+      const modal = document.getElementById('modal-entry-hub');
+      if (!modal) return;
+      updateStudentDisplayInfo();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.style.display = 'flex';
+    }
+
+    function closeEntryHubModal() {
+      const modal = document.getElementById('modal-entry-hub');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.style.display = 'none';
+      }
+    }
+
+    // Chọn luồng 1: Ôn Thi Tốt Nghiệp THPT
+    function handleSelectExamFlow() {
+      closeEntryHubModal();
+      openExamRegisterModal();
+    }
+
+    // Mở form đăng ký nhanh Ôn thi tốt nghiệp
+    function openExamRegisterModal() {
+      const modal = document.getElementById('modal-exam-register');
+      if (!modal) return;
+      const inpName = document.getElementById('exam-reg-name');
+      const inpSchool = document.getElementById('exam-reg-school');
+      const selClass = document.getElementById('exam-reg-class');
+      if (inpName) inpName.value = studentInfo.name || localStorage.getItem('STUDENT_NAME') || 'Minh Anh';
+      if (inpSchool) inpSchool.value = studentInfo.school || localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh';
+      if (selClass) {
+        const cls = studentInfo.class || localStorage.getItem('STUDENT_CLASS') || '12A1';
+        selClass.value = (cls.startsWith('12')) ? cls : '12A1';
+      }
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.style.display = 'flex';
+    }
+
+    function closeExamRegisterModal() {
+      const modal = document.getElementById('modal-exam-register');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.style.display = 'none';
+      }
+    }
+
+    function handleConfirmExamRegister(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      const inpName = document.getElementById('exam-reg-name');
+      const inpSchool = document.getElementById('exam-reg-school');
+      const selClass = document.getElementById('exam-reg-class');
+
+      studentInfo.name = (inpName && inpName.value.trim()) ? inpName.value.trim() : 'Minh Anh';
+      studentInfo.school = (inpSchool && inpSchool.value.trim()) ? inpSchool.value.trim() : 'THPT Kỳ Anh';
+      studentInfo.class = (selClass && selClass.value) ? selClass.value : '12A1';
+      studentInfo.grade = 'Lớp 12';
+
+      localStorage.setItem('STUDENT_NAME', studentInfo.name);
+      localStorage.setItem('STUDENT_SCHOOL', studentInfo.school);
+      localStorage.setItem('STUDENT_CLASS', studentInfo.class);
+      localStorage.setItem('STUDENT_GRADE', 'Lớp 12');
+      localStorage.setItem('CURRENT_APP_MODE', 'exam');
+
+      updateStudentDisplayInfo();
+      closeExamRegisterModal();
+      openExamPracticeModal();
+    }
+
+    // Chọn luồng 2: Học Kiến Thức Sách Giáo Khoa
+    function handleSelectSgkFlow() {
+      currentAppMode = 'sgk';
+      localStorage.setItem('CURRENT_APP_MODE', 'sgk');
+      closeEntryHubModal();
+      const modalSetup = document.getElementById('modal-setup');
+      if (modalSetup) {
+        // Đồng bộ họ tên và trường vào form setup
+        const sName = document.getElementById('setup-name');
+        const sSchool = document.getElementById('setup-school');
+        if (sName) sName.value = studentInfo.name || localStorage.getItem('STUDENT_NAME') || 'Minh Anh';
+        if (sSchool) sSchool.value = studentInfo.school || localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh';
+        modalSetup.classList.remove('hidden');
+        modalSetup.classList.add('flex');
+        modalSetup.style.display = 'flex';
+      }
+    }
+
+    function openStudentQuickEditModal() {
+      closeEntryHubModal();
+      openExamRegisterModal();
+    }
+
+    // Cập nhật thông tin học sinh hiển thị trên toàn bộ giao diện
+    function updateStudentDisplayInfo() {
+      const sName = studentInfo.name || localStorage.getItem('STUDENT_NAME') || 'Minh Anh';
+      const sSchool = studentInfo.school || localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh';
+      const sClass = studentInfo.class || localStorage.getItem('STUDENT_CLASS') || '12A1';
+
+      studentInfo.name = sName;
+      studentInfo.school = sSchool;
+      studentInfo.class = sClass;
+
+      const hName = document.getElementById('hub-student-name');
+      if (hName) hName.textContent = sName;
+      const hSchool = document.getElementById('hub-student-school');
+      if (hSchool) hSchool.textContent = sSchool;
+      const hClass = document.getElementById('hub-student-class');
+      if (hClass) hClass.textContent = sClass;
+
+      const bName = document.getElementById('badge-name');
+      if (bName) bName.textContent = sName;
+      const bSchool = document.getElementById('badge-school');
+      if (bSchool) bSchool.textContent = sSchool;
+      const bClass = document.getElementById('badge-class');
+      if (bClass) bClass.textContent = sClass;
+      const mClass = document.getElementById('mobile-class-badge');
+      if (mClass) mClass.textContent = sClass;
+    }
 
     function openExamPracticeModal() {
       if (!enforceAuthentication('Ôn thi tốt nghiệp cùng Thầy Thuấn')) return;
@@ -1850,6 +2157,7 @@
         renderExamCards();
         modal.classList.remove('hidden');
         modal.classList.add('flex');
+        modal.style.display = 'flex';
         renderMath(modal);
       }
     }
@@ -1859,6 +2167,7 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
+        modal.style.display = 'none';
       }
     }
 
@@ -1867,7 +2176,7 @@
       if (!container) return;
 
       container.innerHTML = GRADUATION_EXAMS_DB.map((exam, idx) => `
-        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 hover:border-amber-400 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group">
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border-2 border-slate-200 hover:border-amber-400 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="text-xs font-black px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-mono tracking-wider shadow-xs">
@@ -1878,7 +2187,7 @@
               </span>
             </div>
             
-            <h4 class="font-extrabold text-[12.5pt] sm:text-[13.5pt] text-slate-900 group-hover:text-amber-800 transition line-clamp-2 leading-snug mb-2">
+            <h4 class="font-black text-[13pt] sm:text-[14pt] text-slate-900 group-hover:text-amber-800 transition line-clamp-2 leading-snug mb-2">
               ${exam.title}
             </h4>
 
@@ -1886,19 +2195,24 @@
               ${exam.description}
             </p>
 
+            <div class="bg-amber-50/70 border border-amber-200/60 p-2.5 rounded-xl text-xs text-amber-950 font-medium mb-3">
+              <i class="fa-solid fa-list-check text-amber-600 mr-1.5"></i>
+              <span>${exam.structure}</span>
+            </div>
+
             <div class="flex flex-wrap gap-1.5 mb-4">
               ${exam.tags.map(t => `<span class="bg-slate-100 text-slate-700 text-[10px] sm:text-xs font-medium px-2 py-0.5 rounded-md border border-slate-200">${t}</span>`).join('')}
             </div>
           </div>
 
           <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
-            <span class="text-[10pt] text-slate-500 font-medium">90 phút • 3 Phần</span>
+            <span class="text-[10pt] text-slate-500 font-bold"><i class="fa-regular fa-clock text-amber-600 mr-1"></i>90 phút</span>
             <button 
               type="button" 
               onclick="startGraduationExam('${exam.id}')" 
-              class="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black rounded-xl text-xs sm:text-[11.5pt] shadow-sm hover:shadow transition flex items-center gap-1.5 cursor-pointer active:scale-95"
+              class="px-4 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black rounded-xl text-xs sm:text-[11.5pt] shadow hover:shadow-md transition flex items-center gap-1.5 cursor-pointer active:scale-95 uppercase tracking-wider"
             >
-              <span>Vào Làm Đề Ngay</span>
+              <span>Vào Làm Đề Này</span>
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </button>
           </div>
@@ -1908,53 +2222,158 @@
 
     function startGraduationExam(examId) {
       const exam = GRADUATION_EXAMS_DB.find(e => e.id === examId) || GRADUATION_EXAMS_DB[0];
+      currentAppMode = 'exam';
+      localStorage.setItem('CURRENT_APP_MODE', 'exam');
 
       // Thiết lập học sinh sang Lớp 12 và bài thi tương ứng
-      studentInfo.class = "12A1";
+      studentInfo.class = (studentInfo.class && studentInfo.class.startsWith("12")) ? studentInfo.class : "12A1";
       studentInfo.grade = "Lớp 12";
       studentInfo.lesson = exam.title;
 
-      localStorage.setItem('STUDENT_CLASS', "12A1");
+      localStorage.setItem('STUDENT_CLASS', studentInfo.class);
       localStorage.setItem('STUDENT_GRADE', "Lớp 12");
       localStorage.setItem('STUDENT_LESSON', exam.title);
 
-      // Cập nhật Header & Info nếu có
-      const badgeClass = document.getElementById('badge-class');
-      if (badgeClass) badgeClass.textContent = "12A1";
-      const mobClassBadge = document.getElementById('mobile-class-badge');
-      if (mobClassBadge) mobClassBadge.textContent = "12A1";
+      updateStudentDisplayInfo();
+
       const chatCurrentLesson = document.getElementById('chat-current-lesson');
       if (chatCurrentLesson) chatCurrentLesson.textContent = exam.title;
       const chatCurrentClass = document.getElementById('chat-current-class');
-      if (chatCurrentClass) chatCurrentClass.textContent = "12A1";
+      if (chatCurrentClass) chatCurrentClass.textContent = studentInfo.class;
 
-      // Nạp giáo án bài tập tương ứng
+      // Nạp giáo án bài thi tương ứng (Chế độ Ôn tập thi 3 phần chuẩn)
       if (typeof resolveKNTTLesson === 'function') {
         activeLesson = resolveKNTTLesson(exam.lessonRef, "Lớp 12");
         if (activeLesson) {
           activeLesson.lessonTitle = exam.title;
+          activeLesson.isChapterReview = true;
+          activeLesson.isGraduationExam = true;
           activeTFQuestions = activeLesson.tfQuestions || [];
           activeSAQuestions = activeLesson.saQuestions || [];
         }
       }
 
-      // Render lại giao diện học tập
+      // Reset trạng thái làm bài
+      chapterExamState.submitted = false;
+      chapterExamState.mcqAnswers = {};
+      tfAnswers = {};
+      saAnswers = {};
+
+      // Khởi động đồng hồ đếm ngược 90 phút (5400 giây)
+      startExamCountdownTimer(90 * 60);
+
+      // Cập nhật giao diện tab làm bài thi
+      applyExamModeTabsUI();
+
+      // Render lại toàn bộ giao diện bài thi
       if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
-      if (typeof renderTheoryPanel === 'function') renderTheoryPanel();
       if (typeof renderMCQPanel === 'function') renderMCQPanel();
       if (typeof renderTFPanel === 'function') renderTFPanel();
+      if (typeof renderSAPanel === 'function') renderSAPanel();
       if (typeof renderMath === 'function') renderMath(document.body);
 
-      // Đóng modal chọn đề
+      // Đóng tất cả modal chọn đề & hub
       closeExamPracticeModal();
+      closeEntryHubModal();
+      closeExamRegisterModal();
 
-      // Mở Tab 1 (Lý thuyết / Sơ đồ tư duy)
-      if (typeof switchStudyTab === 'function') switchStudyTab('theory');
+      // Mở ngay Phần 1: Trắc Nghiệm để làm bài
+      switchStudyTab('mcq');
 
-      // Cuộn lên đầu trang
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    // Tối ưu các nút tab khi ở Chế độ Ôn Thi Tốt Nghiệp
+    function applyExamModeTabsUI() {
+      const tabTheory = document.getElementById('tab-btn-theory');
+      if (tabTheory) tabTheory.classList.add('hidden'); // Ẩn lý thuyết SGK khi luyện đề
+
+      const tabSa = document.getElementById('tab-btn-sa');
+      if (tabSa) {
+        tabSa.classList.remove('hidden');
+        tabSa.classList.add('flex');
+      }
+
+      const labelMcq = document.getElementById('tab-label-mcq');
+      if (labelMcq) labelMcq.textContent = "1. Trắc Nghiệm";
+
+      const labelTf = document.getElementById('tab-label-tf');
+      if (labelTf) labelTf.textContent = "2. Đúng / Sai";
+
+      const labelSa = document.getElementById('tab-label-sa');
+      if (labelSa) labelSa.textContent = "3. Trả Lời Ngắn";
+
+      const btnFinish = document.getElementById('tab-btn-finish');
+      if (btnFinish) {
+        btnFinish.innerHTML = '<i class="fa-solid fa-flag-checkered text-amber-300"></i><span>Nộp Bài Thi</span>';
+      }
+    }
+
+    // Khôi phục giao diện các tab khi ở Chế độ Học SGK
+    function applySgkModeTabsUI() {
+      const tabTheory = document.getElementById('tab-btn-theory');
+      if (tabTheory) {
+        tabTheory.classList.remove('hidden');
+        tabTheory.classList.add('flex');
+      }
+
+      const labelMcq = document.getElementById('tab-label-mcq');
+      if (labelMcq) labelMcq.textContent = "2. Trắc Nghiệm";
+
+      const labelTf = document.getElementById('tab-label-tf');
+      if (labelTf) labelTf.textContent = "3. Phiếu 24 Ý";
+
+      const labelSa = document.getElementById('tab-label-sa');
+      if (labelSa) labelSa.textContent = "4. Trả Lời Ngắn";
+
+      const btnFinish = document.getElementById('tab-btn-finish');
+      if (btnFinish) {
+        btnFinish.innerHTML = '<i class="fa-solid fa-flag-checkered text-amber-300"></i><span>Kết thúc bài học</span>';
+      }
+    }
+
+    // Đồng hồ đếm ngược 90 phút cho phòng thi
+    function startExamCountdownTimer(totalSec = 5400) {
+      if (examCountdownInterval) clearInterval(examCountdownInterval);
+      examCountdownSeconds = totalSec;
+      updateExamTimerDisplay();
+
+      examCountdownInterval = setInterval(() => {
+        if (examCountdownSeconds > 0) {
+          examCountdownSeconds--;
+          updateExamTimerDisplay();
+          if (examCountdownSeconds === 900) {
+            alert('⚠️ CHÚ Ý: Thời gian làm bài thi còn lại đúng 15 phút!');
+          } else if (examCountdownSeconds === 300) {
+            alert('⚠️ KHẨN TRƯƠNG: Thời gian làm bài thi chỉ còn 5 phút!');
+          }
+        } else {
+          clearInterval(examCountdownInterval);
+          examCountdownInterval = null;
+          alert('⏰ ĐÃ HẾT 90 PHÚT LÀM BÀI! Hệ thống tiến hành thu bài và chấm điểm tự động.');
+          if (typeof submitChapterReviewExam === 'function') {
+            submitChapterReviewExam();
+          }
+        }
+      }, 1000);
+    }
+
+    function updateExamTimerDisplay() {
+      const el = document.getElementById('study-timer-text');
+      const mm = String(Math.floor(examCountdownSeconds / 60)).padStart(2, '0');
+      const ss = String(examCountdownSeconds % 60).padStart(2, '0');
+      const formatted = `${mm}:${ss}`;
+      if (el) el.textContent = formatted;
+    }
+
+    window.openEntryHubModal = openEntryHubModal;
+    window.closeEntryHubModal = closeEntryHubModal;
+    window.handleSelectExamFlow = handleSelectExamFlow;
+    window.handleSelectSgkFlow = handleSelectSgkFlow;
+    window.openExamRegisterModal = openExamRegisterModal;
+    window.closeExamRegisterModal = closeExamRegisterModal;
+    window.handleConfirmExamRegister = handleConfirmExamRegister;
+    window.openStudentQuickEditModal = openStudentQuickEditModal;
     window.openExamPracticeModal = openExamPracticeModal;
     window.closeExamPracticeModal = closeExamPracticeModal;
     window.startGraduationExam = startGraduationExam;
@@ -16780,6 +17199,9 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
     // Setup Modal Submit: Load Exact Lesson according to KNTT (Tương thích 100% Điện Thoại & Máy Tính)
     let isStartingLesson = false;
     function handleStartLearning(e) {
+      currentAppMode = 'sgk';
+      localStorage.setItem('CURRENT_APP_MODE', 'sgk');
+      applySgkModeTabsUI();
       if (e) {
         if (typeof e.preventDefault === 'function') e.preventDefault();
         if (typeof e.stopPropagation === 'function') e.stopPropagation();
@@ -17921,30 +18343,20 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         // Màn hình Chặn cửa (Modal Authentication): Xuất hiện ngay lập tức khi tải trang web nếu chưa xác thực
         // Tự động kiểm tra bộ nhớ cục bộ (localStorage):
         if (isUserAuthenticated()) {
-          // Đã có mã hợp lệ: Tự động bỏ qua màn hình chặn cửa và đưa học sinh vào THẲNG giao diện học tập chính
+          // Đã có mã hợp lệ: Tự động bỏ qua màn hình chặn cửa
           closeAuthGatekeeperModal();
+
+          // Cập nhật thông tin học sinh
+          updateStudentDisplayInfo();
+
+          // Mở màn hình chọn 2 luồng học tập nếu chưa vào bài học cụ thể
+          openEntryHubModal();
           const modalSetup = document.getElementById('modal-setup');
           if (modalSetup) {
             modalSetup.classList.add('hidden');
             modalSetup.classList.remove('flex');
             modalSetup.style.display = 'none';
           }
-
-          // Cập nhật thông tin học sinh lên Header (nếu có các element)
-          const bName = document.getElementById('badge-name');
-          if (bName) bName.textContent = studentInfo.name;
-          const bSchool = document.getElementById('badge-school');
-          if (bSchool) bSchool.textContent = studentInfo.school;
-          const bClass = document.getElementById('badge-class');
-          if (bClass) bClass.textContent = studentInfo.class;
-          const sBadge = document.getElementById('session-badge');
-          if (sBadge) sBadge.classList.remove('hidden');
-          const mClass = document.getElementById('mobile-class-badge');
-          if (mClass) mClass.textContent = studentInfo.class;
-          const cLesson = document.getElementById('chat-current-lesson');
-          if (cLesson) cLesson.textContent = studentInfo.lesson;
-          const cClass = document.getElementById('chat-current-class');
-          if (cClass) cClass.textContent = studentInfo.class;
         } else {
           // Chưa lưu mã: Lập tức hiển thị Màn hình Chặn cửa để yêu cầu nhập mã
           openAuthGatekeeperModal(false);
