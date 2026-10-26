@@ -374,7 +374,7 @@
       <!-- Nút 1: 📖 HỌC BÀI THEO SGK -->
       <button 
         id="nav-btn-sgk" 
-        onclick="handleSelectNavMode('sgk')" 
+        onclick="handleNavButtonClick('sgk')" 
         class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400"
         title="Học kiến thức sách giáo khoa Kết Nối Tri Thức Khối 10, 11, 12"
       >
@@ -385,7 +385,7 @@
       <!-- Nút 2: 📝 ÔN THI ĐỊNH KỲ -->
       <button 
         id="nav-btn-periodic" 
-        onclick="handleSelectNavMode('periodic')" 
+        onclick="handleNavButtonClick('periodic')" 
         class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
         title="Luyện đề ôn thi Giữa kỳ & Cuối kỳ Khối 10, 11, 12"
       >
@@ -396,7 +396,7 @@
       <!-- Nút 3: 🎯 ÔN THI TỐT NGHIỆP THPT -->
       <button 
         id="nav-btn-graduation" 
-        onclick="handleSelectNavMode('graduation')" 
+        onclick="handleNavButtonClick('graduation')" 
         class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
         title="Luyện đề thi tốt nghiệp THPT chuẩn cấu trúc Bộ GD&ĐT"
       >
@@ -570,15 +570,23 @@
     <!-- Main Classroom Board -->
     <main class="flex-1 bg-white rounded-2xl shadow-sm flex flex-col border border-slate-200 overflow-hidden relative">
       
-      <!-- Current Lesson Banner (Gọn gàng & Tinh tế) -->
-      <div id="chat-lesson-banner" class="bg-indigo-50/70 border-b border-indigo-100 px-3 sm:px-4 py-1.5 flex items-center justify-between text-xs text-indigo-900 shrink-0 gap-2">
+      <!-- Current Lesson Banner (Hiển thị đầy đủ Họ tên, Trường, Lớp chuẩn Hình 2) -->
+      <div id="chat-lesson-banner" class="bg-indigo-50/80 border-b border-indigo-100 px-3 sm:px-4 py-2 flex items-center justify-between text-xs sm:text-[11.5pt] text-indigo-900 shrink-0 gap-2 font-serif flex-wrap">
         <div class="flex items-center gap-1.5 sm:gap-2 truncate">
-          <span class="bg-indigo-600 text-white text-[9.5pt] font-black px-1.5 py-0.2 rounded shadow-xs shrink-0">SGK</span>
+          <span class="bg-indigo-600 text-white text-[9.5pt] sm:text-[10pt] font-black px-2 py-0.5 rounded shadow-xs shrink-0">SGK</span>
           <span class="truncate font-semibold"><strong id="chat-current-lesson" class="text-indigo-950 font-bold">Bài 1: Tính đơn điệu và cực trị của hàm số</strong></span>
         </div>
-        <div class="flex items-center gap-1.5 shrink-0">
+        <div class="flex items-center gap-2 shrink-0">
+          <!-- Student Info Badge (Họ tên, Trường, Lớp) -->
+          <div class="inline-flex items-center gap-1.5 bg-white border border-indigo-200 px-3 py-1 rounded-xl text-indigo-950 font-medium text-xs sm:text-[11pt] shadow-2xs">
+            <span>👤 <b id="display-student-name" class="font-bold text-indigo-900">Minh Anh</b></span>
+            <span class="text-slate-300">•</span>
+            <span id="display-student-school" class="text-slate-700">THPT Kỳ Anh</span>
+            <span class="text-slate-300">•</span>
+            <span id="display-student-class" class="bg-indigo-100 text-indigo-900 font-bold px-2 py-0.5 rounded text-[10.5pt]">12A1</span>
+          </div>
           <span id="chat-current-section-badge" class="bg-amber-100 border border-amber-300 text-amber-900 font-bold px-2 py-0.5 rounded text-[10.5pt]">Đang học: Mục 1</span>
-          <span id="chat-current-class" class="bg-indigo-200/80 text-indigo-900 font-bold px-2 py-0.5 rounded text-[10.5pt]">12A1</span>
+          <span id="chat-current-class" class="hidden">12A1</span>
         </div>
       </div>
 
@@ -672,7 +680,7 @@
                 <i class="fa-solid fa-sliders"></i>
                 <span>Mở Bảng Chọn Kỳ Thi</span>
               </button>
-              <button onclick="handleSelectNavMode('sgk')" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow cursor-pointer transition flex items-center gap-2">
+              <button onclick="handleNavButtonClick('sgk')" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow cursor-pointer transition flex items-center gap-2">
                 <i class="fa-solid fa-book-open"></i>
                 <span>Học Bài Theo SGK</span>
               </button>
@@ -928,160 +936,109 @@
        Kho Đề Thi Thử Tốt Nghiệp THPT Môn Toán Chuẩn Ma Trận 2025 Bộ GD&ĐT
        ========================================================================= -->
   <div   <!-- =========================================================================
-       MODAL: TRANG CHỦ CHỌN HƯỚNG HỌC TẬP (ENTRY SELECTION HUB)
-       Phân chia 2 luồng: 1. Ôn Thi Tốt Nghiệp THPT | 2. Học Kiến Thức SGK
+       MODAL: ĐĂNG KÝ THÔNG TIN HỌC SINH (Bắt buộc trước khi vào các mục học)
        ========================================================================= -->
-  <div id="modal-entry-hub" class="mode-modal fixed inset-0 bg-slate-950/85 backdrop-blur-md z-[99990] flex items-center justify-center p-3 sm:p-5 font-serif select-none animate-in fade-in" data-modal="mode-select">
-    <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full border border-indigo-100 overflow-hidden font-serif flex flex-col max-h-[95vh]">
-      
-      <!-- Hub Header Banner -->
-      <div class="bg-gradient-to-r from-indigo-800 via-indigo-900 to-slate-900 text-white p-5 sm:p-6 text-center relative shrink-0">
-        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm shadow-inner mb-3 text-amber-300 text-3xl border border-amber-300/30">
-          <i class="fa-solid fa-graduation-cap"></i>
+  <div id="modal-student-info" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99995] hidden items-center justify-center p-3 sm:p-4 select-none font-serif animate-in fade-in">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full border border-indigo-200 overflow-hidden font-serif">
+      <div class="bg-gradient-to-r from-indigo-800 via-indigo-900 to-slate-900 text-white p-5 text-center">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-white/10 text-amber-300 text-2xl shadow mb-2">
+          <i class="fa-solid fa-id-card"></i>
         </div>
-        <h2 class="text-[16pt] sm:text-[18pt] font-black tracking-tight leading-snug uppercase">
-          Trợ Lý Học Tập Toán Thầy Thuấn Phan
-        </h2>
-        <p class="text-[12pt] sm:text-[13pt] text-amber-200 mt-1 font-semibold">
-          CHỌN HƯỚNG HỌC TẬP PHÙ HỢP VỚI BẠN
+        <h3 class="text-[15pt] sm:text-[16pt] font-black uppercase" id="modal-student-info-title">Thông Tin Học Sinh</h3>
+        <p class="text-xs sm:text-[11pt] text-indigo-200 font-medium mt-0.5" id="modal-student-info-desc">
+          Vui lòng xác nhận thông tin để đồng bộ kết quả học tập
         </p>
-
-        <!-- Current Student Info Badge -->
-        <div class="mt-3 inline-flex flex-wrap items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-[11pt] text-indigo-100">
-          <span>👤 Học sinh: <b id="hub-student-name" class="text-white font-bold">Minh Anh</b></span>
-          <span class="text-white/40">•</span>
-          <span>🏫 <span id="hub-student-school">THPT Kỳ Anh</span></span>
-          <span class="text-white/40">•</span>
-          <span class="bg-amber-400 text-indigo-950 font-black px-2 py-0.2 rounded-full text-[10pt]" id="hub-student-class">12A1</span>
-          <button type="button" onclick="openStudentQuickEditModal()" class="text-amber-300 hover:text-white underline ml-1 cursor-pointer text-xs" title="Chỉnh sửa thông tin học sinh">
-            <i class="fa-solid fa-pen-to-square"></i> Đổi
-          </button>
-        </div>
       </div>
 
-      <!-- 2 Major Entry Mode Cards -->
-      <div class="p-5 sm:p-7 overflow-y-auto bg-slate-50 flex-1 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6">
-        
-        <!-- NÚT 1: ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN -->
-        <div 
-          id="card-mode-exam"
-          onclick="handleSelectMode('exam')" 
-          style="cursor: pointer;"
-          class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-amber-400 hover:border-amber-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
-        >
-          <div class="absolute top-0 right-0 bg-gradient-to-l from-amber-500 to-orange-500 text-slate-950 text-[10.5pt] uppercase font-black px-3.5 py-1 rounded-bl-2xl shadow-xs tracking-wider">
-            🔥 Khối 12 • Mục tiêu 9+
-          </div>
+      <form id="form-student-info" onsubmit="handleConfirmStudentInfo(event); return false;" class="p-5 sm:p-6 space-y-4">
+        <div>
+          <label class="block text-[12pt] font-bold text-slate-800 mb-1">
+            Họ và tên học sinh <span class="text-rose-600">*</span>:
+          </label>
+          <input 
+            type="text" 
+            id="modal-student-name" 
+            required 
+            placeholder="Ví dụ: Nguyễn Minh Anh" 
+            value="Minh Anh"
+            class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-[12pt] focus:ring-2 focus:ring-indigo-500 focus:outline-none font-bold text-slate-900" 
+          />
+        </div>
 
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center text-2xl shadow-md mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-bullseye text-2xl"></i>
-            </div>
+        <div>
+          <label class="block text-[12pt] font-bold text-slate-800 mb-1">
+            Trường THPT:
+          </label>
+          <input 
+            type="text" 
+            id="modal-student-school" 
+            placeholder="Ví dụ: THPT Kỳ Anh" 
+            value="THPT Kỳ Anh"
+            class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-[12pt] focus:ring-2 focus:ring-indigo-500 focus:outline-none font-medium text-slate-800" 
+          />
+        </div>
 
-            <h3 class="font-black text-[15pt] sm:text-[16.5pt] text-slate-900 leading-snug group-hover:text-amber-700 transition mb-2 uppercase">
-              🎯 ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN
-            </h3>
+        <div>
+          <label class="block text-[12pt] font-bold text-slate-800 mb-1">
+            Lớp học:
+          </label>
+          <select 
+            id="modal-student-class" 
+            class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-[12pt] focus:ring-2 focus:ring-indigo-500 focus:outline-none font-bold bg-white text-slate-900"
+          >
+            <!-- Khối 12 -->
+            <optgroup label="Khối 12">
+              <option value="12A1" selected>Lớp 12A1</option>
+              <option value="12A2">Lớp 12A2</option>
+              <option value="12A3">Lớp 12A3</option>
+              <option value="12A4">Lớp 12A4</option>
+              <option value="12A5">Lớp 12A5</option>
+              <option value="12A6">Lớp 12A6</option>
+              <option value="12A7">Lớp 12A7</option>
+              <option value="12A8">Lớp 12A8</option>
+              <option value="12A9">Lớp 12A9</option>
+              <option value="12A10">Lớp 12A10</option>
+              <option value="12A11">Lớp 12A11</option>
+              <option value="12A12">Lớp 12A12</option>
+            </optgroup>
+            <!-- Khối 11 -->
+            <optgroup label="Khối 11">
+              <option value="11A1">Lớp 11A1</option>
+              <option value="11A2">Lớp 11A2</option>
+              <option value="11A3">Lớp 11A3</option>
+              <option value="11A4">Lớp 11A4</option>
+              <option value="11A5">Lớp 11A5</option>
+              <option value="11A6">Lớp 11A6</option>
+            </optgroup>
+            <!-- Khối 10 -->
+            <optgroup label="Khối 10">
+              <option value="10A1">Lớp 10A1</option>
+              <option value="10A2">Lớp 10A2</option>
+              <option value="10A3">Lớp 10A3</option>
+              <option value="10A4">Lớp 10A4</option>
+              <option value="10A5">Lớp 10A5</option>
+              <option value="10A6">Lớp 10A6</option>
+            </optgroup>
+          </select>
+        </div>
 
-            <p class="text-[11.5pt] text-slate-600 leading-relaxed mb-4">
-              Luyện đề thi thử Tốt nghiệp THPT bám sát đề thi chính thức và cấu trúc mới của Bộ GD&ĐT.
-            </p>
-
-            <ul class="space-y-2 text-xs sm:text-[11pt] text-slate-700 mb-6 bg-amber-50/60 p-3.5 rounded-2xl border border-amber-200/60 font-sans">
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-circle-check text-emerald-600 mt-1 shrink-0"></i>
-                <span><b>Đề 1:</b> Đề thi chính thức tốt nghiệp THPT 2024 (Toán)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-circle-check text-emerald-600 mt-1 shrink-0"></i>
-                <span><b>Đề 2:</b> Đề thi tốt nghiệp THPT cấu trúc mới 2025 (3 Phần)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-circle-check text-emerald-600 mt-1 shrink-0"></i>
-                <span><b>Đề 3:</b> Đề thi minh họa / tốt nghiệp THPT 2026 (Xác suất Bayes, Tối ưu hóa)</span>
-              </li>
-              <li class="flex items-start gap-2 text-amber-900 font-semibold">
-                <i class="fa-solid fa-stopwatch text-amber-600 mt-1 shrink-0"></i>
-                <span>Bấm giờ 90 phút • Chấm điểm tự động • Lời giải chi tiết LaTeX</span>
-              </li>
-            </ul>
-          </div>
-
+        <div class="pt-2 flex items-center gap-2">
           <button 
             type="button" 
-            onclick="event.stopPropagation(); handleSelectMode('exam');" 
-            style="cursor: pointer;"
-            class="w-full py-3.5 px-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:via-orange-400 hover:to-amber-400 text-slate-950 font-black rounded-2xl text-[12.5pt] sm:text-[13.5pt] shadow-md hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-95 uppercase tracking-wide border border-amber-300"
+            onclick="closeStudentInfoModal()" 
+            class="w-1/3 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer"
           >
-            <span>Vào Luyện Đề Tốt Nghiệp</span>
-            <i class="fa-solid fa-arrow-right"></i>
+            Đóng
           </button>
-        </div>
-
-        <!-- NÚT 2: HỌC KIẾN THỨC SÁCH GIÁO KHOA -->
-        <div 
-          id="card-mode-curriculum"
-          onclick="handleSelectMode('curriculum')" 
-          style="cursor: pointer;"
-          class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-indigo-300 hover:border-indigo-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
-        >
-          <div class="absolute top-0 right-0 bg-gradient-to-l from-indigo-600 to-blue-600 text-white text-[10.5pt] uppercase font-bold px-3.5 py-1 rounded-bl-2xl shadow-xs tracking-wider">
-            📚 Toán 10 • 11 • 12 KNTT
-          </div>
-
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-2xl shadow-md mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-book-open"></i>
-            </div>
-
-            <h3 class="font-black text-[15pt] sm:text-[16.5pt] text-slate-900 leading-snug group-hover:text-indigo-700 transition mb-2 uppercase">
-              📖 HỌC KIẾN THỨC SÁCH GIÁO KHOA
-            </h3>
-
-            <p class="text-[11.5pt] text-slate-600 leading-relaxed mb-4">
-              Học chuẩn theo từng bài mục SGK Kết nối tri thức với cuộc sống từ cơ bản đến nâng cao.
-            </p>
-
-            <ul class="space-y-2 text-xs sm:text-[11pt] text-slate-700 mb-6 bg-indigo-50/60 p-3.5 rounded-2xl border border-indigo-200/60 font-sans">
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-circle-check text-indigo-600 mt-1 shrink-0"></i>
-                <span>Học theo chuẩn 3 khối lớp: <b>Lớp 10, Lớp 11, Lớp 12</b></span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-circle-check text-indigo-600 mt-1 shrink-0"></i>
-                <span>Từng mục lý thuyết sư phạm, sơ đồ tư duy & ví dụ</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-circle-check text-indigo-600 mt-1 shrink-0"></i>
-                <span>3 câu trắc nghiệm củng cố ngay sau từng mục học</span>
-              </li>
-              <li class="flex items-start gap-2 text-indigo-950 font-semibold">
-                <i class="fa-solid fa-list-check text-indigo-600 mt-1 shrink-0"></i>
-                <span>Phiếu kiểm tra 24 ý Đúng/Sai • Trợ lý AI hỏi đáp 24/7</span>
-              </li>
-            </ul>
-          </div>
-
           <button 
-            type="button" 
-            onclick="event.stopPropagation(); handleSelectMode('curriculum');" 
-            style="cursor: pointer;"
-            class="w-full py-3.5 px-4 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-extrabold rounded-2xl text-[12.5pt] sm:text-[13.5pt] shadow-md hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-95 uppercase tracking-wide border border-indigo-400"
+            type="submit" 
+            class="w-2/3 py-2.5 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-black rounded-xl text-xs sm:text-[12pt] shadow-md transition flex items-center justify-center gap-1.5 cursor-pointer"
           >
-            <span>Vào Học Bài SGK</span>
-            <i class="fa-solid fa-arrow-right"></i>
+            <span>Xác nhận</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
           </button>
         </div>
-
-      </div>
-
-      <!-- Hub Footer -->
-      <div class="px-6 py-3 bg-white border-t border-slate-200 flex items-center justify-between text-xs sm:text-[11pt] text-slate-500 shrink-0">
-        <span class="italic">💡 Học sinh có thể bấm nút "Chọn chế độ học khác" ở thanh điều hướng trên cùng để chuyển đổi bất kỳ lúc nào.</span>
-        <button type="button" onclick="closeEntryHubModal()" class="px-4 py-1.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold transition cursor-pointer">
-          Đóng
-        </button>
-      </div>
-
+      </form>
     </div>
   </div>
 
@@ -1324,7 +1281,7 @@
         <button type="button" onclick="closePeriodicModal()" class="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer">
           Đóng
         </button>
-        <button type="button" onclick="handleSelectNavMode('sgk')" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow transition cursor-pointer flex items-center gap-1.5">
+        <button type="button" onclick="handleNavButtonClick('sgk')" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow transition cursor-pointer flex items-center gap-1.5">
           <i class="fa-solid fa-book-open"></i>
           <span>Về Học Bài Theo SGK</span>
         </button>
@@ -2083,8 +2040,8 @@
           updateAuthUIBadge();
           updateModeUI();
 
-          // Mở màn hình chọn 2 luồng học tập trung tâm
-          openEntryHubModal();
+          // Đã bỏ popup phân luồng, chuyển thẳng vào giao diện chính
+          updateNavButtonsActiveUI("sgk");
         } else {
           // Tab Mã VIP
           const inputVip = document.getElementById('input-vip-code');
@@ -2114,8 +2071,8 @@
           updateAuthUIBadge();
           updateModeUI();
 
-          // Mở màn hình chọn 2 luồng học tập trung tâm
-          openEntryHubModal();
+          // Đã bỏ popup phân luồng, chuyển thẳng vào giao diện chính
+          updateNavButtonsActiveUI("sgk");
         }
       } catch (err) {
         console.error("Error in handleConfirmAuth:", err);
@@ -2321,158 +2278,56 @@
 
 
     // Quản lý 3 Chế Độ Điều Hướng Chính: SGK, Định Kỳ, Tốt Nghiệp
-    function handleSelectNavMode(mode) {
-      try {
-        const btnSgk = document.getElementById('nav-btn-sgk');
-        const btnPeriodic = document.getElementById('nav-btn-periodic');
-        const btnGrad = document.getElementById('nav-btn-graduation');
+    
+    // Biến lưu trạng thái mục tiêu khi học sinh bấm 1 trong 3 nút điều hướng
+    let pendingTargetMode = 'sgk';
 
-        const activeClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400';
-        const inactiveClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20';
+    // Xử lý sự kiện khi học sinh bấm vào bất kỳ nút nào trong 3 nút điều hướng
+    function handleNavButtonClick(mode) {
+      pendingTargetMode = mode;
+      openStudentInfoModal(mode);
+    }
 
-        if (btnSgk) btnSgk.className = (mode === 'sgk') ? activeClass : inactiveClass;
-        if (btnPeriodic) btnPeriodic.className = (mode === 'periodic') ? activeClass : inactiveClass;
-        if (btnGrad) btnGrad.className = (mode === 'graduation' || mode === 'exam') ? activeClass : inactiveClass;
+    // Mở Modal Đăng Ký Thông Tin Học Sinh
+    function openStudentInfoModal(mode) {
+      const modal = document.getElementById('modal-student-info');
+      if (!modal) {
+        proceedToTargetMode(mode);
+        return;
+      }
 
-        // Đóng các modal popups nếu đang mở
-        const modalHub = document.getElementById('modal-entry-hub');
-        if (modalHub) {
-          modalHub.style.display = 'none';
-          modalHub.classList.add('hidden');
-        }
-        closeExamRegisterModal();
-        closeExamPracticeModal();
-        closePeriodicModal();
+      // Lấy thông tin đã lưu trong LocalStorage nếu có
+      const sName = studentInfo.name || localStorage.getItem('STUDENT_NAME') || 'Minh Anh';
+      const sSchool = studentInfo.school || localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh';
+      const sClass = studentInfo.class || localStorage.getItem('STUDENT_CLASS') || '12A1';
 
+      const inpName = document.getElementById('modal-student-name');
+      const inpSchool = document.getElementById('modal-student-school');
+      const selClass = document.getElementById('modal-student-class');
+
+      if (inpName) inpName.value = sName;
+      if (inpSchool) inpSchool.value = sSchool;
+      if (selClass) selClass.value = sClass;
+
+      const descEl = document.getElementById('modal-student-info-desc');
+      if (descEl) {
         if (mode === 'sgk') {
-          currentAppMode = 'sgk';
-          localStorage.setItem('CURRENT_APP_MODE', 'sgk');
-
-          if (typeof examCountdownInterval !== 'undefined' && examCountdownInterval) {
-            clearInterval(examCountdownInterval);
-          }
-
-          const pPeriodic = document.getElementById('panel-periodic');
-          if (pPeriodic) pPeriodic.classList.add('hidden');
-
-          const examSubNav = document.getElementById('exam-sub-nav');
-          if (examSubNav) {
-            examSubNav.classList.add('hidden');
-            examSubNav.classList.remove('flex');
-          }
-          const sgkSubNav = document.getElementById('sgk-sub-nav');
-          if (sgkSubNav) {
-            sgkSubNav.classList.remove('hidden');
-            sgkSubNav.classList.add('flex');
-          }
-          const flowBar = document.getElementById('flow-status-bar');
-          if (flowBar) flowBar.style.display = '';
-
-          // Reset bài học SGK nếu trước đó đang lưu tên đề thi
-          if (!studentInfo.lesson || studentInfo.lesson.includes('Đề thi') || studentInfo.lesson.includes('tốt nghiệp') || (activeLesson && activeLesson.isGraduationExam)) {
-            studentInfo.lesson = 'Bài 1: Tính đơn điệu và cực trị của hàm số';
-            studentInfo.grade = studentInfo.grade || 'Lớp 12';
-            if (typeof resolveKNTTLesson === 'function') {
-              activeLesson = resolveKNTTLesson(studentInfo.lesson, studentInfo.grade);
-              if (activeLesson) {
-                activeLesson.isGraduationExam = false;
-                activeTFQuestions = activeLesson.tfQuestions || [];
-                activeSAQuestions = activeLesson.saQuestions || [];
-              }
-            }
-          }
-
-          updateStudentDisplayInfo();
-          applySgkModeTabsUI();
-
-          // Mở bộ chọn SGK: Khối -> Chương -> Bài
-          openCurriculumPicker();
-
-          // Kích hoạt tab Lý Thuyết SGK
-          switchStudyTab('theory');
-
+          descEl.textContent = 'Vui lòng xác nhận thông tin trước khi vào Học bài theo SGK';
         } else if (mode === 'periodic') {
-          currentAppMode = 'periodic';
-          localStorage.setItem('CURRENT_APP_MODE', 'periodic');
-
-          if (typeof examCountdownInterval !== 'undefined' && examCountdownInterval) {
-            clearInterval(examCountdownInterval);
-          }
-
-          const flowBar = document.getElementById('flow-status-bar');
-          if (flowBar) flowBar.style.display = 'none';
-
-          const sgkSubNav = document.getElementById('sgk-sub-nav');
-          if (sgkSubNav) {
-            sgkSubNav.classList.add('hidden');
-            sgkSubNav.classList.remove('flex');
-          }
-
-          const examSubNav = document.getElementById('exam-sub-nav');
-          if (examSubNav) {
-            examSubNav.classList.add('hidden');
-            examSubNav.classList.remove('flex');
-          }
-
-          ['panel-theory', 'panel-mcq', 'panel-tf', 'panel-sa', 'panel-chat'].forEach(id => {
-            const p = document.getElementById(id);
-            if (p) p.classList.add('hidden');
-          });
-
-          const pPeriodic = document.getElementById('panel-periodic');
-          if (pPeriodic) pPeriodic.classList.remove('hidden');
-
-          const chatLesson = document.getElementById('chat-current-lesson');
-          if (chatLesson) chatLesson.textContent = 'Ôn Thi Định Kỳ (Giữa Kỳ & Cuối Kỳ)';
-
-          openPeriodicModal();
-
-        } else if (mode === 'graduation' || mode === 'exam') {
-          currentAppMode = 'exam';
-          localStorage.setItem('CURRENT_APP_MODE', 'exam');
-
-          const pPeriodic = document.getElementById('panel-periodic');
-          if (pPeriodic) pPeriodic.classList.add('hidden');
-
-          const sgkSubNav = document.getElementById('sgk-sub-nav');
-          if (sgkSubNav) {
-            sgkSubNav.classList.add('hidden');
-            sgkSubNav.classList.remove('flex');
-          }
-          const flowBar = document.getElementById('flow-status-bar');
-          if (flowBar) flowBar.style.display = 'none';
-
-          openExamRegisterModal();
+          descEl.textContent = 'Vui lòng xác nhận thông tin trước khi vào Ôn thi định kỳ';
+        } else {
+          descEl.textContent = 'Vui lòng xác nhận thông tin trước khi vào Ôn thi tốt nghiệp THPT';
         }
-      } catch (err) {
-        console.error("Error in handleSelectNavMode:", err);
       }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.style.display = 'flex';
     }
 
-    function selectPeriodicGrade(grade) {
-      ['10', '11', '12'].forEach(g => {
-        const btn = document.getElementById(`periodic-grade-${g}`);
-        if (btn) {
-          if (g === grade) {
-            btn.className = 'periodic-grade-btn py-2.5 px-3 rounded-xl font-black text-xs sm:text-[12pt] border-2 border-teal-500 bg-teal-50 text-teal-900 shadow-xs transition cursor-pointer';
-          } else {
-            btn.className = 'periodic-grade-btn py-2.5 px-3 rounded-xl font-black text-xs sm:text-[12pt] border-2 border-slate-300 hover:border-teal-500 bg-white text-slate-700 transition cursor-pointer';
-          }
-        }
-      });
-    }
-
-    function openPeriodicModal() {
-      const modal = document.getElementById('modal-periodic-exam');
-      if (modal) {
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        modal.style.display = 'flex';
-      }
-    }
-
-    function closePeriodicModal() {
-      const modal = document.getElementById('modal-periodic-exam');
+    // Đóng Modal Đăng Ký Thông Tin Học Sinh
+    function closeStudentInfoModal() {
+      const modal = document.getElementById('modal-student-info');
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
@@ -2480,10 +2335,167 @@
       }
     }
 
-    window.handleSelectNavMode = handleSelectNavMode;
-    window.selectPeriodicGrade = selectPeriodicGrade;
-    window.openPeriodicModal = openPeriodicModal;
-    window.closePeriodicModal = closePeriodicModal;
+    // Khi học sinh bấm 'Xác nhận' trong Modal Thông Tin
+    function handleConfirmStudentInfo(e) {
+      if (e && e.preventDefault) e.preventDefault();
+
+      const inpName = document.getElementById('modal-student-name');
+      const inpSchool = document.getElementById('modal-student-school');
+      const selClass = document.getElementById('modal-student-class');
+
+      const nameVal = (inpName && inpName.value.trim()) ? inpName.value.trim() : 'Minh Anh';
+      const schoolVal = (inpSchool && inpSchool.value.trim()) ? inpSchool.value.trim() : 'THPT Kỳ Anh';
+      const classVal = (selClass && selClass.value) ? selClass.value : '12A1';
+      const gradeVal = getGradeFromClassName(classVal);
+
+      studentInfo.name = nameVal;
+      studentInfo.school = schoolVal;
+      studentInfo.class = classVal;
+      studentInfo.grade = gradeVal;
+
+      localStorage.setItem('STUDENT_NAME', nameVal);
+      localStorage.setItem('STUDENT_SCHOOL', schoolVal);
+      localStorage.setItem('STUDENT_CLASS', classVal);
+      localStorage.setItem('STUDENT_GRADE', gradeVal);
+
+      updateStudentDisplayInfo();
+      closeStudentInfoModal();
+
+      // Điều hướng ngay theo đúng mục đã chọn
+      proceedToTargetMode(pendingTargetMode || 'sgk');
+    }
+
+    // Cập nhật hiệu ứng Active rõ ràng cho 3 nút trên thanh điều hướng
+    function updateNavButtonsActiveUI(mode) {
+      const btnSgk = document.getElementById('nav-btn-sgk');
+      const btnPeriodic = document.getElementById('nav-btn-periodic');
+      const btnGrad = document.getElementById('nav-btn-graduation');
+
+      const activeClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400 ring-2 ring-amber-400/50';
+      const inactiveClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20';
+
+      if (btnSgk) btnSgk.className = (mode === 'sgk') ? activeClass : inactiveClass;
+      if (btnPeriodic) btnPeriodic.className = (mode === 'periodic') ? activeClass : inactiveClass;
+      if (btnGrad) btnGrad.className = (mode === 'graduation' || mode === 'exam') ? activeClass : inactiveClass;
+    }
+
+    // Điều hướng theo đúng mục học sau khi xác nhận thông tin
+    function proceedToTargetMode(mode) {
+      updateNavButtonsActiveUI(mode);
+
+      if (mode === 'sgk') {
+        currentAppMode = 'sgk';
+        localStorage.setItem('CURRENT_APP_MODE', 'sgk');
+
+        if (typeof examCountdownInterval !== 'undefined' && examCountdownInterval) {
+          clearInterval(examCountdownInterval);
+        }
+
+        const pPeriodic = document.getElementById('panel-periodic');
+        if (pPeriodic) pPeriodic.classList.add('hidden');
+
+        const examSubNav = document.getElementById('exam-sub-nav');
+        if (examSubNav) {
+          examSubNav.classList.add('hidden');
+          examSubNav.classList.remove('flex');
+        }
+        const sgkSubNav = document.getElementById('sgk-sub-nav');
+        if (sgkSubNav) {
+          sgkSubNav.classList.remove('hidden');
+          sgkSubNav.classList.add('flex');
+        }
+        const flowBar = document.getElementById('flow-status-bar');
+        if (flowBar) flowBar.style.display = '';
+
+        // Reset bài học SGK nếu trước đó đang là đề thi
+        if (!studentInfo.lesson || studentInfo.lesson.includes('Đề thi') || studentInfo.lesson.includes('tốt nghiệp') || (activeLesson && activeLesson.isGraduationExam)) {
+          studentInfo.lesson = 'Bài 1: Tính đơn điệu và cực trị của hàm số';
+          studentInfo.grade = studentInfo.grade || 'Lớp 12';
+          if (typeof resolveKNTTLesson === 'function') {
+            activeLesson = resolveKNTTLesson(studentInfo.lesson, studentInfo.grade);
+            if (activeLesson) {
+              activeLesson.isGraduationExam = false;
+              activeTFQuestions = activeLesson.tfQuestions || [];
+              activeSAQuestions = activeLesson.saQuestions || [];
+            }
+          }
+        }
+
+        applySgkModeTabsUI();
+        updateStudentDisplayInfo();
+
+        // Mở bộ chọn: [Khối 10 - 11 - 12] -> [Chương] -> [Bài học SGK]
+        openCurriculumPicker();
+
+        // Mở tab Lý Thuyết SGK
+        switchStudyTab('theory');
+
+      } else if (mode === 'periodic') {
+        currentAppMode = 'periodic';
+        localStorage.setItem('CURRENT_APP_MODE', 'periodic');
+
+        if (typeof examCountdownInterval !== 'undefined' && examCountdownInterval) {
+          clearInterval(examCountdownInterval);
+        }
+
+        const flowBar = document.getElementById('flow-status-bar');
+        if (flowBar) flowBar.style.display = 'none';
+
+        const sgkSubNav = document.getElementById('sgk-sub-nav');
+        if (sgkSubNav) {
+          sgkSubNav.classList.add('hidden');
+          sgkSubNav.classList.remove('flex');
+        }
+
+        const examSubNav = document.getElementById('exam-sub-nav');
+        if (examSubNav) {
+          examSubNav.classList.add('hidden');
+          examSubNav.classList.remove('flex');
+        }
+
+        ['panel-theory', 'panel-mcq', 'panel-tf', 'panel-sa', 'panel-chat'].forEach(id => {
+          const p = document.getElementById(id);
+          if (p) p.classList.add('hidden');
+        });
+
+        const pPeriodic = document.getElementById('panel-periodic');
+        if (pPeriodic) pPeriodic.classList.remove('hidden');
+
+        const chatLesson = document.getElementById('chat-current-lesson');
+        if (chatLesson) chatLesson.textContent = 'Ôn Thi Định Kỳ (Giữa Kỳ & Cuối Kỳ)';
+
+        // Mở bảng chọn: [Khối 10, 11, 12] -> [Đề Giữa kỳ / Cuối kỳ (HK1, HK2)]
+        openPeriodicModal();
+
+      } else if (mode === 'graduation' || mode === 'exam') {
+        currentAppMode = 'exam';
+        localStorage.setItem('CURRENT_APP_MODE', 'exam');
+
+        const pPeriodic = document.getElementById('panel-periodic');
+        if (pPeriodic) pPeriodic.classList.add('hidden');
+
+        const sgkSubNav = document.getElementById('sgk-sub-nav');
+        if (sgkSubNav) {
+          sgkSubNav.classList.add('hidden');
+          sgkSubNav.classList.remove('flex');
+        }
+        const flowBar = document.getElementById('flow-status-bar');
+        if (flowBar) flowBar.style.display = 'none';
+
+        // Mở danh sách 3 đề thi chuẩn cấu trúc Bộ GD&ĐT
+        openExamPracticeModal();
+      }
+    }
+
+    window.handleNavButtonClick = handleNavButtonClick;
+    window.openStudentInfoModal = openStudentInfoModal;
+    window.closeStudentInfoModal = closeStudentInfoModal;
+    window.handleConfirmStudentInfo = handleConfirmStudentInfo;
+    window.proceedToTargetMode = proceedToTargetMode;
+    window.updateNavButtonsActiveUI = updateNavButtonsActiveUI;
+
+    window.handleSelectNavMode = proceedToTargetMode;
+
 
 
     function showExamSection() {
@@ -2495,6 +2507,13 @@
     function openCurriculumPicker() {
       const modalSetup = document.getElementById('modal-setup');
       if (modalSetup) {
+        const inpName = document.getElementById('setup-name');
+        const inpSchool = document.getElementById('setup-school');
+        const selClass = document.getElementById('setup-class');
+        if (inpName) inpName.value = studentInfo.name || localStorage.getItem('STUDENT_NAME') || 'Minh Anh';
+        if (inpSchool) inpSchool.value = studentInfo.school || localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh';
+        if (selClass && studentInfo.class) selClass.value = studentInfo.class;
+
         modalSetup.classList.remove('hidden');
         modalSetup.classList.add('flex');
         modalSetup.style.display = 'flex';
@@ -2596,12 +2615,12 @@
       studentInfo.school = sSchool;
       studentInfo.class = sClass;
 
-      const hName = document.getElementById('hub-student-name');
-      if (hName) hName.textContent = sName;
-      const hSchool = document.getElementById('hub-student-school');
-      if (hSchool) hSchool.textContent = sSchool;
-      const hClass = document.getElementById('hub-student-class');
-      if (hClass) hClass.textContent = sClass;
+      const dName = document.getElementById('display-student-name');
+      if (dName) dName.textContent = sName;
+      const dSchool = document.getElementById('display-student-school');
+      if (dSchool) dSchool.textContent = sSchool;
+      const dClass = document.getElementById('display-student-class');
+      if (dClass) dClass.textContent = sClass;
 
       const bName = document.getElementById('badge-name');
       if (bName) bName.textContent = sName;
@@ -2611,6 +2630,8 @@
       if (bClass) bClass.textContent = sClass;
       const mClass = document.getElementById('mobile-class-badge');
       if (mClass) mClass.textContent = sClass;
+      const chatClass = document.getElementById('chat-current-class');
+      if (chatClass) chatClass.textContent = sClass;
     }
 
     function openExamPracticeModal() {
@@ -18849,8 +18870,8 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
           // Cập nhật thông tin học sinh
           updateStudentDisplayInfo();
 
-          // Mở màn hình chọn 2 luồng học tập nếu chưa vào bài học cụ thể
-          openEntryHubModal();
+          // Đã bỏ popup phân luồng, chuyển thẳng vào giao diện chính
+          updateNavButtonsActiveUI("sgk");
           const modalSetup = document.getElementById('modal-setup');
           if (modalSetup) {
             modalSetup.classList.add('hidden');
