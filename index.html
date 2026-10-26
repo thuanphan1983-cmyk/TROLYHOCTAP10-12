@@ -367,23 +367,53 @@
   </div>
 
   <!-- Study Navigation Tabs (Tối ưu tuyệt đối cho Điện Thoại & Máy Tính) -->
-  <div id="study-mode-tabs" class="bg-indigo-900 text-white px-2 py-1.5 shrink-0 flex items-center justify-between gap-1 shadow-sm border-b border-indigo-950/40 font-serif z-10">
-    <div class="flex items-center gap-1 sm:gap-2 flex-1 max-w-7xl mx-auto overflow-x-auto no-scrollbar">
-      <!-- Nút chuyển đổi luồng học tập: Chọn chế độ học khác -->
+  <!-- Study Navigation Header Bar: ĐÚNG 3 NÚT DUY NHẤT CĂN GIỮA -->
+  <div id="study-mode-tabs" class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white px-3 py-2 sm:py-2.5 shrink-0 flex items-center justify-center shadow-md border-b border-indigo-800/60 font-serif z-20">
+    <div class="flex items-center justify-center gap-2 sm:gap-4 max-w-4xl mx-auto w-full">
+      
+      <!-- Nút 1: 📖 HỌC BÀI THEO SGK -->
       <button 
-        id="btn-switch-entry-mode" 
-        onclick="openEntryHubModal()" 
-        class="py-2 px-3 sm:px-3.5 rounded-xl font-black text-xs sm:text-[11.5pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-sky-500 via-indigo-600 to-sky-600 hover:from-sky-400 hover:to-indigo-500 text-white shadow-md border border-sky-300/40 cursor-pointer whitespace-nowrap shrink-0"
-        title="Bấm để đổi giữa Ôn thi tốt nghiệp THPT và Học SGK"
+        id="nav-btn-sgk" 
+        onclick="handleSelectNavMode('sgk')" 
+        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400"
+        title="Học kiến thức sách giáo khoa Kết Nối Tri Thức Khối 10, 11, 12"
       >
-        <i class="fa-solid fa-arrows-rotate text-sky-200"></i>
-        <span>Chọn chế độ học khác</span>
+        <span class="text-sm sm:text-base">📖</span>
+        <span class="tracking-wide">HỌC BÀI THEO SGK</span>
       </button>
 
+      <!-- Nút 2: 📝 ÔN THI ĐỊNH KỲ -->
+      <button 
+        id="nav-btn-periodic" 
+        onclick="handleSelectNavMode('periodic')" 
+        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        title="Luyện đề ôn thi Giữa kỳ & Cuối kỳ Khối 10, 11, 12"
+      >
+        <span class="text-sm sm:text-base">📝</span>
+        <span class="tracking-wide">ÔN THI ĐỊNH KỲ</span>
+      </button>
+
+      <!-- Nút 3: 🎯 ÔN THI TỐT NGHIỆP THPT -->
+      <button 
+        id="nav-btn-graduation" 
+        onclick="handleSelectNavMode('graduation')" 
+        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        title="Luyện đề thi tốt nghiệp THPT chuẩn cấu trúc Bộ GD&ĐT"
+      >
+        <span class="text-sm sm:text-base">🎯</span>
+        <span class="tracking-wide">ÔN THI TỐT NGHIỆP THPT</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- SGK Sub Navigation Bar (Chỉ hiển thị khi đang ở chế độ Học SGK) -->
+  <div id="sgk-sub-nav" class="bg-indigo-900/90 text-white px-2 py-1.5 shrink-0 flex items-center justify-between gap-1 shadow-xs border-b border-indigo-950/40 font-serif z-10">
+    <div class="flex items-center gap-1 sm:gap-2 flex-1 max-w-7xl mx-auto overflow-x-auto no-scrollbar">
       <button 
         id="tab-btn-theory" 
         onclick="switchStudyTab('theory')" 
-        class="flex-1 py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white text-indigo-950 shadow-sm cursor-pointer"
+        class="flex-1 py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white text-indigo-950 shadow-sm cursor-pointer whitespace-nowrap"
       >
         <i id="tab-icon-theory" class="fa-solid fa-book-open text-amber-500"></i>
         <span id="tab-label-theory">1. Lý Thuyết</span>
@@ -393,7 +423,7 @@
       <button 
         id="tab-btn-mcq" 
         onclick="switchStudyTab('mcq')" 
-        class="flex-1 py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer"
+        class="flex-1 py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
       >
         <i class="fa-solid fa-circle-question text-emerald-400"></i>
         <span id="tab-label-mcq">2. Trắc Nghiệm</span>
@@ -403,7 +433,7 @@
       <button 
         id="tab-btn-tf" 
         onclick="switchStudyTab('tf')" 
-        class="flex-1 py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer"
+        class="flex-1 py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
       >
         <i class="fa-solid fa-list-check text-amber-400"></i>
         <span id="tab-label-tf">3. Phiếu 24 Ý</span>
@@ -411,20 +441,9 @@
       </button>
 
       <button 
-        id="tab-btn-sa" 
-        onclick="switchStudyTab('sa')" 
-        class="hidden py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer"
-        title="Phần 3: 4 câu hỏi trả lời ngắn (Điền kết quả tính toán)"
-      >
-        <i class="fa-solid fa-pen-to-square text-cyan-400"></i>
-        <span id="tab-label-sa">4. Trả Lời Ngắn</span>
-        <span id="tab-badge-sa" class="bg-indigo-800 text-cyan-300 text-[10px] px-1.5 py-0.2 rounded-full font-bold border border-indigo-400/40">0/4</span>
-      </button>
-
-      <button 
         id="tab-btn-chat" 
         onclick="switchStudyTab('chat')" 
-        class="py-2 px-2 sm:px-2.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer"
+        class="py-1.5 sm:py-2 px-2 sm:px-2.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
         title="Trò chuyện hoặc hỏi ý kiến Thầy/Cô Trợ lý"
       >
         <i class="fa-solid fa-comments text-sky-400"></i>
@@ -434,7 +453,7 @@
       <button 
         id="tab-btn-finish" 
         onclick="handleFinishLesson()" 
-        class="py-2 px-2.5 sm:px-3 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-rose-600 hover:bg-rose-700 text-white shadow-xs cursor-pointer whitespace-nowrap"
+        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-rose-600 hover:bg-rose-700 text-white shadow-xs cursor-pointer whitespace-nowrap"
         title="Kết thúc buổi học để xem Bảng đánh giá 5 mức & Thống kê lớp"
       >
         <i class="fa-solid fa-flag-checkered text-amber-300"></i>
@@ -444,22 +463,78 @@
       <button 
         id="btn-export-pdf-header" 
         onclick="openEvaluationSheetModal()" 
-        class="py-2 px-2.5 sm:px-3 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white/10 hover:bg-white/20 text-rose-200 hover:text-white border border-rose-300/40 cursor-pointer whitespace-nowrap shadow-xs"
+        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white/10 hover:bg-white/20 text-rose-200 hover:text-white border border-rose-300/40 cursor-pointer whitespace-nowrap shadow-xs"
         title="Xem và Xuất Phiếu đánh giá buổi học ra file PDF"
       >
         <i class="fa-solid fa-file-pdf text-rose-300 text-sm"></i>
         <span class="hidden lg:inline">Xuất Phiếu PDF</span>
       </button>
 
-      <!-- Nút nổi bật: 🎯 ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN -->
       <button 
-        id="btn-on-thi-tot-nghiep" 
-        onclick="openExamRegisterModal()" 
-        class="py-2 px-2.5 sm:px-3.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black shadow-xs cursor-pointer whitespace-nowrap border border-amber-300/60 shrink-0"
-        title="Bấm để mở kho luyện đề thi thử tốt nghiệp THPT chuẩn cấu trúc Bộ GD&ĐT 2025"
+        onclick="openCurriculumPicker()" 
+        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-bold text-xs sm:text-[11.5pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-xs cursor-pointer whitespace-nowrap"
+        title="Chọn bài học SGK khác"
       >
-        <span class="text-sm">🎯</span>
-        <span class="font-black">ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN</span>
+        <i class="fa-solid fa-book-bookmark"></i>
+        <span>Đổi Bài SGK</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Exam Sub Navigation Bar (Chỉ hiển thị khi đang Ôn Thi Tốt Nghiệp) -->
+  <div id="exam-sub-nav" class="bg-indigo-950 text-white px-2 py-1.5 shrink-0 hidden items-center justify-between gap-1 shadow-xs border-b border-indigo-800 font-serif z-10">
+    <div class="flex items-center gap-1 sm:gap-2 flex-1 max-w-7xl mx-auto overflow-x-auto no-scrollbar">
+      <button 
+        id="exam-tab-btn-mcq" 
+        onclick="switchStudyTab('mcq')" 
+        class="flex-1 py-1.5 sm:py-2 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white text-indigo-950 shadow-sm cursor-pointer whitespace-nowrap"
+      >
+        <i class="fa-solid fa-circle-question text-emerald-500"></i>
+        <span>1. Trắc Nghiệm</span>
+      </button>
+
+      <button 
+        id="exam-tab-btn-tf" 
+        onclick="switchStudyTab('tf')" 
+        class="flex-1 py-1.5 sm:py-2 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
+      >
+        <i class="fa-solid fa-list-check text-amber-400"></i>
+        <span>2. Đúng / Sai</span>
+      </button>
+
+      <button 
+        id="tab-btn-sa" 
+        onclick="switchStudyTab('sa')" 
+        class="flex-1 py-1.5 sm:py-2 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
+      >
+        <i class="fa-solid fa-pen-to-square text-cyan-400"></i>
+        <span id="tab-label-sa">3. Trả Lời Ngắn</span>
+      </button>
+
+      <!-- Exam Timer Display -->
+      <div class="px-3 py-1.5 rounded-xl bg-amber-400 text-slate-950 font-black text-xs sm:text-[12pt] flex items-center gap-1.5 shrink-0 shadow-sm">
+        <i class="fa-solid fa-clock animate-pulse text-rose-700"></i>
+        <span id="study-timer-text">90:00</span>
+      </div>
+
+      <!-- Submit Exam Button -->
+      <button 
+        onclick="handleFinishLesson()" 
+        class="py-1.5 sm:py-2 px-3 sm:px-4 rounded-xl font-black text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-rose-600 hover:bg-rose-700 text-white shadow-sm cursor-pointer whitespace-nowrap"
+        title="Nộp bài thi để chấm điểm và xem đáp án chi tiết"
+      >
+        <i class="fa-solid fa-flag-checkered text-amber-300"></i>
+        <span>Nộp Bài Thi</span>
+      </button>
+
+      <!-- Change Exam Button -->
+      <button 
+        onclick="openExamRegisterModal()" 
+        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-bold text-xs sm:text-[11.5pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white/10 hover:bg-white/20 text-amber-200 hover:text-white border border-amber-300/40 cursor-pointer whitespace-nowrap"
+        title="Chọn đề thi tốt nghiệp khác"
+      >
+        <i class="fa-solid fa-rotate text-amber-300"></i>
+        <span class="hidden sm:inline">Đổi Đề</span>
       </button>
     </div>
   </div>
@@ -567,7 +642,45 @@
           </form>
         </footer>
       </div>
-    </main>
+    
+      <!-- PANEL 6: ÔN THI ĐỊNH KỲ (Bảng chọn Khối & Học kỳ) -->
+      <div id="panel-periodic" class="study-panel flex-1 overflow-y-auto p-4 sm:p-6 hidden font-serif">
+        <div class="max-w-3xl mx-auto my-auto space-y-6">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-teal-100 text-teal-700 text-3xl mb-3 shadow-inner">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h2 class="text-[16pt] sm:text-[20pt] font-black text-slate-900 uppercase">
+              📝 ÔN THI ĐỊNH KỲ - TOÁN THPT
+            </h2>
+            <p class="text-slate-600 text-xs sm:text-[12pt] mt-1">
+              Kho đề kiểm tra Giữa học kỳ 1, Cuối học kỳ 1, Giữa học kỳ 2 và Cuối học kỳ 2 cho Khối 10, 11, 12
+            </p>
+          </div>
+
+          <div class="p-6 bg-gradient-to-r from-teal-50 via-emerald-50 to-teal-50 border-2 border-teal-300 rounded-3xl shadow-sm text-center">
+            <div class="inline-flex items-center gap-2 text-teal-900 font-black text-[13pt] mb-2">
+              <i class="fa-solid fa-circle-info text-teal-600 text-lg"></i>
+              <span>THÔNG BÁO TỪ THẦY THUẤN</span>
+            </div>
+            <p class="text-slate-800 text-xs sm:text-[12.5pt] font-semibold leading-relaxed">
+              Hệ thống đề ôn thi định kỳ Giữa kỳ & Cuối kỳ đang được cập nhật...<br/>
+              <span class="text-slate-600 text-xs sm:text-[11pt] font-normal">(Sẵn sàng khung dữ liệu để nạp đề chi tiết cho các khối 10, 11 và 12).</span>
+            </p>
+            <div class="mt-5 flex flex-wrap items-center justify-center gap-3">
+              <button onclick="openPeriodicModal()" class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow cursor-pointer transition flex items-center gap-2">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Mở Bảng Chọn Kỳ Thi</span>
+              </button>
+              <button onclick="handleSelectNavMode('sgk')" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow cursor-pointer transition flex items-center gap-2">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Học Bài Theo SGK</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+</main>
   </div>
 
   <!-- MODAL: PHIẾU LÀM BÀI 6 CÂU ĐÚNG / SAI (24 Ý HỎI) -->
@@ -1129,6 +1242,96 @@
   </div>
 
   <!-- Modal: Initial Student Setup (SGK Kết nối tri thức) -->
+  <!-- Modal: Ôn Thi Định Kỳ (Giữa Kỳ & Cuối Kỳ) -->
+  <div id="modal-periodic-exam" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99992] hidden items-center justify-center p-3 sm:p-4 select-none font-serif animate-in fade-in">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-xl w-full border border-teal-200 overflow-hidden font-serif flex flex-col max-h-[92vh]">
+      <div class="bg-gradient-to-r from-teal-600 via-emerald-600 to-indigo-800 text-white p-5 text-center shrink-0">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-white/20 text-teal-200 text-2xl shadow mb-2">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <h3 class="text-[15pt] sm:text-[17pt] font-black uppercase">📝 ÔN THI ĐỊNH KỲ TOÁN THPT</h3>
+        <p class="text-xs sm:text-[11pt] text-teal-100 font-medium mt-0.5">Luyện đề khảo sát chất lượng Giữa kỳ & Cuối kỳ (Khối 10, 11, 12)</p>
+      </div>
+
+      <div class="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1 bg-slate-50">
+        <!-- 1. Chọn Khối Lớp -->
+        <div>
+          <label class="block text-[12pt] font-bold text-slate-800 mb-2">1. Chọn Khối Lớp:</label>
+          <div class="grid grid-cols-3 gap-2 sm:gap-3">
+            <button type="button" onclick="selectPeriodicGrade('10')" id="periodic-grade-10" class="periodic-grade-btn py-2.5 px-3 rounded-xl font-black text-xs sm:text-[12pt] border-2 border-slate-300 hover:border-teal-500 bg-white text-slate-700 transition cursor-pointer">
+              Lớp 10
+            </button>
+            <button type="button" onclick="selectPeriodicGrade('11')" id="periodic-grade-11" class="periodic-grade-btn py-2.5 px-3 rounded-xl font-black text-xs sm:text-[12pt] border-2 border-slate-300 hover:border-teal-500 bg-white text-slate-700 transition cursor-pointer">
+              Lớp 11
+            </button>
+            <button type="button" onclick="selectPeriodicGrade('12')" id="periodic-grade-12" class="periodic-grade-btn py-2.5 px-3 rounded-xl font-black text-xs sm:text-[12pt] border-2 border-teal-500 bg-teal-50 text-teal-900 shadow-xs transition cursor-pointer">
+              Lớp 12
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Chọn Đề Giữa kỳ / Cuối kỳ -->
+        <div>
+          <label class="block text-[12pt] font-bold text-slate-800 mb-2">2. Chọn Đề Kiểm Tra Định Kỳ:</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div class="p-3.5 bg-white rounded-2xl border-2 border-slate-200 hover:border-teal-400 transition cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-xs sm:text-[11.5pt]">Đề Giữa Học Kỳ 1</span>
+                <span class="text-[9.5pt] bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded-full">HK1</span>
+              </div>
+              <p class="text-[10.5pt] text-slate-500 mt-1">Cấu trúc 90 phút • Đánh giá nửa đầu HK1</p>
+            </div>
+
+            <div class="p-3.5 bg-white rounded-2xl border-2 border-slate-200 hover:border-teal-400 transition cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-xs sm:text-[11.5pt]">Đề Cuối Học Kỳ 1</span>
+                <span class="text-[9.5pt] bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded-full">HK1</span>
+              </div>
+              <p class="text-[10.5pt] text-slate-500 mt-1">Cấu trúc 90 phút • Tổng hợp toàn bộ HK1</p>
+            </div>
+
+            <div class="p-3.5 bg-white rounded-2xl border-2 border-slate-200 hover:border-teal-400 transition cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-xs sm:text-[11.5pt]">Đề Giữa Học Kỳ 2</span>
+                <span class="text-[9.5pt] bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded-full">HK2</span>
+              </div>
+              <p class="text-[10.5pt] text-slate-500 mt-1">Cấu trúc 90 phút • Đánh giá nửa đầu HK2</p>
+            </div>
+
+            <div class="p-3.5 bg-white rounded-2xl border-2 border-slate-200 hover:border-teal-400 transition cursor-pointer shadow-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-xs sm:text-[11.5pt]">Đề Cuối Học Kỳ 2</span>
+                <span class="text-[9.5pt] bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded-full">HK2</span>
+              </div>
+              <p class="text-[10.5pt] text-slate-500 mt-1">Cấu trúc 90 phút • Tổng kết năm học</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Thông báo trạng thái theo yêu cầu -->
+        <div class="p-4 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl shadow-sm text-slate-800">
+          <div class="flex items-center gap-2 text-amber-800 font-bold text-xs sm:text-[12pt] mb-1">
+            <i class="fa-solid fa-spinner fa-spin text-amber-600"></i>
+            <span>Thông Báo Trạng Thái:</span>
+          </div>
+          <p class="text-xs sm:text-[11.5pt] leading-relaxed font-semibold text-slate-800">
+            📌 Hệ thống đề ôn thi định kỳ Giữa kỳ & Cuối kỳ đang được cập nhật... <span class="font-normal text-slate-600">(sẵn sàng khung dữ liệu để nạp đề sau).</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 bg-white border-t border-slate-200 flex items-center justify-between shrink-0">
+        <button type="button" onclick="closePeriodicModal()" class="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer">
+          Đóng
+        </button>
+        <button type="button" onclick="handleSelectNavMode('sgk')" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow transition cursor-pointer flex items-center gap-1.5">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Về Học Bài Theo SGK</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div id="modal-setup" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-100 animate-in fade-in zoom-in duration-200 font-serif">
       <div class="flex items-center gap-3 mb-4">
@@ -2107,34 +2310,65 @@
     // HÀM ĐIỀU HƯỚNG CHỌN CHẾ ĐỘ HỌC: ÔN THI TỐT NGHIỆP HOẶC HỌC SGK
     // =========================================================================
     function handleSelectMode(mode) {
+      if (mode === 'exam' || mode === 'graduation') {
+        handleSelectNavMode('graduation');
+      } else if (mode === 'periodic') {
+        handleSelectNavMode('periodic');
+      } else {
+        handleSelectNavMode('sgk');
+      }
+    }
+
+
+    // Quản lý 3 Chế Độ Điều Hướng Chính: SGK, Định Kỳ, Tốt Nghiệp
+    function handleSelectNavMode(mode) {
       try {
-        // 1. Đóng/ẩn hoàn toàn popup phân luồng
-        const modalHub = document.getElementById('modal-entry-hub') || document.getElementById('mode-select-modal') || document.querySelector('.mode-modal');
+        const btnSgk = document.getElementById('nav-btn-sgk');
+        const btnPeriodic = document.getElementById('nav-btn-periodic');
+        const btnGrad = document.getElementById('nav-btn-graduation');
+
+        const activeClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400';
+        const inactiveClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20';
+
+        if (btnSgk) btnSgk.className = (mode === 'sgk') ? activeClass : inactiveClass;
+        if (btnPeriodic) btnPeriodic.className = (mode === 'periodic') ? activeClass : inactiveClass;
+        if (btnGrad) btnGrad.className = (mode === 'graduation' || mode === 'exam') ? activeClass : inactiveClass;
+
+        // Đóng các modal popups nếu đang mở
+        const modalHub = document.getElementById('modal-entry-hub');
         if (modalHub) {
           modalHub.style.display = 'none';
           modalHub.classList.add('hidden');
-          modalHub.classList.remove('flex');
         }
+        closeExamRegisterModal();
+        closeExamPracticeModal();
+        closePeriodicModal();
 
-        // 2. Chuyển giao diện theo lựa chọn
-        if (mode === 'exam') {
-          currentAppMode = 'exam';
-          localStorage.setItem('CURRENT_APP_MODE', 'exam');
-          openExamRegisterModal();
-        } else {
+        if (mode === 'sgk') {
           currentAppMode = 'sgk';
           localStorage.setItem('CURRENT_APP_MODE', 'sgk');
 
-          // Đóng triệt để các modal luyện đề
-          closeExamRegisterModal();
-          closeExamPracticeModal();
-
-          // Dừng đồng hồ bấm giờ đề thi nếu đang chạy
           if (typeof examCountdownInterval !== 'undefined' && examCountdownInterval) {
             clearInterval(examCountdownInterval);
           }
 
-          // Reset tiêu đề bài học nếu đang lưu tên đề thi, tránh lẫn vào SGK
+          const pPeriodic = document.getElementById('panel-periodic');
+          if (pPeriodic) pPeriodic.classList.add('hidden');
+
+          const examSubNav = document.getElementById('exam-sub-nav');
+          if (examSubNav) {
+            examSubNav.classList.add('hidden');
+            examSubNav.classList.remove('flex');
+          }
+          const sgkSubNav = document.getElementById('sgk-sub-nav');
+          if (sgkSubNav) {
+            sgkSubNav.classList.remove('hidden');
+            sgkSubNav.classList.add('flex');
+          }
+          const flowBar = document.getElementById('flow-status-bar');
+          if (flowBar) flowBar.style.display = '';
+
+          // Reset bài học SGK nếu trước đó đang lưu tên đề thi
           if (!studentInfo.lesson || studentInfo.lesson.includes('Đề thi') || studentInfo.lesson.includes('tốt nghiệp') || (activeLesson && activeLesson.isGraduationExam)) {
             studentInfo.lesson = 'Bài 1: Tính đơn điệu và cực trị của hàm số';
             studentInfo.grade = studentInfo.grade || 'Lớp 12';
@@ -2148,24 +2382,109 @@
             }
           }
 
-          // Khôi phục giao diện các tab SGK và hiển thị lại Flow Status Bar
+          updateStudentDisplayInfo();
           applySgkModeTabsUI();
 
-          // Cập nhật thông tin học sinh lên giao diện
-          updateStudentDisplayInfo();
-
-          // Mở bộ chọn SGK (Khối - Chương - Bài)
+          // Mở bộ chọn SGK: Khối -> Chương -> Bài
           openCurriculumPicker();
 
           // Kích hoạt tab Lý Thuyết SGK
-          if (typeof switchStudyTab === 'function') {
-            switchStudyTab('theory');
+          switchStudyTab('theory');
+
+        } else if (mode === 'periodic') {
+          currentAppMode = 'periodic';
+          localStorage.setItem('CURRENT_APP_MODE', 'periodic');
+
+          if (typeof examCountdownInterval !== 'undefined' && examCountdownInterval) {
+            clearInterval(examCountdownInterval);
           }
+
+          const flowBar = document.getElementById('flow-status-bar');
+          if (flowBar) flowBar.style.display = 'none';
+
+          const sgkSubNav = document.getElementById('sgk-sub-nav');
+          if (sgkSubNav) {
+            sgkSubNav.classList.add('hidden');
+            sgkSubNav.classList.remove('flex');
+          }
+
+          const examSubNav = document.getElementById('exam-sub-nav');
+          if (examSubNav) {
+            examSubNav.classList.add('hidden');
+            examSubNav.classList.remove('flex');
+          }
+
+          ['panel-theory', 'panel-mcq', 'panel-tf', 'panel-sa', 'panel-chat'].forEach(id => {
+            const p = document.getElementById(id);
+            if (p) p.classList.add('hidden');
+          });
+
+          const pPeriodic = document.getElementById('panel-periodic');
+          if (pPeriodic) pPeriodic.classList.remove('hidden');
+
+          const chatLesson = document.getElementById('chat-current-lesson');
+          if (chatLesson) chatLesson.textContent = 'Ôn Thi Định Kỳ (Giữa Kỳ & Cuối Kỳ)';
+
+          openPeriodicModal();
+
+        } else if (mode === 'graduation' || mode === 'exam') {
+          currentAppMode = 'exam';
+          localStorage.setItem('CURRENT_APP_MODE', 'exam');
+
+          const pPeriodic = document.getElementById('panel-periodic');
+          if (pPeriodic) pPeriodic.classList.add('hidden');
+
+          const sgkSubNav = document.getElementById('sgk-sub-nav');
+          if (sgkSubNav) {
+            sgkSubNav.classList.add('hidden');
+            sgkSubNav.classList.remove('flex');
+          }
+          const flowBar = document.getElementById('flow-status-bar');
+          if (flowBar) flowBar.style.display = 'none';
+
+          openExamRegisterModal();
         }
       } catch (err) {
-        console.error("Error in handleSelectMode:", err);
+        console.error("Error in handleSelectNavMode:", err);
       }
     }
+
+    function selectPeriodicGrade(grade) {
+      ['10', '11', '12'].forEach(g => {
+        const btn = document.getElementById(`periodic-grade-${g}`);
+        if (btn) {
+          if (g === grade) {
+            btn.className = 'periodic-grade-btn py-2.5 px-3 rounded-xl font-black text-xs sm:text-[12pt] border-2 border-teal-500 bg-teal-50 text-teal-900 shadow-xs transition cursor-pointer';
+          } else {
+            btn.className = 'periodic-grade-btn py-2.5 px-3 rounded-xl font-black text-xs sm:text-[12pt] border-2 border-slate-300 hover:border-teal-500 bg-white text-slate-700 transition cursor-pointer';
+          }
+        }
+      });
+    }
+
+    function openPeriodicModal() {
+      const modal = document.getElementById('modal-periodic-exam');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modal.style.display = 'flex';
+      }
+    }
+
+    function closePeriodicModal() {
+      const modal = document.getElementById('modal-periodic-exam');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.style.display = 'none';
+      }
+    }
+
+    window.handleSelectNavMode = handleSelectNavMode;
+    window.selectPeriodicGrade = selectPeriodicGrade;
+    window.openPeriodicModal = openPeriodicModal;
+    window.closePeriodicModal = closePeriodicModal;
+
 
     function showExamSection() {
       if (typeof switchStudyTab === 'function') {
@@ -2422,6 +2741,29 @@
       closeExamRegisterModal();
 
       // Mở ngay Phần 1: Trắc Nghiệm để làm bài
+      
+      const btnSgk = document.getElementById('nav-btn-sgk');
+      const btnPeriodic = document.getElementById('nav-btn-periodic');
+      const btnGrad = document.getElementById('nav-btn-graduation');
+      const activeClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400';
+      const inactiveClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20';
+      if (btnSgk) btnSgk.className = inactiveClass;
+      if (btnPeriodic) btnPeriodic.className = inactiveClass;
+      if (btnGrad) btnGrad.className = activeClass;
+
+      const examSubNav = document.getElementById('exam-sub-nav');
+      if (examSubNav) {
+        examSubNav.classList.remove('hidden');
+        examSubNav.classList.add('flex');
+      }
+      const sgkSubNav = document.getElementById('sgk-sub-nav');
+      if (sgkSubNav) {
+        sgkSubNav.classList.add('hidden');
+        sgkSubNav.classList.remove('flex');
+      }
+      const pPeriodic = document.getElementById('panel-periodic');
+      if (pPeriodic) pPeriodic.classList.add('hidden');
+
       switchStudyTab('mcq');
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
