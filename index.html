@@ -1580,83 +1580,91 @@
 
     // Xử lý khi bấm nút "Xác nhận & Bắt đầu học"
     function handleConfirmAuth() {
-      const alertBox = document.getElementById('auth-alert-box');
-      if (alertBox) alertBox.classList.add('hidden');
+      try {
+        const alertBox = document.getElementById('auth-alert-box');
+        if (alertBox) alertBox.classList.add('hidden');
 
-      if (currentAuthTab === 'personal') {
-        const inputKey = document.getElementById('input-personal-key');
-        const personalKey = inputKey ? inputKey.value.trim() : "";
-        if (!personalKey) {
-          showAuthAlert("Vui lòng nhập hoặc dán mã Google Gemini API Key của bạn để tiếp tục!", "error");
-          if (inputKey) inputKey.focus();
-          return;
+        if (currentAuthTab === 'personal') {
+          const inputKey = document.getElementById('input-personal-key');
+          const personalKey = inputKey ? inputKey.value.trim() : "";
+          if (!personalKey) {
+            showAuthAlert("Vui lòng nhập hoặc dán mã Google Gemini API Key của bạn để tiếp tục!", "error");
+            if (inputKey) inputKey.focus();
+            return;
+          }
+          if (personalKey.length < 8) {
+            showAuthAlert("Mã API Key không hợp lệ! Vui lòng kiểm tra lại mã đã lấy từ Google AI Studio.", "error");
+            if (inputKey) inputKey.focus();
+            return;
+          }
+
+          // Lưu thông tin vào LocalStorage
+          localStorage.setItem('THUAN_AUTH_MODE', 'personal');
+          localStorage.setItem('THUAN_AUTH_VALUE', personalKey);
+          localStorage.setItem('GEMINI_API_KEY', personalKey);
+          apiKey = personalKey;
+          isDemoMode = false;
+
+          closeAuthGatekeeperModal();
+          updateAuthUIBadge();
+          updateModeUI();
+
+          // Đồng bộ vào input settings
+          const inputSettingsKey = document.getElementById('input-api-key');
+          if (inputSettingsKey) inputSettingsKey.value = personalKey;
+
+          // Nếu setup modal đang đóng và chưa bắt đầu học thì mở setup modal
+          const modalSetup = document.getElementById('modal-setup');
+          if (modalSetup && !activeLesson) {
+            modalSetup.classList.remove('hidden');
+            modalSetup.classList.add('flex');
+            modalSetup.style.display = 'flex';
+          }
+        } else {
+          // Tab Mã VIP
+          const inputVip = document.getElementById('input-vip-code');
+          const enteredCode = inputVip ? inputVip.value.trim().toUpperCase() : "";
+
+          if (!enteredCode) {
+            showAuthAlert("Vui lòng nhập Mã VIP nội bộ lớp học của Thầy Thuấn Phan!", "error");
+            if (inputVip) inputVip.focus();
+            return;
+          }
+
+          if (enteredCode !== VIP_AUTH_SECRET) {
+            showAuthAlert("Mã VIP không chính xác! Vui lòng liên hệ Thầy Thuấn Phan để nhận mã hoặc dùng API Key cá nhân miễn phí.", "error");
+            if (inputVip) inputVip.focus();
+            return;
+          }
+
+          // Mã VIP chính xác
+          localStorage.setItem('THUAN_AUTH_MODE', 'vip');
+          localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
+          const serverKey = getActiveGeminiApiKey();
+          localStorage.setItem('GEMINI_API_KEY', serverKey);
+          apiKey = serverKey;
+          isDemoMode = false;
+
+          closeAuthGatekeeperModal();
+          updateAuthUIBadge();
+          updateModeUI();
+
+          const inputSettingsKey = document.getElementById('input-api-key');
+          if (inputSettingsKey) inputSettingsKey.value = "VIP-HOANGGIA2026-ACTIVE";
+
+          const modalSetup = document.getElementById('modal-setup');
+          if (modalSetup && !activeLesson) {
+            modalSetup.classList.remove('hidden');
+            modalSetup.classList.add('flex');
+            modalSetup.style.display = 'flex';
+          }
         }
-        if (personalKey.length < 8) {
-          showAuthAlert("Mã API Key không hợp lệ! Vui lòng kiểm tra lại mã đã lấy từ Google AI Studio.", "error");
-          if (inputKey) inputKey.focus();
-          return;
-        }
-
-        // Lưu thông tin vào LocalStorage
-        localStorage.setItem('THUAN_AUTH_MODE', 'personal');
-        localStorage.setItem('THUAN_AUTH_VALUE', personalKey);
-        localStorage.setItem('GEMINI_API_KEY', personalKey);
-        apiKey = personalKey;
-        isDemoMode = false;
-
+      } catch (err) {
+        console.error("Error in handleConfirmAuth:", err);
         closeAuthGatekeeperModal();
-        updateAuthUIBadge();
-        updateModeUI();
-
-        // Đồng bộ vào input settings
-        const inputSettingsKey = document.getElementById('input-api-key');
-        if (inputSettingsKey) inputSettingsKey.value = personalKey;
-
-        // Nếu setup modal đang đóng và chưa bắt đầu học thì mở setup modal
-        const modalSetup = document.getElementById('modal-setup');
-        if (modalSetup && !activeLesson) {
-          modalSetup.classList.remove('hidden');
-          modalSetup.classList.add('flex');
-        }
-      } else {
-        // Tab Mã VIP
-        const inputVip = document.getElementById('input-vip-code');
-        const enteredCode = inputVip ? inputVip.value.trim().toUpperCase() : "";
-
-        if (!enteredCode) {
-          showAuthAlert("Vui lòng nhập Mã VIP nội bộ lớp học của Thầy Thuấn Phan!", "error");
-          if (inputVip) inputVip.focus();
-          return;
-        }
-
-        if (enteredCode !== VIP_AUTH_SECRET) {
-          showAuthAlert("Mã VIP không chính xác! Vui lòng liên hệ Thầy Thuấn Phan để nhận mã hoặc dùng API Key cá nhân miễn phí.", "error");
-          if (inputVip) inputVip.focus();
-          return;
-        }
-
-        // Mã VIP chính xác
-        localStorage.setItem('THUAN_AUTH_MODE', 'vip');
-        localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
-        const serverKey = getActiveGeminiApiKey();
-        localStorage.setItem('GEMINI_API_KEY', serverKey);
-        apiKey = serverKey;
-        isDemoMode = false;
-
-        closeAuthGatekeeperModal();
-        updateAuthUIBadge();
-        updateModeUI();
-
-        const inputSettingsKey = document.getElementById('input-api-key');
-        if (inputSettingsKey) inputSettingsKey.value = "VIP-HOANGGIA2026-ACTIVE";
-
-        const modalSetup = document.getElementById('modal-setup');
-        if (modalSetup && !activeLesson) {
-          modalSetup.classList.remove('hidden');
-          modalSetup.classList.add('flex');
-        }
       }
     }
+    window.handleConfirmAuth = handleConfirmAuth;
 
     // Mở Modal Chặn Cửa
     function openAuthGatekeeperModal(isReauth = false) {
@@ -1664,6 +1672,7 @@
       if (!modal) return;
       modal.classList.remove('hidden');
       modal.classList.add('flex');
+      modal.style.display = 'flex';
 
       const alertBox = document.getElementById('auth-alert-box');
       if (alertBox) alertBox.classList.add('hidden');
@@ -1689,8 +1698,10 @@
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
+        modal.style.display = 'none';
       }
     }
+    window.closeAuthGatekeeperModal = closeAuthGatekeeperModal;
 
     // Cập nhật huy hiệu trạng thái xác thực trên Header
     function updateAuthUIBadge() {
@@ -1717,6 +1728,8 @@
         label.className = "text-rose-200 font-bold text-[11px] whitespace-nowrap";
       }
     }
+    window.updateAuthUIBadge = updateAuthUIBadge;
+    window.updateAuthBadgeUI = updateAuthUIBadge;
 
     // Hàm kiểm tra và chặn mọi chức năng nếu chưa xác thực
     // HÃ m kiá»ƒm tra vÃ  cháº·n má»i chá»©c nÄƒng náº¿u chÆ°a xÃ¡c thá»±c
@@ -16984,18 +16997,22 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
     }
 
     function updateModeUI() {
-      if (isDemoMode) {
-        modeText.textContent = "Demo KNTT";
-        modeBadge.className = "flex items-center bg-amber-500/20 text-xs px-2.5 py-1 rounded-lg border border-amber-400/30 text-amber-200";
+      const modeTextEl = document.getElementById('mode-text');
+      const modeBadgeEl = document.getElementById('mode-badge');
+      if (typeof isDemoMode !== 'undefined' && isDemoMode) {
+        if (modeTextEl) modeTextEl.textContent = "Demo KNTT";
+        if (modeBadgeEl) modeBadgeEl.className = "flex items-center bg-amber-500/20 text-xs px-2.5 py-1 rounded-lg border border-amber-400/30 text-amber-200";
       } else {
-        let label = selectedModel
+        const curModel = (typeof selectedModel !== 'undefined' && selectedModel) ? selectedModel : 'gemini-3.8-flash';
+        let label = curModel
           .replace('gemini-', 'Gemini ')
           .replace('-flash', ' Flash')
           .replace('-pro', ' Pro');
-        modeText.textContent = label;
-        modeBadge.className = "flex items-center bg-indigo-900/60 text-xs px-2.5 py-1 rounded-lg border border-indigo-500/30 text-indigo-200";
+        if (modeTextEl) modeTextEl.textContent = label;
+        if (modeBadgeEl) modeBadgeEl.className = "flex items-center bg-indigo-900/60 text-xs px-2.5 py-1 rounded-lg border border-indigo-500/30 text-indigo-200";
       }
     }
+    window.updateModeUI = updateModeUI;
 
     // Settings Modal Handlers
     if (btnSettings) btnSettings.addEventListener('click', () => modalSettings.classList.remove('hidden'));
@@ -17903,13 +17920,39 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 
         // Màn hình Chặn cửa (Modal Authentication): Xuất hiện ngay lập tức khi tải trang web nếu chưa xác thực
         // Tự động kiểm tra bộ nhớ cục bộ (localStorage):
-      // Đã có mã hợp lệ: Tự động bỏ qua màn hình chặn cửa và đưa học sinh vào giao diện chính
-      // Chưa lưu mã: Lập tức hiển thị Màn hình Chặn cửa để yêu cầu nhập mã
+        if (isUserAuthenticated()) {
+          // Đã có mã hợp lệ: Tự động bỏ qua màn hình chặn cửa và đưa học sinh vào THẲNG giao diện học tập chính
+          closeAuthGatekeeperModal();
+          const modalSetup = document.getElementById('modal-setup');
+          if (modalSetup) {
+            modalSetup.classList.add('hidden');
+            modalSetup.classList.remove('flex');
+            modalSetup.style.display = 'none';
+          }
+
+          // Cập nhật thông tin học sinh lên Header (nếu có các element)
+          const bName = document.getElementById('badge-name');
+          if (bName) bName.textContent = studentInfo.name;
+          const bSchool = document.getElementById('badge-school');
+          if (bSchool) bSchool.textContent = studentInfo.school;
+          const bClass = document.getElementById('badge-class');
+          if (bClass) bClass.textContent = studentInfo.class;
+          const sBadge = document.getElementById('session-badge');
+          if (sBadge) sBadge.classList.remove('hidden');
+          const mClass = document.getElementById('mobile-class-badge');
+          if (mClass) mClass.textContent = studentInfo.class;
+          const cLesson = document.getElementById('chat-current-lesson');
+          if (cLesson) cLesson.textContent = studentInfo.lesson;
+          const cClass = document.getElementById('chat-current-class');
+          if (cClass) cClass.textContent = studentInfo.class;
+        } else {
+          // Chưa lưu mã: Lập tức hiển thị Màn hình Chặn cửa để yêu cầu nhập mã
           openAuthGatekeeperModal(false);
           const modalSetup = document.getElementById('modal-setup');
           if (modalSetup) {
             modalSetup.classList.add('hidden');
             modalSetup.classList.remove('flex');
+            modalSetup.style.display = 'none';
           }
         }
       } catch (err) {
@@ -17919,6 +17962,30 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 
     // Run immediately since script is placed right before closing body
     initApp();
+
+    // Attach click and keydown handlers for auth gatekeeper
+    const btnConfirmAuthEl = document.getElementById('btn-confirm-auth');
+    if (btnConfirmAuthEl) {
+      btnConfirmAuthEl.addEventListener('click', handleConfirmAuth);
+    }
+    const inpPersonalKey = document.getElementById('input-personal-key');
+    if (inpPersonalKey) {
+      inpPersonalKey.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleConfirmAuth();
+        }
+      });
+    }
+    const inpVipCode = document.getElementById('input-vip-code');
+    if (inpVipCode) {
+      inpVipCode.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleConfirmAuth();
+        }
+      });
+    }
 
     if (document.readyState === 'loading') {
       window.addEventListener('DOMContentLoaded', initApp);
