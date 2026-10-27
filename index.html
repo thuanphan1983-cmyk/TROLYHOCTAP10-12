@@ -367,6 +367,48 @@
     <button id="btn-mobile-more-menu"></button>
   </div>
 
+  <!-- Top Header Bar: Thương hiệu, Thông tin học sinh, Đổi thông tin & Đổi API Key -->
+  <header class="bg-indigo-950 text-white px-3 sm:px-6 py-2 border-b border-indigo-900 flex items-center justify-between font-serif z-30 shrink-0 shadow-sm">
+    <div class="flex items-center gap-2">
+      <span class="text-amber-400 text-lg sm:text-xl font-black">📐</span>
+      <h1 class="text-xs sm:text-[13pt] font-black tracking-wide text-white flex items-center gap-1 sm:gap-2">
+        <span>TRỢ LÝ TOÁN THPT</span>
+        <span class="hidden sm:inline text-indigo-300 font-normal">| THẦY THUẤN</span>
+      </h1>
+    </div>
+    <div class="flex items-center gap-1.5 sm:gap-2.5">
+      <!-- Huy hiệu tên học sinh & lớp -->
+      <div class="bg-indigo-900/90 border border-indigo-700/60 rounded-xl px-2.5 py-1 text-xs sm:text-[11.5pt] flex items-center gap-1.5 shadow-sm text-indigo-100">
+        <i class="fa-solid fa-user-graduate text-amber-400 text-xs sm:text-sm"></i>
+        <span id="top-student-name" class="font-bold text-white truncate max-w-[110px] sm:max-w-[200px]">Học sinh (12A1)</span>
+      </div>
+
+      <!-- Nút 1: ⚙️ Đổi thông tin (Dành cho máy dùng chung) -->
+      <button 
+        type="button" 
+        id="btn-top-change-student-info"
+        onclick="openStudentInfoModal('change')" 
+        class="bg-indigo-800 hover:bg-indigo-700 border border-indigo-600/70 text-indigo-100 hover:text-white font-bold px-2 sm:px-2.5 py-1 rounded-xl text-xs sm:text-[11pt] flex items-center gap-1 shadow-sm transition active:scale-95 cursor-pointer whitespace-nowrap"
+        title="Đổi tên và lớp học sinh cho máy dùng chung"
+      >
+        <span>⚙️</span>
+        <span class="hidden md:inline">Đổi thông tin</span>
+      </button>
+
+      <!-- Nút 2: 🔑 Đổi API Key -->
+      <button 
+        type="button" 
+        id="btn-top-change-api-key"
+        onclick="openAuthGatekeeperModal(true)" 
+        class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-2 sm:px-2.5 py-1 rounded-xl text-xs sm:text-[11pt] flex items-center gap-1 shadow-sm transition active:scale-95 cursor-pointer whitespace-nowrap"
+        title="Nhập hoặc đổi API Key cá nhân / Mã VIP"
+      >
+        <span>🔑</span>
+        <span class="hidden md:inline">Đổi API Key</span>
+      </button>
+    </div>
+  </header>
+
   <!-- Study Navigation Tabs (Tối ưu tuyệt đối cho Điện Thoại & Máy Tính) -->
   <!-- Study Navigation Header Bar: ĐÚNG 3 NÚT DUY NHẤT CĂN GIỮA -->
   <div id="study-mode-tabs" class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white px-3 py-2 sm:py-2.5 shrink-0 flex items-center justify-center shadow-md border-b border-indigo-800/60 font-serif z-20">
@@ -832,10 +874,16 @@
       
       <!-- Modal Header Banner -->
       <div class="bg-gradient-to-r from-indigo-700 via-indigo-800 to-purple-800 text-white p-5 sm:p-6 text-center relative">
-        <!-- strict gatekeeper banner
-          <i class="fa-solid fa-xmark"></i>
+        <button 
+          type="button" 
+          id="btn-close-auth-modal" 
+          onclick="closeAuthGatekeeperModal()" 
+          class="absolute right-4 top-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center cursor-pointer transition text-base hidden" 
+          title="Đóng (Giữ nguyên API Key hiện tại)"
+        >
+          ✕
         </button>
-        --> <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm shadow-inner mb-3 text-amber-300 text-2xl">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm shadow-inner mb-3 text-amber-300 text-2xl">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
         <h2 class="text-[15pt] sm:text-[16pt] font-black tracking-tight leading-snug">
@@ -1004,14 +1052,46 @@
           var hasVip = (mode === 'vip' && (val === 'HOANGGIA2026' || !val));
           var isVerified = (verified === 'true' && (hasKey || hasVip));
 
+          var modalAuth = document.getElementById('modal-auth-gatekeeper');
+          var modalStudent = document.getElementById('modal-student-info');
+
           if (hasKey || hasVip || isVerified) {
-            var modal = document.getElementById('modal-auth-gatekeeper');
-            if (modal) {
-              modal.style.setProperty('display', 'none', 'important');
-              modal.classList.add('hidden');
-              modal.classList.remove('flex');
+            // Đã có API Key: Ẩn modal xác thực
+            if (modalAuth) {
+              modalAuth.style.setProperty('display', 'none', 'important');
+              modalAuth.classList.add('hidden');
+              modalAuth.classList.remove('flex');
+            }
+
+            // BƯỚC 2: Kiểm tra thông tin học sinh
+            var sName = localStorage.getItem('student_name') || localStorage.getItem('STUDENT_NAME');
+            var isReg = (localStorage.getItem('student_info_registered') === 'true') && sName && sName.trim().length > 0;
+            if (!isReg) {
+              if (modalStudent) {
+                modalStudent.classList.remove('hidden');
+                modalStudent.classList.add('flex');
+                modalStudent.style.setProperty('display', 'flex', 'important');
+              }
+            } else {
+              if (modalStudent) {
+                modalStudent.style.setProperty('display', 'none', 'important');
+                modalStudent.classList.add('hidden');
+                modalStudent.classList.remove('flex');
+              }
             }
             return true;
+          } else {
+            // Chưa có API Key: Bắt buộc hiện modal xác thực, ẩn modal học sinh
+            if (modalAuth) {
+              modalAuth.classList.remove('hidden');
+              modalAuth.classList.add('flex');
+              modalAuth.style.setProperty('display', 'flex', 'important');
+            }
+            if (modalStudent) {
+              modalStudent.style.setProperty('display', 'none', 'important');
+              modalStudent.classList.add('hidden');
+              modalStudent.classList.remove('flex');
+            }
           }
         } catch (e) {
           console.warn('Auto auth check error:', e);
@@ -1165,11 +1245,27 @@
 
           window.closeAuthGatekeeperModal();
 
-          if (typeof updateStudentDisplayInfo === 'function') updateStudentDisplayInfo();
-          if (typeof updateAuthUIBadge === 'function') updateAuthUIBadge();
-          if (typeof updateModeUI === 'function') updateModeUI();
-          if (typeof updateNavButtonsActiveUI === 'function') updateNavButtonsActiveUI("sgk");
-          if (typeof switchStudyTab === 'function') switchStudyTab('theory');
+          // BƯỚC 2: Kiểm tra thông tin học sinh sau khi đã xác thực API Key
+          var sName = localStorage.getItem('student_name') || localStorage.getItem('STUDENT_NAME');
+          var isReg = (localStorage.getItem('student_info_registered') === 'true') && sName && sName.trim().length > 0;
+          if (!isReg) {
+            if (typeof window.openStudentInfoModal === 'function') {
+              window.openStudentInfoModal('onboarding');
+            } else {
+              var mStudent = document.getElementById('modal-student-info');
+              if (mStudent) {
+                mStudent.classList.remove('hidden');
+                mStudent.classList.add('flex');
+                mStudent.style.setProperty('display', 'flex', 'important');
+              }
+            }
+          } else {
+            if (typeof updateStudentDisplayInfo === 'function') updateStudentDisplayInfo();
+            if (typeof updateAuthUIBadge === 'function') updateAuthUIBadge();
+            if (typeof updateModeUI === 'function') updateModeUI();
+            if (typeof updateNavButtonsActiveUI === 'function') updateNavButtonsActiveUI("sgk");
+            if (typeof switchStudyTab === 'function') switchStudyTab('theory');
+          }
 
         } catch (err) {
           console.warn("handleConfirmAuth execution:", err);
@@ -1253,8 +1349,8 @@
             type="text" 
             id="modal-student-name" 
             required 
-            placeholder="Ví dụ: Nguyễn Minh Anh" 
-            value="Minh Anh"
+            placeholder="Nhập họ và tên học sinh (Ví dụ: Nguyễn Minh Anh)" 
+            value=""
             class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-xs sm:text-[12pt] focus:ring-2 focus:ring-indigo-500 focus:outline-none font-bold text-slate-900" 
           />
         </div>
@@ -1319,6 +1415,7 @@
         <div class="pt-2 flex items-center gap-2">
           <button 
             type="button" 
+            id="btn-close-student-info"
             onclick="closeStudentInfoModal()" 
             class="w-1/3 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer"
           >
@@ -1326,10 +1423,13 @@
           </button>
           <button 
             type="submit" 
-            class="w-2/3 py-2.5 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-black rounded-xl text-xs sm:text-[12pt] shadow-md transition flex items-center justify-center gap-1.5 cursor-pointer"
+            id="btn-submit-student-info"
+            class="flex-1 py-2.5 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-black rounded-xl text-xs sm:text-[12pt] shadow-md transition flex items-center justify-center gap-1.5 cursor-pointer"
           >
-            <span>Xác nhận</span>
+            <span>Xác nhận & Vào học</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
           </button>
         </div>
       </form>
@@ -2319,19 +2419,21 @@
           modalSetup.style.display = 'none';
         }
 
-        // 3. Cập nhật thông tin học sinh & huy hiệu giao diện an toàn
-        if (typeof updateStudentDisplayInfo === 'function') updateStudentDisplayInfo();
+        // 3. Cập nhật huy hiệu trạng thái xác thực
         if (typeof updateAuthUIBadge === 'function') updateAuthUIBadge();
-        if (typeof updateModeUI === 'function') updateModeUI();
 
-        // 4. Chuyển thẳng học sinh vào giao diện chính chứa 3 nút điều hướng
-        if (typeof updateNavButtonsActiveUI === 'function') {
-          updateNavButtonsActiveUI("sgk");
-        }
+        // 4. BƯỚC 2: Kiểm tra Thông Tin Học Sinh (student_name, student_class)
+        const sName = localStorage.getItem('student_name') || localStorage.getItem('STUDENT_NAME');
+        const isRegistered = (localStorage.getItem('student_info_registered') === 'true') && sName && sName.trim().length > 0;
 
-        // 5. Mở tab Lý Thuyết SGK để học sinh học ngay
-        if (typeof switchStudyTab === 'function') {
-          switchStudyTab('theory');
+        if (!isRegistered) {
+          // Chưa có thông tin học sinh -> Hiện Modal Khai báo Thông Tin Học Sinh (Bước 2/2)
+          openStudentInfoModal('onboarding');
+        } else {
+          // Đã có thông tin -> Vào thẳng trang học chính!
+          if (typeof updateStudentDisplayInfo === 'function') updateStudentDisplayInfo();
+          if (typeof updateNavButtonsActiveUI === 'function') updateNavButtonsActiveUI(currentAppMode || "sgk");
+          if (typeof proceedToTargetMode === 'function') proceedToTargetMode(currentAppMode || "sgk");
         }
 
       } catch (err) {
@@ -2347,10 +2449,21 @@
       if (!modal) return;
       modal.classList.remove('hidden');
       modal.classList.add('flex');
-      modal.style.display = 'flex';
+      modal.style.setProperty('display', 'flex', 'important');
 
       const alertBox = document.getElementById('auth-alert-box');
       if (alertBox) alertBox.classList.add('hidden');
+
+      const btnClose = document.getElementById('btn-close-auth-modal');
+      if (btnClose) {
+        if (isReauth && isUserAuthenticated()) {
+          btnClose.classList.remove('hidden');
+          btnClose.style.display = '';
+        } else {
+          btnClose.classList.add('hidden');
+          btnClose.style.display = 'none';
+        }
+      }
 
       // Điền sẵn giá trị nếu đã từng lưu
       const mode = localStorage.getItem('THUAN_AUTH_MODE') || 'personal';
@@ -2365,6 +2478,7 @@
         const inputKey = document.getElementById('input-personal-key');
         if (inputKey && val) inputKey.value = val;
       }
+      document.body.classList.add('overflow-hidden');
     }
 
     // Đóng Modal Chặn Cửa (Chỉ được đóng khi đã xác thực hợp lệ)
@@ -3540,12 +3654,7 @@
     // Xử lý sự kiện khi học sinh bấm vào bất kỳ nút nào trong 3 nút điều hướng
     function handleNavButtonClick(mode) {
       pendingTargetMode = mode;
-      const savedName = localStorage.getItem('STUDENT_NAME');
-      if (savedName && savedName.trim().length > 0) {
-        proceedToTargetMode(mode);
-      } else {
-        openStudentInfoModal(mode);
-      }
+      proceedToTargetMode(mode);
     }
 
     // Mở Modal Đăng Ký Thông Tin Học Sinh
@@ -3557,32 +3666,42 @@
       }
 
       // Lấy thông tin đã lưu trong LocalStorage nếu có
-      const sName = studentInfo.name || localStorage.getItem('STUDENT_NAME') || 'Minh Anh';
-      const sSchool = studentInfo.school || localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh';
-      const sClass = studentInfo.class || localStorage.getItem('STUDENT_CLASS') || '12A1';
+      const sName = localStorage.getItem('student_name') || localStorage.getItem('STUDENT_NAME') || '';
+      const sSchool = localStorage.getItem('student_school') || localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh';
+      const sClass = localStorage.getItem('student_class') || localStorage.getItem('STUDENT_CLASS') || '12A1';
 
       const inpName = document.getElementById('modal-student-name');
       const inpSchool = document.getElementById('modal-student-school');
       const selClass = document.getElementById('modal-student-class');
 
-      if (inpName) inpName.value = sName;
+      if (inpName) inpName.value = (sName && sName !== 'Học sinh') ? sName : '';
       if (inpSchool) inpSchool.value = sSchool;
       if (selClass) selClass.value = sClass;
 
+      const titleEl = document.getElementById('modal-student-info-title');
       const descEl = document.getElementById('modal-student-info-desc');
-      if (descEl) {
-        if (mode === 'sgk') {
-          descEl.textContent = 'Vui lòng xác nhận thông tin trước khi vào Học bài theo SGK';
-        } else if (mode === 'periodic') {
-          descEl.textContent = 'Vui lòng xác nhận thông tin trước khi vào Ôn thi định kỳ';
-        } else {
-          descEl.textContent = 'Vui lòng xác nhận thông tin trước khi vào Ôn thi tốt nghiệp THPT';
+      const btnClose = document.getElementById('btn-close-student-info');
+
+      if (mode === 'onboarding') {
+        if (titleEl) titleEl.textContent = 'Khai Báo Thông Tin Học Sinh';
+        if (descEl) descEl.textContent = 'Bước 2/2: Nhập Họ tên và Lớp để bắt đầu quá trình học tập';
+        if (btnClose) {
+          btnClose.classList.add('hidden');
+          btnClose.style.display = 'none';
+        }
+      } else {
+        if (titleEl) titleEl.textContent = '⚙️ Đổi Thông Tin Học Sinh';
+        if (descEl) descEl.textContent = 'Dành cho học sinh mượn máy học chung đổi lại Họ tên và Lớp của mình';
+        if (btnClose) {
+          btnClose.classList.remove('hidden');
+          btnClose.style.display = '';
         }
       }
 
       modal.classList.remove('hidden');
       modal.classList.add('flex');
-      modal.style.display = 'flex';
+      modal.style.setProperty('display', 'flex', 'important');
+      document.body.classList.add('overflow-hidden');
     }
 
     // Đóng Modal Đăng Ký Thông Tin Học Sinh
@@ -3593,9 +3712,10 @@
         modal.classList.remove('flex');
         modal.style.setProperty('display', 'none', 'important');
       }
+      document.body.classList.remove('overflow-hidden');
     }
 
-    // Khi học sinh bấm 'Xác nhận' trong Modal Thông Tin
+    // Khi học sinh bấm 'Xác nhận & Vào học' trong Modal Thông Tin
     function handleConfirmStudentInfo(e) {
       if (e && e.preventDefault) e.preventDefault();
 
@@ -3603,7 +3723,12 @@
       const inpSchool = document.getElementById('modal-student-school');
       const selClass = document.getElementById('modal-student-class');
 
-      const nameVal = (inpName && inpName.value.trim()) ? inpName.value.trim() : 'Minh Anh';
+      const nameVal = (inpName && inpName.value.trim()) ? inpName.value.trim() : '';
+      if (!nameVal) {
+        alert('Vui lòng nhập Họ và tên học sinh!');
+        if (inpName) inpName.focus();
+        return;
+      }
       const schoolVal = (inpSchool && inpSchool.value.trim()) ? inpSchool.value.trim() : 'THPT Kỳ Anh';
       const classVal = (selClass && selClass.value) ? selClass.value : '12A1';
       const gradeVal = getGradeFromClassName(classVal);
@@ -3613,16 +3738,21 @@
       studentInfo.class = classVal;
       studentInfo.grade = gradeVal;
 
+      localStorage.setItem('student_name', nameVal);
       localStorage.setItem('STUDENT_NAME', nameVal);
+      localStorage.setItem('student_school', schoolVal);
       localStorage.setItem('STUDENT_SCHOOL', schoolVal);
+      localStorage.setItem('student_class', classVal);
       localStorage.setItem('STUDENT_CLASS', classVal);
+      localStorage.setItem('student_grade', gradeVal);
       localStorage.setItem('STUDENT_GRADE', gradeVal);
+      localStorage.setItem('student_info_registered', 'true');
 
       updateStudentDisplayInfo();
       closeStudentInfoModal();
 
-      // Điều hướng ngay theo đúng mục đã chọn
-      proceedToTargetMode(pendingTargetMode || 'sgk');
+      // BƯỚC 3: Vào thẳng trang học chính
+      proceedToTargetMode(pendingTargetMode || currentAppMode || 'sgk');
     }
 
     // Cập nhật hiệu ứng Active rõ ràng cho 3 nút trên thanh điều hướng
@@ -3877,13 +4007,18 @@
 
     // Cập nhật thông tin học sinh hiển thị trên toàn bộ giao diện
     function updateStudentDisplayInfo() {
-      const sName = studentInfo.name || localStorage.getItem('STUDENT_NAME') || 'Minh Anh';
-      const sSchool = studentInfo.school || localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh';
-      const sClass = studentInfo.class || localStorage.getItem('STUDENT_CLASS') || '12A1';
+      const sName = localStorage.getItem('student_name') || localStorage.getItem('STUDENT_NAME') || studentInfo.name || 'Học sinh';
+      const sSchool = localStorage.getItem('student_school') || localStorage.getItem('STUDENT_SCHOOL') || studentInfo.school || 'THPT Kỳ Anh';
+      const sClass = localStorage.getItem('student_class') || localStorage.getItem('STUDENT_CLASS') || studentInfo.class || '12A1';
 
       studentInfo.name = sName;
       studentInfo.school = sSchool;
       studentInfo.class = sClass;
+
+      const topName = document.getElementById('top-student-name');
+      if (topName) {
+        topName.textContent = (sName && sName !== 'Học sinh') ? `${sName} (${sClass})` : `Học sinh (${sClass})`;
+      }
 
       const dName = document.getElementById('display-student-name');
       if (dName) dName.textContent = sName;
@@ -31425,34 +31560,47 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 
         // Cập nhật huy hiệu trạng thái xác thực
         updateAuthUIBadge();
+        updateStudentDisplayInfo();
 
-        // Màn hình Chặn cửa (Modal Authentication): Xuất hiện ngay lập tức khi tải trang web nếu chưa xác thực
-        // Tự động kiểm tra bộ nhớ cục bộ (localStorage):
-        if (isUserAuthenticated()) {
-          // Đã có mã hợp lệ: Tự động bỏ qua màn hình chặn cửa
-          closeAuthGatekeeperModal();
-
-          // Cập nhật thông tin học sinh
-          updateStudentDisplayInfo();
-
-          // Đã bỏ popup phân luồng, chuyển thẳng vào giao diện chính
-          updateNavButtonsActiveUI("sgk");
-          const modalSetup = document.getElementById('modal-setup');
-          if (modalSetup) {
-            modalSetup.classList.add('hidden');
-            modalSetup.classList.remove('flex');
-            modalSetup.style.display = 'none';
-          }
-        } else {
-          // Chưa lưu mã: Lập tức hiển thị Màn hình Chặn cửa để yêu cầu nhập mã
+        // =========================================================================
+        // LUỒNG TRUY CẬP 2 BƯỚC BẮT BUỘC:
+        // =========================================================================
+        // BƯỚC 1: Kiểm tra API Key (1 lần duy nhất trên máy)
+        if (!isUserAuthenticated()) {
+          // Chưa có API Key -> Hiện Modal nhập API Key che toàn màn hình
           openAuthGatekeeperModal(false);
-          const modalSetup = document.getElementById('modal-setup');
-          if (modalSetup) {
-            modalSetup.classList.add('hidden');
-            modalSetup.classList.remove('flex');
-            modalSetup.style.display = 'none';
+          const modalStudent = document.getElementById('modal-student-info');
+          if (modalStudent) {
+            modalStudent.classList.add('hidden');
+            modalStudent.classList.remove('flex');
+            modalStudent.style.setProperty('display', 'none', 'important');
           }
+          return;
         }
+
+        // Đã có API Key hợp lệ -> Ẩn Modal API Key
+        closeAuthGatekeeperModal();
+
+        // BƯỚC 2: Kiểm tra Thông Tin Học Sinh (Họ tên, Lớp)
+        const sName = localStorage.getItem('student_name') || localStorage.getItem('STUDENT_NAME');
+        const isRegistered = (localStorage.getItem('student_info_registered') === 'true') && sName && sName.trim().length > 0;
+
+        if (!isRegistered) {
+          // Chưa khai báo thông tin học sinh -> Hiện bảng nhập Họ tên & Lớp (Bước 2)
+          openStudentInfoModal('onboarding');
+          return;
+        }
+
+        // BƯỚC 3: Đã hoàn tất 2 bước -> Vào trang học chính!
+        closeStudentInfoModal();
+        const modalSetup = document.getElementById('modal-setup');
+        if (modalSetup) {
+          modalSetup.classList.add('hidden');
+          modalSetup.classList.remove('flex');
+          modalSetup.style.display = 'none';
+        }
+        updateNavButtonsActiveUI(currentAppMode || "sgk");
+        proceedToTargetMode(currentAppMode || "sgk");
       } catch (err) {
         console.warn('InitApp warning:', err);
       }
