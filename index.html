@@ -2092,9 +2092,59 @@
     let serverVipKeyIndex = 0;
 
     // Primary Global Application State (khai báo sớm tránh lỗi Temporal Dead Zone)
-    let activeLesson = null, activeTFQuestions = [], currentTFIndex = 0, tfViewMode = 'single', conversationHistory = [], tfAnswers = {}, activeSAQuestions = [], currentSAIndex = 0, saAnswers = {}, saScores = {}, saAttempts = {};
+    let activeLesson = null;
+    let activeTFQuestions = [];
+    let currentTFIndex = 0;
+    let tfViewMode = 'single';
+    let currentStudyTab = 'theory';
+    let conversationHistory = [];
+    let tfAnswers = {};
+    let activeSAQuestions = [];
+    let currentSAIndex = 0;
+    let saAnswers = {};
+    let saScores = {};
+    let saAttempts = {};
     let isDemoMode = false;
     let currentAppMode = localStorage.getItem('CURRENT_APP_MODE') || 'sgk';
+
+    let demoState = {
+      sectionIndex: 0,
+      mcqIndex: 0,
+      isWaitingSectionFeedback: false,
+      isFinishedSections: false
+    };
+
+    let demoProgress = {
+      sections: [],
+      mcqAttempts: {},
+      mcqScores: {},
+      tfExam: { submitted: false, correct: 0, total: 24, score: 0 }
+    };
+
+    let interactionMetrics = {
+      totalInteractions: 0,
+      reExplainRequests: 0,
+      studentQuestions: 0
+    };
+
+    let chapterExamState = {
+      submitted: false,
+      mcqAnswers: {},
+      scores: {
+        mcqScore: 0,
+        mcqCorrectCount: 0,
+        tfScore: 0,
+        tfCorrectCount: 0,
+        saScore: 0,
+        saCorrectCount: 0
+      }
+    };
+
+    let studyElapsedSeconds = 0;
+    let studyStartTime = Date.now();
+    let studyTimerInterval = null;
+    let selectedModel = localStorage.getItem('GEMINI_MODEL') || 'gemini-3.8-flash';
+
     let studentInfo = {
       name: localStorage.getItem('STUDENT_NAME') || 'Minh Anh',
       school: localStorage.getItem('STUDENT_SCHOOL') || 'THPT Kỳ Anh',
@@ -2102,17 +2152,6 @@
       grade: localStorage.getItem('STUDENT_GRADE') || 'Lớp 12',
       lesson: localStorage.getItem('STUDENT_LESSON') || 'Bài 1: Tính đơn điệu và cực trị của hàm số'
     };
-    activeLesson = null;
-    activeTFQuestions = [];
-    currentTFIndex = 0;
-    tfViewMode = 'single';
-    conversationHistory = [];
-    tfAnswers = {};
-    activeSAQuestions = [];
-    currentSAIndex = 0;
-    saAnswers = {};
-    saScores = {};
-    saAttempts = {};
 
     // Trạng thái tab xác thực đang chọn: 'personal' hoặc 'vip'
     let currentAuthTab = 'personal';
@@ -25169,11 +25208,9 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         if (answeredTF < totalTFItems) unans.push(`• Phần 2 (Đúng / Sai): còn thiếu ${totalTFItems - answeredTF}/${totalTFItems} ý`);
         if (answeredSA < saList.length) unans.push(`• Phần 3 (Trả lời ngắn): còn thiếu ${saList.length - answeredSA}/${saList.length} câu`);
 
-        const confirmMsg = `Em còn một số câu chưa hoàn thành:
-${unans.join('
-')}
-
-Em có chắc chắn muốn NỘP BÀI KIỂM TRA ngay bây giờ để Thầy/Cô chấm điểm và mở lời giải chi tiết không?`;
+        const confirmMsg = "Em còn một số câu chưa hoàn thành:\n" +
+          unans.join("\n") +
+          "\n\nEm có chắc chắn muốn NỘP BÀI KIỂM TRA ngay bây giờ để Thầy/Cô chấm điểm và mở lời giải chi tiết không?";
         if (!confirm(confirmMsg)) {
           return;
         }
