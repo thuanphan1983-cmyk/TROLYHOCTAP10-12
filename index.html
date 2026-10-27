@@ -554,6 +554,15 @@
         <span id="tab-label-sa">3. Trả Lời Ngắn</span>
       </button>
 
+      <button 
+        id="exam-tab-btn-essay" 
+        onclick="switchStudyTab('essay')" 
+        class="flex-1 py-1.5 sm:py-2 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap hidden"
+      >
+        <i class="fa-solid fa-pen-nib text-purple-400"></i>
+        <span id="tab-label-essay">4. Tự Luận</span>
+      </button>
+
       <!-- Exam Timer Display -->
       <div class="px-3 py-1.5 rounded-xl bg-amber-400 text-slate-950 font-black text-xs sm:text-[12pt] flex items-center gap-1.5 shrink-0 shadow-sm">
         <i class="fa-solid fa-clock animate-pulse text-rose-700"></i>
@@ -651,6 +660,11 @@
       <!-- PANEL 4: 4 CÂU TRẢ LỜI NGẮN (ĐIỀN ĐÁP SỐ - CHUẨN ĐỀ THI 2025) -->
       <div id="panel-sa" class="study-panel flex-1 overflow-y-auto p-2 sm:p-4 hidden font-serif flex-col">
         <!-- Rendered dynamically via renderSAPanel() -->
+      </div>
+
+      <!-- PANEL 4b: CÂU HỎI TỰ LUẬN (DÀNH CHO ĐỀ THI ĐỊNH KỲ KHỐI 10 & 11) -->
+      <div id="panel-essay" class="study-panel flex-1 overflow-y-auto p-2 sm:p-4 hidden font-serif flex-col">
+        <!-- Rendered dynamically via renderEssayPanel() -->
       </div>
 
       <!-- PANEL 5: HỎI BÀI & TRÒ CHUYỆN VỚI THẦY/CÔ (Chat stream truyền thống) -->
@@ -1464,7 +1478,7 @@
       <div class="p-4 bg-white border-t border-slate-200 flex items-center justify-between shrink-0">
         <div class="text-xs sm:text-[11pt] text-slate-600 font-semibold flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-          <span>Thầy Phan Bá Thuấn • Giáo viên Toán THPT Kỳ Anh</span>
+          <span>Thầy Phan Đình Thuấn • Giáo viên Toán THPT Kỳ Anh</span>
         </div>
         <button type="button" onclick="closeExamPracticeModal()" class="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer">
           Đóng
@@ -1567,13 +1581,19 @@
 
       <!-- Footer -->
       <div class="p-4 bg-white border-t border-slate-200 flex items-center justify-between shrink-0">
-        <button type="button" onclick="closePeriodicModal()" class="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer">
-          Đóng
-        </button>
-        <button type="button" onclick="handleNavButtonClick('sgk')" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow transition cursor-pointer flex items-center gap-1.5">
-          <i class="fa-solid fa-book-open"></i>
-          <span>Về Học Bài Theo SGK</span>
-        </button>
+        <div class="text-xs sm:text-[11pt] text-slate-600 font-semibold flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span>
+          <span>Thầy Phan Đình Thuấn • Giáo viên Toán THPT Kỳ Anh</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button type="button" onclick="closePeriodicModal()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer">
+            Đóng
+          </button>
+          <button type="button" onclick="handleNavButtonClick('sgk')" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-[11.5pt] shadow transition cursor-pointer flex items-center gap-1.5">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Về Học Bài Theo SGK</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -3750,9 +3770,13 @@
 
       updateStudentDisplayInfo();
       closeStudentInfoModal();
+      closePeriodicModal();
+      closeExamPracticeModal();
 
-      // BƯỚC 3: Vào thẳng trang học chính
-      proceedToTargetMode(pendingTargetMode || currentAppMode || 'sgk');
+      // BƯỚC 3: Vào thẳng giao diện Học Bài Theo SGK theo đúng yêu cầu
+      currentAppMode = 'sgk';
+      localStorage.setItem('CURRENT_APP_MODE', 'sgk');
+      proceedToTargetMode('sgk');
     }
 
     // Cập nhật hiệu ứng Active rõ ràng cho 3 nút trên thanh điều hướng
@@ -18768,88 +18792,120 @@
     }
 
     function startPeriodicExam(grade, periodKey, examNumber) {
-      const gradeData = PERIODIC_EXAMS_DB[grade] || PERIODIC_EXAMS_DB["12"];
-      const periodExams = gradeData[periodKey] || gradeData["gk1"];
-      const exam = periodExams.find(e => e.examNumber === examNumber) || periodExams[0];
+      try {
+        // Đóng ngay lập tức các modal để giao diện phản hồi tức thì
+        closePeriodicModal();
+        closeExamPracticeModal();
+        closeStudentInfoModal();
 
-      currentAppMode = 'periodic';
-      localStorage.setItem('CURRENT_APP_MODE', 'periodic');
+        const gradeData = PERIODIC_EXAMS_DB[grade] || PERIODIC_EXAMS_DB["12"];
+        const periodExams = gradeData[periodKey] || gradeData["gk1"];
+        const exam = periodExams.find(e => e.examNumber === examNumber) || periodExams[0];
+        if (!exam) {
+          console.error("Không tìm thấy đề thi định kỳ:", grade, periodKey, examNumber);
+          return;
+        }
 
-      const gradeName = (grade === '12') ? 'Lớp 12' : (grade === '11' ? 'Lớp 11' : 'Lớp 10');
-      studentInfo.grade = gradeName;
-      studentInfo.lesson = exam.title;
-      localStorage.setItem('STUDENT_GRADE', gradeName);
-      localStorage.setItem('STUDENT_LESSON', exam.title);
-      updateStudentDisplayInfo();
+        currentAppMode = 'periodic';
+        localStorage.setItem('CURRENT_APP_MODE', 'periodic');
 
-      activeLesson = {
-        lessonTitle: exam.title,
-        isChapterReview: true,
-        isPeriodicExam: true,
-        periodicGrade: grade,
-        periodicPeriod: periodKey,
-        periodicExamIndex: examNumber,
-        class: gradeName,
-        sections: [
-          {
-            sectionNumber: 1,
-            title: "Phần 1: Trắc nghiệm nhiều lựa chọn",
-            theory: `<div class="p-4 bg-teal-50 border border-teal-200 rounded-2xl">
-              <h4 class="font-bold text-slate-900">${exam.title}</h4>
-              <p class="text-xs text-slate-600 mt-1">${exam.matrixNote}</p>
-              <p class="text-xs text-teal-800 font-semibold mt-1">${exam.structure}</p>
-            </div>`,
-            mcqs: exam.mcqs || []
+        const gradeName = (grade === '12') ? 'Lớp 12' : (grade === '11' ? 'Lớp 11' : 'Lớp 10');
+        studentInfo.grade = gradeName;
+        studentInfo.lesson = exam.title;
+        localStorage.setItem('STUDENT_GRADE', gradeName);
+        localStorage.setItem('STUDENT_LESSON', exam.title);
+        updateStudentDisplayInfo();
+
+        // CHUẨN HÓA TOÀN BỘ MCQ OPTIONS SANG DẠNG ARRAY AN TOÀN
+        const normalizedMcqs = (exam.mcqs || []).map(m => {
+          let opts = m.options;
+          if (opts && !Array.isArray(opts)) {
+            opts = ['A', 'B', 'C', 'D'].map(k => (opts[k] !== undefined ? `${k}. ${opts[k]}` : ''));
           }
-        ],
-        tfQuestions: exam.tfQuestions || [],
-        saQuestions: exam.saQuestions || [],
-        essayQuestions: exam.essayQuestions || []
-      };
+          return {
+            ...m,
+            options: opts
+          };
+        });
 
-      activeTFQuestions = exam.tfQuestions || [];
-      activeSAQuestions = exam.saQuestions || [];
+        activeLesson = {
+          lessonTitle: exam.title,
+          isChapterReview: true,
+          isPeriodicExam: true,
+          periodicGrade: grade,
+          periodicPeriod: periodKey,
+          periodicExamIndex: examNumber,
+          class: gradeName,
+          sections: [
+            {
+              sectionNumber: 1,
+              title: "Phần 1: Trắc nghiệm nhiều lựa chọn",
+              theory: `<div class="p-4 bg-teal-50 border border-teal-200 rounded-2xl">
+                <h4 class="font-bold text-slate-900">${exam.title}</h4>
+                <p class="text-xs text-slate-600 mt-1">${exam.matrixNote || ''}</p>
+                <p class="text-xs text-teal-800 font-semibold mt-1">${exam.structure || ''}</p>
+              </div>`,
+              mcqs: normalizedMcqs
+            }
+          ],
+          tfQuestions: exam.tfQuestions || [],
+          saQuestions: exam.saQuestions || [],
+          essayQuestions: exam.essayQuestions || []
+        };
 
-      chapterExamState.submitted = false;
-      chapterExamState.mcqAnswers = {};
-      demoState.mcqIndex = 0;
-      tfAnswers = {};
-      saAnswers = {};
-      saScores = {};
-      currentSAIndex = 0;
+        activeTFQuestions = exam.tfQuestions || [];
+        activeSAQuestions = exam.saQuestions || [];
 
-      startExamCountdownTimer((exam.durationMinutes || 90) * 60);
+        chapterExamState.submitted = false;
+        chapterExamState.mcqAnswers = {};
+        demoState.mcqIndex = 0;
+        currentTFIndex = 0;
+        currentSAIndex = 0;
+        tfAnswers = {};
+        saAnswers = {};
+        saScores = {};
 
-      applyExamModeTabsUI();
+        startExamCountdownTimer((exam.durationMinutes || 90) * 60);
 
-      if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
-      if (typeof renderMCQPanel === 'function') renderMCQPanel();
-      if (typeof renderTFPanel === 'function') renderTFPanel();
-      if (typeof renderSAPanel === 'function') renderSAPanel();
-      if (typeof renderMath === 'function') renderMath(document.body);
+        applyExamModeTabsUI();
+        updateNavButtonsActiveUI('periodic');
 
-      closePeriodicModal();
-      closeStudentInfoModal();
+        const examSubNav = document.getElementById('exam-sub-nav');
+        if (examSubNav) {
+          examSubNav.classList.remove('hidden');
+          examSubNav.classList.add('flex');
+        }
+        const sgkSubNav = document.getElementById('sgk-sub-nav');
+        if (sgkSubNav) {
+          sgkSubNav.classList.add('hidden');
+          sgkSubNav.classList.remove('flex');
+        }
+        const flowBar = document.getElementById('flow-status-bar');
+        if (flowBar) flowBar.style.display = 'none';
+        const pPeriodic = document.getElementById('panel-periodic');
+        if (pPeriodic) pPeriodic.classList.add('hidden');
 
-      updateNavButtonsActiveUI('periodic');
+        // Hiển thị nút Tab Tự Luận nếu đề thi có câu hỏi tự luận (Khối 10, 11)
+        const tabEssay = document.getElementById('exam-tab-btn-essay');
+        if (tabEssay) {
+          if (exam.essayQuestions && exam.essayQuestions.length > 0) {
+            tabEssay.classList.remove('hidden');
+            tabEssay.classList.add('flex');
+          } else {
+            tabEssay.classList.add('hidden');
+            tabEssay.classList.remove('flex');
+          }
+        }
 
-      const examSubNav = document.getElementById('exam-sub-nav');
-      if (examSubNav) {
-        examSubNav.classList.remove('hidden');
-        examSubNav.classList.add('flex');
+        switchStudyTab('mcq');
+
+        if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
+        if (typeof renderMath === 'function') renderMath(document.body);
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error("Lỗi khi vào làm đề thi định kỳ:", err);
       }
-      const sgkSubNav = document.getElementById('sgk-sub-nav');
-      if (sgkSubNav) {
-        sgkSubNav.classList.add('hidden');
-        sgkSubNav.classList.remove('flex');
-      }
-      const flowBar = document.getElementById('flow-status-bar');
-      if (flowBar) flowBar.style.display = 'none';
-      const pPeriodic = document.getElementById('panel-periodic');
-      if (pPeriodic) pPeriodic.classList.add('hidden');
-
-      switchStudyTab('mcq');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     window.selectPeriodicGrade = selectPeriodicGrade;
@@ -18939,96 +18995,117 @@
     }
 
     function startGraduationExam(examId) {
-      const exam = GRADUATION_EXAMS_DB.find(e => e.id === examId) || GRADUATION_EXAMS_DB[0];
-      currentAppMode = 'exam';
-      localStorage.setItem('CURRENT_APP_MODE', 'exam');
+      try {
+        // Đóng ngay lập tức tất cả modal
+        closeExamPracticeModal();
+        closePeriodicModal();
+        closeStudentInfoModal();
 
-      // Thiết lập học sinh sang Lớp 12 và bài thi tương ứng
-      studentInfo.class = (studentInfo.class && studentInfo.class.startsWith("12")) ? studentInfo.class : "12A1";
-      studentInfo.grade = "Lớp 12";
-      studentInfo.lesson = exam.title;
+        const exam = GRADUATION_EXAMS_DB.find(e => e.id === examId) || GRADUATION_EXAMS_DB[0];
+        if (!exam) {
+          console.error("Không tìm thấy đề thi tốt nghiệp:", examId);
+          return;
+        }
 
-      localStorage.setItem('STUDENT_CLASS', studentInfo.class);
-      localStorage.setItem('STUDENT_GRADE', "Lớp 12");
-      localStorage.setItem('STUDENT_LESSON', exam.title);
+        currentAppMode = 'exam';
+        localStorage.setItem('CURRENT_APP_MODE', 'exam');
 
-      updateStudentDisplayInfo();
+        studentInfo.class = (studentInfo.class && studentInfo.class.startsWith("12")) ? studentInfo.class : "12A1";
+        studentInfo.grade = "Lớp 12";
+        studentInfo.lesson = exam.title;
 
-      const chatCurrentLesson = document.getElementById('chat-current-lesson');
-      if (chatCurrentLesson) chatCurrentLesson.textContent = exam.title;
-      const chatCurrentClass = document.getElementById('chat-current-class');
-      if (chatCurrentClass) chatCurrentClass.textContent = studentInfo.class;
+        localStorage.setItem('STUDENT_CLASS', studentInfo.class);
+        localStorage.setItem('STUDENT_GRADE', "Lớp 12");
+        localStorage.setItem('STUDENT_LESSON', exam.title);
 
-      // Nạp trực tiếp dữ liệu đề thi chuẩn 3 phần từ đối tượng exam
-      activeLesson = {
-        lessonTitle: exam.title,
-        isChapterReview: true,
-        isGraduationExam: true,
-        class: "Lớp 12",
-        sections: [
-          {
-            sectionNumber: 1,
-            title: "Phần 1: Trắc nghiệm 4 lựa chọn",
-            theory: `<div class="p-4 bg-amber-50 border border-amber-200 rounded-2xl">
-              <h4 class="font-bold text-slate-900">${exam.title}</h4>
-              <p class="text-xs text-slate-600 mt-1">${exam.structure}</p>
-            </div>`,
-            mcqs: exam.mcqs || []
+        updateStudentDisplayInfo();
+
+        const chatCurrentLesson = document.getElementById('chat-current-lesson');
+        if (chatCurrentLesson) chatCurrentLesson.textContent = exam.title;
+        const chatCurrentClass = document.getElementById('chat-current-class');
+        if (chatCurrentClass) chatCurrentClass.textContent = studentInfo.class;
+
+        // CHUẨN HÓA TOÀN BỘ MCQ OPTIONS SANG DẠNG ARRAY AN TOÀN
+        const normalizedMcqs = (exam.mcqs || []).map(m => {
+          let opts = m.options;
+          if (opts && !Array.isArray(opts)) {
+            opts = ['A', 'B', 'C', 'D'].map(k => (opts[k] !== undefined ? `${k}. ${opts[k]}` : ''));
           }
-        ],
-        tfQuestions: exam.tfQuestions || [],
-        saQuestions: exam.saQuestions || []
-      };
+          return {
+            ...m,
+            options: opts
+          };
+        });
 
-      activeTFQuestions = exam.tfQuestions || [];
-      activeSAQuestions = exam.saQuestions || [];
+        activeLesson = {
+          lessonTitle: exam.title,
+          isChapterReview: true,
+          isGraduationExam: true,
+          class: "Lớp 12",
+          sections: [
+            {
+              sectionNumber: 1,
+              title: "Phần 1: Trắc nghiệm 4 lựa chọn",
+              theory: `<div class="p-4 bg-amber-50 border border-amber-200 rounded-2xl">
+                <h4 class="font-bold text-slate-900">${exam.title}</h4>
+                <p class="text-xs text-slate-600 mt-1">${exam.structure}</p>
+              </div>`,
+              mcqs: normalizedMcqs
+            }
+          ],
+          tfQuestions: exam.tfQuestions || [],
+          saQuestions: exam.saQuestions || [],
+          essayQuestions: []
+        };
 
-      // Reset trạng thái làm bài
-      chapterExamState.submitted = false;
-      chapterExamState.mcqAnswers = {};
-      demoState.mcqIndex = 0;
-      tfAnswers = {};
-      saAnswers = {};
-      saScores = {};
-      currentSAIndex = 0;
+        activeTFQuestions = exam.tfQuestions || [];
+        activeSAQuestions = exam.saQuestions || [];
 
-      // Khởi động đồng hồ đếm ngược 90 phút (5400 giây)
-      startExamCountdownTimer(90 * 60);
+        chapterExamState.submitted = false;
+        chapterExamState.mcqAnswers = {};
+        demoState.mcqIndex = 0;
+        currentTFIndex = 0;
+        currentSAIndex = 0;
+        tfAnswers = {};
+        saAnswers = {};
+        saScores = {};
 
-      // Cập nhật giao diện tab làm bài thi
-      applyExamModeTabsUI();
+        startExamCountdownTimer(90 * 60);
 
-      // Render lại toàn bộ giao diện bài thi
-      if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
-      if (typeof renderMCQPanel === 'function') renderMCQPanel();
-      if (typeof renderTFPanel === 'function') renderTFPanel();
-      if (typeof renderSAPanel === 'function') renderSAPanel();
-      if (typeof renderMath === 'function') renderMath(document.body);
+        applyExamModeTabsUI();
+        updateNavButtonsActiveUI('graduation');
 
-      // Đóng tất cả modal chọn đề
-      closeExamPracticeModal();
-      closeStudentInfoModal();
+        const examSubNav = document.getElementById('exam-sub-nav');
+        if (examSubNav) {
+          examSubNav.classList.remove('hidden');
+          examSubNav.classList.add('flex');
+        }
+        const sgkSubNav = document.getElementById('sgk-sub-nav');
+        if (sgkSubNav) {
+          sgkSubNav.classList.add('hidden');
+          sgkSubNav.classList.remove('flex');
+        }
+        const flowBar = document.getElementById('flow-status-bar');
+        if (flowBar) flowBar.style.display = 'none';
+        const pPeriodic = document.getElementById('panel-periodic');
+        if (pPeriodic) pPeriodic.classList.add('hidden');
 
-      // Cập nhật giao diện thanh điều hướng
-      updateNavButtonsActiveUI('graduation');
-      const examSubNav = document.getElementById('exam-sub-nav');
-      if (examSubNav) {
-        examSubNav.classList.remove('hidden');
-        examSubNav.classList.add('flex');
+        // Đề thi tốt nghiệp THPT chuẩn không có tự luận
+        const tabEssay = document.getElementById('exam-tab-btn-essay');
+        if (tabEssay) {
+          tabEssay.classList.add('hidden');
+          tabEssay.classList.remove('flex');
+        }
+
+        switchStudyTab('mcq');
+
+        if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
+        if (typeof renderMath === 'function') renderMath(document.body);
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error("Lỗi khi vào làm đề thi tốt nghiệp:", err);
       }
-      const sgkSubNav = document.getElementById('sgk-sub-nav');
-      if (sgkSubNav) {
-        sgkSubNav.classList.add('hidden');
-        sgkSubNav.classList.remove('flex');
-      }
-      const flowBar = document.getElementById('flow-status-bar');
-      if (flowBar) flowBar.style.display = 'none';
-      const pPeriodic = document.getElementById('panel-periodic');
-      if (pPeriodic) pPeriodic.classList.add('hidden');
-
-      // Mở ngay Phần 1: Trắc Nghiệm để làm bài
-      switchStudyTab('mcq');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Tối ưu các nút tab khi ở Chế độ Ôn Thi Tốt Nghiệp
@@ -28267,7 +28344,11 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       qText = qText.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
 
       let optionsHTML = '';
-      mcq.options.forEach((optText, i) => {
+      const rawMcqOpts = mcq.options || [];
+      const mcqOptsList = Array.isArray(rawMcqOpts)
+        ? rawMcqOpts
+        : optionLetters.map(k => (rawMcqOpts[k] !== undefined ? `${k}. ${rawMcqOpts[k]}` : ''));
+      mcqOptsList.forEach((optText, i) => {
         const letter = optionLetters[i];
         const style = themeStyles[i];
         const cleanContent = optText.replace(/^[A-D]\.\s*/, '');
@@ -28371,7 +28452,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       <i class="fa-solid fa-graduation-cap text-emerald-600"></i>
       <span>Hướng dẫn giải chi tiết chuẩn $\\LaTeX$:</span>
     </div>
-    <div class="text-slate-700">${curMcq.explain}</div>
+    <div class="text-slate-700">${curMcq.explanation || curMcq.explain || "Xem lại kiến thức lý thuyết liên quan."}</div>
   </div>
 </div>
       `;
@@ -28808,15 +28889,17 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       const pMcq = document.getElementById('panel-mcq');
       const pTf = document.getElementById('panel-tf');
       const pSa = document.getElementById('panel-sa');
+      const pEssay = document.getElementById('panel-essay');
       const pChat = document.getElementById('panel-chat');
 
       if (pTheory) pTheory.classList.toggle('hidden', tab !== 'theory');
       if (pMcq) pMcq.classList.toggle('hidden', (tab !== 'mcq' && tab !== 'exam'));
       if (pTf) pTf.classList.toggle('hidden', tab !== 'tf');
       if (pSa) pSa.classList.toggle('hidden', tab !== 'sa');
+      if (pEssay) pEssay.classList.toggle('hidden', tab !== 'essay');
       if (pChat) pChat.classList.toggle('hidden', tab !== 'chat');
 
-      // Cập nhật giao diện nút tab
+      // Cập nhật giao diện nút tab SGK Sub-nav
       const tabItems = [
         { key: 'theory', el: document.getElementById('tab-btn-theory') },
         { key: 'mcq', el: document.getElementById('tab-btn-mcq') },
@@ -28829,10 +28912,27 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         if (t.el) {
           const isAct = (t.key === tab);
           if (isAct) {
-            t.el.className = 'flex-1 py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white text-indigo-950 shadow-sm cursor-pointer';
+            t.el.className = 'flex-1 py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white text-indigo-950 shadow-sm cursor-pointer whitespace-nowrap';
           } else {
             const isHiddenSa = (t.key === 'sa' && (!activeLesson || !activeLesson.isChapterReview));
-            t.el.className = (isHiddenSa ? 'hidden ' : 'flex-1 ') + 'py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer';
+            t.el.className = (isHiddenSa ? 'hidden ' : 'flex-1 ') + 'py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap';
+          }
+        }
+      });
+
+      // Cập nhật giao diện nút tab Exam Sub-nav
+      const examTabBtns = [
+        { key: 'mcq', el: document.getElementById('exam-tab-btn-mcq') },
+        { key: 'tf', el: document.getElementById('exam-tab-btn-tf') },
+        { key: 'sa', el: document.getElementById('tab-btn-sa') },
+        { key: 'essay', el: document.getElementById('exam-tab-btn-essay') }
+      ];
+      examTabBtns.forEach(t => {
+        if (t.el) {
+          if (t.key === tab) {
+            t.el.className = 'flex-1 py-1.5 sm:py-2 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white text-indigo-950 shadow-sm cursor-pointer whitespace-nowrap';
+          } else {
+            t.el.className = 'flex-1 py-1.5 sm:py-2 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap';
           }
         }
       });
@@ -28845,6 +28945,8 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         renderTFPanel();
       } else if (tab === 'sa') {
         renderSAPanel();
+      } else if (tab === 'essay') {
+        if (typeof renderEssayPanel === 'function') renderEssayPanel();
       } else if (tab === 'chat') {
         const mc = document.getElementById('messages-container');
         if (mc) mc.scrollTop = mc.scrollHeight;
@@ -29276,9 +29378,14 @@ ${activeLesson.lessonTitle}
       // Render 4 options A, B, C, D
       const optionLetters = ['A', 'B', 'C', 'D'];
       let optionsHTML = '';
-      curMcq.options.forEach((optText, i) => {
+      const rawOpts = curMcq.options || [];
+      const optsList = Array.isArray(rawOpts)
+        ? rawOpts
+        : optionLetters.map(k => (rawOpts[k] !== undefined ? `${k}. ${rawOpts[k]}` : ''));
+
+      optsList.forEach((optText, i) => {
         const letter = optionLetters[i];
-        const cleanContent = optText.replace(/^[A-D]\.\s*/, '');
+        const cleanContent = (typeof optText === 'string') ? optText.replace(/^[A-D]\.\s*/, '') : String(optText || '');
         const isSelected = (userChoice === letter);
         const isCorrectAnswer = (letter === curMcq.correct);
 
@@ -29351,7 +29458,7 @@ ${activeLesson.lessonTitle}
                 <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
                 <span>Hướng dẫn giải chi tiết chuẩn $\\LaTeX$:</span>
               </div>
-              <div class="text-slate-800 leading-relaxed text-[12.5pt]">${curMcq.explain}</div>
+              <div class="text-slate-800 leading-relaxed text-[12.5pt]">${curMcq.explanation || curMcq.explain || "Xem lại kiến thức lý thuyết liên quan."}</div>
             </div>
           </div>
         `;
@@ -29419,13 +29526,13 @@ ${activeLesson.lessonTitle}
               </button>
               
               <span class="text-xs sm:text-[11.5pt] text-slate-700 font-bold bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">
-                Câu ${mcqIdx + 1} / 6
+                Câu ${mcqIdx + 1} / ${mcqs.length}
               </span>
 
               <button 
                 type="button" 
-                onclick="if(demoState.mcqIndex < 5) { demoState.mcqIndex++; renderMCQPanel(); }" 
-                ${mcqIdx >= 5 ? 'disabled' : ''} 
+                onclick="if(demoState.mcqIndex < ${mcqs.length - 1}) { demoState.mcqIndex++; renderMCQPanel(); }" 
+                ${mcqIdx >= mcqs.length - 1 ? 'disabled' : ''} 
                 class="px-3 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white disabled:opacity-30 disabled:cursor-not-allowed font-medium text-xs sm:text-[12pt] flex items-center gap-1 shadow-xs cursor-pointer min-h-[40px]"
               >
                 Câu tiếp theo <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -29644,7 +29751,7 @@ ${activeLesson.lessonTitle}
                 <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
                 <span>Hướng dẫn giải chi tiết từng ý $a, b, c, d$ chuẩn $\\LaTeX$:</span>
               </div>
-              <div class="text-slate-800 leading-relaxed text-[12.5pt]">${q.explain || 'Xem lại định lý và phương pháp giải trong bài.'}</div>
+              <div class="text-slate-800 leading-relaxed text-[12.5pt]">${q.explanation || q.explain || 'Xem lại định lý và phương pháp giải trong bài.'}</div>
             </div>
           </div>
         `;
@@ -29680,7 +29787,7 @@ ${activeLesson.lessonTitle}
                 <span class="bg-amber-600 text-white font-bold text-xs px-2.5 py-1 rounded-lg">
                   Câu ${q.id}
                 </span>
-                <span class="font-bold text-[12.5pt] sm:text-[13pt] text-slate-900">${q.title}</span>
+                <span class="font-bold text-[12.5pt] sm:text-[13pt] text-slate-900">${q.statement || q.title || ""}</span>
               </div>
               <span class="text-xs font-semibold text-slate-600 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full shrink-0">
                 1.00 đ
@@ -29858,7 +29965,7 @@ ${activeLesson.lessonTitle}
                 <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
                 <span>Hướng dẫn giải chi tiết chuẩn $\\LaTeX$:</span>
               </div>
-              <div class="text-slate-800 leading-relaxed text-[12.5pt]">${curQ.explain}</div>
+              <div class="text-slate-800 leading-relaxed text-[12.5pt]">${curQ.explanation || curQ.explain || 'Xem lại phương pháp giải trong bài.'}</div>
             </div>
           </div>
         `;
@@ -30152,7 +30259,11 @@ ${activeLesson.lessonTitle}
       qText = qText.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
 
       let optionsHTML = '';
-      curMcq.options.forEach((optText, i) => {
+      const rawCurMcqOpts = curMcq.options || [];
+      const curMcqOptsList = Array.isArray(rawCurMcqOpts)
+        ? rawCurMcqOpts
+        : optionLetters.map(k => (rawCurMcqOpts[k] !== undefined ? `${k}. ${rawCurMcqOpts[k]}` : ''));
+      curMcqOptsList.forEach((optText, i) => {
         const letter = optionLetters[i];
         const style = themeStyles[i];
         const cleanContent = optText.replace(/^[A-D]\.\s*/, '');
@@ -30447,7 +30558,7 @@ ${activeLesson.lessonTitle}
                       <i class="fa-solid fa-graduation-cap text-emerald-600"></i>
                       <span>Hướng dẫn giải chi tiết chuẩn $\\LaTeX$:</span>
                     </div>
-                    <div class="text-slate-700">${curMcq.explain}</div>
+                    <div class="text-slate-700">${curMcq.explanation || curMcq.explain || "Xem lại kiến thức lý thuyết liên quan."}</div>
                   </div>
                   <div class="p-2 bg-indigo-50 rounded-lg text-indigo-900 text-xs italic">
                     Không sao cả em nhé! Học từ lỗi sai sẽ giúp em nhớ sâu và không mắc lại ở các bài tập tiếp theo.
@@ -30528,7 +30639,7 @@ ${activeLesson.lessonTitle}
                 <i class="fa-solid fa-graduation-cap text-emerald-600"></i>
                 <span>Hướng dẫn giải chi tiết:</span>
               </div>
-              <div class="text-slate-800">${curMcq.explain}</div>
+              <div class="text-slate-800">${curMcq.explanation || curMcq.explain || "Xem lại kiến thức lý thuyết liên quan."}</div>
             </div>
             <div class="pt-1">
               ${hasMoreMCQs ? `
@@ -30869,7 +30980,94 @@ ${activeLesson.lessonTitle}
       return s.toLowerCase();
     }
 
-    function renderSAPanel() {
+    
+    // =========================================================================
+    // RENDER PHẦN 4: CÂU HỎI TỰ LUẬN (ĐỀ THI ĐỊNH KỲ KHỐI 10 & 11)
+    // =========================================================================
+    function renderEssayPanel() {
+      const container = document.getElementById('panel-essay');
+      if (!container) return;
+
+      const essays = (activeLesson && Array.isArray(activeLesson.essayQuestions)) ? activeLesson.essayQuestions : [];
+      if (essays.length === 0) {
+        container.innerHTML = `
+          <div class="max-w-xl mx-auto my-auto p-6 bg-slate-50 border border-slate-200 rounded-2xl text-center space-y-3 font-serif">
+            <i class="fa-solid fa-info-circle text-purple-600 text-3xl"></i>
+            <h3 class="font-bold text-lg text-slate-800">Không có phần tự luận</h3>
+            <p class="text-sm text-slate-600">Đề thi này không có câu hỏi tự luận riêng biệt (cấu trúc mới tích hợp trong phần trả lời ngắn).</p>
+            <button type="button" onclick="switchStudyTab('mcq')" class="px-4 py-2 bg-indigo-600 text-white rounded-xl text-sm font-bold cursor-pointer">Quay lại Trắc nghiệm</button>
+          </div>
+        `;
+        return;
+      }
+
+      let html = `
+        <div class="max-w-3xl w-full mx-auto space-y-4 font-serif">
+          <div class="bg-gradient-to-r from-purple-800 via-indigo-900 to-slate-900 text-white p-4 rounded-2xl shadow-sm flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center font-bold text-xl">✍️</span>
+              <div>
+                <h3 class="font-bold text-base sm:text-lg leading-tight">Phần 4: Câu Hỏi Tự Luận (${essays.length} câu)</h3>
+                <p class="text-xs sm:text-[11pt] text-purple-200">${activeLesson.lessonTitle || 'Đề thi định kỳ'} • <strong>${(3.0 / essays.length).toFixed(2)} đ / câu</strong> (Tối đa 3.00 điểm)</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 bg-purple-500/30 border border-purple-300/40 rounded-full text-xs font-bold text-purple-100">
+              Thang điểm 3.0 đ
+            </span>
+          </div>
+
+          <div class="space-y-4">
+      `;
+
+      essays.forEach((eq, idx) => {
+        html += `
+          <div class="bg-white rounded-2xl border-2 border-purple-200 p-4 sm:p-5 shadow-xs space-y-3">
+            <div class="flex items-center justify-between gap-2 pb-2 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="bg-purple-700 text-white font-black text-xs px-2.5 py-1 rounded-lg">
+                  Câu ${idx + 1}
+                </span>
+                <span class="text-xs sm:text-[11pt] text-slate-500 font-bold">(${eq.maxScore || 0.75} điểm)</span>
+              </div>
+            </div>
+
+            <div class="text-[12.5pt] sm:text-[13.5pt] text-slate-900 font-medium leading-relaxed">
+              ${eq.question}
+            </div>
+
+            <details class="bg-purple-50/70 border border-purple-200 rounded-xl p-3 text-xs sm:text-[12pt] text-slate-800 transition">
+              <summary class="font-bold text-purple-900 cursor-pointer flex items-center gap-1.5 select-none hover:text-purple-700">
+                <i class="fa-solid fa-lightbulb text-amber-500"></i>
+                <span>Xem hướng dẫn chấm và lời giải chi tiết chuẩn $\\LaTeX$</span>
+              </summary>
+              <div class="mt-3 pt-3 border-t border-purple-200/80 text-slate-800 leading-relaxed space-y-1">
+                ${eq.explanation || eq.explain || 'Đang cập nhật hướng dẫn giải chi tiết...'}
+              </div>
+            </details>
+          </div>
+        `;
+      });
+
+      html += `
+          </div>
+          
+          <div class="flex items-center justify-between pt-2">
+            <button type="button" onclick="switchStudyTab('sa')" class="px-4 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer">
+              <i class="fa-solid fa-arrow-left"></i> Về Phần Trả Lời Ngắn
+            </button>
+            <button type="button" onclick="handleFinishLesson()" class="px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl text-xs sm:text-sm shadow flex items-center gap-1.5 cursor-pointer">
+              <i class="fa-solid fa-flag-checkered text-amber-300"></i> Nộp Toàn Bộ Bài Thi
+            </button>
+          </div>
+        </div>
+      `;
+
+      container.innerHTML = html;
+      if (typeof renderMath === 'function') renderMath(container);
+    }
+    window.renderEssayPanel = renderEssayPanel;
+
+function renderSAPanel() {
       const container = document.getElementById('panel-sa');
       if (!container) return;
 
@@ -31104,7 +31302,7 @@ ${activeLesson.lessonTitle}
               <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
               <span>Hướng dẫn giải chi tiết chuẩn $\\LaTeX$:</span>
             </div>
-            <div class="text-slate-700 leading-relaxed">${curQ.explain}</div>
+            <div class="text-slate-700 leading-relaxed">${curQ.explanation || curQ.explain || 'Xem lại phương pháp giải trong bài.'}</div>
           </div>
         </div>
       `;
@@ -33938,7 +34136,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         <i class="fa-solid fa-graduation-cap text-emerald-600"></i>
         <span>Hướng dẫn giải chi tiết chuẩn $\\LaTeX$:</span>
       </div>
-      <div class="text-slate-700">${curMcq.explain}</div>
+      <div class="text-slate-700">${curMcq.explanation || curMcq.explain || "Xem lại kiến thức lý thuyết liên quan."}</div>
     </div>
     <div class="p-2 bg-indigo-50 rounded-lg text-indigo-900 text-xs italic">
       Không sao cả em nhé! Học từ lỗi sai sẽ giúp em nhớ sâu và tiến bộ nhanh hơn ở các câu sau.
@@ -34005,7 +34203,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
       <i class="fa-solid fa-graduation-cap text-emerald-600"></i>
       <span>Hướng dẫn giải chi tiết chuẩn $\\LaTeX$:</span>
     </div>
-    <div class="text-slate-700">${curMcq.explain}</div>
+    <div class="text-slate-700">${curMcq.explanation || curMcq.explain || "Xem lại kiến thức lý thuyết liên quan."}</div>
   </div>
 </div>`;
 
@@ -35240,8 +35438,11 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
           modalSetup.classList.remove('flex');
           modalSetup.style.display = 'none';
         }
-        updateNavButtonsActiveUI(currentAppMode || "sgk");
-        proceedToTargetMode(currentAppMode || "sgk");
+        // Mặc định luôn vào thẳng giao diện chính Học Bài Theo SGK khi khởi động
+        currentAppMode = 'sgk';
+        localStorage.setItem('CURRENT_APP_MODE', 'sgk');
+        updateNavButtonsActiveUI('sgk');
+        proceedToTargetMode('sgk');
       } catch (err) {
         console.warn('InitApp warning:', err);
       }
