@@ -15364,11 +15364,11 @@
     window.closeExamPracticeModal = closeExamPracticeModal;
     window.startGraduationExam = startGraduationExam;
     let storedModel = localStorage.getItem('GEMINI_MODEL');
-    let selectedModel = (storedModel && storedModel !== 'gemini-1.5-flash') ? storedModel : 'gemini-3.8-flash';
+    selectedModel = (storedModel && storedModel !== 'gemini-1.5-flash') ? storedModel : 'gemini-3.8-flash';
     isDemoMode = false;
     
     // Demo progression state
-    let demoState = {
+    demoState = {
       sectionIndex: 0,
       mcqIndex: 0,
       currentMCQAttempts: 0,
@@ -15377,7 +15377,7 @@
     };
 
     // Tracking progress for evaluation and reminders
-    let demoProgress = {
+    demoProgress = {
       section1: { attempted: 0, correct: 0, earnedScore: 0, completed: false },
       section2: { attempted: 0, correct: 0, earnedScore: 0, completed: false },
       section3: { attempted: 0, correct: 0, earnedScore: 0, completed: false },
@@ -15419,7 +15419,7 @@
     saAttempts = {};
 
     // Chapter Review Exam State (Bài kiểm tra ôn tập chương - Làm độc lập không gợi ý, nộp cả 3 phần mới chấm điểm & cho đáp án chi tiết)
-    let chapterExamState = {
+    chapterExamState = {
       submitted: false,
       mcqAnswers: {},
       scores: {
@@ -15437,12 +15437,12 @@
     };
 
     // Study Timer State
-    let studyStartTime = null;
-    let studyTimerInterval = null;
-    let studyElapsedSeconds = 0;
+    studyStartTime = null;
+    studyTimerInterval = null;
+    studyElapsedSeconds = 0;
 
     // Student-Teacher Interaction Tracker
-    let interactionMetrics = {
+    interactionMetrics = {
       questionsAsked: 0,
       reExplainRequests: 0,
       totalInteractions: 0
