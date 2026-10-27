@@ -369,6 +369,30 @@
       min-height: calc(100vh - 55px);
     }
 
+  
+    /* SGK FOCUS MODE STYLES */
+    body.sgk-focus-active header,
+    body.sgk-focus-active #study-mode-tabs,
+    body.sgk-focus-active #sgk-sub-nav,
+    body.sgk-focus-active #exam-sub-nav,
+    body.sgk-focus-active #flow-status-bar,
+    body.sgk-focus-active #chat-lesson-banner,
+    body.sgk-focus-active .theory-header-banner {
+      display: none !important;
+    }
+    body.sgk-focus-active #sgk-focus-nav {
+      display: flex !important;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    body.sgk-focus-active main {
+      border-radius: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      min-height: calc(100vh - 55px);
+    }
+
   </style>
 </head>
 <body class="bg-slate-100 h-screen flex flex-col font-serif text-slate-800">
@@ -635,6 +659,40 @@
         >
           <i class="fa-solid fa-arrow-right-from-bracket"></i>
           <span class="hidden lg:inline">Thoát</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SGK Focus Mode Navigation Bar (Sticky Top) -->
+  <div id="sgk-focus-nav" class="bg-indigo-950 text-white px-3 py-2 shrink-0 hidden items-center justify-between gap-2 shadow-md border-b border-indigo-800 font-serif z-30 sticky top-0">
+    <div class="flex items-center justify-between gap-2 w-full max-w-7xl mx-auto flex-wrap">
+      <!-- Left: Grade Badge & Lesson Title -->
+      <div class="flex items-center gap-2 shrink-0">
+        <span class="px-2.5 py-1 rounded-lg bg-emerald-500 text-white font-black text-xs sm:text-sm tracking-wide shadow-xs flex items-center gap-1.5">
+          <i class="fa-solid fa-book-open"></i>
+          <span id="sgk-focus-grade-badge">LỚP 12</span>
+        </span>
+        <span id="sgk-focus-title" class="text-xs sm:text-sm font-bold text-white truncate max-w-[200px] sm:max-w-[360px] md:max-w-[480px]">
+          Bài 1: Tính đơn điệu và cực trị của hàm số
+        </span>
+      </div>
+
+      <!-- Center: Section pills -->
+      <div id="sgk-focus-section-pills" class="flex items-center gap-1 sm:gap-1.5 overflow-x-auto no-scrollbar shrink-0">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Right: Action Buttons -->
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <button 
+          type="button" 
+          onclick="openSgkLessonSelectorModal()" 
+          class="py-1.5 sm:py-2 px-3 sm:px-3.5 rounded-xl font-bold text-xs sm:text-sm transition active:scale-95 bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-sm flex items-center gap-1.5 cursor-pointer"
+          title="Chọn bài học SGK khác"
+        >
+          <i class="fa-solid fa-rotate text-indigo-900"></i>
+          <span>Đổi bài khác</span>
         </button>
       </div>
     </div>
@@ -3720,6 +3778,496 @@
     // Biến lưu trạng thái mục tiêu khi học sinh bấm 1 trong 3 nút điều hướng
     let pendingTargetMode = 'sgk';
 
+
+    // =========================================================================
+    // HỆ THỐNG QUẢN LÝ BÀI HỌC SGK KẾT NỐI TRI THỨC (KHỐI 10, 11, 12) & FOCUS MODE
+    // =========================================================================
+    const SGK_CURRICULUM_DATA = {
+  "12": [
+    {
+      "chapter": "Chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị hàm số",
+      "lessons": [
+        "Bài 1: Tính đơn điệu và cực trị của hàm số",
+        "Bài 2: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số",
+        "Bài 3: Đường tiệm cận của đồ thị hàm số",
+        "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+        "Bài 5: Ứng dụng đạo hàm để giải quyết một số bài toán thực tiễn",
+        "Bài tập cuối chương I"
+      ]
+    },
+    {
+      "chapter": "Chương II: Toạ độ vectơ trong không gian",
+      "lessons": [
+        "Bài 6: Vectơ trong không gian",
+        "Bài 7: Hệ trục toạ độ trong không gian",
+        "Bài 8: Biểu thức toạ độ của các phép toán vectơ",
+        "Bài tập cuối chương II"
+      ]
+    },
+    {
+      "chapter": "Chương III: Các số đặc trưng đo mức độ phân tán của mẫu số liệu ghép nhóm",
+      "lessons": [
+        "Bài 9: Khoảng biến thiên và khoảng tứ phân vị",
+        "Bài 10: Phương sai và độ lệch chuẩn",
+        "Bài tập cuối chương III"
+      ]
+    },
+    {
+      "chapter": "Chương IV: Nguyên hàm và tích phân",
+      "lessons": [
+        "Bài 11: Nguyên hàm",
+        "Bài 12: Tích phân",
+        "Bài 13: Ứng dụng hình học của tích phân",
+        "Bài tập cuối chương IV"
+      ]
+    },
+    {
+      "chapter": "Chương V: Phương pháp toạ độ trong không gian",
+      "lessons": [
+        "Bài 14: Phương trình mặt phẳng",
+        "Bài 15: Phương trình đường thẳng trong không gian",
+        "Bài 16: Công thức tính góc trong không gian",
+        "Bài 17: Phương trình mặt cầu",
+        "Bài tập cuối chương V"
+      ]
+    },
+    {
+      "chapter": "Chương VI: Xác suất có điều kiện",
+      "lessons": [
+        "Bài 18: Xác suất có điều kiện",
+        "Bài 19: Công thức xác suất toàn phần và công thức Bayes",
+        "Bài tập cuối chương VI"
+      ]
+    }
+  ],
+  "11": [
+    {
+      "chapter": "Chương I: Hàm số lượng giác và phương trình lượng giác",
+      "lessons": [
+        "Bài 1: Giá trị lượng giác của góc lượng giác",
+        "Bài 2: Công thức lượng giác",
+        "Bài 3: Hàm số lượng giác",
+        "Bài 4: Phương trình lượng giác cơ bản",
+        "Bài tập cuối chương I"
+      ]
+    },
+    {
+      "chapter": "Chương II: Dãy số. Cấp số cộng và cấp số nhân",
+      "lessons": [
+        "Bài 5: Dãy số",
+        "Bài 6: Cấp số cộng",
+        "Bài 7: Cấp số nhân",
+        "Bài tập cuối chương II"
+      ]
+    },
+    {
+      "chapter": "Chương III: Các số đặc trưng đo xu thế trung tâm của mẫu số liệu ghép nhóm",
+      "lessons": [
+        "Bài 8: Mẫu số liệu ghép nhóm",
+        "Bài 9: Các số đặc trưng đo xu thế trung tâm",
+        "Bài tập cuối chương III"
+      ]
+    },
+    {
+      "chapter": "Chương IV: Quan hệ song song trong không gian",
+      "lessons": [
+        "Bài 10: Đường thẳng và mặt phẳng trong không gian",
+        "Bài 11: Hai đường thẳng song song",
+        "Bài 12: Đường thẳng và mặt phẳng song song",
+        "Bài 13: Hai mặt phẳng song song",
+        "Bài 14: Phép chiếu song song",
+        "Bài tập cuối chương IV"
+      ]
+    },
+    {
+      "chapter": "Chương V: Giới hạn. Hàm số liên tục",
+      "lessons": [
+        "Bài 15: Giới hạn của dãy số",
+        "Bài 16: Giới hạn của hàm số",
+        "Bài 17: Hàm số liên tục",
+        "Bài tập cuối chương V"
+      ]
+    },
+    {
+      "chapter": "Chương VI: Hàm số mũ và hàm số lôgarit",
+      "lessons": [
+        "Bài 18: Luỹ thừa với số mũ thực",
+        "Bài 19: Lôgarit",
+        "Bài 20: Hàm số mũ và hàm số lôgarit",
+        "Bài 21: Phương trình, bất phương trình mũ và lôgarit",
+        "Bài tập cuối chương VI"
+      ]
+    },
+    {
+      "chapter": "Chương VII: Quan hệ vuông góc trong không gian",
+      "lessons": [
+        "Bài 22: Hai đường thẳng vuông góc",
+        "Bài 23: Đường thẳng vuông góc với mặt phẳng",
+        "Bài 24: Phép chiếu vuông góc. Góc giữa đường thẳng và mặt phẳng",
+        "Bài 25: Hai mặt phẳng vuông góc",
+        "Bài 26: Khoảng cách",
+        "Bài 27: Thể tích",
+        "Bài tập cuối chương VII"
+      ]
+    },
+    {
+      "chapter": "Chương VIII: Các quy tắc tính xác suất",
+      "lessons": [
+        "Bài 28: Biến cố hợp, biến cố giao, biến cố độc lập",
+        "Bài 29: Công thức cộng xác suất",
+        "Bài 30: Công thức nhân xác suất cho hai biến cố độc lập",
+        "Bài tập cuối chương VIII"
+      ]
+    },
+    {
+      "chapter": "Chương IX: Đạo hàm",
+      "lessons": [
+        "Bài 31: Định nghĩa và ý nghĩa của đạo hàm",
+        "Bài 32: Các quy tắc tính đạo hàm",
+        "Bài 33: Đạo hàm cấp hai",
+        "Bài tập cuối chương IX"
+      ]
+    }
+  ],
+  "10": [
+    {
+      "chapter": "Chương I: Mệnh đề và tập hợp",
+      "lessons": [
+        "Bài 1: Mệnh đề",
+        "Bài 2: Tập hợp và các phép toán trên tập hợp",
+        "Bài tập cuối chương I"
+      ]
+    },
+    {
+      "chapter": "Chương II: Bất phương trình và hệ bất phương trình bậc nhất hai ẩn",
+      "lessons": [
+        "Bài 3: Bất phương trình bậc nhất hai ẩn",
+        "Bài 4: Hệ bất phương trình bậc nhất hai ẩn",
+        "Bài tập cuối chương II"
+      ]
+    },
+    {
+      "chapter": "Chương III: Hệ thức lượng trong tam giác",
+      "lessons": [
+        "Bài 5: Giá trị lượng giác của một góc từ 0° đến 180°",
+        "Bài 6: Hệ thức lượng trong tam giác",
+        "Bài tập cuối chương III"
+      ]
+    },
+    {
+      "chapter": "Chương IV: Vectơ",
+      "lessons": [
+        "Bài 7: Các khái niệm mở đầu về vectơ",
+        "Bài 8: Tổng và hiệu của hai vectơ",
+        "Bài 9: Tích của một vectơ với một số",
+        "Bài 10: Vectơ trong mặt phẳng toạ độ",
+        "Bài 11: Tích vô hướng của hai vectơ",
+        "Bài tập cuối chương IV"
+      ]
+    },
+    {
+      "chapter": "Chương V: Các số đặc trưng đo xu thế trung tâm và độ phân tán của mẫu số liệu không ghép nhóm",
+      "lessons": [
+        "Bài 12: Số gần đúng và sai số",
+        "Bài 13: Các số đặc trưng đo xu thế trung tâm",
+        "Bài 14: Các số đặc trưng đo mức độ phân tán",
+        "Bài tập cuối chương V"
+      ]
+    },
+    {
+      "chapter": "Chương VI: Hàm số, đồ thị và ứng dụng",
+      "lessons": [
+        "Bài 15: Hàm số",
+        "Bài 16: Hàm số bậc hai",
+        "Bài 17: Dấu của tam thức bậc hai",
+        "Bài 18: Phương trình quy về phương trình bậc hai",
+        "Bài tập cuối chương VI"
+      ]
+    },
+    {
+      "chapter": "Chương VII: Phương pháp toạ độ trong mặt phẳng",
+      "lessons": [
+        "Bài 19: Phương trình đường thẳng",
+        "Bài 20: Vị trí tương đối giữa hai đường thẳng. Góc và khoảng cách",
+        "Bài 21: Đường tròn trong mặt phẳng toạ độ",
+        "Bài 22: Ba đường conic",
+        "Bài tập cuối chương VII"
+      ]
+    },
+    {
+      "chapter": "Chương VIII: Đại số tổ hợp",
+      "lessons": [
+        "Bài 23: Quy tắc đếm",
+        "Bài 24: Hoán vị, chỉnh hợp và tổ hợp",
+        "Bài 25: Nhị thức Newton",
+        "Bài tập cuối chương VIII"
+      ]
+    },
+    {
+      "chapter": "Chương IX: Tính xác suất theo định nghĩa cổ điển",
+      "lessons": [
+        "Bài 26: Biến cố và định nghĩa cổ điển của xác suất",
+        "Bài 27: Thực hành tính xác suất theo định nghĩa cổ điển",
+        "Bài tập cuối chương IX"
+      ]
+    }
+  ]
+};
+
+    // Mở Bảng Chọn Bài Học (Lesson Selector Modal)
+    function openSgkLessonSelectorModal(preferredGrade) {
+      const modal = document.getElementById('modal-sgk-lesson-selector');
+      if (!modal) return;
+
+      let grade = preferredGrade;
+      if (!grade) {
+        const cls = (studentInfo && studentInfo.class) ? studentInfo.class : (localStorage.getItem('student_class') || '');
+        if (cls.startsWith('10')) grade = '10';
+        else if (cls.startsWith('11')) grade = '11';
+        else grade = '12';
+      }
+
+      renderSgkLessonsByGrade(grade);
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.style.display = 'flex';
+      document.body.classList.add('overflow-hidden');
+    }
+
+    // Đóng Bảng Chọn Bài Học
+    function closeSgkLessonSelectorModal() {
+      const modal = document.getElementById('modal-sgk-lesson-selector');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.style.display = 'none';
+      }
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Hiển thị danh sách Chương và Bài học theo Khối
+    function renderSgkLessonsByGrade(grade) {
+      const gStr = String(grade).replace(/[^0-9]/g, '');
+      const activeG = (gStr === '10' || gStr === '11') ? gStr : '12';
+
+      // Cập nhật giao diện 3 nút Tab chọn khối
+      ['10', '11', '12'].forEach(g => {
+        const btn = document.getElementById('btn-sgk-grade-' + g);
+        if (btn) {
+          if (g === activeG) {
+            btn.className = "px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer flex items-center gap-2 bg-indigo-600 text-white shadow-sm";
+          } else {
+            btn.className = "px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer flex items-center gap-2 bg-white text-slate-700 hover:bg-slate-200";
+          }
+        }
+      });
+
+      const container = document.getElementById('sgk-lessons-container');
+      if (!container) return;
+
+      const chapters = SGK_CURRICULUM_DATA[activeG] || [];
+      let html = '';
+
+      chapters.forEach((ch, cIdx) => {
+        html += `
+          <div class="bg-slate-50/80 rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-xs space-y-3">
+            <div class="flex items-center justify-between gap-2 border-b border-slate-200 pb-2.5">
+              <div class="flex items-center gap-2.5">
+                <span class="w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 font-black text-xs flex items-center justify-center shrink-0">
+                  ${cIdx + 1}
+                </span>
+                <h4 class="font-bold text-sm sm:text-base text-slate-900 leading-snug">
+                  ${ch.chapter}
+                </h4>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-white text-[11px] font-bold text-slate-500 border border-slate-200 shrink-0">
+                ${ch.lessons.length} bài
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        `;
+
+        ch.lessons.forEach((lesTitle, lIdx) => {
+          const isCurrent = (studentInfo && studentInfo.lesson === lesTitle && (studentInfo.grade || '').includes(activeG));
+          const escapedTitle = lesTitle.replace(/'/g, "\\'");
+
+          html += `
+            <button 
+              type="button" 
+              onclick="selectSgkLesson('${escapedTitle}', '${activeG}')"
+              class="text-left p-3 rounded-xl border transition-all duration-150 flex items-start gap-3 group cursor-pointer ${isCurrent ? 'bg-indigo-50 border-indigo-500 shadow-xs ring-1 ring-indigo-500' : 'bg-white hover:bg-indigo-50/50 hover:border-indigo-300 border-slate-200 shadow-xs active:scale-[0.99]'}"
+            >
+              <div class="w-8 h-8 rounded-lg ${isCurrent ? 'bg-indigo-600 text-white' : 'bg-indigo-100 text-indigo-700 group-hover:bg-indigo-600 group-hover:text-white'} flex items-center justify-center shrink-0 transition text-sm">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-indigo-950 leading-snug">
+                  ${lesTitle}
+                </p>
+                <p class="text-[11px] text-slate-500 mt-0.5 flex items-center gap-1">
+                  <span>Lớp ${activeG}</span>
+                  ${isCurrent ? '<span class="text-emerald-600 font-bold ml-1">• Đang học</span>' : ''}
+                </p>
+              </div>
+              <i class="fa-solid fa-chevron-right text-xs text-slate-400 group-hover:text-indigo-600 mt-2 shrink-0"></i>
+            </button>
+          `;
+        });
+
+        html += `
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Chọn một bài học cụ thể từ Bảng chọn bài
+    function selectSgkLesson(lessonTitle, grade) {
+      studentInfo.grade = 'Lớp ' + grade;
+      studentInfo.lesson = lessonTitle;
+      localStorage.setItem('student_grade', studentInfo.grade);
+      localStorage.setItem('STUDENT_GRADE', studentInfo.grade);
+      localStorage.setItem('student_lesson', lessonTitle);
+      localStorage.setItem('STUDENT_LESSON', lessonTitle);
+
+      if (typeof resolveKNTTLesson === 'function') {
+        activeLesson = resolveKNTTLesson(lessonTitle, studentInfo.grade);
+      }
+      if (!activeLesson && typeof KNTT_GRADE_12_DB !== 'undefined') {
+        activeLesson = KNTT_GRADE_12_DB[0]?.lessons[0] || null;
+      }
+      if (activeLesson) {
+        activeLesson.isGraduationExam = false;
+        activeLesson.isPeriodicExam = false;
+        activeTFQuestions = activeLesson.tfQuestions || [];
+        activeSAQuestions = activeLesson.saQuestions || [];
+      }
+
+      demoState.sectionIndex = 0;
+      closeSgkLessonSelectorModal();
+      enterSgkFocusMode(lessonTitle, grade);
+      switchStudyTab('theory');
+      renderTheoryPanel();
+      updateSgkFocusNav();
+      updateStudentDisplayInfo();
+    }
+
+    // Kích hoạt Chế Độ Học Tập Toàn Màn Hình (Focus Mode)
+    function enterSgkFocusMode(lessonTitle, grade) {
+      document.body.classList.add('sgk-focus-active');
+      const nav = document.getElementById('sgk-focus-nav');
+      if (nav) {
+        nav.classList.remove('hidden');
+        nav.classList.add('flex');
+        nav.style.display = 'flex';
+      }
+      updateSgkFocusNav();
+    }
+
+    // Thoát Chế Độ Focus Mode khi sang các chế độ khác
+    function exitSgkFocusMode() {
+      document.body.classList.remove('sgk-focus-active');
+      const nav = document.getElementById('sgk-focus-nav');
+      if (nav) {
+        nav.classList.add('hidden');
+        nav.classList.remove('flex');
+        nav.style.display = 'none';
+      }
+    }
+
+    // Nhảy tới mục cụ thể trong bài học
+    function goToSgkSection(idx) {
+      if (!activeLesson || !activeLesson.sections || !activeLesson.sections[idx]) return;
+      demoState.sectionIndex = idx;
+      renderTheoryPanel();
+      updateSgkFocusNav();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const pTheory = document.getElementById('panel-theory');
+      if (pTheory) pTheory.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Điều hướng: Nút "← Quay lại"
+    function handleSgkPrevSection() {
+      if (!activeLesson || !activeLesson.sections) return;
+      if ((demoState.sectionIndex || 0) > 0) {
+        demoState.sectionIndex = (demoState.sectionIndex || 0) - 1;
+        renderTheoryPanel();
+        updateSgkFocusNav();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const pTheory = document.getElementById('panel-theory');
+        if (pTheory) pTheory.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        openSgkLessonSelectorModal();
+      }
+    }
+
+    // Điều hướng: Nút "Tiếp tục →"
+    function handleSgkNextSection() {
+      if (!activeLesson || !activeLesson.sections) return;
+      const totalSecs = activeLesson.sections.length;
+      if ((demoState.sectionIndex || 0) < totalSecs - 1) {
+        demoState.sectionIndex = (demoState.sectionIndex || 0) + 1;
+        renderTheoryPanel();
+        updateSgkFocusNav();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const pTheory = document.getElementById('panel-theory');
+        if (pTheory) pTheory.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        // Đã học xong mục cuối, mở bảng chọn bài tiếp theo
+        openSgkLessonSelectorModal();
+      }
+    }
+
+    // Cập nhật thanh điều hướng Sticky Top trong Focus Mode
+    function updateSgkFocusNav() {
+      const nav = document.getElementById('sgk-focus-nav');
+      if (!nav) return;
+
+      const gradeBadge = document.getElementById('sgk-focus-grade-badge');
+      if (gradeBadge) {
+        const g = (studentInfo && studentInfo.grade) ? studentInfo.grade.toUpperCase() : 'LỚP 12';
+        gradeBadge.textContent = g;
+      }
+
+      const titleEl = document.getElementById('sgk-focus-title');
+      if (titleEl) {
+        titleEl.textContent = (activeLesson && activeLesson.title) ? activeLesson.title : ((activeLesson && activeLesson.lessonTitle) ? activeLesson.lessonTitle : (studentInfo && studentInfo.lesson ? studentInfo.lesson : 'Bài học SGK'));
+      }
+
+      const pillsContainer = document.getElementById('sgk-focus-section-pills');
+      if (pillsContainer && activeLesson && activeLesson.sections && activeLesson.sections.length > 0) {
+        const curIdx = demoState.sectionIndex || 0;
+        pillsContainer.innerHTML = activeLesson.sections.map((s, idx) => {
+          const isActive = idx === curIdx;
+          return `
+            <button 
+              type="button" 
+              onclick="goToSgkSection(${idx})"
+              class="px-2.5 py-1 rounded-lg text-xs font-bold transition cursor-pointer flex items-center gap-1 ${isActive ? 'bg-amber-400 text-slate-950 shadow-xs' : 'bg-indigo-900/90 hover:bg-indigo-800 text-indigo-200'}"
+              title="${s.sectionTitle || ('Mục ' + s.sectionNumber)}"
+            >
+              <span class="w-1.5 h-1.5 rounded-full ${isActive ? 'bg-indigo-900' : 'bg-indigo-400'}"></span>
+              <span>Mục ${s.sectionNumber}</span>
+            </button>
+          `;
+        }).join('');
+      }
+    }
+
+    window.openSgkLessonSelectorModal = openSgkLessonSelectorModal;
+    window.closeSgkLessonSelectorModal = closeSgkLessonSelectorModal;
+    window.renderSgkLessonsByGrade = renderSgkLessonsByGrade;
+    window.selectSgkLesson = selectSgkLesson;
+    window.enterSgkFocusMode = enterSgkFocusMode;
+    window.exitSgkFocusMode = exitSgkFocusMode;
+    window.goToSgkSection = goToSgkSection;
+    window.handleSgkPrevSection = handleSgkPrevSection;
+    window.handleSgkNextSection = handleSgkNextSection;
+    window.updateSgkFocusNav = updateSgkFocusNav;
+
     // Xử lý sự kiện khi học sinh bấm vào bất kỳ nút nào trong 3 nút điều hướng
     function handleNavButtonClick(mode) {
       pendingTargetMode = mode;
@@ -3871,29 +4419,10 @@
         const flowBar = document.getElementById('flow-status-bar');
         if (flowBar) flowBar.style.display = '';
 
-        // Reset bài học SGK nếu trước đó đang là đề thi
-        const isExamActive = !activeLesson || activeLesson.isGraduationExam || activeLesson.isPeriodicExam || (studentInfo.lesson && (studentInfo.lesson.toLowerCase().includes('đề') || studentInfo.lesson.toLowerCase().includes('thi')));
-        if (isExamActive || !activeLesson.sections || activeLesson.sections.length === 0) {
-          studentInfo.lesson = 'Bài 1: Tính đơn điệu và cực trị của hàm số';
-          studentInfo.grade = studentInfo.grade || 'Lớp 12';
-          if (typeof resolveKNTTLesson === 'function') {
-            activeLesson = resolveKNTTLesson(studentInfo.lesson, studentInfo.grade);
-          }
-          if (!activeLesson && typeof KNTT_GRADE_12_DB !== 'undefined') {
-            activeLesson = KNTT_GRADE_12_DB[0]?.lessons[0] || null;
-          }
-          if (activeLesson) {
-            activeLesson.isGraduationExam = false;
-            activeLesson.isPeriodicExam = false;
-            activeTFQuestions = activeLesson.tfQuestions || [];
-            activeSAQuestions = activeLesson.saQuestions || [];
-          }
-        }
-
         applySgkModeTabsUI();
         updateStudentDisplayInfo();
 
-        // Đóng các modal chọn bài nếu đang mở
+        // Đóng các modal setup nếu có
         const mSetup = document.getElementById('modal-setup');
         if (mSetup) {
           mSetup.classList.add('hidden');
@@ -3901,10 +4430,11 @@
           mSetup.style.display = 'none';
         }
 
-        // Mở tab Lý Thuyết SGK
-        switchStudyTab('theory');
+        // BẢNG CHỌN BÀI HỌC (LESSON SELECTOR) SGK
+        openSgkLessonSelectorModal();
 
       } else if (mode === 'periodic') {
+        if (typeof exitSgkFocusMode === 'function') exitSgkFocusMode();
         currentAppMode = 'periodic';
         localStorage.setItem('CURRENT_APP_MODE', 'periodic');
 
@@ -3942,6 +4472,7 @@
         openPeriodicModal();
 
       } else if (mode === 'graduation' || mode === 'exam') {
+        if (typeof exitSgkFocusMode === 'function') exitSgkFocusMode();
         currentAppMode = 'exam';
         localStorage.setItem('CURRENT_APP_MODE', 'exam');
 
@@ -27765,7 +28296,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       return `
 <div class="my-2 space-y-4 font-serif theory-expanded-card" id="theory-card-${section.sectionNumber}">
   <!-- Header Banner To Rõ & Hiện Đại (Có nút Mở Rộng Không Gian) -->
-  <div class="p-4 sm:p-5 bg-gradient-to-r from-indigo-700 via-indigo-800 to-purple-800 rounded-2xl text-white shadow-md flex flex-wrap items-center justify-between gap-3">
+  <div class="theory-header-banner p-4 sm:p-5 bg-gradient-to-r from-indigo-700 via-indigo-800 to-purple-800 rounded-2xl text-white shadow-md flex flex-wrap items-center justify-between gap-3">
     <div class="flex items-center gap-3.5">
       <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-2xl font-bold shadow-inner shrink-0">
         📖
@@ -28497,27 +29028,42 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
 
       const theoryHTML = formatTheoryCardHTML(curSec, studentInfo.name, studentInfo.lesson, studentInfo.class);
       
-      const ctaHTML = `
-        <div class="my-4 p-4 sm:p-5 bg-gradient-to-r from-emerald-50 via-teal-50 to-indigo-50 border-2 border-emerald-300 rounded-2xl shadow-sm text-center space-y-3 font-serif">
-          <div class="flex items-center justify-center gap-2 text-emerald-900 font-bold text-base sm:text-lg">
-            <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
-            <span>Em đã đọc và nắm chắc lý thuyết ${curSec.sectionTitle}?</span>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto">
-            Hãy làm ngay 3 câu hỏi trắc nghiệm củng cố (bắt đầu từ Câu 1/3) để khắc sâu kiến thức và nhớ lâu công thức nhé!
-          </p>
+      const totalSecs = (activeLesson && activeLesson.sections) ? activeLesson.sections.length : 1;
+      const prevDisabled = secIndex <= 0;
+
+      const bottomNavHTML = `
+        <div class="my-6 p-4 sm:p-5 bg-white rounded-2xl border-2 border-indigo-100 shadow-md flex items-center justify-between gap-3 font-serif not-prose">
           <button 
             type="button" 
-            onclick="switchStudyTab('mcq')" 
-            class="w-full sm:w-auto px-6 py-3.5 bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white font-bold rounded-xl text-sm sm:text-base transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg mx-auto cursor-pointer"
+            onclick="handleSgkPrevSection()" 
+            ${prevDisabled ? 'disabled' : ''}
+            class="px-5 sm:px-7 py-3 rounded-xl font-bold text-sm sm:text-base transition flex items-center gap-2 cursor-pointer shadow-sm active:scale-95 ${prevDisabled ? 'bg-slate-100 text-slate-400 cursor-not-allowed shadow-none' : 'bg-slate-200 hover:bg-slate-300 text-slate-800'}"
           >
-            <span>👉 Bắt đầu làm 3 câu Trắc nghiệm Mục ${curSec.sectionNumber} (Câu 1/3)</span>
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>← Quay lại</span>
+          </button>
+
+          <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center">
+            <span class="px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-900 font-black text-xs sm:text-sm">
+              Mục ${curSec.sectionNumber} / ${totalSecs}
+            </span>
+            <span class="text-xs text-slate-500 font-semibold truncate max-w-[150px] sm:max-w-xs">
+              ${curSec.sectionTitle || ''}
+            </span>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="handleSgkNextSection()" 
+            class="px-5 sm:px-7 py-3 rounded-xl font-bold text-sm sm:text-base transition flex items-center gap-2 cursor-pointer shadow-md active:scale-95 bg-indigo-600 hover:bg-indigo-700 text-white hover:shadow-lg"
+          >
+            <span>Tiếp tục →</span>
             <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       `;
 
-      container.innerHTML = theoryHTML + ctaHTML;
+      container.innerHTML = theoryHTML + bottomNavHTML;
       renderMath(container);
       
       const badgeSec = document.getElementById('tab-badge-section');
@@ -34915,5 +35461,56 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
       renderMath(document.body);
     });
   </script>
+
+  <!-- Modal: SGK Lesson Selector (Bảng chọn bài học SGK chuẩn KNTT) -->
+  <div id="modal-sgk-lesson-selector" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-50 hidden items-center justify-center p-3 sm:p-6 font-serif">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-slate-200 animate-in fade-in zoom-in duration-200">
+      <!-- Header -->
+      <div class="p-4 sm:p-5 bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white flex items-center justify-between border-b border-indigo-800">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-xl shadow-sm shrink-0">
+            📚
+          </div>
+          <div>
+            <h3 class="text-base sm:text-xl font-bold leading-tight">Mục Lục Bài Học SGK Kết Nối Tri Thức</h3>
+            <p class="text-xs text-indigo-200">Chọn bài học để bắt đầu học tập trung toàn màn hình (Focus Mode)</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeSgkLessonSelectorModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center cursor-pointer transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Grade Selector Tabs -->
+      <div class="flex items-center gap-2 p-3 sm:px-6 bg-slate-100 border-b border-slate-200 overflow-x-auto no-scrollbar">
+        <button type="button" onclick="renderSgkLessonsByGrade('12')" id="btn-sgk-grade-12" class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer flex items-center gap-2 bg-indigo-600 text-white shadow-sm">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Khối 12 (19 bài)</span>
+        </button>
+        <button type="button" onclick="renderSgkLessonsByGrade('11')" id="btn-sgk-grade-11" class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer flex items-center gap-2 bg-white text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-book"></i>
+          <span>Khối 11 (33 bài)</span>
+        </button>
+        <button type="button" onclick="renderSgkLessonsByGrade('10')" id="btn-sgk-grade-10" class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer flex items-center gap-2 bg-white text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-shapes"></i>
+          <span>Khối 10 (27 bài)</span>
+        </button>
+      </div>
+
+      <!-- Chapters & Lessons Container -->
+      <div id="sgk-lessons-container" class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6">
+        <!-- Rendered dynamically via renderSgkLessonsByGrade() -->
+      </div>
+
+      <!-- Footer -->
+      <div class="p-3 sm:p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
+        <span class="flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-circle-check text-emerald-600"></i>
+          <span>Chọn bài học bất kỳ để kích hoạt chế độ học tập tập trung toàn màn hình.</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
