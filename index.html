@@ -832,10 +832,10 @@
       
       <!-- Modal Header Banner -->
       <div class="bg-gradient-to-r from-indigo-700 via-indigo-800 to-purple-800 text-white p-5 sm:p-6 text-center relative">
-        <button type="button" onclick="closeAuthGatekeeperModal()" class="absolute top-4 right-4 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center transition cursor-pointer text-base" title="Đóng bảng và vào trang học tập">
+        <!-- strict gatekeeper banner
           <i class="fa-solid fa-xmark"></i>
         </button>
-        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm shadow-inner mb-3 text-amber-300 text-2xl">
+        --> <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm shadow-inner mb-3 text-amber-300 text-2xl">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
         <h2 class="text-[15pt] sm:text-[16pt] font-black tracking-tight leading-snug">
@@ -964,7 +964,7 @@
         <button 
           type="button" 
           id="btn-confirm-auth" 
-          onclick="const m=document.getElementById('modal-auth-gatekeeper'); if(m){m.style.setProperty('display','none','important'); m.classList.add('hidden'); m.classList.remove('flex');} handleConfirmAuth();" 
+          onclick="handleConfirmAuth()" 
           class="w-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-extrabold py-3.5 rounded-2xl text-[13.5pt] shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
         >
           <span>Xác nhận & Bắt đầu học</span>
@@ -1878,18 +1878,18 @@
 
     // Kiểm tra xem người dùng đã xác thực hợp lệ hay chưa
     function isUserAuthenticated() {
+      const key = localStorage.getItem('saved_gemini_api_key') || localStorage.getItem('GEMINI_API_KEY');
+      if (key && key.trim().length >= 8) return true;
       const mode = localStorage.getItem('THUAN_AUTH_MODE');
       const val = localStorage.getItem('THUAN_AUTH_VALUE');
-      const key = localStorage.getItem('GEMINI_API_KEY');
-      if (key && key.trim().length >= 5) return true;
-      if (mode === 'vip') return true;
-      if (mode === 'personal' && val && val.trim().length >= 5) return true;
+      if (mode === 'vip' && val === VIP_AUTH_SECRET) return true;
+      if (mode === 'personal' && val && val.trim().length >= 8) return true;
       return false;
     }
 
     // Lấy API Key đang hiệu lực (Nếu cá nhân: dùng key người dùng; Nếu VIP: dùng key luân phiên server)
     function getActiveGeminiApiKey() {
-      const savedKey = localStorage.getItem('GEMINI_API_KEY');
+      const savedKey = localStorage.getItem('saved_gemini_api_key') || localStorage.getItem('GEMINI_API_KEY');
       if (savedKey && savedKey.trim().length >= 8) return savedKey.trim();
       const val = localStorage.getItem('THUAN_AUTH_VALUE');
       if (val && val.trim().length >= 8 && val !== VIP_AUTH_SECRET) return val.trim();
@@ -1994,27 +1994,30 @@
           ? SERVER_VIP_KEY_POOL[0]
           : "AIzaSy_fallback_key_2026";
 
-        if (currentAuthTab === 'personal' && personalKey && personalKey.length >= 8) {
-          // Học sinh đã nhập API Key cá nhân hợp lệ
+        if (currentAuthTab === 'personal') {
+          if (!personalKey || personalKey.length < 8) {
+            showAuthAlert("Vui lòng nhập Google Gemini API Key của bạn (bắt đầu bằng AIza...) để tiếp tục học!", "error");
+            if (inputKey) inputKey.focus();
+            return;
+          }
+          localStorage.setItem('saved_gemini_api_key', personalKey);
+          localStorage.setItem('GEMINI_API_KEY', personalKey);
           localStorage.setItem('THUAN_AUTH_MODE', 'personal');
           localStorage.setItem('THUAN_AUTH_VALUE', personalKey);
-          localStorage.setItem('GEMINI_API_KEY', personalKey);
           apiKey = personalKey;
-        } else if (currentAuthTab === 'vip' && enteredCode && enteredCode === VIP_AUTH_SECRET) {
-          // Học sinh nhập đúng mã VIP
-          localStorage.setItem('THUAN_AUTH_MODE', 'vip');
-          localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
+        } else if (currentAuthTab === 'vip') {
+          if (!enteredCode || enteredCode !== VIP_AUTH_SECRET) {
+            showAuthAlert("Mã VIP không chính xác! Vui lòng nhập đúng mã do Thầy Thuấn cung cấp (Mặc định: HOANGGIA2026) hoặc dùng API Key cá nhân miễn phí.", "error");
+            if (inputVip) inputVip.focus();
+            return;
+          }
+          localStorage.setItem('saved_gemini_api_key', fallbackServerKey);
           localStorage.setItem('GEMINI_API_KEY', fallbackServerKey);
-          apiKey = fallbackServerKey;
-        } else {
-          // Tự động dùng key dự phòng hệ thống để học sinh không bao giờ bị kẹt
-          const chosenKey = (personalKey && personalKey.length >= 8) ? personalKey : fallbackServerKey;
           localStorage.setItem('THUAN_AUTH_MODE', 'vip');
           localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
-          localStorage.setItem('GEMINI_API_KEY', chosenKey);
-          apiKey = chosenKey;
+          apiKey = fallbackServerKey;
         }
-
+        // Authentication validation passed successfully
         isDemoMode = false;
 
         // 1. Lập tức ẩn hoàn toàn modal xác thực API Key
@@ -2078,6 +2081,7 @@
 
     // Đóng Modal Chặn Cửa (Chỉ được đóng khi đã xác thực hợp lệ)
     function closeAuthGatekeeperModal() {
+      if (!isUserAuthenticated()) return;
       const modal = document.getElementById('modal-auth-gatekeeper');
       if (modal) {
         modal.classList.add('hidden');
@@ -2121,14 +2125,8 @@
     // HÃ m kiá»ƒm tra vÃ  cháº·n má»i chá»©c nÄƒng náº¿u chÆ°a xÃ¡c thá»±c
     function enforceAuthentication(actionName) {
       if (!isUserAuthenticated()) {
-        const fallbackServerKey = (typeof SERVER_VIP_KEY_POOL !== 'undefined' && SERVER_VIP_KEY_POOL.length > 0)
-          ? SERVER_VIP_KEY_POOL[0]
-          : "AIzaSy_fallback_key_2026";
-        localStorage.setItem('THUAN_AUTH_MODE', 'vip');
-        localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
-        localStorage.setItem('GEMINI_API_KEY', fallbackServerKey);
-        apiKey = fallbackServerKey;
-        closeAuthGatekeeperModal();
+        openAuthGatekeeperModal(false);
+        return false;
       }
       return true;
     }
@@ -2136,6 +2134,7 @@
     // Xử lý Đăng xuất / Đổi mã: Xóa sạch dữ liệu lưu trong LocalStorage và mở lại màn hình đăng nhập
     function handleLogoutAuth() {
       if (confirm('Em/Thầy Cô có chắc chắn muốn Đăng xuất và xóa Mã VIP / API Key đã lưu trên trình duyệt này không?')) {
+        localStorage.removeItem('saved_gemini_api_key');
         localStorage.removeItem('THUAN_AUTH_MODE');
         localStorage.removeItem('THUAN_AUTH_VALUE');
         localStorage.removeItem('GEMINI_API_KEY');
@@ -3251,7 +3250,12 @@
     // Xử lý sự kiện khi học sinh bấm vào bất kỳ nút nào trong 3 nút điều hướng
     function handleNavButtonClick(mode) {
       pendingTargetMode = mode;
-      openStudentInfoModal(mode);
+      const savedName = localStorage.getItem('STUDENT_NAME');
+      if (savedName && savedName.trim().length > 0) {
+        proceedToTargetMode(mode);
+      } else {
+        openStudentInfoModal(mode);
+      }
     }
 
     // Mở Modal Đăng Ký Thông Tin Học Sinh
@@ -3374,24 +3378,34 @@
         if (flowBar) flowBar.style.display = '';
 
         // Reset bài học SGK nếu trước đó đang là đề thi
-        if (!studentInfo.lesson || studentInfo.lesson.includes('Đề thi') || studentInfo.lesson.includes('tốt nghiệp') || (activeLesson && activeLesson.isGraduationExam)) {
+        const isExamActive = !activeLesson || activeLesson.isGraduationExam || activeLesson.isPeriodicExam || (studentInfo.lesson && (studentInfo.lesson.toLowerCase().includes('đề') || studentInfo.lesson.toLowerCase().includes('thi')));
+        if (isExamActive || !activeLesson.sections || activeLesson.sections.length === 0) {
           studentInfo.lesson = 'Bài 1: Tính đơn điệu và cực trị của hàm số';
           studentInfo.grade = studentInfo.grade || 'Lớp 12';
           if (typeof resolveKNTTLesson === 'function') {
             activeLesson = resolveKNTTLesson(studentInfo.lesson, studentInfo.grade);
-            if (activeLesson) {
-              activeLesson.isGraduationExam = false;
-              activeTFQuestions = activeLesson.tfQuestions || [];
-              activeSAQuestions = activeLesson.saQuestions || [];
-            }
+          }
+          if (!activeLesson && typeof KNTT_GRADE_12_DB !== 'undefined') {
+            activeLesson = KNTT_GRADE_12_DB[0]?.lessons[0] || null;
+          }
+          if (activeLesson) {
+            activeLesson.isGraduationExam = false;
+            activeLesson.isPeriodicExam = false;
+            activeTFQuestions = activeLesson.tfQuestions || [];
+            activeSAQuestions = activeLesson.saQuestions || [];
           }
         }
 
         applySgkModeTabsUI();
         updateStudentDisplayInfo();
 
-        // Mở bộ chọn: [Khối 10 - 11 - 12] -> [Chương] -> [Bài học SGK]
-        openCurriculumPicker();
+        // Đóng các modal chọn bài nếu đang mở
+        const mSetup = document.getElementById('modal-setup');
+        if (mSetup) {
+          mSetup.classList.add('hidden');
+          mSetup.classList.remove('flex');
+          mSetup.style.display = 'none';
+        }
 
         // Mở tab Lý Thuyết SGK
         switchStudyTab('theory');
@@ -24775,7 +24789,16 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     // 1. Render Panel Lý Thuyết SGK
     function renderTheoryPanel() {
       const container = document.getElementById('panel-theory');
-      if (!container || !activeLesson || !activeLesson.sections) return;
+      if (!container) return;
+      if (!activeLesson || !activeLesson.sections || activeLesson.sections.length === 0) {
+        if (typeof resolveKNTTLesson === 'function') {
+          activeLesson = resolveKNTTLesson(studentInfo ? studentInfo.lesson : 'Bài 1: Tính đơn điệu và cực trị của hàm số', studentInfo ? studentInfo.grade : 'Lớp 12');
+        }
+        if (!activeLesson && typeof KNTT_GRADE_12_DB !== 'undefined' && KNTT_GRADE_12_DB.length > 0) {
+          activeLesson = KNTT_GRADE_12_DB[0]?.lessons[0] || null;
+        }
+      }
+      if (!activeLesson || !activeLesson.sections || activeLesson.sections.length === 0) return;
       
       const secIndex = demoState.sectionIndex || 0;
       const curSec = activeLesson.sections[secIndex] || activeLesson.sections[0];
@@ -25929,7 +25952,16 @@ ${activeLesson.lessonTitle}
     // 2. Render Panel Trắc Nghiệm (1 câu trọn vẹn 1 màn hình)
     function renderMCQPanel() {
       const container = document.getElementById('panel-mcq');
-      if (!container || !activeLesson || !activeLesson.sections) return;
+      if (!container) return;
+      if (!activeLesson || !activeLesson.sections || activeLesson.sections.length === 0) {
+        if (typeof resolveKNTTLesson === 'function') {
+          activeLesson = resolveKNTTLesson(studentInfo ? studentInfo.lesson : 'Bài 1: Tính đơn điệu và cực trị của hàm số', studentInfo ? studentInfo.grade : 'Lớp 12');
+        }
+        if (!activeLesson && typeof KNTT_GRADE_12_DB !== 'undefined' && KNTT_GRADE_12_DB.length > 0) {
+          activeLesson = KNTT_GRADE_12_DB[0]?.lessons[0] || null;
+        }
+      }
+      if (!activeLesson || !activeLesson.sections) return;
 
       if (activeLesson && activeLesson.isChapterReview) {
         renderChapterReviewMCQPanel(container);
@@ -27334,16 +27366,27 @@ ${activeLesson.lessonTitle}
           });
         }
 
-        const data = await response.json();
+        let data;
+        try {
+          data = await response.json();
+        } catch (jsonErr) {
+          data = null;
+        }
         removeTypingIndicator();
 
-        if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
+        if (data && data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
           const reply = data.candidates[0].content.parts[0].text;
           conversationHistory.push({
             role: "model",
             parts: [{ text: reply }]
           });
           appendMessage('assistant', reply);
+        } else if (!response.ok) {
+          if (response.status === 400 || response.status === 403) {
+            appendMessage('assistant', '⚠️ API Key không hợp lệ hoặc đã hết hạn mức. Em vui lòng bấm nút "Xác thực Key" ở góc trên để cập nhật API Key mới hoặc chuyển sang Mã VIP: **HOANGGIA2026** nhé!');
+          } else {
+            await handleKNTTDemoStep(userMessage);
+          }
         } else {
           // Fallback tự động sang bộ máy sư phạm SGK KNTT để học sinh không bị gián đoạn
           await handleKNTTDemoStep(userMessage);
@@ -27351,9 +27394,16 @@ ${activeLesson.lessonTitle}
       } catch (err) {
         removeTypingIndicator();
         console.warn("Chuyển tiếp tự động sang bộ máy sư phạm KNTT:", err);
-        await handleKNTTDemoStep(userMessage);
+        try {
+          await handleKNTTDemoStep(userMessage);
+        } catch (fallbackErr) {
+          appendMessage('assistant', '⚠️ Hệ thống đang bận. Em vui lòng thử lại sau giây lát hoặc làm bài tập theo sách giáo khoa nhé!');
+        }
       } finally {
-        btnSend.disabled = false;
+        removeTypingIndicator();
+        if (typeof btnSend !== 'undefined' && btnSend) {
+          btnSend.disabled = false;
+        }
       }
     }
 
