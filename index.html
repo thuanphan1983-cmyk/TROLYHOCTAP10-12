@@ -25015,7 +25015,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     // ==========================================
     // CƠ CHẾ ĐIỀU HƯỚNG & HỌC TẬP TỐI ƯU CHO ĐIỆN THOẠI & MÁY TÍNH
     // ==========================================
-    let currentStudyTab = 'theory'; // 'theory' | 'mcq' | 'tf' | 'chat'
+    currentStudyTab = currentStudyTab || 'theory'; // 'theory' | 'mcq' | 'tf' | 'chat'
 
     function toggleMobileMoreMenu() {
       const modal = document.getElementById('modal-mobile-menu');
