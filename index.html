@@ -984,6 +984,247 @@
     </div>
   </div>
 
+  <!-- Script Xử Lý Xác Thực Chặn Cửa Nhanh & Đảm Bảo Không Liệt Nút -->
+  <script>
+    (function() {
+      var VIP_SECRET = "HOANGGIA2026";
+      window.currentAuthTab = 'personal';
+
+      // 1. Tự động kiểm tra đăng nhập ngay lập tức khi tải trang (Auto-login check)
+      function checkAutoAuth() {
+        try {
+          var verified = localStorage.getItem('auth_verified');
+          var k1 = localStorage.getItem('gemini_api_key');
+          var k2 = localStorage.getItem('saved_gemini_api_key');
+          var k3 = localStorage.getItem('GEMINI_API_KEY');
+          var mode = localStorage.getItem('THUAN_AUTH_MODE');
+          var val = localStorage.getItem('THUAN_AUTH_VALUE');
+
+          var hasKey = (k1 && k1.trim().length >= 8) || (k2 && k2.trim().length >= 8) || (k3 && k3.trim().length >= 8);
+          var hasVip = (mode === 'vip' && (val === 'HOANGGIA2026' || !val));
+          var isVerified = (verified === 'true' && (hasKey || hasVip));
+
+          if (hasKey || hasVip || isVerified) {
+            var modal = document.getElementById('modal-auth-gatekeeper');
+            if (modal) {
+              modal.style.setProperty('display', 'none', 'important');
+              modal.classList.add('hidden');
+              modal.classList.remove('flex');
+            }
+            return true;
+          }
+        } catch (e) {
+          console.warn('Auto auth check error:', e);
+        }
+        return false;
+      }
+
+      // Chạy kiểm tra ngay khi đọc tới đây
+      checkAutoAuth();
+
+      // 2. Chuyển tab giữa API Key Cá Nhân và Mã VIP
+      window.switchAuthTab = function(tab) {
+        window.currentAuthTab = tab;
+        var btnPersonal = document.getElementById('tab-auth-personal');
+        var btnVip = document.getElementById('tab-auth-vip');
+        var panelPersonal = document.getElementById('auth-panel-personal');
+        var panelVip = document.getElementById('auth-panel-vip');
+        var alertBox = document.getElementById('auth-alert-box');
+        if (alertBox) {
+          alertBox.classList.add('hidden');
+          alertBox.style.display = 'none';
+        }
+
+        if (tab === 'personal') {
+          if (btnPersonal) {
+            btnPersonal.className = "py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition bg-white text-indigo-900 shadow-sm border border-slate-200 cursor-pointer";
+          }
+          if (btnVip) {
+            btnVip.className = "py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition text-slate-600 hover:text-indigo-900 cursor-pointer";
+          }
+          if (panelPersonal) {
+            panelPersonal.classList.remove('hidden');
+            panelPersonal.style.display = 'block';
+          }
+          if (panelVip) {
+            panelVip.classList.add('hidden');
+            panelVip.style.display = 'none';
+          }
+          setTimeout(function() {
+            var input = document.getElementById('input-personal-key');
+            if (input) input.focus();
+          }, 50);
+        } else {
+          if (btnVip) {
+            btnVip.className = "py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition bg-amber-500 text-slate-900 shadow-sm border border-amber-400 cursor-pointer font-extrabold";
+          }
+          if (btnPersonal) {
+            btnPersonal.className = "py-2.5 px-2 rounded-xl font-bold text-xs sm:text-[12pt] flex flex-col items-center justify-center gap-1 transition text-slate-600 hover:text-indigo-900 cursor-pointer";
+          }
+          if (panelPersonal) {
+            panelPersonal.classList.add('hidden');
+            panelPersonal.style.display = 'none';
+          }
+          if (panelVip) {
+            panelVip.classList.remove('hidden');
+            panelVip.style.display = 'block';
+          }
+          setTimeout(function() {
+            var input = document.getElementById('input-vip-code');
+            if (input) input.focus();
+          }, 50);
+        }
+      };
+
+      // 3. Hiện/ẩn API Key
+      window.toggleKeyVisibility = function(inputId, iconId) {
+        var input = document.getElementById(inputId);
+        var icon = document.getElementById(iconId);
+        if (!input || !icon) return;
+        if (input.type === 'password') {
+          input.type = 'text';
+          icon.className = 'fa-solid fa-eye-slash';
+        } else {
+          input.type = 'password';
+          icon.className = 'fa-solid fa-eye';
+        }
+      };
+
+      // 4. Hiển thị thông báo
+      window.showAuthAlert = function(msg, type) {
+        type = type || 'error';
+        var alertBox = document.getElementById('auth-alert-box');
+        var alertMsg = document.getElementById('auth-alert-msg');
+        var alertIcon = document.getElementById('auth-alert-icon');
+        if (!alertBox || !alertMsg) return;
+
+        alertMsg.textContent = msg;
+        alertBox.classList.remove('hidden');
+        alertBox.style.display = 'flex';
+        if (type === 'error') {
+          alertBox.className = "p-3 rounded-xl border text-[11.5pt] flex items-start gap-2 bg-rose-50 border-rose-300 text-rose-800";
+          if (alertIcon) alertIcon.className = "fa-solid fa-circle-xmark mt-0.5 shrink-0 text-rose-600";
+        } else {
+          alertBox.className = "p-3 rounded-xl border text-[11.5pt] flex items-start gap-2 bg-emerald-50 border-emerald-300 text-emerald-800";
+          if (alertIcon) alertIcon.className = "fa-solid fa-circle-check mt-0.5 shrink-0 text-emerald-600";
+        }
+      };
+
+      // 5. Đóng modal xác thực
+      window.closeAuthGatekeeperModal = function() {
+        var modal = document.getElementById('modal-auth-gatekeeper');
+        if (modal) {
+          modal.style.setProperty('display', 'none', 'important');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+        document.body.classList.remove('overflow-hidden');
+      };
+
+      // 6. Xử lý nút "Xác nhận & Bắt đầu học"
+      window.handleConfirmAuth = function() {
+        try {
+          var alertBox = document.getElementById('auth-alert-box');
+          if (alertBox) {
+            alertBox.classList.add('hidden');
+            alertBox.style.display = 'none';
+          }
+
+          var inputKey = document.getElementById('input-personal-key');
+          var inputVip = document.getElementById('input-vip-code');
+          var personalKey = inputKey ? inputKey.value.trim() : "";
+          var enteredCode = inputVip ? inputVip.value.trim().toUpperCase() : "";
+
+          var fallbackVipKey = (function(){ try { return atob("QVEuQWI4Uk42TGg1SndTZlVDZDJscHEtNjJBT0toRFFqUmNDWU1jRXd0M3VKRmVpTTYxa0E="); } catch(e) { return "AIzaSy_fallback_key_2026"; } })();
+
+          if (window.currentAuthTab === 'personal') {
+            if (!personalKey || personalKey.length === 0) {
+              window.showAuthAlert("Vui lòng nhập Google Gemini API Key của bạn (bắt đầu bằng AIza...) để tiếp tục học!", "error");
+              if (inputKey) inputKey.focus();
+              return;
+            }
+            localStorage.setItem('gemini_api_key', personalKey);
+            localStorage.setItem('saved_gemini_api_key', personalKey);
+            localStorage.setItem('GEMINI_API_KEY', personalKey);
+            localStorage.setItem('auth_verified', 'true');
+            localStorage.setItem('THUAN_AUTH_MODE', 'personal');
+            localStorage.setItem('THUAN_AUTH_VALUE', personalKey);
+          } else {
+            if (!enteredCode || enteredCode !== VIP_SECRET) {
+              window.showAuthAlert("Mã VIP không chính xác! Vui lòng nhập đúng mã HOANGGIA2026 hoặc dùng API Key cá nhân miễn phí.", "error");
+              if (inputVip) inputVip.focus();
+              return;
+            }
+            localStorage.setItem('gemini_api_key', fallbackVipKey);
+            localStorage.setItem('saved_gemini_api_key', fallbackVipKey);
+            localStorage.setItem('GEMINI_API_KEY', fallbackVipKey);
+            localStorage.setItem('auth_verified', 'true');
+            localStorage.setItem('THUAN_AUTH_MODE', 'vip');
+            localStorage.setItem('THUAN_AUTH_VALUE', VIP_SECRET);
+          }
+
+          window.closeAuthGatekeeperModal();
+
+          if (typeof updateStudentDisplayInfo === 'function') updateStudentDisplayInfo();
+          if (typeof updateAuthUIBadge === 'function') updateAuthUIBadge();
+          if (typeof updateModeUI === 'function') updateModeUI();
+          if (typeof updateNavButtonsActiveUI === 'function') updateNavButtonsActiveUI("sgk");
+          if (typeof switchStudyTab === 'function') switchStudyTab('theory');
+
+        } catch (err) {
+          console.warn("handleConfirmAuth execution:", err);
+          window.closeAuthGatekeeperModal();
+        }
+      };
+
+      // 7. Gắn trực tiếp Event Listeners để chống liệt nút triệt để
+      function bindAuthEvents() {
+        var btnPersonal = document.getElementById('tab-auth-personal');
+        if (btnPersonal) {
+          btnPersonal.onclick = function() { window.switchAuthTab('personal'); };
+        }
+        var btnVip = document.getElementById('tab-auth-vip');
+        if (btnVip) {
+          btnVip.onclick = function() { window.switchAuthTab('vip'); };
+        }
+        var btnConfirm = document.getElementById('btn-confirm-auth');
+        if (btnConfirm) {
+          btnConfirm.onclick = function() { window.handleConfirmAuth(); };
+        }
+        var inpKey = document.getElementById('input-personal-key');
+        if (inpKey) {
+          inpKey.onkeydown = function(e) {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              window.handleConfirmAuth();
+            }
+          };
+        }
+        var inpVip = document.getElementById('input-vip-code');
+        if (inpVip) {
+          inpVip.onkeydown = function(e) {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              window.handleConfirmAuth();
+            }
+          };
+        }
+      }
+
+      bindAuthEvents();
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          checkAutoAuth();
+          bindAuthEvents();
+        });
+      }
+      window.addEventListener('load', function() {
+        checkAutoAuth();
+      });
+    })();
+  </script>
+
   <!-- =========================================================================
        MODAL: ÔN THI TỐT NGHIỆP CÙNG THẦY THUẤN
        Kho Đề Thi Thử Tốt Nghiệp THPT Môn Toán Chuẩn Ma Trận 2025 Bộ GD&ĐT
@@ -1878,18 +2119,20 @@
 
     // Kiểm tra xem người dùng đã xác thực hợp lệ hay chưa
     function isUserAuthenticated() {
-      const key = localStorage.getItem('saved_gemini_api_key') || localStorage.getItem('GEMINI_API_KEY');
+      const verified = localStorage.getItem('auth_verified');
+      const key = localStorage.getItem('gemini_api_key') || localStorage.getItem('saved_gemini_api_key') || localStorage.getItem('GEMINI_API_KEY');
+      if (verified === 'true') return true;
       if (key && key.trim().length >= 8) return true;
       const mode = localStorage.getItem('THUAN_AUTH_MODE');
       const val = localStorage.getItem('THUAN_AUTH_VALUE');
-      if (mode === 'vip' && val === VIP_AUTH_SECRET) return true;
+      if (mode === 'vip' && (val === VIP_AUTH_SECRET || val === 'HOANGGIA2026')) return true;
       if (mode === 'personal' && val && val.trim().length >= 8) return true;
       return false;
     }
 
     // Lấy API Key đang hiệu lực (Nếu cá nhân: dùng key người dùng; Nếu VIP: dùng key luân phiên server)
     function getActiveGeminiApiKey() {
-      const savedKey = localStorage.getItem('saved_gemini_api_key') || localStorage.getItem('GEMINI_API_KEY');
+      const savedKey = localStorage.getItem('gemini_api_key') || localStorage.getItem('saved_gemini_api_key') || localStorage.getItem('GEMINI_API_KEY');
       if (savedKey && savedKey.trim().length >= 8) return savedKey.trim();
       const val = localStorage.getItem('THUAN_AUTH_VALUE');
       if (val && val.trim().length >= 8 && val !== VIP_AUTH_SECRET) return val.trim();
@@ -1958,6 +2201,8 @@
         icon.className = 'fa-solid fa-eye';
       }
     }
+    window.switchAuthTab = switchAuthTab;
+    window.toggleKeyVisibility = toggleKeyVisibility;
 
     // Hiển thị thông báo trong modal auth
     function showAuthAlert(msg, type = 'error') {
@@ -1976,10 +2221,10 @@
         alertIcon.className = "fa-solid fa-circle-check mt-0.5 shrink-0 text-emerald-600";
       }
     }
+    window.showAuthAlert = showAuthAlert;
 
     // Xử lý khi bấm nút "Xác nhận & Bắt đầu học"
     function handleConfirmAuth() {
-      closeAuthGatekeeperModal();
       try {
         const alertBox = document.getElementById('auth-alert-box');
         if (alertBox) alertBox.classList.add('hidden');
@@ -1995,24 +2240,28 @@
           : "AIzaSy_fallback_key_2026";
 
         if (currentAuthTab === 'personal') {
-          if (!personalKey || personalKey.length < 8) {
+          if (!personalKey || personalKey.length < 5) {
             showAuthAlert("Vui lòng nhập Google Gemini API Key của bạn (bắt đầu bằng AIza...) để tiếp tục học!", "error");
             if (inputKey) inputKey.focus();
             return;
           }
+          localStorage.setItem('gemini_api_key', personalKey);
           localStorage.setItem('saved_gemini_api_key', personalKey);
           localStorage.setItem('GEMINI_API_KEY', personalKey);
+          localStorage.setItem('auth_verified', 'true');
           localStorage.setItem('THUAN_AUTH_MODE', 'personal');
           localStorage.setItem('THUAN_AUTH_VALUE', personalKey);
           apiKey = personalKey;
         } else if (currentAuthTab === 'vip') {
-          if (!enteredCode || enteredCode !== VIP_AUTH_SECRET) {
+          if (!enteredCode || (enteredCode !== VIP_AUTH_SECRET && enteredCode !== 'HOANGGIA2026')) {
             showAuthAlert("Mã VIP không chính xác! Vui lòng nhập đúng mã do Thầy Thuấn cung cấp (Mặc định: HOANGGIA2026) hoặc dùng API Key cá nhân miễn phí.", "error");
             if (inputVip) inputVip.focus();
             return;
           }
+          localStorage.setItem('gemini_api_key', fallbackServerKey);
           localStorage.setItem('saved_gemini_api_key', fallbackServerKey);
           localStorage.setItem('GEMINI_API_KEY', fallbackServerKey);
+          localStorage.setItem('auth_verified', 'true');
           localStorage.setItem('THUAN_AUTH_MODE', 'vip');
           localStorage.setItem('THUAN_AUTH_VALUE', VIP_AUTH_SECRET);
           apiKey = fallbackServerKey;
@@ -2134,10 +2383,12 @@
     // Xử lý Đăng xuất / Đổi mã: Xóa sạch dữ liệu lưu trong LocalStorage và mở lại màn hình đăng nhập
     function handleLogoutAuth() {
       if (confirm('Em/Thầy Cô có chắc chắn muốn Đăng xuất và xóa Mã VIP / API Key đã lưu trên trình duyệt này không?')) {
+        localStorage.removeItem('gemini_api_key');
         localStorage.removeItem('saved_gemini_api_key');
+        localStorage.removeItem('GEMINI_API_KEY');
+        localStorage.removeItem('auth_verified');
         localStorage.removeItem('THUAN_AUTH_MODE');
         localStorage.removeItem('THUAN_AUTH_VALUE');
-        localStorage.removeItem('GEMINI_API_KEY');
         apiKey = '';
 
         // Reset ô nhập trong modal
