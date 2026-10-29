@@ -18716,12 +18716,15 @@
             }
           ],
           tfQuestions: exam.tfQuestions || [],
-          saQuestions: exam.saQuestions || [],
+          saQuestions: (exam.saQuestions || []).map(q => { const std = (typeof getQuestionCorrectAnswer === "function") ? getQuestionCorrectAnswer(q) : (q.correctAnswer || q.answer || ""); return { ...q, correctAnswer: std, answer: std }; }),
           essayQuestions: exam.essayQuestions || []
         };
 
         activeTFQuestions = exam.tfQuestions || [];
-        activeSAQuestions = exam.saQuestions || [];
+        activeSAQuestions = (exam.saQuestions || []).map(q => {
+          const std = getQuestionCorrectAnswer(q);
+          return { ...q, correctAnswer: std, answer: std };
+        });
 
         chapterExamState.submitted = false;
         chapterExamState.mcqAnswers = {};
@@ -18913,12 +18916,15 @@
             }
           ],
           tfQuestions: exam.tfQuestions || [],
-          saQuestions: exam.saQuestions || [],
+          saQuestions: (exam.saQuestions || []).map(q => { const std = (typeof getQuestionCorrectAnswer === "function") ? getQuestionCorrectAnswer(q) : (q.correctAnswer || q.answer || ""); return { ...q, correctAnswer: std, answer: std }; }),
           essayQuestions: []
         };
 
         activeTFQuestions = exam.tfQuestions || [];
-        activeSAQuestions = exam.saQuestions || [];
+        activeSAQuestions = (exam.saQuestions || []).map(q => {
+          const std = getQuestionCorrectAnswer(q);
+          return { ...q, correctAnswer: std, answer: std };
+        });
 
         chapterExamState.submitted = false;
         chapterExamState.mcqAnswers = {};
@@ -28290,6 +28296,47 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     }
     window.scrollToTheoryBlock = scrollToTheoryBlock;
 
+    // =========================================================================
+    // XỬ LÝ NÚT LÀM BÀI TRẮC NGHIỆM CỦNG CỐ (CUỘN MƯỢT HOẶC CHUYỂN TAB)
+    // =========================================================================
+    function handleGoToMCQ(mcqIdx) {
+      const targetIdx = (typeof mcqIdx === 'number') ? mcqIdx : (demoState.mcqIndex || 0);
+      const targetId = 'mcq-box-' + targetIdx;
+      const existingBox = document.getElementById(targetId) || document.getElementById('mcq-box-0');
+      
+      // Nếu khung câu hỏi đã tồn tại trên màn hình hiện tại và đang hiển thị, cuộn mượt tới đó
+      if (existingBox && !existingBox.closest('.hidden') && existingBox.offsetParent !== null) {
+        existingBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        existingBox.classList.add('ring-4', 'ring-indigo-400');
+        setTimeout(() => existingBox.classList.remove('ring-4', 'ring-indigo-400'), 1500);
+        return;
+      }
+
+      // Kích hoạt trạng thái mở/chuyển tab bài tập trắc nghiệm củng cố tương ứng
+      if (typeof switchStudyTab === 'function') {
+        switchStudyTab('mcq');
+      }
+      demoState.mcqIndex = targetIdx;
+      if (typeof renderMCQPanel === 'function') {
+        renderMCQPanel();
+      }
+
+      // Cuộn mượt tới vị trí làm bài trắc nghiệm
+      setTimeout(() => {
+        const pMcq = document.getElementById('panel-mcq');
+        if (pMcq) {
+          pMcq.scrollTo({ top: 0, behavior: 'smooth' });
+          pMcq.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        const targetOpt = document.getElementById('panel-opt-A') || pMcq;
+        if (targetOpt) {
+          targetOpt.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 80);
+    }
+    window.handleGoToMCQ = handleGoToMCQ;
+    window.scrollToSectionMCQ = handleGoToMCQ;
+
     function formatTheoryCardHTML(section, studentName, lessonTitle, studentClass) {
       let theoryBody = section.theory.replace(/\{student_name\}/g, studentName);
       
@@ -28363,9 +28410,9 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         <i class="fa-solid fa-circle-check text-emerald-600"></i>
         <span>Đã học xong lý thuyết Mục ${section.sectionNumber}. Mời em làm 3 câu trắc nghiệm củng cố ngay dưới đây:</span>
       </span>
-      <button type="button" onclick="document.getElementById('mcq-box-0')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer">
-        <span>Làm câu 1/3 ngay</span>
-        <i class="fa-solid fa-arrow-down text-[10px]"></i>
+      <button type="button" onclick="handleGoToMCQ(0)" class="px-3.5 py-2 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer" title="Làm bài tập trắc nghiệm củng cố ngay">
+        <span>Làm câu 1/${(section.mcqs && section.mcqs.length) ? section.mcqs.length : 3} ngay</span>
+        <i class="fa-solid fa-arrow-right text-[10px]"></i>
       </button>
     </div>
   </div>
@@ -29204,10 +29251,11 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       const saWeight = (saList.length > 0) ? (targetSaMax / saList.length) : 0.5;
       saList.forEach(q => {
         const rawVal = saAnswers[q.id] || '';
-        const userNorm = normalizeMathAnswer(rawVal);
-        const correctNorm = normalizeMathAnswer(q.correctAnswer);
-        const isAccepted = Array.isArray(q.acceptedAnswers) && q.acceptedAnswers.some(a => normalizeMathAnswer(a) === userNorm);
-        const isCorrect = (userNorm.length > 0) && ((userNorm === correctNorm) || isAccepted);
+        const stdCorrect = getQuestionCorrectAnswer(q);
+        if (!q.correctAnswer && stdCorrect) q.correctAnswer = stdCorrect;
+        if (!q.answer && stdCorrect) q.answer = stdCorrect;
+
+        const isCorrect = isShortAnswerCorrect(rawVal, q);
         if (isCorrect) {
           saScore += saWeight;
           saCorrectCount++;
@@ -29950,7 +29998,7 @@ ${activeLesson.lessonTitle}
             <div class="bg-white p-3.5 rounded-xl border border-slate-200 space-y-2 text-slate-800">
               <div class="flex flex-wrap items-center gap-3 text-xs sm:text-sm">
                 <span>Em đã điền: <strong class="${isCorrect ? 'text-emerald-700' : 'text-rose-600'}">${userVal || '(Để trống)'}</strong></span>
-                <span>Đáp số chuẩn: <strong class="text-indigo-700 font-bold">${curQ.correctAnswer} ${curQ.unit || ''}</strong></span>
+                <span>Đáp số chuẩn: <strong class="text-indigo-700 font-bold">${getQuestionCorrectAnswer(curQ) || curQ.correctAnswer || curQ.answer || '—'} ${curQ.unit || ''}</strong></span>
               </div>
               <div class="text-xs font-bold text-indigo-900 flex items-center gap-1.5 pt-1 border-t border-slate-100">
                 <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
@@ -30918,23 +30966,89 @@ ${activeLesson.lessonTitle}
     // ==========================================
     // 5. RENDER PANEL PHẦN 3: 4 CÂU TRẢ LỜI NGẮN (ĐIỀN ĐÁP SỐ CHUẨN ĐỀ THI 2025)
     // ==========================================
+    // Lấy đáp số chuẩn từ bất kỳ tên thuộc tính nào (correctAnswer, answer, correct_answer, dap_an, correct)
+    function getQuestionCorrectAnswer(q) {
+      if (!q) return '';
+      const candidates = [
+        q.correctAnswer,
+        q.answer,
+        q.correct_answer,
+        q.dap_an,
+        q.dapAn,
+        q.correct,
+        q.result
+      ];
+      for (const c of candidates) {
+        if (c !== undefined && c !== null && String(c).trim() !== '') {
+          return String(c).trim();
+        }
+      }
+      return '';
+    }
+    window.getQuestionCorrectAnswer = getQuestionCorrectAnswer;
+
+    // Chuẩn hóa định dạng toán học: xử lý dấu phẩy/chấm thập phân, phân số, khoảng trắng
     function normalizeMathAnswer(val) {
       if (val === undefined || val === null) return "";
-      let s = String(val).trim().replace(/,/g, '.');
-      if (/^-?\d+\s*\/\s*\d+$/.test(s)) {
+      let s = String(val).trim().replace(/,/g, '.').replace(/\s+/g, '');
+      if (!s) return "";
+
+      // Xử lý phân số dạng a/b (ví dụ 1/2 -> 0.5, -3/4 -> -0.75)
+      if (/^-?\d+(?:\.\d+)?\s*\/\s*-?\d+(?:\.\d+)?$/.test(s)) {
         const parts = s.split('/');
         const num = parseFloat(parts[0]);
         const den = parseFloat(parts[1]);
-        if (den !== 0) {
-          s = String(num / den);
+        if (den !== 0 && !isNaN(num) && !isNaN(den)) {
+          const fracVal = num / den;
+          return String(Math.round(fracVal * 10000) / 10000);
         }
       }
+
+      // Ép kiểu số thực và làm tròn 4 chữ số thập phân
       const numVal = parseFloat(s);
-      if (!isNaN(numVal)) {
+      if (!isNaN(numVal) && isFinite(numVal) && (String(numVal) === s || /^-?\d+(?:\.\d+)?$/.test(s))) {
         return String(Math.round(numVal * 10000) / 10000);
       }
+
       return s.toLowerCase();
     }
+    window.normalizeMathAnswer = normalizeMathAnswer;
+
+    // So sánh chuẩn hóa đáp số giữa học sinh và đề bài
+    function isShortAnswerCorrect(userAns, q) {
+      if (!q) return false;
+      const userRaw = (userAns !== undefined && userAns !== null) ? String(userAns).trim() : '';
+      if (!userRaw) return false;
+
+      const correctRaw = getQuestionCorrectAnswer(q);
+      if (!correctRaw) return false;
+
+      const userTrim = userRaw.replace(/\s+/g, '');
+      const correctTrim = correctRaw.replace(/\s+/g, '');
+
+      // 1. So sánh trực tiếp chuỗi (sau khi bỏ khoảng trắng dư thừa)
+      if (userTrim.toLowerCase() === correctTrim.toLowerCase()) return true;
+
+      // 2. So sánh sau chuẩn hóa toán học (dấu phẩy/chấm thập phân, phân số)
+      const userNorm = normalizeMathAnswer(userRaw);
+      const correctNorm = normalizeMathAnswer(correctRaw);
+      if (userNorm && correctNorm && userNorm === correctNorm) return true;
+
+      // 3. Kiểm tra danh sách đáp án chấp nhận (acceptedAnswers) nếu có
+      if (Array.isArray(q.acceptedAnswers) && q.acceptedAnswers.length > 0) {
+        for (const a of q.acceptedAnswers) {
+          if (a !== undefined && a !== null) {
+            const aRaw = String(a).trim().replace(/\s+/g, '');
+            if (userTrim.toLowerCase() === aRaw.toLowerCase()) return true;
+            const aNorm = normalizeMathAnswer(a);
+            if (userNorm && aNorm && userNorm === aNorm) return true;
+          }
+        }
+      }
+
+      return false;
+    }
+    window.isShortAnswerCorrect = isShortAnswerCorrect;
 
     
     // =========================================================================
@@ -31274,7 +31388,7 @@ function renderSAPanel() {
           </div>
           <div class="bg-white p-3 rounded-lg border border-slate-200 space-y-1.5 text-slate-800">
             <div class="font-bold text-slate-900">
-              ✅ <strong>Đáp số chuẩn:</strong> <span class="text-emerald-700 text-base font-black">${curQ.correctAnswer} ${curQ.unit || ''}</span>
+              ✅ <strong>Đáp số chuẩn:</strong> <span class="text-emerald-700 text-base font-black">${getQuestionCorrectAnswer(curQ) || curQ.correctAnswer || curQ.answer || '—'} ${curQ.unit || ''}</span>
             </div>
             <div class="text-xs font-bold text-indigo-900 flex items-center gap-1 pt-1">
               <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
@@ -31305,10 +31419,11 @@ function renderSAPanel() {
       const attempt = saAttempts[qId];
       saAnswers[qId] = rawVal;
 
-      const userNorm = normalizeMathAnswer(rawVal);
-      const correctNorm = normalizeMathAnswer(curQ.correctAnswer);
-      const isAccepted = Array.isArray(curQ.acceptedAnswers) && curQ.acceptedAnswers.some(a => normalizeMathAnswer(a) === userNorm);
-      const isCorrect = (userNorm === correctNorm) || isAccepted;
+      const stdCorrect = getQuestionCorrectAnswer(curQ);
+      if (!curQ.correctAnswer && stdCorrect) curQ.correctAnswer = stdCorrect;
+      if (!curQ.answer && stdCorrect) curQ.answer = stdCorrect;
+
+      const isCorrect = isShortAnswerCorrect(rawVal, curQ);
 
       const fb = document.getElementById(`sa-feedback-${curQ.id}`);
 
