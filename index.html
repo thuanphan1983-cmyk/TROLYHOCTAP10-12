@@ -456,15 +456,15 @@
   </header>
 
   <!-- Study Navigation Tabs (Tối ưu tuyệt đối cho Điện Thoại & Máy Tính) -->
-  <!-- Study Navigation Header Bar: ĐÚNG 3 NÚT DUY NHẤT CĂN GIỮA -->
-  <div id="study-mode-tabs" class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white px-3 py-2 sm:py-2.5 shrink-0 flex items-center justify-center shadow-md border-b border-indigo-800/60 font-serif z-20">
-    <div class="flex items-center justify-center gap-2 sm:gap-4 max-w-4xl mx-auto w-full">
+  <!-- Study Navigation Header Bar: 4 NÚT ĐIỀU HƯỚNG CHÍNH CĂN GIỮA -->
+  <div id="study-mode-tabs" class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white px-2 sm:px-3 py-2 sm:py-2.5 shrink-0 flex items-center justify-center shadow-md border-b border-indigo-800/60 font-serif z-20">
+    <div class="flex items-center justify-center gap-1.5 sm:gap-3 max-w-6xl mx-auto w-full">
       
       <!-- Nút 1: 📖 HỌC BÀI THEO SGK -->
       <button 
         id="nav-btn-sgk" 
         onclick="handleNavButtonClick('sgk')" 
-        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400"
+        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400"
         title="Học kiến thức sách giáo khoa Kết Nối Tri Thức Khối 10, 11, 12"
       >
         <span class="text-sm sm:text-base">📖</span>
@@ -475,7 +475,7 @@
       <button 
         id="nav-btn-periodic" 
         onclick="handleNavButtonClick('periodic')" 
-        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
         title="Luyện đề ôn thi Giữa kỳ & Cuối kỳ Khối 10, 11, 12"
       >
         <span class="text-sm sm:text-base">📝</span>
@@ -486,11 +486,22 @@
       <button 
         id="nav-btn-graduation" 
         onclick="handleNavButtonClick('graduation')" 
-        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
         title="Luyện đề thi tốt nghiệp THPT chuẩn cấu trúc Bộ GD&ĐT"
       >
         <span class="text-sm sm:text-base">🎯</span>
         <span class="tracking-wide">ÔN THI TỐT NGHIỆP THPT</span>
+      </button>
+
+      <!-- Nút 4: 📚 ÔN THI TN THEO CHỦ ĐỀ -->
+      <button 
+        id="nav-btn-topic" 
+        onclick="handleNavButtonClick('topic')" 
+        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        title="Ôn tập tốt nghiệp theo 9 chuyên đề trọng tâm: Tóm tắt lý thuyết và 45 đề chuẩn cấu trúc Bộ GD&ĐT"
+      >
+        <span class="text-sm sm:text-base">📚</span>
+        <span class="tracking-wide">ÔN THI TN THEO CHỦ ĐỀ</span>
       </button>
 
     </div>
@@ -1558,6 +1569,112 @@
   </div>
 
     <!-- =========================================================================
+       MODAL: BẢNG ÔN THI TỐT NGHIỆP THEO CHỦ ĐỀ (9 CHỦ ĐỀ - LÝ THUYẾT & 45 ĐỀ)
+       ========================================================================= -->
+  <div id="modal-topic-review" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99992] hidden items-center justify-center p-2 sm:p-4 select-none font-serif animate-in fade-in">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-6xl w-full border-2 border-indigo-300 overflow-hidden font-serif flex flex-col max-h-[95vh]">
+      <!-- Header -->
+      <div class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-purple-950 text-white p-3.5 sm:p-5 text-center shrink-0 relative shadow-md">
+        <button type="button" onclick="closeTopicReviewModal()" class="absolute right-3.5 top-3.5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white font-black flex items-center justify-center cursor-pointer transition text-base" title="Đóng">
+          ✕
+        </button>
+        <div class="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-amber-400 text-indigo-950 text-xl shadow mb-1">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3 class="text-[15pt] sm:text-[18pt] font-black uppercase tracking-wide flex items-center justify-center gap-2">
+          <span>📚 ÔN THI TỐT NGHIỆP THPT THEO CHỦ ĐỀ</span>
+        </h3>
+        <p class="text-xs sm:text-[11.5pt] text-indigo-200 font-semibold mt-0.5">
+          9 Chuyên đề trọng tâm • Tóm tắt lý thuyết cốt lõi • 5 đề luyện tập/chuyên đề chuẩn cấu trúc Bộ GD&ĐT
+        </p>
+      </div>
+
+      <!-- Main Body: Sidebar (9 Topics) + Content Area -->
+      <div class="flex-1 overflow-hidden flex flex-col md:flex-row bg-slate-100">
+        <!-- Sidebar: Danh sách 9 chủ đề -->
+        <div class="w-full md:w-80 shrink-0 bg-white border-b md:border-b-0 md:border-r border-slate-200 flex flex-col">
+          <div class="p-2.5 sm:p-3 bg-indigo-50/70 border-b border-indigo-100 flex items-center justify-between">
+            <span class="text-xs sm:text-[11pt] font-black text-indigo-950 uppercase tracking-wide flex items-center gap-1.5">
+              <i class="fa-solid fa-layer-group text-indigo-600"></i>
+              <span>DANH SÁCH 9 CHỦ ĐỀ</span>
+            </span>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-600 text-white">9 Chuyên Đề</span>
+          </div>
+          <!-- Topic list container -->
+          <div id="topic-list-container" class="p-2 space-y-1.5 overflow-y-auto max-h-48 md:max-h-full flex-1">
+            <!-- Dynamic render from TOPIC_EXAMS_DB -->
+          </div>
+        </div>
+
+        <!-- Content Area: Detail for Selected Topic -->
+        <div class="flex-1 flex flex-col overflow-hidden bg-slate-50">
+          <!-- Topic Top Header & Sub-Tabs -->
+          <div class="bg-white p-3 sm:p-4 border-b border-slate-200 shrink-0">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span id="topic-detail-badge" class="text-xs font-black px-2.5 py-0.5 rounded-lg bg-indigo-100 text-indigo-800 border border-indigo-200">CĐ 1</span>
+                  <span id="topic-detail-grade" class="text-[10pt] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">Lớp 11</span>
+                </div>
+                <h4 id="topic-detail-title" class="font-black text-[13pt] sm:text-[15pt] text-slate-900 leading-snug">
+                  DÃY SỐ - CSC - CSN
+                </h4>
+                <p id="topic-detail-desc" class="text-xs sm:text-[11pt] text-slate-600 mt-0.5">
+                  Tóm tắt kiến thức lý thuyết và 5 đề thi bám sát định dạng Bộ GD&ĐT
+                </p>
+              </div>
+            </div>
+
+            <!-- Dual Sub Tabs: I. TÓM TẮT KIẾN THỨC vs II. CÁC ĐỀ LUYỆN TẬP -->
+            <div class="flex items-center gap-2">
+              <button 
+                id="topic-tab-btn-theory" 
+                onclick="switchTopicInnerTab('theory')" 
+                class="flex-1 py-2 px-3 rounded-xl font-black text-xs sm:text-[11.5pt] flex items-center justify-center gap-2 transition cursor-pointer active:scale-95 border bg-indigo-900 text-white border-indigo-950 shadow-sm"
+              >
+                <i class="fa-solid fa-book-open text-amber-400"></i>
+                <span>I. TÓM TẮT KIẾN THỨC</span>
+              </button>
+              <button 
+                id="topic-tab-btn-exams" 
+                onclick="switchTopicInnerTab('exams')" 
+                class="flex-1 py-2 px-3 rounded-xl font-black text-xs sm:text-[11.5pt] flex items-center justify-center gap-2 transition cursor-pointer active:scale-95 border bg-white hover:bg-slate-100 text-slate-700 border-slate-300"
+              >
+                <i class="fa-solid fa-pen-to-square text-indigo-600"></i>
+                <span>II. CÁC ĐỀ LUYỆN TẬP (5 ĐỀ)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab Content Scrollable -->
+          <div class="flex-1 overflow-y-auto p-3 sm:p-5">
+            <!-- Sub Panel 1: Lý thuyết -->
+            <div id="topic-panel-theory" class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-xs">
+              <!-- Theory HTML rendered here -->
+            </div>
+
+            <!-- Sub Panel 2: 5 Đề luyện tập -->
+            <div id="topic-panel-exams" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              <!-- 5 Exam cards rendered here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="p-3 sm:p-4 bg-white border-t border-slate-200 flex items-center justify-between shrink-0">
+        <div class="text-xs sm:text-[11pt] text-slate-600 font-semibold flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+          <span>Hệ thống Ôn Thi Tốt Nghiệp THPT 2025 - 2026 • Thầy Phan Đình Thuấn</span>
+        </div>
+        <button type="button" onclick="closeTopicReviewModal()" class="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl text-xs sm:text-[11.5pt] transition cursor-pointer">
+          Đóng
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
        MODAL 1: BẢNG CHỌN ĐỀ ÔN THI TỐT NGHIỆP THPT (Chuẩn 3 Đề Bộ GD&ĐT)
        ========================================================================= -->
   <div id="modal-exam-practice" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99992] hidden items-center justify-center p-3 sm:p-5 select-none font-serif animate-in fade-in">
@@ -2294,6 +2411,7 @@
   <script src="kntt-lessons-grade12.js"></script>
   <script src="kntt-lessons-grade11.js"></script>
   <script src="kntt-lessons-grade10.js"></script>
+  <script src="kntt-topic-exams.js"></script>
 
   <!-- Application Logic -->
   <script>
@@ -4376,18 +4494,20 @@
       proceedToTargetMode('sgk');
     }
 
-    // Cập nhật hiệu ứng Active rõ ràng cho 3 nút trên thanh điều hướng
+    // Cập nhật hiệu ứng Active rõ ràng cho các nút trên thanh điều hướng
     function updateNavButtonsActiveUI(mode) {
       const btnSgk = document.getElementById('nav-btn-sgk');
       const btnPeriodic = document.getElementById('nav-btn-periodic');
       const btnGrad = document.getElementById('nav-btn-graduation');
+      const btnTopic = document.getElementById('nav-btn-topic');
 
-      const activeClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400 ring-2 ring-amber-400/50';
-      const inactiveClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-2.5 sm:px-4 rounded-2xl font-black text-xs sm:text-[13pt] flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20';
+      const activeClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400 ring-2 ring-amber-400/50';
+      const inactiveClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20';
 
       if (btnSgk) btnSgk.className = (mode === 'sgk') ? activeClass : inactiveClass;
       if (btnPeriodic) btnPeriodic.className = (mode === 'periodic') ? activeClass : inactiveClass;
-      if (btnGrad) btnGrad.className = (mode === 'graduation' || mode === 'exam') ? activeClass : inactiveClass;
+      if (btnGrad) btnGrad.className = (mode === 'graduation' || (mode === 'exam' && (!activeLesson || !activeLesson.isTopicExam))) ? activeClass : inactiveClass;
+      if (btnTopic) btnTopic.className = (mode === 'topic' || (mode === 'exam' && activeLesson && activeLesson.isTopicExam)) ? activeClass : inactiveClass;
     }
 
     // Điều hướng theo đúng mục học sau khi xác nhận thông tin
@@ -4489,6 +4609,25 @@
 
         // Mở danh sách 3 đề thi chuẩn cấu trúc Bộ GD&ĐT
         openExamPracticeModal();
+
+      } else if (mode === 'topic') {
+        if (typeof exitSgkFocusMode === 'function') exitSgkFocusMode();
+        currentAppMode = 'topic';
+        localStorage.setItem('CURRENT_APP_MODE', 'topic');
+
+        const pPeriodic = document.getElementById('panel-periodic');
+        if (pPeriodic) pPeriodic.classList.add('hidden');
+
+        const sgkSubNav = document.getElementById('sgk-sub-nav');
+        if (sgkSubNav) {
+          sgkSubNav.classList.add('hidden');
+          sgkSubNav.classList.remove('flex');
+        }
+        const flowBar = document.getElementById('flow-status-bar');
+        if (flowBar) flowBar.style.display = 'none';
+
+        // Mở danh sách 9 chuyên đề Ôn Thi Tốt Nghiệp THPT
+        openTopicReviewModal();
       }
     }
 
@@ -18863,6 +19002,325 @@
     window.startPeriodicExam = startPeriodicExam;
 
 
+    // =========================================================================
+    // LOGIC ÔN THI TỐT NGHIỆP THEO CHỦ ĐỀ (9 CHỦ ĐỀ - 45 ĐỀ LUYỆN TẬP)
+    // =========================================================================
+    let selectedTopicId = 'cd1';
+    let currentTopicInnerTab = 'theory';
+
+    function openTopicReviewModal() {
+      if (typeof enforceAuthentication === 'function' && !enforceAuthentication('Ôn thi tốt nghiệp theo chuyên đề cùng Thầy Thuấn')) return;
+      const modal = document.getElementById('modal-topic-review');
+      if (modal) {
+        renderTopicSelectorList();
+        selectTopic(selectedTopicId || 'cd1');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modal.style.display = 'flex';
+        document.body.classList.add('overflow-hidden');
+        if (typeof renderMath === 'function') renderMath(modal);
+      }
+    }
+
+    function closeTopicReviewModal() {
+      const modal = document.getElementById('modal-topic-review');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.style.setProperty('display', 'none', 'important');
+      }
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function renderTopicSelectorList() {
+      const container = document.getElementById('topic-list-container');
+      if (!container) return;
+      const db = window.TOPIC_EXAMS_DB || [];
+      if (!db.length) return;
+
+      container.innerHTML = db.map(topic => {
+        const isActive = (topic.id === selectedTopicId);
+        const activeClass = isActive 
+          ? 'bg-gradient-to-r from-indigo-900 to-indigo-800 text-white shadow-md border-indigo-950 ring-2 ring-amber-400/70' 
+          : 'bg-white hover:bg-indigo-50/70 text-slate-800 border-slate-200 hover:border-indigo-300';
+        const badgeColor = isActive
+          ? 'bg-amber-400 text-indigo-950 font-black'
+          : 'bg-indigo-100 text-indigo-900 font-bold';
+
+        return `
+          <button 
+            type="button" 
+            onclick="selectTopic('${topic.id}')" 
+            class="w-full text-left p-2.5 sm:p-3 rounded-2xl border transition-all duration-150 flex items-center justify-between gap-2.5 cursor-pointer active:scale-98 ${activeClass}"
+          >
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="text-xs px-2 py-0.5 rounded-lg shrink-0 ${badgeColor}">
+                ${topic.code}
+              </span>
+              <div class="min-w-0">
+                <p class="font-black text-xs sm:text-[11.5pt] truncate leading-tight">
+                  ${topic.title.replace(/^CĐ\s*\d+:\s*/i, '')}
+                </p>
+                <p class="text-[10px] sm:text-[10.5pt] opacity-80 truncate mt-0.5">
+                  ${topic.badge || 'Kiến thức trọng tâm'}
+                </p>
+              </div>
+            </div>
+            <span class="text-xs shrink-0 font-bold opacity-90 flex items-center gap-1">
+              <span>5 đề</span>
+              <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectTopic(topicId) {
+      selectedTopicId = topicId;
+      const db = window.TOPIC_EXAMS_DB || [];
+      const topic = db.find(t => t.id === topicId) || db[0];
+      if (!topic) return;
+
+      renderTopicSelectorList();
+
+      const badgeEl = document.getElementById('topic-detail-badge');
+      const gradeEl = document.getElementById('topic-detail-grade');
+      const titleEl = document.getElementById('topic-detail-title');
+      const descEl = document.getElementById('topic-detail-desc');
+
+      if (badgeEl) badgeEl.textContent = topic.code;
+      if (gradeEl) gradeEl.textContent = topic.badge || `Lớp ${topic.grade || '12'}`;
+      if (titleEl) titleEl.textContent = topic.title;
+      if (descEl) descEl.textContent = topic.description;
+
+      const theoryPanel = document.getElementById('topic-panel-theory');
+      if (theoryPanel) {
+        theoryPanel.innerHTML = topic.summary || '<p>Đang cập nhật tóm tắt lý thuyết...</p>';
+      }
+
+      const examsPanel = document.getElementById('topic-panel-exams');
+      if (examsPanel) {
+        examsPanel.innerHTML = (topic.exams || []).map((exam, idx) => `
+          <div class="bg-white rounded-2xl p-4 sm:p-5 border-2 border-slate-200 hover:border-amber-400 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-1.5 mb-2.5">
+                <span class="text-[10.5pt] font-black px-2.5 py-0.5 rounded-lg bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-mono tracking-wider shadow-2xs">
+                  ĐỀ SỐ ${idx + 1}
+                </span>
+                <span class="text-[9.5pt] font-bold px-2 py-0.5 rounded-full border ${exam.badgeColor || 'bg-blue-50 text-blue-800 border-blue-200'}">
+                  ${exam.badge || 'Chuẩn 2025 - 2026'}
+                </span>
+              </div>
+              
+              <h5 class="font-black text-[12.5pt] sm:text-[13.5pt] text-slate-900 group-hover:text-indigo-900 transition line-clamp-2 leading-snug mb-2">
+                ${exam.title}
+              </h5>
+
+              <p class="text-[11px] sm:text-[11pt] text-slate-600 line-clamp-2 leading-relaxed mb-3">
+                ${exam.description}
+              </p>
+
+              <div class="bg-indigo-50/70 border border-indigo-200 p-2.5 rounded-xl text-xs sm:text-[10.5pt] text-indigo-950 font-medium mb-3 space-y-1">
+                <div class="flex items-center gap-1.5 text-indigo-900 font-bold">
+                  <i class="fa-solid fa-list-check text-indigo-600"></i>
+                  <span>Cấu trúc 3 phần (10.0 điểm):</span>
+                </div>
+                <p class="text-xs text-slate-700">${exam.structure}</p>
+                <p class="text-[10.5px] text-indigo-800 font-semibold mt-1">📊 ${exam.matrixNote}</p>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="bg-slate-100 text-slate-700 text-[10.5px] font-semibold px-2 py-0.5 rounded border border-slate-200">Mã: ${exam.code}</span>
+                <span class="bg-slate-100 text-slate-700 text-[10.5px] font-semibold px-2 py-0.5 rounded border border-slate-200">Thời gian: 90 phút</span>
+                <span class="bg-emerald-50 text-emerald-800 text-[10.5px] font-semibold px-2 py-0.5 rounded border border-emerald-200">Độc lập 100%</span>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2 mt-2">
+              <span class="text-xs text-slate-500 font-bold flex items-center gap-1">
+                <i class="fa-regular fa-clock text-amber-600"></i>
+                <span>90 phút</span>
+              </span>
+              <button 
+                type="button" 
+                onclick="startTopicExam('${topic.id}', '${exam.id}')" 
+                class="px-3.5 py-2 bg-gradient-to-r from-indigo-700 to-indigo-900 hover:from-indigo-600 hover:to-indigo-800 text-white font-black rounded-xl text-xs sm:text-[11pt] shadow hover:shadow-md transition flex items-center gap-1.5 cursor-pointer active:scale-95 uppercase tracking-wide"
+              >
+                <span>Vào Làm Đề ${idx + 1}</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      switchTopicInnerTab(currentTopicInnerTab || 'theory');
+
+      const modal = document.getElementById('modal-topic-review');
+      if (modal && typeof renderMath === 'function') {
+        renderMath(modal);
+      }
+    }
+
+    function switchTopicInnerTab(tab) {
+      currentTopicInnerTab = tab;
+      const btnTheory = document.getElementById('topic-tab-btn-theory');
+      const btnExams = document.getElementById('topic-tab-btn-exams');
+      const panelTheory = document.getElementById('topic-panel-theory');
+      const panelExams = document.getElementById('topic-panel-exams');
+
+      const activeBtn = 'flex-1 py-2 px-3 rounded-xl font-black text-xs sm:text-[11.5pt] flex items-center justify-center gap-2 transition cursor-pointer active:scale-95 border bg-indigo-900 text-white border-indigo-950 shadow-sm';
+      const inactiveBtn = 'flex-1 py-2 px-3 rounded-xl font-black text-xs sm:text-[11.5pt] flex items-center justify-center gap-2 transition cursor-pointer active:scale-95 border bg-white hover:bg-slate-100 text-slate-700 border-slate-300';
+
+      if (tab === 'theory') {
+        if (btnTheory) btnTheory.className = activeBtn;
+        if (btnExams) btnExams.className = inactiveBtn;
+        if (panelTheory) panelTheory.classList.remove('hidden');
+        if (panelExams) panelExams.classList.add('hidden');
+      } else {
+        if (btnTheory) btnTheory.className = inactiveBtn;
+        if (btnExams) btnExams.className = activeBtn;
+        if (panelTheory) panelTheory.classList.add('hidden');
+        if (panelExams) {
+          panelExams.classList.remove('hidden');
+          panelExams.classList.add('grid');
+        }
+      }
+
+      const modal = document.getElementById('modal-topic-review');
+      if (modal && typeof renderMath === 'function') {
+        renderMath(modal);
+      }
+    }
+
+    function startTopicExam(topicId, examId) {
+      try {
+        closeTopicReviewModal();
+        closeExamPracticeModal();
+        closePeriodicModal();
+        closeStudentInfoModal();
+
+        const db = window.TOPIC_EXAMS_DB || [];
+        const topic = db.find(t => t.id === topicId) || db[0];
+        if (!topic) {
+          console.error("Không tìm thấy chuyên đề:", topicId);
+          return;
+        }
+        const exam = (topic.exams || []).find(e => e.id === examId) || topic.exams[0];
+        if (!exam) {
+          console.error("Không tìm thấy đề thi chuyên đề:", examId);
+          return;
+        }
+
+        currentAppMode = 'exam';
+        localStorage.setItem('CURRENT_APP_MODE', 'exam');
+
+        studentInfo.class = (studentInfo.class && studentInfo.class.startsWith("12")) ? studentInfo.class : "12A1";
+        studentInfo.grade = topic.grade ? `Lớp ${topic.grade}` : "Lớp 12";
+        studentInfo.lesson = `${topic.code}: ${exam.title}`;
+
+        localStorage.setItem('STUDENT_CLASS', studentInfo.class);
+        localStorage.setItem('STUDENT_GRADE', studentInfo.grade);
+        localStorage.setItem('STUDENT_LESSON', studentInfo.lesson);
+
+        updateStudentDisplayInfo();
+
+        const chatCurrentLesson = document.getElementById('chat-current-lesson');
+        if (chatCurrentLesson) chatCurrentLesson.textContent = `${topic.code}: ${exam.title}`;
+        const chatCurrentClass = document.getElementById('chat-current-class');
+        if (chatCurrentClass) chatCurrentClass.textContent = studentInfo.class;
+
+        const normalizedMcqs = (typeof randomizeExamMCQs === 'function') ? randomizeExamMCQs(exam.mcqs || []) : (exam.mcqs || []);
+
+        activeLesson = {
+          lessonTitle: `${topic.code}: ${exam.title}`,
+          isChapterReview: true,
+          isGraduationExam: true,
+          isTopicExam: true,
+          currentTopicId: topic.id,
+          currentExamId: exam.id,
+          class: studentInfo.grade,
+          sections: [
+            {
+              sectionNumber: 1,
+              title: "Phần 1: Trắc nghiệm 4 lựa chọn",
+              theory: `<div class="p-4 bg-amber-50 border border-amber-200 rounded-2xl">
+                <h4 class="font-bold text-slate-900">${exam.title}</h4>
+                <p class="text-xs text-slate-600 mt-1">${exam.structure}</p>
+                <p class="text-xs text-indigo-800 font-semibold mt-1">${exam.matrixNote}</p>
+              </div>`,
+              mcqs: normalizedMcqs
+            }
+          ],
+          tfQuestions: exam.tfQuestions || [],
+          saQuestions: (exam.saQuestions || []).map(q => {
+            const std = (typeof getQuestionCorrectAnswer === "function") ? getQuestionCorrectAnswer(q) : (q.correctAnswer || q.answer || "");
+            return { ...q, correctAnswer: std, answer: std };
+          }),
+          essayQuestions: []
+        };
+
+        activeTFQuestions = exam.tfQuestions || [];
+        activeSAQuestions = (exam.saQuestions || []).map(q => {
+          const std = (typeof getQuestionCorrectAnswer === "function") ? getQuestionCorrectAnswer(q) : (q.correctAnswer || q.answer || "");
+          return { ...q, correctAnswer: std, answer: std };
+        });
+
+        chapterExamState.submitted = false;
+        chapterExamState.mcqAnswers = {};
+        demoState.mcqIndex = 0;
+        currentTFIndex = 0;
+        currentSAIndex = 0;
+        tfAnswers = {};
+        saAnswers = {};
+        saScores = {};
+
+        startExamCountdownTimer(90 * 60);
+
+        const examNum = exam.examNumber || 1;
+        enterFullscreenExamMode(exam.title, `${topic.code} - ĐỀ SỐ ${examNum}`);
+        applyExamModeTabsUI();
+        updateNavButtonsActiveUI('topic');
+
+        const examSubNav = document.getElementById('exam-sub-nav');
+        if (examSubNav) {
+          examSubNav.classList.remove('hidden');
+          examSubNav.classList.add('flex');
+        }
+        const sgkSubNav = document.getElementById('sgk-sub-nav');
+        if (sgkSubNav) {
+          sgkSubNav.classList.add('hidden');
+          sgkSubNav.classList.remove('flex');
+        }
+        const flowBar = document.getElementById('flow-status-bar');
+        if (flowBar) flowBar.style.display = 'none';
+        const pPeriodic = document.getElementById('panel-periodic');
+        if (pPeriodic) pPeriodic.classList.add('hidden');
+
+        const tabEssay = document.getElementById('exam-tab-btn-essay');
+        if (tabEssay) {
+          tabEssay.classList.add('hidden');
+          tabEssay.classList.remove('flex');
+        }
+
+        switchStudyTab('mcq');
+
+        if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
+        if (typeof renderMath === 'function') renderMath(document.body);
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error("Lỗi khởi tạo đề chuyên đề:", err);
+      }
+    }
+
+    window.openTopicReviewModal = openTopicReviewModal;
+    window.closeTopicReviewModal = closeTopicReviewModal;
+    window.renderTopicSelectorList = renderTopicSelectorList;
+    window.selectTopic = selectTopic;
+    window.switchTopicInnerTab = switchTopicInnerTab;
+    window.startTopicExam = startTopicExam;
+
     function openExamPracticeModal() {
       if (!enforceAuthentication('Ôn thi tốt nghiệp cùng Thầy Thuấn')) return;
       const modal = document.getElementById('modal-exam-practice');
@@ -19244,7 +19702,9 @@
     }
 
     function handleChangeExamClick() {
-      if (activeLesson && activeLesson.isPeriodicExam) {
+      if (activeLesson && activeLesson.isTopicExam) {
+        if (typeof openTopicReviewModal === 'function') openTopicReviewModal();
+      } else if (activeLesson && activeLesson.isPeriodicExam) {
         if (typeof openPeriodicModal === 'function') openPeriodicModal();
       } else {
         if (typeof openExamPracticeModal === 'function') openExamPracticeModal();
