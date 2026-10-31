@@ -120,14 +120,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Cho $\\int_0^2 f(x)dx = 3$ và $\\int_2^5 f(x)dx = 7$. Tính tích phân $I = \\int_0^5 f(x)dx$.",
+                    "question": "**Câu 5 (VDC):** Cho $\\int_0^2 f(x)dx = 3$ và $\\int_2^5 f(x)dx = 7$. Tính tích phân $I = \\int_0^5 f(x)dx$.",
                     "options": {"A": "$4$", "B": "$10$", "C": "$-4$", "D": "$21$"},
                     "correct": "B",
                     "explanation": "$\\int_0^5 f(x)dx = \\int_0^2 f(x)dx + \\int_2^5 f(x)dx = 3 + 7 = 10$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2 - 4$, trục hoành và hai đường thẳng $x = 0, x = 2$ bằng",
+                    "question": "**Câu 6 (VDC):** Diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2 - 4$, trục hoành và hai đường thẳng $x = 0, x = 2$ bằng",
                     "options": {"A": "$\\frac{16}{3}$", "B": "$4$", "C": "$-\\frac{16}{3}$", "D": "$\\frac{8}{3}$"},
                     "correct": "A",
                     "explanation": "Trên $[0; 2]$, $x^2 - 4 \\le 0$, diện tích $S = \\int_0^2 (4 - x^2)dx = (4x - x^3/3)\\Big|_0^2 = 8 - 8/3 = 16/3$."
@@ -250,14 +250,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Thể tích khối tròn xoay khi quay hình phẳng giới hạn bởi $y = \\sqrt{2x}$, $y = 0$, $x = 0$, $x = 3$ quanh trục $Ox$ có dạng $k\\pi$. Tính giá trị của $k$.",
+                    "question": "**Câu 5 (VDC):** Thể tích khối tròn xoay khi quay hình phẳng giới hạn bởi $y = \\sqrt{2x}$, $y = 0$, $x = 0$, $x = 3$ quanh trục $Ox$ có dạng $k\\pi$. Tính giá trị của $k$.",
                     "correctAnswer": "9",
                     "acceptedAnswers": ["9"],
                     "explanation": "$V = \\pi \\int_0^3 2x dx = \\pi x^2\\Big|_0^3 = 9\\pi \\Rightarrow k = 9$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một giọt nước rỉ vào một bình với tốc độ $q(t) = 6t - t^2$ (ml/phút) trong $6$ phút đầu tiên ($0 \\le t \\le 6$). Tổng lượng nước chảy vào bình sau $6$ phút là bao nhiêu ml?",
+                    "question": "**Câu 6 (VDC):** Một giọt nước rỉ vào một bình với tốc độ $q(t) = 6t - t^2$ (ml/phút) trong $6$ phút đầu tiên ($0 \\le t \\le 6$). Tổng lượng nước chảy vào bình sau $6$ phút là bao nhiêu ml?",
                     "correctAnswer": "36",
                     "acceptedAnswers": ["36"],
                     "explanation": "$V = \\int_0^6 (6t - t^2)dt = (3t^2 - t^3/3)\\Big|_0^6 = 108 - 72 = 36\\text{ ml}$."
@@ -296,14 +296,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Biết $\\int_0^2 f(x)dx = 4$. Tính tích phân $I = \\int_0^2 [2f(x) + 3]dx$.",
+                    "question": "**Câu 5 (VDC):** Biết $\\int_0^2 f(x)dx = 4$. Tính tích phân $I = \\int_0^2 [2f(x) + 3]dx$.",
                     "options": {"A": "$11$", "B": "$14$", "C": "$10$", "D": "$8$"},
                     "correct": "B",
                     "explanation": "$I = 2(4) + 3(2 - 0) = 8 + 6 = 14$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Diện tích hình phẳng giới hạn bởi đồ thị hai hàm số $y = x^2$ và $y = x$ bằng",
+                    "question": "**Câu 6 (VDC):** Diện tích hình phẳng giới hạn bởi đồ thị hai hàm số $y = x^2$ và $y = x$ bằng",
                     "options": {"A": "$\\frac{1}{6}$", "B": "$\\frac{1}{3}$", "C": "$\\frac{1}{2}$", "D": "$\\frac{5}{6}$"},
                     "correct": "A",
                     "explanation": "$x^2 - x = 0 \\Leftrightarrow x = 0, x = 1$. $S = \\int_0^1 (x - x^2)dx = 1/2 - 1/3 = 1/6$."
@@ -426,14 +426,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Cho hình phẳng giới hạn bởi đường cong $y = e^x$, trục hoành, trục tung và đường thẳng $x = 1$. Thể tích khối tròn xoay sinh ra khi quay hình này quanh trục $Ox$ có dạng $\\frac{\\pi}{2}(e^a - b)$. Tính giá trị của $a + b$.",
+                    "question": "**Câu 5 (VDC):** Cho hình phẳng giới hạn bởi đường cong $y = e^x$, trục hoành, trục tung và đường thẳng $x = 1$. Thể tích khối tròn xoay sinh ra khi quay hình này quanh trục $Ox$ có dạng $\\frac{\\pi}{2}(e^a - b)$. Tính giá trị của $a + b$.",
                     "correctAnswer": "3",
                     "acceptedAnswers": ["3"],
                     "explanation": "$V = \\pi \\int_0^1 e^{2x}dx = \\frac{\\pi}{2}(e^2 - 1) \\Rightarrow a = 2, b = 1 \\Rightarrow a + b = 3$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một bể dầu bị rò rỉ với tốc độ rò rỉ là $r(t) = 200 - 4t$ (lít/giờ) với $0 \\le t \\le 50$. Lượng dầu rò rỉ trong 10 giờ đầu tiên là bao nhiêu lít?",
+                    "question": "**Câu 6 (VDC):** Một bể dầu bị rò rỉ với tốc độ rò rỉ là $r(t) = 200 - 4t$ (lít/giờ) với $0 \\le t \\le 50$. Lượng dầu rò rỉ trong 10 giờ đầu tiên là bao nhiêu lít?",
                     "correctAnswer": "1800",
                     "acceptedAnswers": ["1800"],
                     "explanation": "$V = \\int_0^{10} (200 - 4t)dt = 200(10) - 2(100) = 2000 - 200 = 1800$ lít."
@@ -472,14 +472,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Diện tích hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành và hai đường thẳng $x = 0, x = 2$ bằng",
+                    "question": "**Câu 5 (VDC):** Diện tích hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành và hai đường thẳng $x = 0, x = 2$ bằng",
                     "options": {"A": "$2$", "B": "$8$", "C": "$4$", "D": "$16$"},
                     "correct": "C",
                     "explanation": "$S = \\int_0^2 x^3 dx = \\frac{x^4}{4}\\Big|_0^2 = 4$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Thể tích khối tròn xoay sinh ra khi quay hình phẳng giới hạn bởi $y = 2x - x^2$ và $y = 0$ quanh trục hoành là",
+                    "question": "**Câu 6 (VDC):** Thể tích khối tròn xoay sinh ra khi quay hình phẳng giới hạn bởi $y = 2x - x^2$ và $y = 0$ quanh trục hoành là",
                     "options": {"A": "$\\frac{16\\pi}{15}$", "B": "$\\frac{4\\pi}{3}$", "C": "$\\frac{8\\pi}{15}$", "D": "$\\frac{2\\pi}{3}$"},
                     "correct": "A",
                     "explanation": "$V = \\pi \\int_0^2 (2x - x^2)^2 dx = \\pi \\int_0^2 (4x^2 - 4x^3 + x^4)dx = \\pi (32/3 - 16 + 32/5) = \\frac{16\\pi}{15}$."
@@ -602,14 +602,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Khối tròn xoay tạo thành khi quay quanh $Ox$ hình phẳng giới hạn bởi $y = 3\\sqrt{x}$, $y = 0$, $x = 1$, $x = 2$ có thể tích bằng $k\\pi$. Tính giá trị của $k$.",
+                    "question": "**Câu 5 (VDC):** Khối tròn xoay tạo thành khi quay quanh $Ox$ hình phẳng giới hạn bởi $y = 3\\sqrt{x}$, $y = 0$, $x = 1$, $x = 2$ có thể tích bằng $k\\pi$. Tính giá trị của $k$.",
                     "correctAnswer": "13.5",
                     "acceptedAnswers": ["13.5", "27/2", "13,5"],
                     "explanation": "$V = \\pi \\int_1^2 9x dx = 9\\pi \\frac{4 - 1}{2} = 13.5\\pi \\Rightarrow k = 13.5$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một giếng khoan sâu bị phun khí mê-tan với tốc độ thoát khí $F(t) = 300 - 10t\\text{ (m}^3\\text{/giờ)}$. Sau bao nhiêu giờ thì lượng khí mê-tan phun ra đạt cực đại (tốc độ bằng 0)?",
+                    "question": "**Câu 6 (VDC):** Một giếng khoan sâu bị phun khí mê-tan với tốc độ thoát khí $F(t) = 300 - 10t\\text{ (m}^3\\text{/giờ)}$. Sau bao nhiêu giờ thì lượng khí mê-tan phun ra đạt cực đại (tốc độ bằng 0)?",
                     "correctAnswer": "30",
                     "acceptedAnswers": ["30"],
                     "explanation": "$F(t) = 0 \\Leftrightarrow t = 30\\text{ giờ}$."
@@ -648,14 +648,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Cho $\\int_1^3 f(x)dx = 4$. Khi đó $\\int_1^3 [2f(x) - 1]dx$ bằng",
+                    "question": "**Câu 5 (VDC):** Cho $\\int_1^3 f(x)dx = 4$. Khi đó $\\int_1^3 [2f(x) - 1]dx$ bằng",
                     "options": {"A": "$6$", "B": "$7$", "C": "$8$", "D": "$5$"},
                     "correct": "A",
                     "explanation": "$2(4) - (3 - 1) = 8 - 2 = 6$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Thể tích khối tròn xoay tạo thành khi quay quanh trục $Ox$ hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành, các đường thẳng $x = 0$ và $x = 1$ bằng",
+                    "question": "**Câu 6 (VDC):** Thể tích khối tròn xoay tạo thành khi quay quanh trục $Ox$ hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành, các đường thẳng $x = 0$ và $x = 1$ bằng",
                     "options": {"A": "$\\frac{\\pi}{7}$", "B": "$\\frac{\\pi}{6}$", "C": "$\\frac{\\pi}{4}$", "D": "$\\frac{\\pi}{5}$"},
                     "correct": "A",
                     "explanation": "$V = \\pi \\int_0^1 (x^3)^2 dx = \\pi \\int_0^1 x^6 dx = \\frac{\\pi}{7}$."
@@ -778,14 +778,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Cho hình phẳng giới hạn bởi $y = \\sqrt{3}x$, trục hoành, đường thẳng $x = 0$ và $x = 2$. Khối tròn xoay tạo thành khi quay quanh trục $Ox$ có thể tích là $k\\pi$. Tính giá trị của $k$.",
+                    "question": "**Câu 5 (VDC):** Cho hình phẳng giới hạn bởi $y = \\sqrt{3}x$, trục hoành, đường thẳng $x = 0$ và $x = 2$. Khối tròn xoay tạo thành khi quay quanh trục $Ox$ có thể tích là $k\\pi$. Tính giá trị của $k$.",
                     "correctAnswer": "8",
                     "acceptedAnswers": ["8"],
                     "explanation": "$V = \\pi \\int_0^2 3x^2 dx = 3\\pi \\times 8/3 = 8\\pi \\Rightarrow k = 8$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một bể nước bị rò rỉ theo quy luật $v(t) = 50 - 2t$ (lít/phút) với $0 \\le t \\le 25$. Lượng nước đã thất thoát trong $10$ phút đầu là bao nhiêu lít?",
+                    "question": "**Câu 6 (VDC):** Một bể nước bị rò rỉ theo quy luật $v(t) = 50 - 2t$ (lít/phút) với $0 \\le t \\le 25$. Lượng nước đã thất thoát trong $10$ phút đầu là bao nhiêu lít?",
                     "correctAnswer": "400",
                     "acceptedAnswers": ["400"],
                     "explanation": "$V = \\int_0^{10} (50 - 2t)dt = 50(10) - 100 = 400$ lít."
@@ -824,14 +824,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Biết $\\int_0^1 \\frac{2x}{x^2 + 1}dx = \\ln a$. Giá trị của $a$ bằng",
+                    "question": "**Câu 5 (VDC):** Biết $\\int_0^1 \\frac{2x}{x^2 + 1}dx = \\ln a$. Giá trị của $a$ bằng",
                     "options": {"A": "$1$", "B": "$3$", "C": "$2$", "D": "$4$"},
                     "correct": "C",
                     "explanation": "$\\ln(x^2 + 1)\\Big|_0^1 = \\ln 2 \\Rightarrow a = 2$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = 2 - x^2$ và đường thẳng $y = x$ bằng",
+                    "question": "**Câu 6 (VDC):** Diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = 2 - x^2$ và đường thẳng $y = x$ bằng",
                     "options": {"A": "$\\frac{9}{2}$", "B": "$\\frac{7}{2}$", "C": "$\\frac{9}{4}$", "D": "$\\frac{5}{2}$"},
                     "correct": "A",
                     "explanation": "$2 - x^2 = x \\Leftrightarrow x^2 + x - 2 = 0 \\Leftrightarrow x = -2, x = 1$. $S = \\int_{-2}^1 (2 - x - x^2)dx = 9/2$."
@@ -954,14 +954,14 @@ def get_topic_cd6():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Khối tròn xoay tạo thành khi quay quanh $Ox$ hình phẳng giới hạn bởi $y = \\sqrt{5x}$, $y = 0$, $x = 0$, $x = 2$ có thể tích là $k\\pi$. Tính giá trị của $k$.",
+                    "question": "**Câu 5 (VDC):** Khối tròn xoay tạo thành khi quay quanh $Ox$ hình phẳng giới hạn bởi $y = \\sqrt{5x}$, $y = 0$, $x = 0$, $x = 2$ có thể tích là $k\\pi$. Tính giá trị của $k$.",
                     "correctAnswer": "10",
                     "acceptedAnswers": ["10"],
                     "explanation": "$V = \\pi \\int_0^2 5x dx = 5\\pi \\times 4/2 = 10\\pi \\Rightarrow k = 10$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một máy bơm nước bơm vào hồ với lưu lượng $q(t) = 80 - 4t\\text{ (m}^3\\text{/phút)}$ trong $20$ phút đầu. Tổng thể tích nước đã bơm vào hồ sau $10$ phút là bao nhiêu mét khối?",
+                    "question": "**Câu 6 (VDC):** Một máy bơm nước bơm vào hồ với lưu lượng $q(t) = 80 - 4t\\text{ (m}^3\\text{/phút)}$ trong $20$ phút đầu. Tổng thể tích nước đã bơm vào hồ sau $10$ phút là bao nhiêu mét khối?",
                     "correctAnswer": "600",
                     "acceptedAnswers": ["600"],
                     "explanation": "$V = \\int_0^{10} (80 - 4t)dt = 800 - 200 = 600\\text{ m}^3$."

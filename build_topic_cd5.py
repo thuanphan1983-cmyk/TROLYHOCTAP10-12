@@ -126,14 +126,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Giá trị lớn nhất của hàm số $f(x) = x^4 - 2x^2 + 3$ trên đoạn $[0; 2]$ bằng",
+                    "question": "**Câu 5 (VDC):** Giá trị lớn nhất của hàm số $f(x) = x^4 - 2x^2 + 3$ trên đoạn $[0; 2]$ bằng",
                     "options": {"A": "$11$", "B": "$3$", "C": "$2$", "D": "$19$"},
                     "correct": "A",
                     "explanation": "$f'(x) = 4x^3 - 4x = 4x(x^2 - 1) = 0 \\Leftrightarrow x = 0, x = 1$ trên $[0; 2]$. Ta có: $f(0) = 3$, $f(1) = 2$, $f(2) = 11$. Vậy $\\max = 11$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Đồ thị hàm số $y = \\frac{x^2 - 3x + 4}{x - 1}$ có đường tiệm cận xiên là đường thẳng",
+                    "question": "**Câu 6 (VDC):** Đồ thị hàm số $y = \\frac{x^2 - 3x + 4}{x - 1}$ có đường tiệm cận xiên là đường thẳng",
                     "options": {"A": "$y = x + 2$", "B": "$y = x - 1$", "C": "$y = x - 2$", "D": "$y = 2x - 3$"},
                     "correct": "C",
                     "explanation": "$y = x - 2 + \\frac{2}{x-1}$. Khi $x \\to \\pm\\infty$, $\\frac{2}{x-1} \\to 0$, nên tiệm cận xiên là $y = x - 2$."
@@ -256,14 +256,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một công ty ước tính số lượng sản phẩm bán được theo đơn giá $p$ (nghìn đồng) là $D(p) = 120 - 2p$ ($10 \\le p \\le 50$). Doanh thu lớn nhất công ty có thể thu được là bao nhiêu nghìn đồng?",
+                    "question": "**Câu 5 (VDC):** Một công ty ước tính số lượng sản phẩm bán được theo đơn giá $p$ (nghìn đồng) là $D(p) = 120 - 2p$ ($10 \\le p \\le 50$). Doanh thu lớn nhất công ty có thể thu được là bao nhiêu nghìn đồng?",
                     "correctAnswer": "1800",
                     "acceptedAnswers": ["1800"],
                     "explanation": "Doanh thu $R(p) = p(120 - 2p) = -2p^2 + 120p$. Đạt cực đại tại $p = 30$, $R(30) = 1800$ nghìn đồng."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một giọt nước hình cầu bay hơi sao cho bán kính $r$ giảm đều với tốc độ $0.05\\text{ mm/s}$. Khi bán kính bằng $10\\text{ mm}$, tốc độ giảm thể tích của giọt nước là bao nhiêu $\\pi\\text{ mm}^3\\text{/s}$?",
+                    "question": "**Câu 6 (VDC):** Một giọt nước hình cầu bay hơi sao cho bán kính $r$ giảm đều với tốc độ $0.05\\text{ mm/s}$. Khi bán kính bằng $10\\text{ mm}$, tốc độ giảm thể tích của giọt nước là bao nhiêu $\\pi\\text{ mm}^3\\text{/s}$?",
                     "correctAnswer": "20",
                     "acceptedAnswers": ["20"],
                     "explanation": "$V'(t) = 4\\pi r^2 |r'(t)| = 4\\pi (10)^2 \\times 0.05 = 20\\pi\\text{ mm}^3\\text{/s}$. Số cần điền là 20."
@@ -302,14 +302,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Đồ thị hàm số $y = \\frac{x^2 + 2x - 3}{x + 3}$ có bao nhiêu đường tiệm cận đứng?",
+                    "question": "**Câu 5 (VDC):** Đồ thị hàm số $y = \\frac{x^2 + 2x - 3}{x + 3}$ có bao nhiêu đường tiệm cận đứng?",
                     "options": {"A": "$0$", "B": "$1$", "C": "$2$", "D": "$3$"},
                     "correct": "A",
                     "explanation": "Tử số là $(x + 3)(x - 1)$. Với $x \\ne -3$, $y = x - 1$. Giới hạn $\\lim_{x \\to -3} y = -4$ hữu hạn, do đó không có tiệm cận đứng nào."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Cho hàm số $y = -x^3 + 3x^2 - 2$. Mệnh đề nào sau đây đúng?",
+                    "question": "**Câu 6 (VDC):** Cho hàm số $y = -x^3 + 3x^2 - 2$. Mệnh đề nào sau đây đúng?",
                     "options": {"A": "Hàm số đồng biến trên $(-\\infty; 0)$", "B": "Hàm số đồng biến trên $(0; 2)$", "C": "Hàm số nghịch biến trên $(0; 2)$", "D": "Hàm số đồng biến trên $(2; +\\infty)$"},
                     "correct": "B",
                     "explanation": "$y' = -3x^2 + 6x = -3x(x - 2) > 0 \\Leftrightarrow 0 < x < 2$."
@@ -432,14 +432,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Đồ thị hàm số $y = \\frac{2x^2 + x - 1}{x + 1}$ có bao nhiêu đường tiệm cận?",
+                    "question": "**Câu 5 (VDC):** Đồ thị hàm số $y = \\frac{2x^2 + x - 1}{x + 1}$ có bao nhiêu đường tiệm cận?",
                     "correctAnswer": "0",
                     "acceptedAnswers": ["0"],
                     "explanation": "$2x^2 + x - 1 = (x+1)(2x-1)$. Với $x \\ne -1$, hàm số là đường thẳng $y = 2x - 1$ bỏ điểm $(-1; -3)$, không có đường tiệm cận nào."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một sợi dây dài $100\\text{ cm}$ cắt thành hai đoạn: một đoạn uốn thành hình vuông, một đoạn uốn thành hình tròn. Để tổng diện tích nhỏ nhất, tỉ số cạnh hình vuông chia cho bán kính hình tròn bằng bao nhiêu?",
+                    "question": "**Câu 6 (VDC):** Một sợi dây dài $100\\text{ cm}$ cắt thành hai đoạn: một đoạn uốn thành hình vuông, một đoạn uốn thành hình tròn. Để tổng diện tích nhỏ nhất, tỉ số cạnh hình vuông chia cho bán kính hình tròn bằng bao nhiêu?",
                     "correctAnswer": "2",
                     "acceptedAnswers": ["2"],
                     "explanation": "Cực tiểu diện tích khi $a = 2r \\Rightarrow a/r = 2$."
@@ -478,14 +478,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Giá trị nhỏ nhất của hàm số $f(x) = x + \\frac{4}{x}$ trên đoạn $[1; 3]$ bằng",
+                    "question": "**Câu 5 (VDC):** Giá trị nhỏ nhất của hàm số $f(x) = x + \\frac{4}{x}$ trên đoạn $[1; 3]$ bằng",
                     "options": {"A": "$5$", "B": "$\\frac{13}{3}$", "C": "$4$", "D": "$\\frac{9}{2}$"},
                     "correct": "C",
                     "explanation": "$f'(x) = 1 - 4/x^2 = 0 \\Leftrightarrow x = 2 \\in [1; 3]$. $f(1) = 5, f(2) = 4, f(3) = 13/3$. Vậy $\\min = 4$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Điểm uốn của đồ thị hàm số $y = x^3 - 3x^2 + 2$ có tọa độ là",
+                    "question": "**Câu 6 (VDC):** Điểm uốn của đồ thị hàm số $y = x^3 - 3x^2 + 2$ có tọa độ là",
                     "options": {"A": "$(1; 0)$", "B": "$(1; 2)$", "C": "$(0; 2)$", "D": "$(2; -2)$"},
                     "correct": "A",
                     "explanation": "$y'' = 6x - 6 = 0 \\Leftrightarrow x = 1 \\Rightarrow y(1) = 0$. Tọa độ điểm uốn là $(1; 0)$."
@@ -608,14 +608,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một cửa hàng bán sản phẩm với giá $x$ đô-la một đơn vị thì bán được $200 - 2x$ sản phẩm. Chi phí nhập mỗi sản phẩm là $20$ đô-la. Để lợi nhuận lớn nhất, giá bán $x$ cần đặt là bao nhiêu đô-la?",
+                    "question": "**Câu 5 (VDC):** Một cửa hàng bán sản phẩm với giá $x$ đô-la một đơn vị thì bán được $200 - 2x$ sản phẩm. Chi phí nhập mỗi sản phẩm là $20$ đô-la. Để lợi nhuận lớn nhất, giá bán $x$ cần đặt là bao nhiêu đô-la?",
                     "correctAnswer": "60",
                     "acceptedAnswers": ["60"],
                     "explanation": "$P(x) = (x - 20)(200 - 2x) = -2x^2 + 240x - 4000$. Đạt cực đại tại $x = 60$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một hình nón có độ dài đường sinh $l = 6\\text{ cm}$. Thể tích lớn nhất của khối nón có dạng $k\\sqrt{3}\\pi\\text{ cm}^3$. Tính giá trị của $k$.",
+                    "question": "**Câu 6 (VDC):** Một hình nón có độ dài đường sinh $l = 6\\text{ cm}$. Thể tích lớn nhất của khối nón có dạng $k\\sqrt{3}\\pi\\text{ cm}^3$. Tính giá trị của $k$.",
                     "correctAnswer": "16",
                     "acceptedAnswers": ["16"],
                     "explanation": "$V = \\frac{1}{3}\\pi (36 - h^2)h \\Rightarrow h = 2\\sqrt{3} \\Rightarrow V = 16\\sqrt{3}\\pi \\Rightarrow k = 16$."
@@ -654,14 +654,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Đồ thị hàm số $y = \\frac{x^2 - x + 1}{x - 1}$ có tiệm cận xiên đi qua điểm nào dưới đây?",
+                    "question": "**Câu 5 (VDC):** Đồ thị hàm số $y = \\frac{x^2 - x + 1}{x - 1}$ có tiệm cận xiên đi qua điểm nào dưới đây?",
                     "options": {"A": "$O(0; 0)$", "B": "$A(1; 2)$", "C": "$B(0; 1)$", "D": "$C(2; 1)$"},
                     "correct": "A",
                     "explanation": "$y = x + 1/(x-1)$, tiệm cận xiên là $y = x$, đi qua gốc tọa độ $O(0; 0)$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một vật ném thẳng đứng lên cao từ mặt đất với phương trình $s(t) = 20t - 5t^2$ ($s$ tính bằng mét, $t$ tính bằng giây). Độ cao lớn nhất vật đạt được là",
+                    "question": "**Câu 6 (VDC):** Một vật ném thẳng đứng lên cao từ mặt đất với phương trình $s(t) = 20t - 5t^2$ ($s$ tính bằng mét, $t$ tính bằng giây). Độ cao lớn nhất vật đạt được là",
                     "options": {"A": "$15\\text{ m}$", "B": "$30\\text{ m}$", "C": "$20\\text{ m}$", "D": "$25\\text{ m}$"},
                     "correct": "C",
                     "explanation": "$v(t) = 20 - 10t = 0 \\Leftrightarrow t = 2\\text{ s}$. Độ cao $s(2) = 20\\text{ m}$."
@@ -784,14 +784,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một cửa hàng nhận thấy rằng nếu bán một món quà với giá $p$ nghìn đồng thì số lượng bán được là $q = 100 - p$ sản phẩm. Chi phí vốn mỗi món là $40$ nghìn đồng. Giá bán $p$ (nghìn đồng) cần đặt là bao nhiêu để thu được lợi nhuận lớn nhất?",
+                    "question": "**Câu 5 (VDC):** Một cửa hàng nhận thấy rằng nếu bán một món quà với giá $p$ nghìn đồng thì số lượng bán được là $q = 100 - p$ sản phẩm. Chi phí vốn mỗi món là $40$ nghìn đồng. Giá bán $p$ (nghìn đồng) cần đặt là bao nhiêu để thu được lợi nhuận lớn nhất?",
                     "correctAnswer": "70",
                     "acceptedAnswers": ["70"],
                     "explanation": "$P(p) = (p - 40)(100 - p) = -p^2 + 140p - 4000$. Đạt cực đại tại $p = 70$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một quả bóng được đá lên từ mặt đất với quỹ đạo độ cao $h(t) = 18t - 4.9t^2$ (mét). Vận tốc tức thời của quả bóng tại thời điểm $t = 1\\text{ s}$ là bao nhiêu m/s?",
+                    "question": "**Câu 6 (VDC):** Một quả bóng được đá lên từ mặt đất với quỹ đạo độ cao $h(t) = 18t - 4.9t^2$ (mét). Vận tốc tức thời của quả bóng tại thời điểm $t = 1\\text{ s}$ là bao nhiêu m/s?",
                     "correctAnswer": "8.2",
                     "acceptedAnswers": ["8.2", "8,2"],
                     "explanation": "$v(1) = h'(1) = 18 - 9.8 = 8.2\\text{ m/s}$."
@@ -830,14 +830,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Đồ thị hàm số $y = \\frac{x^2 - 4x + 3}{x - 3}$ có bao nhiêu đường tiệm cận đứng?",
+                    "question": "**Câu 5 (VDC):** Đồ thị hàm số $y = \\frac{x^2 - 4x + 3}{x - 3}$ có bao nhiêu đường tiệm cận đứng?",
                     "options": {"A": "$1$", "B": "$0$", "C": "$2$", "D": "$3$"},
                     "correct": "B",
                     "explanation": "Tử số là $(x - 1)(x - 3)$. Tại $x \\to 3$, $y \\to 2$, không có tiệm cận đứng (0 đường)."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Đường tiệm cận xiên của đồ thị hàm số $y = \\frac{x^2 + x - 2}{x + 2}$ là",
+                    "question": "**Câu 6 (VDC):** Đường tiệm cận xiên của đồ thị hàm số $y = \\frac{x^2 + x - 2}{x + 2}$ là",
                     "options": {"A": "$y = x - 1$", "B": "$y = x + 1$", "C": "$y = x$", "D": "$y = x + 2$"},
                     "correct": "A",
                     "explanation": "$x^2 + x - 2 = (x + 2)(x - 1)$. Đồ thị là đường thẳng $y = x - 1$."
@@ -960,14 +960,14 @@ def get_topic_cd5():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một cửa hàng hoa quả tính toán lợi nhuận bán cam theo giá bán $x$ (nghìn đồng/kg) là $P(x) = -2x^2 + 100x - 800$ (nghìn đồng/ngày). Giá bán cam tối ưu để lợi nhuận mỗi ngày cao nhất là bao nhiêu nghìn đồng/kg?",
+                    "question": "**Câu 5 (VDC):** Một cửa hàng hoa quả tính toán lợi nhuận bán cam theo giá bán $x$ (nghìn đồng/kg) là $P(x) = -2x^2 + 100x - 800$ (nghìn đồng/ngày). Giá bán cam tối ưu để lợi nhuận mỗi ngày cao nhất là bao nhiêu nghìn đồng/kg?",
                     "correctAnswer": "25",
                     "acceptedAnswers": ["25"],
                     "explanation": "Đỉnh parabol tại $x = 100/4 = 25$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một giàn khoan dầu ở vị trí $A$ cách bờ biển $5\\text{ km}$. Điểm $B$ trên bờ biển gần $A$ nhất. Nhà máy lọc dầu ở vị trí $C$ trên bờ cách $B$ một khoảng $12\\text{ km}$. Kéo đường ống từ $A$ đến $M$ trên bờ rồi đến $C$. Khoảng cách $BM$ bằng bao nhiêu km để tổng chiều dài đường ống $AM + MC$ nhỏ nhất?",
+                    "question": "**Câu 6 (VDC):** Một giàn khoan dầu ở vị trí $A$ cách bờ biển $5\\text{ km}$. Điểm $B$ trên bờ biển gần $A$ nhất. Nhà máy lọc dầu ở vị trí $C$ trên bờ cách $B$ một khoảng $12\\text{ km}$. Kéo đường ống từ $A$ đến $M$ trên bờ rồi đến $C$. Khoảng cách $BM$ bằng bao nhiêu km để tổng chiều dài đường ống $AM + MC$ nhỏ nhất?",
                     "correctAnswer": "12",
                     "acceptedAnswers": ["12"],
                     "explanation": "Đoạn thẳng nối $A$ và $C$ trực tiếp là ngắn nhất, suy ra $M$ trùng $C$, tức $BM = 12\\text{ km}$."

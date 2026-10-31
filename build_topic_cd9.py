@@ -104,14 +104,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Tỉ lệ người mắc một bệnh hiểm nghèo trong cộng đồng là $1\\%$. Một xét nghiệm có độ chính xác $95\\%$ (tức là người có bệnh thì $95\\%$ xét nghiệm dương tính, người không bệnh thì $95\\%$ xét nghiệm âm tính). Một người đi xét nghiệm có kết quả dương tính. Xác suất người đó thực sự mắc bệnh xấp xỉ bằng",
+                    "question": "**Câu 5 (VDC):** Tỉ lệ người mắc một bệnh hiểm nghèo trong cộng đồng là $1\\%$. Một xét nghiệm có độ chính xác $95\\%$ (tức là người có bệnh thì $95\\%$ xét nghiệm dương tính, người không bệnh thì $95\\%$ xét nghiệm âm tính). Một người đi xét nghiệm có kết quả dương tính. Xác suất người đó thực sự mắc bệnh xấp xỉ bằng",
                     "options": {"A": "$16.1\\%$", "B": "$95\\%$", "C": "$50\\%$", "D": "$1\\%$"},
                     "correct": "A",
                     "explanation": "Áp dụng Bayes: $P(B|+) = \\frac{0.01 \\times 0.95}{0.01 \\times 0.95 + 0.99 \\times 0.05} = \\frac{0.0095}{0.0095 + 0.0495} = \\frac{0.0095}{0.0590} \\approx 16.1\\%$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một nhà máy có hai dây chuyền sản xuất cùng một loại linh kiện: dây chuyền I sản xuất $60\\%$ sản phẩm, dây chuyền II sản xuất $40\\%$ sản phẩm. Tỉ lệ phế phẩm của dây chuyền I là $2\\%$, của dây chuyền II là $3\\%$. Chọn ngẫu nhiên một sản phẩm của nhà máy, xác suất sản phẩm đó là phế phẩm bằng",
+                    "question": "**Câu 6 (VDC):** Một nhà máy có hai dây chuyền sản xuất cùng một loại linh kiện: dây chuyền I sản xuất $60\\%$ sản phẩm, dây chuyền II sản xuất $40\\%$ sản phẩm. Tỉ lệ phế phẩm của dây chuyền I là $2\\%$, của dây chuyền II là $3\\%$. Chọn ngẫu nhiên một sản phẩm của nhà máy, xác suất sản phẩm đó là phế phẩm bằng",
                     "options": {"A": "$0.024$", "B": "$0.025$", "C": "$0.05$", "D": "$0.012$"},
                     "correct": "A",
                     "explanation": "Theo công thức xác suất toàn phần: $P = 0.6 \\times 0.02 + 0.4 \\times 0.03 = 0.012 + 0.012 = 0.024$ ($2.4\\%$)."
@@ -234,14 +234,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một bài kiểm tra trắc nghiệm có 4 phương án cho mỗi câu hỏi. Học sinh $A$ biết câu trả lời đúng với xác suất $0.7$. Nếu không biết, học sinh đó đoán mò ngẫu nhiên. Biết học sinh $A$ đã trả lời đúng câu hỏi đó, tính xác suất học sinh đó thực sự biết đáp án (làm tròn kết quả đến hai chữ số thập phân).",
+                    "question": "**Câu 5 (VDC):** Một bài kiểm tra trắc nghiệm có 4 phương án cho mỗi câu hỏi. Học sinh $A$ biết câu trả lời đúng với xác suất $0.7$. Nếu không biết, học sinh đó đoán mò ngẫu nhiên. Biết học sinh $A$ đã trả lời đúng câu hỏi đó, tính xác suất học sinh đó thực sự biết đáp án (làm tròn kết quả đến hai chữ số thập phân).",
                     "correctAnswer": "0.90",
                     "acceptedAnswers": ["0.9", "0.90", "0,9", "0,90", "28/31"],
                     "explanation": "Bayes: $P(Biết|Đúng) = \\frac{0.7 \\times 1}{0.7 \\times 1 + 0.3 \\times 0.25} = \\frac{0.7}{0.7 + 0.075} = \\frac{0.7}{0.775} = \\frac{28}{31} \\approx 0.90$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một hộp chứa 3 quả cầu đỏ và 7 quả cầu trắng. Rút ngẫu nhiên lần lượt 2 quả cầu không hoàn lại. Tính xác suất để quả cầu thứ 2 màu đỏ biết quả thứ nhất màu đỏ.",
+                    "question": "**Câu 6 (VDC):** Một hộp chứa 3 quả cầu đỏ và 7 quả cầu trắng. Rút ngẫu nhiên lần lượt 2 quả cầu không hoàn lại. Tính xác suất để quả cầu thứ 2 màu đỏ biết quả thứ nhất màu đỏ.",
                     "correctAnswer": "0.22",
                     "acceptedAnswers": ["0.22", "2/9", "0,22"],
                     "explanation": "Sau khi rút 1 quả đỏ, trong hộp còn 2 đỏ và 7 trắng (tổng 9 quả). Xác suất rút tiếp quả đỏ là $2/9 \\approx 0.22$."
@@ -280,14 +280,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một máy bay có hai động cơ độc lập. Xác suất để động cơ 1 bị hỏng trong chuyến bay là $0.01$, động cơ 2 bị hỏng là $0.02$. Máy bay bay an toàn nếu có ít nhất một động cơ hoạt động bình thường. Xác suất chuyến bay an toàn bằng",
+                    "question": "**Câu 5 (VDC):** Một máy bay có hai động cơ độc lập. Xác suất để động cơ 1 bị hỏng trong chuyến bay là $0.01$, động cơ 2 bị hỏng là $0.02$. Máy bay bay an toàn nếu có ít nhất một động cơ hoạt động bình thường. Xác suất chuyến bay an toàn bằng",
                     "options": {"A": "$0.9998$", "B": "$0.9702$", "C": "$0.9900$", "D": "$0.9800$"},
                     "correct": "A",
                     "explanation": "Xác suất cả 2 động cơ cùng hỏng là $0.01 \\times 0.02 = 0.0002$. Xác suất an toàn: $1 - 0.0002 = 0.9998$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một thùng hàng chứa $80\\%$ sản phẩm loại I và $20\\%$ sản phẩm loại II. Tỉ lệ hỏng của sản phẩm loại I là $1\\%$, loại II là $5\\%$. Lấy ngẫu nhiên một sản phẩm thì thấy bị hỏng. Xác suất để sản phẩm đó là loại I bằng",
+                    "question": "**Câu 6 (VDC):** Một thùng hàng chứa $80\\%$ sản phẩm loại I và $20\\%$ sản phẩm loại II. Tỉ lệ hỏng của sản phẩm loại I là $1\\%$, loại II là $5\\%$. Lấy ngẫu nhiên một sản phẩm thì thấy bị hỏng. Xác suất để sản phẩm đó là loại I bằng",
                     "options": {"A": "$\\frac{4}{9}$", "B": "$\\frac{5}{9}$", "C": "$\\frac{8}{10}$", "D": "$\\frac{1}{2}$"},
                     "correct": "A",
                     "explanation": "Bayes: $P(I|Hỏng) = \\frac{0.8 \\times 0.01}{0.8 \\times 0.01 + 0.2 \\times 0.05} = \\frac{0.008}{0.008 + 0.010} = \\frac{0.008}{0.018} = \\frac{4}{9}$."
@@ -410,14 +410,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một ngân hàng ước tính xác suất một khách hàng vay tiền vỡ nợ là $0.02$. Một phần mềm chấm điểm tín dụng dự báo đúng khách hàng vỡ nợ với tỉ lệ $90\\%$, nhưng cũng dự báo nhầm khách hàng không vỡ nợ thành vỡ nợ với tỉ lệ $5\\%$. Khi phần mềm cảnh báo một khách hàng sẽ vỡ nợ, tính xác suất thực sự khách hàng đó vỡ nợ (làm tròn kết quả đến hai chữ số thập phân).",
+                    "question": "**Câu 5 (VDC):** Một ngân hàng ước tính xác suất một khách hàng vay tiền vỡ nợ là $0.02$. Một phần mềm chấm điểm tín dụng dự báo đúng khách hàng vỡ nợ với tỉ lệ $90\\%$, nhưng cũng dự báo nhầm khách hàng không vỡ nợ thành vỡ nợ với tỉ lệ $5\\%$. Khi phần mềm cảnh báo một khách hàng sẽ vỡ nợ, tính xác suất thực sự khách hàng đó vỡ nợ (làm tròn kết quả đến hai chữ số thập phân).",
                     "correctAnswer": "0.27",
                     "acceptedAnswers": ["0.27", "0,27", "18/67"],
                     "explanation": "Bayes: $P(VN|CB) = \\frac{0.02 \\times 0.9}{0.02 \\times 0.9 + 0.98 \\times 0.05} = \\frac{0.018}{0.018 + 0.049} = \\frac{0.018}{0.067} = \\frac{18}{67} \\approx 0.27$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một hộp có 5 viên bi trắng và 5 viên bi đen. Rút lần lượt 2 viên bi không hoàn lại. Biết viên thứ nhất màu đen, tính xác suất viên thứ hai màu trắng.",
+                    "question": "**Câu 6 (VDC):** Một hộp có 5 viên bi trắng và 5 viên bi đen. Rút lần lượt 2 viên bi không hoàn lại. Biết viên thứ nhất màu đen, tính xác suất viên thứ hai màu trắng.",
                     "correctAnswer": "0.56",
                     "acceptedAnswers": ["0.56", "5/9", "0,56"],
                     "explanation": "Còn lại 5 trắng và 4 đen (tổng 9 viên). Xác suất là $5/9 \\approx 0.56$."
@@ -456,14 +456,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một thiết bị có hai linh kiện hoạt động độc lập. Xác suất linh kiện A bị lỗi là $0.05$, linh kiện B bị lỗi là $0.1$. Xác suất để thiết bị hoạt động tốt (cả 2 linh kiện không bị lỗi) bằng",
+                    "question": "**Câu 5 (VDC):** Một thiết bị có hai linh kiện hoạt động độc lập. Xác suất linh kiện A bị lỗi là $0.05$, linh kiện B bị lỗi là $0.1$. Xác suất để thiết bị hoạt động tốt (cả 2 linh kiện không bị lỗi) bằng",
                     "options": {"A": "$0.855$", "B": "$0.85$", "C": "$0.995$", "D": "$0.005$"},
                     "correct": "A",
                     "explanation": "$(1 - 0.05)(1 - 0.1) = 0.95 \\times 0.9 = 0.855$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Tỉ lệ cử tri ủng hộ ứng cử viên X là $60\\%$. Trong số người ủng hộ X, có $70\\%$ đi bỏ phiếu. Trong số người không ủng hộ X, có $40\\%$ đi bỏ phiếu. Xác suất một cử tri được chọn ngẫu nhiên có đi bỏ phiếu bằng",
+                    "question": "**Câu 6 (VDC):** Tỉ lệ cử tri ủng hộ ứng cử viên X là $60\\%$. Trong số người ủng hộ X, có $70\\%$ đi bỏ phiếu. Trong số người không ủng hộ X, có $40\\%$ đi bỏ phiếu. Xác suất một cử tri được chọn ngẫu nhiên có đi bỏ phiếu bằng",
                     "options": {"A": "$0.58$", "B": "$0.55$", "C": "$0.66$", "D": "$0.50$"},
                     "correct": "A",
                     "explanation": "$0.6 \\times 0.7 + 0.4 \\times 0.4 = 0.42 + 0.16 = 0.58$."
@@ -586,14 +586,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Gieo một con xúc xắc cân đối. Biết kết quả xuất hiện số chấm lớn hơn $3$. Tính xác suất xuất hiện mặt $6$ chấm (nhập phân số dạng tối giản $a/b$ hoặc số thập phân làm tròn hai chữ số: ví dụ $1/3$ thì nhập 0.33).",
+                    "question": "**Câu 5 (VDC):** Gieo một con xúc xắc cân đối. Biết kết quả xuất hiện số chấm lớn hơn $3$. Tính xác suất xuất hiện mặt $6$ chấm (nhập phân số dạng tối giản $a/b$ hoặc số thập phân làm tròn hai chữ số: ví dụ $1/3$ thì nhập 0.33).",
                     "correctAnswer": "0.33",
                     "acceptedAnswers": ["0.33", "1/3", "0,33"],
                     "explanation": "Các số lớn hơn 3 là $\\{4, 5, 6\\}$ (3 khả năng). Mặt 6 có 1 khả năng, xác suất $1/3 \\approx 0.33$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một trạm thu phí cao tốc có hai làn tự động ETC1 và ETC2. Xe qua ETC1 chiếm $60\\%$, qua ETC2 chiếm $40\\%$. Tỉ lệ xe bị lỗi nhận diện thẻ ở ETC1 là $1\\%$, ở ETC2 là $3\\%$. Tính xác suất một xe bất kỳ qua trạm bị lỗi nhận diện (nhập dưới dạng phần trăm: ví dụ $1.8\\%$ thì nhập 1.8).",
+                    "question": "**Câu 6 (VDC):** Một trạm thu phí cao tốc có hai làn tự động ETC1 và ETC2. Xe qua ETC1 chiếm $60\\%$, qua ETC2 chiếm $40\\%$. Tỉ lệ xe bị lỗi nhận diện thẻ ở ETC1 là $1\\%$, ở ETC2 là $3\\%$. Tính xác suất một xe bất kỳ qua trạm bị lỗi nhận diện (nhập dưới dạng phần trăm: ví dụ $1.8\\%$ thì nhập 1.8).",
                     "correctAnswer": "1.8",
                     "acceptedAnswers": ["1.8", "1,8", "0.018"],
                     "explanation": "$P = 0.6 \\times 0.01 + 0.4 \\times 0.03 = 0.006 + 0.012 = 0.018 = 1.8\\%$."
@@ -632,14 +632,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Tỉ lệ người nhiễm một loại virus trong cộng đồng là $0.5\\%$. Một bộ kit xét nghiệm nhanh có độ nhạy $90\\%$ và độ đặc hiệu $95\\%$. Khi xét nghiệm một người ngẫu nhiên cho kết quả dương tính, xác suất người đó thực sự nhiễm virus xấp xỉ bằng",
+                    "question": "**Câu 5 (VDC):** Tỉ lệ người nhiễm một loại virus trong cộng đồng là $0.5\\%$. Một bộ kit xét nghiệm nhanh có độ nhạy $90\\%$ và độ đặc hiệu $95\\%$. Khi xét nghiệm một người ngẫu nhiên cho kết quả dương tính, xác suất người đó thực sự nhiễm virus xấp xỉ bằng",
                     "options": {"A": "$8.3\\%$", "B": "$90\\%$", "C": "$50\\%$", "D": "$0.5\\%$"},
                     "correct": "A",
                     "explanation": "Bayes: $P = \\frac{0.005 \\times 0.90}{0.005 \\times 0.90 + 0.995 \\times 0.05} = \\frac{0.0045}{0.0045 + 0.04975} = \\frac{0.0045}{0.05425} \\approx 8.29\\% \\approx 8.3\\%$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một nông trường nuôi bò sữa có hai trang trại: trang trại A cung cấp $70\\%$ tổng sản lượng sữa, trang trại B cung cấp $30\\%$. Tỉ lệ sữa đạt chuẩn loại 1 của trang trại A là $95\\%$, của trang trại B là $90\\%$. Chọn ngẫu nhiên một hộp sữa của nông trường, xác suất hộp sữa đạt chuẩn loại 1 bằng",
+                    "question": "**Câu 6 (VDC):** Một nông trường nuôi bò sữa có hai trang trại: trang trại A cung cấp $70\\%$ tổng sản lượng sữa, trang trại B cung cấp $30\\%$. Tỉ lệ sữa đạt chuẩn loại 1 của trang trại A là $95\\%$, của trang trại B là $90\\%$. Chọn ngẫu nhiên một hộp sữa của nông trường, xác suất hộp sữa đạt chuẩn loại 1 bằng",
                     "options": {"A": "$0.935$", "B": "$0.925$", "C": "$0.940$", "D": "$0.910$"},
                     "correct": "A",
                     "explanation": "$P = 0.7 \\times 0.95 + 0.3 \\times 0.90 = 0.665 + 0.270 = 0.935$."
@@ -762,14 +762,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Gieo một con xúc xắc cân đối hai lần. Tính xác suất để lần thứ hai xuất hiện mặt 6 chấm biết tổng số chấm sau hai lần gieo bằng 10 (viết dạng số thập phân làm tròn hai chữ số hoặc phân số tối giản).",
+                    "question": "**Câu 5 (VDC):** Gieo một con xúc xắc cân đối hai lần. Tính xác suất để lần thứ hai xuất hiện mặt 6 chấm biết tổng số chấm sau hai lần gieo bằng 10 (viết dạng số thập phân làm tròn hai chữ số hoặc phân số tối giản).",
                     "correctAnswer": "0.33",
                     "acceptedAnswers": ["0.33", "1/3", "0,33"],
                     "explanation": "Các cặp có tổng bằng 10: $(4,6), (5,5), (6,4)$ gồm 3 cặp. Cặp có lần 2 bằng 6 là $(4,6)$ (1 cặp). Xác suất là $1/3 \\approx 0.33$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một kho xăng dầu có hai bể chứa $B_1$ và $B_2$ với dung tích bằng nhau ($50\\% - 50\\%$). Bể $B_1$ có tỉ lệ tạp chất $0.5\\%$, bể $B_2$ có tỉ lệ tạp chất $1.5\\%$. Lấy ngẫu nhiên một mẫu xăng từ kho, tính xác suất mẫu xăng có tạp chất (nhập số dạng phần trăm: ví dụ $1\\%$ thì nhập 1).",
+                    "question": "**Câu 6 (VDC):** Một kho xăng dầu có hai bể chứa $B_1$ và $B_2$ với dung tích bằng nhau ($50\\% - 50\\%$). Bể $B_1$ có tỉ lệ tạp chất $0.5\\%$, bể $B_2$ có tỉ lệ tạp chất $1.5\\%$. Lấy ngẫu nhiên một mẫu xăng từ kho, tính xác suất mẫu xăng có tạp chất (nhập số dạng phần trăm: ví dụ $1\\%$ thì nhập 1).",
                     "correctAnswer": "1",
                     "acceptedAnswers": ["1", "1%", "0.01"],
                     "explanation": "$P = 0.5 \\times 0.005 + 0.5 \\times 0.015 = 0.0025 + 0.0075 = 0.01 = 1\\%$."
@@ -808,14 +808,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một công ty phần mềm phát hiện một loại mã độc với xác suất $99\\%$. Xác suất phần mềm nhận diện nhầm một file an toàn thành mã độc là $1\\%$. Trong một thư mục, tỉ lệ file chứa mã độc là $0.1\\%$. Khi phần mềm báo một file là mã độc, xác suất file đó thực sự chứa mã độc là",
+                    "question": "**Câu 5 (VDC):** Một công ty phần mềm phát hiện một loại mã độc với xác suất $99\\%$. Xác suất phần mềm nhận diện nhầm một file an toàn thành mã độc là $1\\%$. Trong một thư mục, tỉ lệ file chứa mã độc là $0.1\\%$. Khi phần mềm báo một file là mã độc, xác suất file đó thực sự chứa mã độc là",
                     "options": {"A": "$9\\%$", "B": "$99\\%$", "C": "$50\\%$", "D": "$1\\%$"},
                     "correct": "A",
                     "explanation": "Bayes: $P = \\frac{0.001 \\times 0.99}{0.001 \\times 0.99 + 0.999 \\times 0.01} = \\frac{0.00099}{0.00099 + 0.00999} = \\frac{0.00099}{0.01098} \\approx 9\\%$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một trạm phát điện năng lượng mặt trời có hai cụm pin A và B. Cụm A tạo ra $60\\%$ sản lượng điện, cụm B tạo ra $40\\%$. Tỉ lệ suy hao hiệu suất trong ngày nhiều mây của cụm A là $10\\%$, của cụm B là $15\\%$. Chọn ngẫu nhiên một phần điện năng bị suy hao, xác suất phần điện năng đó do cụm A tạo ra bằng",
+                    "question": "**Câu 6 (VDC):** Một trạm phát điện năng lượng mặt trời có hai cụm pin A và B. Cụm A tạo ra $60\\%$ sản lượng điện, cụm B tạo ra $40\\%$. Tỉ lệ suy hao hiệu suất trong ngày nhiều mây của cụm A là $10\\%$, của cụm B là $15\\%$. Chọn ngẫu nhiên một phần điện năng bị suy hao, xác suất phần điện năng đó do cụm A tạo ra bằng",
                     "options": {"A": "$\\frac{1}{2}$", "B": "$\\frac{3}{5}$", "C": "$\\frac{2}{3}$", "D": "$\\frac{4}{7}$"},
                     "correct": "A",
                     "explanation": "Bayes: $P(A|Suy\\ hao) = \\frac{0.6 \\times 0.10}{0.6 \\times 0.10 + 0.4 \\times 0.15} = \\frac{0.06}{0.06 + 0.06} = \\frac{0.06}{0.12} = \\frac{1}{2}$."
@@ -938,14 +938,14 @@ def get_topic_cd9():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một ngân hàng phát hiện giao dịch gian lận chiếm tỉ lệ $0.2\\%$ tổng số giao dịch. Hệ thống AI cảnh báo đúng giao dịch gian lận với xác suất $98\\%$, nhưng cảnh báo nhầm giao dịch hợp pháp thành gian lận với xác suất $1\\%$. Khi hệ thống AI cảnh báo một giao dịch là gian lận, tính xác suất giao dịch đó thực sự là gian lận (làm tròn kết quả đến hai chữ số thập phân).",
+                    "question": "**Câu 5 (VDC):** Một ngân hàng phát hiện giao dịch gian lận chiếm tỉ lệ $0.2\\%$ tổng số giao dịch. Hệ thống AI cảnh báo đúng giao dịch gian lận với xác suất $98\\%$, nhưng cảnh báo nhầm giao dịch hợp pháp thành gian lận với xác suất $1\\%$. Khi hệ thống AI cảnh báo một giao dịch là gian lận, tính xác suất giao dịch đó thực sự là gian lận (làm tròn kết quả đến hai chữ số thập phân).",
                     "correctAnswer": "0.16",
                     "acceptedAnswers": ["0.16", "0,16", "0.164"],
                     "explanation": "Bayes: $P = \\frac{0.002 \\times 0.98}{0.002 \\times 0.98 + 0.998 \\times 0.01} = \\frac{0.00196}{0.00196 + 0.00998} = \\frac{0.00196}{0.01194} \\approx 0.164 \\approx 0.16$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một giỏ hoa quả có 6 quả cam và 4 quả táo. Lấy lần lượt 2 quả không hoàn lại. Tính xác suất quả thứ hai là quả cam biết quả thứ nhất là quả táo (nhập số thập phân làm tròn hai chữ số hoặc phân số tối giản).",
+                    "question": "**Câu 6 (VDC):** Một giỏ hoa quả có 6 quả cam và 4 quả táo. Lấy lần lượt 2 quả không hoàn lại. Tính xác suất quả thứ hai là quả cam biết quả thứ nhất là quả táo (nhập số thập phân làm tròn hai chữ số hoặc phân số tối giản).",
                     "correctAnswer": "0.67",
                     "acceptedAnswers": ["0.67", "6/9", "2/3", "0,67"],
                     "explanation": "Còn lại 6 cam và 3 táo (tổng 9 quả). Xác suất là $6/9 = 2/3 \\approx 0.67$."

@@ -119,14 +119,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Trong không gian $Oxyz$, cho hai điểm $A(1; 2; 3)$ và $B(3; 0; 1)$. Tọa độ trung điểm $M$ của đoạn thẳng $AB$ là",
+                    "question": "**Câu 5 (VDC):** Trong không gian $Oxyz$, cho hai điểm $A(1; 2; 3)$ và $B(3; 0; 1)$. Tọa độ trung điểm $M$ của đoạn thẳng $AB$ là",
                     "options": {"A": "$(2; 1; 2)$", "B": "$(4; 2; 4)$", "C": "$(1; -1; -1)$", "D": "$(2; 2; 2)$"},
                     "correct": "A",
                     "explanation": "$M\\left(\\frac{1+3}{2}; \\frac{2+0}{2}; \\frac{3+1}{2}\\right) = (2; 1; 2)$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Trong không gian $Oxyz$, đường thẳng $d: \\begin{cases} x = 1 + 2t \\\\ y = -1 + t \\\\ z = 3 - t \\end{cases}$ đi qua điểm nào dưới đây?",
+                    "question": "**Câu 6 (VDC):** Trong không gian $Oxyz$, đường thẳng $d: \\begin{cases} x = 1 + 2t \\\\ y = -1 + t \\\\ z = 3 - t \\end{cases}$ đi qua điểm nào dưới đây?",
                     "options": {"A": "$M(1; -1; 3)$", "B": "$N(2; 1; -1)$", "C": "$P(-1; 1; -3)$", "D": "$Q(3; 0; 1)$"},
                     "correct": "A",
                     "explanation": "Cho $t = 0$ ta được điểm $(1; -1; 3)$ thuộc đường thẳng $d$."
@@ -249,14 +249,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một đường dây điện cao thế chạy thẳng từ cột điện $A(10; 20; 30)$ đến cột điện $B(50; 20; 30)$ (đơn vị: mét). Khoảng cách an toàn thẳng đứng từ dây điện xuống mặt đất $z = 0$ bằng bao nhiêu mét?",
+                    "question": "**Câu 5 (VDC):** Một đường dây điện cao thế chạy thẳng từ cột điện $A(10; 20; 30)$ đến cột điện $B(50; 20; 30)$ (đơn vị: mét). Khoảng cách an toàn thẳng đứng từ dây điện xuống mặt đất $z = 0$ bằng bao nhiêu mét?",
                     "correctAnswer": "30",
                     "acceptedAnswers": ["30"],
                     "explanation": "Cao độ của dây điện luôn là $z = 30$, do đó khoảng cách thẳng đứng đến mặt đất $z = 0$ là $30\\text{ m}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một trạm thu phát tín hiệu vệ tinh được đặt tại $A(3; 4; 0)$ trên mặt đất. Một vệ tinh đang bay tại vị trí $S(3; 4; 300)$ (đơn vị: km). Khoảng cách từ vệ tinh $S$ đến trạm thu $A$ bằng bao nhiêu km?",
+                    "question": "**Câu 6 (VDC):** Một trạm thu phát tín hiệu vệ tinh được đặt tại $A(3; 4; 0)$ trên mặt đất. Một vệ tinh đang bay tại vị trí $S(3; 4; 300)$ (đơn vị: km). Khoảng cách từ vệ tinh $S$ đến trạm thu $A$ bằng bao nhiêu km?",
                     "correctAnswer": "300",
                     "acceptedAnswers": ["300"],
                     "explanation": "$SA = \\sqrt{(3-3)^2 + (4-4)^2 + (300-0)^2} = 300\\text{ km}$."
@@ -295,14 +295,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Trong không gian $Oxyz$, cho hai điểm $A(1; 1; 2)$ và $B(3; -1; 0)$. Vectơ $\\vec{AB}$ có tọa độ là",
+                    "question": "**Câu 5 (VDC):** Trong không gian $Oxyz$, cho hai điểm $A(1; 1; 2)$ và $B(3; -1; 0)$. Vectơ $\\vec{AB}$ có tọa độ là",
                     "options": {"A": "$(2; -2; -2)$", "B": "$(4; 0; 2)$", "C": "$(2; 0; -2)$", "D": "$(-2; 2; 2)$"},
                     "correct": "A",
                     "explanation": "$\\vec{AB} = (3 - 1; -1 - 1; 0 - 2) = (2; -2; -2)$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Đường thẳng $d$ đi qua điểm $A(2; 1; -3)$ có vectơ chỉ phương $\\vec{u} = (1; -2; 2)$ có phương trình chính tắc là",
+                    "question": "**Câu 6 (VDC):** Đường thẳng $d$ đi qua điểm $A(2; 1; -3)$ có vectơ chỉ phương $\\vec{u} = (1; -2; 2)$ có phương trình chính tắc là",
                     "options": {"A": "$\\frac{x - 2}{1} = \\frac{y - 1}{-2} = \\frac{z + 3}{2}$", "B": "$\\frac{x + 2}{1} = \\frac{y + 1}{-2} = \\frac{z - 3}{2}$", "C": "$\\frac{x - 1}{2} = \\frac{y + 2}{1} = \\frac{z - 2}{-3}$", "D": "$\\frac{x - 2}{1} = \\frac{y - 1}{2} = \\frac{z + 3}{2}$"},
                     "correct": "A",
                     "explanation": "$\\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c} \\Leftrightarrow \\frac{x - 2}{1} = \\frac{y - 1}{-2} = \\frac{z + 3}{2}$."
@@ -425,14 +425,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một máy bay hạ cánh theo đường thẳng từ độ cao $1200\\text{ m}$ tại vị trí $A(0; 0; 1200)$ xuống đầu đường băng tại $B(3000; 4000; 0)$ (đơn vị: mét). Chiều dài quỹ đạo hạ cánh của máy bay bằng bao nhiêu mét?",
+                    "question": "**Câu 5 (VDC):** Một máy bay hạ cánh theo đường thẳng từ độ cao $1200\\text{ m}$ tại vị trí $A(0; 0; 1200)$ xuống đầu đường băng tại $B(3000; 4000; 0)$ (đơn vị: mét). Chiều dài quỹ đạo hạ cánh của máy bay bằng bao nhiêu mét?",
                     "correctAnswer": "5142",
                     "acceptedAnswers": ["5142", "5141.98"],
                     "explanation": "$AB = \\sqrt{3000^2 + 4000^2 + 1200^2} = \\sqrt{25000000 + 1440000} = \\sqrt{26440000} \\approx 5141.98 \\approx 5142\\text{ m}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một trạm radar quét mặt cầu bán kính $50\\text{ km}$ đặt tại gốc tọa độ $O$. Một máy bay không người lái đang bay ở tọa độ $(30; 20; 10)$ (km). Khoảng cách từ máy bay đến trạm radar bằng bao nhiêu km? (Làm tròn đến hàng đơn vị).",
+                    "question": "**Câu 6 (VDC):** Một trạm radar quét mặt cầu bán kính $50\\text{ km}$ đặt tại gốc tọa độ $O$. Một máy bay không người lái đang bay ở tọa độ $(30; 20; 10)$ (km). Khoảng cách từ máy bay đến trạm radar bằng bao nhiêu km? (Làm tròn đến hàng đơn vị).",
                     "correctAnswer": "37",
                     "acceptedAnswers": ["37", "37.4"],
                     "explanation": "$d = \\sqrt{30^2 + 20^2 + 10^2} = \\sqrt{900 + 400 + 100} = \\sqrt{1400} \\approx 37.41 \\approx 37\\text{ km}$."
@@ -471,14 +471,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Hai vectơ $\\vec{u} = (1; 2; -2)$ và $\\vec{v} = (2; -1; 0)$ có tích vô hướng bằng",
+                    "question": "**Câu 5 (VDC):** Hai vectơ $\\vec{u} = (1; 2; -2)$ và $\\vec{v} = (2; -1; 0)$ có tích vô hướng bằng",
                     "options": {"A": "$0$", "B": "$4$", "C": "$-4$", "D": "$2$"},
                     "correct": "A",
                     "explanation": "$1(2) + 2(-1) + (-2)(0) = 2 - 2 + 0 = 0$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Đường thẳng đi qua $M(1; 0; -1)$ và vuông góc với mặt phẳng $(\\alpha): 2x - y + 3z + 1 = 0$ có phương trình là",
+                    "question": "**Câu 6 (VDC):** Đường thẳng đi qua $M(1; 0; -1)$ và vuông góc với mặt phẳng $(\\alpha): 2x - y + 3z + 1 = 0$ có phương trình là",
                     "options": {"A": "$\\frac{x - 1}{2} = \\frac{y}{-1} = \\frac{z + 1}{3}$", "B": "$\\frac{x + 1}{2} = \\frac{y}{-1} = \\frac{z - 1}{3}$", "C": "$\\frac{x - 2}{1} = \\frac{y + 1}{0} = \\frac{z - 3}{-1}$", "D": "$\\frac{x - 1}{2} = \\frac{y}{1} = \\frac{z + 1}{3}$"},
                     "correct": "A",
                     "explanation": "Đường vuông góc mặt phẳng nhận VTPT của mặt phẳng làm VTCP: $\\vec{u} = (2; -1; 3)$."
@@ -601,14 +601,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một vệ tinh nhân tạo chuyển động theo quỹ đạo tròn trong mặt phẳng $(Oxy)$ có bán kính $R = 7000\\text{ km}$ quanh tâm Trái Đất đặt tại $O(0; 0; 0)$. Khoảng cách từ vệ tinh đến tâm Trái Đất là bao nhiêu km?",
+                    "question": "**Câu 5 (VDC):** Một vệ tinh nhân tạo chuyển động theo quỹ đạo tròn trong mặt phẳng $(Oxy)$ có bán kính $R = 7000\\text{ km}$ quanh tâm Trái Đất đặt tại $O(0; 0; 0)$. Khoảng cách từ vệ tinh đến tâm Trái Đất là bao nhiêu km?",
                     "correctAnswer": "7000",
                     "acceptedAnswers": ["7000"],
                     "explanation": "Bán kính quỹ đạo tròn chính là khoảng cách đến tâm: $7000\\text{ km}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một trạm thu phát sóng di động $5G$ đặt tại đỉnh một tòa nhà có tọa độ $A(100; 200; 50)$ (đơn vị: mét). Một người dùng đứng trên mặt đất tại vị trí $B(100; 200; 0)$. Khoảng cách thẳng đứng từ người dùng đến trạm thu phát sóng bằng bao nhiêu mét?",
+                    "question": "**Câu 6 (VDC):** Một trạm thu phát sóng di động $5G$ đặt tại đỉnh một tòa nhà có tọa độ $A(100; 200; 50)$ (đơn vị: mét). Một người dùng đứng trên mặt đất tại vị trí $B(100; 200; 0)$. Khoảng cách thẳng đứng từ người dùng đến trạm thu phát sóng bằng bao nhiêu mét?",
                     "correctAnswer": "50",
                     "acceptedAnswers": ["50"],
                     "explanation": "Khoảng cách thẳng đứng là $|z_A - z_B| = 50 - 0 = 50\\text{ m}$."
@@ -647,14 +647,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Vectơ chỉ phương của đường thẳng $d: \\begin{cases} x = 2 - t \\\\ y = 3 + 2t \\\\ z = -1 + 4t \\end{cases}$ là",
+                    "question": "**Câu 5 (VDC):** Vectơ chỉ phương của đường thẳng $d: \\begin{cases} x = 2 - t \\\\ y = 3 + 2t \\\\ z = -1 + 4t \\end{cases}$ là",
                     "options": {"A": "$\\vec{u} = (-1; 2; 4)$", "B": "$\\vec{u} = (2; 3; -1)$", "C": "$\\vec{u} = (1; 2; 4)$", "D": "$\\vec{u} = (-1; -2; 4)$"},
                     "correct": "A",
                     "explanation": "Hệ số trước $t$ lần lượt là $-1, 2, 4$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Mặt phẳng $(P)$ đi qua $A(0; 1; 0)$ và song song với mặt phẳng $(Oxy)$ có phương trình là",
+                    "question": "**Câu 6 (VDC):** Mặt phẳng $(P)$ đi qua $A(0; 1; 0)$ và song song với mặt phẳng $(Oxy)$ có phương trình là",
                     "options": {"A": "$z = 0$", "B": "$y = 1$", "C": "$z = 1$", "D": "$x = 0$"},
                     "correct": "B",
                     "explanation": "Mặt phẳng song song $(Oxy)$ có dạng $z = c$. Nếu đi qua $A(0; 1; 0)$ có cao độ $z = 0$ thì chính là mặt phẳng $(Oxy): z = 0$."
@@ -777,14 +777,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một máy bay hạ cánh theo đường thẳng từ điểm $A(0; 2000; 1000)$ xuống điểm $B(0; 6000; 0)$ trên đường băng (đơn vị: mét). Chiều dài quãng đường bay hạ cánh xấp xỉ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).",
+                    "question": "**Câu 5 (VDC):** Một máy bay hạ cánh theo đường thẳng từ điểm $A(0; 2000; 1000)$ xuống điểm $B(0; 6000; 0)$ trên đường băng (đơn vị: mét). Chiều dài quãng đường bay hạ cánh xấp xỉ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).",
                     "correctAnswer": "4123",
                     "acceptedAnswers": ["4123", "4123.1"],
                     "explanation": "$AB = \\sqrt{0 + 4000^2 + (-1000)^2} = \\sqrt{16000000 + 1000000} = \\sqrt{17000000} \\approx 4123.1 \\Rightarrow 4123\\text{ m}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một giàn khoan dầu đặt tại điểm $A(10; 20; 0)$ trên biển. Một tàu cứu hộ xuất phát từ điểm $B(10; 20; 0)$ chạy thẳng đến giàn khoan khác ở tọa độ $C(40; 60; 0)$ (đơn vị: km). Quãng đường tàu cứu hộ phải chạy bằng bao nhiêu km?",
+                    "question": "**Câu 6 (VDC):** Một giàn khoan dầu đặt tại điểm $A(10; 20; 0)$ trên biển. Một tàu cứu hộ xuất phát từ điểm $B(10; 20; 0)$ chạy thẳng đến giàn khoan khác ở tọa độ $C(40; 60; 0)$ (đơn vị: km). Quãng đường tàu cứu hộ phải chạy bằng bao nhiêu km?",
                     "correctAnswer": "50",
                     "acceptedAnswers": ["50"],
                     "explanation": "$BC = \\sqrt{(40-10)^2 + (60-20)^2} = \\sqrt{30^2 + 40^2} = 50\\text{ km}$."
@@ -823,14 +823,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Khoảng cách từ điểm $M(1; 1; 1)$ đến mặt phẳng $(P): 3x + 4z + 2 = 0$ bằng",
+                    "question": "**Câu 5 (VDC):** Khoảng cách từ điểm $M(1; 1; 1)$ đến mặt phẳng $(P): 3x + 4z + 2 = 0$ bằng",
                     "options": {"A": "$\\frac{9}{5}$", "B": "$\\frac{7}{5}$", "C": "$2$", "D": "$\\frac{8}{5}$"},
                     "correct": "A",
                     "explanation": "$d = \\frac{|3(1) + 4(1) + 2|}{\\sqrt{3^2 + 0^2 + 4^2}} = \\frac{9}{5}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Đường thẳng $d: \\frac{x - 1}{2} = \\frac{y + 2}{3} = \\frac{z - 4}{1}$ có vectơ chỉ phương là",
+                    "question": "**Câu 6 (VDC):** Đường thẳng $d: \\frac{x - 1}{2} = \\frac{y + 2}{3} = \\frac{z - 4}{1}$ có vectơ chỉ phương là",
                     "options": {"A": "$\\vec{u} = (2; 3; 1)$", "B": "$\\vec{u} = (1; -2; 4)$", "C": "$\\vec{u} = (-2; -3; -1)$", "D": "$\\vec{u} = (2; -3; 1)$"},
                     "correct": "A",
                     "explanation": "VTCP lấy từ các mẫu số: $(2; 3; 1)$."
@@ -953,14 +953,14 @@ def get_topic_cd8():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một đường hầm thoát hiểm chạy thẳng từ hầm mỏ ở độ sâu $100\\text{ m}$ tại điểm $A(0; 0; -100)$ lên mặt đất tại điểm $B(300; 400; 0)$ (mét). Chiều dài của đường hầm thoát hiểm xấp xỉ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).",
+                    "question": "**Câu 5 (VDC):** Một đường hầm thoát hiểm chạy thẳng từ hầm mỏ ở độ sâu $100\\text{ m}$ tại điểm $A(0; 0; -100)$ lên mặt đất tại điểm $B(300; 400; 0)$ (mét). Chiều dài của đường hầm thoát hiểm xấp xỉ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).",
                     "correctAnswer": "510",
                     "acceptedAnswers": ["510", "509.9"],
                     "explanation": "$AB = \\sqrt{300^2 + 400^2 + 100^2} = \\sqrt{250000 + 10000} = \\sqrt{260000} \\approx 509.9 \\Rightarrow 510\\text{ m}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một ngọn hải đăng phát tín hiệu cảnh báo đá ngầm trong bán kính $15\\text{ hải lý}$. Vị trí hải đăng tại $H(10; 20; 0)$. Một con tàu ở tọa độ $T(10; 30; 0)$. Khoảng cách từ tàu đến hải đăng bằng bao nhiêu hải lý?",
+                    "question": "**Câu 6 (VDC):** Một ngọn hải đăng phát tín hiệu cảnh báo đá ngầm trong bán kính $15\\text{ hải lý}$. Vị trí hải đăng tại $H(10; 20; 0)$. Một con tàu ở tọa độ $T(10; 30; 0)$. Khoảng cách từ tàu đến hải đăng bằng bao nhiêu hải lý?",
                     "correctAnswer": "10",
                     "acceptedAnswers": ["10"],
                     "explanation": "$HT = |30 - 20| = 10\\text{ hải lý}$."

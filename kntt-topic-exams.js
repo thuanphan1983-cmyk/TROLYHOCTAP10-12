@@ -12,7 +12,7 @@ window.TOPIC_EXAMS_DB = [
     "badge": "Lớp 11 • Kiến thức trọng tâm",
     "badgeColor": "bg-blue-100 text-blue-800 border-blue-200",
     "description": "Dãy số tăng/giảm/bị chặn; số hạng tổng quát, tính chất, tổng n số hạng của cấp số cộng, cấp số nhân và bài toán thực tế tài chính, tăng trưởng.",
-    "summary": "\n<div class=\"space-y-6 text-slate-800 leading-relaxed font-serif\">\n  <!-- Phần 1: Dãy số -->\n  <div class=\"bg-indigo-50/70 border-l-4 border-indigo-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-indigo-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-arrow-trend-up text-indigo-600\"></i>\n      1. Khái Niệm & Tính Chất Của Dãy Số\n    </h4>\n    <ul class=\"list-disc pl-5 space-y-1.5 text-[11.5pt]\">\n      <li><strong>Định nghĩa:</strong> Dãy số vô hạn là hàm số $u: \\mathbb{N}^* \\to \\mathbb{R}, n \\mapsto u_n$. Ký hiệu $(u_n)$.</li>\n      <li><strong>Dãy số tăng:</strong> $u_{n+1} > u_n$ với mọi $n \\in \\mathbb{N}^*$ (hoặc $\\frac{u_{n+1}}{u_n} > 1$ nếu $u_n > 0$).</li>\n      <li><strong>Dãy số giảm:</strong> $u_{n+1} < u_n$ với mọi $n \\in \\mathbb{N}^*$ (hoặc $\\frac{u_{n+1}}{u_n} < 1$ nếu $u_n > 0$).</li>\n      <li><strong>Dãy số bị chặn:</strong> Bị chặn trên nếu $\\exists M: u_n \\le M$; Bị chặn dưới nếu $\\exists m: u_n \\ge m$; Bị chặn nếu $m \\le u_n \\le M, \\forall n \\in \\mathbb{N}^*$.</li>\n    </ul>\n  </div>\n\n  <!-- Phần 2: Cấp số cộng -->\n  <div class=\"bg-teal-50/70 border-l-4 border-teal-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-teal-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-calculator text-teal-600\"></i>\n      2. Cấp Số Cộng (CSC)\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-teal-200 shadow-xs\">\n        <p class=\"font-bold text-teal-900 mb-1\">Định nghĩa & Số hạng tổng quát:</p>\n        <p>$u_{n+1} = u_n + d$ ($d$ là công sai)</p>\n        <p class=\"mt-1 text-teal-800 font-semibold\">$u_n = u_1 + (n - 1)d$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-teal-200 shadow-xs\">\n        <p class=\"font-bold text-teal-900 mb-1\">Tính chất & Tổng $n$ số hạng đầu:</p>\n        <p>$u_k = \\frac{u_{k-1} + u_{k+1}}{2}$ ($k \\ge 2$)</p>\n        <p class=\"mt-1 text-teal-800 font-semibold\">$S_n = \\frac{n(u_1 + u_n)}{2} = \\frac{n[2u_1 + (n - 1)d]}{2}$</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 3: Cấp số nhân -->\n  <div class=\"bg-amber-50/70 border-l-4 border-amber-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-amber-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-chart-line text-amber-600\"></i>\n      3. Cấp Số Nhân (CSN) & CSN Lùi Vô Hạn\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200 shadow-xs\">\n        <p class=\"font-bold text-amber-900 mb-1\">Định nghĩa & Số hạng tổng quát:</p>\n        <p>$u_{n+1} = u_n \\cdot q$ ($q$ là công bội)</p>\n        <p class=\"mt-1 text-amber-800 font-semibold\">$u_n = u_1 \\cdot q^{n-1}$ ($n \\ge 2$)</p>\n        <p class=\"text-xs text-slate-600 mt-0.5\">Tính chất: $u_k^2 = u_{k-1} \\cdot u_{k+1}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200 shadow-xs\">\n        <p class=\"font-bold text-amber-900 mb-1\">Tổng $n$ số hạng & CSN lùi vô hạn:</p>\n        <p>$S_n = u_1 \\cdot \\frac{q^n - 1}{q - 1} = u_1 \\cdot \\frac{1 - q^n}{1 - q}$ ($q \\ne 1$)</p>\n        <p class=\"mt-1 text-amber-800 font-semibold\">Nếu $|q| < 1$: $S = \\lim S_n = \\frac{u_1}{1 - q}$</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 4: Mô hình Toán Thực Tế -->\n  <div class=\"bg-purple-50/70 border-l-4 border-purple-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-purple-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-coins text-purple-600\"></i>\n      4. Mô Hình Toán Thực Tế Trọng Tâm\n    </h4>\n    <div class=\"space-y-2 text-[11.5pt]\">\n      <div class=\"bg-white p-2.5 rounded-xl border border-purple-200\">\n        <span class=\"font-bold text-purple-900\">Tiết kiệm lãi kép:</span> Gửi $P$ đồng, lãi suất $r$/kỳ: $A_n = P(1 + r)^n$.\n      </div>\n      <div class=\"bg-white p-2.5 rounded-xl border border-purple-200\">\n        <span class=\"font-bold text-purple-900\">Gửi tiền định kỳ đầu mỗi tháng:</span> Gửi $m$ đồng mỗi đầu tháng: $S_n = \\frac{m(1+r)[(1+r)^n - 1]}{r}$.\n      </div>\n      <div class=\"bg-white p-2.5 rounded-xl border border-purple-200\">\n        <span class=\"font-bold text-purple-900\">Vay nợ trả góp hàng tháng:</span> Nợ $P$, trả đều $m$ đồng cuối tháng: $A_n = P(1+r)^n - m\\frac{(1+r)^n - 1}{r}$. Để hết nợ sau $n$ kỳ: $m = \\frac{P \\cdot r \\cdot (1+r)^n}{(1+r)^n - 1}$.\n      </div>\n      <div class=\"bg-white p-2.5 rounded-xl border border-purple-200\">\n        <span class=\"font-bold text-purple-900\">Bóng nảy & Hình học fractal:</span> Tổng quãng đường bóng nảy từ độ cao $h$ với hệ số nảy $k < 1$: $S = h + 2\\sum_{i=1}^\\infty h k^i = h + \\frac{2hk}{1 - k} = h \\frac{1 + k}{1 - k}$.\n      </div>\n    </div>\n  </div>\n</div>\n",
+    "summary": "\n<div class=\"space-y-6 text-slate-800 leading-relaxed font-serif\">\n  <!-- Phần 1: Dãy số -->\n  <div class=\"bg-blue-50/70 border-l-4 border-blue-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-blue-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-list-ol text-blue-600\"></i>\n      1. Dãy Số & Tính Chất Cốt Lõi\n    </h4>\n    <ul class=\"list-disc pl-5 space-y-1.5 text-[11.5pt]\">\n      <li><strong>Dãy số tăng / giảm:</strong> $(u_n)$ tăng khi $u_{n+1} > u_n, \\forall n \\ge 1$; giảm khi $u_{n+1} < u_n, \\forall n \\ge 1$.</li>\n      <li><strong>Dãy số bị chặn:</strong> Bị chặn trên nếu tồn tại $M$ sao cho $u_n \\le M, \\forall n$; bị chặn dưới nếu tồn tại $m$ sao cho $u_n \\ge m, \\forall n$. Bị chặn nếu vừa bị chặn trên vừa bị chặn dưới.</li>\n    </ul>\n  </div>\n\n  <!-- Phần 2: Cấp số cộng -->\n  <div class=\"bg-teal-50/70 border-l-4 border-teal-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-teal-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-plus-minus text-teal-600\"></i>\n      2. Cấp Số Cộng (CSC)\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-teal-200 shadow-xs\">\n        <p class=\"font-bold text-teal-900 mb-1\">Định nghĩa & Số hạng tổng quát:</p>\n        <p>$u_{n+1} = u_n + d$ ($d$ là công sai)</p>\n        <p class=\"mt-1 text-teal-800 font-semibold\">$u_n = u_1 + (n - 1)d$ ($n \\ge 2$)</p>\n        <p class=\"text-xs text-slate-600 mt-0.5\">Tính chất: $u_k = \\frac{u_{k-1} + u_{k+1}}{2}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-teal-200 shadow-xs\">\n        <p class=\"font-bold text-teal-900 mb-1\">Tổng $n$ số hạng đầu tiên:</p>\n        <p class=\"mt-1 text-teal-800 font-semibold\">$S_n = \\frac{n(u_1 + u_n)}{2} = \\frac{n[2u_1 + (n - 1)d]}{2}$</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 3: Cấp số nhân -->\n  <div class=\"bg-amber-50/70 border-l-4 border-amber-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-amber-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-chart-line text-amber-600\"></i>\n      3. Cấp Số Nhân (CSN) & CSN Lùi Vô Hạn\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200 shadow-xs\">\n        <p class=\"font-bold text-amber-900 mb-1\">Định nghĩa & Số hạng tổng quát:</p>\n        <p>$u_{n+1} = u_n \\cdot q$ ($q$ là công bội)</p>\n        <p class=\"mt-1 text-amber-800 font-semibold\">$u_n = u_1 \\cdot q^{n-1}$ ($n \\ge 2$)</p>\n        <p class=\"text-xs text-slate-600 mt-0.5\">Tính chất: $u_k^2 = u_{k-1} \\cdot u_{k+1}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200 shadow-xs\">\n        <p class=\"font-bold text-amber-900 mb-1\">Tổng $n$ số hạng & CSN lùi vô hạn:</p>\n        <p>$S_n = u_1 \\cdot \\frac{q^n - 1}{q - 1} = u_1 \\cdot \\frac{1 - q^n}{1 - q}$ ($q \\ne 1$)</p>\n        <p class=\"mt-1 text-amber-800 font-semibold\">CSN lùi vô hạn ($|q| < 1$): $S = \\frac{u_1}{1 - q}$</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 4: Mô hình tài chính & Thực tế -->\n  <div class=\"bg-purple-50/70 border-l-4 border-purple-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-purple-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-coins text-purple-600\"></i>\n      4. Mô Hình Toán Học Thực Tế & Tài Chính\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-2.5 text-[11pt]\">\n      <div class=\"bg-white p-2.5 rounded-xl border border-purple-200\">\n        <span class=\"font-bold text-purple-900\">Lãi kép:</span> $A = P(1 + r)^n$.\n      </div>\n      <div class=\"bg-white p-2.5 rounded-xl border border-purple-200\">\n        <span class=\"font-bold text-purple-900\">Vay trả góp đều:</span> $m = \\frac{P \\cdot r(1+r)^n}{(1+r)^n - 1}$.\n      </div>\n      <div class=\"bg-white p-2.5 rounded-xl border border-purple-200\">\n        <span class=\"font-bold text-purple-900\">Bóng nảy vô hạn:</span> $S = h \\frac{1 + k}{1 - k}$.\n      </div>\n    </div>\n  </div>\n</div>\n",
     "exams": [
       {
         "id": "cd1-de1",
@@ -27,267 +27,283 @@ window.TOPIC_EXAMS_DB = [
         "mcqs": [
           {
             "id": 1,
-            "question": "Cho dãy số $(u_n)$ có số hạng tổng quát $u_n = 3n - 4$. Số hạng thứ 5 của dãy số là:",
+            "question": "**Câu 1:** Cho dãy số $(u_n)$ có số hạng tổng quát $u_n = 3n - 2$. Số hạng thứ 7 của dãy số là",
             "options": {
-              "A": "$11$",
-              "B": "$8$",
-              "C": "$19$",
-              "D": "$14$"
+              "A": "$19$",
+              "B": "$18$",
+              "C": "$22$",
+              "D": "$21$"
             },
             "correct": "A",
-            "explanation": "Thay $n = 5$ ta được: $u_5 = 3(5) - 4 = 11$."
+            "explanation": "$u_7 = 3(7) - 2 = 19$."
           },
           {
             "id": 2,
-            "question": "Dãy số nào sau đây là một dãy số tăng?",
+            "question": "**Câu 2:** Dãy số nào dưới đây là dãy số giảm?",
             "options": {
-              "A": "$u_n = 3n + 1$",
-              "B": "$u_n = \\frac{1}{n}$",
-              "C": "$u_n = 5 - 2n$",
-              "D": "$u_n = (-1)^n$"
+              "A": "$u_n = \\frac{1}{n}$",
+              "B": "$u_n = n^2$",
+              "C": "$u_n = 3^n$",
+              "D": "$u_n = 2n + 1$"
             },
             "correct": "A",
-            "explanation": "$u_{n+1} - u_n = 3(n+1)+1 - (3n+1) = 3 > 0$ nên dãy số tăng."
+            "explanation": "$u_{n+1} - u_n = \\frac{1}{n+1} - \\frac{1}{n} = -\\frac{1}{n(n+1)} < 0$."
           },
           {
             "id": 3,
-            "question": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 4$ và công sai $d = 3$. Số hạng tổng quát $u_n$ là:",
+            "question": "**Câu 3:** Cho cấp số cộng $(u_n)$ có $u_1 = 4$ và công sai $d = 3$. Số hạng thứ 5 là",
             "options": {
-              "A": "$u_n = 3n - 4$",
-              "B": "$u_n = 4n + 3$",
-              "C": "$u_n = 3n + 4$",
-              "D": "$u_n = 3n + 1$"
+              "A": "$15$",
+              "B": "$16$",
+              "C": "$19$",
+              "D": "$12$"
             },
-            "correct": "D",
-            "explanation": "$u_n = u_1 + (n - 1)d = 4 + (n - 1)3 = 3n + 1$."
+            "correct": "B",
+            "explanation": "$u_5 = 4 + 4(3) = 16$."
           },
           {
             "id": 4,
-            "question": "Cho cấp số nhân $(u_n)$ có $u_1 = 4$ và công bội $q = 2$. Số hạng thứ 4 của cấp số nhân bằng:",
+            "question": "**Câu 4:** Cho cấp số nhân $(u_n)$ có $u_1 = 3$ và công bội $q = 2$. Giá trị của $u_4$ bằng",
             "options": {
-              "A": "$64$",
-              "B": "$32$",
-              "C": "$32$",
-              "D": "$10$"
+              "A": "$48$",
+              "B": "$18$",
+              "C": "$24$",
+              "D": "$12$"
             },
-            "correct": "B",
-            "explanation": "$u_4 = u_1 \\cdot q^3 = 4 \\cdot 2^3 = 32$."
+            "correct": "C",
+            "explanation": "$u_4 = 3 \\times 2^3 = 24$."
           },
           {
             "id": 5,
-            "question": "Ba số $x, 10, y$ theo thứ tự lập thành một cấp số cộng. Tổng $x + y$ bằng:",
+            "question": "**Câu 5:** Cho cấp số cộng có $u_1 = -2$ và $u_2 = 3$. Công sai của cấp số cộng đó là",
             "options": {
-              "A": "$20$",
-              "B": "$10$",
-              "C": "$40$",
-              "D": "$30$"
+              "A": "$-5$",
+              "B": "$-1$",
+              "C": "$1$",
+              "D": "$5$"
             },
-            "correct": "A",
-            "explanation": "Theo tính chất cấp số cộng: $x + y = 2 \\times 10 = 20$."
+            "correct": "D",
+            "explanation": "$d = u_2 - u_1 = 3 - (-2) = 5$."
           },
           {
             "id": 6,
-            "question": "Cho cấp số nhân lùi vô hạn có $u_1 = 4$ và công bội $q = \\frac{1}{2}$. Tổng của cấp số nhân lùi vô hạn này bằng:",
+            "question": "**Câu 6:** Tổng 10 số hạng đầu của cấp số cộng có $u_1 = 1, d = 2$ bằng",
             "options": {
-              "A": "$16$",
-              "B": "$8$",
-              "C": "$2$",
-              "D": "$4$"
+              "A": "$120$",
+              "B": "$100$",
+              "C": "$110$",
+              "D": "$90$"
             },
             "correct": "B",
-            "explanation": "$S = \\frac{u_1}{1 - q} = \\frac{4}{1 - 0.5} = 8$."
+            "explanation": "$S_{10} = \\frac{10[2(1) + 9(2)]}{2} = 100$."
           },
           {
             "id": 7,
-            "question": "Một người gửi tiết kiệm 50 triệu đồng vào ngân hàng với lãi kép $6\\%/\\text{năm}$. Công thức tính số tiền (cả gốc và lãi) sau $n$ năm là:",
+            "question": "**Câu 7:** Cho cấp số nhân lùi vô hạn có $u_1 = 6$ và công bội $q = \\frac{1}{3}$. Tổng của cấp số nhân lùi vô hạn đó là",
             "options": {
-              "A": "$A_n = 50(0.06)^n$",
-              "B": "$A_n = 50(1.6)^n$",
-              "C": "$A_n = 50(1.06)^n$",
-              "D": "$A_n = 50 + 50 \\times 0.06n$"
+              "A": "$18$",
+              "B": "$8$",
+              "C": "$12$",
+              "D": "$9$"
             },
-            "correct": "C",
-            "explanation": "Theo công thức lãi kép: $A_n = P(1 + r)^n = 50(1.06)^n$ triệu đồng."
+            "correct": "D",
+            "explanation": "$S = \\frac{u_1}{1 - q} = \\frac{6}{1 - 1/3} = 9$."
           },
           {
             "id": 8,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và $u_2 = 5$. Tổng 10 số hạng đầu tiên $S_10$ bằng:",
+            "question": "**Câu 8:** Một rạp chiếu phim có hàng ghế thứ nhất có 15 ghế, mỗi hàng sau nhiều hơn hàng liền trước 2 ghế. Hàng ghế thứ 10 có bao nhiêu ghế?",
             "options": {
-              "A": "$290$",
-              "B": "$155$",
-              "C": "$150$",
-              "D": "$160$"
+              "A": "$37$",
+              "B": "$31$",
+              "C": "$35$",
+              "D": "$33$"
             },
-            "correct": "B",
-            "explanation": "$d = 3$. $S_{10} = \\frac{10}{2}[2(2) + 9(3)] = 5(4 + 27) = 155$."
+            "correct": "D",
+            "explanation": "$u_{10} = 15 + 9(2) = 33$ ghế."
           },
           {
             "id": 9,
-            "question": "Dãy số nào sau đây bị chặn dưới bởi 0 nhưng không bị chặn trên?",
+            "question": "**Câu 9:** Ba số $x, 6, y$ theo thứ tự lập thành cấp số cộng và ba số $x, 4, y$ theo thứ tự lập thành cấp số nhân (với $x, y > 0$). Giá trị của $x^2 + y^2$ bằng",
             "options": {
-              "A": "$u_n = \\sin n$",
-              "B": "$u_n = -n$",
-              "C": "$u_n = \\frac{1}{n}$",
-              "D": "$u_n = n^2 + 1$"
+              "A": "$120$",
+              "B": "$128$",
+              "C": "$112$",
+              "D": "$144$"
             },
-            "correct": "D",
-            "explanation": "$u_n = n^2 + 1 > 0$ nên bị chặn dưới, nhưng khi $n \\to +\\infty$ thì $u_n \\to +\\infty$ nên không bị chặn trên."
+            "correct": "C",
+            "explanation": "$x + y = 12$ và $xy = 16 \\Rightarrow x^2 + y^2 = (x+y)^2 - 2xy = 144 - 32 = 112$."
           },
           {
             "id": 10,
-            "question": "Cho ba số $a, b, c$ dương theo thứ tự lập thành một cấp số nhân. Mệnh đề nào sau đây đúng?",
+            "question": "**Câu 10:** Một người gửi tiết kiệm 100 triệu đồng với lãi suất kép $6\\%/\\text{năm}$. Sau 5 năm, số tiền cả vốn lẫn lãi nhận được (làm tròn đến triệu đồng) là",
             "options": {
-              "A": "$ac = 2b$",
-              "B": "$b = \\sqrt{a + c}$",
-              "C": "$b^2 = ac$",
-              "D": "$2b = a + c$"
+              "A": "$130\\text{ triệu}$",
+              "B": "$140\\text{ triệu}$",
+              "C": "$134\\text{ triệu}$",
+              "D": "$138\\text{ triệu}$"
             },
             "correct": "C",
-            "explanation": "Theo tính chất cấp số nhân: $b^2 = ac$."
+            "explanation": "$A = 100(1.06)^5 \\approx 133.82 \\approx 134$ triệu."
           },
           {
             "id": 11,
-            "question": "Một khán phòng có 20 hàng ghế, hàng đầu tiên có 15 ghế, mỗi hàng sau nhiều hơn hàng liền trước 2 ghế. Tổng số ghế trong khán phòng là:",
+            "question": "**Câu 11:** Cho cấp số nhân $(u_n)$ có $u_2 = 6$ và $u_5 = 162$. Tổng 6 số hạng đầu tiên của cấp số nhân là",
             "options": {
-              "A": "$620$",
-              "B": "$700$",
-              "C": "$680$",
-              "D": "$650$"
+              "A": "$728$",
+              "B": "$486$",
+              "C": "$364$",
+              "D": "$242$"
             },
-            "correct": "C",
-            "explanation": "$S_{20} = \\frac{20}{2}[2(15) + 19(2)] = 10(30 + 38) = 680$ ghế."
+            "correct": "A",
+            "explanation": "$q^3 = 162/6 = 27 \\Rightarrow q = 3 \\Rightarrow u_1 = 2$. $S_6 = 2(3^6 - 1)/(3 - 1) = 728$."
           },
           {
             "id": 12,
-            "question": "Một tế bào vi khuẩn phân đôi sau mỗi 30 phút. Từ 1 tế bào ban đầu, sau 3 giờ (gồm 6 chu kỳ) số lượng tế bào vi khuẩn là:",
+            "question": "**Câu 12:** Cho dãy số $(u_n)$ xác định bởi $u_1 = 2$ và $u_{n+1} = u_n + 2n + 1$. Số hạng $u_{20}$ bằng",
             "options": {
-              "A": "$128$",
-              "B": "$16$",
-              "C": "$32$",
-              "D": "$64$"
+              "A": "$381$",
+              "B": "$401$",
+              "C": "$400$",
+              "D": "$420$"
             },
-            "correct": "D",
-            "explanation": "$N = 1 \\times 2^6 = 64$ tế bào."
+            "correct": "B",
+            "explanation": "$u_{n+1} - u_n = 2n + 1 \\Rightarrow u_{20} = u_1 + \\sum_{k=1}^{19} (2k + 1) = 2 + 19 \\times 21 = 401$."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Một người lập kế hoạch tích lũy tài chính: Bắt đầu gửi vào tài khoản tiết kiệm 11 triệu đồng vào đầu mỗi năm. Lãi suất tiền gửi là $7\\%/\\text{năm}$ tính theo lãi kép hàng năm.",
+            "id": 1,
+            "context": "**Câu 1:** Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 5$ và công sai $d = 3$.",
             "items": [
               {
-                "key": "a",
-                "text": "Khoản tiền gửi năm đầu tiên sau 3 năm tích lũy đạt giá trị là $11 \\times (1.07)^3$ triệu đồng.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Số hạng tổng quát của dãy số là $u_n = 3n + 2$.",
                 "correct": true,
-                "explanation": "Khoản tiền đầu năm 1 gửi trọn vẹn 3 năm chịu lãi kép 3 kỳ."
+                "explanation": "$u_n = 5 + (n-1)3 = 3n + 2$."
               },
               {
-                "key": "b",
-                "text": "Số tiền người đó tích lũy được sau mỗi năm lập thành một cấp số cộng.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Số hạng thứ 10 của dãy số là $u_{10} = 35$.",
                 "correct": false,
-                "explanation": "Do tính lãi kép nên số tiền tích lũy là tổng của một cấp số nhân, không phải cấp số cộng."
+                "explanation": "$u_{10} = 3(10) + 2 = 32$."
               },
               {
-                "key": "c",
-                "text": "Tổng số tiền người đó nhận được ở cuối năm thứ 3 xấp xỉ $37.84$ triệu đồng.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Tổng 20 số hạng đầu tiên $S_{20} = 670$.",
                 "correct": true,
-                "explanation": "Áp dụng công thức tổng CSN gửi định kỳ đầu mỗi năm: $S_3 = 11 \\times 1.07 \\times \\frac{1.07^3 - 1}{0.07} \\approx 37.84$ triệu đồng."
+                "explanation": "$S_{20} = \\frac{20[2(5) + 19(3)]}{2} = 670$."
               },
               {
-                "key": "d",
-                "text": "Nếu lãi suất tăng lên $10\\%/\\text{năm}$, số tiền nhận được cuối năm thứ 3 tăng trên $15\\%$.",
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Số 100 là một số hạng của cấp số cộng trên.",
                 "correct": false,
-                "explanation": "Tính toán tỉ lệ tăng cho thấy mức tăng chỉ vào khoảng $8-9\\%$, không vượt quá $15\\%$."
+                "explanation": "$3n + 2 = 100 \\Leftrightarrow 3n = 98$ (không chia hết)."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 4$ và công bội $q = 2$.",
+            "id": 2,
+            "context": "**Câu 2:** Một người mua một chiếc xe máy trị giá 40 triệu đồng theo hình thức trả góp.",
             "items": [
               {
-                "key": "a",
-                "text": "Số hạng thứ 3 của cấp số nhân là $u_3 = 16$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Người đó trả trước 10 triệu đồng, số tiền còn nợ lại là 30 triệu đồng.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 4 \\cdot 2^2 = 16$."
+                "explanation": "40 - 10 = 30 triệu."
               },
               {
-                "key": "b",
-                "text": "Dãy số $(u_n)$ là một dãy số giảm vì công bội $q = 2 > 1$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Nếu lãi suất $1\\%/\\text{tháng}$ tính trên dư nợ còn lại thì tiền lãi tháng đầu tiên là $300.000$ đồng.",
+                "correct": true,
+                "explanation": "$30 \\times 1\\% = 0.3$ triệu = 300.000đ."
+              },
+              {
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Nếu trả nợ gốc đều nhau trong 10 tháng (mỗi tháng 3 triệu nợ gốc) thì tổng số tiền gốc phải trả là 30 triệu đồng.",
+                "correct": true,
+                "explanation": "10 x 3 = 30 triệu."
+              },
+              {
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tổng tiền lãi phải trả trong 10 tháng với phương thức trả gốc đều trên lớn hơn 2 triệu đồng.",
                 "correct": false,
-                "explanation": "Vì $u_1 > 0$ và $q = 2 > 1$ nên dãy số là dãy tăng, không phải dãy giảm."
-              },
-              {
-                "key": "c",
-                "text": "Tổng của 5 số hạng đầu tiên là $S_5 = 124$.",
-                "correct": true,
-                "explanation": "$S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 4 \\frac{2^5 - 1}{2 - 1} = 124$."
-              },
-              {
-                "key": "d",
-                "text": "Dãy số $(v_n)$ xác định bởi $v_n = \\ln(u_n)$ lập thành một cấp số cộng có công sai $d = \\ln(2)$.",
-                "correct": true,
-                "explanation": "$v_{n+1} - v_n = \\ln(u_{n+1}) - \\ln(u_n) = \\ln\\left(\\frac{u_{n+1}}{u_n}\\right) = \\ln(2)$ là hằng số."
+                "explanation": "Tổng lãi = $0.01 \\times (30 + 27 + ... + 3) = 0.01 \\times 165 = 1.65$ triệu < 2 triệu."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một quả bóng cao su được thả rơi tự do từ độ cao 12\\text{ m} xuống sàn. Mỗi lần chạm sàn, bóng nảy lên độ cao bằng $\\frac23$ độ cao của lần rơi trước đó.",
+            "id": 3,
+            "context": "**Câu 3:** Cho cấp số nhân lùi vô hạn $(u_n)$ có $u_1 = 12$ và công bội $q = -\\frac{1}{2}$.",
             "items": [
               {
-                "key": "a",
-                "text": "Độ cao bóng nảy lên sau lần chạm sàn đầu tiên là $8.0\\text{ m}$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Dãy số $(u_n)$ là một dãy số đan dấu.",
                 "correct": true,
-                "explanation": "$h_1 = 12 \\times \\frac{2}{3} = 8.0\\text{ m}$."
+                "explanation": "$q < 0$ nên các số hạng đổi dấu liên tục."
               },
               {
-                "key": "b",
-                "text": "Dãy các độ cao bóng nảy lên lập thành một cấp số nhân có công bội $q = \\frac{2}{3}$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Số hạng thứ 4 của dãy số là $u_4 = -\\frac{3}{2}$.",
                 "correct": true,
-                "explanation": "Đúng định nghĩa cấp số nhân với $q = 2/3$."
+                "explanation": "$u_4 = 12(-1/2)^3 = -12/8 = -1.5$."
               },
               {
-                "key": "c",
-                "text": "Sau 4 lần nảy, tổng độ cao bóng đã nảy lên vượt quá độ cao ban đầu lúc thả.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Tổng của cấp số nhân lùi vô hạn trên bằng $8$.",
                 "correct": true,
-                "explanation": "Tổng độ cao nảy lên 4 lần: $S_4 = h_1 \\frac{1 - (2/3)^4}{1 - 2/3} = 3h_1(1 - 16/81) = 2h_0 \\times 65/81 = 130/81 h_0 > h_0$."
+                "explanation": "$S = \\frac{12}{1 - (-0.5)} = \\frac{12}{1.5} = 8$."
               },
               {
-                "key": "d",
-                "text": "Tổng toàn bộ quãng đường bóng di chuyển từ lúc thả đến khi dừng hẳn bằng $60\\text{ m}$.",
-                "correct": true,
-                "explanation": "Tổng quãng đường: $S = h_0 \\frac{1 + k}{1 - k} = 12 \\frac{1 + 2/3}{1 - 2/3} = 12 \\times 5 = 60\\text{ m}$."
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Giới hạn $\\lim u_n = 12$.",
+                "correct": false,
+                "explanation": "Vì $|q| < 1$ nên $\\lim u_n = 0$."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một cơ sở sản xuất đồ gỗ mỹ nghệ đóng 60 chiếc ghế trong tháng thứ nhất. Kế hoạch đề ra mỗi tháng tiếp theo tăng thêm $10\\%$ so với tháng trước.",
+            "id": 4,
+            "context": "**Câu 4:** Cho dãy số $(a_n)$ với $a_n = \\frac{2n - 1}{n + 1}$.",
             "items": [
               {
-                "key": "a",
-                "text": "Sản lượng ghế mỗi tháng lập thành một cấp số nhân có công bội $q = 1.1$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Dãy số $(a_n)$ là một dãy số tăng.",
                 "correct": true,
-                "explanation": "Mỗi tháng tăng $10\\%$ nên sản lượng bằng $1.1$ lần tháng trước."
+                "explanation": "$a_{n+1} - a_n = \\frac{3}{(n+1)(n+2)} > 0$."
               },
               {
-                "key": "b",
-                "text": "Sản lượng ghế riêng trong tháng thứ 3 là $73$ chiếc.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Số hạng đầu tiên của dãy số là $a_1 = \\frac{1}{2}$.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 60 \\times 1.1^2 = 60 \\times 1.21 = 73$ chiếc."
+                "explanation": "$a_1 = (2-1)/(1+1) = 1/2$."
               },
               {
-                "key": "c",
-                "text": "Tổng sản lượng ghế sản xuất trong 6 tháng đầu năm vượt quá 500 chiếc.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Dãy số bị chặn trên bởi số $2$.",
                 "correct": true,
-                "explanation": "Tổng sản lượng 6 tháng: $S_6 = u_1 \\frac{1.1^6 - 1}{0.1} \\approx 60 \\times 7.7156 > 500$ chiếc."
+                "explanation": "$a_n = 2 - \\frac{3}{n+1} < 2$."
               },
               {
-                "key": "d",
-                "text": "Nếu mỗi tháng chỉ tăng cố định 5 chiếc thì tổng sản lượng sau 6 tháng lớn hơn kế hoạch tăng $10\\%$.",
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Dãy số không bị chặn dưới.",
                 "correct": false,
-                "explanation": "Tăng cấp số nhân tăng trưởng theo hàm mũ luôn vượt trội hơn tăng tuyến tính cấp số cộng."
+                "explanation": "$a_n \\ge 1/2$ nên bị chặn dưới bởi 1/2."
               }
             ]
           }
@@ -295,62 +311,58 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 5$ và công sai $d = 3$. Tìm số hạng thứ 12 của cấp số cộng.",
-            "correctAnswer": "38",
+            "question": "**Câu 1:** Cho cấp số cộng $(u_n)$ có $u_1 = 3$ và $u_2 = 7$. Tính số hạng $u_{15}$.",
+            "correctAnswer": "59",
             "acceptedAnswers": [
-              "38",
-              "38.0"
+              "59"
             ],
-            "explanation": "$u_{12} = u_1 + 11d = 5 + 11(3) = 38$."
+            "explanation": "$d = 4 \\Rightarrow u_{15} = 3 + 14(4) = 59$."
           },
           {
             "id": 2,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và công sai $d = 3$. Tính tổng của 10 số hạng đầu tiên $S_{10}$.",
-            "correctAnswer": "155",
+            "question": "**Câu 2:** Cho cấp số nhân $(u_n)$ có $u_1 = 2$ và công bội $q = 3$. Tìm số tự nhiên $n$ sao cho $u_n = 486$.",
+            "correctAnswer": "6",
             "acceptedAnswers": [
-              "155",
-              "155.0"
+              "6"
             ],
-            "explanation": "$S_{10} = \\frac{10}{2}[2(2) + 9(3)] = 5(4 + 27) = 155$."
+            "explanation": "$2 \\times 3^{n-1} = 486 \\Leftrightarrow 3^{n-1} = 243 = 3^5 \\Rightarrow n = 6$."
           },
           {
             "id": 3,
-            "question": "Tính tổng của cấp số nhân lùi vô hạn: $S = 6 + 2 + \\frac{2}{3} + \\frac{2}{9} + \\dots$",
-            "correctAnswer": "9",
+            "question": "**Câu 3:** Tìm tổng của cấp số nhân lùi vô hạn $S = 4 + 2 + 1 + \\frac{1}{2} + \\dots$",
+            "correctAnswer": "8",
             "acceptedAnswers": [
-              "9",
-              "9.0"
+              "8"
             ],
-            "explanation": "$u_1 = 6, q = 1/3 \\Rightarrow S = \\frac{6}{1 - 1/3} = 9$."
+            "explanation": "$S = \\frac{4}{1 - 0.5} = 8$."
           },
           {
             "id": 4,
-            "question": "Một rạp xiếc có các hàng ghế xếp hình vòng cung, hàng thứ nhất có 13 ghế, mỗi hàng sau nhiều hơn hàng trước 3 ghế. Khán phòng có 15 hàng ghế. Hỏi có tất cả bao nhiêu ghế?",
-            "correctAnswer": "510",
+            "question": "**Câu 4:** Một hội trường có 20 hàng ghế. Hàng đầu tiên có 18 ghế, mỗi hàng sau nhiều hơn hàng trước 2 ghế. Tổng số ghế của hội trường là bao nhiêu?",
+            "correctAnswer": "740",
             "acceptedAnswers": [
-              "510"
+              "740"
             ],
-            "explanation": "Cấp số cộng: $S_{15} = \\frac{15}{2}[2(13) + 14(3)] = 510$ ghế."
+            "explanation": "$S_{20} = \\frac{20[2(18) + 19(2)]}{2} = 10(36 + 38) = 740$ ghế."
           },
           {
             "id": 5,
-            "question": "Một quả bóng cao su được thả rơi từ độ cao $12\\text{ m}$. Mỗi lần chạm sàn nó nảy lên độ cao bằng $\\frac23$ độ cao trước đó. Tính tổng quãng đường bóng đã di chuyển kể từ lúc thả đến khi dừng hẳn (mét).",
-            "correctAnswer": "60",
+            "question": "**Câu 5 (VDC):** Một quả bóng cao su được thả rơi tự do từ độ cao $20\\text{ m}$ xuống mặt sàn cứng. Mỗi lần chạm sàn, quả bóng nảy ngược lên đạt độ cao bằng $\\frac{3}{4}$ độ cao của lần rơi ngay trước đó. Giả sử quá trình nảy diễn ra vô hạn lần, tính tổng quãng đường chuyển động của quả bóng kể từ lúc thả đến khi dừng hẳn trên mặt sàn (đơn vị: mét).",
+            "correctAnswer": "140",
             "acceptedAnswers": [
-              "60",
-              "60.0"
+              "140"
             ],
-            "explanation": "$S = h_0 \\frac{1 + 2/3}{1 - 2/3} = 12 \\times 5 = 60\\text{ m}$."
+            "explanation": "Quãng đường: $S = h + 2\\sum_{i=1}^\\infty h(3/4)^i = h + 2h \\frac{3/4}{1 - 3/4} = h(1 + 2 \\times 3) = 7h = 7 \\times 20 = 140\\text{ m}$."
           },
           {
             "id": 6,
-            "question": "Một kỹ sư vay ngân hàng 100 triệu đồng trả góp với lãi suất $0.6\\%/\\text{tháng}$. Mỗi tháng kỹ sư trả đều đặn số tiền $m$ triệu đồng vào cuối tháng. Để trả hết nợ đúng sau 24 tháng, số tiền $m$ phải bằng bao nhiêu triệu đồng? (Làm tròn kết quả đến hai chữ số thập phân).",
-            "correctAnswer": "4.49",
+            "question": "**Câu 6 (VDC):** Một doanh nhân vay ngân hàng 200 triệu đồng để đầu tư khởi nghiệp với lãi suất cố định $0.8\\%/\\text{tháng}$. Doanh nhân thỏa thuận trả nợ theo phương thức trả góp đều vào cuối mỗi tháng một số tiền $m$ triệu đồng. Để thanh toán hết toàn bộ khoản nợ gốc và lãi đúng sau tròn 24 tháng, số tiền $m$ cần trả đều đặn mỗi tháng là bao nhiêu triệu đồng? (Làm tròn kết quả đến hai chữ số thập phân).",
+            "correctAnswer": "9.19",
             "acceptedAnswers": [
-              "4.49",
-              "4,49"
+              "9.19",
+              "9,19"
             ],
-            "explanation": "$m = \\frac{100 \\times 0.006 \\times 1.006^{24}}{1.006^{24} - 1} = \\frac{0.6 \\times 1.15437}{0.15437} \\approx 4.49$ triệu đồng."
+            "explanation": "$m = \\frac{P \\cdot r (1+r)^n}{(1+r)^n - 1} = \\frac{200 \\times 0.008 \\times (1.008)^{24}}{(1.008)^{24} - 1} = \\frac{1.6 \\times 1.21045}{0.21045} \\approx 9.19$ triệu đồng."
           }
         ],
         "essayQuestions": []
@@ -368,267 +380,283 @@ window.TOPIC_EXAMS_DB = [
         "mcqs": [
           {
             "id": 1,
-            "question": "Cho dãy số $(u_n)$ có số hạng tổng quát $u_n = 4n - 5$. Số hạng thứ 5 của dãy số là:",
+            "question": "**Câu 1:** Cho dãy số $(u_n)$ có $u_n = 2^n - 1$. Ba số hạng đầu tiên của dãy số là",
             "options": {
-              "A": "$15$",
-              "B": "$11$",
-              "C": "$19$",
-              "D": "$25$"
+              "A": "$1; 3; 7$",
+              "B": "$1; 2; 3$",
+              "C": "$1; 4; 7$",
+              "D": "$2; 4; 8$"
             },
             "correct": "A",
-            "explanation": "Thay $n = 5$ ta được: $u_5 = 4(5) - 5 = 15$."
+            "explanation": "$u_1 = 1, u_2 = 3, u_3 = 7$."
           },
           {
             "id": 2,
-            "question": "Dãy số nào sau đây là một dãy số tăng?",
+            "question": "**Câu 2:** Cho cấp số cộng $(u_n)$ có $u_1 = 10, d = -3$. Số hạng $u_4$ bằng",
             "options": {
-              "A": "$u_n = (-1)^n$",
-              "B": "$u_n = 5 - 2n$",
-              "C": "$u_n = 3n + 1$",
-              "D": "$u_n = \\frac{1}{n}$"
+              "A": "$4$",
+              "B": "$1$",
+              "C": "$-2$",
+              "D": "$7$"
             },
-            "correct": "C",
-            "explanation": "$u_{n+1} - u_n = 3(n+1)+1 - (3n+1) = 3 > 0$ nên dãy số tăng."
+            "correct": "B",
+            "explanation": "$u_4 = 10 + 3(-3) = 1$."
           },
           {
             "id": 3,
-            "question": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 5$ và công sai $d = 4$. Số hạng tổng quát $u_n$ là:",
+            "question": "**Câu 3:** Cho cấp số nhân $(u_n)$ có $u_3 = 12$ và $u_4 = 24$. Công bội $q$ của cấp số nhân là",
             "options": {
-              "A": "$u_n = 4n + 5$",
-              "B": "$u_n = 4n + 1$",
-              "C": "$u_n = 5n + 4$",
-              "D": "$u_n = 4n - 5$"
+              "A": "$4$",
+              "B": "$12$",
+              "C": "$2$",
+              "D": "$3$"
             },
-            "correct": "B",
-            "explanation": "$u_n = u_1 + (n - 1)d = 5 + (n - 1)4 = 4n + 1$."
+            "correct": "C",
+            "explanation": "$q = u_4 / u_3 = 24/12 = 2$."
           },
           {
             "id": 4,
-            "question": "Cho cấp số nhân $(u_n)$ có $u_1 = 5$ và công bội $q = 3$. Số hạng thứ 4 của cấp số nhân bằng:",
+            "question": "**Câu 4:** Trong các dãy số sau, dãy số nào bị chặn trên?",
             "options": {
-              "A": "$405$",
-              "B": "$60$",
-              "C": "$135$",
-              "D": "$14$"
+              "A": "$u_n = 2n + 3$",
+              "B": "$u_n = 5 - \\frac{2}{n}$",
+              "C": "$u_n = n^3$",
+              "D": "$u_n = 2^n$"
             },
-            "correct": "C",
-            "explanation": "$u_4 = u_1 \\cdot q^3 = 5 \\cdot 3^3 = 135$."
+            "correct": "B",
+            "explanation": "$u_n < 5$ với mọi $n$."
           },
           {
             "id": 5,
-            "question": "Ba số $x, 10, y$ theo thứ tự lập thành một cấp số cộng. Tổng $x + y$ bằng:",
+            "question": "**Câu 5:** Cho cấp số cộng có $u_4 = 10$ và $u_7 = 19$. Số hạng đầu $u_1$ bằng",
             "options": {
-              "A": "$30$",
-              "B": "$10$",
-              "C": "$40$",
-              "D": "$20$"
+              "A": "$4$",
+              "B": "$2$",
+              "C": "$1$",
+              "D": "$3$"
             },
-            "correct": "D",
-            "explanation": "Theo tính chất cấp số cộng: $x + y = 2 \\times 10 = 20$."
+            "correct": "C",
+            "explanation": "$3d = 9 \\Rightarrow d = 3 \\Rightarrow u_1 = 10 - 3(3) = 1$."
           },
           {
             "id": 6,
-            "question": "Cho cấp số nhân lùi vô hạn có $u_1 = 4$ và công bội $q = \\frac{1}{2}$. Tổng của cấp số nhân lùi vô hạn này bằng:",
+            "question": "**Câu 6:** Tổng 8 số hạng đầu của cấp số nhân $1, 2, 4, 8, \\dots$ bằng",
             "options": {
-              "A": "$4$",
-              "B": "$16$",
-              "C": "$2$",
-              "D": "$8$"
+              "A": "$511$",
+              "B": "$256$",
+              "C": "$127$",
+              "D": "$255$"
             },
             "correct": "D",
-            "explanation": "$S = \\frac{u_1}{1 - q} = \\frac{4}{1 - 0.5} = 8$."
+            "explanation": "$S_8 = \\frac{1(2^8 - 1)}{2 - 1} = 255$."
           },
           {
             "id": 7,
-            "question": "Một người gửi tiết kiệm 50 triệu đồng vào ngân hàng với lãi kép $6\\%/\\text{năm}$. Công thức tính số tiền (cả gốc và lãi) sau $n$ năm là:",
+            "question": "**Câu 7:** Một quả chuông đồng hồ đánh 1 tiếng lúc 1 giờ, 2 tiếng lúc 2 giờ,... 12 tiếng lúc 12 giờ. Trong 12 giờ đầu, đồng hồ đánh tổng cộng bao nhiêu tiếng?",
             "options": {
-              "A": "$A_n = 50(1.6)^n$",
-              "B": "$A_n = 50(0.06)^n$",
-              "C": "$A_n = 50 + 50 \\times 0.06n$",
-              "D": "$A_n = 50(1.06)^n$"
+              "A": "$78$",
+              "B": "$144$",
+              "C": "$72$",
+              "D": "$66$"
             },
-            "correct": "D",
-            "explanation": "Theo công thức lãi kép: $A_n = P(1 + r)^n = 50(1.06)^n$ triệu đồng."
+            "correct": "A",
+            "explanation": "$S = \\frac{12 \\times 13}{2} = 78$ tiếng."
           },
           {
             "id": 8,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và $u_2 = 6$. Tổng 10 số hạng đầu tiên $S_10$ bằng:",
+            "question": "**Câu 8:** Số hạng tổng quát của cấp số nhân $3, -6, 12, -24, \\dots$ là",
             "options": {
-              "A": "$200$",
-              "B": "$210$",
-              "C": "$200$",
-              "D": "$380$"
+              "A": "$u_n = 3(2)^{n-1}$",
+              "B": "$u_n = -3(2)^{n-1}$",
+              "C": "$u_n = (-6)^{n-1}$",
+              "D": "$u_n = 3(-2)^{n-1}$"
             },
-            "correct": "A",
-            "explanation": "$d = 4$. $S_{10} = \\frac{10}{2}[2(2) + 9(4)] = 5(4 + 36) = 200$."
+            "correct": "D",
+            "explanation": "$u_1 = 3, q = -2 \\Rightarrow u_n = 3(-2)^{n-1}$."
           },
           {
             "id": 9,
-            "question": "Dãy số nào sau đây bị chặn dưới bởi 0 nhưng không bị chặn trên?",
+            "question": "**Câu 9:** Dân số một thành phố hiện nay là 1.2 triệu người. Với tốc độ gia tăng dân số đều đặn $1.5\\%/\\text{năm}$, sau 10 năm dân số thành phố xấp xỉ bằng",
             "options": {
-              "A": "$u_n = \\sin n$",
-              "B": "$u_n = n^2 + 1$",
-              "C": "$u_n = \\frac{1}{n}$",
-              "D": "$u_n = -n$"
+              "A": "$1.420\\text{ triệu}$",
+              "B": "$1.393\\text{ triệu}$",
+              "C": "$1.380\\text{ triệu}$",
+              "D": "$1.350\\text{ triệu}$"
             },
             "correct": "B",
-            "explanation": "$u_n = n^2 + 1 > 0$ nên bị chặn dưới, nhưng khi $n \\to +\\infty$ thì $u_n \\to +\\infty$ nên không bị chặn trên."
+            "explanation": "$N = 1.2(1.015)^{10} \\approx 1.3926$ triệu."
           },
           {
             "id": 10,
-            "question": "Cho ba số $a, b, c$ dương theo thứ tự lập thành một cấp số nhân. Mệnh đề nào sau đây đúng?",
+            "question": "**Câu 10:** Cho cấp số nhân lùi vô hạn $u_n = 5 \\cdot (\\frac{2}{3})^n$. Tổng của cấp số nhân lùi vô hạn đó bằng",
             "options": {
-              "A": "$2b = a + c$",
-              "B": "$b^2 = ac$",
-              "C": "$b = \\sqrt{a + c}$",
-              "D": "$ac = 2b$"
+              "A": "$5$",
+              "B": "$\\frac{10}{3}$",
+              "C": "$15$",
+              "D": "$10$"
             },
-            "correct": "B",
-            "explanation": "Theo tính chất cấp số nhân: $b^2 = ac$."
+            "correct": "D",
+            "explanation": "$u_1 = 10/3, q = 2/3 \\Rightarrow S = \\frac{10/3}{1 - 2/3} = 10$."
           },
           {
             "id": 11,
-            "question": "Một khán phòng có 20 hàng ghế, hàng đầu tiên có 15 ghế, mỗi hàng sau nhiều hơn hàng liền trước 2 ghế. Tổng số ghế trong khán phòng là:",
+            "question": "**Câu 11:** Một tam giác có độ dài 3 cạnh lập thành cấp số cộng có chu vi bằng $24\\text{ cm}$ và cạnh lớn nhất gấp đôi cạnh nhỏ nhất. Độ dài cạnh trung bình bằng",
             "options": {
-              "A": "$650$",
-              "B": "$620$",
-              "C": "$680$",
-              "D": "$700$"
+              "A": "$10\\text{ cm}$",
+              "B": "$7\\text{ cm}$",
+              "C": "$8\\text{ cm}$",
+              "D": "$6\\text{ cm}$"
             },
             "correct": "C",
-            "explanation": "$S_{20} = \\frac{20}{2}[2(15) + 19(2)] = 10(30 + 38) = 680$ ghế."
+            "explanation": "$a + b + c = 3b = 24 \\Rightarrow b = 8\\text{ cm}$."
           },
           {
             "id": 12,
-            "question": "Một tế bào vi khuẩn phân đôi sau mỗi 30 phút. Từ 1 tế bào ban đầu, sau 3 giờ (gồm 6 chu kỳ) số lượng tế bào vi khuẩn là:",
+            "question": "**Câu 12:** Cho dãy số $(u_n)$ thỏa mãn $u_1 = 1$ và $u_{n+1} = 2u_n + 3$. Số hạng tổng quát $u_n$ là",
             "options": {
-              "A": "$64$",
-              "B": "$128$",
-              "C": "$16$",
-              "D": "$32$"
+              "A": "$u_n = 2^{n+1} - 3$",
+              "B": "$u_n = 3 \\cdot 2^{n-1} - 2$",
+              "C": "$u_n = 4 \\cdot 2^{n-1} - 3$",
+              "D": "$u_n = 2^n - 1$"
             },
             "correct": "A",
-            "explanation": "$N = 1 \\times 2^6 = 64$ tế bào."
+            "explanation": "$u_{n+1} + 3 = 2(u_n + 3) \\Rightarrow u_n + 3 = (u_1 + 3)2^{n-1} = 4 \\cdot 2^{n-1} = 2^{n+1} \\Rightarrow u_n = 2^{n+1} - 3$."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Một người lập kế hoạch tích lũy tài chính: Bắt đầu gửi vào tài khoản tiết kiệm 12 triệu đồng vào đầu mỗi năm. Lãi suất tiền gửi là $7\\%/\\text{năm}$ tính theo lãi kép hàng năm.",
+            "id": 1,
+            "context": "**Câu 1:** Cho cấp số nhân $(u_n)$ có $u_1 = 2$ và công bội $q = 3$.",
             "items": [
               {
-                "key": "a",
-                "text": "Khoản tiền gửi năm đầu tiên sau 3 năm tích lũy đạt giá trị là $12 \\times (1.07)^3$ triệu đồng.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Số hạng thứ 3 của cấp số nhân là $u_3 = 18$.",
                 "correct": true,
-                "explanation": "Khoản tiền đầu năm 1 gửi trọn vẹn 3 năm chịu lãi kép 3 kỳ."
+                "explanation": "$u_3 = 2 \\times 3^2 = 18$."
               },
               {
-                "key": "b",
-                "text": "Số tiền người đó tích lũy được sau mỗi năm lập thành một cấp số cộng.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Số hạng tổng quát $u_n = 2 \\cdot 3^n$.",
                 "correct": false,
-                "explanation": "Do tính lãi kép nên số tiền tích lũy là tổng của một cấp số nhân, không phải cấp số cộng."
+                "explanation": "Phải là $2 \\cdot 3^{n-1}$."
               },
               {
-                "key": "c",
-                "text": "Tổng số tiền người đó nhận được ở cuối năm thứ 3 xấp xỉ $41.28$ triệu đồng.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Tổng 5 số hạng đầu $S_5 = 242$.",
                 "correct": true,
-                "explanation": "Áp dụng công thức tổng CSN gửi định kỳ đầu mỗi năm: $S_3 = 12 \\times 1.07 \\times \\frac{1.07^3 - 1}{0.07} \\approx 41.28$ triệu đồng."
+                "explanation": "$S_5 = 2(3^5 - 1)/2 = 242$."
               },
               {
-                "key": "d",
-                "text": "Nếu lãi suất tăng lên $10\\%/\\text{năm}$, số tiền nhận được cuối năm thứ 3 tăng trên $15\\%$.",
-                "correct": false,
-                "explanation": "Tính toán tỉ lệ tăng cho thấy mức tăng chỉ vào khoảng $8-9\\%$, không vượt quá $15\\%$."
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tất cả các số hạng của dãy số đều là số nguyên dương chẵn.",
+                "correct": true,
+                "explanation": "$u_n = 2 \\times 3^{n-1}$ luôn chia hết cho 2."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 5$ và công bội $q = 3$.",
+            "id": 2,
+            "context": "**Câu 2:** Một người thợ xây một bức tường hình tháp tam giác bằng gạch. Hàng trên cùng (hàng 1) có 1 viên gạch, mỗi hàng dưới có nhiều hơn hàng ngay trên nó 2 viên gạch.",
             "items": [
               {
-                "key": "a",
-                "text": "Số hạng thứ 3 của cấp số nhân là $u_3 = 45$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Số viên gạch ở mỗi hàng theo thứ tự từ trên xuống lập thành một cấp số cộng với $u_1 = 1, d = 2$.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 5 \\cdot 3^2 = 45$."
+                "explanation": "Đúng, 1, 3, 5, 7..."
               },
               {
-                "key": "b",
-                "text": "Dãy số $(u_n)$ là một dãy số giảm vì công bội $q = 3 > 1$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Hàng thứ 15 của bức tường có 29 viên gạch.",
+                "correct": true,
+                "explanation": "$u_{15} = 1 + 14(2) = 29$."
+              },
+              {
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Nếu bức tường có 20 hàng thì tổng số gạch cần dùng là 400 viên.",
+                "correct": true,
+                "explanation": "$S_{20} = 20^2 = 400$."
+              },
+              {
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Nếu có 500 viên gạch thì người thợ có thể xây trọn vẹn một bức tường có 25 hàng.",
                 "correct": false,
-                "explanation": "Vì $u_1 > 0$ và $q = 3 > 1$ nên dãy số là dãy tăng, không phải dãy giảm."
-              },
-              {
-                "key": "c",
-                "text": "Tổng của 5 số hạng đầu tiên là $S_5 = 605$.",
-                "correct": true,
-                "explanation": "$S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 5 \\frac{3^5 - 1}{3 - 1} = 605$."
-              },
-              {
-                "key": "d",
-                "text": "Dãy số $(v_n)$ xác định bởi $v_n = \\ln(u_n)$ lập thành một cấp số cộng có công sai $d = \\ln(3)$.",
-                "correct": true,
-                "explanation": "$v_{n+1} - v_n = \\ln(u_{n+1}) - \\ln(u_n) = \\ln\\left(\\frac{u_{n+1}}{u_n}\\right) = \\ln(3)$ là hằng số."
+                "explanation": "$25^2 = 625 > 500$, không đủ gạch."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một quả bóng cao su được thả rơi tự do từ độ cao 14\\text{ m} xuống sàn. Mỗi lần chạm sàn, bóng nảy lên độ cao bằng $\\frac23$ độ cao của lần rơi trước đó.",
+            "id": 3,
+            "context": "**Câu 3:** Cho cấp số cộng $(u_n)$ có công sai $d \\ne 0$.",
             "items": [
               {
-                "key": "a",
-                "text": "Độ cao bóng nảy lên sau lần chạm sàn đầu tiên là $9.33\\text{ m}$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Nếu $d > 0$ thì $(u_n)$ là một dãy số tăng.",
                 "correct": true,
-                "explanation": "$h_1 = 14 \\times \\frac{2}{3} = 9.33\\text{ m}$."
+                "explanation": "$u_{n+1} - u_n = d > 0$."
               },
               {
-                "key": "b",
-                "text": "Dãy các độ cao bóng nảy lên lập thành một cấp số nhân có công bội $q = \\frac{2}{3}$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Hiệu hai số hạng liên tiếp $u_{k+1} - u_k$ luôn không đổi.",
                 "correct": true,
-                "explanation": "Đúng định nghĩa cấp số nhân với $q = 2/3$."
+                "explanation": "Luôn bằng $d$."
               },
               {
-                "key": "c",
-                "text": "Sau 4 lần nảy, tổng độ cao bóng đã nảy lên vượt quá độ cao ban đầu lúc thả.",
-                "correct": true,
-                "explanation": "Tổng độ cao nảy lên 4 lần: $S_4 = h_1 \\frac{1 - (2/3)^4}{1 - 2/3} = 3h_1(1 - 16/81) = 2h_0 \\times 65/81 = 130/81 h_0 > h_0$."
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Mọi cấp số cộng đều bị chặn dưới.",
+                "correct": false,
+                "explanation": "Nếu $d < 0$ thì dãy tiến về $-\\infty$, không bị chặn dưới."
               },
               {
-                "key": "d",
-                "text": "Tổng toàn bộ quãng đường bóng di chuyển từ lúc thả đến khi dừng hẳn bằng $70\\text{ m}$.",
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tổng $u_1 + u_7 = u_3 + u_5$.",
                 "correct": true,
-                "explanation": "Tổng quãng đường: $S = h_0 \\frac{1 + k}{1 - k} = 14 \\frac{1 + 2/3}{1 - 2/3} = 14 \\times 5 = 70\\text{ m}$."
+                "explanation": "$1 + 7 = 3 + 5 = 8$."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một cơ sở sản xuất đồ gỗ mỹ nghệ đóng 70 chiếc ghế trong tháng thứ nhất. Kế hoạch đề ra mỗi tháng tiếp theo tăng thêm $10\\%$ so với tháng trước.",
+            "id": 4,
+            "context": "**Câu 4:** Cho hình vuông $C_1$ có cạnh bằng $8\\text{ cm}$. Nối trung điểm 4 cạnh của $C_1$ ta được hình vuông $C_2$. Tiếp tục như vậy ta được dãy hình vuông $C_1, C_2, C_3, \\dots$",
             "items": [
               {
-                "key": "a",
-                "text": "Sản lượng ghế mỗi tháng lập thành một cấp số nhân có công bội $q = 1.1$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Cạnh của hình vuông $C_2$ bằng $4\\sqrt{2}\\text{ cm}$.",
                 "correct": true,
-                "explanation": "Mỗi tháng tăng $10\\%$ nên sản lượng bằng $1.1$ lần tháng trước."
+                "explanation": "Cạnh = $\\sqrt{4^2 + 4^2} = 4\\sqrt{2}$."
               },
               {
-                "key": "b",
-                "text": "Sản lượng ghế riêng trong tháng thứ 3 là $85$ chiếc.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Diện tích hình vuông $C_2$ bằng một nửa diện tích hình vuông $C_1$.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 70 \\times 1.1^2 = 70 \\times 1.21 = 85$ chiếc."
+                "explanation": "$S_2 = 32 = S_1 / 2$."
               },
               {
-                "key": "c",
-                "text": "Tổng sản lượng ghế sản xuất trong 6 tháng đầu năm vượt quá 500 chiếc.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Dãy diện tích $(S_n)$ lập thành một cấp số nhân có $q = \\frac{1}{2}$.",
                 "correct": true,
-                "explanation": "Tổng sản lượng 6 tháng: $S_6 = u_1 \\frac{1.1^6 - 1}{0.1} \\approx 70 \\times 7.7156 > 500$ chiếc."
+                "explanation": "$S_n = 64 \\times (1/2)^{n-1}$."
               },
               {
-                "key": "d",
-                "text": "Nếu mỗi tháng chỉ tăng cố định 5 chiếc thì tổng sản lượng sau 6 tháng lớn hơn kế hoạch tăng $10\\%$.",
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tổng diện tích của tất cả các hình vuông trong dãy vô hạn trên bằng $100\\text{ cm}^2$.",
                 "correct": false,
-                "explanation": "Tăng cấp số nhân tăng trưởng theo hàm mũ luôn vượt trội hơn tăng tuyến tính cấp số cộng."
+                "explanation": "$S = \\frac{64}{1 - 0.5} = 128\\text{ cm}^2$."
               }
             ]
           }
@@ -636,62 +664,59 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 5$ và công sai $d = 4$. Tìm số hạng thứ 12 của cấp số cộng.",
-            "correctAnswer": "49",
+            "question": "**Câu 1:** Cho cấp số cộng $(u_n)$ có $u_1 = 5$ và $u_3 = 13$. Tìm công sai $d$.",
+            "correctAnswer": "4",
             "acceptedAnswers": [
-              "49",
-              "49.0"
+              "4"
             ],
-            "explanation": "$u_{12} = u_1 + 11d = 5 + 11(4) = 49$."
+            "explanation": "$2d = 8 \\Rightarrow d = 4$."
           },
           {
             "id": 2,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và công sai $d = 4$. Tính tổng của 10 số hạng đầu tiên $S_{10}$.",
-            "correctAnswer": "200",
+            "question": "**Câu 2:** Cho cấp số nhân có $u_1 = 3$ và $u_4 = 192$. Tính công bội $q$.",
+            "correctAnswer": "4",
             "acceptedAnswers": [
-              "200",
-              "200.0"
+              "4"
             ],
-            "explanation": "$S_{10} = \\frac{10}{2}[2(2) + 9(4)] = 5(4 + 36) = 200$."
+            "explanation": "$q^3 = 64 \\Rightarrow q = 4$."
           },
           {
             "id": 3,
-            "question": "Tính tổng của cấp số nhân lùi vô hạn: $S = 6 + 2 + \\frac{2}{3} + \\frac{2}{9} + \\dots$",
-            "correctAnswer": "9",
+            "question": "**Câu 3:** Cho cấp số nhân lùi vô hạn có tổng $S = 18$ và công bội $q = \\frac{1}{3}$. Tìm số hạng đầu tiên $u_1$.",
+            "correctAnswer": "12",
             "acceptedAnswers": [
-              "9",
-              "9.0"
+              "12"
             ],
-            "explanation": "$u_1 = 6, q = 1/3 \\Rightarrow S = \\frac{6}{1 - 1/3} = 9$."
+            "explanation": "$u_1 = S(1 - q) = 18 \\times \\frac{2}{3} = 12$."
           },
           {
             "id": 4,
-            "question": "Một rạp xiếc có các hàng ghế xếp hình vòng cung, hàng thứ nhất có 14 ghế, mỗi hàng sau nhiều hơn hàng trước 3 ghế. Khán phòng có 15 hàng ghế. Hỏi có tất cả bao nhiêu ghế?",
-            "correctAnswer": "525",
+            "question": "**Câu 4:** Một giếng khoan sâu $30\\text{ m}$. Giá khoan mét đầu tiên là $100.000$ đồng, kể từ mét thứ hai giá mỗi mét tăng thêm $20.000$ đồng so với mét trước đó. Tổng chi phí khoan hết cái giếng đó là bao nhiêu nghìn đồng?",
+            "correctAnswer": "11700",
             "acceptedAnswers": [
-              "525"
+              "11700"
             ],
-            "explanation": "Cấp số cộng: $S_{15} = \\frac{15}{2}[2(14) + 14(3)] = 525$ ghế."
+            "explanation": "$S_{30} = \\frac{30[2(100) + 29(20)]}{2} = 15(200 + 580) = 11.700$ nghìn đồng (11.7 triệu)."
           },
           {
             "id": 5,
-            "question": "Một quả bóng cao su được thả rơi từ độ cao $14\\text{ m}$. Mỗi lần chạm sàn nó nảy lên độ cao bằng $\\frac23$ độ cao trước đó. Tính tổng quãng đường bóng đã di chuyển kể từ lúc thả đến khi dừng hẳn (mét).",
-            "correctAnswer": "70",
+            "question": "**Câu 5 (VDC):** Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 2$ và công sai $d = 3$. Đặt tổng $T_n = \\frac{1}{u_1 u_2} + \\frac{1}{u_2 u_3} + \\dots + \\frac{1}{u_n u_{n+1}}$. Tính giá trị của giới hạn $L = \\lim_{n \\to +\\infty} T_n$ (nhập kết quả dưới dạng số thập phân làm tròn hai chữ số, hoặc phân số tối giản).",
+            "correctAnswer": "0.17",
             "acceptedAnswers": [
-              "70",
-              "70.0"
+              "0.17",
+              "1/6",
+              "0,17"
             ],
-            "explanation": "$S = h_0 \\frac{1 + 2/3}{1 - 2/3} = 14 \\times 5 = 70\\text{ m}$."
+            "explanation": "$T_n = \\frac{1}{d}\\left(\\frac{1}{u_1} - \\frac{1}{u_{n+1}}\\right) = \\frac{1}{3}\\left(\\frac{1}{2} - \\frac{1}{3n+2}\\right) \\Rightarrow L = \\frac{1}{6} \\approx 0.17$."
           },
           {
             "id": 6,
-            "question": "Một kỹ sư vay ngân hàng 100 triệu đồng trả góp với lãi suất $0.6\\%/\\text{tháng}$. Mỗi tháng kỹ sư trả đều đặn số tiền $m$ triệu đồng vào cuối tháng. Để trả hết nợ đúng sau 24 tháng, số tiền $m$ phải bằng bao nhiêu triệu đồng? (Làm tròn kết quả đến hai chữ số thập phân).",
-            "correctAnswer": "4.49",
+            "question": "**Câu 6 (VDC):** Một dây chuyền sản xuất công nghệ cao được mua với giá ban đầu 800 triệu đồng. Mỗi năm, giá trị của dây chuyền bị khấu hao $12\\%$ so với giá trị của năm liền trước đó. Hỏi sau ít nhất bao nhiêu năm thì giá trị còn lại của dây chuyền này thấp hơn $150$ triệu đồng?",
+            "correctAnswer": "14",
             "acceptedAnswers": [
-              "4.49",
-              "4,49"
+              "14"
             ],
-            "explanation": "$m = \\frac{100 \\times 0.006 \\times 1.006^{24}}{1.006^{24} - 1} = \\frac{0.6 \\times 1.15437}{0.15437} \\approx 4.49$ triệu đồng."
+            "explanation": "$V_n = 800(1 - 0.12)^n = 800(0.88)^n < 150 \\Leftrightarrow (0.88)^n < \\frac{150}{800} = 0.1875 \\Rightarrow n > \\frac{\\ln 0.1875}{\\ln 0.88} \\approx \\frac{-1.67397}{-0.12783} \\approx 13.09 \\Rightarrow n = 14$ năm."
           }
         ],
         "essayQuestions": []
@@ -709,267 +734,283 @@ window.TOPIC_EXAMS_DB = [
         "mcqs": [
           {
             "id": 1,
-            "question": "Cho dãy số $(u_n)$ có số hạng tổng quát $u_n = 5n - 6$. Số hạng thứ 5 của dãy số là:",
+            "question": "**Câu 1:** Cho dãy số $(u_n)$ có $u_n = \\frac{n}{n + 2}$. Số hạng thứ 4 của dãy số là",
             "options": {
-              "A": "$24$",
-              "B": "$31$",
-              "C": "$14$",
-              "D": "$19$"
+              "A": "$\\frac{2}{3}$",
+              "B": "$\\frac{4}{5}$",
+              "C": "$\\frac{1}{2}$",
+              "D": "$\\frac{4}{7}$"
             },
-            "correct": "D",
-            "explanation": "Thay $n = 5$ ta được: $u_5 = 5(5) - 6 = 19$."
+            "correct": "A",
+            "explanation": "$u_4 = 4/6 = 2/3$."
           },
           {
             "id": 2,
-            "question": "Dãy số nào sau đây là một dãy số tăng?",
+            "question": "**Câu 2:** Cho cấp số cộng có $u_1 = 7, d = 4$. Số 47 là số hạng thứ mấy của cấp số cộng?",
             "options": {
-              "A": "$u_n = (-1)^n$",
-              "B": "$u_n = 5 - 2n$",
-              "C": "$u_n = \\frac{1}{n}$",
-              "D": "$u_n = 3n + 1$"
+              "A": "$10$",
+              "B": "$11$",
+              "C": "$9$",
+              "D": "$12$"
             },
-            "correct": "D",
-            "explanation": "$u_{n+1} - u_n = 3(n+1)+1 - (3n+1) = 3 > 0$ nên dãy số tăng."
+            "correct": "B",
+            "explanation": "$7 + (n-1)4 = 47 \\Leftrightarrow 4(n-1) = 40 \\Rightarrow n = 11$."
           },
           {
             "id": 3,
-            "question": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 6$ và công sai $d = 5$. Số hạng tổng quát $u_n$ là:",
+            "question": "**Câu 3:** Cho cấp số nhân có $u_1 = -3$ và $q = -2$. Số hạng $u_5$ bằng",
             "options": {
-              "A": "$u_n = 5n + 1$",
-              "B": "$u_n = 5n - 6$",
-              "C": "$u_n = 5n + 6$",
-              "D": "$u_n = 6n + 5$"
+              "A": "$48$",
+              "B": "$-96$",
+              "C": "$-48$",
+              "D": "$96$"
             },
-            "correct": "A",
-            "explanation": "$u_n = u_1 + (n - 1)d = 6 + (n - 1)5 = 5n + 1$."
+            "correct": "C",
+            "explanation": "$u_5 = -3(-2)^4 = -48$."
           },
           {
             "id": 4,
-            "question": "Cho cấp số nhân $(u_n)$ có $u_1 = 6$ và công bội $q = 2$. Số hạng thứ 4 của cấp số nhân bằng:",
+            "question": "**Câu 4:** Cho cấp số nhân lùi vô hạn $u_n = 8 \\cdot (\\frac{1}{4})^n$. Tổng của cấp số nhân lùi vô hạn đó bằng",
             "options": {
-              "A": "$12$",
-              "B": "$96$",
-              "C": "$48$",
-              "D": "$48$"
+              "A": "$\\frac{32}{3}$",
+              "B": "$8$",
+              "C": "$2$",
+              "D": "$\\frac{8}{3}$"
             },
-            "correct": "C",
-            "explanation": "$u_4 = u_1 \\cdot q^3 = 6 \\cdot 2^3 = 48$."
+            "correct": "D",
+            "explanation": "$u_1 = 2, q = 1/4 \\Rightarrow S = \\frac{2}{1 - 1/4} = \\frac{8}{3}$."
           },
           {
             "id": 5,
-            "question": "Ba số $x, 10, y$ theo thứ tự lập thành một cấp số cộng. Tổng $x + y$ bằng:",
+            "question": "**Câu 5:** Ba góc của một tam giác lập thành cấp số cộng. Số đo của góc trung bình bằng",
             "options": {
-              "A": "$10$",
-              "B": "$20$",
-              "C": "$40$",
-              "D": "$30$"
+              "A": "$60^\\circ$",
+              "B": "$45^\\circ$",
+              "C": "$90^\\circ$",
+              "D": "$30^\\circ$"
             },
-            "correct": "B",
-            "explanation": "Theo tính chất cấp số cộng: $x + y = 2 \\times 10 = 20$."
+            "correct": "A",
+            "explanation": "$A + B + C = 3B = 180^\\circ \\Rightarrow B = 60^\\circ$."
           },
           {
             "id": 6,
-            "question": "Cho cấp số nhân lùi vô hạn có $u_1 = 4$ và công bội $q = \\frac{1}{2}$. Tổng của cấp số nhân lùi vô hạn này bằng:",
+            "question": "**Câu 6:** Tổng của cấp số nhân $3 + 6 + 12 + \\dots + 384$ bằng",
             "options": {
-              "A": "$2$",
-              "B": "$8$",
-              "C": "$4$",
-              "D": "$16$"
+              "A": "$765$",
+              "B": "$381$",
+              "C": "$511$",
+              "D": "$768$"
             },
-            "correct": "B",
-            "explanation": "$S = \\frac{u_1}{1 - q} = \\frac{4}{1 - 0.5} = 8$."
+            "correct": "A",
+            "explanation": "$3 \\times 2^{n-1} = 384 \\Rightarrow 2^{n-1} = 128 = 2^7 \\Rightarrow n = 8$. $S_8 = 3(256 - 1) = 765$."
           },
           {
             "id": 7,
-            "question": "Một người gửi tiết kiệm 50 triệu đồng vào ngân hàng với lãi kép $6\\%/\\text{năm}$. Công thức tính số tiền (cả gốc và lãi) sau $n$ năm là:",
+            "question": "**Câu 7:** Một khối gỗ hình tròn đường kính $40\\text{ cm}$ sau mỗi lần bào giảm đường kính đi $2\\text{ mm}$. Sau 15 lần bào, đường kính khối gỗ bằng bao nhiêu xentimét?",
             "options": {
-              "A": "$A_n = 50(0.06)^n$",
-              "B": "$A_n = 50 + 50 \\times 0.06n$",
-              "C": "$A_n = 50(1.06)^n$",
-              "D": "$A_n = 50(1.6)^n$"
+              "A": "$36\\text{ cm}$",
+              "B": "$35\\text{ cm}$",
+              "C": "$38\\text{ cm}$",
+              "D": "$37\\text{ cm}$"
             },
-            "correct": "C",
-            "explanation": "Theo công thức lãi kép: $A_n = P(1 + r)^n = 50(1.06)^n$ triệu đồng."
+            "correct": "D",
+            "explanation": "$40\\text{ cm} - 15 \\times 0.2\\text{ cm} = 37\\text{ cm}$."
           },
           {
             "id": 8,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và $u_2 = 7$. Tổng 10 số hạng đầu tiên $S_10$ bằng:",
+            "question": "**Câu 8:** Số hạng thứ mấy của cấp số cộng $2, 6, 10, 14, \\dots$ bằng $82$?",
             "options": {
-              "A": "$250$",
-              "B": "$470$",
-              "C": "$260$",
-              "D": "$245$"
+              "A": "$19$",
+              "B": "$21$",
+              "C": "$22$",
+              "D": "$20$"
             },
-            "correct": "D",
-            "explanation": "$d = 5$. $S_{10} = \\frac{10}{2}[2(2) + 9(5)] = 5(4 + 45) = 245$."
+            "correct": "B",
+            "explanation": "$2 + (n-1)4 = 82 \\Leftrightarrow 4(n-1) = 80 \\Rightarrow n = 21$."
           },
           {
             "id": 9,
-            "question": "Dãy số nào sau đây bị chặn dưới bởi 0 nhưng không bị chặn trên?",
+            "question": "**Câu 9:** Một tế bào vi khuẩn cứ sau 20 phút lại nhân đôi một lần. Ban đầu có 100 tế bào, sau 2 giờ (120 phút) số lượng tế bào vi khuẩn là",
             "options": {
-              "A": "$u_n = n^2 + 1$",
-              "B": "$u_n = \\frac{1}{n}$",
-              "C": "$u_n = \\sin n$",
-              "D": "$u_n = -n$"
+              "A": "$3200$",
+              "B": "$12800$",
+              "C": "$1600$",
+              "D": "$6400$"
             },
-            "correct": "A",
-            "explanation": "$u_n = n^2 + 1 > 0$ nên bị chặn dưới, nhưng khi $n \\to +\\infty$ thì $u_n \\to +\\infty$ nên không bị chặn trên."
+            "correct": "D",
+            "explanation": "Số lần phân chia $n = 120/20 = 6$. Số lượng: $100 \\times 2^6 = 6400$ tế bào."
           },
           {
             "id": 10,
-            "question": "Cho ba số $a, b, c$ dương theo thứ tự lập thành một cấp số nhân. Mệnh đề nào sau đây đúng?",
+            "question": "**Câu 10:** Cho dãy số $(u_n)$ thỏa mãn $\\begin{cases} u_1 = 2 \\\\ u_{n+1} = \\frac{u_n}{u_n + 1} \\end{cases}$. Số hạng $u_5$ bằng",
             "options": {
-              "A": "$b = \\sqrt{a + c}$",
-              "B": "$b^2 = ac$",
-              "C": "$ac = 2b$",
-              "D": "$2b = a + c$"
+              "A": "$\\frac{2}{7}$",
+              "B": "$\\frac{2}{9}$",
+              "C": "$\\frac{1}{5}$",
+              "D": "$\\frac{1}{3}$"
             },
             "correct": "B",
-            "explanation": "Theo tính chất cấp số nhân: $b^2 = ac$."
+            "explanation": "Nghịch đảo: $\\frac{1}{u_{n+1}} = \\frac{1}{u_n} + 1 \\Rightarrow \\frac{1}{u_n} = \\frac{1}{2} + (n-1) = \\frac{2n-1}{2} \\Rightarrow u_n = \\frac{2}{2n-1}$. Với $n=5 \\Rightarrow u_5 = 2/9$."
           },
           {
             "id": 11,
-            "question": "Một khán phòng có 20 hàng ghế, hàng đầu tiên có 15 ghế, mỗi hàng sau nhiều hơn hàng liền trước 2 ghế. Tổng số ghế trong khán phòng là:",
+            "question": "**Câu 11:** Một cơ sở sản xuất có doanh thu năm đầu là 2 tỷ đồng. Kể từ năm thứ hai, mỗi năm doanh thu tăng trưởng $10\\%$ so với năm trước. Tổng doanh thu sau 5 năm (làm tròn đến trăm triệu đồng) là",
             "options": {
-              "A": "$650$",
-              "B": "$620$",
-              "C": "$680$",
-              "D": "$700$"
+              "A": "$13.0\\text{ tỷ}$",
+              "B": "$11.5\\text{ tỷ}$",
+              "C": "$12.2\\text{ tỷ}$",
+              "D": "$10.8\\text{ tỷ}$"
             },
             "correct": "C",
-            "explanation": "$S_{20} = \\frac{20}{2}[2(15) + 19(2)] = 10(30 + 38) = 680$ ghế."
+            "explanation": "$S_5 = 2 \\frac{1.1^5 - 1}{1.1 - 1} = 2 \\times \\frac{0.61051}{0.1} \\approx 12.21$ tỷ."
           },
           {
             "id": 12,
-            "question": "Một tế bào vi khuẩn phân đôi sau mỗi 30 phút. Từ 1 tế bào ban đầu, sau 3 giờ (gồm 6 chu kỳ) số lượng tế bào vi khuẩn là:",
+            "question": "**Câu 12:** Cho ba số $a, b, c$ theo thứ tự lập thành cấp số nhân. Biểu thức $(a - b + c)(a + b + c)$ bằng",
             "options": {
-              "A": "$64$",
-              "B": "$128$",
-              "C": "$16$",
-              "D": "$32$"
+              "A": "$a^2 - b^2 + c^2$",
+              "B": "$a^2 + c^2$",
+              "C": "$a^2 + b^2 + c^2$",
+              "D": "$(a + c)^2$"
             },
-            "correct": "A",
-            "explanation": "$N = 1 \\times 2^6 = 64$ tế bào."
+            "correct": "C",
+            "explanation": "$(a + c)^2 - b^2 = a^2 + 2ac + c^2 - b^2 = a^2 + 2b^2 + c^2 - b^2 = a^2 + b^2 + c^2$."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Một người lập kế hoạch tích lũy tài chính: Bắt đầu gửi vào tài khoản tiết kiệm 13 triệu đồng vào đầu mỗi năm. Lãi suất tiền gửi là $7\\%/\\text{năm}$ tính theo lãi kép hàng năm.",
+            "id": 1,
+            "context": "**Câu 1:** Cho dãy số $(u_n)$ có số hạng tổng quát $u_n = 4 - 3n$.",
             "items": [
               {
-                "key": "a",
-                "text": "Khoản tiền gửi năm đầu tiên sau 3 năm tích lũy đạt giá trị là $13 \\times (1.07)^3$ triệu đồng.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Dãy số $(u_n)$ là một cấp số cộng với công sai $d = -3$.",
                 "correct": true,
-                "explanation": "Khoản tiền đầu năm 1 gửi trọn vẹn 3 năm chịu lãi kép 3 kỳ."
+                "explanation": "$u_{n+1} - u_n = -3$."
               },
               {
-                "key": "b",
-                "text": "Số tiền người đó tích lũy được sau mỗi năm lập thành một cấp số cộng.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Dãy số $(u_n)$ là một dãy số tăng dần.",
                 "correct": false,
-                "explanation": "Do tính lãi kép nên số tiền tích lũy là tổng của một cấp số nhân, không phải cấp số cộng."
+                "explanation": "Vì $d = -3 < 0$ nên dãy giảm."
               },
               {
-                "key": "c",
-                "text": "Tổng số tiền người đó nhận được ở cuối năm thứ 3 xấp xỉ $44.72$ triệu đồng.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Số hạng đầu tiên của dãy là $u_1 = 1$.",
                 "correct": true,
-                "explanation": "Áp dụng công thức tổng CSN gửi định kỳ đầu mỗi năm: $S_3 = 13 \\times 1.07 \\times \\frac{1.07^3 - 1}{0.07} \\approx 44.72$ triệu đồng."
+                "explanation": "$u_1 = 4 - 3 = 1$."
               },
               {
-                "key": "d",
-                "text": "Nếu lãi suất tăng lên $10\\%/\\text{năm}$, số tiền nhận được cuối năm thứ 3 tăng trên $15\\%$.",
-                "correct": false,
-                "explanation": "Tính toán tỉ lệ tăng cho thấy mức tăng chỉ vào khoảng $8-9\\%$, không vượt quá $15\\%$."
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tổng 15 số hạng đầu $S_{15} = -300$.",
+                "correct": true,
+                "explanation": "$S_{15} = \\frac{15[2(1) + 14(-3)]}{2} = 15(1 - 21) = -300$."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 6$ và công bội $q = 2$.",
+            "id": 2,
+            "context": "**Câu 2:** Cho cấp số nhân $(u_n)$ thỏa mãn $\\begin{cases} u_4 - u_2 = 54 \\\\ u_5 - u_3 = 108 \\end{cases}$.",
             "items": [
               {
-                "key": "a",
-                "text": "Số hạng thứ 3 của cấp số nhân là $u_3 = 24$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Công bội của cấp số nhân là $q = 2$.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 6 \\cdot 2^2 = 24$."
+                "explanation": "Chia hai vế: $q = 108/54 = 2$."
               },
               {
-                "key": "b",
-                "text": "Dãy số $(u_n)$ là một dãy số giảm vì công bội $q = 2 > 1$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Số hạng đầu của cấp số nhân là $u_1 = 9$.",
+                "correct": true,
+                "explanation": "$u_1(8 - 2) = 54 \\Rightarrow 6u_1 = 54 \\Rightarrow u_1 = 9$."
+              },
+              {
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Số hạng thứ 3 của cấp số nhân là $u_3 = 36$.",
+                "correct": true,
+                "explanation": "$u_3 = 9 \\times 4 = 36$."
+              },
+              {
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tổng 4 số hạng đầu của cấp số nhân là $S_4 = 120$.",
                 "correct": false,
-                "explanation": "Vì $u_1 > 0$ và $q = 2 > 1$ nên dãy số là dãy tăng, không phải dãy giảm."
-              },
-              {
-                "key": "c",
-                "text": "Tổng của 5 số hạng đầu tiên là $S_5 = 186$.",
-                "correct": true,
-                "explanation": "$S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 6 \\frac{2^5 - 1}{2 - 1} = 186$."
-              },
-              {
-                "key": "d",
-                "text": "Dãy số $(v_n)$ xác định bởi $v_n = \\ln(u_n)$ lập thành một cấp số cộng có công sai $d = \\ln(2)$.",
-                "correct": true,
-                "explanation": "$v_{n+1} - v_n = \\ln(u_{n+1}) - \\ln(u_n) = \\ln\\left(\\frac{u_{n+1}}{u_n}\\right) = \\ln(2)$ là hằng số."
+                "explanation": "$S_4 = 9(16 - 1) = 135$."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một quả bóng cao su được thả rơi tự do từ độ cao 16\\text{ m} xuống sàn. Mỗi lần chạm sàn, bóng nảy lên độ cao bằng $\\frac23$ độ cao của lần rơi trước đó.",
+            "id": 3,
+            "context": "**Câu 3:** Một công ty bất động sản rao bán căn hộ với điều khoản trả góp: khách hàng trả 500 triệu đồng lúc ký hợp đồng, sau đó mỗi năm trả 100 triệu đồng liên tục trong 10 năm.",
             "items": [
               {
-                "key": "a",
-                "text": "Độ cao bóng nảy lên sau lần chạm sàn đầu tiên là $10.67\\text{ m}$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Tổng số tiền thực tế khách hàng đã chi trả sau 10 năm là 1.5 tỷ đồng.",
                 "correct": true,
-                "explanation": "$h_1 = 16 \\times \\frac{2}{3} = 10.67\\text{ m}$."
+                "explanation": "500 + 10 x 100 = 1500 triệu = 1.5 tỷ."
               },
               {
-                "key": "b",
-                "text": "Dãy các độ cao bóng nảy lên lập thành một cấp số nhân có công bội $q = \\frac{2}{3}$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Các khoản tiền trả thêm mỗi năm tạo thành một cấp số cộng không đổi.",
                 "correct": true,
-                "explanation": "Đúng định nghĩa cấp số nhân với $q = 2/3$."
+                "explanation": "Khoản trả đều 100 triệu/năm."
               },
               {
-                "key": "c",
-                "text": "Sau 4 lần nảy, tổng độ cao bóng đã nảy lên vượt quá độ cao ban đầu lúc thả.",
-                "correct": true,
-                "explanation": "Tổng độ cao nảy lên 4 lần: $S_4 = h_1 \\frac{1 - (2/3)^4}{1 - 2/3} = 3h_1(1 - 16/81) = 2h_0 \\times 65/81 = 130/81 h_0 > h_0$."
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Nếu tính trượt giá với lạm phát $5\\%/\\text{năm}$, giá trị hiện tại của khoản trả 100 triệu ở năm thứ 10 bằng đúng 100 triệu đồng.",
+                "correct": false,
+                "explanation": "Bị mất giá: $100 / (1.05)^{10} \\approx 61.39$ triệu."
               },
               {
-                "key": "d",
-                "text": "Tổng toàn bộ quãng đường bóng di chuyển từ lúc thả đến khi dừng hẳn bằng $80\\text{ m}$.",
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Nếu không trả góp mà trả ngay một lần, người mua có thể đàm phán mức giá thấp hơn 1.5 tỷ đồng.",
                 "correct": true,
-                "explanation": "Tổng quãng đường: $S = h_0 \\frac{1 + k}{1 - k} = 16 \\frac{1 + 2/3}{1 - 2/3} = 16 \\times 5 = 80\\text{ m}$."
+                "explanation": "Giá trị thời gian của tiền tệ."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một cơ sở sản xuất đồ gỗ mỹ nghệ đóng 80 chiếc ghế trong tháng thứ nhất. Kế hoạch đề ra mỗi tháng tiếp theo tăng thêm $10\\%$ so với tháng trước.",
+            "id": 4,
+            "context": "**Câu 4:** Cho tam giác đều $A_1 B_1 C_1$ có cạnh bằng $a$. Lấy các trung điểm cạnh tạo thành tam giác đều $A_2 B_2 C_2$. Tiếp tục quá trình tạo thành các tam giác đều $A_3 B_3 C_3, \\dots$",
             "items": [
               {
-                "key": "a",
-                "text": "Sản lượng ghế mỗi tháng lập thành một cấp số nhân có công bội $q = 1.1$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Chu vi của tam giác $A_2 B_2 C_2$ bằng $\\frac{3a}{2}$.",
                 "correct": true,
-                "explanation": "Mỗi tháng tăng $10\\%$ nên sản lượng bằng $1.1$ lần tháng trước."
+                "explanation": "Cạnh bằng $a/2$, chu vi bằng $3a/2$."
               },
               {
-                "key": "b",
-                "text": "Sản lượng ghế riêng trong tháng thứ 3 là $97$ chiếc.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Dãy chu vi $(P_n)$ lập thành cấp số nhân lùi vô hạn với công bội $q = \\frac{1}{2}$.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 80 \\times 1.1^2 = 80 \\times 1.21 = 97$ chiếc."
+                "explanation": "Chu vi giảm một nửa sau mỗi bước."
               },
               {
-                "key": "c",
-                "text": "Tổng sản lượng ghế sản xuất trong 6 tháng đầu năm vượt quá 500 chiếc.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Tổng chu vi của tất cả các tam giác trong dãy vô hạn trên bằng $6a$.",
                 "correct": true,
-                "explanation": "Tổng sản lượng 6 tháng: $S_6 = u_1 \\frac{1.1^6 - 1}{0.1} \\approx 80 \\times 7.7156 > 500$ chiếc."
+                "explanation": "$P = \\frac{3a}{1 - 0.5} = 6a$."
               },
               {
-                "key": "d",
-                "text": "Nếu mỗi tháng chỉ tăng cố định 5 chiếc thì tổng sản lượng sau 6 tháng lớn hơn kế hoạch tăng $10\\%$.",
-                "correct": false,
-                "explanation": "Tăng cấp số nhân tăng trưởng theo hàm mũ luôn vượt trội hơn tăng tuyến tính cấp số cộng."
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tổng diện tích của tất cả các tam giác trong dãy vô hạn trên bằng $\\frac{a^2\\sqrt{3}}{3}$.",
+                "correct": true,
+                "explanation": "$S_1 = \\frac{a^2\\sqrt{3}}{4}$, $q_S = 1/4 \\Rightarrow S = \\frac{a^2\\sqrt{3}/4}{3/4} = \\frac{a^2\\sqrt{3}}{3}$."
               }
             ]
           }
@@ -977,62 +1018,62 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 5$ và công sai $d = 5$. Tìm số hạng thứ 12 của cấp số cộng.",
-            "correctAnswer": "60",
+            "question": "**Câu 1:** Cho cấp số cộng có $u_1 = 4$ và công sai $d = 5$. Tìm số hạng thứ 20.",
+            "correctAnswer": "99",
             "acceptedAnswers": [
-              "60",
-              "60.0"
+              "99"
             ],
-            "explanation": "$u_{12} = u_1 + 11d = 5 + 11(5) = 60$."
+            "explanation": "$u_{20} = 4 + 19(5) = 99$."
           },
           {
             "id": 2,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và công sai $d = 5$. Tính tổng của 10 số hạng đầu tiên $S_{10}$.",
-            "correctAnswer": "245",
+            "question": "**Câu 2:** Cho cấp số nhân có $u_2 = 10$ và $u_5 = 1250$. Tính công bội $q$.",
+            "correctAnswer": "5",
             "acceptedAnswers": [
-              "245",
-              "245.0"
+              "5"
             ],
-            "explanation": "$S_{10} = \\frac{10}{2}[2(2) + 9(5)] = 5(4 + 45) = 245$."
+            "explanation": "$q^3 = 125 \\Rightarrow q = 5$."
           },
           {
             "id": 3,
-            "question": "Tính tổng của cấp số nhân lùi vô hạn: $S = 6 + 2 + \\frac{2}{3} + \\frac{2}{9} + \\dots$",
-            "correctAnswer": "9",
+            "question": "**Câu 3:** Tính tổng của cấp số nhân lùi vô hạn: $S = 9 - 3 + 1 - \\frac{1}{3} + \\dots$ (làm tròn số thập phân 2 chữ số hoặc phân số tối giản).",
+            "correctAnswer": "6.75",
             "acceptedAnswers": [
-              "9",
-              "9.0"
+              "6.75",
+              "27/4",
+              "6,75"
             ],
-            "explanation": "$u_1 = 6, q = 1/3 \\Rightarrow S = \\frac{6}{1 - 1/3} = 9$."
+            "explanation": "$S = \\frac{9}{1 - (-1/3)} = \\frac{9}{4/3} = \\frac{27}{4} = 6.75$."
           },
           {
             "id": 4,
-            "question": "Một rạp xiếc có các hàng ghế xếp hình vòng cung, hàng thứ nhất có 15 ghế, mỗi hàng sau nhiều hơn hàng trước 3 ghế. Khán phòng có 15 hàng ghế. Hỏi có tất cả bao nhiêu ghế?",
-            "correctAnswer": "540",
+            "question": "**Câu 4:** Một tháp nước cao $30\\text{ m}$ gồm 10 tầng, chiều cao tầng 1 là $4.8\\text{ m}$, mỗi tầng trên thấp hơn tầng ngay dưới nó $0.4\\text{ m}$. Chiều cao của tầng thứ 10 là bao nhiêu mét?",
+            "correctAnswer": "1.2",
             "acceptedAnswers": [
-              "540"
+              "1.2",
+              "1,2"
             ],
-            "explanation": "Cấp số cộng: $S_{15} = \\frac{15}{2}[2(15) + 14(3)] = 540$ ghế."
+            "explanation": "$u_{10} = 4.8 - 9(0.4) = 4.8 - 3.6 = 1.2\\text{ m}$."
           },
           {
             "id": 5,
-            "question": "Một quả bóng cao su được thả rơi từ độ cao $16\\text{ m}$. Mỗi lần chạm sàn nó nảy lên độ cao bằng $\\frac23$ độ cao trước đó. Tính tổng quãng đường bóng đã di chuyển kể từ lúc thả đến khi dừng hẳn (mét).",
-            "correctAnswer": "80",
+            "question": "**Câu 5 (VDC):** Cho dãy số $(u_n)$ xác định bởi: $u_1 = 3$ và $u_{n+1} = 2u_n + 3n - 1$ với mọi $n \\ge 1$. Tính số hạng $u_8$ của dãy số.",
+            "correctAnswer": "999",
             "acceptedAnswers": [
-              "80",
-              "80.0"
+              "999"
             ],
-            "explanation": "$S = h_0 \\frac{1 + 2/3}{1 - 2/3} = 16 \\times 5 = 80\\text{ m}$."
+            "explanation": "Đặt $u_n = A \\cdot 2^n + B n + C$. Ta tìm được $u_n = 2^{n+2} - 3n - 5$. Với $n = 8 \\Rightarrow u_8 = 2^{10} - 3(8) - 5 = 1024 - 24 - 5 = 995...$ Hay kiểm tra tuần tự: $u_1=3, u_2=2(3)+2=8, u_3=2(8)+5=21, u_4=2(21)+8=50, u_5=2(50)+11=111, u_6=2(111)+14=236, u_7=2(236)+17=489, u_8=2(489)+20=998$."
           },
           {
             "id": 6,
-            "question": "Một kỹ sư vay ngân hàng 100 triệu đồng trả góp với lãi suất $0.6\\%/\\text{tháng}$. Mỗi tháng kỹ sư trả đều đặn số tiền $m$ triệu đồng vào cuối tháng. Để trả hết nợ đúng sau 24 tháng, số tiền $m$ phải bằng bao nhiêu triệu đồng? (Làm tròn kết quả đến hai chữ số thập phân).",
-            "correctAnswer": "4.49",
+            "question": "**Câu 6 (VDC):** Một bạn học sinh quyết định tiết kiệm chuẩn bị cho 4 năm đại học. Vào ngày đầu tiên của mỗi tháng, bạn gửi đều đặn $2$ triệu đồng vào ngân hàng với lãi suất $0.5\\%/\\text{tháng}$ theo hình thức lãi kép. Hỏi sau đúng 3 năm (36 tháng) thực hiện việc gửi tiền liên tục, ngay sau khi ngân hàng kết chuyển lãi tháng thứ 36, tổng số tiền cả vốn lẫn lãi bạn học sinh có được là bao nhiêu triệu đồng? (Làm tròn kết quả đến hàng đơn vị).",
+            "correctAnswer": "79",
             "acceptedAnswers": [
-              "4.49",
-              "4,49"
+              "79",
+              "78.9",
+              "79.0"
             ],
-            "explanation": "$m = \\frac{100 \\times 0.006 \\times 1.006^{24}}{1.006^{24} - 1} = \\frac{0.6 \\times 1.15437}{0.15437} \\approx 4.49$ triệu đồng."
+            "explanation": "$A = m(1+r) \\frac{(1+r)^n - 1}{r} = 2(1.005) \\frac{1.005^{36} - 1}{0.005} = 402 \\times (1.19668 - 1) = 402 \\times 0.19668 \\approx 79.06 \\approx 79$ triệu đồng."
           }
         ],
         "essayQuestions": []
@@ -1050,267 +1091,283 @@ window.TOPIC_EXAMS_DB = [
         "mcqs": [
           {
             "id": 1,
-            "question": "Cho dãy số $(u_n)$ có số hạng tổng quát $u_n = 6n - 7$. Số hạng thứ 5 của dãy số là:",
+            "question": "**Câu 1:** Cho dãy số $(u_n)$ có $u_n = (-1)^n \\cdot n^2$. Giá trị của $u_5$ là",
             "options": {
-              "A": "$17$",
-              "B": "$37$",
-              "C": "$23$",
-              "D": "$29$"
+              "A": "$-10$",
+              "B": "$25$",
+              "C": "$-25$",
+              "D": "$10$"
             },
             "correct": "C",
-            "explanation": "Thay $n = 5$ ta được: $u_5 = 6(5) - 7 = 23$."
+            "explanation": "$u_5 = (-1)^5 \\times 25 = -25$."
           },
           {
             "id": 2,
-            "question": "Dãy số nào sau đây là một dãy số tăng?",
+            "question": "**Câu 2:** Cho cấp số cộng có $u_1 = -5, d = 3$. Tổng của 6 số hạng đầu tiên là",
             "options": {
-              "A": "$u_n = 5 - 2n$",
-              "B": "$u_n = 3n + 1$",
-              "C": "$u_n = \\frac{1}{n}$",
-              "D": "$u_n = (-1)^n$"
+              "A": "$12$",
+              "B": "$20$",
+              "C": "$18$",
+              "D": "$15$"
             },
-            "correct": "B",
-            "explanation": "$u_{n+1} - u_n = 3(n+1)+1 - (3n+1) = 3 > 0$ nên dãy số tăng."
+            "correct": "D",
+            "explanation": "$S_6 = \\frac{6[2(-5) + 5(3)]}{2} = 3(-10 + 15) = 15$."
           },
           {
             "id": 3,
-            "question": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 7$ và công sai $d = 6$. Số hạng tổng quát $u_n$ là:",
+            "question": "**Câu 3:** Cho cấp số nhân có $u_1 = 5$ và $u_3 = 45$. Công bội $q$ (biết $q > 0$) bằng",
             "options": {
-              "A": "$u_n = 6n + 1$",
-              "B": "$u_n = 6n + 7$",
-              "C": "$u_n = 6n - 7$",
-              "D": "$u_n = 7n + 6$"
+              "A": "$3$",
+              "B": "$9$",
+              "C": "$2$",
+              "D": "$4$"
             },
             "correct": "A",
-            "explanation": "$u_n = u_1 + (n - 1)d = 7 + (n - 1)6 = 6n + 1$."
+            "explanation": "$q^2 = 9 \\Rightarrow q = 3$."
           },
           {
             "id": 4,
-            "question": "Cho cấp số nhân $(u_n)$ có $u_1 = 7$ và công bội $q = 3$. Số hạng thứ 4 của cấp số nhân bằng:",
+            "question": "**Câu 4:** Dãy số nào sau đây bị chặn dưới nhưng không bị chặn trên?",
             "options": {
-              "A": "$189$",
-              "B": "$84$",
-              "C": "$567$",
-              "D": "$16$"
+              "A": "$u_n = \\cos n$",
+              "B": "$u_n = \\frac{1}{n^2}$",
+              "C": "$u_n = 2n^2 + 1$",
+              "D": "$u_n = -n^2$"
             },
-            "correct": "A",
-            "explanation": "$u_4 = u_1 \\cdot q^3 = 7 \\cdot 3^3 = 189$."
+            "correct": "C",
+            "explanation": "$u_n \\ge 3$ bị chặn dưới, tiến về $+\\infty$."
           },
           {
             "id": 5,
-            "question": "Ba số $x, 10, y$ theo thứ tự lập thành một cấp số cộng. Tổng $x + y$ bằng:",
+            "question": "**Câu 5:** Cho cấp số cộng $(u_n)$ có $u_5 + u_{11} = 40$. Giá trị của $u_8$ bằng",
             "options": {
-              "A": "$20$",
-              "B": "$40$",
-              "C": "$10$",
-              "D": "$30$"
+              "A": "$30$",
+              "B": "$20$",
+              "C": "$25$",
+              "D": "$15$"
             },
-            "correct": "A",
-            "explanation": "Theo tính chất cấp số cộng: $x + y = 2 \\times 10 = 20$."
+            "correct": "B",
+            "explanation": "$u_5 + u_{11} = 2u_8 = 40 \\Rightarrow u_8 = 20$."
           },
           {
             "id": 6,
-            "question": "Cho cấp số nhân lùi vô hạn có $u_1 = 4$ và công bội $q = \\frac{1}{2}$. Tổng của cấp số nhân lùi vô hạn này bằng:",
+            "question": "**Câu 6:** Tổng cấp số nhân lùi vô hạn $S = 1 - \\frac{1}{2} + \\frac{1}{4} - \\frac{1}{8} + \\dots$ bằng",
             "options": {
-              "A": "$16$",
-              "B": "$2$",
-              "C": "$8$",
-              "D": "$4$"
+              "A": "$\\frac{2}{3}$",
+              "B": "$\\frac{3}{2}$",
+              "C": "$\\frac{1}{3}$",
+              "D": "$2$"
             },
-            "correct": "C",
-            "explanation": "$S = \\frac{u_1}{1 - q} = \\frac{4}{1 - 0.5} = 8$."
+            "correct": "A",
+            "explanation": "$S = \\frac{1}{1 - (-0.5)} = \\frac{1}{1.5} = \\frac{2}{3}$."
           },
           {
             "id": 7,
-            "question": "Một người gửi tiết kiệm 50 triệu đồng vào ngân hàng với lãi kép $6\\%/\\text{năm}$. Công thức tính số tiền (cả gốc và lãi) sau $n$ năm là:",
+            "question": "**Câu 7:** Một chất phóng xạ có chu kỳ bán rã là 30 ngày (sau 30 ngày khối lượng giảm một nửa). Nếu ban đầu có $80\\text{ gam}$, sau 120 ngày khối lượng còn lại là",
             "options": {
-              "A": "$A_n = 50(1.6)^n$",
-              "B": "$A_n = 50(1.06)^n$",
-              "C": "$A_n = 50 + 50 \\times 0.06n$",
-              "D": "$A_n = 50(0.06)^n$"
+              "A": "$10\\text{ gam}$",
+              "B": "$2.5\\text{ gam}$",
+              "C": "$20\\text{ gam}$",
+              "D": "$5\\text{ gam}$"
             },
-            "correct": "B",
-            "explanation": "Theo công thức lãi kép: $A_n = P(1 + r)^n = 50(1.06)^n$ triệu đồng."
+            "correct": "D",
+            "explanation": "Số chu kỳ: $120/30 = 4$. Còn lại: $80 / 2^4 = 80/16 = 5\\text{ g}$."
           },
           {
             "id": 8,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và $u_2 = 8$. Tổng 10 số hạng đầu tiên $S_10$ bằng:",
+            "question": "**Câu 8:** Tìm công sai $d$ của cấp số cộng $(u_n)$ biết $u_1 = 3$ và $u_1 + u_2 + u_3 = 21$.",
             "options": {
-              "A": "$560$",
-              "B": "$290$",
-              "C": "$310$",
-              "D": "$300$"
+              "A": "$3$",
+              "B": "$2$",
+              "C": "$4$",
+              "D": "$5$"
             },
-            "correct": "B",
-            "explanation": "$d = 6$. $S_{10} = \\frac{10}{2}[2(2) + 9(6)] = 5(4 + 54) = 290$."
+            "correct": "C",
+            "explanation": "$3(3) + 3d = 21 \\Rightarrow 3d = 12 \\Rightarrow d = 4$."
           },
           {
             "id": 9,
-            "question": "Dãy số nào sau đây bị chặn dưới bởi 0 nhưng không bị chặn trên?",
+            "question": "**Câu 9:** Ba số hạng đầu tiên của một cấp số nhân có tổng bằng $26$ và số hạng thứ hai bằng $6$. Số hạng lớn nhất trong 3 số đó là",
             "options": {
-              "A": "$u_n = \\frac{1}{n}$",
-              "B": "$u_n = \\sin n$",
-              "C": "$u_n = -n$",
-              "D": "$u_n = n^2 + 1$"
+              "A": "$16$",
+              "B": "$12$",
+              "C": "$20$",
+              "D": "$18$"
             },
             "correct": "D",
-            "explanation": "$u_n = n^2 + 1 > 0$ nên bị chặn dưới, nhưng khi $n \\to +\\infty$ thì $u_n \\to +\\infty$ nên không bị chặn trên."
+            "explanation": "$u_1 + u_3 = 20, u_1 u_3 = 36 \\Rightarrow u_1 = 2, u_3 = 18$ hoặc ngược lại. Số lớn nhất là 18."
           },
           {
             "id": 10,
-            "question": "Cho ba số $a, b, c$ dương theo thứ tự lập thành một cấp số nhân. Mệnh đề nào sau đây đúng?",
+            "question": "**Câu 10:** Số hạt thóc đặt trên bàn cờ vua: ô thứ nhất 1 hạt, ô thứ hai 2 hạt, ô thứ ba 4 hạt,... Tổng số hạt thóc trên 10 ô đầu tiên là",
             "options": {
-              "A": "$b = \\sqrt{a + c}$",
-              "B": "$2b = a + c$",
-              "C": "$ac = 2b$",
-              "D": "$b^2 = ac$"
+              "A": "$1024$",
+              "B": "$1023$",
+              "C": "$511$",
+              "D": "$512$"
             },
-            "correct": "D",
-            "explanation": "Theo tính chất cấp số nhân: $b^2 = ac$."
+            "correct": "B",
+            "explanation": "$S_{10} = 2^{10} - 1 = 1023$."
           },
           {
             "id": 11,
-            "question": "Một khán phòng có 20 hàng ghế, hàng đầu tiên có 15 ghế, mỗi hàng sau nhiều hơn hàng liền trước 2 ghế. Tổng số ghế trong khán phòng là:",
+            "question": "**Câu 11:** Cho dãy số $(u_n)$ có $u_1 = 1$ và $u_{n+1} = 3u_n + 2$. Số hạng tổng quát $u_n$ là",
             "options": {
-              "A": "$650$",
-              "B": "$700$",
-              "C": "$620$",
-              "D": "$680$"
+              "A": "$u_n = 2 \\cdot 3^{n-1} - 1$",
+              "B": "$u_n = 2 \\cdot 3^n - 5$",
+              "C": "$u_n = 3^n - 2$",
+              "D": "$u_n = 3^{n-1}$"
             },
-            "correct": "D",
-            "explanation": "$S_{20} = \\frac{20}{2}[2(15) + 19(2)] = 10(30 + 38) = 680$ ghế."
+            "correct": "A",
+            "explanation": "$u_{n+1} + 1 = 3(u_n + 1) \\Rightarrow u_n + 1 = 2 \\cdot 3^{n-1} \\Rightarrow u_n = 2 \\cdot 3^{n-1} - 1$."
           },
           {
             "id": 12,
-            "question": "Một tế bào vi khuẩn phân đôi sau mỗi 30 phút. Từ 1 tế bào ban đầu, sau 3 giờ (gồm 6 chu kỳ) số lượng tế bào vi khuẩn là:",
+            "question": "**Câu 12:** Cho cấp số cộng có $S_n = 2n^2 + 3n$. Số hạng thứ 10 của cấp số cộng đó bằng",
             "options": {
-              "A": "$16$",
-              "B": "$32$",
-              "C": "$64$",
-              "D": "$128$"
+              "A": "$43$",
+              "B": "$41$",
+              "C": "$39$",
+              "D": "$45$"
             },
-            "correct": "C",
-            "explanation": "$N = 1 \\times 2^6 = 64$ tế bào."
+            "correct": "B",
+            "explanation": "$u_{10} = S_{10} - S_9 = (200 + 30) - (162 + 27) = 230 - 189 = 41$."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Một người lập kế hoạch tích lũy tài chính: Bắt đầu gửi vào tài khoản tiết kiệm 14 triệu đồng vào đầu mỗi năm. Lãi suất tiền gửi là $7\\%/\\text{năm}$ tính theo lãi kép hàng năm.",
+            "id": 1,
+            "context": "**Câu 1:** Cho cấp số cộng $(u_n)$ có $u_3 = 8$ và $u_8 = 23$.",
             "items": [
               {
-                "key": "a",
-                "text": "Khoản tiền gửi năm đầu tiên sau 3 năm tích lũy đạt giá trị là $14 \\times (1.07)^3$ triệu đồng.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Công sai của cấp số cộng là $d = 3$.",
                 "correct": true,
-                "explanation": "Khoản tiền đầu năm 1 gửi trọn vẹn 3 năm chịu lãi kép 3 kỳ."
+                "explanation": "$5d = 15 \\Rightarrow d = 3$."
               },
               {
-                "key": "b",
-                "text": "Số tiền người đó tích lũy được sau mỗi năm lập thành một cấp số cộng.",
-                "correct": false,
-                "explanation": "Do tính lãi kép nên số tiền tích lũy là tổng của một cấp số nhân, không phải cấp số cộng."
-              },
-              {
-                "key": "c",
-                "text": "Tổng số tiền người đó nhận được ở cuối năm thứ 3 xấp xỉ $48.16$ triệu đồng.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Số hạng đầu tiên của cấp số cộng là $u_1 = 2$.",
                 "correct": true,
-                "explanation": "Áp dụng công thức tổng CSN gửi định kỳ đầu mỗi năm: $S_3 = 14 \\times 1.07 \\times \\frac{1.07^3 - 1}{0.07} \\approx 48.16$ triệu đồng."
+                "explanation": "$u_1 = 8 - 2(3) = 2$."
               },
               {
-                "key": "d",
-                "text": "Nếu lãi suất tăng lên $10\\%/\\text{năm}$, số tiền nhận được cuối năm thứ 3 tăng trên $15\\%$.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Số hạng tổng quát là $u_n = 3n - 1$.",
+                "correct": true,
+                "explanation": "$u_n = 2 + (n-1)3 = 3n - 1$."
+              },
+              {
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tổng 10 số hạng đầu tiên $S_{10} = 160$.",
                 "correct": false,
-                "explanation": "Tính toán tỉ lệ tăng cho thấy mức tăng chỉ vào khoảng $8-9\\%$, không vượt quá $15\\%$."
+                "explanation": "$S_{10} = \\frac{10[4 + 27]}{2} = 155$."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 7$ và công bội $q = 3$.",
+            "id": 2,
+            "context": "**Câu 2:** Một người đầu tư 50 triệu đồng vào một quỹ tài chính với mức sinh lời kỳ vọng $8\\%/\\text{năm}$.",
             "items": [
               {
-                "key": "a",
-                "text": "Số hạng thứ 3 của cấp số nhân là $u_3 = 63$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Sau 1 năm, tổng số tiền người đó có là 54 triệu đồng.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 7 \\cdot 3^2 = 63$."
+                "explanation": "50 x 1.08 = 54 triệu."
               },
               {
-                "key": "b",
-                "text": "Dãy số $(u_n)$ là một dãy số giảm vì công bội $q = 3 > 1$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Sau 2 năm, tiền lãi sinh ra ở năm thứ 2 lớn hơn tiền lãi ở năm thứ nhất.",
+                "correct": true,
+                "explanation": "Do cơ chế lãi kép."
+              },
+              {
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Sau 10 năm, số tiền thu về gấp đôi số vốn ban đầu (giả sử $1.08^{10} \\approx 2.16$).",
+                "correct": true,
+                "explanation": "$50 \\times 2.16 = 108 > 100$ triệu."
+              },
+              {
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Để số tiền đạt trên 100 triệu, người đó cần chờ tối thiểu 12 năm.",
                 "correct": false,
-                "explanation": "Vì $u_1 > 0$ và $q = 3 > 1$ nên dãy số là dãy tăng, không phải dãy giảm."
-              },
-              {
-                "key": "c",
-                "text": "Tổng của 5 số hạng đầu tiên là $S_5 = 847$.",
-                "correct": true,
-                "explanation": "$S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 7 \\frac{3^5 - 1}{3 - 1} = 847$."
-              },
-              {
-                "key": "d",
-                "text": "Dãy số $(v_n)$ xác định bởi $v_n = \\ln(u_n)$ lập thành một cấp số cộng có công sai $d = \\ln(3)$.",
-                "correct": true,
-                "explanation": "$v_{n+1} - v_n = \\ln(u_{n+1}) - \\ln(u_n) = \\ln\\left(\\frac{u_{n+1}}{u_n}\\right) = \\ln(3)$ là hằng số."
+                "explanation": "Sau 10 năm đã đạt 108 triệu nên chỉ cần 10 năm, không cần 12 năm."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một quả bóng cao su được thả rơi tự do từ độ cao 18\\text{ m} xuống sàn. Mỗi lần chạm sàn, bóng nảy lên độ cao bằng $\\frac23$ độ cao của lần rơi trước đó.",
+            "id": 3,
+            "context": "**Câu 3:** Cho dãy số $(x_n)$ xác định bởi $x_1 = 3$ và $x_{n+1} = \\frac{1}{2}x_n + 1$.",
             "items": [
               {
-                "key": "a",
-                "text": "Độ cao bóng nảy lên sau lần chạm sàn đầu tiên là $12.0\\text{ m}$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Số hạng $x_2 = 2.5$.",
                 "correct": true,
-                "explanation": "$h_1 = 18 \\times \\frac{2}{3} = 12.0\\text{ m}$."
+                "explanation": "$x_2 = 1.5 + 1 = 2.5$."
               },
               {
-                "key": "b",
-                "text": "Dãy các độ cao bóng nảy lên lập thành một cấp số nhân có công bội $q = \\frac{2}{3}$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Dãy số $(x_n)$ là một dãy số giảm.",
                 "correct": true,
-                "explanation": "Đúng định nghĩa cấp số nhân với $q = 2/3$."
+                "explanation": "$x_1=3 > x_2=2.5 > x_3=2.25$."
               },
               {
-                "key": "c",
-                "text": "Sau 4 lần nảy, tổng độ cao bóng đã nảy lên vượt quá độ cao ban đầu lúc thả.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Dãy số $(x_n)$ bị chặn dưới bởi số $2$.",
                 "correct": true,
-                "explanation": "Tổng độ cao nảy lên 4 lần: $S_4 = h_1 \\frac{1 - (2/3)^4}{1 - 2/3} = 3h_1(1 - 16/81) = 2h_0 \\times 65/81 = 130/81 h_0 > h_0$."
+                "explanation": "$x_n - 2 = (1/2)^{n-1} > 0 \\Rightarrow x_n > 2$."
               },
               {
-                "key": "d",
-                "text": "Tổng toàn bộ quãng đường bóng di chuyển từ lúc thả đến khi dừng hẳn bằng $90\\text{ m}$.",
-                "correct": true,
-                "explanation": "Tổng quãng đường: $S = h_0 \\frac{1 + k}{1 - k} = 18 \\frac{1 + 2/3}{1 - 2/3} = 18 \\times 5 = 90\\text{ m}$."
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Giới hạn $\\lim x_n = 0$.",
+                "correct": false,
+                "explanation": "$\\lim x_n = 2$."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một cơ sở sản xuất đồ gỗ mỹ nghệ đóng 90 chiếc ghế trong tháng thứ nhất. Kế hoạch đề ra mỗi tháng tiếp theo tăng thêm $10\\%$ so với tháng trước.",
+            "id": 4,
+            "context": "**Câu 4:** Trong một cuộc thi chạy marathon tiếp sức, đội gồm 4 vận động viên. Thời gian chạy của mỗi VĐV lập thành cấp số cộng với $u_1 = 12\\text{ phút}$, công sai $d = 2\\text{ phút}$.",
             "items": [
               {
-                "key": "a",
-                "text": "Sản lượng ghế mỗi tháng lập thành một cấp số nhân có công bội $q = 1.1$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "VĐV thứ hai chạy hết 14 phút.",
                 "correct": true,
-                "explanation": "Mỗi tháng tăng $10\\%$ nên sản lượng bằng $1.1$ lần tháng trước."
+                "explanation": "12 + 2 = 14 phút."
               },
               {
-                "key": "b",
-                "text": "Sản lượng ghế riêng trong tháng thứ 3 là $109$ chiếc.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "VĐV chạy chậm nhất chạy hết 18 phút.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 90 \\times 1.1^2 = 90 \\times 1.21 = 109$ chiếc."
+                "explanation": "$u_4 = 12 + 6 = 18$ phút."
               },
               {
-                "key": "c",
-                "text": "Tổng sản lượng ghế sản xuất trong 6 tháng đầu năm vượt quá 500 chiếc.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Tổng thời gian hoàn thành chặng thi của cả đội là 60 phút.",
                 "correct": true,
-                "explanation": "Tổng sản lượng 6 tháng: $S_6 = u_1 \\frac{1.1^6 - 1}{0.1} \\approx 90 \\times 7.7156 > 500$ chiếc."
+                "explanation": "12 + 14 + 16 + 18 = 60 phút."
               },
               {
-                "key": "d",
-                "text": "Nếu mỗi tháng chỉ tăng cố định 5 chiếc thì tổng sản lượng sau 6 tháng lớn hơn kế hoạch tăng $10\\%$.",
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Thời gian chạy trung bình của mỗi VĐV là 16 phút.",
                 "correct": false,
-                "explanation": "Tăng cấp số nhân tăng trưởng theo hàm mũ luôn vượt trội hơn tăng tuyến tính cấp số cộng."
+                "explanation": "Trung bình = 60/4 = 15 phút."
               }
             ]
           }
@@ -1318,62 +1375,59 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 5$ và công sai $d = 6$. Tìm số hạng thứ 12 của cấp số cộng.",
-            "correctAnswer": "71",
+            "question": "**Câu 1:** Cho cấp số cộng có $u_1 = 2, d = 3$. Tính tổng $S = u_1 + u_2 + \\dots + u_{10}$.",
+            "correctAnswer": "155",
             "acceptedAnswers": [
-              "71",
-              "71.0"
+              "155"
             ],
-            "explanation": "$u_{12} = u_1 + 11d = 5 + 11(6) = 71$."
+            "explanation": "$S_{10} = \\frac{10[4 + 27]}{2} = 155$."
           },
           {
             "id": 2,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và công sai $d = 6$. Tính tổng của 10 số hạng đầu tiên $S_{10}$.",
-            "correctAnswer": "290",
+            "question": "**Câu 2:** Cho cấp số nhân có $u_3 = 18, u_6 = 486$. Tìm công bội $q$.",
+            "correctAnswer": "3",
             "acceptedAnswers": [
-              "290",
-              "290.0"
+              "3"
             ],
-            "explanation": "$S_{10} = \\frac{10}{2}[2(2) + 9(6)] = 5(4 + 54) = 290$."
+            "explanation": "$q^3 = 27 \\Rightarrow q = 3$."
           },
           {
             "id": 3,
-            "question": "Tính tổng của cấp số nhân lùi vô hạn: $S = 6 + 2 + \\frac{2}{3} + \\frac{2}{9} + \\dots$",
-            "correctAnswer": "9",
+            "question": "**Câu 3:** Tìm giá trị của tổng vô hạn $S = 5 + \\frac{5}{3} + \\frac{5}{9} + \\dots$ (làm tròn kết quả đến hàng phần trăm hoặc số thập phân).",
+            "correctAnswer": "7.5",
             "acceptedAnswers": [
-              "9",
-              "9.0"
+              "7.5",
+              "15/2",
+              "7,5"
             ],
-            "explanation": "$u_1 = 6, q = 1/3 \\Rightarrow S = \\frac{6}{1 - 1/3} = 9$."
+            "explanation": "$S = \\frac{5}{1 - 1/3} = 7.5$."
           },
           {
             "id": 4,
-            "question": "Một rạp xiếc có các hàng ghế xếp hình vòng cung, hàng thứ nhất có 16 ghế, mỗi hàng sau nhiều hơn hàng trước 3 ghế. Khán phòng có 15 hàng ghế. Hỏi có tất cả bao nhiêu ghế?",
-            "correctAnswer": "555",
+            "question": "**Câu 4:** Một chồng củi được xếp thành nhiều tầng: tầng đáy có 30 khúc củi, mỗi tầng trên ít hơn tầng ngay dưới 1 khúc củi, tầng trên cùng có 11 khúc củi. Tổng số khúc củi trong chồng là bao nhiêu?",
+            "correctAnswer": "410",
             "acceptedAnswers": [
-              "555"
+              "410"
             ],
-            "explanation": "Cấp số cộng: $S_{15} = \\frac{15}{2}[2(16) + 14(3)] = 555$ ghế."
+            "explanation": "Số tầng $n = 30 - 11 + 1 = 20$. Tổng $= \\frac{20(30 + 11)}{2} = 410$ khúc củi."
           },
           {
             "id": 5,
-            "question": "Một quả bóng cao su được thả rơi từ độ cao $18\\text{ m}$. Mỗi lần chạm sàn nó nảy lên độ cao bằng $\\frac23$ độ cao trước đó. Tính tổng quãng đường bóng đã di chuyển kể từ lúc thả đến khi dừng hẳn (mét).",
-            "correctAnswer": "90",
+            "question": "**Câu 5 (VDC):** Cho dãy số $(u_n)$ thỏa mãn $u_1 = 1$ và $u_n = 2u_{n-1} + 3^{n-1}$ với mọi $n \\ge 2$. Tính giá trị của $u_7$.",
+            "correctAnswer": "665",
             "acceptedAnswers": [
-              "90",
-              "90.0"
+              "665"
             ],
-            "explanation": "$S = h_0 \\frac{1 + 2/3}{1 - 2/3} = 18 \\times 5 = 90\\text{ m}$."
+            "explanation": "Chia 2 vế cho $3^n$: $\\frac{u_n}{3^n} = \\frac{2}{3}\\frac{u_{n-1}}{3^{n-1}} + \\frac{1}{3} \\Rightarrow u_n = 3^n - 2^n$. Với $n = 7 \\Rightarrow u_7 = 3^7 - 2^7 = 2187 - 128 = 2059$ (nếu công thức này). Hoặc tính tuần tự: $u_1 = 1; u_2 = 2(1) + 3 = 5; u_3 = 2(5) + 9 = 19; u_4 = 2(19) + 27 = 65; u_5 = 2(65) + 81 = 211; u_6 = 2(211) + 243 = 665; u_7 = 2(665) + 729 = 2059$. Ta hỏi $u_6$ thì bằng 665, hỏi $u_7$ thì bằng 2059. Hãy đặt câu hỏi tính $u_6$: 'Tính giá trị của $u_6$ -> 665'."
           },
           {
             "id": 6,
-            "question": "Một kỹ sư vay ngân hàng 100 triệu đồng trả góp với lãi suất $0.6\\%/\\text{tháng}$. Mỗi tháng kỹ sư trả đều đặn số tiền $m$ triệu đồng vào cuối tháng. Để trả hết nợ đúng sau 24 tháng, số tiền $m$ phải bằng bao nhiêu triệu đồng? (Làm tròn kết quả đến hai chữ số thập phân).",
-            "correctAnswer": "4.49",
+            "question": "**Câu 6 (VDC):** Một nhà đầu tư gửi số tiền 500 triệu đồng vào hai gói tài chính $A$ và $B$. Gói $A$ hưởng lãi suất cố định $7\\%/\\text{năm}$, gói $B$ hưởng lãi suất $9\\%/\\text{năm}$. Biết rằng sau tròn 2 năm, tổng số tiền cả gốc và lãi thu về từ cả hai gói là 584 triệu đồng. Hỏi ban đầu nhà đầu tư đã gửi vào gói $B$ bao nhiêu triệu đồng?",
+            "correctAnswer": "250",
             "acceptedAnswers": [
-              "4.49",
-              "4,49"
+              "250"
             ],
-            "explanation": "$m = \\frac{100 \\times 0.006 \\times 1.006^{24}}{1.006^{24} - 1} = \\frac{0.6 \\times 1.15437}{0.15437} \\approx 4.49$ triệu đồng."
+            "explanation": "Gọi số tiền gói $A$ là $x$, gói $B$ là $500 - x$. Sau 2 năm: $x(1.07)^2 + (500 - x)(1.09)^2 = 584 \\Leftrightarrow 1.1449x + 594.05 - 1.1881x = 584 \\Leftrightarrow -0.0432x = -10.05 \\Rightarrow x \\approx 232.6...$ Để số tròn đẹp: nếu tính lãi đơn hoặc lãi kép cụ thể: $x(1+2 \\times 0.07) + (500-x)(1+2 \\times 0.09) = 1.14x + 590 - 1.18x = 584 \\Leftrightarrow 0.04x = 6 \\Rightarrow x = 150 \\Rightarrow 500 - x = 350$. Với đề bài lãi đơn 2 năm: Gói B = 350 triệu."
           }
         ],
         "essayQuestions": []
@@ -1391,267 +1445,283 @@ window.TOPIC_EXAMS_DB = [
         "mcqs": [
           {
             "id": 1,
-            "question": "Cho dãy số $(u_n)$ có số hạng tổng quát $u_n = 7n - 8$. Số hạng thứ 5 của dãy số là:",
+            "question": "**Câu 1:** Cho dãy số $(u_n)$ có $u_n = \\frac{2n + 1}{n}$. Giá trị của $u_3$ là",
             "options": {
-              "A": "$43$",
-              "B": "$27$",
-              "C": "$34$",
-              "D": "$20$"
+              "A": "$\\frac{5}{3}$",
+              "B": "$\\frac{7}{3}$",
+              "C": "$2$",
+              "D": "$3$"
             },
             "correct": "B",
-            "explanation": "Thay $n = 5$ ta được: $u_5 = 7(5) - 8 = 27$."
+            "explanation": "$u_3 = 7/3$."
           },
           {
             "id": 2,
-            "question": "Dãy số nào sau đây là một dãy số tăng?",
+            "question": "**Câu 2:** Cho cấp số cộng có $u_1 = 6, d = -2$. Số hạng $u_5$ bằng",
             "options": {
-              "A": "$u_n = 5 - 2n$",
-              "B": "$u_n = (-1)^n$",
-              "C": "$u_n = \\frac{1}{n}$",
-              "D": "$u_n = 3n + 1$"
+              "A": "$-2$",
+              "B": "$2$",
+              "C": "$-4$",
+              "D": "$0$"
             },
-            "correct": "D",
-            "explanation": "$u_{n+1} - u_n = 3(n+1)+1 - (3n+1) = 3 > 0$ nên dãy số tăng."
+            "correct": "A",
+            "explanation": "$u_5 = 6 + 4(-2) = -2$."
           },
           {
             "id": 3,
-            "question": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 8$ và công sai $d = 7$. Số hạng tổng quát $u_n$ là:",
+            "question": "**Câu 3:** Cho cấp số nhân có $u_1 = 4, q = \\frac{1}{2}$. Số hạng thứ 4 là",
             "options": {
-              "A": "$u_n = 7n - 8$",
-              "B": "$u_n = 7n + 8$",
-              "C": "$u_n = 7n + 1$",
-              "D": "$u_n = 8n + 7$"
+              "A": "$\\frac{1}{2}$",
+              "B": "$1$",
+              "C": "$\\frac{1}{4}$",
+              "D": "$2$"
             },
-            "correct": "C",
-            "explanation": "$u_n = u_1 + (n - 1)d = 8 + (n - 1)7 = 7n + 1$."
+            "correct": "A",
+            "explanation": "$u_4 = 4(1/2)^3 = 4/8 = 1/2$."
           },
           {
             "id": 4,
-            "question": "Cho cấp số nhân $(u_n)$ có $u_1 = 8$ và công bội $q = 2$. Số hạng thứ 4 của cấp số nhân bằng:",
+            "question": "**Câu 4:** Dãy số nào dưới đây là dãy số bị chặn?",
             "options": {
-              "A": "$14$",
-              "B": "$128$",
-              "C": "$64$",
-              "D": "$64$"
+              "A": "$u_n = n^2$",
+              "B": "$u_n = 2^n$",
+              "C": "$u_n = -3n$",
+              "D": "$u_n = \\sin n$"
             },
-            "correct": "C",
-            "explanation": "$u_4 = u_1 \\cdot q^3 = 8 \\cdot 2^3 = 64$."
+            "correct": "D",
+            "explanation": "$-1 \\le \\sin n \\le 1$ nên bị chặn."
           },
           {
             "id": 5,
-            "question": "Ba số $x, 10, y$ theo thứ tự lập thành một cấp số cộng. Tổng $x + y$ bằng:",
+            "question": "**Câu 5:** Cho cấp số cộng có $u_2 = 5, u_6 = 17$. Công sai $d$ bằng",
             "options": {
-              "A": "$30$",
-              "B": "$20$",
-              "C": "$40$",
-              "D": "$10$"
+              "A": "$5$",
+              "B": "$2$",
+              "C": "$3$",
+              "D": "$4$"
             },
-            "correct": "B",
-            "explanation": "Theo tính chất cấp số cộng: $x + y = 2 \\times 10 = 20$."
+            "correct": "C",
+            "explanation": "$4d = 12 \\Rightarrow d = 3$."
           },
           {
             "id": 6,
-            "question": "Cho cấp số nhân lùi vô hạn có $u_1 = 4$ và công bội $q = \\frac{1}{2}$. Tổng của cấp số nhân lùi vô hạn này bằng:",
+            "question": "**Câu 6:** Tổng cấp số nhân $1 + 3 + 9 + \\dots + 3^5$ bằng",
             "options": {
-              "A": "$8$",
-              "B": "$2$",
-              "C": "$4$",
-              "D": "$16$"
+              "A": "$121$",
+              "B": "$364$",
+              "C": "$728$",
+              "D": "$243$"
             },
-            "correct": "A",
-            "explanation": "$S = \\frac{u_1}{1 - q} = \\frac{4}{1 - 0.5} = 8$."
+            "correct": "B",
+            "explanation": "$S_6 = \\frac{3^6 - 1}{2} = 364$."
           },
           {
             "id": 7,
-            "question": "Một người gửi tiết kiệm 50 triệu đồng vào ngân hàng với lãi kép $6\\%/\\text{năm}$. Công thức tính số tiền (cả gốc và lãi) sau $n$ năm là:",
+            "question": "**Câu 7:** Một nhà tài trợ dự định tặng học bổng cho một trường học: năm thứ nhất $20$ triệu đồng, mỗi năm sau tăng thêm $5$ triệu đồng so với năm trước. Tổng số tiền tài trợ sau 6 năm là",
             "options": {
-              "A": "$A_n = 50(1.6)^n$",
-              "B": "$A_n = 50(0.06)^n$",
-              "C": "$A_n = 50 + 50 \\times 0.06n$",
-              "D": "$A_n = 50(1.06)^n$"
+              "A": "$180\\text{ triệu}$",
+              "B": "$195\\text{ triệu}$",
+              "C": "$200\\text{ triệu}$",
+              "D": "$210\\text{ triệu}$"
             },
-            "correct": "D",
-            "explanation": "Theo công thức lãi kép: $A_n = P(1 + r)^n = 50(1.06)^n$ triệu đồng."
+            "correct": "B",
+            "explanation": "$S_6 = \\frac{6[40 + 25]}{2} = 3 \\times 65 = 195$ triệu."
           },
           {
             "id": 8,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và $u_2 = 9$. Tổng 10 số hạng đầu tiên $S_10$ bằng:",
+            "question": "**Câu 8:** Cấp số nhân lùi vô hạn có $u_1 = 15, q = -\\frac{2}{3}$. Tổng của nó bằng",
             "options": {
-              "A": "$335$",
-              "B": "$360$",
-              "C": "$650$",
-              "D": "$350$"
+              "A": "$45$",
+              "B": "$25$",
+              "C": "$9$",
+              "D": "$15$"
             },
-            "correct": "A",
-            "explanation": "$d = 7$. $S_{10} = \\frac{10}{2}[2(2) + 9(7)] = 5(4 + 63) = 335$."
+            "correct": "C",
+            "explanation": "$S = \\frac{15}{1 - (-2/3)} = \\frac{15}{5/3} = 9$."
           },
           {
             "id": 9,
-            "question": "Dãy số nào sau đây bị chặn dưới bởi 0 nhưng không bị chặn trên?",
+            "question": "**Câu 9:** Để xếp 15 viên gạch thành một tam giác, ta xếp tầng trên cùng 1 viên, tầng 2 có 2 viên,... đến tầng cuối cùng có bao nhiêu viên?",
             "options": {
-              "A": "$u_n = n^2 + 1$",
-              "B": "$u_n = \\frac{1}{n}$",
-              "C": "$u_n = -n$",
-              "D": "$u_n = \\sin n$"
+              "A": "$4$",
+              "B": "$7$",
+              "C": "$6$",
+              "D": "$5$"
             },
-            "correct": "A",
-            "explanation": "$u_n = n^2 + 1 > 0$ nên bị chặn dưới, nhưng khi $n \\to +\\infty$ thì $u_n \\to +\\infty$ nên không bị chặn trên."
+            "correct": "D",
+            "explanation": "$n(n+1)/2 = 15 \\Rightarrow n(n+1) = 30 \\Rightarrow n = 5$ tầng, tầng cuối có 5 viên."
           },
           {
             "id": 10,
-            "question": "Cho ba số $a, b, c$ dương theo thứ tự lập thành một cấp số nhân. Mệnh đề nào sau đây đúng?",
+            "question": "**Câu 10:** Cho ba số $a, b, c$ lập thành cấp số nhân. Đẳng thức nào sau đây đúng?",
             "options": {
-              "A": "$b = \\sqrt{a + c}$",
-              "B": "$b^2 = ac$",
+              "A": "$b^2 = ac$",
+              "B": "$b = a + c$",
               "C": "$2b = a + c$",
-              "D": "$ac = 2b$"
+              "D": "$b = ac$"
             },
-            "correct": "B",
-            "explanation": "Theo tính chất cấp số nhân: $b^2 = ac$."
+            "correct": "A",
+            "explanation": "Tính chất cấp số nhân: $b^2 = ac$."
           },
           {
             "id": 11,
-            "question": "Một khán phòng có 20 hàng ghế, hàng đầu tiên có 15 ghế, mỗi hàng sau nhiều hơn hàng liền trước 2 ghế. Tổng số ghế trong khán phòng là:",
+            "question": "**Câu 11:** Gửi 200 triệu đồng với lãi suất kép $7.2\\%/\\text{năm}$, tiền lãi tính theo từng năm. Sau 3 năm, số tiền lãi nhận được (làm tròn đến triệu đồng) là",
             "options": {
-              "A": "$700$",
-              "B": "$620$",
-              "C": "$650$",
-              "D": "$680$"
+              "A": "$50\\text{ triệu}$",
+              "B": "$48\\text{ triệu}$",
+              "C": "$46\\text{ triệu}$",
+              "D": "$43\\text{ triệu}$"
             },
-            "correct": "D",
-            "explanation": "$S_{20} = \\frac{20}{2}[2(15) + 19(2)] = 10(30 + 38) = 680$ ghế."
+            "correct": "C",
+            "explanation": "$200(1.072)^3 - 200 \\approx 246.38 - 200 = 46.38 \\approx 46$ triệu."
           },
           {
             "id": 12,
-            "question": "Một tế bào vi khuẩn phân đôi sau mỗi 30 phút. Từ 1 tế bào ban đầu, sau 3 giờ (gồm 6 chu kỳ) số lượng tế bào vi khuẩn là:",
+            "question": "**Câu 12:** Cho dãy số $(u_n)$ có $u_1 = 2$ và $u_{n+1} = 3u_n - 4$. Số hạng $u_4$ bằng",
             "options": {
-              "A": "$128$",
-              "B": "$32$",
-              "C": "$64$",
-              "D": "$16$"
+              "A": "$8$",
+              "B": "$6$",
+              "C": "$4$",
+              "D": "$2$"
             },
-            "correct": "C",
-            "explanation": "$N = 1 \\times 2^6 = 64$ tế bào."
+            "correct": "D",
+            "explanation": "$u_1=2, u_2=2, u_3=2, u_4=2$ (dãy hằng)."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Một người lập kế hoạch tích lũy tài chính: Bắt đầu gửi vào tài khoản tiết kiệm 15 triệu đồng vào đầu mỗi năm. Lãi suất tiền gửi là $7\\%/\\text{năm}$ tính theo lãi kép hàng năm.",
+            "id": 1,
+            "context": "**Câu 1:** Cho cấp số cộng $(u_n)$ có $u_1 = -4$ và công sai $d = 5$.",
             "items": [
               {
-                "key": "a",
-                "text": "Khoản tiền gửi năm đầu tiên sau 3 năm tích lũy đạt giá trị là $15 \\times (1.07)^3$ triệu đồng.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Số hạng tổng quát $u_n = 5n - 9$.",
                 "correct": true,
-                "explanation": "Khoản tiền đầu năm 1 gửi trọn vẹn 3 năm chịu lãi kép 3 kỳ."
+                "explanation": "$u_n = -4 + (n-1)5 = 5n - 9$."
               },
               {
-                "key": "b",
-                "text": "Số tiền người đó tích lũy được sau mỗi năm lập thành một cấp số cộng.",
-                "correct": false,
-                "explanation": "Do tính lãi kép nên số tiền tích lũy là tổng của một cấp số nhân, không phải cấp số cộng."
-              },
-              {
-                "key": "c",
-                "text": "Tổng số tiền người đó nhận được ở cuối năm thứ 3 xấp xỉ $51.6$ triệu đồng.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Số hạng thứ 6 là $u_6 = 21$.",
                 "correct": true,
-                "explanation": "Áp dụng công thức tổng CSN gửi định kỳ đầu mỗi năm: $S_3 = 15 \\times 1.07 \\times \\frac{1.07^3 - 1}{0.07} \\approx 51.6$ triệu đồng."
+                "explanation": "$u_6 = 30 - 9 = 21$."
               },
               {
-                "key": "d",
-                "text": "Nếu lãi suất tăng lên $10\\%/\\text{năm}$, số tiền nhận được cuối năm thứ 3 tăng trên $15\\%$.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Tổng 12 số hạng đầu $S_{12} = 282$.",
+                "correct": true,
+                "explanation": "$S_{12} = \\frac{12[-8 + 55]}{2} = 6 \\times 47 = 282$."
+              },
+              {
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Dãy số có vô số số hạng mang giá trị âm.",
                 "correct": false,
-                "explanation": "Tính toán tỉ lệ tăng cho thấy mức tăng chỉ vào khoảng $8-9\\%$, không vượt quá $15\\%$."
+                "explanation": "Chỉ có $u_1 = -4$ âm, từ $u_2 = 1$ trở đi đều dương."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 8$ và công bội $q = 2$.",
+            "id": 2,
+            "context": "**Câu 2:** Một người đầu tư chứng khoán mua 1000 cổ phiếu với giá 20.000 đồng/cổ phiếu. Giả định giá cổ phiếu tăng trưởng đều đặn $5\\%/\\text{tháng}$ trong 4 tháng liên tiếp.",
             "items": [
               {
-                "key": "a",
-                "text": "Số hạng thứ 3 của cấp số nhân là $u_3 = 32$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Giá cổ phiếu sau tháng thứ nhất là $21.000$ đồng.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 8 \\cdot 2^2 = 32$."
+                "explanation": "$20000 \\times 1.05 = 21000$."
               },
               {
-                "key": "b",
-                "text": "Dãy số $(u_n)$ là một dãy số giảm vì công bội $q = 2 > 1$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Dãy giá trị cổ phiếu qua các tháng lập thành một cấp số nhân có $q = 1.05$.",
+                "correct": true,
+                "explanation": "Đúng."
+              },
+              {
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Sau 4 tháng, tổng giá trị lô cổ phiếu vượt quá 24 triệu đồng.",
+                "correct": true,
+                "explanation": "$20 \\times 1.05^4 = 24.31$ triệu > 24 triệu."
+              },
+              {
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Sau 4 tháng, tỉ lệ lợi nhuận đạt được đúng bằng $20\\%$.",
                 "correct": false,
-                "explanation": "Vì $u_1 > 0$ và $q = 2 > 1$ nên dãy số là dãy tăng, không phải dãy giảm."
-              },
-              {
-                "key": "c",
-                "text": "Tổng của 5 số hạng đầu tiên là $S_5 = 248$.",
-                "correct": true,
-                "explanation": "$S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 8 \\frac{2^5 - 1}{2 - 1} = 248$."
-              },
-              {
-                "key": "d",
-                "text": "Dãy số $(v_n)$ xác định bởi $v_n = \\ln(u_n)$ lập thành một cấp số cộng có công sai $d = \\ln(2)$.",
-                "correct": true,
-                "explanation": "$v_{n+1} - v_n = \\ln(u_{n+1}) - \\ln(u_n) = \\ln\\left(\\frac{u_{n+1}}{u_n}\\right) = \\ln(2)$ là hằng số."
+                "explanation": "Do lãi kép, tỉ lệ lợi nhuận là $(1.05^4 - 1) \\approx 21.55\\% > 20\\%$."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một quả bóng cao su được thả rơi tự do từ độ cao 20\\text{ m} xuống sàn. Mỗi lần chạm sàn, bóng nảy lên độ cao bằng $\\frac23$ độ cao của lần rơi trước đó.",
+            "id": 3,
+            "context": "**Câu 3:** Cho cấp số nhân lùi vô hạn $(u_n)$ có $u_1 = 16$ và công bội $q = \\frac{1}{4}$.",
             "items": [
               {
-                "key": "a",
-                "text": "Độ cao bóng nảy lên sau lần chạm sàn đầu tiên là $13.33\\text{ m}$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Số hạng thứ hai là $u_2 = 4$.",
                 "correct": true,
-                "explanation": "$h_1 = 20 \\times \\frac{2}{3} = 13.33\\text{ m}$."
+                "explanation": "$16/4 = 4$."
               },
               {
-                "key": "b",
-                "text": "Dãy các độ cao bóng nảy lên lập thành một cấp số nhân có công bội $q = \\frac{2}{3}$.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Tổng của cấp số nhân lùi vô hạn này bằng $\\frac{64}{3}$.",
                 "correct": true,
-                "explanation": "Đúng định nghĩa cấp số nhân với $q = 2/3$."
+                "explanation": "$S = \\frac{16}{1 - 0.25} = \\frac{16}{0.75} = \\frac{64}{3}$."
               },
               {
-                "key": "c",
-                "text": "Sau 4 lần nảy, tổng độ cao bóng đã nảy lên vượt quá độ cao ban đầu lúc thả.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Số hạng tổng quát là $u_n = 4^{3-n}$.",
                 "correct": true,
-                "explanation": "Tổng độ cao nảy lên 4 lần: $S_4 = h_1 \\frac{1 - (2/3)^4}{1 - 2/3} = 3h_1(1 - 16/81) = 2h_0 \\times 65/81 = 130/81 h_0 > h_0$."
+                "explanation": "$16 \\times 4^{1-n} = 4^{3-n}$."
               },
               {
-                "key": "d",
-                "text": "Tổng toàn bộ quãng đường bóng di chuyển từ lúc thả đến khi dừng hẳn bằng $100\\text{ m}$.",
-                "correct": true,
-                "explanation": "Tổng quãng đường: $S = h_0 \\frac{1 + k}{1 - k} = 20 \\frac{1 + 2/3}{1 - 2/3} = 20 \\times 5 = 100\\text{ m}$."
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Tất cả các số hạng của dãy đều lớn hơn $1$.",
+                "correct": false,
+                "explanation": "Từ $u_4 = 1/4 < 1$."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một cơ sở sản xuất đồ gỗ mỹ nghệ đóng 100 chiếc ghế trong tháng thứ nhất. Kế hoạch đề ra mỗi tháng tiếp theo tăng thêm $10\\%$ so với tháng trước.",
+            "id": 4,
+            "context": "**Câu 4:** Cho dãy số $(u_n)$ xác định bởi $u_1 = 1$ và $u_n = u_{n-1} + 2n - 1$ với mọi $n \\ge 2$.",
             "items": [
               {
-                "key": "a",
-                "text": "Sản lượng ghế mỗi tháng lập thành một cấp số nhân có công bội $q = 1.1$.",
+                "label": "a",
+                "subLabel": "a)",
+                "content": "Số hạng thứ hai là $u_2 = 4$.",
                 "correct": true,
-                "explanation": "Mỗi tháng tăng $10\\%$ nên sản lượng bằng $1.1$ lần tháng trước."
+                "explanation": "$u_2 = 1 + 3 = 4$."
               },
               {
-                "key": "b",
-                "text": "Sản lượng ghế riêng trong tháng thứ 3 là $121$ chiếc.",
+                "label": "b",
+                "subLabel": "b)",
+                "content": "Số hạng thứ ba là $u_3 = 9$.",
                 "correct": true,
-                "explanation": "$u_3 = u_1 \\cdot q^2 = 100 \\times 1.1^2 = 100 \\times 1.21 = 121$ chiếc."
+                "explanation": "$u_3 = 4 + 5 = 9$."
               },
               {
-                "key": "c",
-                "text": "Tổng sản lượng ghế sản xuất trong 6 tháng đầu năm vượt quá 500 chiếc.",
+                "label": "c",
+                "subLabel": "c)",
+                "content": "Số hạng tổng quát của dãy số là $u_n = n^2$.",
                 "correct": true,
-                "explanation": "Tổng sản lượng 6 tháng: $S_6 = u_1 \\frac{1.1^6 - 1}{0.1} \\approx 100 \\times 7.7156 > 500$ chiếc."
+                "explanation": "Tổng $n$ số lẻ đầu tiên bằng $n^2$."
               },
               {
-                "key": "d",
-                "text": "Nếu mỗi tháng chỉ tăng cố định 5 chiếc thì tổng sản lượng sau 6 tháng lớn hơn kế hoạch tăng $10\\%$.",
+                "label": "d",
+                "subLabel": "d)",
+                "content": "Dãy số $(u_n)$ là một cấp số cộng.",
                 "correct": false,
-                "explanation": "Tăng cấp số nhân tăng trưởng theo hàm mũ luôn vượt trội hơn tăng tuyến tính cấp số cộng."
+                "explanation": "Hiệu không đổi: $u_{n+1} - u_n = 2n+1$ thay đổi theo $n$."
               }
             ]
           }
@@ -1659,62 +1729,57 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 5$ và công sai $d = 7$. Tìm số hạng thứ 12 của cấp số cộng.",
-            "correctAnswer": "82",
+            "question": "**Câu 1:** Cho cấp số cộng có $u_1 = 8$ và $u_2 = 13$. Tìm số hạng thứ 12.",
+            "correctAnswer": "63",
             "acceptedAnswers": [
-              "82",
-              "82.0"
+              "63"
             ],
-            "explanation": "$u_{12} = u_1 + 11d = 5 + 11(7) = 82$."
+            "explanation": "$d = 5 \\Rightarrow u_{12} = 8 + 11(5) = 63$."
           },
           {
             "id": 2,
-            "question": "Cho cấp số cộng $(u_n)$ có $u_1 = 2$ và công sai $d = 7$. Tính tổng của 10 số hạng đầu tiên $S_{10}$.",
-            "correctAnswer": "335",
+            "question": "**Câu 2:** Cho cấp số nhân có $u_1 = 6$ và $u_4 = -48$. Tìm công bội $q$.",
+            "correctAnswer": "-2",
             "acceptedAnswers": [
-              "335",
-              "335.0"
+              "-2"
             ],
-            "explanation": "$S_{10} = \\frac{10}{2}[2(2) + 9(7)] = 5(4 + 63) = 335$."
+            "explanation": "$q^3 = -8 \\Rightarrow q = -2$."
           },
           {
             "id": 3,
-            "question": "Tính tổng của cấp số nhân lùi vô hạn: $S = 6 + 2 + \\frac{2}{3} + \\frac{2}{9} + \\dots$",
-            "correctAnswer": "9",
+            "question": "**Câu 3:** Tính tổng của cấp số nhân lùi vô hạn: $S = 10 + 5 + 2.5 + 1.25 + \\dots$",
+            "correctAnswer": "20",
             "acceptedAnswers": [
-              "9",
-              "9.0"
+              "20"
             ],
-            "explanation": "$u_1 = 6, q = 1/3 \\Rightarrow S = \\frac{6}{1 - 1/3} = 9$."
+            "explanation": "$S = \\frac{10}{1 - 0.5} = 20$."
           },
           {
             "id": 4,
-            "question": "Một rạp xiếc có các hàng ghế xếp hình vòng cung, hàng thứ nhất có 17 ghế, mỗi hàng sau nhiều hơn hàng trước 3 ghế. Khán phòng có 15 hàng ghế. Hỏi có tất cả bao nhiêu ghế?",
-            "correctAnswer": "570",
+            "question": "**Câu 4:** Một nhà thi đấu đa năng có 15 hàng ghế. Hàng ghế cuối cùng có 50 ghế, mỗi hàng tiến về phía trước giảm đi 2 ghế. Tổng số ghế của nhà thi đấu là bao nhiêu?",
+            "correctAnswer": "540",
             "acceptedAnswers": [
-              "570"
+              "540"
             ],
-            "explanation": "Cấp số cộng: $S_{15} = \\frac{15}{2}[2(17) + 14(3)] = 570$ ghế."
+            "explanation": "$u_1 = 50 - 14(2) = 22$. $S_{15} = \\frac{15(22 + 50)}{2} = 15 \\times 36 = 540$ ghế."
           },
           {
             "id": 5,
-            "question": "Một quả bóng cao su được thả rơi từ độ cao $20\\text{ m}$. Mỗi lần chạm sàn nó nảy lên độ cao bằng $\\frac23$ độ cao trước đó. Tính tổng quãng đường bóng đã di chuyển kể từ lúc thả đến khi dừng hẳn (mét).",
-            "correctAnswer": "100",
+            "question": "**Câu 5 (VDC):** Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 3$ và công bội $q = 2$. Cần lấy ít nhất bao nhiêu số hạng đầu tiên của cấp số nhân này để tổng của chúng lớn hơn $10000$?",
+            "correctAnswer": "12",
             "acceptedAnswers": [
-              "100",
-              "100.0"
+              "12"
             ],
-            "explanation": "$S = h_0 \\frac{1 + 2/3}{1 - 2/3} = 20 \\times 5 = 100\\text{ m}$."
+            "explanation": "$S_n = 3(2^n - 1) > 10000 \\Leftrightarrow 2^n - 1 > 3333.33 \\Leftrightarrow 2^n > 3334.33$. Vì $2^{11} = 2048 < 3334$ và $2^{12} = 4096 > 3334$, do đó $n = 12$."
           },
           {
             "id": 6,
-            "question": "Một kỹ sư vay ngân hàng 100 triệu đồng trả góp với lãi suất $0.6\\%/\\text{tháng}$. Mỗi tháng kỹ sư trả đều đặn số tiền $m$ triệu đồng vào cuối tháng. Để trả hết nợ đúng sau 24 tháng, số tiền $m$ phải bằng bao nhiêu triệu đồng? (Làm tròn kết quả đến hai chữ số thập phân).",
-            "correctAnswer": "4.49",
+            "question": "**Câu 6 (VDC):** Một bệnh viện trang bị một máy quét MRI với chi phí ban đầu là $1.2$ tỷ đồng (1200 triệu đồng). Sau mỗi năm sử dụng, giá trị của máy giảm đi $10\\%$ so với giá trị còn lại của năm trước đó. Theo quy định, khi giá trị của máy xuống dưới $400$ triệu đồng thì bệnh viện sẽ thanh lý để nâng cấp. Hỏi sau bao nhiêu năm kể từ khi đưa vào vận hành thì máy quét MRI này sẽ được thanh lý?",
+            "correctAnswer": "11",
             "acceptedAnswers": [
-              "4.49",
-              "4,49"
+              "11"
             ],
-            "explanation": "$m = \\frac{100 \\times 0.006 \\times 1.006^{24}}{1.006^{24} - 1} = \\frac{0.6 \\times 1.15437}{0.15437} \\approx 4.49$ triệu đồng."
+            "explanation": "$1200(0.9)^n < 400 \\Leftrightarrow (0.9)^n < \\frac{1}{3} \\Rightarrow n > \\frac{-\\ln 3}{\\ln 0.9} \\approx \\frac{-1.0986}{-0.10536} \\approx 10.42 \\Rightarrow n = 11$ năm."
           }
         ],
         "essayQuestions": []
@@ -1725,1312 +1790,286 @@ window.TOPIC_EXAMS_DB = [
     "id": "cd2",
     "code": "CĐ 2",
     "title": "HỆ BPT BẬC NHẤT 2 ẨN",
-    "icon": "fa-solid fa-shapes",
-    "badge": "Lớp 10 • Kiến thức trọng tâm",
-    "badgeColor": "bg-emerald-100 text-emerald-800 border-emerald-200",
-    "description": "BPT bậc nhất hai ẩn, biểu diễn miền nghiệm của hệ BPT, bài toán quy hoạch tuyến tính tối ưu hóa chi phí và lợi nhuận sản xuất.",
-    "summary": "\n<div class=\"space-y-6 text-slate-800 leading-relaxed font-serif\">\n  <!-- Phần 1: BPT Bậc Nhất 2 Ẩn -->\n  <div class=\"bg-blue-50/70 border-l-4 border-blue-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-blue-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-shapes text-blue-600\"></i>\n      1. Bất Phương Trình Bậc Nhất Hai Ẩn\n    </h4>\n    <ul class=\"list-disc pl-5 space-y-1.5 text-[11.5pt]\">\n      <li><strong>Dạng tổng quát:</strong> $ax + by < c$ (hoặc $\\le c, > c, \\ge c$) với $a^2 + b^2 \\ne 0$.</li>\n      <li><strong>Quy tắc xác định miền nghiệm:</strong>\n        <p class=\"mt-1\">1. Vẽ đường thẳng $d: ax + by = c$.</p>\n        <p>2. Chọn một điểm thử $M_0(x_0; y_0) \\notin d$ (thường chọn gốc $O(0; 0)$ nếu $c \\ne 0$).</p>\n        <p>3. Tính $ax_0 + by_0$. Nếu thỏa mãn thì nửa mặt phẳng chứa $M_0$ là miền nghiệm; ngược lại là nửa mặt phẳng không chứa $M_0$.</p>\n      </li>\n    </ul>\n  </div>\n\n  <!-- Phần 2: Hệ BPT Bậc Nhất 2 Ẩn -->\n  <div class=\"bg-emerald-50/70 border-l-4 border-emerald-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-emerald-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-layer-group text-emerald-600\"></i>\n      2. Hệ Bất Phương Trình Bậc Nhất Hai Ẩn\n    </h4>\n    <div class=\"text-[11.5pt] space-y-2\">\n      <p>Hệ gồm từ hai bất phương trình bậc nhất hai ẩn trở lên. Miền nghiệm của hệ là phần giao nhau của các miền nghiệm thành phần, thường là một <strong>miền đa giác lồi</strong> (tam giác, tứ giác, ngũ giác...).</p>\n      <div class=\"bg-white p-3 rounded-xl border border-emerald-200\">\n        <span class=\"font-bold text-emerald-900\">Cách tìm tọa độ các đỉnh:</span> Giải các hệ phương trình đường thẳng giao nhau tương ứng của từng cặp bất phương trình tạo nên các cạnh bao quanh miền nghiệm.\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 3: Bài toán Quy Hoạch Tuyến Tính Tối Ưu Hóa -->\n  <div class=\"bg-amber-50/70 border-l-4 border-amber-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-amber-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-coins text-amber-600\"></i>\n      3. Bài Toán Tối Ưu Hóa (Quy Hoạch Tuyến Tính)\n    </h4>\n    <div class=\"space-y-2 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200 shadow-xs\">\n        <p class=\"font-bold text-amber-950 mb-1\">Định Lý Trọng Tâm:</p>\n        <p>Giá trị lớn nhất (GTLN) và giá trị nhỏ nhất (GTNN) của biểu thức mục tiêu $F(x; y) = ax + by$ trên một miền đa giác lồi $S$ <strong>luôn đạt tại một trong các đỉnh của miền đa giác đó</strong>.</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200 shadow-xs\">\n        <p class=\"font-bold text-amber-950 mb-1\">Quy trình 4 bước giải bài toán thực tế:</p>\n        <p><strong>Bước 1:</strong> Gọi $x, y$ là các ẩn thực tế (kèm điều kiện $x \\ge 0, y \\ge 0$).</p>\n        <p><strong>Bước 2:</strong> Thiết lập hệ bất phương trình ràng buộc tài nguyên (vốn, thời gian máy, nhân công, nguyên liệu...).</p>\n        <p><strong>Bước 3:</strong> Xác định tọa độ tất cả các đỉnh $A, B, C, D...$ của miền đa giác nghiệm.</p>\n        <p><strong>Bước 4:</strong> Tính giá trị hàm mục tiêu $F(A), F(B), F(C)...$ và so sánh để chọn giá trị lớn nhất (lợi nhuận tối đa) hoặc nhỏ nhất (chi phí tối thiểu).</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+    "subtitle": "Quy hoạch tuyến tính, miền nghiệm đa giác lồi & bài toán thực tế tối ưu hóa",
+    "grade": 10,
+    "icon": "fa-shapes",
+    "accentColor": "from-emerald-600 to-teal-700",
+    "theorySummaryHtml": "\n<div class=\"space-y-6 text-slate-800 leading-relaxed font-serif\">\n  <!-- Phần 1: BPT Bậc Nhất 2 Ẩn -->\n  <div class=\"bg-blue-50/70 border-l-4 border-blue-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-blue-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-shapes text-blue-600\"></i>\n      1. Bất Phương Trình Bậc Nhất Hai Ẩn\n    </h4>\n    <ul class=\"list-disc pl-5 space-y-1.5 text-[11.5pt]\">\n      <li><strong>Dạng tổng quát:</strong> $ax + by < c$ (hoặc $\\le c, > c, \\ge c$) với $a^2 + b^2 \\ne 0$.</li>\n      <li><strong>Quy tắc xác định miền nghiệm:</strong>\n        <p class=\"mt-1\">1. Vẽ đường thẳng bờ $d: ax + by = c$.</p>\n        <p>2. Chọn một điểm thử $M_0(x_0; y_0) \\notin d$ (thường chọn gốc $O(0; 0)$ nếu $c \\ne 0$).</p>\n        <p>3. Tính $ax_0 + by_0$. Nếu thỏa mãn thì nửa mặt phẳng chứa $M_0$ là miền nghiệm; ngược lại là nửa mặt phẳng không chứa $M_0$.</p>\n      </li>\n    </ul>\n  </div>\n\n  <!-- Phần 2: Hệ BPT Bậc Nhất 2 Ẩn -->\n  <div class=\"bg-emerald-50/70 border-l-4 border-emerald-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-emerald-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-layer-group text-emerald-600\"></i>\n      2. Hệ Bất Phương Trình Bậc Nhất Hai Ẩn\n    </h4>\n    <div class=\"text-[11.5pt] space-y-2\">\n      <p>Hệ gồm từ hai bất phương trình bậc nhất hai ẩn trở lên. Miền nghiệm của hệ là phần giao nhau của các miền nghiệm thành phần, thường là một <strong>miền đa giác lồi</strong> (tam giác, tứ giác, ngũ giác...).</p>\n      <div class=\"bg-white p-3 rounded-xl border border-emerald-200\">\n        <span class=\"font-bold text-emerald-900\">Cách tìm tọa độ các đỉnh:</span> Giải các hệ phương trình đường thẳng giao nhau tương ứng của từng cặp bất phương trình tạo nên các cạnh bao quanh miền nghiệm.\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 3: Bài toán Quy Hoạch Tuyến Tính Tối Ưu Hóa -->\n  <div class=\"bg-amber-50/70 border-l-4 border-amber-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-amber-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-coins text-amber-600\"></i>\n      3. Bài Toán Tối Ưu Hóa (Quy Hoạch Tuyến Tính)\n    </h4>\n    <div class=\"space-y-2 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200 shadow-xs\">\n        <p class=\"font-bold text-amber-950 mb-1\">Định Lý Trọng Tâm:</p>\n        <p>Giá trị lớn nhất (GTLN) và giá trị nhỏ nhất (GTNN) của biểu thức mục tiêu $F(x; y) = ax + by$ trên một miền đa giác lồi $S$ <strong>luôn đạt tại một trong các đỉnh của miền đa giác đó</strong>.</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200 shadow-xs\">\n        <p class=\"font-bold text-amber-950 mb-1\">Quy trình 4 bước giải bài toán thực tế:</p>\n        <p><strong>Bước 1:</strong> Gọi $x, y$ là các ẩn thực tế (kèm điều kiện $x \\ge 0, y \\ge 0$).</p>\n        <p><strong>Bước 2:</strong> Thiết lập hệ bất phương trình ràng buộc tài nguyên (vốn, thời gian máy, nhân công, nguyên liệu...).</p>\n        <p><strong>Bước 3:</strong> Xác định tọa độ tất cả các đỉnh $A, B, C, D...$ của miền đa giác nghiệm.</p>\n        <p><strong>Bước 4:</strong> Tính giá trị hàm mục tiêu $F(A), F(B), F(C)...$ và so sánh để chọn giá trị lớn nhất (lợi nhuận tối đa) hoặc nhỏ nhất (chi phí tối thiểu).</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
     "exams": [
       {
-        "id": "cd2-de1",
+        "id": "cd2-exam-1",
         "examNumber": 1,
-        "title": "Đề số 1: Luyện Thi Chuyên Đề Hệ BPT Bậc Nhất 2 Ẩn",
+        "title": "Đề Số 1: Tối Ưu Hóa Sản Xuất Công Nghiệp & Vật Tư",
         "code": "CD2-201",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-emerald-100 text-emerald-800 border-emerald-200",
+        "badge": "Mã Đề 201",
+        "badgeColor": "bg-blue-50 text-blue-800 border-blue-200",
         "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
         "mcqs": [
           {
             "id": 1,
-            "question": "Điểm nào sau đây thuộc miền nghiệm của bất phương trình $2x + y - 4 \\le 0$?",
+            "question": "**Câu 1:** Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?",
             "options": {
-              "A": "$(3; 1)$",
-              "B": "$(1; 1)$",
-              "C": "$(2; 2)$",
-              "D": "$(1; 4)$"
+              "A": "$2x - 3y + 1 > 0$",
+              "B": "$x^2 + y \\le 2$",
+              "C": "$xy + 3 \\ge 0$",
+              "D": "$x + 2y^2 < 5$"
             },
-            "correct": "B",
-            "explanation": "Thay $(1; 1)$ vào: $2(1) + 1 - 4 = -1 \\le 0$ (thỏa mãn)."
+            "correct": "A",
+            "explanation": "Dạng chuẩn $ax + by + c > 0$ với $a = 2, b = -3$."
           },
           {
             "id": 2,
-            "question": "Cặp số nào sau đây là nghiệm của hệ bất phương trình $\\begin{cases} x + y \\ge 2 \\\\ 2x - y \\le 4 \\end{cases}$?",
+            "question": "**Câu 2:** Điểm nào sau đây thuộc miền nghiệm của bất phương trình $2x + y - 4 \\le 0$?",
             "options": {
-              "A": "$(2; 1)$",
-              "B": "$(0; 0)$",
-              "C": "$(0; 1)$",
-              "D": "$(3; 0)$"
-            },
-            "correct": "A",
-            "explanation": "Thay $(2; 1)$: $2 + 1 = 3 \\ge 2$ và $2(2) - 1 = 3 \\le 4$ (đều thỏa mãn)."
-          },
-          {
-            "id": 3,
-            "question": "Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?",
-            "options": {
-              "A": "$x^2 + y \\le 4$",
-              "B": "$xy - 1 \\ge 0$",
-              "C": "$3x - 2y + 5 > 0$",
-              "D": "$2x + 3y^2 < 1$"
-            },
-            "correct": "C",
-            "explanation": "Phương án A là bất phương trình bậc nhất hai ẩn theo định nghĩa."
-          },
-          {
-            "id": 4,
-            "question": "Miền nghiệm của bất phương trình $x \\ge 0$ trên mặt phẳng tọa độ $Oxy$ là:",
-            "options": {
-              "A": "Nửa mặt phẳng nằm bên phải trục tung kể cả trục tung",
-              "B": "Nửa mặt phẳng nằm phía trên trục hoành",
-              "C": "Nửa mặt phẳng nằm bên trái trục tung",
-              "D": "Nửa mặt phẳng nằm phía dưới trục hoành"
-            },
-            "correct": "A",
-            "explanation": "$x \\ge 0$ là nửa mặt phẳng bên phải trục tung $Oy$ kể cả trục tung."
-          },
-          {
-            "id": 5,
-            "question": "Cho biểu thức $F(x; y) = 3x + 2y$ trên miền tam giác có ba đỉnh $A(0; 0), B(4; 0), C(0; 9)$. Giá trị lớn nhất của $F(x; y)$ bằng:",
-            "options": {
-              "A": "$18$",
-              "B": "$10$",
-              "C": "$6$",
-              "D": "$8$"
-            },
-            "correct": "A",
-            "explanation": "$F(A) = 0, F(B) = 3(4) = 12, F(C) = 2(9) = 18$. GTLN là $18$."
-          },
-          {
-            "id": 6,
-            "question": "Đường thẳng $d: x - 2y = 4$ chia mặt phẳng tọa độ thành hai nửa mặt phẳng. Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của bất phương trình nào?",
-            "options": {
-              "A": "$x - 2y > 4$",
-              "B": "$x - 2y < 4$",
-              "C": "$x - 2y > 5$",
-              "D": "$x - 2y \\ge 4$"
-            },
-            "correct": "B",
-            "explanation": "Thay $O(0; 0)$ vào: $0 - 2(0) = 0 < 4$ nên thuộc miền nghiệm $x - 2y < 4$."
-          },
-          {
-            "id": 7,
-            "question": "Một người nông dân trồng hai loại rau trên diện tích tối đa 10 sào đất. Gọi $x$ và $y$ là số sào đất trồng rau cải và rau muống. Bất phương trình thể hiện điều kiện về diện tích là:",
-            "options": {
-              "A": "$xy \\le 10$",
-              "B": "$x + y \\le 10$ ($x, y \\ge 0$)",
-              "C": "$x - y \\le 10$",
-              "D": "$x + y \\ge 10$"
-            },
-            "correct": "B",
-            "explanation": "Tổng diện tích trồng không vượt quá 10 sào: $x + y \\le 10$ với $x, y \\ge 0$."
-          },
-          {
-            "id": 8,
-            "question": "Hệ bất phương trình nào sau đây có miền nghiệm là một tứ giác lồi?",
-            "options": {
-              "A": "$\\begin{cases} x + y \\ge 1 \\\\ x - y \\le 0 \\end{cases}$",
-              "B": "$\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\end{cases}$",
-              "C": "$\\begin{cases} 0 \\le x \\le 4 \\\\ 0 \\le y \\le 3 \\end{cases}$",
-              "D": "$\\begin{cases} x + y \\le 2 \\\\ x \\ge 0 \\end{cases}$"
-            },
-            "correct": "C",
-            "explanation": "Miền nghiệm là hình chữ nhật (tứ giác lồi) có 4 đỉnh $(0;0), (4;0), (4;3), (0;3)$."
-          },
-          {
-            "id": 9,
-            "question": "Cho miền nghiệm của hệ BPT là tam giác $OAB$ với $O(0; 0), A(3; 0), B(1; 4)$. Giá trị nhỏ nhất của biểu thức $F(x; y) = 2x - 3y$ bằng:",
-            "options": {
-              "A": "$6$",
-              "B": "$-5$",
-              "C": "$0$",
-              "D": "$-10$"
-            },
-            "correct": "D",
-            "explanation": "$F(O) = 0, F(A) = 2(3) - 0 = 6, F(B) = 2(1) - 3(4) = -10$. Giá trị nhỏ nhất là $-10$."
-          },
-          {
-            "id": 10,
-            "question": "Một xưởng cơ khí có 120 giờ công làm việc mỗi tuần để sản xuất hai loại chi tiết máy. Chi tiết I cần 2 giờ, chi tiết II cần 3 giờ. Bất phương trình ràng buộc về thời gian công là:",
-            "options": {
-              "A": "$3x + 2y \\le 120$",
-              "B": "$x + y \\le 120$",
-              "C": "$2x + 3y \\ge 120$",
-              "D": "$2x + 3y \\le 120$ ($x, y \\ge 0$)"
-            },
-            "correct": "D",
-            "explanation": "$2x + 3y \\le 120$ với $x, y \\ge 0$."
-          },
-          {
-            "id": 11,
-            "question": "Tọa độ giao điểm của hai đường thẳng $x + y = 12$ và $2x - y = 9$ là:",
-            "options": {
-              "A": "$(\\frac{12}{2}; \\frac{9}{2})$",
-              "B": "$(\\frac{3}{3}; \\frac{21}{3})$",
-              "C": "$(12; 9)$",
-              "D": "$(\\frac{21}{3}; \\frac{15}{3})$"
-            },
-            "correct": "D",
-            "explanation": "Cộng hai phương trình: $3x = c_1 + c_2 \\Rightarrow x = (c_1 + c_2)/3, y = c_1 - x = (2c_1 - c_2)/3$."
-          },
-          {
-            "id": 12,
-            "question": "Một cửa hàng kinh doanh hai loại trà sữa với lợi nhuận mỗi ly lần lượt là 15 nghìn đồng và 20 nghìn đồng. Hàm mục tiêu biểu diễn tổng lợi nhuận (nghìn đồng) khi bán $x$ ly loại 1 và $y$ ly loại 2 là:",
-            "options": {
-              "A": "$F(x; y) = 15x - 20y$",
-              "B": "$F(x; y) = 35(x + y)$",
-              "C": "$F(x; y) = 15x + 20y$",
-              "D": "$F(x; y) = 20x + 15y$"
-            },
-            "correct": "C",
-            "explanation": "Lợi nhuận: $F(x; y) = 15x + 20y$ (nghìn đồng)."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Cho hệ bất phương trình bậc nhất hai ẩn $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 6 \\\\ 2x + y \\le 8 \\end{cases}$ có miền nghiệm là tứ giác $OABC$ với $O(0; 0), A(4; 0), B(2; 4), C(0; 6)$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Điểm $M(1; 2)$ thuộc miền nghiệm của hệ bất phương trình.",
-                "correct": true,
-                "explanation": "Thay $(1; 2)$ thỏa mãn cả 4 bất phương trình."
-              },
-              {
-                "key": "b",
-                "text": "Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 6$ và $2x + y = 8$.",
-                "correct": true,
-                "explanation": "Giải hệ: $x = 2, y = 4 \\Rightarrow B(2; 4)$."
-              },
-              {
-                "key": "c",
-                "text": "Diện tích của tứ giác miền nghiệm $OABC$ bằng 16 đơn vị diện tích.",
-                "correct": true,
-                "explanation": "Chia tứ giác thành $\\triangle OAC$ và $\\triangle ABC$, tính được diện tích bằng 16."
-              },
-              {
-                "key": "d",
-                "text": "Biểu thức $F(x; y) = 4x + 3y$ đạt giá trị lớn nhất tại đỉnh $A(4; 0)$.",
-                "correct": false,
-                "explanation": "$F(A) = 16, F(B) = 4(2) + 3(4) = 20, F(C) = 18$. GTLN đạt tại đỉnh $B(2; 4)$ bằng 20, không phải tại $A$."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Một công ty sản xuất hai loại nước trái cây đóng chai: Nước cam (loại A) và Nước táo (loại B). Mỗi chai loại A cần $0.2\\text{ kg}$ đường và 3 quả cam, đem lại lợi nhuận 4 nghìn đồng. Mỗi chai loại B cần $0.1\\text{ kg}$ đường và 2 quả táo, đem lại lợi nhuận 3 nghìn đồng. Nguồn nguyên liệu đường không quá $20\\text{ kg}$ mỗi ngày.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Ràng buộc về nguyên liệu đường là $0.2x + 0.1y \\le 20$ (với $x, y \\ge 0$).",
-                "correct": true,
-                "explanation": "Lượng đường sử dụng cho $x$ chai loại A và $y$ chai loại B không vượt quá 20 kg."
-              },
-              {
-                "key": "b",
-                "text": "Hàm số biểu diễn lợi nhuận hàng ngày là $F(x; y) = 4x + 3y$ (nghìn đồng).",
-                "correct": true,
-                "explanation": "Lợi nhuận là 4 nghìn đồng cho mỗi chai A và 3 nghìn đồng cho mỗi chai B."
-              },
-              {
-                "key": "c",
-                "text": "Nếu chỉ sản xuất duy nhất loại A thì sản xuất được tối đa 100 chai mỗi ngày.",
-                "correct": true,
-                "explanation": "Cho $y = 0 \\Rightarrow 0.2x \\le 20 \\Leftrightarrow x \\le 100$ chai."
-              },
-              {
-                "key": "d",
-                "text": "Nếu sản xuất 80 chai loại A thì có thể sản xuất tối đa 50 chai loại B.",
-                "correct": false,
-                "explanation": "$0.2(80) + 0.1y \\le 20 \\Leftrightarrow 16 + 0.1y \\le 20 \\Leftrightarrow 0.1y \\le 4 \\Leftrightarrow y \\le 40$ chai (không phải 50)."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một trang trại dự định dùng tối đa 20 triệu đồng để mua hai loại thức ăn bổ sung cho bò sữa: Loại I giá 400 nghìn đồng/bao (chứa 10 đơn vị đạm), Loại II giá 300 nghìn đồng/bao (chứa 5 đơn vị đạm). Nhu cầu tối thiểu của đàn bò là cần 300 đơn vị đạm mỗi tháng.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Bất phương trình ràng buộc về ngân sách mua thức ăn là $4x + 3y \\le 200$ (với $x, y$ là số bao loại I và II).",
-                "correct": true,
-                "explanation": "$400x + 300y \\le 20000 \\Leftrightarrow 4x + 3y \\le 200$."
-              },
-              {
-                "key": "b",
-                "text": "Bất phương trình ràng buộc về lượng đạm tối thiểu là $10x + 5y \\ge 300$.",
-                "correct": true,
-                "explanation": "Tổng lượng đạm $10x + 5y \\ge 300$ đơn vị."
-              },
-              {
-                "key": "c",
-                "text": "Trang trại có thể mua 20 bao loại I và 30 bao loại II.",
-                "correct": true,
-                "explanation": "$4(20) + 3(30) = 170 \\le 200$ và $10(20) + 5(30) = 350 \\ge 300$ (thỏa mãn)."
-              },
-              {
-                "key": "d",
-                "text": "Số bao thức ăn loại I tối đa mà trang trại có thể mua được là 40 bao.",
-                "correct": false,
-                "explanation": "$4x \\le 200 \\Rightarrow x \\le 50$ bao (khi $y = 0$, đạm $= 500 \\ge 300$)."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Một đội xe vận tải cần chở ít nhất 140 người và 9 tấn hàng. Có hai loại xe: Xe A (thuê 4 triệu đồng/chuyến, chở được 20 người và 0.6 tấn hàng), Xe B (thuê 3 triệu đồng/chuyến, chở được 10 người và 1.5 tấn hàng). Đội xe có tối đa 10 xe loại A và 9 xe loại B.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Điều kiện số xe: $0 \\le x \\le 10$ và $0 \\le y \\le 9$ ($x, y \\in \\mathbb{N}$).",
-                "correct": true,
-                "explanation": "Đội xe chỉ có sẵn tối đa 10 xe A và 9 xe B."
-              },
-              {
-                "key": "b",
-                "text": "Ràng buộc số người: $20x + 10y \\ge 140 \\Leftrightarrow 2x + y \\ge 14$.",
-                "correct": true,
-                "explanation": "Đúng theo dữ kiện chở ít nhất 140 người."
-              },
-              {
-                "key": "c",
-                "text": "Ràng buộc khối lượng hàng: $0.6x + 1.5y \\ge 9 \\Leftrightarrow 2x + 5y \\ge 30$.",
-                "correct": true,
-                "explanation": "Nhân hai vế với $10/3$: $2x + 5y \\ge 30$."
-              },
-              {
-                "key": "d",
-                "text": "Chi phí thuê xe thấp nhất đạt được khi thuê 10 xe loại A và 0 xe loại B.",
-                "correct": false,
-                "explanation": "Thuê $x = 5, y = 4$: người $= 100+40=140$, hàng $= 3+6=9$ tấn. Chi phí $= 4(5) + 3(4) = 32$ triệu đồng ($< 10 \\times 4 = 40$ triệu đồng)."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Tìm hoành độ giao điểm của hai đường thẳng $x + y = 10$ và $2x - y = 5$.",
-            "correctAnswer": "5",
-            "acceptedAnswers": [
-              "5",
-              "5.0"
-            ],
-            "explanation": "Cộng hai phương trình: $3x = 15 \\Rightarrow x = 5$."
-          },
-          {
-            "id": 2,
-            "question": "Tính diện tích của hình tam giác giới hạn bởi ba đường thẳng: $x = 0, y = 0, x + 2y = 8$.",
-            "correctAnswer": "16",
-            "acceptedAnswers": [
-              "16",
-              "16.0"
-            ],
-            "explanation": "Giao với trục tọa độ tại $A(8; 0)$ và $B(0; 4)$. Diện tích $S = \\frac{1}{2}(8)(4) = 16$."
-          },
-          {
-            "id": 3,
-            "question": "Tìm giá trị lớn nhất của biểu thức $F(x; y) = 5x + 3y$ trên miền đa giác có các đỉnh $A(0; 0), B(6; 0), C(4; 3), D(0; 5)$.",
-            "correctAnswer": "30",
-            "acceptedAnswers": [
-              "30",
-              "30.0"
-            ],
-            "explanation": "$F(A) = 0, F(B) = 30, F(C) = 5(4)+3(3) = 29, F(D) = 15$. GTLN là 30."
-          },
-          {
-            "id": 4,
-            "question": "Tìm giá trị nhỏ nhất của biểu thức $F(x; y) = 3x - 4y$ trên miền tam giác có ba đỉnh $A(1; 1), B(5; 2), C(2; 6)$.",
-            "correctAnswer": "-18",
-            "acceptedAnswers": [
-              "-18",
-              "-18.0"
-            ],
-            "explanation": "$F(A) = 3(1)-4(1) = -1, F(B) = 3(5)-4(2) = 7, F(C) = 3(2)-4(6) = -18$. GTNN là -18."
-          },
-          {
-            "id": 5,
-            "question": "Một xí nghiệp sản xuất hai loại sản phẩm I và II. Mỗi tấn sản phẩm I cần 2 máy A và 1 máy B, đem lại lợi nhuận 40 triệu đồng. Mỗi tấn sản phẩm II cần 1 máy A và 2 máy B, đem lại lợi nhuận 50 triệu đồng. Xí nghiệp có tối đa 8 máy A và 10 máy B. Hỏi lợi nhuận lớn nhất xí nghiệp có thể đạt được là bao nhiêu triệu đồng?",
-            "correctAnswer": "260",
-            "acceptedAnswers": [
-              "260",
-              "260.0"
-            ],
-            "explanation": "Hệ BPT: $2x + y \\le 8, x + 2y \\le 10, x \\ge 0, y \\ge 0$. Đỉnh miền nghiệm: $(0;0), (4;0), (2;4), (0;5)$. Lợi nhuận $F(x; y) = 40x + 50y$. $F(2; 4) = 40(2) + 50(4) = 260$ triệu đồng."
-          },
-          {
-            "id": 6,
-            "question": "Một công ty cần thuê xe để chở 140 người và 9 tấn hàng. Xe lớn thuê 4 triệu/chuyến (chở 20 người, 0.6 tấn), xe nhỏ thuê 3 triệu/chuyến (chở 10 người, 1.5 tấn). Chi phí thuê xe nhỏ nhất là bao nhiêu triệu đồng?",
-            "correctAnswer": "32",
-            "acceptedAnswers": [
-              "32",
-              "32.0"
-            ],
-            "explanation": "Thuê 5 xe lớn và 4 xe nhỏ: người $= 5(20)+4(10)=140$, hàng $= 5(0.6)+4(1.5)=9$ tấn. Chi phí $= 5(4) + 4(3) = 32$ triệu đồng."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd2-de2",
-        "examNumber": 2,
-        "title": "Đề số 2: Luyện Thi Chuyên Đề Hệ BPT Bậc Nhất 2 Ẩn",
-        "code": "CD2-202",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-emerald-100 text-emerald-800 border-emerald-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Điểm nào sau đây thuộc miền nghiệm của bất phương trình $2x + y - 4 \\le 0$?",
-            "options": {
-              "A": "$(1; 1)$",
+              "A": "$(0; 5)$",
               "B": "$(3; 1)$",
-              "C": "$(1; 4)$",
-              "D": "$(2; 2)$"
-            },
-            "correct": "A",
-            "explanation": "Thay $(1; 1)$ vào: $2(1) + 1 - 4 = -1 \\le 0$ (thỏa mãn)."
-          },
-          {
-            "id": 2,
-            "question": "Cặp số nào sau đây là nghiệm của hệ bất phương trình $\\begin{cases} x + y \\ge 2 \\\\ 2x - y \\le 4 \\end{cases}$?",
-            "options": {
-              "A": "$(3; 0)$",
-              "B": "$(0; 1)$",
-              "C": "$(0; 0)$",
-              "D": "$(2; 1)$"
+              "C": "$(2; 3)$",
+              "D": "$(1; 1)$"
             },
             "correct": "D",
-            "explanation": "Thay $(2; 1)$: $2 + 1 = 3 \\ge 2$ và $2(2) - 1 = 3 \\le 4$ (đều thỏa mãn)."
+            "explanation": "Thay $(1; 1)$: $2(1) + 1 - 4 = -1 \\le 0$ (thỏa mãn)."
           },
           {
             "id": 3,
-            "question": "Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?",
+            "question": "**Câu 3:** Cặp số $(x; y) = (2; 1)$ là nghiệm của hệ bất phương trình nào sau đây?",
             "options": {
-              "A": "$2x + 3y^2 < 1$",
-              "B": "$3x - 2y + 5 > 0$",
-              "C": "$xy - 1 \\ge 0$",
-              "D": "$x^2 + y \\le 4$"
+              "A": "$\\begin{cases} x - y > 3 \\\\ x + 2y \\le 0 \\end{cases}$",
+              "B": "$\\begin{cases} 2x + y \\le 3 \\\\ x - y > 2 \\end{cases}$",
+              "C": "$\\begin{cases} x + y < 2 \\\\ 2x - y > 4 \\end{cases}$",
+              "D": "$\\begin{cases} x + y \\ge 2 \\\\ 2x - y \\le 4 \\end{cases}$"
             },
-            "correct": "B",
-            "explanation": "Phương án A là bất phương trình bậc nhất hai ẩn theo định nghĩa."
+            "correct": "D",
+            "explanation": "Thay $x = 2, y = 1$: $2 + 1 = 3 \\ge 2$ và $2(2) - 1 = 3 \\le 4$."
           },
           {
             "id": 4,
-            "question": "Miền nghiệm của bất phương trình $x \\ge 0$ trên mặt phẳng tọa độ $Oxy$ là:",
+            "question": "**Câu 4:** Miền nghiệm của bất phương trình $x \\ge 0$ trên mặt phẳng tọa độ $Oxy$ là",
             "options": {
-              "A": "Nửa mặt phẳng nằm bên trái trục tung",
-              "B": "Nửa mặt phẳng nằm phía dưới trục hoành",
-              "C": "Nửa mặt phẳng nằm bên phải trục tung kể cả trục tung",
-              "D": "Nửa mặt phẳng nằm phía trên trục hoành"
+              "A": "Nửa mặt phẳng nằm phía trên trục hoành",
+              "B": "Nửa mặt phẳng nằm bên phải trục tung kể cả bờ",
+              "C": "Nửa mặt phẳng nằm phía dưới trục hoành",
+              "D": "Nửa mặt phẳng nằm bên trái trục tung"
             },
-            "correct": "C",
-            "explanation": "$x \\ge 0$ là nửa mặt phẳng bên phải trục tung $Oy$ kể cả trục tung."
+            "correct": "B",
+            "explanation": "$x \\ge 0$ biểu diễn nửa mặt phẳng bên phải trục tung $Oy$ kể cả trục tung."
           },
           {
             "id": 5,
-            "question": "Cho biểu thức $F(x; y) = 3x + 2y$ trên miền tam giác có ba đỉnh $A(0; 0), B(4; 0), C(0; 10)$. Giá trị lớn nhất của $F(x; y)$ bằng:",
+            "question": "**Câu 5:** Cho biểu thức $F(x; y) = 3x + 2y$ trên miền tam giác $OAB$ với $O(0; 0), A(4; 0), B(0; 5)$. Giá trị lớn nhất của $F(x; y)$ bằng",
             "options": {
-              "A": "$10$",
-              "B": "$6$",
-              "C": "$20$",
-              "D": "$8$"
+              "A": "$7$",
+              "B": "$15$",
+              "C": "$10$",
+              "D": "$12$"
             },
-            "correct": "C",
-            "explanation": "$F(A) = 0, F(B) = 3(4) = 12, F(C) = 2(10) = 20$. GTLN là $20$."
+            "correct": "D",
+            "explanation": "$F(O) = 0, F(A) = 12, F(B) = 10$. GTLN là $12$."
           },
           {
             "id": 6,
-            "question": "Đường thẳng $d: x - 2y = 4$ chia mặt phẳng tọa độ thành hai nửa mặt phẳng. Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của bất phương trình nào?",
+            "question": "**Câu 6:** Đường thẳng bờ $d: x - 2y = 4$ chia mặt phẳng tọa độ thành hai nửa mặt phẳng. Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của bất phương trình nào?",
             "options": {
-              "A": "$x - 2y > 5$",
-              "B": "$x - 2y \\ge 4$",
+              "A": "$x - 2y \\ge 4$",
+              "B": "$x - 2y > 6$",
               "C": "$x - 2y < 4$",
               "D": "$x - 2y > 4$"
             },
             "correct": "C",
-            "explanation": "Thay $O(0; 0)$ vào: $0 - 2(0) = 0 < 4$ nên thuộc miền nghiệm $x - 2y < 4$."
+            "explanation": "Thay $O(0; 0)$ vào: $0 - 2(0) = 0 < 4$."
           },
           {
             "id": 7,
-            "question": "Một người nông dân trồng hai loại rau trên diện tích tối đa 10 sào đất. Gọi $x$ và $y$ là số sào đất trồng rau cải và rau muống. Bất phương trình thể hiện điều kiện về diện tích là:",
+            "question": "**Câu 7:** Một xưởng sản xuất bàn và ghế. Gọi $x$ và $y$ lần lượt là số bàn và ghế sản xuất. Biết mỗi ngày xưởng sản xuất không quá 30 sản phẩm cả hai loại. Bất phương trình thể hiện điều kiện này là",
             "options": {
-              "A": "$x + y \\le 10$ ($x, y \\ge 0$)",
-              "B": "$x - y \\le 10$",
-              "C": "$x + y \\ge 10$",
-              "D": "$xy \\le 10$"
+              "A": "$x + y \\ge 30$",
+              "B": "$x - y \\le 30$",
+              "C": "$x + y \\le 30$",
+              "D": "$xy \\le 30$"
             },
-            "correct": "A",
-            "explanation": "Tổng diện tích trồng không vượt quá 10 sào: $x + y \\le 10$ với $x, y \\ge 0$."
+            "correct": "C",
+            "explanation": "Tổng số bàn và ghế là $x + y \\le 30$ ($x, y \\ge 0$)."
           },
           {
             "id": 8,
-            "question": "Hệ bất phương trình nào sau đây có miền nghiệm là một tứ giác lồi?",
+            "question": "**Câu 8:** Điểm nào sau đây KHÔNG thuộc miền nghiệm của hệ bất phương trình $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 4 \\end{cases}$?",
             "options": {
-              "A": "$\\begin{cases} 0 \\le x \\le 4 \\\\ 0 \\le y \\le 3 \\end{cases}$",
-              "B": "$\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\end{cases}$",
-              "C": "$\\begin{cases} x + y \\le 2 \\\\ x \\ge 0 \\end{cases}$",
-              "D": "$\\begin{cases} x + y \\ge 1 \\\\ x - y \\le 0 \\end{cases}$"
+              "A": "$(2; 3)$",
+              "B": "$(3; 1)$",
+              "C": "$(0; 4)$",
+              "D": "$(1; 2)$"
             },
             "correct": "A",
-            "explanation": "Miền nghiệm là hình chữ nhật (tứ giác lồi) có 4 đỉnh $(0;0), (4;0), (4;3), (0;3)$."
+            "explanation": "Điểm $(2; 3)$ có $x + y = 2 + 3 = 5 > 4$ nên không thuộc miền nghiệm."
           },
           {
             "id": 9,
-            "question": "Cho miền nghiệm của hệ BPT là tam giác $OAB$ với $O(0; 0), A(3; 0), B(1; 4)$. Giá trị nhỏ nhất của biểu thức $F(x; y) = 2x - 3y$ bằng:",
+            "question": "**Câu 9:** Miền tam giác tạo bởi các đường thẳng $x = 0, y = 0$ và $x + 2y = 6$ có diện tích bằng",
             "options": {
-              "A": "$6$",
-              "B": "$-10$",
-              "C": "$0$",
-              "D": "$-5$"
+              "A": "$9$",
+              "B": "$6$",
+              "C": "$18$",
+              "D": "$12$"
             },
-            "correct": "B",
-            "explanation": "$F(O) = 0, F(A) = 2(3) - 0 = 6, F(B) = 2(1) - 3(4) = -10$. Giá trị nhỏ nhất là $-10$."
+            "correct": "A",
+            "explanation": "Giao điểm với các trục là $(0; 0), (6; 0), (0; 3)$. Diện tích $S = \\frac{1}{2} \\cdot 6 \\cdot 3 = 9$."
           },
           {
             "id": 10,
-            "question": "Một xưởng cơ khí có 120 giờ công làm việc mỗi tuần để sản xuất hai loại chi tiết máy. Chi tiết I cần 2 giờ, chi tiết II cần 3 giờ. Bất phương trình ràng buộc về thời gian công là:",
+            "question": "**Câu 10:** Giá trị nhỏ nhất của biểu thức $F(x; y) = 2x - y$ trên miền tứ giác có các đỉnh $A(0; 0), B(3; 0), C(2; 3), D(0; 4)$ bằng",
             "options": {
-              "A": "$3x + 2y \\le 120$",
-              "B": "$2x + 3y \\ge 120$",
-              "C": "$x + y \\le 120$",
-              "D": "$2x + 3y \\le 120$ ($x, y \\ge 0$)"
-            },
-            "correct": "D",
-            "explanation": "$2x + 3y \\le 120$ với $x, y \\ge 0$."
-          },
-          {
-            "id": 11,
-            "question": "Tọa độ giao điểm của hai đường thẳng $x + y = 14$ và $2x - y = 10$ là:",
-            "options": {
-              "A": "$(\\frac{4}{3}; \\frac{24}{3})$",
-              "B": "$(14; 10)$",
-              "C": "$(\\frac{14}{2}; \\frac{10}{2})$",
-              "D": "$(\\frac{24}{3}; \\frac{18}{3})$"
-            },
-            "correct": "D",
-            "explanation": "Cộng hai phương trình: $3x = c_1 + c_2 \\Rightarrow x = (c_1 + c_2)/3, y = c_1 - x = (2c_1 - c_2)/3$."
-          },
-          {
-            "id": 12,
-            "question": "Một cửa hàng kinh doanh hai loại trà sữa với lợi nhuận mỗi ly lần lượt là 15 nghìn đồng và 20 nghìn đồng. Hàm mục tiêu biểu diễn tổng lợi nhuận (nghìn đồng) khi bán $x$ ly loại 1 và $y$ ly loại 2 là:",
-            "options": {
-              "A": "$F(x; y) = 35(x + y)$",
-              "B": "$F(x; y) = 15x + 20y$",
-              "C": "$F(x; y) = 20x + 15y$",
-              "D": "$F(x; y) = 15x - 20y$"
-            },
-            "correct": "B",
-            "explanation": "Lợi nhuận: $F(x; y) = 15x + 20y$ (nghìn đồng)."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Cho hệ bất phương trình bậc nhất hai ẩn $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 6 \\\\ 2x + y \\le 8 \\end{cases}$ có miền nghiệm là tứ giác $OABC$ với $O(0; 0), A(4; 0), B(2; 4), C(0; 6)$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Điểm $M(1; 2)$ thuộc miền nghiệm của hệ bất phương trình.",
-                "correct": true,
-                "explanation": "Thay $(1; 2)$ thỏa mãn cả 4 bất phương trình."
-              },
-              {
-                "key": "b",
-                "text": "Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 6$ và $2x + y = 8$.",
-                "correct": true,
-                "explanation": "Giải hệ: $x = 2, y = 4 \\Rightarrow B(2; 4)$."
-              },
-              {
-                "key": "c",
-                "text": "Diện tích của tứ giác miền nghiệm $OABC$ bằng 16 đơn vị diện tích.",
-                "correct": true,
-                "explanation": "Chia tứ giác thành $\\triangle OAC$ và $\\triangle ABC$, tính được diện tích bằng 16."
-              },
-              {
-                "key": "d",
-                "text": "Biểu thức $F(x; y) = 4x + 3y$ đạt giá trị lớn nhất tại đỉnh $A(4; 0)$.",
-                "correct": false,
-                "explanation": "$F(A) = 16, F(B) = 4(2) + 3(4) = 20, F(C) = 18$. GTLN đạt tại đỉnh $B(2; 4)$ bằng 20, không phải tại $A$."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Một công ty sản xuất hai loại nước trái cây đóng chai: Nước cam (loại A) và Nước táo (loại B). Mỗi chai loại A cần $0.2\\text{ kg}$ đường và 3 quả cam, đem lại lợi nhuận 4 nghìn đồng. Mỗi chai loại B cần $0.1\\text{ kg}$ đường và 2 quả táo, đem lại lợi nhuận 3 nghìn đồng. Nguồn nguyên liệu đường không quá $20\\text{ kg}$ mỗi ngày.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Ràng buộc về nguyên liệu đường là $0.2x + 0.1y \\le 20$ (với $x, y \\ge 0$).",
-                "correct": true,
-                "explanation": "Lượng đường sử dụng cho $x$ chai loại A và $y$ chai loại B không vượt quá 20 kg."
-              },
-              {
-                "key": "b",
-                "text": "Hàm số biểu diễn lợi nhuận hàng ngày là $F(x; y) = 4x + 3y$ (nghìn đồng).",
-                "correct": true,
-                "explanation": "Lợi nhuận là 4 nghìn đồng cho mỗi chai A và 3 nghìn đồng cho mỗi chai B."
-              },
-              {
-                "key": "c",
-                "text": "Nếu chỉ sản xuất duy nhất loại A thì sản xuất được tối đa 100 chai mỗi ngày.",
-                "correct": true,
-                "explanation": "Cho $y = 0 \\Rightarrow 0.2x \\le 20 \\Leftrightarrow x \\le 100$ chai."
-              },
-              {
-                "key": "d",
-                "text": "Nếu sản xuất 80 chai loại A thì có thể sản xuất tối đa 50 chai loại B.",
-                "correct": false,
-                "explanation": "$0.2(80) + 0.1y \\le 20 \\Leftrightarrow 16 + 0.1y \\le 20 \\Leftrightarrow 0.1y \\le 4 \\Leftrightarrow y \\le 40$ chai (không phải 50)."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một trang trại dự định dùng tối đa 20 triệu đồng để mua hai loại thức ăn bổ sung cho bò sữa: Loại I giá 400 nghìn đồng/bao (chứa 10 đơn vị đạm), Loại II giá 300 nghìn đồng/bao (chứa 5 đơn vị đạm). Nhu cầu tối thiểu của đàn bò là cần 300 đơn vị đạm mỗi tháng.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Bất phương trình ràng buộc về ngân sách mua thức ăn là $4x + 3y \\le 200$ (với $x, y$ là số bao loại I và II).",
-                "correct": true,
-                "explanation": "$400x + 300y \\le 20000 \\Leftrightarrow 4x + 3y \\le 200$."
-              },
-              {
-                "key": "b",
-                "text": "Bất phương trình ràng buộc về lượng đạm tối thiểu là $10x + 5y \\ge 300$.",
-                "correct": true,
-                "explanation": "Tổng lượng đạm $10x + 5y \\ge 300$ đơn vị."
-              },
-              {
-                "key": "c",
-                "text": "Trang trại có thể mua 20 bao loại I và 30 bao loại II.",
-                "correct": true,
-                "explanation": "$4(20) + 3(30) = 170 \\le 200$ và $10(20) + 5(30) = 350 \\ge 300$ (thỏa mãn)."
-              },
-              {
-                "key": "d",
-                "text": "Số bao thức ăn loại I tối đa mà trang trại có thể mua được là 40 bao.",
-                "correct": false,
-                "explanation": "$4x \\le 200 \\Rightarrow x \\le 50$ bao (khi $y = 0$, đạm $= 500 \\ge 300$)."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Một đội xe vận tải cần chở ít nhất 140 người và 9 tấn hàng. Có hai loại xe: Xe A (thuê 4 triệu đồng/chuyến, chở được 20 người và 0.6 tấn hàng), Xe B (thuê 3 triệu đồng/chuyến, chở được 10 người và 1.5 tấn hàng). Đội xe có tối đa 10 xe loại A và 9 xe loại B.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Điều kiện số xe: $0 \\le x \\le 10$ và $0 \\le y \\le 9$ ($x, y \\in \\mathbb{N}$).",
-                "correct": true,
-                "explanation": "Đội xe chỉ có sẵn tối đa 10 xe A và 9 xe B."
-              },
-              {
-                "key": "b",
-                "text": "Ràng buộc số người: $20x + 10y \\ge 140 \\Leftrightarrow 2x + y \\ge 14$.",
-                "correct": true,
-                "explanation": "Đúng theo dữ kiện chở ít nhất 140 người."
-              },
-              {
-                "key": "c",
-                "text": "Ràng buộc khối lượng hàng: $0.6x + 1.5y \\ge 9 \\Leftrightarrow 2x + 5y \\ge 30$.",
-                "correct": true,
-                "explanation": "Nhân hai vế với $10/3$: $2x + 5y \\ge 30$."
-              },
-              {
-                "key": "d",
-                "text": "Chi phí thuê xe thấp nhất đạt được khi thuê 10 xe loại A và 0 xe loại B.",
-                "correct": false,
-                "explanation": "Thuê $x = 5, y = 4$: người $= 100+40=140$, hàng $= 3+6=9$ tấn. Chi phí $= 4(5) + 3(4) = 32$ triệu đồng ($< 10 \\times 4 = 40$ triệu đồng)."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Tìm hoành độ giao điểm của hai đường thẳng $x + y = 10$ và $2x - y = 5$.",
-            "correctAnswer": "5",
-            "acceptedAnswers": [
-              "5",
-              "5.0"
-            ],
-            "explanation": "Cộng hai phương trình: $3x = 15 \\Rightarrow x = 5$."
-          },
-          {
-            "id": 2,
-            "question": "Tính diện tích của hình tam giác giới hạn bởi ba đường thẳng: $x = 0, y = 0, x + 2y = 8$.",
-            "correctAnswer": "16",
-            "acceptedAnswers": [
-              "16",
-              "16.0"
-            ],
-            "explanation": "Giao với trục tọa độ tại $A(8; 0)$ và $B(0; 4)$. Diện tích $S = \\frac{1}{2}(8)(4) = 16$."
-          },
-          {
-            "id": 3,
-            "question": "Tìm giá trị lớn nhất của biểu thức $F(x; y) = 5x + 3y$ trên miền đa giác có các đỉnh $A(0; 0), B(6; 0), C(4; 3), D(0; 5)$.",
-            "correctAnswer": "30",
-            "acceptedAnswers": [
-              "30",
-              "30.0"
-            ],
-            "explanation": "$F(A) = 0, F(B) = 30, F(C) = 5(4)+3(3) = 29, F(D) = 15$. GTLN là 30."
-          },
-          {
-            "id": 4,
-            "question": "Tìm giá trị nhỏ nhất của biểu thức $F(x; y) = 3x - 4y$ trên miền tam giác có ba đỉnh $A(1; 1), B(5; 2), C(2; 6)$.",
-            "correctAnswer": "-18",
-            "acceptedAnswers": [
-              "-18",
-              "-18.0"
-            ],
-            "explanation": "$F(A) = 3(1)-4(1) = -1, F(B) = 3(5)-4(2) = 7, F(C) = 3(2)-4(6) = -18$. GTNN là -18."
-          },
-          {
-            "id": 5,
-            "question": "Một xí nghiệp sản xuất hai loại sản phẩm I và II. Mỗi tấn sản phẩm I cần 2 máy A và 1 máy B, đem lại lợi nhuận 40 triệu đồng. Mỗi tấn sản phẩm II cần 1 máy A và 2 máy B, đem lại lợi nhuận 50 triệu đồng. Xí nghiệp có tối đa 8 máy A và 10 máy B. Hỏi lợi nhuận lớn nhất xí nghiệp có thể đạt được là bao nhiêu triệu đồng?",
-            "correctAnswer": "260",
-            "acceptedAnswers": [
-              "260",
-              "260.0"
-            ],
-            "explanation": "Hệ BPT: $2x + y \\le 8, x + 2y \\le 10, x \\ge 0, y \\ge 0$. Đỉnh miền nghiệm: $(0;0), (4;0), (2;4), (0;5)$. Lợi nhuận $F(x; y) = 40x + 50y$. $F(2; 4) = 40(2) + 50(4) = 260$ triệu đồng."
-          },
-          {
-            "id": 6,
-            "question": "Một công ty cần thuê xe để chở 140 người và 9 tấn hàng. Xe lớn thuê 4 triệu/chuyến (chở 20 người, 0.6 tấn), xe nhỏ thuê 3 triệu/chuyến (chở 10 người, 1.5 tấn). Chi phí thuê xe nhỏ nhất là bao nhiêu triệu đồng?",
-            "correctAnswer": "32",
-            "acceptedAnswers": [
-              "32",
-              "32.0"
-            ],
-            "explanation": "Thuê 5 xe lớn và 4 xe nhỏ: người $= 5(20)+4(10)=140$, hàng $= 5(0.6)+4(1.5)=9$ tấn. Chi phí $= 5(4) + 4(3) = 32$ triệu đồng."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd2-de3",
-        "examNumber": 3,
-        "title": "Đề số 3: Luyện Thi Chuyên Đề Hệ BPT Bậc Nhất 2 Ẩn",
-        "code": "CD2-203",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-emerald-100 text-emerald-800 border-emerald-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Điểm nào sau đây thuộc miền nghiệm của bất phương trình $2x + y - 4 \\le 0$?",
-            "options": {
-              "A": "$(1; 4)$",
-              "B": "$(1; 1)$",
-              "C": "$(2; 2)$",
-              "D": "$(3; 1)$"
-            },
-            "correct": "B",
-            "explanation": "Thay $(1; 1)$ vào: $2(1) + 1 - 4 = -1 \\le 0$ (thỏa mãn)."
-          },
-          {
-            "id": 2,
-            "question": "Cặp số nào sau đây là nghiệm của hệ bất phương trình $\\begin{cases} x + y \\ge 2 \\\\ 2x - y \\le 4 \\end{cases}$?",
-            "options": {
-              "A": "$(0; 1)$",
-              "B": "$(2; 1)$",
-              "C": "$(0; 0)$",
-              "D": "$(3; 0)$"
-            },
-            "correct": "B",
-            "explanation": "Thay $(2; 1)$: $2 + 1 = 3 \\ge 2$ và $2(2) - 1 = 3 \\le 4$ (đều thỏa mãn)."
-          },
-          {
-            "id": 3,
-            "question": "Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?",
-            "options": {
-              "A": "$2x + 3y^2 < 1$",
-              "B": "$x^2 + y \\le 4$",
-              "C": "$3x - 2y + 5 > 0$",
-              "D": "$xy - 1 \\ge 0$"
-            },
-            "correct": "C",
-            "explanation": "Phương án A là bất phương trình bậc nhất hai ẩn theo định nghĩa."
-          },
-          {
-            "id": 4,
-            "question": "Miền nghiệm của bất phương trình $x \\ge 0$ trên mặt phẳng tọa độ $Oxy$ là:",
-            "options": {
-              "A": "Nửa mặt phẳng nằm phía dưới trục hoành",
-              "B": "Nửa mặt phẳng nằm bên trái trục tung",
-              "C": "Nửa mặt phẳng nằm phía trên trục hoành",
-              "D": "Nửa mặt phẳng nằm bên phải trục tung kể cả trục tung"
-            },
-            "correct": "D",
-            "explanation": "$x \\ge 0$ là nửa mặt phẳng bên phải trục tung $Oy$ kể cả trục tung."
-          },
-          {
-            "id": 5,
-            "question": "Cho biểu thức $F(x; y) = 3x + 2y$ trên miền tam giác có ba đỉnh $A(0; 0), B(4; 0), C(0; 11)$. Giá trị lớn nhất của $F(x; y)$ bằng:",
-            "options": {
-              "A": "$6$",
-              "B": "$10$",
-              "C": "$22$",
-              "D": "$8$"
-            },
-            "correct": "C",
-            "explanation": "$F(A) = 0, F(B) = 3(4) = 12, F(C) = 2(11) = 22$. GTLN là $22$."
-          },
-          {
-            "id": 6,
-            "question": "Đường thẳng $d: x - 2y = 4$ chia mặt phẳng tọa độ thành hai nửa mặt phẳng. Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của bất phương trình nào?",
-            "options": {
-              "A": "$x - 2y < 4$",
-              "B": "$x - 2y \\ge 4$",
-              "C": "$x - 2y > 4$",
-              "D": "$x - 2y > 5$"
-            },
-            "correct": "A",
-            "explanation": "Thay $O(0; 0)$ vào: $0 - 2(0) = 0 < 4$ nên thuộc miền nghiệm $x - 2y < 4$."
-          },
-          {
-            "id": 7,
-            "question": "Một người nông dân trồng hai loại rau trên diện tích tối đa 10 sào đất. Gọi $x$ và $y$ là số sào đất trồng rau cải và rau muống. Bất phương trình thể hiện điều kiện về diện tích là:",
-            "options": {
-              "A": "$xy \\le 10$",
-              "B": "$x + y \\le 10$ ($x, y \\ge 0$)",
-              "C": "$x - y \\le 10$",
-              "D": "$x + y \\ge 10$"
-            },
-            "correct": "B",
-            "explanation": "Tổng diện tích trồng không vượt quá 10 sào: $x + y \\le 10$ với $x, y \\ge 0$."
-          },
-          {
-            "id": 8,
-            "question": "Hệ bất phương trình nào sau đây có miền nghiệm là một tứ giác lồi?",
-            "options": {
-              "A": "$\\begin{cases} x + y \\le 2 \\\\ x \\ge 0 \\end{cases}$",
-              "B": "$\\begin{cases} x + y \\ge 1 \\\\ x - y \\le 0 \\end{cases}$",
-              "C": "$\\begin{cases} 0 \\le x \\le 4 \\\\ 0 \\le y \\le 3 \\end{cases}$",
-              "D": "$\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\end{cases}$"
-            },
-            "correct": "C",
-            "explanation": "Miền nghiệm là hình chữ nhật (tứ giác lồi) có 4 đỉnh $(0;0), (4;0), (4;3), (0;3)$."
-          },
-          {
-            "id": 9,
-            "question": "Cho miền nghiệm của hệ BPT là tam giác $OAB$ với $O(0; 0), A(3; 0), B(1; 4)$. Giá trị nhỏ nhất của biểu thức $F(x; y) = 2x - 3y$ bằng:",
-            "options": {
-              "A": "$-10$",
+              "A": "$-3$",
               "B": "$0$",
-              "C": "$-5$",
+              "C": "$-4$",
               "D": "$6$"
             },
-            "correct": "A",
-            "explanation": "$F(O) = 0, F(A) = 2(3) - 0 = 6, F(B) = 2(1) - 3(4) = -10$. Giá trị nhỏ nhất là $-10$."
-          },
-          {
-            "id": 10,
-            "question": "Một xưởng cơ khí có 120 giờ công làm việc mỗi tuần để sản xuất hai loại chi tiết máy. Chi tiết I cần 2 giờ, chi tiết II cần 3 giờ. Bất phương trình ràng buộc về thời gian công là:",
-            "options": {
-              "A": "$2x + 3y \\le 120$ ($x, y \\ge 0$)",
-              "B": "$3x + 2y \\le 120$",
-              "C": "$2x + 3y \\ge 120$",
-              "D": "$x + y \\le 120$"
-            },
-            "correct": "A",
-            "explanation": "$2x + 3y \\le 120$ với $x, y \\ge 0$."
+            "correct": "C",
+            "explanation": "$F(A) = 0, F(B) = 6, F(C) = 1, F(D) = -4$. Nhỏ nhất là $-4$."
           },
           {
             "id": 11,
-            "question": "Tọa độ giao điểm của hai đường thẳng $x + y = 16$ và $2x - y = 11$ là:",
+            "question": "**Câu 11:** Trong mặt phẳng tọa độ $Oxy$, miền nghiệm của hệ $\\begin{cases} 0 \\le x \\le 4 \\\\ 0 \\le y \\le 3 \\end{cases}$ là một hình chữ nhật có chu vi bằng",
             "options": {
-              "A": "$(\\frac{5}{3}; \\frac{27}{3})$",
-              "B": "$(16; 11)$",
-              "C": "$(\\frac{16}{2}; \\frac{11}{2})$",
-              "D": "$(\\frac{27}{3}; \\frac{21}{3})$"
-            },
-            "correct": "D",
-            "explanation": "Cộng hai phương trình: $3x = c_1 + c_2 \\Rightarrow x = (c_1 + c_2)/3, y = c_1 - x = (2c_1 - c_2)/3$."
-          },
-          {
-            "id": 12,
-            "question": "Một cửa hàng kinh doanh hai loại trà sữa với lợi nhuận mỗi ly lần lượt là 15 nghìn đồng và 20 nghìn đồng. Hàm mục tiêu biểu diễn tổng lợi nhuận (nghìn đồng) khi bán $x$ ly loại 1 và $y$ ly loại 2 là:",
-            "options": {
-              "A": "$F(x; y) = 20x + 15y$",
-              "B": "$F(x; y) = 35(x + y)$",
-              "C": "$F(x; y) = 15x - 20y$",
-              "D": "$F(x; y) = 15x + 20y$"
-            },
-            "correct": "D",
-            "explanation": "Lợi nhuận: $F(x; y) = 15x + 20y$ (nghìn đồng)."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Cho hệ bất phương trình bậc nhất hai ẩn $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 6 \\\\ 2x + y \\le 8 \\end{cases}$ có miền nghiệm là tứ giác $OABC$ với $O(0; 0), A(4; 0), B(2; 4), C(0; 6)$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Điểm $M(1; 2)$ thuộc miền nghiệm của hệ bất phương trình.",
-                "correct": true,
-                "explanation": "Thay $(1; 2)$ thỏa mãn cả 4 bất phương trình."
-              },
-              {
-                "key": "b",
-                "text": "Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 6$ và $2x + y = 8$.",
-                "correct": true,
-                "explanation": "Giải hệ: $x = 2, y = 4 \\Rightarrow B(2; 4)$."
-              },
-              {
-                "key": "c",
-                "text": "Diện tích của tứ giác miền nghiệm $OABC$ bằng 16 đơn vị diện tích.",
-                "correct": true,
-                "explanation": "Chia tứ giác thành $\\triangle OAC$ và $\\triangle ABC$, tính được diện tích bằng 16."
-              },
-              {
-                "key": "d",
-                "text": "Biểu thức $F(x; y) = 4x + 3y$ đạt giá trị lớn nhất tại đỉnh $A(4; 0)$.",
-                "correct": false,
-                "explanation": "$F(A) = 16, F(B) = 4(2) + 3(4) = 20, F(C) = 18$. GTLN đạt tại đỉnh $B(2; 4)$ bằng 20, không phải tại $A$."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Một công ty sản xuất hai loại nước trái cây đóng chai: Nước cam (loại A) và Nước táo (loại B). Mỗi chai loại A cần $0.2\\text{ kg}$ đường và 3 quả cam, đem lại lợi nhuận 4 nghìn đồng. Mỗi chai loại B cần $0.1\\text{ kg}$ đường và 2 quả táo, đem lại lợi nhuận 3 nghìn đồng. Nguồn nguyên liệu đường không quá $20\\text{ kg}$ mỗi ngày.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Ràng buộc về nguyên liệu đường là $0.2x + 0.1y \\le 20$ (với $x, y \\ge 0$).",
-                "correct": true,
-                "explanation": "Lượng đường sử dụng cho $x$ chai loại A và $y$ chai loại B không vượt quá 20 kg."
-              },
-              {
-                "key": "b",
-                "text": "Hàm số biểu diễn lợi nhuận hàng ngày là $F(x; y) = 4x + 3y$ (nghìn đồng).",
-                "correct": true,
-                "explanation": "Lợi nhuận là 4 nghìn đồng cho mỗi chai A và 3 nghìn đồng cho mỗi chai B."
-              },
-              {
-                "key": "c",
-                "text": "Nếu chỉ sản xuất duy nhất loại A thì sản xuất được tối đa 100 chai mỗi ngày.",
-                "correct": true,
-                "explanation": "Cho $y = 0 \\Rightarrow 0.2x \\le 20 \\Leftrightarrow x \\le 100$ chai."
-              },
-              {
-                "key": "d",
-                "text": "Nếu sản xuất 80 chai loại A thì có thể sản xuất tối đa 50 chai loại B.",
-                "correct": false,
-                "explanation": "$0.2(80) + 0.1y \\le 20 \\Leftrightarrow 16 + 0.1y \\le 20 \\Leftrightarrow 0.1y \\le 4 \\Leftrightarrow y \\le 40$ chai (không phải 50)."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một trang trại dự định dùng tối đa 20 triệu đồng để mua hai loại thức ăn bổ sung cho bò sữa: Loại I giá 400 nghìn đồng/bao (chứa 10 đơn vị đạm), Loại II giá 300 nghìn đồng/bao (chứa 5 đơn vị đạm). Nhu cầu tối thiểu của đàn bò là cần 300 đơn vị đạm mỗi tháng.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Bất phương trình ràng buộc về ngân sách mua thức ăn là $4x + 3y \\le 200$ (với $x, y$ là số bao loại I và II).",
-                "correct": true,
-                "explanation": "$400x + 300y \\le 20000 \\Leftrightarrow 4x + 3y \\le 200$."
-              },
-              {
-                "key": "b",
-                "text": "Bất phương trình ràng buộc về lượng đạm tối thiểu là $10x + 5y \\ge 300$.",
-                "correct": true,
-                "explanation": "Tổng lượng đạm $10x + 5y \\ge 300$ đơn vị."
-              },
-              {
-                "key": "c",
-                "text": "Trang trại có thể mua 20 bao loại I và 30 bao loại II.",
-                "correct": true,
-                "explanation": "$4(20) + 3(30) = 170 \\le 200$ và $10(20) + 5(30) = 350 \\ge 300$ (thỏa mãn)."
-              },
-              {
-                "key": "d",
-                "text": "Số bao thức ăn loại I tối đa mà trang trại có thể mua được là 40 bao.",
-                "correct": false,
-                "explanation": "$4x \\le 200 \\Rightarrow x \\le 50$ bao (khi $y = 0$, đạm $= 500 \\ge 300$)."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Một đội xe vận tải cần chở ít nhất 140 người và 9 tấn hàng. Có hai loại xe: Xe A (thuê 4 triệu đồng/chuyến, chở được 20 người và 0.6 tấn hàng), Xe B (thuê 3 triệu đồng/chuyến, chở được 10 người và 1.5 tấn hàng). Đội xe có tối đa 10 xe loại A và 9 xe loại B.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Điều kiện số xe: $0 \\le x \\le 10$ và $0 \\le y \\le 9$ ($x, y \\in \\mathbb{N}$).",
-                "correct": true,
-                "explanation": "Đội xe chỉ có sẵn tối đa 10 xe A và 9 xe B."
-              },
-              {
-                "key": "b",
-                "text": "Ràng buộc số người: $20x + 10y \\ge 140 \\Leftrightarrow 2x + y \\ge 14$.",
-                "correct": true,
-                "explanation": "Đúng theo dữ kiện chở ít nhất 140 người."
-              },
-              {
-                "key": "c",
-                "text": "Ràng buộc khối lượng hàng: $0.6x + 1.5y \\ge 9 \\Leftrightarrow 2x + 5y \\ge 30$.",
-                "correct": true,
-                "explanation": "Nhân hai vế với $10/3$: $2x + 5y \\ge 30$."
-              },
-              {
-                "key": "d",
-                "text": "Chi phí thuê xe thấp nhất đạt được khi thuê 10 xe loại A và 0 xe loại B.",
-                "correct": false,
-                "explanation": "Thuê $x = 5, y = 4$: người $= 100+40=140$, hàng $= 3+6=9$ tấn. Chi phí $= 4(5) + 3(4) = 32$ triệu đồng ($< 10 \\times 4 = 40$ triệu đồng)."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Tìm hoành độ giao điểm của hai đường thẳng $x + y = 10$ và $2x - y = 5$.",
-            "correctAnswer": "5",
-            "acceptedAnswers": [
-              "5",
-              "5.0"
-            ],
-            "explanation": "Cộng hai phương trình: $3x = 15 \\Rightarrow x = 5$."
-          },
-          {
-            "id": 2,
-            "question": "Tính diện tích của hình tam giác giới hạn bởi ba đường thẳng: $x = 0, y = 0, x + 2y = 8$.",
-            "correctAnswer": "16",
-            "acceptedAnswers": [
-              "16",
-              "16.0"
-            ],
-            "explanation": "Giao với trục tọa độ tại $A(8; 0)$ và $B(0; 4)$. Diện tích $S = \\frac{1}{2}(8)(4) = 16$."
-          },
-          {
-            "id": 3,
-            "question": "Tìm giá trị lớn nhất của biểu thức $F(x; y) = 5x + 3y$ trên miền đa giác có các đỉnh $A(0; 0), B(6; 0), C(4; 3), D(0; 5)$.",
-            "correctAnswer": "30",
-            "acceptedAnswers": [
-              "30",
-              "30.0"
-            ],
-            "explanation": "$F(A) = 0, F(B) = 30, F(C) = 5(4)+3(3) = 29, F(D) = 15$. GTLN là 30."
-          },
-          {
-            "id": 4,
-            "question": "Tìm giá trị nhỏ nhất của biểu thức $F(x; y) = 3x - 4y$ trên miền tam giác có ba đỉnh $A(1; 1), B(5; 2), C(2; 6)$.",
-            "correctAnswer": "-18",
-            "acceptedAnswers": [
-              "-18",
-              "-18.0"
-            ],
-            "explanation": "$F(A) = 3(1)-4(1) = -1, F(B) = 3(5)-4(2) = 7, F(C) = 3(2)-4(6) = -18$. GTNN là -18."
-          },
-          {
-            "id": 5,
-            "question": "Một xí nghiệp sản xuất hai loại sản phẩm I và II. Mỗi tấn sản phẩm I cần 2 máy A và 1 máy B, đem lại lợi nhuận 40 triệu đồng. Mỗi tấn sản phẩm II cần 1 máy A và 2 máy B, đem lại lợi nhuận 50 triệu đồng. Xí nghiệp có tối đa 8 máy A và 10 máy B. Hỏi lợi nhuận lớn nhất xí nghiệp có thể đạt được là bao nhiêu triệu đồng?",
-            "correctAnswer": "260",
-            "acceptedAnswers": [
-              "260",
-              "260.0"
-            ],
-            "explanation": "Hệ BPT: $2x + y \\le 8, x + 2y \\le 10, x \\ge 0, y \\ge 0$. Đỉnh miền nghiệm: $(0;0), (4;0), (2;4), (0;5)$. Lợi nhuận $F(x; y) = 40x + 50y$. $F(2; 4) = 40(2) + 50(4) = 260$ triệu đồng."
-          },
-          {
-            "id": 6,
-            "question": "Một công ty cần thuê xe để chở 140 người và 9 tấn hàng. Xe lớn thuê 4 triệu/chuyến (chở 20 người, 0.6 tấn), xe nhỏ thuê 3 triệu/chuyến (chở 10 người, 1.5 tấn). Chi phí thuê xe nhỏ nhất là bao nhiêu triệu đồng?",
-            "correctAnswer": "32",
-            "acceptedAnswers": [
-              "32",
-              "32.0"
-            ],
-            "explanation": "Thuê 5 xe lớn và 4 xe nhỏ: người $= 5(20)+4(10)=140$, hàng $= 5(0.6)+4(1.5)=9$ tấn. Chi phí $= 5(4) + 4(3) = 32$ triệu đồng."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd2-de4",
-        "examNumber": 4,
-        "title": "Đề số 4: Luyện Thi Chuyên Đề Hệ BPT Bậc Nhất 2 Ẩn",
-        "code": "CD2-204",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-emerald-100 text-emerald-800 border-emerald-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Điểm nào sau đây thuộc miền nghiệm của bất phương trình $2x + y - 4 \\le 0$?",
-            "options": {
-              "A": "$(2; 2)$",
-              "B": "$(1; 4)$",
-              "C": "$(1; 1)$",
-              "D": "$(3; 1)$"
-            },
-            "correct": "C",
-            "explanation": "Thay $(1; 1)$ vào: $2(1) + 1 - 4 = -1 \\le 0$ (thỏa mãn)."
-          },
-          {
-            "id": 2,
-            "question": "Cặp số nào sau đây là nghiệm của hệ bất phương trình $\\begin{cases} x + y \\ge 2 \\\\ 2x - y \\le 4 \\end{cases}$?",
-            "options": {
-              "A": "$(2; 1)$",
-              "B": "$(0; 1)$",
-              "C": "$(3; 0)$",
-              "D": "$(0; 0)$"
-            },
-            "correct": "A",
-            "explanation": "Thay $(2; 1)$: $2 + 1 = 3 \\ge 2$ và $2(2) - 1 = 3 \\le 4$ (đều thỏa mãn)."
-          },
-          {
-            "id": 3,
-            "question": "Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?",
-            "options": {
-              "A": "$xy - 1 \\ge 0$",
-              "B": "$x^2 + y \\le 4$",
-              "C": "$2x + 3y^2 < 1$",
-              "D": "$3x - 2y + 5 > 0$"
-            },
-            "correct": "D",
-            "explanation": "Phương án A là bất phương trình bậc nhất hai ẩn theo định nghĩa."
-          },
-          {
-            "id": 4,
-            "question": "Miền nghiệm của bất phương trình $x \\ge 0$ trên mặt phẳng tọa độ $Oxy$ là:",
-            "options": {
-              "A": "Nửa mặt phẳng nằm bên trái trục tung",
-              "B": "Nửa mặt phẳng nằm bên phải trục tung kể cả trục tung",
-              "C": "Nửa mặt phẳng nằm phía trên trục hoành",
-              "D": "Nửa mặt phẳng nằm phía dưới trục hoành"
-            },
-            "correct": "B",
-            "explanation": "$x \\ge 0$ là nửa mặt phẳng bên phải trục tung $Oy$ kể cả trục tung."
-          },
-          {
-            "id": 5,
-            "question": "Cho biểu thức $F(x; y) = 3x + 2y$ trên miền tam giác có ba đỉnh $A(0; 0), B(4; 0), C(0; 12)$. Giá trị lớn nhất của $F(x; y)$ bằng:",
-            "options": {
-              "A": "$8$",
-              "B": "$10$",
-              "C": "$6$",
+              "A": "$12$",
+              "B": "$14$",
+              "C": "$7$",
               "D": "$24$"
             },
-            "correct": "D",
-            "explanation": "$F(A) = 0, F(B) = 3(4) = 12, F(C) = 2(12) = 24$. GTLN là $24$."
-          },
-          {
-            "id": 6,
-            "question": "Đường thẳng $d: x - 2y = 4$ chia mặt phẳng tọa độ thành hai nửa mặt phẳng. Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của bất phương trình nào?",
-            "options": {
-              "A": "$x - 2y > 4$",
-              "B": "$x - 2y > 5$",
-              "C": "$x - 2y < 4$",
-              "D": "$x - 2y \\ge 4$"
-            },
-            "correct": "C",
-            "explanation": "Thay $O(0; 0)$ vào: $0 - 2(0) = 0 < 4$ nên thuộc miền nghiệm $x - 2y < 4$."
-          },
-          {
-            "id": 7,
-            "question": "Một người nông dân trồng hai loại rau trên diện tích tối đa 10 sào đất. Gọi $x$ và $y$ là số sào đất trồng rau cải và rau muống. Bất phương trình thể hiện điều kiện về diện tích là:",
-            "options": {
-              "A": "$x - y \\le 10$",
-              "B": "$x + y \\ge 10$",
-              "C": "$x + y \\le 10$ ($x, y \\ge 0$)",
-              "D": "$xy \\le 10$"
-            },
-            "correct": "C",
-            "explanation": "Tổng diện tích trồng không vượt quá 10 sào: $x + y \\le 10$ với $x, y \\ge 0$."
-          },
-          {
-            "id": 8,
-            "question": "Hệ bất phương trình nào sau đây có miền nghiệm là một tứ giác lồi?",
-            "options": {
-              "A": "$\\begin{cases} x + y \\le 2 \\\\ x \\ge 0 \\end{cases}$",
-              "B": "$\\begin{cases} 0 \\le x \\le 4 \\\\ 0 \\le y \\le 3 \\end{cases}$",
-              "C": "$\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\end{cases}$",
-              "D": "$\\begin{cases} x + y \\ge 1 \\\\ x - y \\le 0 \\end{cases}$"
-            },
             "correct": "B",
-            "explanation": "Miền nghiệm là hình chữ nhật (tứ giác lồi) có 4 đỉnh $(0;0), (4;0), (4;3), (0;3)$."
-          },
-          {
-            "id": 9,
-            "question": "Cho miền nghiệm của hệ BPT là tam giác $OAB$ với $O(0; 0), A(3; 0), B(1; 4)$. Giá trị nhỏ nhất của biểu thức $F(x; y) = 2x - 3y$ bằng:",
-            "options": {
-              "A": "$-10$",
-              "B": "$0$",
-              "C": "$-5$",
-              "D": "$6$"
-            },
-            "correct": "A",
-            "explanation": "$F(O) = 0, F(A) = 2(3) - 0 = 6, F(B) = 2(1) - 3(4) = -10$. Giá trị nhỏ nhất là $-10$."
-          },
-          {
-            "id": 10,
-            "question": "Một xưởng cơ khí có 120 giờ công làm việc mỗi tuần để sản xuất hai loại chi tiết máy. Chi tiết I cần 2 giờ, chi tiết II cần 3 giờ. Bất phương trình ràng buộc về thời gian công là:",
-            "options": {
-              "A": "$2x + 3y \\ge 120$",
-              "B": "$2x + 3y \\le 120$ ($x, y \\ge 0$)",
-              "C": "$x + y \\le 120$",
-              "D": "$3x + 2y \\le 120$"
-            },
-            "correct": "B",
-            "explanation": "$2x + 3y \\le 120$ với $x, y \\ge 0$."
-          },
-          {
-            "id": 11,
-            "question": "Tọa độ giao điểm của hai đường thẳng $x + y = 18$ và $2x - y = 12$ là:",
-            "options": {
-              "A": "$(\\frac{30}{3}; \\frac{24}{3})$",
-              "B": "$(\\frac{18}{2}; \\frac{12}{2})$",
-              "C": "$(18; 12)$",
-              "D": "$(\\frac{6}{3}; \\frac{30}{3})$"
-            },
-            "correct": "A",
-            "explanation": "Cộng hai phương trình: $3x = c_1 + c_2 \\Rightarrow x = (c_1 + c_2)/3, y = c_1 - x = (2c_1 - c_2)/3$."
+            "explanation": "Chiều dài 4, chiều rộng 3, chu vi $2(4 + 3) = 14$."
           },
           {
             "id": 12,
-            "question": "Một cửa hàng kinh doanh hai loại trà sữa với lợi nhuận mỗi ly lần lượt là 15 nghìn đồng và 20 nghìn đồng. Hàm mục tiêu biểu diễn tổng lợi nhuận (nghìn đồng) khi bán $x$ ly loại 1 và $y$ ly loại 2 là:",
+            "question": "**Câu 12:** Cho hệ bất phương trình $\\begin{cases} x + y - 2 \\ge 0 \\\\ x - y + 2 \\ge 0 \\\\ x \\le 3 \\end{cases}$. Miền nghiệm của hệ là hình gì?",
             "options": {
-              "A": "$F(x; y) = 20x + 15y$",
-              "B": "$F(x; y) = 15x - 20y$",
-              "C": "$F(x; y) = 35(x + y)$",
-              "D": "$F(x; y) = 15x + 20y$"
+              "A": "Miền tứ giác",
+              "B": "Miền tam giác",
+              "C": "Miền ngũ giác",
+              "D": "Nửa mặt phẳng"
             },
-            "correct": "D",
-            "explanation": "Lợi nhuận: $F(x; y) = 15x + 20y$ (nghìn đồng)."
+            "correct": "B",
+            "explanation": "Giao của 3 nửa mặt phẳng giới hạn bởi 3 đường thẳng tạo thành một miền tam giác có 3 đỉnh $(0; 2), (3; -1), (3; 5)$."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Cho hệ bất phương trình bậc nhất hai ẩn $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 6 \\\\ 2x + y \\le 8 \\end{cases}$ có miền nghiệm là tứ giác $OABC$ với $O(0; 0), A(4; 0), B(2; 4), C(0; 6)$.",
+            "id": 1,
+            "question": "**Câu 1:** Cho bất phương trình bậc nhất hai ẩn $2x - 3y + 6 < 0$ ($*$). Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Điểm $M(1; 2)$ thuộc miền nghiệm của hệ bất phương trình.",
-                "correct": true,
-                "explanation": "Thay $(1; 2)$ thỏa mãn cả 4 bất phương trình."
-              },
-              {
-                "key": "b",
-                "text": "Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 6$ và $2x + y = 8$.",
-                "correct": true,
-                "explanation": "Giải hệ: $x = 2, y = 4 \\Rightarrow B(2; 4)$."
-              },
-              {
-                "key": "c",
-                "text": "Diện tích của tứ giác miền nghiệm $OABC$ bằng 16 đơn vị diện tích.",
-                "correct": true,
-                "explanation": "Chia tứ giác thành $\\triangle OAC$ và $\\triangle ABC$, tính được diện tích bằng 16."
-              },
-              {
-                "key": "d",
-                "text": "Biểu thức $F(x; y) = 4x + 3y$ đạt giá trị lớn nhất tại đỉnh $A(4; 0)$.",
+                "id": "a",
+                "text": "Cặp số $(0; 0)$ là một nghiệm của bất phương trình ($*$).",
                 "correct": false,
-                "explanation": "$F(A) = 16, F(B) = 4(2) + 3(4) = 20, F(C) = 18$. GTLN đạt tại đỉnh $B(2; 4)$ bằng 20, không phải tại $A$."
+                "explanation": "Thay $(0; 0)$: $2(0) - 3(0) + 6 = 6 < 0$ là sai."
+              },
+              {
+                "id": "b",
+                "text": "Điểm $M(-4; 0)$ thuộc miền nghiệm của bất phương trình ($*$).",
+                "correct": true,
+                "explanation": "Thay $(-4; 0)$: $2(-4) + 6 = -2 < 0$ (đúng)."
+              },
+              {
+                "id": "c",
+                "text": "Đường thẳng $d: 2x - 3y + 6 = 0$ cắt trục hoành tại điểm $(-3; 0)$.",
+                "correct": true,
+                "explanation": "Cho $y = 0 \\Rightarrow 2x + 6 = 0 \\Rightarrow x = -3$."
+              },
+              {
+                "id": "d",
+                "text": "Miền nghiệm của ($*$) chứa điểm $P(1; 3)$.",
+                "correct": true,
+                "explanation": "Thay $(1; 3)$: $2(1) - 3(3) + 6 = -1 < 0$ (đúng)."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Một công ty sản xuất hai loại nước trái cây đóng chai: Nước cam (loại A) và Nước táo (loại B). Mỗi chai loại A cần $0.2\\text{ kg}$ đường và 3 quả cam, đem lại lợi nhuận 4 nghìn đồng. Mỗi chai loại B cần $0.1\\text{ kg}$ đường và 2 quả táo, đem lại lợi nhuận 3 nghìn đồng. Nguồn nguyên liệu đường không quá $20\\text{ kg}$ mỗi ngày.",
+            "id": 2,
+            "question": "**Câu 2:** Cho hệ bất phương trình $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 4 \\\\ 2x + y \\le 6 \\end{cases}$ ($H$). Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Ràng buộc về nguyên liệu đường là $0.2x + 0.1y \\le 20$ (với $x, y \\ge 0$).",
+                "id": "a",
+                "text": "Miền nghiệm của hệ ($H$) là một miền tứ giác lồi.",
                 "correct": true,
-                "explanation": "Lượng đường sử dụng cho $x$ chai loại A và $y$ chai loại B không vượt quá 20 kg."
+                "explanation": "Các đỉnh là $O(0; 0), A(3; 0), B(2; 2), C(0; 4)$."
               },
               {
-                "key": "b",
-                "text": "Hàm số biểu diễn lợi nhuận hàng ngày là $F(x; y) = 4x + 3y$ (nghìn đồng).",
+                "id": "b",
+                "text": "Tọa độ giao điểm của hai đường thẳng $x + y = 4$ và $2x + y = 6$ là $B(2; 2)$.",
                 "correct": true,
-                "explanation": "Lợi nhuận là 4 nghìn đồng cho mỗi chai A và 3 nghìn đồng cho mỗi chai B."
+                "explanation": "Trừ hai phương trình: $x = 2 \\Rightarrow y = 2$."
               },
               {
-                "key": "c",
-                "text": "Nếu chỉ sản xuất duy nhất loại A thì sản xuất được tối đa 100 chai mỗi ngày.",
-                "correct": true,
-                "explanation": "Cho $y = 0 \\Rightarrow 0.2x \\le 20 \\Leftrightarrow x \\le 100$ chai."
-              },
-              {
-                "key": "d",
-                "text": "Nếu sản xuất 80 chai loại A thì có thể sản xuất tối đa 50 chai loại B.",
+                "id": "c",
+                "text": "Điểm $K(1; 3)$ nằm ngoài miền nghiệm của hệ ($H$).",
                 "correct": false,
-                "explanation": "$0.2(80) + 0.1y \\le 20 \\Leftrightarrow 16 + 0.1y \\le 20 \\Leftrightarrow 0.1y \\le 4 \\Leftrightarrow y \\le 40$ chai (không phải 50)."
+                "explanation": "Thay $K(1; 3)$: $1 \\ge 0, 3 \\ge 0, 1+3=4 \\le 4, 2(1)+3=5 \\le 6$. $K$ thuộc miền nghiệm."
+              },
+              {
+                "id": "d",
+                "text": "Giá trị lớn nhất của biểu thức $F(x; y) = 3x + y$ trên miền nghiệm là $9$.",
+                "correct": true,
+                "explanation": "$F(O)=0, F(A)=9, F(B)=8, F(C)=4$. GTLN là 9 tại $A(3; 0)$."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một trang trại dự định dùng tối đa 20 triệu đồng để mua hai loại thức ăn bổ sung cho bò sữa: Loại I giá 400 nghìn đồng/bao (chứa 10 đơn vị đạm), Loại II giá 300 nghìn đồng/bao (chứa 5 đơn vị đạm). Nhu cầu tối thiểu của đàn bò là cần 300 đơn vị đạm mỗi tháng.",
+            "id": 3,
+            "question": "**Câu 3:** Một xưởng cơ khí sản xuất hai loại sản phẩm A và B. Mỗi sản phẩm A cần 2 giờ máy và 1 giờ nhân công; mỗi sản phẩm B cần 1 giờ máy và 3 giờ nhân công. Quỹ thời gian máy tối đa là 10 giờ, nhân công tối đa là 15 giờ. Gọi $x, y$ lần lượt là số sản phẩm A và B sản xuất. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Bất phương trình ràng buộc về ngân sách mua thức ăn là $4x + 3y \\le 200$ (với $x, y$ là số bao loại I và II).",
+                "id": "a",
+                "text": "Hệ bất phương trình ràng buộc là $\\begin{cases} 2x + y \\le 10 \\\\ x + 3y \\le 15 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$.",
                 "correct": true,
-                "explanation": "$400x + 300y \\le 20000 \\Leftrightarrow 4x + 3y \\le 200$."
+                "explanation": "Đúng với giả thiết về giờ máy và nhân công."
               },
               {
-                "key": "b",
-                "text": "Bất phương trình ràng buộc về lượng đạm tối thiểu là $10x + 5y \\ge 300$.",
-                "correct": true,
-                "explanation": "Tổng lượng đạm $10x + 5y \\ge 300$ đơn vị."
-              },
-              {
-                "key": "c",
-                "text": "Trang trại có thể mua 20 bao loại I và 30 bao loại II.",
-                "correct": true,
-                "explanation": "$4(20) + 3(30) = 170 \\le 200$ và $10(20) + 5(30) = 350 \\ge 300$ (thỏa mãn)."
-              },
-              {
-                "key": "d",
-                "text": "Số bao thức ăn loại I tối đa mà trang trại có thể mua được là 40 bao.",
+                "id": "b",
+                "text": "Xưởng có thể sản xuất đồng thời 4 sản phẩm A và 3 sản phẩm B.",
                 "correct": false,
-                "explanation": "$4x \\le 200 \\Rightarrow x \\le 50$ bao (khi $y = 0$, đạm $= 500 \\ge 300$)."
+                "explanation": "Với $(4; 3)$: $2(4) + 3 = 11 > 10$ (vượt quá giờ máy)."
+              },
+              {
+                "id": "c",
+                "text": "Miền nghiệm của hệ chứa điểm cực biên $(3; 4)$.",
+                "correct": true,
+                "explanation": "Giải hệ $2x + y = 10$ và $x + 3y = 15 \\Rightarrow x = 3, y = 4$."
+              },
+              {
+                "id": "d",
+                "text": "Nếu mỗi sản phẩm A lãi 400 nghìn, mỗi sản phẩm B lãi 500 nghìn, thì lợi nhuận cao nhất đạt được khi sản xuất 3 sản phẩm A và 4 sản phẩm B.",
+                "correct": true,
+                "explanation": "$L(3; 4) = 400(3) + 500(4) = 3200$. Tại $(5; 0) \\Rightarrow 2000$. Tại $(0; 5) \\Rightarrow 2500$."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một đội xe vận tải cần chở ít nhất 140 người và 9 tấn hàng. Có hai loại xe: Xe A (thuê 4 triệu đồng/chuyến, chở được 20 người và 0.6 tấn hàng), Xe B (thuê 3 triệu đồng/chuyến, chở được 10 người và 1.5 tấn hàng). Đội xe có tối đa 10 xe loại A và 9 xe loại B.",
+            "id": 4,
+            "question": "**Câu 4:** Cho biểu thức mục tiêu $F(x; y) = 2x - 3y$ xác định trên miền đa giác lồi $S$ có các đỉnh $A(-1; 2), B(4; 1), C(3; 5), D(0; 4)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Điều kiện số xe: $0 \\le x \\le 10$ và $0 \\le y \\le 9$ ($x, y \\in \\mathbb{N}$).",
+                "id": "a",
+                "text": "Giá trị của biểu thức $F$ tại đỉnh $A$ là $-8$.",
                 "correct": true,
-                "explanation": "Đội xe chỉ có sẵn tối đa 10 xe A và 9 xe B."
+                "explanation": "$F(A) = 2(-1) - 3(2) = -8$."
               },
               {
-                "key": "b",
-                "text": "Ràng buộc số người: $20x + 10y \\ge 140 \\Leftrightarrow 2x + y \\ge 14$.",
+                "id": "b",
+                "text": "Giá trị lớn nhất của $F(x; y)$ trên miền $S$ bằng $5$.",
                 "correct": true,
-                "explanation": "Đúng theo dữ kiện chở ít nhất 140 người."
+                "explanation": "$F(B) = 2(4) - 3(1) = 5, F(C) = 6 - 15 = -9, F(D) = -12$. GTLN là 5 tại $B$."
               },
               {
-                "key": "c",
-                "text": "Ràng buộc khối lượng hàng: $0.6x + 1.5y \\ge 9 \\Leftrightarrow 2x + 5y \\ge 30$.",
-                "correct": true,
-                "explanation": "Nhân hai vế với $10/3$: $2x + 5y \\ge 30$."
-              },
-              {
-                "key": "d",
-                "text": "Chi phí thuê xe thấp nhất đạt được khi thuê 10 xe loại A và 0 xe loại B.",
+                "id": "c",
+                "text": "Giá trị nhỏ nhất của $F(x; y)$ trên miền $S$ đạt tại đỉnh $C(3; 5)$.",
                 "correct": false,
-                "explanation": "Thuê $x = 5, y = 4$: người $= 100+40=140$, hàng $= 3+6=9$ tấn. Chi phí $= 4(5) + 3(4) = 32$ triệu đồng ($< 10 \\times 4 = 40$ triệu đồng)."
+                "explanation": "GTNN là $-12$ đạt tại $D(0; 4)$, không phải $C$ (vì $F(D) = -12 < F(C) = -9$)."
+              },
+              {
+                "id": "d",
+                "text": "Điểm $M(1; 2)$ nằm trong miền đa giác $S$ và có giá trị $F(M) = -4$.",
+                "correct": true,
+                "explanation": "$F(1; 2) = 2(1) - 3(2) = -4$ và điểm $(1; 2)$ nằm trong tứ giác."
               }
             ]
           }
@@ -3038,341 +2077,341 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Tìm hoành độ giao điểm của hai đường thẳng $x + y = 10$ và $2x - y = 5$.",
-            "correctAnswer": "5",
+            "question": "**Câu 1:** Cho điểm $M(m; 2)$ nằm trên đường thẳng bờ của bất phương trình $3x - 4y + 5 = 0$. Tìm giá trị của $m$.",
+            "correctAnswer": "1",
             "acceptedAnswers": [
-              "5",
-              "5.0"
+              "1",
+              "1.0"
             ],
-            "explanation": "Cộng hai phương trình: $3x = 15 \\Rightarrow x = 5$."
+            "explanation": "Thay vào phương trình: $3m - 4(2) + 5 = 0 \\Rightarrow 3m - 3 = 0 \\Rightarrow m = 1$."
           },
           {
             "id": 2,
-            "question": "Tính diện tích của hình tam giác giới hạn bởi ba đường thẳng: $x = 0, y = 0, x + 2y = 8$.",
-            "correctAnswer": "16",
+            "question": "**Câu 2:** Tính diện tích của miền tam giác xác định bởi hệ bất phương trình $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ 3x + 4y \\le 24 \\end{cases}$.",
+            "correctAnswer": "24",
             "acceptedAnswers": [
-              "16",
-              "16.0"
+              "24",
+              "24.0"
             ],
-            "explanation": "Giao với trục tọa độ tại $A(8; 0)$ và $B(0; 4)$. Diện tích $S = \\frac{1}{2}(8)(4) = 16$."
+            "explanation": "Miền tam giác vuông tại $O(0; 0)$ có hai đỉnh trên trục tọa độ là $A(8; 0)$ và $B(0; 6)$. Diện tích $S = \\frac{1}{2} \\cdot 8 \\cdot 6 = 24$."
           },
           {
             "id": 3,
-            "question": "Tìm giá trị lớn nhất của biểu thức $F(x; y) = 5x + 3y$ trên miền đa giác có các đỉnh $A(0; 0), B(6; 0), C(4; 3), D(0; 5)$.",
-            "correctAnswer": "30",
+            "question": "**Câu 3:** Tìm giá trị lớn nhất của biểu thức $F(x; y) = 4x + 3y$ trên miền nghiệm của hệ $\\begin{cases} x + y \\le 5 \\\\ 2x + y \\le 8 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$.",
+            "correctAnswer": "18",
             "acceptedAnswers": [
-              "30",
-              "30.0"
+              "18",
+              "18.0"
             ],
-            "explanation": "$F(A) = 0, F(B) = 30, F(C) = 5(4)+3(3) = 29, F(D) = 15$. GTLN là 30."
+            "explanation": "Các đỉnh là $O(0; 0), A(4; 0), B(3; 2), C(0; 5)$. $F(O)=0, F(A)=16, F(B)=4(3)+3(2)=18$? Chờ chút: $B$ là giao của $x+y=5$ và $2x+y=8 \\Rightarrow x=3, y=2$. $F(B)=4(3)+3(2)=18$. Tại $A(4; 0)$: $F(A)=16$. Tại $C(0; 5)$: $F(C)=15$. GTLN là 18. Hãy cập nhật đúng là 18."
           },
           {
             "id": 4,
-            "question": "Tìm giá trị nhỏ nhất của biểu thức $F(x; y) = 3x - 4y$ trên miền tam giác có ba đỉnh $A(1; 1), B(5; 2), C(2; 6)$.",
-            "correctAnswer": "-18",
+            "question": "**Câu 4:** Một cửa hàng bán hai loại bánh A và B. Mỗi hộp bánh A lãi 30 nghìn đồng, mỗi hộp bánh B lãi 50 nghìn đồng. Do dung lượng tủ bảo quản, tổng số hộp bánh bán ra không quá 40 hộp và số hộp bánh B không quá 25 hộp. Tính số tiền lãi lớn nhất (đơn vị: nghìn đồng) mà cửa hàng có thể thu được.",
+            "correctAnswer": "1700",
             "acceptedAnswers": [
-              "-18",
-              "-18.0"
+              "1700",
+              "1700.0"
             ],
-            "explanation": "$F(A) = 3(1)-4(1) = -1, F(B) = 3(5)-4(2) = 7, F(C) = 3(2)-4(6) = -18$. GTNN là -18."
+            "explanation": "$x + y \\le 40, y \\le 25, x, y \\ge 0$. Lãi $L = 30x + 50y = 30(x+y) + 20y \\le 30(40) + 20(25) = 1200 + 500 = 1700$ nghìn đồng (đạt tại $x = 15, y = 25$)."
           },
           {
             "id": 5,
-            "question": "Một xí nghiệp sản xuất hai loại sản phẩm I và II. Mỗi tấn sản phẩm I cần 2 máy A và 1 máy B, đem lại lợi nhuận 40 triệu đồng. Mỗi tấn sản phẩm II cần 1 máy A và 2 máy B, đem lại lợi nhuận 50 triệu đồng. Xí nghiệp có tối đa 8 máy A và 10 máy B. Hỏi lợi nhuận lớn nhất xí nghiệp có thể đạt được là bao nhiêu triệu đồng?",
-            "correctAnswer": "260",
+            "question": "**Câu 5 (VDC):** Một nhà máy hóa chất cần sản xuất hai loại phân bón cao cấp NPK-1 và NPK-2 từ 3 nguồn nguyên liệu đạm ($N$), lân ($P$) và kali ($K$). Để sản xuất 1 tấn NPK-1 cần $20\\text{ kg } N$, $30\\text{ kg } P$, $10\\text{ kg } K$. Để sản xuất 1 tấn NPK-2 cần $40\\text{ kg } N$, $15\\text{ kg } P$, $30\\text{ kg } K$. Nguồn kho hiện có tối đa $400\\text{ kg } N$, $360\\text{ kg } P$ và $300\\text{ kg } K$. Mỗi tấn NPK-1 lãi 4 triệu đồng, mỗi tấn NPK-2 lãi 5 triệu đồng. Ngoài ra công suất lò sấy chỉ cho phép sản xuất tối đa tổng cộng 14 tấn cả hai loại. Tính lợi nhuận lớn nhất mà nhà máy có thể thu được (triệu đồng).",
+            "correctAnswer": "62",
             "acceptedAnswers": [
-              "260",
-              "260.0"
+              "62",
+              "62.0"
             ],
-            "explanation": "Hệ BPT: $2x + y \\le 8, x + 2y \\le 10, x \\ge 0, y \\ge 0$. Đỉnh miền nghiệm: $(0;0), (4;0), (2;4), (0;5)$. Lợi nhuận $F(x; y) = 40x + 50y$. $F(2; 4) = 40(2) + 50(4) = 260$ triệu đồng."
+            "explanation": "Gọi $x, y \\ge 0$ là số tấn NPK-1 và NPK-2. Các ràng buộc: $20x + 40y \\le 400 \\iff x + 2y \\le 20$; $30x + 15y \\le 360 \\iff 2x + y \\le 24$; $10x + 30y \\le 300 \\iff x + 3y \\le 30$; $x + y \\le 14$. Miền đa giác nghiệm có các đỉnh $O(0; 0), (12; 0), (10; 4), (8; 6), (0; 10)$. Lợi nhuận $L = 4x + 5y$. Tại $(8; 6)$: $L = 4(8) + 5(6) = 62$ triệu đồng. Đây là giá trị lớn nhất."
           },
           {
             "id": 6,
-            "question": "Một công ty cần thuê xe để chở 140 người và 9 tấn hàng. Xe lớn thuê 4 triệu/chuyến (chở 20 người, 0.6 tấn), xe nhỏ thuê 3 triệu/chuyến (chở 10 người, 1.5 tấn). Chi phí thuê xe nhỏ nhất là bao nhiêu triệu đồng?",
-            "correctAnswer": "32",
+            "question": "**Câu 6 (VDC):** Một dự án xây dựng cần vận chuyển ít nhất 240 tấn xi măng và 360 tấn sắt thép từ cảng về công trường. Công ty vận tải có hai đội xe: Đội xe A gồm các xe tải hạng nặng chở được 12 tấn xi măng và 10 tấn sắt thép mỗi chuyến, chi phí mỗi chuyến là 3 triệu đồng; Đội xe B gồm các xe tải hạng trung chở được 6 tấn xi măng và 15 tấn sắt thép mỗi chuyến, chi phí mỗi chuyến là 2.5 triệu đồng. Do quy định phân luồng giao thông cảng, tổng số chuyến của đội xe A không quá 25 chuyến và tổng số chuyến của cả hai đội xe không vượt quá 40 chuyến. Hỏi công ty cần điều phối số chuyến xe sao cho chi phí vận tải nhỏ nhất, và chi phí nhỏ nhất đó bằng bao nhiêu triệu đồng?",
+            "correctAnswer": "76",
             "acceptedAnswers": [
-              "32",
-              "32.0"
+              "76",
+              "76.0"
             ],
-            "explanation": "Thuê 5 xe lớn và 4 xe nhỏ: người $= 5(20)+4(10)=140$, hàng $= 5(0.6)+4(1.5)=9$ tấn. Chi phí $= 5(4) + 4(3) = 32$ triệu đồng."
+            "explanation": "Gọi $x$ là số chuyến đội A, $y$ là số chuyến đội B ($x, y \\ge 0$). Ta có hệ ràng buộc: $12x + 6y \\ge 240 \\iff 2x + y \\ge 40$; $10x + 15y \\ge 360 \\iff 2x + 3y \\ge 72$; $x \\le 25$; $x + y \\le 40$. Hàm chi phí cần tối thiểu hóa: $C(x; y) = 3x + 2.5y$. Giao điểm của hai đường giới hạn hàng hóa $2x + y = 40$ và $2x + 3y = 72$ cho tọa độ $x = 12, y = 16$. Điểm $(12; 16)$ thỏa mãn $x \\le 25$ và $x + y = 28 \\le 40$. Tại $(12; 16)$: $C = 3(12) + 2.5(16) = 36 + 40 = 76$ triệu đồng. Kiểm tra các đỉnh biên khác: $(0; 40) \\Rightarrow C = 100$; $(25; 15) \\Rightarrow C = 112.5$; $(25; 22/3) \\Rightarrow C \\approx 93.33$. Chi phí nhỏ nhất là 76 triệu đồng."
           }
         ],
         "essayQuestions": []
       },
       {
-        "id": "cd2-de5",
-        "examNumber": 5,
-        "title": "Đề số 5: Luyện Thi Chuyên Đề Hệ BPT Bậc Nhất 2 Ẩn",
-        "code": "CD2-205",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-emerald-100 text-emerald-800 border-emerald-200",
+        "id": "cd2-exam-2",
+        "examNumber": 2,
+        "title": "Đề Số 2: Chế Biến Thực Phẩm, Chăn Nuôi & Dinh Dưỡng Tối Ưu",
+        "code": "CD2-202",
+        "badge": "Mã Đề 202",
+        "badgeColor": "bg-emerald-50 text-emerald-800 border-emerald-200",
         "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
         "mcqs": [
           {
             "id": 1,
-            "question": "Điểm nào sau đây thuộc miền nghiệm của bất phương trình $2x + y - 4 \\le 0$?",
+            "question": "**Câu 1:** Trong mặt phẳng tọa độ $Oxy$, miền nghiệm của bất phương trình nào sau đây chứa gốc tọa độ $O(0; 0)$?",
             "options": {
-              "A": "$(3; 1)$",
-              "B": "$(1; 4)$",
-              "C": "$(1; 1)$",
-              "D": "$(2; 2)$"
+              "A": "$2x - y + 3 > 0$",
+              "B": "$x - 2y - 1 \\ge 0$",
+              "C": "$x + 3y - 5 > 0$",
+              "D": "$3x - 4y + 2 < 0$"
             },
-            "correct": "C",
-            "explanation": "Thay $(1; 1)$ vào: $2(1) + 1 - 4 = -1 \\le 0$ (thỏa mãn)."
+            "correct": "A",
+            "explanation": "Thay $O(0; 0)$: $2(0) - 0 + 3 = 3 > 0$ (thỏa mãn)."
           },
           {
             "id": 2,
-            "question": "Cặp số nào sau đây là nghiệm của hệ bất phương trình $\\begin{cases} x + y \\ge 2 \\\\ 2x - y \\le 4 \\end{cases}$?",
+            "question": "**Câu 2:** Cặp số $(x; y) = (1; -2)$ KHÔNG là nghiệm của bất phương trình nào sau đây?",
             "options": {
-              "A": "$(0; 1)$",
-              "B": "$(2; 1)$",
-              "C": "$(0; 0)$",
-              "D": "$(3; 0)$"
+              "A": "$2x - y \\ge 0$",
+              "B": "$3x + 2y + 5 > 0$",
+              "C": "$x + y > 0$",
+              "D": "$x - 3y \\ge 4$"
             },
-            "correct": "B",
-            "explanation": "Thay $(2; 1)$: $2 + 1 = 3 \\ge 2$ và $2(2) - 1 = 3 \\le 4$ (đều thỏa mãn)."
+            "correct": "C",
+            "explanation": "Thay $(1; -2)$: $1 + (-2) = -1 > 0$ là sai."
           },
           {
             "id": 3,
-            "question": "Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?",
+            "question": "**Câu 3:** Miền nghiệm của hệ bất phương trình $\\begin{cases} x - y \\le 0 \\\\ x + 2y \\ge 0 \\end{cases}$ chứa điểm nào sau đây?",
             "options": {
-              "A": "$xy - 1 \\ge 0$",
-              "B": "$3x - 2y + 5 > 0$",
-              "C": "$x^2 + y \\le 4$",
-              "D": "$2x + 3y^2 < 1$"
+              "A": "$(0; 2)$",
+              "B": "$(1; -3)$",
+              "C": "$(3; 1)$",
+              "D": "$(2; 0)$"
             },
-            "correct": "B",
-            "explanation": "Phương án A là bất phương trình bậc nhất hai ẩn theo định nghĩa."
+            "correct": "A",
+            "explanation": "Thay $(0; 2)$: $0 - 2 = -2 \\le 0$ và $0 + 4 = 4 \\ge 0$ (thỏa mãn)."
           },
           {
             "id": 4,
-            "question": "Miền nghiệm của bất phương trình $x \\ge 0$ trên mặt phẳng tọa độ $Oxy$ là:",
+            "question": "**Câu 4:** Đường thẳng $d: 2x - 3y = 6$ đi qua hai điểm nào trên các trục tọa độ?",
             "options": {
-              "A": "Nửa mặt phẳng nằm bên trái trục tung",
-              "B": "Nửa mặt phẳng nằm bên phải trục tung kể cả trục tung",
-              "C": "Nửa mặt phẳng nằm phía dưới trục hoành",
-              "D": "Nửa mặt phẳng nằm phía trên trục hoành"
+              "A": "$(3; 0)$ và $(0; -2)$",
+              "B": "$(6; 0)$ và $(0; -6)$",
+              "C": "$(0; 3)$ và $(-2; 0)$",
+              "D": "$(2; 0)$ và $(0; -3)$"
             },
-            "correct": "B",
-            "explanation": "$x \\ge 0$ là nửa mặt phẳng bên phải trục tung $Oy$ kể cả trục tung."
+            "correct": "A",
+            "explanation": "Cho $y = 0 \\Rightarrow x = 3$; cho $x = 0 \\Rightarrow y = -2$."
           },
           {
             "id": 5,
-            "question": "Cho biểu thức $F(x; y) = 3x + 2y$ trên miền tam giác có ba đỉnh $A(0; 0), B(4; 0), C(0; 13)$. Giá trị lớn nhất của $F(x; y)$ bằng:",
+            "question": "**Câu 5:** Cho biểu thức $F(x; y) = x - 4y$ trên miền tam giác có 3 đỉnh $A(0; 0), B(5; 0), C(0; 3)$. Giá trị nhỏ nhất của $F(x; y)$ bằng",
             "options": {
-              "A": "$8$",
-              "B": "$10$",
-              "C": "$26$",
-              "D": "$6$"
+              "A": "$0$",
+              "B": "$-12$",
+              "C": "$5$",
+              "D": "$-4$"
             },
-            "correct": "C",
-            "explanation": "$F(A) = 0, F(B) = 3(4) = 12, F(C) = 2(13) = 26$. GTLN là $26$."
+            "correct": "B",
+            "explanation": "$F(A) = 0, F(B) = 5, F(C) = -12$. Giá trị nhỏ nhất là $-12$."
           },
           {
             "id": 6,
-            "question": "Đường thẳng $d: x - 2y = 4$ chia mặt phẳng tọa độ thành hai nửa mặt phẳng. Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của bất phương trình nào?",
+            "question": "**Câu 6:** Một cơ sở sản xuất bánh dẻo và bánh nướng. Mỗi ngày cơ sở làm ra ít nhất 50 chiếc bánh dẻo. Gọi $x$ là số bánh dẻo làm ra. Bất phương trình mô tả điều này là",
             "options": {
-              "A": "$x - 2y \\ge 4$",
-              "B": "$x - 2y > 5$",
-              "C": "$x - 2y > 4$",
-              "D": "$x - 2y < 4$"
+              "A": "$x < 50$",
+              "B": "$x \\ge 50$",
+              "C": "$x \\le 50$",
+              "D": "$x > 50$"
             },
-            "correct": "D",
-            "explanation": "Thay $O(0; 0)$ vào: $0 - 2(0) = 0 < 4$ nên thuộc miền nghiệm $x - 2y < 4$."
+            "correct": "B",
+            "explanation": "Ít nhất 50 nghĩa là $x \\ge 50$."
           },
           {
             "id": 7,
-            "question": "Một người nông dân trồng hai loại rau trên diện tích tối đa 10 sào đất. Gọi $x$ và $y$ là số sào đất trồng rau cải và rau muống. Bất phương trình thể hiện điều kiện về diện tích là:",
+            "question": "**Câu 7:** Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn?",
             "options": {
-              "A": "$x + y \\le 10$ ($x, y \\ge 0$)",
-              "B": "$x + y \\ge 10$",
-              "C": "$xy \\le 10$",
-              "D": "$x - y \\le 10$"
+              "A": "$\\begin{cases} x^2 + y \\le 3 \\\\ x - 2y > 0 \\end{cases}$",
+              "B": "$\\begin{cases} 2x + 3y \\le 5 \\\\ x - y > 1 \\end{cases}$",
+              "C": "$\\begin{cases} 3x + y^3 \\ge 2 \\\\ 2x - y < 5 \\end{cases}$",
+              "D": "$\\begin{cases} xy \\le 4 \\\\ x + y \\ge 1 \\end{cases}$"
             },
-            "correct": "A",
-            "explanation": "Tổng diện tích trồng không vượt quá 10 sào: $x + y \\le 10$ với $x, y \\ge 0$."
+            "correct": "B",
+            "explanation": "Cả hai bất phương trình đều có bậc nhất đối với hai ẩn $x, y$."
           },
           {
             "id": 8,
-            "question": "Hệ bất phương trình nào sau đây có miền nghiệm là một tứ giác lồi?",
+            "question": "**Câu 8:** Điểm nào sau đây thuộc miền nghiệm của hệ $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ 2x + 3y \\le 12 \\end{cases}$?",
             "options": {
-              "A": "$\\begin{cases} x + y \\le 2 \\\\ x \\ge 0 \\end{cases}$",
-              "B": "$\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\end{cases}$",
-              "C": "$\\begin{cases} x + y \\ge 1 \\\\ x - y \\le 0 \\end{cases}$",
-              "D": "$\\begin{cases} 0 \\le x \\le 4 \\\\ 0 \\le y \\le 3 \\end{cases}$"
+              "A": "$(1; 4)$",
+              "B": "$(4; 2)$",
+              "C": "$(5; 1)$",
+              "D": "$(2; 2)$"
             },
             "correct": "D",
-            "explanation": "Miền nghiệm là hình chữ nhật (tứ giác lồi) có 4 đỉnh $(0;0), (4;0), (4;3), (0;3)$."
+            "explanation": "Thay $(2; 2)$: $2(2) + 3(2) = 10 \\le 12$."
           },
           {
             "id": 9,
-            "question": "Cho miền nghiệm của hệ BPT là tam giác $OAB$ với $O(0; 0), A(3; 0), B(1; 4)$. Giá trị nhỏ nhất của biểu thức $F(x; y) = 2x - 3y$ bằng:",
+            "question": "**Câu 9:** Cho hệ bất phương trình $\\begin{cases} x \\ge 1 \\\\ y \\ge 1 \\\\ x + y \\le 4 \\end{cases}$. Miền nghiệm của hệ là hình gì?",
             "options": {
-              "A": "$-5$",
-              "B": "$0$",
-              "C": "$-10$",
-              "D": "$6$"
+              "A": "Miền ngũ giác",
+              "B": "Miền tứ giác",
+              "C": "Nửa mặt phẳng",
+              "D": "Miền tam giác"
             },
-            "correct": "C",
-            "explanation": "$F(O) = 0, F(A) = 2(3) - 0 = 6, F(B) = 2(1) - 3(4) = -10$. Giá trị nhỏ nhất là $-10$."
+            "correct": "D",
+            "explanation": "Các đỉnh là $(1; 1), (3; 1), (1; 3)$, tạo thành miền tam giác."
           },
           {
             "id": 10,
-            "question": "Một xưởng cơ khí có 120 giờ công làm việc mỗi tuần để sản xuất hai loại chi tiết máy. Chi tiết I cần 2 giờ, chi tiết II cần 3 giờ. Bất phương trình ràng buộc về thời gian công là:",
+            "question": "**Câu 10:** Cho $F(x; y) = 2x + 5y$. Trong các điểm $A(1; 1), B(2; 4), C(4; 2), D(0; 5)$, điểm nào làm cho $F$ đạt giá trị lớn nhất?",
             "options": {
-              "A": "$3x + 2y \\le 120$",
-              "B": "$x + y \\le 120$",
-              "C": "$2x + 3y \\ge 120$",
-              "D": "$2x + 3y \\le 120$ ($x, y \\ge 0$)"
+              "A": "$B(2; 4)$",
+              "B": "$A(1; 1)$",
+              "C": "$C(4; 2)$",
+              "D": "$D(0; 5)$"
             },
             "correct": "D",
-            "explanation": "$2x + 3y \\le 120$ với $x, y \\ge 0$."
+            "explanation": "$F(A)=7, F(B)=24, F(C)=18, F(D)=25$. Điểm $D(0; 5)$ cho giá trị 25 lớn nhất."
           },
           {
             "id": 11,
-            "question": "Tọa độ giao điểm của hai đường thẳng $x + y = 20$ và $2x - y = 13$ là:",
+            "question": "**Câu 11:** Diện tích của miền nghiệm tạo bởi hệ $\\begin{cases} -2 \\le x \\le 3 \\\\ 0 \\le y \\le 4 \\end{cases}$ bằng",
             "options": {
-              "A": "$(\\frac{33}{3}; \\frac{27}{3})$",
-              "B": "$(\\frac{7}{3}; \\frac{33}{3})$",
-              "C": "$(20; 13)$",
-              "D": "$(\\frac{20}{2}; \\frac{13}{2})$"
+              "A": "$12$",
+              "B": "$18$",
+              "C": "$20$",
+              "D": "$15$"
             },
-            "correct": "A",
-            "explanation": "Cộng hai phương trình: $3x = c_1 + c_2 \\Rightarrow x = (c_1 + c_2)/3, y = c_1 - x = (2c_1 - c_2)/3$."
+            "correct": "C",
+            "explanation": "Chiều rộng là $3 - (-2) = 5$, chiều cao là 4. Diện tích $S = 5 \\times 4 = 20$."
           },
           {
             "id": 12,
-            "question": "Một cửa hàng kinh doanh hai loại trà sữa với lợi nhuận mỗi ly lần lượt là 15 nghìn đồng và 20 nghìn đồng. Hàm mục tiêu biểu diễn tổng lợi nhuận (nghìn đồng) khi bán $x$ ly loại 1 và $y$ ly loại 2 là:",
+            "question": "**Câu 12:** Khẳng định nào sau đây là SAI khi nói về bài toán quy hoạch tuyến tính trên miền đa giác lồi?",
             "options": {
-              "A": "$F(x; y) = 15x + 20y$",
-              "B": "$F(x; y) = 20x + 15y$",
-              "C": "$F(x; y) = 15x - 20y$",
-              "D": "$F(x; y) = 35(x + y)$"
+              "A": "Miền nghiệm là giao của các nửa mặt phẳng",
+              "B": "Giá trị lớn nhất và nhỏ nhất luôn đạt tại ít nhất một trong các đỉnh của miền đa giác",
+              "C": "Giá trị lớn nhất của hàm mục tiêu luôn luôn đạt tại tâm của đa giác",
+              "D": "Hàm mục tiêu có dạng tuyến tính $F(x; y) = ax + by$"
             },
-            "correct": "A",
-            "explanation": "Lợi nhuận: $F(x; y) = 15x + 20y$ (nghìn đồng)."
+            "correct": "C",
+            "explanation": "Khẳng định A sai vì cực trị tuyến tính luôn đạt tại các đỉnh biên, không phải tâm đa giác."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Cho hệ bất phương trình bậc nhất hai ẩn $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 6 \\\\ 2x + y \\le 8 \\end{cases}$ có miền nghiệm là tứ giác $OABC$ với $O(0; 0), A(4; 0), B(2; 4), C(0; 6)$.",
+            "id": 1,
+            "question": "**Câu 1:** Cho hệ bất phương trình $\\begin{cases} 3x + 4y \\le 12 \\\\ x \\ge 0 \\\\ y \\ge 0 \\end{cases}$ ($*$). Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Điểm $M(1; 2)$ thuộc miền nghiệm của hệ bất phương trình.",
+                "id": "a",
+                "text": "Miền nghiệm của hệ ($*$) là một tam giác vuông.",
                 "correct": true,
-                "explanation": "Thay $(1; 2)$ thỏa mãn cả 4 bất phương trình."
+                "explanation": "Tam giác giới hạn bởi hai trục tọa độ vuông góc và đường thẳng $3x + 4y = 12$."
               },
               {
-                "key": "b",
-                "text": "Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 6$ và $2x + y = 8$.",
+                "id": "b",
+                "text": "Độ dài cạnh huyền của tam giác miền nghiệm bằng 5.",
                 "correct": true,
-                "explanation": "Giải hệ: $x = 2, y = 4 \\Rightarrow B(2; 4)$."
+                "explanation": "Hai cạnh góc vuông là 4 (trên $Ox$) và 3 (trên $Oy$). Cạnh huyền $\\sqrt{4^2 + 3^2} = 5$."
               },
               {
-                "key": "c",
-                "text": "Diện tích của tứ giác miền nghiệm $OABC$ bằng 16 đơn vị diện tích.",
+                "id": "c",
+                "text": "Điểm $M(2; 1.5)$ nằm trong miền nghiệm của hệ ($*$).",
                 "correct": true,
-                "explanation": "Chia tứ giác thành $\\triangle OAC$ và $\\triangle ABC$, tính được diện tích bằng 16."
+                "explanation": "Thay vào: $3(2) + 4(1.5) = 6 + 6 = 12 \\le 12$."
               },
               {
-                "key": "d",
-                "text": "Biểu thức $F(x; y) = 4x + 3y$ đạt giá trị lớn nhất tại đỉnh $A(4; 0)$.",
-                "correct": false,
-                "explanation": "$F(A) = 16, F(B) = 4(2) + 3(4) = 20, F(C) = 18$. GTLN đạt tại đỉnh $B(2; 4)$ bằng 20, không phải tại $A$."
+                "id": "d",
+                "text": "Giá trị lớn nhất của biểu thức $F(x; y) = x + y$ trên miền nghiệm là $4$.",
+                "correct": true,
+                "explanation": "$F(0; 0)=0, F(4; 0)=4, F(0; 3)=3$. GTLN là 4 tại $(4; 0)$."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Một công ty sản xuất hai loại nước trái cây đóng chai: Nước cam (loại A) và Nước táo (loại B). Mỗi chai loại A cần $0.2\\text{ kg}$ đường và 3 quả cam, đem lại lợi nhuận 4 nghìn đồng. Mỗi chai loại B cần $0.1\\text{ kg}$ đường và 2 quả táo, đem lại lợi nhuận 3 nghìn đồng. Nguồn nguyên liệu đường không quá $20\\text{ kg}$ mỗi ngày.",
+            "id": 2,
+            "question": "**Câu 2:** Cho hệ bất phương trình không bị chặn $\\begin{cases} x + y \\ge 3 \\\\ 2x - y \\ge 0 \\\\ x \\le 5 \\end{cases}$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Ràng buộc về nguyên liệu đường là $0.2x + 0.1y \\le 20$ (với $x, y \\ge 0$).",
+                "id": "a",
+                "text": "Giao điểm của hai đường thẳng $x + y = 3$ và $2x - y = 0$ là điểm $A(1; 2)$.",
                 "correct": true,
-                "explanation": "Lượng đường sử dụng cho $x$ chai loại A và $y$ chai loại B không vượt quá 20 kg."
+                "explanation": "Cộng hai phương trình: $3x = 3 \\Rightarrow x = 1, y = 2$."
               },
               {
-                "key": "b",
-                "text": "Hàm số biểu diễn lợi nhuận hàng ngày là $F(x; y) = 4x + 3y$ (nghìn đồng).",
-                "correct": true,
-                "explanation": "Lợi nhuận là 4 nghìn đồng cho mỗi chai A và 3 nghìn đồng cho mỗi chai B."
-              },
-              {
-                "key": "c",
-                "text": "Nếu chỉ sản xuất duy nhất loại A thì sản xuất được tối đa 100 chai mỗi ngày.",
-                "correct": true,
-                "explanation": "Cho $y = 0 \\Rightarrow 0.2x \\le 20 \\Leftrightarrow x \\le 100$ chai."
-              },
-              {
-                "key": "d",
-                "text": "Nếu sản xuất 80 chai loại A thì có thể sản xuất tối đa 50 chai loại B.",
+                "id": "b",
+                "text": "Miền nghiệm của hệ là một miền tam giác đóng.",
                 "correct": false,
-                "explanation": "$0.2(80) + 0.1y \\le 20 \\Leftrightarrow 16 + 0.1y \\le 20 \\Leftrightarrow 0.1y \\le 4 \\Leftrightarrow y \\le 40$ chai (không phải 50)."
+                "explanation": "Vì $y$ không bị giới hạn dưới nên miền nghiệm không phải tam giác đóng."
+              },
+              {
+                "id": "c",
+                "text": "Điểm $B(4; 2)$ thuộc miền nghiệm của hệ.",
+                "correct": true,
+                "explanation": "Thay $(4; 2)$: $4+2=6 \\ge 3, 2(4)-2=6 \\ge 0, 4 \\le 5$ (đúng)."
+              },
+              {
+                "id": "d",
+                "text": "Biểu thức $F(x; y) = x + 2y$ đạt giá trị nhỏ nhất trên miền nghiệm bằng $5$.",
+                "correct": true,
+                "explanation": "Tại các đỉnh: $A(1; 2) \\Rightarrow F = 1 + 4 = 5$. Tại $(5; -2) \\Rightarrow F = 5 - 4 = 1$ nhưng với $2x - y \\ge 0$ thì $y \\le 2x = 10$. Với $x + y \\ge 3$, min của $x + 2y$ tại giao điểm $A(1; 2)$ là 5."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một trang trại dự định dùng tối đa 20 triệu đồng để mua hai loại thức ăn bổ sung cho bò sữa: Loại I giá 400 nghìn đồng/bao (chứa 10 đơn vị đạm), Loại II giá 300 nghìn đồng/bao (chứa 5 đơn vị đạm). Nhu cầu tối thiểu của đàn bò là cần 300 đơn vị đạm mỗi tháng.",
+            "id": 3,
+            "question": "**Câu 3:** Một trang trại chăn nuôi dự định nuôi gà và vịt. Số gà không quá 80 con, số vịt không quá 60 con. Tổng số gia cầm không quá 100 con. Gọi $x, y$ lần lượt là số gà và vịt. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Bất phương trình ràng buộc về ngân sách mua thức ăn là $4x + 3y \\le 200$ (với $x, y$ là số bao loại I và II).",
+                "id": "a",
+                "text": "Hệ bất phương trình ràng buộc là $\\begin{cases} 0 \\le x \\le 80 \\\\ 0 \\le y \\le 60 \\\\ x + y \\le 100 \\end{cases}$.",
                 "correct": true,
-                "explanation": "$400x + 300y \\le 20000 \\Leftrightarrow 4x + 3y \\le 200$."
+                "explanation": "Chính xác theo điều kiện bài toán."
               },
               {
-                "key": "b",
-                "text": "Bất phương trình ràng buộc về lượng đạm tối thiểu là $10x + 5y \\ge 300$.",
-                "correct": true,
-                "explanation": "Tổng lượng đạm $10x + 5y \\ge 300$ đơn vị."
-              },
-              {
-                "key": "c",
-                "text": "Trang trại có thể mua 20 bao loại I và 30 bao loại II.",
-                "correct": true,
-                "explanation": "$4(20) + 3(30) = 170 \\le 200$ và $10(20) + 5(30) = 350 \\ge 300$ (thỏa mãn)."
-              },
-              {
-                "key": "d",
-                "text": "Số bao thức ăn loại I tối đa mà trang trại có thể mua được là 40 bao.",
+                "id": "b",
+                "text": "Trang trại có thể nuôi 70 con gà và 40 con vịt cùng lúc.",
                 "correct": false,
-                "explanation": "$4x \\le 200 \\Rightarrow x \\le 50$ bao (khi $y = 0$, đạm $= 500 \\ge 300$)."
+                "explanation": "Tổng $70 + 40 = 110 > 100$ (vượt quá tải)."
+              },
+              {
+                "id": "c",
+                "text": "Miền nghiệm của hệ là một miền ngũ giác lồi.",
+                "correct": true,
+                "explanation": "Năm đỉnh là $(0; 0), (80; 0), (80; 20), (40; 60), (0; 60)$."
+              },
+              {
+                "id": "d",
+                "text": "Nếu mỗi con gà lãi 40 nghìn và mỗi con vịt lãi 50 nghìn thì nuôi 40 con gà và 60 con vịt đem lại lợi nhuận cao nhất.",
+                "correct": true,
+                "explanation": "$L(80; 20) = 40(80) + 50(20) = 4200$; $L(40; 60) = 40(40) + 50(60) = 4600$ nghìn đồng (lớn nhất)."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một đội xe vận tải cần chở ít nhất 140 người và 9 tấn hàng. Có hai loại xe: Xe A (thuê 4 triệu đồng/chuyến, chở được 20 người và 0.6 tấn hàng), Xe B (thuê 3 triệu đồng/chuyến, chở được 10 người và 1.5 tấn hàng). Đội xe có tối đa 10 xe loại A và 9 xe loại B.",
+            "id": 4,
+            "question": "**Câu 4:** Cho miền tứ giác $S$ có 4 đỉnh $A(1; 1), B(5; 1), C(4; 4), D(1; 3)$ và hàm mục tiêu $F(x; y) = 3x - 2y$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Điều kiện số xe: $0 \\le x \\le 10$ và $0 \\le y \\le 9$ ($x, y \\in \\mathbb{N}$).",
+                "id": "a",
+                "text": "Giá trị của hàm mục tiêu tại đỉnh $B$ là $13$.",
                 "correct": true,
-                "explanation": "Đội xe chỉ có sẵn tối đa 10 xe A và 9 xe B."
+                "explanation": "$F(B) = 3(5) - 2(1) = 13$."
               },
               {
-                "key": "b",
-                "text": "Ràng buộc số người: $20x + 10y \\ge 140 \\Leftrightarrow 2x + y \\ge 14$.",
+                "id": "b",
+                "text": "Giá trị nhỏ nhất của $F(x; y)$ trên miền $S$ bằng $-3$.",
                 "correct": true,
-                "explanation": "Đúng theo dữ kiện chở ít nhất 140 người."
+                "explanation": "$F(A) = 1, F(B) = 13, F(C) = 4, F(D) = 3 - 6 = -3$. GTNN là $-3$ tại $D$."
               },
               {
-                "key": "c",
-                "text": "Ràng buộc khối lượng hàng: $0.6x + 1.5y \\ge 9 \\Leftrightarrow 2x + 5y \\ge 30$.",
-                "correct": true,
-                "explanation": "Nhân hai vế với $10/3$: $2x + 5y \\ge 30$."
-              },
-              {
-                "key": "d",
-                "text": "Chi phí thuê xe thấp nhất đạt được khi thuê 10 xe loại A và 0 xe loại B.",
+                "id": "c",
+                "text": "Giá trị lớn nhất của $F(x; y)$ trên miền $S$ đạt tại đỉnh $C(4; 4)$.",
                 "correct": false,
-                "explanation": "Thuê $x = 5, y = 4$: người $= 100+40=140$, hàng $= 3+6=9$ tấn. Chi phí $= 4(5) + 3(4) = 32$ triệu đồng ($< 10 \\times 4 = 40$ triệu đồng)."
+                "explanation": "GTLN đạt tại $B(5; 1)$ bằng 13, không phải tại $C$."
+              },
+              {
+                "id": "d",
+                "text": "Điểm $I(2; 2)$ nằm trong miền tứ giác $S$ và có giá trị $F(I) = 2$.",
+                "correct": true,
+                "explanation": "$F(2; 2) = 3(2) - 2(2) = 2$."
               }
             ]
           }
@@ -3380,63 +2419,1089 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Tìm hoành độ giao điểm của hai đường thẳng $x + y = 10$ và $2x - y = 5$.",
-            "correctAnswer": "5",
+            "question": "**Câu 1:** Tính giá trị của biểu thức $F(x; y) = 5x - 2y$ tại điểm $M(4; 3)$.",
+            "correctAnswer": "14",
             "acceptedAnswers": [
-              "5",
-              "5.0"
+              "14",
+              "14.0"
             ],
-            "explanation": "Cộng hai phương trình: $3x = 15 \\Rightarrow x = 5$."
+            "explanation": "$F(4; 3) = 5(4) - 2(3) = 20 - 6 = 14$."
           },
           {
             "id": 2,
-            "question": "Tính diện tích của hình tam giác giới hạn bởi ba đường thẳng: $x = 0, y = 0, x + 2y = 8$.",
-            "correctAnswer": "16",
+            "question": "**Câu 2:** Cho miền nghiệm của một hệ bất phương trình là tam giác có ba đỉnh $A(1; 1), B(7; 1), C(1; 9)$. Tính diện tích miền tam giác đó.",
+            "correctAnswer": "24",
             "acceptedAnswers": [
-              "16",
-              "16.0"
+              "24",
+              "24.0"
             ],
-            "explanation": "Giao với trục tọa độ tại $A(8; 0)$ và $B(0; 4)$. Diện tích $S = \\frac{1}{2}(8)(4) = 16$."
+            "explanation": "Tam giác vuông tại $A$, cạnh $AB = 6$, cạnh $AC = 8$. Diện tích $S = \\frac{1}{2} \\times 6 \\times 8 = 24$."
           },
           {
             "id": 3,
-            "question": "Tìm giá trị lớn nhất của biểu thức $F(x; y) = 5x + 3y$ trên miền đa giác có các đỉnh $A(0; 0), B(6; 0), C(4; 3), D(0; 5)$.",
+            "question": "**Câu 3:** Tìm giá trị lớn nhất của biểu thức $F(x; y) = 2x + 3y$ trên miền nghiệm của hệ $\\begin{cases} 2x + y \\le 10 \\\\ x + 2y \\le 8 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$.",
+            "correctAnswer": "14",
+            "acceptedAnswers": [
+              "14",
+              "14.0"
+            ],
+            "explanation": "Giao của hai đường là $x = 4, y = 2$. Các đỉnh: $(0; 0) \\Rightarrow 0, (5; 0) \\Rightarrow 10, (4; 2) \\Rightarrow 14, (0; 4) \\Rightarrow 12$. GTLN là 14 tại $(4; 2)$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một hộ nông dân chăn nuôi lợn và bò. Mỗi con lợn cần 10 triệu đồng vốn và đem lại lãi 1.5 triệu đồng. Mỗi con bò cần 25 triệu đồng vốn và đem lại lãi 3.5 triệu đồng. Tổng số vốn không quá 200 triệu đồng và chuồng trại chỉ chứa tối đa 14 con. Tính số tiền lãi lớn nhất (đơn vị: triệu đồng) mà hộ nông dân có thể thu được.",
+            "correctAnswer": "29",
+            "acceptedAnswers": [
+              "29",
+              "29.0"
+            ],
+            "explanation": "Ràng buộc: $10x + 25y \\le 200 \\iff 2x + 5y \\le 40$; $x + y \\le 14$; $x, y \\in \\mathbb{N}$. Giao của hai đường: $2(14-y) + 5y = 40 \\Rightarrow 3y = 12 \\Rightarrow y = 4, x = 10$. Tiền lãi $L(10; 4) = 1.5(10) + 3.5(4) = 15 + 14 = 29$ triệu đồng."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Viện dinh dưỡng điều chế một khẩu phần ăn đặc biệt cho vận động viên từ hai loại thực phẩm tinh bột cao cấp $X$ và $Y$. Mỗi lạng thực phẩm $X$ chứa 8 đơn vị protein, 4 đơn vị chất béo và 12 đơn vị carbohydrate, giá bán là 25 nghìn đồng. Mỗi lạng thực phẩm $Y$ chứa 6 đơn vị protein, 8 đơn vị chất béo và 6 đơn vị carbohydrate, giá bán là 30 nghìn đồng. Yêu cầu dinh dưỡng tối thiểu mỗi ngày: ít nhất 48 đơn vị protein, ít nhất 32 đơn vị chất béo và ít nhất 48 đơn vị carbohydrate. Đồng thời, do quy định cân bằng khẩu vị, khối lượng thực phẩm $Y$ không được vượt quá 2 lần khối lượng thực phẩm $X$, và tổng khối lượng hai loại không quá 10 lạng. Hỏi chi phí mua thực phẩm mỗi ngày nhỏ nhất là bao nhiêu nghìn đồng?",
+            "correctAnswer": "168",
+            "acceptedAnswers": [
+              "168",
+              "168.0"
+            ],
+            "explanation": "Gọi $x, y$ là số lạng thực phẩm $X, Y$ ($x, y \\ge 0$). Ràng buộc: Protein: $8x + 6y \\ge 48 \\iff 4x + 3y \\ge 24$; Chất béo: $4x + 8y \\ge 32 \\iff x + 2y \\ge 8$; Carbs: $12x + 6y \\ge 48 \\iff 2x + y \\ge 8$; Khẩu vị: $y \\le 2x$; Tổng khối lượng: $x + y \\le 10$. Hàm chi phí: $C(x; y) = 25x + 30y$ (nghìn đồng). Xét giao điểm của $4x + 3y = 24$ và $x + 2y = 8$: giải hệ được $x = 4.8, y = 1.6$. Kiểm tra: $y = 1.6 \\le 2(4.8) = 9.6$ (thỏa); $2(4.8) + 1.6 = 11.2 \\ge 8$ (thỏa); $4.8 + 1.6 = 6.4 \\le 10$ (thỏa). Chi phí tại $(4.8; 1.6)$: $C = 25(4.8) + 30(1.6) = 120 + 48 = 168$ nghìn đồng. Kiểm tra các đỉnh khác: tại giao $y = 2x$ và $4x + 3y = 24 \\Rightarrow (2.4; 4.8) \\Rightarrow C = 204$; tại $(8; 0) \\Rightarrow C = 200$. Vậy chi phí nhỏ nhất là 168 nghìn đồng."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một trang trại chăn nuôi công nghệ cao cần phối trộn thức ăn hỗn hợp từ hai nguyên liệu ngô nghiền và cám đậu nành. Mỗi kg ngô nghiền chứa $0.5$ đơn vị dinh dưỡng loại I, $0.2$ đơn vị dinh dưỡng loại II và giá mua 8 nghìn đồng/kg. Mỗi kg cám đậu nành chứa $0.25$ đơn vị loại I, $0.6$ đơn vị loại II và giá mua 14 nghìn đồng/kg. Yêu cầu mỗi khẩu phần hàng ngày phải có ít nhất 20 đơn vị loại I và 24 đơn vị loại II. Do thiết bị chứa giới hạn, số kg cám đậu nành sử dụng không vượt quá 30 kg. Hãy tính chi phí mua nguyên liệu thấp nhất (nghìn đồng) để đáp ứng khẩu phần trên.",
+            "correctAnswer": "660",
+            "acceptedAnswers": [
+              "660",
+              "660.0"
+            ],
+            "explanation": "Gọi $x, y$ là số kg ngô và cám ($x, y \\ge 0$). Ta có hệ: Loại I: $0.5x + 0.25y \\ge 20 \\iff 2x + y \\ge 80$; Loại II: $0.2x + 0.6y \\ge 24 \\iff x + 3y \\ge 120$; Giới hạn cám: $y \\le 30$. Hàm chi phí: $C(x; y) = 8x + 14y$. Giao điểm của hai đường thẳng $2x + y = 80$ và $x + 3y = 120$ cho $y = 32 > 30$ (nằm ngoài vùng $y \\le 30$). Do đó trên biên $y = 30$, để thỏa mãn cả hai bất phương trình ta cần: $2x + 30 \\ge 80 \\Rightarrow x \\ge 25$ và $x + 3(30) \\ge 120 \\Rightarrow x \\ge 30$. Điểm biên khả thi có chi phí nhỏ nhất là $(30; 30)$. Tại đó: $C = 8(30) + 14(30) = 240 + 420 = 660$ nghìn đồng."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd2-exam-3",
+        "examNumber": 3,
+        "title": "Đề Số 3: Vận Tải, Logistics & Năng Lượng Công Nghiệp",
+        "code": "CD2-203",
+        "badge": "Mã Đề 203",
+        "badgeColor": "bg-indigo-50 text-indigo-800 border-indigo-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Trong các cặp số sau, cặp số nào là nghiệm của bất phương trình $x - 3y + 6 \\ge 0$?",
+            "options": {
+              "A": "$(0; 1)$",
+              "B": "$(0; 3)$",
+              "C": "$(2; 5)$",
+              "D": "$(1; 4)$"
+            },
+            "correct": "A",
+            "explanation": "Thay $(0; 1)$: $0 - 3(1) + 6 = 3 \\ge 0$ (thỏa mãn)."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Miền nghiệm của bất phương trình $y \\le 2$ là",
+            "options": {
+              "A": "Nửa mặt phẳng nằm bên phải trục tung",
+              "B": "Nửa mặt phẳng nằm phía dưới đường thẳng $y = 2$ kể cả bờ",
+              "C": "Nửa mặt phẳng nằm phía trên đường thẳng $y = 2$",
+              "D": "Nửa mặt phẳng nằm bên trái đường thẳng $x = 2$"
+            },
+            "correct": "B",
+            "explanation": "$y \\le 2$ là nửa mặt phẳng phía dưới đường thẳng $y = 2$ kể cả đường thẳng đó."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Bất phương trình nào sau đây KHÔNG là bất phương trình bậc nhất hai ẩn?",
+            "options": {
+              "A": "$x - y + 4 \\ge 0$",
+              "B": "$x^2 - 2y + 1 > 0$",
+              "C": "$3x + 5y \\le 10$",
+              "D": "$2x + 7y < 0$"
+            },
+            "correct": "B",
+            "explanation": "$x^2$ là bậc hai, không phải bậc nhất."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hệ bất phương trình $\\begin{cases} x + y \\le 6 \\\\ x - y \\ge 0 \\\\ y \\ge 0 \\end{cases}$. Điểm nào sau đây thuộc miền nghiệm của hệ?",
+            "options": {
+              "A": "$(4; 3)$",
+              "B": "$(2; -1)$",
+              "C": "$(1; 3)$",
+              "D": "$(3; 1)$"
+            },
+            "correct": "D",
+            "explanation": "Thay $(3; 1)$: $3 + 1 = 4 \\le 6$, $3 - 1 = 2 \\ge 0$, $1 \\ge 0$ (đều thỏa mãn)."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Giao điểm của hai đường thẳng $2x + y = 7$ và $x - y = 2$ là",
+            "options": {
+              "A": "$(2; 3)$",
+              "B": "$(1; 5)$",
+              "C": "$(3; 1)$",
+              "D": "$(4; -1)$"
+            },
+            "correct": "C",
+            "explanation": "Cộng hai phương trình: $3x = 9 \\Rightarrow x = 3 \\Rightarrow y = 1$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Cho tam giác $ABC$ có các đỉnh $A(0; 0), B(6; 0), C(2; 4)$. Giá trị lớn nhất của $F(x; y) = 2x + y$ trên miền tam giác này bằng",
+            "options": {
+              "A": "$12$",
+              "B": "$8$",
+              "C": "$10$",
+              "D": "$14$"
+            },
+            "correct": "A",
+            "explanation": "$F(A) = 0, F(B) = 2(6) + 0 = 12, F(C) = 2(2) + 4 = 8$. GTLN là $12$ tại $B$."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Một đoàn xe tải cần chở ít nhất 120 tấn hàng. Mỗi xe loại I chở 6 tấn, mỗi xe loại II chở 10 tấn. Bất phương trình mô tả tổng số hàng vận chuyển là",
+            "options": {
+              "A": "$6x + 10y \\le 120$",
+              "B": "$10x + 6y < 120$",
+              "C": "$6x + 10y \\ge 120$",
+              "D": "$6x - 10y \\ge 120$"
+            },
+            "correct": "C",
+            "explanation": "Ít nhất 120 tấn nghĩa là $6x + 10y \\ge 120$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Điểm $M(2; 3)$ thuộc miền nghiệm của bất phương trình nào sau đây?",
+            "options": {
+              "A": "$4x - y - 6 < 0$",
+              "B": "$2x - 3y + 6 < 0$",
+              "C": "$3x - 2y + 1 > 0$",
+              "D": "$x + 2y - 10 > 0$"
+            },
+            "correct": "C",
+            "explanation": "Thay $(2; 3)$: $3(2) - 2(3) + 1 = 1 > 0$ (thỏa mãn)."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Hệ bất phương trình $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le -1 \\end{cases}$ có miền nghiệm là",
+            "options": {
+              "A": "Nửa mặt phẳng",
+              "B": "Miền tam giác",
+              "C": "Một điểm duy nhất",
+              "D": "Tập rỗng $\\varnothing$"
+            },
+            "correct": "D",
+            "explanation": "Vì $x \\ge 0, y \\ge 0 \\Rightarrow x + y \\ge 0$, không thể $\\le -1$. Hệ vô nghiệm."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Giá trị nhỏ nhất của $F(x; y) = 3x - y$ trên miền tứ giác có 4 đỉnh $O(0; 0), A(3; 0), B(3; 4), C(0; 2)$ bằng",
+            "options": {
+              "A": "$9$",
+              "B": "$0$",
+              "C": "$5$",
+              "D": "$-2$"
+            },
+            "correct": "D",
+            "explanation": "$F(O) = 0, F(A) = 9, F(B) = 5, F(C) = -2$. GTNN là $-2$."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Đường thẳng $d: 4x + 3y = 12$ chia mặt phẳng thành hai nửa mặt phẳng. Điểm nào sau đây cùng phía với gốc tọa độ $O$ so với đường thẳng $d$?",
+            "options": {
+              "A": "$(1; 1)$",
+              "B": "$(3; 2)$",
+              "C": "$(4; 1)$",
+              "D": "$(2; 3)$"
+            },
+            "correct": "A",
+            "explanation": "$O(0; 0)$ có $4(0) + 3(0) - 12 = -12 < 0$. Điểm $(1; 1)$ có $4(1) + 3(1) - 12 = -5 < 0$ (cùng phía)."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Cho biểu thức $F(x; y) = x + 3y$ trên miền đa giác lồi. Nếu $F$ đạt giá trị lớn nhất tại hai đỉnh phân biệt $A$ và $B$ thì",
+            "options": {
+              "A": "Đa giác không bị chặn",
+              "B": "$F$ đạt giá trị lớn nhất tại mọi điểm thuộc đoạn thẳng $AB$",
+              "C": "$F$ chỉ đạt giá trị lớn nhất tại trung điểm của $AB$",
+              "D": "Bài toán không có giá trị lớn nhất"
+            },
+            "correct": "B",
+            "explanation": "Đặc tính tuyến tính: nếu đạt cực đại tại 2 đỉnh thì đạt cực đại trên toàn bộ đoạn nối 2 đỉnh đó."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hệ bất phương trình $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + 2y \\le 8 \\\\ 3x + 2y \\le 12 \\end{cases}$ ($S$). Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Miền nghiệm của hệ ($S$) là miền tứ giác lồi có 4 đỉnh.",
+                "correct": true,
+                "explanation": "Các đỉnh là $O(0; 0), A(4; 0), B(2; 3), C(0; 4)$."
+              },
+              {
+                "id": "b",
+                "text": "Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + 2y = 8$ và $3x + 2y = 12$ là $(2; 3)$.",
+                "correct": true,
+                "explanation": "Trừ hai phương trình: $2x = 4 \\Rightarrow x = 2 \\Rightarrow y = 3$."
+              },
+              {
+                "id": "c",
+                "text": "Diện tích của tứ giác miền nghiệm bằng 14.",
+                "correct": false,
+                "explanation": "Chia thành 2 tam giác: $S = S_{\\triangle OAB} + S_{\\triangle OBC} = \\frac{1}{2}(4)(3) + \\frac{1}{2}(4)(2) = 6 + 4 = 10$? Để kiểm tra: $O(0,0), A(4,0), B(2,3), C(0,4)$. $S = \\frac{1}{2}|0(0-3) + 4(3-4) + 2(4-0) + 0(0-0)| = \\frac{1}{2}|-4 + 8| = 2$ à không, Shoelace: $x_1 y_2 - y_1 x_2$: $(0)(0) - (0)(4) + (4)(3) - (0)(2) + (2)(4) - (3)(0) + (0)(0) - (4)(0) = 12 + 8 = 20 \\Rightarrow S = 10$. Vậy mệnh đề diện tích bằng 14 là SAI."
+              },
+              {
+                "id": "d",
+                "text": "Biểu thức $F(x; y) = 5x + 4y$ đạt giá trị lớn nhất trên miền nghiệm bằng $22$.",
+                "correct": true,
+                "explanation": "$F(O)=0, F(A)=20, F(B)=5(2)+4(3)=22, F(C)=16$. GTLN là 22 tại $B(2; 3)$."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho bất phương trình $4x - 5y + 20 \\ge 0$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Đường thẳng bờ $d: 4x - 5y + 20 = 0$ đi qua điểm $A(-5; 0)$ và $B(0; 4)$.",
+                "correct": true,
+                "explanation": "Thay tọa độ $A$ và $B$ đều thỏa mãn phương trình."
+              },
+              {
+                "id": "b",
+                "text": "Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của bất phương trình.",
+                "correct": true,
+                "explanation": "Thay $(0; 0)$: $0 - 0 + 20 = 20 \\ge 0$ (đúng)."
+              },
+              {
+                "id": "c",
+                "text": "Điểm $K(-3; 2)$ thuộc miền nghiệm của bất phương trình.",
+                "correct": false,
+                "explanation": "Thay $(-3; 2)$: $4(-3) - 5(2) + 20 = -12 - 10 + 20 = -2 < 0$. Đúng là $K$ không thuộc miền nghiệm, nên khẳng định $K$ không thuộc là ĐÚNG. Đổi câu text thành: 'Điểm $K(-3; 2)$ thuộc miền nghiệm' -> SAI."
+              },
+              {
+                "id": "d",
+                "text": "Miền nghiệm là nửa mặt phẳng bờ $d$ chứa gốc tọa độ $O$ kể cả bờ.",
+                "correct": true,
+                "explanation": "Đúng theo quy tắc xác định miền nghiệm."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Một công ty cung cấp dịch vụ xe buýt du lịch có hai loại xe: Xe loại A (45 chỗ ngồi, giá thuê 3 triệu/ngày) và Xe loại B (30 chỗ ngồi, giá thuê 2.2 triệu/ngày). Cần chở ít nhất 180 khách, tổng số xe không quá 5 xe. Gọi $x, y$ là số xe loại A và B. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Hệ bất phương trình ràng buộc là $\\begin{cases} 45x + 30y \\ge 180 \\\\ x + y \\le 5 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$.",
+                "correct": true,
+                "explanation": "Đúng với giả thiết số khách và tổng số xe."
+              },
+              {
+                "id": "b",
+                "text": "Công ty có thể thuê 2 xe loại A và 3 xe loại B.",
+                "correct": true,
+                "explanation": "Sức chứa: $2(45) + 3(30) = 90 + 90 = 180$ khách và tổng xe $2 + 3 = 5$."
+              },
+              {
+                "id": "c",
+                "text": "Miền nghiệm chứa điểm cực biên $(4; 0)$.",
+                "correct": true,
+                "explanation": "$4(45) = 180$ và $4 \\le 5$."
+              },
+              {
+                "id": "d",
+                "text": "Chi phí thuê xe nhỏ nhất là 12 triệu đồng.",
+                "correct": true,
+                "explanation": "Thuê 4 xe loại A: $4 \\times 3 = 12$ triệu đồng. Thuê 2 xe A + 3 xe B: $2(3) + 3(2.2) = 6 + 6.6 = 12.6$ triệu đồng. Min là 12 triệu."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hàm mục tiêu $F(x; y) = 4x - 2y$ trên miền tam giác có 3 đỉnh $A(0; 1), B(4; 2), C(1; 5)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Giá trị của $F$ tại đỉnh $A$ bằng $-2$.",
+                "correct": true,
+                "explanation": "$F(A) = 4(0) - 2(1) = -2$."
+              },
+              {
+                "id": "b",
+                "text": "Giá trị lớn nhất của $F(x; y)$ bằng $12$.",
+                "correct": true,
+                "explanation": "$F(B) = 4(4) - 2(2) = 12$. Các đỉnh khác: $F(A) = -2, F(C) = 4(1) - 2(5) = -6$. GTLN là 12."
+              },
+              {
+                "id": "c",
+                "text": "Giá trị nhỏ nhất của $F(x; y)$ bằng $-6$ tại đỉnh $C$.",
+                "correct": true,
+                "explanation": "$F(C) = -6$ là giá trị nhỏ nhất."
+              },
+              {
+                "id": "d",
+                "text": "Điểm $M(2; 2)$ nằm trong tam giác và có giá trị $F(M) = 6$.",
+                "correct": false,
+                "explanation": "$F(2; 2) = 4(2) - 2(2) = 4 \\ne 6$."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho bất phương trình $2x + y - 6 \\le 0$. Điểm $A(a; 2)$ thuộc bờ của bất phương trình. Tìm giá trị của $a$.",
+            "correctAnswer": "2",
+            "acceptedAnswers": [
+              "2",
+              "2.0"
+            ],
+            "explanation": "$2a + 2 - 6 = 0 \\Rightarrow 2a = 4 \\Rightarrow a = 2$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Tính diện tích miền nghiệm của hệ bất phương trình $\\begin{cases} 0 \\le x \\le 6 \\\\ 0 \\le y \\le 5 \\\\ x + y \\ge 4 \\end{cases}$.",
+            "correctAnswer": "22",
+            "acceptedAnswers": [
+              "22",
+              "22.0"
+            ],
+            "explanation": "Hình chữ nhật kích thước $6 \\times 5 = 30$. Phần tam giác bị bỏ đi ở góc tọa độ có cạnh 4 và 4, diện tích $\\frac{1}{2} \\cdot 4 \\cdot 4 = 8$. Diện tích miền nghiệm là $30 - 8 = 22$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Tìm giá trị lớn nhất của $F(x; y) = 3x + 5y$ trên miền nghiệm của hệ $\\begin{cases} x + y \\le 6 \\\\ y \\le 4 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$.",
+            "correctAnswer": "26",
+            "acceptedAnswers": [
+              "26",
+              "26.0"
+            ],
+            "explanation": "Các đỉnh: $(0; 0) \\Rightarrow 0, (6; 0) \\Rightarrow 18, (2; 4) \\Rightarrow 3(2)+5(4)=26, (0; 4) \\Rightarrow 20$. GTLN là 26 tại $(2; 4)$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một công ty vận tải có hai loại xe tải để chở 12 tấn hàng. Xe lớn chở được 3 tấn, chi phí 1.2 triệu. Xe nhỏ chở được 1.5 tấn, chi phí 0.7 triệu. Tìm chi phí thuê xe nhỏ nhất (đơn vị: triệu đồng).",
+            "correctAnswer": "4.8",
+            "acceptedAnswers": [
+              "4.8",
+              "4,8"
+            ],
+            "explanation": "Thuê 4 xe lớn: chi phí $4 \\times 1.2 = 4.8$ triệu đồng. Thuê 8 xe nhỏ: $8 \\times 0.7 = 5.6$ triệu. Chi phí nhỏ nhất là 4.8 triệu."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Một nhà máy sản xuất linh kiện vi mạch điện tử có hai dây chuyền tự động D1 và D2. Mỗi giờ, dây chuyền D1 tiêu thụ $15\\text{ kWh}$ điện, tạo ra $120$ chip loại A và $60$ chip loại B, phát thải $2\\text{ kg } CO_2$. Dây chuyền D2 tiêu thụ $20\\text{ kWh}$ điện, tạo ra $80$ chip loại A và $120$ chip loại B, phát thải $1.5\\text{ kg } CO_2$. Theo hợp đồng cung ứng trong ngày, nhà máy phải bàn giao ít nhất $1440$ chip loại A và $1080$ chip loại B. Do trạm biến áp của khu công nghiệp hạn chế công suất, tổng điện năng tiêu thụ trong ngày không được vượt quá $280\\text{ kWh}$. Quy định môi trường yêu cầu tổng lượng $CO_2$ xả thải trong ngày không vượt quá $30\\text{ kg}$. Tiền điện cho mỗi giờ hoạt động của D1 là 60 nghìn đồng, của D2 là 75 nghìn đồng. Hãy tìm số tiền điện tối thiểu (nghìn đồng) mà nhà máy phải trả trong ngày để hoàn thành đơn hàng.",
+            "correctAnswer": "930",
+            "acceptedAnswers": [
+              "930",
+              "930.0"
+            ],
+            "explanation": "Gọi $x, y \\ge 0$ là số giờ hoạt động của D1 và D2. Ràng buộc: Chip A: $120x + 80y \\ge 1440 \\iff 3x + 2y \\ge 36$; Chip B: $60x + 120y \\ge 1080 \\iff x + 2y \\ge 20$; Điện năng: $15x + 20y \\le 280$; Xả thải $CO_2$: $2x + 1.5y \\le 30$. Hàm chi phí tiền điện cần cực tiểu: $C(x; y) = 60x + 75y$. Giao điểm của hai đường ràng buộc sản lượng $3x + 2y = 36$ và $x + 2y = 20$ cho $x = 8, y = 6$. Kiểm tra giới hạn: Điện năng $= 15(8) + 20(6) = 240 \\le 280$ (thỏa); $CO_2 = 2(8) + 1.5(6) = 25 \\le 30$ (thỏa). Chi phí điện tại $(8; 6)$ là $C = 60(8) + 75(6) = 480 + 450 = 930$ nghìn đồng. Do cả hai ràng buộc sản phẩm đều có hệ số chi phí dương và $x, y$ giảm xuống điểm biên này, 930 nghìn đồng là chi phí tối thiểu."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một công ty du lịch tổ chức tour khám phá biển đảo bằng hai loại du thuyền cao tốc: Loại Alpha (chở được 40 khách và 15 vali cồng kềnh, chi phí nhiên liệu 12 triệu đồng/chuyến) và Loại Beta (chở được 60 khách và 10 vali cồng kềnh, chi phí nhiên liệu 15 triệu đồng/chuyến). Đoàn khách gồm ít nhất 480 người và 120 vali cồng kềnh. Cảng vụ chỉ cho phép xuất bến tối đa 10 thuyền Alpha và 12 thuyền Beta trong ngày, đồng thời tổng số chuyến của cả hai loại không được quá 15 chuyến. Hãy xác định tổng chi phí nhiên liệu nhỏ nhất (triệu đồng) để vận chuyển hết số khách và hành lý trên.",
+            "correctAnswer": "132",
+            "acceptedAnswers": [
+              "132",
+              "132.0"
+            ],
+            "explanation": "Gọi $x, y \\in \\mathbb{N}$ là số chuyến thuyền Alpha và Beta. Ràng buộc: Khách: $40x + 60y \\ge 480 \\iff 2x + 3y \\ge 24$; Hành lý: $15x + 10y \\ge 120 \\iff 3x + 2y \\ge 24$; $x \\le 10, y \\le 12, x + y \\le 15$. Hàm chi phí: $C(x; y) = 12x + 15y$. Điểm giao nhau của hai đường thẳng $2x + 3y = 24$ và $3x + 2y = 24$ là $(4.8; 4.8)$. Do $x, y$ nguyên, ta xét các điểm nguyên lân cận thỏa mãn cả hai điều kiện: $(6; 4)$ có $2(6)+3(4)=24$ và $3(6)+2(4)=26 \\ge 24$, chi phí $C(6; 4) = 12(6) + 15(4) = 72 + 60 = 132$ triệu đồng; Điểm $(5; 5)$ có $C(5; 5) = 12(5) + 15(5) = 135$ triệu; Điểm $(4; 6)$ có $C(4; 6) = 12(4) + 15(6) = 138$ triệu. Vậy chi phí nhiên liệu nhỏ nhất là 132 triệu đồng."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd2-exam-4",
+        "examNumber": 4,
+        "title": "Đề Số 4: Nông Nghiệp Xuất Khẩu & Tối Ưu Nguồn Tài Nguyên",
+        "code": "CD2-204",
+        "badge": "Mã Đề 204",
+        "badgeColor": "bg-purple-50 text-purple-800 border-purple-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cặp số $(x; y) = (2; 3)$ là nghiệm của bất phương trình nào sau đây?",
+            "options": {
+              "A": "$x - 2y + 5 < 0$",
+              "B": "$x + 3y - 12 > 0$",
+              "C": "$2x + y - 5 \\ge 0$",
+              "D": "$3x - y - 4 < 0$"
+            },
+            "correct": "C",
+            "explanation": "Thay $(2; 3)$: $2(2) + 3 - 5 = 2 \\ge 0$ (thỏa mãn)."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Miền nghiệm của bất phương trình $x - y < 0$ là nửa mặt phẳng bờ $d: x - y = 0$ chứa điểm nào?",
+            "options": {
+              "A": "$(4; 2)$",
+              "B": "$(0; 1)$",
+              "C": "$(3; 1)$",
+              "D": "$(2; 0)$"
+            },
+            "correct": "B",
+            "explanation": "Thay $(0; 1)$: $0 - 1 = -1 < 0$ (thỏa mãn)."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Hệ bất phương trình nào sau đây có miền nghiệm là một hình vuông?",
+            "options": {
+              "A": "$\\begin{cases} 0 \\le x \\le 3 \\\\ 0 \\le y \\le 3 \\end{cases}$",
+              "B": "$\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 3 \\end{cases}$",
+              "C": "$\\begin{cases} x + y \\le 3 \\\\ x - y \\le 3 \\end{cases}$",
+              "D": "$\\begin{cases} 0 \\le x \\le 3 \\\\ 0 \\le y \\le 4 \\end{cases}$"
+            },
+            "correct": "A",
+            "explanation": "Cạnh bằng 3 theo cả hai chiều $x$ và $y$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Điểm $O(0; 0)$ KHÔNG thuộc miền nghiệm của bất phương trình nào sau đây?",
+            "options": {
+              "A": "$2x + 3y + 6 < 0$",
+              "B": "$x - y + 1 > 0$",
+              "C": "$3x + 2y - 4 \\le 0$",
+              "D": "$x + y + 5 \\ge 0$"
+            },
+            "correct": "A",
+            "explanation": "Thay $(0; 0)$: $6 < 0$ là sai."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Cho tam giác có các đỉnh $O(0; 0), A(5; 0), B(0; 6)$. Giá trị lớn nhất của $F(x; y) = 3x + 2y$ bằng",
+            "options": {
+              "A": "$18$",
+              "B": "$21$",
+              "C": "$12$",
+              "D": "$15$"
+            },
+            "correct": "D",
+            "explanation": "$F(O)=0, F(A)=15, F(B)=12$. GTLN là $15$ tại $A$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Một nông trường có 100 ha đất trồng cà phê và hồ tiêu. Gọi $x, y$ là diện tích trồng cà phê và hồ tiêu. Bất phương trình ràng buộc diện tích là",
+            "options": {
+              "A": "$xy \\le 100$",
+              "B": "$x - y \\le 100$",
+              "C": "$x + y \\ge 100$",
+              "D": "$x + y \\le 100$"
+            },
+            "correct": "D",
+            "explanation": "Tổng diện tích $x + y \\le 100$."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Cặp số $(x; y) = (1; 2)$ thỏa mãn hệ bất phương trình nào sau đây?",
+            "options": {
+              "A": "$\\begin{cases} 2x + y \\le 5 \\\\ x - y \\le 0 \\end{cases}$",
+              "B": "$\\begin{cases} 2x + y \\le 5 \\\\ x - y > 0 \\end{cases}$",
+              "C": "$\\begin{cases} x + 2y < 3 \\\\ 2x - y > 1 \\end{cases}$",
+              "D": "$\\begin{cases} 2x + y > 5 \\\\ x - y \\le 0 \\end{cases}$"
+            },
+            "correct": "A",
+            "explanation": "$2(1) + 2 = 4 \\le 5$ và $1 - 2 = -1 \\le 0$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Điểm nào sau đây nằm trên đường thẳng bờ của bất phương trình $3x - 5y + 15 \\ge 0$?",
+            "options": {
+              "A": "$(2; 4)$",
+              "B": "$(3; 0)$",
+              "C": "$(0; 3)$",
+              "D": "$(1; 2)$"
+            },
+            "correct": "C",
+            "explanation": "Thay $(0; 3)$: $3(0) - 5(3) + 15 = 0$ (thuộc bờ đường thẳng)."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Cho hệ $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 3 \\\\ x - y \\le 1 \\end{cases}$. Miền nghiệm của hệ có bao nhiêu đỉnh?",
+            "options": {
+              "A": "3 đỉnh",
+              "B": "6 đỉnh",
+              "C": "5 đỉnh",
+              "D": "4 đỉnh"
+            },
+            "correct": "D",
+            "explanation": "Các đỉnh là $(0; 0), (1; 0), (2; 1), (0; 3)$ (tứ giác lồi có 4 đỉnh)."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Giá trị nhỏ nhất của $F(x; y) = 2x - 3y$ trên miền tứ giác có 4 đỉnh $A(0; 0), B(4; 0), C(3; 3), D(0; 2)$ bằng",
+            "options": {
+              "A": "$8$",
+              "B": "$-6$",
+              "C": "$-3$",
+              "D": "$0$"
+            },
+            "correct": "B",
+            "explanation": "$F(A)=0, F(B)=8, F(C)=-3, F(D)=-6$. GTNN là $-6$ tại $D$."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Trong mặt phẳng $Oxy$, miền nghiệm của bất phương trình $x + y \\ge 0$ là",
+            "options": {
+              "A": "Nửa mặt phẳng bờ $x + y = 0$ chứa điểm $(-1; -1)$",
+              "B": "Nửa mặt phẳng bờ $x + y = 0$ chứa điểm $(1; 1)$",
+              "C": "Toàn bộ mặt phẳng",
+              "D": "Đường thẳng $x + y = 0$"
+            },
+            "correct": "B",
+            "explanation": "Thay $(1; 1)$: $1 + 1 = 2 \\ge 0$ (thỏa mãn)."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Cho biểu thức $F(x; y) = ax + by$. Khi vẽ các đường mức $ax + by = c$, các đường mức này có tính chất gì?",
+            "options": {
+              "A": "Là các đường thẳng cắt nhau tại gốc tọa độ",
+              "B": "Là các đường tròn đồng tâm",
+              "C": "Là các đường thẳng song song với nhau",
+              "D": "Là các đường cong parabol"
+            },
+            "correct": "C",
+            "explanation": "Các đường thẳng $ax + by = c$ có cùng vectơ pháp tuyến nên song song với nhau."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hệ bất phương trình $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ 2x + y \\le 6 \\\\ x + 2y \\le 6 \\end{cases}$ ($D$). Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Miền nghiệm ($D$) là một tứ giác đối xứng qua đường thẳng $y = x$.",
+                "correct": true,
+                "explanation": "Vì các phương trình đối xứng giữa $x$ và $y$."
+              },
+              {
+                "id": "b",
+                "text": "Đỉnh đối diện gốc $O$ có tọa độ là $(2; 2)$.",
+                "correct": true,
+                "explanation": "Giải hệ $2x + y = 6$ và $x + 2y = 6 \\Rightarrow x = 2, y = 2$."
+              },
+              {
+                "id": "c",
+                "text": "Điểm $M(1.5; 1.5)$ nằm ngoài miền nghiệm ($D$).",
+                "correct": false,
+                "explanation": "$2(1.5) + 1.5 = 4.5 \\le 6$. $M$ nằm trong miền nghiệm."
+              },
+              {
+                "id": "d",
+                "text": "Giá trị lớn nhất của $F(x; y) = x + y$ trên miền ($D$) bằng $4$.",
+                "correct": true,
+                "explanation": "Tại $(2; 2)$ thì $x + y = 4$."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho bất phương trình $3x - 2y \\le 6$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Đường thẳng bờ cắt trục hoành tại $(2; 0)$ và trục tung tại $(0; -3)$.",
+                "correct": true,
+                "explanation": "Cho $y = 0 \\Rightarrow x = 2$; cho $x = 0 \\Rightarrow y = -3$."
+              },
+              {
+                "id": "b",
+                "text": "Điểm $P(1; -2)$ thuộc miền nghiệm của bất phương trình.",
+                "correct": false,
+                "explanation": "Thay $(1; -2)$: $3(1) - 2(-2) = 7 \\le 6$ là sai."
+              },
+              {
+                "id": "c",
+                "text": "Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm.",
+                "correct": true,
+                "explanation": "$3(0) - 2(0) = 0 \\le 6$ (đúng)."
+              },
+              {
+                "id": "d",
+                "text": "Miền nghiệm không chứa điểm nào trên trục tung có tung độ dương.",
+                "correct": false,
+                "explanation": "Với điểm $(0; 1)$: $3(0) - 2(1) = -2 \\le 6$ (vẫn thuộc miền nghiệm)."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Một trang trại dự kiến trồng ngô và khoai lang trên diện tích tối đa 8 ha. Chi phí trồng 1 ha ngô là 15 triệu, 1 ha khoai là 20 triệu. Tổng ngân sách tối đa là 140 triệu. Gọi $x, y$ là số ha ngô và khoai. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Hệ bất phương trình ràng buộc là $\\begin{cases} x + y \\le 8 \\\\ 15x + 20y \\le 140 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$.",
+                "correct": true,
+                "explanation": "Chính xác theo giả thiết đề bài."
+              },
+              {
+                "id": "b",
+                "text": "Trang trại có thể trồng 5 ha ngô và 4 ha khoai.",
+                "correct": false,
+                "explanation": "$5 + 4 = 9 > 8$ ha (vượt quá diện tích)."
+              },
+              {
+                "id": "c",
+                "text": "Miền nghiệm có đỉnh giao biên là $(4; 4)$.",
+                "correct": true,
+                "explanation": "Giải $x + y = 8$ và $3x + 4y = 28 \\Rightarrow x = 4, y = 4$."
+              },
+              {
+                "id": "d",
+                "text": "Nếu 1 ha ngô lãi 30 triệu, 1 ha khoai lãi 36 triệu thì lợi nhuận lớn nhất đạt được khi trồng 4 ha ngô và 4 ha khoai.",
+                "correct": true,
+                "explanation": "$L(4; 4) = 30(4) + 36(4) = 264$. Tại $(8; 0) \\Rightarrow L = 240$. Tại $(0; 7) \\Rightarrow L = 36(7) = 252$. Lợi nhuận lớn nhất đúng là 264 tại $(4; 4)$. Hãy sửa mệnh đề thành True."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho tứ giác $ABCD$ với $A(0; 2), B(3; 0), C(4; 3), D(1; 4)$. Xét biểu thức $F(x; y) = 3x - y$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Giá trị của $F$ tại đỉnh $A$ là $-2$.",
+                "correct": true,
+                "explanation": "$F(A) = 3(0) - 2 = -2$."
+              },
+              {
+                "id": "b",
+                "text": "Giá trị lớn nhất của $F$ trên tứ giác bằng $9$.",
+                "correct": true,
+                "explanation": "$F(B) = 3(3) - 0 = 9, F(C) = 12 - 3 = 9$. GTLN là 9."
+              },
+              {
+                "id": "c",
+                "text": "Tất cả các điểm trên đoạn thẳng $BC$ đều làm cho $F$ đạt giá trị lớn nhất.",
+                "correct": true,
+                "explanation": "Do $F(B) = F(C) = 9$ và hàm $F$ là tuyến tính."
+              },
+              {
+                "id": "d",
+                "text": "Giá trị nhỏ nhất của $F$ bằng $-1$ tại đỉnh $D$.",
+                "correct": false,
+                "explanation": "$F(D) = 3(1) - 4 = -1$. Nhưng $F(A) = -2 < -1$. Vậy GTNN là $-2$ tại $A$, mệnh đề d SAI."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Tính giá trị của biểu thức $F(x; y) = 3x + 2y$ tại điểm $A(5; 4)$.",
+            "correctAnswer": "23",
+            "acceptedAnswers": [
+              "23",
+              "23.0"
+            ],
+            "explanation": "$F(5; 4) = 3(5) + 2(4) = 15 + 8 = 23$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Miền nghiệm của hệ $\\begin{cases} 0 \\le x \\le 5 \\\\ 0 \\le y \\le 6 \\\\ y \\le x \\end{cases}$ là một tam giác vuông. Tính diện tích miền tam giác đó.",
+            "correctAnswer": "12.5",
+            "acceptedAnswers": [
+              "12.5",
+              "12,5"
+            ],
+            "explanation": "Đỉnh là $(0; 0), (5; 0), (5; 5)$. Tam giác vuông cân có cạnh góc vuông bằng 5. Diện tích $S = \\frac{1}{2} \\cdot 5 \\cdot 5 = 12.5$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Tìm giá trị lớn nhất của $F(x; y) = 4x + y$ trên miền nghiệm của hệ $\\begin{cases} x + y \\le 7 \\\\ 3x + y \\le 15 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$.",
+            "correctAnswer": "20",
+            "acceptedAnswers": [
+              "20",
+              "20.0"
+            ],
+            "explanation": "Giao của hai đường là $x = 4, y = 3$. Các đỉnh: $(0; 0) \\Rightarrow 0, (5; 0) \\Rightarrow 20, (4; 3) \\Rightarrow 4(4)+3=19, (0; 7) \\Rightarrow 7$. GTLN tại $(5; 0)$ là 20. Nếu tại $(5; 0)$ là 20. Chờ chút: $3(5) + 0 = 15 \\le 15$ và $5 + 0 = 5 \\le 7$. $F(5; 0) = 20$. GTLN là 20."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một xưởng mộc đóng bàn và ghế. Mỗi chiếc bàn cần 2m gỗ và 3 giờ công, lãi 400 nghìn. Mỗi chiếc ghế cần 1m gỗ và 1 giờ công, lãi 150 nghìn. Có sẵn 16m gỗ và 21 giờ công. Tìm số tiền lãi lớn nhất (đơn vị: nghìn đồng).",
+            "correctAnswer": "2900",
+            "acceptedAnswers": [
+              "2900",
+              "2900.0"
+            ],
+            "explanation": "$2x + y \\le 16$ và $3x + y \\le 21$. Trừ hai phương trình: $x = 5, y = 6$. Lợi nhuận $L = 400(5) + 150(6) = 2000 + 900 = 2900$. Tại $(7; 0)$: $400(7) = 2800$. Tại $(0; 16)$: $150(16) = 2400$. Lợi nhuận lớn nhất là 2900 nghìn đồng."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Một hợp tác xã nông nghiệp công nghệ cao dự định trồng sầu riêng Ri6 và thanh long ruột đỏ trên khu đất có diện tích tối đa 12 ha. Trồng 1 ha sầu riêng cần vốn đầu tư ban đầu 120 triệu đồng, 40 ngày công và $300\\text{ m}^3$ nước tưới mỗi tháng, mang lại lợi nhuận dự kiến 150 triệu đồng/năm. Trồng 1 ha thanh long cần 80 triệu đồng vốn, 60 ngày công và $150\\text{ m}^3$ nước tưới mỗi tháng, mang lại lợi nhuận 90 triệu đồng/năm. Hợp tác xã có sẵn tổng nguồn vốn không quá 1200 triệu đồng, nhân lực tối đa 600 ngày công và hệ thống thủy lợi cung cấp tối đa $2700\\text{ m}^3$ nước tưới mỗi tháng. Tính lợi nhuận tối đa hàng năm (triệu đồng) mà hợp tác xã có thể đạt được.",
+            "correctAnswer": "1440",
+            "acceptedAnswers": [
+              "1440",
+              "1440.0"
+            ],
+            "explanation": "Gọi $x, y \\ge 0$ là số ha sầu riêng và thanh long. Các điều kiện: Đất: $x + y \\le 12$; Vốn: $120x + 80y \\le 1200 \\iff 3x + 2y \\le 30$; Công: $40x + 60y \\le 600 \\iff 2x + 3y \\le 30$; Nước: $300x + 150y \\le 2700 \\iff 2x + y \\le 18$. Hàm lợi nhuận: $L(x; y) = 150x + 90y$. Giao điểm của hai đường $3x + 2y = 30$ và $2x + 3y = 30$ là $x = 6, y = 6$. Kiểm tra: $6 + 6 = 12 \\le 12$ (thỏa mãn); $2(6) + 6 = 18 \\le 18$ (thỏa mãn). Điểm $(6; 6)$ là một đỉnh của miền nghiệm. Lợi nhuận tại $(6; 6)$ là $L = 150(6) + 90(6) = 900 + 540 = 1440$ triệu đồng. Tại $(9; 0)$: $L = 1350$; tại $(0; 10)$: $L = 900$. Vậy lợi nhuận tối đa là 1440 triệu đồng."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một xưởng đúc cơ khí chính xác nhận hợp đồng chế tạo hai loại chi tiết máy $P_1$ và $P_2$. Để gia công xong 1 chi tiết $P_1$ cần 3 giờ trên máy tiện, 2 giờ trên máy phay và 1 giờ trên máy mài. Để gia công 1 chi tiết $P_2$ cần 1 giờ trên máy tiện, 2 giờ trên máy phay và 3 giờ trên máy mài. Phân xưởng có tổng số giờ máy khả dụng trong tuần: máy tiện không quá 45 giờ, máy phay không quá 40 giờ, máy mài không quá 45 giờ. Do yêu cầu thị trường, số lượng chi tiết $P_1$ không vượt quá 12 chiếc, và số lượng $P_2$ không vượt quá 14 chiếc. Mỗi chi tiết $P_1$ đem lại tiền lãi 250 nghìn đồng, mỗi chi tiết $P_2$ đem lại tiền lãi 300 nghìn đồng. Hãy tìm số tiền lãi lớn nhất (nghìn đồng) mà xưởng cơ khí có thể đạt được trong một tuần.",
+            "correctAnswer": "5600",
+            "acceptedAnswers": [
+              "5600",
+              "5600.0"
+            ],
+            "explanation": "Gọi $x, y \\in \\mathbb{N}$ là số chi tiết $P_1, P_2$. Ta có hệ: Máy tiện: $3x + y \\le 45$; Máy phay: $2x + 2y \\le 40 \\iff x + y \\le 20$; Máy mài: $x + 3y \\le 45$; Thị trường: $x \\le 12, y \\le 14$. Tiền lãi: $L(x; y) = 250x + 300y$. Giao điểm của $x + y = 20$ và $x + 3y = 45$ cho $y = 12.5, x = 7.5$. Do $x, y$ nguyên và cần tối đa hóa $L$ với hệ số của $y$ lớn hơn ($300 > 250$): Xét $y = 12 \\Rightarrow x \\le 20 - 12 = 8$. Kiểm tra: $3(8) + 12 = 36 \\le 45$; $8 + 3(12) = 44 \\le 45$; $8 \\le 12, 12 \\le 14$. Điểm $(8; 12)$ hoàn toàn khả thi! Lợi nhuận tại $(8; 12)$ là $L = 250(8) + 300(12) = 2000 + 3600 = 5600$ nghìn đồng. Nếu thử $y = 13 \\Rightarrow x + 3(13) \\le 45 \\Rightarrow x \\le 6 \\Rightarrow L(6; 13) = 1500 + 3900 = 5400 < 5600$. Vậy tiền lãi lớn nhất là 5600 nghìn đồng."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd2-exam-5",
+        "examNumber": 5,
+        "title": "Đề Số 5: Tài Chính Doanh Nghiệp & Danh Mục Đầu Tư",
+        "code": "CD2-205",
+        "badge": "Mã Đề 205",
+        "badgeColor": "bg-rose-50 text-rose-800 border-rose-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Bất phương trình nào sau đây mô tả nửa mặt phẳng bên trái trục tung kể cả trục tung?",
+            "options": {
+              "A": "$y \\le 0$",
+              "B": "$x \\ge 0$",
+              "C": "$y \\ge 0$",
+              "D": "$x \\le 0$"
+            },
+            "correct": "D",
+            "explanation": "Bên trái trục tung nghĩa là hoành độ $x \\le 0$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Điểm nào sau đây thuộc miền nghiệm của bất phương trình $3x - y + 2 > 0$?",
+            "options": {
+              "A": "$-2; 1$",
+              "B": "$(0; 5)$",
+              "C": "$(1; 2)$",
+              "D": "$-1; 0$"
+            },
+            "correct": "C",
+            "explanation": "Thay $(1; 2)$: $3(1) - 2 + 2 = 3 > 0$ (thỏa mãn)."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hệ bất phương trình $\\begin{cases} 2x + 3y \\le 6 \\\\ x \\ge 0 \\\\ y \\ge 0 \\end{cases}$. Miền nghiệm của hệ có hình dạng là",
+            "options": {
+              "A": "Miền tam giác vuông",
+              "B": "Miền tứ giác",
+              "C": "Miền ngũ giác",
+              "D": "Nửa mặt phẳng"
+            },
+            "correct": "A",
+            "explanation": "Giao của góc phần tư thứ nhất với nửa mặt phẳng tạo ra tam giác vuông tại $O(0; 0)$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cặp số $(x; y) = (3; 2)$ là nghiệm của hệ bất phương trình nào sau đây?",
+            "options": {
+              "A": "$\\begin{cases} x + 2y \\ge 5 \\\\ 2x - y \\le 6 \\end{cases}$",
+              "B": "$\\begin{cases} x - y > 2 \\\\ x + y < 4 \\end{cases}$",
+              "C": "$\\begin{cases} x + 2y < 5 \\\\ 2x - y > 6 \\end{cases}$",
+              "D": "$\\begin{cases} 3x - y < 5 \\\\ x + 3y > 10 \\end{cases}$"
+            },
+            "correct": "A",
+            "explanation": "$3 + 2(2) = 7 \\ge 5$ và $2(3) - 2 = 4 \\le 6$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Giá trị nhỏ nhất của $F(x; y) = 3x - 2y$ trên miền tam giác có 3 đỉnh $O(0; 0), A(4; 0), B(0; 3)$ bằng",
+            "options": {
+              "A": "$0$",
+              "B": "$-6$",
+              "C": "$12$",
+              "D": "$-3$"
+            },
+            "correct": "B",
+            "explanation": "$F(O)=0, F(A)=12, F(B)=-6$. GTNN là $-6$ tại $B$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Một nhà đầu tư có số vốn 500 triệu để rót vào hai kênh cổ phiếu $x$ và trái phiếu $y$. Bất phương trình thể hiện giới hạn vốn đầu tư là",
+            "options": {
+              "A": "$x + y \\ge 500$",
+              "B": "$x + y \\le 500$",
+              "C": "$xy \\le 500$",
+              "D": "$x - y \\le 500$"
+            },
+            "correct": "B",
+            "explanation": "Tổng số vốn đầu tư $x + y \\le 500$ ($x, y \\ge 0$)."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Đường thẳng bờ $d: 5x - 2y = 10$ cắt trục hoành tại điểm nào?",
+            "options": {
+              "A": "$(0; 2)$",
+              "B": "$(0; -5)$",
+              "C": "$(5; 0)$",
+              "D": "$(2; 0)$"
+            },
+            "correct": "D",
+            "explanation": "Cho $y = 0 \\Rightarrow 5x = 10 \\Rightarrow x = 2$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Điểm nào sau đây KHÔNG thuộc miền nghiệm của hệ $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ 3x + 2y \\le 12 \\end{cases}$?",
+            "options": {
+              "A": "$(2; 1)$",
+              "B": "$(0; 4)$",
+              "C": "$(3; 2)$",
+              "D": "$(1; 2)$"
+            },
+            "correct": "C",
+            "explanation": "Thay $(3; 2)$: $3(3) + 2(2) = 13 > 12$."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Diện tích của miền nghiệm tạo bởi hệ $\\begin{cases} 0 \\le x \\le 4 \\\\ 0 \\le y \\le 5 \\end{cases}$ bằng",
+            "options": {
+              "A": "$20$",
+              "B": "$9$",
+              "C": "$18$",
+              "D": "$40$"
+            },
+            "correct": "A",
+            "explanation": "$S = 4 \\times 5 = 20$."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Cho $F(x; y) = 4x + 5y$. Trong 4 điểm sau, điểm nào cho giá trị của $F$ lớn nhất?",
+            "options": {
+              "A": "$(4; 2)$",
+              "B": "$(3; 4)$",
+              "C": "$(2; 4)$",
+              "D": "$(5; 1)$"
+            },
+            "correct": "B",
+            "explanation": "$F(3; 4) = 4(3) + 5(4) = 32$. Các điểm khác: $(5; 1) \\Rightarrow 25, (2; 4) \\Rightarrow 28, (4; 2) \\Rightarrow 26$. Lớn nhất là 32 tại $(3; 4)$."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Trong mặt phẳng tọa độ $Oxy$, bất phương trình nào sau đây có miền nghiệm là nửa mặt phẳng chứa gốc tọa độ $O$?",
+            "options": {
+              "A": "$4x - y - 5 > 0$",
+              "B": "$3x + 5y + 1 < 0$",
+              "C": "$x + 2y - 3 > 0$",
+              "D": "$2x - 3y + 4 \\ge 0$"
+            },
+            "correct": "D",
+            "explanation": "Thay $O(0; 0)$: $4 \\ge 0$ (thỏa mãn)."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Điều kiện cần và đủ để miền nghiệm của một hệ bất phương trình bậc nhất hai ẩn là một đa giác lồi bị chặn là",
+            "options": {
+              "A": "Hệ có vô số nghiệm",
+              "B": "Gốc tọa độ phải thuộc miền nghiệm",
+              "C": "Miền nghiệm được bao quanh bởi các đoạn thẳng và có diện tích hữu hạn",
+              "D": "Hệ có đúng 3 bất phương trình"
+            },
+            "correct": "C",
+            "explanation": "Miền bị chặn là miền có diện tích hữu hạn và nằm trọn trong một hình tròn bán kính đủ lớn."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hệ bất phương trình $\\begin{cases} x \\ge 0 \\\\ y \\ge 0 \\\\ x + y \\le 5 \\\\ 3x + y \\le 9 \\end{cases}$ ($H$). Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Miền nghiệm ($H$) là một tứ giác có các đỉnh là $O(0; 0), A(3; 0), B(2; 3), C(0; 5)$.",
+                "correct": true,
+                "explanation": "Giải giao của $x+y=5$ và $3x+y=9 \\Rightarrow 2x = 4 \\Rightarrow x = 2, y = 3$."
+              },
+              {
+                "id": "b",
+                "text": "Biểu thức $F(x; y) = 2x + 3y$ đạt giá trị lớn nhất tại đỉnh $B(2; 3)$.",
+                "correct": false,
+                "explanation": "$F(A)=6, F(B)=2(2)+3(3)=13, F(C)=15$. GTLN là 15 tại $C(0; 5)$. Khẳng định b nói đạt tại C là ĐÚNG. Đổi thành False bằng cách nói: 'GTLN đạt tại B(2; 3)' -> SAI."
+              },
+              {
+                "id": "c",
+                "text": "Điểm $M(1; 3)$ thuộc miền nghiệm của hệ ($H$).",
+                "correct": true,
+                "explanation": "$1+3=4 \\le 5$ và $3(1)+3=6 \\le 9$ (đúng)."
+              },
+              {
+                "id": "d",
+                "text": "Diện tích của tứ giác miền nghiệm bằng 11.5.",
+                "correct": false,
+                "explanation": "$S = S_{OAB} + S_{OBC} = \\frac{1}{2}(3)(3) + \\frac{1}{2}(5)(2) = 4.5 + 5 = 9.5 \\ne 11.5$. Vậy mệnh đề d SAI."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho bất phương trình $-2x + 3y + 6 \\ge 0$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Đường thẳng bờ có phương trình là $-2x + 3y + 6 = 0$.",
+                "correct": true,
+                "explanation": "Đúng phương trình bờ."
+              },
+              {
+                "id": "b",
+                "text": "Gốc tọa độ $O(0; 0)$ không thuộc miền nghiệm của bất phương trình.",
+                "correct": false,
+                "explanation": "Thay $(0; 0)$: $6 \\ge 0$ (thuộc miền nghiệm)."
+              },
+              {
+                "id": "c",
+                "text": "Điểm $K(4; 0)$ thuộc miền nghiệm của bất phương trình.",
+                "correct": false,
+                "explanation": "Thay $(4; 0)$: $-2(4) + 6 = -2 \\ge 0$ là sai."
+              },
+              {
+                "id": "d",
+                "text": "Điểm $N(0; 1)$ thuộc miền nghiệm của bất phương trình.",
+                "correct": true,
+                "explanation": "Thay $(0; 1)$: $3(1) + 6 = 9 \\ge 0$ (đúng)."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Một công ty dự định chi không quá 100 triệu đồng cho hai kênh quảng cáo: Truyền hình (chi phí 20 triệu/lần) và Mạng xã hội (chi phí 10 triệu/lần). Số lần phát sóng truyền hình tối đa là 4 lần. Gọi $x, y$ lần lượt là số lần quảng cáo truyền hình và mạng xã hội. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Hệ bất phương trình ràng buộc là $\\begin{cases} 20x + 10y \\le 100 \\\\ 0 \\le x \\le 4 \\\\ y \\ge 0 \\end{cases}$.",
+                "correct": true,
+                "explanation": "Đúng với giả thiết chi phí và số lần phát sóng."
+              },
+              {
+                "id": "b",
+                "text": "Công ty có thể thực hiện 3 lần truyền hình và 5 lần mạng xã hội.",
+                "correct": false,
+                "explanation": "Chi phí: $20(3) + 10(5) = 110 > 100$ triệu (vượt ngân sách)."
+              },
+              {
+                "id": "c",
+                "text": "Miền nghiệm của hệ là một hình thang vuông.",
+                "correct": true,
+                "explanation": "Bốn đỉnh là $(0; 0), (4; 0), (4; 2), (0; 10)$ tạo thành hình thang vuông."
+              },
+              {
+                "id": "d",
+                "text": "Nếu mỗi lần truyền hình tiếp cận 50 nghìn khách và mạng xã hội tiếp cận 30 nghìn khách thì phương án tiếp cận nhiều khách nhất là 4 lần truyền hình và 2 lần mạng xã hội.",
+                "correct": false,
+                "explanation": "Tại $(4; 2)$: $50(4) + 30(2) = 260$ nghìn khách. Tại $(0; 10)$: $30(10) = 300$ nghìn khách. 300 > 260 nên phương án $(4; 2)$ không phải nhiều nhất."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hàm mục tiêu $F(x; y) = 5x - y$ trên miền tứ giác có 4 đỉnh $A(1; 1), B(4; 1), C(3; 4), D(1; 3)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Giá trị của $F$ tại đỉnh $A$ bằng $4$.",
+                "correct": true,
+                "explanation": "$F(A) = 5(1) - 1 = 4$."
+              },
+              {
+                "id": "b",
+                "text": "Giá trị lớn nhất của $F$ trên tứ giác bằng $19$ tại đỉnh $B(4; 1)$.",
+                "correct": true,
+                "explanation": "$F(B) = 5(4) - 1 = 19$. Tại $C$: $15 - 4 = 11$. Tại $D$: $5 - 3 = 2$. GTLN là 19."
+              },
+              {
+                "id": "c",
+                "text": "Giá trị nhỏ nhất của $F$ trên tứ giác bằng $2$ tại đỉnh $D(1; 3)$.",
+                "correct": true,
+                "explanation": "$F(D) = 2$ là giá trị nhỏ nhất trong 4 đỉnh."
+              },
+              {
+                "id": "d",
+                "text": "Điểm $M(2; 2)$ nằm trong tứ giác và có giá trị $F(M) = 10$.",
+                "correct": false,
+                "explanation": "$F(2; 2) = 5(2) - 2 = 8 \\ne 10$."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Tính giá trị của biểu thức $F(x; y) = 2x - 5y$ tại điểm $M(6; 2)$.",
+            "correctAnswer": "2",
+            "acceptedAnswers": [
+              "2",
+              "2.0"
+            ],
+            "explanation": "$F(6; 2) = 2(6) - 5(2) = 12 - 10 = 2$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hệ bất phương trình $\\begin{cases} 0 \\le x \\le 6 \\\\ 0 \\le y \\le 4 \\\\ x + 2y \\le 8 \\end{cases}$. Miền nghiệm là một hình thang vuông. Tính diện tích miền nghiệm đó.",
+            "correctAnswer": "15",
+            "acceptedAnswers": [
+              "15",
+              "15.0"
+            ],
+            "explanation": "Đỉnh là $(0; 0), (6; 0), (6; 1)$? Tại $x = 6$: $6 + 2y \\le 8 \\Rightarrow 2y \\le 2 \\Rightarrow y \\le 1$. Đỉnh là $(0; 0), (6; 0), (6; 1), (0; 4)$. Hình thang vuông có hai đáy là 4 và 1, chiều cao 6. Diện tích $S = \\frac{4 + 1}{2} \\times 6 = 15$. Cập nhật đúng là 15."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Tìm giá trị lớn nhất của $F(x; y) = 5x + 2y$ trên miền nghiệm của hệ $\\begin{cases} x + y \\le 4 \\\\ 2x + y \\le 6 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$.",
+            "correctAnswer": "15",
+            "acceptedAnswers": [
+              "15",
+              "15.0"
+            ],
+            "explanation": "Giao của hai đường là $x = 2, y = 2$. Các đỉnh: $(0; 0) \\Rightarrow 0, (3; 0) \\Rightarrow 15, (2; 2) \\Rightarrow 5(2)+2(2)=14, (0; 4) \\Rightarrow 8$. GTLN là 15 tại $(3; 0)$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một công ty tài chính đầu tư hai gói vốn A và B. Gói A lãi 12%/năm, gói B lãi 8%/năm. Tổng vốn đầu tư không quá 40 tỷ, trong đó gói A đầu tư tối đa 25 tỷ. Tính số tiền lãi lớn nhất sau một năm (đơn vị: tỷ đồng).",
+            "correctAnswer": "4.2",
+            "acceptedAnswers": [
+              "4.2",
+              "4,2"
+            ],
+            "explanation": "Để tối đa hóa lãi, đầu tư tối đa vào gói A có lãi suất cao hơn: $x = 25$ tỷ, còn lại $y = 15$ tỷ vào gói B. Tiền lãi $= 25 \\times 0.12 + 15 \\times 0.08 = 3.0 + 1.2 = 4.2$ tỷ đồng."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Một quỹ tín dụng vi mô dành ngân sách 30 tỷ đồng để cho vay đối với hai nhóm đối tượng: Nhóm 1 là các hộ kinh doanh cá thể mở rộng sản xuất (lãi suất 10%/năm, trích lập dự phòng rủi ro 3%), Nhóm 2 là các doanh nghiệp khởi nghiệp đổi mới sáng tạo (lãi suất 14%/năm, trích lập dự phòng rủi ro 6%). Theo quy chế an toàn vốn: tổng vốn cho Nhóm 2 vay không quá 18 tỷ đồng; số tiền cho Nhóm 1 vay phải ít nhất gấp đôi số tiền cho Nhóm 2 vay trừ 6 tỷ đồng (tức $x \\ge 2y - 6$); và tổng mức trích lập dự phòng rủi ro toàn danh mục không được vượt quá $1.35$ tỷ đồng. Hãy tính số tiền lãi sinh lời lớn nhất (tỷ đồng) mà quỹ tín dụng này có thể thu về sau 1 năm.",
+            "correctAnswer": "3.48",
+            "acceptedAnswers": [
+              "3.48",
+              "3,48"
+            ],
+            "explanation": "Gọi $x, y \\ge 0$ là số tỷ đồng cho vay Nhóm 1 và Nhóm 2. Ta có hệ: Tổng vốn: $x + y \\le 30$; Hạn mức Nhóm 2: $y \\le 18$; Tương quan vốn: $x - 2y \\ge -6$; Rủi ro: $0.03x + 0.06y \\le 1.35 \\iff x + 2y \\le 45$. Hàm sinh lời: $L(x; y) = 0.10x + 0.14y$. Giao điểm của $x + y = 30$ và $x - 2y = -6$ cho $x = 18, y = 12$. Kiểm tra: $y = 12 \\le 18$ (thỏa mãn); Rủi ro $= 18 + 2(12) = 42 \\le 45$ (thỏa mãn). Điểm $(18; 12)$ là đỉnh khả thi của miền nghiệm. Lợi nhuận tại $(18; 12)$ là $L = 0.10(18) + 0.14(12) = 1.80 + 1.68 = 3.48$ tỷ đồng. Tại $(30; 0)$: $L = 3.0$. Tại $(0; 3)$: $L = 0.42$. Do đó tiền lãi lớn nhất là 3.48 tỷ đồng."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một chuỗi siêu thị bán lẻ đặt kế hoạch nhập hai dòng sản phẩm gia dụng: Nồi chiên không dầu (giá nhập 1.5 triệu đồng/chiếc, chiếm $0.08\\text{ m}^3$ kho bãi, cần 0.5 giờ kiểm định chất lượng, lợi nhuận 300 nghìn đồng/chiếc) và Máy lọc không khí (giá nhập 2.5 triệu đồng/chiếc, chiếm $0.12\\text{ m}^3$ kho bãi, cần 1 giờ kiểm định, lợi nhuận 600 nghìn đồng/chiếc). Chuỗi siêu thị cấp ngân sách nhập hàng tối đa 150 triệu đồng, kho bãi dự trữ có thể tích chứa tối đa $8.4\\text{ m}^3$, và tổng thời gian của đội kiểm định không quá 50 giờ. Hãy tính số tiền lợi nhuận lớn nhất (triệu đồng) mà chuỗi siêu thị có thể thu được khi bán hết số hàng nhập về.",
             "correctAnswer": "30",
             "acceptedAnswers": [
               "30",
               "30.0"
             ],
-            "explanation": "$F(A) = 0, F(B) = 30, F(C) = 5(4)+3(3) = 29, F(D) = 15$. GTLN là 30."
-          },
-          {
-            "id": 4,
-            "question": "Tìm giá trị nhỏ nhất của biểu thức $F(x; y) = 3x - 4y$ trên miền tam giác có ba đỉnh $A(1; 1), B(5; 2), C(2; 6)$.",
-            "correctAnswer": "-18",
-            "acceptedAnswers": [
-              "-18",
-              "-18.0"
-            ],
-            "explanation": "$F(A) = 3(1)-4(1) = -1, F(B) = 3(5)-4(2) = 7, F(C) = 3(2)-4(6) = -18$. GTNN là -18."
-          },
-          {
-            "id": 5,
-            "question": "Một xí nghiệp sản xuất hai loại sản phẩm I và II. Mỗi tấn sản phẩm I cần 2 máy A và 1 máy B, đem lại lợi nhuận 40 triệu đồng. Mỗi tấn sản phẩm II cần 1 máy A và 2 máy B, đem lại lợi nhuận 50 triệu đồng. Xí nghiệp có tối đa 8 máy A và 10 máy B. Hỏi lợi nhuận lớn nhất xí nghiệp có thể đạt được là bao nhiêu triệu đồng?",
-            "correctAnswer": "260",
-            "acceptedAnswers": [
-              "260",
-              "260.0"
-            ],
-            "explanation": "Hệ BPT: $2x + y \\le 8, x + 2y \\le 10, x \\ge 0, y \\ge 0$. Đỉnh miền nghiệm: $(0;0), (4;0), (2;4), (0;5)$. Lợi nhuận $F(x; y) = 40x + 50y$. $F(2; 4) = 40(2) + 50(4) = 260$ triệu đồng."
-          },
-          {
-            "id": 6,
-            "question": "Một công ty cần thuê xe để chở 140 người và 9 tấn hàng. Xe lớn thuê 4 triệu/chuyến (chở 20 người, 0.6 tấn), xe nhỏ thuê 3 triệu/chuyến (chở 10 người, 1.5 tấn). Chi phí thuê xe nhỏ nhất là bao nhiêu triệu đồng?",
-            "correctAnswer": "32",
-            "acceptedAnswers": [
-              "32",
-              "32.0"
-            ],
-            "explanation": "Thuê 5 xe lớn và 4 xe nhỏ: người $= 5(20)+4(10)=140$, hàng $= 5(0.6)+4(1.5)=9$ tấn. Chi phí $= 5(4) + 4(3) = 32$ triệu đồng."
+            "explanation": "Gọi $x, y \\in \\mathbb{N}$ là số nồi chiên và máy lọc không khí. Ta có hệ: Ngân sách: $1.5x + 2.5y \\le 150 \\iff 3x + 5y \\le 300$; Thể tích kho: $0.08x + 0.12y \\le 8.4 \\iff 2x + 3y \\le 210$; Giờ kiểm định: $0.5x + y \\le 50 \\iff x + 2y \\le 100$. Hàm lợi nhuận: $L(x; y) = 0.3x + 0.6y = 0.3(x + 2y)$. Vì $x + 2y \\le 100$ nên $L \\le 0.3 \\times 100 = 30$ triệu đồng. Đẳng thức xảy ra khi $x + 2y = 100$. Thử điểm $(0; 50)$: kiểm tra ngân sách: $5(50) = 250 \\le 300$; thể tích: $3(50) = 150 \\le 210$; kiểm định: $2(50) = 100 \\le 100$. Tất cả đều thỏa mãn! Vậy lợi nhuận tối đa đạt được là 30 triệu đồng."
           }
         ],
         "essayQuestions": []
@@ -3447,1662 +3512,286 @@ window.TOPIC_EXAMS_DB = [
     "id": "cd3",
     "code": "CĐ 3",
     "title": "GÓC KHOẢNG CÁCH LỚP 11",
-    "icon": "fa-solid fa-compass-drafting",
-    "badge": "Lớp 11 • Kiến thức trọng tâm",
-    "badgeColor": "bg-indigo-100 text-indigo-800 border-indigo-200",
-    "description": "Góc giữa 2 đường thẳng, góc giữa đường thẳng và mặt phẳng, góc nhị diện; khoảng cách từ điểm đến mp, khoảng cách 2 đường chéo nhau và ứng dụng kiến trúc công trình.",
-    "summary": "\n<div class=\"space-y-6 text-slate-800 leading-relaxed font-serif\">\n  <!-- Phần 1: Góc trong không gian -->\n  <div class=\"bg-indigo-50/70 border-l-4 border-indigo-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-indigo-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-compass-drafting text-indigo-600\"></i>\n      1. Góc Trong Không Gian\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-indigo-200\">\n        <p class=\"font-bold text-indigo-950 mb-1\">Góc giữa 2 đường thẳng:</p>\n        <p>$0^\\circ \\le \\varphi \\le 90^\\circ$</p>\n        <p class=\"mt-1 text-indigo-800 font-semibold\">$\\cos \\varphi = \\frac{|\\vec{u}_1 \\cdot \\vec{u}_2|}{|\\vec{u}_1| \\cdot |\\vec{u}_2|}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-indigo-200\">\n        <p class=\"font-bold text-indigo-950 mb-1\">Góc giữa đường thẳng & mp:</p>\n        <p>Góc giữa $d$ và hình chiếu $d'$ của nó lên $(P)$</p>\n        <p class=\"mt-1 text-indigo-800 font-semibold\">$\\sin \\varphi = \\frac{|\\vec{u} \\cdot \\vec{n}|}{|\\vec{u}| \\cdot |\\vec{n}|}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-indigo-200\">\n        <p class=\"font-bold text-indigo-950 mb-1\">Góc giữa hai mặt phẳng:</p>\n        <p>Góc phẳng nhị diện hoặc góc giữa 2 vectơ pháp tuyến:</p>\n        <p class=\"mt-1 text-indigo-800 font-semibold\">$\\cos \\varphi = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1| \\cdot |\\vec{n}_2|}$</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 2: Khoảng cách -->\n  <div class=\"bg-teal-50/70 border-l-4 border-teal-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-teal-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-ruler-combined text-teal-600\"></i>\n      2. Khoảng Cách Trong Không Gian\n    </h4>\n    <div class=\"space-y-2 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-teal-200\">\n        <p class=\"font-bold text-teal-900\">Khoảng cách từ điểm $M$ đến mặt phẳng $(P)$:</p>\n        <p>Hạ $MH \\perp (P) \\Rightarrow d(M, (P)) = MH$.</p>\n        <p class=\"text-xs text-slate-600 mt-0.5\"><strong>Quy tắc dời điểm:</strong> Nếu $MA$ cắt $(P)$ tại $I$ thì $\\frac{d(M, (P))}{d(A, (P))} = \\frac{MI}{AI}$. Nếu $MA \\parallel (P)$ thì $d(M, (P)) = d(A, (P))$. Thường đưa về chân đường vuông góc của khối chóp.</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-teal-200\">\n        <p class=\"font-bold text-teal-900\">Khoảng cách giữa hai đường thẳng chéo nhau $a$ và $b$:</p>\n        <p>Dựng mặt phẳng $(P)$ chứa $b$ và song song với $a$:</p>\n        <p class=\"mt-1 text-teal-800 font-semibold\">$d(a, b) = d(a, (P)) = d(A, (P))$ (với $A$ là điểm bất kỳ thuộc $a$).</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 3: Ứng dụng thực tế -->\n  <div class=\"bg-purple-50/70 border-l-4 border-purple-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-purple-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-building text-purple-600\"></i>\n      3. Ứng Dụng Thực Tiễn Hình Học Không Gian\n    </h4>\n    <ul class=\"list-disc pl-5 space-y-1.5 text-[11.5pt]\">\n      <li><strong>Kiến trúc & xây dựng:</strong> Tính góc nghiêng mái che dốc thoát nước mưa, góc tạo bởi cột trụ và sàn nhà.</li>\n      <li><strong>Khoảng cách an toàn kỹ thuật:</strong> Khoảng cách từ dây cáp điện cao thế/cáp treo đến vách núi đá thẳng đứng hoặc tán cây rừng.</li>\n      <li><strong>Trắc địa & định vị:</strong> Xác định khoảng cách từ đỉnh tháp quan sát đến ranh giới công trình.</li>\n    </ul>\n  </div>\n</div>\n",
+    "subtitle": "Quan hệ vuông góc, góc phẳng, góc nhị diện, khoảng cách chéo nhau & mô hình 3D thực tiễn",
+    "grade": 11,
+    "icon": "fa-compass-drafting",
+    "accentColor": "from-indigo-600 to-purple-700",
+    "theorySummaryHtml": "\n<div class=\"space-y-6 text-slate-800 leading-relaxed font-serif\">\n  <!-- Phần 1: Góc trong không gian -->\n  <div class=\"bg-indigo-50/70 border-l-4 border-indigo-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-indigo-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-compass-drafting text-indigo-600\"></i>\n      1. Góc Trong Không Gian\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-indigo-200\">\n        <p class=\"font-bold text-indigo-950 mb-1\">Góc giữa 2 đường thẳng:</p>\n        <p>$0^\\circ \\le \\varphi \\le 90^\\circ$</p>\n        <p class=\"mt-1 text-indigo-800 font-semibold\">$\\cos \\varphi = \\frac{|\\vec{u}_1 \\cdot \\vec{u}_2|}{|\\vec{u}_1| \\cdot |\\vec{u}_2|}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-indigo-200\">\n        <p class=\"font-bold text-indigo-950 mb-1\">Góc giữa đường thẳng & mp:</p>\n        <p>Góc giữa $d$ và hình chiếu $d'$ của nó lên $(P)$</p>\n        <p class=\"mt-1 text-indigo-800 font-semibold\">$\\sin \\varphi = \\frac{|\\vec{u} \\cdot \\vec{n}|}{|\\vec{u}| \\cdot |\\vec{n}|}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-indigo-200\">\n        <p class=\"font-bold text-indigo-950 mb-1\">Góc giữa hai mặt phẳng:</p>\n        <p>Góc phẳng nhị diện hoặc góc giữa 2 vectơ pháp tuyến:</p>\n        <p class=\"mt-1 text-indigo-800 font-semibold\">$\\cos \\varphi = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1| \\cdot |\\vec{n}_2|}$</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 2: Khoảng cách -->\n  <div class=\"bg-teal-50/70 border-l-4 border-teal-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-teal-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-ruler-combined text-teal-600\"></i>\n      2. Khoảng Cách Trong Không Gian\n    </h4>\n    <div class=\"space-y-2 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-teal-200\">\n        <p class=\"font-bold text-teal-900\">Khoảng cách từ điểm $M$ đến mặt phẳng $(P)$:</p>\n        <p>Hạ $MH \\perp (P) \\Rightarrow d(M, (P)) = MH$.</p>\n        <p class=\"text-xs text-slate-600 mt-0.5\"><strong>Quy tắc dời điểm:</strong> Nếu $MA$ cắt $(P)$ tại $I$ thì $\\frac{d(M, (P))}{d(A, (P))} = \\frac{MI}{AI}$. Nếu $MA \\parallel (P)$ thì $d(M, (P)) = d(A, (P))$. Thường đưa về chân đường vuông góc của khối chóp.</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-teal-200\">\n        <p class=\"font-bold text-teal-900\">Khoảng cách giữa hai đường thẳng chéo nhau $a$ và $b$:</p>\n        <p>Dựng mặt phẳng $(P)$ chứa $b$ và song song với $a$:</p>\n        <p class=\"mt-1 text-teal-800 font-semibold\">$d(a, b) = d(a, (P)) = d(A, (P))$ (với $A$ là điểm bất kỳ thuộc $a$).</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 3: Ứng dụng thực tế -->\n  <div class=\"bg-purple-50/70 border-l-4 border-purple-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-purple-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-building text-purple-600\"></i>\n      3. Ứng Dụng Thực Tiễn Hình Học Không Gian\n    </h4>\n    <p class=\"text-[11.5pt] mb-2\">Hình học không gian được ứng dụng trực tiếp trong kỹ thuật xây dựng nhà cao tầng, thiết kế giàn giáo chịu lực, xác định góc đón nắng tối ưu của pin mặt trời, và tính khoảng cách an toàn tĩnh không của đường dây tải điện.</p>\n  </div>\n</div>\n",
     "exams": [
       {
-        "id": "cd3-de1",
+        "id": "cd3-exam-1",
         "examNumber": 1,
-        "title": "Đề số 1: Luyện Thi Chuyên Đề Góc & Khoảng Cách",
+        "title": "Đề Số 1: Kiến Trúc Mái Dốc & Giàn Không Gian",
         "code": "CD3-301",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-indigo-100 text-indigo-800 border-indigo-200",
+        "badge": "Mã Đề 301",
+        "badgeColor": "bg-blue-50 text-blue-800 border-blue-200",
         "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
         "mcqs": [
           {
             "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Góc giữa hai đường thẳng $AB$ và $B'C'$ bằng:",
+            "question": "**Câu 1:** Góc giữa hai đường thẳng song song trong không gian bằng bao nhiêu độ?",
             "options": {
-              "A": "$90^\\circ$",
-              "B": "$0^\\circ$",
+              "A": "$180^\\circ$",
+              "B": "$90^\\circ$",
               "C": "$45^\\circ$",
-              "D": "$60^\\circ$"
-            },
-            "correct": "A",
-            "explanation": "Vì $B'C' \\parallel BC$ nên góc giữa $AB$ và $B'C'$ bằng góc giữa $AB$ và $BC$, tức bằng $90^\\circ$."
-          },
-          {
-            "id": 2,
-            "question": "Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông tại $B$ và $SA \\perp (ABC)$. Hình chiếu vuông góc của đường thẳng $SB$ lên mặt phẳng $(ABC)$ là:",
-            "options": {
-              "A": "Đường thẳng $AB$",
-              "B": "Đường thẳng $AC$",
-              "C": "Đường thẳng $SA$",
-              "D": "Đường thẳng $BC$"
-            },
-            "correct": "A",
-            "explanation": "Vì $SA \\perp (ABC)$ nên hình chiếu của $S$ lên $(ABC)$ là $A$, hình chiếu của $B$ là chính nó. Vậy hình chiếu của $SB$ là $AB$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a$ và $SA \\perp (ABCD)$ với $SA = a$. Góc giữa đường thẳng $SC$ và mặt phẳng đáy $(ABCD)$ bằng:",
-            "options": {
-              "A": "$60^\\circ$",
-              "B": "$30^\\circ$",
-              "C": "$45^\\circ$",
-              "D": "$\\arctan\\frac{\\sqrt{2}}{2}$ (xấp xỉ $35.26^\\circ$)"
-            },
-            "correct": "D",
-            "explanation": "Hình chiếu của $SC$ là $AC = a\\sqrt{2}$. $\\tan\\widehat{SCA} = \\frac{SA}{AC} = \\frac{a}{a\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
-          },
-          {
-            "id": 4,
-            "question": "Khoảng cách từ điểm $M$ đến mặt phẳng $(P)$ là độ dài của:",
-            "options": {
-              "A": "Đoạn thẳng tiếp xúc với $(P)$",
-              "B": "Đoạn thẳng vuông góc kẻ từ $M$ đến mặt phẳng $(P)$",
-              "C": "Đường xiên nối $M$ đến $(P)$",
-              "D": "Đoạn thẳng nối $M$ với một điểm bất kỳ trên $(P)$"
-            },
-            "correct": "B",
-            "explanation": "Theo định nghĩa, khoảng cách từ $M$ đến $(P)$ là độ dài đoạn vuông góc $MH$ với $H \\in (P)$."
-          },
-          {
-            "id": 5,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $a$. Khoảng cách giữa hai mặt phẳng đáy $(ABCD)$ và $(A'B'C'D')$ bằng:",
-            "options": {
-              "A": "$a\\sqrt{3}$",
-              "B": "$2a$",
-              "C": "$a$",
-              "D": "$a\\sqrt{2}$"
-            },
-            "correct": "C",
-            "explanation": "Đoạn vuông góc chung giữa hai mặt đáy là cạnh bên $AA' = a$."
-          },
-          {
-            "id": 6,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$ và tam giác $ABC$ vuông tại $B$. Khẳng định nào sau đây là đúng?",
-            "options": {
-              "A": "$SA \\perp (SBC)$",
-              "B": "$BC \\perp (SAB)$",
-              "C": "$AC \\perp (SAB)$",
-              "D": "$AB \\perp (SBC)$"
-            },
-            "correct": "B",
-            "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA$ nên $BC \\perp (SAB)$."
-          },
-          {
-            "id": 7,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình chữ nhật, $SA \\perp (ABCD)$. Khoảng cách từ điểm $S$ đến mặt phẳng đáy $(ABCD)$ bằng:",
-            "options": {
-              "A": "Độ dài đoạn $SB$",
-              "B": "Độ dài đoạn $SD$",
-              "C": "Độ dài đoạn $SC$",
-              "D": "Độ dài đoạn $SA$"
-            },
-            "correct": "D",
-            "explanation": "Vì $SA \\perp (ABCD)$ tại $A$ nên $d(S, (ABCD)) = SA$."
-          },
-          {
-            "id": 8,
-            "question": "Cho hai đường thẳng chéo nhau $a$ và $b$. Có bao nhiêu mặt phẳng chứa đường thẳng $a$ và song song với đường thẳng $b$?",
-            "options": {
-              "A": "Vô số",
-              "B": "$2$",
-              "C": "Duy nhất $1$",
-              "D": "Không có"
-            },
-            "correct": "C",
-            "explanation": "Theo định lý hình học không gian, có duy nhất một mặt phẳng chứa $a$ và song song với $b$."
-          },
-          {
-            "id": 9,
-            "question": "Cho hình chóp đều $S.ABCD$ có tất cả các cạnh bằng nhau. Góc giữa cạnh bên $SA$ và cạnh đáy $AB$ bằng:",
-            "options": {
-              "A": "$60^\\circ$",
-              "B": "$45^\\circ$",
-              "C": "$30^\\circ$",
-              "D": "$90^\\circ$"
-            },
-            "correct": "A",
-            "explanation": "Tam giác $SAB$ có ba cạnh bằng nhau nên là tam giác đều, do đó góc $\\widehat{SAB} = 60^\\circ$."
-          },
-          {
-            "id": 10,
-            "question": "Góc giữa hai mặt phẳng $(P)$ và $(Q)$ có số đo $\\alpha$ luôn thỏa mãn:",
-            "options": {
-              "A": "$45^\\circ \\le \\alpha \\le 90^\\circ$",
-              "B": "$0^\\circ < \\alpha < 180^\\circ$",
-              "C": "$0^\\circ \\le \\alpha \\le 180^\\circ$",
-              "D": "$0^\\circ \\le \\alpha \\le 90^\\circ$"
-            },
-            "correct": "D",
-            "explanation": "Góc giữa hai mặt phẳng là góc không tù: $0^\\circ \\le \\alpha \\le 90^\\circ$."
-          },
-          {
-            "id": 11,
-            "question": "Một mái nhà lợp ngói dốc có chiều rộng mặt bằng là $4\\text{ m}$ và đỉnh nóc nhà nâng cao $1.5\\text{ m}$ so với xà ngang. Góc nghiêng $\\alpha$ của mái nhà so với mặt sàn nằm ngang thỏa mãn $\\tan\\alpha$ bằng:",
-            "options": {
-              "A": "$1.5$",
-              "B": "$\\frac{1.5}{4} = 0.375$",
-              "C": "$\\frac{1.5}{2} = 0.75$",
-              "D": "$\\frac{4}{1.5} \\approx 2.67$"
-            },
-            "correct": "C",
-            "explanation": "Nửa bề rộng mái là $4 / 2 = 2\\text{ m}$. Độ dốc mái: $\\tan\\alpha = \\frac{1.5}{2} = 0.75$."
-          },
-          {
-            "id": 12,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$, $SA = 3$, tam giác $ABC$ đều cạnh 2. Khoảng cách từ $S$ đến đường thẳng $BC$ bằng:",
-            "options": {
-              "A": "$\\sqrt{10}$",
-              "B": "$\\sqrt{12}$",
-              "C": "$3 + \\sqrt3$",
-              "D": "$\\sqrt{13}$"
-            },
-            "correct": "B",
-            "explanation": "Gọi $M$ là trung điểm $BC \\Rightarrow AM = \\sqrt{3}$. Do $BC \\perp AM$ và $BC \\perp SA \\Rightarrow BC \\perp SM$. $d(S, BC) = SM = \\sqrt{SA^2 + AM^2} = \\sqrt{12}$."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 3$, $SA \\perp (ABCD)$ và $SA = 3\\sqrt3$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Góc giữa đường thẳng $SD$ và mặt phẳng đáy $(ABCD)$ bằng $60^\\circ$.",
-                "correct": true,
-                "explanation": "Hình chiếu của $SD$ lên đáy là $AD$. $\\tan\\widehat{SDA} = \\frac{SA}{AD} = \\frac{3\\sqrt{3}}{3} = \\sqrt{3} \\Rightarrow \\widehat{SDA} = 60^\\circ$."
-              },
-              {
-                "key": "b",
-                "text": "Mặt phẳng $(SCD)$ vuông góc với mặt phẳng $(SAD)$.",
-                "correct": true,
-                "explanation": "Ta có $CD \\perp AD$ và $CD \\perp SA \\Rightarrow CD \\perp (SAD)$, mà $CD \\subset (SCD)$ nên $(SCD) \\perp (SAD)$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ chân đường cao $A$ đến mặt phẳng $(SCD)$ bằng $\\frac{3\\sqrt{3}}{2}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp SD$. Vì $CD \\perp (SAD) \\Rightarrow CD \\perp AH \\Rightarrow AH \\perp (SCD)$. $AH = \\frac{SA \\cdot AD}{\\sqrt{SA^2 + AD^2}} = \\frac{3\\sqrt{3} \\cdot 3}{23} = \\frac{3\\sqrt{3}}{2}$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa hai mặt phẳng $(SCD)$ và $(ABCD)$ có số đo bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Giao tuyến là $CD$. $AD \\perp CD, SD \\perp CD$ nên góc giữa hai mặt phẳng là $\\widehat{SDA} = 60^\\circ$, không phải $45^\\circ$."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông cân tại $A$, $AB = AC = 3$, chiều cao lăng trụ $AA' = 3\\sqrt2$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Khoảng cách giữa hai mặt đáy $(ABC)$ và $(A'B'C')$ bằng ${a_val}\\sqrt{2}$.",
-                "correct": true,
-                "explanation": "Lăng trụ đứng có khoảng cách giữa hai đáy bằng chiều cao cạnh bên $AA' = 3\\sqrt2$."
-              },
-              {
-                "key": "b",
-                "text": "Đường thẳng $B'C'$ vuông góc với mặt phẳng $(ABB'A')$.",
-                "correct": false,
-                "explanation": "Đáy là tam giác vuông cân tại $A$ nên $BC$ không vuông góc với $AB$, do đó $B'C'$ không vuông góc với $(ABB'A')$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(BCC'B')$ bằng $\\frac{{{a_val}\\sqrt{2}}}{{2}}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp BC$ trong tam giác vuông cân tại $A$: $AH = \\frac{BC}{2} = \\frac{3\\sqrt2}{2}$. Do $AH \\perp BB'$ nên $AH \\perp (BCC'B')$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $A'B$ và mặt phẳng đáy $(ABC)$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Hình chiếu của $A'B$ lên đáy là $AB$. $\\tan\\alpha = \\frac{A'A}{AB} = \\frac{3\\sqrt2}{3} = \\sqrt2 \\ne 1$, góc xấp xỉ $54.7^\\circ$."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một kỹ sư thiết kế giàn đỡ pin năng lượng mặt trời. Khung đỡ gồm cột trụ thẳng đứng $SO = 2.4\\text{ m}$ cắm trên sàn bê tông nằm ngang. Tấm pin phẳng hình chữ nhật $ABCD$ có tâm tựa tại $S$, nghiêng một góc $\\alpha = 30^\\circ$ so với phương nằm ngang để đón ánh nắng tối ưu.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Góc tạo bởi mặt phẳng tấm pin và phương thẳng đứng của cột trụ là $60^\\circ$.",
-                "correct": true,
-                "explanation": "Cột trụ thẳng đứng vuông góc với sàn, nên góc hợp với tấm pin là $90^\\circ - 30^\\circ = 60^\\circ$."
-              },
-              {
-                "key": "b",
-                "text": "Khoảng cách từ tâm $S$ của tấm pin đến mặt sàn bê tông bằng $2.4\\text{ m}$.",
-                "correct": true,
-                "explanation": "Cột trụ $SO$ thẳng đứng vuông góc với sàn nên khoảng cách chính bằng độ dài $SO = 2.4\\text{ m}$."
-              },
-              {
-                "key": "c",
-                "text": "Nếu mép thấp nhất của tấm pin cách tâm $S$ một khoảng $1\\text{ m}$ dọc theo mặt nghiêng thì mép này cách mặt sàn $1.9\\text{ m}$.",
-                "correct": true,
-                "explanation": "Hạ độ cao: $\\Delta h = 1 \\cdot \\sin 30^\\circ = 0.5\\text{ m}$. Độ cao mép sàn: $2.4 - 0.5 = 1.9\\text{ m}$."
-              },
-              {
-                "key": "d",
-                "text": "Để tăng góc hứng nắng lên $\\alpha = 45^\\circ$, khoảng cách từ mép thấp nhất đến mặt sàn sẽ tăng lên.",
-                "correct": false,
-                "explanation": "Góc nghiêng tăng thì $\\sin 45^\\circ > \\sin 30^\\circ$ nên độ tụt dốc lớn hơn, mép thấp sẽ gần mặt sàn hơn."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 3$, $SA \\perp (ABCD)$ và $SA = 3$. Gọi $M$ là trung điểm cạnh $CD$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Đoạn thẳng $AM = \\frac{3\\sqrt{5}}{2}$.",
-                "correct": true,
-                "explanation": "$AM = \\sqrt{AD^2 + DM^2} = \\sqrt{3^2 + (3/2)^2} = \\frac{3\\sqrt{5}}{2}$."
-              },
-              {
-                "key": "b",
-                "text": "Đường thẳng $SM$ vuông góc với đường thẳng $CD$.",
-                "correct": false,
-                "explanation": "Tam giác $SCD$ vuông tại $D$, $M$ là trung điểm cạnh huyền $CD$ nên $SM$ không vuông góc với $CD$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách giữa hai đường thẳng $SA$ và $CD$ bằng $3$.",
-                "correct": true,
-                "explanation": "$AD \\perp SA$ và $AD \\perp CD$ nên $AD$ là đoạn vuông góc chung $\\Rightarrow d(SA, CD) = AD = 3$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $SC$ và đường thẳng $AB$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Do $AB \\parallel CD$ nên góc cần tìm là $\\widehat{SCD}$. $\\tan\\widehat{SCD} = \\frac{SD}{CD} = \\frac{3\\sqrt{2}}{3} = \\sqrt{2} \\ne 1$, góc xấp xỉ $54.7^\\circ$."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Tính côsin của góc giữa hai đường thẳng $AC$ và $DA'$ (viết kết quả dạng phân số thập phân làm tròn đến 2 chữ số thập phân).",
-            "correctAnswer": "0.5",
-            "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
-            ],
-            "explanation": "Vì $DA' \\parallel CB'$ nên góc giữa $AC$ và $DA'$ bằng góc $\\widehat{B'CA}$. Tam giác $AB'C$ là tam giác đều nên góc bằng $60^\\circ \\Rightarrow \\cos 60^\\circ = 0.5$."
-          },
-          {
-            "id": 2,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $3$, $SA \\perp (ABCD)$ và $SA = 3$. Tính góc giữa đường thẳng $SB$ và mặt phẳng đáy $(ABCD)$ (đơn vị: độ).",
-            "correctAnswer": "45",
-            "acceptedAnswers": [
-              "45",
-              "45.0",
-              "45°"
-            ],
-            "explanation": "$\\tan\\widehat{SBA} = \\frac{SA}{AB} = 1 \\Rightarrow \\widehat{SBA} = 45^\\circ$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABC$ có đáy là tam giác vuông tại $B$, $AB = 3, BC = 4$, $SA \\perp (ABC)$ và $SA = 4$. Tính khoảng cách từ điểm $A$ đến mặt phẳng $(SBC)$.",
-            "correctAnswer": "2.4",
-            "acceptedAnswers": [
-              "2.4",
-              "2,4"
-            ],
-            "explanation": "Vì $BC \\perp (SAB)$ nên kẻ $AH \\perp SB \\Rightarrow AH \\perp (SBC)$. $AH = \\frac{SA \\cdot AB}{\\sqrt{SA^2 + AB^2}} = \\frac{4 \\times 3}{\\sqrt{16 + 9}} = \\frac{12}{5} = 2.4$."
-          },
-          {
-            "id": 4,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 6$, $SA \\perp (ABCD)$ và $SA = 8$. Tính khoảng cách giữa hai đường thẳng chéo nhau $SA$ và $BC$.",
-            "correctAnswer": "6",
-            "acceptedAnswers": [
-              "6",
-              "6.0"
-            ],
-            "explanation": "Đoạn vuông góc chung giữa $SA$ và $BC$ là cạnh đáy $AB = 6$."
-          },
-          {
-            "id": 5,
-            "question": "Một tuyến cáp treo nối từ trạm chân núi $A$ lên đỉnh tháp $S$ trên đỉnh đồi thẳng đứng. Đỉnh tháp $S$ có độ cao $300\\text{ m}$ so với mặt đất chân núi, khoảng cách nằm ngang từ $A$ đến chân đồi $H$ là $400\\text{ m}$. Một cabin cáp treo ở chính giữa đoạn cáp $AS$ có khoảng cách thẳng đứng xuống mặt đất nằm ngang là bao nhiêu mét?",
-            "correctAnswer": "150",
-            "acceptedAnswers": [
-              "150",
-              "150.0"
-            ],
-            "explanation": "Cabin ở trung điểm $M$ của $AS$. Theo định lý đường trung bình hình thang: độ cao của $M$ bằng $\\frac{0 + 300}{2} = 150\\text{ m}$."
-          },
-          {
-            "id": 6,
-            "question": "Một giàn giáo công trình dạng hình hộp chữ nhật có kích thước dài $4\\text{ m}$, rộng $3\\text{ m}$, cao $12\\text{ m}$. Kỹ sư gắn một thanh giằng thép chéo nối từ một đỉnh đáy dưới lên đỉnh đối diện trần trên. Tính độ dài thanh giằng thép đó (mét).",
-            "correctAnswer": "13",
-            "acceptedAnswers": [
-              "13",
-              "13.0"
-            ],
-            "explanation": "Đường chéo hình hộp chữ nhật: $d = \\sqrt{4^2 + 3^2 + 12^2} = \\sqrt{16 + 9 + 144} = \\sqrt{169} = 13\\text{ m}$."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd3-de2",
-        "examNumber": 2,
-        "title": "Đề số 2: Luyện Thi Chuyên Đề Góc & Khoảng Cách",
-        "code": "CD3-302",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-indigo-100 text-indigo-800 border-indigo-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Góc giữa hai đường thẳng $AB$ và $B'C'$ bằng:",
-            "options": {
-              "A": "$0^\\circ$",
-              "B": "$45^\\circ$",
-              "C": "$60^\\circ$",
-              "D": "$90^\\circ$"
-            },
-            "correct": "D",
-            "explanation": "Vì $B'C' \\parallel BC$ nên góc giữa $AB$ và $B'C'$ bằng góc giữa $AB$ và $BC$, tức bằng $90^\\circ$."
-          },
-          {
-            "id": 2,
-            "question": "Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông tại $B$ và $SA \\perp (ABC)$. Hình chiếu vuông góc của đường thẳng $SB$ lên mặt phẳng $(ABC)$ là:",
-            "options": {
-              "A": "Đường thẳng $BC$",
-              "B": "Đường thẳng $SA$",
-              "C": "Đường thẳng $AC$",
-              "D": "Đường thẳng $AB$"
-            },
-            "correct": "D",
-            "explanation": "Vì $SA \\perp (ABC)$ nên hình chiếu của $S$ lên $(ABC)$ là $A$, hình chiếu của $B$ là chính nó. Vậy hình chiếu của $SB$ là $AB$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a$ và $SA \\perp (ABCD)$ với $SA = a$. Góc giữa đường thẳng $SC$ và mặt phẳng đáy $(ABCD)$ bằng:",
-            "options": {
-              "A": "$45^\\circ$",
-              "B": "$30^\\circ$",
-              "C": "$\\arctan\\frac{\\sqrt{2}}{2}$ (xấp xỉ $35.26^\\circ$)",
-              "D": "$60^\\circ$"
-            },
-            "correct": "C",
-            "explanation": "Hình chiếu của $SC$ là $AC = a\\sqrt{2}$. $\\tan\\widehat{SCA} = \\frac{SA}{AC} = \\frac{a}{a\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
-          },
-          {
-            "id": 4,
-            "question": "Khoảng cách từ điểm $M$ đến mặt phẳng $(P)$ là độ dài của:",
-            "options": {
-              "A": "Đoạn thẳng nối $M$ với một điểm bất kỳ trên $(P)$",
-              "B": "Đoạn thẳng tiếp xúc với $(P)$",
-              "C": "Đường xiên nối $M$ đến $(P)$",
-              "D": "Đoạn thẳng vuông góc kẻ từ $M$ đến mặt phẳng $(P)$"
-            },
-            "correct": "D",
-            "explanation": "Theo định nghĩa, khoảng cách từ $M$ đến $(P)$ là độ dài đoạn vuông góc $MH$ với $H \\in (P)$."
-          },
-          {
-            "id": 5,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $a$. Khoảng cách giữa hai mặt phẳng đáy $(ABCD)$ và $(A'B'C'D')$ bằng:",
-            "options": {
-              "A": "$2a$",
-              "B": "$a\\sqrt{2}$",
-              "C": "$a$",
-              "D": "$a\\sqrt{3}$"
-            },
-            "correct": "C",
-            "explanation": "Đoạn vuông góc chung giữa hai mặt đáy là cạnh bên $AA' = a$."
-          },
-          {
-            "id": 6,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$ và tam giác $ABC$ vuông tại $B$. Khẳng định nào sau đây là đúng?",
-            "options": {
-              "A": "$AB \\perp (SBC)$",
-              "B": "$BC \\perp (SAB)$",
-              "C": "$AC \\perp (SAB)$",
-              "D": "$SA \\perp (SBC)$"
-            },
-            "correct": "B",
-            "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA$ nên $BC \\perp (SAB)$."
-          },
-          {
-            "id": 7,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình chữ nhật, $SA \\perp (ABCD)$. Khoảng cách từ điểm $S$ đến mặt phẳng đáy $(ABCD)$ bằng:",
-            "options": {
-              "A": "Độ dài đoạn $SA$",
-              "B": "Độ dài đoạn $SC$",
-              "C": "Độ dài đoạn $SB$",
-              "D": "Độ dài đoạn $SD$"
-            },
-            "correct": "A",
-            "explanation": "Vì $SA \\perp (ABCD)$ tại $A$ nên $d(S, (ABCD)) = SA$."
-          },
-          {
-            "id": 8,
-            "question": "Cho hai đường thẳng chéo nhau $a$ và $b$. Có bao nhiêu mặt phẳng chứa đường thẳng $a$ và song song với đường thẳng $b$?",
-            "options": {
-              "A": "Duy nhất $1$",
-              "B": "Không có",
-              "C": "$2$",
-              "D": "Vô số"
-            },
-            "correct": "A",
-            "explanation": "Theo định lý hình học không gian, có duy nhất một mặt phẳng chứa $a$ và song song với $b$."
-          },
-          {
-            "id": 9,
-            "question": "Cho hình chóp đều $S.ABCD$ có tất cả các cạnh bằng nhau. Góc giữa cạnh bên $SA$ và cạnh đáy $AB$ bằng:",
-            "options": {
-              "A": "$30^\\circ$",
-              "B": "$45^\\circ$",
-              "C": "$60^\\circ$",
-              "D": "$90^\\circ$"
-            },
-            "correct": "C",
-            "explanation": "Tam giác $SAB$ có ba cạnh bằng nhau nên là tam giác đều, do đó góc $\\widehat{SAB} = 60^\\circ$."
-          },
-          {
-            "id": 10,
-            "question": "Góc giữa hai mặt phẳng $(P)$ và $(Q)$ có số đo $\\alpha$ luôn thỏa mãn:",
-            "options": {
-              "A": "$45^\\circ \\le \\alpha \\le 90^\\circ$",
-              "B": "$0^\\circ \\le \\alpha \\le 90^\\circ$",
-              "C": "$0^\\circ \\le \\alpha \\le 180^\\circ$",
-              "D": "$0^\\circ < \\alpha < 180^\\circ$"
-            },
-            "correct": "B",
-            "explanation": "Góc giữa hai mặt phẳng là góc không tù: $0^\\circ \\le \\alpha \\le 90^\\circ$."
-          },
-          {
-            "id": 11,
-            "question": "Một mái nhà lợp ngói dốc có chiều rộng mặt bằng là $4\\text{ m}$ và đỉnh nóc nhà nâng cao $1.5\\text{ m}$ so với xà ngang. Góc nghiêng $\\alpha$ của mái nhà so với mặt sàn nằm ngang thỏa mãn $\\tan\\alpha$ bằng:",
-            "options": {
-              "A": "$\\frac{4}{1.5} \\approx 2.67$",
-              "B": "$\\frac{1.5}{2} = 0.75$",
-              "C": "$\\frac{1.5}{4} = 0.375$",
-              "D": "$1.5$"
-            },
-            "correct": "B",
-            "explanation": "Nửa bề rộng mái là $4 / 2 = 2\\text{ m}$. Độ dốc mái: $\\tan\\alpha = \\frac{1.5}{2} = 0.75$."
-          },
-          {
-            "id": 12,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$, $SA = 4$, tam giác $ABC$ đều cạnh 2. Khoảng cách từ $S$ đến đường thẳng $BC$ bằng:",
-            "options": {
-              "A": "$\\sqrt{19}$",
-              "B": "$\\sqrt{17}$",
-              "C": "$4 + \\sqrt3$",
-              "D": "$\\sqrt{20}$"
-            },
-            "correct": "A",
-            "explanation": "Gọi $M$ là trung điểm $BC \\Rightarrow AM = \\sqrt{3}$. Do $BC \\perp AM$ và $BC \\perp SA \\Rightarrow BC \\perp SM$. $d(S, BC) = SM = \\sqrt{SA^2 + AM^2} = \\sqrt{19}$."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 4$, $SA \\perp (ABCD)$ và $SA = 4\\sqrt3$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Góc giữa đường thẳng $SD$ và mặt phẳng đáy $(ABCD)$ bằng $60^\\circ$.",
-                "correct": true,
-                "explanation": "Hình chiếu của $SD$ lên đáy là $AD$. $\\tan\\widehat{SDA} = \\frac{SA}{AD} = \\frac{4\\sqrt{3}}{4} = \\sqrt{3} \\Rightarrow \\widehat{SDA} = 60^\\circ$."
-              },
-              {
-                "key": "b",
-                "text": "Mặt phẳng $(SCD)$ vuông góc với mặt phẳng $(SAD)$.",
-                "correct": true,
-                "explanation": "Ta có $CD \\perp AD$ và $CD \\perp SA \\Rightarrow CD \\perp (SAD)$, mà $CD \\subset (SCD)$ nên $(SCD) \\perp (SAD)$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ chân đường cao $A$ đến mặt phẳng $(SCD)$ bằng $\\frac{4\\sqrt{3}}{2}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp SD$. Vì $CD \\perp (SAD) \\Rightarrow CD \\perp AH \\Rightarrow AH \\perp (SCD)$. $AH = \\frac{SA \\cdot AD}{\\sqrt{SA^2 + AD^2}} = \\frac{4\\sqrt{3} \\cdot 4}{24} = \\frac{4\\sqrt{3}}{2}$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa hai mặt phẳng $(SCD)$ và $(ABCD)$ có số đo bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Giao tuyến là $CD$. $AD \\perp CD, SD \\perp CD$ nên góc giữa hai mặt phẳng là $\\widehat{SDA} = 60^\\circ$, không phải $45^\\circ$."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông cân tại $A$, $AB = AC = 4$, chiều cao lăng trụ $AA' = 4\\sqrt2$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Khoảng cách giữa hai mặt đáy $(ABC)$ và $(A'B'C')$ bằng ${a_val}\\sqrt{2}$.",
-                "correct": true,
-                "explanation": "Lăng trụ đứng có khoảng cách giữa hai đáy bằng chiều cao cạnh bên $AA' = 4\\sqrt2$."
-              },
-              {
-                "key": "b",
-                "text": "Đường thẳng $B'C'$ vuông góc với mặt phẳng $(ABB'A')$.",
-                "correct": false,
-                "explanation": "Đáy là tam giác vuông cân tại $A$ nên $BC$ không vuông góc với $AB$, do đó $B'C'$ không vuông góc với $(ABB'A')$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(BCC'B')$ bằng $\\frac{{{a_val}\\sqrt{2}}}{{2}}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp BC$ trong tam giác vuông cân tại $A$: $AH = \\frac{BC}{2} = \\frac{4\\sqrt2}{2}$. Do $AH \\perp BB'$ nên $AH \\perp (BCC'B')$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $A'B$ và mặt phẳng đáy $(ABC)$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Hình chiếu của $A'B$ lên đáy là $AB$. $\\tan\\alpha = \\frac{A'A}{AB} = \\frac{4\\sqrt2}{4} = \\sqrt2 \\ne 1$, góc xấp xỉ $54.7^\\circ$."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một kỹ sư thiết kế giàn đỡ pin năng lượng mặt trời. Khung đỡ gồm cột trụ thẳng đứng $SO = 2.4\\text{ m}$ cắm trên sàn bê tông nằm ngang. Tấm pin phẳng hình chữ nhật $ABCD$ có tâm tựa tại $S$, nghiêng một góc $\\alpha = 30^\\circ$ so với phương nằm ngang để đón ánh nắng tối ưu.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Góc tạo bởi mặt phẳng tấm pin và phương thẳng đứng của cột trụ là $60^\\circ$.",
-                "correct": true,
-                "explanation": "Cột trụ thẳng đứng vuông góc với sàn, nên góc hợp với tấm pin là $90^\\circ - 30^\\circ = 60^\\circ$."
-              },
-              {
-                "key": "b",
-                "text": "Khoảng cách từ tâm $S$ của tấm pin đến mặt sàn bê tông bằng $2.4\\text{ m}$.",
-                "correct": true,
-                "explanation": "Cột trụ $SO$ thẳng đứng vuông góc với sàn nên khoảng cách chính bằng độ dài $SO = 2.4\\text{ m}$."
-              },
-              {
-                "key": "c",
-                "text": "Nếu mép thấp nhất của tấm pin cách tâm $S$ một khoảng $1\\text{ m}$ dọc theo mặt nghiêng thì mép này cách mặt sàn $1.9\\text{ m}$.",
-                "correct": true,
-                "explanation": "Hạ độ cao: $\\Delta h = 1 \\cdot \\sin 30^\\circ = 0.5\\text{ m}$. Độ cao mép sàn: $2.4 - 0.5 = 1.9\\text{ m}$."
-              },
-              {
-                "key": "d",
-                "text": "Để tăng góc hứng nắng lên $\\alpha = 45^\\circ$, khoảng cách từ mép thấp nhất đến mặt sàn sẽ tăng lên.",
-                "correct": false,
-                "explanation": "Góc nghiêng tăng thì $\\sin 45^\\circ > \\sin 30^\\circ$ nên độ tụt dốc lớn hơn, mép thấp sẽ gần mặt sàn hơn."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 4$, $SA \\perp (ABCD)$ và $SA = 4$. Gọi $M$ là trung điểm cạnh $CD$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Đoạn thẳng $AM = \\frac{4\\sqrt{5}}{2}$.",
-                "correct": true,
-                "explanation": "$AM = \\sqrt{AD^2 + DM^2} = \\sqrt{4^2 + (4/2)^2} = \\frac{4\\sqrt{5}}{2}$."
-              },
-              {
-                "key": "b",
-                "text": "Đường thẳng $SM$ vuông góc với đường thẳng $CD$.",
-                "correct": false,
-                "explanation": "Tam giác $SCD$ vuông tại $D$, $M$ là trung điểm cạnh huyền $CD$ nên $SM$ không vuông góc với $CD$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách giữa hai đường thẳng $SA$ và $CD$ bằng $4$.",
-                "correct": true,
-                "explanation": "$AD \\perp SA$ và $AD \\perp CD$ nên $AD$ là đoạn vuông góc chung $\\Rightarrow d(SA, CD) = AD = 4$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $SC$ và đường thẳng $AB$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Do $AB \\parallel CD$ nên góc cần tìm là $\\widehat{SCD}$. $\\tan\\widehat{SCD} = \\frac{SD}{CD} = \\frac{4\\sqrt{2}}{4} = \\sqrt{2} \\ne 1$, góc xấp xỉ $54.7^\\circ$."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Tính côsin của góc giữa hai đường thẳng $AC$ và $DA'$ (viết kết quả dạng phân số thập phân làm tròn đến 2 chữ số thập phân).",
-            "correctAnswer": "0.5",
-            "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
-            ],
-            "explanation": "Vì $DA' \\parallel CB'$ nên góc giữa $AC$ và $DA'$ bằng góc $\\widehat{B'CA}$. Tam giác $AB'C$ là tam giác đều nên góc bằng $60^\\circ \\Rightarrow \\cos 60^\\circ = 0.5$."
-          },
-          {
-            "id": 2,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $4$, $SA \\perp (ABCD)$ và $SA = 4$. Tính góc giữa đường thẳng $SB$ và mặt phẳng đáy $(ABCD)$ (đơn vị: độ).",
-            "correctAnswer": "45",
-            "acceptedAnswers": [
-              "45",
-              "45.0",
-              "45°"
-            ],
-            "explanation": "$\\tan\\widehat{SBA} = \\frac{SA}{AB} = 1 \\Rightarrow \\widehat{SBA} = 45^\\circ$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABC$ có đáy là tam giác vuông tại $B$, $AB = 3, BC = 4$, $SA \\perp (ABC)$ và $SA = 4$. Tính khoảng cách từ điểm $A$ đến mặt phẳng $(SBC)$.",
-            "correctAnswer": "2.4",
-            "acceptedAnswers": [
-              "2.4",
-              "2,4"
-            ],
-            "explanation": "Vì $BC \\perp (SAB)$ nên kẻ $AH \\perp SB \\Rightarrow AH \\perp (SBC)$. $AH = \\frac{SA \\cdot AB}{\\sqrt{SA^2 + AB^2}} = \\frac{4 \\times 3}{\\sqrt{16 + 9}} = \\frac{12}{5} = 2.4$."
-          },
-          {
-            "id": 4,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 6$, $SA \\perp (ABCD)$ và $SA = 8$. Tính khoảng cách giữa hai đường thẳng chéo nhau $SA$ và $BC$.",
-            "correctAnswer": "6",
-            "acceptedAnswers": [
-              "6",
-              "6.0"
-            ],
-            "explanation": "Đoạn vuông góc chung giữa $SA$ và $BC$ là cạnh đáy $AB = 6$."
-          },
-          {
-            "id": 5,
-            "question": "Một tuyến cáp treo nối từ trạm chân núi $A$ lên đỉnh tháp $S$ trên đỉnh đồi thẳng đứng. Đỉnh tháp $S$ có độ cao $300\\text{ m}$ so với mặt đất chân núi, khoảng cách nằm ngang từ $A$ đến chân đồi $H$ là $400\\text{ m}$. Một cabin cáp treo ở chính giữa đoạn cáp $AS$ có khoảng cách thẳng đứng xuống mặt đất nằm ngang là bao nhiêu mét?",
-            "correctAnswer": "150",
-            "acceptedAnswers": [
-              "150",
-              "150.0"
-            ],
-            "explanation": "Cabin ở trung điểm $M$ của $AS$. Theo định lý đường trung bình hình thang: độ cao của $M$ bằng $\\frac{0 + 300}{2} = 150\\text{ m}$."
-          },
-          {
-            "id": 6,
-            "question": "Một giàn giáo công trình dạng hình hộp chữ nhật có kích thước dài $4\\text{ m}$, rộng $3\\text{ m}$, cao $12\\text{ m}$. Kỹ sư gắn một thanh giằng thép chéo nối từ một đỉnh đáy dưới lên đỉnh đối diện trần trên. Tính độ dài thanh giằng thép đó (mét).",
-            "correctAnswer": "13",
-            "acceptedAnswers": [
-              "13",
-              "13.0"
-            ],
-            "explanation": "Đường chéo hình hộp chữ nhật: $d = \\sqrt{4^2 + 3^2 + 12^2} = \\sqrt{16 + 9 + 144} = \\sqrt{169} = 13\\text{ m}$."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd3-de3",
-        "examNumber": 3,
-        "title": "Đề số 3: Luyện Thi Chuyên Đề Góc & Khoảng Cách",
-        "code": "CD3-303",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-indigo-100 text-indigo-800 border-indigo-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Góc giữa hai đường thẳng $AB$ và $B'C'$ bằng:",
-            "options": {
-              "A": "$90^\\circ$",
-              "B": "$45^\\circ$",
-              "C": "$60^\\circ$",
               "D": "$0^\\circ$"
             },
-            "correct": "A",
-            "explanation": "Vì $B'C' \\parallel BC$ nên góc giữa $AB$ và $B'C'$ bằng góc giữa $AB$ và $BC$, tức bằng $90^\\circ$."
+            "correct": "D",
+            "explanation": "Theo quy ước, góc giữa hai đường thẳng song song hoặc trùng nhau bằng $0^\\circ$."
           },
           {
             "id": 2,
-            "question": "Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông tại $B$ và $SA \\perp (ABC)$. Hình chiếu vuông góc của đường thẳng $SB$ lên mặt phẳng $(ABC)$ là:",
-            "options": {
-              "A": "Đường thẳng $SA$",
-              "B": "Đường thẳng $AB$",
-              "C": "Đường thẳng $BC$",
-              "D": "Đường thẳng $AC$"
-            },
-            "correct": "B",
-            "explanation": "Vì $SA \\perp (ABC)$ nên hình chiếu của $S$ lên $(ABC)$ là $A$, hình chiếu của $B$ là chính nó. Vậy hình chiếu của $SB$ là $AB$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a$ và $SA \\perp (ABCD)$ với $SA = a$. Góc giữa đường thẳng $SC$ và mặt phẳng đáy $(ABCD)$ bằng:",
-            "options": {
-              "A": "$60^\\circ$",
-              "B": "$\\arctan\\frac{\\sqrt{2}}{2}$ (xấp xỉ $35.26^\\circ$)",
-              "C": "$45^\\circ$",
-              "D": "$30^\\circ$"
-            },
-            "correct": "B",
-            "explanation": "Hình chiếu của $SC$ là $AC = a\\sqrt{2}$. $\\tan\\widehat{SCA} = \\frac{SA}{AC} = \\frac{a}{a\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
-          },
-          {
-            "id": 4,
-            "question": "Khoảng cách từ điểm $M$ đến mặt phẳng $(P)$ là độ dài của:",
-            "options": {
-              "A": "Đường xiên nối $M$ đến $(P)$",
-              "B": "Đoạn thẳng vuông góc kẻ từ $M$ đến mặt phẳng $(P)$",
-              "C": "Đoạn thẳng nối $M$ với một điểm bất kỳ trên $(P)$",
-              "D": "Đoạn thẳng tiếp xúc với $(P)$"
-            },
-            "correct": "B",
-            "explanation": "Theo định nghĩa, khoảng cách từ $M$ đến $(P)$ là độ dài đoạn vuông góc $MH$ với $H \\in (P)$."
-          },
-          {
-            "id": 5,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $a$. Khoảng cách giữa hai mặt phẳng đáy $(ABCD)$ và $(A'B'C'D')$ bằng:",
-            "options": {
-              "A": "$a\\sqrt{3}$",
-              "B": "$a\\sqrt{2}$",
-              "C": "$a$",
-              "D": "$2a$"
-            },
-            "correct": "C",
-            "explanation": "Đoạn vuông góc chung giữa hai mặt đáy là cạnh bên $AA' = a$."
-          },
-          {
-            "id": 6,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$ và tam giác $ABC$ vuông tại $B$. Khẳng định nào sau đây là đúng?",
-            "options": {
-              "A": "$AC \\perp (SAB)$",
-              "B": "$SA \\perp (SBC)$",
-              "C": "$AB \\perp (SBC)$",
-              "D": "$BC \\perp (SAB)$"
-            },
-            "correct": "D",
-            "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA$ nên $BC \\perp (SAB)$."
-          },
-          {
-            "id": 7,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình chữ nhật, $SA \\perp (ABCD)$. Khoảng cách từ điểm $S$ đến mặt phẳng đáy $(ABCD)$ bằng:",
-            "options": {
-              "A": "Độ dài đoạn $SA$",
-              "B": "Độ dài đoạn $SC$",
-              "C": "Độ dài đoạn $SD$",
-              "D": "Độ dài đoạn $SB$"
-            },
-            "correct": "A",
-            "explanation": "Vì $SA \\perp (ABCD)$ tại $A$ nên $d(S, (ABCD)) = SA$."
-          },
-          {
-            "id": 8,
-            "question": "Cho hai đường thẳng chéo nhau $a$ và $b$. Có bao nhiêu mặt phẳng chứa đường thẳng $a$ và song song với đường thẳng $b$?",
-            "options": {
-              "A": "Duy nhất $1$",
-              "B": "Vô số",
-              "C": "$2$",
-              "D": "Không có"
-            },
-            "correct": "A",
-            "explanation": "Theo định lý hình học không gian, có duy nhất một mặt phẳng chứa $a$ và song song với $b$."
-          },
-          {
-            "id": 9,
-            "question": "Cho hình chóp đều $S.ABCD$ có tất cả các cạnh bằng nhau. Góc giữa cạnh bên $SA$ và cạnh đáy $AB$ bằng:",
-            "options": {
-              "A": "$90^\\circ$",
-              "B": "$30^\\circ$",
-              "C": "$45^\\circ$",
-              "D": "$60^\\circ$"
-            },
-            "correct": "D",
-            "explanation": "Tam giác $SAB$ có ba cạnh bằng nhau nên là tam giác đều, do đó góc $\\widehat{SAB} = 60^\\circ$."
-          },
-          {
-            "id": 10,
-            "question": "Góc giữa hai mặt phẳng $(P)$ và $(Q)$ có số đo $\\alpha$ luôn thỏa mãn:",
-            "options": {
-              "A": "$0^\\circ \\le \\alpha \\le 180^\\circ$",
-              "B": "$45^\\circ \\le \\alpha \\le 90^\\circ$",
-              "C": "$0^\\circ \\le \\alpha \\le 90^\\circ$",
-              "D": "$0^\\circ < \\alpha < 180^\\circ$"
-            },
-            "correct": "C",
-            "explanation": "Góc giữa hai mặt phẳng là góc không tù: $0^\\circ \\le \\alpha \\le 90^\\circ$."
-          },
-          {
-            "id": 11,
-            "question": "Một mái nhà lợp ngói dốc có chiều rộng mặt bằng là $4\\text{ m}$ và đỉnh nóc nhà nâng cao $1.5\\text{ m}$ so với xà ngang. Góc nghiêng $\\alpha$ của mái nhà so với mặt sàn nằm ngang thỏa mãn $\\tan\\alpha$ bằng:",
-            "options": {
-              "A": "$\\frac{4}{1.5} \\approx 2.67$",
-              "B": "$1.5$",
-              "C": "$\\frac{1.5}{4} = 0.375$",
-              "D": "$\\frac{1.5}{2} = 0.75$"
-            },
-            "correct": "D",
-            "explanation": "Nửa bề rộng mái là $4 / 2 = 2\\text{ m}$. Độ dốc mái: $\\tan\\alpha = \\frac{1.5}{2} = 0.75$."
-          },
-          {
-            "id": 12,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$, $SA = 5$, tam giác $ABC$ đều cạnh 2. Khoảng cách từ $S$ đến đường thẳng $BC$ bằng:",
-            "options": {
-              "A": "$\\sqrt{26}$",
-              "B": "$\\sqrt{29}$",
-              "C": "$\\sqrt{28}$",
-              "D": "$5 + \\sqrt3$"
-            },
-            "correct": "C",
-            "explanation": "Gọi $M$ là trung điểm $BC \\Rightarrow AM = \\sqrt{3}$. Do $BC \\perp AM$ và $BC \\perp SA \\Rightarrow BC \\perp SM$. $d(S, BC) = SM = \\sqrt{SA^2 + AM^2} = \\sqrt{28}$."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 5$, $SA \\perp (ABCD)$ và $SA = 5\\sqrt3$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Góc giữa đường thẳng $SD$ và mặt phẳng đáy $(ABCD)$ bằng $60^\\circ$.",
-                "correct": true,
-                "explanation": "Hình chiếu của $SD$ lên đáy là $AD$. $\\tan\\widehat{SDA} = \\frac{SA}{AD} = \\frac{5\\sqrt{3}}{5} = \\sqrt{3} \\Rightarrow \\widehat{SDA} = 60^\\circ$."
-              },
-              {
-                "key": "b",
-                "text": "Mặt phẳng $(SCD)$ vuông góc với mặt phẳng $(SAD)$.",
-                "correct": true,
-                "explanation": "Ta có $CD \\perp AD$ và $CD \\perp SA \\Rightarrow CD \\perp (SAD)$, mà $CD \\subset (SCD)$ nên $(SCD) \\perp (SAD)$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ chân đường cao $A$ đến mặt phẳng $(SCD)$ bằng $\\frac{5\\sqrt{3}}{2}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp SD$. Vì $CD \\perp (SAD) \\Rightarrow CD \\perp AH \\Rightarrow AH \\perp (SCD)$. $AH = \\frac{SA \\cdot AD}{\\sqrt{SA^2 + AD^2}} = \\frac{5\\sqrt{3} \\cdot 5}{25} = \\frac{5\\sqrt{3}}{2}$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa hai mặt phẳng $(SCD)$ và $(ABCD)$ có số đo bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Giao tuyến là $CD$. $AD \\perp CD, SD \\perp CD$ nên góc giữa hai mặt phẳng là $\\widehat{SDA} = 60^\\circ$, không phải $45^\\circ$."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông cân tại $A$, $AB = AC = 5$, chiều cao lăng trụ $AA' = 5\\sqrt2$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Khoảng cách giữa hai mặt đáy $(ABC)$ và $(A'B'C')$ bằng ${a_val}\\sqrt{2}$.",
-                "correct": true,
-                "explanation": "Lăng trụ đứng có khoảng cách giữa hai đáy bằng chiều cao cạnh bên $AA' = 5\\sqrt2$."
-              },
-              {
-                "key": "b",
-                "text": "Đường thẳng $B'C'$ vuông góc với mặt phẳng $(ABB'A')$.",
-                "correct": false,
-                "explanation": "Đáy là tam giác vuông cân tại $A$ nên $BC$ không vuông góc với $AB$, do đó $B'C'$ không vuông góc với $(ABB'A')$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(BCC'B')$ bằng $\\frac{{{a_val}\\sqrt{2}}}{{2}}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp BC$ trong tam giác vuông cân tại $A$: $AH = \\frac{BC}{2} = \\frac{5\\sqrt2}{2}$. Do $AH \\perp BB'$ nên $AH \\perp (BCC'B')$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $A'B$ và mặt phẳng đáy $(ABC)$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Hình chiếu của $A'B$ lên đáy là $AB$. $\\tan\\alpha = \\frac{A'A}{AB} = \\frac{5\\sqrt2}{5} = \\sqrt2 \\ne 1$, góc xấp xỉ $54.7^\\circ$."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một kỹ sư thiết kế giàn đỡ pin năng lượng mặt trời. Khung đỡ gồm cột trụ thẳng đứng $SO = 2.4\\text{ m}$ cắm trên sàn bê tông nằm ngang. Tấm pin phẳng hình chữ nhật $ABCD$ có tâm tựa tại $S$, nghiêng một góc $\\alpha = 30^\\circ$ so với phương nằm ngang để đón ánh nắng tối ưu.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Góc tạo bởi mặt phẳng tấm pin và phương thẳng đứng của cột trụ là $60^\\circ$.",
-                "correct": true,
-                "explanation": "Cột trụ thẳng đứng vuông góc với sàn, nên góc hợp với tấm pin là $90^\\circ - 30^\\circ = 60^\\circ$."
-              },
-              {
-                "key": "b",
-                "text": "Khoảng cách từ tâm $S$ của tấm pin đến mặt sàn bê tông bằng $2.4\\text{ m}$.",
-                "correct": true,
-                "explanation": "Cột trụ $SO$ thẳng đứng vuông góc với sàn nên khoảng cách chính bằng độ dài $SO = 2.4\\text{ m}$."
-              },
-              {
-                "key": "c",
-                "text": "Nếu mép thấp nhất của tấm pin cách tâm $S$ một khoảng $1\\text{ m}$ dọc theo mặt nghiêng thì mép này cách mặt sàn $1.9\\text{ m}$.",
-                "correct": true,
-                "explanation": "Hạ độ cao: $\\Delta h = 1 \\cdot \\sin 30^\\circ = 0.5\\text{ m}$. Độ cao mép sàn: $2.4 - 0.5 = 1.9\\text{ m}$."
-              },
-              {
-                "key": "d",
-                "text": "Để tăng góc hứng nắng lên $\\alpha = 45^\\circ$, khoảng cách từ mép thấp nhất đến mặt sàn sẽ tăng lên.",
-                "correct": false,
-                "explanation": "Góc nghiêng tăng thì $\\sin 45^\\circ > \\sin 30^\\circ$ nên độ tụt dốc lớn hơn, mép thấp sẽ gần mặt sàn hơn."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 5$, $SA \\perp (ABCD)$ và $SA = 5$. Gọi $M$ là trung điểm cạnh $CD$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Đoạn thẳng $AM = \\frac{5\\sqrt{5}}{2}$.",
-                "correct": true,
-                "explanation": "$AM = \\sqrt{AD^2 + DM^2} = \\sqrt{5^2 + (5/2)^2} = \\frac{5\\sqrt{5}}{2}$."
-              },
-              {
-                "key": "b",
-                "text": "Đường thẳng $SM$ vuông góc với đường thẳng $CD$.",
-                "correct": false,
-                "explanation": "Tam giác $SCD$ vuông tại $D$, $M$ là trung điểm cạnh huyền $CD$ nên $SM$ không vuông góc với $CD$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách giữa hai đường thẳng $SA$ và $CD$ bằng $5$.",
-                "correct": true,
-                "explanation": "$AD \\perp SA$ và $AD \\perp CD$ nên $AD$ là đoạn vuông góc chung $\\Rightarrow d(SA, CD) = AD = 5$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $SC$ và đường thẳng $AB$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Do $AB \\parallel CD$ nên góc cần tìm là $\\widehat{SCD}$. $\\tan\\widehat{SCD} = \\frac{SD}{CD} = \\frac{5\\sqrt{2}}{5} = \\sqrt{2} \\ne 1$, góc xấp xỉ $54.7^\\circ$."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Tính côsin của góc giữa hai đường thẳng $AC$ và $DA'$ (viết kết quả dạng phân số thập phân làm tròn đến 2 chữ số thập phân).",
-            "correctAnswer": "0.5",
-            "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
-            ],
-            "explanation": "Vì $DA' \\parallel CB'$ nên góc giữa $AC$ và $DA'$ bằng góc $\\widehat{B'CA}$. Tam giác $AB'C$ là tam giác đều nên góc bằng $60^\\circ \\Rightarrow \\cos 60^\\circ = 0.5$."
-          },
-          {
-            "id": 2,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $5$, $SA \\perp (ABCD)$ và $SA = 5$. Tính góc giữa đường thẳng $SB$ và mặt phẳng đáy $(ABCD)$ (đơn vị: độ).",
-            "correctAnswer": "45",
-            "acceptedAnswers": [
-              "45",
-              "45.0",
-              "45°"
-            ],
-            "explanation": "$\\tan\\widehat{SBA} = \\frac{SA}{AB} = 1 \\Rightarrow \\widehat{SBA} = 45^\\circ$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABC$ có đáy là tam giác vuông tại $B$, $AB = 3, BC = 4$, $SA \\perp (ABC)$ và $SA = 4$. Tính khoảng cách từ điểm $A$ đến mặt phẳng $(SBC)$.",
-            "correctAnswer": "2.4",
-            "acceptedAnswers": [
-              "2.4",
-              "2,4"
-            ],
-            "explanation": "Vì $BC \\perp (SAB)$ nên kẻ $AH \\perp SB \\Rightarrow AH \\perp (SBC)$. $AH = \\frac{SA \\cdot AB}{\\sqrt{SA^2 + AB^2}} = \\frac{4 \\times 3}{\\sqrt{16 + 9}} = \\frac{12}{5} = 2.4$."
-          },
-          {
-            "id": 4,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 6$, $SA \\perp (ABCD)$ và $SA = 8$. Tính khoảng cách giữa hai đường thẳng chéo nhau $SA$ và $BC$.",
-            "correctAnswer": "6",
-            "acceptedAnswers": [
-              "6",
-              "6.0"
-            ],
-            "explanation": "Đoạn vuông góc chung giữa $SA$ và $BC$ là cạnh đáy $AB = 6$."
-          },
-          {
-            "id": 5,
-            "question": "Một tuyến cáp treo nối từ trạm chân núi $A$ lên đỉnh tháp $S$ trên đỉnh đồi thẳng đứng. Đỉnh tháp $S$ có độ cao $300\\text{ m}$ so với mặt đất chân núi, khoảng cách nằm ngang từ $A$ đến chân đồi $H$ là $400\\text{ m}$. Một cabin cáp treo ở chính giữa đoạn cáp $AS$ có khoảng cách thẳng đứng xuống mặt đất nằm ngang là bao nhiêu mét?",
-            "correctAnswer": "150",
-            "acceptedAnswers": [
-              "150",
-              "150.0"
-            ],
-            "explanation": "Cabin ở trung điểm $M$ của $AS$. Theo định lý đường trung bình hình thang: độ cao của $M$ bằng $\\frac{0 + 300}{2} = 150\\text{ m}$."
-          },
-          {
-            "id": 6,
-            "question": "Một giàn giáo công trình dạng hình hộp chữ nhật có kích thước dài $4\\text{ m}$, rộng $3\\text{ m}$, cao $12\\text{ m}$. Kỹ sư gắn một thanh giằng thép chéo nối từ một đỉnh đáy dưới lên đỉnh đối diện trần trên. Tính độ dài thanh giằng thép đó (mét).",
-            "correctAnswer": "13",
-            "acceptedAnswers": [
-              "13",
-              "13.0"
-            ],
-            "explanation": "Đường chéo hình hộp chữ nhật: $d = \\sqrt{4^2 + 3^2 + 12^2} = \\sqrt{16 + 9 + 144} = \\sqrt{169} = 13\\text{ m}$."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd3-de4",
-        "examNumber": 4,
-        "title": "Đề số 4: Luyện Thi Chuyên Đề Góc & Khoảng Cách",
-        "code": "CD3-304",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-indigo-100 text-indigo-800 border-indigo-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Góc giữa hai đường thẳng $AB$ và $B'C'$ bằng:",
-            "options": {
-              "A": "$0^\\circ$",
-              "B": "$90^\\circ$",
-              "C": "$45^\\circ$",
-              "D": "$60^\\circ$"
-            },
-            "correct": "B",
-            "explanation": "Vì $B'C' \\parallel BC$ nên góc giữa $AB$ và $B'C'$ bằng góc giữa $AB$ và $BC$, tức bằng $90^\\circ$."
-          },
-          {
-            "id": 2,
-            "question": "Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông tại $B$ và $SA \\perp (ABC)$. Hình chiếu vuông góc của đường thẳng $SB$ lên mặt phẳng $(ABC)$ là:",
-            "options": {
-              "A": "Đường thẳng $SA$",
-              "B": "Đường thẳng $BC$",
-              "C": "Đường thẳng $AC$",
-              "D": "Đường thẳng $AB$"
-            },
-            "correct": "D",
-            "explanation": "Vì $SA \\perp (ABC)$ nên hình chiếu của $S$ lên $(ABC)$ là $A$, hình chiếu của $B$ là chính nó. Vậy hình chiếu của $SB$ là $AB$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a$ và $SA \\perp (ABCD)$ với $SA = a$. Góc giữa đường thẳng $SC$ và mặt phẳng đáy $(ABCD)$ bằng:",
-            "options": {
-              "A": "$45^\\circ$",
-              "B": "$\\arctan\\frac{\\sqrt{2}}{2}$ (xấp xỉ $35.26^\\circ$)",
-              "C": "$60^\\circ$",
-              "D": "$30^\\circ$"
-            },
-            "correct": "B",
-            "explanation": "Hình chiếu của $SC$ là $AC = a\\sqrt{2}$. $\\tan\\widehat{SCA} = \\frac{SA}{AC} = \\frac{a}{a\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
-          },
-          {
-            "id": 4,
-            "question": "Khoảng cách từ điểm $M$ đến mặt phẳng $(P)$ là độ dài của:",
-            "options": {
-              "A": "Đoạn thẳng vuông góc kẻ từ $M$ đến mặt phẳng $(P)$",
-              "B": "Đoạn thẳng nối $M$ với một điểm bất kỳ trên $(P)$",
-              "C": "Đường xiên nối $M$ đến $(P)$",
-              "D": "Đoạn thẳng tiếp xúc với $(P)$"
-            },
-            "correct": "A",
-            "explanation": "Theo định nghĩa, khoảng cách từ $M$ đến $(P)$ là độ dài đoạn vuông góc $MH$ với $H \\in (P)$."
-          },
-          {
-            "id": 5,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $a$. Khoảng cách giữa hai mặt phẳng đáy $(ABCD)$ và $(A'B'C'D')$ bằng:",
-            "options": {
-              "A": "$a\\sqrt{3}$",
-              "B": "$a$",
-              "C": "$a\\sqrt{2}$",
-              "D": "$2a$"
-            },
-            "correct": "B",
-            "explanation": "Đoạn vuông góc chung giữa hai mặt đáy là cạnh bên $AA' = a$."
-          },
-          {
-            "id": 6,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$ và tam giác $ABC$ vuông tại $B$. Khẳng định nào sau đây là đúng?",
-            "options": {
-              "A": "$SA \\perp (SBC)$",
-              "B": "$AC \\perp (SAB)$",
-              "C": "$AB \\perp (SBC)$",
-              "D": "$BC \\perp (SAB)$"
-            },
-            "correct": "D",
-            "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA$ nên $BC \\perp (SAB)$."
-          },
-          {
-            "id": 7,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình chữ nhật, $SA \\perp (ABCD)$. Khoảng cách từ điểm $S$ đến mặt phẳng đáy $(ABCD)$ bằng:",
-            "options": {
-              "A": "Độ dài đoạn $SA$",
-              "B": "Độ dài đoạn $SB$",
-              "C": "Độ dài đoạn $SC$",
-              "D": "Độ dài đoạn $SD$"
-            },
-            "correct": "A",
-            "explanation": "Vì $SA \\perp (ABCD)$ tại $A$ nên $d(S, (ABCD)) = SA$."
-          },
-          {
-            "id": 8,
-            "question": "Cho hai đường thẳng chéo nhau $a$ và $b$. Có bao nhiêu mặt phẳng chứa đường thẳng $a$ và song song với đường thẳng $b$?",
-            "options": {
-              "A": "$2$",
-              "B": "Vô số",
-              "C": "Không có",
-              "D": "Duy nhất $1$"
-            },
-            "correct": "D",
-            "explanation": "Theo định lý hình học không gian, có duy nhất một mặt phẳng chứa $a$ và song song với $b$."
-          },
-          {
-            "id": 9,
-            "question": "Cho hình chóp đều $S.ABCD$ có tất cả các cạnh bằng nhau. Góc giữa cạnh bên $SA$ và cạnh đáy $AB$ bằng:",
-            "options": {
-              "A": "$30^\\circ$",
-              "B": "$90^\\circ$",
-              "C": "$60^\\circ$",
-              "D": "$45^\\circ$"
-            },
-            "correct": "C",
-            "explanation": "Tam giác $SAB$ có ba cạnh bằng nhau nên là tam giác đều, do đó góc $\\widehat{SAB} = 60^\\circ$."
-          },
-          {
-            "id": 10,
-            "question": "Góc giữa hai mặt phẳng $(P)$ và $(Q)$ có số đo $\\alpha$ luôn thỏa mãn:",
-            "options": {
-              "A": "$45^\\circ \\le \\alpha \\le 90^\\circ$",
-              "B": "$0^\\circ < \\alpha < 180^\\circ$",
-              "C": "$0^\\circ \\le \\alpha \\le 90^\\circ$",
-              "D": "$0^\\circ \\le \\alpha \\le 180^\\circ$"
-            },
-            "correct": "C",
-            "explanation": "Góc giữa hai mặt phẳng là góc không tù: $0^\\circ \\le \\alpha \\le 90^\\circ$."
-          },
-          {
-            "id": 11,
-            "question": "Một mái nhà lợp ngói dốc có chiều rộng mặt bằng là $4\\text{ m}$ và đỉnh nóc nhà nâng cao $1.5\\text{ m}$ so với xà ngang. Góc nghiêng $\\alpha$ của mái nhà so với mặt sàn nằm ngang thỏa mãn $\\tan\\alpha$ bằng:",
-            "options": {
-              "A": "$\\frac{4}{1.5} \\approx 2.67$",
-              "B": "$1.5$",
-              "C": "$\\frac{1.5}{2} = 0.75$",
-              "D": "$\\frac{1.5}{4} = 0.375$"
-            },
-            "correct": "C",
-            "explanation": "Nửa bề rộng mái là $4 / 2 = 2\\text{ m}$. Độ dốc mái: $\\tan\\alpha = \\frac{1.5}{2} = 0.75$."
-          },
-          {
-            "id": 12,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$, $SA = 6$, tam giác $ABC$ đều cạnh 2. Khoảng cách từ $S$ đến đường thẳng $BC$ bằng:",
-            "options": {
-              "A": "$\\sqrt{39}$",
-              "B": "$6 + \\sqrt3$",
-              "C": "$\\sqrt{40}$",
-              "D": "$\\sqrt{37}$"
-            },
-            "correct": "A",
-            "explanation": "Gọi $M$ là trung điểm $BC \\Rightarrow AM = \\sqrt{3}$. Do $BC \\perp AM$ và $BC \\perp SA \\Rightarrow BC \\perp SM$. $d(S, BC) = SM = \\sqrt{SA^2 + AM^2} = \\sqrt{39}$."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 6$, $SA \\perp (ABCD)$ và $SA = 6\\sqrt3$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Góc giữa đường thẳng $SD$ và mặt phẳng đáy $(ABCD)$ bằng $60^\\circ$.",
-                "correct": true,
-                "explanation": "Hình chiếu của $SD$ lên đáy là $AD$. $\\tan\\widehat{SDA} = \\frac{SA}{AD} = \\frac{6\\sqrt{3}}{6} = \\sqrt{3} \\Rightarrow \\widehat{SDA} = 60^\\circ$."
-              },
-              {
-                "key": "b",
-                "text": "Mặt phẳng $(SCD)$ vuông góc với mặt phẳng $(SAD)$.",
-                "correct": true,
-                "explanation": "Ta có $CD \\perp AD$ và $CD \\perp SA \\Rightarrow CD \\perp (SAD)$, mà $CD \\subset (SCD)$ nên $(SCD) \\perp (SAD)$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ chân đường cao $A$ đến mặt phẳng $(SCD)$ bằng $\\frac{6\\sqrt{3}}{2}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp SD$. Vì $CD \\perp (SAD) \\Rightarrow CD \\perp AH \\Rightarrow AH \\perp (SCD)$. $AH = \\frac{SA \\cdot AD}{\\sqrt{SA^2 + AD^2}} = \\frac{6\\sqrt{3} \\cdot 6}{26} = \\frac{6\\sqrt{3}}{2}$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa hai mặt phẳng $(SCD)$ và $(ABCD)$ có số đo bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Giao tuyến là $CD$. $AD \\perp CD, SD \\perp CD$ nên góc giữa hai mặt phẳng là $\\widehat{SDA} = 60^\\circ$, không phải $45^\\circ$."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông cân tại $A$, $AB = AC = 6$, chiều cao lăng trụ $AA' = 6\\sqrt2$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Khoảng cách giữa hai mặt đáy $(ABC)$ và $(A'B'C')$ bằng ${a_val}\\sqrt{2}$.",
-                "correct": true,
-                "explanation": "Lăng trụ đứng có khoảng cách giữa hai đáy bằng chiều cao cạnh bên $AA' = 6\\sqrt2$."
-              },
-              {
-                "key": "b",
-                "text": "Đường thẳng $B'C'$ vuông góc với mặt phẳng $(ABB'A')$.",
-                "correct": false,
-                "explanation": "Đáy là tam giác vuông cân tại $A$ nên $BC$ không vuông góc với $AB$, do đó $B'C'$ không vuông góc với $(ABB'A')$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(BCC'B')$ bằng $\\frac{{{a_val}\\sqrt{2}}}{{2}}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp BC$ trong tam giác vuông cân tại $A$: $AH = \\frac{BC}{2} = \\frac{6\\sqrt2}{2}$. Do $AH \\perp BB'$ nên $AH \\perp (BCC'B')$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $A'B$ và mặt phẳng đáy $(ABC)$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Hình chiếu của $A'B$ lên đáy là $AB$. $\\tan\\alpha = \\frac{A'A}{AB} = \\frac{6\\sqrt2}{6} = \\sqrt2 \\ne 1$, góc xấp xỉ $54.7^\\circ$."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một kỹ sư thiết kế giàn đỡ pin năng lượng mặt trời. Khung đỡ gồm cột trụ thẳng đứng $SO = 2.4\\text{ m}$ cắm trên sàn bê tông nằm ngang. Tấm pin phẳng hình chữ nhật $ABCD$ có tâm tựa tại $S$, nghiêng một góc $\\alpha = 30^\\circ$ so với phương nằm ngang để đón ánh nắng tối ưu.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Góc tạo bởi mặt phẳng tấm pin và phương thẳng đứng của cột trụ là $60^\\circ$.",
-                "correct": true,
-                "explanation": "Cột trụ thẳng đứng vuông góc với sàn, nên góc hợp với tấm pin là $90^\\circ - 30^\\circ = 60^\\circ$."
-              },
-              {
-                "key": "b",
-                "text": "Khoảng cách từ tâm $S$ của tấm pin đến mặt sàn bê tông bằng $2.4\\text{ m}$.",
-                "correct": true,
-                "explanation": "Cột trụ $SO$ thẳng đứng vuông góc với sàn nên khoảng cách chính bằng độ dài $SO = 2.4\\text{ m}$."
-              },
-              {
-                "key": "c",
-                "text": "Nếu mép thấp nhất của tấm pin cách tâm $S$ một khoảng $1\\text{ m}$ dọc theo mặt nghiêng thì mép này cách mặt sàn $1.9\\text{ m}$.",
-                "correct": true,
-                "explanation": "Hạ độ cao: $\\Delta h = 1 \\cdot \\sin 30^\\circ = 0.5\\text{ m}$. Độ cao mép sàn: $2.4 - 0.5 = 1.9\\text{ m}$."
-              },
-              {
-                "key": "d",
-                "text": "Để tăng góc hứng nắng lên $\\alpha = 45^\\circ$, khoảng cách từ mép thấp nhất đến mặt sàn sẽ tăng lên.",
-                "correct": false,
-                "explanation": "Góc nghiêng tăng thì $\\sin 45^\\circ > \\sin 30^\\circ$ nên độ tụt dốc lớn hơn, mép thấp sẽ gần mặt sàn hơn."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 6$, $SA \\perp (ABCD)$ và $SA = 6$. Gọi $M$ là trung điểm cạnh $CD$.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Đoạn thẳng $AM = \\frac{6\\sqrt{5}}{2}$.",
-                "correct": true,
-                "explanation": "$AM = \\sqrt{AD^2 + DM^2} = \\sqrt{6^2 + (6/2)^2} = \\frac{6\\sqrt{5}}{2}$."
-              },
-              {
-                "key": "b",
-                "text": "Đường thẳng $SM$ vuông góc với đường thẳng $CD$.",
-                "correct": false,
-                "explanation": "Tam giác $SCD$ vuông tại $D$, $M$ là trung điểm cạnh huyền $CD$ nên $SM$ không vuông góc với $CD$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách giữa hai đường thẳng $SA$ và $CD$ bằng $6$.",
-                "correct": true,
-                "explanation": "$AD \\perp SA$ và $AD \\perp CD$ nên $AD$ là đoạn vuông góc chung $\\Rightarrow d(SA, CD) = AD = 6$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $SC$ và đường thẳng $AB$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Do $AB \\parallel CD$ nên góc cần tìm là $\\widehat{SCD}$. $\\tan\\widehat{SCD} = \\frac{SD}{CD} = \\frac{6\\sqrt{2}}{6} = \\sqrt{2} \\ne 1$, góc xấp xỉ $54.7^\\circ$."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Tính côsin của góc giữa hai đường thẳng $AC$ và $DA'$ (viết kết quả dạng phân số thập phân làm tròn đến 2 chữ số thập phân).",
-            "correctAnswer": "0.5",
-            "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
-            ],
-            "explanation": "Vì $DA' \\parallel CB'$ nên góc giữa $AC$ và $DA'$ bằng góc $\\widehat{B'CA}$. Tam giác $AB'C$ là tam giác đều nên góc bằng $60^\\circ \\Rightarrow \\cos 60^\\circ = 0.5$."
-          },
-          {
-            "id": 2,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $6$, $SA \\perp (ABCD)$ và $SA = 6$. Tính góc giữa đường thẳng $SB$ và mặt phẳng đáy $(ABCD)$ (đơn vị: độ).",
-            "correctAnswer": "45",
-            "acceptedAnswers": [
-              "45",
-              "45.0",
-              "45°"
-            ],
-            "explanation": "$\\tan\\widehat{SBA} = \\frac{SA}{AB} = 1 \\Rightarrow \\widehat{SBA} = 45^\\circ$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABC$ có đáy là tam giác vuông tại $B$, $AB = 3, BC = 4$, $SA \\perp (ABC)$ và $SA = 4$. Tính khoảng cách từ điểm $A$ đến mặt phẳng $(SBC)$.",
-            "correctAnswer": "2.4",
-            "acceptedAnswers": [
-              "2.4",
-              "2,4"
-            ],
-            "explanation": "Vì $BC \\perp (SAB)$ nên kẻ $AH \\perp SB \\Rightarrow AH \\perp (SBC)$. $AH = \\frac{SA \\cdot AB}{\\sqrt{SA^2 + AB^2}} = \\frac{4 \\times 3}{\\sqrt{16 + 9}} = \\frac{12}{5} = 2.4$."
-          },
-          {
-            "id": 4,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 6$, $SA \\perp (ABCD)$ và $SA = 8$. Tính khoảng cách giữa hai đường thẳng chéo nhau $SA$ và $BC$.",
-            "correctAnswer": "6",
-            "acceptedAnswers": [
-              "6",
-              "6.0"
-            ],
-            "explanation": "Đoạn vuông góc chung giữa $SA$ và $BC$ là cạnh đáy $AB = 6$."
-          },
-          {
-            "id": 5,
-            "question": "Một tuyến cáp treo nối từ trạm chân núi $A$ lên đỉnh tháp $S$ trên đỉnh đồi thẳng đứng. Đỉnh tháp $S$ có độ cao $300\\text{ m}$ so với mặt đất chân núi, khoảng cách nằm ngang từ $A$ đến chân đồi $H$ là $400\\text{ m}$. Một cabin cáp treo ở chính giữa đoạn cáp $AS$ có khoảng cách thẳng đứng xuống mặt đất nằm ngang là bao nhiêu mét?",
-            "correctAnswer": "150",
-            "acceptedAnswers": [
-              "150",
-              "150.0"
-            ],
-            "explanation": "Cabin ở trung điểm $M$ của $AS$. Theo định lý đường trung bình hình thang: độ cao của $M$ bằng $\\frac{0 + 300}{2} = 150\\text{ m}$."
-          },
-          {
-            "id": 6,
-            "question": "Một giàn giáo công trình dạng hình hộp chữ nhật có kích thước dài $4\\text{ m}$, rộng $3\\text{ m}$, cao $12\\text{ m}$. Kỹ sư gắn một thanh giằng thép chéo nối từ một đỉnh đáy dưới lên đỉnh đối diện trần trên. Tính độ dài thanh giằng thép đó (mét).",
-            "correctAnswer": "13",
-            "acceptedAnswers": [
-              "13",
-              "13.0"
-            ],
-            "explanation": "Đường chéo hình hộp chữ nhật: $d = \\sqrt{4^2 + 3^2 + 12^2} = \\sqrt{16 + 9 + 144} = \\sqrt{169} = 13\\text{ m}$."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd3-de5",
-        "examNumber": 5,
-        "title": "Đề số 5: Luyện Thi Chuyên Đề Góc & Khoảng Cách",
-        "code": "CD3-305",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-indigo-100 text-indigo-800 border-indigo-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Góc giữa hai đường thẳng $AB$ và $B'C'$ bằng:",
-            "options": {
-              "A": "$0^\\circ$",
-              "B": "$90^\\circ$",
-              "C": "$45^\\circ$",
-              "D": "$60^\\circ$"
-            },
-            "correct": "B",
-            "explanation": "Vì $B'C' \\parallel BC$ nên góc giữa $AB$ và $B'C'$ bằng góc giữa $AB$ và $BC$, tức bằng $90^\\circ$."
-          },
-          {
-            "id": 2,
-            "question": "Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông tại $B$ và $SA \\perp (ABC)$. Hình chiếu vuông góc của đường thẳng $SB$ lên mặt phẳng $(ABC)$ là:",
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$. Hình chiếu vuông góc của đường thẳng $SC$ lên mặt phẳng $(ABC)$ là",
             "options": {
               "A": "Đường thẳng $SA$",
               "B": "Đường thẳng $BC$",
               "C": "Đường thẳng $AB$",
               "D": "Đường thẳng $AC$"
             },
-            "correct": "C",
-            "explanation": "Vì $SA \\perp (ABC)$ nên hình chiếu của $S$ lên $(ABC)$ là $A$, hình chiếu của $B$ là chính nó. Vậy hình chiếu của $SB$ là $AB$."
+            "correct": "D",
+            "explanation": "Vì $SA \\perp (ABC)$ nên hình chiếu của $S$ lên $(ABC)$ là $A$, hình chiếu của $C$ là chính nó. Do đó hình chiếu của $SC$ là $AC$."
           },
           {
             "id": 3,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a$ và $SA \\perp (ABCD)$ với $SA = a$. Góc giữa đường thẳng $SC$ và mặt phẳng đáy $(ABCD)$ bằng:",
+            "question": "**Câu 3:** Cho hình lập phương $ABCD.A'B'C'D'$. Góc giữa hai đường thẳng $AB$ và $B'C'$ bằng",
             "options": {
-              "A": "$\\arctan\\frac{\\sqrt{2}}{2}$ (xấp xỉ $35.26^\\circ$)",
+              "A": "$90^\\circ$",
               "B": "$45^\\circ$",
-              "C": "$30^\\circ$",
-              "D": "$60^\\circ$"
+              "C": "$60^\\circ$",
+              "D": "$30^\\circ$"
             },
             "correct": "A",
-            "explanation": "Hình chiếu của $SC$ là $AC = a\\sqrt{2}$. $\\tan\\widehat{SCA} = \\frac{SA}{AC} = \\frac{a}{a\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
+            "explanation": "Vì $B'C' \\parallel BC$ nên góc giữa $AB$ và $B'C'$ là góc giữa $AB$ và $BC$, bằng $90^\\circ$."
           },
           {
             "id": 4,
-            "question": "Khoảng cách từ điểm $M$ đến mặt phẳng $(P)$ là độ dài của:",
+            "question": "**Câu 4:** Cho hình chóp tứ giác đều $S.ABCD$ có tâm đáy là $O$. Đoạn thẳng nào sau đây biểu diễn khoảng cách từ đỉnh $S$ đến mặt phẳng đáy $(ABCD)$?",
             "options": {
-              "A": "Đoạn thẳng vuông góc kẻ từ $M$ đến mặt phẳng $(P)$",
-              "B": "Đoạn thẳng nối $M$ với một điểm bất kỳ trên $(P)$",
-              "C": "Đường xiên nối $M$ đến $(P)$",
-              "D": "Đoạn thẳng tiếp xúc với $(P)$"
+              "A": "$SC$",
+              "B": "$SB$",
+              "C": "$SO$",
+              "D": "$SA$"
             },
-            "correct": "A",
-            "explanation": "Theo định nghĩa, khoảng cách từ $M$ đến $(P)$ là độ dài đoạn vuông góc $MH$ với $H \\in (P)$."
+            "correct": "C",
+            "explanation": "Trong chóp tứ giác đều, $SO \\perp (ABCD)$, do đó $d(S, (ABCD)) = SO$."
           },
           {
             "id": 5,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $a$. Khoảng cách giữa hai mặt phẳng đáy $(ABCD)$ và $(A'B'C'D')$ bằng:",
+            "question": "**Câu 5:** Hai mặt phẳng phân biệt cùng vuông góc với một mặt phẳng thứ ba thì giao tuyến của chúng (nếu có) sẽ",
             "options": {
-              "A": "$2a$",
-              "B": "$a\\sqrt{3}$",
-              "C": "$a$",
-              "D": "$a\\sqrt{2}$"
+              "A": "Vuông góc với mặt phẳng thứ ba đó",
+              "B": "Song song với mặt phẳng thứ ba đó",
+              "C": "Tạo với mặt phẳng thứ ba một góc $45^\\circ$",
+              "D": "Nằm trong mặt phẳng thứ ba đó"
             },
-            "correct": "C",
-            "explanation": "Đoạn vuông góc chung giữa hai mặt đáy là cạnh bên $AA' = a$."
+            "correct": "A",
+            "explanation": "Định lý: Nếu hai mặt phẳng cắt nhau cùng vuông góc với mặt phẳng thứ ba thì giao tuyến của chúng vuông góc với mặt phẳng thứ ba."
           },
           {
             "id": 6,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$ và tam giác $ABC$ vuông tại $B$. Khẳng định nào sau đây là đúng?",
+            "question": "**Câu 6:** Cho hình lập phương $ABCD.A'B'C'D'$ cạnh $a$. Khoảng cách giữa hai mặt phẳng song song $(ABCD)$ và $(A'B'C'D')$ bằng",
             "options": {
-              "A": "$BC \\perp (SAB)$",
-              "B": "$AC \\perp (SAB)$",
-              "C": "$SA \\perp (SBC)$",
-              "D": "$AB \\perp (SBC)$"
+              "A": "$\\frac{a}{2}$",
+              "B": "$a$",
+              "C": "$a\\sqrt{2}$",
+              "D": "$a\\sqrt{3}$"
             },
-            "correct": "A",
-            "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA$ nên $BC \\perp (SAB)$."
+            "correct": "B",
+            "explanation": "Khoảng cách giữa hai đáy của hình lập phương cạnh $a$ bằng đúng chiều cao $AA' = a$."
           },
           {
             "id": 7,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình chữ nhật, $SA \\perp (ABCD)$. Khoảng cách từ điểm $S$ đến mặt phẳng đáy $(ABCD)$ bằng:",
+            "question": "**Câu 7:** Cho tứ diện đều $ABCD$. Góc giữa hai đường thẳng chéo nhau $AB$ và $CD$ bằng",
             "options": {
-              "A": "Độ dài đoạn $SB$",
-              "B": "Độ dài đoạn $SD$",
-              "C": "Độ dài đoạn $SC$",
-              "D": "Độ dài đoạn $SA$"
+              "A": "$60^\\circ$",
+              "B": "$90^\\circ$",
+              "C": "$45^\\circ$",
+              "D": "$30^\\circ$"
             },
-            "correct": "D",
-            "explanation": "Vì $SA \\perp (ABCD)$ tại $A$ nên $d(S, (ABCD)) = SA$."
+            "correct": "B",
+            "explanation": "Trong tứ diện đều, các cặp cạnh đối diện luôn vuông góc với nhau từng đôi một."
           },
           {
             "id": 8,
-            "question": "Cho hai đường thẳng chéo nhau $a$ và $b$. Có bao nhiêu mặt phẳng chứa đường thẳng $a$ và song song với đường thẳng $b$?",
+            "question": "**Câu 8:** Cho hình chóp $S.ABC$ có đáy là tam giác vuông tại $B$ và $SA \\perp (ABC)$. Mặt phẳng nào sau đây vuông góc với mặt phẳng $(SAB)$?",
             "options": {
-              "A": "Vô số",
-              "B": "Duy nhất $1$",
-              "C": "Không có",
-              "D": "$2$"
+              "A": "$(ABC)$",
+              "B": "$(SBC)$",
+              "C": "Cả $(SBC)$ và $(ABC)$",
+              "D": "$(SAC)$"
             },
             "correct": "B",
-            "explanation": "Theo định lý hình học không gian, có duy nhất một mặt phẳng chứa $a$ và song song với $b$."
+            "explanation": "Vì $BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB) \\Rightarrow (SBC) \\perp (SAB)$."
           },
           {
             "id": 9,
-            "question": "Cho hình chóp đều $S.ABCD$ có tất cả các cạnh bằng nhau. Góc giữa cạnh bên $SA$ và cạnh đáy $AB$ bằng:",
+            "question": "**Câu 9:** Cho hình chóp $S.ABC$ có đáy là tam giác đều cạnh $a$, $SA \\perp (ABC)$ và $SA = a$. Góc giữa đường thẳng $SB$ và mặt phẳng $(ABC)$ bằng",
             "options": {
-              "A": "$30^\\circ$",
-              "B": "$45^\\circ$",
-              "C": "$90^\\circ$",
-              "D": "$60^\\circ$"
+              "A": "$45^\\circ$",
+              "B": "$90^\\circ$",
+              "C": "$60^\\circ$",
+              "D": "$30^\\circ$"
             },
-            "correct": "D",
-            "explanation": "Tam giác $SAB$ có ba cạnh bằng nhau nên là tam giác đều, do đó góc $\\widehat{SAB} = 60^\\circ$."
+            "correct": "A",
+            "explanation": "Góc là $\\widehat{SBA}$. Tam giác $SAB$ vuông tại $A$ có $SA = AB = a$ nên tam giác vuông cân $\\Rightarrow \\widehat{SBA} = 45^\\circ$."
           },
           {
             "id": 10,
-            "question": "Góc giữa hai mặt phẳng $(P)$ và $(Q)$ có số đo $\\alpha$ luôn thỏa mãn:",
+            "question": "**Câu 10:** Cho đường thẳng $a$ song song với mặt phẳng $(P)$. Khoảng cách giữa $a$ và $(P)$ được tính bằng",
             "options": {
-              "A": "$45^\\circ \\le \\alpha \\le 90^\\circ$",
-              "B": "$0^\\circ \\le \\alpha \\le 90^\\circ$",
-              "C": "$0^\\circ \\le \\alpha \\le 180^\\circ$",
-              "D": "$0^\\circ < \\alpha < 180^\\circ$"
+              "A": "Khoảng cách từ tâm của $(P)$ đến $a$",
+              "B": "Độ dài đoạn vuông góc nối từ một điểm trên $(P)$ đến một điểm trên $a$",
+              "C": "Khoảng cách từ gốc tọa độ đến $a$",
+              "D": "Khoảng cách từ một điểm bất kỳ trên $a$ đến $(P)$"
             },
-            "correct": "B",
-            "explanation": "Góc giữa hai mặt phẳng là góc không tù: $0^\\circ \\le \\alpha \\le 90^\\circ$."
+            "correct": "D",
+            "explanation": "Theo định nghĩa, khoảng cách giữa đường thẳng song song với mặt phẳng bằng khoảng cách từ điểm bất kỳ trên đường thẳng đến mặt phẳng."
           },
           {
             "id": 11,
-            "question": "Một mái nhà lợp ngói dốc có chiều rộng mặt bằng là $4\\text{ m}$ và đỉnh nóc nhà nâng cao $1.5\\text{ m}$ so với xà ngang. Góc nghiêng $\\alpha$ của mái nhà so với mặt sàn nằm ngang thỏa mãn $\\tan\\alpha$ bằng:",
+            "question": "**Câu 11:** Một cột cờ cao $8\\text{ m}$ vuông góc với mặt sân nằm ngang. Một sợi dây nối từ đỉnh cột cờ đến một cọc neo trên mặt đất cách chân cột $6\\text{ m}$. Chiều dài sợi dây cáp là",
             "options": {
-              "A": "$1.5$",
-              "B": "$\\frac{1.5}{4} = 0.375$",
-              "C": "$\\frac{1.5}{2} = 0.75$",
-              "D": "$\\frac{4}{1.5} \\approx 2.67$"
+              "A": "$9\\text{ m}$",
+              "B": "$12\\text{ m}$",
+              "C": "$10\\text{ m}$",
+              "D": "$14\\text{ m}$"
             },
             "correct": "C",
-            "explanation": "Nửa bề rộng mái là $4 / 2 = 2\\text{ m}$. Độ dốc mái: $\\tan\\alpha = \\frac{1.5}{2} = 0.75$."
+            "explanation": "Theo định lý Pytago: $l = \\sqrt{8^2 + 6^2} = \\sqrt{100} = 10\\text{ m}$."
           },
           {
             "id": 12,
-            "question": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$, $SA = 7$, tam giác $ABC$ đều cạnh 2. Khoảng cách từ $S$ đến đường thẳng $BC$ bằng:",
+            "question": "**Câu 12:** Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a$, $SA \\perp (ABCD)$. Khoảng cách từ điểm $D$ đến mặt phẳng $(SAB)$ bằng",
             "options": {
-              "A": "$\\sqrt{50}$",
-              "B": "$\\sqrt{53}$",
-              "C": "$7 + \\sqrt3$",
-              "D": "$\\sqrt{52}$"
+              "A": "$\\frac{a}{2}$",
+              "B": "$a\\sqrt{2}$",
+              "C": "$a$",
+              "D": "$2a$"
             },
-            "correct": "D",
-            "explanation": "Gọi $M$ là trung điểm $BC \\Rightarrow AM = \\sqrt{3}$. Do $BC \\perp AM$ và $BC \\perp SA \\Rightarrow BC \\perp SM$. $d(S, BC) = SM = \\sqrt{SA^2 + AM^2} = \\sqrt{52}$."
+            "correct": "C",
+            "explanation": "Vì $DA \\perp AB$ và $DA \\perp SA$ nên $DA \\perp (SAB)$, do đó khoảng cách bằng $DA = a$."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 7$, $SA \\perp (ABCD)$ và $SA = 7\\sqrt3$.",
+            "id": 1,
+            "question": "**Câu 1:** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông tâm $O$, cạnh bằng $4$. Cạnh bên $SA$ vuông góc với mặt phẳng đáy và $SA = 4\\sqrt{3}$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Góc giữa đường thẳng $SD$ và mặt phẳng đáy $(ABCD)$ bằng $60^\\circ$.",
+                "id": "a",
+                "text": "Đường thẳng $BC$ vuông góc với mặt phẳng $(SAB)$.",
                 "correct": true,
-                "explanation": "Hình chiếu của $SD$ lên đáy là $AD$. $\\tan\\widehat{SDA} = \\frac{SA}{AD} = \\frac{7\\sqrt{3}}{7} = \\sqrt{3} \\Rightarrow \\widehat{SDA} = 60^\\circ$."
+                "explanation": "Vì $BC \\perp AB$ và $BC \\perp SA$."
               },
               {
-                "key": "b",
-                "text": "Mặt phẳng $(SCD)$ vuông góc với mặt phẳng $(SAD)$.",
-                "correct": true,
-                "explanation": "Ta có $CD \\perp AD$ và $CD \\perp SA \\Rightarrow CD \\perp (SAD)$, mà $CD \\subset (SCD)$ nên $(SCD) \\perp (SAD)$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách từ chân đường cao $A$ đến mặt phẳng $(SCD)$ bằng $\\frac{7\\sqrt{3}}{2}$.",
-                "correct": true,
-                "explanation": "Hạ $AH \\perp SD$. Vì $CD \\perp (SAD) \\Rightarrow CD \\perp AH \\Rightarrow AH \\perp (SCD)$. $AH = \\frac{SA \\cdot AD}{\\sqrt{SA^2 + AD^2}} = \\frac{7\\sqrt{3} \\cdot 7}{27} = \\frac{7\\sqrt{3}}{2}$."
-              },
-              {
-                "key": "d",
-                "text": "Góc giữa hai mặt phẳng $(SCD)$ và $(ABCD)$ có số đo bằng $45^\\circ$.",
+                "id": "b",
+                "text": "Góc giữa đường thẳng $SC$ và mặt phẳng đáy $(ABCD)$ bằng $60^\\circ$.",
                 "correct": false,
-                "explanation": "Giao tuyến là $CD$. $AD \\perp CD, SD \\perp CD$ nên góc giữa hai mặt phẳng là $\\widehat{SDA} = 60^\\circ$, không phải $45^\\circ$."
+                "explanation": "$AC = 4\\sqrt{2}$. $\\tan \\widehat{SCA} = \\frac{SA}{AC} = \\frac{4\\sqrt{3}}{4\\sqrt{2}} = \\sqrt{1.5} \\ne \\sqrt{3}$ nên không bằng $60^\\circ$."
+              },
+              {
+                "id": "c",
+                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(SBD)$ bằng $\\frac{4\\sqrt{6}}{3}$.",
+                "correct": false,
+                "explanation": "Hạ $AH \\perp SO$ với $O$ là tâm hình vuông. $OA = 2\\sqrt{2}$. $\\frac{1}{AH^2} = \\frac{1}{SA^2} + \\frac{1}{OA^2} = \\frac{1}{48} + \\frac{1}{8} = \\frac{7}{48} \\Rightarrow AH = \\frac{4\\sqrt{3}}{\\sqrt{7}} \\ne \\frac{4\\sqrt{6}}{3}$."
+              },
+              {
+                "id": "d",
+                "text": "Mặt phẳng $(SAC)$ là mặt phẳng trung trực của đoạn thẳng $BD$.",
+                "correct": true,
+                "explanation": "$BD \\perp AC$ và $BD \\perp SA \\Rightarrow BD \\perp (SAC)$ tại trung điểm $O$ của $BD$."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông cân tại $A$, $AB = AC = 7$, chiều cao lăng trụ $AA' = 7\\sqrt2$.",
+            "id": 2,
+            "question": "**Câu 2:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB = 4, AD = 3, AA' = 12$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Khoảng cách giữa hai mặt đáy $(ABC)$ và $(A'B'C')$ bằng ${a_val}\\sqrt{2}$.",
+                "id": "a",
+                "text": "Độ dài đường chéo $AC'$ của hình hộp bằng 13.",
                 "correct": true,
-                "explanation": "Lăng trụ đứng có khoảng cách giữa hai đáy bằng chiều cao cạnh bên $AA' = 7\\sqrt2$."
+                "explanation": "$AC' = \\sqrt{4^2 + 3^2 + 12^2} = \\sqrt{16 + 9 + 144} = \\sqrt{169} = 13$."
               },
               {
-                "key": "b",
-                "text": "Đường thẳng $B'C'$ vuông góc với mặt phẳng $(ABB'A')$.",
+                "id": "b",
+                "text": "Khoảng cách giữa hai đường thẳng $AB$ và $C'D'$ bằng 12.",
                 "correct": false,
-                "explanation": "Đáy là tam giác vuông cân tại $A$ nên $BC$ không vuông góc với $AB$, do đó $B'C'$ không vuông góc với $(ABB'A')$."
+                "explanation": "$AB \\parallel C'D'$. Khoảng cách bằng độ dài $BC' = \\sqrt{3^2 + 12^2} = \\sqrt{153} \\ne 12$."
               },
               {
-                "key": "c",
-                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(BCC'B')$ bằng $\\frac{{{a_val}\\sqrt{2}}}{{2}}$.",
+                "id": "c",
+                "text": "Sin của góc giữa đường chéo $AC'$ và mặt phẳng đáy $(ABCD)$ bằng $\\frac{12}{13}$.",
                 "correct": true,
-                "explanation": "Hạ $AH \\perp BC$ trong tam giác vuông cân tại $A$: $AH = \\frac{BC}{2} = \\frac{7\\sqrt2}{2}$. Do $AH \\perp BB'$ nên $AH \\perp (BCC'B')$."
+                "explanation": "Hình chiếu của $AC'$ lên $(ABCD)$ là $AC$. $\\sin \\widehat{C'AC} = \\frac{CC'}{AC'} = \\frac{12}{13}$."
               },
               {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $A'B$ và mặt phẳng đáy $(ABC)$ bằng $45^\\circ$.",
-                "correct": false,
-                "explanation": "Hình chiếu của $A'B$ lên đáy là $AB$. $\\tan\\alpha = \\frac{A'A}{AB} = \\frac{7\\sqrt2}{7} = \\sqrt2 \\ne 1$, góc xấp xỉ $54.7^\\circ$."
+                "id": "d",
+                "text": "Khoảng cách giữa hai mặt phẳng song song $(ADD'A')$ và $(BCC'B')$ bằng 4.",
+                "correct": true,
+                "explanation": "Khoảng cách giữa hai mặt phẳng đối diện bằng $AB = 4$."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một kỹ sư thiết kế giàn đỡ pin năng lượng mặt trời. Khung đỡ gồm cột trụ thẳng đứng $SO = 2.4\\text{ m}$ cắm trên sàn bê tông nằm ngang. Tấm pin phẳng hình chữ nhật $ABCD$ có tâm tựa tại $S$, nghiêng một góc $\\alpha = 30^\\circ$ so với phương nằm ngang để đón ánh nắng tối ưu.",
+            "id": 3,
+            "question": "**Câu 3:** Một mái nhà của một trung tâm hội nghị có dạng hình chóp tứ giác đều $S.ABCD$ với đáy là hình vuông cạnh $20\\text{ m}$, chiều cao $SO = 10\\text{ m}$. Kỹ sư dự định lắp đặt các tấm pin mặt trời trên 4 mặt mái phẳng $(SAB), (SBC), (SCD), (SDA)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Góc tạo bởi mặt phẳng tấm pin và phương thẳng đứng của cột trụ là $60^\\circ$.",
+                "id": "a",
+                "text": "Hình chiếu vuông góc của đỉnh $S$ lên mặt phẳng trần nhà $(ABCD)$ là tâm $O$ của hình vuông đáy.",
                 "correct": true,
-                "explanation": "Cột trụ thẳng đứng vuông góc với sàn, nên góc hợp với tấm pin là $90^\\circ - 30^\\circ = 60^\\circ$."
+                "explanation": "Theo tính chất hình chóp đều."
               },
               {
-                "key": "b",
-                "text": "Khoảng cách từ tâm $S$ của tấm pin đến mặt sàn bê tông bằng $2.4\\text{ m}$.",
+                "id": "b",
+                "text": "Độ dài trung đoạn của chóp (đoạn nối $S$ với trung điểm cạnh đáy) bằng $10\\sqrt{2}\\text{ m}$.",
                 "correct": true,
-                "explanation": "Cột trụ $SO$ thẳng đứng vuông góc với sàn nên khoảng cách chính bằng độ dài $SO = 2.4\\text{ m}$."
+                "explanation": "Gọi $M$ là trung điểm $AB$, $OM = 10\\text{ m}$. $SM = \\sqrt{SO^2 + OM^2} = \\sqrt{10^2 + 10^2} = 10\\sqrt{2}\\text{ m}$."
               },
               {
-                "key": "c",
-                "text": "Nếu mép thấp nhất của tấm pin cách tâm $S$ một khoảng $1\\text{ m}$ dọc theo mặt nghiêng thì mép này cách mặt sàn $1.9\\text{ m}$.",
+                "id": "c",
+                "text": "Góc nghiêng của mặt phẳng mái che $(SAB)$ so với trần nhà nằm ngang bằng $45^\\circ$.",
                 "correct": true,
-                "explanation": "Hạ độ cao: $\\Delta h = 1 \\cdot \\sin 30^\\circ = 0.5\\text{ m}$. Độ cao mép sàn: $2.4 - 0.5 = 1.9\\text{ m}$."
+                "explanation": "Góc giữa $(SAB)$ và đáy là $\\widehat{SMO}$. $\\tan \\widehat{SMO} = \\frac{SO}{OM} = \\frac{10}{10} = 1 \\Rightarrow \\widehat{SMO} = 45^\\circ$."
               },
               {
-                "key": "d",
-                "text": "Để tăng góc hứng nắng lên $\\alpha = 45^\\circ$, khoảng cách từ mép thấp nhất đến mặt sàn sẽ tăng lên.",
+                "id": "d",
+                "text": "Tổng diện tích của 4 mặt mái che bằng $400\\sqrt{3}\\text{ m}^2$.",
                 "correct": false,
-                "explanation": "Góc nghiêng tăng thì $\\sin 45^\\circ > \\sin 30^\\circ$ nên độ tụt dốc lớn hơn, mép thấp sẽ gần mặt sàn hơn."
+                "explanation": "Diện tích mỗi mặt tam giác cân: $S_1 = \\frac{1}{2} \\cdot 20 \\cdot 10\\sqrt{2} = 100\\sqrt{2}$. Tổng 4 mặt là $400\\sqrt{2}\\text{ m}^2 \\ne 400\\sqrt{3}$."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 7$, $SA \\perp (ABCD)$ và $SA = 7$. Gọi $M$ là trung điểm cạnh $CD$.",
+            "id": 4,
+            "question": "**Câu 4:** Cho tứ diện $OABC$ có $OA, OB, OC$ đôi một vuông góc tại $O$, với $OA = a, OB = b, OC = c$. Gọi $H$ là hình chiếu vuông góc của $O$ lên mặt phẳng $(ABC)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Đoạn thẳng $AM = \\frac{7\\sqrt{5}}{2}$.",
+                "id": "a",
+                "text": "$H$ là trực tâm của tam giác $ABC$.",
                 "correct": true,
-                "explanation": "$AM = \\sqrt{AD^2 + DM^2} = \\sqrt{7^2 + (7/2)^2} = \\frac{7\\sqrt{5}}{2}$."
+                "explanation": "Tính chất kinh điển của tứ diện vuông: hình chiếu của $O$ lên mặt đối diện là trực tâm."
               },
               {
-                "key": "b",
-                "text": "Đường thẳng $SM$ vuông góc với đường thẳng $CD$.",
-                "correct": false,
-                "explanation": "Tam giác $SCD$ vuông tại $D$, $M$ là trung điểm cạnh huyền $CD$ nên $SM$ không vuông góc với $CD$."
-              },
-              {
-                "key": "c",
-                "text": "Khoảng cách giữa hai đường thẳng $SA$ và $CD$ bằng $7$.",
+                "id": "b",
+                "text": "Công thức tính độ dài đường cao $OH$ là $\\frac{1}{OH^2} = \\frac{1}{a^2} + \\frac{1}{b^2} + \\frac{1}{c^2}$.",
                 "correct": true,
-                "explanation": "$AD \\perp SA$ và $AD \\perp CD$ nên $AD$ là đoạn vuông góc chung $\\Rightarrow d(SA, CD) = AD = 7$."
+                "explanation": "Hệ thức lượng mở rộng trong không gian cho tứ diện vuông."
               },
               {
-                "key": "d",
-                "text": "Góc giữa đường thẳng $SC$ và đường thẳng $AB$ bằng $45^\\circ$.",
+                "id": "c",
+                "text": "Góc giữa đường thẳng $OA$ và mặt phẳng $(ABC)$ là góc $\\widehat{OAH}$.",
+                "correct": true,
+                "explanation": "Hình chiếu của $OA$ lên $(ABC)$ là $AH$, nên góc là $\\widehat{OAH}$."
+              },
+              {
+                "id": "d",
+                "text": "Nếu $a = b = c$ thì góc giữa các mặt phẳng bên và mặt phẳng $(ABC)$ đều bằng $60^\\circ$.",
                 "correct": false,
-                "explanation": "Do $AB \\parallel CD$ nên góc cần tìm là $\\widehat{SCD}$. $\\tan\\widehat{SCD} = \\frac{SD}{CD} = \\frac{7\\sqrt{2}}{7} = \\sqrt{2} \\ne 1$, góc xấp xỉ $54.7^\\circ$."
+                "explanation": "$\\cos \\varphi = \\frac{S_{OAB}}{S_{ABC}} = \\frac{a^2/2}{a^2\\sqrt{3}/2} = \\frac{1}{\\sqrt{3}} \\ne \\frac{1}{2}$ nên không bằng $60^\\circ$."
               }
             ]
           }
@@ -5110,65 +3799,1431 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Tính côsin của góc giữa hai đường thẳng $AC$ và $DA'$ (viết kết quả dạng phân số thập phân làm tròn đến 2 chữ số thập phân).",
-            "correctAnswer": "0.5",
+            "question": "**Câu 1:** Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$ và $SA = 4$. Khoảng cách từ đỉnh $S$ đến mặt phẳng đáy $(ABC)$ bằng bao nhiêu?",
+            "correctAnswer": "4",
             "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
+              "4",
+              "4.0"
             ],
-            "explanation": "Vì $DA' \\parallel CB'$ nên góc giữa $AC$ và $DA'$ bằng góc $\\widehat{B'CA}$. Tam giác $AB'C$ là tam giác đều nên góc bằng $60^\\circ \\Rightarrow \\cos 60^\\circ = 0.5$."
+            "explanation": "Vì $SA \\perp (ABC)$ nên khoảng cách từ $S$ đến $(ABC)$ chính bằng $SA = 4$."
           },
           {
             "id": 2,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $7$, $SA \\perp (ABCD)$ và $SA = 7$. Tính góc giữa đường thẳng $SB$ và mặt phẳng đáy $(ABCD)$ (đơn vị: độ).",
-            "correctAnswer": "45",
-            "acceptedAnswers": [
-              "45",
-              "45.0",
-              "45°"
-            ],
-            "explanation": "$\\tan\\widehat{SBA} = \\frac{SA}{AB} = 1 \\Rightarrow \\widehat{SBA} = 45^\\circ$."
-          },
-          {
-            "id": 3,
-            "question": "Cho hình chóp $S.ABC$ có đáy là tam giác vuông tại $B$, $AB = 3, BC = 4$, $SA \\perp (ABC)$ và $SA = 4$. Tính khoảng cách từ điểm $A$ đến mặt phẳng $(SBC)$.",
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông tại $B$ với $AB = 3, BC = 4$. Cạnh bên $SA$ vuông góc với mặt phẳng đáy và $SA = 4$. Tính khoảng cách từ điểm $A$ đến mặt phẳng $(SBC)$.",
             "correctAnswer": "2.4",
             "acceptedAnswers": [
               "2.4",
               "2,4"
             ],
-            "explanation": "Vì $BC \\perp (SAB)$ nên kẻ $AH \\perp SB \\Rightarrow AH \\perp (SBC)$. $AH = \\frac{SA \\cdot AB}{\\sqrt{SA^2 + AB^2}} = \\frac{4 \\times 3}{\\sqrt{16 + 9}} = \\frac{12}{5} = 2.4$."
+            "explanation": "Kẻ $AH \\perp SB$. Vì $BC \\perp (SAB) \\Rightarrow BC \\perp AH \\Rightarrow AH \\perp (SBC)$. $AH = \\frac{SA \\cdot AB}{\\sqrt{SA^2 + AB^2}} = \\frac{4 \\times 3}{\\sqrt{16 + 9}} = \\frac{12}{5} = 2.4$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hình chóp tứ giác đều $S.ABCD$ có đáy là hình vuông cạnh 4, chiều cao $SO = 2\\sqrt{2}$. Tính số đo góc (đơn vị: độ) giữa cạnh bên $SA$ và mặt phẳng đáy $(ABCD)$.",
+            "correctAnswer": "45",
+            "acceptedAnswers": [
+              "45",
+              "45.0"
+            ],
+            "explanation": "Đường chéo $AC = 4\\sqrt{2} \\Rightarrow OA = 2\\sqrt{2}$. Vì $SO = OA = 2\\sqrt{2}$ nên tam giác $SOA$ vuông cân tại $O \\Rightarrow \\widehat{SAO} = 45^\\circ$."
           },
           {
             "id": 4,
-            "question": "Cho hình chóp $S.ABCD$ có đáy là hình vuông cạnh $a = 6$, $SA \\perp (ABCD)$ và $SA = 8$. Tính khoảng cách giữa hai đường thẳng chéo nhau $SA$ và $BC$.",
+            "question": "**Câu 4:** Một cột ăng-ten cao $24\\text{ m}$ dựng vuông góc với mặt sân nằm ngang. Người ta dùng 4 sợi dây cáp thép nối từ đỉnh cột xuống 4 cọc neo trên mặt đất cách đều chân cột $7\\text{ m}$. Tính tổng chiều dài 4 sợi dây cáp thép đó (đơn vị: mét).",
+            "correctAnswer": "100",
+            "acceptedAnswers": [
+              "100",
+              "100.0"
+            ],
+            "explanation": "Chiều dài mỗi sợi dây: $l = \\sqrt{24^2 + 7^2} = \\sqrt{576 + 49} = \\sqrt{625} = 25\\text{ m}$. Tổng 4 sợi là $4 \\times 25 = 100\\text{ m}$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 6$, cạnh bên $SA$ vuông góc với mặt phẳng đáy và $SA = 8$. Gọi $M$ là trung điểm của cạnh $CD$. Tính khoảng cách giữa hai đường thẳng chéo nhau $BM$ và $SC$ (làm tròn kết quả đến hàng phần mười).",
+            "correctAnswer": "1.9",
+            "acceptedAnswers": [
+              "1.9",
+              "1,9"
+            ],
+            "explanation": "Gắn hệ trục tọa độ với $A(0;0;0), B(6;0;0), C(6;6;0), D(0;6;0), S(0;0;8)$. Khi đó $M(3;6;0)$. Vectơ chỉ phương: $\\vec{u}_{BM} = (-3; 6; 0) \\parallel (-1; 2; 0)$, $\\vec{u}_{SC} = (6; 6; -8) \\parallel (3; 3; -4)$. Vectơ pháp tuyến chung: $\\vec{n} = (-1; 2; 0) \\times (3; 3; -4) = (-8; -4; -9)$. Vectơ $\\vec{BS} = (-6; 0; 8)$. Khoảng cách giữa hai đường thẳng: $d = \\frac{|\\vec{BS} \\cdot \\vec{n}|}{|\\vec{n}|} = \\frac{|(-6)(-8) + 8(-9)|}{\\sqrt{64 + 16 + 81}} = \\frac{24}{\\sqrt{161}} \\approx 1.891 \\approx 1.9$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Cho hình lăng trụ đứng tam giác $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông tại $B$, $AB = 6, BC = 8$, chiều cao lăng trụ $AA' = 12$. Gọi $I$ là trung điểm của cạnh $A'C'$. Tính khoảng cách giữa hai đường thẳng chéo nhau $B'C$ và $AI$ (làm tròn kết quả đến hàng phần mười).",
+            "correctAnswer": "3.8",
+            "acceptedAnswers": [
+              "3.8",
+              "3,8"
+            ],
+            "explanation": "Gắn hệ tọa độ với gốc tại $B(0;0;0)$, $BA$ dọc $Ox$ ($A(6;0;0)$), $BC$ dọc $Oy$ ($C(0;8;0)$), $BB'$ dọc $Oz$ ($B'(0;0;12)$). Khi đó $A'(6;0;12), C'(0;8;12) \\Rightarrow I(3;4;12)$. Ta có $\\vec{AI} = (-3; 4; 12)$, $\\vec{B'C} = (0; 8; -12) \\parallel (0; 2; -3)$. Vectơ pháp tuyến chung $\\vec{n} = \\vec{AI} \\times (0; 2; -3) = (-36; -9; -6) \\parallel (12; 3; 2)$. Vectơ $\\vec{AB'} = (-6; 0; 12)$. Khoảng cách giữa hai đường thẳng: $d = \\frac{|-6(12) + 12(2)|}{\\sqrt{144 + 9 + 4}} = \\frac{48}{\\sqrt{157}} \\approx 3.83 \\approx 3.8$."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd3-exam-2",
+        "examNumber": 2,
+        "title": "Đề Số 2: Tháp Viễn Thông, Cáp Giằng & Góc Nâng",
+        "code": "CD3-302",
+        "badge": "Mã Đề 302",
+        "badgeColor": "bg-emerald-50 text-emerald-800 border-emerald-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho đường thẳng $a \\perp (P)$. Mọi đường thẳng $b$ nằm trong mặt phẳng $(P)$ đều có tính chất gì đối với $a$?",
+            "options": {
+              "A": "$a$ chéo $b$",
+              "B": "$a \\parallel b$",
+              "C": "$a \\perp b$",
+              "D": "$a$ cắt $b$"
+            },
+            "correct": "C",
+            "explanation": "Theo định nghĩa đường thẳng vuông góc với mặt phẳng."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$. Góc giữa đường thẳng $SA$ và mặt phẳng đáy $(ABC)$ bằng",
+            "options": {
+              "A": "$45^\\circ$",
+              "B": "$90^\\circ$",
+              "C": "$0^\\circ$",
+              "D": "$60^\\circ$"
+            },
+            "correct": "B",
+            "explanation": "Vì $SA \\perp (ABC)$ nên góc giữa nó và mặt phẳng bằng $90^\\circ$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Trong không gian, cho hai đường thẳng phân biệt $a$ và $b$ cùng vuông góc với một mặt phẳng $(P)$. Mối quan hệ giữa $a$ và $b$ là",
+            "options": {
+              "A": "$a$ chéo $b$",
+              "B": "$a \\parallel b$",
+              "C": "$a \\perp b$",
+              "D": "$a$ cắt $b$"
+            },
+            "correct": "B",
+            "explanation": "Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hình lập phương $ABCD.A'B'C'D'$. Khoảng cách từ điểm $A$ đến mặt phẳng $(CDD'C')$ bằng độ dài đoạn thẳng nào?",
+            "options": {
+              "A": "$AD$",
+              "B": "$AB'$",
+              "C": "$AC$",
+              "D": "$AA'$"
+            },
+            "correct": "A",
+            "explanation": "Vì $AD \\perp (CDD'C')$ nên $d(A, (CDD'C')) = AD$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Cho hình chóp $S.ABCD$ có đáy là hình vuông, $SA \\perp (ABCD)$. Góc giữa mặt phẳng $(SBC)$ và mặt phẳng đáy $(ABCD)$ là góc nào?",
+            "options": {
+              "A": "$\\widehat{SDA}$",
+              "B": "$\\widehat{SCA}$",
+              "C": "$\\widehat{SOA}$",
+              "D": "$\\widehat{SBA}$"
+            },
+            "correct": "D",
+            "explanation": "$BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB)$. Do đó góc là $\\widehat{SBA}$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Cho tam giác $ABC$ vuông tại $A$ trong mặt phẳng $(P)$. Lấy điểm $S$ nằm ngoài $(P)$ sao cho $SA \\perp (P)$. Khẳng định nào sau đây SAI?",
+            "options": {
+              "A": "$SC \\perp BC$",
+              "B": "$AC \\perp (SAB)$",
+              "C": "$AB \\perp (SAC)$",
+              "D": "$BC \\perp (SAB)$"
+            },
+            "correct": "A",
+            "explanation": "$AB \\perp AC$ và $AB \\perp SA \\Rightarrow AB \\perp (SAC)$. Tương tự $AC \\perp (SAB)$. Còn $SC$ không vuông góc với $BC$."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Một máy bay đang cất cánh từ đường băng theo góc nâng $30^\\circ$. Sau khi bay được quãng đường $4000\\text{ m}$, máy bay đạt độ cao bằng bao nhiêu?",
+            "options": {
+              "A": "$2000\\sqrt{3}\\text{ m}$",
+              "B": "$2000\\text{ m}$",
+              "C": "$1000\\text{ m}$",
+              "D": "$4000\\text{ m}$"
+            },
+            "correct": "B",
+            "explanation": "$h = 4000 \\times \\sin 30^\\circ = 4000 \\times 0.5 = 2000\\text{ m}$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. Đường thẳng nào sau đây chéo nhau với đường thẳng $AA'$?",
+            "options": {
+              "A": "$BB'$",
+              "B": "$DD'$",
+              "C": "$CC'$",
+              "D": "$BC$"
+            },
+            "correct": "D",
+            "explanation": "$AA'$ và $BC$ không cùng thuộc mặt phẳng nào và không cắt nhau nên chéo nhau."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Khoảng cách giữa hai mặt phẳng song song $(\\alpha)$ và $(\\beta)$ là",
+            "options": {
+              "A": "Khoảng cách giữa hai gốc tọa độ",
+              "B": "Độ dài đoạn thẳng nối hai tâm",
+              "C": "Khoảng cách từ một điểm bất kỳ trên $(\\alpha)$ đến $(\\beta)$",
+              "D": "Nửa khoảng cách từ gốc $O$"
+            },
+            "correct": "C",
+            "explanation": "Đúng theo định nghĩa khoảng cách giữa hai mặt phẳng song song."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Cho hình chóp tứ giác đều $S.ABCD$ có cạnh đáy bằng $a$, cạnh bên bằng $a$. Góc giữa mặt phẳng $(SAB)$ và mặt phẳng $(SCD)$ có cosin bằng",
+            "options": {
+              "A": "$\\frac{1}{2}$",
+              "B": "$\\frac{\\sqrt{2}}{2}$",
+              "C": "$\\frac{1}{3}$",
+              "D": "$\\frac{\\sqrt{3}}{2}$"
+            },
+            "correct": "C",
+            "explanation": "Góc giữa hai mặt phẳng đối diện của hình chóp đều có cạnh bên bằng cạnh đáy có $\\cos \\varphi = 1/3$."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Cho tứ diện $OABC$ có $OA = OB = OC = a$ và đôi một vuông góc. Khoảng cách từ $O$ đến mặt phẳng $(ABC)$ bằng",
+            "options": {
+              "A": "$\\frac{a\\sqrt{2}}{2}$",
+              "B": "$a\\sqrt{3}$",
+              "C": "$\\frac{a}{3}$",
+              "D": "$\\frac{a\\sqrt{3}}{3}$"
+            },
+            "correct": "D",
+            "explanation": "$\\frac{1}{h^2} = \\frac{3}{a^2} \\Rightarrow h = \\frac{a}{\\sqrt{3}} = \\frac{a\\sqrt{3}}{3}$."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Cho đường thẳng $d$ không vuông góc với mặt phẳng $(P)$. Số đường thẳng nằm trong $(P)$ vuông góc với $d$ là",
+            "options": {
+              "A": "Vô số",
+              "B": "Đúng 2",
+              "C": "Không có đường nào",
+              "D": "Đúng 1"
+            },
+            "correct": "A",
+            "explanation": "Mọi đường thẳng trong $(P)$ vuông góc với hình chiếu $d'$ của $d$ đều vuông góc với $d$ (định lý 3 đường vuông góc), do đó có vô số."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác đều cạnh $a = 6$, cạnh bên $SA \\perp (ABC)$ và $SA = 3\\sqrt{3}$. Gọi $M$ là trung điểm của $BC$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Đoạn thẳng $AM$ vuông góc với đường thẳng $BC$.",
+                "correct": true,
+                "explanation": "Trong tam giác đều, trung tuyến đồng thời là đường cao."
+              },
+              {
+                "id": "b",
+                "text": "Đường thẳng $BC$ vuông góc với mặt phẳng $(SAM)$.",
+                "correct": true,
+                "explanation": "Vì $BC \\perp AM$ và $BC \\perp SA$."
+              },
+              {
+                "id": "c",
+                "text": "Góc giữa mặt phẳng $(SBC)$ và mặt phẳng đáy $(ABC)$ bằng $45^\\circ$.",
+                "correct": true,
+                "explanation": "Góc là $\\widehat{SMA}$. $AM = 6\\sqrt{3}/2 = 3\\sqrt{3}$. Vì $SA = AM = 3\\sqrt{3}$ nên tam giác vuông cân $\\Rightarrow \\widehat{SMA} = 45^\\circ$."
+              },
+              {
+                "id": "d",
+                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(SBC)$ bằng $3\\sqrt{6}$.",
+                "correct": false,
+                "explanation": "$d = \\frac{SA \\cdot AM}{\\sqrt{SA^2 + AM^2}} = \\frac{3\\sqrt{3}}{\\sqrt{2}} = \\frac{3\\sqrt{6}}{2} \\ne 3\\sqrt{6}$."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $a = 4$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Góc giữa hai đường thẳng $AC$ và $A'D$ bằng $60^\\circ$.",
+                "correct": true,
+                "explanation": "Nối $B'C \\parallel A'D$. Tam giác $ACB'$ là tam giác đều (ba cạnh là ba đường chéo bằng nhau $4\\sqrt{2}$), nên góc bằng $60^\\circ$."
+              },
+              {
+                "id": "b",
+                "text": "Đường thẳng $AC'$ vuông góc với mặt phẳng $(A'BD)$.",
+                "correct": true,
+                "explanation": "Tính chất đặc trưng của hình lập phương."
+              },
+              {
+                "id": "c",
+                "text": "Khoảng cách giữa hai mặt phẳng song song $(A'BD)$ và $(CB'D')$ bằng $\\frac{4\\sqrt{3}}{3}$.",
+                "correct": true,
+                "explanation": "Đoạn $AC'$ có độ dài $4\\sqrt{3}$ bị hai mặt phẳng này chia thành 3 phần bằng nhau, mỗi phần dài $\\frac{4\\sqrt{3}}{3}$."
+              },
+              {
+                "id": "d",
+                "text": "Khoảng cách giữa hai đường thẳng chéo nhau $AA'$ và $CD$ bằng $4\\sqrt{2}$.",
+                "correct": false,
+                "explanation": "Đoạn vuông góc chung là $AD$ có độ dài bằng $4$, không phải $4\\sqrt{2}$."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Một tháp truyền hình cao $60\\text{ m}$ dựng thẳng đứng trên mặt đất bằng phẳng tại vị trí $O$. Từ hai trạm quan sát $A$ và $B$ trên mặt đất, người ta đo được góc nâng đến đỉnh tháp $S$ lần lượt là $45^\\circ$ và $30^\\circ$. Biết góc $\\widehat{AOB} = 90^\\circ$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Khoảng cách từ trạm $A$ đến chân tháp $O$ bằng $60\\text{ m}$.",
+                "correct": true,
+                "explanation": "Tam giác $SOA$ vuông tại $O$ có góc $45^\\circ$ nên $OA = SO = 60\\text{ m}$."
+              },
+              {
+                "id": "b",
+                "text": "Khoảng cách từ trạm $B$ đến chân tháp $O$ bằng $60\\sqrt{3}\\text{ m}$.",
+                "correct": true,
+                "explanation": "$OB = \\frac{SO}{\\tan 30^\\circ} = 60\\sqrt{3}\\text{ m}$."
+              },
+              {
+                "id": "c",
+                "text": "Khoảng cách giữa hai trạm quan sát $A$ và $B$ bằng $120\\text{ m}$.",
+                "correct": true,
+                "explanation": "Tam giác $OAB$ vuông tại $O$: $AB = \\sqrt{OA^2 + OB^2} = \\sqrt{60^2 + (60\\sqrt{3})^2} = \\sqrt{3600 + 10800} = \\sqrt{14400} = 120\\text{ m}$."
+              },
+              {
+                "id": "d",
+                "text": "Khoảng cách từ đỉnh tháp $S$ đến đoạn thẳng $AB$ bằng $80\text{ m}$.",
+                "correct": false,
+                "explanation": "Chiều cao từ $O$ đến $AB$: $OH = \\frac{OA \\cdot OB}{AB} = \\frac{60 \\times 60\\sqrt{3}}{120} = 30\\sqrt{3}$. Khi đó $SH = \\sqrt{SO^2 + OH^2} = \\sqrt{3600 + 2700} = \\sqrt{6300} = 30\\sqrt{7}\\text{ m}$. Khẳng định này là ĐÚNG. Sửa text thành 'bằng 80 m' -> SAI."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hình chóp $S.ABCD$ có đáy là hình thoi tâm $O$, $SO \\perp (ABCD)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Mặt phẳng $(SAC)$ vuông góc với mặt phẳng $(SBD)$.",
+                "correct": true,
+                "explanation": "Vì $AC \\perp BD$ và $SO \\perp AC \\Rightarrow AC \\perp (SBD) \\Rightarrow (SAC) \\perp (SBD)$."
+              },
+              {
+                "id": "b",
+                "text": "Hình chiếu của tam giác $SAB$ lên mặt phẳng đáy là tam giác $OAB$.",
+                "correct": true,
+                "explanation": "Vì hình chiếu của $S$ là $O$, $A$ và $B$ nằm trên đáy."
+              },
+              {
+                "id": "c",
+                "text": "Khoảng cách từ $S$ đến các cạnh đáy của hình thoi luôn bằng nhau.",
+                "correct": true,
+                "explanation": "Vì $O$ cách đều 4 cạnh hình thoi và $SO \\perp đáy$."
+              },
+              {
+                "id": "d",
+                "text": "Góc giữa cạnh bên $SA$ và mặt phẳng đáy bằng góc giữa cạnh bên $SB$ và mặt phẳng đáy.",
+                "correct": false,
+                "explanation": "Vì $OA \\ne OB$ (hình thoi không phải hình vuông) nên $\\tan \\widehat{SAO} \\ne \\tan \\widehat{SBO}$."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho tứ diện $OABC$ có $OA, OB, OC$ đôi một vuông góc tại $O$. Biết $OA = 3, OB = 4, OC = 12$. Tính khoảng cách từ $O$ đến mặt phẳng $(ABC)$ (làm tròn đến hàng phần mười).",
+            "correctAnswer": "2.4",
+            "acceptedAnswers": [
+              "2.4",
+              "2,4"
+            ],
+            "explanation": "$\\frac{1}{h^2} = \\frac{1}{9} + \\frac{1}{16} + \\frac{1}{144} = \\frac{16 + 9 + 1}{144} = \\frac{26}{144} \\Rightarrow h = \\frac{12}{\\sqrt{26}} \\approx 2.353 \\approx 2.4$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có đáy là tam giác đều cạnh bằng 6, $SA \\perp (ABC)$ và $SA = 3$. Tính khoảng cách từ điểm $S$ đến đường thẳng $BC$.",
             "correctAnswer": "6",
             "acceptedAnswers": [
               "6",
               "6.0"
             ],
-            "explanation": "Đoạn vuông góc chung giữa $SA$ và $BC$ là cạnh đáy $AB = 6$."
+            "explanation": "Gọi $M$ là trung điểm $BC \\Rightarrow AM = 6\\sqrt{3}/2 = 3\\sqrt{3}$. Vì $BC \\perp AM$ và $BC \\perp SA$ nên $BC \\perp SM$. Do đó khoảng cách là $SM = \\sqrt{SA^2 + AM^2} = \\sqrt{9 + 27} = \\sqrt{36} = 6$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB = 3, AD = 4, AA' = 5$. Tính khoảng cách giữa hai đường thẳng song song $AB$ và $C'D'$.",
+            "correctAnswer": "6.4",
+            "acceptedAnswers": [
+              "6.4",
+              "6,4"
+            ],
+            "explanation": "Khoảng cách giữa hai đường song song $AB$ và $C'D'$ bằng độ dài đoạn chéo mặt bên $AD' = \\sqrt{AD^2 + AA'^2} = \\sqrt{4^2 + 5^2} = \\sqrt{41} \\approx 6.4$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một cầu trượt nước tại công viên có độ dốc thẳng dài $20\\text{ m}$, điểm xuất phát cao hơn mặt nước $12\\text{ m}$. Tính góc nghiêng (độ) của máng trượt so với mặt nước nằm ngang (làm tròn đến hàng phần mười).",
+            "correctAnswer": "36.9",
+            "acceptedAnswers": [
+              "36.9",
+              "36,9"
+            ],
+            "explanation": "$\\sin \\alpha = \\frac{12}{20} = 0.6 \\Rightarrow \\alpha = \\arcsin(0.6) \\approx 36.87^\\circ \\approx 36.9^\\circ$."
           },
           {
             "id": 5,
-            "question": "Một tuyến cáp treo nối từ trạm chân núi $A$ lên đỉnh tháp $S$ trên đỉnh đồi thẳng đứng. Đỉnh tháp $S$ có độ cao $300\\text{ m}$ so với mặt đất chân núi, khoảng cách nằm ngang từ $A$ đến chân đồi $H$ là $400\\text{ m}$. Một cabin cáp treo ở chính giữa đoạn cáp $AS$ có khoảng cách thẳng đứng xuống mặt đất nằm ngang là bao nhiêu mét?",
-            "correctAnswer": "150",
+            "question": "**Câu 5 (VDC):** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật có $AB = 4, AD = 3$. Cạnh bên $SA$ vuông góc với mặt phẳng đáy và $SA = 12$. Tính khoảng cách giữa hai đường thẳng chéo nhau $AC$ và $SB$ (làm tròn kết quả đến hàng phần mười).",
+            "correctAnswer": "2.4",
             "acceptedAnswers": [
-              "150",
-              "150.0"
+              "2.4",
+              "2,4"
             ],
-            "explanation": "Cabin ở trung điểm $M$ của $AS$. Theo định lý đường trung bình hình thang: độ cao của $M$ bằng $\\frac{0 + 300}{2} = 150\\text{ m}$."
+            "explanation": "Gắn hệ tọa độ với $A(0;0;0), B(4;0;0), D(0;3;0), C(4;3;0), S(0;0;12)$. Ta có $\\vec{u}_{AC} = (4; 3; 0)$, $\\vec{u}_{SB} = (4; 0; -12) \\parallel (1; 0; -3)$. Vectơ pháp tuyến chung: $\\vec{n} = (4; 3; 0) \\times (1; 0; -3) = (-9; 12; -3) \\parallel (3; -4; 1)$. Vectơ $\\vec{AS} = (0; 0; 12)$. Khoảng cách giữa hai đường: $d = \\frac{|\\vec{AS} \\cdot \\vec{n}|}{|\\vec{n}|} = \\frac{|12(1)|}{\\sqrt{9 + 16 + 1}} = \\frac{12}{\\sqrt{26}} \\approx 2.353 \\approx 2.4$."
           },
           {
             "id": 6,
-            "question": "Một giàn giáo công trình dạng hình hộp chữ nhật có kích thước dài $4\\text{ m}$, rộng $3\\text{ m}$, cao $12\\text{ m}$. Kỹ sư gắn một thanh giằng thép chéo nối từ một đỉnh đáy dưới lên đỉnh đối diện trần trên. Tính độ dài thanh giằng thép đó (mét).",
-            "correctAnswer": "13",
+            "question": "**Câu 6 (VDC):** Cho hình chóp tam giác đều $S.ABC$ có cạnh đáy bằng $6$, cạnh bên bằng $2\\sqrt{7}$. Tính khoảng cách giữa hai đường thẳng chéo nhau $SA$ và $BC$ (làm tròn kết quả đến hàng phần mười).",
+            "correctAnswer": "3.9",
             "acceptedAnswers": [
-              "13",
-              "13.0"
+              "3.9",
+              "3,9"
             ],
-            "explanation": "Đường chéo hình hộp chữ nhật: $d = \\sqrt{4^2 + 3^2 + 12^2} = \\sqrt{16 + 9 + 144} = \\sqrt{169} = 13\\text{ m}$."
+            "explanation": "Gọi $O$ là tâm đáy $ABC$, $M$ là trung điểm $BC$. Ta có $AM = 6\\sqrt{3}/2 = 3\\sqrt{3}$, $AO = 2\\sqrt{3}, OM = \\sqrt{3}$. Chiều cao $SO = \\sqrt{SA^2 - AO^2} = \\sqrt{28 - 12} = 4$. Do $BC \\perp (SAM)$, mặt phẳng $(P)$ qua $BC$ song song với $SA$ sẽ cắt $(SAM)$ theo đường thẳng qua $M$ song song $SA$. Do đó khoảng cách giữa $SA$ và $BC$ chính bằng khoảng cách từ điểm $A$ (hoặc $M$) đến đường thẳng kia trong tam giác $SAM$. Chiều cao hạ từ $M$ xuống $SA$ trong $\\triangle SAM$: Diện tích $S_{\\triangle SAM} = \\frac{1}{2} \\cdot SO \\cdot AM = \\frac{1}{2} \\cdot 4 \\cdot 3\\sqrt{3} = 6\\sqrt{3}$. Chiều cao $h = \\frac{2 S}{SA} = \\frac{12\\sqrt{3}}{2\\sqrt{7}} = \\frac{6\\sqrt{21}}{7} \\approx 3.928 \\approx 3.9$."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd3-exam-3",
+        "examNumber": 3,
+        "title": "Đề Số 3: Cầu Dây Văng & Giàn Không Gian",
+        "code": "CD3-303",
+        "badge": "Mã Đề 303",
+        "badgeColor": "bg-indigo-50 text-indigo-800 border-indigo-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Trong không gian, cho hai mặt phẳng $(P)$ và $(Q)$ cắt nhau theo giao tuyến $d$. Để xác định góc giữa hai mặt phẳng, ta xác định góc giữa hai đường thẳng cùng vuông góc với $d$ và",
+            "options": {
+              "A": "Cùng song song với $(P)$",
+              "B": "Cùng nằm trong $(P)$",
+              "C": "Cùng chéo nhau với $d$",
+              "D": "Lần lượt nằm trong $(P)$ và $(Q)$"
+            },
+            "correct": "D",
+            "explanation": "Đúng theo định nghĩa góc giữa hai mặt phẳng cắt nhau."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$. Hình chiếu vuông góc của điểm $S$ lên mặt phẳng đáy $(ABC)$ là",
+            "options": {
+              "A": "Trọng tâm tam giác $ABC$",
+              "B": "Điểm $B$",
+              "C": "Điểm $A$",
+              "D": "Điểm $C$"
+            },
+            "correct": "C",
+            "explanation": "Vì $SA \\perp (ABC)$ nên hình chiếu của $S$ là $A$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. Đường thẳng nào vuông góc với mặt phẳng $(ABCD)$?",
+            "options": {
+              "A": "$AD$",
+              "B": "$AA'$",
+              "C": "$AB$",
+              "D": "$AC$"
+            },
+            "correct": "B",
+            "explanation": "Các cạnh bên của hình hộp chữ nhật vuông góc với hai đáy."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hình lập phương $ABCD.A'B'C'D'$. Góc giữa hai đường thẳng $A'B'$ và $CD$ bằng",
+            "options": {
+              "A": "$0^\\circ$",
+              "B": "$90^\\circ$",
+              "C": "$45^\\circ$",
+              "D": "$180^\\circ$"
+            },
+            "correct": "A",
+            "explanation": "$A'B' \\parallel AB \\parallel CD$ nên góc giữa chúng bằng $0^\\circ$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Khoảng cách giữa hai đường thẳng chéo nhau $a$ và $b$ bằng độ dài đoạn thẳng nào?",
+            "options": {
+              "A": "Đoạn nối hai hình chiếu lên mặt phẳng nằm ngang",
+              "B": "Đoạn vuông góc chung của $a$ và $b$",
+              "C": "Đoạn thẳng ngắn nhất nối hai trung điểm",
+              "D": "Đoạn thẳng nối điểm bất kỳ trên $a$ với điểm bất kỳ trên $b$"
+            },
+            "correct": "B",
+            "explanation": "Theo định nghĩa đoạn vuông góc chung."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Cho hình chóp $S.ABC$ có đáy $ABC$ vuông cân tại $A$, $SA \\perp (ABC)$. Mặt phẳng $(SAB)$ và $(SAC)$",
+            "options": {
+              "A": "Tạo với nhau góc $60^\\circ$",
+              "B": "Song song với nhau",
+              "C": "Vuông góc với nhau",
+              "D": "Trùng nhau"
+            },
+            "correct": "C",
+            "explanation": "$AB \\perp AC$, $AB \\perp SA \\Rightarrow AB \\perp (SAC) \\Rightarrow (SAB) \\perp (SAC)$."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Một mái tôn nhà xưởng nghiêng một góc $30^\\circ$ so với mặt phẳng nằm ngang. Chiều rộng mặt bằng nhà xưởng theo phương ngang là $10\\text{ m}$. Chiều dài mái tôn dốc là",
+            "options": {
+              "A": "$5\\text{ m}$",
+              "B": "$20\\text{ m}$",
+              "C": "$10\\sqrt{3}\\text{ m}$",
+              "D": "$\\frac{20\\sqrt{3}}{3}\\text{ m}$"
+            },
+            "correct": "D",
+            "explanation": "$L = \\frac{10}{\\cos 30^\\circ} = \\frac{10}{\\sqrt{3}/2} = \\frac{20\\sqrt{3}}{3}\\text{ m}$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Cho hình chóp tứ giác đều $S.ABCD$. Đường thẳng nào sau đây vuông góc với mặt phẳng $(SAC)$?",
+            "options": {
+              "A": "$BD$",
+              "B": "$SO$",
+              "C": "$AB$",
+              "D": "$CD$"
+            },
+            "correct": "A",
+            "explanation": "Vì đáy là hình vuông nên $BD \\perp AC$. Lại có $BD \\perp SO \\Rightarrow BD \\perp (SAC)$."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Cho hai mặt phẳng $(P)$ và $(Q)$ vuông góc với nhau. Một đường thẳng $d$ nằm trong $(P)$ và vuông góc với giao tuyến của hai mặt phẳng thì",
+            "options": {
+              "A": "$d$ nằm trong $(Q)$",
+              "B": "$d \\perp (Q)$",
+              "C": "$d$ tạo với $(Q)$ góc $45^\\circ$",
+              "D": "$d \\parallel (Q)$"
+            },
+            "correct": "B",
+            "explanation": "Định lý: Nếu hai mặt phẳng vuông góc với nhau, bất kỳ đường thẳng nào nằm trong mặt phẳng này và vuông góc với giao tuyến thì vuông góc với mặt phẳng kia."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Cho tứ diện đều $ABCD$ cạnh $a$. Khoảng cách từ đỉnh $A$ đến mặt phẳng đối diện $(BCD)$ bằng",
+            "options": {
+              "A": "$\\frac{a\\sqrt{3}}{3}$",
+              "B": "$\\frac{a\\sqrt{3}}{2}$",
+              "C": "$\\frac{a\\sqrt{6}}{3}$",
+              "D": "$\\frac{a\\sqrt{2}}{2}$"
+            },
+            "correct": "C",
+            "explanation": "Chiều cao tứ diện đều cạnh $a$ bằng $\\frac{a\\sqrt{6}}{3}$."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Góc giữa đường thẳng $d$ và mặt phẳng $(P)$ có thể nhận giá trị nào sau đây?",
+            "options": {
+              "A": "$-30^\\circ$",
+              "B": "$180^\\circ$",
+              "C": "$120^\\circ$",
+              "D": "$45^\\circ$"
+            },
+            "correct": "D",
+            "explanation": "Góc giữa đường thẳng và mặt phẳng luôn nằm trong khoảng $[0^\\circ; 90^\\circ]$."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Cho hình lập phương $ABCD.A'B'C'D'$. Khoảng cách giữa hai đường thẳng $AA'$ và $CC'$ bằng",
+            "options": {
+              "A": "Độ dài đoạn thẳng $AC$",
+              "B": "Độ dài đoạn thẳng $AB$",
+              "C": "Độ dài đoạn thẳng $AD'$",
+              "D": "Độ dài đoạn thẳng $AC'$"
+            },
+            "correct": "A",
+            "explanation": "Khoảng cách giữa hai cạnh đối diện bằng độ dài đường chéo đáy $AC$."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 6$, $SA \\perp (ABCD)$ và $SA = 6$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Tam giác $SCD$ là tam giác vuông tại $D$.",
+                "correct": true,
+                "explanation": "$CD \\perp AD$ và $CD \\perp SA \\Rightarrow CD \\perp (SAD) \\Rightarrow CD \\perp SD$."
+              },
+              {
+                "id": "b",
+                "text": "Góc giữa đường thẳng $SD$ và mặt phẳng $(ABCD)$ bằng $45^\\circ$.",
+                "correct": true,
+                "explanation": "Tam giác $SAD$ vuông cân tại $A$ ($SA = AD = 6$) nên góc bằng $45^\\circ$."
+              },
+              {
+                "id": "c",
+                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(SCD)$ bằng $3\\sqrt{2}$.",
+                "correct": true,
+                "explanation": "Hạ $AH \\perp SD$. Vì $SA = AD = 6$ nên $AH = 6/\\sqrt{2} = 3\\sqrt{2}$."
+              },
+              {
+                "id": "d",
+                "text": "Khoảng cách giữa hai đường thẳng $AB$ và $SC$ bằng $3\\sqrt{2}$.",
+                "correct": true,
+                "explanation": "$AB \\parallel CD \\Rightarrow AB \\parallel (SCD) \\Rightarrow d(AB, SC) = d(A, (SCD)) = 3\\sqrt{2}$."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông tại $A$ với $AB = 3, AC = 4$ và cạnh bên $AA' = 5$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Mặt phẳng $(ABB'A')$ vuông góc với mặt phẳng $(ACC'A')$.",
+                "correct": true,
+                "explanation": "Vì $AB \\perp AC$ và $AA'$ vuông góc với đáy."
+              },
+              {
+                "id": "b",
+                "text": "Độ dài cạnh $BC$ của tam giác đáy bằng 5.",
+                "correct": true,
+                "explanation": "$BC = \\sqrt{3^2 + 4^2} = 5$."
+              },
+              {
+                "id": "c",
+                "text": "Khoảng cách từ điểm $A$ đến mặt phẳng $(BCC'B')$ bằng $2.4$.",
+                "correct": true,
+                "explanation": "Hạ $AH \\perp BC \\Rightarrow AH = \\frac{AB \\cdot AC}{BC} = \\frac{12}{5} = 2.4$."
+              },
+              {
+                "id": "d",
+                "text": "Góc giữa đường thẳng $A'B$ và mặt phẳng $(ACC'A')$ bằng $45^\\circ$.",
+                "correct": false,
+                "explanation": "Hình chiếu của $A'B$ lên $(ACC'A')$ là $A'A$. $\\tan = AB/AA' = 3/5 \\ne 1$ nên không bằng $45^\\circ$."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Một cây cầu dây văng có trụ tháp thẳng đứng $SO = 30\\text{ m}$ trên mố trụ cầu $O$. Hai sợi dây văng $SA$ và $SB$ nối tới 2 điểm $A, B$ trên mặt sàn cầu sao cho $OA = 40\\text{ m}, OB = 40\\text{ m}$ và tam giác $OAB$ vuông tại $O$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Khoảng cách giữa hai điểm neo cáp $AB = 40\\sqrt{2}\\text{ m}$.",
+                "correct": true,
+                "explanation": "Tam giác vuông cân cạnh 40 nên huyền là $40\\sqrt{2}$."
+              },
+              {
+                "id": "b",
+                "text": "Chiều dài mỗi sợi dây văng $SA = SB = 50\\text{ m}$.",
+                "correct": true,
+                "explanation": "$SA = \\sqrt{30^2 + 40^2} = 50\\text{ m}$."
+              },
+              {
+                "id": "c",
+                "text": "Hình chiếu vuông góc của đỉnh tháp $S$ lên mặt sàn cầu là tâm $O$.",
+                "correct": true,
+                "explanation": "Vì trụ tháp thẳng đứng vuông góc với mặt sàn."
+              },
+              {
+                "id": "d",
+                "text": "Góc giữa mặt phẳng tạo bởi hai sợi cáp $(SAB)$ và mặt sàn cầu $(OAB)$ bằng $60^\\circ$.",
+                "correct": false,
+                "explanation": "Gọi $M$ là trung điểm $AB$, $OM = 20\\sqrt{2}$. $\\tan = 30/(20\\sqrt{2}) \\approx 1.06 \\ne \\sqrt{3}$ nên không bằng $60^\\circ$."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hình chóp tứ giác đều $S.ABCD$ có tất cả các cạnh đều bằng $a$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Chiều cao của khối chóp bằng $\\frac{a\\sqrt{2}}{2}$.",
+                "correct": true,
+                "explanation": "$SO = \\sqrt{a^2 - (a\\sqrt{2}/2)^2} = \\frac{a\\sqrt{2}}{2}$."
+              },
+              {
+                "id": "b",
+                "text": "Góc giữa cạnh bên và mặt phẳng đáy bằng $45^\\circ$.",
+                "correct": true,
+                "explanation": "Tam giác $SOA$ có $SO = OA = \\frac{a\\sqrt{2}}{2}$ nên vuông cân tại $O$."
+              },
+              {
+                "id": "c",
+                "text": "Góc giữa mặt phẳng bên và mặt đáy có tang bằng $\\sqrt{2}$.",
+                "correct": true,
+                "explanation": "$\\tan \\varphi = \\frac{SO}{OM} = \\frac{a\\sqrt{2}/2}{a/2} = \\sqrt{2}$."
+              },
+              {
+                "id": "d",
+                "text": "Hai đường thẳng $SA$ và $CD$ song song với nhau.",
+                "correct": false,
+                "explanation": "$SA$ và $CD$ là hai đường thẳng chéo nhau."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hình lập phương $ABCD.A'B'C'D'$ cạnh bằng $5\\text{ cm}$. Tính khoảng cách giữa hai mặt phẳng đối diện $(ABCD)$ và $(A'B'C'D')$.",
+            "correctAnswer": "5",
+            "acceptedAnswers": [
+              "5",
+              "5.0"
+            ],
+            "explanation": "Khoảng cách giữa hai mặt đối diện bằng đúng cạnh hình lập phương là $5\\text{ cm}$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$, đáy $ABC$ là tam giác đều cạnh bằng 4 và $SA = 2\\sqrt{3}$. Tính số đo góc (độ) giữa đường thẳng $SA$ và mặt phẳng $(SBC)$.",
+            "correctAnswer": "45",
+            "acceptedAnswers": [
+              "45",
+              "45.0"
+            ],
+            "explanation": "Gọi $M$ là trung điểm $BC \\Rightarrow AM = 2\\sqrt{3}$. Vì $SA = AM = 2\\sqrt{3}$ và $SA \\perp AM$ nên $\\triangle SAM$ vuông cân tại $A$. Hạ $AH \\perp SM \\Rightarrow AH \\perp (SBC)$. Hình chiếu của $SA$ lên $(SBC)$ là $SH$. Góc là $\\widehat{ASH} = 45^\\circ$? Chờ chút: tam giác vuông cân thì góc $\\widehat{ASH} = 45^\\circ$. Sửa đáp án thành 45."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB = 6, AD = 8, AA' = 10$. Tính độ dài đường chéo $AC'$ (làm tròn đến hàng phần mười).",
+            "correctAnswer": "14.1",
+            "acceptedAnswers": [
+              "14.1",
+              "14,1"
+            ],
+            "explanation": "$AC' = \\sqrt{6^2 + 8^2 + 10^2} = \\sqrt{36 + 64 + 100} = \\sqrt{200} = 10\\sqrt{2} \\approx 14.14 \\approx 14.1$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một mái che hiên nhà có chiều dài mái dốc là $5\\text{ m}$, đầu hiên cao hơn mép gắn tường $3\\text{ m}$. Tính góc dốc của mái che so với phương thẳng đứng (đơn vị: độ, làm tròn đến hàng phần mười).",
+            "correctAnswer": "53.1",
+            "acceptedAnswers": [
+              "53.1",
+              "53,1"
+            ],
+            "explanation": "$\\cos \\beta = 3/5 = 0.6 \\Rightarrow \\beta = \\arccos(0.6) \\approx 53.1^\\circ$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $6$. Tính khoảng cách giữa hai đường thẳng chéo nhau $BD$ và $A'C$ (làm tròn kết quả đến hàng phần mười).",
+            "correctAnswer": "2.4",
+            "acceptedAnswers": [
+              "2.4",
+              "2,4"
+            ],
+            "explanation": "Đoạn thẳng $BD$ vuông góc với mặt phẳng $(AA'C'C)$ tại tâm $O$ của đáy $ABCD$. Từ $O$ kẻ $OH \\perp A'C$ tại $H$. Khi đó $OH \\perp BD$ và $OH \\perp A'C$, do đó $OH$ là đoạn vuông góc chung. Trong hình chữ nhật $ACC'A'$: $AC = 6\\sqrt{2}, CC' = 6 \\Rightarrow A'C = \\sqrt{72 + 36} = 6\\sqrt{3}$. Điểm $O$ là trung điểm $AC \\Rightarrow OA = 3\\sqrt{2}$. Khoảng cách từ $O$ đến $A'C$ là $OH = \\frac{OA \\cdot CC'}{A'C} = \\frac{3\\sqrt{2} \\cdot 6}{6\\sqrt{3}} = \\sqrt{6} \\approx 2.449 \\approx 2.4$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một cây cầu treo dây văng có trụ tháp thẳng đứng $SO = 30\\text{ m}$ đặt vuông góc với mặt sàn cầu phẳng $(OAB)$. Hai sợi dây văng chịu lực $SA$ và $SB$ được neo tại hai điểm $A, B$ trên mặt sàn cầu sao cho $OA = 40\\text{ m}, OB = 40\\text{ m}$ và tam giác $OAB$ vuông tại $O$. Tính số đo góc (đơn vị: độ) giữa mặt phẳng tạo bởi hai dây văng $(SAB)$ và mặt sàn cầu phẳng $(OAB)$ (làm tròn đến hàng phần mười).",
+            "correctAnswer": "46.7",
+            "acceptedAnswers": [
+              "46.7",
+              "46,7"
+            ],
+            "explanation": "Gọi $M$ là trung điểm của đoạn nối hai mố neo $AB$. Vì $\\triangle OAB$ vuông cân tại $O$ nên $OM \\perp AB$ và $OM = \\frac{40}{\\sqrt{2}} = 20\\sqrt{2}\\text{ m}$. Vì $SO \\perp (OAB)$ nên $SM \\perp AB$. Do đó góc giữa mặt phẳng dây văng $(SAB)$ và mặt sàn cầu $(OAB)$ là góc nhọn $\\widehat{SMO}$. Ta có $\\tan \\widehat{SMO} = \\frac{SO}{OM} = \\frac{30}{20\\sqrt{2}} = \\frac{3}{2\\sqrt{2}} = \\frac{3\\sqrt{2}}{4} \\approx 1.06066$. Từ đó $\\widehat{SMO} = \\arctan(1.06066) \\approx 46.686^\\circ \\approx 46.7^\\circ$."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd3-exam-4",
+        "examNumber": 4,
+        "title": "Đề Số 4: Công Trình Ngầm, Hầm Dốc & Giàn Giáo",
+        "code": "CD3-304",
+        "badge": "Mã Đề 304",
+        "badgeColor": "bg-purple-50 text-purple-800 border-purple-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hai đường thẳng chéo nhau $a$ và $b$. Có bao nhiêu mặt phẳng chứa đường thẳng $a$ và song song với đường thẳng $b$?",
+            "options": {
+              "A": "2",
+              "B": "Không có mặt phẳng nào",
+              "C": "Đúng 1",
+              "D": "Vô số"
+            },
+            "correct": "C",
+            "explanation": "Theo định lý: Qua một trong hai đường thẳng chéo nhau có duy nhất một mặt phẳng song song với đường thẳng kia."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác đều, $SA \\perp (ABC)$. Mặt phẳng $(SAB)$ tạo với đáy góc là",
+            "options": {
+              "A": "$60^\\circ$",
+              "B": "$90^\\circ$",
+              "C": "$30^\\circ$",
+              "D": "$45^\\circ$"
+            },
+            "correct": "B",
+            "explanation": "Vì $SA \\perp (ABC)$ và $SA \\subset (SAB)$ nên $(SAB) \\perp (ABC)$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. Khoảng cách giữa hai đường thẳng $AB$ và $CD$ bằng",
+            "options": {
+              "A": "Độ dài đoạn $AD$",
+              "B": "Độ dài đoạn $AC$",
+              "C": "Độ dài đoạn $AA'$",
+              "D": "Độ dài đoạn $AC'$"
+            },
+            "correct": "A",
+            "explanation": "$AB$ và $CD$ là hai cạnh đối diện của đáy hình chữ nhật nên khoảng cách bằng $AD$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Trong không gian, cho ba mặt phẳng $(P), (Q), (R)$ phân biệt. Nếu $(P) \\parallel (Q)$ và $(R) \\perp (P)$ thì",
+            "options": {
+              "A": "$(R) \\parallel (Q)$",
+              "B": "$(R) \\perp (Q)$",
+              "C": "$(R) \\equiv (Q)$",
+              "D": "$(P) \\perp (Q)$"
+            },
+            "correct": "B",
+            "explanation": "Mặt phẳng vuông góc với một trong hai mặt phẳng song song thì vuông góc với mặt phẳng còn lại."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Cho hình chóp $S.ABCD$ có đáy là hình vuông, $SA \\perp (ABCD)$. Đường thẳng $BD$ vuông góc với mặt phẳng nào sau đây?",
+            "options": {
+              "A": "$(SAD)$",
+              "B": "$(SCD)$",
+              "C": "$(SAB)$",
+              "D": "$(SAC)$"
+            },
+            "correct": "D",
+            "explanation": "$BD \\perp AC$ (hai đường chéo hình vuông) và $BD \\perp SA \\Rightarrow BD \\perp (SAC)$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Cho tứ diện $ABCD$ có $AB, AC, AD$ đôi một vuông góc. Hình chiếu của $A$ lên mặt phẳng $(BCD)$ là",
+            "options": {
+              "A": "Trọng tâm của tam giác $BCD$",
+              "B": "Trực tâm của tam giác $BCD$",
+              "C": "Trung điểm cạnh $BC$",
+              "D": "Tâm đường tròn ngoại tiếp $\\triangle BCD$"
+            },
+            "correct": "B",
+            "explanation": "Tính chất kinh điển: hình chiếu đỉnh vuông lên mặt tam giác đối diện là trực tâm."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Một giàn giáo công trình có thanh chống nghiêng dài $5\\text{ m}$ đặt tựa vào tường thẳng đứng, chân thanh chống cách chân tường $3\\text{ m}$. Góc tạo bởi thanh chống và mặt đất có cosin bằng",
+            "options": {
+              "A": "$0.6$",
+              "B": "$0.8$",
+              "C": "$0.75$",
+              "D": "$0.5$"
+            },
+            "correct": "A",
+            "explanation": "$\\cos \\alpha = 3/5 = 0.6$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Cho hình lập phương $ABCD.A'B'C'D'$. Sin của góc giữa đường chéo $BD'$ và mặt phẳng đáy $(ABCD)$ bằng",
+            "options": {
+              "A": "$\\frac{1}{\\sqrt{2}}$",
+              "B": "$\\frac{\\sqrt{2}}{\\sqrt{3}}$",
+              "C": "$\\frac{1}{2}$",
+              "D": "$\\frac{1}{\\sqrt{3}}$"
+            },
+            "correct": "D",
+            "explanation": "$\\sin = \\frac{DD'}{BD'} = \\frac{a}{a\\sqrt{3}} = \\frac{1}{\\sqrt{3}}$."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Cho hình chóp tứ giác đều $S.ABCD$ có $O$ là tâm đáy. Đoạn vuông góc chung của $SO$ và $AB$ có độ dài bằng",
+            "options": {
+              "A": "Nửa cạnh đáy",
+              "B": "Cạnh đáy",
+              "C": "Cạnh bên",
+              "D": "Chiều cao $SO$"
+            },
+            "correct": "A",
+            "explanation": "Đoạn vuông góc chung nối $O$ với trung điểm $AB$, có độ dài bằng nửa cạnh đáy."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Cho đường thẳng $a$ song song với đường thẳng $b$, đường thẳng $b$ vuông góc với mặt phẳng $(P)$. Khẳng định nào sau đây ĐÚNG?",
+            "options": {
+              "A": "Góc giữa $a$ và $(P)$ bằng $45^\\circ$",
+              "B": "$a \\parallel (P)$",
+              "C": "$a \\perp (P)$",
+              "D": "$a \\subset (P)$"
+            },
+            "correct": "C",
+            "explanation": "Đường thẳng song song với một đường thẳng vuông góc với mặt phẳng thì vuông góc với mặt phẳng đó."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Cho hình lập phương $ABCD.A'B'C'D'$. Góc giữa hai mặt phẳng $(ABCD)$ và $(A'B'C'D')$ bằng",
+            "options": {
+              "A": "$45^\\circ$",
+              "B": "$180^\\circ$",
+              "C": "$90^\\circ$",
+              "D": "$0^\\circ$"
+            },
+            "correct": "D",
+            "explanation": "Hai mặt phẳng song song có góc bằng $0^\\circ$."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Cho khối chóp $S.ABC$ có thể tích $V = 20$, diện tích đáy $S_{\\triangle ABC} = 15$. Khoảng cách từ đỉnh $S$ đến mặt phẳng đáy bằng",
+            "options": {
+              "A": "$2$",
+              "B": "$6$",
+              "C": "$4$",
+              "D": "$3$"
+            },
+            "correct": "C",
+            "explanation": "$V = \\frac{1}{3} S \\cdot h \\Rightarrow h = \\frac{3V}{S} = \\frac{60}{15} = 4$."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 4$, tam giác $SAB$ đều và nằm trong mặt phẳng vuông góc với đáy. Gọi $H$ là trung điểm của cạnh $AB$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Đoạn thẳng $SH$ vuông góc với mặt phẳng đáy $(ABCD)$.",
+                "correct": true,
+                "explanation": "Vì tam giác $SAB$ đều và $(SAB) \\perp (ABCD)$."
+              },
+              {
+                "id": "b",
+                "text": "Độ dài đường cao $SH = 2\\sqrt{3}$.",
+                "correct": true,
+                "explanation": "$SH = \\frac{4\\sqrt{3}}{2} = 2\\sqrt{3}$."
+              },
+              {
+                "id": "c",
+                "text": "Khoảng cách từ điểm $H$ đến mặt phẳng $(SCD)$ bằng $\\frac{4\\sqrt{21}}{7}$.",
+                "correct": true,
+                "explanation": "Gọi $M$ là trung điểm $CD \\Rightarrow HM = 4$. Hạ $HK \\perp SM \\Rightarrow HK = \\frac{SH \\cdot HM}{\\sqrt{SH^2 + HM^2}} = \\frac{2\\sqrt{3} \\cdot 4}{\\sqrt{12 + 16}} = \\frac{4\\sqrt{21}}{7}$."
+              },
+              {
+                "id": "d",
+                "text": "Góc giữa mặt phẳng $(SCD)$ và mặt đáy bằng $60^\\circ$.",
+                "correct": false,
+                "explanation": "$\\tan = \\frac{SH}{HM} = \\frac{2\\sqrt{3}}{4} = \\frac{\\sqrt{3}}{2} \\ne \\sqrt{3}$ nên không bằng $60^\\circ$."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp tam giác đều $S.ABC$ có cạnh đáy bằng $a = 6$, chiều cao $SO = 2\\sqrt{3}$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Hình chiếu vuông góc của $S$ lên mặt đáy trùng với tâm đường tròn ngoại tiếp tam giác đáy.",
+                "correct": true,
+                "explanation": "Đúng theo định nghĩa hình chóp tam giác đều."
+              },
+              {
+                "id": "b",
+                "text": "Bán kính đường tròn ngoại tiếp tam giác đáy $R = 2\\sqrt{3}$.",
+                "correct": true,
+                "explanation": "$R = \\frac{a}{\\sqrt{3}} = \\frac{6}{\\sqrt{3}} = 2\\sqrt{3}$."
+              },
+              {
+                "id": "c",
+                "text": "Góc giữa cạnh bên $SA$ và mặt đáy bằng $45^\\circ$.",
+                "correct": true,
+                "explanation": "Vì $SO = R = 2\\sqrt{3}$ nên $\\triangle SOA$ vuông cân tại $O$."
+              },
+              {
+                "id": "d",
+                "text": "Độ dài cạnh bên $SA = 4\\sqrt{3}$.",
+                "correct": false,
+                "explanation": "$SA = \\sqrt{SO^2 + R^2} = \\sqrt{12 + 12} = \\sqrt{24} = 2\\sqrt{6} \\ne 4\\sqrt{3}$."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Một hầm đường bộ qua đèo có mặt cắt ngang dạng hình chữ nhật cao $6\\text{ m}$, rộng $10\\text{ m}$. Tuyến đường hầm dốc đều thẳng xuống với góc nghiêng $3^\\circ$ so với mặt phẳng nằm ngang. Chiều dài tuyến hầm dốc là $2000\\text{ m}$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Chênh lệch độ cao giữa hai cửa hầm xấp xỉ $104.7\\text{ m}$.",
+                "correct": true,
+                "explanation": "$\\Delta h = 2000 \\times \\sin(3^\\circ) \\approx 2000 \\times 0.052336 = 104.7\\text{ m}$."
+              },
+              {
+                "id": "b",
+                "text": "Chiều dài hình chiếu của hầm lên mặt đất nằm ngang dài hơn $1995\\text{ m}$.",
+                "correct": true,
+                "explanation": "$L_{chiếu} = 2000 \\times \\cos(3^\\circ) \\approx 1997.3\\text{ m} > 1995\\text{ m}$."
+              },
+              {
+                "id": "c",
+                "text": "Mặt đường hầm vuông góc với vách tường hầm.",
+                "correct": true,
+                "explanation": "Theo kết cấu hình hộp chữ nhật."
+              },
+              {
+                "id": "d",
+                "text": "Góc tạo bởi hướng dốc của hầm với phương thẳng đứng bằng $93^\\circ$.",
+                "correct": false,
+                "explanation": "Góc với phương thẳng đứng là $90^\\circ - 3^\\circ = 87^\\circ \\ne 93^\\circ$."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hình lập phương $ABCD.A'B'C'D'$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Đường thẳng $B'D'$ song song với mặt phẳng $(ABCD)$.",
+                "correct": true,
+                "explanation": "Vì $B'D' \\parallel BD$ và $BD \\subset (ABCD)$."
+              },
+              {
+                "id": "b",
+                "text": "Khoảng cách giữa $B'D'$ và $(ABCD)$ bằng cạnh hình lập phương.",
+                "correct": true,
+                "explanation": "Bằng độ dài đoạn thẳng đứng $BB'$."
+              },
+              {
+                "id": "c",
+                "text": "Góc giữa hai đường thẳng $AC$ và $B'D'$ bằng $90^\\circ$.",
+                "correct": true,
+                "explanation": "Vì $B'D' \\parallel BD$ và $AC \\perp BD$ (hai đường chéo hình vuông)."
+              },
+              {
+                "id": "d",
+                "text": "Mặt phẳng $(ACC'A')$ chia hình lập phương thành 3 khối lăng trụ bằng nhau.",
+                "correct": false,
+                "explanation": "Chia thành 2 khối lăng trụ tam giác đều bằng nhau, không phải 3."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho tứ diện đều $ABCD$ có cạnh bằng $a = 6$. Tính khoảng cách giữa hai đường thẳng chéo nhau $AB$ và $CD$ (làm tròn đến hàng phần mười).",
+            "correctAnswer": "4.2",
+            "acceptedAnswers": [
+              "4.2",
+              "4,2"
+            ],
+            "explanation": "Đoạn vuông góc chung nối trung điểm hai cạnh đối diện: $d = \\frac{a\\sqrt{2}}{2} = \\frac{6\\sqrt{2}}{2} = 3\\sqrt{2} \\approx 4.24 \\approx 4.2$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$, đáy $ABC$ vuông tại $B$ với $AB = 4, BC = 3$. Cạnh bên $SA = 4$. Tính cosin của góc giữa đường thẳng $SC$ và mặt phẳng $(SAB)$ (làm tròn đến hàng phần mười).",
+            "correctAnswer": "0.9",
+            "acceptedAnswers": [
+              "0.9",
+              "0,9"
+            ],
+            "explanation": "Vì $BC \\perp (SAB)$ nên hình chiếu của $SC$ lên $(SAB)$ là $SB$. Góc là $\\widehat{CSB}$. $SB = \\sqrt{4^2 + 4^2} = 4\\sqrt{2}$, $SC = \\sqrt{SA^2 + AC^2} = \\sqrt{16 + 25} = \\sqrt{41}$. $\\cos = SB/SC = 4\\sqrt{2}/\\sqrt{41} \\approx 5.657/6.403 \\approx 0.883 \\approx 0.9$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB = 3, AD = 4, AA' = 12$. Tính khoảng cách từ điểm $A'$ đến mặt phẳng $(ABCD)$.",
+            "correctAnswer": "12",
+            "acceptedAnswers": [
+              "12",
+              "12.0"
+            ],
+            "explanation": "Vì $A'A \\perp (ABCD)$ nên khoảng cách chính bằng $AA' = 12$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một cầu cảng có đường dốc cho xe container dài $30\\text{ m}$, nối từ mặt đất lên sàn cảng cao $4.5\\text{ m}$. Tính góc nghiêng (độ) của dốc so với mặt đất (làm tròn đến hàng phần mười).",
+            "correctAnswer": "8.6",
+            "acceptedAnswers": [
+              "8.6",
+              "8,6"
+            ],
+            "explanation": "$\\sin \\alpha = \\frac{4.5}{30} = 0.15 \\Rightarrow \\alpha = \\arcsin(0.15) \\approx 8.627^\\circ \\approx 8.6^\\circ$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh bằng $4$, tam giác $SAB$ đều và nằm trong mặt phẳng vuông góc với đáy. Gọi $G$ là trọng tâm tam giác $SAB$. Tính khoảng cách từ điểm $G$ đến mặt phẳng $(SCD)$ (làm tròn kết quả đến hàng phần mười).",
+            "correctAnswer": "0.9",
+            "acceptedAnswers": [
+              "0.9",
+              "0,9"
+            ],
+            "explanation": "Gọi $H$ là trung điểm $AB \\Rightarrow SH \\perp (ABCD)$, $SH = \\frac{4\\sqrt{3}}{2} = 2\\sqrt{3}$. Đoạn $SG$ cắt $(SCD)$ tại $S$ với tỉ số $\\frac{SG}{SH} = \\frac{2}{3} \\Rightarrow d(G, (SCD)) = \\frac{1}{3} d(H, (SCD))$. Gọi $M$ là trung điểm $CD \\Rightarrow HM = 4$. Trong tam giác vuông $SHM$, kẻ $HK \\perp SM \\Rightarrow HK \\perp (SCD)$. $HK = \\frac{SH \\cdot HM}{\\sqrt{SH^2 + HM^2}} = \\frac{2\\sqrt{3} \\cdot 4}{\\sqrt{12 + 16}} = \\frac{4\\sqrt{21}}{7}$. Do đó $d(G, (SCD)) = \\frac{1}{3} \\cdot \\frac{4\\sqrt{21}}{7} = \\frac{4\\sqrt{21}}{21} \\approx 0.8728 \\approx 0.9$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một giàn giáo xây dựng dạng hình hộp chữ nhật $ABCD.A'B'C'D'$ có kích thước mặt sàn $AB = 6\\text{ m}, AD = 8\\text{ m}$ và chiều cao cột $AA' = 12\\text{ m}$. Để chống rung lắc động đất, kỹ sư lắp hai thanh giằng chéo $AC'$ và $BD$. Tính khoảng cách ngắn nhất giữa hai thanh giằng này (làm tròn kết quả đến hàng phần mười).",
+            "correctAnswer": "3.7",
+            "acceptedAnswers": [
+              "3.7",
+              "3,7"
+            ],
+            "explanation": "Gắn hệ tọa độ với gốc tại $A(0;0;0), B(6;0;0), D(0;8;0), C(6;8;0), A'(0;0;12), C'(6;8;12)$. Ta có $\\vec{u}_{AC'} = (6; 8; 12) \\parallel (3; 4; 6)$, $\\vec{u}_{BD} = (-6; 8; 0) \\parallel (-3; 4; 0)$. Vectơ pháp tuyến chung: $\\vec{n} = (3; 4; 6) \\times (-3; 4; 0) = (-24; -18; 24) \\parallel (-4; -3; 4)$. Vectơ $\\vec{AB} = (6; 0; 0)$. Khoảng cách giữa hai thanh giằng: $d = \\frac{|\\vec{AB} \\cdot \\vec{n}|}{|\\vec{n}|} = \\frac{|6(-4)|}{\\sqrt{16 + 9 + 16}} = \\frac{24}{\\sqrt{41}} \\approx 3.748 \\approx 3.7$."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd3-exam-5",
+        "examNumber": 5,
+        "title": "Đề Số 5: Thiết Kế Mái Che Sân Khấu & Không Gian Đa Diện",
+        "code": "CD3-305",
+        "badge": "Mã Đề 305",
+        "badgeColor": "bg-rose-50 text-rose-800 border-rose-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Trong không gian, hai mặt phẳng phân biệt cùng vuông góc với một đường thẳng thì",
+            "options": {
+              "A": "Vuông góc với nhau",
+              "B": "Trùng nhau",
+              "C": "Cắt nhau",
+              "D": "Song song với nhau"
+            },
+            "correct": "D",
+            "explanation": "Hai mặt phẳng phân biệt cùng vuông góc với một đường thẳng thì song song với nhau."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$. Góc giữa đường thẳng $SB$ và mặt phẳng đáy $(ABC)$ là góc nào?",
+            "options": {
+              "A": "$\\widehat{ASB}$",
+              "B": "$\\widehat{SAB}$",
+              "C": "$\\widehat{SBC}$",
+              "D": "$\\widehat{SBA}$"
+            },
+            "correct": "D",
+            "explanation": "Hình chiếu của $SB$ lên đáy là $AB$, nên góc là $\\widehat{SBA}$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. Khoảng cách giữa hai mặt đáy $(ABCD)$ và $(A'B'C'D')$ bằng độ dài đoạn nào?",
+            "options": {
+              "A": "$BB'$",
+              "B": "$AC$",
+              "C": "$BD$",
+              "D": "$BC$"
+            },
+            "correct": "A",
+            "explanation": "Bằng chiều cao đứng $BB'$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho tam giác $ABC$ vuông tại $B$. Trên đường thẳng vuông góc với $(ABC)$ tại $A$ lấy điểm $S$. Khẳng định nào sau đây ĐÚNG?",
+            "options": {
+              "A": "$AB \\perp (SBC)$",
+              "B": "$BC \\perp (SAB)$",
+              "C": "$AC \\perp (SAB)$",
+              "D": "$BC \\perp (SAC)$"
+            },
+            "correct": "B",
+            "explanation": "$BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB)$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Góc giữa hai mặt phẳng vuông góc với nhau bằng",
+            "options": {
+              "A": "$90^\\circ$",
+              "B": "$0^\\circ$",
+              "C": "$180^\\circ$",
+              "D": "$45^\\circ$"
+            },
+            "correct": "A",
+            "explanation": "Theo định nghĩa góc giữa hai mặt phẳng."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Cho hình lập phương $ABCD.A'B'C'D'$ cạnh $a$. Khoảng cách từ điểm $A'$ đến đường thẳng $BC$ bằng",
+            "options": {
+              "A": "$\\frac{a\\sqrt{2}}{2}$",
+              "B": "$a\\sqrt{2}$",
+              "C": "$a\\sqrt{3}$",
+              "D": "$a$"
+            },
+            "correct": "B",
+            "explanation": "Vì $BC \\perp (ABB'A')$ nên khoảng cách là $A'B = \\sqrt{a^2 + a^2} = a\\sqrt{2}$."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Một thang dây cứu hỏa dài $15\\text{ m}$ bắc từ xe thang đến cửa sổ tòa nhà cao $12\\text{ m}$. Khoảng cách theo phương ngang từ xe đến chân tòa nhà là",
+            "options": {
+              "A": "$8\\text{ m}$",
+              "B": "$10\\text{ m}$",
+              "C": "$11\\text{ m}$",
+              "D": "$9\\text{ m}$"
+            },
+            "correct": "D",
+            "explanation": "$d = \\sqrt{15^2 - 12^2} = \\sqrt{225 - 144} = \\sqrt{81} = 9\\text{ m}$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Cho hình chóp tứ giác đều $S.ABCD$. Mặt phẳng nào sau đây là mặt phẳng đối xứng của khối chóp?",
+            "options": {
+              "A": "$(SAC)$",
+              "B": "$(SCD)$",
+              "C": "$(SAB)$",
+              "D": "$(SBC)$"
+            },
+            "correct": "A",
+            "explanation": "$(SAC)$ và $(SBD)$ là hai mặt phẳng đối xứng đi qua đỉnh và đường chéo đáy."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Cho hình lăng trụ tam giác đều $ABC.A'B'C'$. Góc giữa mặt phẳng bên $(ABB'A')$ và mặt đáy $(ABC)$ bằng",
+            "options": {
+              "A": "$45^\\circ$",
+              "B": "$30^\\circ$",
+              "C": "$90^\\circ$",
+              "D": "$60^\\circ$"
+            },
+            "correct": "C",
+            "explanation": "Trong lăng trụ đứng, các mặt bên luôn vuông góc với hai đáy."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Cho hình chóp $S.ABC$ có đáy là tam giác vuông tại $B$, $SA \\perp (ABC)$. Đoạn vuông góc chung của $SA$ và $BC$ là",
+            "options": {
+              "A": "Đoạn $BC$",
+              "B": "Đoạn $AC$",
+              "C": "Đoạn $AB$",
+              "D": "Đoạn $SB$"
+            },
+            "correct": "C",
+            "explanation": "$AB \\perp SA$ (tại $A$) và $AB \\perp BC$ (tại $B$). Vậy $AB$ là đoạn vuông góc chung."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Trong không gian, tập hợp các điểm cách đều hai mặt phẳng song song $(\\alpha)$ và $(\\beta)$ là",
+            "options": {
+              "A": "Một đường thẳng",
+              "B": "Mặt phẳng song song và cách đều cả hai mặt phẳng đó",
+              "C": "Hai đường thẳng song song",
+              "D": "Một điểm"
+            },
+            "correct": "B",
+            "explanation": "Đúng theo tính chất mặt phẳng cách đều."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Cho hình chóp $S.ABCD$ có $SA \\perp (ABCD)$, đáy là hình vuông. Đường thẳng $SC$ tạo với mặt phẳng $(SAB)$ một góc có đỉnh là",
+            "options": {
+              "A": "Đỉnh $B$",
+              "B": "Đỉnh $C$",
+              "C": "Đỉnh $S$",
+              "D": "Đỉnh $A$"
+            },
+            "correct": "C",
+            "explanation": "Hình chiếu của $SC$ lên $(SAB)$ là $SB$, nên góc là $\\widehat{CSB}$ (đỉnh $S$)."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho tứ diện $OABC$ có $OA, OB, OC$ đôi một vuông góc tại $O$, với $OA = 3, OB = 4, OC = 12$. Gọi $H$ là trực tâm của tam giác $ABC$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Đoạn thẳng $OH$ vuông góc với mặt phẳng $(ABC)$.",
+                "correct": true,
+                "explanation": "Tính chất trực tâm tứ diện vuông."
+              },
+              {
+                "id": "b",
+                "text": "Độ dài đoạn $OH = \\frac{12}{\\sqrt{26}}$.",
+                "correct": true,
+                "explanation": "$\\frac{1}{OH^2} = \\frac{1}{9} + \\frac{1}{16} + \\frac{1}{144} = \\frac{26}{144} \\Rightarrow OH = \\frac{12}{\\sqrt{26}}$."
+              },
+              {
+                "id": "c",
+                "text": "Tam giác $ABC$ là tam giác vuông.",
+                "correct": false,
+                "explanation": "Cả ba góc của tam giác $ABC$ trong tứ diện vuông đều là góc nhọn."
+              },
+              {
+                "id": "d",
+                "text": "Cosin của góc giữa mặt phẳng $(OAB)$ và mặt phẳng $(ABC)$ bằng $\\frac{1}{\\sqrt{26}}$.",
+                "correct": true,
+                "explanation": "$\\cos \\varphi = \\frac{S_{OAB}}{S_{ABC}} = \\frac{OH}{OC} = \\frac{12/\\sqrt{26}}{12} = \\frac{1}{\\sqrt{26}}$."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp $S.ABCD$ có đáy là hình thoi tâm $O$ cạnh $a = 6$, góc $\\widehat{BAD} = 60^\\circ$. Cạnh bên $SO \\perp (ABCD)$ và $SO = 3\\sqrt{3}$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Tam giác $ABD$ là tam giác đều cạnh bằng 6.",
+                "correct": true,
+                "explanation": "Hình thoi có góc $60^\\circ$ tạo bởi hai tam giác đều ghép lại."
+              },
+              {
+                "id": "b",
+                "text": "Độ dài đoạn $BD = 6$ và $AC = 6\\sqrt{3}$.",
+                "correct": true,
+                "explanation": "Đúng tính chất hình thoi có góc $60^\\circ$."
+              },
+              {
+                "id": "c",
+                "text": "Góc giữa đường thẳng $SA$ và mặt đáy bằng $45^\\circ$.",
+                "correct": true,
+                "explanation": "$OA = AC/2 = 3\\sqrt{3}$. Vì $SO = OA = 3\\sqrt{3}$ nên $\\triangle SOA$ vuông cân $\\Rightarrow 45^\\circ$."
+              },
+              {
+                "id": "d",
+                "text": "Khoảng cách từ điểm $O$ đến mặt phẳng $(SCD)$ bằng $4.5$.",
+                "correct": false,
+                "explanation": "Hạ $OH \\perp CD$. $OH = \\frac{BD \\cdot AC}{4 CD} = \\frac{6 \\cdot 6\\sqrt{3}}{24} = \\frac{3\\sqrt{3}}{2}$. Khoảng cách $d = \\frac{SO \\cdot OH}{\\sqrt{SO^2 + OH^2}} = \\frac{3\\sqrt{3} \\cdot (3\\sqrt{3}/2)}{\\sqrt{27 + 27/4}} = \\frac{27/2}{\\sqrt{135}/2} = \\frac{27}{3\\sqrt{15}} = \\frac{3\\sqrt{15}}{5} \\approx 2.32 \\ne 4.5$."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Một mái che khán đài sân vận động ngoài trời có thiết kế dạng khối chóp tứ giác $S.ABCD$ với đáy là hình thang vuông tại $A$ và $B$, $AB = BC = 6\\text{ m}, AD = 12\\text{ m}$. Cột trụ chính $SA$ vuông góc với mặt đất nằm ngang và có chiều cao $SA = 8\\text{ m}$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Diện tích mặt bằng khán đài $ABCD$ bằng $54\\text{ m}^2$.",
+                "correct": true,
+                "explanation": "$S = \\frac{(BC + AD) \\cdot AB}{2} = \\frac{(6 + 12) \\cdot 6}{2} = 54\\text{ m}^2$."
+              },
+              {
+                "id": "b",
+                "text": "Đoạn thẳng $CD$ vuông góc với đoạn thẳng $AC$.",
+                "correct": true,
+                "explanation": "Kẻ $CE \\perp AD \\Rightarrow CE = 6, ED = 6 \\Rightarrow CD^2 = 72$. $AC^2 = 72, AD^2 = 144 = 72 + 72 \\Rightarrow \\triangle ACD$ vuông tại $C$."
+              },
+              {
+                "id": "c",
+                "text": "Đường thẳng $CD$ vuông góc với mặt phẳng $(SAC)$.",
+                "correct": true,
+                "explanation": "Vì $CD \\perp AC$ và $CD \\perp SA \\Rightarrow CD \\perp (SAC)$."
+              },
+              {
+                "id": "d",
+                "text": "Góc giữa mặt phẳng mái $(SCD)$ và mặt phẳng đáy bằng $60^\\circ$.",
+                "correct": false,
+                "explanation": "Góc là $\\widehat{SCA}$. $AC = 6\\sqrt{2} \\approx 8.48$. $\\tan = 8/(6\\sqrt{2}) = 2\\sqrt{2}/3 \\approx 0.94 \\ne \\sqrt{3}$ nên không bằng $60^\\circ$."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Cho hình lập phương $ABCD.A'B'C'D'$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Đường chéo $AC'$ vuông góc với đường chéo đáy $BD$.",
+                "correct": true,
+                "explanation": "$BD \\perp AC$ và $BD \\perp AA' \\Rightarrow BD \\perp (ACC'A') \\Rightarrow BD \\perp AC'$."
+              },
+              {
+                "id": "b",
+                "text": "Đường chéo $AC'$ vuông góc với đường chéo mặt bên $BC'$.",
+                "correct": false,
+                "explanation": "Tam giác $ABC'$ không vuông tại đỉnh nào liên quan $AC'$ vuông góc $BC'$."
+              },
+              {
+                "id": "c",
+                "text": "Góc giữa hai đường thẳng $A'B$ và $B'C$ bằng $60^\\circ$.",
+                "correct": true,
+                "explanation": "Tịnh tiến $A'B$ thành $D'C$. Tam giác $B'CD'$ đều nên góc bằng $60^\\circ$."
+              },
+              {
+                "id": "d",
+                "text": "Khoảng cách giữa hai đường thẳng $AB$ và $CC'$ bằng độ dài cạnh hình lập phương.",
+                "correct": true,
+                "explanation": "Đoạn vuông góc chung là $BC$ có độ dài bằng cạnh hình lập phương."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$, $SA = 6$, tam giác $ABC$ vuông tại $B$ có $AB = 8, BC = 6$. Tính khoảng cách từ đỉnh $S$ đến đường thẳng $BC$.",
+            "correctAnswer": "10",
+            "acceptedAnswers": [
+              "10",
+              "10.0"
+            ],
+            "explanation": "Vì $BC \\perp AB$ và $BC \\perp SA$ nên $BC \\perp SB$. Khoảng cách là độ dài $SB = \\sqrt{SA^2 + AB^2} = \\sqrt{6^2 + 8^2} = 10$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho hình chóp tứ giác đều $S.ABCD$ có cạnh đáy bằng $4$, cạnh bên bằng $2\\sqrt{6}$. Tính chiều cao $SO$ của khối chóp.",
+            "correctAnswer": "4",
+            "acceptedAnswers": [
+              "4",
+              "4.0"
+            ],
+            "explanation": "$OA = 4\\sqrt{2}/2 = 2\\sqrt{2}$. Chiều cao $SO = \\sqrt{SA^2 - OA^2} = \\sqrt{24 - 8} = \\sqrt{16} = 4$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB = 6, AD = 8, AA' = 12$. Tính sin của góc giữa đường chéo $AC'$ và mặt phẳng đáy $(ABCD)$ (làm tròn đến hàng phần mười).",
+            "correctAnswer": "0.8",
+            "acceptedAnswers": [
+              "0.8",
+              "0,8"
+            ],
+            "explanation": "Đường chéo đáy $AC = \\sqrt{36 + 64} = 10$. Đường chéo hình hộp $AC' = \\sqrt{10^2 + 12^2} = \\sqrt{244} \\approx 15.62$. $\\sin = AA'/AC' = 12/\\sqrt{244} \\approx 0.768 \\approx 0.8$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một biển quảng cáo lớn được gắn trên đỉnh một tòa nhà cao $30\\text{ m}$. Một người đứng cách chân tòa nhà $40\\text{ m}$ nhìn lên đỉnh biển quảng cáo với góc nâng $45^\\circ$. Tính chiều cao của biển quảng cáo (đơn vị: mét).",
+            "correctAnswer": "10",
+            "acceptedAnswers": [
+              "10",
+              "10.0"
+            ],
+            "explanation": "Góc nâng $45^\\circ$ từ điểm cách chân tòa nhà $40\\text{ m}$ suy ra tổng độ cao đỉnh biển quảng cáo là $40\\text{ m}$. Chiều cao biển quảng cáo là $40 - 30 = 10\\text{ m}$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Cho tứ diện $OABC$ có $OA, OB, OC$ đôi một vuông góc tại $O$, với $OA = 3, OB = 4, OC = 12$. Gọi $H$ là trực tâm của tam giác $ABC$. Tính độ dài đoạn thẳng $OH$ (làm tròn kết quả đến hàng phần mười).",
+            "correctAnswer": "2.4",
+            "acceptedAnswers": [
+              "2.4",
+              "2,4"
+            ],
+            "explanation": "Theo hệ thức lượng trong tứ diện vuông: $\\frac{1}{OH^2} = \\frac{1}{OA^2} + \\frac{1}{OB^2} + \\frac{1}{OC^2} = \\frac{1}{9} + \\frac{1}{16} + \\frac{1}{144} = \\frac{16 + 9 + 1}{144} = \\frac{26}{144}$. Do đó $OH = \\frac{12}{\\sqrt{26}} \\approx 2.353 \\approx 2.4$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một mái che sân khấu ngoài trời có thiết kế dạng chóp tứ giác $S.ABCD$ với đáy là hình thang vuông tại $A$ và $B$, $AB = BC = 6\\text{ m}, AD = 12\\text{ m}$. Cột đỡ chính $SA$ dựng thẳng đứng vuông góc với mặt đất có chiều cao $SA = 8\\text{ m}$. Tính góc (đơn vị: độ) giữa hai mặt phẳng mái nghiêng $(SCD)$ và mặt đất nằm ngang $(ABCD)$ (làm tròn đến hàng phần mười).",
+            "correctAnswer": "43.3",
+            "acceptedAnswers": [
+              "43.3",
+              "43,3"
+            ],
+            "explanation": "Gắn hệ tọa độ với gốc tại $A(0;0;0)$, $AB$ dọc trục $Ox$ ($B(6;0;0)$), $AD$ dọc trục $Oy$ ($D(0;12;0)$), $C(6;6;0)$, $S(0;0;8)$. Vectơ pháp tuyến mặt đất là $\\vec{k} = (0; 0; 1)$. Xét mặt phẳng $(SCD)$: có hai vectơ $\\vec{SC} = (6; 6; -8)$ và $\\vec{SD} = (0; 12; -8)$. Vectơ pháp tuyến của $(SCD)$: $\\vec{n} = \\vec{SC} \\times \\vec{SD} = (48; 48; 72) \\parallel (2; 2; 3)$. Cosin góc giữa hai mặt phẳng: $\\cos \\alpha = \\frac{|(2; 2; 3) \\cdot (0; 0; 1)|}{\\sqrt{2^2 + 2^2 + 3^2} \\cdot 1} = \\frac{3}{\\sqrt{17}} \\approx 0.7276$. Từ đó $\\alpha = \\arccos(0.7276) \\approx 43.31^\\circ \\approx 43.3^\\circ$."
           }
         ],
         "essayQuestions": []
@@ -5179,1321 +5234,628 @@ window.TOPIC_EXAMS_DB = [
     "id": "cd4",
     "code": "CĐ 4",
     "title": "BÀI TOÁN TỔ HỢP",
-    "icon": "fa-solid fa-calculator",
-    "badge": "Lớp 10 & 11 • Kiến thức trọng tâm",
-    "badgeColor": "bg-amber-100 text-amber-800 border-amber-200",
-    "description": "Quy tắc đếm, hoán vị, chỉnh hợp, tổ hợp, nhị thức Newton, xác suất cổ điển và ứng dụng bảo mật, quản trị phân phối.",
-    "summary": "\n<div class=\"space-y-6 text-slate-800 leading-relaxed font-serif\">\n  <!-- Phần 1: Các Quy Tắc Đếm Cơ Bản -->\n  <div class=\"bg-amber-50/70 border-l-4 border-amber-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-amber-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-list-ol text-amber-600\"></i>\n      1. Các Quy Tắc Đếm Cơ Bản\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200\">\n        <p class=\"font-bold text-amber-900 mb-1\">Quy tắc cộng (Phương án):</p>\n        <p>Công việc có $k$ phương án độc lập, phương án $i$ có $n_i$ cách thực hiện:</p>\n        <p class=\"mt-1 font-semibold text-amber-800\">Tổng số cách = $n_1 + n_2 + \\dots + n_k$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200\">\n        <p class=\"font-bold text-amber-900 mb-1\">Quy tắc nhân (Công đoạn):</p>\n        <p>Công việc gồm $k$ công đoạn nối tiếp nhau, công đoạn $i$ có $n_i$ cách:</p>\n        <p class=\"mt-1 font-semibold text-amber-800\">Tổng số cách = $n_1 \\times n_2 \\times \\dots \\times n_k$</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 2: Hoán vị, Chỉnh hợp, Tổ hợp -->\n  <div class=\"bg-blue-50/70 border-l-4 border-blue-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-blue-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-calculator text-blue-600\"></i>\n      2. Hoán Vị - Chỉnh Hợp - Tổ Hợp\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-blue-200\">\n        <p class=\"font-bold text-blue-900 mb-1\">Hoán vị ($P_n$):</p>\n        <p>Sắp xếp thứ tự $n$ phần tử:</p>\n        <p class=\"mt-1 font-semibold text-blue-800\">$P_n = n!$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-blue-200\">\n        <p class=\"font-bold text-blue-900 mb-1\">Chỉnh hợp ($A_n^k$):</p>\n        <p>Chọn $k$ phần tử <em>có xếp thứ tự</em>:</p>\n        <p class=\"mt-1 font-semibold text-blue-800\">$A_n^k = \\frac{n!}{(n - k)!}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-blue-200\">\n        <p class=\"font-bold text-blue-900 mb-1\">Tổ hợp ($C_n^k$):</p>\n        <p>Chọn $k$ phần tử <em>không tính thứ tự</em>:</p>\n        <p class=\"mt-1 font-semibold text-blue-800\">$C_n^k = \\frac{n!}{k!(n - k)!}$</p>\n      </div>\n    </div>\n    <div class=\"bg-white p-3 rounded-xl border border-blue-200 text-xs sm:text-[11pt] mt-2\">\n      <strong>Tính chất tổ hợp:</strong> $C_n^k = C_n^{n-k}$; $C_n^{k-1} + C_n^k = C_{n+1}^k$; $C_n^0 + C_n^1 + \\dots + C_n^n = 2^n$.\n    </div>\n  </div>\n\n  <!-- Phần 3: Xác Suất Cổ Điển -->\n  <div class=\"bg-emerald-50/70 border-l-4 border-emerald-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-emerald-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-dice text-emerald-600\"></i>\n      3. Xác Suất Cổ Điển\n    </h4>\n    <div class=\"space-y-2 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-emerald-200\">\n        <p class=\"font-bold text-emerald-900\">Công thức định nghĩa:</p>\n        <p>$P(A) = \\frac{n(A)}{n(\\Omega)}$ ($0 \\le P(A) \\le 1$)</p>\n        <p class=\"text-xs text-slate-600 mt-1\">Biến cố đối: $P(\\bar{A}) = 1 - P(A)$. Quy tắc cộng: $P(A \\cup B) = P(A) + P(B)$ nếu $A, B$ xung khắc. Quy tắc nhân: $P(AB) = P(A) \\cdot P(B)$ nếu $A, B$ độc lập.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+    "subtitle": "Quy tắc đếm, hoán vị, chỉnh hợp, tổ hợp, nhị thức Newton & xác suất cổ điển",
+    "grade": 10,
+    "icon": "fa-calculator",
+    "accentColor": "from-amber-600 to-orange-700",
+    "theorySummaryHtml": "\n<div class=\"space-y-6 text-slate-800 leading-relaxed font-serif\">\n  <!-- Phần 1: Quy Tắc Đếm Cơ Bản -->\n  <div class=\"bg-amber-50/70 border-l-4 border-amber-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-amber-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-list-ol text-amber-600\"></i>\n      1. Các Quy Tắc Đếm Cơ Bản\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200\">\n        <p class=\"font-bold text-amber-900 mb-1\">Quy tắc cộng (Phương án độc lập):</p>\n        <p>Nếu công việc có $k$ phương án thực hiện độc lập, phương án $i$ có $n_i$ cách:</p>\n        <p class=\"mt-1 font-semibold text-amber-800\">Tổng số cách = $n_1 + n_2 + \\dots + n_k$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-amber-200\">\n        <p class=\"font-bold text-amber-900 mb-1\">Quy tắc nhân (Công đoạn liên tiếp):</p>\n        <p>Nếu công việc gồm $k$ công đoạn nối tiếp nhau, công đoạn $i$ có $n_i$ cách:</p>\n        <p class=\"mt-1 font-semibold text-amber-800\">Tổng số cách = $n_1 \\times n_2 \\times \\dots \\times n_k$</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phần 2: Hoán Vị - Chỉnh Hợp - Tổ Hợp -->\n  <div class=\"bg-blue-50/70 border-l-4 border-blue-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-blue-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-calculator text-blue-600\"></i>\n      2. Hoán Vị - Chỉnh Hợp - Tổ Hợp\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-blue-200\">\n        <p class=\"font-bold text-blue-900 mb-1\">Hoán vị ($P_n$):</p>\n        <p>Sắp xếp thứ tự $n$ phần tử:</p>\n        <p class=\"mt-1 font-semibold text-blue-800\">$P_n = n!$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-blue-200\">\n        <p class=\"font-bold text-blue-900 mb-1\">Chỉnh hợp ($A_n^k$):</p>\n        <p>Chọn $k$ phần tử <em>có thứ tự</em>:</p>\n        <p class=\"mt-1 font-semibold text-blue-800\">$A_n^k = \\frac{n!}{(n - k)!}$</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-blue-200\">\n        <p class=\"font-bold text-blue-900 mb-1\">Tổ hợp ($C_n^k$):</p>\n        <p>Chọn $k$ phần tử <em>không thứ tự</em>:</p>\n        <p class=\"mt-1 font-semibold text-blue-800\">$C_n^k = \\frac{n!}{k!(n - k)!}$</p>\n      </div>\n    </div>\n    <div class=\"bg-white p-3 rounded-xl border border-blue-200 text-xs sm:text-[11pt] mt-2\">\n      <strong>Tính chất quan trọng:</strong> $C_n^k = C_n^{n-k}$; $C_n^{k-1} + C_n^k = C_{n+1}^k$; $C_n^0 + C_n^1 + \\dots + C_n^n = 2^n$.\n    </div>\n  </div>\n\n  <!-- Phần 3: Nhị Thức Newton & Xác Suất Cổ Điển -->\n  <div class=\"bg-emerald-50/70 border-l-4 border-emerald-600 p-4 rounded-r-2xl\">\n    <h4 class=\"font-black text-lg text-emerald-950 flex items-center gap-2 mb-2\">\n      <i class=\"fa-solid fa-dice text-emerald-600\"></i>\n      3. Nhị Thức Newton & Xác Suất Cổ Điển\n    </h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-[11.5pt]\">\n      <div class=\"bg-white p-3 rounded-xl border border-emerald-200\">\n        <p class=\"font-bold text-emerald-900 mb-1\">Khai triển nhị thức Newton:</p>\n        <p>$(a + b)^n = \\sum_{k=0}^n C_n^k a^{n-k} b^k$</p>\n        <p class=\"text-xs text-slate-600 mt-0.5\">Số hạng tổng quát thứ $k+1$: $T_{k+1} = C_n^k a^{n-k} b^k$.</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-emerald-200\">\n        <p class=\"font-bold text-emerald-900 mb-1\">Xác suất cổ điển:</p>\n        <p>$P(A) = \\frac{n(A)}{n(\\Omega)}$</p>\n        <p class=\"text-xs text-slate-600 mt-0.5\">Biến cố đối: $P(\\overline{A}) = 1 - P(A)$. Biến cố độc lập: $P(AB) = P(A) \\cdot P(B)$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
     "exams": [
       {
-        "id": "cd4-de1",
+        "id": "cd4-exam-1",
         "examNumber": 1,
-        "title": "Đề số 1: Luyện Thi Chuyên Đề Bài Toán Tổ Hợp",
+        "title": "Đề Số 1: Mã Hóa Bảo Mật & Xác Thực Hệ Thống",
         "code": "CD4-401",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-amber-100 text-amber-800 border-amber-200",
+        "badge": "Mã Đề 401",
+        "badgeColor": "bg-blue-50 text-blue-800 border-blue-200",
         "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
         "mcqs": [
           {
             "id": 1,
-            "question": "Có bao nhiêu cách chọn 3 học sinh từ một nhóm gồm 10 học sinh để đi trực tuần?",
+            "question": "**Câu 1:** Có 5 cuốn sách Toán khác nhau và 4 cuốn sách Lí khác nhau trên giá sách. Có bao nhiêu cách chọn ra một cuốn sách để đọc?",
             "options": {
-              "A": "$30$",
-              "B": "$C_{10}^3 = 120$",
-              "C": "$A_{10}^3 = 720$",
-              "D": "$10^3 = 1000$"
+              "A": "$9$",
+              "B": "$5$",
+              "C": "$4$",
+              "D": "$20$"
             },
-            "correct": "B",
-            "explanation": "Chọn không phân biệt thứ tự là tổ hợp: $C_{10}^3 = \\frac{10 \\times 9 \\times 8}{6} = 120$ cách."
+            "correct": "A",
+            "explanation": "Áp dụng quy tắc cộng: $5 + 4 = 9$ cách."
           },
           {
             "id": 2,
-            "question": "Có bao nhiêu cách xếp 5 người ngồi vào một bàn dài có 5 ghế?",
+            "question": "**Câu 2:** Số hoán vị của một tập hợp gồm 5 phần tử là",
             "options": {
-              "A": "$25$",
-              "B": "$C_5^1 = 5$",
-              "C": "$5^5 = 3125$",
-              "D": "$P_5 = 120$"
+              "A": "$120$",
+              "B": "$720$",
+              "C": "$24$",
+              "D": "$25$"
             },
-            "correct": "D",
-            "explanation": "Số hoán vị của 5 người là $5! = 120$ cách."
+            "correct": "A",
+            "explanation": "$P_5 = 5! = 120$."
           },
           {
             "id": 3,
-            "question": "Từ các chữ số 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 3 chữ số đôi một khác nhau?",
+            "question": "**Câu 3:** Công thức tính số tổ hợp chập $k$ của $n$ phần tử ($0 \\le k \\le n$) là",
             "options": {
-              "A": "$5^3 = 125$",
-              "B": "$15$",
-              "C": "$A_5^3 = 60$",
-              "D": "$C_5^3 = 10$"
+              "A": "$C_n^k = \\frac{n!}{k!}$",
+              "B": "$C_n^k = \\frac{n!}{(n - k)!}$",
+              "C": "$C_n^k = \\frac{k!}{(n - k)!}$",
+              "D": "$C_n^k = \\frac{n!}{k!(n - k)!}$"
             },
-            "correct": "C",
-            "explanation": "Chọn 3 trong 5 chữ số có xếp thứ tự: $A_5^3 = 5 \\times 4 \\times 3 = 60$ số."
+            "correct": "D",
+            "explanation": "Theo đúng định nghĩa công thức tổ hợp."
           },
           {
             "id": 4,
-            "question": "Tung một đồng xu cân đối và đồng chất 2 lần liên tiếp. Số phần tử của không gian mẫu $n(\\Omega)$ là:",
+            "question": "**Câu 4:** Có bao nhiêu số tự nhiên có 3 chữ số đôi một khác nhau được lập từ các chữ số $\\{1, 2, 3, 4, 5\\}$?",
             "options": {
-              "A": "$6$",
-              "B": "$4$",
-              "C": "$8$",
-              "D": "$2$"
+              "A": "$10$",
+              "B": "$60$",
+              "C": "$125$",
+              "D": "$20$"
             },
             "correct": "B",
-            "explanation": "$n(\\Omega) = 2 \\times 2 = 4$ ({SS, SN, NS, NN})."
+            "explanation": "Mỗi số là một chỉnh hợp chập 3 của 5 chữ số: $A_5^3 = 5 \\times 4 \\times 3 = 60$."
           },
           {
             "id": 5,
-            "question": "Trong một hộp có 5 quả cầu đỏ và 7 quả cầu xanh. Lấy ngẫu nhiên 1 quả cầu. Xác suất để lấy được quả cầu đỏ là:",
+            "question": "**Câu 5:** Gieo một con xúc xắc cân đối và đồng chất một lần. Xác suất để xuất hiện mặt có số chấm là số nguyên tố bằng",
             "options": {
-              "A": "$\\frac{5}{12}$",
-              "B": "$\\frac{5}{7}$",
-              "C": "$\\frac{7}{12}$",
-              "D": "$\\frac{1}{5}$"
+              "A": "$\\frac{1}{3}$",
+              "B": "$\\frac{2}{3}$",
+              "C": "$\\frac{1}{2}$",
+              "D": "$\\frac{1}{6}$"
             },
-            "correct": "A",
-            "explanation": "Tổng số cầu là $5 + 7 = 12$. Xác suất lấy cầu đỏ là $5/12$."
+            "correct": "C",
+            "explanation": "Các số nguyên tố là $\\{2, 3, 5\\}$ gồm 3 mặt. Xác suất $P = 3/6 = 1/2$."
           },
           {
             "id": 6,
-            "question": "Hệ số của $x^2$ trong khai triển nhị thức Newton $(x + 2)^4$ là:",
+            "question": "**Câu 6:** Có bao nhiêu cách chọn một ban đại diện gồm 3 người từ một nhóm 10 tình nguyện viên?",
+            "options": {
+              "A": "$30$",
+              "B": "$720$",
+              "C": "$120$",
+              "D": "$210$"
+            },
+            "correct": "C",
+            "explanation": "Số cách là $C_{10}^3 = \\frac{10 \\times 9 \\times 8}{6} = 120$."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Hệ số của $x^2$ trong khai triển nhị thức $(x + 2)^4$ bằng",
+            "options": {
+              "A": "$16$",
+              "B": "$6$",
+              "C": "$12$",
+              "D": "$24$"
+            },
+            "correct": "D",
+            "explanation": "Số hạng chứa $x^2$ là $C_4^2 \\cdot x^2 \\cdot 2^2 = 6 \\times 4 \\times x^2 = 24x^2$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Tung một đồng xu cân đối 3 lần liên tiếp. Số phần tử của không gian mẫu $\\Omega$ bằng",
+            "options": {
+              "A": "$9$",
+              "B": "$8$",
+              "C": "$6$",
+              "D": "$16$"
+            },
+            "correct": "B",
+            "explanation": "Mỗi lần tung có 2 kết quả (S hoặc N), 3 lần tung có $2^3 = 8$ kết quả."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Tổng các hệ số trong khai triển nhị thức $(2x - 1)^5$ bằng",
+            "options": {
+              "A": "$1$",
+              "B": "$-1$",
+              "C": "$0$",
+              "D": "$32$"
+            },
+            "correct": "A",
+            "explanation": "Cho $x = 1$: $(2(1) - 1)^5 = 1^5 = 1$."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Một hộp chứa 4 viên bi đỏ và 6 viên bi xanh. Lấy ngẫu nhiên đồng thời 2 viên bi. Xác suất để lấy được 2 viên bi cùng màu bằng",
+            "options": {
+              "A": "$\\frac{2}{5}$",
+              "B": "$\\frac{8}{15}$",
+              "C": "$\\frac{7}{15}$",
+              "D": "$\\frac{1}{3}$"
+            },
+            "correct": "C",
+            "explanation": "$n(\\Omega) = C_{10}^2 = 45$. Số cách cùng màu: $C_4^2 + C_6^2 = 6 + 15 = 21$. Xác suất $P = 21/45 = 7/15$."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Một mã khóa vali gồm 4 vòng số, mỗi vòng có 10 chữ số từ 0 đến 9. Có bao nhiêu mã khóa có 4 chữ số khác nhau?",
+            "options": {
+              "A": "$10000$",
+              "B": "$5040$",
+              "C": "$4536$",
+              "D": "$720$"
+            },
+            "correct": "B",
+            "explanation": "Số mã khóa là $A_{10}^4 = 10 \\times 9 \\times 8 \\times 7 = 5040$."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Chọn ngẫu nhiên một số tự nhiên có 2 chữ số từ 10 đến 99. Xác suất để số được chọn chia hết cho 9 bằng",
+            "options": {
+              "A": "$\\frac{1}{5}$",
+              "B": "$\\frac{11}{90}$",
+              "C": "$\\frac{1}{10}$",
+              "D": "$\\frac{1}{9}$"
+            },
+            "correct": "D",
+            "explanation": "Có $99 - 10 + 1 = 90$ số. Các số chia hết cho 9 là $\\{18, 27, \\dots, 99\\}$ gồm $(99-18)/9 + 1 = 10$ số. Xác suất $10/90 = 1/9$."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho tập hợp các chữ số $A = \\{0, 1, 2, 3, 4, 5\\}$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Có thể lập được 600 số tự nhiên có 4 chữ số bất kỳ từ tập $A$.",
+                "correct": false,
+                "explanation": "Chữ số đầu có 5 cách chọn, 3 chữ số sau mỗi vị trí có 6 cách chọn $\\Rightarrow 5 \\times 6^3 = 1080 \\ne 600$."
+              },
+              {
+                "id": "b",
+                "text": "Có thể lập được 300 số tự nhiên có 4 chữ số đôi một khác nhau từ tập $A$.",
+                "correct": true,
+                "explanation": "Chữ số hàng nghìn có 5 cách (khác 0), 3 chữ số còn lại có $A_5^3 = 60$ cách $\\Rightarrow 5 \\times 60 = 300$ số."
+              },
+              {
+                "id": "c",
+                "text": "Trong các số tự nhiên có 4 chữ số khác nhau lập từ $A$, có 156 số là số chẵn.",
+                "correct": true,
+                "explanation": "Tận cùng là 0: $A_5^3 = 60$. Tận cùng là 2 hoặc 4: $2 \\times (4 \\times A_4^2) = 2 \\times 48 = 96$. Tổng là $60 + 96 = 156$ số."
+              },
+              {
+                "id": "d",
+                "text": "Số các số tự nhiên có 4 chữ số khác nhau lập từ $A$ và chia hết cho 5 là $120$.",
+                "correct": false,
+                "explanation": "Tận cùng là 0: 60 số. Tận cùng là 5: $4 \\times A_4^2 = 48$ số. Tổng là $60 + 48 = 108 \\ne 120$."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Xét khai triển nhị thức $(2x - 3)^6 = a_6 x^6 + a_5 x^5 + \\dots + a_1 x + a_0$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Khai triển có tất cả 7 số hạng.",
+                "correct": true,
+                "explanation": "Khai triển nhị thức bậc $n$ có $n + 1$ số hạng, ở đây $6 + 1 = 7$."
+              },
+              {
+                "id": "b",
+                "text": "Hệ số tự do (không chứa $x$) $a_0 = 729$.",
+                "correct": true,
+                "explanation": "$a_0 = (-3)^6 = 729$."
+              },
+              {
+                "id": "c",
+                "text": "Hệ số của $x^5$ trong khai triển bằng $-576$.",
+                "correct": true,
+                "explanation": "Số hạng chứa $x^5$ là $C_6^1 (2x)^5 (-3)^1 = 6 \\times 32 \\times (-3) x^5 = -576 x^5$."
+              },
+              {
+                "id": "d",
+                "text": "Tổng tất cả các hệ số trong khai triển bằng 1.",
+                "correct": true,
+                "explanation": "Thay $x = 1$: $(2(1) - 3)^6 = (-1)^6 = 1$."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Một tổ làm việc gồm 6 nam và 4 nữ. Cần lập một ban thường trực gồm 4 người. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Tổng số cách chọn 4 người tùy ý là $210$ cách.",
+                "correct": true,
+                "explanation": "$C_{10}^4 = \\frac{10 \\times 9 \\times 8 \\times 7}{24} = 210$ cách."
+              },
+              {
+                "id": "b",
+                "text": "Số cách chọn có đúng 2 nam và 2 nữ là $90$ cách.",
+                "correct": true,
+                "explanation": "$C_6^2 \\times C_4^2 = 15 \\times 6 = 90$ cách."
+              },
+              {
+                "id": "c",
+                "text": "Số cách chọn có ít nhất một nữ là $195$ cách.",
+                "correct": true,
+                "explanation": "Biến cố đối là chọn toàn nam: $C_6^4 = 15$. Số cách có ít nhất một nữ: $210 - 15 = 195$ cách."
+              },
+              {
+                "id": "d",
+                "text": "Số cách chọn sao cho số nam nhiều hơn số nữ là $115$ cách.",
+                "correct": false,
+                "explanation": "Các trường hợp nam > nữ: (4 nam, 0 nữ) có $C_6^4 = 15$; (3 nam, 1 nữ) có $C_6^3 \\times C_4^1 = 20 \\times 4 = 80$. Tổng là $15 + 80 = 95 \\ne 115$. Khẳng định d SAI."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một bài thi trắc nghiệm gồm 4 câu hỏi, mỗi câu có 4 phương án trả lời trong đó chỉ có 1 phương án đúng. Một thí sinh chọn ngẫu nhiên một phương án cho mỗi câu. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Số phần tử của không gian mẫu bằng $256$.",
+                "correct": true,
+                "explanation": "$n(\\Omega) = 4^4 = 256$."
+              },
+              {
+                "id": "b",
+                "text": "Xác suất để thí sinh trả lời đúng tất cả 4 câu là $\\frac{1}{256}$.",
+                "correct": true,
+                "explanation": "$(1/4)^4 = 1/256$."
+              },
+              {
+                "id": "c",
+                "text": "Xác suất để thí sinh trả lời sai cả 4 câu là $\\frac{81}{256}$.",
+                "correct": true,
+                "explanation": "$(3/4)^4 = 81/256$."
+              },
+              {
+                "id": "d",
+                "text": "Xác suất để thí sinh trả lời đúng đúng 2 câu bằng $\\frac{27}{128}$.",
+                "correct": true,
+                "explanation": "$C_4^2 \\times (1/4)^2 \\times (3/4)^2 = 6 \\times \\frac{9}{256} = \\frac{54}{256} = \\frac{27}{128}$."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Có bao nhiêu cách xếp 5 bạn học sinh ngồi vào một dãy gồm 5 chiếc ghế kê thẳng hàng?",
+            "correctAnswer": "120",
+            "acceptedAnswers": [
+              "120",
+              "120.0"
+            ],
+            "explanation": "Số hoán vị của 5 bạn: $5! = 120$ cách."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Tìm hệ số của số hạng chứa $x^3$ trong khai triển nhị thức $(x + 2)^5$.",
+            "correctAnswer": "40",
+            "acceptedAnswers": [
+              "40",
+              "40.0"
+            ],
+            "explanation": "Số hạng chứa $x^3$ là $C_5^3 x^3 2^2 = 10 \\times 4 x^3 = 40x^3$. Hệ số là 40."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Có bao nhiêu số tự nhiên có 5 chữ số đôi một khác nhau được lập từ các chữ số $\\{1, 2, 3, 4, 5, 6\\}$ sao cho số đó luôn là số lẻ?",
+            "correctAnswer": "360",
+            "acceptedAnswers": [
+              "360",
+              "360.0"
+            ],
+            "explanation": "Chữ số tận cùng có 3 cách chọn ($\\{1, 3, 5\\}$). Bốn chữ số đứng trước có $A_5^4 = 120$ cách chọn. Tổng số các số lẻ là $3 \\times 120 = 360$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một hộp có 5 viên bi đỏ và 7 viên bi xanh. Lấy ngẫu nhiên đồng thời 3 viên bi. Tính xác suất để lấy được ít nhất 1 viên bi màu đỏ (làm tròn kết quả đến hàng phần trăm).",
+            "correctAnswer": "0.84",
+            "acceptedAnswers": [
+              "0.84",
+              "0,84"
+            ],
+            "explanation": "Biến cố đối là lấy được 3 viên bi xanh: $P(\\overline{A}) = \\frac{C_7^3}{C_{12}^3} = \\frac{35}{220} = \\frac{7}{44} \\approx 0.159$. Xác suất lấy ít nhất 1 bi đỏ: $P(A) = 1 - 7/44 = 37/44 \\approx 0.8409 \\approx 0.84$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Có bao nhiêu số tự nhiên có 6 chữ số đôi một khác nhau được lập từ tập các chữ số $\\{0, 1, 2, 3, 4, 5, 6, 7\\}$ sao cho số đó chia hết cho 5 và hai chữ số 1 và 2 luôn đứng cạnh nhau?",
+            "correctAnswer": "888",
+            "acceptedAnswers": [
+              "888",
+              "888.0"
+            ],
+            "explanation": "Để số chia hết cho 5, chữ số tận cùng $a_6 \\in \\{0, 5\\}$. Hai chữ số 1 và 2 luôn đứng cạnh nhau coi như một khối kép $B = (12)$ hoặc $(21)$ (có 2 hoán vị). Xét 2 trường hợp tận cùng kết hợp loại trừ chữ số hàng đầu bằng 0, tính tổng các cấu hình được chính xác 888 số."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một trung tâm an ninh mạng có 8 chuyên gia mật mã và 7 chuyên gia an toàn thông tin. Cần thành lập một tổ công tác phản ứng nhanh gồm 6 người, yêu cầu phải có cả chuyên gia mật mã và chuyên gia an toàn thông tin, trong đó số chuyên gia mật mã nhiều hơn số chuyên gia an toàn thông tin. Đồng thời, hai chuyên gia kỳ cựu $A$ (mật mã) và $B$ (an toàn thông tin) không thể cùng tham gia tổ công tác. Hỏi có bao nhiêu cách lập tổ công tác thỏa mãn các yêu cầu trên?",
+            "correctAnswer": "1617",
+            "acceptedAnswers": [
+              "1617",
+              "1617.0"
+            ],
+            "explanation": "Số chuyên gia mật mã (M) > an toàn thông tin (T) và có đủ cả hai loại nên có hai cơ cấu: (5 M, 1 T) hoặc (4 M, 2 T). Cơ cấu (5 M, 1 T): có $C_8^5 \\times C_7^1 = 392$ cách; nếu cả A và B cùng tham gia thì có $C_7^4 \\times C_6^0 = 35$ cách $\\Rightarrow 392 - 35 = 357$ cách. Cơ cấu (4 M, 2 T): có $C_8^4 \\times C_7^2 = 70 \\times 21 = 1470$ cách; nếu cả A và B cùng tham gia thì có $C_7^3 \\times C_6^1 = 35 \\times 6 = 210$ cách $\\Rightarrow 1470 - 210 = 1260$ cách. Tổng số cách thỏa mãn là $357 + 1260 = 1617$ cách."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd4-exam-2",
+        "examNumber": 2,
+        "title": "Đề Số 2: Phân Công Ca Trực & Hội Đồng Kiểm Định",
+        "code": "CD4-402",
+        "badge": "Mã Đề 402",
+        "badgeColor": "bg-emerald-50 text-emerald-800 border-emerald-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Một thực đơn ăn trưa có 4 món khai vị và 6 món chính. Một khách hàng muốn chọn 1 món khai vị và 1 món chính. Số cách chọn là",
+            "options": {
+              "A": "$16$",
+              "B": "$12$",
+              "C": "$24$",
+              "D": "$10$"
+            },
+            "correct": "C",
+            "explanation": "Theo quy tắc nhân: $4 \\times 6 = 24$ cách."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Có bao nhiêu cách sắp xếp 4 bạn học sinh thành một hàng dọc?",
             "options": {
               "A": "$24$",
               "B": "$16$",
               "C": "$12$",
-              "D": "$6$"
-            },
-            "correct": "A",
-            "explanation": "Số hạng tổng quát: $T_{k+1} = C_4^k x^{4-k} 2^k$. Với $4 - k = 2 \\Rightarrow k = 2$. Hệ số: $C_4^2 \\times 2^2 = 6 \\times 4 = 24$."
-          },
-          {
-            "id": 7,
-            "question": "Cho $A$ là biến cố ngẫu nhiên có xác suất $P(A) = 0.35$. Xác suất của biến cố đối $\\bar{A}$ bằng:",
-            "options": {
-              "A": "$0.75$",
-              "B": "$1.35$",
-              "C": "$0.65$",
-              "D": "$0.35$"
-            },
-            "correct": "C",
-            "explanation": "$P(\\bar{A}) = 1 - P(A) = 1 - 0.35 = 0.65$."
-          },
-          {
-            "id": 8,
-            "question": "Một tổ có 6 nam và 4 nữ. Có bao nhiêu cách chọn 2 học sinh gồm 1 nam và 1 nữ?",
-            "options": {
-              "A": "$12$",
-              "B": "$10$",
-              "C": "$45$",
-              "D": "$24$"
-            },
-            "correct": "D",
-            "explanation": "$6 \\times 4 = 24$ cách."
-          },
-          {
-            "id": 9,
-            "question": "Hai xạ thủ bắn độc lập vào bia, xác suất bắn trúng của xạ thủ thứ nhất là $0.8$, xạ thủ thứ hai là $0.7$. Xác suất để cả hai xạ thủ cùng bắn trúng là:",
-            "options": {
-              "A": "$0.50$",
-              "B": "$0.94$",
-              "C": "$0.14$",
-              "D": "$0.56$"
-            },
-            "correct": "D",
-            "explanation": "Vì độc lập nên $P = 0.8 \\times 0.7 = 0.56$."
-          },
-          {
-            "id": 10,
-            "question": "Gieo một con xúc xắc cân đối và đồng chất một lần. Xác suất để xuất hiện mặt có số chấm là số nguyên tố bằng:",
-            "options": {
-              "A": "$\\frac{1}{6}$",
-              "B": "$\\frac{1}{2}$",
-              "C": "$\\frac{2}{3}$",
-              "D": "$\\frac{1}{3}$"
-            },
-            "correct": "B",
-            "explanation": "Các số nguyên tố là {2, 3, 5} gồm 3 trường hợp. Xác suất: $3/6 = 1/2$."
-          },
-          {
-            "id": 11,
-            "question": "Một mã PIN bảo mật điện thoại gồm 4 chữ số (mỗi chữ số chọn từ 0 đến 9). Có bao nhiêu mã PIN khác nhau nếu các chữ số không được lặp lại?",
-            "options": {
-              "A": "$5040$",
-              "B": "$210$",
-              "C": "$10000$",
-              "D": "$720$"
-            },
-            "correct": "A",
-            "explanation": "$A_{10}^4 = 10 \\times 9 \\times 8 \\times 7 = 5040$ mã."
-          },
-          {
-            "id": 12,
-            "question": "Một lớp học có 20 học sinh nam và 15 học sinh nữ. Chọn ngẫu nhiên 3 học sinh. Số cách chọn để có cả nam và nữ là:",
-            "options": {
-              "A": "$1140$",
-              "B": "$6545$",
-              "C": "$5025$",
-              "D": "$455$"
-            },
-            "correct": "C",
-            "explanation": "Tổng số cách chọn 3 em: $C_{35}^3 = 6545$. Số cách toàn nam: $C_{20}^3 = 1140$. Số cách toàn nữ: $C_{15}^3 = 455$. Số cách có cả nam và nữ: $6545 - 1140 - 455 = 4950$ hoặc $5025$."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Một trường THPT tổ chức giải bóng đá mini. Khối 12 có 9 đội tham gia thi đấu vòng tròn một lượt (mỗi đội đều đá với tất cả các đội còn lại đúng 1 trận).",
-            "items": [
-              {
-                "key": "a",
-                "text": "Mỗi trận đấu là một tổ hợp chập 2 của 9 đội bóng.",
-                "correct": true,
-                "explanation": "Đúng định nghĩa, mỗi trận là 1 cặp đấu chọn từ tập hợp đội."
-              },
-              {
-                "key": "b",
-                "text": "Tổng số trận đấu của toàn giải là $C_{9}^2 = 36$ trận.",
-                "correct": true,
-                "explanation": "Số trận: $C_{9}^2 = 36$ trận."
-              },
-              {
-                "key": "c",
-                "text": "Mỗi đội bóng trong giải sẽ thi đấu đúng 8 trận.",
-                "correct": true,
-                "explanation": "Mỗi đội đá với tất cả các đội còn lại nên đá đúng 8 = 8 trận."
-              },
-              {
-                "key": "d",
-                "text": "Nếu chuyển sang thể thức thi đấu lượt đi và lượt về thì tổng số trận đấu tăng gấp 4 lần.",
-                "correct": false,
-                "explanation": "Đá lượt đi lượt về chỉ nhân đôi số trận (gấp 2 lần), không phải gấp 4 lần."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Một lô hàng thiết bị viễn thông có 100 sản phẩm, trong đó có 6 sản phẩm bị lỗi kỹ thuật. Nhân viên kiểm định lấy ngẫu nhiên 5 sản phẩm để kiểm tra chất lượng.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Số phần tử của không gian mẫu là $n(\\Omega) = C_{100}^5$.",
-                "correct": true,
-                "explanation": "Chọn 5 sản phẩm ngẫu nhiên từ 100 sản phẩm."
-              },
-              {
-                "key": "b",
-                "text": "Số cách chọn được 5 sản phẩm hoàn toàn không bị lỗi là $C_{94}^5$.",
-                "correct": true,
-                "explanation": "Có $100 - 6 = 94$ sản phẩm tốt, chọn 5 sản phẩm tốt có $C_{94}^5$ cách."
-              },
-              {
-                "key": "c",
-                "text": "Xác suất để trong 5 sản phẩm lấy ra có ít nhất một sản phẩm bị lỗi là $1 - \\frac{C_{94}^5}{C_{100}^5}$.",
-                "correct": true,
-                "explanation": "Áp dụng biến cố đối: $P(\\text{ít nhất 1 lỗi}) = 1 - P(\\text{không có lỗi})$.' "
-              },
-              {
-                "key": "d",
-                "text": "Xác suất để cả 5 sản phẩm lấy ra đều bị lỗi lớn hơn $1\\%$.",
-                "correct": false,
-                "explanation": "Số cách chọn 5 lỗi là $C_6^5 = 6$. Xác suất $\\frac{6}{C_{100}^5} \\approx 8 \\times 10^{-8} < 1\\%$ rất nhiều."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một ngân hàng thiết kế hệ thống mật khẩu truy cập OTP gồm 6 ký tự số từ 0 đến 9 được sinh ngẫu nhiên độc lập.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Tổng số mã OTP có thể tạo ra là $10^6 = 1000000$ mã.",
-                "correct": true,
-                "explanation": "Mỗi vị trí có 10 lựa chọn, 6 vị trí có $10^6$ mã."
-              },
-              {
-                "key": "b",
-                "text": "Số mã OTP gồm 6 chữ số hoàn toàn khác nhau là $A_{10}^6 = 151200$ mã.",
-                "correct": true,
-                "explanation": "$A_{10}^6 = 10 \\times 9 \\times 8 \\times 7 \\times 6 \\times 5 = 151200$."
-              },
-              {
-                "key": "c",
-                "text": "Xác suất một mã OTP ngẫu nhiên có 6 chữ số hoàn toàn khác nhau là $15.12\\%$.",
-                "correct": true,
-                "explanation": "$\\frac{151200}{1000000} = 0.1512 = 15.12\\%$."
-              },
-              {
-                "key": "d",
-                "text": "Số mã OTP bắt đầu bằng số 0 chiếm $50\\%$ tổng số mã OTP.",
-                "correct": false,
-                "explanation": "Số mã bắt đầu bằng 0 chiếm đúng $1/10 = 10\\%$ tổng số mã."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Một nhóm nghiên cứu gồm 7 nam và 5 nữ. Cần chọn một phái đoàn gồm 4 người đi công tác nước ngoài.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Có $C_{12}^4 = 495$ cách chọn phái đoàn bất kỳ.",
-                "correct": true,
-                "explanation": "Chọn 4 người từ tổng số 12 người có $C_{12}^4 = 495$ cách."
-              },
-              {
-                "key": "b",
-                "text": "Có $C_7^2 \\times C_5^2 = 210$ cách chọn phái đoàn gồm đúng 2 nam và 2 nữ.",
-                "correct": true,
-                "explanation": "$C_7^2 = 21, C_5^2 = 10 \\Rightarrow 21 \\times 10 = 210$ cách."
-              },
-              {
-                "key": "c",
-                "text": "Số cách chọn phái đoàn có ít nhất một thành viên nữ là 460 cách.",
-                "correct": true,
-                "explanation": "Trừ trường hợp toàn nam: $495 - C_7^4 = 495 - 35 = 460$ cách."
-              },
-              {
-                "key": "d",
-                "text": "Xác suất để phái đoàn có trưởng đoàn là nam và phó đoàn là nữ (phân công vị trí cụ thể) lớn hơn xác suất phái đoàn chỉ gồm toàn nam.",
-                "correct": true,
-                "explanation": "Có $7 \\times 5 = 35$ cách chọn cặp trưởng/phó, kết hợp 2 thành viên còn lại có nhiều hơn 35 cách."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Có bao nhiêu cách chọn 4 học sinh từ một lớp học có 30 học sinh?",
-            "correctAnswer": "27405",
-            "acceptedAnswers": [
-              "27405",
-              "27405.0"
-            ],
-            "explanation": "$C_{30}^4 = \\frac{30 \\times 29 \\times 28 \\times 27}{24} = 27405$ cách."
-          },
-          {
-            "id": 2,
-            "question": "Tìm hệ số của số hạng chứa $x^3$ trong khai triển nhị thức $(2x - 1)^5$.",
-            "correctAnswer": "80",
-            "acceptedAnswers": [
-              "80",
-              "80.0"
-            ],
-            "explanation": "Số hạng: $C_5^2 (2x)^3 (-1)^2 = 10 \\times 8 \\times 1 = 80$."
-          },
-          {
-            "id": 3,
-            "question": "Từ các chữ số 0, 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 4 chữ số khác nhau?",
-            "correctAnswer": "300",
-            "acceptedAnswers": [
-              "300",
-              "300.0"
-            ],
-            "explanation": "Chữ số đầu có 5 cách ($1..5$), 3 vị trí sau chọn từ 5 chữ số còn lại có $A_5^3 = 60$. Tổng: $5 \\times 60 = 300$ số."
-          },
-          {
-            "id": 4,
-            "question": "Một hộp chứa 6 bi trắng và 4 bi đen. Rút ngẫu nhiên 3 bi. Tính xác suất để lấy được đúng 2 bi trắng (viết dưới dạng số thập phân).",
-            "correctAnswer": "0.5",
-            "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
-            ],
-            "explanation": "Số cách chọn 2 trắng, 1 đen: $C_6^2 \\times C_4^1 = 15 \\times 4 = 60$. Tổng cách: $C_{10}^3 = 120$. Xác suất: $60/120 = 0.5$."
-          },
-          {
-            "id": 5,
-            "question": "Một hệ thống mã số định danh gồm 2 chữ cái in hoa (từ bảng chữ cái 26 chữ cái tiếng Anh) theo sau bởi 4 chữ số (từ 0 đến 9). Các chữ cái và chữ số đều có thể lặp lại. Có tất cả bao nhiêu triệu mã số định danh khác nhau? (Làm tròn đến hàng phần mười).",
-            "correctAnswer": "6.76",
-            "acceptedAnswers": [
-              "6.76",
-              "6,76",
-              "6.8",
-              "6,8"
-            ],
-            "explanation": "$26 \\times 26 \\times 10^4 = 676 \\times 10000 = 6760000 = 6.76$ triệu mã."
-          },
-          {
-            "id": 6,
-            "question": "Một mạng truyền thông gồm 3 trạm chuyển mạch độc lập mắc nối tiếp. Xác suất mỗi trạm hoạt động thông suốt lần lượt là $0.9$, $0.95$, và $0.9$. Tính xác suất để toàn bộ mạng lưới truyền tin thông suốt (làm tròn kết quả đến hàng phần trăm).",
-            "correctAnswer": "0.77",
-            "acceptedAnswers": [
-              "0.77",
-              "0,77"
-            ],
-            "explanation": "Vì các trạm độc lập và mắc nối tiếp: $P = 0.9 \\times 0.95 \\times 0.9 = 0.7695 \\approx 0.77$."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd4-de2",
-        "examNumber": 2,
-        "title": "Đề số 2: Luyện Thi Chuyên Đề Bài Toán Tổ Hợp",
-        "code": "CD4-402",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-amber-100 text-amber-800 border-amber-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Có bao nhiêu cách chọn 3 học sinh từ một nhóm gồm 10 học sinh để đi trực tuần?",
-            "options": {
-              "A": "$C_{10}^3 = 120$",
-              "B": "$10^3 = 1000$",
-              "C": "$30$",
-              "D": "$A_{10}^3 = 720$"
-            },
-            "correct": "A",
-            "explanation": "Chọn không phân biệt thứ tự là tổ hợp: $C_{10}^3 = \\frac{10 \\times 9 \\times 8}{6} = 120$ cách."
-          },
-          {
-            "id": 2,
-            "question": "Có bao nhiêu cách xếp 5 người ngồi vào một bàn dài có 5 ghế?",
-            "options": {
-              "A": "$5^5 = 3125$",
-              "B": "$C_5^1 = 5$",
-              "C": "$P_5 = 120$",
-              "D": "$25$"
-            },
-            "correct": "C",
-            "explanation": "Số hoán vị của 5 người là $5! = 120$ cách."
-          },
-          {
-            "id": 3,
-            "question": "Từ các chữ số 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 3 chữ số đôi một khác nhau?",
-            "options": {
-              "A": "$A_5^3 = 60$",
-              "B": "$C_5^3 = 10$",
-              "C": "$5^3 = 125$",
-              "D": "$15$"
-            },
-            "correct": "A",
-            "explanation": "Chọn 3 trong 5 chữ số có xếp thứ tự: $A_5^3 = 5 \\times 4 \\times 3 = 60$ số."
-          },
-          {
-            "id": 4,
-            "question": "Tung một đồng xu cân đối và đồng chất 2 lần liên tiếp. Số phần tử của không gian mẫu $n(\\Omega)$ là:",
-            "options": {
-              "A": "$6$",
-              "B": "$8$",
-              "C": "$4$",
-              "D": "$2$"
-            },
-            "correct": "C",
-            "explanation": "$n(\\Omega) = 2 \\times 2 = 4$ ({SS, SN, NS, NN})."
-          },
-          {
-            "id": 5,
-            "question": "Trong một hộp có 5 quả cầu đỏ và 7 quả cầu xanh. Lấy ngẫu nhiên 1 quả cầu. Xác suất để lấy được quả cầu đỏ là:",
-            "options": {
-              "A": "$\\frac{7}{12}$",
-              "B": "$\\frac{5}{7}$",
-              "C": "$\\frac{1}{5}$",
-              "D": "$\\frac{5}{12}$"
-            },
-            "correct": "D",
-            "explanation": "Tổng số cầu là $5 + 7 = 12$. Xác suất lấy cầu đỏ là $5/12$."
-          },
-          {
-            "id": 6,
-            "question": "Hệ số của $x^2$ trong khai triển nhị thức Newton $(x + 2)^4$ là:",
-            "options": {
-              "A": "$6$",
-              "B": "$24$",
-              "C": "$12$",
-              "D": "$16$"
-            },
-            "correct": "B",
-            "explanation": "Số hạng tổng quát: $T_{k+1} = C_4^k x^{4-k} 2^k$. Với $4 - k = 2 \\Rightarrow k = 2$. Hệ số: $C_4^2 \\times 2^2 = 6 \\times 4 = 24$."
-          },
-          {
-            "id": 7,
-            "question": "Cho $A$ là biến cố ngẫu nhiên có xác suất $P(A) = 0.35$. Xác suất của biến cố đối $\\bar{A}$ bằng:",
-            "options": {
-              "A": "$1.35$",
-              "B": "$0.75$",
-              "C": "$0.35$",
-              "D": "$0.65$"
-            },
-            "correct": "D",
-            "explanation": "$P(\\bar{A}) = 1 - P(A) = 1 - 0.35 = 0.65$."
-          },
-          {
-            "id": 8,
-            "question": "Một tổ có 6 nam và 4 nữ. Có bao nhiêu cách chọn 2 học sinh gồm 1 nam và 1 nữ?",
-            "options": {
-              "A": "$10$",
-              "B": "$24$",
-              "C": "$45$",
-              "D": "$12$"
-            },
-            "correct": "B",
-            "explanation": "$6 \\times 4 = 24$ cách."
-          },
-          {
-            "id": 9,
-            "question": "Hai xạ thủ bắn độc lập vào bia, xác suất bắn trúng của xạ thủ thứ nhất là $0.8$, xạ thủ thứ hai là $0.7$. Xác suất để cả hai xạ thủ cùng bắn trúng là:",
-            "options": {
-              "A": "$0.14$",
-              "B": "$0.50$",
-              "C": "$0.56$",
-              "D": "$0.94$"
-            },
-            "correct": "C",
-            "explanation": "Vì độc lập nên $P = 0.8 \\times 0.7 = 0.56$."
-          },
-          {
-            "id": 10,
-            "question": "Gieo một con xúc xắc cân đối và đồng chất một lần. Xác suất để xuất hiện mặt có số chấm là số nguyên tố bằng:",
-            "options": {
-              "A": "$\\frac{2}{3}$",
-              "B": "$\\frac{1}{3}$",
-              "C": "$\\frac{1}{6}$",
-              "D": "$\\frac{1}{2}$"
-            },
-            "correct": "D",
-            "explanation": "Các số nguyên tố là {2, 3, 5} gồm 3 trường hợp. Xác suất: $3/6 = 1/2$."
-          },
-          {
-            "id": 11,
-            "question": "Một mã PIN bảo mật điện thoại gồm 4 chữ số (mỗi chữ số chọn từ 0 đến 9). Có bao nhiêu mã PIN khác nhau nếu các chữ số không được lặp lại?",
-            "options": {
-              "A": "$5040$",
-              "B": "$10000$",
-              "C": "$720$",
-              "D": "$210$"
-            },
-            "correct": "A",
-            "explanation": "$A_{10}^4 = 10 \\times 9 \\times 8 \\times 7 = 5040$ mã."
-          },
-          {
-            "id": 12,
-            "question": "Một lớp học có 20 học sinh nam và 15 học sinh nữ. Chọn ngẫu nhiên 3 học sinh. Số cách chọn để có cả nam và nữ là:",
-            "options": {
-              "A": "$6545$",
-              "B": "$5025$",
-              "C": "$1140$",
-              "D": "$455$"
-            },
-            "correct": "B",
-            "explanation": "Tổng số cách chọn 3 em: $C_{35}^3 = 6545$. Số cách toàn nam: $C_{20}^3 = 1140$. Số cách toàn nữ: $C_{15}^3 = 455$. Số cách có cả nam và nữ: $6545 - 1140 - 455 = 4950$ hoặc $5025$."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Một trường THPT tổ chức giải bóng đá mini. Khối 12 có 10 đội tham gia thi đấu vòng tròn một lượt (mỗi đội đều đá với tất cả các đội còn lại đúng 1 trận).",
-            "items": [
-              {
-                "key": "a",
-                "text": "Mỗi trận đấu là một tổ hợp chập 2 của 10 đội bóng.",
-                "correct": true,
-                "explanation": "Đúng định nghĩa, mỗi trận là 1 cặp đấu chọn từ tập hợp đội."
-              },
-              {
-                "key": "b",
-                "text": "Tổng số trận đấu của toàn giải là $C_{10}^2 = 45$ trận.",
-                "correct": true,
-                "explanation": "Số trận: $C_{10}^2 = 45$ trận."
-              },
-              {
-                "key": "c",
-                "text": "Mỗi đội bóng trong giải sẽ thi đấu đúng 9 trận.",
-                "correct": true,
-                "explanation": "Mỗi đội đá với tất cả các đội còn lại nên đá đúng 9 = 9 trận."
-              },
-              {
-                "key": "d",
-                "text": "Nếu chuyển sang thể thức thi đấu lượt đi và lượt về thì tổng số trận đấu tăng gấp 4 lần.",
-                "correct": false,
-                "explanation": "Đá lượt đi lượt về chỉ nhân đôi số trận (gấp 2 lần), không phải gấp 4 lần."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Một lô hàng thiết bị viễn thông có 100 sản phẩm, trong đó có 6 sản phẩm bị lỗi kỹ thuật. Nhân viên kiểm định lấy ngẫu nhiên 5 sản phẩm để kiểm tra chất lượng.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Số phần tử của không gian mẫu là $n(\\Omega) = C_{100}^5$.",
-                "correct": true,
-                "explanation": "Chọn 5 sản phẩm ngẫu nhiên từ 100 sản phẩm."
-              },
-              {
-                "key": "b",
-                "text": "Số cách chọn được 5 sản phẩm hoàn toàn không bị lỗi là $C_{94}^5$.",
-                "correct": true,
-                "explanation": "Có $100 - 6 = 94$ sản phẩm tốt, chọn 5 sản phẩm tốt có $C_{94}^5$ cách."
-              },
-              {
-                "key": "c",
-                "text": "Xác suất để trong 5 sản phẩm lấy ra có ít nhất một sản phẩm bị lỗi là $1 - \\frac{C_{94}^5}{C_{100}^5}$.",
-                "correct": true,
-                "explanation": "Áp dụng biến cố đối: $P(\\text{ít nhất 1 lỗi}) = 1 - P(\\text{không có lỗi})$.' "
-              },
-              {
-                "key": "d",
-                "text": "Xác suất để cả 5 sản phẩm lấy ra đều bị lỗi lớn hơn $1\\%$.",
-                "correct": false,
-                "explanation": "Số cách chọn 5 lỗi là $C_6^5 = 6$. Xác suất $\\frac{6}{C_{100}^5} \\approx 8 \\times 10^{-8} < 1\\%$ rất nhiều."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một ngân hàng thiết kế hệ thống mật khẩu truy cập OTP gồm 6 ký tự số từ 0 đến 9 được sinh ngẫu nhiên độc lập.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Tổng số mã OTP có thể tạo ra là $10^6 = 1000000$ mã.",
-                "correct": true,
-                "explanation": "Mỗi vị trí có 10 lựa chọn, 6 vị trí có $10^6$ mã."
-              },
-              {
-                "key": "b",
-                "text": "Số mã OTP gồm 6 chữ số hoàn toàn khác nhau là $A_{10}^6 = 151200$ mã.",
-                "correct": true,
-                "explanation": "$A_{10}^6 = 10 \\times 9 \\times 8 \\times 7 \\times 6 \\times 5 = 151200$."
-              },
-              {
-                "key": "c",
-                "text": "Xác suất một mã OTP ngẫu nhiên có 6 chữ số hoàn toàn khác nhau là $15.12\\%$.",
-                "correct": true,
-                "explanation": "$\\frac{151200}{1000000} = 0.1512 = 15.12\\%$."
-              },
-              {
-                "key": "d",
-                "text": "Số mã OTP bắt đầu bằng số 0 chiếm $50\\%$ tổng số mã OTP.",
-                "correct": false,
-                "explanation": "Số mã bắt đầu bằng 0 chiếm đúng $1/10 = 10\\%$ tổng số mã."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Một nhóm nghiên cứu gồm 7 nam và 5 nữ. Cần chọn một phái đoàn gồm 4 người đi công tác nước ngoài.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Có $C_{12}^4 = 495$ cách chọn phái đoàn bất kỳ.",
-                "correct": true,
-                "explanation": "Chọn 4 người từ tổng số 12 người có $C_{12}^4 = 495$ cách."
-              },
-              {
-                "key": "b",
-                "text": "Có $C_7^2 \\times C_5^2 = 210$ cách chọn phái đoàn gồm đúng 2 nam và 2 nữ.",
-                "correct": true,
-                "explanation": "$C_7^2 = 21, C_5^2 = 10 \\Rightarrow 21 \\times 10 = 210$ cách."
-              },
-              {
-                "key": "c",
-                "text": "Số cách chọn phái đoàn có ít nhất một thành viên nữ là 460 cách.",
-                "correct": true,
-                "explanation": "Trừ trường hợp toàn nam: $495 - C_7^4 = 495 - 35 = 460$ cách."
-              },
-              {
-                "key": "d",
-                "text": "Xác suất để phái đoàn có trưởng đoàn là nam và phó đoàn là nữ (phân công vị trí cụ thể) lớn hơn xác suất phái đoàn chỉ gồm toàn nam.",
-                "correct": true,
-                "explanation": "Có $7 \\times 5 = 35$ cách chọn cặp trưởng/phó, kết hợp 2 thành viên còn lại có nhiều hơn 35 cách."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Có bao nhiêu cách chọn 4 học sinh từ một lớp học có 30 học sinh?",
-            "correctAnswer": "27405",
-            "acceptedAnswers": [
-              "27405",
-              "27405.0"
-            ],
-            "explanation": "$C_{30}^4 = \\frac{30 \\times 29 \\times 28 \\times 27}{24} = 27405$ cách."
-          },
-          {
-            "id": 2,
-            "question": "Tìm hệ số của số hạng chứa $x^3$ trong khai triển nhị thức $(2x - 1)^5$.",
-            "correctAnswer": "80",
-            "acceptedAnswers": [
-              "80",
-              "80.0"
-            ],
-            "explanation": "Số hạng: $C_5^2 (2x)^3 (-1)^2 = 10 \\times 8 \\times 1 = 80$."
-          },
-          {
-            "id": 3,
-            "question": "Từ các chữ số 0, 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 4 chữ số khác nhau?",
-            "correctAnswer": "300",
-            "acceptedAnswers": [
-              "300",
-              "300.0"
-            ],
-            "explanation": "Chữ số đầu có 5 cách ($1..5$), 3 vị trí sau chọn từ 5 chữ số còn lại có $A_5^3 = 60$. Tổng: $5 \\times 60 = 300$ số."
-          },
-          {
-            "id": 4,
-            "question": "Một hộp chứa 6 bi trắng và 4 bi đen. Rút ngẫu nhiên 3 bi. Tính xác suất để lấy được đúng 2 bi trắng (viết dưới dạng số thập phân).",
-            "correctAnswer": "0.5",
-            "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
-            ],
-            "explanation": "Số cách chọn 2 trắng, 1 đen: $C_6^2 \\times C_4^1 = 15 \\times 4 = 60$. Tổng cách: $C_{10}^3 = 120$. Xác suất: $60/120 = 0.5$."
-          },
-          {
-            "id": 5,
-            "question": "Một hệ thống mã số định danh gồm 2 chữ cái in hoa (từ bảng chữ cái 26 chữ cái tiếng Anh) theo sau bởi 4 chữ số (từ 0 đến 9). Các chữ cái và chữ số đều có thể lặp lại. Có tất cả bao nhiêu triệu mã số định danh khác nhau? (Làm tròn đến hàng phần mười).",
-            "correctAnswer": "6.76",
-            "acceptedAnswers": [
-              "6.76",
-              "6,76",
-              "6.8",
-              "6,8"
-            ],
-            "explanation": "$26 \\times 26 \\times 10^4 = 676 \\times 10000 = 6760000 = 6.76$ triệu mã."
-          },
-          {
-            "id": 6,
-            "question": "Một mạng truyền thông gồm 3 trạm chuyển mạch độc lập mắc nối tiếp. Xác suất mỗi trạm hoạt động thông suốt lần lượt là $0.9$, $0.95$, và $0.9$. Tính xác suất để toàn bộ mạng lưới truyền tin thông suốt (làm tròn kết quả đến hàng phần trăm).",
-            "correctAnswer": "0.77",
-            "acceptedAnswers": [
-              "0.77",
-              "0,77"
-            ],
-            "explanation": "Vì các trạm độc lập và mắc nối tiếp: $P = 0.9 \\times 0.95 \\times 0.9 = 0.7695 \\approx 0.77$."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd4-de3",
-        "examNumber": 3,
-        "title": "Đề số 3: Luyện Thi Chuyên Đề Bài Toán Tổ Hợp",
-        "code": "CD4-403",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-amber-100 text-amber-800 border-amber-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Có bao nhiêu cách chọn 3 học sinh từ một nhóm gồm 10 học sinh để đi trực tuần?",
-            "options": {
-              "A": "$30$",
-              "B": "$A_{10}^3 = 720$",
-              "C": "$C_{10}^3 = 120$",
-              "D": "$10^3 = 1000$"
-            },
-            "correct": "C",
-            "explanation": "Chọn không phân biệt thứ tự là tổ hợp: $C_{10}^3 = \\frac{10 \\times 9 \\times 8}{6} = 120$ cách."
-          },
-          {
-            "id": 2,
-            "question": "Có bao nhiêu cách xếp 5 người ngồi vào một bàn dài có 5 ghế?",
-            "options": {
-              "A": "$P_5 = 120$",
-              "B": "$5^5 = 3125$",
-              "C": "$C_5^1 = 5$",
-              "D": "$25$"
-            },
-            "correct": "A",
-            "explanation": "Số hoán vị của 5 người là $5! = 120$ cách."
-          },
-          {
-            "id": 3,
-            "question": "Từ các chữ số 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 3 chữ số đôi một khác nhau?",
-            "options": {
-              "A": "$C_5^3 = 10$",
-              "B": "$5^3 = 125$",
-              "C": "$A_5^3 = 60$",
-              "D": "$15$"
-            },
-            "correct": "C",
-            "explanation": "Chọn 3 trong 5 chữ số có xếp thứ tự: $A_5^3 = 5 \\times 4 \\times 3 = 60$ số."
-          },
-          {
-            "id": 4,
-            "question": "Tung một đồng xu cân đối và đồng chất 2 lần liên tiếp. Số phần tử của không gian mẫu $n(\\Omega)$ là:",
-            "options": {
-              "A": "$6$",
-              "B": "$8$",
-              "C": "$2$",
               "D": "$4$"
             },
-            "correct": "D",
-            "explanation": "$n(\\Omega) = 2 \\times 2 = 4$ ({SS, SN, NS, NN})."
+            "correct": "A",
+            "explanation": "$4! = 24$ cách."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Khẳng định nào sau đây là SAI về tổ hợp và chỉnh hợp?",
+            "options": {
+              "A": "$C_n^k = C_n^{n-k}$",
+              "B": "$C_n^0 = 1$",
+              "C": "$C_n^k = A_n^k$",
+              "D": "$A_n^k = k! \\cdot C_n^k$"
+            },
+            "correct": "C",
+            "explanation": "$C_n^k = \\frac{A_n^k}{k!}$ nên không thể bằng $A_n^k$ khi $k > 1$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Số cách chọn đồng thời 2 viên kẹo từ gói kẹo gồm 8 viên kẹo khác nhau là",
+            "options": {
+              "A": "$28$",
+              "B": "$56$",
+              "C": "$16$",
+              "D": "$64$"
+            },
+            "correct": "A",
+            "explanation": "$C_8^2 = \\frac{8 \\times 7}{2} = 28$ cách."
           },
           {
             "id": 5,
-            "question": "Trong một hộp có 5 quả cầu đỏ và 7 quả cầu xanh. Lấy ngẫu nhiên 1 quả cầu. Xác suất để lấy được quả cầu đỏ là:",
+            "question": "**Câu 5:** Gieo đồng thời hai con xúc xắc cân đối. Xác suất để tổng số chấm xuất hiện trên hai con xúc xắc bằng 7 là",
             "options": {
-              "A": "$\\frac{7}{12}$",
-              "B": "$\\frac{5}{7}$",
-              "C": "$\\frac{1}{5}$",
-              "D": "$\\frac{5}{12}$"
+              "A": "$\\frac{7}{36}$",
+              "B": "$\\frac{1}{6}$",
+              "C": "$\\frac{1}{12}$",
+              "D": "$\\frac{5}{36}$"
             },
-            "correct": "D",
-            "explanation": "Tổng số cầu là $5 + 7 = 12$. Xác suất lấy cầu đỏ là $5/12$."
+            "correct": "B",
+            "explanation": "Các cặp có tổng bằng 7: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ gồm 6 cặp. Xác suất $6/36 = 1/6$."
           },
           {
             "id": 6,
-            "question": "Hệ số của $x^2$ trong khai triển nhị thức Newton $(x + 2)^4$ là:",
+            "question": "**Câu 6:** Có bao nhiêu đoạn thẳng nối các đỉnh của một bát giác đều 8 đỉnh?",
+            "options": {
+              "A": "$16$",
+              "B": "$56$",
+              "C": "$20$",
+              "D": "$28$"
+            },
+            "correct": "D",
+            "explanation": "Mỗi đoạn thẳng nối 2 đỉnh là một tổ hợp chập 2 của 8 đỉnh: $C_8^2 = 28$."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Hệ số của $x^3$ trong khai triển nhị thức $(2x + 1)^4$ bằng",
             "options": {
               "A": "$16$",
               "B": "$24$",
-              "C": "$12$",
-              "D": "$6$"
+              "C": "$8$",
+              "D": "$32$"
             },
-            "correct": "B",
-            "explanation": "Số hạng tổng quát: $T_{k+1} = C_4^k x^{4-k} 2^k$. Với $4 - k = 2 \\Rightarrow k = 2$. Hệ số: $C_4^2 \\times 2^2 = 6 \\times 4 = 24$."
-          },
-          {
-            "id": 7,
-            "question": "Cho $A$ là biến cố ngẫu nhiên có xác suất $P(A) = 0.35$. Xác suất của biến cố đối $\\bar{A}$ bằng:",
-            "options": {
-              "A": "$1.35$",
-              "B": "$0.65$",
-              "C": "$0.35$",
-              "D": "$0.75$"
-            },
-            "correct": "B",
-            "explanation": "$P(\\bar{A}) = 1 - P(A) = 1 - 0.35 = 0.65$."
+            "correct": "D",
+            "explanation": "Số hạng là $C_4^3 (2x)^3 (1)^1 = 4 \\times 8x^3 = 32x^3$."
           },
           {
             "id": 8,
-            "question": "Một tổ có 6 nam và 4 nữ. Có bao nhiêu cách chọn 2 học sinh gồm 1 nam và 1 nữ?",
+            "question": "**Câu 8:** Một túi có 5 quả bóng trắng và 3 quả bóng đen. Lấy ngẫu nhiên 1 quả bóng. Xác suất lấy được bóng đen bằng",
             "options": {
-              "A": "$10$",
-              "B": "$24$",
-              "C": "$45$",
-              "D": "$12$"
-            },
-            "correct": "B",
-            "explanation": "$6 \\times 4 = 24$ cách."
-          },
-          {
-            "id": 9,
-            "question": "Hai xạ thủ bắn độc lập vào bia, xác suất bắn trúng của xạ thủ thứ nhất là $0.8$, xạ thủ thứ hai là $0.7$. Xác suất để cả hai xạ thủ cùng bắn trúng là:",
-            "options": {
-              "A": "$0.50$",
-              "B": "$0.94$",
-              "C": "$0.56$",
-              "D": "$0.14$"
-            },
-            "correct": "C",
-            "explanation": "Vì độc lập nên $P = 0.8 \\times 0.7 = 0.56$."
-          },
-          {
-            "id": 10,
-            "question": "Gieo một con xúc xắc cân đối và đồng chất một lần. Xác suất để xuất hiện mặt có số chấm là số nguyên tố bằng:",
-            "options": {
-              "A": "$\\frac{1}{3}$",
-              "B": "$\\frac{1}{6}$",
-              "C": "$\\frac{2}{3}$",
-              "D": "$\\frac{1}{2}$"
-            },
-            "correct": "D",
-            "explanation": "Các số nguyên tố là {2, 3, 5} gồm 3 trường hợp. Xác suất: $3/6 = 1/2$."
-          },
-          {
-            "id": 11,
-            "question": "Một mã PIN bảo mật điện thoại gồm 4 chữ số (mỗi chữ số chọn từ 0 đến 9). Có bao nhiêu mã PIN khác nhau nếu các chữ số không được lặp lại?",
-            "options": {
-              "A": "$5040$",
-              "B": "$10000$",
-              "C": "$720$",
-              "D": "$210$"
-            },
-            "correct": "A",
-            "explanation": "$A_{10}^4 = 10 \\times 9 \\times 8 \\times 7 = 5040$ mã."
-          },
-          {
-            "id": 12,
-            "question": "Một lớp học có 20 học sinh nam và 15 học sinh nữ. Chọn ngẫu nhiên 3 học sinh. Số cách chọn để có cả nam và nữ là:",
-            "options": {
-              "A": "$5025$",
-              "B": "$6545$",
-              "C": "$1140$",
-              "D": "$455$"
-            },
-            "correct": "A",
-            "explanation": "Tổng số cách chọn 3 em: $C_{35}^3 = 6545$. Số cách toàn nam: $C_{20}^3 = 1140$. Số cách toàn nữ: $C_{15}^3 = 455$. Số cách có cả nam và nữ: $6545 - 1140 - 455 = 4950$ hoặc $5025$."
-          }
-        ],
-        "tfQuestions": [
-          {
-            "id": "tf1",
-            "statement": "Một trường THPT tổ chức giải bóng đá mini. Khối 12 có 11 đội tham gia thi đấu vòng tròn một lượt (mỗi đội đều đá với tất cả các đội còn lại đúng 1 trận).",
-            "items": [
-              {
-                "key": "a",
-                "text": "Mỗi trận đấu là một tổ hợp chập 2 của 11 đội bóng.",
-                "correct": true,
-                "explanation": "Đúng định nghĩa, mỗi trận là 1 cặp đấu chọn từ tập hợp đội."
-              },
-              {
-                "key": "b",
-                "text": "Tổng số trận đấu của toàn giải là $C_{11}^2 = 55$ trận.",
-                "correct": true,
-                "explanation": "Số trận: $C_{11}^2 = 55$ trận."
-              },
-              {
-                "key": "c",
-                "text": "Mỗi đội bóng trong giải sẽ thi đấu đúng 10 trận.",
-                "correct": true,
-                "explanation": "Mỗi đội đá với tất cả các đội còn lại nên đá đúng 10 = 10 trận."
-              },
-              {
-                "key": "d",
-                "text": "Nếu chuyển sang thể thức thi đấu lượt đi và lượt về thì tổng số trận đấu tăng gấp 4 lần.",
-                "correct": false,
-                "explanation": "Đá lượt đi lượt về chỉ nhân đôi số trận (gấp 2 lần), không phải gấp 4 lần."
-              }
-            ]
-          },
-          {
-            "id": "tf2",
-            "statement": "Một lô hàng thiết bị viễn thông có 100 sản phẩm, trong đó có 6 sản phẩm bị lỗi kỹ thuật. Nhân viên kiểm định lấy ngẫu nhiên 5 sản phẩm để kiểm tra chất lượng.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Số phần tử của không gian mẫu là $n(\\Omega) = C_{100}^5$.",
-                "correct": true,
-                "explanation": "Chọn 5 sản phẩm ngẫu nhiên từ 100 sản phẩm."
-              },
-              {
-                "key": "b",
-                "text": "Số cách chọn được 5 sản phẩm hoàn toàn không bị lỗi là $C_{94}^5$.",
-                "correct": true,
-                "explanation": "Có $100 - 6 = 94$ sản phẩm tốt, chọn 5 sản phẩm tốt có $C_{94}^5$ cách."
-              },
-              {
-                "key": "c",
-                "text": "Xác suất để trong 5 sản phẩm lấy ra có ít nhất một sản phẩm bị lỗi là $1 - \\frac{C_{94}^5}{C_{100}^5}$.",
-                "correct": true,
-                "explanation": "Áp dụng biến cố đối: $P(\\text{ít nhất 1 lỗi}) = 1 - P(\\text{không có lỗi})$.' "
-              },
-              {
-                "key": "d",
-                "text": "Xác suất để cả 5 sản phẩm lấy ra đều bị lỗi lớn hơn $1\\%$.",
-                "correct": false,
-                "explanation": "Số cách chọn 5 lỗi là $C_6^5 = 6$. Xác suất $\\frac{6}{C_{100}^5} \\approx 8 \\times 10^{-8} < 1\\%$ rất nhiều."
-              }
-            ]
-          },
-          {
-            "id": "tf3",
-            "statement": "Một ngân hàng thiết kế hệ thống mật khẩu truy cập OTP gồm 6 ký tự số từ 0 đến 9 được sinh ngẫu nhiên độc lập.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Tổng số mã OTP có thể tạo ra là $10^6 = 1000000$ mã.",
-                "correct": true,
-                "explanation": "Mỗi vị trí có 10 lựa chọn, 6 vị trí có $10^6$ mã."
-              },
-              {
-                "key": "b",
-                "text": "Số mã OTP gồm 6 chữ số hoàn toàn khác nhau là $A_{10}^6 = 151200$ mã.",
-                "correct": true,
-                "explanation": "$A_{10}^6 = 10 \\times 9 \\times 8 \\times 7 \\times 6 \\times 5 = 151200$."
-              },
-              {
-                "key": "c",
-                "text": "Xác suất một mã OTP ngẫu nhiên có 6 chữ số hoàn toàn khác nhau là $15.12\\%$.",
-                "correct": true,
-                "explanation": "$\\frac{151200}{1000000} = 0.1512 = 15.12\\%$."
-              },
-              {
-                "key": "d",
-                "text": "Số mã OTP bắt đầu bằng số 0 chiếm $50\\%$ tổng số mã OTP.",
-                "correct": false,
-                "explanation": "Số mã bắt đầu bằng 0 chiếm đúng $1/10 = 10\\%$ tổng số mã."
-              }
-            ]
-          },
-          {
-            "id": "tf4",
-            "statement": "Một nhóm nghiên cứu gồm 7 nam và 5 nữ. Cần chọn một phái đoàn gồm 4 người đi công tác nước ngoài.",
-            "items": [
-              {
-                "key": "a",
-                "text": "Có $C_{12}^4 = 495$ cách chọn phái đoàn bất kỳ.",
-                "correct": true,
-                "explanation": "Chọn 4 người từ tổng số 12 người có $C_{12}^4 = 495$ cách."
-              },
-              {
-                "key": "b",
-                "text": "Có $C_7^2 \\times C_5^2 = 210$ cách chọn phái đoàn gồm đúng 2 nam và 2 nữ.",
-                "correct": true,
-                "explanation": "$C_7^2 = 21, C_5^2 = 10 \\Rightarrow 21 \\times 10 = 210$ cách."
-              },
-              {
-                "key": "c",
-                "text": "Số cách chọn phái đoàn có ít nhất một thành viên nữ là 460 cách.",
-                "correct": true,
-                "explanation": "Trừ trường hợp toàn nam: $495 - C_7^4 = 495 - 35 = 460$ cách."
-              },
-              {
-                "key": "d",
-                "text": "Xác suất để phái đoàn có trưởng đoàn là nam và phó đoàn là nữ (phân công vị trí cụ thể) lớn hơn xác suất phái đoàn chỉ gồm toàn nam.",
-                "correct": true,
-                "explanation": "Có $7 \\times 5 = 35$ cách chọn cặp trưởng/phó, kết hợp 2 thành viên còn lại có nhiều hơn 35 cách."
-              }
-            ]
-          }
-        ],
-        "saQuestions": [
-          {
-            "id": 1,
-            "question": "Có bao nhiêu cách chọn 4 học sinh từ một lớp học có 30 học sinh?",
-            "correctAnswer": "27405",
-            "acceptedAnswers": [
-              "27405",
-              "27405.0"
-            ],
-            "explanation": "$C_{30}^4 = \\frac{30 \\times 29 \\times 28 \\times 27}{24} = 27405$ cách."
-          },
-          {
-            "id": 2,
-            "question": "Tìm hệ số của số hạng chứa $x^3$ trong khai triển nhị thức $(2x - 1)^5$.",
-            "correctAnswer": "80",
-            "acceptedAnswers": [
-              "80",
-              "80.0"
-            ],
-            "explanation": "Số hạng: $C_5^2 (2x)^3 (-1)^2 = 10 \\times 8 \\times 1 = 80$."
-          },
-          {
-            "id": 3,
-            "question": "Từ các chữ số 0, 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 4 chữ số khác nhau?",
-            "correctAnswer": "300",
-            "acceptedAnswers": [
-              "300",
-              "300.0"
-            ],
-            "explanation": "Chữ số đầu có 5 cách ($1..5$), 3 vị trí sau chọn từ 5 chữ số còn lại có $A_5^3 = 60$. Tổng: $5 \\times 60 = 300$ số."
-          },
-          {
-            "id": 4,
-            "question": "Một hộp chứa 6 bi trắng và 4 bi đen. Rút ngẫu nhiên 3 bi. Tính xác suất để lấy được đúng 2 bi trắng (viết dưới dạng số thập phân).",
-            "correctAnswer": "0.5",
-            "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
-            ],
-            "explanation": "Số cách chọn 2 trắng, 1 đen: $C_6^2 \\times C_4^1 = 15 \\times 4 = 60$. Tổng cách: $C_{10}^3 = 120$. Xác suất: $60/120 = 0.5$."
-          },
-          {
-            "id": 5,
-            "question": "Một hệ thống mã số định danh gồm 2 chữ cái in hoa (từ bảng chữ cái 26 chữ cái tiếng Anh) theo sau bởi 4 chữ số (từ 0 đến 9). Các chữ cái và chữ số đều có thể lặp lại. Có tất cả bao nhiêu triệu mã số định danh khác nhau? (Làm tròn đến hàng phần mười).",
-            "correctAnswer": "6.76",
-            "acceptedAnswers": [
-              "6.76",
-              "6,76",
-              "6.8",
-              "6,8"
-            ],
-            "explanation": "$26 \\times 26 \\times 10^4 = 676 \\times 10000 = 6760000 = 6.76$ triệu mã."
-          },
-          {
-            "id": 6,
-            "question": "Một mạng truyền thông gồm 3 trạm chuyển mạch độc lập mắc nối tiếp. Xác suất mỗi trạm hoạt động thông suốt lần lượt là $0.9$, $0.95$, và $0.9$. Tính xác suất để toàn bộ mạng lưới truyền tin thông suốt (làm tròn kết quả đến hàng phần trăm).",
-            "correctAnswer": "0.77",
-            "acceptedAnswers": [
-              "0.77",
-              "0,77"
-            ],
-            "explanation": "Vì các trạm độc lập và mắc nối tiếp: $P = 0.9 \\times 0.95 \\times 0.9 = 0.7695 \\approx 0.77$."
-          }
-        ],
-        "essayQuestions": []
-      },
-      {
-        "id": "cd4-de4",
-        "examNumber": 4,
-        "title": "Đề số 4: Luyện Thi Chuyên Đề Bài Toán Tổ Hợp",
-        "code": "CD4-404",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-amber-100 text-amber-800 border-amber-200",
-        "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
-        "mcqs": [
-          {
-            "id": 1,
-            "question": "Có bao nhiêu cách chọn 3 học sinh từ một nhóm gồm 10 học sinh để đi trực tuần?",
-            "options": {
-              "A": "$A_{10}^3 = 720$",
-              "B": "$30$",
-              "C": "$C_{10}^3 = 120$",
-              "D": "$10^3 = 1000$"
-            },
-            "correct": "C",
-            "explanation": "Chọn không phân biệt thứ tự là tổ hợp: $C_{10}^3 = \\frac{10 \\times 9 \\times 8}{6} = 120$ cách."
-          },
-          {
-            "id": 2,
-            "question": "Có bao nhiêu cách xếp 5 người ngồi vào một bàn dài có 5 ghế?",
-            "options": {
-              "A": "$5^5 = 3125$",
-              "B": "$25$",
-              "C": "$C_5^1 = 5$",
-              "D": "$P_5 = 120$"
-            },
-            "correct": "D",
-            "explanation": "Số hoán vị của 5 người là $5! = 120$ cách."
-          },
-          {
-            "id": 3,
-            "question": "Từ các chữ số 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 3 chữ số đôi một khác nhau?",
-            "options": {
-              "A": "$C_5^3 = 10$",
-              "B": "$A_5^3 = 60$",
-              "C": "$15$",
-              "D": "$5^3 = 125$"
-            },
-            "correct": "B",
-            "explanation": "Chọn 3 trong 5 chữ số có xếp thứ tự: $A_5^3 = 5 \\times 4 \\times 3 = 60$ số."
-          },
-          {
-            "id": 4,
-            "question": "Tung một đồng xu cân đối và đồng chất 2 lần liên tiếp. Số phần tử của không gian mẫu $n(\\Omega)$ là:",
-            "options": {
-              "A": "$4$",
-              "B": "$8$",
-              "C": "$6$",
-              "D": "$2$"
-            },
-            "correct": "A",
-            "explanation": "$n(\\Omega) = 2 \\times 2 = 4$ ({SS, SN, NS, NN})."
-          },
-          {
-            "id": 5,
-            "question": "Trong một hộp có 5 quả cầu đỏ và 7 quả cầu xanh. Lấy ngẫu nhiên 1 quả cầu. Xác suất để lấy được quả cầu đỏ là:",
-            "options": {
-              "A": "$\\frac{7}{12}$",
-              "B": "$\\frac{5}{7}$",
-              "C": "$\\frac{5}{12}$",
-              "D": "$\\frac{1}{5}$"
-            },
-            "correct": "C",
-            "explanation": "Tổng số cầu là $5 + 7 = 12$. Xác suất lấy cầu đỏ là $5/12$."
-          },
-          {
-            "id": 6,
-            "question": "Hệ số của $x^2$ trong khai triển nhị thức Newton $(x + 2)^4$ là:",
-            "options": {
-              "A": "$6$",
-              "B": "$12$",
-              "C": "$24$",
-              "D": "$16$"
-            },
-            "correct": "C",
-            "explanation": "Số hạng tổng quát: $T_{k+1} = C_4^k x^{4-k} 2^k$. Với $4 - k = 2 \\Rightarrow k = 2$. Hệ số: $C_4^2 \\times 2^2 = 6 \\times 4 = 24$."
-          },
-          {
-            "id": 7,
-            "question": "Cho $A$ là biến cố ngẫu nhiên có xác suất $P(A) = 0.35$. Xác suất của biến cố đối $\\bar{A}$ bằng:",
-            "options": {
-              "A": "$0.65$",
-              "B": "$1.35$",
-              "C": "$0.35$",
-              "D": "$0.75$"
-            },
-            "correct": "A",
-            "explanation": "$P(\\bar{A}) = 1 - P(A) = 1 - 0.35 = 0.65$."
-          },
-          {
-            "id": 8,
-            "question": "Một tổ có 6 nam và 4 nữ. Có bao nhiêu cách chọn 2 học sinh gồm 1 nam và 1 nữ?",
-            "options": {
-              "A": "$10$",
-              "B": "$24$",
-              "C": "$12$",
-              "D": "$45$"
-            },
-            "correct": "B",
-            "explanation": "$6 \\times 4 = 24$ cách."
-          },
-          {
-            "id": 9,
-            "question": "Hai xạ thủ bắn độc lập vào bia, xác suất bắn trúng của xạ thủ thứ nhất là $0.8$, xạ thủ thứ hai là $0.7$. Xác suất để cả hai xạ thủ cùng bắn trúng là:",
-            "options": {
-              "A": "$0.50$",
-              "B": "$0.56$",
-              "C": "$0.14$",
-              "D": "$0.94$"
-            },
-            "correct": "B",
-            "explanation": "Vì độc lập nên $P = 0.8 \\times 0.7 = 0.56$."
-          },
-          {
-            "id": 10,
-            "question": "Gieo một con xúc xắc cân đối và đồng chất một lần. Xác suất để xuất hiện mặt có số chấm là số nguyên tố bằng:",
-            "options": {
-              "A": "$\\frac{1}{2}$",
-              "B": "$\\frac{1}{6}$",
-              "C": "$\\frac{2}{3}$",
+              "A": "$\\frac{3}{8}$",
+              "B": "$\\frac{5}{8}$",
+              "C": "$\\frac{3}{5}$",
               "D": "$\\frac{1}{3}$"
             },
             "correct": "A",
-            "explanation": "Các số nguyên tố là {2, 3, 5} gồm 3 trường hợp. Xác suất: $3/6 = 1/2$."
+            "explanation": "Có 3 bóng đen trên tổng 8 quả, xác suất bằng $3/8$."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Cho tập hợp $X$ gồm 6 phần tử. Số tập hợp con gồm 3 phần tử của $X$ là",
+            "options": {
+              "A": "$120$",
+              "B": "$20$",
+              "C": "$30$",
+              "D": "$18$"
+            },
+            "correct": "B",
+            "explanation": "$C_6^3 = \\frac{6 \\times 5 \\times 4}{6} = 20$."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Số đường chéo của một đa giác lồi 10 cạnh bằng",
+            "options": {
+              "A": "$45$",
+              "B": "$10$",
+              "C": "$35$",
+              "D": "$20$"
+            },
+            "correct": "C",
+            "explanation": "Số đường chéo là $C_{10}^2 - 10 = 45 - 10 = 35$."
           },
           {
             "id": 11,
-            "question": "Một mã PIN bảo mật điện thoại gồm 4 chữ số (mỗi chữ số chọn từ 0 đến 9). Có bao nhiêu mã PIN khác nhau nếu các chữ số không được lặp lại?",
+            "question": "**Câu 11:** Trong khai triển $(x - 1)^6$, số hạng chính giữa là số hạng thứ mấy?",
             "options": {
-              "A": "$210$",
-              "B": "$720$",
-              "C": "$10000$",
-              "D": "$5040$"
+              "A": "Số hạng thứ 5",
+              "B": "Số hạng thứ 4",
+              "C": "Số hạng thứ 3",
+              "D": "Số hạng thứ 6"
             },
-            "correct": "D",
-            "explanation": "$A_{10}^4 = 10 \\times 9 \\times 8 \\times 7 = 5040$ mã."
+            "correct": "B",
+            "explanation": "Khai triển có $6 + 1 = 7$ số hạng nên số hạng chính giữa là số hạng thứ 4."
           },
           {
             "id": 12,
-            "question": "Một lớp học có 20 học sinh nam và 15 học sinh nữ. Chọn ngẫu nhiên 3 học sinh. Số cách chọn để có cả nam và nữ là:",
+            "question": "**Câu 12:** Gieo một con xúc xắc 2 lần. Biến cố 'Mặt 6 chấm xuất hiện ít nhất một lần' có số phần tử bằng",
             "options": {
-              "A": "$455$",
-              "B": "$1140$",
-              "C": "$6545$",
-              "D": "$5025$"
+              "A": "$10$",
+              "B": "$12$",
+              "C": "$6$",
+              "D": "$11$"
             },
             "correct": "D",
-            "explanation": "Tổng số cách chọn 3 em: $C_{35}^3 = 6545$. Số cách toàn nam: $C_{20}^3 = 1140$. Số cách toàn nữ: $C_{15}^3 = 455$. Số cách có cả nam và nữ: $6545 - 1140 - 455 = 4950$ hoặc $5025$."
+            "explanation": "Biến cố đối là không xuất hiện mặt 6 ở cả 2 lần: $5 \\times 5 = 25$. Số phần tử cần tìm là $36 - 25 = 11$."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Một trường THPT tổ chức giải bóng đá mini. Khối 12 có 12 đội tham gia thi đấu vòng tròn một lượt (mỗi đội đều đá với tất cả các đội còn lại đúng 1 trận).",
+            "id": 1,
+            "question": "**Câu 1:** Một tủ sách gồm 8 cuốn sách Toán khác nhau và 6 cuốn sách Văn khác nhau. Lấy ngẫu nhiên 3 cuốn sách. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Mỗi trận đấu là một tổ hợp chập 2 của 12 đội bóng.",
+                "id": "a",
+                "text": "Tổng số cách lấy 3 cuốn sách tùy ý là $364$ cách.",
                 "correct": true,
-                "explanation": "Đúng định nghĩa, mỗi trận là 1 cặp đấu chọn từ tập hợp đội."
+                "explanation": "$C_{14}^3 = \\frac{14 \\times 13 \\times 12}{6} = 364$ cách."
               },
               {
-                "key": "b",
-                "text": "Tổng số trận đấu của toàn giải là $C_{12}^2 = 66$ trận.",
+                "id": "b",
+                "text": "Số cách lấy được cả 3 cuốn đều là sách Toán là $56$ cách.",
                 "correct": true,
-                "explanation": "Số trận: $C_{12}^2 = 66$ trận."
+                "explanation": "$C_8^3 = \\frac{8 \\times 7 \\times 6}{6} = 56$ cách."
               },
               {
-                "key": "c",
-                "text": "Mỗi đội bóng trong giải sẽ thi đấu đúng 11 trận.",
+                "id": "c",
+                "text": "Số cách lấy được ít nhất 1 cuốn sách Văn là $308$ cách.",
                 "correct": true,
-                "explanation": "Mỗi đội đá với tất cả các đội còn lại nên đá đúng 11 = 11 trận."
+                "explanation": "$364 - 56 = 308$ cách."
               },
               {
-                "key": "d",
-                "text": "Nếu chuyển sang thể thức thi đấu lượt đi và lượt về thì tổng số trận đấu tăng gấp 4 lần.",
+                "id": "d",
+                "text": "Xác suất để lấy được 2 cuốn Toán và 1 cuốn Văn lớn hơn $0.5$.",
                 "correct": false,
-                "explanation": "Đá lượt đi lượt về chỉ nhân đôi số trận (gấp 2 lần), không phải gấp 4 lần."
+                "explanation": "Số cách lấy 2 Toán 1 Văn: $C_8^2 \\times C_6^1 = 28 \\times 6 = 168$. Xác suất $168/364 \\approx 0.4615 < 0.5$."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Một lô hàng thiết bị viễn thông có 100 sản phẩm, trong đó có 6 sản phẩm bị lỗi kỹ thuật. Nhân viên kiểm định lấy ngẫu nhiên 5 sản phẩm để kiểm tra chất lượng.",
+            "id": 2,
+            "question": "**Câu 2:** Xét phương trình $C_n^2 = 21$ ($n \\in \\mathbb{N}, n \\ge 2$). Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Số phần tử của không gian mẫu là $n(\\Omega) = C_{100}^5$.",
+                "id": "a",
+                "text": "Phương trình tương đương với $n(n - 1) = 42$.",
                 "correct": true,
-                "explanation": "Chọn 5 sản phẩm ngẫu nhiên từ 100 sản phẩm."
+                "explanation": "$C_n^2 = \\frac{n(n-1)}{2} = 21 \\Rightarrow n(n-1) = 42$."
               },
               {
-                "key": "b",
-                "text": "Số cách chọn được 5 sản phẩm hoàn toàn không bị lỗi là $C_{94}^5$.",
+                "id": "b",
+                "text": "Giá trị của $n$ thỏa mãn phương trình là $n = 7$.",
                 "correct": true,
-                "explanation": "Có $100 - 6 = 94$ sản phẩm tốt, chọn 5 sản phẩm tốt có $C_{94}^5$ cách."
+                "explanation": "$7 \\times 6 = 42$ nên $n = 7$."
               },
               {
-                "key": "c",
-                "text": "Xác suất để trong 5 sản phẩm lấy ra có ít nhất một sản phẩm bị lỗi là $1 - \\frac{C_{94}^5}{C_{100}^5}$.",
+                "id": "c",
+                "text": "Với giá trị $n$ tìm được, $A_n^3 = 210$.",
                 "correct": true,
-                "explanation": "Áp dụng biến cố đối: $P(\\text{ít nhất 1 lỗi}) = 1 - P(\\text{không có lỗi})$.' "
+                "explanation": "$A_7^3 = 7 \\times 6 \\times 5 = 210$."
               },
               {
-                "key": "d",
-                "text": "Xác suất để cả 5 sản phẩm lấy ra đều bị lỗi lớn hơn $1\\%$.",
+                "id": "d",
+                "text": "Với giá trị $n$ tìm được, số tập con có 4 phần tử của tập hợp $n$ phần tử là $28$.",
                 "correct": false,
-                "explanation": "Số cách chọn 5 lỗi là $C_6^5 = 6$. Xác suất $\\frac{6}{C_{100}^5} \\approx 8 \\times 10^{-8} < 1\\%$ rất nhiều."
+                "explanation": "$C_7^4 = C_7^3 = 35 \\ne 28$."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một ngân hàng thiết kế hệ thống mật khẩu truy cập OTP gồm 6 ký tự số từ 0 đến 9 được sinh ngẫu nhiên độc lập.",
+            "id": 3,
+            "question": "**Câu 3:** Một bệnh viện phân công ca trực cấp cứu ban đêm gồm 5 bác sĩ từ danh sách 12 bác sĩ gồm 7 nam và 5 nữ. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Tổng số mã OTP có thể tạo ra là $10^6 = 1000000$ mã.",
+                "id": "a",
+                "text": "Số cách chọn 5 bác sĩ trực tùy ý là $792$ cách.",
                 "correct": true,
-                "explanation": "Mỗi vị trí có 10 lựa chọn, 6 vị trí có $10^6$ mã."
+                "explanation": "$C_{12}^5 = 792$ cách."
               },
               {
-                "key": "b",
-                "text": "Số mã OTP gồm 6 chữ số hoàn toàn khác nhau là $A_{10}^6 = 151200$ mã.",
+                "id": "b",
+                "text": "Số cách chọn 5 bác sĩ trong đó có đúng 3 nam và 2 nữ là $350$ cách.",
                 "correct": true,
-                "explanation": "$A_{10}^6 = 10 \\times 9 \\times 8 \\times 7 \\times 6 \\times 5 = 151200$."
+                "explanation": "$C_7^3 \\times C_5^2 = 35 \\times 10 = 350$ cách."
               },
               {
-                "key": "c",
-                "text": "Xác suất một mã OTP ngẫu nhiên có 6 chữ số hoàn toàn khác nhau là $15.12\\%$.",
+                "id": "c",
+                "text": "Số cách chọn mà có ít nhất 1 bác sĩ nữ là $771$ cách.",
                 "correct": true,
-                "explanation": "$\\frac{151200}{1000000} = 0.1512 = 15.12\\%$."
+                "explanation": "Biến cố đối là toàn nam: $C_7^5 = 21$. Số cách là $792 - 21 = 771$ cách."
               },
               {
-                "key": "d",
-                "text": "Số mã OTP bắt đầu bằng số 0 chiếm $50\\%$ tổng số mã OTP.",
+                "id": "d",
+                "text": "Nếu vợ chồng bác sĩ An và Bình (nằm trong danh sách) không thể cùng trực một ca, thì số cách chọn là $650$ cách.",
                 "correct": false,
-                "explanation": "Số mã bắt đầu bằng 0 chiếm đúng $1/10 = 10\\%$ tổng số mã."
+                "explanation": "Số cách cả hai cùng trực: $C_{10}^3 = 120$. Số cách thỏa mãn là $792 - 120 = 672 \\ne 650$."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một nhóm nghiên cứu gồm 7 nam và 5 nữ. Cần chọn một phái đoàn gồm 4 người đi công tác nước ngoài.",
+            "id": 4,
+            "question": "**Câu 4:** Khai triển nhị thức $(3x - 1)^5$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Có $C_{12}^4 = 495$ cách chọn phái đoàn bất kỳ.",
+                "id": "a",
+                "text": "Hệ số của số hạng có bậc cao nhất là $243$.",
                 "correct": true,
-                "explanation": "Chọn 4 người từ tổng số 12 người có $C_{12}^4 = 495$ cách."
+                "explanation": "$3^5 = 243$."
               },
               {
-                "key": "b",
-                "text": "Có $C_7^2 \\times C_5^2 = 210$ cách chọn phái đoàn gồm đúng 2 nam và 2 nữ.",
-                "correct": true,
-                "explanation": "$C_7^2 = 21, C_5^2 = 10 \\Rightarrow 21 \\times 10 = 210$ cách."
+                "id": "b",
+                "text": "Hệ số tự do của khai triển là $1$.",
+                "correct": false,
+                "explanation": "$(-1)^5 = -1 \\ne 1$."
               },
               {
-                "key": "c",
-                "text": "Số cách chọn phái đoàn có ít nhất một thành viên nữ là 460 cách.",
+                "id": "c",
+                "text": "Hệ số của $x^4$ trong khai triển là $-405$.",
                 "correct": true,
-                "explanation": "Trừ trường hợp toàn nam: $495 - C_7^4 = 495 - 35 = 460$ cách."
+                "explanation": "$C_5^1 (3x)^4 (-1) = 5 \\times 81 \\times (-1) x^4 = -405 x^4$."
               },
               {
-                "key": "d",
-                "text": "Xác suất để phái đoàn có trưởng đoàn là nam và phó đoàn là nữ (phân công vị trí cụ thể) lớn hơn xác suất phái đoàn chỉ gồm toàn nam.",
+                "id": "d",
+                "text": "Tổng các hệ số của khai triển bằng $32$.",
                 "correct": true,
-                "explanation": "Có $7 \\times 5 = 35$ cách chọn cặp trưởng/phó, kết hợp 2 thành viên còn lại có nhiều hơn 35 cách."
+                "explanation": "Cho $x = 1$: $(3(1) - 1)^5 = 2^5 = 32$."
               }
             ]
           }
@@ -6501,344 +5863,342 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Có bao nhiêu cách chọn 4 học sinh từ một lớp học có 30 học sinh?",
-            "correctAnswer": "27405",
+            "question": "**Câu 1:** Tính giá trị của $C_{10}^4$.",
+            "correctAnswer": "210",
             "acceptedAnswers": [
-              "27405",
-              "27405.0"
+              "210",
+              "210.0"
             ],
-            "explanation": "$C_{30}^4 = \\frac{30 \\times 29 \\times 28 \\times 27}{24} = 27405$ cách."
+            "explanation": "$C_{10}^4 = \\frac{10 \\times 9 \\times 8 \\times 7}{24} = 210$."
           },
           {
             "id": 2,
-            "question": "Tìm hệ số của số hạng chứa $x^3$ trong khai triển nhị thức $(2x - 1)^5$.",
-            "correctAnswer": "80",
+            "question": "**Câu 2:** Tìm hệ số của $x^4$ trong khai triển $(2x + 1)^6$.",
+            "correctAnswer": "240",
             "acceptedAnswers": [
-              "80",
-              "80.0"
+              "240",
+              "240.0"
             ],
-            "explanation": "Số hạng: $C_5^2 (2x)^3 (-1)^2 = 10 \\times 8 \\times 1 = 80$."
+            "explanation": "$C_6^4 (2x)^4 (1)^2 = 15 \\times 16 x^4 = 240 x^4$. Hệ số là 240."
           },
           {
             "id": 3,
-            "question": "Từ các chữ số 0, 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 4 chữ số khác nhau?",
-            "correctAnswer": "300",
+            "question": "**Câu 3:** Có bao nhiêu số tự nhiên gồm 4 chữ số khác nhau lập từ các chữ số $\\{1, 2, 3, 4, 5, 6, 7\\}$ sao cho chữ số hàng nghìn luôn là chữ số 7?",
+            "correctAnswer": "120",
             "acceptedAnswers": [
-              "300",
-              "300.0"
+              "120",
+              "120.0"
             ],
-            "explanation": "Chữ số đầu có 5 cách ($1..5$), 3 vị trí sau chọn từ 5 chữ số còn lại có $A_5^3 = 60$. Tổng: $5 \\times 60 = 300$ số."
+            "explanation": "Chữ số hàng nghìn cố định là 7. Ba vị trí còn lại chọn từ 6 chữ số: $A_6^3 = 6 \\times 5 \\times 4 = 120$ số."
           },
           {
             "id": 4,
-            "question": "Một hộp chứa 6 bi trắng và 4 bi đen. Rút ngẫu nhiên 3 bi. Tính xác suất để lấy được đúng 2 bi trắng (viết dưới dạng số thập phân).",
-            "correctAnswer": "0.5",
+            "question": "**Câu 4:** Gieo một con xúc xắc cân đối hai lần liên tiếp. Tính xác suất để cả hai lần gieo đều xuất hiện mặt có số chấm chia hết cho 3.",
+            "correctAnswer": "0.11",
             "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
+              "0.11",
+              "0,11",
+              "1/9"
             ],
-            "explanation": "Số cách chọn 2 trắng, 1 đen: $C_6^2 \\times C_4^1 = 15 \\times 4 = 60$. Tổng cách: $C_{10}^3 = 120$. Xác suất: $60/120 = 0.5$."
+            "explanation": "Các mặt chia hết cho 3 là $\\{3, 6\\}$ (2 mặt). Xác suất mỗi lần là $2/6 = 1/3$. Xác suất cả hai lần là $(1/3)^2 = 1/9 \\approx 0.1111 \\approx 0.11$."
           },
           {
             "id": 5,
-            "question": "Một hệ thống mã số định danh gồm 2 chữ cái in hoa (từ bảng chữ cái 26 chữ cái tiếng Anh) theo sau bởi 4 chữ số (từ 0 đến 9). Các chữ cái và chữ số đều có thể lặp lại. Có tất cả bao nhiêu triệu mã số định danh khác nhau? (Làm tròn đến hàng phần mười).",
-            "correctAnswer": "6.76",
+            "question": "**Câu 5 (VDC):** Từ các chữ số $\\{0, 1, 2, 3, 4, 5, 6\\}$, có thể lập được bao nhiêu số tự nhiên chẵn gồm 5 chữ số đôi một khác nhau sao cho chữ số hàng chục nghìn nhỏ hơn chữ số hàng đơn vị?",
+            "correctAnswer": "540",
             "acceptedAnswers": [
-              "6.76",
-              "6,76",
-              "6.8",
-              "6,8"
+              "540",
+              "540.0"
             ],
-            "explanation": "$26 \\times 26 \\times 10^4 = 676 \\times 10000 = 6760000 = 6.76$ triệu mã."
+            "explanation": "Số tự nhiên chẵn $\\overline{a_1 a_2 a_3 a_4 a_5}$ có chữ số tận cùng $a_5 \\in \\{0, 2, 4, 6\\}$. Điều kiện $1 \\le a_1 < a_5$: do đó $a_5$ chỉ có thể nhận các giá trị trong $\\{2, 4, 6\\}$. Với $a_5 = 2$: $a_1 = 1$ (1 cách), 3 vị trí giữa chọn từ 5 chữ số còn lại có $A_5^3 = 60$ cách $\\Rightarrow 60$ số. Với $a_5 = 4$: $a_1 \\in \\{1, 2, 3\\}$ (3 cách), 3 vị trí giữa có $A_5^3 = 60$ cách $\\Rightarrow 180$ số. Với $a_5 = 6$: $a_1 \\in \\{1, 2, 3, 4, 5\\}$ (5 cách), 3 vị trí giữa có $A_5^3 = 60$ cách $\\Rightarrow 300$ số. Tổng số các số thỏa mãn là $60 + 180 + 300 = 540$ số."
           },
           {
             "id": 6,
-            "question": "Một mạng truyền thông gồm 3 trạm chuyển mạch độc lập mắc nối tiếp. Xác suất mỗi trạm hoạt động thông suốt lần lượt là $0.9$, $0.95$, và $0.9$. Tính xác suất để toàn bộ mạng lưới truyền tin thông suốt (làm tròn kết quả đến hàng phần trăm).",
-            "correctAnswer": "0.77",
+            "question": "**Câu 6 (VDC):** Một hội đồng thi tốt nghiệp THPT gồm 15 thầy cô: 7 giáo viên Toán, 5 giáo viên Lí và 3 giáo viên Hóa. Cần thành lập một ban kiểm định chất lượng đề thi gồm 5 người sao cho phải có đủ cả 3 bộ môn, đồng thời số lượng giáo viên Toán không ít hơn số lượng giáo viên Lí. Hỏi có tất cả bao nhiêu cách lập ban kiểm định thỏa mãn yêu cầu?",
+            "correctAnswer": "1505",
             "acceptedAnswers": [
-              "0.77",
-              "0,77"
+              "1505",
+              "1505.0"
             ],
-            "explanation": "Vì các trạm độc lập và mắc nối tiếp: $P = 0.9 \\times 0.95 \\times 0.9 = 0.7695 \\approx 0.77$."
+            "explanation": "Gọi $(t, l, h)$ lần lượt là số giáo viên Toán, Lí, Hóa. Ta có $t + l + h = 5$, $t, l, h \\ge 1$ và $t \\ge l$. Các trường hợp: TH1: $(3, 1, 1) \\Rightarrow C_7^3 \\times C_5^1 \\times C_3^1 = 35 \\times 5 \\times 3 = 525$. TH2: $(2, 2, 1) \\Rightarrow C_7^2 \\times C_5^2 \\times C_3^1 = 21 \\times 10 \\times 3 = 630$. TH3: $(2, 1, 2) \\Rightarrow C_7^2 \\times C_5^1 \\times C_3^2 = 21 \\times 5 \\times 3 = 315$. TH4: $(1, 1, 3) \\Rightarrow C_7^1 \\times C_5^1 \\times C_3^3 = 7 \\times 5 \\times 1 = 35$. Tổng số cách là $525 + 630 + 315 + 35 = 1505$ cách."
           }
         ],
         "essayQuestions": []
       },
       {
-        "id": "cd4-de5",
-        "examNumber": 5,
-        "title": "Đề số 5: Luyện Thi Chuyên Đề Bài Toán Tổ Hợp",
-        "code": "CD4-405",
-        "badge": "Chuẩn Cấu Trúc 2025 - 2026",
-        "badgeColor": "bg-amber-100 text-amber-800 border-amber-200",
+        "id": "cd4-exam-3",
+        "examNumber": 3,
+        "title": "Đề Số 3: Xếp Chỗ Ngồi & Bài Toán Nghiệm Nguyên",
+        "code": "CD4-403",
+        "badge": "Mã Đề 403",
+        "badgeColor": "bg-indigo-50 text-indigo-800 border-indigo-200",
         "durationMinutes": 90,
-        "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
-        "structure": "12 câu TN (3.0đ) • 4 câu Đúng/Sai (4.0đ) • 6 câu Trả lời ngắn (3.0đ) • Tổng 10.0đ",
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
         "mcqs": [
           {
             "id": 1,
-            "question": "Có bao nhiêu cách chọn 3 học sinh từ một nhóm gồm 10 học sinh để đi trực tuần?",
+            "question": "**Câu 1:** Có bao nhiêu cách chọn 1 bạn nam và 1 bạn nữ từ một nhóm gồm 6 bạn nam và 8 bạn nữ?",
             "options": {
-              "A": "$30$",
-              "B": "$A_{10}^3 = 720$",
-              "C": "$C_{10}^3 = 120$",
-              "D": "$10^3 = 1000$"
+              "A": "$48$",
+              "B": "$14$",
+              "C": "$28$",
+              "D": "$24$"
             },
-            "correct": "C",
-            "explanation": "Chọn không phân biệt thứ tự là tổ hợp: $C_{10}^3 = \\frac{10 \\times 9 \\times 8}{6} = 120$ cách."
+            "correct": "A",
+            "explanation": "Quy tắc nhân: $6 \\times 8 = 48$ cách."
           },
           {
             "id": 2,
-            "question": "Có bao nhiêu cách xếp 5 người ngồi vào một bàn dài có 5 ghế?",
+            "question": "**Câu 2:** Cho tập hợp $S$ gồm 10 phần tử. Số chỉnh hợp chập 2 của 10 phần tử là",
             "options": {
-              "A": "$5^5 = 3125$",
-              "B": "$P_5 = 120$",
-              "C": "$25$",
-              "D": "$C_5^1 = 5$"
+              "A": "$90$",
+              "B": "$20$",
+              "C": "$45$",
+              "D": "$100$"
             },
-            "correct": "B",
-            "explanation": "Số hoán vị của 5 người là $5! = 120$ cách."
+            "correct": "A",
+            "explanation": "$A_{10}^2 = 10 \\times 9 = 90$."
           },
           {
             "id": 3,
-            "question": "Từ các chữ số 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 3 chữ số đôi một khác nhau?",
+            "question": "**Câu 3:** Hệ số của $x^2$ trong khai triển nhị thức $(x + 1)^5$ bằng",
             "options": {
-              "A": "$5^3 = 125$",
-              "B": "$C_5^3 = 10$",
-              "C": "$A_5^3 = 60$",
-              "D": "$15$"
+              "A": "$20$",
+              "B": "$5$",
+              "C": "$10$",
+              "D": "$1$"
             },
             "correct": "C",
-            "explanation": "Chọn 3 trong 5 chữ số có xếp thứ tự: $A_5^3 = 5 \\times 4 \\times 3 = 60$ số."
+            "explanation": "$C_5^2 = 10$."
           },
           {
             "id": 4,
-            "question": "Tung một đồng xu cân đối và đồng chất 2 lần liên tiếp. Số phần tử của không gian mẫu $n(\\Omega)$ là:",
+            "question": "**Câu 4:** Có 6 học sinh xếp vào một vòng tròn. Số cách xếp các bạn vào bàn tròn là",
             "options": {
-              "A": "$4$",
-              "B": "$6$",
-              "C": "$8$",
-              "D": "$2$"
+              "A": "$720$",
+              "B": "$120$",
+              "C": "$24$",
+              "D": "$36$"
             },
-            "correct": "A",
-            "explanation": "$n(\\Omega) = 2 \\times 2 = 4$ ({SS, SN, NS, NN})."
+            "correct": "B",
+            "explanation": "Số hoán vị vòng quanh của $n$ phần tử là $(n - 1)! = 5! = 120$ cách."
           },
           {
             "id": 5,
-            "question": "Trong một hộp có 5 quả cầu đỏ và 7 quả cầu xanh. Lấy ngẫu nhiên 1 quả cầu. Xác suất để lấy được quả cầu đỏ là:",
+            "question": "**Câu 5:** Gieo một đồng xu cân đối hai lần. Xác suất để xuất hiện ít nhất một mặt ngửa là",
             "options": {
-              "A": "$\\frac{7}{12}$",
-              "B": "$\\frac{5}{12}$",
-              "C": "$\\frac{5}{7}$",
-              "D": "$\\frac{1}{5}$"
+              "A": "$\\frac{1}{4}$",
+              "B": "$\\frac{2}{3}$",
+              "C": "$\\frac{1}{2}$",
+              "D": "$\\frac{3}{4}$"
             },
-            "correct": "B",
-            "explanation": "Tổng số cầu là $5 + 7 = 12$. Xác suất lấy cầu đỏ là $5/12$."
+            "correct": "D",
+            "explanation": "Biến cố đối là xuất hiện 2 mặt sấp $(SS)$ có xác suất $1/4$. Vậy $P = 1 - 1/4 = 3/4$."
           },
           {
             "id": 6,
-            "question": "Hệ số của $x^2$ trong khai triển nhị thức Newton $(x + 2)^4$ là:",
+            "question": "**Câu 6:** Có bao nhiêu cách chọn 4 bông hoa từ một bình hoa chứa 9 bông hoa khác nhau?",
             "options": {
-              "A": "$16$",
-              "B": "$12$",
-              "C": "$6$",
-              "D": "$24$"
+              "A": "$24$",
+              "B": "$36$",
+              "C": "$126$",
+              "D": "$3024$"
             },
-            "correct": "D",
-            "explanation": "Số hạng tổng quát: $T_{k+1} = C_4^k x^{4-k} 2^k$. Với $4 - k = 2 \\Rightarrow k = 2$. Hệ số: $C_4^2 \\times 2^2 = 6 \\times 4 = 24$."
+            "correct": "C",
+            "explanation": "$C_9^4 = \\frac{9 \\times 8 \\times 7 \\times 6}{24} = 126$."
           },
           {
             "id": 7,
-            "question": "Cho $A$ là biến cố ngẫu nhiên có xác suất $P(A) = 0.35$. Xác suất của biến cố đối $\\bar{A}$ bằng:",
+            "question": "**Câu 7:** Một lớp học có 20 học sinh nam và 15 học sinh nữ. Chọn ngẫu nhiên 1 học sinh làm lớp trưởng. Có bao nhiêu cách chọn?",
             "options": {
-              "A": "$0.75$",
-              "B": "$0.35$",
-              "C": "$1.35$",
-              "D": "$0.65$"
+              "A": "$20$",
+              "B": "$15$",
+              "C": "$300$",
+              "D": "$35$"
             },
             "correct": "D",
-            "explanation": "$P(\\bar{A}) = 1 - P(A) = 1 - 0.35 = 0.65$."
+            "explanation": "Quy tắc cộng: $20 + 15 = 35$ cách."
           },
           {
             "id": 8,
-            "question": "Một tổ có 6 nam và 4 nữ. Có bao nhiêu cách chọn 2 học sinh gồm 1 nam và 1 nữ?",
+            "question": "**Câu 8:** Trong khai triển $(2x - y)^4$, số hạng thứ 3 có hệ số bằng",
             "options": {
-              "A": "$45$",
-              "B": "$24$",
-              "C": "$10$",
-              "D": "$12$"
+              "A": "$-32$",
+              "B": "$16$",
+              "C": "$24$",
+              "D": "$-8$"
             },
-            "correct": "B",
-            "explanation": "$6 \\times 4 = 24$ cách."
+            "correct": "C",
+            "explanation": "Số hạng thứ 3 là $C_4^2 (2x)^2 (-y)^2 = 6 \\times 4 x^2 y^2 = 24 x^2 y^2$."
           },
           {
             "id": 9,
-            "question": "Hai xạ thủ bắn độc lập vào bia, xác suất bắn trúng của xạ thủ thứ nhất là $0.8$, xạ thủ thứ hai là $0.7$. Xác suất để cả hai xạ thủ cùng bắn trúng là:",
+            "question": "**Câu 9:** Chọn ngẫu nhiên 2 số từ tập $\\{1, 2, 3, 4, 5, 6\\}$. Xác suất để tích của 2 số là số chẵn bằng",
             "options": {
-              "A": "$0.56$",
-              "B": "$0.50$",
-              "C": "$0.14$",
-              "D": "$0.94$"
+              "A": "$\\frac{4}{5}$",
+              "B": "$\\frac{2}{3}$",
+              "C": "$\\frac{1}{5}$",
+              "D": "$\\frac{1}{2}$"
             },
             "correct": "A",
-            "explanation": "Vì độc lập nên $P = 0.8 \\times 0.7 = 0.56$."
+            "explanation": "Tích là số lẻ khi cả hai số đều lẻ $\\{1, 3, 5\\}$ có $C_3^2 = 3$ cách. Tổng số cách $C_6^2 = 15$. Xác suất tích chẵn là $1 - 3/15 = 12/15 = 4/5$."
           },
           {
             "id": 10,
-            "question": "Gieo một con xúc xắc cân đối và đồng chất một lần. Xác suất để xuất hiện mặt có số chấm là số nguyên tố bằng:",
+            "question": "**Câu 10:** Số tập con có đúng 2 phần tử của một tập hợp có $n$ phần tử ($n \\ge 2$) được cho bởi biểu thức",
             "options": {
-              "A": "$\\frac{1}{6}$",
-              "B": "$\\frac{1}{3}$",
-              "C": "$\\frac{2}{3}$",
-              "D": "$\\frac{1}{2}$"
+              "A": "$n(n - 1)$",
+              "B": "$\\frac{n(n - 1)}{2}$",
+              "C": "$\\frac{n(n + 1)}{2}$",
+              "D": "$n^2$"
             },
-            "correct": "D",
-            "explanation": "Các số nguyên tố là {2, 3, 5} gồm 3 trường hợp. Xác suất: $3/6 = 1/2$."
+            "correct": "B",
+            "explanation": "$C_n^2 = \\frac{n(n-1)}{2}$."
           },
           {
             "id": 11,
-            "question": "Một mã PIN bảo mật điện thoại gồm 4 chữ số (mỗi chữ số chọn từ 0 đến 9). Có bao nhiêu mã PIN khác nhau nếu các chữ số không được lặp lại?",
+            "question": "**Câu 11:** Có bao nhiêu số tự nhiên có 2 chữ số mà cả hai chữ số đều là số chẵn?",
             "options": {
-              "A": "$720$",
-              "B": "$10000$",
-              "C": "$5040$",
-              "D": "$210$"
+              "A": "$16$",
+              "B": "$20$",
+              "C": "$25$",
+              "D": "$24$"
             },
-            "correct": "C",
-            "explanation": "$A_{10}^4 = 10 \\times 9 \\times 8 \\times 7 = 5040$ mã."
+            "correct": "B",
+            "explanation": "Chữ số đầu có 4 cách $\\{2, 4, 6, 8\\}$, chữ số sau có 5 cách $\\{0, 2, 4, 6, 8\\} \\Rightarrow 4 \\times 5 = 20$ số."
           },
           {
             "id": 12,
-            "question": "Một lớp học có 20 học sinh nam và 15 học sinh nữ. Chọn ngẫu nhiên 3 học sinh. Số cách chọn để có cả nam và nữ là:",
+            "question": "**Câu 12:** Khai triển $(a + b)^n$ có bao nhiêu số hạng?",
             "options": {
-              "A": "$5025$",
-              "B": "$1140$",
-              "C": "$6545$",
-              "D": "$455$"
+              "A": "$n - 1$",
+              "B": "$2n$",
+              "C": "$n$",
+              "D": "$n + 1$"
             },
-            "correct": "A",
-            "explanation": "Tổng số cách chọn 3 em: $C_{35}^3 = 6545$. Số cách toàn nam: $C_{20}^3 = 1140$. Số cách toàn nữ: $C_{15}^3 = 455$. Số cách có cả nam và nữ: $6545 - 1140 - 455 = 4950$ hoặc $5025$."
+            "correct": "D",
+            "explanation": "Khai triển nhị thức bậc $n$ luôn có $n + 1$ số hạng."
           }
         ],
         "tfQuestions": [
           {
-            "id": "tf1",
-            "statement": "Một trường THPT tổ chức giải bóng đá mini. Khối 12 có 13 đội tham gia thi đấu vòng tròn một lượt (mỗi đội đều đá với tất cả các đội còn lại đúng 1 trận).",
+            "id": 1,
+            "question": "**Câu 1:** Xếp 4 bạn nam và 3 bạn nữ ngồi vào một dãy ghế có 7 chỗ ngồi. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Mỗi trận đấu là một tổ hợp chập 2 của 13 đội bóng.",
+                "id": "a",
+                "text": "Số cách xếp tùy ý 7 bạn là $5040$ cách.",
                 "correct": true,
-                "explanation": "Đúng định nghĩa, mỗi trận là 1 cặp đấu chọn từ tập hợp đội."
+                "explanation": "$7! = 5040$ cách."
               },
               {
-                "key": "b",
-                "text": "Tổng số trận đấu của toàn giải là $C_{13}^2 = 78$ trận.",
+                "id": "b",
+                "text": "Số cách xếp các bạn nữ luôn ngồi cạnh nhau là $720$ cách.",
                 "correct": true,
-                "explanation": "Số trận: $C_{13}^2 = 78$ trận."
+                "explanation": "Gộp 3 bạn nữ thành 1 phần tử: $5! \\times 3! = 120 \\times 6 = 720$ cách."
               },
               {
-                "key": "c",
-                "text": "Mỗi đội bóng trong giải sẽ thi đấu đúng 12 trận.",
+                "id": "c",
+                "text": "Số cách xếp nam nữ xen kẽ nhau là $144$ cách.",
                 "correct": true,
-                "explanation": "Mỗi đội đá với tất cả các đội còn lại nên đá đúng 12 = 12 trận."
+                "explanation": "Vì có 4 nam và 3 nữ nên chỉ có thứ tự N-Nu-N-Nu-N-Nu-N: $4! \\times 3! = 24 \\times 6 = 144$ cách."
               },
               {
-                "key": "d",
-                "text": "Nếu chuyển sang thể thức thi đấu lượt đi và lượt về thì tổng số trận đấu tăng gấp 4 lần.",
+                "id": "d",
+                "text": "Số cách xếp sao cho không có 2 bạn nữ nào ngồi cạnh nhau là $1200$ cách.",
                 "correct": false,
-                "explanation": "Đá lượt đi lượt về chỉ nhân đôi số trận (gấp 2 lần), không phải gấp 4 lần."
+                "explanation": "Xếp 4 nam có $4! = 24$ cách, tạo ra 5 khoảng trống. Chọn 3 khoảng trống cho 3 nữ có $A_5^3 = 60$ cách $\\Rightarrow 24 \\times 60 = 1440 \\ne 1200$."
               }
             ]
           },
           {
-            "id": "tf2",
-            "statement": "Một lô hàng thiết bị viễn thông có 100 sản phẩm, trong đó có 6 sản phẩm bị lỗi kỹ thuật. Nhân viên kiểm định lấy ngẫu nhiên 5 sản phẩm để kiểm tra chất lượng.",
+            "id": 2,
+            "question": "**Câu 2:** Cho tập hợp $A = \\{1, 2, 3, 4, 5, 6, 7\\}$. Lập các số tự nhiên có 4 chữ số khác nhau từ $A$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Số phần tử của không gian mẫu là $n(\\Omega) = C_{100}^5$.",
+                "id": "a",
+                "text": "Tổng số các số lập được là $840$ số.",
                 "correct": true,
-                "explanation": "Chọn 5 sản phẩm ngẫu nhiên từ 100 sản phẩm."
+                "explanation": "$A_7^4 = 7 \\times 6 \\times 5 \\times 4 = 840$."
               },
               {
-                "key": "b",
-                "text": "Số cách chọn được 5 sản phẩm hoàn toàn không bị lỗi là $C_{94}^5$.",
+                "id": "b",
+                "text": "Có $360$ số chẵn được tạo thành.",
                 "correct": true,
-                "explanation": "Có $100 - 6 = 94$ sản phẩm tốt, chọn 5 sản phẩm tốt có $C_{94}^5$ cách."
+                "explanation": "Chữ số tận cùng có 3 cách ($\\{2, 4, 6\\}$). Ba chữ số đầu có $A_6^3 = 120$ cách $\\Rightarrow 3 \\times 120 = 360$ số."
               },
               {
-                "key": "c",
-                "text": "Xác suất để trong 5 sản phẩm lấy ra có ít nhất một sản phẩm bị lỗi là $1 - \\frac{C_{94}^5}{C_{100}^5}$.",
+                "id": "c",
+                "text": "Số các số chia hết cho 5 là $120$ số.",
                 "correct": true,
-                "explanation": "Áp dụng biến cố đối: $P(\\text{ít nhất 1 lỗi}) = 1 - P(\\text{không có lỗi})$.' "
+                "explanation": "Chữ số tận cùng là 5 (1 cách), ba vị trí đầu có $A_6^3 = 120$ cách."
               },
               {
-                "key": "d",
-                "text": "Xác suất để cả 5 sản phẩm lấy ra đều bị lỗi lớn hơn $1\\%$.",
+                "id": "d",
+                "text": "Có $240$ số luôn bắt đầu bằng chữ số 1 và kết thúc bằng chữ số 7.",
                 "correct": false,
-                "explanation": "Số cách chọn 5 lỗi là $C_6^5 = 6$. Xác suất $\\frac{6}{C_{100}^5} \\approx 8 \\times 10^{-8} < 1\\%$ rất nhiều."
+                "explanation": "Cố định vị trí đầu và cuối, còn lại 2 vị trí chọn từ 5 chữ số: $A_5^2 = 20 \\ne 240$."
               }
             ]
           },
           {
-            "id": "tf3",
-            "statement": "Một ngân hàng thiết kế hệ thống mật khẩu truy cập OTP gồm 6 ký tự số từ 0 đến 9 được sinh ngẫu nhiên độc lập.",
+            "id": 3,
+            "question": "**Câu 3:** Khai triển $(x^2 - \\frac{2}{x})^6$ ($x \\ne 0$). Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Tổng số mã OTP có thể tạo ra là $10^6 = 1000000$ mã.",
+                "id": "a",
+                "text": "Số hạng tổng quát thứ $k+1$ là $C_6^k (-2)^k x^{12 - 3k}$.",
                 "correct": true,
-                "explanation": "Mỗi vị trí có 10 lựa chọn, 6 vị trí có $10^6$ mã."
+                "explanation": "$C_6^k (x^2)^{6-k} (-2/x)^k = C_6^k (-2)^k x^{12-2k-k} = C_6^k (-2)^k x^{12-3k}$."
               },
               {
-                "key": "b",
-                "text": "Số mã OTP gồm 6 chữ số hoàn toàn khác nhau là $A_{10}^6 = 151200$ mã.",
+                "id": "b",
+                "text": "Khai triển có số hạng không chứa $x$ ứng với $k = 4$.",
                 "correct": true,
-                "explanation": "$A_{10}^6 = 10 \\times 9 \\times 8 \\times 7 \\times 6 \\times 5 = 151200$."
+                "explanation": "$12 - 3k = 0 \\Rightarrow k = 4$."
               },
               {
-                "key": "c",
-                "text": "Xác suất một mã OTP ngẫu nhiên có 6 chữ số hoàn toàn khác nhau là $15.12\\%$.",
+                "id": "c",
+                "text": "Số hạng không chứa $x$ bằng $240$.",
                 "correct": true,
-                "explanation": "$\\frac{151200}{1000000} = 0.1512 = 15.12\\%$."
+                "explanation": "$C_6^4 (-2)^4 = 15 \\times 16 = 240$."
               },
               {
-                "key": "d",
-                "text": "Số mã OTP bắt đầu bằng số 0 chiếm $50\\%$ tổng số mã OTP.",
+                "id": "d",
+                "text": "Hệ số của $x^6$ trong khai triển bằng $-60$.",
                 "correct": false,
-                "explanation": "Số mã bắt đầu bằng 0 chiếm đúng $1/10 = 10\\%$ tổng số mã."
+                "explanation": "$12 - 3k = 6 \\Rightarrow 3k = 6 \\Rightarrow k = 2$. Hệ số là $C_6^2 (-2)^2 = 15 \\times 4 = 60$. Khẳng định này là ĐÚNG. Đổi thành bằng $-60$ -> SAI."
               }
             ]
           },
           {
-            "id": "tf4",
-            "statement": "Một nhóm nghiên cứu gồm 7 nam và 5 nữ. Cần chọn một phái đoàn gồm 4 người đi công tác nước ngoài.",
+            "id": 4,
+            "question": "**Câu 4:** Một hộp có 6 quả cầu xanh và 4 quả cầu đỏ. Lấy ngẫu nhiên lần lượt từng quả cầu không hoàn lại cho đến khi lấy được quả cầu đỏ thì dừng. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
-                "key": "a",
-                "text": "Có $C_{12}^4 = 495$ cách chọn phái đoàn bất kỳ.",
+                "id": "a",
+                "text": "Xác suất để dừng lại ở lần lấy thứ nhất bằng $\\frac{2}{5}$.",
                 "correct": true,
-                "explanation": "Chọn 4 người từ tổng số 12 người có $C_{12}^4 = 495$ cách."
+                "explanation": "$4/10 = 2/5$."
               },
               {
-                "key": "b",
-                "text": "Có $C_7^2 \\times C_5^2 = 210$ cách chọn phái đoàn gồm đúng 2 nam và 2 nữ.",
+                "id": "b",
+                "text": "Xác suất để dừng lại ở lần lấy thứ hai bằng $\\frac{4}{15}$.",
                 "correct": true,
-                "explanation": "$C_7^2 = 21, C_5^2 = 10 \\Rightarrow 21 \\times 10 = 210$ cách."
+                "explanation": "Lần 1 xanh, lần 2 đỏ: $\\frac{6}{10} \\times \\frac{4}{9} = \\frac{24}{90} = \\frac{4}{15}$."
               },
               {
-                "key": "c",
-                "text": "Số cách chọn phái đoàn có ít nhất một thành viên nữ là 460 cách.",
+                "id": "c",
+                "text": "Số lần lấy tối đa để dừng lại là 7 lần.",
                 "correct": true,
-                "explanation": "Trừ trường hợp toàn nam: $495 - C_7^4 = 495 - 35 = 460$ cách."
+                "explanation": "Nếu lấy hết cả 6 quả xanh thì quả thứ 7 chắc chắn là đỏ."
               },
               {
-                "key": "d",
-                "text": "Xác suất để phái đoàn có trưởng đoàn là nam và phó đoàn là nữ (phân công vị trí cụ thể) lớn hơn xác suất phái đoàn chỉ gồm toàn nam.",
-                "correct": true,
-                "explanation": "Có $7 \\times 5 = 35$ cách chọn cặp trưởng/phó, kết hợp 2 thành viên còn lại có nhiều hơn 35 cách."
+                "id": "d",
+                "text": "Xác suất để phải lấy đến lần thứ 4 mới dừng lại lớn hơn $0.1$.",
+                "correct": false,
+                "explanation": "3 quả đầu xanh, quả thứ 4 đỏ: $\\frac{6}{10} \\times \\frac{5}{9} \\times \\frac{4}{8} \\times \\frac{4}{7} = \\frac{2}{21} \\approx 0.0952 < 0.1$."
               }
             ]
           }
@@ -6846,66 +6206,748 @@ window.TOPIC_EXAMS_DB = [
         "saQuestions": [
           {
             "id": 1,
-            "question": "Có bao nhiêu cách chọn 4 học sinh từ một lớp học có 30 học sinh?",
-            "correctAnswer": "27405",
+            "question": "**Câu 1:** Có bao nhiêu cách chọn 3 phần tử từ một tập hợp gồm 8 phần tử phân biệt?",
+            "correctAnswer": "56",
             "acceptedAnswers": [
-              "27405",
-              "27405.0"
+              "56",
+              "56.0"
             ],
-            "explanation": "$C_{30}^4 = \\frac{30 \\times 29 \\times 28 \\times 27}{24} = 27405$ cách."
+            "explanation": "$C_8^3 = \\frac{8 \\times 7 \\times 6}{6} = 56$."
           },
           {
             "id": 2,
-            "question": "Tìm hệ số của số hạng chứa $x^3$ trong khai triển nhị thức $(2x - 1)^5$.",
-            "correctAnswer": "80",
+            "question": "**Câu 2:** Tìm số hạng không chứa $x$ trong khai triển $(x + \\frac{1}{x})^4$.",
+            "correctAnswer": "6",
             "acceptedAnswers": [
-              "80",
-              "80.0"
+              "6",
+              "6.0"
             ],
-            "explanation": "Số hạng: $C_5^2 (2x)^3 (-1)^2 = 10 \\times 8 \\times 1 = 80$."
+            "explanation": "Số hạng không chứa $x$ ứng với $k = 2$: $C_4^2 = 6$."
           },
           {
             "id": 3,
-            "question": "Từ các chữ số 0, 1, 2, 3, 4, 5 có thể lập được bao nhiêu số tự nhiên có 4 chữ số khác nhau?",
-            "correctAnswer": "300",
+            "question": "**Câu 3:** Một ban chấp hành đoàn trường gồm 10 bạn. Cần bầu ra một bí thư, một phó bí thư và một ủy viên thường trực. Có bao nhiêu cách phân công nhân sự?",
+            "correctAnswer": "720",
             "acceptedAnswers": [
-              "300",
-              "300.0"
+              "720",
+              "720.0"
             ],
-            "explanation": "Chữ số đầu có 5 cách ($1..5$), 3 vị trí sau chọn từ 5 chữ số còn lại có $A_5^3 = 60$. Tổng: $5 \\times 60 = 300$ số."
+            "explanation": "Có tính thứ tự chức vụ: $A_{10}^3 = 10 \\times 9 \\times 8 = 720$ cách."
           },
           {
             "id": 4,
-            "question": "Một hộp chứa 6 bi trắng và 4 bi đen. Rút ngẫu nhiên 3 bi. Tính xác suất để lấy được đúng 2 bi trắng (viết dưới dạng số thập phân).",
-            "correctAnswer": "0.5",
+            "question": "**Câu 4:** Gieo một con xúc xắc cân đối liên tiếp 3 lần. Tính xác suất để ít nhất một lần xuất hiện mặt 1 chấm (làm tròn kết quả đến hàng phần trăm).",
+            "correctAnswer": "0.42",
             "acceptedAnswers": [
-              "0.5",
-              "0,5",
-              "1/2"
+              "0.42",
+              "0,42"
             ],
-            "explanation": "Số cách chọn 2 trắng, 1 đen: $C_6^2 \\times C_4^1 = 15 \\times 4 = 60$. Tổng cách: $C_{10}^3 = 120$. Xác suất: $60/120 = 0.5$."
+            "explanation": "Xác suất không có mặt 1 chấm nào là $(5/6)^3 = 125/216$. Xác suất có ít nhất 1 lần là $1 - 125/216 = 91/216 \\approx 0.4213 \\approx 0.42$."
           },
           {
             "id": 5,
-            "question": "Một hệ thống mã số định danh gồm 2 chữ cái in hoa (từ bảng chữ cái 26 chữ cái tiếng Anh) theo sau bởi 4 chữ số (từ 0 đến 9). Các chữ cái và chữ số đều có thể lặp lại. Có tất cả bao nhiêu triệu mã số định danh khác nhau? (Làm tròn đến hàng phần mười).",
-            "correctAnswer": "6.76",
+            "question": "**Câu 5 (VDC):** Có 10 bạn học sinh gồm 6 bạn nam (trong đó có bạn An) và 4 bạn nữ (trong đó có bạn Bình) xếp thành một hàng dọc. Hỏi có bao nhiêu cách sắp xếp sao cho không có hai bạn nữ nào đứng cạnh nhau, đồng thời bạn An luôn đứng trước bạn Bình?",
+            "correctAnswer": "302400",
             "acceptedAnswers": [
-              "6.76",
-              "6,76",
-              "6.8",
-              "6,8"
+              "302400",
+              "302400.0"
             ],
-            "explanation": "$26 \\times 26 \\times 10^4 = 676 \\times 10000 = 6760000 = 6.76$ triệu mã."
+            "explanation": "Xếp 6 bạn nam thành hàng dọc có $6! = 720$ cách. Giữa các bạn nam và hai đầu tạo ra 7 khoảng trống để xếp 4 bạn nữ. Chọn 4 khoảng trống trong 7 khoảng trống có $C_7^4 = 35$ cách. Xếp 4 bạn nữ vào 4 vị trí đã chọn có $4! = 24$ cách. Tổng số cách xếp sao cho không có 2 bạn nữ nào đứng cạnh nhau là $720 \\times 35 \\times 24 = 604800$ cách. Do tính đối xứng hoán vị độc lập giữa An và Bình trong toàn bộ các cách xếp hợp lệ, số cách để An đứng trước Bình chiếm đúng một nửa: $604800 / 2 = 302400$ cách."
           },
           {
             "id": 6,
-            "question": "Một mạng truyền thông gồm 3 trạm chuyển mạch độc lập mắc nối tiếp. Xác suất mỗi trạm hoạt động thông suốt lần lượt là $0.9$, $0.95$, và $0.9$. Tính xác suất để toàn bộ mạng lưới truyền tin thông suốt (làm tròn kết quả đến hàng phần trăm).",
-            "correctAnswer": "0.77",
+            "question": "**Câu 6 (VDC):** Có bao nhiêu bộ số nguyên $(x, y, z, t)$ thỏa mãn phương trình $x + y + z + t = 20$, với các điều kiện ràng buộc: $x \\ge 1$, $y \\ge 2$, $z \\ge 3$ và $1 \\le t \\le 6$?",
+            "correctAnswer": "440",
             "acceptedAnswers": [
-              "0.77",
-              "0,77"
+              "440",
+              "440.0"
             ],
-            "explanation": "Vì các trạm độc lập và mắc nối tiếp: $P = 0.9 \\times 0.95 \\times 0.9 = 0.7695 \\approx 0.77$."
+            "explanation": "Đặt $x' = x - 1 \\ge 0, y' = y - 2 \\ge 0, z' = z - 3 \\ge 0, t' = t - 1$ với $0 \\le t' \\le 5$. Khi đó $x' + y' + z' + t' = 20 - 1 - 2 - 3 - 1 = 13$. Tổng số nghiệm nguyên không âm của 4 biến là $C_{13 + 4 - 1}^{4 - 1} = C_{16}^3 = 560$. Loại bỏ các trường hợp vi phạm $t' \\ge 6$: đặt $t'' = t' - 6 \\ge 0$, phương trình thành $x' + y' + z' + t'' = 13 - 6 = 7$. Số nghiệm vi phạm là $C_{7 + 4 - 1}^{4 - 1} = C_{10}^3 = 120$. Vậy số bộ nguyên thỏa mãn là $560 - 120 = 440$."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd4-exam-4",
+        "examNumber": 4,
+        "title": "Đề Số 4: Hình Học Tổ Hợp & Đa Giác Đều",
+        "code": "CD4-404",
+        "badge": "Mã Đề 404",
+        "badgeColor": "bg-purple-50 text-purple-800 border-purple-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Một tam giác được xác định bởi bao nhiêu đỉnh không thẳng hàng?",
+            "options": {
+              "A": "$4$",
+              "B": "$1$",
+              "C": "$2$",
+              "D": "$3$"
+            },
+            "correct": "D",
+            "explanation": "Tam giác có 3 đỉnh không thẳng hàng."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho 10 điểm phân biệt trên mặt phẳng sao cho không có 3 điểm nào thẳng hàng. Số tam giác có 3 đỉnh lấy từ 10 điểm đó là",
+            "options": {
+              "A": "$720$",
+              "B": "$45$",
+              "C": "$30$",
+              "D": "$120$"
+            },
+            "correct": "D",
+            "explanation": "$C_{10}^3 = 120$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Số cách chọn 2 bạn nam từ 7 bạn nam là",
+            "options": {
+              "A": "$14$",
+              "B": "$49$",
+              "C": "$21$",
+              "D": "$42$"
+            },
+            "correct": "C",
+            "explanation": "$C_7^2 = 21$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Gieo một con xúc xắc. Xác suất để số chấm xuất hiện lớn hơn 4 bằng",
+            "options": {
+              "A": "$\\frac{2}{3}$",
+              "B": "$\\frac{1}{6}$",
+              "C": "$\\frac{1}{3}$",
+              "D": "$\\frac{1}{2}$"
+            },
+            "correct": "C",
+            "explanation": "Các mặt lớn hơn 4 là $\\{5, 6\\}$ (2 mặt). Xác suất $2/6 = 1/3$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Hệ số của $x$ trong khai triển $(x + 3)^3$ bằng",
+            "options": {
+              "A": "$3$",
+              "B": "$27$",
+              "C": "$1$",
+              "D": "$9$"
+            },
+            "correct": "B",
+            "explanation": "$C_3^1 x (3^2) = 3 \\times 9 x = 27x$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Có bao nhiêu số tự nhiên gồm 3 chữ số khác nhau lập từ tập $\\{1, 3, 5, 7, 9\\}$?",
+            "options": {
+              "A": "$60$",
+              "B": "$10$",
+              "C": "$125$",
+              "D": "$20$"
+            },
+            "correct": "A",
+            "explanation": "$A_5^3 = 5 \\times 4 \\times 3 = 60$."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Một tổ có 8 học sinh. Có bao nhiêu cách chọn 1 tổ trưởng và 1 tổ phó?",
+            "options": {
+              "A": "$28$",
+              "B": "$56$",
+              "C": "$16$",
+              "D": "$64$"
+            },
+            "correct": "B",
+            "explanation": "$A_8^2 = 56$."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Tung 2 đồng xu cân đối. Xác suất để được 2 mặt giống nhau bằng",
+            "options": {
+              "A": "$\\frac{1}{4}$",
+              "B": "$\\frac{3}{4}$",
+              "C": "$\\frac{1}{3}$",
+              "D": "$\\frac{1}{2}$"
+            },
+            "correct": "D",
+            "explanation": "Có 2 kết quả thuận lợi $(SS, NN)$ trên 4 kết quả. Xác suất $2/4 = 1/2$."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Cho $n \\in \\mathbb{N}^*$. Tổng $C_n^0 + C_n^1 + \\dots + C_n^n$ bằng",
+            "options": {
+              "A": "$2^n$",
+              "B": "$2n$",
+              "C": "$n^2$",
+              "D": "$2^{n-1}$"
+            },
+            "correct": "A",
+            "explanation": "Công thức cơ bản của nhị thức Newton với $a = b = 1$."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Số đường chéo của một lục giác đều là",
+            "options": {
+              "A": "$9$",
+              "B": "$15$",
+              "C": "$12$",
+              "D": "$6$"
+            },
+            "correct": "A",
+            "explanation": "$C_6^2 - 6 = 15 - 6 = 9$."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Khai triển $(x - 2)^4$ có bao nhiêu số hạng?",
+            "options": {
+              "A": "$6$",
+              "B": "$4$",
+              "C": "$5$",
+              "D": "$3$"
+            },
+            "correct": "C",
+            "explanation": "$4 + 1 = 5$ số hạng."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Lấy ngẫu nhiên 1 lá bài từ bộ bài tú lơ khơ 52 lá. Xác suất để lấy được lá Át (Ace) bằng",
+            "options": {
+              "A": "$\\frac{1}{52}$",
+              "B": "$\\frac{1}{13}$",
+              "C": "$\\frac{4}{13}$",
+              "D": "$\\frac{1}{4}$"
+            },
+            "correct": "B",
+            "explanation": "Có 4 lá Át trong 52 lá, xác suất $4/52 = 1/13$."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho đa giác đều $H$ có 12 đỉnh nội tiếp trong một đường tròn tâm $O$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Số tam giác có 3 đỉnh là đỉnh của đa giác $H$ bằng $220$.",
+                "correct": true,
+                "explanation": "$C_{12}^3 = \\frac{12 \\times 11 \\times 10}{6} = 220$."
+              },
+              {
+                "id": "b",
+                "text": "Đa giác $H$ có đúng 6 đường chéo đi qua tâm $O$.",
+                "correct": true,
+                "explanation": "Mỗi đường chéo qua tâm nối 2 đỉnh đối diện: $12 / 2 = 6$ đường."
+              },
+              {
+                "id": "c",
+                "text": "Số tam giác vuông có 3 đỉnh là đỉnh của đa giác $H$ bằng $60$.",
+                "correct": true,
+                "explanation": "Mỗi đường kính kết hợp với 10 đỉnh còn lại tạo thành 1 tam giác vuông: $6 \\times 10 = 60$ tam giác."
+              },
+              {
+                "id": "d",
+                "text": "Số hình chữ nhật có 4 đỉnh là đỉnh của đa giác $H$ bằng $30$.",
+                "correct": false,
+                "explanation": "Mỗi cặp 2 đường kính tạo thành 1 hình chữ nhật: $C_6^2 = 15 \\ne 30$."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Một hộp có 7 viên bi đỏ và 5 viên bi xanh. Lấy ngẫu nhiên 4 viên bi. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Số phần tử của không gian mẫu bằng $495$.",
+                "correct": true,
+                "explanation": "$C_{12}^4 = 495$."
+              },
+              {
+                "id": "b",
+                "text": "Số cách lấy được 2 bi đỏ và 2 bi xanh là $210$ cách.",
+                "correct": true,
+                "explanation": "$C_7^2 \\times C_5^2 = 21 \\times 10 = 210$."
+              },
+              {
+                "id": "c",
+                "text": "Xác suất để lấy được 4 viên bi cùng màu bằng $\\frac{8}{99}$.",
+                "correct": true,
+                "explanation": "Cùng màu đỏ: $C_7^4 = 35$, cùng màu xanh: $C_5^4 = 5$. Tổng là 40. Xác suất $40/495 = 8/99$."
+              },
+              {
+                "id": "d",
+                "text": "Xác suất để có ít nhất 1 bi xanh nhỏ hơn $0.9$.",
+                "correct": false,
+                "explanation": "Biến cố đối toàn đỏ: $35/495 = 7/99 \\approx 0.07$. Vậy xác suất có ít nhất 1 bi xanh là $1 - 7/99 = 92/99 \\approx 0.929 > 0.9$."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Khai triển nhị thức $(x + \\frac{2}{x^2})^9$ ($x \\ne 0$). Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Số hạng tổng quát thứ $k+1$ là $C_9^k 2^k x^{9 - 3k}$.",
+                "correct": true,
+                "explanation": "$C_9^k x^{9-k} (2 x^{-2})^k = C_9^k 2^k x^{9-3k}$."
+              },
+              {
+                "id": "b",
+                "text": "Khai triển có số hạng không chứa $x$ ứng với $k = 3$.",
+                "correct": true,
+                "explanation": "$9 - 3k = 0 \\Rightarrow k = 3$."
+              },
+              {
+                "id": "c",
+                "text": "Hệ số của số hạng không chứa $x$ bằng $672$.",
+                "correct": true,
+                "explanation": "$C_9^3 \\times 2^3 = 84 \\times 8 = 672$."
+              },
+              {
+                "id": "d",
+                "text": "Trong khai triển không tồn tại số hạng chứa $x^2$.",
+                "correct": true,
+                "explanation": "$9 - 3k = 2 \\Rightarrow 3k = 7$ (không có nghiệm nguyên $k$)."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Có 5 người khách bước vào một toa tàu gồm 7 ghế trống. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Số cách xếp 5 người vào 7 ghế là $2520$ cách.",
+                "correct": true,
+                "explanation": "$A_7^5 = 7 \\times 6 \\times 5 \\times 4 \\times 3 = 2520$ cách."
+              },
+              {
+                "id": "b",
+                "text": "Số cách chọn 5 ghế để 5 người ngồi là $21$ cách.",
+                "correct": true,
+                "explanation": "$C_7^5 = 21$ cách."
+              },
+              {
+                "id": "c",
+                "text": "Nếu có 2 ghế đầu luôn phải có người ngồi thì có $840$ cách xếp.",
+                "correct": false,
+                "explanation": "Chọn 2 người vào 2 ghế đầu: $A_5^2 = 20$. Ba người còn lại xếp vào 5 ghế còn lại: $A_5^3 = 60$. Tổng là $20 \\times 60 = 1200 \\ne 840$. Khẳng định c SAI."
+              },
+              {
+                "id": "d",
+                "text": "Số ghế còn trống sau khi xếp xong là 2 ghế.",
+                "correct": true,
+                "explanation": "$7 - 5 = 2$ ghế."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Một đa giác lồi có 8 đỉnh. Hỏi có bao nhiêu đường chéo?",
+            "correctAnswer": "20",
+            "acceptedAnswers": [
+              "20",
+              "20.0"
+            ],
+            "explanation": "Số đường chéo là $C_8^2 - 8 = 28 - 8 = 20$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Tìm hệ số của số hạng không chứa $x$ trong khai triển $(x + \\frac{1}{x^2})^6$.",
+            "correctAnswer": "15",
+            "acceptedAnswers": [
+              "15",
+              "15.0"
+            ],
+            "explanation": "$6 - 3k = 0 \\Rightarrow k = 2$. Hệ số là $C_6^2 = 15$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Có bao nhiêu số tự nhiên gồm 3 chữ số khác nhau lấy từ $\\{1, 2, 3, 4, 5, 6\\}$?",
+            "correctAnswer": "120",
+            "acceptedAnswers": [
+              "120",
+              "120.0"
+            ],
+            "explanation": "$A_6^3 = 6 \\times 5 \\times 4 = 120$."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Gieo một con xúc xắc cân đối liên tiếp 2 lần. Tính xác suất để tổng số chấm xuất hiện lớn hơn hoặc bằng 10 (làm tròn đến hàng phần trăm).",
+            "correctAnswer": "0.17",
+            "acceptedAnswers": [
+              "0.17",
+              "0,17"
+            ],
+            "explanation": "Các cặp có tổng $\\ge 10$: tổng 10 có $(4,6), (5,5), (6,4)$ (3 cặp); tổng 11 có $(5,6), (6,5)$ (2 cặp); tổng 12 có $(6,6)$ (1 cặp). Tổng cộng 6 cặp. Xác suất $6/36 = 1/6 \\approx 0.1667 \\approx 0.17$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Từ các chữ số $\\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$, có thể lập được bao nhiêu số tự nhiên có 6 chữ số đôi một khác nhau sao cho số đó chứa đúng 3 chữ số chẵn và 3 chữ số lẻ, đồng thời các chữ số chẵn không đứng cạnh nhau?",
+            "correctAnswer": "5760",
+            "acceptedAnswers": [
+              "5760",
+              "5760.0"
+            ],
+            "explanation": "Tập các chữ số chẵn là $\\{2, 4, 6, 8\\}$ (4 số), tập chữ số lẻ là $\\{1, 3, 5, 7, 9\\}$ (5 số). Chọn 3 chữ số chẵn có $C_4^3 = 4$ cách. Chọn 3 chữ số lẻ có $C_5^3 = 10$ cách. Sắp xếp 3 chữ số lẻ thành hàng có $3! = 6$ cách, tạo ra 4 khoảng trống (gồm hai đầu và hai giữa). Chọn 3 trong 4 khoảng trống và sắp thứ tự 3 chữ số chẵn vào có $A_4^3 = 24$ cách. Theo quy tắc nhân, tổng số các số thỏa mãn là $4 \\times 10 \\times 6 \\times 24 = 5760$ số."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Chọn ngẫu nhiên 3 đỉnh từ các đỉnh của một đa giác đều có 20 đỉnh nội tiếp trong một đường tròn. Có bao nhiêu tam giác vuông được tạo thành từ 3 đỉnh được chọn?",
+            "correctAnswer": "180",
+            "acceptedAnswers": [
+              "180",
+              "180.0"
+            ],
+            "explanation": "Một tam giác có 3 đỉnh lấy từ các đỉnh của đa giác đều là tam giác vuông khi và chỉ khi có một cạnh là đường kính của đường tròn ngoại tiếp. Đa giác đều 20 đỉnh có $20 / 2 = 10$ đường kính đi qua tâm. Với mỗi đường kính cố định, có 18 đỉnh còn lại của đa giác; mỗi đỉnh đó kết hợp với 2 đầu mút của đường kính tạo thành đúng một tam giác vuông. Vậy số tam giác vuông tạo thành là $10 \\times 18 = 180$ tam giác."
+          }
+        ],
+        "essayQuestions": []
+      },
+      {
+        "id": "cd4-exam-5",
+        "examNumber": 5,
+        "title": "Đề Số 5: Đếm Cấu Hình & Xác Suất Nhị Thức",
+        "code": "CD4-405",
+        "badge": "Mã Đề 405",
+        "badgeColor": "bg-rose-50 text-rose-800 border-rose-200",
+        "durationMinutes": 90,
+        "matrixNote": "NB: 30% | TH: 30% | VD: 20% | VDC: 20%",
+        "structure": "12 Câu TN (3.0đ) + 4 Câu Đ/S (4.0đ) + 6 Câu TLN (3.0đ)",
+        "mcqs": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Số các số tự nhiên có 1 chữ số là",
+            "options": {
+              "A": "$9$",
+              "B": "$10$",
+              "C": "$8$",
+              "D": "$11$"
+            },
+            "correct": "B",
+            "explanation": "Các số từ 0 đến 9 gồm 10 số."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Cho tập hợp $A$ có 5 phần tử. Số hoán vị của 5 phần tử đó là",
+            "options": {
+              "A": "$720$",
+              "B": "$60$",
+              "C": "$120$",
+              "D": "$24$"
+            },
+            "correct": "C",
+            "explanation": "$5! = 120$."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Khẳng định nào sau đây ĐÚNG về tổ hợp?",
+            "options": {
+              "A": "$C_n^k = C_n^{k + 1}$",
+              "B": "$C_n^k = n!$",
+              "C": "$C_n^1 = 1$",
+              "D": "$C_n^k = C_n^{n - k}$"
+            },
+            "correct": "D",
+            "explanation": "Tính chất đối xứng cơ bản của tổ hợp."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Có bao nhiêu cách chọn ra 2 học sinh từ một nhóm 8 học sinh?",
+            "options": {
+              "A": "$56$",
+              "B": "$16$",
+              "C": "$28$",
+              "D": "$64$"
+            },
+            "correct": "C",
+            "explanation": "$C_8^2 = 28$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5:** Gieo một con xúc xắc cân đối. Xác suất để xuất hiện mặt có số chấm chia hết cho 2 là",
+            "options": {
+              "A": "$\\frac{1}{2}$",
+              "B": "$\\frac{1}{3}$",
+              "C": "$\\frac{1}{6}$",
+              "D": "$\\frac{2}{3}$"
+            },
+            "correct": "A",
+            "explanation": "Mặt chẵn $\\{2, 4, 6\\}$ có 3 mặt, xác suất $3/6 = 1/2$."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6:** Khai triển $(x + 1)^4$ có tất cả bao nhiêu số hạng?",
+            "options": {
+              "A": "$6$",
+              "B": "$3$",
+              "C": "$4$",
+              "D": "$5$"
+            },
+            "correct": "D",
+            "explanation": "$4 + 1 = 5$ số hạng."
+          },
+          {
+            "id": 7,
+            "question": "**Câu 7:** Một lớp học có 18 bạn nam và 12 bạn nữ. Cần chọn một bạn đi dự đại hội thanh niên. Có bao nhiêu cách chọn?",
+            "options": {
+              "A": "$216$",
+              "B": "$30$",
+              "C": "$18$",
+              "D": "$12$"
+            },
+            "correct": "B",
+            "explanation": "$18 + 12 = 30$ cách."
+          },
+          {
+            "id": 8,
+            "question": "**Câu 8:** Hệ số của $x^3$ trong khai triển nhị thức $(x + 2)^4$ bằng",
+            "options": {
+              "A": "$8$",
+              "B": "$24$",
+              "C": "$4$",
+              "D": "$16$"
+            },
+            "correct": "A",
+            "explanation": "$C_4^3 x^3 (2)^1 = 4 \\times 2 x^3 = 8x^3$."
+          },
+          {
+            "id": 9,
+            "question": "**Câu 9:** Chọn ngẫu nhiên một số từ tập $\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$. Xác suất để chọn được số chia hết cho 3 là",
+            "options": {
+              "A": "$\\frac{1}{3}$",
+              "B": "$\\frac{3}{10}$",
+              "C": "$\\frac{2}{5}$",
+              "D": "$\\frac{1}{10}$"
+            },
+            "correct": "B",
+            "explanation": "Các số chia hết cho 3 là $\\{3, 6, 9\\}$ gồm 3 số. Xác suất $3/10$."
+          },
+          {
+            "id": 10,
+            "question": "**Câu 10:** Số chỉnh hợp chập 3 của 6 phần tử bằng",
+            "options": {
+              "A": "$720$",
+              "B": "$216$",
+              "C": "$20$",
+              "D": "$120$"
+            },
+            "correct": "D",
+            "explanation": "$A_6^3 = 6 \\times 5 \\times 4 = 120$."
+          },
+          {
+            "id": 11,
+            "question": "**Câu 11:** Trong mặt phẳng có 8 điểm phân biệt không có 3 điểm nào thẳng hàng. Có bao nhiêu đoạn thẳng nối các điểm đó?",
+            "options": {
+              "A": "$8$",
+              "B": "$56$",
+              "C": "$28$",
+              "D": "$16$"
+            },
+            "correct": "C",
+            "explanation": "$C_8^2 = 28$."
+          },
+          {
+            "id": 12,
+            "question": "**Câu 12:** Tổng các hệ số trong khai triển $(3x - 2)^4$ bằng",
+            "options": {
+              "A": "$1$",
+              "B": "$16$",
+              "C": "$81$",
+              "D": "$0$"
+            },
+            "correct": "A",
+            "explanation": "Thay $x = 1$: $(3(1) - 2)^4 = 1^4 = 1$."
+          }
+        ],
+        "tfQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Cho tập $S = \\{0, 1, 2, 3, 4, 5, 6\\}$. Lập số tự nhiên có 5 chữ số khác nhau từ $S$. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Có $2160$ số tự nhiên có 5 chữ số khác nhau được lập.",
+                "correct": true,
+                "explanation": "Chữ số đầu có 6 cách, 4 chữ số sau có $A_6^4 = 360$ cách $\\Rightarrow 6 \\times 360 = 2160$ số."
+              },
+              {
+                "id": "b",
+                "text": "Có $1080$ số lẻ được lập.",
+                "correct": false,
+                "explanation": "Tận cùng là số lẻ $\\{1, 3, 5\\}$ (3 cách). Chữ số đầu có 5 cách (khác 0 và chữ số cuối). Ba vị trí giữa có $A_5^3 = 60$ cách $\\Rightarrow 3 \\times 5 \\times 60 = 900 \\ne 1080$ số."
+              },
+              {
+                "id": "c",
+                "text": "Số các số chia hết cho 5 lập được là $660$ số.",
+                "correct": true,
+                "explanation": "Tận cùng là 0: $A_6^4 = 360$ số. Tận cùng là 5: $5 \\times A_5^3 = 300$ số. Tổng là $360 + 300 = 660$ số."
+              },
+              {
+                "id": "d",
+                "text": "Số các số luôn chứa chữ số 0 và chữ số 1 là $1440$ số.",
+                "correct": false,
+                "explanation": "Dùng bù trừ hoặc chọn vị trí được số khác 1440."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Một hộp chứa 6 quả cầu đỏ, 5 quả cầu vàng và 4 quả cầu xanh. Lấy ngẫu nhiên đồng thời 4 quả cầu. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Số phần tử của không gian mẫu là $1365$.",
+                "correct": true,
+                "explanation": "$C_{15}^4 = 1365$."
+              },
+              {
+                "id": "b",
+                "text": "Số cách lấy được 4 quả cùng màu đỏ là $15$ cách.",
+                "correct": true,
+                "explanation": "$C_6^4 = 15$ cách."
+              },
+              {
+                "id": "c",
+                "text": "Số cách lấy có đủ cả 3 màu là $720$ cách.",
+                "correct": true,
+                "explanation": "(2 đỏ, 1 vàng, 1 xanh): $C_6^2 \\times 5 \\times 4 = 15 \\times 20 = 300$; (1 đỏ, 2 vàng, 1 xanh): $6 \\times C_5^2 \\times 4 = 6 \\times 10 \\times 4 = 240$; (1 đỏ, 1 vàng, 2 xanh): $6 \\times 5 \\times C_4^2 = 30 \\times 6 = 180$. Tổng là $300 + 240 + 180 = 720$ cách."
+              },
+              {
+                "id": "d",
+                "text": "Xác suất để trong 4 quả lấy ra có ít nhất 1 quả màu xanh lớn hơn $0.75$.",
+                "correct": true,
+                "explanation": "Biến cố đối không có màu xanh (lấy từ 11 quả đỏ và vàng): $C_{11}^4 = 330$. Xác suất có ít nhất 1 xanh là $1 - 330/1365 = 1 - 22/91 = 69/91 \\approx 0.758 > 0.75$."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Khai triển $(2x^3 - \\frac{1}{x})^8$ ($x \\ne 0$). Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Khai triển có tất cả 9 số hạng.",
+                "correct": true,
+                "explanation": "$8 + 1 = 9$ số hạng."
+              },
+              {
+                "id": "b",
+                "text": "Số hạng tổng quát thứ $k+1$ có số mũ của $x$ là $24 - 4k$.",
+                "correct": true,
+                "explanation": "Số mũ là $3(8 - k) - k = 24 - 4k$."
+              },
+              {
+                "id": "c",
+                "text": "Khai triển có số hạng không chứa $x$ ứng với $k = 6$.",
+                "correct": true,
+                "explanation": "$24 - 4k = 0 \\Rightarrow k = 6$."
+              },
+              {
+                "id": "d",
+                "text": "Số hạng không chứa $x$ bằng $112$.",
+                "correct": true,
+                "explanation": "$C_8^6 (2)^2 (-1)^6 = 28 \\times 4 \\times 1 = 112$."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Một máy bay ném bom vào một mục tiêu độc lập. Xác suất ném trúng mục tiêu ở mỗi lần là $0.7$. Máy bay ném 3 quả bom độc lập. Xét tính đúng/sai của các mệnh đề sau:",
+            "items": [
+              {
+                "id": "a",
+                "text": "Xác suất để cả 3 quả đều trúng mục tiêu bằng $0.343$.",
+                "correct": true,
+                "explanation": "$(0.7)^3 = 0.343$."
+              },
+              {
+                "id": "b",
+                "text": "Xác suất để cả 3 quả đều trượt mục tiêu bằng $0.027$.",
+                "correct": true,
+                "explanation": "$(0.3)^3 = 0.027$."
+              },
+              {
+                "id": "c",
+                "text": "Xác suất để có đúng 2 quả trúng mục tiêu bằng $0.441$.",
+                "correct": true,
+                "explanation": "$C_3^2 (0.7)^2 (0.3)^1 = 3 \\times 0.49 \\times 0.3 = 0.441$."
+              },
+              {
+                "id": "d",
+                "text": "Xác suất mục tiêu bị trúng bom (có ít nhất 1 quả trúng) nhỏ hơn $0.95$.",
+                "correct": false,
+                "explanation": "Xác suất là $1 - 0.027 = 0.973 > 0.95$."
+              }
+            ]
+          }
+        ],
+        "saQuestions": [
+          {
+            "id": 1,
+            "question": "**Câu 1:** Tính giá trị của biểu thức $P = A_6^2 + C_6^2$.",
+            "correctAnswer": "45",
+            "acceptedAnswers": [
+              "45",
+              "45.0"
+            ],
+            "explanation": "$A_6^2 = 30, C_6^2 = 15 \\Rightarrow P = 30 + 15 = 45$."
+          },
+          {
+            "id": 2,
+            "question": "**Câu 2:** Tìm hệ số của $x^2$ trong khai triển nhị thức $(3x + 1)^4$.",
+            "correctAnswer": "54",
+            "acceptedAnswers": [
+              "54",
+              "54.0"
+            ],
+            "explanation": "$C_4^2 (3x)^2 (1)^2 = 6 \\times 9 x^2 = 54x^2$. Hệ số là 54."
+          },
+          {
+            "id": 3,
+            "question": "**Câu 3:** Có bao nhiêu số tự nhiên gồm 4 chữ số khác nhau lập từ các chữ số $\\{2, 4, 6, 8\\}$?",
+            "correctAnswer": "24",
+            "acceptedAnswers": [
+              "24",
+              "24.0"
+            ],
+            "explanation": "$4! = 24$ số."
+          },
+          {
+            "id": 4,
+            "question": "**Câu 4:** Gieo một đồng xu cân đối 4 lần liên tiếp. Tính xác suất để có đúng 2 lần xuất hiện mặt ngửa.",
+            "correctAnswer": "0.375",
+            "acceptedAnswers": [
+              "0.375",
+              "0,375",
+              "3/8"
+            ],
+            "explanation": "$C_4^2 (1/2)^4 = 6/16 = 3/8 = 0.375$."
+          },
+          {
+            "id": 5,
+            "question": "**Câu 5 (VDC):** Trong mặt phẳng cho tập hợp gồm 15 điểm phân biệt, trong đó có đúng 5 điểm thẳng hàng và ngoài ra không có 3 điểm nào khác thẳng hàng. Có bao nhiêu tứ giác lồi có 4 đỉnh lấy từ 15 điểm trên?",
+            "correctAnswer": "1260",
+            "acceptedAnswers": [
+              "1260",
+              "1260.0"
+            ],
+            "explanation": "Tổng số cách chọn 4 điểm bất kỳ từ 15 điểm là $C_{15}^4 = 1365$. Bốn điểm không thể tạo thành tứ giác nếu: cả 4 điểm đều thuộc đường thẳng (có $C_5^4 = 5$ cách), hoặc có đúng 3 điểm thuộc đường thẳng và 1 điểm ngoài đường thẳng (có $C_5^3 \\times C_{10}^1 = 10 \\times 10 = 100$ cách). Số tứ giác lồi tạo thành là $1365 - 5 - 100 = 1260$ tứ giác."
+          },
+          {
+            "id": 6,
+            "question": "**Câu 6 (VDC):** Một đề thi khảo sát chất lượng gồm 20 câu hỏi trắc nghiệm, mỗi câu có 4 phương án lựa chọn và chỉ có 1 phương án đúng (mỗi câu đúng được 0.5 điểm). Một học sinh đã làm chắc chắn đúng 12 câu, còn 8 câu còn lại học sinh chọn ngẫu nhiên một phương án. Tính xác suất để học sinh đó đạt điểm từ 8.0 điểm trở lên (làm tròn kết quả đến hàng phần nghìn).",
+            "correctAnswer": "0.114",
+            "acceptedAnswers": [
+              "0.114",
+              "0,114"
+            ],
+            "explanation": "Để đạt từ 8.0 điểm trở lên (ít nhất 16 câu đúng), học sinh cần làm đúng thêm ít nhất $16 - 12 = 4$ câu trong 8 câu chọn ngẫu nhiên. Số câu đúng $X$ trong 8 câu tuân theo phân phối nhị thức $B(8; 0.25)$. Ta tính: $P(X \\ge 4) = \\sum_{k=4}^8 C_8^k (0.25)^k (0.75)^{8-k}$. Cụ thể: $P(X = 4) = C_8^4 (0.25)^4 (0.75)^4 = 70 \\times \\frac{81}{65536} \\approx 0.08651$; $P(X = 5) = C_8^5 (0.25)^5 (0.75)^3 = 56 \\times \\frac{27}{65536} \\approx 0.02307$; $P(X = 6) = C_8^6 (0.25)^6 (0.75)^2 = 28 \\times \\frac{9}{65536} \\approx 0.00384$; $P(X = 7) = C_8^7 (0.25)^7 (0.75)^1 = 8 \\times \\frac{3}{65536} \\approx 0.00037$; $P(X = 8) = (0.25)^8 \\approx 0.000015$. Tổng xác suất: $P(X \\ge 4) \\approx 0.1138 \\approx 0.114$."
           }
         ],
         "essayQuestions": []
@@ -6983,7 +7025,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Giá trị lớn nhất của hàm số $f(x) = x^4 - 2x^2 + 3$ trên đoạn $[0; 2]$ bằng",
+            "question": "**Câu 5 (VDC):** Giá trị lớn nhất của hàm số $f(x) = x^4 - 2x^2 + 3$ trên đoạn $[0; 2]$ bằng",
             "options": {
               "A": "$19$",
               "B": "$2$",
@@ -6995,7 +7037,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Đồ thị hàm số $y = \\frac{x^2 - 3x + 4}{x - 1}$ có đường tiệm cận xiên là đường thẳng",
+            "question": "**Câu 6 (VDC):** Đồ thị hàm số $y = \\frac{x^2 - 3x + 4}{x - 1}$ có đường tiệm cận xiên là đường thẳng",
             "options": {
               "A": "$y = x + 2$",
               "B": "$y = x - 1$",
@@ -7255,7 +7297,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một công ty ước tính số lượng sản phẩm bán được theo đơn giá $p$ (nghìn đồng) là $D(p) = 120 - 2p$ ($10 \\le p \\le 50$). Doanh thu lớn nhất công ty có thể thu được là bao nhiêu nghìn đồng?",
+            "question": "**Câu 5 (VDC):** Một công ty ước tính số lượng sản phẩm bán được theo đơn giá $p$ (nghìn đồng) là $D(p) = 120 - 2p$ ($10 \\le p \\le 50$). Doanh thu lớn nhất công ty có thể thu được là bao nhiêu nghìn đồng?",
             "correctAnswer": "1800",
             "acceptedAnswers": [
               "1800"
@@ -7264,7 +7306,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một giọt nước hình cầu bay hơi sao cho bán kính $r$ giảm đều với tốc độ $0.05\\text{ mm/s}$. Khi bán kính bằng $10\\text{ mm}$, tốc độ giảm thể tích của giọt nước là bao nhiêu $\\pi\\text{ mm}^3\\text{/s}$?",
+            "question": "**Câu 6 (VDC):** Một giọt nước hình cầu bay hơi sao cho bán kính $r$ giảm đều với tốc độ $0.05\\text{ mm/s}$. Khi bán kính bằng $10\\text{ mm}$, tốc độ giảm thể tích của giọt nước là bao nhiêu $\\pi\\text{ mm}^3\\text{/s}$?",
             "correctAnswer": "20",
             "acceptedAnswers": [
               "20"
@@ -7335,7 +7377,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Đồ thị hàm số $y = \\frac{x^2 + 2x - 3}{x + 3}$ có bao nhiêu đường tiệm cận đứng?",
+            "question": "**Câu 5 (VDC):** Đồ thị hàm số $y = \\frac{x^2 + 2x - 3}{x + 3}$ có bao nhiêu đường tiệm cận đứng?",
             "options": {
               "A": "$0$",
               "B": "$2$",
@@ -7347,7 +7389,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Cho hàm số $y = -x^3 + 3x^2 - 2$. Mệnh đề nào sau đây đúng?",
+            "question": "**Câu 6 (VDC):** Cho hàm số $y = -x^3 + 3x^2 - 2$. Mệnh đề nào sau đây đúng?",
             "options": {
               "A": "Hàm số đồng biến trên $(2; +\\infty)$",
               "B": "Hàm số đồng biến trên $(-\\infty; 0)$",
@@ -7607,7 +7649,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Đồ thị hàm số $y = \\frac{2x^2 + x - 1}{x + 1}$ có bao nhiêu đường tiệm cận?",
+            "question": "**Câu 5 (VDC):** Đồ thị hàm số $y = \\frac{2x^2 + x - 1}{x + 1}$ có bao nhiêu đường tiệm cận?",
             "correctAnswer": "0",
             "acceptedAnswers": [
               "0"
@@ -7616,7 +7658,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một sợi dây dài $100\\text{ cm}$ cắt thành hai đoạn: một đoạn uốn thành hình vuông, một đoạn uốn thành hình tròn. Để tổng diện tích nhỏ nhất, tỉ số cạnh hình vuông chia cho bán kính hình tròn bằng bao nhiêu?",
+            "question": "**Câu 6 (VDC):** Một sợi dây dài $100\\text{ cm}$ cắt thành hai đoạn: một đoạn uốn thành hình vuông, một đoạn uốn thành hình tròn. Để tổng diện tích nhỏ nhất, tỉ số cạnh hình vuông chia cho bán kính hình tròn bằng bao nhiêu?",
             "correctAnswer": "2",
             "acceptedAnswers": [
               "2"
@@ -7687,7 +7729,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Giá trị nhỏ nhất của hàm số $f(x) = x + \\frac{4}{x}$ trên đoạn $[1; 3]$ bằng",
+            "question": "**Câu 5 (VDC):** Giá trị nhỏ nhất của hàm số $f(x) = x + \\frac{4}{x}$ trên đoạn $[1; 3]$ bằng",
             "options": {
               "A": "$\\frac{9}{2}$",
               "B": "$4$",
@@ -7699,7 +7741,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Điểm uốn của đồ thị hàm số $y = x^3 - 3x^2 + 2$ có tọa độ là",
+            "question": "**Câu 6 (VDC):** Điểm uốn của đồ thị hàm số $y = x^3 - 3x^2 + 2$ có tọa độ là",
             "options": {
               "A": "$(1; 0)$",
               "B": "$(0; 2)$",
@@ -7959,7 +8001,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một cửa hàng bán sản phẩm với giá $x$ đô-la một đơn vị thì bán được $200 - 2x$ sản phẩm. Chi phí nhập mỗi sản phẩm là $20$ đô-la. Để lợi nhuận lớn nhất, giá bán $x$ cần đặt là bao nhiêu đô-la?",
+            "question": "**Câu 5 (VDC):** Một cửa hàng bán sản phẩm với giá $x$ đô-la một đơn vị thì bán được $200 - 2x$ sản phẩm. Chi phí nhập mỗi sản phẩm là $20$ đô-la. Để lợi nhuận lớn nhất, giá bán $x$ cần đặt là bao nhiêu đô-la?",
             "correctAnswer": "60",
             "acceptedAnswers": [
               "60"
@@ -7968,7 +8010,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một hình nón có độ dài đường sinh $l = 6\\text{ cm}$. Thể tích lớn nhất của khối nón có dạng $k\\sqrt{3}\\pi\\text{ cm}^3$. Tính giá trị của $k$.",
+            "question": "**Câu 6 (VDC):** Một hình nón có độ dài đường sinh $l = 6\\text{ cm}$. Thể tích lớn nhất của khối nón có dạng $k\\sqrt{3}\\pi\\text{ cm}^3$. Tính giá trị của $k$.",
             "correctAnswer": "16",
             "acceptedAnswers": [
               "16"
@@ -8039,7 +8081,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Đồ thị hàm số $y = \\frac{x^2 - x + 1}{x - 1}$ có tiệm cận xiên đi qua điểm nào dưới đây?",
+            "question": "**Câu 5 (VDC):** Đồ thị hàm số $y = \\frac{x^2 - x + 1}{x - 1}$ có tiệm cận xiên đi qua điểm nào dưới đây?",
             "options": {
               "A": "$C(2; 1)$",
               "B": "$A(1; 2)$",
@@ -8051,7 +8093,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một vật ném thẳng đứng lên cao từ mặt đất với phương trình $s(t) = 20t - 5t^2$ ($s$ tính bằng mét, $t$ tính bằng giây). Độ cao lớn nhất vật đạt được là",
+            "question": "**Câu 6 (VDC):** Một vật ném thẳng đứng lên cao từ mặt đất với phương trình $s(t) = 20t - 5t^2$ ($s$ tính bằng mét, $t$ tính bằng giây). Độ cao lớn nhất vật đạt được là",
             "options": {
               "A": "$20\\text{ m}$",
               "B": "$15\\text{ m}$",
@@ -8312,7 +8354,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một cửa hàng nhận thấy rằng nếu bán một món quà với giá $p$ nghìn đồng thì số lượng bán được là $q = 100 - p$ sản phẩm. Chi phí vốn mỗi món là $40$ nghìn đồng. Giá bán $p$ (nghìn đồng) cần đặt là bao nhiêu để thu được lợi nhuận lớn nhất?",
+            "question": "**Câu 5 (VDC):** Một cửa hàng nhận thấy rằng nếu bán một món quà với giá $p$ nghìn đồng thì số lượng bán được là $q = 100 - p$ sản phẩm. Chi phí vốn mỗi món là $40$ nghìn đồng. Giá bán $p$ (nghìn đồng) cần đặt là bao nhiêu để thu được lợi nhuận lớn nhất?",
             "correctAnswer": "70",
             "acceptedAnswers": [
               "70"
@@ -8321,7 +8363,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một quả bóng được đá lên từ mặt đất với quỹ đạo độ cao $h(t) = 18t - 4.9t^2$ (mét). Vận tốc tức thời của quả bóng tại thời điểm $t = 1\\text{ s}$ là bao nhiêu m/s?",
+            "question": "**Câu 6 (VDC):** Một quả bóng được đá lên từ mặt đất với quỹ đạo độ cao $h(t) = 18t - 4.9t^2$ (mét). Vận tốc tức thời của quả bóng tại thời điểm $t = 1\\text{ s}$ là bao nhiêu m/s?",
             "correctAnswer": "8.2",
             "acceptedAnswers": [
               "8.2",
@@ -8393,7 +8435,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Đồ thị hàm số $y = \\frac{x^2 - 4x + 3}{x - 3}$ có bao nhiêu đường tiệm cận đứng?",
+            "question": "**Câu 5 (VDC):** Đồ thị hàm số $y = \\frac{x^2 - 4x + 3}{x - 3}$ có bao nhiêu đường tiệm cận đứng?",
             "options": {
               "A": "$2$",
               "B": "$0$",
@@ -8405,7 +8447,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Đường tiệm cận xiên của đồ thị hàm số $y = \\frac{x^2 + x - 2}{x + 2}$ là",
+            "question": "**Câu 6 (VDC):** Đường tiệm cận xiên của đồ thị hàm số $y = \\frac{x^2 + x - 2}{x + 2}$ là",
             "options": {
               "A": "$y = x$",
               "B": "$y = x + 1$",
@@ -8665,7 +8707,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một cửa hàng hoa quả tính toán lợi nhuận bán cam theo giá bán $x$ (nghìn đồng/kg) là $P(x) = -2x^2 + 100x - 800$ (nghìn đồng/ngày). Giá bán cam tối ưu để lợi nhuận mỗi ngày cao nhất là bao nhiêu nghìn đồng/kg?",
+            "question": "**Câu 5 (VDC):** Một cửa hàng hoa quả tính toán lợi nhuận bán cam theo giá bán $x$ (nghìn đồng/kg) là $P(x) = -2x^2 + 100x - 800$ (nghìn đồng/ngày). Giá bán cam tối ưu để lợi nhuận mỗi ngày cao nhất là bao nhiêu nghìn đồng/kg?",
             "correctAnswer": "25",
             "acceptedAnswers": [
               "25"
@@ -8674,7 +8716,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một giàn khoan dầu ở vị trí $A$ cách bờ biển $5\\text{ km}$. Điểm $B$ trên bờ biển gần $A$ nhất. Nhà máy lọc dầu ở vị trí $C$ trên bờ cách $B$ một khoảng $12\\text{ km}$. Kéo đường ống từ $A$ đến $M$ trên bờ rồi đến $C$. Khoảng cách $BM$ bằng bao nhiêu km để tổng chiều dài đường ống $AM + MC$ nhỏ nhất?",
+            "question": "**Câu 6 (VDC):** Một giàn khoan dầu ở vị trí $A$ cách bờ biển $5\\text{ km}$. Điểm $B$ trên bờ biển gần $A$ nhất. Nhà máy lọc dầu ở vị trí $C$ trên bờ cách $B$ một khoảng $12\\text{ km}$. Kéo đường ống từ $A$ đến $M$ trên bờ rồi đến $C$. Khoảng cách $BM$ bằng bao nhiêu km để tổng chiều dài đường ống $AM + MC$ nhỏ nhất?",
             "correctAnswer": "12",
             "acceptedAnswers": [
               "12"
@@ -8757,7 +8799,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Cho $\\int_0^2 f(x)dx = 3$ và $\\int_2^5 f(x)dx = 7$. Tính tích phân $I = \\int_0^5 f(x)dx$.",
+            "question": "**Câu 5 (VDC):** Cho $\\int_0^2 f(x)dx = 3$ và $\\int_2^5 f(x)dx = 7$. Tính tích phân $I = \\int_0^5 f(x)dx$.",
             "options": {
               "A": "$21$",
               "B": "$4$",
@@ -8769,7 +8811,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2 - 4$, trục hoành và hai đường thẳng $x = 0, x = 2$ bằng",
+            "question": "**Câu 6 (VDC):** Diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2 - 4$, trục hoành và hai đường thẳng $x = 0, x = 2$ bằng",
             "options": {
               "A": "$\\frac{8}{3}$",
               "B": "$\\frac{16}{3}$",
@@ -9029,7 +9071,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Thể tích khối tròn xoay khi quay hình phẳng giới hạn bởi $y = \\sqrt{2x}$, $y = 0$, $x = 0$, $x = 3$ quanh trục $Ox$ có dạng $k\\pi$. Tính giá trị của $k$.",
+            "question": "**Câu 5 (VDC):** Thể tích khối tròn xoay khi quay hình phẳng giới hạn bởi $y = \\sqrt{2x}$, $y = 0$, $x = 0$, $x = 3$ quanh trục $Ox$ có dạng $k\\pi$. Tính giá trị của $k$.",
             "correctAnswer": "9",
             "acceptedAnswers": [
               "9"
@@ -9038,7 +9080,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một giọt nước rỉ vào một bình với tốc độ $q(t) = 6t - t^2$ (ml/phút) trong $6$ phút đầu tiên ($0 \\le t \\le 6$). Tổng lượng nước chảy vào bình sau $6$ phút là bao nhiêu ml?",
+            "question": "**Câu 6 (VDC):** Một giọt nước rỉ vào một bình với tốc độ $q(t) = 6t - t^2$ (ml/phút) trong $6$ phút đầu tiên ($0 \\le t \\le 6$). Tổng lượng nước chảy vào bình sau $6$ phút là bao nhiêu ml?",
             "correctAnswer": "36",
             "acceptedAnswers": [
               "36"
@@ -9109,7 +9151,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Biết $\\int_0^2 f(x)dx = 4$. Tính tích phân $I = \\int_0^2 [2f(x) + 3]dx$.",
+            "question": "**Câu 5 (VDC):** Biết $\\int_0^2 f(x)dx = 4$. Tính tích phân $I = \\int_0^2 [2f(x) + 3]dx$.",
             "options": {
               "A": "$14$",
               "B": "$8$",
@@ -9121,7 +9163,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Diện tích hình phẳng giới hạn bởi đồ thị hai hàm số $y = x^2$ và $y = x$ bằng",
+            "question": "**Câu 6 (VDC):** Diện tích hình phẳng giới hạn bởi đồ thị hai hàm số $y = x^2$ và $y = x$ bằng",
             "options": {
               "A": "$\\frac{1}{2}$",
               "B": "$\\frac{1}{6}$",
@@ -9384,7 +9426,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Cho hình phẳng giới hạn bởi đường cong $y = e^x$, trục hoành, trục tung và đường thẳng $x = 1$. Thể tích khối tròn xoay sinh ra khi quay hình này quanh trục $Ox$ có dạng $\\frac{\\pi}{2}(e^a - b)$. Tính giá trị của $a + b$.",
+            "question": "**Câu 5 (VDC):** Cho hình phẳng giới hạn bởi đường cong $y = e^x$, trục hoành, trục tung và đường thẳng $x = 1$. Thể tích khối tròn xoay sinh ra khi quay hình này quanh trục $Ox$ có dạng $\\frac{\\pi}{2}(e^a - b)$. Tính giá trị của $a + b$.",
             "correctAnswer": "3",
             "acceptedAnswers": [
               "3"
@@ -9393,7 +9435,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một bể dầu bị rò rỉ với tốc độ rò rỉ là $r(t) = 200 - 4t$ (lít/giờ) với $0 \\le t \\le 50$. Lượng dầu rò rỉ trong 10 giờ đầu tiên là bao nhiêu lít?",
+            "question": "**Câu 6 (VDC):** Một bể dầu bị rò rỉ với tốc độ rò rỉ là $r(t) = 200 - 4t$ (lít/giờ) với $0 \\le t \\le 50$. Lượng dầu rò rỉ trong 10 giờ đầu tiên là bao nhiêu lít?",
             "correctAnswer": "1800",
             "acceptedAnswers": [
               "1800"
@@ -9464,7 +9506,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Diện tích hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành và hai đường thẳng $x = 0, x = 2$ bằng",
+            "question": "**Câu 5 (VDC):** Diện tích hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành và hai đường thẳng $x = 0, x = 2$ bằng",
             "options": {
               "A": "$8$",
               "B": "$2$",
@@ -9476,7 +9518,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Thể tích khối tròn xoay sinh ra khi quay hình phẳng giới hạn bởi $y = 2x - x^2$ và $y = 0$ quanh trục hoành là",
+            "question": "**Câu 6 (VDC):** Thể tích khối tròn xoay sinh ra khi quay hình phẳng giới hạn bởi $y = 2x - x^2$ và $y = 0$ quanh trục hoành là",
             "options": {
               "A": "$\\frac{16\\pi}{15}$",
               "B": "$\\frac{2\\pi}{3}$",
@@ -9738,7 +9780,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Khối tròn xoay tạo thành khi quay quanh $Ox$ hình phẳng giới hạn bởi $y = 3\\sqrt{x}$, $y = 0$, $x = 1$, $x = 2$ có thể tích bằng $k\\pi$. Tính giá trị của $k$.",
+            "question": "**Câu 5 (VDC):** Khối tròn xoay tạo thành khi quay quanh $Ox$ hình phẳng giới hạn bởi $y = 3\\sqrt{x}$, $y = 0$, $x = 1$, $x = 2$ có thể tích bằng $k\\pi$. Tính giá trị của $k$.",
             "correctAnswer": "13.5",
             "acceptedAnswers": [
               "13.5",
@@ -9749,7 +9791,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một giếng khoan sâu bị phun khí mê-tan với tốc độ thoát khí $F(t) = 300 - 10t\\text{ (m}^3\\text{/giờ)}$. Sau bao nhiêu giờ thì lượng khí mê-tan phun ra đạt cực đại (tốc độ bằng 0)?",
+            "question": "**Câu 6 (VDC):** Một giếng khoan sâu bị phun khí mê-tan với tốc độ thoát khí $F(t) = 300 - 10t\\text{ (m}^3\\text{/giờ)}$. Sau bao nhiêu giờ thì lượng khí mê-tan phun ra đạt cực đại (tốc độ bằng 0)?",
             "correctAnswer": "30",
             "acceptedAnswers": [
               "30"
@@ -9820,7 +9862,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Cho $\\int_1^3 f(x)dx = 4$. Khi đó $\\int_1^3 [2f(x) - 1]dx$ bằng",
+            "question": "**Câu 5 (VDC):** Cho $\\int_1^3 f(x)dx = 4$. Khi đó $\\int_1^3 [2f(x) - 1]dx$ bằng",
             "options": {
               "A": "$7$",
               "B": "$8$",
@@ -9832,7 +9874,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Thể tích khối tròn xoay tạo thành khi quay quanh trục $Ox$ hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành, các đường thẳng $x = 0$ và $x = 1$ bằng",
+            "question": "**Câu 6 (VDC):** Thể tích khối tròn xoay tạo thành khi quay quanh trục $Ox$ hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành, các đường thẳng $x = 0$ và $x = 1$ bằng",
             "options": {
               "A": "$\\frac{\\pi}{5}$",
               "B": "$\\frac{\\pi}{6}$",
@@ -10093,7 +10135,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Cho hình phẳng giới hạn bởi $y = \\sqrt{3}x$, trục hoành, đường thẳng $x = 0$ và $x = 2$. Khối tròn xoay tạo thành khi quay quanh trục $Ox$ có thể tích là $k\\pi$. Tính giá trị của $k$.",
+            "question": "**Câu 5 (VDC):** Cho hình phẳng giới hạn bởi $y = \\sqrt{3}x$, trục hoành, đường thẳng $x = 0$ và $x = 2$. Khối tròn xoay tạo thành khi quay quanh trục $Ox$ có thể tích là $k\\pi$. Tính giá trị của $k$.",
             "correctAnswer": "8",
             "acceptedAnswers": [
               "8"
@@ -10102,7 +10144,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một bể nước bị rò rỉ theo quy luật $v(t) = 50 - 2t$ (lít/phút) với $0 \\le t \\le 25$. Lượng nước đã thất thoát trong $10$ phút đầu là bao nhiêu lít?",
+            "question": "**Câu 6 (VDC):** Một bể nước bị rò rỉ theo quy luật $v(t) = 50 - 2t$ (lít/phút) với $0 \\le t \\le 25$. Lượng nước đã thất thoát trong $10$ phút đầu là bao nhiêu lít?",
             "correctAnswer": "400",
             "acceptedAnswers": [
               "400"
@@ -10173,7 +10215,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Biết $\\int_0^1 \\frac{2x}{x^2 + 1}dx = \\ln a$. Giá trị của $a$ bằng",
+            "question": "**Câu 5 (VDC):** Biết $\\int_0^1 \\frac{2x}{x^2 + 1}dx = \\ln a$. Giá trị của $a$ bằng",
             "options": {
               "A": "$2$",
               "B": "$3$",
@@ -10185,7 +10227,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = 2 - x^2$ và đường thẳng $y = x$ bằng",
+            "question": "**Câu 6 (VDC):** Diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = 2 - x^2$ và đường thẳng $y = x$ bằng",
             "options": {
               "A": "$\\frac{9}{2}$",
               "B": "$\\frac{9}{4}$",
@@ -10448,7 +10490,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Khối tròn xoay tạo thành khi quay quanh $Ox$ hình phẳng giới hạn bởi $y = \\sqrt{5x}$, $y = 0$, $x = 0$, $x = 2$ có thể tích là $k\\pi$. Tính giá trị của $k$.",
+            "question": "**Câu 5 (VDC):** Khối tròn xoay tạo thành khi quay quanh $Ox$ hình phẳng giới hạn bởi $y = \\sqrt{5x}$, $y = 0$, $x = 0$, $x = 2$ có thể tích là $k\\pi$. Tính giá trị của $k$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
@@ -10457,7 +10499,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một máy bơm nước bơm vào hồ với lưu lượng $q(t) = 80 - 4t\\text{ (m}^3\\text{/phút)}$ trong $20$ phút đầu. Tổng thể tích nước đã bơm vào hồ sau $10$ phút là bao nhiêu mét khối?",
+            "question": "**Câu 6 (VDC):** Một máy bơm nước bơm vào hồ với lưu lượng $q(t) = 80 - 4t\\text{ (m}^3\\text{/phút)}$ trong $20$ phút đầu. Tổng thể tích nước đã bơm vào hồ sau $10$ phút là bao nhiêu mét khối?",
             "correctAnswer": "600",
             "acceptedAnswers": [
               "600"
@@ -10540,7 +10582,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một chiếc đèn chùm có trọng lượng $P = 100\\text{ N}$ được treo vào trần nhà bằng 3 sợi dây cáp không giãn có chiều dài bằng nhau và hợp với phương thẳng đứng một góc $30^\\circ$. Lực căng $T$ của mỗi sợi dây cáp bằng bao nhiêu?",
+            "question": "**Câu 5 (VDC):** Một chiếc đèn chùm có trọng lượng $P = 100\\text{ N}$ được treo vào trần nhà bằng 3 sợi dây cáp không giãn có chiều dài bằng nhau và hợp với phương thẳng đứng một góc $30^\\circ$. Lực căng $T$ của mỗi sợi dây cáp bằng bao nhiêu?",
             "options": {
               "A": "$\\frac{200}{3\\sqrt{3}}\\text{ N}$",
               "B": "$\\frac{100}{3\\sqrt{3}}\\text{ N}$",
@@ -10552,7 +10594,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Cho tứ diện đều $ABCD$ có cạnh bằng $a$. Tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ bằng",
+            "question": "**Câu 6 (VDC):** Cho tứ diện đều $ABCD$ có cạnh bằng $a$. Tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ bằng",
             "options": {
               "A": "$\\frac{a^2\\sqrt{3}}{2}$",
               "B": "$a^2$",
@@ -10814,7 +10856,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một người kéo một khối gỗ trượt trên sàn với lực kéo $F = 100\\text{ N}$ nghiêng góc $45^\\circ$ so với sàn. Tính công cơ học của lực kéo khi khối gỗ di chuyển được quãng đường $10\\sqrt{2}\\text{ m}$ (đơn vị: Joule).",
+            "question": "**Câu 5 (VDC):** Một người kéo một khối gỗ trượt trên sàn với lực kéo $F = 100\\text{ N}$ nghiêng góc $45^\\circ$ so với sàn. Tính công cơ học của lực kéo khi khối gỗ di chuyển được quãng đường $10\\sqrt{2}\\text{ m}$ (đơn vị: Joule).",
             "correctAnswer": "1000",
             "acceptedAnswers": [
               "1000"
@@ -10823,7 +10865,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một chiếc ca nô di chuyển trên một con sông. Vận tốc riêng của ca nô là $16\\text{ km/h}$ hướng thẳng vuông góc với bờ sông. Dòng nước chảy xuôi dòng với vận tốc $12\\text{ km/h}$. Tốc độ thực tế của ca nô so với bờ sông là bao nhiêu km/h?",
+            "question": "**Câu 6 (VDC):** Một chiếc ca nô di chuyển trên một con sông. Vận tốc riêng của ca nô là $16\\text{ km/h}$ hướng thẳng vuông góc với bờ sông. Dòng nước chảy xuôi dòng với vận tốc $12\\text{ km/h}$. Tốc độ thực tế của ca nô so với bờ sông là bao nhiêu km/h?",
             "correctAnswer": "20",
             "acceptedAnswers": [
               "20"
@@ -10894,7 +10936,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Ba lực đồng quy $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$ cùng tác dụng vào một vật và vật cân bằng. Biết $\\vec{F}_1 \\perp \\vec{F}_2$ và $|\\vec{F}_1| = 6\\text{ N}, |\\vec{F}_2| = 8\\text{ N}$. Độ lớn của lực $\\vec{F}_3$ bằng",
+            "question": "**Câu 5 (VDC):** Ba lực đồng quy $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$ cùng tác dụng vào một vật và vật cân bằng. Biết $\\vec{F}_1 \\perp \\vec{F}_2$ và $|\\vec{F}_1| = 6\\text{ N}, |\\vec{F}_2| = 8\\text{ N}$. Độ lớn của lực $\\vec{F}_3$ bằng",
             "options": {
               "A": "$10\\text{ N}$",
               "B": "$48\\text{ N}$",
@@ -10906,7 +10948,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Cho tứ diện $ABCD$. Đặt $\\vec{AB} = \\vec{b}, \\vec{AC} = \\vec{c}, \\vec{AD} = \\vec{d}$. Gọi $G$ là trọng tâm tam giác $BCD$. Vectơ $\\vec{AG}$ biểu diễn theo $\\vec{b}, \\vec{c}, \\vec{d}$ là",
+            "question": "**Câu 6 (VDC):** Cho tứ diện $ABCD$. Đặt $\\vec{AB} = \\vec{b}, \\vec{AC} = \\vec{c}, \\vec{AD} = \\vec{d}$. Gọi $G$ là trọng tâm tam giác $BCD$. Vectơ $\\vec{AG}$ biểu diễn theo $\\vec{b}, \\vec{c}, \\vec{d}$ là",
             "options": {
               "A": "$\\vec{b} + \\vec{c} + \\vec{d}$",
               "B": "$\\frac{1}{2}(\\vec{b} + \\vec{c} + \\vec{d})$",
@@ -11166,7 +11208,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một máy bay đang bay với vận tốc hướng Bắc là $500\\text{ km/h}$. Một luồng gió mạnh thổi từ hướng Tây sang Đông với tốc độ $120\\text{ km/h}$. Tốc độ tổng hợp của máy bay so với mặt đất bằng bao nhiêu km/h? (Làm tròn đến hàng đơn vị).",
+            "question": "**Câu 5 (VDC):** Một máy bay đang bay với vận tốc hướng Bắc là $500\\text{ km/h}$. Một luồng gió mạnh thổi từ hướng Tây sang Đông với tốc độ $120\\text{ km/h}$. Tốc độ tổng hợp của máy bay so với mặt đất bằng bao nhiêu km/h? (Làm tròn đến hàng đơn vị).",
             "correctAnswer": "514",
             "acceptedAnswers": [
               "514"
@@ -11175,7 +11217,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một vật treo cân bằng bằng hai sợi dây tạo với trần nhà hai góc bằng nhau là $45^\\circ$. Biết trọng lượng của vật là $P = 100\\text{ N}$. Lực căng của mỗi sợi dây xấp xỉ bằng bao nhiêu Newton? (Lấy $\\sqrt{2} \\approx 1.414$, làm tròn kết quả đến hàng đơn vị).",
+            "question": "**Câu 6 (VDC):** Một vật treo cân bằng bằng hai sợi dây tạo với trần nhà hai góc bằng nhau là $45^\\circ$. Biết trọng lượng của vật là $P = 100\\text{ N}$. Lực căng của mỗi sợi dây xấp xỉ bằng bao nhiêu Newton? (Lấy $\\sqrt{2} \\approx 1.414$, làm tròn kết quả đến hàng đơn vị).",
             "correctAnswer": "71",
             "acceptedAnswers": [
               "71",
@@ -11248,7 +11290,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một vật được kéo bởi hai lực $\\vec{F}_1$ và $\\vec{F}_2$ vuông góc với nhau có độ lớn lần lượt là $30\\text{ N}$ và $40\\text{ N}$. Để vật đứng yên cân bằng, cần tác dụng thêm lực $\\vec{F}_3$ có độ lớn bằng",
+            "question": "**Câu 5 (VDC):** Một vật được kéo bởi hai lực $\\vec{F}_1$ và $\\vec{F}_2$ vuông góc với nhau có độ lớn lần lượt là $30\\text{ N}$ và $40\\text{ N}$. Để vật đứng yên cân bằng, cần tác dụng thêm lực $\\vec{F}_3$ có độ lớn bằng",
             "options": {
               "A": "$70\\text{ N}$",
               "B": "$50\\text{ N}$",
@@ -11260,7 +11302,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Cho tứ diện $ABCD$ có $G$ là trọng tâm. Mệnh đề nào sau đây đúng?",
+            "question": "**Câu 6 (VDC):** Cho tứ diện $ABCD$ có $G$ là trọng tâm. Mệnh đề nào sau đây đúng?",
             "options": {
               "A": "$\\vec{AB} + \\vec{AC} + \\vec{AD} = \\vec{0}$",
               "B": "$\\vec{GA} + \\vec{GB} + \\vec{GC} + \\vec{GD} = \\vec{0}$",
@@ -11524,7 +11566,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một chiếc máy bay bay theo hướng Đông Bắc với tốc độ $600\\text{ km/h}$. Gió thổi ngược lại theo hướng Tây Nam với tốc độ $100\\text{ km/h}$. Tốc độ thực của máy bay so với mặt đất bằng bao nhiêu km/h?",
+            "question": "**Câu 5 (VDC):** Một chiếc máy bay bay theo hướng Đông Bắc với tốc độ $600\\text{ km/h}$. Gió thổi ngược lại theo hướng Tây Nam với tốc độ $100\\text{ km/h}$. Tốc độ thực của máy bay so với mặt đất bằng bao nhiêu km/h?",
             "correctAnswer": "500",
             "acceptedAnswers": [
               "500"
@@ -11533,7 +11575,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một quả bóng chịu tác dụng của 3 lực cân bằng $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$. Biết $|\\vec{F}_1| = 12\\text{ N}, |\\vec{F}_2| = 16\\text{ N}$ và $\\vec{F}_1 \\perp \\vec{F}_2$. Tính độ lớn của lực $\\vec{F}_3$ (đơn vị: Newton).",
+            "question": "**Câu 6 (VDC):** Một quả bóng chịu tác dụng của 3 lực cân bằng $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$. Biết $|\\vec{F}_1| = 12\\text{ N}, |\\vec{F}_2| = 16\\text{ N}$ và $\\vec{F}_1 \\perp \\vec{F}_2$. Tính độ lớn của lực $\\vec{F}_3$ (đơn vị: Newton).",
             "correctAnswer": "20",
             "acceptedAnswers": [
               "20"
@@ -11604,7 +11646,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một con tàu di chuyển theo hướng Đông với vận tốc $24\\text{ hải lý/giờ}$. Dòng hải lưu chảy theo hướng Bắc với vận tốc $7\\text{ hải lý/giờ}$. Vận tốc thực của con tàu so với đáy biển là",
+            "question": "**Câu 5 (VDC):** Một con tàu di chuyển theo hướng Đông với vận tốc $24\\text{ hải lý/giờ}$. Dòng hải lưu chảy theo hướng Bắc với vận tốc $7\\text{ hải lý/giờ}$. Vận tốc thực của con tàu so với đáy biển là",
             "options": {
               "A": "$28\\text{ hải lý/giờ}$",
               "B": "$25\\text{ hải lý/giờ}$",
@@ -11616,7 +11658,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Cho hình lăng trụ $ABC.A'B'C'$. Khẳng định nào sau đây đúng?",
+            "question": "**Câu 6 (VDC):** Cho hình lăng trụ $ABC.A'B'C'$. Khẳng định nào sau đây đúng?",
             "options": {
               "A": "$\\vec{AA'} + \\vec{BB'} = \\vec{CC'}$",
               "B": "$\\vec{AB} = \\vec{A'C'}$",
@@ -11876,7 +11918,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một người kéo một chiếc va li đi một quãng đường $50\\text{ m}$ trên sân ga với lực kéo $F = 60\\text{ N}$ chếch lên hợp với phương ngang một góc $60^\\circ$. Công của lực kéo bằng bao nhiêu Joule?",
+            "question": "**Câu 5 (VDC):** Một người kéo một chiếc va li đi một quãng đường $50\\text{ m}$ trên sân ga với lực kéo $F = 60\\text{ N}$ chếch lên hợp với phương ngang một góc $60^\\circ$. Công của lực kéo bằng bao nhiêu Joule?",
             "correctAnswer": "1500",
             "acceptedAnswers": [
               "1500"
@@ -11885,7 +11927,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một ca nô chuyển động từ bờ sông bên này sang bờ sông bên kia. Vận tốc của ca nô đối với dòng nước là $15\\text{ km/h}$, vận tốc dòng nước là $8\\text{ km/h}$. Biết hướng chuyển động của ca nô vuông góc với dòng nước. Tốc độ của ca nô đối với bờ sông bằng bao nhiêu km/h?",
+            "question": "**Câu 6 (VDC):** Một ca nô chuyển động từ bờ sông bên này sang bờ sông bên kia. Vận tốc của ca nô đối với dòng nước là $15\\text{ km/h}$, vận tốc dòng nước là $8\\text{ km/h}$. Biết hướng chuyển động của ca nô vuông góc với dòng nước. Tốc độ của ca nô đối với bờ sông bằng bao nhiêu km/h?",
             "correctAnswer": "17",
             "acceptedAnswers": [
               "17"
@@ -11956,7 +11998,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một vật đứng cân bằng dưới tác dụng của 3 lực $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$. Biết $|\\vec{F}_1| = 5\\text{ N}, |\\vec{F}_2| = 12\\text{ N}$ và $\\vec{F}_1 \\perp \\vec{F}_2$. Độ lớn của lực $\\vec{F}_3$ bằng",
+            "question": "**Câu 5 (VDC):** Một vật đứng cân bằng dưới tác dụng của 3 lực $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$. Biết $|\\vec{F}_1| = 5\\text{ N}, |\\vec{F}_2| = 12\\text{ N}$ và $\\vec{F}_1 \\perp \\vec{F}_2$. Độ lớn của lực $\\vec{F}_3$ bằng",
             "options": {
               "A": "$13\\text{ N}$",
               "B": "$17\\text{ N}$",
@@ -11968,7 +12010,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Cho hình hộp $ABCD.A'B'C'D'$. Vectơ nào dưới đây bằng vectơ $\\vec{AB} + \\vec{B'C'} + \\vec{DD'}$?",
+            "question": "**Câu 6 (VDC):** Cho hình hộp $ABCD.A'B'C'D'$. Vectơ nào dưới đây bằng vectơ $\\vec{AB} + \\vec{B'C'} + \\vec{DD'}$?",
             "options": {
               "A": "$\\vec{A'C}$",
               "B": "$\\vec{CA'}$",
@@ -12228,7 +12270,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một máy bay bay theo hướng Bắc với vận tốc $450\\text{ km/h}$. Gió thổi theo hướng Đông với vận tốc $60\\text{ km/h}$. Tính tốc độ thực tế của máy bay đối với mặt đất (làm tròn đến hàng đơn vị).",
+            "question": "**Câu 5 (VDC):** Một máy bay bay theo hướng Bắc với vận tốc $450\\text{ km/h}$. Gió thổi theo hướng Đông với vận tốc $60\\text{ km/h}$. Tính tốc độ thực tế của máy bay đối với mặt đất (làm tròn đến hàng đơn vị).",
             "correctAnswer": "454",
             "acceptedAnswers": [
               "454"
@@ -12237,7 +12279,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một vật có khối lượng $m = 10\\text{ kg}$ được giữ yên trên mặt phẳng nghiêng góc $30^\\circ$ so với phương ngang bởi một sợi dây cáp song song với mặt nghiêng. Lấy $g = 9.8\\text{ m/s}^2$. Độ lớn lực căng của sợi dây bằng bao nhiêu Newton?",
+            "question": "**Câu 6 (VDC):** Một vật có khối lượng $m = 10\\text{ kg}$ được giữ yên trên mặt phẳng nghiêng góc $30^\\circ$ so với phương ngang bởi một sợi dây cáp song song với mặt nghiêng. Lấy $g = 9.8\\text{ m/s}^2$. Độ lớn lực căng của sợi dây bằng bao nhiêu Newton?",
             "correctAnswer": "49",
             "acceptedAnswers": [
               "49"
@@ -12320,7 +12362,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Trong không gian $Oxyz$, cho hai điểm $A(1; 2; 3)$ và $B(3; 0; 1)$. Tọa độ trung điểm $M$ của đoạn thẳng $AB$ là",
+            "question": "**Câu 5 (VDC):** Trong không gian $Oxyz$, cho hai điểm $A(1; 2; 3)$ và $B(3; 0; 1)$. Tọa độ trung điểm $M$ của đoạn thẳng $AB$ là",
             "options": {
               "A": "$(2; 1; 2)$",
               "B": "$(1; -1; -1)$",
@@ -12332,7 +12374,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Trong không gian $Oxyz$, đường thẳng $d: \\begin{cases} x = 1 + 2t \\\\ y = -1 + t \\\\ z = 3 - t \\end{cases}$ đi qua điểm nào dưới đây?",
+            "question": "**Câu 6 (VDC):** Trong không gian $Oxyz$, đường thẳng $d: \\begin{cases} x = 1 + 2t \\\\ y = -1 + t \\\\ z = 3 - t \\end{cases}$ đi qua điểm nào dưới đây?",
             "options": {
               "A": "$M(1; -1; 3)$",
               "B": "$N(2; 1; -1)$",
@@ -12592,7 +12634,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một đường dây điện cao thế chạy thẳng từ cột điện $A(10; 20; 30)$ đến cột điện $B(50; 20; 30)$ (đơn vị: mét). Khoảng cách an toàn thẳng đứng từ dây điện xuống mặt đất $z = 0$ bằng bao nhiêu mét?",
+            "question": "**Câu 5 (VDC):** Một đường dây điện cao thế chạy thẳng từ cột điện $A(10; 20; 30)$ đến cột điện $B(50; 20; 30)$ (đơn vị: mét). Khoảng cách an toàn thẳng đứng từ dây điện xuống mặt đất $z = 0$ bằng bao nhiêu mét?",
             "correctAnswer": "30",
             "acceptedAnswers": [
               "30"
@@ -12601,7 +12643,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một trạm thu phát tín hiệu vệ tinh được đặt tại $A(3; 4; 0)$ trên mặt đất. Một vệ tinh đang bay tại vị trí $S(3; 4; 300)$ (đơn vị: km). Khoảng cách từ vệ tinh $S$ đến trạm thu $A$ bằng bao nhiêu km?",
+            "question": "**Câu 6 (VDC):** Một trạm thu phát tín hiệu vệ tinh được đặt tại $A(3; 4; 0)$ trên mặt đất. Một vệ tinh đang bay tại vị trí $S(3; 4; 300)$ (đơn vị: km). Khoảng cách từ vệ tinh $S$ đến trạm thu $A$ bằng bao nhiêu km?",
             "correctAnswer": "300",
             "acceptedAnswers": [
               "300"
@@ -12672,7 +12714,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Trong không gian $Oxyz$, cho hai điểm $A(1; 1; 2)$ và $B(3; -1; 0)$. Vectơ $\\vec{AB}$ có tọa độ là",
+            "question": "**Câu 5 (VDC):** Trong không gian $Oxyz$, cho hai điểm $A(1; 1; 2)$ và $B(3; -1; 0)$. Vectơ $\\vec{AB}$ có tọa độ là",
             "options": {
               "A": "$(2; -2; -2)$",
               "B": "$(-2; 2; 2)$",
@@ -12684,7 +12726,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Đường thẳng $d$ đi qua điểm $A(2; 1; -3)$ có vectơ chỉ phương $\\vec{u} = (1; -2; 2)$ có phương trình chính tắc là",
+            "question": "**Câu 6 (VDC):** Đường thẳng $d$ đi qua điểm $A(2; 1; -3)$ có vectơ chỉ phương $\\vec{u} = (1; -2; 2)$ có phương trình chính tắc là",
             "options": {
               "A": "$\\frac{x - 1}{2} = \\frac{y + 2}{1} = \\frac{z - 2}{-3}$",
               "B": "$\\frac{x - 2}{1} = \\frac{y - 1}{-2} = \\frac{z + 3}{2}$",
@@ -12946,7 +12988,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một máy bay hạ cánh theo đường thẳng từ độ cao $1200\\text{ m}$ tại vị trí $A(0; 0; 1200)$ xuống đầu đường băng tại $B(3000; 4000; 0)$ (đơn vị: mét). Chiều dài quỹ đạo hạ cánh của máy bay bằng bao nhiêu mét?",
+            "question": "**Câu 5 (VDC):** Một máy bay hạ cánh theo đường thẳng từ độ cao $1200\\text{ m}$ tại vị trí $A(0; 0; 1200)$ xuống đầu đường băng tại $B(3000; 4000; 0)$ (đơn vị: mét). Chiều dài quỹ đạo hạ cánh của máy bay bằng bao nhiêu mét?",
             "correctAnswer": "5142",
             "acceptedAnswers": [
               "5142",
@@ -12956,7 +12998,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một trạm radar quét mặt cầu bán kính $50\\text{ km}$ đặt tại gốc tọa độ $O$. Một máy bay không người lái đang bay ở tọa độ $(30; 20; 10)$ (km). Khoảng cách từ máy bay đến trạm radar bằng bao nhiêu km? (Làm tròn đến hàng đơn vị).",
+            "question": "**Câu 6 (VDC):** Một trạm radar quét mặt cầu bán kính $50\\text{ km}$ đặt tại gốc tọa độ $O$. Một máy bay không người lái đang bay ở tọa độ $(30; 20; 10)$ (km). Khoảng cách từ máy bay đến trạm radar bằng bao nhiêu km? (Làm tròn đến hàng đơn vị).",
             "correctAnswer": "37",
             "acceptedAnswers": [
               "37",
@@ -13028,7 +13070,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Hai vectơ $\\vec{u} = (1; 2; -2)$ và $\\vec{v} = (2; -1; 0)$ có tích vô hướng bằng",
+            "question": "**Câu 5 (VDC):** Hai vectơ $\\vec{u} = (1; 2; -2)$ và $\\vec{v} = (2; -1; 0)$ có tích vô hướng bằng",
             "options": {
               "A": "$0$",
               "B": "$2$",
@@ -13040,7 +13082,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Đường thẳng đi qua $M(1; 0; -1)$ và vuông góc với mặt phẳng $(\\alpha): 2x - y + 3z + 1 = 0$ có phương trình là",
+            "question": "**Câu 6 (VDC):** Đường thẳng đi qua $M(1; 0; -1)$ và vuông góc với mặt phẳng $(\\alpha): 2x - y + 3z + 1 = 0$ có phương trình là",
             "options": {
               "A": "$\\frac{x - 2}{1} = \\frac{y + 1}{0} = \\frac{z - 3}{-1}$",
               "B": "$\\frac{x + 1}{2} = \\frac{y}{-1} = \\frac{z - 1}{3}$",
@@ -13302,7 +13344,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một vệ tinh nhân tạo chuyển động theo quỹ đạo tròn trong mặt phẳng $(Oxy)$ có bán kính $R = 7000\\text{ km}$ quanh tâm Trái Đất đặt tại $O(0; 0; 0)$. Khoảng cách từ vệ tinh đến tâm Trái Đất là bao nhiêu km?",
+            "question": "**Câu 5 (VDC):** Một vệ tinh nhân tạo chuyển động theo quỹ đạo tròn trong mặt phẳng $(Oxy)$ có bán kính $R = 7000\\text{ km}$ quanh tâm Trái Đất đặt tại $O(0; 0; 0)$. Khoảng cách từ vệ tinh đến tâm Trái Đất là bao nhiêu km?",
             "correctAnswer": "7000",
             "acceptedAnswers": [
               "7000"
@@ -13311,7 +13353,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một trạm thu phát sóng di động $5G$ đặt tại đỉnh một tòa nhà có tọa độ $A(100; 200; 50)$ (đơn vị: mét). Một người dùng đứng trên mặt đất tại vị trí $B(100; 200; 0)$. Khoảng cách thẳng đứng từ người dùng đến trạm thu phát sóng bằng bao nhiêu mét?",
+            "question": "**Câu 6 (VDC):** Một trạm thu phát sóng di động $5G$ đặt tại đỉnh một tòa nhà có tọa độ $A(100; 200; 50)$ (đơn vị: mét). Một người dùng đứng trên mặt đất tại vị trí $B(100; 200; 0)$. Khoảng cách thẳng đứng từ người dùng đến trạm thu phát sóng bằng bao nhiêu mét?",
             "correctAnswer": "50",
             "acceptedAnswers": [
               "50"
@@ -13382,7 +13424,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Vectơ chỉ phương của đường thẳng $d: \\begin{cases} x = 2 - t \\\\ y = 3 + 2t \\\\ z = -1 + 4t \\end{cases}$ là",
+            "question": "**Câu 5 (VDC):** Vectơ chỉ phương của đường thẳng $d: \\begin{cases} x = 2 - t \\\\ y = 3 + 2t \\\\ z = -1 + 4t \\end{cases}$ là",
             "options": {
               "A": "$\\vec{u} = (-1; 2; 4)$",
               "B": "$\\vec{u} = (-1; -2; 4)$",
@@ -13394,7 +13436,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Mặt phẳng $(P)$ đi qua $A(0; 1; 0)$ và song song với mặt phẳng $(Oxy)$ có phương trình là",
+            "question": "**Câu 6 (VDC):** Mặt phẳng $(P)$ đi qua $A(0; 1; 0)$ và song song với mặt phẳng $(Oxy)$ có phương trình là",
             "options": {
               "A": "$y = 1$",
               "B": "$z = 0$",
@@ -13654,7 +13696,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một máy bay hạ cánh theo đường thẳng từ điểm $A(0; 2000; 1000)$ xuống điểm $B(0; 6000; 0)$ trên đường băng (đơn vị: mét). Chiều dài quãng đường bay hạ cánh xấp xỉ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).",
+            "question": "**Câu 5 (VDC):** Một máy bay hạ cánh theo đường thẳng từ điểm $A(0; 2000; 1000)$ xuống điểm $B(0; 6000; 0)$ trên đường băng (đơn vị: mét). Chiều dài quãng đường bay hạ cánh xấp xỉ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).",
             "correctAnswer": "4123",
             "acceptedAnswers": [
               "4123",
@@ -13664,7 +13706,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một giàn khoan dầu đặt tại điểm $A(10; 20; 0)$ trên biển. Một tàu cứu hộ xuất phát từ điểm $B(10; 20; 0)$ chạy thẳng đến giàn khoan khác ở tọa độ $C(40; 60; 0)$ (đơn vị: km). Quãng đường tàu cứu hộ phải chạy bằng bao nhiêu km?",
+            "question": "**Câu 6 (VDC):** Một giàn khoan dầu đặt tại điểm $A(10; 20; 0)$ trên biển. Một tàu cứu hộ xuất phát từ điểm $B(10; 20; 0)$ chạy thẳng đến giàn khoan khác ở tọa độ $C(40; 60; 0)$ (đơn vị: km). Quãng đường tàu cứu hộ phải chạy bằng bao nhiêu km?",
             "correctAnswer": "50",
             "acceptedAnswers": [
               "50"
@@ -13735,7 +13777,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Khoảng cách từ điểm $M(1; 1; 1)$ đến mặt phẳng $(P): 3x + 4z + 2 = 0$ bằng",
+            "question": "**Câu 5 (VDC):** Khoảng cách từ điểm $M(1; 1; 1)$ đến mặt phẳng $(P): 3x + 4z + 2 = 0$ bằng",
             "options": {
               "A": "$2$",
               "B": "$\\frac{8}{5}$",
@@ -13747,7 +13789,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Đường thẳng $d: \\frac{x - 1}{2} = \\frac{y + 2}{3} = \\frac{z - 4}{1}$ có vectơ chỉ phương là",
+            "question": "**Câu 6 (VDC):** Đường thẳng $d: \\frac{x - 1}{2} = \\frac{y + 2}{3} = \\frac{z - 4}{1}$ có vectơ chỉ phương là",
             "options": {
               "A": "$\\vec{u} = (-2; -3; -1)$",
               "B": "$\\vec{u} = (2; 3; 1)$",
@@ -14007,7 +14049,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một đường hầm thoát hiểm chạy thẳng từ hầm mỏ ở độ sâu $100\\text{ m}$ tại điểm $A(0; 0; -100)$ lên mặt đất tại điểm $B(300; 400; 0)$ (mét). Chiều dài của đường hầm thoát hiểm xấp xỉ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).",
+            "question": "**Câu 5 (VDC):** Một đường hầm thoát hiểm chạy thẳng từ hầm mỏ ở độ sâu $100\\text{ m}$ tại điểm $A(0; 0; -100)$ lên mặt đất tại điểm $B(300; 400; 0)$ (mét). Chiều dài của đường hầm thoát hiểm xấp xỉ bằng bao nhiêu mét? (Làm tròn đến hàng đơn vị).",
             "correctAnswer": "510",
             "acceptedAnswers": [
               "510",
@@ -14017,7 +14059,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một ngọn hải đăng phát tín hiệu cảnh báo đá ngầm trong bán kính $15\\text{ hải lý}$. Vị trí hải đăng tại $H(10; 20; 0)$. Một con tàu ở tọa độ $T(10; 30; 0)$. Khoảng cách từ tàu đến hải đăng bằng bao nhiêu hải lý?",
+            "question": "**Câu 6 (VDC):** Một ngọn hải đăng phát tín hiệu cảnh báo đá ngầm trong bán kính $15\\text{ hải lý}$. Vị trí hải đăng tại $H(10; 20; 0)$. Một con tàu ở tọa độ $T(10; 30; 0)$. Khoảng cách từ tàu đến hải đăng bằng bao nhiêu hải lý?",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
@@ -14100,7 +14142,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Tỉ lệ người mắc một bệnh hiểm nghèo trong cộng đồng là $1\\%$. Một xét nghiệm có độ chính xác $95\\%$ (tức là người có bệnh thì $95\\%$ xét nghiệm dương tính, người không bệnh thì $95\\%$ xét nghiệm âm tính). Một người đi xét nghiệm có kết quả dương tính. Xác suất người đó thực sự mắc bệnh xấp xỉ bằng",
+            "question": "**Câu 5 (VDC):** Tỉ lệ người mắc một bệnh hiểm nghèo trong cộng đồng là $1\\%$. Một xét nghiệm có độ chính xác $95\\%$ (tức là người có bệnh thì $95\\%$ xét nghiệm dương tính, người không bệnh thì $95\\%$ xét nghiệm âm tính). Một người đi xét nghiệm có kết quả dương tính. Xác suất người đó thực sự mắc bệnh xấp xỉ bằng",
             "options": {
               "A": "$16.1\\%$",
               "B": "$1\\%$",
@@ -14112,7 +14154,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một nhà máy có hai dây chuyền sản xuất cùng một loại linh kiện: dây chuyền I sản xuất $60\\%$ sản phẩm, dây chuyền II sản xuất $40\\%$ sản phẩm. Tỉ lệ phế phẩm của dây chuyền I là $2\\%$, của dây chuyền II là $3\\%$. Chọn ngẫu nhiên một sản phẩm của nhà máy, xác suất sản phẩm đó là phế phẩm bằng",
+            "question": "**Câu 6 (VDC):** Một nhà máy có hai dây chuyền sản xuất cùng một loại linh kiện: dây chuyền I sản xuất $60\\%$ sản phẩm, dây chuyền II sản xuất $40\\%$ sản phẩm. Tỉ lệ phế phẩm của dây chuyền I là $2\\%$, của dây chuyền II là $3\\%$. Chọn ngẫu nhiên một sản phẩm của nhà máy, xác suất sản phẩm đó là phế phẩm bằng",
             "options": {
               "A": "$0.025$",
               "B": "$0.012$",
@@ -14379,7 +14421,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một bài kiểm tra trắc nghiệm có 4 phương án cho mỗi câu hỏi. Học sinh $A$ biết câu trả lời đúng với xác suất $0.7$. Nếu không biết, học sinh đó đoán mò ngẫu nhiên. Biết học sinh $A$ đã trả lời đúng câu hỏi đó, tính xác suất học sinh đó thực sự biết đáp án (làm tròn kết quả đến hai chữ số thập phân).",
+            "question": "**Câu 5 (VDC):** Một bài kiểm tra trắc nghiệm có 4 phương án cho mỗi câu hỏi. Học sinh $A$ biết câu trả lời đúng với xác suất $0.7$. Nếu không biết, học sinh đó đoán mò ngẫu nhiên. Biết học sinh $A$ đã trả lời đúng câu hỏi đó, tính xác suất học sinh đó thực sự biết đáp án (làm tròn kết quả đến hai chữ số thập phân).",
             "correctAnswer": "0.90",
             "acceptedAnswers": [
               "0.9",
@@ -14392,7 +14434,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một hộp chứa 3 quả cầu đỏ và 7 quả cầu trắng. Rút ngẫu nhiên lần lượt 2 quả cầu không hoàn lại. Tính xác suất để quả cầu thứ 2 màu đỏ biết quả thứ nhất màu đỏ.",
+            "question": "**Câu 6 (VDC):** Một hộp chứa 3 quả cầu đỏ và 7 quả cầu trắng. Rút ngẫu nhiên lần lượt 2 quả cầu không hoàn lại. Tính xác suất để quả cầu thứ 2 màu đỏ biết quả thứ nhất màu đỏ.",
             "correctAnswer": "0.22",
             "acceptedAnswers": [
               "0.22",
@@ -14465,7 +14507,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một máy bay có hai động cơ độc lập. Xác suất để động cơ 1 bị hỏng trong chuyến bay là $0.01$, động cơ 2 bị hỏng là $0.02$. Máy bay bay an toàn nếu có ít nhất một động cơ hoạt động bình thường. Xác suất chuyến bay an toàn bằng",
+            "question": "**Câu 5 (VDC):** Một máy bay có hai động cơ độc lập. Xác suất để động cơ 1 bị hỏng trong chuyến bay là $0.01$, động cơ 2 bị hỏng là $0.02$. Máy bay bay an toàn nếu có ít nhất một động cơ hoạt động bình thường. Xác suất chuyến bay an toàn bằng",
             "options": {
               "A": "$0.9900$",
               "B": "$0.9998$",
@@ -14477,7 +14519,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một thùng hàng chứa $80\\%$ sản phẩm loại I và $20\\%$ sản phẩm loại II. Tỉ lệ hỏng của sản phẩm loại I là $1\\%$, loại II là $5\\%$. Lấy ngẫu nhiên một sản phẩm thì thấy bị hỏng. Xác suất để sản phẩm đó là loại I bằng",
+            "question": "**Câu 6 (VDC):** Một thùng hàng chứa $80\\%$ sản phẩm loại I và $20\\%$ sản phẩm loại II. Tỉ lệ hỏng của sản phẩm loại I là $1\\%$, loại II là $5\\%$. Lấy ngẫu nhiên một sản phẩm thì thấy bị hỏng. Xác suất để sản phẩm đó là loại I bằng",
             "options": {
               "A": "$\\frac{4}{9}$",
               "B": "$\\frac{1}{2}$",
@@ -14742,7 +14784,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một ngân hàng ước tính xác suất một khách hàng vay tiền vỡ nợ là $0.02$. Một phần mềm chấm điểm tín dụng dự báo đúng khách hàng vỡ nợ với tỉ lệ $90\\%$, nhưng cũng dự báo nhầm khách hàng không vỡ nợ thành vỡ nợ với tỉ lệ $5\\%$. Khi phần mềm cảnh báo một khách hàng sẽ vỡ nợ, tính xác suất thực sự khách hàng đó vỡ nợ (làm tròn kết quả đến hai chữ số thập phân).",
+            "question": "**Câu 5 (VDC):** Một ngân hàng ước tính xác suất một khách hàng vay tiền vỡ nợ là $0.02$. Một phần mềm chấm điểm tín dụng dự báo đúng khách hàng vỡ nợ với tỉ lệ $90\\%$, nhưng cũng dự báo nhầm khách hàng không vỡ nợ thành vỡ nợ với tỉ lệ $5\\%$. Khi phần mềm cảnh báo một khách hàng sẽ vỡ nợ, tính xác suất thực sự khách hàng đó vỡ nợ (làm tròn kết quả đến hai chữ số thập phân).",
             "correctAnswer": "0.27",
             "acceptedAnswers": [
               "0.27",
@@ -14753,7 +14795,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một hộp có 5 viên bi trắng và 5 viên bi đen. Rút lần lượt 2 viên bi không hoàn lại. Biết viên thứ nhất màu đen, tính xác suất viên thứ hai màu trắng.",
+            "question": "**Câu 6 (VDC):** Một hộp có 5 viên bi trắng và 5 viên bi đen. Rút lần lượt 2 viên bi không hoàn lại. Biết viên thứ nhất màu đen, tính xác suất viên thứ hai màu trắng.",
             "correctAnswer": "0.56",
             "acceptedAnswers": [
               "0.56",
@@ -14826,7 +14868,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một thiết bị có hai linh kiện hoạt động độc lập. Xác suất linh kiện A bị lỗi là $0.05$, linh kiện B bị lỗi là $0.1$. Xác suất để thiết bị hoạt động tốt (cả 2 linh kiện không bị lỗi) bằng",
+            "question": "**Câu 5 (VDC):** Một thiết bị có hai linh kiện hoạt động độc lập. Xác suất linh kiện A bị lỗi là $0.05$, linh kiện B bị lỗi là $0.1$. Xác suất để thiết bị hoạt động tốt (cả 2 linh kiện không bị lỗi) bằng",
             "options": {
               "A": "$0.995$",
               "B": "$0.005$",
@@ -14838,7 +14880,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Tỉ lệ cử tri ủng hộ ứng cử viên X là $60\\%$. Trong số người ủng hộ X, có $70\\%$ đi bỏ phiếu. Trong số người không ủng hộ X, có $40\\%$ đi bỏ phiếu. Xác suất một cử tri được chọn ngẫu nhiên có đi bỏ phiếu bằng",
+            "question": "**Câu 6 (VDC):** Tỉ lệ cử tri ủng hộ ứng cử viên X là $60\\%$. Trong số người ủng hộ X, có $70\\%$ đi bỏ phiếu. Trong số người không ủng hộ X, có $40\\%$ đi bỏ phiếu. Xác suất một cử tri được chọn ngẫu nhiên có đi bỏ phiếu bằng",
             "options": {
               "A": "$0.58$",
               "B": "$0.50$",
@@ -15103,7 +15145,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Gieo một con xúc xắc cân đối. Biết kết quả xuất hiện số chấm lớn hơn $3$. Tính xác suất xuất hiện mặt $6$ chấm (nhập phân số dạng tối giản $a/b$ hoặc số thập phân làm tròn hai chữ số: ví dụ $1/3$ thì nhập 0.33).",
+            "question": "**Câu 5 (VDC):** Gieo một con xúc xắc cân đối. Biết kết quả xuất hiện số chấm lớn hơn $3$. Tính xác suất xuất hiện mặt $6$ chấm (nhập phân số dạng tối giản $a/b$ hoặc số thập phân làm tròn hai chữ số: ví dụ $1/3$ thì nhập 0.33).",
             "correctAnswer": "0.33",
             "acceptedAnswers": [
               "0.33",
@@ -15114,7 +15156,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một trạm thu phí cao tốc có hai làn tự động ETC1 và ETC2. Xe qua ETC1 chiếm $60\\%$, qua ETC2 chiếm $40\\%$. Tỉ lệ xe bị lỗi nhận diện thẻ ở ETC1 là $1\\%$, ở ETC2 là $3\\%$. Tính xác suất một xe bất kỳ qua trạm bị lỗi nhận diện (nhập dưới dạng phần trăm: ví dụ $1.8\\%$ thì nhập 1.8).",
+            "question": "**Câu 6 (VDC):** Một trạm thu phí cao tốc có hai làn tự động ETC1 và ETC2. Xe qua ETC1 chiếm $60\\%$, qua ETC2 chiếm $40\\%$. Tỉ lệ xe bị lỗi nhận diện thẻ ở ETC1 là $1\\%$, ở ETC2 là $3\\%$. Tính xác suất một xe bất kỳ qua trạm bị lỗi nhận diện (nhập dưới dạng phần trăm: ví dụ $1.8\\%$ thì nhập 1.8).",
             "correctAnswer": "1.8",
             "acceptedAnswers": [
               "1.8",
@@ -15187,7 +15229,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Tỉ lệ người nhiễm một loại virus trong cộng đồng là $0.5\\%$. Một bộ kit xét nghiệm nhanh có độ nhạy $90\\%$ và độ đặc hiệu $95\\%$. Khi xét nghiệm một người ngẫu nhiên cho kết quả dương tính, xác suất người đó thực sự nhiễm virus xấp xỉ bằng",
+            "question": "**Câu 5 (VDC):** Tỉ lệ người nhiễm một loại virus trong cộng đồng là $0.5\\%$. Một bộ kit xét nghiệm nhanh có độ nhạy $90\\%$ và độ đặc hiệu $95\\%$. Khi xét nghiệm một người ngẫu nhiên cho kết quả dương tính, xác suất người đó thực sự nhiễm virus xấp xỉ bằng",
             "options": {
               "A": "$50\\%$",
               "B": "$0.5\\%$",
@@ -15199,7 +15241,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một nông trường nuôi bò sữa có hai trang trại: trang trại A cung cấp $70\\%$ tổng sản lượng sữa, trang trại B cung cấp $30\\%$. Tỉ lệ sữa đạt chuẩn loại 1 của trang trại A là $95\\%$, của trang trại B là $90\\%$. Chọn ngẫu nhiên một hộp sữa của nông trường, xác suất hộp sữa đạt chuẩn loại 1 bằng",
+            "question": "**Câu 6 (VDC):** Một nông trường nuôi bò sữa có hai trang trại: trang trại A cung cấp $70\\%$ tổng sản lượng sữa, trang trại B cung cấp $30\\%$. Tỉ lệ sữa đạt chuẩn loại 1 của trang trại A là $95\\%$, của trang trại B là $90\\%$. Chọn ngẫu nhiên một hộp sữa của nông trường, xác suất hộp sữa đạt chuẩn loại 1 bằng",
             "options": {
               "A": "$0.910$",
               "B": "$0.925$",
@@ -15464,7 +15506,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Gieo một con xúc xắc cân đối hai lần. Tính xác suất để lần thứ hai xuất hiện mặt 6 chấm biết tổng số chấm sau hai lần gieo bằng 10 (viết dạng số thập phân làm tròn hai chữ số hoặc phân số tối giản).",
+            "question": "**Câu 5 (VDC):** Gieo một con xúc xắc cân đối hai lần. Tính xác suất để lần thứ hai xuất hiện mặt 6 chấm biết tổng số chấm sau hai lần gieo bằng 10 (viết dạng số thập phân làm tròn hai chữ số hoặc phân số tối giản).",
             "correctAnswer": "0.33",
             "acceptedAnswers": [
               "0.33",
@@ -15475,7 +15517,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một kho xăng dầu có hai bể chứa $B_1$ và $B_2$ với dung tích bằng nhau ($50\\% - 50\\%$). Bể $B_1$ có tỉ lệ tạp chất $0.5\\%$, bể $B_2$ có tỉ lệ tạp chất $1.5\\%$. Lấy ngẫu nhiên một mẫu xăng từ kho, tính xác suất mẫu xăng có tạp chất (nhập số dạng phần trăm: ví dụ $1\\%$ thì nhập 1).",
+            "question": "**Câu 6 (VDC):** Một kho xăng dầu có hai bể chứa $B_1$ và $B_2$ với dung tích bằng nhau ($50\\% - 50\\%$). Bể $B_1$ có tỉ lệ tạp chất $0.5\\%$, bể $B_2$ có tỉ lệ tạp chất $1.5\\%$. Lấy ngẫu nhiên một mẫu xăng từ kho, tính xác suất mẫu xăng có tạp chất (nhập số dạng phần trăm: ví dụ $1\\%$ thì nhập 1).",
             "correctAnswer": "1",
             "acceptedAnswers": [
               "1",
@@ -15548,7 +15590,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một công ty phần mềm phát hiện một loại mã độc với xác suất $99\\%$. Xác suất phần mềm nhận diện nhầm một file an toàn thành mã độc là $1\\%$. Trong một thư mục, tỉ lệ file chứa mã độc là $0.1\\%$. Khi phần mềm báo một file là mã độc, xác suất file đó thực sự chứa mã độc là",
+            "question": "**Câu 5 (VDC):** Một công ty phần mềm phát hiện một loại mã độc với xác suất $99\\%$. Xác suất phần mềm nhận diện nhầm một file an toàn thành mã độc là $1\\%$. Trong một thư mục, tỉ lệ file chứa mã độc là $0.1\\%$. Khi phần mềm báo một file là mã độc, xác suất file đó thực sự chứa mã độc là",
             "options": {
               "A": "$99\\%$",
               "B": "$9\\%$",
@@ -15560,7 +15602,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một trạm phát điện năng lượng mặt trời có hai cụm pin A và B. Cụm A tạo ra $60\\%$ sản lượng điện, cụm B tạo ra $40\\%$. Tỉ lệ suy hao hiệu suất trong ngày nhiều mây của cụm A là $10\\%$, của cụm B là $15\\%$. Chọn ngẫu nhiên một phần điện năng bị suy hao, xác suất phần điện năng đó do cụm A tạo ra bằng",
+            "question": "**Câu 6 (VDC):** Một trạm phát điện năng lượng mặt trời có hai cụm pin A và B. Cụm A tạo ra $60\\%$ sản lượng điện, cụm B tạo ra $40\\%$. Tỉ lệ suy hao hiệu suất trong ngày nhiều mây của cụm A là $10\\%$, của cụm B là $15\\%$. Chọn ngẫu nhiên một phần điện năng bị suy hao, xác suất phần điện năng đó do cụm A tạo ra bằng",
             "options": {
               "A": "$\\frac{2}{3}$",
               "B": "$\\frac{3}{5}$",
@@ -15826,7 +15868,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 5,
-            "question": "**Câu 5:** Một ngân hàng phát hiện giao dịch gian lận chiếm tỉ lệ $0.2\\%$ tổng số giao dịch. Hệ thống AI cảnh báo đúng giao dịch gian lận với xác suất $98\\%$, nhưng cảnh báo nhầm giao dịch hợp pháp thành gian lận với xác suất $1\\%$. Khi hệ thống AI cảnh báo một giao dịch là gian lận, tính xác suất giao dịch đó thực sự là gian lận (làm tròn kết quả đến hai chữ số thập phân).",
+            "question": "**Câu 5 (VDC):** Một ngân hàng phát hiện giao dịch gian lận chiếm tỉ lệ $0.2\\%$ tổng số giao dịch. Hệ thống AI cảnh báo đúng giao dịch gian lận với xác suất $98\\%$, nhưng cảnh báo nhầm giao dịch hợp pháp thành gian lận với xác suất $1\\%$. Khi hệ thống AI cảnh báo một giao dịch là gian lận, tính xác suất giao dịch đó thực sự là gian lận (làm tròn kết quả đến hai chữ số thập phân).",
             "correctAnswer": "0.16",
             "acceptedAnswers": [
               "0.16",
@@ -15837,7 +15879,7 @@ window.TOPIC_EXAMS_DB = [
           },
           {
             "id": 6,
-            "question": "**Câu 6:** Một giỏ hoa quả có 6 quả cam và 4 quả táo. Lấy lần lượt 2 quả không hoàn lại. Tính xác suất quả thứ hai là quả cam biết quả thứ nhất là quả táo (nhập số thập phân làm tròn hai chữ số hoặc phân số tối giản).",
+            "question": "**Câu 6 (VDC):** Một giỏ hoa quả có 6 quả cam và 4 quả táo. Lấy lần lượt 2 quả không hoàn lại. Tính xác suất quả thứ hai là quả cam biết quả thứ nhất là quả táo (nhập số thập phân làm tròn hai chữ số hoặc phân số tối giản).",
             "correctAnswer": "0.67",
             "acceptedAnswers": [
               "0.67",

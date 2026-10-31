@@ -99,14 +99,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một chiếc đèn chùm có trọng lượng $P = 100\\text{ N}$ được treo vào trần nhà bằng 3 sợi dây cáp không giãn có chiều dài bằng nhau và hợp với phương thẳng đứng một góc $30^\\circ$. Lực căng $T$ của mỗi sợi dây cáp bằng bao nhiêu?",
+                    "question": "**Câu 5 (VDC):** Một chiếc đèn chùm có trọng lượng $P = 100\\text{ N}$ được treo vào trần nhà bằng 3 sợi dây cáp không giãn có chiều dài bằng nhau và hợp với phương thẳng đứng một góc $30^\\circ$. Lực căng $T$ của mỗi sợi dây cáp bằng bao nhiêu?",
                     "options": {"A": "$\\frac{100}{3\\sqrt{3}}\\text{ N}$", "B": "$\\frac{200}{3\\sqrt{3}}\\text{ N}$", "C": "$\\frac{100\\sqrt{3}}{3}\\text{ N}$", "D": "$50\\text{ N}$"},
                     "correct": "B",
                     "explanation": "Tổng hình chiếu các lực căng lên phương thẳng đứng cân bằng với trọng lượng: $3T \\cos 30^\\circ = P \\Leftrightarrow 3T \\frac{\\sqrt{3}}{2} = 100 \\Rightarrow T = \\frac{200}{3\\sqrt{3}}\\text{ N}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Cho tứ diện đều $ABCD$ có cạnh bằng $a$. Tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ bằng",
+                    "question": "**Câu 6 (VDC):** Cho tứ diện đều $ABCD$ có cạnh bằng $a$. Tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ bằng",
                     "options": {"A": "$\\frac{a^2}{2}$", "B": "$-\\frac{a^2}{2}$", "C": "$\\frac{a^2\\sqrt{3}}{2}$", "D": "$a^2$"},
                     "correct": "A",
                     "explanation": "Tam giác $ABC$ đều cạnh $a$ nên góc $(\\vec{AB}, \\vec{AC}) = 60^\\circ$. Do đó $\\vec{AB} \\cdot \\vec{AC} = a \\cdot a \\cdot \\cos 60^\\circ = \\frac{a^2}{2}$."
@@ -229,14 +229,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một người kéo một khối gỗ trượt trên sàn với lực kéo $F = 100\\text{ N}$ nghiêng góc $45^\\circ$ so với sàn. Tính công cơ học của lực kéo khi khối gỗ di chuyển được quãng đường $10\\sqrt{2}\\text{ m}$ (đơn vị: Joule).",
+                    "question": "**Câu 5 (VDC):** Một người kéo một khối gỗ trượt trên sàn với lực kéo $F = 100\\text{ N}$ nghiêng góc $45^\\circ$ so với sàn. Tính công cơ học của lực kéo khi khối gỗ di chuyển được quãng đường $10\\sqrt{2}\\text{ m}$ (đơn vị: Joule).",
                     "correctAnswer": "1000",
                     "acceptedAnswers": ["1000"],
                     "explanation": "$A = F \\cdot s \\cdot \\cos 45^\\circ = 100 \\times 10\\sqrt{2} \\times \\frac{\\sqrt{2}}{2} = 1000\\text{ J}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một chiếc ca nô di chuyển trên một con sông. Vận tốc riêng của ca nô là $16\\text{ km/h}$ hướng thẳng vuông góc với bờ sông. Dòng nước chảy xuôi dòng với vận tốc $12\\text{ km/h}$. Tốc độ thực tế của ca nô so với bờ sông là bao nhiêu km/h?",
+                    "question": "**Câu 6 (VDC):** Một chiếc ca nô di chuyển trên một con sông. Vận tốc riêng của ca nô là $16\\text{ km/h}$ hướng thẳng vuông góc với bờ sông. Dòng nước chảy xuôi dòng với vận tốc $12\\text{ km/h}$. Tốc độ thực tế của ca nô so với bờ sông là bao nhiêu km/h?",
                     "correctAnswer": "20",
                     "acceptedAnswers": ["20"],
                     "explanation": "$v = \\sqrt{16^2 + 12^2} = \\sqrt{256 + 144} = \\sqrt{400} = 20\\text{ km/h}$."
@@ -275,14 +275,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Ba lực đồng quy $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$ cùng tác dụng vào một vật và vật cân bằng. Biết $\\vec{F}_1 \\perp \\vec{F}_2$ và $|\\vec{F}_1| = 6\\text{ N}, |\\vec{F}_2| = 8\\text{ N}$. Độ lớn của lực $\\vec{F}_3$ bằng",
+                    "question": "**Câu 5 (VDC):** Ba lực đồng quy $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$ cùng tác dụng vào một vật và vật cân bằng. Biết $\\vec{F}_1 \\perp \\vec{F}_2$ và $|\\vec{F}_1| = 6\\text{ N}, |\\vec{F}_2| = 8\\text{ N}$. Độ lớn của lực $\\vec{F}_3$ bằng",
                     "options": {"A": "$10\\text{ N}$", "B": "$14\\text{ N}$", "C": "$2\\text{ N}$", "D": "$48\\text{ N}$"},
                     "correct": "A",
                     "explanation": "Vì $\\vec{F}_1 + \\vec{F}_2 + \\vec{F}_3 = \\vec{0} \\Rightarrow \\vec{F}_3 = -(\\vec{F}_1 + \\vec{F}_2)$. Do $\\vec{F}_1 \\perp \\vec{F}_2$ nên $|\\vec{F}_3| = \\sqrt{6^2 + 8^2} = 10\\text{ N}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Cho tứ diện $ABCD$. Đặt $\\vec{AB} = \\vec{b}, \\vec{AC} = \\vec{c}, \\vec{AD} = \\vec{d}$. Gọi $G$ là trọng tâm tam giác $BCD$. Vectơ $\\vec{AG}$ biểu diễn theo $\\vec{b}, \\vec{c}, \\vec{d}$ là",
+                    "question": "**Câu 6 (VDC):** Cho tứ diện $ABCD$. Đặt $\\vec{AB} = \\vec{b}, \\vec{AC} = \\vec{c}, \\vec{AD} = \\vec{d}$. Gọi $G$ là trọng tâm tam giác $BCD$. Vectơ $\\vec{AG}$ biểu diễn theo $\\vec{b}, \\vec{c}, \\vec{d}$ là",
                     "options": {"A": "$\\frac{1}{3}(\\vec{b} + \\vec{c} + \\vec{d})$", "B": "$\\vec{b} + \\vec{c} + \\vec{d}$", "C": "$\\frac{1}{2}(\\vec{b} + \\vec{c} + \\vec{d})$", "D": "$\\frac{1}{4}(\\vec{b} + \\vec{c} + \\vec{d})$"},
                     "correct": "A",
                     "explanation": "Theo tính chất trọng tâm tam giác: $\\vec{AG} = \\frac{1}{3}(\\vec{AB} + \\vec{AC} + \\vec{AD}) = \\frac{1}{3}(\\vec{b} + \\vec{c} + \\vec{d})$."
@@ -405,14 +405,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một máy bay đang bay với vận tốc hướng Bắc là $500\\text{ km/h}$. Một luồng gió mạnh thổi từ hướng Tây sang Đông với tốc độ $120\\text{ km/h}$. Tốc độ tổng hợp của máy bay so với mặt đất bằng bao nhiêu km/h? (Làm tròn đến hàng đơn vị).",
+                    "question": "**Câu 5 (VDC):** Một máy bay đang bay với vận tốc hướng Bắc là $500\\text{ km/h}$. Một luồng gió mạnh thổi từ hướng Tây sang Đông với tốc độ $120\\text{ km/h}$. Tốc độ tổng hợp của máy bay so với mặt đất bằng bao nhiêu km/h? (Làm tròn đến hàng đơn vị).",
                     "correctAnswer": "514",
                     "acceptedAnswers": ["514"],
                     "explanation": "$v = \\sqrt{500^2 + 120^2} = \\sqrt{250000 + 14400} = \\sqrt{264400} \\approx 514.2 \\Rightarrow 514$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một vật treo cân bằng bằng hai sợi dây tạo với trần nhà hai góc bằng nhau là $45^\\circ$. Biết trọng lượng của vật là $P = 100\\text{ N}$. Lực căng của mỗi sợi dây xấp xỉ bằng bao nhiêu Newton? (Lấy $\\sqrt{2} \\approx 1.414$, làm tròn kết quả đến hàng đơn vị).",
+                    "question": "**Câu 6 (VDC):** Một vật treo cân bằng bằng hai sợi dây tạo với trần nhà hai góc bằng nhau là $45^\\circ$. Biết trọng lượng của vật là $P = 100\\text{ N}$. Lực căng của mỗi sợi dây xấp xỉ bằng bao nhiêu Newton? (Lấy $\\sqrt{2} \\approx 1.414$, làm tròn kết quả đến hàng đơn vị).",
                     "correctAnswer": "71",
                     "acceptedAnswers": ["71", "70.7", "70,7"],
                     "explanation": "$2T \\sin 45^\\circ = P \\Rightarrow 2T \\frac{\\sqrt{2}}{2} = 100 \\Rightarrow T = \\frac{100}{\\sqrt{2}} = 50\\sqrt{2} \\approx 70.71 \\approx 71\\text{ N}$."
@@ -451,14 +451,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một vật được kéo bởi hai lực $\\vec{F}_1$ và $\\vec{F}_2$ vuông góc với nhau có độ lớn lần lượt là $30\\text{ N}$ và $40\\text{ N}$. Để vật đứng yên cân bằng, cần tác dụng thêm lực $\\vec{F}_3$ có độ lớn bằng",
+                    "question": "**Câu 5 (VDC):** Một vật được kéo bởi hai lực $\\vec{F}_1$ và $\\vec{F}_2$ vuông góc với nhau có độ lớn lần lượt là $30\\text{ N}$ và $40\\text{ N}$. Để vật đứng yên cân bằng, cần tác dụng thêm lực $\\vec{F}_3$ có độ lớn bằng",
                     "options": {"A": "$50\\text{ N}$", "B": "$70\\text{ N}$", "C": "$10\\text{ N}$", "D": "$35\\text{ N}$"},
                     "correct": "A",
                     "explanation": "Hợp lực của $\\vec{F}_1$ và $\\vec{F}_2$ là $\\sqrt{30^2 + 40^2} = 50\\text{ N}$. Để cân bằng, $|\\vec{F}_3| = 50\\text{ N}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Cho tứ diện $ABCD$ có $G$ là trọng tâm. Mệnh đề nào sau đây đúng?",
+                    "question": "**Câu 6 (VDC):** Cho tứ diện $ABCD$ có $G$ là trọng tâm. Mệnh đề nào sau đây đúng?",
                     "options": {"A": "$\\vec{GA} + \\vec{GB} + \\vec{GC} + \\vec{GD} = \\vec{0}$", "B": "$\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{GD}$", "C": "$\\vec{AB} + \\vec{AC} + \\vec{AD} = \\vec{0}$", "D": "$\\vec{DA} + \\vec{DB} + \\vec{DC} = \\vec{0}$"},
                     "correct": "A",
                     "explanation": "Đặc trưng của trọng tâm tứ diện là tổng vectơ từ trọng tâm đến 4 đỉnh bằng $\\vec{0}$."
@@ -581,14 +581,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một chiếc máy bay bay theo hướng Đông Bắc với tốc độ $600\\text{ km/h}$. Gió thổi ngược lại theo hướng Tây Nam với tốc độ $100\\text{ km/h}$. Tốc độ thực của máy bay so với mặt đất bằng bao nhiêu km/h?",
+                    "question": "**Câu 5 (VDC):** Một chiếc máy bay bay theo hướng Đông Bắc với tốc độ $600\\text{ km/h}$. Gió thổi ngược lại theo hướng Tây Nam với tốc độ $100\\text{ km/h}$. Tốc độ thực của máy bay so với mặt đất bằng bao nhiêu km/h?",
                     "correctAnswer": "500",
                     "acceptedAnswers": ["500"],
                     "explanation": "Hai hướng ngược nhau hoàn toàn nên $v = 600 - 100 = 500\\text{ km/h}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một quả bóng chịu tác dụng của 3 lực cân bằng $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$. Biết $|\\vec{F}_1| = 12\\text{ N}, |\\vec{F}_2| = 16\\text{ N}$ và $\\vec{F}_1 \\perp \\vec{F}_2$. Tính độ lớn của lực $\\vec{F}_3$ (đơn vị: Newton).",
+                    "question": "**Câu 6 (VDC):** Một quả bóng chịu tác dụng của 3 lực cân bằng $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$. Biết $|\\vec{F}_1| = 12\\text{ N}, |\\vec{F}_2| = 16\\text{ N}$ và $\\vec{F}_1 \\perp \\vec{F}_2$. Tính độ lớn của lực $\\vec{F}_3$ (đơn vị: Newton).",
                     "correctAnswer": "20",
                     "acceptedAnswers": ["20"],
                     "explanation": "$|\\vec{F}_3| = \\sqrt{12^2 + 16^2} = \\sqrt{144 + 256} = \\sqrt{400} = 20\\text{ N}$."
@@ -627,14 +627,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một con tàu di chuyển theo hướng Đông với vận tốc $24\\text{ hải lý/giờ}$. Dòng hải lưu chảy theo hướng Bắc với vận tốc $7\\text{ hải lý/giờ}$. Vận tốc thực của con tàu so với đáy biển là",
+                    "question": "**Câu 5 (VDC):** Một con tàu di chuyển theo hướng Đông với vận tốc $24\\text{ hải lý/giờ}$. Dòng hải lưu chảy theo hướng Bắc với vận tốc $7\\text{ hải lý/giờ}$. Vận tốc thực của con tàu so với đáy biển là",
                     "options": {"A": "$25\\text{ hải lý/giờ}$", "B": "$31\\text{ hải lý/giờ}$", "C": "$17\\text{ hải lý/giờ}$", "D": "$28\\text{ hải lý/giờ}$"},
                     "correct": "A",
                     "explanation": "$v = \\sqrt{24^2 + 7^2} = \\sqrt{576 + 49} = \\sqrt{625} = 25\\text{ hải lý/giờ}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Cho hình lăng trụ $ABC.A'B'C'$. Khẳng định nào sau đây đúng?",
+                    "question": "**Câu 6 (VDC):** Cho hình lăng trụ $ABC.A'B'C'$. Khẳng định nào sau đây đúng?",
                     "options": {"A": "$\\vec{AA'} = \\vec{BB'} = \\vec{CC'}$", "B": "$\\vec{AA'} + \\vec{BB'} = \\vec{CC'}$", "C": "$\\vec{AA'} = -\\vec{BB'}$", "D": "$\\vec{AB} = \\vec{A'C'}$"},
                     "correct": "A",
                     "explanation": "Các cạnh bên của hình lăng trụ song song và bằng nhau, cùng hướng từ đáy dưới lên đáy trên nên các vectơ bằng nhau."
@@ -757,14 +757,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một người kéo một chiếc va li đi một quãng đường $50\\text{ m}$ trên sân ga với lực kéo $F = 60\\text{ N}$ chếch lên hợp với phương ngang một góc $60^\\circ$. Công của lực kéo bằng bao nhiêu Joule?",
+                    "question": "**Câu 5 (VDC):** Một người kéo một chiếc va li đi một quãng đường $50\\text{ m}$ trên sân ga với lực kéo $F = 60\\text{ N}$ chếch lên hợp với phương ngang một góc $60^\\circ$. Công của lực kéo bằng bao nhiêu Joule?",
                     "correctAnswer": "1500",
                     "acceptedAnswers": ["1500"],
                     "explanation": "$A = 60 \\times 50 \\times \\cos 60^\\circ = 3000 \\times 0.5 = 1500\\text{ J}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một ca nô chuyển động từ bờ sông bên này sang bờ sông bên kia. Vận tốc của ca nô đối với dòng nước là $15\\text{ km/h}$, vận tốc dòng nước là $8\\text{ km/h}$. Biết hướng chuyển động của ca nô vuông góc với dòng nước. Tốc độ của ca nô đối với bờ sông bằng bao nhiêu km/h?",
+                    "question": "**Câu 6 (VDC):** Một ca nô chuyển động từ bờ sông bên này sang bờ sông bên kia. Vận tốc của ca nô đối với dòng nước là $15\\text{ km/h}$, vận tốc dòng nước là $8\\text{ km/h}$. Biết hướng chuyển động của ca nô vuông góc với dòng nước. Tốc độ của ca nô đối với bờ sông bằng bao nhiêu km/h?",
                     "correctAnswer": "17",
                     "acceptedAnswers": ["17"],
                     "explanation": "$v = \\sqrt{15^2 + 8^2} = \\sqrt{225 + 64} = \\sqrt{289} = 17\\text{ km/h}$."
@@ -803,14 +803,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một vật đứng cân bằng dưới tác dụng của 3 lực $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$. Biết $|\\vec{F}_1| = 5\\text{ N}, |\\vec{F}_2| = 12\\text{ N}$ và $\\vec{F}_1 \\perp \\vec{F}_2$. Độ lớn của lực $\\vec{F}_3$ bằng",
+                    "question": "**Câu 5 (VDC):** Một vật đứng cân bằng dưới tác dụng của 3 lực $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$. Biết $|\\vec{F}_1| = 5\\text{ N}, |\\vec{F}_2| = 12\\text{ N}$ và $\\vec{F}_1 \\perp \\vec{F}_2$. Độ lớn của lực $\\vec{F}_3$ bằng",
                     "options": {"A": "$13\\text{ N}$", "B": "$17\\text{ N}$", "C": "$7\\text{ N}$", "D": "$60\\text{ N}$"},
                     "correct": "A",
                     "explanation": "$\\sqrt{5^2 + 12^2} = 13\\text{ N}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Cho hình hộp $ABCD.A'B'C'D'$. Vectơ nào dưới đây bằng vectơ $\\vec{AB} + \\vec{B'C'} + \\vec{DD'}$?",
+                    "question": "**Câu 6 (VDC):** Cho hình hộp $ABCD.A'B'C'D'$. Vectơ nào dưới đây bằng vectơ $\\vec{AB} + \\vec{B'C'} + \\vec{DD'}$?",
                     "options": {"A": "$\\vec{AC'}$", "B": "$\\vec{CA'}$", "C": "$\\vec{BD'}$", "D": "$\\vec{A'C}$"},
                     "correct": "A",
                     "explanation": "Vì $\\vec{B'C'} = \\vec{AD}$ và $\\vec{DD'} = \\vec{AA'}$ nên $\\vec{AB} + \\vec{AD} + \\vec{AA'} = \\vec{AC'}$."
@@ -933,14 +933,14 @@ def get_topic_cd7():
                 },
                 {
                     "id": 5,
-                    "question": "**Câu 5:** Một máy bay bay theo hướng Bắc với vận tốc $450\\text{ km/h}$. Gió thổi theo hướng Đông với vận tốc $60\\text{ km/h}$. Tính tốc độ thực tế của máy bay đối với mặt đất (làm tròn đến hàng đơn vị).",
+                    "question": "**Câu 5 (VDC):** Một máy bay bay theo hướng Bắc với vận tốc $450\\text{ km/h}$. Gió thổi theo hướng Đông với vận tốc $60\\text{ km/h}$. Tính tốc độ thực tế của máy bay đối với mặt đất (làm tròn đến hàng đơn vị).",
                     "correctAnswer": "454",
                     "acceptedAnswers": ["454"],
                     "explanation": "$v = \\sqrt{450^2 + 60^2} = \\sqrt{202500 + 3600} = \\sqrt{206100} \\approx 453.98 \\Rightarrow 454\\text{ km/h}$."
                 },
                 {
                     "id": 6,
-                    "question": "**Câu 6:** Một vật có khối lượng $m = 10\\text{ kg}$ được giữ yên trên mặt phẳng nghiêng góc $30^\\circ$ so với phương ngang bởi một sợi dây cáp song song với mặt nghiêng. Lấy $g = 9.8\\text{ m/s}^2$. Độ lớn lực căng của sợi dây bằng bao nhiêu Newton?",
+                    "question": "**Câu 6 (VDC):** Một vật có khối lượng $m = 10\\text{ kg}$ được giữ yên trên mặt phẳng nghiêng góc $30^\\circ$ so với phương ngang bởi một sợi dây cáp song song với mặt nghiêng. Lấy $g = 9.8\\text{ m/s}^2$. Độ lớn lực căng của sợi dây bằng bao nhiêu Newton?",
                     "correctAnswer": "49",
                     "acceptedAnswers": ["49"],
                     "explanation": "$T = m g \\sin 30^\\circ = 10 \\times 9.8 \\times 0.5 = 49\\text{ N}$."
