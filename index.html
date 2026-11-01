@@ -1831,6 +1831,62 @@
   </div>
 
   <!-- =========================================================================
+       MODAL: CHUYỂN SANG PHẦN HỌC KHÁC
+       ========================================================================= -->
+  <div id="modal-switch-part" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99993] hidden items-center justify-center p-3 sm:p-5 select-none font-serif animate-in fade-in">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-xl w-full border-2 border-indigo-300 overflow-hidden font-serif flex flex-col max-h-[90vh]">
+      <!-- Header -->
+      <div class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-purple-950 text-white p-4 shrink-0 flex items-center justify-between gap-3 shadow-md">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-400 text-indigo-950 flex items-center justify-center text-lg font-bold shadow-sm">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div>
+            <h4 class="font-black text-sm sm:text-base uppercase tracking-wide flex items-center gap-2">
+              <span>CHUYỂN SANG PHẦN HỌC KHÁC</span>
+            </h4>
+            <p id="switch-part-lesson-title" class="text-xs text-indigo-200 line-clamp-1">
+              Chọn phần nội dung em muốn làm tiếp theo
+            </p>
+          </div>
+        </div>
+        <button 
+          type="button" 
+          onclick="closeSwitchPartModal()" 
+          class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white font-black flex items-center justify-center cursor-pointer transition text-base"
+          title="Đóng"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Body / Grid options -->
+      <div id="switch-part-grid" class="flex-1 overflow-y-auto p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3 bg-slate-50/70">
+        <!-- Dynamically populated in openSwitchPartModal() -->
+      </div>
+
+      <!-- Footer -->
+      <div class="p-3.5 sm:p-4 bg-white border-t border-slate-200 flex items-center justify-between gap-2.5 shrink-0">
+        <button 
+          type="button" 
+          onclick="closeSwitchPartModal()" 
+          class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm cursor-pointer transition"
+        >
+          Đóng
+        </button>
+        <button 
+          type="button" 
+          onclick="closeSwitchPartModal(); if (activeLesson && activeLesson.isChapterReview) { submitChapterReviewExam(false); } else { handleFinishLesson(); }" 
+          class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-black text-xs sm:text-sm flex items-center gap-2 shadow-md cursor-pointer active:scale-95 transition"
+        >
+          <i class="fa-solid fa-flag-checkered text-amber-300"></i>
+          <span>Nộp bài & Chấm điểm</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
        MODAL 1: BẢNG CHỌN ĐỀ ÔN THI TỐT NGHIỆP THPT (Chuẩn 3 Đề Bộ GD&ĐT)
        ========================================================================= -->
   <div id="modal-exam-practice" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99992] hidden items-center justify-center p-3 sm:p-5 select-none font-serif animate-in fade-in">
@@ -20579,6 +20635,178 @@
     window.switchTopicInnerTab = switchTopicInnerTab;
     window.startTopicExam = startTopicExam;
 
+    function openSwitchPartModal() {
+      const modal = document.getElementById('modal-switch-part');
+      if (!modal) return;
+
+      const isCR = activeLesson && activeLesson.isChapterReview;
+      const curSec = (activeLesson && activeLesson.sections && activeLesson.sections[0]) ? activeLesson.sections[0] : null;
+      const mcqs = (curSec && curSec.mcqs) ? curSec.mcqs : [];
+      let answeredMCQ = 0;
+      if (isCR && window.chapterExamState && window.chapterExamState.mcqAnswers) {
+        mcqs.forEach((m, idx) => {
+          if (window.chapterExamState.mcqAnswers[idx]) answeredMCQ++;
+        });
+      }
+
+      const tfList = (window.activeTFQuestions && window.activeTFQuestions.length) ? window.activeTFQuestions : [];
+      let answeredTF = 0;
+      tfList.forEach(q => {
+        (q.items || []).forEach(it => {
+          if (window.tfAnswers && window.tfAnswers[`${q.id}_${it.key}`]) answeredTF++;
+        });
+      });
+
+      const saList = (window.activeSAQuestions && window.activeSAQuestions.length) ? window.activeSAQuestions : [];
+      let answeredSA = 0;
+      saList.forEach(q => {
+        if (window.saAnswers && window.saAnswers[q.id] && String(window.saAnswers[q.id]).trim().length > 0) answeredSA++;
+      });
+
+      const titleEl = document.getElementById('switch-part-lesson-title');
+      if (titleEl) {
+        titleEl.textContent = (activeLesson && activeLesson.lessonTitle) ? activeLesson.lessonTitle : 'Bài học SGK';
+      }
+
+      const gridEl = document.getElementById('switch-part-grid');
+      if (gridEl) {
+        let itemsHtml = `
+          <!-- 1. Lý Thuyết -->
+          <button 
+            type="button" 
+            onclick="switchStudyTab('theory'); closeSwitchPartModal();" 
+            class="p-3.5 sm:p-4 rounded-2xl border-2 border-indigo-200 hover:border-indigo-500 bg-white hover:bg-indigo-50/70 transition flex items-start gap-3.5 text-left group shadow-xs cursor-pointer active:scale-95"
+          >
+            <div class="w-11 h-11 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between">
+                <span>Lý Thuyết Trọng Tâm</span>
+                <span class="text-[10px] text-indigo-700 font-semibold px-2 py-0.5 rounded-full bg-indigo-50 border border-indigo-200">Mục 1</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-0.5 line-clamp-2">Định nghĩa, công thức toán học và ví dụ minh họa SGK</p>
+            </div>
+          </button>
+
+          <!-- 2. Phần 1: Trắc Nghiệm Khách Quan -->
+          <button 
+            type="button" 
+            onclick="switchStudyTab('mcq'); closeSwitchPartModal();" 
+            class="p-3.5 sm:p-4 rounded-2xl border-2 border-blue-200 hover:border-blue-500 bg-white hover:bg-blue-50/70 transition flex items-start gap-3.5 text-left group shadow-xs cursor-pointer active:scale-95"
+          >
+            <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+              <i class="fa-solid fa-list-ol"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between">
+                <span>Phần 1: Trắc Nghiệm</span>
+                <span class="text-[10px] text-blue-700 font-bold px-2 py-0.5 rounded-full bg-blue-50 border border-blue-200">${answeredMCQ}/${mcqs.length} câu</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-0.5 line-clamp-2">4 lựa chọn A, B, C, D (0.50 đ / câu)</p>
+            </div>
+          </button>
+
+          <!-- 3. Phần 2: Đúng / Sai -->
+          <button 
+            type="button" 
+            onclick="switchStudyTab('tf'); closeSwitchPartModal();" 
+            class="p-3.5 sm:p-4 rounded-2xl border-2 border-amber-200 hover:border-amber-500 bg-white hover:bg-amber-50/70 transition flex items-start gap-3.5 text-left group shadow-xs cursor-pointer active:scale-95"
+          >
+            <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between">
+                <span>Phần 2: Đúng / Sai</span>
+                <span class="text-[10px] text-amber-900 font-bold px-2 py-0.5 rounded-full bg-amber-50 border border-amber-300">${answeredTF}/${tfList.length * 4} ý</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-0.5 line-clamp-2">${tfList.length} câu đúng/sai (${tfList.length * 4} ý hỏi chuẩn Bộ GD&ĐT)</p>
+            </div>
+          </button>
+        `;
+
+        if (saList.length > 0) {
+          itemsHtml += `
+            <!-- 4. Phần 3: Trả Lời Ngắn -->
+            <button 
+              type="button" 
+              onclick="switchStudyTab('sa'); closeSwitchPartModal();" 
+              class="p-3.5 sm:p-4 rounded-2xl border-2 border-cyan-200 hover:border-cyan-500 bg-white hover:bg-cyan-50/70 transition flex items-start gap-3.5 text-left group shadow-xs cursor-pointer active:scale-95"
+            >
+              <div class="w-11 h-11 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between">
+                  <span>Phần 3: Trả Lời Ngắn</span>
+                  <span class="text-[10px] text-cyan-900 font-bold px-2 py-0.5 rounded-full bg-cyan-50 border border-cyan-300">${answeredSA}/${saList.length} câu</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-0.5 line-clamp-2">${saList.length} câu điền số hoặc phân số rút gọn</p>
+              </div>
+            </button>
+          `;
+        }
+
+        if (activeLesson && activeLesson.essayQuestions && activeLesson.essayQuestions.length > 0) {
+          itemsHtml += `
+            <!-- 5. Phần 4: Tự Luận -->
+            <button 
+              type="button" 
+              onclick="switchStudyTab('essay'); closeSwitchPartModal();" 
+              class="p-3.5 sm:p-4 rounded-2xl border-2 border-teal-200 hover:border-teal-500 bg-white hover:bg-teal-50/70 transition flex items-start gap-3.5 text-left group shadow-xs cursor-pointer active:scale-95"
+            >
+              <div class="w-11 h-11 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+                <i class="fa-solid fa-file-lines"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between">
+                  <span>Phần 4: Tự Luận</span>
+                  <span class="text-[10px] text-teal-900 font-bold px-2 py-0.5 rounded-full bg-teal-50 border border-teal-300">${activeLesson.essayQuestions.length} bài</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-0.5 line-clamp-2">Trình bày lời giải chi tiết theo các bước</p>
+              </div>
+            </button>
+          `;
+        }
+
+        itemsHtml += `
+          <!-- 6. Trợ Lý AI -->
+          <button 
+            type="button" 
+            onclick="switchStudyTab('chat'); closeSwitchPartModal();" 
+            class="p-3.5 sm:p-4 rounded-2xl border-2 border-purple-200 hover:border-purple-500 bg-white hover:bg-purple-50/70 transition flex items-start gap-3.5 text-left group shadow-xs cursor-pointer active:scale-95"
+          >
+            <div class="w-11 h-11 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between">
+                <span>Trợ Lý AI Thầy Thuấn</span>
+                <span class="text-[10px] text-purple-700 font-bold px-2 py-0.5 rounded-full bg-purple-50 border border-purple-200">Trò chuyện</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-0.5 line-clamp-2">Hỏi đáp công thức, nhận gợi ý và giải thích sư phạm</p>
+            </div>
+          </button>
+        `;
+
+        gridEl.innerHTML = itemsHtml;
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+    window.openSwitchPartModal = openSwitchPartModal;
+
+    function closeSwitchPartModal() {
+      const modal = document.getElementById('modal-switch-part');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+    window.closeSwitchPartModal = closeSwitchPartModal;
+
     function openExamPracticeModal() {
       if (!enforceAuthentication('Ôn thi tốt nghiệp cùng Thầy Thuấn')) return;
       const modal = document.getElementById('modal-exam-practice');
@@ -31415,30 +31643,64 @@ ${activeLesson.lessonTitle}
             <!-- Detailed solution if submitted -->
             ${solutionBox}
 
-            <!-- Minimal Bottom Navigation -->
+            <!-- Bottom Navigation Bar -->
             <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-200">
               <button 
                 type="button" 
                 onclick="handleExamPrevQuestion('mcq')" 
                 ${mcqIdx === 0 ? 'disabled' : ''} 
-                class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-indigo-200 bg-white hover:bg-indigo-50 text-indigo-950 font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-indigo-200 bg-white hover:bg-indigo-50 text-indigo-950 font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
               >
                 <i class="fa-solid fa-arrow-left"></i>
                 <span>← Câu trước</span>
               </button>
 
-              <div class="text-xs sm:text-sm text-indigo-950 font-black bg-indigo-50 px-4 sm:px-5 py-2 rounded-full border border-indigo-200 shadow-xs">
+              <div class="text-xs sm:text-sm text-indigo-950 font-black bg-indigo-50 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full border border-indigo-200 shadow-xs">
                 Câu ${mcqIdx + 1} / ${mcqs.length}
               </div>
 
+              ${mcqIdx < mcqs.length - 1 ? `
+                <button 
+                  type="button" 
+                  onclick="handleExamNextQuestion('mcq')" 
+                  class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md shadow-indigo-600/30 transition active:scale-95"
+                >
+                  <span>Câu tiếp theo →</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              ` : `
+                <button 
+                  type="button" 
+                  onclick="switchStudyTab('tf')" 
+                  class="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md transition active:scale-95"
+                  title="Chuyển sang Phần 2: Đúng / Sai"
+                >
+                  <span>Sang Phần 2 (Đúng/Sai) →</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              `}
+            </div>
+
+            <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
+            <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-dashed border-indigo-200">
               <button 
                 type="button" 
-                onclick="handleExamNextQuestion('mcq')" 
-                ${mcqIdx >= mcqs.length - 1 ? 'disabled' : ''} 
-                class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-md shadow-indigo-600/30 disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                onclick="openSwitchPartModal()" 
+                class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-700 via-purple-700 to-indigo-800 hover:from-indigo-600 hover:to-purple-600 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
+                title="Mở bảng lựa chọn để chuyển nhanh sang phần học khác"
               >
-                <span>Câu tiếp theo →</span>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-layer-group text-amber-300"></i>
+                <span>Chuyển sang phần khác</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="submitChapterReviewExam(false)" 
+                class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+                title="Nộp bài kiểm tra để chấm điểm và xem lời giải chi tiết"
+              >
+                <i class="fa-solid fa-flag-checkered text-amber-300"></i>
+                <span>${isSubmitted ? 'Đã Nộp Bài (Xem Kết Quả)' : 'Nộp Bài'}</span>
               </button>
             </div>
           </div>
@@ -31668,30 +31930,64 @@ ${activeLesson.lessonTitle}
             <!-- Detailed solution if submitted -->
             ${solutionBox}
 
-            <!-- Minimal Bottom Navigation -->
+            <!-- Bottom Navigation Bar -->
             <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-200">
               <button 
                 type="button" 
                 onclick="handleExamPrevQuestion('tf')" 
                 ${currentTFIndex === 0 ? 'disabled' : ''} 
-                class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-amber-300 bg-white hover:bg-amber-50 text-slate-900 font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-amber-300 bg-white hover:bg-amber-50 text-slate-900 font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
               >
                 <i class="fa-solid fa-arrow-left"></i>
                 <span>← Câu trước</span>
               </button>
 
-              <div class="text-xs sm:text-sm text-amber-950 font-black bg-amber-50 px-4 sm:px-5 py-2 rounded-full border border-amber-300 shadow-xs">
+              <div class="text-xs sm:text-sm text-amber-950 font-black bg-amber-50 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full border border-amber-300 shadow-xs">
                 Câu ${currentTFIndex + 1} / ${totalTFQuestions}
               </div>
 
+              ${currentTFIndex < totalTFQuestions - 1 ? `
+                <button 
+                  type="button" 
+                  onclick="handleExamNextQuestion('tf')" 
+                  class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md shadow-amber-500/30 transition active:scale-95"
+                >
+                  <span>Câu tiếp theo →</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              ` : `
+                <button 
+                  type="button" 
+                  onclick="${(activeSAQuestions && activeSAQuestions.length > 0) ? `switchStudyTab('sa')` : `submitChapterReviewExam(false)`}" 
+                  class="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md transition active:scale-95"
+                  title="${(activeSAQuestions && activeSAQuestions.length > 0) ? 'Chuyển sang Phần 3: Trả lời ngắn' : 'Nộp bài thi'}"
+                >
+                  <span>${(activeSAQuestions && activeSAQuestions.length > 0) ? 'Sang Phần 3 (Trả lời ngắn) →' : 'Nộp bài ngay 🏁'}</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              `}
+            </div>
+
+            <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
+            <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-dashed border-amber-300">
               <button 
                 type="button" 
-                onclick="handleExamNextQuestion('tf')" 
-                ${currentTFIndex >= totalTFQuestions - 1 ? 'disabled' : ''} 
-                class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-md shadow-amber-500/30 disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                onclick="openSwitchPartModal()" 
+                class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 text-slate-950 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
+                title="Mở bảng lựa chọn để chuyển nhanh sang phần học khác"
               >
-                <span>Câu tiếp theo →</span>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Chuyển sang phần khác</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="submitChapterReviewExam(false)" 
+                class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+                title="Nộp bài để chấm điểm và xem lời giải chi tiết"
+              >
+                <i class="fa-solid fa-flag-checkered text-amber-300"></i>
+                <span>${isSubmitted ? 'Đã Nộp Bài (Xem Kết Quả)' : 'Nộp Bài'}</span>
               </button>
             </div>
           </div>
@@ -31884,30 +32180,63 @@ ${activeLesson.lessonTitle}
             <!-- Detailed solution if submitted -->
             ${solutionBox}
 
-            <!-- Minimal Bottom Navigation -->
+            <!-- Bottom Navigation Bar -->
             <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-200">
               <button 
                 type="button" 
                 onclick="handleExamPrevQuestion('sa')" 
                 ${currentSAIndex === 0 ? 'disabled' : ''} 
-                class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-cyan-300 bg-white hover:bg-cyan-50 text-slate-900 font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-cyan-300 bg-white hover:bg-cyan-50 text-slate-900 font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
               >
                 <i class="fa-solid fa-arrow-left"></i>
                 <span>← Câu trước</span>
               </button>
 
-              <div class="text-xs sm:text-sm text-cyan-950 font-black bg-cyan-50 px-4 sm:px-5 py-2 rounded-full border border-cyan-300 shadow-xs">
+              <div class="text-xs sm:text-sm text-cyan-950 font-black bg-cyan-50 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full border border-cyan-300 shadow-xs">
                 Câu ${currentSAIndex + 1} / ${saList.length}
               </div>
 
+              ${currentSAIndex < saList.length - 1 ? `
+                <button 
+                  type="button" 
+                  onclick="handleExamNextQuestion('sa')" 
+                  class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md shadow-cyan-600/30 transition active:scale-95"
+                >
+                  <span>Câu tiếp theo →</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              ` : `
+                <button 
+                  type="button" 
+                  onclick="submitChapterReviewExam(false)" 
+                  class="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-black text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md transition active:scale-95"
+                  title="Nộp bài kiểm tra ngay"
+                >
+                  <span>Nộp bài ngay 🏁</span>
+                </button>
+              `}
+            </div>
+
+            <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
+            <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-dashed border-cyan-300">
               <button 
                 type="button" 
-                onclick="handleExamNextQuestion('sa')" 
-                ${currentSAIndex >= saList.length - 1 ? 'disabled' : ''} 
-                class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-md shadow-cyan-600/30 disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                onclick="openSwitchPartModal()" 
+                class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-700 via-teal-700 to-cyan-800 hover:from-cyan-600 hover:to-teal-600 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
+                title="Mở bảng lựa chọn để chuyển nhanh sang phần học khác"
               >
-                <span>Câu tiếp theo →</span>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-layer-group text-amber-300"></i>
+                <span>Chuyển sang phần khác</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="submitChapterReviewExam(false)" 
+                class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+                title="Nộp bài để chấm điểm và xem lời giải chi tiết"
+              >
+                <i class="fa-solid fa-flag-checkered text-amber-300"></i>
+                <span>${isSubmitted ? 'Đã Nộp Bài (Xem Kết Quả)' : 'Nộp Bài'}</span>
               </button>
             </div>
           </div>
@@ -32148,7 +32477,31 @@ ${activeLesson.lessonTitle}
           </div>
 
           <!-- Feedback Area Placeholder -->
+          <!-- Feedback Area Placeholder -->
           <div id="panel-mcq-feedback" class="space-y-2"></div>
+
+          <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
+          <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-slate-200">
+            <button 
+              type="button" 
+              onclick="openSwitchPartModal()" 
+              class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-700 via-purple-700 to-indigo-800 hover:from-indigo-600 hover:to-purple-600 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
+              title="Chuyển sang phần học khác (Lý thuyết, Đúng/Sai, Trợ lý AI...)"
+            >
+              <i class="fa-solid fa-layer-group text-amber-300"></i>
+              <span>Chuyển sang phần khác</span>
+            </button>
+
+            <button 
+              type="button" 
+              onclick="handleFinishLesson()" 
+              class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+              title="Nộp bài và kết thúc bài học để nhận đánh giá 5 mức & xuất PDF"
+            >
+              <i class="fa-solid fa-flag-checkered text-amber-300"></i>
+              <span>Nộp bài & Kết thúc</span>
+            </button>
+          </div>
         </div>
       `;
 
