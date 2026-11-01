@@ -974,7 +974,7 @@
             <!-- List in Panel -->
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span id="panel-periodic-exams-list-title" class="font-black text-slate-800 text-xs sm:text-[13pt]">3. Danh Sách Đề Thi (Mở Khóa Tuần Tự):</span>
+                <span id="panel-periodic-exams-list-title" class="font-black text-slate-800 text-xs sm:text-[13pt]">3. Danh Sách Đề Thi (Tự Do Chọn Đề • Chuẩn Bộ GD&ĐT):</span>
                 <span class="text-xs text-slate-500 font-normal">Hoàn thành & nộp Đề để mở khóa Đề tiếp theo</span>
               </div>
               <div id="panel-periodic-exams-list" class="space-y-3">
@@ -1865,7 +1865,7 @@
   </div>
 
   <!-- =========================================================================
-       MODAL 2: BẢNG CHỌN ĐỀ ÔN THI ĐỊNH KỲ (Khối 10, 11, 12 - 4 Kỳ Thi - Mở Khóa Tuần Tự)
+       MODAL 2: BẢNG CHỌN ĐỀ ÔN THI ĐỊNH KỲ (Khối 10, 11, 12 - 4 Kỳ Thi - Tự Do Chọn Đề)
        ========================================================================= -->
   <div id="modal-periodic-exam" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99992] hidden items-center justify-center p-3 sm:p-5 select-none font-serif animate-in fade-in">
     <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full border-2 border-teal-300 overflow-hidden font-serif flex flex-col max-h-[92vh]">
@@ -1878,7 +1878,7 @@
           <i class="fa-solid fa-calendar-check"></i>
         </div>
         <h3 class="text-[16pt] sm:text-[19pt] font-black uppercase tracking-wide">📝 BẢNG CHỌN ĐỀ ÔN THI ĐỊNH KỲ</h3>
-        <p class="text-xs sm:text-[12pt] text-teal-100 font-medium mt-1">Luyện đề khảo sát Giữa kỳ & Cuối kỳ (Khối 10, 11, 12) • Cơ chế mở khóa tuần tự</p>
+        <p class="text-xs sm:text-[12pt] text-teal-100 font-medium mt-1">Luyện đề khảo sát Giữa kỳ & Cuối kỳ (Khối 10, 11, 12) • Tự do chọn đề • In/Xuất PDF chuẩn Bộ GD&ĐT</p>
       </div>
 
       <!-- Body -->
@@ -1944,10 +1944,10 @@
           </div>
         </div>
 
-        <!-- 3. Danh sách đề thi tương ứng (Cơ chế mở khóa tuần tự) -->
+        <!-- 3. Danh sách đề thi tương ứng (Tự do chọn đề) -->
         <div>
           <label class="block text-[12pt] font-bold text-slate-800 mb-2 flex items-center justify-between">
-            <span id="periodic-exams-list-title">3. Danh Sách Đề Thi (Mở Khóa Tuần Tự):</span>
+            <span id="periodic-exams-list-title">3. Danh Sách Đề Thi (Tự Do Chọn Đề • Chuẩn Bộ GD&ĐT):</span>
             <span class="text-xs text-slate-500 font-normal">Hoàn thành & nộp Đề để mở khóa Đề tiếp theo</span>
           </label>
           <div id="periodic-exams-list" class="space-y-3">
@@ -18925,8 +18925,6 @@
     function renderPeriodicExamsList() {
       const gradeData = PERIODIC_EXAMS_DB[currentPeriodicGrade] || PERIODIC_EXAMS_DB["12"];
       const exams = gradeData[currentPeriodicPeriod] || [];
-      const unlockKey = 'PERIODIC_UNLOCKED_' + currentPeriodicGrade + '_' + currentPeriodicPeriod;
-      const maxUnlocked = parseInt(localStorage.getItem(unlockKey) || '1', 10);
 
       const periodNames = {
         gk1: "Giữa Học Kỳ 1",
@@ -18934,23 +18932,22 @@
         gk2: "Giữa Học Kỳ 2",
         ck2: "Cuối Học Kỳ 2"
       };
-      const titleText = '3. Danh Sách Đề Thi ' + (periodNames[currentPeriodicPeriod] || '') + ' - Khối ' + currentPeriodicGrade + ' (Mở Khóa Tuần Tự):';
+      const titleText = '3. Danh Sách Đề Thi ' + (periodNames[currentPeriodicPeriod] || '') + ' - Khối ' + currentPeriodicGrade + ' (Tự Do Chọn Đề • Chuẩn Bộ GD&ĐT):';
       const t1 = document.getElementById('periodic-exams-list-title');
       if (t1) t1.textContent = titleText;
       const t2 = document.getElementById('panel-periodic-exams-list-title');
       if (t2) t2.textContent = titleText;
 
       const html = exams.map(exam => {
-        const isUnlocked = (exam.examNumber <= maxUnlocked);
         return `
-          <div class="bg-white rounded-2xl p-4 sm:p-5 border-2 ${isUnlocked ? 'border-teal-200 hover:border-teal-400' : 'border-slate-200 bg-slate-50/70 opacity-90'} shadow-xs transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="bg-white rounded-2xl p-4 sm:p-5 border-2 border-teal-200 hover:border-teal-400 shadow-xs transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div class="flex-1 space-y-1.5">
               <div class="flex flex-wrap items-center gap-2">
-                <span class="text-xs font-black px-2.5 py-0.5 rounded-lg ${isUnlocked ? 'bg-teal-700 text-white' : 'bg-slate-300 text-slate-700'} font-mono">
+                <span class="text-xs font-black px-2.5 py-0.5 rounded-lg bg-teal-700 text-white font-mono">
                   ĐỀ SỐ ${exam.examNumber}
                 </span>
-                <span class="text-[10pt] font-bold px-2 py-0.5 rounded-full ${isUnlocked ? 'bg-emerald-100 text-emerald-900 border border-emerald-300' : 'bg-slate-200 text-slate-600'}">
-                  ${isUnlocked ? '🔓 ĐÃ MỞ KHÓA' : '🔒 ĐANG KHÓA'}
+                <span class="text-[10pt] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300">
+                  🔓 TỰ DO LUYỆN TẬP
                 </span>
                 <span class="text-[10pt] font-semibold text-slate-500">
                   <i class="fa-regular fa-clock mr-1"></i>${exam.durationMinutes || 90} phút
@@ -18972,26 +18969,24 @@
               </div>
             </div>
 
-            <div class="shrink-0 w-full sm:w-auto">
-              ${isUnlocked ? `
-                <button 
-                  type="button" 
-                  onclick="startPeriodicExam('${currentPeriodicGrade}', '${currentPeriodicPeriod}', ${exam.examNumber})" 
-                  class="w-full sm:w-auto px-5 py-2.5 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-black rounded-xl text-xs sm:text-[11.5pt] shadow transition cursor-pointer flex items-center justify-center gap-2 active:scale-95 uppercase tracking-wide"
-                >
-                  <i class="fa-solid fa-play text-xs"></i>
-                  <span>Vào Làm Đề Số ${exam.examNumber}</span>
-                </button>
-              ` : `
-                <button 
-                  type="button" 
-                  disabled 
-                  class="w-full sm:w-auto px-4 py-2.5 bg-slate-200 text-slate-500 font-bold rounded-xl text-xs sm:text-[11pt] cursor-not-allowed flex items-center justify-center gap-1.5"
-                >
-                  <i class="fa-solid fa-lock text-xs"></i>
-                  <span>Cần nộp Đề ${exam.examNumber - 1} để mở</span>
-                </button>
-              `}
+            <div class="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+              <button 
+                type="button" 
+                onclick="openPeriodicPrintPreview('${currentPeriodicGrade}', '${currentPeriodicPeriod}', ${exam.examNumber})" 
+                class="px-3.5 sm:px-4 py-2 sm:py-2.5 bg-white hover:bg-slate-100 text-teal-800 hover:text-teal-950 border-2 border-teal-300 hover:border-teal-500 font-bold rounded-xl text-xs sm:text-[11pt] shadow-2xs transition flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+                title="In đề thi hoặc xuất file PDF chuẩn Bộ GD&ĐT tiết kiệm giấy"
+              >
+                <i class="fa-solid fa-print text-teal-600"></i>
+                <span>In / Xuất PDF</span>
+              </button>
+              <button 
+                type="button" 
+                onclick="startPeriodicExam('${currentPeriodicGrade}', '${currentPeriodicPeriod}', ${exam.examNumber})" 
+                class="px-5 py-2 sm:py-2.5 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-black rounded-xl text-xs sm:text-[11.5pt] shadow transition cursor-pointer flex items-center justify-center gap-2 active:scale-95 uppercase tracking-wide"
+              >
+                <i class="fa-solid fa-play text-xs"></i>
+                <span>Vào Làm Đề Số ${exam.examNumber}</span>
+              </button>
             </div>
           </div>
         `;
@@ -19482,9 +19477,12 @@
 
     // =========================================================================
     // HỆ THỐNG IN ĐỀ THI & XUẤT FILE PDF TIẾT KIỆM GIẤY (CHUẨN BỘ GD&ĐT)
+    // HỖ TRỢ CẢ ÔN THI THEO CHUYÊN ĐỀ VÀ ÔN THI ĐỊNH KỲ (KHỐI 10, 11, 12)
     // =========================================================================
+    let currentPrintType = 'topic'; // 'topic' hoặc 'periodic'
     let currentPrintTopic = null;
     let currentPrintExam = null;
+    let currentPrintPeriodicMeta = null; // { grade, periodKey, examNumber }
     let showPrintSolutions = false;
 
     function openTopicPrintPreview(topicId, examId) {
@@ -19495,18 +19493,25 @@
         const exam = (topic.exams || []).find(e => e.id === examId) || topic.exams[0];
         if (!exam) return;
 
+        currentPrintType = 'topic';
         currentPrintTopic = topic;
         currentPrintExam = exam;
+        currentPrintPeriodicMeta = null;
         showPrintSolutions = false;
 
         const modal = document.getElementById('modal-topic-print-preview');
         const modalTitle = document.getElementById('print-modal-title');
         const modalSubtitle = document.getElementById('print-modal-subtitle');
         const toggleBtnText = document.getElementById('btn-toggle-solutions-text');
+        const toggleBtn = document.getElementById('btn-toggle-solutions');
 
         if (modalTitle) modalTitle.textContent = `IN ĐỀ THI: ${exam.code} - ${topic.code}`;
         if (modalSubtitle) modalSubtitle.textContent = `${topic.title} • ${exam.title} (Thời gian 90 phút • Độc lập 100%)`;
         if (toggleBtnText) toggleBtnText.textContent = "Kèm Đáp Án";
+        if (toggleBtn) {
+          toggleBtn.classList.remove('bg-amber-400', 'text-slate-950', 'border-amber-300');
+          toggleBtn.classList.add('bg-white/10', 'text-indigo-100');
+        }
 
         renderPrintExamPaper();
 
@@ -19517,7 +19522,60 @@
           document.body.classList.add('overflow-hidden');
         }
       } catch (err) {
-        console.error("Lỗi mở xem trước in đề:", err);
+        console.error("Lỗi mở xem trước in đề chuyên đề:", err);
+      }
+    }
+
+    function openPeriodicPrintPreview(grade, periodKey, examNumber) {
+      try {
+        const gradeData = PERIODIC_EXAMS_DB[String(grade)] || PERIODIC_EXAMS_DB["12"];
+        const exams = gradeData[periodKey] || [];
+        const num = parseInt(examNumber, 10) || 1;
+        const exam = exams.find(e => e.examNumber === num) || exams[0];
+        if (!exam) return;
+
+        currentPrintType = 'periodic';
+        currentPrintExam = exam;
+        currentPrintTopic = null;
+        currentPrintPeriodicMeta = {
+          grade: String(grade),
+          periodKey: String(periodKey),
+          examNumber: num
+        };
+        showPrintSolutions = false;
+
+        const periodNames = {
+          gk1: "Giữa Học Kỳ 1",
+          ck1: "Cuối Học Kỳ 1",
+          gk2: "Giữa Học Kỳ 2",
+          ck2: "Cuối Học Kỳ 2"
+        };
+        const pName = periodNames[periodKey] || "Định Kỳ";
+
+        const modal = document.getElementById('modal-topic-print-preview');
+        const modalTitle = document.getElementById('print-modal-title');
+        const modalSubtitle = document.getElementById('print-modal-subtitle');
+        const toggleBtnText = document.getElementById('btn-toggle-solutions-text');
+        const toggleBtn = document.getElementById('btn-toggle-solutions');
+
+        if (modalTitle) modalTitle.textContent = `IN ĐỀ ĐỊNH KỲ: ĐỀ SỐ ${exam.examNumber} - TOÁN ${grade}`;
+        if (modalSubtitle) modalSubtitle.textContent = `Khối ${grade} • ${pName} • ${exam.title} (Chuẩn Bộ GD&ĐT • Siêu Tiết Kiệm Giấy)`;
+        if (toggleBtnText) toggleBtnText.textContent = "Kèm Đáp Án";
+        if (toggleBtn) {
+          toggleBtn.classList.remove('bg-amber-400', 'text-slate-950', 'border-amber-300');
+          toggleBtn.classList.add('bg-white/10', 'text-indigo-100');
+        }
+
+        renderPrintExamPaper();
+
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          modal.style.display = 'flex';
+          document.body.classList.add('overflow-hidden');
+        }
+      } catch (err) {
+        console.error("Lỗi mở xem trước in đề định kỳ:", err);
       }
     }
 
@@ -19550,61 +19608,80 @@
       renderPrintExamPaper();
     }
 
+    const formatMcqOptsPrint = (options, correctLetter) => {
+      if (!options) return '';
+      const letters = ['A', 'B', 'C', 'D'];
+      const opts = letters.map(l => ({ letter: l, text: options[l] || '' }));
+      
+      const hasCases = opts.some(o => o.text && (o.text.includes('cases') || o.text.includes('\\begin') || o.text.length > 32));
+      const maxLen = Math.max(...opts.map(o => (o.text || '').replace(/\\text\{.*?\}/g, 'X').length));
+      
+      let gridCols = 'grid-cols-4';
+      if (hasCases || maxLen > 28) {
+        gridCols = 'grid-cols-1';
+      } else if (maxLen > 10) {
+        gridCols = 'grid-cols-2';
+      }
+
+      return `
+        <div class="grid ${gridCols} gap-x-2 gap-y-0.5 text-[9pt] leading-tight mt-0.5 pl-1">
+          ${opts.map(o => {
+            const isCorrect = (showPrintSolutions && o.letter === correctLetter);
+            const highlight = isCorrect ? 'font-bold text-red-700 underline decoration-red-600 decoration-1.5' : '';
+            return `
+              <div class="${highlight}">
+                <strong class="font-bold">${o.letter}.</strong> ${o.text}${isCorrect ? ' <span class="text-[8.5pt] text-red-600 font-sans font-bold">✓</span>' : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    };
+
+    const cleanQText = (text) => {
+      if (!text) return '';
+      return text.replace(/^\*\*Câu\s*\d+(\s*\([A-Z]+\))?:\*\*\s*/i, '')
+                 .replace(/^Câu\s*\d+(\s*\([A-Z]+\))?:\s*/i, '')
+                 .trim();
+    };
+
     function renderPrintExamPaper() {
       const container = document.getElementById('printable-topic-exam-paper');
-      if (!container || !currentPrintTopic || !currentPrintExam) return;
+      if (!container || !currentPrintExam) return;
 
-      const topic = currentPrintTopic;
-      const exam = currentPrintExam;
+      if (currentPrintType === 'periodic' && currentPrintPeriodicMeta) {
+        renderPeriodicPrintPaper(container, currentPrintExam, currentPrintPeriodicMeta);
+      } else if (currentPrintTopic) {
+        renderTopicPrintPaper(container, currentPrintTopic, currentPrintExam);
+      }
 
-      const formatMcqOptsPrint = (options, correctLetter) => {
-        if (!options) return '';
-        const letters = ['A', 'B', 'C', 'D'];
-        const opts = letters.map(l => ({ letter: l, text: options[l] || '' }));
-        
-        const hasCases = opts.some(o => o.text && (o.text.includes('cases') || o.text.includes('\\begin') || o.text.length > 32));
-        const maxLen = Math.max(...opts.map(o => (o.text || '').replace(/\\text\{.*?\}/g, 'X').length));
-        
-        let gridCols = 'grid-cols-4';
-        if (hasCases || maxLen > 28) {
-          gridCols = 'grid-cols-1';
-        } else if (maxLen > 10) {
-          gridCols = 'grid-cols-2';
-        }
+      if (typeof renderMath === 'function') {
+        renderMath(container);
+      } else if (typeof renderMathInElement === 'function') {
+        renderMathInElement(container, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ],
+          throwOnError: false
+        });
+      }
+    }
 
-        return `
-          <div class="grid ${gridCols} gap-x-2 gap-y-0.5 text-[9pt] leading-tight mt-0.5 pl-1">
-            ${opts.map(o => {
-              const isCorrect = (showPrintSolutions && o.letter === correctLetter);
-              const highlight = isCorrect ? 'font-bold text-red-700 underline decoration-red-600 decoration-1.5' : '';
-              return `
-                <div class="${highlight}">
-                  <strong class="font-bold">${o.letter}.</strong> ${o.text}${isCorrect ? ' <span class="text-[8.5pt] text-red-600 font-sans font-bold">✓</span>' : ''}
-                </div>
-              `;
-            }).join('')}
-          </div>
-        `;
-      };
-
-      const cleanQText = (text) => {
-        if (!text) return '';
-        return text.replace(/^\*\*Câu\s*\d+(\s*\([A-Z]+\))?:\*\*\s*/i, '').trim();
-      };
-
+    // =========================================================================
+    // RENDER ĐỀ CHUYÊN ĐỀ TỐT NGHIỆP
+    // =========================================================================
+    function renderTopicPrintPaper(container, topic, exam) {
       const mcqs = exam.mcqs || [];
       const mcqsCol1 = mcqs.slice(0, 6);
       const mcqsCol2 = mcqs.slice(6, 12);
       const tfs = exam.tfQuestions || [];
       const sas = exam.saQuestions || [];
 
-      // ==========================================
-      // TRANG 1: HEADER + PHẦN I (12 CÂU / 2 CỘT)
-      // ==========================================
+      // TRANG 1: HEADER + PHẦN I
       let page1Html = `
         <div class="a4-page font-serif">
           <div>
-            <!-- Header chuẩn Bộ GD&ĐT -->
             <div class="border-b-2 border-black pb-1.5 mb-2 text-[9pt] leading-tight">
               <div class="grid grid-cols-2 gap-2 text-center">
                 <div>
@@ -19628,15 +19705,12 @@
               </div>
             </div>
 
-            <!-- Banner Phần I -->
             <div class="font-bold text-[9.5pt] uppercase mb-1.5 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
               <span>PHẦN I. Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.</span>
               <span class="text-[8.5pt] font-normal italic lowercase">(3.0 điểm)</span>
             </div>
 
-            <!-- Grid 2 Cột Phần I -->
             <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
-              <!-- Cột 1: Câu 1 -> 6 -->
               <div class="col-divider space-y-1.5">
                 ${mcqsCol1.map((q, idx) => `
                   <div class="break-inside-avoid">
@@ -19646,7 +19720,6 @@
                 `).join('')}
               </div>
 
-              <!-- Cột 2: Câu 7 -> 12 -->
               <div class="pl-1 space-y-1.5">
                 ${mcqsCol2.map((q, idx) => `
                   <div class="break-inside-avoid">
@@ -19658,7 +19731,6 @@
             </div>
           </div>
 
-          <!-- Footer Trang 1 -->
           <div class="pt-1 border-t border-slate-300 flex justify-between text-[8pt] text-slate-600 font-mono mt-auto">
             <div>Trang 1/2</div>
             <div>Mã đề thi: ${exam.code}</div>
@@ -19666,22 +19738,17 @@
         </div>
       `;
 
-      // ==========================================
-      // TRANG 2: PHẦN II (4 CÂU Đ/S) + PHẦN III (6 CÂU TLN)
-      // ==========================================
+      // TRANG 2: PHẦN II + PHẦN III
       let page2Html = `
         <div class="html2pdf__page-break"></div>
         <div class="a4-page font-serif">
           <div>
-            <!-- Sub-header Trang 2 -->
             <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[8.5pt]">
               <div class="font-bold uppercase text-indigo-950">MÔN: TOÁN — ${topic.code}: ${topic.title}</div>
               <div class="font-mono font-bold">MÃ ĐỀ: ${exam.code}</div>
             </div>
 
-            <!-- Grid 2 Cột Trang 2 -->
             <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
-              <!-- Cột 1: Phần II (4 câu Đúng / Sai) -->
               <div class="col-divider">
                 <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
                   <span>PHẦN II. Câu trắc nghiệm đúng sai.</span>
@@ -19714,7 +19781,6 @@
                 </div>
               </div>
 
-              <!-- Cột 2: Phần III (6 câu Trả lời ngắn) + Hết -->
               <div class="pl-1 flex flex-col justify-between">
                 <div>
                   <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
@@ -19735,7 +19801,6 @@
                   </div>
                 </div>
 
-                <!-- Hết đề thi -->
                 <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
                   <div class="font-bold text-[9pt] tracking-widest">------------------ HẾT ------------------</div>
                   <div class="italic text-[8pt] text-slate-600 mt-0.5">
@@ -19746,7 +19811,6 @@
             </div>
           </div>
 
-          <!-- Footer Trang 2 -->
           <div class="pt-1 border-t border-slate-300 flex justify-between text-[8pt] text-slate-600 font-mono mt-auto">
             <div>Trang 2/2</div>
             <div>Mã đề thi: ${exam.code}</div>
@@ -19754,9 +19818,7 @@
         </div>
       `;
 
-      // ==========================================
-      // TRANG 3 (NẾU BẬT ĐÁP ÁN): HƯỚNG DẪN CHẤM & LỜI GIẢI
-      // ==========================================
+      // TRANG 3: ĐÁP ÁN & LỜI GIẢI
       let page3Html = '';
       if (showPrintSolutions) {
         page3Html = `
@@ -19768,9 +19830,7 @@
                 <div class="text-[9.5pt] font-semibold text-slate-700">MÔN TOÁN — ${topic.code}: ${topic.title} • MÃ ĐỀ: ${exam.code}</div>
               </div>
 
-              <!-- BẢNG ĐÁP ÁN TỔNG HỢP -->
               <div class="grid grid-cols-3 gap-2.5 mb-3 text-[8.5pt]">
-                <!-- Phần I Table -->
                 <div class="border border-black p-1.5 rounded-sm">
                   <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8.5pt]">ĐÁP ÁN PHẦN I</div>
                   <div class="grid grid-cols-6 gap-0.5 text-center font-mono">
@@ -19783,7 +19843,6 @@
                   </div>
                 </div>
 
-                <!-- Phần II Table -->
                 <div class="border border-black p-1.5 rounded-sm">
                   <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8.5pt]">ĐÁP ÁN PHẦN II</div>
                   <table class="w-full text-center border-collapse font-mono text-[8pt]">
@@ -19799,7 +19858,6 @@
                   </table>
                 </div>
 
-                <!-- Phần III Table -->
                 <div class="border border-black p-1.5 rounded-sm">
                   <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8.5pt]">ĐÁP ÁN PHẦN III</div>
                   <div class="grid grid-cols-3 gap-1 text-center font-mono">
@@ -19813,7 +19871,6 @@
                 </div>
               </div>
 
-              <!-- LỜI GIẢI CHI TIẾT CÁC CÂU VẬN DỤNG CAO -->
               <div class="mt-2">
                 <div class="font-bold text-[9pt] uppercase text-indigo-950 mb-1 border-b border-black pb-0.5 flex items-center justify-between">
                   <span>LỜI GIẢI CHI TIẾT CÁC CÂU VẬN DỤNG CAO (PHẦN III):</span>
@@ -19830,7 +19887,6 @@
               </div>
             </div>
 
-            <!-- Footer Trang 3 -->
             <div class="pt-1 border-t border-slate-300 flex justify-between text-[8pt] text-slate-600 font-mono mt-auto">
               <div>Trang 3/3 (Hướng dẫn chấm)</div>
               <div>Mã đề thi: ${exam.code}</div>
@@ -19840,18 +19896,421 @@
       }
 
       container.innerHTML = page1Html + page2Html + page3Html;
+    }
 
-      if (typeof renderMath === 'function') {
-        renderMath(container);
-      } else if (typeof renderMathInElement === 'function') {
-        renderMathInElement(container, {
-          delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '$', right: '$', display: false}
-          ],
-          throwOnError: false
-        });
+    // =========================================================================
+    // RENDER ĐỀ KIỂM TRA ĐỊNH KỲ (KHỐI 10, 11, 12)
+    // =========================================================================
+    function renderPeriodicPrintPaper(container, exam, meta) {
+      const periodNames = {
+        gk1: "Giữa Học Kỳ 1",
+        ck1: "Cuối Học Kỳ 1",
+        gk2: "Giữa Học Kỳ 2",
+        ck2: "Cuối Học Kỳ 2"
+      };
+      const pName = periodNames[meta.periodKey] || "Định Kỳ";
+
+      let examCode = '';
+      const codeMatch = (exam.title || '').match(/Mã\s*(\w+)/i);
+      if (codeMatch) {
+        examCode = codeMatch[1];
+      } else {
+        examCode = `${meta.grade}${meta.periodKey.toUpperCase()}-0${meta.examNumber}`;
       }
+
+      const mcqs = exam.mcqs || [];
+      const mcqsCol1 = mcqs.slice(0, 6);
+      const mcqsCol2 = mcqs.slice(6, 12);
+      const tfs = exam.tfQuestions || [];
+      const sas = exam.saQuestions || [];
+      const essays = exam.essayQuestions || [];
+      const isGrade12 = (meta.grade === '12');
+
+      // TRANG 1: HEADER + PHẦN I
+      let page1Html = `
+        <div class="a4-page font-serif">
+          <div>
+            <div class="border-b-2 border-black pb-1.5 mb-2 text-[9pt] leading-tight">
+              <div class="grid grid-cols-2 gap-2 text-center">
+                <div>
+                  <div class="font-bold uppercase text-[8.5pt]">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
+                  <div class="font-bold uppercase text-[9.5pt] text-teal-950">ĐỀ KIỂM TRA ĐỊNH KỲ ${pName.toUpperCase()}</div>
+                  <div class="font-bold text-[8.5pt]">ĐỀ CHÍNH THỨC</div>
+                  <div class="italic text-[8pt] text-slate-500">(Đề thi có 02 trang)</div>
+                </div>
+                <div>
+                  <div class="font-bold uppercase text-[9.5pt] text-teal-950">NĂM HỌC 2025 - 2026</div>
+                  <div class="font-bold uppercase text-[9pt]">MÔN: TOÁN — KHỐI ${meta.grade}</div>
+                  <div class="text-[8.5pt]">Thời gian làm bài: ${exam.durationMinutes || 90} phút, không kể phát đề</div>
+                  <div class="font-bold text-[8.5pt] mt-0.5 inline-block px-2.5 py-0.2 border border-black font-mono">
+                    MÃ ĐỀ THI: ${examCode}
+                  </div>
+                </div>
+              </div>
+              <div class="mt-1.5 pt-1 border-t border-black flex justify-between text-[8.5pt]">
+                <div>Họ và tên thí sinh: ................................................................................</div>
+                <div>Số báo danh: .............................</div>
+              </div>
+            </div>
+
+            <div class="font-bold text-[9.5pt] uppercase mb-1.5 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+              <span>PHẦN I. Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.</span>
+              <span class="text-[8.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
+              <div class="col-divider space-y-1.5">
+                ${mcqsCol1.map((q, idx) => `
+                  <div class="break-inside-avoid">
+                    <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
+                    ${formatMcqOptsPrint(q.options, q.correct)}
+                  </div>
+                `).join('')}
+              </div>
+
+              <div class="pl-1 space-y-1.5">
+                ${mcqsCol2.map((q, idx) => `
+                  <div class="break-inside-avoid">
+                    <div><strong class="font-bold">Câu ${idx + 7}:</strong> ${cleanQText(q.question)}</div>
+                    ${formatMcqOptsPrint(q.options, q.correct)}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-1 border-t border-slate-300 flex justify-between text-[8pt] text-slate-600 font-mono mt-auto">
+            <div>Trang 1/2</div>
+            <div>Mã đề thi: ${examCode}</div>
+          </div>
+        </div>
+      `;
+
+      // TRANG 2 NỘI DUNG
+      let page2Content = '';
+      if (isGrade12) {
+        // KHỐI 12: PHẦN II (4 CÂU Đ/S) + PHẦN III (6 CÂU TLN)
+        page2Content = `
+          <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
+            <div class="col-divider">
+              <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                <span>PHẦN II. Câu trắc nghiệm đúng sai.</span>
+                <span class="text-[8.5pt] font-normal italic lowercase">(4.0 điểm)</span>
+              </div>
+              <div class="italic text-[8pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) chọn đúng hoặc sai.</div>
+              
+              <div class="space-y-2">
+                ${tfs.map((q, idx) => {
+                  const qContext = q.statement || q.context || q.question || '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(qContext)}</div>
+                      <div class="pl-2 mt-0.5 space-y-0.5 text-[8.8pt]">
+                        ${(q.items || []).map(it => {
+                          const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : (it.id ? it.id + ')' : '')));
+                          const content = it.content || it.text || '';
+                          let badge = '';
+                          if (showPrintSolutions) {
+                            badge = it.correct 
+                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
+                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
+                          }
+                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
+                        }).join('')}
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <div class="pl-1 flex flex-col justify-between">
+              <div>
+                <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
+                  <span class="text-[8.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                </div>
+                <div class="italic text-[8pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
+
+                <div class="space-y-2">
+                  ${sas.map((q, idx) => {
+                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                    return `
+                      <div class="break-inside-avoid">
+                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+
+              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+                <div class="font-bold text-[9pt] tracking-widest">------------------ HẾT ------------------</div>
+                <div class="italic text-[8pt] text-slate-600 mt-0.5">
+                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // KHỐI 10 & 11: PHẦN II (2 CÂU Đ/S) + PHẦN III (4 CÂU TLN) + PHẦN IV (3 CÂU TỰ LUẬN)
+        page2Content = `
+          <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
+            <div class="col-divider space-y-2">
+              <div>
+                <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                  <span>PHẦN II. Câu trắc nghiệm đúng sai.</span>
+                  <span class="text-[8.5pt] font-normal italic lowercase">(2.0 điểm)</span>
+                </div>
+                <div class="italic text-[8pt] text-slate-600 mb-1">Thí sinh trả lời từ câu 1 đến câu 2. Mỗi câu chọn đúng hoặc sai.</div>
+                
+                <div class="space-y-1.5">
+                  ${tfs.map((q, idx) => {
+                    const qContext = q.statement || q.context || q.question || '';
+                    return `
+                      <div class="break-inside-avoid">
+                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(qContext)}</div>
+                        <div class="pl-2 mt-0.5 space-y-0.5 text-[8.8pt]">
+                          ${(q.items || []).map(it => {
+                            const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : (it.id ? it.id + ')' : '')));
+                            const content = it.content || it.text || '';
+                            let badge = '';
+                            if (showPrintSolutions) {
+                              badge = it.correct 
+                                ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
+                                : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
+                            }
+                            return `<div><strong>${label}</strong> ${content}${badge}</div>`;
+                          }).join('')}
+                        </div>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+
+              <div>
+                <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
+                  <span class="text-[8.5pt] font-normal italic lowercase">(2.0 điểm)</span>
+                </div>
+                <div class="italic text-[8pt] text-slate-600 mb-1">Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào phiếu trả lời.</div>
+
+                <div class="space-y-1.5">
+                  ${sas.map((q, idx) => {
+                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                    return `
+                      <div class="break-inside-avoid">
+                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            </div>
+
+            <div class="pl-1 flex flex-col justify-between">
+              <div>
+                <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                  <span>PHẦN IV. Tự luận.</span>
+                  <span class="text-[8.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                </div>
+                <div class="italic text-[8pt] text-slate-600 mb-1.5">Thí sinh trình bày lời giải chi tiết vào giấy làm bài thi.</div>
+
+                <div class="space-y-2 text-[9pt] leading-snug">
+                  ${essays.map((eq, idx) => `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Bài ${idx + 1}:</strong> <span class="font-semibold italic text-[8.5pt] text-slate-700">(${eq.maxScore || 1.0} điểm)</span> ${cleanQText(eq.question)}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+                <div class="font-bold text-[9pt] tracking-widest">------------------ HẾT ------------------</div>
+                <div class="italic text-[8pt] text-slate-600 mt-0.5">
+                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      let page2Html = `
+        <div class="html2pdf__page-break"></div>
+        <div class="a4-page font-serif">
+          <div>
+            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[8.5pt]">
+              <div class="font-bold uppercase text-teal-950">MÔN: TOÁN ${meta.grade} — ${pName.toUpperCase()}</div>
+              <div class="font-mono font-bold">MÃ ĐỀ: ${examCode}</div>
+            </div>
+
+            ${page2Content}
+          </div>
+
+          <div class="pt-1 border-t border-slate-300 flex justify-between text-[8pt] text-slate-600 font-mono mt-auto">
+            <div>Trang 2/2</div>
+            <div>Mã đề thi: ${examCode}</div>
+          </div>
+        </div>
+      `;
+
+      // TRANG 3: ĐÁP ÁN & LỜI GIẢI
+      let page3Html = '';
+      if (showPrintSolutions) {
+        if (isGrade12) {
+          page3Html = `
+            <div class="html2pdf__page-break"></div>
+            <div class="a4-page font-serif">
+              <div>
+                <div class="border-b-2 border-teal-950 pb-1.5 mb-2.5 text-center">
+                  <div class="font-bold uppercase text-[12pt] text-teal-950 tracking-wider">HƯỚNG DẪN CHẤM & ĐÁP ÁN CHI TIẾT</div>
+                  <div class="text-[9.5pt] font-semibold text-slate-700">MÔN TOÁN 12 — ${pName.toUpperCase()} • MÃ ĐỀ: ${examCode}</div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2.5 mb-3 text-[8.5pt]">
+                  <div class="border border-black p-1.5 rounded-sm">
+                    <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8.5pt]">ĐÁP ÁN PHẦN I</div>
+                    <div class="grid grid-cols-6 gap-0.5 text-center font-mono">
+                      ${mcqs.map((q, i) => `
+                        <div class="border border-slate-300 p-0.5">
+                          <div class="text-[7.5pt] text-slate-500">${i + 1}</div>
+                          <div class="font-black text-red-700 text-[8.5pt]">${q.correct}</div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+
+                  <div class="border border-black p-1.5 rounded-sm">
+                    <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8.5pt]">ĐÁP ÁN PHẦN II</div>
+                    <table class="w-full text-center border-collapse font-mono text-[8pt]">
+                      <thead><tr class="bg-slate-50"><th>Câu</th><th>a</th><th>b</th><th>c</th><th>d</th></tr></thead>
+                      <tbody>
+                        ${tfs.map((q, i) => `
+                          <tr class="border-t border-slate-200">
+                            <td class="font-bold">${i + 1}</td>
+                            ${(q.items || []).map(it => `<td class="font-black ${it.correct ? 'text-emerald-700' : 'text-rose-700'}">${it.correct ? 'Đ' : 'S'}</td>`).join('')}
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="border border-black p-1.5 rounded-sm">
+                    <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8.5pt]">ĐÁP ÁN PHẦN III</div>
+                    <div class="grid grid-cols-3 gap-1 text-center font-mono">
+                      ${sas.map((q, i) => `
+                        <div class="border border-slate-300 p-0.5">
+                          <div class="text-[7.5pt] text-slate-500">Câu ${i + 1}</div>
+                          <div class="font-black text-teal-900 text-[8.5pt] truncate">${q.correctAnswer || q.answer}</div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2">
+                  <div class="font-bold text-[9pt] uppercase text-teal-950 mb-1 border-b border-black pb-0.5 flex items-center justify-between">
+                    <span>LỜI GIẢI CHI TIẾT CÁC CÂU VẬN DỤNG CAO (PHẦN III):</span>
+                    <span class="text-[8pt] font-normal italic lowercase">(Dành cho giáo viên)</span>
+                  </div>
+                  <div class="space-y-1.5 text-[8.5pt] leading-snug">
+                    ${sas.slice(4).map((q, i) => `
+                      <div class="p-1.5 bg-slate-50 border border-slate-200 rounded text-[8.5pt]">
+                        <div><strong class="text-teal-950 font-bold">Câu ${i + 5}:</strong> <em>${q.explanation || 'Áp dụng công thức và tính toán.'}</em></div>
+                        <div class="font-bold text-red-700 mt-0.5 font-mono">➔ Đáp số chuẩn: ${q.correctAnswer || q.answer}</div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-1 border-t border-slate-300 flex justify-between text-[8pt] text-slate-600 font-mono mt-auto">
+                <div>Trang 3/3 (Hướng dẫn chấm)</div>
+                <div>Mã đề thi: ${examCode}</div>
+              </div>
+            </div>
+          `;
+        } else {
+          // KHỐI 10 & 11:
+          page3Html = `
+            <div class="html2pdf__page-break"></div>
+            <div class="a4-page font-serif">
+              <div>
+                <div class="border-b-2 border-teal-950 pb-1.5 mb-2.5 text-center">
+                  <div class="font-bold uppercase text-[12pt] text-teal-950 tracking-wider">HƯỚNG DẪN CHẤM & ĐÁP ÁN CHI TIẾT</div>
+                  <div class="text-[9.5pt] font-semibold text-slate-700">MÔN TOÁN ${meta.grade} — ${pName.toUpperCase()} • MÃ ĐỀ: ${examCode}</div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2.5 mb-2 text-[8.5pt]">
+                  <div class="border border-black p-1 rounded-sm">
+                    <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8pt]">ĐÁP ÁN PHẦN I</div>
+                    <div class="grid grid-cols-6 gap-0.5 text-center font-mono">
+                      ${mcqs.map((q, i) => `
+                        <div class="border border-slate-300 p-0.5">
+                          <div class="text-[7pt] text-slate-500">${i + 1}</div>
+                          <div class="font-black text-red-700 text-[8pt]">${q.correct}</div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+
+                  <div class="border border-black p-1 rounded-sm">
+                    <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8pt]">ĐÁP ÁN PHẦN II</div>
+                    <table class="w-full text-center border-collapse font-mono text-[7.5pt]">
+                      <thead><tr class="bg-slate-50"><th>Câu</th><th>a</th><th>b</th><th>c</th><th>d</th></tr></thead>
+                      <tbody>
+                        ${tfs.map((q, i) => `
+                          <tr class="border-t border-slate-200">
+                            <td class="font-bold">${i + 1}</td>
+                            ${(q.items || []).map(it => `<td class="font-black ${it.correct ? 'text-emerald-700' : 'text-rose-700'}">${it.correct ? 'Đ' : 'S'}</td>`).join('')}
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="border border-black p-1 rounded-sm">
+                    <div class="font-bold text-center border-b border-black pb-0.5 mb-1 bg-slate-100 uppercase text-[8pt]">ĐÁP ÁN PHẦN III</div>
+                    <div class="grid grid-cols-2 gap-1 text-center font-mono">
+                      ${sas.map((q, i) => `
+                        <div class="border border-slate-300 p-0.5">
+                          <div class="text-[7pt] text-slate-500">Câu ${i + 1}</div>
+                          <div class="font-black text-teal-900 text-[8pt] truncate">${q.correctAnswer || q.answer}</div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2">
+                  <div class="font-bold text-[9pt] uppercase text-teal-950 mb-1 border-b border-black pb-0.5 flex items-center justify-between">
+                    <span>HƯỚNG DẪN CHẤM & BIỂU ĐIỂM CHI TIẾT PHẦN IV (TỰ LUẬN):</span>
+                    <span class="text-[8pt] font-normal italic lowercase">(Dành cho giáo viên)</span>
+                  </div>
+                  <div class="space-y-1.5 text-[8.5pt] leading-snug">
+                    ${essays.map((eq, i) => `
+                      <div class="p-1.5 bg-slate-50 border border-slate-200 rounded text-[8.2pt]">
+                        <div><strong class="text-teal-950 font-bold">Bài ${i + 1} (${eq.maxScore || 1.0} điểm):</strong></div>
+                        <div class="mt-0.5 whitespace-pre-line text-slate-800">${eq.explanation || 'Trình bày theo các bước chuẩn.'}</div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-1 border-t border-slate-300 flex justify-between text-[8pt] text-slate-600 font-mono mt-auto">
+                <div>Trang 3/3 (Hướng dẫn chấm)</div>
+                <div>Mã đề thi: ${examCode}</div>
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      container.innerHTML = page1Html + page2Html + page3Html;
     }
 
     function printTopicExamPaper() {
@@ -19890,8 +20349,15 @@
         });
       }
 
+      let filename = 'De_Thi.pdf';
+      if (currentPrintType === 'periodic' && currentPrintPeriodicMeta) {
+        const pKey = currentPrintPeriodicMeta.periodKey.toUpperCase();
+        filename = `De_Kiem_Tra_Dinh_Ky_Toan_${currentPrintPeriodicMeta.grade}_${pKey}_De${currentPrintPeriodicMeta.examNumber}.pdf`;
+      } else if (currentPrintExam) {
+        filename = `De_Thi_TN_${currentPrintExam.code || 'CHUYEN_DE'}.pdf`;
+      }
+
       if (typeof html2pdf === 'function') {
-        const filename = `De_Thi_TN_${currentPrintExam.code || 'CHUYEN_DE'}.pdf`;
         const opt = {
           margin: 0,
           filename: filename,
@@ -19931,6 +20397,8 @@
     function handleExamPrintPdfClick() {
       if (activeLesson && activeLesson.isTopicExam) {
         openTopicPrintPreview(activeLesson.currentTopicId, activeLesson.currentExamId);
+      } else if (activeLesson && activeLesson.isPeriodicExam) {
+        openPeriodicPrintPreview(activeLesson.periodicGrade, activeLesson.periodicPeriod, activeLesson.periodicExamIndex);
       } else {
         // Fallback for regular exams
         if (typeof printEvaluationSheet === 'function') {
@@ -19941,12 +20409,14 @@
       }
     }
 
+    window.openPeriodicPrintPreview = openPeriodicPrintPreview;
     window.openTopicPrintPreview = openTopicPrintPreview;
     window.closeTopicPrintPreview = closeTopicPrintPreview;
     window.printTopicExamPaper = printTopicExamPaper;
     window.downloadTopicExamPDF = downloadTopicExamPDF;
     window.toggleTopicExamSolutions = toggleTopicExamSolutions;
     window.handleExamPrintPdfClick = handleExamPrintPdfClick;
+
 
     window.openTopicReviewModal = openTopicReviewModal;
     window.closeTopicReviewModal = closeTopicReviewModal;
@@ -30501,7 +30971,7 @@ ${activeLesson.lessonTitle}
           `• Phần 3 (Trả lời ngắn): ${saScore}/${isGrade12 ? '3.00' : '2.00'} đ (${saCorrectCount}/${saList.length} câu đúng)
 
 ` +
-          `🔓 ĐỀ SỐ ${pIndex + 1} của kỳ thi đã được MỞ KHÓA thành công! Em có thể tiếp tục luyện tập!
+          `🔓 Em có thể tự do luyện tập bất kỳ đề nào trong kỳ thi!
 ` +
           `Toàn bộ ĐÁP ÁN & HƯỚNG DẪN GIẢI CHI TIẾT đã được mở tại tất cả các Tab!`);
       } else if (activeLesson && activeLesson.isGraduationExam) {
