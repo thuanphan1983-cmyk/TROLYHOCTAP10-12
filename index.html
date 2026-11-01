@@ -17,6 +17,9 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   
   <!-- html2pdf.js for exporting Evaluation Sheet to PDF -->
+  <!-- html2canvas and jsPDF for high-precision page-by-page PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   
   <!-- Font Awesome Icons -->
@@ -20329,10 +20332,10 @@
       }, 250);
     }
 
-    function downloadTopicExamPDF() {
-      const element = document.getElementById('printable-topic-exam-paper');
+    async function downloadTopicExamPDF() {
+      const container = document.getElementById('printable-topic-exam-paper');
       const btn = document.getElementById('btn-download-pdf');
-      if (!element || !currentPrintExam) return;
+      if (!container || !currentPrintExam) return;
 
       const originalHTML = btn ? btn.innerHTML : '';
       if (btn) {
@@ -20340,14 +20343,18 @@
         btn.disabled = true;
       }
 
+      // Ensure all math equations are fully rendered
       if (typeof renderMath === 'function') {
-        renderMath(element);
+        renderMath(container);
       } else if (typeof renderMathInElement === 'function') {
-        renderMathInElement(element, {
+        renderMathInElement(container, {
           delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}],
           throwOnError: false
         });
       }
+
+      // Allow DOM to settle and layout to stabilize
+      await new Promise(resolve => setTimeout(resolve, 300));
 
       let filename = 'De_Thi.pdf';
       if (currentPrintType === 'periodic' && currentPrintPeriodicMeta) {
@@ -20357,6 +20364,65 @@
         filename = `De_Thi_TN_${currentPrintExam.code || 'CHUYEN_DE'}.pdf`;
       }
 
+      const pages = container.querySelectorAll('.a4-page');
+
+      // =========================================================================
+      // PHƯƠNG PHÁP 1: XUẤT TỪNG TRANG A4 BẰNG jsPDF + html2canvas (CHUẨN 100%)
+      // Triệt tiêu hoàn toàn lỗi cắt ngang chữ, lệch lề trái và trang trắng trung gian
+      // =========================================================================
+      const jsPDFConstructor = (window.jspdf && window.jspdf.jsPDF) || window.jsPDF;
+      if (typeof jsPDFConstructor === 'function' && typeof html2canvas === 'function' && pages && pages.length > 0) {
+        try {
+          const pdf = new jsPDFConstructor({
+            orientation: 'portrait',
+            unit: 'mm',
+            format: 'a4',
+            compress: true
+          });
+
+          for (let i = 0; i < pages.length; i++) {
+            const pageEl = pages[i];
+            
+            // Chụp trực tiếp từng trang A4 độc lập
+            const canvas = await html2canvas(pageEl, {
+              scale: 2,
+              useCORS: true,
+              logging: false,
+              backgroundColor: '#ffffff',
+              scrollX: 0,
+              scrollY: 0,
+              onclone: (clonedDoc) => {
+                const clonedPages = clonedDoc.querySelectorAll('.a4-page');
+                clonedPages.forEach(p => {
+                  p.style.boxShadow = 'none';
+                  p.style.margin = '0';
+                  p.style.border = 'none';
+                });
+              }
+            });
+
+            const imgData = canvas.toDataURL('image/jpeg', 0.98);
+            if (i > 0) {
+              pdf.addPage('a4', 'portrait');
+            }
+            // Khớp trọn vẹn 100% kích thước khổ A4 (210mm x 297mm)
+            pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+          }
+
+          pdf.save(filename);
+          if (btn) {
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
+          }
+          return;
+        } catch (pageErr) {
+          console.warn("Lỗi phương thức xuất trực tiếp từng trang, chuyển sang html2pdf:", pageErr);
+        }
+      }
+
+      // =========================================================================
+      // PHƯƠNG PHÁP 2: DỰ PHÒNG BẰNG html2pdf (ĐÃ SỬA LỖI LỆCH LỀ & TRANG TRẮNG)
+      // =========================================================================
       if (typeof html2pdf === 'function') {
         const opt = {
           margin: 0,
@@ -20366,13 +20432,15 @@
             scale: 2,
             useCORS: true,
             letterRendering: true,
-            windowWidth: 794
+            scrollX: 0,
+            scrollY: 0,
+            backgroundColor: '#ffffff'
           },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-          pagebreak: { mode: ['css', 'legacy'], before: '.html2pdf__page-break' }
+          pagebreak: { mode: ['css', 'legacy'] }
         };
 
-        html2pdf().set(opt).from(element).save().then(() => {
+        html2pdf().set(opt).from(container).save().then(() => {
           if (btn) {
             btn.innerHTML = originalHTML;
             btn.disabled = false;
