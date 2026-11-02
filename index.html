@@ -784,6 +784,16 @@
       <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
         <button 
           type="button" 
+          onclick="openLessonPracticeModal()" 
+          class="py-1.5 sm:py-2 px-3 sm:px-3.5 rounded-xl font-black text-xs sm:text-sm transition active:scale-95 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-400 text-white shadow-sm flex items-center gap-1.5 cursor-pointer border border-emerald-400/40"
+          title="Làm 2 đề ôn tập bám sát nội dung bài học vừa học"
+        >
+          <i class="fa-solid fa-file-pen text-amber-300"></i>
+          <span>Làm đề ôn tập</span>
+        </button>
+
+        <button 
+          type="button" 
           onclick="openSgkLessonSelectorModal()" 
           class="py-1.5 sm:py-2 px-3 sm:px-3.5 rounded-xl font-bold text-xs sm:text-sm transition active:scale-95 bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-sm flex items-center gap-1.5 cursor-pointer"
           title="Chọn bài học SGK khác"
@@ -20713,8 +20723,10 @@
       const modal = document.getElementById('modal-lesson-practice-exams');
       if (!modal) return;
 
-      const title = lessonTitle || (activeLesson && activeLesson.lessonTitle) || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
-      const g = grade || (activeLesson && (activeLesson.grade || activeLesson.class)) || (studentInfo ? studentInfo.grade : 'Lớp 12');
+      const domTitle = document.getElementById('sgk-focus-title')?.textContent?.trim();
+      const domGrade = document.getElementById('sgk-focus-grade-badge')?.textContent?.trim();
+      const title = lessonTitle || (activeLesson && (activeLesson.lessonTitle || activeLesson.title)) || domTitle || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
+      const g = grade || (activeLesson && (activeLesson.grade || activeLesson.class)) || domGrade || (studentInfo ? (studentInfo.grade || studentInfo.class) : 'Lớp 12');
 
       const exams = (typeof getLessonPracticeExams === 'function') 
         ? getLessonPracticeExams(title, g) 
@@ -20828,8 +20840,10 @@
     function startLessonPracticeExam(examNumber) {
       try {
         const curLesson = activeLesson || {};
-        const title = curLesson.lessonTitle || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
-        const grade = curLesson.grade || curLesson.class || (studentInfo ? studentInfo.grade : 'Lớp 12');
+        const domTitle = document.getElementById('sgk-focus-title')?.textContent?.trim();
+        const domGrade = document.getElementById('sgk-focus-grade-badge')?.textContent?.trim();
+        const title = curLesson.lessonTitle || curLesson.title || domTitle || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
+        const grade = curLesson.grade || curLesson.class || domGrade || (studentInfo ? (studentInfo.grade || studentInfo.class) : 'Lớp 12');
         const gradeNum = String(grade).replace(/[^0-9]/g, '') || '12';
 
         const exams = (typeof getLessonPracticeExams === 'function') 
@@ -20928,8 +20942,10 @@
     function openLessonPracticePrintPreview(examNumber) {
       try {
         const curLesson = activeLesson || {};
-        const title = curLesson.lessonTitle || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
-        const grade = curLesson.grade || curLesson.class || (studentInfo ? studentInfo.grade : 'Lớp 12');
+        const domTitle = document.getElementById('sgk-focus-title')?.textContent?.trim();
+        const domGrade = document.getElementById('sgk-focus-grade-badge')?.textContent?.trim();
+        const title = curLesson.lessonTitle || curLesson.title || domTitle || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
+        const grade = curLesson.grade || curLesson.class || domGrade || (studentInfo ? (studentInfo.grade || studentInfo.class) : 'Lớp 12');
 
         const exams = (typeof getLessonPracticeExams === 'function') 
           ? getLessonPracticeExams(title, grade) 
@@ -38580,3 +38596,10 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 
 </body>
 </html>
+
+<script>
+  window.openLessonPracticeModal = openLessonPracticeModal;
+  window.closeLessonPracticeModal = closeLessonPracticeModal;
+  window.startLessonPracticeExam = startLessonPracticeExam;
+  window.openLessonPracticePrintPreview = openLessonPracticePrintPreview;
+</script>
