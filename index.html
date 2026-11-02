@@ -615,6 +615,17 @@
       </button>
 
       <button 
+        id="tab-btn-lesson-exams" 
+        onclick="openLessonPracticeModal()" 
+        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-black text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
+        title="Mở 2 Đề Ôn Tập bài học chuẩn Bộ GD&ĐT (Làm online & In/Xuất PDF)"
+      >
+        <i class="fa-solid fa-file-signature text-indigo-950"></i>
+        <span>2 Đề Ôn Tập</span>
+        <span class="bg-indigo-950 text-amber-300 text-[10px] px-1.5 py-0.2 rounded-full font-black">Mới</span>
+      </button>
+
+      <button 
         id="tab-btn-finish" 
         onclick="handleFinishLesson()" 
         class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-rose-600 hover:bg-rose-700 text-white shadow-xs cursor-pointer whitespace-nowrap"
@@ -1831,6 +1842,59 @@
   </div>
 
   <!-- =========================================================================
+       MODAL: 2 ĐỀ ÔN TẬP BÀI HỌC (CHUẨN BỘ GD&ĐT)
+       ========================================================================= -->
+  <div id="modal-lesson-practice-exams" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-[99994] hidden items-center justify-center p-3 sm:p-5 select-none font-serif animate-in fade-in">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full border-2 border-indigo-400 overflow-hidden font-serif flex flex-col max-h-[92vh]">
+      <!-- Header -->
+      <div class="bg-gradient-to-r from-indigo-950 via-purple-900 to-indigo-900 text-white p-4 sm:p-5 shrink-0 flex items-center justify-between gap-3 shadow-md">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-amber-400 text-indigo-950 flex items-center justify-center text-xl font-black shadow-md">
+            <i class="fa-solid fa-file-signature"></i>
+          </div>
+          <div>
+            <h4 class="font-black text-base sm:text-lg uppercase tracking-wide flex items-center gap-2">
+              <span>2 ĐỀ ÔN TẬP BÀI HỌC — CHUẨN BỘ GD&ĐT</span>
+              <span id="lesson-exam-grade-badge" class="text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/30 text-emerald-300 border border-emerald-400/50">Lớp 12</span>
+            </h4>
+            <p id="lesson-exam-title-display" class="text-xs sm:text-sm text-indigo-200 line-clamp-1">
+              Bài học SGK KNTT
+            </p>
+          </div>
+        </div>
+        <button 
+          type="button" 
+          onclick="closeLessonPracticeModal()" 
+          class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white font-black flex items-center justify-center cursor-pointer transition text-base"
+          title="Đóng"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Body: 2 Exam Cards Grid -->
+      <div id="lesson-practice-exams-container" class="flex-1 overflow-y-auto p-4 sm:p-6 bg-slate-50/70 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <!-- Dynamically populated in openLessonPracticeModal() -->
+      </div>
+
+      <!-- Footer Note -->
+      <div class="p-3.5 sm:p-4 bg-white border-t border-slate-200 flex items-center justify-between gap-3 text-xs text-slate-500 shrink-0">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-emerald-600"></i>
+          <span>Cấu trúc chuẩn ma trận: 30% NB • 30% TH • 20% VD • 20% VDC • In 2 trang A4</span>
+        </div>
+        <button 
+          type="button" 
+          onclick="closeLessonPracticeModal()" 
+          class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold cursor-pointer transition text-xs sm:text-sm"
+        >
+          Đóng
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
        MODAL: CHUYỂN SANG PHẦN HỌC KHÁC
        ========================================================================= -->
   <div id="modal-switch-part" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[99993] hidden items-center justify-center p-3 sm:p-5 select-none font-serif animate-in fade-in">
@@ -2624,6 +2688,7 @@
   <script src="kntt-lessons-grade11.js"></script>
   <script src="kntt-lessons-grade10.js"></script>
   <script src="kntt-topic-exams.js"></script>
+  <script src="kntt-lesson-practice-exams.js"></script>
 
   <!-- Application Logic -->
   <script>
@@ -19542,6 +19607,7 @@
     let currentPrintTopic = null;
     let currentPrintExam = null;
     let currentPrintPeriodicMeta = null; // { grade, periodKey, examNumber }
+    let currentPrintLessonPracticeMeta = null; // { grade, lessonTitle, examNumber }
     let showPrintSolutions = false;
 
     function openTopicPrintPreview(topicId, examId) {
@@ -19710,6 +19776,8 @@
 
       if (currentPrintType === 'periodic' && currentPrintPeriodicMeta) {
         renderPeriodicPrintPaper(container, currentPrintExam, currentPrintPeriodicMeta);
+      } else if (currentPrintType === 'lesson_practice' && currentPrintLessonPracticeMeta) {
+        renderLessonPracticePrintPaper(container, currentPrintExam, currentPrintLessonPracticeMeta);
       } else if (currentPrintTopic) {
         renderTopicPrintPaper(container, currentPrintTopic, currentPrintExam);
       }
@@ -20502,6 +20570,11 @@
       if (currentPrintType === 'periodic' && currentPrintPeriodicMeta) {
         const pKey = currentPrintPeriodicMeta.periodKey.toUpperCase();
         filename = `De_Kiem_Tra_Dinh_Ky_Toan_${currentPrintPeriodicMeta.grade}_${pKey}_De${currentPrintPeriodicMeta.examNumber}.pdf`;
+      } else if (currentPrintType === 'lesson_practice' && currentPrintLessonPracticeMeta) {
+        const cleanTitle = (currentPrintLessonPracticeMeta.lessonTitle || 'Bai_Hoc')
+          .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-zA-Z0-9]/g, '_').replace(/_+/g, '_').slice(0, 30);
+        filename = `De_On_Tap_Toan_${currentPrintLessonPracticeMeta.grade}_${cleanTitle}_De${currentPrintLessonPracticeMeta.examNumber}.pdf`;
       } else if (currentPrintExam) {
         filename = `De_Thi_TN_${currentPrintExam.code || 'CHUYEN_DE'}.pdf`;
       }
@@ -20609,6 +20682,10 @@
         openTopicPrintPreview(activeLesson.currentTopicId, activeLesson.currentExamId);
       } else if (activeLesson && activeLesson.isPeriodicExam) {
         openPeriodicPrintPreview(activeLesson.periodicGrade, activeLesson.periodicPeriod, activeLesson.periodicExamIndex);
+      } else if (activeLesson && activeLesson.isLessonPracticeExam) {
+        openLessonPracticePrintPreview(activeLesson.lessonPracticeExamIndex || 1);
+      } else if (activeLesson) {
+        openLessonPracticeModal();
       } else {
         // Fallback for regular exams
         if (typeof printEvaluationSheet === 'function') {
@@ -20627,6 +20704,650 @@
     window.toggleTopicExamSolutions = toggleTopicExamSolutions;
     window.handleExamPrintPdfClick = handleExamPrintPdfClick;
 
+
+    
+    // =========================================================================
+    // HỆ THỐNG 2 ĐỀ ÔN TẬP BÀI HỌC SGK CHUẨN BỘ GD&ĐT
+    // =========================================================================
+    function openLessonPracticeModal(lessonTitle, grade) {
+      const modal = document.getElementById('modal-lesson-practice-exams');
+      if (!modal) return;
+
+      const title = lessonTitle || (activeLesson && activeLesson.lessonTitle) || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
+      const g = grade || (activeLesson && (activeLesson.grade || activeLesson.class)) || (studentInfo ? studentInfo.grade : 'Lớp 12');
+
+      const exams = (typeof getLessonPracticeExams === 'function') 
+        ? getLessonPracticeExams(title, g) 
+        : null;
+
+      const titleEl = document.getElementById('lesson-exam-title-display');
+      const gradeBadge = document.getElementById('lesson-exam-grade-badge');
+      const container = document.getElementById('lesson-practice-exams-container');
+
+      if (titleEl) titleEl.textContent = title;
+      if (gradeBadge) gradeBadge.textContent = String(g).includes('10') ? 'Lớp 10' : (String(g).includes('11') ? 'Lớp 11' : 'Lớp 12');
+
+      if (!exams || exams.length === 0) {
+        if (container) {
+          container.innerHTML = `
+            <div class="col-span-1 md:col-span-2 p-8 text-center bg-white rounded-2xl border border-slate-200">
+              <p class="text-slate-600 font-bold">Đang cập nhật 2 đề ôn tập cho bài học này...</p>
+            </div>
+          `;
+        }
+      } else {
+        const isGrade12 = String(g).includes('12');
+        if (container) {
+          container.innerHTML = exams.map((exam, idx) => {
+            const num = idx + 1;
+            const badgeColor = num === 1 
+              ? 'bg-indigo-100 text-indigo-900 border-indigo-300' 
+              : 'bg-emerald-100 text-emerald-900 border-emerald-300';
+            const btnGradient = num === 1 
+              ? 'from-indigo-600 to-purple-700 hover:from-indigo-500 hover:to-purple-600' 
+              : 'from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600';
+
+            const structureText = isGrade12
+              ? '12 Câu TN (3.0đ) • 4 Câu Đ/S (4.0đ) • 6 Câu TLN (3.0đ)'
+              : '12 Câu TN (3.0đ) • 2 Câu Đ/S (2.0đ) • 6 Câu TLN (3.0đ) • 4 Câu TL (2.0đ)';
+
+            return `
+              <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-indigo-100 hover:border-indigo-300 shadow-md hover:shadow-xl transition-all duration-200 flex flex-col justify-between gap-4 group">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider border ${badgeColor}">
+                      ${exam.code} • ĐỀ SỐ ${num}
+                    </span>
+                    <span class="text-xs font-bold text-slate-500 flex items-center gap-1">
+                      <i class="fa-regular fa-clock text-amber-500"></i>
+                      <span>${exam.durationMinutes || (isGrade12 ? 90 : 60)} phút</span>
+                    </span>
+                  </div>
+
+                  <h3 class="font-black text-base sm:text-lg text-slate-900 group-hover:text-indigo-950 transition leading-snug">
+                    ${exam.title}
+                  </h3>
+
+                  <div class="mt-3 p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1.5">
+                    <div class="flex items-center gap-2">
+                      <i class="fa-solid fa-layer-group text-indigo-600"></i>
+                      <span class="font-bold text-slate-800">Cấu trúc:</span>
+                      <span>${structureText}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="fa-solid fa-bullseye text-rose-500"></i>
+                      <span class="font-bold text-slate-800">Tỷ lệ:</span>
+                      <span class="text-indigo-900 font-semibold">30% NB • 30% TH • 20% VD • 20% VDC</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                  <button 
+                    type="button" 
+                    onclick="openLessonPracticePrintPreview(${num})" 
+                    class="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition cursor-pointer active:scale-95 border border-slate-300 shadow-2xs"
+                    title="In đề hoặc xuất PDF khổ A4 2 trang tiết kiệm giấy"
+                  >
+                    <i class="fa-solid fa-print text-indigo-600"></i>
+                    <span>In / Xuất PDF</span>
+                  </button>
+
+                  <button 
+                    type="button" 
+                    onclick="startLessonPracticeExam(${num})" 
+                    class="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r ${btnGradient} text-white font-black text-xs sm:text-sm flex items-center justify-center gap-1.5 transition cursor-pointer active:scale-95 shadow-md shadow-indigo-600/20"
+                    title="Bắt đầu làm bài kiểm tra trực tuyến trên Web App"
+                  >
+                    <span>Làm Online</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.style.display = 'flex';
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeLessonPracticeModal() {
+      const modal = document.getElementById('modal-lesson-practice-exams');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.style.setProperty('display', 'none', 'important');
+      }
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function startLessonPracticeExam(examNumber) {
+      try {
+        const curLesson = activeLesson || {};
+        const title = curLesson.lessonTitle || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
+        const grade = curLesson.grade || curLesson.class || (studentInfo ? studentInfo.grade : 'Lớp 12');
+        const gradeNum = String(grade).replace(/[^0-9]/g, '') || '12';
+
+        const exams = (typeof getLessonPracticeExams === 'function') 
+          ? getLessonPracticeExams(title, grade) 
+          : null;
+        if (!exams || exams.length === 0) {
+          alert('Không tìm thấy dữ liệu đề ôn tập cho bài học này.');
+          return;
+        }
+
+        const num = parseInt(examNumber, 10) || 1;
+        const exam = exams.find(e => e.examNumber === num) || exams[0];
+        if (!exam) return;
+
+        closeLessonPracticeModal();
+        closeSwitchPartModal();
+
+        // Thiết lập chế độ làm bài kiểm tra ôn tập
+        activeLesson.isChapterReview = true;
+        activeLesson.isLessonPracticeExam = true;
+        activeLesson.lessonPracticeExamIndex = num;
+        activeLesson.lessonPracticeGrade = gradeNum;
+        activeLesson.chapterShortTitle = `${exam.code}: ${exam.title}`;
+
+        if (!activeLesson.sections || activeLesson.sections.length === 0) {
+          activeLesson.sections = [{}];
+        }
+        activeLesson.sections[0].mcqs = exam.mcqs || [];
+        window.activeTFQuestions = exam.tfQuestions || [];
+        window.activeSAQuestions = exam.saQuestions || [];
+        window.activeEssayQuestions = exam.essayQuestions || [];
+        activeLesson.essayQuestions = exam.essayQuestions || [];
+
+        // Khởi tạo lại trạng thái bài làm
+        window.chapterExamState = {
+          mcqAnswers: {},
+          submitted: false,
+          scores: { mcqScore: 0, tfScore: 0, saScore: 0, essayScore: 0, totalScore: 0 }
+        };
+        window.tfAnswers = {};
+        window.saAnswers = {};
+        window.essayAnswers = {};
+        demoState.mcqIndex = 0;
+        currentTFIndex = 0;
+        currentSAIndex = 0;
+        currentEssayIndex = 0;
+
+        // Bật thanh điều hướng phòng thi (Exam Mode)
+        const examSubNav = document.getElementById('exam-sub-nav');
+        if (examSubNav) {
+          examSubNav.classList.remove('hidden');
+          examSubNav.classList.add('flex');
+        }
+        const sgkSubNav = document.getElementById('sgk-sub-nav');
+        if (sgkSubNav) {
+          sgkSubNav.classList.add('hidden');
+          sgkSubNav.classList.remove('flex');
+        }
+        const flowBar = document.getElementById('flow-status-bar');
+        if (flowBar) flowBar.style.display = 'none';
+
+        const navTitle = document.getElementById('exam-nav-title');
+        if (navTitle) navTitle.textContent = `${exam.lessonTitle} • ${exam.code}`;
+        const navBadge = document.getElementById('exam-nav-badge');
+        if (navBadge) navBadge.textContent = `ĐỀ ÔN TẬP`;
+
+        // Tab Tự Luận: chỉ hiển thị khi đề thi có phần Tự Luận (Lớp 10, 11)
+        const tabEssay = document.getElementById('exam-tab-btn-essay');
+        if (tabEssay) {
+          if (exam.essayQuestions && exam.essayQuestions.length > 0) {
+            tabEssay.classList.remove('hidden');
+            tabEssay.classList.add('flex');
+          } else {
+            tabEssay.classList.add('hidden');
+            tabEssay.classList.remove('flex');
+          }
+        }
+
+        // Khởi động đồng hồ đếm ngược 90 phút (hoặc 60 phút)
+        const durationSec = (exam.durationMinutes || (gradeNum === '12' ? 90 : 60)) * 60;
+        if (typeof startExamCountdownTimer === 'function') {
+          startExamCountdownTimer(durationSec);
+        }
+
+        switchStudyTab('mcq');
+        renderMCQPanel();
+        if (typeof buildAnswerSheetUI === 'function') buildAnswerSheetUI();
+        if (typeof renderMath === 'function') renderMath(document.body);
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error("Lỗi khi bắt đầu làm đề ôn tập bài học:", err);
+      }
+    }
+
+    function openLessonPracticePrintPreview(examNumber) {
+      try {
+        const curLesson = activeLesson || {};
+        const title = curLesson.lessonTitle || (studentInfo ? studentInfo.lesson : 'Bài 1: Mệnh đề');
+        const grade = curLesson.grade || curLesson.class || (studentInfo ? studentInfo.grade : 'Lớp 12');
+
+        const exams = (typeof getLessonPracticeExams === 'function') 
+          ? getLessonPracticeExams(title, grade) 
+          : null;
+        if (!exams || exams.length === 0) {
+          alert('Không tìm thấy dữ liệu đề ôn tập cho bài học này.');
+          return;
+        }
+
+        const num = parseInt(examNumber, 10) || 1;
+        const exam = exams.find(e => e.examNumber === num) || exams[0];
+        if (!exam) return;
+
+        currentPrintType = 'lesson_practice';
+        currentPrintExam = exam;
+        currentPrintTopic = null;
+        currentPrintPeriodicMeta = null;
+        currentPrintLessonPracticeMeta = {
+          grade: String(exam.grade || grade).replace(/[^0-9]/g, '') || '12',
+          lessonTitle: exam.lessonTitle || title,
+          examNumber: num
+        };
+        showPrintSolutions = false;
+
+        const modal = document.getElementById('modal-topic-print-preview');
+        const modalTitle = document.getElementById('print-modal-title');
+        const modalSubtitle = document.getElementById('print-modal-subtitle');
+        const toggleBtnText = document.getElementById('btn-toggle-solutions-text');
+        const toggleBtn = document.getElementById('btn-toggle-solutions');
+
+        if (modalTitle) modalTitle.textContent = `IN ĐỀ ÔN TẬP: ĐỀ SỐ ${exam.examNumber} - TOÁN ${currentPrintLessonPracticeMeta.grade}`;
+        if (modalSubtitle) modalSubtitle.textContent = `${exam.lessonTitle} • ${exam.code} (Chuẩn Bộ GD&ĐT • Tiết Kiệm Giấy 2 Trang A4)`;
+        if (toggleBtnText) toggleBtnText.textContent = "Kèm Đáp Án";
+        if (toggleBtn) {
+          toggleBtn.classList.remove('bg-amber-400', 'text-slate-950', 'border-amber-300');
+          toggleBtn.classList.add('bg-white/10', 'text-indigo-100');
+        }
+
+        renderPrintExamPaper();
+
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          modal.style.display = 'flex';
+          document.body.classList.add('overflow-hidden');
+        }
+      } catch (err) {
+        console.error("Lỗi mở xem trước in đề ôn tập bài học:", err);
+      }
+    }
+
+    // =========================================================================
+    // RENDER ĐỀ ÔN TẬP BÀI HỌC KHỔ A4 (2 TRANG A4 CHUẨN BỘ GD&ĐT)
+    // =========================================================================
+    function renderLessonPracticePrintPaper(container, exam, meta) {
+      const isGrade12 = (String(meta.grade).includes('12'));
+      const mcqs = exam.mcqs || [];
+      const mcqsCol1 = mcqs.slice(0, 6);
+      const mcqsCol2 = mcqs.slice(6, 12);
+      const tfs = exam.tfQuestions || [];
+      const sas = exam.saQuestions || [];
+      const essays = exam.essayQuestions || [];
+
+      // =========================================================================
+      // TRANG 1: HEADER + PHẦN I (12 CÂU) + PHẦN II (CÂU 1 & 2) KHÍT TRANG 1
+      // =========================================================================
+      let page1Html = `
+        <div class="a4-page font-serif">
+          <div>
+            <!-- Header chuẩn Bộ GD&ĐT (Khung Mã Đề Căn Giữa Tuyệt Đối) -->
+            <div class="border-b-2 border-black pb-1 mb-2 text-[9pt]">
+              <table class="w-full border-collapse mb-1 text-center">
+                <tr>
+                  <td class="w-1/2 align-top text-center pb-1">
+                    <div class="font-bold uppercase text-[8.5pt]">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
+                    <div class="font-bold uppercase text-[9.5pt] text-indigo-950">ĐỀ ÔN TẬP BÀI HỌC</div>
+                    <div class="font-bold text-[8.5pt]">ĐỀ CHÍNH THỨC</div>
+                    <div class="italic text-[8pt] text-slate-500">(Đề thi có 02 trang)</div>
+                  </td>
+                  <td class="w-1/2 align-top text-center pb-1">
+                    <div class="font-bold uppercase text-[9.5pt] text-indigo-950">NĂM HỌC 2025 - 2026</div>
+                    <div class="font-bold uppercase text-[9pt]">MÔN: TOÁN — KHỐI ${meta.grade}</div>
+                    <div class="text-[8.5pt] font-medium text-slate-800 line-clamp-1">${meta.lessonTitle}</div>
+                    <div class="text-[8.5pt] mb-1">Thời gian làm bài: ${exam.durationMinutes || (isGrade12 ? 90 : 60)} phút</div>
+                    <div class="inline-block border border-black px-2.5 py-0.5 font-bold text-[8.5pt] font-mono leading-none bg-white">
+                      MÃ ĐỀ THI: ${exam.code}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <div class="border-t border-black pt-1 flex justify-between text-[8.5pt]">
+                <div>Họ và tên thí sinh: ................................................................................</div>
+                <div>Số báo danh: .............................</div>
+              </div>
+            </div>
+
+            <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn) -->
+            <div class="font-bold text-[9.5pt] uppercase mb-1.5 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+              <span>PHẦN I. Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.</span>
+              <span class="text-[8.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
+              <div class="col-divider space-y-1.5">
+                ${mcqsCol1.map((q, idx) => `
+                  <div class="break-inside-avoid">
+                    <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
+                    ${formatMcqOptsPrint(q.options, q.correct)}
+                  </div>
+                `).join('')}
+              </div>
+
+              <div class="pl-1 space-y-1.5">
+                ${mcqsCol2.map((q, idx) => `
+                  <div class="break-inside-avoid">
+                    <div><strong class="font-bold">Câu ${idx + 7}:</strong> ${cleanQText(q.question)}</div>
+                    ${formatMcqOptsPrint(q.options, q.correct)}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- ĐẨY TIẾP PHẦN II (CÂU 1 & 2) LÊN TRANG 1 ĐỂ KHÍT TRANG -->
+            ${tfs.length > 0 ? `
+              <div class="font-bold text-[9.5pt] uppercase mt-2 mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                <span>PHẦN II. Câu trắc nghiệm đúng sai. (${isGrade12 ? '4.0' : '2.0'} điểm)</span>
+                <span class="text-[8.5pt] font-normal italic lowercase">(Thí sinh trả lời từ câu 1 đến câu ${isGrade12 ? '4' : '2'})</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
+                <!-- Cột 1: Câu 1 -->
+                <div class="col-divider">
+                  ${tfs[0] ? `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu 1:</strong> ${cleanQText(tfs[0].context || tfs[0].question || tfs[0].statement || '')}</div>
+                      <div class="pl-2 mt-0.5 space-y-0.5 text-[8.8pt]">
+                        ${(tfs[0].items || []).map(it => {
+                          const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : ''));
+                          const content = it.content || it.text || '';
+                          let badge = '';
+                          if (showPrintSolutions) {
+                            badge = it.correct 
+                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
+                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
+                          }
+                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
+                        }).join('')}
+                      </div>
+                    </div>
+                  ` : ''}
+                </div>
+
+                <!-- Cột 2: Câu 2 -->
+                <div class="pl-1">
+                  ${tfs[1] ? `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu 2:</strong> ${cleanQText(tfs[1].context || tfs[1].question || tfs[1].statement || '')}</div>
+                      <div class="pl-2 mt-0.5 space-y-0.5 text-[8.8pt]">
+                        ${(tfs[1].items || []).map(it => {
+                          const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : ''));
+                          const content = it.content || it.text || '';
+                          let badge = '';
+                          if (showPrintSolutions) {
+                            badge = it.correct 
+                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
+                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
+                          }
+                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
+                        }).join('')}
+                      </div>
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+
+          <div class="page-footer text-[8pt] text-slate-500 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+            <span>Mã đề ${exam.code}</span>
+            <span>Trang 1/2</span>
+          </div>
+        </div>
+      `;
+
+      // =========================================================================
+      // TRANG 2: KHỐI 12 (PHẦN II TIẾP + PHẦN III) / KHỐI 10-11 (PHẦN III + PHẦN IV)
+      // =========================================================================
+      let page2Content = '';
+      if (isGrade12) {
+        // KHỐI 12: CỘT 1 LÀ PHẦN II (CÂU 3 & 4), CỘT 2 LÀ PHẦN III (6 CÂU TLN)
+        page2Content = `
+          <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
+            <!-- Cột 1: Phần II tiếp theo (Câu 3 và 4) -->
+            <div class="col-divider space-y-2">
+              <div class="font-bold text-[9pt] italic text-slate-700 bg-slate-50 px-1 py-0.5 border-b border-slate-200">
+                PHẦN II (Tiếp theo). Câu trắc nghiệm đúng sai.
+              </div>
+
+              ${tfs.slice(2, 4).map((q, idx) => {
+                const qContext = q.context || q.question || q.statement || '';
+                return `
+                  <div class="break-inside-avoid">
+                    <div><strong class="font-bold">Câu ${idx + 3}:</strong> ${cleanQText(qContext)}</div>
+                    <div class="pl-2 mt-0.5 space-y-0.5 text-[8.8pt]">
+                      ${(q.items || []).map(it => {
+                        const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : ''));
+                        const content = it.content || it.text || '';
+                        let badge = '';
+                        if (showPrintSolutions) {
+                          badge = it.correct 
+                            ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
+                            : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
+                        }
+                        return `<div><strong>${label}</strong> ${content}${badge}</div>`;
+                      }).join('')}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <!-- Cột 2: Phần III (6 câu Trả lời ngắn) + Hết -->
+            <div class="pl-1 flex flex-col justify-between">
+              <div>
+                <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
+                  <span class="text-[8.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                </div>
+                <div class="italic text-[8pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
+
+                <div class="space-y-1.5">
+                  ${sas.map((q, idx) => {
+                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                    return `
+                      <div class="break-inside-avoid">
+                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+
+              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+                <div class="font-bold text-[9pt] tracking-widest">------------------ HẾT ------------------</div>
+                <div class="italic text-[8pt] text-slate-600 mt-0.5">
+                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // KHỐI 10 & 11: CỘT 1 LÀ PHẦN III (6 CÂU TLN), CỘT 2 LÀ PHẦN IV (4 BÀI TỰ LUẬN)
+        page2Content = `
+          <div class="grid grid-cols-2 gap-x-4 text-[9pt] leading-snug">
+            <!-- Cột 1: Phần III (6 câu Trả lời ngắn) -->
+            <div class="col-divider space-y-2">
+              <div>
+                <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
+                  <span class="text-[8.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                </div>
+                <div class="italic text-[8pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
+
+                <div class="space-y-1.5">
+                  ${sas.map((q, idx) => {
+                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                    return `
+                      <div class="break-inside-avoid">
+                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            </div>
+
+            <!-- Cột 2: Phần IV (4 bài Tự luận) + Hết -->
+            <div class="pl-1 flex flex-col justify-between">
+              <div>
+                <div class="font-bold text-[9.5pt] uppercase mb-1 bg-slate-100 px-1.5 py-0.5 border-l-3 border-black flex justify-between items-center">
+                  <span>PHẦN IV. Tự luận.</span>
+                  <span class="text-[8.5pt] font-normal italic lowercase">(2.0 điểm)</span>
+                </div>
+                <div class="italic text-[8pt] text-slate-600 mb-1.5">Thí sinh trình bày lời giải chi tiết vào giấy làm bài thi.</div>
+
+                <div class="space-y-2 text-[9pt] leading-snug">
+                  ${essays.map((eq, idx) => `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Bài ${idx + 1}:</strong> <span class="italic text-[8pt]">(${eq.maxScore || 0.5} điểm)</span> ${cleanQText(eq.question)}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+                <div class="font-bold text-[9pt] tracking-widest">------------------ HẾT ------------------</div>
+                <div class="italic text-[8pt] text-slate-600 mt-0.5">
+                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      let page2Html = `
+        <div class="a4-page font-serif">
+          <div>
+            <!-- Header trang 2 -->
+            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[8.5pt]">
+              <div><strong>MÃ ĐỀ THI: ${exam.code}</strong> • MÔN TOÁN ${meta.grade}</div>
+              <div class="italic text-slate-600">${meta.lessonTitle}</div>
+            </div>
+
+            ${page2Content}
+          </div>
+
+          <div class="page-footer text-[8pt] text-slate-500 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+            <span>Mã đề ${exam.code}</span>
+            <span>Trang 2/2</span>
+          </div>
+        </div>
+      `;
+
+      // =========================================================================
+      // TRANG 3: ĐÁP ÁN & LỜI GIẢI CHI TIẾT (KHI BẬT KÈM ĐÁP ÁN)
+      // =========================================================================
+      let page3Html = '';
+      if (showPrintSolutions) {
+        page3Html = `
+          <div class="a4-page font-serif">
+            <div>
+              <div class="border-b-2 border-indigo-900 pb-1.5 mb-3 text-center">
+                <div class="font-black text-sm uppercase text-indigo-950">HƯỚNG DẪN CHẤM & ĐÁP ÁN CHI TIẾT</div>
+                <div class="text-xs text-slate-600">${meta.lessonTitle} • Mã Đề: ${exam.code} (Toán ${meta.grade})</div>
+              </div>
+
+              <!-- BẢNG ĐÁP ÁN PHẦN I -->
+              <div class="mb-3">
+                <div class="font-bold text-[9pt] uppercase mb-1 bg-indigo-50 text-indigo-950 px-2 py-0.5 border-l-3 border-indigo-700">
+                  PHẦN I: ĐÁP ÁN TRẮC NGHIỆM (0.25đ / câu)
+                </div>
+                <table class="w-full text-center border-collapse border border-slate-400 text-[8.5pt]">
+                  <tr class="bg-slate-100 font-bold">
+                    ${mcqs.map((_, idx) => `<td class="border border-slate-400 py-0.5">${idx + 1}</td>`).join('')}
+                  </tr>
+                  <tr class="font-mono font-bold text-red-700">
+                    ${mcqs.map(q => `<td class="border border-slate-400 py-0.5">${q.correct || '-'}</td>`).join('')}
+                  </tr>
+                </table>
+              </div>
+
+              <!-- BẢNG ĐÁP ÁN PHẦN II -->
+              <div class="mb-3">
+                <div class="font-bold text-[9pt] uppercase mb-1 bg-indigo-50 text-indigo-950 px-2 py-0.5 border-l-3 border-indigo-700">
+                  PHẦN II: ĐÁP ÁN ĐÚNG / SAI
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-[8.5pt]">
+                  ${tfs.map((q, idx) => `
+                    <div class="border border-slate-300 p-1.5 rounded bg-slate-50">
+                      <div class="font-bold text-indigo-900 mb-0.5">Câu ${idx + 1}:</div>
+                      <div class="grid grid-cols-4 gap-1 text-center font-mono">
+                        ${(q.items || []).map(it => `
+                          <div class="bg-white border rounded px-1 py-0.5 ${it.correct ? 'text-emerald-700 font-bold' : 'text-rose-700 font-bold'}">
+                            ${it.label || it.subLabel || ''} ${it.correct ? 'Đ' : 'S'}
+                          </div>
+                        `).join('')}
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- BẢNG ĐÁP ÁN PHẦN III -->
+              <div class="mb-3">
+                <div class="font-bold text-[9pt] uppercase mb-1 bg-indigo-50 text-indigo-950 px-2 py-0.5 border-l-3 border-indigo-700">
+                  PHẦN III: ĐÁP ÁN TRẢ LỜI NGẮN (0.50đ / câu)
+                </div>
+                <table class="w-full text-center border-collapse border border-slate-400 text-[8.5pt]">
+                  <tr class="bg-slate-100 font-bold">
+                    ${sas.map((_, idx) => `<td class="border border-slate-400 py-0.5">Câu ${idx + 1}</td>`).join('')}
+                  </tr>
+                  <tr class="font-mono font-bold text-indigo-900 bg-white">
+                    ${sas.map(q => `<td class="border border-slate-400 py-0.5">${q.correctAnswer || q.answer || '-'}</td>`).join('')}
+                  </tr>
+                </table>
+              </div>
+
+              <!-- HƯỚNG DẪN CHẤM PHẦN IV TỰ LUẬN (CHO LỚP 10-11) -->
+              ${essays.length > 0 ? `
+                <div>
+                  <div class="font-bold text-[9pt] uppercase mb-1 bg-indigo-50 text-indigo-950 px-2 py-0.5 border-l-3 border-indigo-700">
+                    PHẦN IV: HƯỚNG DẪN CHẤM TỰ LUẬN
+                  </div>
+                  <div class="space-y-1.5 text-[8.5pt] leading-snug">
+                    ${essays.map((eq, idx) => `
+                      <div class="p-1.5 border border-slate-200 rounded bg-slate-50">
+                        <div><strong class="text-indigo-900">Bài ${idx + 1} (${eq.maxScore || 0.5}đ):</strong> ${eq.title || ''}</div>
+                        <div class="text-slate-700 mt-0.5">${eq.explanation || eq.solution || ''}</div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+
+            <div class="page-footer text-[8pt] text-slate-500 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+              <span>Mã đề ${exam.code}</span>
+              <span>Trang 3/3 (Đáp án)</span>
+            </div>
+          </div>
+        `;
+      }
+
+      container.innerHTML = page1Html + page2Html + page3Html;
+    }
+    window.renderLessonPracticePrintPaper = renderLessonPracticePrintPaper;
 
     window.openTopicReviewModal = openTopicReviewModal;
     window.closeTopicReviewModal = closeTopicReviewModal;
@@ -20671,6 +21392,29 @@
       const gridEl = document.getElementById('switch-part-grid');
       if (gridEl) {
         let itemsHtml = `
+          <!-- 0. 2 ĐỀ ÔN TẬP BÀI HỌC -->
+          <button 
+            type="button" 
+            onclick="closeSwitchPartModal(); openLessonPracticeModal();" 
+            class="p-3.5 sm:p-4 rounded-2xl border-2 border-purple-300 hover:border-purple-600 bg-gradient-to-br from-purple-50/90 via-indigo-50/70 to-amber-50/50 hover:from-purple-100 hover:to-indigo-100 transition flex items-start gap-3.5 text-left group shadow-xs cursor-pointer active:scale-95 col-span-1 sm:col-span-2"
+          >
+            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 text-white flex items-center justify-center text-xl shrink-0 group-hover:scale-105 transition shadow-md">
+              <i class="fa-solid fa-file-signature text-amber-300"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between">
+                <span class="flex items-center gap-1.5">
+                  <span class="text-purple-800 font-black">📝 2 ĐỀ ÔN TẬP BÀI HỌC</span>
+                  <span class="text-[10px] bg-purple-600 text-white font-bold px-2 py-0.5 rounded-full">Chuẩn Bộ GD&ĐT</span>
+                </span>
+                <span class="text-xs text-purple-700 font-bold group-hover:translate-x-1 transition">Mở đề →</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-0.5">
+                Gồm 2 đề ôn tập toàn diện bài vừa học (Đề 1 & Đề 2) • Tự động chấm điểm online hoặc In/Xuất PDF 2 trang A4
+              </p>
+            </div>
+          </button>
+
           <!-- 1. Lý Thuyết -->
           <button 
             type="button" 
@@ -21192,6 +21936,8 @@
         if (typeof openTopicReviewModal === 'function') openTopicReviewModal();
       } else if (activeLesson && activeLesson.isPeriodicExam) {
         if (typeof openPeriodicModal === 'function') openPeriodicModal();
+      } else if (activeLesson && activeLesson.isLessonPracticeExam) {
+        if (typeof openLessonPracticeModal === 'function') openLessonPracticeModal();
       } else {
         if (typeof openExamPracticeModal === 'function') openExamPracticeModal();
       }
@@ -21204,6 +21950,18 @@
         }
       }
       exitFullscreenExamMode();
+      if (activeLesson && activeLesson.isLessonPracticeExam) {
+        activeLesson.isLessonPracticeExam = false;
+        activeLesson.isChapterReview = false;
+      }
+      const sgkSubNav = document.getElementById('sgk-sub-nav');
+      if (sgkSubNav) {
+        sgkSubNav.classList.remove('hidden');
+        sgkSubNav.classList.add('flex');
+      }
+      const flowBar = document.getElementById('flow-status-bar');
+      if (flowBar) flowBar.style.display = 'flex';
+
       if (typeof handleNavButtonClick === 'function') {
         handleNavButtonClick('sgk');
       }
@@ -31223,7 +31981,8 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       }
 
       // Xác định loại bài thi: Khối 12 hay Khối 10, 11
-      const isGrade12 = (!activeLesson.periodicGrade || activeLesson.periodicGrade === '12' || activeLesson.isGraduationExam);
+      const examGrade = String(activeLesson.lessonPracticeGrade || activeLesson.periodicGrade || (activeLesson.grade ? activeLesson.grade : '') || (studentInfo ? studentInfo.grade : '12')).replace(/[^0-9]/g, '');
+      const isGrade12 = (examGrade === '12' || activeLesson.isGraduationExam);
 
       // 1. Chấm Phần 1: Trắc nghiệm (12 câu x 0.25 đ = 3.00 đ)
       let mcqScore = 0;
@@ -31266,10 +32025,11 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
 
       // 3. Chấm Phần 3: Trả lời ngắn
       // Khối 12: 6 câu x 0.5 đ = 3.00 đ
-      // Khối 10, 11: 4 câu x 0.5 đ = 2.00 đ
+      // Khối 10, 11 (Đề ôn tập bài học): 6 câu x 0.5 đ = 3.00 đ
+      // Khối 10, 11 (Đề định kỳ): 4 câu x 0.5 đ = 2.00 đ
       let saScore = 0;
       let saCorrectCount = 0;
-      const targetSaMax = isGrade12 ? 3.0 : 2.0;
+      const targetSaMax = (activeLesson.isLessonPracticeExam || isGrade12) ? 3.0 : 2.0;
       const saWeight = (saList.length > 0) ? (targetSaMax / saList.length) : 0.5;
       saList.forEach(q => {
         const rawVal = saAnswers[q.id] || '';
@@ -31324,6 +32084,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       renderMCQPanel();
       renderTFPanel();
       renderSAPanel();
+      if (typeof renderEssayPanel === 'function') renderEssayPanel();
 
       // Báo cáo chi tiết lên Chatbot AI
       const examReportMD = generateChapterExamReportMarkdown(chapterExamState);
@@ -32203,6 +32964,16 @@ ${activeLesson.lessonTitle}
                   class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md shadow-cyan-600/30 transition active:scale-95"
                 >
                   <span>Câu tiếp theo →</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              ` : (activeLesson && activeLesson.essayQuestions && activeLesson.essayQuestions.length > 0) ? `
+                <button 
+                  type="button" 
+                  onclick="switchStudyTab('essay')" 
+                  class="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-500 hover:to-indigo-600 text-white font-black text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md transition active:scale-95"
+                  title="Chuyển sang Phần 4: Tự Luận"
+                >
+                  <span>Sang Phần 4 (Tự Luận) →</span>
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
               ` : `
@@ -33272,7 +34043,7 @@ ${activeLesson.lessonTitle}
               </div>
             </details>
 
-            <!-- Minimal Bottom Navigation -->
+            <!-- Bottom Navigation -->
             <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-200">
               <button 
                 type="button" 
@@ -33288,14 +34059,47 @@ ${activeLesson.lessonTitle}
                 Câu ${currentEssayIndex + 1} / ${essays.length}
               </div>
 
+              ${currentEssayIndex < essays.length - 1 ? `
+                <button 
+                  type="button" 
+                  onclick="handleExamNextQuestion('essay')" 
+                  class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-md shadow-purple-600/30 transition active:scale-95"
+                >
+                  <span>Câu tiếp theo →</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              ` : `
+                <button 
+                  type="button" 
+                  onclick="submitChapterReviewExam(false)" 
+                  class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-black text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-md transition active:scale-95"
+                  title="Nộp bài kiểm tra ngay"
+                >
+                  <span>Nộp bài ngay 🏁</span>
+                </button>
+              `}
+            </div>
+
+            <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
+            <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-dashed border-purple-300">
               <button 
                 type="button" 
-                onclick="handleExamNextQuestion('essay')" 
-                ${currentEssayIndex >= essays.length - 1 ? 'disabled' : ''} 
-                class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-md shadow-purple-600/30 disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                onclick="openSwitchPartModal()" 
+                class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-800 hover:from-purple-600 hover:to-indigo-600 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
+                title="Mở bảng lựa chọn để chuyển nhanh sang phần học khác"
               >
-                <span>Câu tiếp theo →</span>
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-layer-group text-amber-300"></i>
+                <span>Chuyển sang phần khác</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="submitChapterReviewExam(false)" 
+                class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+                title="Nộp bài để chấm điểm và xem lời giải chi tiết"
+              >
+                <i class="fa-solid fa-flag-checkered text-amber-300"></i>
+                <span>${(typeof chapterExamState !== 'undefined' && chapterExamState.submitted) ? 'Đã Nộp Bài (Xem Kết Quả)' : 'Nộp Bài'}</span>
               </button>
             </div>
           </div>
