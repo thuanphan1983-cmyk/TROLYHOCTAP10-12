@@ -2,14 +2,14 @@
 import json, sys, os
 sys.stdout.reconfigure(encoding='utf-8')
 
-from builder_g12 import generate_g12_exams
-from builder_g11 import generate_g11_exams
-from builder_g10 import generate_g10_exams
+from generator_g12 import build_all_g12_exams
+from generator_g11 import build_all_g11_exams
+from generator_g10 import build_all_g10_exams
 
 print("Starting compilation of all lesson practice exams...")
-g12_db = generate_g12_exams()
-g11_db = generate_g11_exams()
-g10_db = generate_g10_exams()
+g12_db = build_all_g12_exams()
+g11_db = build_all_g11_exams()
+g10_db = build_all_g10_exams()
 
 master_db = {
     "12": g12_db,
