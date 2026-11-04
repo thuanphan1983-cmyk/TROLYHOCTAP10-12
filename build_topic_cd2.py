@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Chuyên đề 2: HỆ BẤT PHƯƠNG TRÌNH BẬC NHẤT 2 ẨN
-Gồm Tóm tắt kiến thức + 5 đề luyện tập độc lập chuẩn cấu trúc 2025-2026
+Gồm Tóm tắt kiến thức + 5 đề luyện tập độc lập chuẩn cấu trúc 2026-2027
 Mỗi đề có 2 câu trả lời ngắn VDC (Vận dụng cao - rất khó).
 """
 from topic_utils import balance_mcqs, validate_exam

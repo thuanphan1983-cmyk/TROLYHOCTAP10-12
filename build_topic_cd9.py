@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Chuyên đề 9: XÁC SUẤT CÓ ĐIỀU KIỆN & CÔNG THỨC BAYES
-Gồm Tóm tắt kiến thức + 5 đề luyện tập chuẩn cấu trúc Đề thi TN THPT 2025-2026.
+Gồm Tóm tắt kiến thức + 5 đề luyện tập chuẩn cấu trúc Đề thi TN THPT 2026-2027.
 Tập trung vào xác suất có điều kiện, công thức xác suất toàn phần, công thức Bayes và bài toán thực tế y tế, kiểm định chất lượng, báo động.
 """
 from topic_utils import balance_mcqs, validate_exam
@@ -957,7 +957,7 @@ def get_topic_cd9():
             "examNumber": exam_idx,
             "title": f"Đề số {exam_idx}: Luyện Thi Chuyên Đề Xác Suất Có Điều Kiện",
             "code": f"CD9-10{exam_idx}",
-            "badge": "Chuẩn Cấu Trúc 2025 - 2026",
+            "badge": "Chuẩn Cấu Trúc 2026 - 2027",
             "badgeColor": "bg-rose-100 text-rose-800 border-rose-200",
             "durationMinutes": 90,
             "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Chuyên đề 6: NGUYÊN HÀM - TÍCH PHÂN VÀ ỨNG DỤNG
-Gồm Tóm tắt kiến thức + 5 đề luyện tập chuẩn cấu trúc Đề thi TN THPT 2025-2026.
+Gồm Tóm tắt kiến thức + 5 đề luyện tập chuẩn cấu trúc Đề thi TN THPT 2026-2027.
 Tuyệt đối KHÔNG chứa tham số m. Tăng cường bài toán diện tích, thể tích, vật lý thực tế.
 """
 from topic_utils import balance_mcqs, validate_exam
@@ -973,7 +973,7 @@ def get_topic_cd6():
             "examNumber": exam_idx,
             "title": f"Đề số {exam_idx}: Luyện Thi Chuyên Đề Nguyên Hàm - Tích Phân",
             "code": f"CD6-10{exam_idx}",
-            "badge": "Chuẩn Cấu Trúc 2025 - 2026",
+            "badge": "Chuẩn Cấu Trúc 2026 - 2027",
             "badgeColor": "bg-emerald-100 text-emerald-800 border-emerald-200",
             "durationMinutes": 90,
             "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",

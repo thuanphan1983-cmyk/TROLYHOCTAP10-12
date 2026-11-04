@@ -48,7 +48,7 @@ def main():
     total_sa = sum(len(e['saQuestions']) for t in topics_db for e in t['exams'])
     print(f"\nTotal Summary: {len(topics_db)} Topics, {total_exams} Exams, {total_mcqs} MCQs, {total_tf} TF questions, {total_sa} SA questions.")
 
-    js_content = "/**\n * NGÂN HÀNG ÔN THI TỐT NGHIỆP THEO CHỦ ĐỀ (9 CHỦ ĐỀ - 45 ĐỀ LUYỆN TẬP)\n * Chuẩn cấu trúc Đề thi TN THPT 2025 - 2026 của Bộ GD&ĐT\n */\n"
+    js_content = "/**\n * NGÂN HÀNG ÔN THI TỐT NGHIỆP THEO CHỦ ĐỀ (9 CHỦ ĐỀ - 45 ĐỀ LUYỆN TẬP)\n * Chuẩn cấu trúc Đề thi TN THPT 2026 - 2027 của Bộ GD&ĐT\n */\n"
     js_content += "if (typeof window === 'undefined') { globalThis.window = globalThis; }\n"
     js_content += "window.TOPIC_EXAMS_DB = " + json.dumps(topics_db, ensure_ascii=False, indent=2) + ";\n"
     js_content += "const TOPIC_EXAMS_DB = window.TOPIC_EXAMS_DB;\n"

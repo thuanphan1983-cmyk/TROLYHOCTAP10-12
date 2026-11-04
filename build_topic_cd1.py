@@ -7,7 +7,7 @@ Mỗi đề có:
 - 4 câu Đúng / Sai (16 ý)
 - 6 câu Trả lời ngắn, trong đó CÂU 5 VÀ CÂU 6 LÀ VDC (RẤT KHÓ)
 - Tuyệt đối không có tham số m
-- Bám sát cấu trúc Đề thi TN THPT 2025 - 2026 của Bộ GD&ĐT
+- Bám sát cấu trúc Đề thi TN THPT 2026 - 2027 của Bộ GD&ĐT
 """
 from topic_utils import balance_mcqs, validate_exam
 
@@ -475,7 +475,7 @@ def get_topic_cd1():
             "examNumber": idx,
             "title": f"Đề số {idx}: Luyện Thi Chuyên Đề Dãy Số - CSC - CSN",
             "code": f"CD1-10{idx}",
-            "badge": "Chuẩn Cấu Trúc 2025 - 2026",
+            "badge": "Chuẩn Cấu Trúc 2026 - 2027",
             "badgeColor": "bg-blue-100 text-blue-800 border-blue-200",
             "durationMinutes": 90,
             "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",

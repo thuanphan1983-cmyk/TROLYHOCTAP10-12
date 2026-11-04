@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Chuyên đề 8: PHƯƠNG PHÁP TỌA ĐỘ TRONG KHÔNG GIAN (OXYZ)
-Gồm Tóm tắt kiến thức + 5 đề luyện tập chuẩn cấu trúc Đề thi TN THPT 2025-2026.
+Gồm Tóm tắt kiến thức + 5 đề luyện tập chuẩn cấu trúc Đề thi TN THPT 2026-2027.
 Tập trung vào hệ tọa độ Oxyz, mặt cầu, mặt phẳng, đường thẳng và bài toán thực tế định vị GPS, radar, tĩnh không.
 """
 from topic_utils import balance_mcqs, validate_exam
@@ -972,7 +972,7 @@ def get_topic_cd8():
             "examNumber": exam_idx,
             "title": f"Đề số {exam_idx}: Luyện Thi Chuyên Đề Phương Pháp Tọa Độ Trong Không Gian",
             "code": f"CD8-10{exam_idx}",
-            "badge": "Chuẩn Cấu Trúc 2025 - 2026",
+            "badge": "Chuẩn Cấu Trúc 2026 - 2027",
             "badgeColor": "bg-amber-100 text-amber-800 border-amber-200",
             "durationMinutes": 90,
             "matrixNote": "30% NB • 30% TH • 20% VD • 20% VDC (Tăng cường bài toán thực tiễn)",
