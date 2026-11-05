@@ -314,7 +314,7 @@
       width: 210mm;
       min-height: 297mm;
       max-height: 297mm;
-      padding: 6.5mm 9mm 6.5mm 9mm;
+      padding: 5.5mm 8.5mm 5.5mm 8.5mm;
       margin: 0 auto 24px auto;
       background: #ffffff;
       color: #000000;
@@ -323,8 +323,8 @@
       position: relative;
       overflow: hidden;
       font-family: "Times New Roman", Times, "Liberation Serif", serif !important;
-      font-size: 12pt;
-      line-height: 1.25;
+      font-size: 11.5pt;
+      line-height: 1.22;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -19793,9 +19793,12 @@
 
     const cleanQText = (text) => {
       if (!text) return '';
-      return text.replace(/^\*\*Câu\s*\d+(\s*\([A-Z]+\))?:\*\*\s*/i, '')
-                 .replace(/^Câu\s*\d+(\s*\([A-Z]+\))?:\s*/i, '')
-                 .trim();
+      let s = String(text).trim();
+      s = s.replace(/^\*\*(?:Bài|Câu)\s*\d+[^:]*:\*\*\s*/i, '');
+      s = s.replace(/^(?:Bài|Câu)\s*\d+[^:]*:\s*/i, '');
+      s = s.replace(/^\*\*\([^\)]+\)\*\*:\s*/i, '');
+      s = s.replace(/^\*\*+/, '').replace(/\*\*+$/, '');
+      return s.trim();
     };
 
     function renderPrintExamPaper() {
@@ -19866,10 +19869,11 @@
             </div>
 
             <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn) -->
-            <div class="font-bold text-[12pt] uppercase mb-1.5 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-              <span>PHẦN I. Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.</span>
-              <span class="text-[10.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+            <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+              <span class="truncate">PHẦN I. CÂU TRẮC NGHIỆM NHIỀU LỰA CHỌN</span>
+              <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
             </div>
+            <div class="italic text-[9.5pt] text-slate-600 mb-1">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.</div>
 
             <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
               <div class="col-divider space-y-1.5">
@@ -19998,9 +20002,9 @@
               <!-- Cột 2: Phần III (6 câu Trả lời ngắn) + Hết -->
               <div class="pl-1 flex flex-col justify-between">
                 <div>
-                  <div class="font-bold text-[12pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                    <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
-                    <span class="text-[10.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                  <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                    <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
+                    <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
                   </div>
                   <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
 
@@ -20301,9 +20305,9 @@
             <!-- Cột 2: Phần III (6 câu Trả lời ngắn) + Hết -->
             <div class="pl-1 flex flex-col justify-between">
               <div>
-                <div class="font-bold text-[12pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
-                  <span class="text-[10.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                  <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
+                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
                 </div>
                 <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
 
@@ -20335,9 +20339,9 @@
             <!-- Cột 1: Phần III (4 câu Trả lời ngắn) -->
             <div class="col-divider space-y-2">
               <div>
-                <div class="font-bold text-[12pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
-                  <span class="text-[10.5pt] font-normal italic lowercase">(2.0 điểm)</span>
+                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                  <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
+                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(2.0 điểm)</span>
                 </div>
                 <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào phiếu trả lời.</div>
 
@@ -20357,9 +20361,9 @@
             <!-- Cột 2: Phần IV (3 bài Tự luận) + Hết -->
             <div class="pl-1 flex flex-col justify-between">
               <div>
-                <div class="font-bold text-[12pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span>PHẦN IV. Tự luận.</span>
-                  <span class="text-[10.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                  <span>PHẦN IV. TỰ LUẬN</span>
+                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
                 </div>
                 <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trình bày lời giải chi tiết vào giấy làm bài thi.</div>
 
@@ -21046,8 +21050,8 @@
                   <td class="w-1/2 align-top text-center pb-1">
                     <div class="font-bold uppercase text-[12pt] text-indigo-950">NĂM HỌC 2026 - 2027</div>
                     <div class="font-bold uppercase text-[11.5pt]">MÔN: TOÁN — KHỐI ${meta.grade}</div>
-                    <div class="text-[11pt] font-medium text-slate-800 line-clamp-1">${meta.lessonTitle}</div>
-                    <div class="text-[10pt] mb-1">Thời gian làm bài: ${exam.durationMinutes || (isGrade12 ? 90 : 60)} phút</div>
+                    <div class="text-[10pt] font-semibold text-slate-800 italic leading-snug">${meta.lessonTitle}</div>
+                    <div class="text-[10pt] my-0.5">Thời gian làm bài: ${exam.durationMinutes || (isGrade12 ? 90 : 60)} phút</div>
                     <div class="inline-block border border-black px-3 py-1 font-bold text-[11pt] font-mono leading-none bg-white">
                       MÃ ĐỀ THI: ${exam.code}
                     </div>
@@ -21088,10 +21092,11 @@
 
             <!-- ĐẨY TIẾP PHẦN II (CÂU 1 & 2) LÊN TRANG 1 ĐỂ KHÍT TRANG -->
             ${tfs.length > 0 ? `
-              <div class="font-bold text-[12pt] uppercase mt-2 mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                <span>PHẦN II. Câu trắc nghiệm đúng sai. (${isGrade12 ? '4.0' : '2.0'} điểm)</span>
-                <span class="text-[10.5pt] font-normal italic lowercase">(Thí sinh trả lời từ câu 1 đến câu ${isGrade12 ? '4' : '2'})</span>
+              <div class="font-bold text-[11.5pt] uppercase mt-1.5 mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                <span class="truncate">PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG SAI</span>
+                <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(${isGrade12 ? '4.0' : '2.0'} điểm)</span>
               </div>
+              <div class="italic text-[9.5pt] text-slate-600 mb-1">Thí sinh trả lời từ câu 1 đến câu ${isGrade12 ? '4' : '2'}. Trong mỗi ý a), b), c), d), chọn đúng hoặc sai.</div>
 
               <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
                 <!-- Cột 1: Câu 1 -->
@@ -21158,8 +21163,8 @@
           <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
             <!-- Cột 1: Phần II tiếp theo (Câu 3 và 4) -->
             <div class="col-divider space-y-2">
-              <div class="font-bold text-[11.5pt] italic text-slate-700 bg-slate-50 px-1.5 py-0.5 border-b border-slate-200">
-                PHẦN II (Tiếp theo). Câu trắc nghiệm đúng sai.
+              <div class="font-bold text-[11pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                <span>PHẦN II (Tiếp theo). CÂU ĐÚNG SAI</span>
               </div>
 
               ${tfs.slice(2, 4).map((q, idx) => {
@@ -21188,9 +21193,9 @@
             <!-- Cột 2: Phần III (6 câu Trả lời ngắn) + Hết -->
             <div class="pl-1 flex flex-col justify-between">
               <div>
-                <div class="font-bold text-[12pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
-                  <span class="text-[10.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                  <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
+                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
                 </div>
                 <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
 
@@ -21222,9 +21227,9 @@
             <!-- Cột 1: Phần III (6 câu Trả lời ngắn) -->
             <div class="col-divider space-y-2">
               <div>
-                <div class="font-bold text-[12pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn.</span>
-                  <span class="text-[10.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                  <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
+                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
                 </div>
                 <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
 
@@ -21244,16 +21249,16 @@
             <!-- Cột 2: Phần IV (4 bài Tự luận) + Hết -->
             <div class="pl-1 flex flex-col justify-between">
               <div>
-                <div class="font-bold text-[12pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span>PHẦN IV. Tự luận.</span>
-                  <span class="text-[10.5pt] font-normal italic lowercase">(2.0 điểm)</span>
+                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
+                  <span>PHẦN IV. TỰ LUẬN</span>
+                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(2.0 điểm)</span>
                 </div>
                 <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trình bày lời giải chi tiết vào giấy làm bài thi.</div>
 
                 <div class="space-y-2 text-[11.5pt] sm:text-[12pt] leading-normal">
                   ${essays.map((eq, idx) => `
                     <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Bài ${idx + 1}:</strong> <span class="italic text-[8pt]">(${eq.maxScore || 0.5} điểm)</span> ${cleanQText(eq.question)}</div>
+                      <div><strong class="font-bold">Bài ${idx + 1}:</strong> <span class="italic text-[9.5pt]">(${eq.maxScore || 0.5} điểm)</span> ${cleanQText(eq.question)}</div>
                     </div>
                   `).join('')}
                 </div>
