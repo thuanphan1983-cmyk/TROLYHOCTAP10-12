@@ -19761,18 +19761,32 @@
       renderPrintExamPaper();
     }
 
+    const getEstimatedVisualLength = (str) => {
+      if (!str) return 0;
+      let s = String(str);
+      s = s.replace(/\\(text|mathrm|mathbf)\{([^}]*)\}/g, '$2');
+      s = s.replace(/\\(frac|dfrac)\{([^}]*)\}\{([^}]*)\}/g, '$2/$3');
+      s = s.replace(/\\(sqrt|overline)\{([^}]*)\}/g, '$2');
+      s = s.replace(/\\[a-zA-Z]+/g, 'X');
+      s = s.replace(/[\$\{\}\^_\\]/g, '');
+      return s.trim().length;
+    };
+
     const formatMcqOptsPrint = (options, correctLetter) => {
       if (!options) return '';
       const letters = ['A', 'B', 'C', 'D'];
       const opts = letters.map(l => ({ letter: l, text: options[l] || '' }));
       
-      const hasCases = opts.some(o => o.text && (o.text.includes('cases') || o.text.includes('\\begin') || o.text.length > 55));
-      const maxLen = Math.max(...opts.map(o => (o.text || '').replace(/\\text\{.*?\}/g, 'X').length));
+      const hasCases = opts.some(o => o.text && (o.text.includes('cases') || (o.text.match(/\\\\/g) || []).length >= 2));
+      const maxVisual = Math.max(...opts.map(o => getEstimatedVisualLength(o.text)));
       
+      // Ưu tiên cao nhất: 1 hàng (4 cột) nếu độ dài hiển thị <= 26 ký tự
+      // Kế tiếp: 2 hàng (2 cột) nếu độ dài hiển thị <= 65 ký tự
+      // Chỉ dùng 1 cột (4 hàng) khi có hệ phương trình nhiều dòng hoặc phương án rất dài (> 65 ký tự)
       let gridCols = 'grid-cols-4';
-      if (hasCases || maxLen > 52) {
+      if (hasCases || maxVisual > 65) {
         gridCols = 'grid-cols-1';
-      } else if (maxLen > 18) {
+      } else if (maxVisual > 26) {
         gridCols = 'grid-cols-2';
       }
 
