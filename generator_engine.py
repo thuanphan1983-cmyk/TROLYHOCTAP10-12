@@ -1,12 +1,31 @@
 # -*- coding: utf-8 -*-
 import json, random, math, os, sys
 
-def make_mcq(q_id, level, text, a, b, c, d, correct, explain):
+def make_mcq(q_id, level, text, a, b, c, d, correct, explain, shuffle=False):
+    letters = ["A", "B", "C", "D"]
+    opts_map = { "A": a, "B": b, "C": c, "D": d }
+    if shuffle:
+        items = [{"text": opts_map[l], "is_correct": (l == correct)} for l in letters]
+        random.shuffle(items)
+        new_opts = {}
+        new_correct = "A"
+        for i, l in enumerate(letters):
+            new_opts[l] = items[i]["text"]
+            if items[i]["is_correct"]:
+                new_correct = l
+        return {
+            "id": q_id,
+            "level": level,
+            "question": f"**Câu {q_id}:** {text}",
+            "options": new_opts,
+            "correct": new_correct,
+            "explanation": explain
+        }
     return {
         "id": q_id,
         "level": level,
         "question": f"**Câu {q_id}:** {text}",
-        "options": { "A": a, "B": b, "C": c, "D": d },
+        "options": opts_map,
         "correct": correct,
         "explanation": explain
     }

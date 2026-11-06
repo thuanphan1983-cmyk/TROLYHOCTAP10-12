@@ -20838,7 +20838,8 @@
         if (!activeLesson.sections || activeLesson.sections.length === 0) {
           activeLesson.sections = [{}];
         }
-        activeLesson.sections[0].mcqs = exam.mcqs || [];
+        const normalizedMcqs = (typeof randomizeExamMCQs === 'function') ? randomizeExamMCQs(exam.mcqs || []) : (exam.mcqs || []);
+        activeLesson.sections[0].mcqs = normalizedMcqs;
         window.activeTFQuestions = exam.tfQuestions || [];
         window.activeSAQuestions = exam.saQuestions || [];
         window.activeEssayQuestions = exam.essayQuestions || [];
