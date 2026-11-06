@@ -323,7 +323,7 @@
       position: relative;
       overflow: hidden;
       font-family: "Times New Roman", Times, "Liberation Serif", serif !important;
-      font-size: 11pt;
+      font-size: 12pt;
       line-height: 1.25;
       display: flex;
       flex-direction: column;
@@ -331,11 +331,41 @@
       page-break-inside: avoid !important;
       break-inside: avoid !important;
     }
-    .a4-page, .a4-page p, .a4-page div, .a4-page span, .a4-page td, .a4-page th, .a4-page strong {
+    .a4-page, 
+    .a4-page p:not(.katex):not(.katex *), 
+    .a4-page div:not(.katex):not(.katex *):not(.katex-display *), 
+    .a4-page span:not(.katex):not(.katex *), 
+    .a4-page td:not(.katex):not(.katex *), 
+    .a4-page th:not(.katex):not(.katex *), 
+    .a4-page strong:not(.katex):not(.katex *) {
       font-family: "Times New Roman", Times, "Liberation Serif", serif;
     }
     .a4-page .font-mono {
       font-family: "Courier New", Courier, monospace !important;
+    }
+    /* Bảo tồn font và glyph KaTeX chuẩn xác tuyệt đối trong khổ giấy in A4 */
+    .a4-page .katex {
+      font-family: KaTeX_Main, "Times New Roman", serif !important;
+      font-size: 1.05em !important;
+      line-height: 1.15 !important;
+    }
+    .a4-page .katex * {
+      font-family: inherit;
+    }
+    .a4-page .katex .mathnormal {
+      font-family: KaTeX_Math !important;
+      font-style: italic !important;
+    }
+    .a4-page .katex .amsrm {
+      font-family: KaTeX_AMS !important;
+    }
+    .a4-page .katex .mainrm {
+      font-family: KaTeX_Main !important;
+    }
+    .a4-page .katex-display {
+      margin: 0.35em 0 !important;
+      padding: 0.1em 0 !important;
+      font-size: 1.08em !important;
     }
     .a4-page:last-child {
       margin-bottom: 0;
@@ -19673,6 +19703,7 @@
           modal.classList.add('flex');
           modal.style.display = 'flex';
           document.body.classList.add('overflow-hidden');
+        setTimeout(() => { const c = document.getElementById('printable-topic-exam-paper'); if (c && typeof renderMath === 'function') renderMath(c); }, 60);
         }
       } catch (err) {
         console.error("Lỗi mở xem trước in đề chuyên đề:", err);
@@ -19726,6 +19757,7 @@
           modal.classList.add('flex');
           modal.style.display = 'flex';
           document.body.classList.add('overflow-hidden');
+        setTimeout(() => { const c = document.getElementById('printable-topic-exam-paper'); if (c && typeof renderMath === 'function') renderMath(c); }, 60);
         }
       } catch (err) {
         console.error("Lỗi mở xem trước in đề định kỳ:", err);
@@ -19791,7 +19823,7 @@
       }
 
       return `
-        <div class="grid ${gridCols} gap-x-4 gap-y-0.5 text-[11pt] sm:text-[11.5pt] leading-snug mt-0.5 pl-2">
+        <div class="grid ${gridCols} gap-x-4 gap-y-0.5 text-[11.5pt] sm:text-[12pt] leading-snug mt-0.5 pl-2">
           ${opts.map(o => {
             const isCorrect = (showPrintSolutions && o.letter === correctLetter);
             const highlight = isCorrect ? 'font-bold text-red-700 underline decoration-red-600 decoration-1.5' : '';
@@ -19807,11 +19839,14 @@
 
     const formatTfItemsPrint = (items) => {
       if (!items || items.length === 0) return '';
-      const hasLong = items.some(it => (it.content || it.text || '').length > 48);
-      const gridClass = hasLong ? 'space-y-0.5' : 'grid grid-cols-2 gap-x-6 gap-y-0.5';
+      const maxVisual = Math.max(...items.map(it => getEstimatedVisualLength(it.content || it.text || '')));
+      const hasMultiline = items.some(it => (it.content || it.text || '').includes('\\\\'));
+      // Bố trí 2 cột (1 hàng 2 ý: a-b và c-d) để tiết kiệm giấy tối đa.
+      // Chỉ dùng 1 cột (4 dòng) khi có hệ phương trình nhiều tầng (\\) hoặc ý rất dài (> 55 ký tự hiển thị)
+      const gridClass = (hasMultiline || maxVisual > 55) ? 'space-y-0.5' : 'grid grid-cols-2 gap-x-6 gap-y-0.5';
       
       return `
-        <div class="${gridClass} pl-3 mt-0.5 text-[11pt] sm:text-[11.5pt] leading-snug">
+        <div class="${gridClass} pl-3 mt-0.5 text-[11.5pt] sm:text-[12pt] leading-snug">
           ${items.map(it => {
             const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : (it.id ? it.id + ')' : '')));
             const content = it.content || it.text || '';
@@ -19909,7 +19944,7 @@
             </div>
             <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</div>
 
-            <div class="space-y-1.5 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+            <div class="space-y-1.5 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
               ${mcqs.map((q, idx) => `
                 <div class="break-inside-avoid">
                   <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
@@ -19937,7 +19972,7 @@
               <div><strong>MÃ ĐỀ THI: ${exam.code}</strong> • BÀI THI: TOÁN — ${topic.code}: ${topic.title}</div>
             </div>
 
-            <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+            <div class="space-y-2 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
               <!-- PHẦN II -->
               <div>
                 <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
@@ -20138,7 +20173,7 @@
             </div>
             <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</div>
 
-            <div class="space-y-1.5 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+            <div class="space-y-1.5 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
               ${mcqs.map((q, idx) => `
                 <div class="break-inside-avoid">
                   <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
@@ -20162,7 +20197,7 @@
       if (isGrade12) {
         // KHỐI 12: CÂU ĐÚNG SAI (4 CÂU) + TRẢ LỜI NGẮN (6 CÂU)
         page2Content = `
-          <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+          <div class="space-y-2 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
             <!-- PHẦN II -->
             <div>
               <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
@@ -20215,7 +20250,7 @@
       } else {
         // KHỐI 10 & 11: CÂU ĐÚNG SAI (2 CÂU) + TRẢ LỜI NGẮN (4 CÂU) + TỰ LUẬN (3 BÀI)
         page2Content = `
-          <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+          <div class="space-y-2 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
             <!-- PHẦN II -->
             <div>
               <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
@@ -20492,7 +20527,8 @@
       }
 
       // Allow DOM to settle and layout to stabilize
-      await new Promise(resolve => setTimeout(resolve, 300));
+      if (document.fonts && typeof document.fonts.ready === 'object') { try { await document.fonts.ready; } catch (e) {} }
+      await new Promise(resolve => setTimeout(resolve, 350));
 
       let filename = 'De_Thi.pdf';
       if (currentPrintType === 'periodic' && currentPrintPeriodicMeta) {
@@ -20909,6 +20945,7 @@
           modal.classList.add('flex');
           modal.style.display = 'flex';
           document.body.classList.add('overflow-hidden');
+        setTimeout(() => { const c = document.getElementById('printable-topic-exam-paper'); if (c && typeof renderMath === 'function') renderMath(c); }, 60);
         }
       } catch (err) {
         console.error("Lỗi mở xem trước in đề ôn tập bài học:", err);
@@ -20965,7 +21002,7 @@
             </div>
             <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</div>
 
-            <div class="space-y-1.5 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+            <div class="space-y-1.5 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
               ${mcqs.map((q, idx) => `
                 <div class="break-inside-avoid">
                   <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
@@ -20989,7 +21026,7 @@
       if (isGrade12) {
         // KHỐI 12: PHẦN II (4 CÂU ĐÚNG SAI) + PHẦN III (6 CÂU TRẢ LỜI NGẮN)
         page2Content = `
-          <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+          <div class="space-y-2 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
             <!-- PHẦN II -->
             <div>
               <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
@@ -21042,7 +21079,7 @@
       } else {
         // KHỐI 10 & 11: PHẦN II (2 CÂU ĐÚNG SAI) + PHẦN III (6 CÂU TLN) + PHẦN IV (4 BÀI TỰ LUẬN)
         page2Content = `
-          <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+          <div class="space-y-2 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
             <!-- PHẦN II -->
             <div>
               <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
