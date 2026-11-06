@@ -464,6 +464,7 @@
     body.exam-fullscreen-active header,
     body.exam-fullscreen-active #study-mode-tabs,
     body.exam-fullscreen-active #sgk-sub-nav,
+    body.exam-fullscreen-active #sgk-focus-nav,
     body.exam-fullscreen-active #flow-status-bar,
     body.exam-fullscreen-active #chat-lesson-banner {
       display: none !important;
@@ -474,11 +475,23 @@
       top: 0;
       z-index: 50;
     }
+    body.exam-fullscreen-active #btn-exam-print-pdf,
+    body.exam-fullscreen-active #exam-sub-nav button[onclick*="handleChangeExamClick"] {
+      display: none !important;
+    }
     body.exam-fullscreen-active main {
       border-radius: 0 !important;
       border: none !important;
       box-shadow: none !important;
       min-height: calc(100vh - 55px);
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    body.exam-fullscreen-active .max-w-\[1680px\] {
+      padding: 0 !important;
+      max-width: 100% !important;
+      gap: 0 !important;
+      margin: 0 !important;
     }
 
   
@@ -20765,7 +20778,7 @@
                     class="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r ${btnGradient} text-white font-black text-xs sm:text-sm flex items-center justify-center gap-1.5 transition cursor-pointer active:scale-95 shadow-md shadow-indigo-600/20"
                     title="Bắt đầu làm bài kiểm tra trực tuyến trên Web App"
                   >
-                    <span>Làm Online</span>
+                    <span>Làm bài</span>
                     <i class="fa-solid fa-arrow-right text-[10px]"></i>
                   </button>
                 </div>
@@ -20845,24 +20858,12 @@
         currentSAIndex = 0;
         currentEssayIndex = 0;
 
-        // Bật thanh điều hướng phòng thi (Exam Mode)
-        const examSubNav = document.getElementById('exam-sub-nav');
-        if (examSubNav) {
-          examSubNav.classList.remove('hidden');
-          examSubNav.classList.add('flex');
+        // Kích hoạt giao diện full màn hình tối ưu hiển thị đề thi
+        if (typeof enterFullscreenExamMode === 'function') {
+          enterFullscreenExamMode(`${exam.lessonTitle} • ${exam.code}`, 'ĐỀ ÔN TẬP');
+        } else {
+          document.body.classList.add('exam-fullscreen-active');
         }
-        const sgkSubNav = document.getElementById('sgk-sub-nav');
-        if (sgkSubNav) {
-          sgkSubNav.classList.add('hidden');
-          sgkSubNav.classList.remove('flex');
-        }
-        const flowBar = document.getElementById('flow-status-bar');
-        if (flowBar) flowBar.style.display = 'none';
-
-        const navTitle = document.getElementById('exam-nav-title');
-        if (navTitle) navTitle.textContent = `${exam.lessonTitle} • ${exam.code}`;
-        const navBadge = document.getElementById('exam-nav-badge');
-        if (navBadge) navBadge.textContent = `ĐỀ ÔN TẬP`;
 
         // Tab Tự Luận: chỉ hiển thị khi đề thi có phần Tự Luận (Lớp 10, 11)
         const tabEssay = document.getElementById('exam-tab-btn-essay');
@@ -21778,6 +21779,8 @@
     function enterFullscreenExamMode(title, badgeText) {
       if (typeof closePeriodicModal === 'function') closePeriodicModal();
       if (typeof closeExamPracticeModal === 'function') closeExamPracticeModal();
+      if (typeof closeLessonPracticeModal === 'function') closeLessonPracticeModal();
+      if (typeof closeSwitchPartModal === 'function') closeSwitchPartModal();
       const regModal = document.getElementById('modal-exam-register');
       if (regModal) {
         regModal.classList.add('hidden');
@@ -21797,6 +21800,13 @@
       if (sgkSubNav) {
         sgkSubNav.classList.add('hidden');
         sgkSubNav.classList.remove('flex');
+      }
+
+      const sgkFocusNav = document.getElementById('sgk-focus-nav');
+      if (sgkFocusNav) {
+        sgkFocusNav.classList.add('hidden');
+        sgkFocusNav.classList.remove('flex');
+        sgkFocusNav.style.display = 'none';
       }
 
       const flowBar = document.getElementById('flow-status-bar');
@@ -21886,18 +21896,37 @@
         if (currentTFIndex > 0) {
           currentTFIndex--;
           if (typeof renderTFPanel === 'function') renderTFPanel();
+        } else {
+          // Quay lại câu cuối cùng của Phần I (Trắc nghiệm)
+          const curSec = (activeLesson.sections && activeLesson.sections[0]) ? activeLesson.sections[0] : null;
+          const mcqs = (curSec && curSec.mcqs) ? curSec.mcqs : [];
+          demoState.mcqIndex = Math.max(0, mcqs.length - 1);
+          switchStudyTab('mcq');
         }
       } else if (part === 'sa') {
         if (currentSAIndex > 0) {
           currentSAIndex--;
           if (typeof renderSAPanel === 'function') renderSAPanel();
+        } else {
+          // Quay lại câu cuối cùng của Phần II (Đúng / Sai)
+          const tfs = (activeTFQuestions && activeTFQuestions.length) ? activeTFQuestions : [];
+          currentTFIndex = Math.max(0, tfs.length - 1);
+          switchStudyTab('tf');
         }
       } else if (part === 'essay') {
         if (currentEssayIndex > 0) {
           currentEssayIndex--;
           if (typeof renderEssayPanel === 'function') renderEssayPanel();
+        } else {
+          // Quay lại câu cuối cùng của Phần III (Trả lời ngắn)
+          const sas = (activeSAQuestions && activeSAQuestions.length) ? activeSAQuestions : [];
+          currentSAIndex = Math.max(0, sas.length - 1);
+          switchStudyTab('sa');
         }
       }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const activePanel = document.querySelector('.study-panel:not(.hidden)');
+      if (activePanel) activePanel.scrollTop = 0;
     }
 
     function handleExamNextQuestion(part) {
@@ -21907,26 +21936,49 @@
         if (demoState.mcqIndex < max - 1) {
           demoState.mcqIndex++;
           if (typeof renderMCQPanel === 'function') renderMCQPanel();
+        } else {
+          // Sang câu 1 của Phần II (Đúng / Sai)
+          currentTFIndex = 0;
+          switchStudyTab('tf');
         }
       } else if (part === 'tf') {
         const max = (activeTFQuestions && activeTFQuestions.length) ? activeTFQuestions.length : 4;
         if (currentTFIndex < max - 1) {
           currentTFIndex++;
           if (typeof renderTFPanel === 'function') renderTFPanel();
+        } else {
+          // Sang câu 1 của Phần III (Trả lời ngắn)
+          currentSAIndex = 0;
+          switchStudyTab('sa');
         }
       } else if (part === 'sa') {
-        const max = (activeSAQuestions && activeSAQuestions.length) ? activeSAQuestions.length : 4;
+        const max = (activeSAQuestions && activeSAQuestions.length) ? activeSAQuestions : 6;
         if (currentSAIndex < max - 1) {
           currentSAIndex++;
           if (typeof renderSAPanel === 'function') renderSAPanel();
+        } else if (activeLesson.essayQuestions && activeLesson.essayQuestions.length > 0) {
+          // Sang câu 1 của Phần IV (Tự luận)
+          currentEssayIndex = 0;
+          switchStudyTab('essay');
+        } else {
+          if (typeof submitChapterReviewExam === 'function') {
+            submitChapterReviewExam(false);
+          }
         }
       } else if (part === 'essay') {
-        const max = (activeLesson.essayQuestions && activeLesson.essayQuestions.length) ? activeLesson.essayQuestions.length : 3;
+        const max = (activeLesson.essayQuestions && activeLesson.essayQuestions.length) ? activeLesson.essayQuestions.length : 4;
         if (currentEssayIndex < max - 1) {
           currentEssayIndex++;
           if (typeof renderEssayPanel === 'function') renderEssayPanel();
+        } else {
+          if (typeof submitChapterReviewExam === 'function') {
+            submitChapterReviewExam(false);
+          }
         }
       }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const activePanel = document.querySelector('.study-panel:not(.hidden)');
+      if (activePanel) activePanel.scrollTop = 0;
     }
 
     window.randomizeExamMCQs = randomizeExamMCQs;
@@ -32313,64 +32365,37 @@ ${activeLesson.lessonTitle}
             <!-- Detailed solution if submitted -->
             ${solutionBox}
 
-            <!-- Bottom Navigation Bar -->
-            <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-200">
+            <!-- Action Bar Chuẩn 3 Nút: Quay lại • Nộp bài • Câu tiếp -->
+            <div class="flex items-center justify-between gap-2.5 sm:gap-4 pt-4 mt-3 border-t border-slate-200">
               <button 
                 type="button" 
                 onclick="handleExamPrevQuestion('mcq')" 
                 ${mcqIdx === 0 ? 'disabled' : ''} 
-                class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-indigo-200 bg-white hover:bg-indigo-50 text-indigo-950 font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                class="flex-1 sm:flex-initial min-w-[110px] sm:min-w-[140px] px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-slate-300 bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                title="Quay lại câu trước"
               >
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>← Câu trước</span>
-              </button>
-
-              <div class="text-xs sm:text-sm text-indigo-950 font-black bg-indigo-50 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full border border-indigo-200 shadow-xs">
-                Câu ${mcqIdx + 1} / ${mcqs.length}
-              </div>
-
-              ${mcqIdx < mcqs.length - 1 ? `
-                <button 
-                  type="button" 
-                  onclick="handleExamNextQuestion('mcq')" 
-                  class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md shadow-indigo-600/30 transition active:scale-95"
-                >
-                  <span>Câu tiếp theo →</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              ` : `
-                <button 
-                  type="button" 
-                  onclick="switchStudyTab('tf')" 
-                  class="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md transition active:scale-95"
-                  title="Chuyển sang Phần 2: Đúng / Sai"
-                >
-                  <span>Sang Phần 2 (Đúng/Sai) →</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              `}
-            </div>
-
-            <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
-            <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-dashed border-indigo-200">
-              <button 
-                type="button" 
-                onclick="openSwitchPartModal()" 
-                class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-700 via-purple-700 to-indigo-800 hover:from-indigo-600 hover:to-purple-600 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
-                title="Mở bảng lựa chọn để chuyển nhanh sang phần học khác"
-              >
-                <i class="fa-solid fa-layer-group text-amber-300"></i>
-                <span>Chuyển sang phần khác</span>
+                <i class="fa-solid fa-arrow-left text-slate-600"></i>
+                <span>Quay lại</span>
               </button>
 
               <button 
                 type="button" 
                 onclick="submitChapterReviewExam(false)" 
-                class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
-                title="Nộp bài kiểm tra để chấm điểm và xem lời giải chi tiết"
+                class="flex-1 sm:flex-initial min-w-[120px] sm:min-w-[160px] px-4 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-rose-600 via-red-600 to-rose-700 hover:from-rose-500 hover:to-red-500 text-white font-black text-xs sm:text-base flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+                title="Nộp bài kiểm tra để chấm điểm"
               >
                 <i class="fa-solid fa-flag-checkered text-amber-300"></i>
-                <span>${isSubmitted ? 'Đã Nộp Bài (Xem Kết Quả)' : 'Nộp Bài'}</span>
+                <span>${isSubmitted ? 'Đã Nộp Bài' : 'Nộp bài'}</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="handleExamNextQuestion('mcq')" 
+                class="flex-1 sm:flex-initial min-w-[110px] sm:min-w-[140px] px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-indigo-600/30 transition active:scale-95"
+                title="Chuyển sang câu tiếp theo"
+              >
+                <span>Câu tiếp</span>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </div>
@@ -32600,64 +32625,36 @@ ${activeLesson.lessonTitle}
             <!-- Detailed solution if submitted -->
             ${solutionBox}
 
-            <!-- Bottom Navigation Bar -->
-            <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-200">
+            <!-- Action Bar Chuẩn 3 Nút: Quay lại • Nộp bài • Câu tiếp -->
+            <div class="flex items-center justify-between gap-2.5 sm:gap-4 pt-4 mt-3 border-t border-slate-200">
               <button 
                 type="button" 
                 onclick="handleExamPrevQuestion('tf')" 
-                ${currentTFIndex === 0 ? 'disabled' : ''} 
-                class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-amber-300 bg-white hover:bg-amber-50 text-slate-900 font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                class="flex-1 sm:flex-initial min-w-[110px] sm:min-w-[140px] px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-slate-300 bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-xs transition active:scale-95"
+                title="Quay lại câu trước"
               >
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>← Câu trước</span>
-              </button>
-
-              <div class="text-xs sm:text-sm text-amber-950 font-black bg-amber-50 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full border border-amber-300 shadow-xs">
-                Câu ${currentTFIndex + 1} / ${totalTFQuestions}
-              </div>
-
-              ${currentTFIndex < totalTFQuestions - 1 ? `
-                <button 
-                  type="button" 
-                  onclick="handleExamNextQuestion('tf')" 
-                  class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md shadow-amber-500/30 transition active:scale-95"
-                >
-                  <span>Câu tiếp theo →</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              ` : `
-                <button 
-                  type="button" 
-                  onclick="${(activeSAQuestions && activeSAQuestions.length > 0) ? `switchStudyTab('sa')` : `submitChapterReviewExam(false)`}" 
-                  class="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md transition active:scale-95"
-                  title="${(activeSAQuestions && activeSAQuestions.length > 0) ? 'Chuyển sang Phần 3: Trả lời ngắn' : 'Nộp bài thi'}"
-                >
-                  <span>${(activeSAQuestions && activeSAQuestions.length > 0) ? 'Sang Phần 3 (Trả lời ngắn) →' : 'Nộp bài ngay 🏁'}</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              `}
-            </div>
-
-            <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
-            <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-dashed border-amber-300">
-              <button 
-                type="button" 
-                onclick="openSwitchPartModal()" 
-                class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 hover:from-amber-500 hover:to-orange-500 text-slate-950 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
-                title="Mở bảng lựa chọn để chuyển nhanh sang phần học khác"
-              >
-                <i class="fa-solid fa-layer-group"></i>
-                <span>Chuyển sang phần khác</span>
+                <i class="fa-solid fa-arrow-left text-slate-600"></i>
+                <span>Quay lại</span>
               </button>
 
               <button 
                 type="button" 
                 onclick="submitChapterReviewExam(false)" 
-                class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
-                title="Nộp bài để chấm điểm và xem lời giải chi tiết"
+                class="flex-1 sm:flex-initial min-w-[120px] sm:min-w-[160px] px-4 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-rose-600 via-red-600 to-rose-700 hover:from-rose-500 hover:to-red-500 text-white font-black text-xs sm:text-base flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+                title="Nộp bài kiểm tra để chấm điểm"
               >
                 <i class="fa-solid fa-flag-checkered text-amber-300"></i>
-                <span>${isSubmitted ? 'Đã Nộp Bài (Xem Kết Quả)' : 'Nộp Bài'}</span>
+                <span>${isSubmitted ? 'Đã Nộp Bài' : 'Nộp bài'}</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="handleExamNextQuestion('tf')" 
+                class="flex-1 sm:flex-initial min-w-[110px] sm:min-w-[140px] px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-amber-500/30 transition active:scale-95"
+                title="Chuyển sang câu tiếp theo"
+              >
+                <span>Câu tiếp</span>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </div>
@@ -32850,73 +32847,36 @@ ${activeLesson.lessonTitle}
             <!-- Detailed solution if submitted -->
             ${solutionBox}
 
-            <!-- Bottom Navigation Bar -->
-            <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-200">
+            <!-- Action Bar Chuẩn 3 Nút: Quay lại • Nộp bài • Câu tiếp -->
+            <div class="flex items-center justify-between gap-2.5 sm:gap-4 pt-4 mt-3 border-t border-slate-200">
               <button 
                 type="button" 
                 onclick="handleExamPrevQuestion('sa')" 
-                ${currentSAIndex === 0 ? 'disabled' : ''} 
-                class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-cyan-300 bg-white hover:bg-cyan-50 text-slate-900 font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                class="flex-1 sm:flex-initial min-w-[110px] sm:min-w-[140px] px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-slate-300 bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-xs transition active:scale-95"
+                title="Quay lại câu trước"
               >
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>← Câu trước</span>
-              </button>
-
-              <div class="text-xs sm:text-sm text-cyan-950 font-black bg-cyan-50 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full border border-cyan-300 shadow-xs">
-                Câu ${currentSAIndex + 1} / ${saList.length}
-              </div>
-
-              ${currentSAIndex < saList.length - 1 ? `
-                <button 
-                  type="button" 
-                  onclick="handleExamNextQuestion('sa')" 
-                  class="px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md shadow-cyan-600/30 transition active:scale-95"
-                >
-                  <span>Câu tiếp theo →</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              ` : (activeLesson && activeLesson.essayQuestions && activeLesson.essayQuestions.length > 0) ? `
-                <button 
-                  type="button" 
-                  onclick="switchStudyTab('essay')" 
-                  class="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-500 hover:to-indigo-600 text-white font-black text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md transition active:scale-95"
-                  title="Chuyển sang Phần 4: Tự Luận"
-                >
-                  <span>Sang Phần 4 (Tự Luận) →</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              ` : `
-                <button 
-                  type="button" 
-                  onclick="submitChapterReviewExam(false)" 
-                  class="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-black text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 cursor-pointer shadow-md transition active:scale-95"
-                  title="Nộp bài kiểm tra ngay"
-                >
-                  <span>Nộp bài ngay 🏁</span>
-                </button>
-              `}
-            </div>
-
-            <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
-            <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-dashed border-cyan-300">
-              <button 
-                type="button" 
-                onclick="openSwitchPartModal()" 
-                class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-700 via-teal-700 to-cyan-800 hover:from-cyan-600 hover:to-teal-600 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
-                title="Mở bảng lựa chọn để chuyển nhanh sang phần học khác"
-              >
-                <i class="fa-solid fa-layer-group text-amber-300"></i>
-                <span>Chuyển sang phần khác</span>
+                <i class="fa-solid fa-arrow-left text-slate-600"></i>
+                <span>Quay lại</span>
               </button>
 
               <button 
                 type="button" 
                 onclick="submitChapterReviewExam(false)" 
-                class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
-                title="Nộp bài để chấm điểm và xem lời giải chi tiết"
+                class="flex-1 sm:flex-initial min-w-[120px] sm:min-w-[160px] px-4 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-rose-600 via-red-600 to-rose-700 hover:from-rose-500 hover:to-red-500 text-white font-black text-xs sm:text-base flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+                title="Nộp bài kiểm tra để chấm điểm"
               >
                 <i class="fa-solid fa-flag-checkered text-amber-300"></i>
-                <span>${isSubmitted ? 'Đã Nộp Bài (Xem Kết Quả)' : 'Nộp Bài'}</span>
+                <span>${isSubmitted ? 'Đã Nộp Bài' : 'Nộp bài'}</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="handleExamNextQuestion('sa')" 
+                class="flex-1 sm:flex-initial min-w-[110px] sm:min-w-[140px] px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-cyan-600/30 transition active:scale-95"
+                title="Chuyển sang câu tiếp theo"
+              >
+                <span>Câu tiếp</span>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </div>
@@ -33952,63 +33912,36 @@ ${activeLesson.lessonTitle}
               </div>
             </details>
 
-            <!-- Bottom Navigation -->
-            <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-200">
+            <!-- Action Bar Chuẩn 3 Nút: Quay lại • Nộp bài • Câu tiếp -->
+            <div class="flex items-center justify-between gap-2.5 sm:gap-4 pt-4 mt-3 border-t border-slate-200">
               <button 
                 type="button" 
                 onclick="handleExamPrevQuestion('essay')" 
-                ${currentEssayIndex === 0 ? 'disabled' : ''} 
-                class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-purple-300 bg-white hover:bg-purple-50 text-purple-950 font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed transition active:scale-95"
+                class="flex-1 sm:flex-initial min-w-[110px] sm:min-w-[140px] px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl border-2 border-slate-300 bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-xs transition active:scale-95"
+                title="Quay lại câu trước"
               >
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>← Câu trước</span>
-              </button>
-
-              <div class="text-xs sm:text-sm text-purple-950 font-black bg-purple-50 px-4 sm:px-5 py-2 rounded-full border border-purple-300 shadow-xs">
-                Câu ${currentEssayIndex + 1} / ${essays.length}
-              </div>
-
-              ${currentEssayIndex < essays.length - 1 ? `
-                <button 
-                  type="button" 
-                  onclick="handleExamNextQuestion('essay')" 
-                  class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-md shadow-purple-600/30 transition active:scale-95"
-                >
-                  <span>Câu tiếp theo →</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              ` : `
-                <button 
-                  type="button" 
-                  onclick="submitChapterReviewExam(false)" 
-                  class="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-black text-xs sm:text-base flex items-center gap-2 cursor-pointer shadow-md transition active:scale-95"
-                  title="Nộp bài kiểm tra ngay"
-                >
-                  <span>Nộp bài ngay 🏁</span>
-                </button>
-              `}
-            </div>
-
-            <!-- Action Toolbar: 2 Nút [Chuyển sang phần khác] & [Nộp bài] -->
-            <div class="flex flex-wrap items-center justify-between gap-2.5 pt-3 mt-3 border-t border-dashed border-purple-300">
-              <button 
-                type="button" 
-                onclick="openSwitchPartModal()" 
-                class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-800 hover:from-purple-600 hover:to-indigo-600 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition cursor-pointer active:scale-95"
-                title="Mở bảng lựa chọn để chuyển nhanh sang phần học khác"
-              >
-                <i class="fa-solid fa-layer-group text-amber-300"></i>
-                <span>Chuyển sang phần khác</span>
+                <i class="fa-solid fa-arrow-left text-slate-600"></i>
+                <span>Quay lại</span>
               </button>
 
               <button 
                 type="button" 
                 onclick="submitChapterReviewExam(false)" 
-                class="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
-                title="Nộp bài để chấm điểm và xem lời giải chi tiết"
+                class="flex-1 sm:flex-initial min-w-[120px] sm:min-w-[160px] px-4 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-rose-600 via-red-600 to-rose-700 hover:from-rose-500 hover:to-red-500 text-white font-black text-xs sm:text-base flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition cursor-pointer active:scale-95"
+                title="Nộp bài kiểm tra để chấm điểm"
               >
                 <i class="fa-solid fa-flag-checkered text-amber-300"></i>
-                <span>${(typeof chapterExamState !== 'undefined' && chapterExamState.submitted) ? 'Đã Nộp Bài (Xem Kết Quả)' : 'Nộp Bài'}</span>
+                <span>${(typeof chapterExamState !== 'undefined' && chapterExamState.submitted) ? 'Đã Nộp Bài' : 'Nộp bài'}</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="handleExamNextQuestion('essay')" 
+                class="flex-1 sm:flex-initial min-w-[110px] sm:min-w-[140px] px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-purple-600/30 transition active:scale-95"
+                title="Chuyển sang câu tiếp theo"
+              >
+                <span>Câu tiếp</span>
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </div>
