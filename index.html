@@ -314,7 +314,7 @@
       width: 210mm;
       min-height: 297mm;
       max-height: 297mm;
-      padding: 5.5mm 8.5mm 5.5mm 8.5mm;
+      padding: 5.5mm 9mm 5.5mm 9mm;
       margin: 0 auto 24px auto;
       background: #ffffff;
       color: #000000;
@@ -323,8 +323,8 @@
       position: relative;
       overflow: hidden;
       font-family: "Times New Roman", Times, "Liberation Serif", serif !important;
-      font-size: 11.5pt;
-      line-height: 1.22;
+      font-size: 11pt;
+      line-height: 1.25;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -19766,18 +19766,18 @@
       const letters = ['A', 'B', 'C', 'D'];
       const opts = letters.map(l => ({ letter: l, text: options[l] || '' }));
       
-      const hasCases = opts.some(o => o.text && (o.text.includes('cases') || o.text.includes('\\begin') || o.text.length > 32));
+      const hasCases = opts.some(o => o.text && (o.text.includes('cases') || o.text.includes('\\begin') || o.text.length > 55));
       const maxLen = Math.max(...opts.map(o => (o.text || '').replace(/\\text\{.*?\}/g, 'X').length));
       
       let gridCols = 'grid-cols-4';
-      if (hasCases || maxLen > 28) {
+      if (hasCases || maxLen > 52) {
         gridCols = 'grid-cols-1';
-      } else if (maxLen > 10) {
+      } else if (maxLen > 18) {
         gridCols = 'grid-cols-2';
       }
 
       return `
-        <div class="grid ${gridCols} gap-x-3 gap-y-1 text-[11.5pt] sm:text-[12pt] leading-snug mt-0.5 pl-1">
+        <div class="grid ${gridCols} gap-x-4 gap-y-0.5 text-[11pt] sm:text-[11.5pt] leading-snug mt-0.5 pl-2">
           ${opts.map(o => {
             const isCorrect = (showPrintSolutions && o.letter === correctLetter);
             const highlight = isCorrect ? 'font-bold text-red-700 underline decoration-red-600 decoration-1.5' : '';
@@ -19786,6 +19786,28 @@
                 <strong class="font-bold">${o.letter}.</strong> ${o.text}${isCorrect ? ' <span class="text-[8.5pt] text-red-600 font-sans font-bold">✓</span>' : ''}
               </div>
             `;
+          }).join('')}
+        </div>
+      `;
+    };
+
+    const formatTfItemsPrint = (items) => {
+      if (!items || items.length === 0) return '';
+      const hasLong = items.some(it => (it.content || it.text || '').length > 48);
+      const gridClass = hasLong ? 'space-y-0.5' : 'grid grid-cols-2 gap-x-6 gap-y-0.5';
+      
+      return `
+        <div class="${gridClass} pl-3 mt-0.5 text-[11pt] sm:text-[11.5pt] leading-snug">
+          ${items.map(it => {
+            const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : (it.id ? it.id + ')' : '')));
+            const content = it.content || it.text || '';
+            let badge = '';
+            if (showPrintSolutions) {
+              badge = it.correct 
+                ? ' <span class="text-[8.5pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
+                : ' <span class="text-[8.5pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
+            }
+            return `<div><strong class="font-bold">${label}</strong> ${content}${badge}</div>`;
           }).join('')}
         </div>
       `;
@@ -19831,213 +19853,134 @@
     // =========================================================================
     function renderTopicPrintPaper(container, topic, exam) {
       const mcqs = exam.mcqs || [];
-      const mcqsCol1 = mcqs.slice(0, 6);
-      const mcqsCol2 = mcqs.slice(6, 12);
       const tfs = exam.tfQuestions || [];
       const sas = exam.saQuestions || [];
 
       // =========================================================================
-      // TRANG 1: HEADER + PHẦN I (12 CÂU) + PHẦN II (CÂU 1 & 2) KHÍT TRANG 1
+      // TRANG 1: HEADER + PHẦN I (12 CÂU TRẮC NGHIỆM 1 CỘT RỘNG RÃI)
       // =========================================================================
       let page1Html = `
         <div class="a4-page font-serif">
           <div>
-            <!-- Header chuẩn Bộ GD&ĐT (Khung Mã Đề Căn Giữa Tuyệt Đối) -->
-            <div class="border-b-2 border-black pb-1 mb-2 text-[9pt]">
+            <!-- Header chuẩn Bộ GD&ĐT gọn gàng -->
+            <div class="border-b border-black pb-1 mb-1.5 text-[9pt]">
               <table class="w-full border-collapse mb-1 text-center">
                 <tr>
-                  <td class="w-1/2 align-top text-center pb-1">
-                    <div class="font-bold uppercase text-[11pt]">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
-                    <div class="font-bold uppercase text-[12pt] text-indigo-950">ĐỀ LUYỆN THI TỐT NGHIỆP THPT</div>
-                    <div class="font-bold text-[11pt]">ĐỀ CHÍNH THỨC</div>
-                    <div class="italic text-[9.5pt] text-slate-500">(Đề thi có 02 trang)</div>
+                  <td class="w-[48%] align-top text-center pb-0.5">
+                    <div class="font-bold uppercase text-[10.5pt] tracking-tight">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
+                    <div class="font-bold uppercase text-[11.5pt] text-indigo-950">ĐỀ LUYỆN THI TỐT NGHIỆP THPT</div>
+                    <div class="font-bold text-[10.5pt]">ĐỀ CHÍNH THỨC</div>
+                    <div class="italic text-[9pt] text-slate-600">(Đề thi có 02 trang)</div>
                   </td>
-                  <td class="w-1/2 align-top text-center pb-1">
-                    <div class="font-bold uppercase text-[12pt] text-indigo-950">NĂM HỌC 2026 - 2027</div>
-                    <div class="font-bold uppercase text-[11.5pt]">BÀI THI: TOÁN — ${topic.code}: ${topic.title}</div>
-                    <div class="text-[10pt] mb-1">Thời gian làm bài: 90 phút, không kể phát đề</div>
-                    <div class="inline-block border border-black px-3 py-1 font-bold text-[11pt] font-mono leading-none bg-white">
+                  <td class="w-[52%] align-top text-center pb-0.5">
+                    <div class="font-bold uppercase text-[11.5pt] text-indigo-950">NĂM HỌC 2026 - 2027</div>
+                    <div class="font-bold uppercase text-[11pt]">BÀI THI: TOÁN — ${topic.code}: ${topic.title}</div>
+                    <div class="text-[9.5pt] my-0.5">Thời gian làm bài: 90 phút, không kể thời gian phát đề</div>
+                    <div class="inline-block border border-black px-3 py-0.5 font-bold text-[10.5pt] font-mono leading-none bg-white">
                       MÃ ĐỀ THI: ${exam.code}
                     </div>
                   </td>
                 </tr>
               </table>
-              <div class="border-t border-black pt-1 flex justify-between text-[11pt]">
+              <div class="border-t border-black pt-1 flex justify-between text-[10pt]">
                 <div>Họ và tên thí sinh: ................................................................................</div>
                 <div>Số báo danh: .............................</div>
               </div>
             </div>
 
-            <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn) -->
-            <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-              <span class="truncate">PHẦN I. CÂU TRẮC NGHIỆM NHIỀU LỰA CHỌN</span>
-              <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
+            <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn - 1 Cột) -->
+            <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+              <span>PHẦN I. Câu trắc nghiệm nhiều lựa chọn</span>
+              <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
             </div>
-            <div class="italic text-[9.5pt] text-slate-600 mb-1">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.</div>
+            <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</div>
 
-            <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-              <div class="col-divider space-y-1.5">
-                ${mcqsCol1.map((q, idx) => `
-                  <div class="break-inside-avoid">
-                    <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
-                    ${formatMcqOptsPrint(q.options, q.correct)}
-                  </div>
-                `).join('')}
-              </div>
-
-              <div class="pl-1 space-y-1.5">
-                ${mcqsCol2.map((q, idx) => `
-                  <div class="break-inside-avoid">
-                    <div><strong class="font-bold">Câu ${idx + 7}:</strong> ${cleanQText(q.question)}</div>
-                    ${formatMcqOptsPrint(q.options, q.correct)}
-                  </div>
-                `).join('')}
-              </div>
+            <div class="space-y-1.5 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+              ${mcqs.map((q, idx) => `
+                <div class="break-inside-avoid">
+                  <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
+                  ${formatMcqOptsPrint(q.options, q.correct)}
+                </div>
+              `).join('')}
             </div>
-
-            <!-- ĐẨY TIẾP PHẦN II (CÂU 1 & 2) LÊN TRANG 1 ĐỂ KHÍT TRANG -->
-            ${tfs.length > 0 ? `
-              <div class="font-bold text-[12pt] uppercase mt-2.5 mb-1.5 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                <span>PHẦN II. Câu trắc nghiệm đúng sai. (4.0 điểm)</span>
-                <span class="text-[10.5pt] font-normal italic lowercase">(Thí sinh trả lời từ câu 1 đến câu 4)</span>
-              </div>
-
-              <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-                <!-- Cột 1: Câu 1 -->
-                <div class="col-divider">
-                  ${tfs[0] ? `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Câu 1:</strong> ${cleanQText(tfs[0].context || tfs[0].question || tfs[0].statement || '')}</div>
-                      <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                        ${(tfs[0].items || []).map(it => {
-                          const label = it.subLabel || (it.label ? it.label + ')' : (it.id ? it.id + ')' : ''));
-                          const content = it.content || it.text || '';
-                          let badge = '';
-                          if (showPrintSolutions) {
-                            badge = it.correct 
-                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                          }
-                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                </div>
-
-                <!-- Cột 2: Câu 2 -->
-                <div class="pl-1">
-                  ${tfs[1] ? `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Câu 2:</strong> ${cleanQText(tfs[1].context || tfs[1].question || tfs[1].statement || '')}</div>
-                      <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                        ${(tfs[1].items || []).map(it => {
-                          const label = it.subLabel || (it.label ? it.label + ')' : (it.id ? it.id + ')' : ''));
-                          const content = it.content || it.text || '';
-                          let badge = '';
-                          if (showPrintSolutions) {
-                            badge = it.correct 
-                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                          }
-                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                </div>
-              </div>
-            ` : ''}
           </div>
 
-          <div class="pt-1 border-t border-slate-300 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
-            <div>Trang 1/2</div>
-            <div>Mã đề thi: ${exam.code}</div>
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+            <span>Mã đề ${exam.code}</span>
+            <span>Trang 1/2</span>
           </div>
         </div>
       `;
 
       // =========================================================================
-      // TRANG 2: PHẦN II (CÂU 3 & 4) + PHẦN III (6 CÂU TRẢ LỜI NGẮN) + HẾT
+      // TRANG 2: PHẦN II (4 CÂU ĐÚNG SAI) + PHẦN III (6 CÂU TRẢ LỜI NGẮN) - 1 CỘT
       // =========================================================================
       let page2Html = `
         <div class="a4-page font-serif">
           <div>
-            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[11pt]">
-              <div class="font-bold uppercase text-indigo-950">MÔN: TOÁN — ${topic.code}: ${topic.title}</div>
-              <div class="font-mono font-bold">MÃ ĐỀ: ${exam.code}</div>
+            <!-- Header trang 2 -->
+            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[10.5pt]">
+              <div><strong>MÃ ĐỀ THI: ${exam.code}</strong> • BÀI THI: TOÁN — ${topic.code}: ${topic.title}</div>
             </div>
 
-            <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-              <!-- Cột 1: Phần II (Câu 3 & 4) -->
-              <div class="col-divider space-y-2">
-                <div class="font-bold text-[11.5pt] sm:text-[12pt] uppercase bg-slate-100 px-2 py-0.5 border-l-4 border-black mb-1 flex justify-between items-center">
-                  <span>PHẦN II (Tiếp theo):</span>
-                  <span class="text-[10pt] font-normal italic lowercase">(Chọn đúng hoặc sai)</span>
+            <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+              <!-- PHẦN II -->
+              <div>
+                <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                  <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
+                  <span class="text-[9.5pt] font-normal italic lowercase font-serif">(4,0 điểm)</span>
                 </div>
+                <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</div>
 
-                ${tfs.slice(2).map((q, idx) => {
-                  const qContext = q.context || q.question || q.statement || '';
-                  return `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Câu ${idx + 3}:</strong> ${cleanQText(qContext)}</div>
-                      <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                        ${(q.items || []).map(it => {
-                          const label = it.subLabel || (it.label ? it.label + ')' : (it.id ? it.id + ')' : ''));
-                          const content = it.content || it.text || '';
-                          let badge = '';
-                          if (showPrintSolutions) {
-                            badge = it.correct 
-                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                          }
-                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                        }).join('')}
+                <div class="space-y-1.5">
+                  ${tfs.map((q, idx) => {
+                    const qContext = q.context || q.question || q.statement || '';
+                    return `
+                      <div class="break-inside-avoid">
+                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(qContext)}</div>
+                        ${formatTfItemsPrint(q.items)}
                       </div>
-                    </div>
-                  `;
-                }).join('')}
+                    `;
+                  }).join('')}
+                </div>
               </div>
 
-              <!-- Cột 2: Phần III (6 câu Trả lời ngắn) + Hết -->
-              <div class="pl-1 flex flex-col justify-between">
-                <div>
-                  <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                    <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
-                    <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
-                  </div>
-                  <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
-
-                  <div class="space-y-1.5">
-                    ${sas.map((q, idx) => {
-                      const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
-                      return `
-                        <div class="break-inside-avoid">
-                          <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
-                        </div>
-                      `;
-                    }).join('')}
-                  </div>
+              <!-- PHẦN III -->
+              <div>
+                <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                  <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
+                  <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
                 </div>
+                <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
 
-                <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
-                  <div class="font-bold text-[11pt] tracking-widest">------------------ HẾT ------------------</div>
-                  <div class="italic text-[9.5pt] text-slate-600 mt-0.5">
-                    (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
-                  </div>
+                <div class="space-y-1.5">
+                  ${sas.map((q, idx) => {
+                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                    return `
+                      <div class="break-inside-avoid">
+                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+
+              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+                <div class="font-bold text-[10.5pt] tracking-widest">------------------ HẾT ------------------</div>
+                <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
+                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="pt-1 border-t border-slate-300 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
-            <div>Trang 2/2</div>
-            <div>Mã đề thi: ${exam.code}</div>
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+            <span>Mã đề ${exam.code}</span>
+            <span>Trang 2/2</span>
           </div>
         </div>
       `;
 
-      // TRANG 3: ĐÁP ÁN & LỜI GIẢI (CHO GIÁO VIÊN)
       let page3Html = '';
       if (showPrintSolutions) {
         page3Html = `
@@ -20120,267 +20063,207 @@
     // RENDER ĐỀ KIỂM TRA ĐỊNH KỲ (KHỐI 10, 11, 12)
     // =========================================================================
     function renderPeriodicPrintPaper(container, exam, meta) {
-      const periodNames = {
-        gk1: "Giữa Học Kỳ 1",
-        ck1: "Cuối Học Kỳ 1",
-        gk2: "Giữa Học Kỳ 2",
-        ck2: "Cuối Học Kỳ 2"
-      };
-      const pName = periodNames[meta.periodKey] || "Định Kỳ";
+      let pName = 'Giữa Học Kỳ 1';
+      if (meta.periodKey === 'gk1') pName = 'Giữa Học Kỳ 1';
+      else if (meta.periodKey === 'ck1') pName = 'Cuối Học Kỳ 1';
+      else if (meta.periodKey === 'gk2') pName = 'Giữa Học Kỳ 2';
+      else if (meta.periodKey === 'ck2') pName = 'Cuối Học Kỳ 2';
 
-      let examCode = '';
-      const codeMatch = (exam.title || '').match(/Mã\s*(\w+)/i);
-      if (codeMatch) {
-        examCode = codeMatch[1];
-      } else {
-        examCode = `${meta.grade}${meta.periodKey.toUpperCase()}-0${meta.examNumber}`;
+      let examCode = exam.code;
+      if (!examCode) {
+        if (meta.periodKey === 'gk1') {
+          const cList = ['101', '102', '103', '104', '105', '106'];
+          examCode = cList[(meta.examNumber - 1) % cList.length];
+        } else {
+          examCode = `${meta.grade}${meta.periodKey.toUpperCase()}-0${meta.examNumber}`;
+        }
       }
 
       const mcqs = exam.mcqs || [];
-      const mcqsCol1 = mcqs.slice(0, 6);
-      const mcqsCol2 = mcqs.slice(6, 12);
       const tfs = exam.tfQuestions || [];
       const sas = exam.saQuestions || [];
       const essays = exam.essayQuestions || [];
       const isGrade12 = (meta.grade === '12');
 
       // =========================================================================
-      // TRANG 1: HEADER + PHẦN I (12 CÂU) + PHẦN II (CÂU 1 & 2) KHÍT TRANG 1
+      // TRANG 1: HEADER + TOÀN BỘ PHẦN I (12 CÂU TRẮC NGHIỆM 1 CỘT RỘNG RÃI)
       // =========================================================================
       let page1Html = `
         <div class="a4-page font-serif">
           <div>
-            <!-- Header chuẩn Bộ GD&ĐT (Khung Mã Đề Căn Giữa Tuyệt Đối) -->
-            <div class="border-b-2 border-black pb-1 mb-2 text-[9pt]">
+            <!-- Header chuẩn Bộ GD&ĐT gọn gàng -->
+            <div class="border-b border-black pb-1 mb-1.5 text-[9pt]">
               <table class="w-full border-collapse mb-1 text-center">
                 <tr>
-                  <td class="w-1/2 align-top text-center pb-1">
-                    <div class="font-bold uppercase text-[11pt]">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
-                    <div class="font-bold uppercase text-[12pt] text-teal-950">ĐỀ KIỂM TRA ĐỊNH KỲ ${pName.toUpperCase()}</div>
-                    <div class="font-bold text-[11pt]">ĐỀ CHÍNH THỨC</div>
-                    <div class="italic text-[9.5pt] text-slate-500">(Đề thi có 02 trang)</div>
+                  <td class="w-[48%] align-top text-center pb-0.5">
+                    <div class="font-bold uppercase text-[10.5pt] tracking-tight">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
+                    <div class="font-bold uppercase text-[11.5pt] text-teal-950">ĐỀ KIỂM TRA ĐỊNH KỲ ${pName.toUpperCase()}</div>
+                    <div class="font-bold text-[10.5pt]">ĐỀ CHÍNH THỨC</div>
+                    <div class="italic text-[9pt] text-slate-600">(Đề thi có 02 trang)</div>
                   </td>
-                  <td class="w-1/2 align-top text-center pb-1">
-                    <div class="font-bold uppercase text-[12pt] text-teal-950">NĂM HỌC 2026 - 2027</div>
-                    <div class="font-bold uppercase text-[11.5pt]">MÔN: TOÁN — KHỐI ${meta.grade}</div>
-                    <div class="text-[10pt] mb-1">Thời gian làm bài: ${exam.durationMinutes || 90} phút, không kể phát đề</div>
-                    <div class="inline-block border border-black px-3 py-1 font-bold text-[11pt] font-mono leading-none bg-white">
+                  <td class="w-[52%] align-top text-center pb-0.5">
+                    <div class="font-bold uppercase text-[11.5pt] text-teal-950">NĂM HỌC 2026 - 2027</div>
+                    <div class="font-bold uppercase text-[11pt]">MÔN: TOÁN — KHỐI ${meta.grade}</div>
+                    <div class="text-[9.5pt] my-0.5">Thời gian làm bài: ${exam.durationMinutes || 90} phút, không kể phát đề</div>
+                    <div class="inline-block border border-black px-3 py-0.5 font-bold text-[10.5pt] font-mono leading-none bg-white">
                       MÃ ĐỀ THI: ${examCode}
                     </div>
                   </td>
                 </tr>
               </table>
-              <div class="border-t border-black pt-1 flex justify-between text-[11pt]">
+              <div class="border-t border-black pt-1 flex justify-between text-[10pt]">
                 <div>Họ và tên thí sinh: ................................................................................</div>
                 <div>Số báo danh: .............................</div>
               </div>
             </div>
 
-            <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn) -->
-            <div class="font-bold text-[12pt] uppercase mb-1.5 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-              <span>PHẦN I. Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.</span>
-              <span class="text-[10.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+            <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn - 1 Cột) -->
+            <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+              <span>PHẦN I. Câu trắc nghiệm nhiều lựa chọn</span>
+              <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
             </div>
+            <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</div>
 
-            <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-              <div class="col-divider space-y-1.5">
-                ${mcqsCol1.map((q, idx) => `
-                  <div class="break-inside-avoid">
-                    <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
-                    ${formatMcqOptsPrint(q.options, q.correct)}
-                  </div>
-                `).join('')}
-              </div>
-
-              <div class="pl-1 space-y-1.5">
-                ${mcqsCol2.map((q, idx) => `
-                  <div class="break-inside-avoid">
-                    <div><strong class="font-bold">Câu ${idx + 7}:</strong> ${cleanQText(q.question)}</div>
-                    ${formatMcqOptsPrint(q.options, q.correct)}
-                  </div>
-                `).join('')}
-              </div>
+            <div class="space-y-1.5 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+              ${mcqs.map((q, idx) => `
+                <div class="break-inside-avoid">
+                  <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
+                  ${formatMcqOptsPrint(q.options, q.correct)}
+                </div>
+              `).join('')}
             </div>
-
-            <!-- ĐẨY TIẾP PHẦN II (CÂU 1 & 2) LÊN TRANG 1 ĐỂ KHÍT TRANG -->
-            ${tfs.length > 0 ? `
-              <div class="font-bold text-[12pt] uppercase mt-2.5 mb-1.5 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                <span>PHẦN II. Câu trắc nghiệm đúng sai. (${isGrade12 ? '4.0' : '2.0'} điểm)</span>
-                <span class="text-[10.5pt] font-normal italic lowercase">(Thí sinh trả lời từ câu 1 đến câu ${isGrade12 ? '4' : '2'})</span>
-              </div>
-
-              <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-                <!-- Cột 1: Câu 1 -->
-                <div class="col-divider">
-                  ${tfs[0] ? `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Câu 1:</strong> ${cleanQText(tfs[0].statement || tfs[0].context || tfs[0].question || '')}</div>
-                      <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                        ${(tfs[0].items || []).map(it => {
-                          const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : (it.id ? it.id + ')' : '')));
-                          const content = it.content || it.text || '';
-                          let badge = '';
-                          if (showPrintSolutions) {
-                            badge = it.correct 
-                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                          }
-                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                </div>
-
-                <!-- Cột 2: Câu 2 -->
-                <div class="pl-1">
-                  ${tfs[1] ? `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Câu 2:</strong> ${cleanQText(tfs[1].statement || tfs[1].context || tfs[1].question || '')}</div>
-                      <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                        ${(tfs[1].items || []).map(it => {
-                          const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : (it.id ? it.id + ')' : '')));
-                          const content = it.content || it.text || '';
-                          let badge = '';
-                          if (showPrintSolutions) {
-                            badge = it.correct 
-                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                          }
-                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                </div>
-              </div>
-            ` : ''}
           </div>
 
-          <div class="pt-1 border-t border-slate-300 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
-            <div>Trang 1/2</div>
-            <div>Mã đề thi: ${examCode}</div>
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+            <span>Mã đề ${examCode}</span>
+            <span>Trang 1/2</span>
           </div>
         </div>
       `;
 
       // =========================================================================
-      // TRANG 2: CÂN ĐỐI PHẦN CÒN LẠI VÀ HẾT
+      // TRANG 2: PHẦN II + PHẦN III (+ PHẦN IV CHO LỚP 10-11) - 1 CỘT
       // =========================================================================
       let page2Content = '';
       if (isGrade12) {
-        // KHỐI 12: CỘT 1 LÀ PHẦN II (CÂU 3 & 4), CỘT 2 LÀ PHẦN III (6 CÂU TLN)
+        // KHỐI 12: CÂU ĐÚNG SAI (4 CÂU) + TRẢ LỜI NGẮN (6 CÂU)
         page2Content = `
-          <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-            <!-- Cột 1: Phần II (Câu 3 & 4) -->
-            <div class="col-divider space-y-2">
-              <div class="font-bold text-[11.5pt] sm:text-[12pt] uppercase bg-slate-100 px-2 py-0.5 border-l-4 border-black mb-1 flex justify-between items-center">
-                <span>PHẦN II (Tiếp theo):</span>
-                <span class="text-[10pt] font-normal italic lowercase">(Chọn đúng hoặc sai)</span>
+          <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+            <!-- PHẦN II -->
+            <div>
+              <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(4,0 điểm)</span>
               </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</div>
 
-              ${tfs.slice(2).map((q, idx) => {
-                const qContext = q.statement || q.context || q.question || '';
-                return `
-                  <div class="break-inside-avoid">
-                    <div><strong class="font-bold">Câu ${idx + 3}:</strong> ${cleanQText(qContext)}</div>
-                    <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                      ${(q.items || []).map(it => {
-                        const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : (it.id ? it.id + ')' : '')));
-                        const content = it.content || it.text || '';
-                        let badge = '';
-                        if (showPrintSolutions) {
-                          badge = it.correct 
-                            ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                            : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                        }
-                        return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                      }).join('')}
+              <div class="space-y-1.5">
+                ${tfs.map((q, idx) => {
+                  const qContext = q.statement || q.context || q.question || '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(qContext)}</div>
+                      ${formatTfItemsPrint(q.items)}
                     </div>
-                  </div>
-                `;
-              }).join('')}
+                  `;
+                }).join('')}
+              </div>
             </div>
 
-            <!-- Cột 2: Phần III (6 câu Trả lời ngắn) + Hết -->
-            <div class="pl-1 flex flex-col justify-between">
-              <div>
-                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
-                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
-                </div>
-                <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
-
-                <div class="space-y-1.5">
-                  ${sas.map((q, idx) => {
-                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
-                    return `
-                      <div class="break-inside-avoid">
-                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
-                      </div>
-                    `;
-                  }).join('')}
-                </div>
+            <!-- PHẦN III -->
+            <div>
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
               </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
 
-              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
-                <div class="font-bold text-[11pt] tracking-widest">------------------ HẾT ------------------</div>
-                <div class="italic text-[8pt] text-slate-600 mt-0.5">
-                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
-                </div>
+              <div class="space-y-1.5">
+                ${sas.map((q, idx) => {
+                  const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+              <div class="font-bold text-[10.5pt] tracking-widest">------------------ HẾT ------------------</div>
+              <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
+                (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
               </div>
             </div>
           </div>
         `;
       } else {
-        // KHỐI 10 & 11: CỘT 1 LÀ PHẦN III (4 CÂU TLN), CỘT 2 LÀ PHẦN IV (3 BÀI TỰ LUẬN)
+        // KHỐI 10 & 11: CÂU ĐÚNG SAI (2 CÂU) + TRẢ LỜI NGẮN (4 CÂU) + TỰ LUẬN (3 BÀI)
         page2Content = `
-          <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-            <!-- Cột 1: Phần III (4 câu Trả lời ngắn) -->
-            <div class="col-divider space-y-2">
-              <div>
-                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
-                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(2.0 điểm)</span>
-                </div>
-                <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào phiếu trả lời.</div>
+          <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+            <!-- PHẦN II -->
+            <div>
+              <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(2,0 điểm)</span>
+              </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</div>
 
-                <div class="space-y-1.5">
-                  ${sas.map((q, idx) => {
-                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
-                    return `
-                      <div class="break-inside-avoid">
-                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
-                      </div>
-                    `;
-                  }).join('')}
-                </div>
+              <div class="space-y-1.5">
+                ${tfs.map((q, idx) => {
+                  const qContext = q.statement || q.context || q.question || '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(qContext)}</div>
+                      ${formatTfItemsPrint(q.items)}
+                    </div>
+                  `;
+                }).join('')}
               </div>
             </div>
 
-            <!-- Cột 2: Phần IV (3 bài Tự luận) + Hết -->
-            <div class="pl-1 flex flex-col justify-between">
-              <div>
-                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span>PHẦN IV. TỰ LUẬN</span>
-                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
-                </div>
-                <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trình bày lời giải chi tiết vào giấy làm bài thi.</div>
-
-                <div class="space-y-2 text-[11.5pt] sm:text-[12pt] leading-normal">
-                  ${essays.map((eq, idx) => `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Bài ${idx + 1}:</strong> <span class="font-semibold italic text-[8.5pt] text-slate-700">(${eq.maxScore || 1.0} điểm)</span> ${cleanQText(eq.question)}</div>
-                    </div>
-                  `).join('')}
-                </div>
+            <!-- PHẦN III -->
+            <div>
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(2,0 điểm)</span>
               </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu ${sas.length}. Điền kết quả vào phiếu trả lời.</div>
 
-              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
-                <div class="font-bold text-[11pt] tracking-widest">------------------ HẾT ------------------</div>
-                <div class="italic text-[8pt] text-slate-600 mt-0.5">
-                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
-                </div>
+              <div class="space-y-1.5">
+                ${sas.map((q, idx) => {
+                  const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <!-- PHẦN IV -->
+            <div>
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN IV. Tự luận</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
+              </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trình bày lời giải chi tiết vào giấy làm bài thi.</div>
+
+              <div class="space-y-1.5">
+                ${essays.map((eq, idx) => `
+                  <div class="break-inside-avoid">
+                    <div><strong class="font-bold">Bài ${idx + 1}:</strong> <span class="font-semibold italic text-[9pt] text-slate-700">(${eq.maxScore || 1.0} điểm)</span> ${cleanQText(eq.question)}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="mt-3 pt-2 border-t border-dashed border-slate-400 text-center">
+              <div class="font-bold text-[10.5pt] tracking-widest">------------------ HẾT ------------------</div>
+              <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
+                (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
               </div>
             </div>
           </div>
@@ -20390,22 +20273,21 @@
       let page2Html = `
         <div class="a4-page font-serif">
           <div>
-            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[11pt]">
-              <div class="font-bold uppercase text-teal-950">MÔN: TOÁN ${meta.grade} — ${pName.toUpperCase()}</div>
-              <div class="font-mono font-bold">MÃ ĐỀ: ${examCode}</div>
+            <!-- Header trang 2 -->
+            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[10.5pt]">
+              <div><strong>MÃ ĐỀ THI: ${examCode}</strong> • MÔN TOÁN ${meta.grade} — ${pName}</div>
             </div>
 
             ${page2Content}
           </div>
 
-          <div class="pt-1 border-t border-slate-300 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
-            <div>Trang 2/2</div>
-            <div>Mã đề thi: ${examCode}</div>
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+            <span>Mã đề ${examCode}</span>
+            <span>Trang 2/2</span>
           </div>
         </div>
       `;
 
-      // TRANG 3: ĐÁP ÁN & LỜI GIẢI (CHO GIÁO VIÊN)
       let page3Html = '';
       if (showPrintSolutions) {
         if (isGrade12) {
@@ -21025,128 +20907,61 @@
     function renderLessonPracticePrintPaper(container, exam, meta) {
       const isGrade12 = (String(meta.grade).includes('12'));
       const mcqs = exam.mcqs || [];
-      const mcqsCol1 = mcqs.slice(0, 6);
-      const mcqsCol2 = mcqs.slice(6, 12);
       const tfs = exam.tfQuestions || [];
       const sas = exam.saQuestions || [];
       const essays = exam.essayQuestions || [];
 
       // =========================================================================
-      // TRANG 1: HEADER + PHẦN I (12 CÂU) + PHẦN II (CÂU 1 & 2) KHÍT TRANG 1
+      // TRANG 1: HEADER + TOÀN BỘ PHẦN I (12 CÂU TRẮC NGHIỆM 1 CỘT RỘNG RÃI)
       // =========================================================================
       let page1Html = `
         <div class="a4-page font-serif">
           <div>
-            <!-- Header chuẩn Bộ GD&ĐT (Khung Mã Đề Căn Giữa Tuyệt Đối) -->
-            <div class="border-b-2 border-black pb-1 mb-2 text-[9pt]">
+            <!-- Header chuẩn Bộ GD&ĐT gọn gàng -->
+            <div class="border-b border-black pb-1 mb-1.5 text-[9pt]">
               <table class="w-full border-collapse mb-1 text-center">
                 <tr>
-                  <td class="w-1/2 align-top text-center pb-1">
-                    <div class="font-bold uppercase text-[11pt]">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
-                    <div class="font-bold uppercase text-[12pt] text-indigo-950">ĐỀ ÔN TẬP BÀI HỌC</div>
-                    <div class="font-bold text-[11pt]">ĐỀ CHÍNH THỨC</div>
-                    <div class="italic text-[9.5pt] text-slate-500">(Đề thi có 02 trang)</div>
+                  <td class="w-[48%] align-top text-center pb-0.5">
+                    <div class="font-bold uppercase text-[10.5pt] tracking-tight">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
+                    <div class="font-bold uppercase text-[11.5pt] text-indigo-950">ĐỀ ÔN TẬP BÀI HỌC</div>
+                    <div class="font-bold text-[10.5pt]">ĐỀ CHÍNH THỨC</div>
+                    <div class="italic text-[9pt] text-slate-600">(Đề thi có 02 trang)</div>
                   </td>
-                  <td class="w-1/2 align-top text-center pb-1">
-                    <div class="font-bold uppercase text-[12pt] text-indigo-950">NĂM HỌC 2026 - 2027</div>
-                    <div class="font-bold uppercase text-[11.5pt]">MÔN: TOÁN — KHỐI ${meta.grade}</div>
+                  <td class="w-[52%] align-top text-center pb-0.5">
+                    <div class="font-bold uppercase text-[11.5pt] text-indigo-950">NĂM HỌC 2026 - 2027</div>
+                    <div class="font-bold uppercase text-[11pt]">MÔN: TOÁN — KHỐI ${meta.grade}</div>
                     <div class="text-[10pt] font-semibold text-slate-800 italic leading-snug">${meta.lessonTitle}</div>
-                    <div class="text-[10pt] my-0.5">Thời gian làm bài: ${exam.durationMinutes || (isGrade12 ? 90 : 60)} phút</div>
-                    <div class="inline-block border border-black px-3 py-1 font-bold text-[11pt] font-mono leading-none bg-white">
+                    <div class="text-[9.5pt] my-0.5">Thời gian làm bài: ${exam.durationMinutes || (isGrade12 ? 90 : 60)} phút, không kể phát đề</div>
+                    <div class="inline-block border border-black px-3 py-0.5 font-bold text-[10.5pt] font-mono leading-none bg-white">
                       MÃ ĐỀ THI: ${exam.code}
                     </div>
                   </td>
                 </tr>
               </table>
-              <div class="border-t border-black pt-1 flex justify-between text-[11pt]">
+              <div class="border-t border-black pt-1 flex justify-between text-[10pt]">
                 <div>Họ và tên thí sinh: ................................................................................</div>
                 <div>Số báo danh: .............................</div>
               </div>
             </div>
 
-            <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn) -->
-            <div class="font-bold text-[12pt] uppercase mb-1.5 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-              <span>PHẦN I. Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.</span>
-              <span class="text-[10.5pt] font-normal italic lowercase">(3.0 điểm)</span>
+            <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn - 1 Cột) -->
+            <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+              <span>PHẦN I. Câu trắc nghiệm nhiều lựa chọn</span>
+              <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
             </div>
+            <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</div>
 
-            <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-              <div class="col-divider space-y-1.5">
-                ${mcqsCol1.map((q, idx) => `
-                  <div class="break-inside-avoid">
-                    <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
-                    ${formatMcqOptsPrint(q.options, q.correct)}
-                  </div>
-                `).join('')}
-              </div>
-
-              <div class="pl-1 space-y-1.5">
-                ${mcqsCol2.map((q, idx) => `
-                  <div class="break-inside-avoid">
-                    <div><strong class="font-bold">Câu ${idx + 7}:</strong> ${cleanQText(q.question)}</div>
-                    ${formatMcqOptsPrint(q.options, q.correct)}
-                  </div>
-                `).join('')}
-              </div>
+            <div class="space-y-1.5 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+              ${mcqs.map((q, idx) => `
+                <div class="break-inside-avoid">
+                  <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}</div>
+                  ${formatMcqOptsPrint(q.options, q.correct)}
+                </div>
+              `).join('')}
             </div>
-
-            <!-- ĐẨY TIẾP PHẦN II (CÂU 1 & 2) LÊN TRANG 1 ĐỂ KHÍT TRANG -->
-            ${tfs.length > 0 ? `
-              <div class="font-bold text-[11.5pt] uppercase mt-1.5 mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                <span class="truncate">PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG SAI</span>
-                <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(${isGrade12 ? '4.0' : '2.0'} điểm)</span>
-              </div>
-              <div class="italic text-[9.5pt] text-slate-600 mb-1">Thí sinh trả lời từ câu 1 đến câu ${isGrade12 ? '4' : '2'}. Trong mỗi ý a), b), c), d), chọn đúng hoặc sai.</div>
-
-              <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-                <!-- Cột 1: Câu 1 -->
-                <div class="col-divider">
-                  ${tfs[0] ? `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Câu 1:</strong> ${cleanQText(tfs[0].context || tfs[0].question || tfs[0].statement || '')}</div>
-                      <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                        ${(tfs[0].items || []).map(it => {
-                          const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : ''));
-                          const content = it.content || it.text || '';
-                          let badge = '';
-                          if (showPrintSolutions) {
-                            badge = it.correct 
-                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                          }
-                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                </div>
-
-                <!-- Cột 2: Câu 2 -->
-                <div class="pl-1">
-                  ${tfs[1] ? `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Câu 2:</strong> ${cleanQText(tfs[1].context || tfs[1].question || tfs[1].statement || '')}</div>
-                      <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                        ${(tfs[1].items || []).map(it => {
-                          const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : ''));
-                          const content = it.content || it.text || '';
-                          let badge = '';
-                          if (showPrintSolutions) {
-                            badge = it.correct 
-                              ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                              : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                          }
-                          return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                </div>
-              </div>
-            ` : ''}
           </div>
 
-          <div class="page-footer text-[10pt] text-slate-500 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
             <span>Mã đề ${exam.code}</span>
             <span>Trang 1/2</span>
           </div>
@@ -21154,121 +20969,128 @@
       `;
 
       // =========================================================================
-      // TRANG 2: KHỐI 12 (PHẦN II TIẾP + PHẦN III) / KHỐI 10-11 (PHẦN III + PHẦN IV)
+      // TRANG 2: PHẦN II + PHẦN III (+ PHẦN IV CHO LỚP 10-11) - 1 CỘT
       // =========================================================================
       let page2Content = '';
       if (isGrade12) {
-        // KHỐI 12: CỘT 1 LÀ PHẦN II (CÂU 3 & 4), CỘT 2 LÀ PHẦN III (6 CÂU TLN)
+        // KHỐI 12: PHẦN II (4 CÂU ĐÚNG SAI) + PHẦN III (6 CÂU TRẢ LỜI NGẮN)
         page2Content = `
-          <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-            <!-- Cột 1: Phần II tiếp theo (Câu 3 và 4) -->
-            <div class="col-divider space-y-2">
-              <div class="font-bold text-[11pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                <span>PHẦN II (Tiếp theo). CÂU ĐÚNG SAI</span>
+          <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+            <!-- PHẦN II -->
+            <div>
+              <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(4,0 điểm)</span>
               </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu ${tfs.length}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</div>
 
-              ${tfs.slice(2, 4).map((q, idx) => {
-                const qContext = q.context || q.question || q.statement || '';
-                return `
-                  <div class="break-inside-avoid">
-                    <div><strong class="font-bold">Câu ${idx + 3}:</strong> ${cleanQText(qContext)}</div>
-                    <div class="pl-2 mt-0.5 space-y-0.5 text-[11pt] sm:text-[11.5pt]">
-                      ${(q.items || []).map(it => {
-                        const label = it.subLabel || (it.label ? it.label + ')' : (it.key ? it.key + ')' : ''));
-                        const content = it.content || it.text || '';
-                        let badge = '';
-                        if (showPrintSolutions) {
-                          badge = it.correct 
-                            ? ' <span class="text-[8pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
-                            : ' <span class="text-[8pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
-                        }
-                        return `<div><strong>${label}</strong> ${content}${badge}</div>`;
-                      }).join('')}
+              <div class="space-y-1.5">
+                ${tfs.map((q, idx) => {
+                  const qContext = q.context || q.question || q.statement || '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(qContext)}</div>
+                      ${formatTfItemsPrint(q.items)}
                     </div>
-                  </div>
-                `;
-              }).join('')}
+                  `;
+                }).join('')}
+              </div>
             </div>
 
-            <!-- Cột 2: Phần III (6 câu Trả lời ngắn) + Hết -->
-            <div class="pl-1 flex flex-col justify-between">
-              <div>
-                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
-                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
-                </div>
-                <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
-
-                <div class="space-y-1.5">
-                  ${sas.map((q, idx) => {
-                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
-                    return `
-                      <div class="break-inside-avoid">
-                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
-                      </div>
-                    `;
-                  }).join('')}
-                </div>
+            <!-- PHẦN III -->
+            <div>
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
               </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
 
-              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
-                <div class="font-bold text-[11pt] tracking-widest">------------------ HẾT ------------------</div>
-                <div class="italic text-[8pt] text-slate-600 mt-0.5">
-                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
-                </div>
+              <div class="space-y-1.5">
+                ${sas.map((q, idx) => {
+                  const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+              <div class="font-bold text-[10.5pt] tracking-widest">------------------ HẾT ------------------</div>
+              <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
+                (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
               </div>
             </div>
           </div>
         `;
       } else {
-        // KHỐI 10 & 11: CỘT 1 LÀ PHẦN III (6 CÂU TLN), CỘT 2 LÀ PHẦN IV (4 BÀI TỰ LUẬN)
+        // KHỐI 10 & 11: PHẦN II (2 CÂU ĐÚNG SAI) + PHẦN III (6 CÂU TLN) + PHẦN IV (4 BÀI TỰ LUẬN)
         page2Content = `
-          <div class="grid grid-cols-2 gap-x-4 text-[11.5pt] sm:text-[12pt] leading-normal font-['Times_New_Roman',serif]">
-            <!-- Cột 1: Phần III (6 câu Trả lời ngắn) -->
-            <div class="col-divider space-y-2">
-              <div>
-                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span class="truncate">PHẦN III. TRẢ LỜI NGẮN</span>
-                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(3.0 điểm)</span>
-                </div>
-                <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
+          <div class="space-y-2 text-[11pt] sm:text-[11.5pt] leading-normal font-['Times_New_Roman',serif]">
+            <!-- PHẦN II -->
+            <div>
+              <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(2,0 điểm)</span>
+              </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu ${tfs.length}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</div>
 
-                <div class="space-y-1.5">
-                  ${sas.map((q, idx) => {
-                    const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
-                    return `
-                      <div class="break-inside-avoid">
-                        <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
-                      </div>
-                    `;
-                  }).join('')}
-                </div>
+              <div class="space-y-1.5">
+                ${tfs.map((q, idx) => {
+                  const qContext = q.context || q.question || q.statement || '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(qContext)}</div>
+                      ${formatTfItemsPrint(q.items)}
+                    </div>
+                  `;
+                }).join('')}
               </div>
             </div>
 
-            <!-- Cột 2: Phần IV (4 bài Tự luận) + Hết -->
-            <div class="pl-1 flex flex-col justify-between">
-              <div>
-                <div class="font-bold text-[11.5pt] uppercase mb-1 bg-slate-100 px-2 py-0.5 border-l-4 border-black flex justify-between items-center">
-                  <span>PHẦN IV. TỰ LUẬN</span>
-                  <span class="text-[9.5pt] font-normal italic lowercase shrink-0 ml-1">(2.0 điểm)</span>
-                </div>
-                <div class="italic text-[10pt] text-slate-600 mb-1.5">Thí sinh trình bày lời giải chi tiết vào giấy làm bài thi.</div>
-
-                <div class="space-y-2 text-[11.5pt] sm:text-[12pt] leading-normal">
-                  ${essays.map((eq, idx) => `
-                    <div class="break-inside-avoid">
-                      <div><strong class="font-bold">Bài ${idx + 1}:</strong> <span class="italic text-[9.5pt]">(${eq.maxScore || 0.5} điểm)</span> ${cleanQText(eq.question)}</div>
-                    </div>
-                  `).join('')}
-                </div>
+            <!-- PHẦN III -->
+            <div>
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
               </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trả lời từ câu 1 đến câu 6. Điền kết quả vào phiếu trả lời.</div>
 
-              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
-                <div class="font-bold text-[11pt] tracking-widest">------------------ HẾT ------------------</div>
-                <div class="italic text-[8pt] text-slate-600 mt-0.5">
-                  (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
-                </div>
+              <div class="space-y-1.5">
+                ${sas.map((q, idx) => {
+                  const sol = showPrintSolutions ? ` <span class="font-bold text-red-700 bg-red-50 border border-red-300 px-1 py-0.2 rounded text-[8.5pt] font-mono ml-1">[Đáp số: ${q.correctAnswer || q.answer}]</span>` : '';
+                  return `
+                    <div class="break-inside-avoid">
+                      <div><strong class="font-bold">Câu ${idx + 1}:</strong> ${cleanQText(q.question)}${sol}</div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <!-- PHẦN IV -->
+            <div>
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <span>PHẦN IV. Tự luận</span>
+                <span class="text-[9.5pt] font-normal italic lowercase font-serif">(2,0 điểm)</span>
+              </div>
+              <div class="italic text-[9pt] text-slate-600 mb-1 leading-tight">Thí sinh trình bày lời giải chi tiết vào giấy làm bài thi.</div>
+
+              <div class="space-y-1.5">
+                ${essays.map((eq, idx) => `
+                  <div class="break-inside-avoid">
+                    <div><strong class="font-bold">Bài ${idx + 1}:</strong> <span class="italic text-[9pt]">(${eq.maxScore || 0.5} điểm)</span> ${cleanQText(eq.question)}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="mt-3 pt-2 border-t border-dashed border-slate-400 text-center">
+              <div class="font-bold text-[10.5pt] tracking-widest">------------------ HẾT ------------------</div>
+              <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
+                (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
               </div>
             </div>
           </div>
@@ -21279,7 +21101,7 @@
         <div class="a4-page font-serif">
           <div>
             <!-- Header trang 2 -->
-            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[11pt]">
+            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[10.5pt]">
               <div><strong>MÃ ĐỀ THI: ${exam.code}</strong> • MÔN TOÁN ${meta.grade}</div>
               <div class="italic text-slate-600">${meta.lessonTitle}</div>
             </div>
@@ -21287,16 +21109,13 @@
             ${page2Content}
           </div>
 
-          <div class="page-footer text-[10pt] text-slate-500 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
             <span>Mã đề ${exam.code}</span>
             <span>Trang 2/2</span>
           </div>
         </div>
       `;
 
-      // =========================================================================
-      // TRANG 3: ĐÁP ÁN & LỜI GIẢI CHI TIẾT (KHI BẬT KÈM ĐÁP ÁN)
-      // =========================================================================
       let page3Html = '';
       if (showPrintSolutions) {
         page3Html = `
