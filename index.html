@@ -675,6 +675,17 @@
         <span class="hidden sm:inline">Hỏi Thầy/Cô</span>
       </button>
 
+            <button 
+        id="btn-open-lesson1-video" 
+        onclick="openMicrolearningVideoModal()" 
+        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-black text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-rose-600 via-rose-500 to-red-600 text-white shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
+        title="Xem 2 Video Bài Giảng 5 phút & Luồng Khóa Gating Workflow"
+      >
+        <i class="fa-solid fa-circle-play text-white animate-pulse"></i>
+        <span>▶ Video Bài 1 (5p)</span>
+        <span class="bg-white/20 text-white text-[10px] px-1.5 py-0.2 rounded-full font-black">Hot</span>
+      </button>
+
       <button 
         id="tab-btn-lesson-exams" 
         onclick="openLessonPracticeModal()" 
@@ -31082,8 +31093,135 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     function formatTheoryCardHTML(section, studentName, lessonTitle, studentClass) {
       let theoryBody = section.theory.replace(/\{student_name\}/g, studentName);
       
+      const isLesson1 = (!lessonTitle || lessonTitle.includes('Bài 1') || lessonTitle.includes('đơn điệu') || lessonTitle.includes('cực trị'));
+      const secNum = section.sectionNumber || 1;
+      
+      let videoBannerHTML = '';
+      if (isLesson1) {
+        if (secNum === 1) {
+          videoBannerHTML = `
+  <!-- Grand Banner & Video 1 (Chuẩn EdTech Micro-learning) -->
+  <div class="theory-grand-banner p-4 sm:p-5 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-950 rounded-2xl text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 border-2 border-amber-400 mb-4 not-prose">
+    <div class="flex items-center gap-3.5 text-center sm:text-left">
+      <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-2xl font-black shadow-md shrink-0">
+        🎉
+      </div>
+      <div>
+        <h2 class="text-base sm:text-xl font-black tracking-tight text-white leading-tight">
+          CHÀO MỪNG CÁC EM ĐẾN VỚI LỚP HỌC TOÁN CỦA THẦY THUẤN PHAN
+        </h2>
+        <p class="text-xs sm:text-sm text-indigo-200 mt-0.5">
+          Micro-learning Toán 12 • Mục 1: Tính đơn điệu của hàm số (Video 05:00)
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 shrink-0 flex-wrap justify-center">
+      <button type="button" onclick="toggleLessonVideo('video1')" class="px-4 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-md transition flex items-center gap-2 cursor-pointer active:scale-95">
+        <i class="fa-solid fa-play"></i>
+        <span>▶ Xem Video bài giảng (5 phút)</span>
+      </button>
+      <button type="button" onclick="openMicrolearningVideoModal()" class="px-3 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center gap-1.5 cursor-pointer" title="Mở phòng học Micro-learning toàn màn hình với luồng khóa liên hoàn">
+        <i class="fa-solid fa-expand"></i>
+        <span class="hidden sm:inline">Phòng học</span> Gating
+      </button>
+    </div>
+  </div>
+
+  <!-- Khung iframe responsive 16:9 Video 1 -->
+  <div id="video1-wrapper" class="hidden my-4 p-3 bg-slate-900 rounded-2xl shadow-xl space-y-3 not-prose">
+    <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
+      <iframe id="video1" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1" title="Video 1: Tính đơn điệu của hàm số" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 bg-slate-800 rounded-xl text-white">
+      <span class="text-xs text-amber-300 font-medium flex items-center gap-1.5">
+        <i class="fa-solid fa-circle-info text-amber-400"></i>
+        <span>Xem hết video 5 phút, bấm nút bên cạnh để hoàn thành và mở khóa trắc nghiệm:</span>
+      </span>
+      <button type="button" onclick="markLessonVideoCompleted(1)" class="w-full sm:w-auto px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>✅ Hoàn thành video 1</span>
+      </button>
+    </div>
+  </div>
+`;
+        } else if (secNum === 2) {
+          if (!window.lesson1GatingState || !window.lesson1GatingState.mcq1Done) {
+            videoBannerHTML = `
+  <!-- Thông báo Khóa Gating Mục 2 -->
+  <div class="my-4 p-5 bg-amber-50 border-2 border-amber-300 rounded-2xl text-center space-y-3 not-prose">
+    <div class="w-12 h-12 mx-auto bg-amber-200 text-amber-900 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-xs">
+      🔒
+    </div>
+    <h3 class="text-base sm:text-lg font-black text-amber-950">Mục 2: Cực trị của hàm số đang bị khóa theo lộ trình</h3>
+    <p class="text-xs sm:text-sm text-amber-800 max-w-lg mx-auto">
+      Theo luồng chặn học tập (Gating Workflow), em cần hoàn thành <strong>Video 1</strong> và nộp đủ <strong>3 câu trắc nghiệm Mục 1</strong> để tự động mở khóa Mục 2!
+    </p>
+    <div class="flex items-center justify-center gap-2 pt-1">
+      <button type="button" onclick="goToSgkSection(0)" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-sm transition shadow-md cursor-pointer active:scale-95 flex items-center gap-2">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Quay lại Mục 1 làm bài</span>
+      </button>
+      <button type="button" onclick="openMicrolearningVideoModal()" class="px-4 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl text-xs sm:text-sm transition shadow-md cursor-pointer active:scale-95 flex items-center gap-1.5">
+        <i class="fa-solid fa-laptop-code"></i>
+        <span>Mở Phòng học Gating</span>
+      </button>
+    </div>
+  </div>
+`;
+          } else {
+            videoBannerHTML = `
+  <!-- Grand Banner & Video 2 (Mục 2 đã mở khóa) -->
+  <div class="theory-grand-banner p-4 sm:p-5 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-950 rounded-2xl text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 border-2 border-purple-400 mb-4 not-prose">
+    <div class="flex items-center gap-3.5 text-center sm:text-left">
+      <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-2xl font-black shadow-md shrink-0">
+        🎉
+      </div>
+      <div>
+        <h2 class="text-base sm:text-xl font-black tracking-tight text-white leading-tight">
+          CHÀO MỪNG CÁC EM ĐẾN VỚI LỚP HỌC TOÁN CỦA THẦY THUẤN PHAN
+        </h2>
+        <p class="text-xs sm:text-sm text-purple-200 mt-0.5">
+          Micro-learning Toán 12 • Mục 2: Cực trị của hàm số (Đã mở khóa thành công!)
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 shrink-0 flex-wrap justify-center">
+      <button type="button" onclick="toggleLessonVideo('video2')" class="px-4 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-md transition flex items-center gap-2 cursor-pointer active:scale-95">
+        <i class="fa-solid fa-play"></i>
+        <span>▶ Xem Video bài giảng (5 phút)</span>
+      </button>
+      <button type="button" onclick="openMicrolearningVideoModal()" class="px-3 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+        <i class="fa-solid fa-expand"></i>
+        <span class="hidden sm:inline">Phòng học</span> Gating
+      </button>
+    </div>
+  </div>
+
+  <!-- Khung iframe responsive 16:9 Video 2 -->
+  <div id="video2-wrapper" class="hidden my-4 p-3 bg-slate-900 rounded-2xl shadow-xl space-y-3 not-prose">
+    <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
+      <iframe id="video2" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1" title="Video 2: Cực trị của hàm số" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 bg-slate-800 rounded-xl text-white">
+      <span class="text-xs text-amber-300 font-medium flex items-center gap-1.5">
+        <i class="fa-solid fa-circle-info text-amber-400"></i>
+        <span>Xem hết video 5 phút, bấm nút bên cạnh để hoàn thành và mở khóa trắc nghiệm Mục 2:</span>
+      </span>
+      <button type="button" onclick="markLessonVideoCompleted(2)" class="w-full sm:w-auto px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>✅ Hoàn thành video 2</span>
+      </button>
+    </div>
+  </div>
+`;
+          }
+        }
+      }
+      
       return `
 <div class="my-2 space-y-4 font-serif theory-expanded-card" id="theory-card-${section.sectionNumber}">
+  ${videoBannerHTML}
+
   <!-- Header Banner To Rõ & Hiện Đại (Có nút Mở Rộng Không Gian) -->
   <div class="theory-header-banner p-4 sm:p-5 bg-gradient-to-r from-indigo-700 via-indigo-800 to-purple-800 rounded-2xl text-white shadow-md flex flex-wrap items-center justify-between gap-3">
     <div class="flex items-center gap-3.5">
@@ -33473,6 +33611,17 @@ ${activeLesson.lessonTitle}
       const secIndex = demoState.sectionIndex || 0;
       recordMCQProgress(secIndex, demoState.mcqIndex, false, 0, true);
       demoState.isWaitingSectionFeedback = true;
+      
+      // Cập nhật trạng thái Gating Workflow cho Bài 1
+      if (!window.lesson1GatingState) {
+        window.lesson1GatingState = { video1Done: false, mcq1Done: false, video2Done: false, mcq2Done: false };
+      }
+      if (secIndex === 0) {
+        window.lesson1GatingState.mcq1Done = true;
+      } else if (secIndex === 1) {
+        window.lesson1GatingState.mcq2Done = true;
+      }
+      
       renderMCQPanel();
     }
     window.handleCompleteSectionMCQs = handleCompleteSectionMCQs;
@@ -38420,6 +38569,413 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
       </div>
     </div>
   </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: PHÒNG HỌC MICRO-LEARNING & GATING WORKFLOW (BÀI 1 TOÁN 12)        -->
+  <!-- ========================================================================= -->
+  <div id="modal-microlearning-video" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden items-center justify-center p-2 sm:p-4 font-serif overflow-y-auto">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[94vh] flex flex-col overflow-hidden border-2 border-indigo-300 animate-in fade-in zoom-in duration-200 my-auto">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 bg-gradient-to-r from-indigo-950 via-purple-950 to-indigo-950 text-white flex items-center justify-between border-b-2 border-amber-400 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-2xl shadow-sm shrink-0">
+            🎉
+          </div>
+          <div>
+            <h3 class="text-base sm:text-xl font-black leading-tight">
+              CHÀO MỪNG CÁC EM ĐẾN VỚI LỚP HỌC TOÁN CỦA THẦY THUẤN PHAN
+            </h3>
+            <p class="text-xs text-indigo-200">
+              Phòng học Micro-learning & Gating Workflow • Bài 1: Tính đơn điệu và cực trị của hàm số
+            </p>
+          </div>
+        </div>
+        <button type="button" onclick="closeMicrolearningVideoModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center cursor-pointer transition shrink-0 ml-2">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Stepper Indicator -->
+      <div class="bg-indigo-900 text-white px-4 py-2 border-b border-indigo-800 text-xs sm:text-sm font-bold flex items-center justify-between gap-2 overflow-x-auto no-scrollbar shrink-0">
+        <div id="modal-step-badge-1" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400 text-slate-950 shrink-0">
+          <span class="w-5 h-5 rounded-full bg-slate-950 text-amber-300 flex items-center justify-center text-xs">1</span>
+          <span>Mục 1: Đơn điệu (Video 5p + 3 MCQ)</span>
+        </div>
+        <i class="fa-solid fa-chevron-right text-indigo-400 text-xs shrink-0"></i>
+        <div id="modal-step-badge-2" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-950 text-indigo-300 shrink-0 border border-indigo-700">
+          <span class="w-5 h-5 rounded-full bg-indigo-800 text-indigo-200 flex items-center justify-center text-xs">2</span>
+          <span>Mục 2: Cực trị (Video 5p + 3 MCQ)</span>
+        </div>
+        <i class="fa-solid fa-chevron-right text-indigo-400 text-xs shrink-0"></i>
+        <div id="modal-step-badge-3" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-950 text-indigo-300 shrink-0 border border-indigo-700">
+          <span class="w-5 h-5 rounded-full bg-indigo-800 text-indigo-200 flex items-center justify-center text-xs">3</span>
+          <span>Phiếu 6 câu Đúng / Sai (24 ý)</span>
+        </div>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 bg-slate-50">
+        
+        <!-- SECTION 1: VIDEO 1 + MCQ 1 -->
+        <div id="modal-sec-1" class="bg-white rounded-2xl border-2 border-indigo-200 p-4 sm:p-5 shadow-sm space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-indigo-100 gap-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-xs">1</span>
+              <div>
+                <h4 class="font-black text-indigo-950 text-base sm:text-lg">Mục 1: Tính đơn điệu của hàm số</h4>
+                <p class="text-xs text-slate-500">Video 05:00 • Tỉ lệ 16:9 • Giọng đọc chuẩn sư phạm</p>
+              </div>
+            </div>
+            <button type="button" onclick="toggleModalVideo('modal-video1')" class="px-4 py-2 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-sm hover:shadow transition flex items-center gap-1.5 cursor-pointer">
+              <i class="fa-solid fa-play"></i>
+              <span>▶ Xem Video bài giảng (5 phút)</span>
+            </button>
+          </div>
+
+          <!-- Video 1 Wrapper -->
+          <div id="modal-video1-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl">
+            <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
+              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1" title="Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
+              <span class="text-xs text-amber-300">Xem xong video 5 phút, bấm nút để mở khóa 3 câu trắc nghiệm:</span>
+              <button type="button" onclick="markModalVideoCompleted(1)" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs transition cursor-pointer shadow-sm">
+                ✅ Hoàn thành video 1
+              </button>
+            </div>
+          </div>
+
+          <!-- MCQ 1 (Gated) -->
+          <div id="modal-mcq1" class="locked space-y-3 pt-3 border-t border-indigo-100 transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-sm text-indigo-900 flex items-center gap-1.5">
+                <i class="fa-solid fa-circle-question text-amber-500"></i>
+                <span>3 Câu trắc nghiệm Mục 1:</span>
+              </span>
+              <span id="modal-mcq1-badge" class="text-xs bg-rose-100 text-rose-700 px-2 py-0.5 rounded-full font-bold">
+                🔒 Xem hết video 1 để mở khóa
+              </span>
+            </div>
+
+            <div class="space-y-3 text-sm">
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <p class="font-bold text-slate-900 mb-2">**Câu 1:** Trên khoảng $(-\infty; -2)$ và $(1; +\infty)$ hàm số có $f'(x) > 0$. Khẳng định nào sau đây đúng?</p>
+                <div class="grid grid-cols-2 gap-2">
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq1" value="A" class="accent-indigo-600"> <span><strong>A.</strong> Đồng biến</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq1" value="B" class="accent-indigo-600"> <span><strong>B.</strong> Nghịch biến</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq1" value="C" class="accent-indigo-600"> <span><strong>C.</strong> Không đổi</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq1" value="D" class="accent-indigo-600"> <span><strong>D.</strong> Cực đại</span></label>
+                </div>
+              </div>
+
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <p class="font-bold text-slate-900 mb-2">**Câu 2:** Nếu $f'(x) = 0$ chỉ xảy ra tại hữu hạn điểm, thì tính đơn điệu của hàm số:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq2" value="A" class="accent-indigo-600"> <span><strong>A.</strong> Bị mất hoàn toàn</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq2" value="B" class="accent-indigo-600"> <span><strong>B.</strong> Không đổi (được bảo toàn)</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq2" value="C" class="accent-indigo-600"> <span><strong>C.</strong> Luôn thành hàm hằng</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq2" value="D" class="accent-indigo-600"> <span><strong>D.</strong> Không kết luận được</span></label>
+                </div>
+              </div>
+
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <p class="font-bold text-slate-900 mb-2">**Câu 3:** Khi kết luận khoảng đơn điệu trong đề thi trắc nghiệm, quy chuẩn là:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq3" value="A" class="accent-indigo-600"> <span><strong>A.</strong> Dùng dấu hợp $\cup$</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq3" value="B" class="accent-indigo-600"> <span><strong>B.</strong> Cấm dùng $\cup$ hoặc $\\$, dùng "và" hoặc ";"</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq3" value="C" class="accent-indigo-600"> <span><strong>C.</strong> Dùng dấu trừ tập hợp $\\$</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq3" value="D" class="accent-indigo-600"> <span><strong>D.</strong> Tùy ý cách nào cũng đúng</span></label>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" onclick="submitModalMCQ(1)" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-sm active:scale-95">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>✅ Nộp 3 câu MCQ Mục 1 để mở khóa Mục 2</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- SECTION 2: VIDEO 2 + MCQ 2 (LOCKED DEFAULT) -->
+        <div id="modal-sec-2" class="bg-white rounded-2xl border-2 border-slate-200 p-4 sm:p-5 shadow-sm space-y-4 locked transition-all duration-300">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-indigo-100 gap-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-sm shadow-xs">2</span>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-black text-indigo-950 text-base sm:text-lg">Mục 2: Cực trị của hàm số</h4>
+                  <span id="modal-sec2-badge" class="bg-slate-200 text-slate-700 text-[10px] px-2 py-0.5 rounded-full font-bold">🔒 Khóa</span>
+                </div>
+                <p class="text-xs text-slate-500">Video 05:00 • Tỉ lệ 16:9 • Giọng đọc chuẩn sư phạm</p>
+              </div>
+            </div>
+            <button type="button" onclick="toggleModalVideo('modal-video2')" class="px-4 py-2 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-sm hover:shadow transition flex items-center gap-1.5 cursor-pointer">
+              <i class="fa-solid fa-play"></i>
+              <span>▶ Xem Video bài giảng (5 phút)</span>
+            </button>
+          </div>
+
+          <!-- Video 2 Wrapper -->
+          <div id="modal-video2-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl">
+            <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
+              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1" title="Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
+              <span class="text-xs text-amber-300">Xem xong video 5 phút, bấm nút để mở khóa 3 câu trắc nghiệm Mục 2:</span>
+              <button type="button" onclick="markModalVideoCompleted(2)" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs transition cursor-pointer shadow-sm">
+                ✅ Hoàn thành video 2
+              </button>
+            </div>
+          </div>
+
+          <!-- MCQ 2 (Gated) -->
+          <div id="modal-mcq2" class="locked space-y-3 pt-3 border-t border-purple-100 transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-sm text-indigo-900 flex items-center gap-1.5">
+                <i class="fa-solid fa-circle-question text-amber-500"></i>
+                <span>3 Câu trắc nghiệm Mục 2:</span>
+              </span>
+              <span id="modal-mcq2-badge" class="text-xs bg-rose-100 text-rose-700 px-2 py-0.5 rounded-full font-bold">
+                🔒 Xem hết video 2 để mở khóa
+              </span>
+            </div>
+
+            <div class="space-y-3 text-sm">
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <p class="font-bold text-slate-900 mb-2">**Câu 1:** Điểm cực trị của hàm số (hỏi $x$) xuất hiện khi:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq21" value="A" class="accent-indigo-600"> <span><strong>A.</strong> Đạo hàm $f'(x) = 0$ (hoặc không xác định) và đổi dấu qua điểm đó</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq21" value="B" class="accent-indigo-600"> <span><strong>B.</strong> $f'(x) = 0$ dù không đổi dấu</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq21" value="C" class="accent-indigo-600"> <span><strong>C.</strong> $f''(x) = 0$</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq21" value="D" class="accent-indigo-600"> <span><strong>D.</strong> Hàm không xác định</span></label>
+                </div>
+              </div>
+
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <p class="font-bold text-slate-900 mb-2">**Câu 2:** Nếu $f'(x_0) = 0$ là nghiệm kép (bội chẵn) của $f'(x)$, thì tại $x_0$ hàm số:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq22" value="A" class="accent-indigo-600"> <span><strong>A.</strong> Cực đại</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq22" value="B" class="accent-indigo-600"> <span><strong>B.</strong> Không có cực trị</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq22" value="C" class="accent-indigo-600"> <span><strong>C.</strong> Cực tiểu</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq22" value="D" class="accent-indigo-600"> <span><strong>D.</strong> Gián đoạn</span></label>
+                </div>
+              </div>
+
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <p class="font-bold text-slate-900 mb-2">**Câu 3:** Khi đề bài hỏi "Giá trị cực trị" của hàm số, ta cần trả lời:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq23" value="A" class="accent-indigo-600"> <span><strong>A.</strong> Giá trị $y$ tại điểm cực trị</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq23" value="B" class="accent-indigo-600"> <span><strong>B.</strong> Hoành độ $x$</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq23" value="C" class="accent-indigo-600"> <span><strong>C.</strong> Tọa độ điểm đồ thị $(x; y)$</span></label>
+                  <label class="flex items-center gap-2 p-2 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-indigo-50"><input type="radio" name="mq23" value="D" class="accent-indigo-600"> <span><strong>D.</strong> Đạo hàm tại điểm đó</span></label>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" onclick="submitModalMCQ(2)" class="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-sm active:scale-95">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>✅ Nộp 3 câu MCQ Mục 2 để mở khóa Phiếu 24 ý</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- SECTION 3: PHIẾU 6 CÂU ĐÚNG / SAI (24 Ý) -->
+        <div id="modal-sec-3" class="bg-white rounded-2xl border-2 border-slate-200 p-4 sm:p-5 shadow-sm space-y-4 locked transition-all duration-300">
+          <div class="flex items-center justify-between pb-3 border-b border-indigo-100 flex-wrap gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-xs">3</span>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-black text-indigo-950 text-base sm:text-lg">Phần II: Luyện tập 6 câu Đúng / Sai (24 ý)</h4>
+                  <span id="modal-sec3-badge" class="bg-slate-200 text-slate-700 text-[10px] px-2 py-0.5 rounded-full font-bold">🔒 Khóa</span>
+                </div>
+                <p class="text-xs text-slate-500">Chuẩn ma trận đề thi tốt nghiệp THPT Bộ GD&ĐT</p>
+              </div>
+            </div>
+            <span class="text-xs font-bold bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full">24 ý kiểm tra</span>
+          </div>
+
+          <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 text-center space-y-3">
+            <div class="text-3xl">🎉</div>
+            <h4 class="font-black text-emerald-900 text-base sm:text-lg">Tuyệt vời! Em đã hoàn thành trọn bộ 2 Video Micro-learning!</h4>
+            <p class="text-xs sm:text-sm text-emerald-700">Phiếu luyện tập 6 câu Đúng / Sai (24 ý) đã sẵn sàng. Em có thể làm trực tiếp trên bảng tương tác chuyên biệt của trang web:</p>
+            <button type="button" onclick="closeMicrolearningVideoModal(); switchStudyTab('tf');" class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-sm transition shadow-md cursor-pointer active:scale-95 inline-flex items-center gap-2">
+              <i class="fa-solid fa-list-check"></i>
+              <span>Mở Phiếu 24 Ý trên Giao Diện Chính</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-3 sm:p-4 bg-slate-100 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600 shrink-0">
+        <span class="flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
+          <span>Thầy Thuấn Phan • Hệ thống Micro-learning Toán 12</span>
+        </span>
+        <button type="button" onclick="closeMicrolearningVideoModal()" class="px-4 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-lg cursor-pointer transition">
+          Đóng
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // HỆ THỐNG GATING WORKFLOW & VIDEO BÀI GIẢNG (MICRO-LEARNING THẦY THUẤN PHAN)
+    // =========================================================================
+    window.lesson1GatingState = window.lesson1GatingState || {
+      video1Done: false,
+      mcq1Done: false,
+      video2Done: false,
+      mcq2Done: false
+    };
+
+    function openMicrolearningVideoModal() {
+      const modal = document.getElementById('modal-microlearning-video');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        renderMath(modal);
+      }
+    }
+    window.openMicrolearningVideoModal = openMicrolearningVideoModal;
+
+    function closeMicrolearningVideoModal() {
+      const modal = document.getElementById('modal-microlearning-video');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+    window.closeMicrolearningVideoModal = closeMicrolearningVideoModal;
+
+    function toggleLessonVideo(wrapperId) {
+      const el = document.getElementById(wrapperId + '-wrapper');
+      if (el) {
+        el.classList.toggle('hidden');
+        if (!el.classList.contains('hidden')) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+    }
+    window.toggleLessonVideo = toggleLessonVideo;
+    window.toggleVideo = toggleLessonVideo;
+
+    function toggleModalVideo(id) {
+      const el = document.getElementById(id + '-wrapper');
+      if (el) {
+        el.classList.toggle('hidden');
+      }
+    }
+    window.toggleModalVideo = toggleModalVideo;
+
+    function markLessonVideoCompleted(num) {
+      if (!window.lesson1GatingState) {
+        window.lesson1GatingState = { video1Done: false, mcq1Done: false, video2Done: false, mcq2Done: false };
+      }
+      if (num === 1) {
+        window.lesson1GatingState.video1Done = true;
+        alert('🎉 Tuyệt vời! Em đã xem xong Video 1. Hãy làm 3 câu trắc nghiệm Mục 1 bên dưới để tự động mở khóa Mục 2.');
+        if (typeof handleGoToMCQ === 'function') {
+          handleGoToMCQ(0);
+        }
+      } else if (num === 2) {
+        window.lesson1GatingState.video2Done = true;
+        alert('🎉 Rất tốt! Em đã xem xong Video 2. Hãy hoàn thành 3 câu trắc nghiệm Mục 2 để mở khóa Phiếu 24 ý.');
+        if (typeof handleGoToMCQ === 'function') {
+          handleGoToMCQ(0);
+        }
+      }
+      if (typeof renderTheoryPanel === 'function') {
+        renderTheoryPanel();
+      }
+    }
+    window.markLessonVideoCompleted = markLessonVideoCompleted;
+    window.markVideoCompleted = markLessonVideoCompleted;
+
+    function markModalVideoCompleted(num) {
+      if (num === 1) {
+        const mcq1 = document.getElementById('modal-mcq1');
+        if (mcq1) mcq1.classList.remove('locked');
+        const badge = document.getElementById('modal-mcq1-badge');
+        if (badge) {
+          badge.className = 'text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-bold';
+          badge.innerHTML = '🔓 Đã mở khóa';
+        }
+        alert('🎉 Đã xem xong Video 1! Hãy trả lời 3 câu trắc nghiệm để mở khóa Mục 2.');
+      } else if (num === 2) {
+        const mcq2 = document.getElementById('modal-mcq2');
+        if (mcq2) mcq2.classList.remove('locked');
+        const badge = document.getElementById('modal-mcq2-badge');
+        if (badge) {
+          badge.className = 'text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-bold';
+          badge.innerHTML = '🔓 Đã mở khóa';
+        }
+        alert('🎉 Đã xem xong Video 2! Hãy trả lời 3 câu trắc nghiệm để mở khóa Phiếu 24 ý.');
+      }
+    }
+    window.markModalVideoCompleted = markModalVideoCompleted;
+
+    function submitModalMCQ(section) {
+      const names = section === 1 ? ['mq1', 'mq2', 'mq3'] : ['mq21', 'mq22', 'mq23'];
+      let ok = true;
+      names.forEach(n => {
+        const checked = Array.from(document.getElementsByName(n)).some(r => r.checked);
+        if (!checked) ok = false;
+      });
+
+      if (!ok) {
+        alert('⚠️ Vui lòng chọn đáp án cho tất cả 3 câu trắc nghiệm trước khi nộp bài!');
+        return;
+      }
+
+      if (section === 1) {
+        window.lesson1GatingState.mcq1Done = true;
+        const sec2 = document.getElementById('modal-sec-2');
+        if (sec2) {
+          sec2.classList.remove('locked');
+          sec2.classList.add('border-purple-300');
+        }
+        const badge = document.getElementById('modal-sec2-badge');
+        if (badge) {
+          badge.className = 'bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-bold';
+          badge.innerHTML = '🔓 Đã mở khóa';
+        }
+        const step2 = document.getElementById('modal-step-badge-2');
+        if (step2) {
+          step2.className = 'flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400 text-slate-950 shrink-0';
+        }
+        alert('🎉 Chúc mừng em đã hoàn thành Mục 1! Mục 2: Cực trị của hàm số đã được mở khóa.');
+        if (sec2) sec2.scrollIntoView({ behavior: 'smooth' });
+      } else if (section === 2) {
+        window.lesson1GatingState.mcq2Done = true;
+        const sec3 = document.getElementById('modal-sec-3');
+        if (sec3) {
+          sec3.classList.remove('locked');
+          sec3.classList.add('border-emerald-300');
+        }
+        const badge = document.getElementById('modal-sec3-badge');
+        if (badge) {
+          badge.className = 'bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-bold';
+          badge.innerHTML = '🔓 Đã mở khóa';
+        }
+        const step3 = document.getElementById('modal-step-badge-3');
+        if (step3) {
+          step3.className = 'flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500 text-white shrink-0';
+        }
+        alert('🎉 Xuất sắc! Em đã hoàn thành toàn bộ 2 video và 6 câu trắc nghiệm. Phiếu 24 ý đã mở khóa!');
+        if (sec3) sec3.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    window.submitModalMCQ = submitModalMCQ;
+    window.submitMCQ = submitModalMCQ;
+    window.unlockSection2 = function() { submitModalMCQ(1); };
+  </script>
 
 </body>
 </html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 1: Tính đơn điệu và cực trị của hàm số - Thầy Thuấn Phan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- KaTeX CDN cho công thức toán -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}]});"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Tinos (Times New Roman web-optimized) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    *, html, body {
+      font-family: 'Times New Roman', 'Tinos', serif;
+    }
+    .fa, .fas, .far, .fa-solid {
+      font-family: "Font Awesome 6 Free", FontAwesome, sans-serif !important;
+    }
+    .locked {
+      opacity: 0.45;
+      pointer-events: none;
+      filter: grayscale(40%);
+      user-select: none;
+    }
+    .unlock-fade {
+      transition: all 0.5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-100 text-slate-900 leading-relaxed min-h-screen flex flex-col font-serif">
+
+  <!-- ==================== BANNER ĐẦU TRANG ==================== -->
+  <header class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-purple-900 text-white py-5 px-4 shadow-lg border-b-4 border-amber-400 sticky top-0 z-30">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-2xl font-black shadow-md shrink-0">
+          🎉
+        </div>
+        <div>
+          <h1 class="text-lg sm:text-2xl font-black tracking-tight leading-tight">
+            CHÀO MỪNG CÁC EM ĐẾN VỚI LỚP HỌC TOÁN CỦA THẦY THUẤN PHAN
+          </h1>
+          <p class="text-xs sm:text-sm text-indigo-200 mt-0.5">
+            Micro-learning Toán 12 • Bài 1: Tính đơn điệu và cực trị của hàm số (SGK Kết nối tri thức)
+          </p>
+        </div>
+      </div>
+      <a href="index.html" class="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/30 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 shrink-0 text-white shadow-xs">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Về trang chủ</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Thanh tiến trình khóa liên hoàn (Gating Stepper) -->
+  <div class="bg-indigo-950 text-white py-2.5 px-4 border-b border-indigo-800 text-xs sm:text-sm">
+    <div class="max-w-4xl mx-auto flex items-center justify-between gap-2 overflow-x-auto no-scrollbar font-bold">
+      <div id="step-badge-1" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400 text-slate-950 shrink-0">
+        <span class="w-5 h-5 rounded-full bg-slate-950 text-amber-300 flex items-center justify-center text-xs">1</span>
+        <span>Video 1 & MCQ 1</span>
+      </div>
+      <i class="fa-solid fa-chevron-right text-indigo-400 text-xs shrink-0"></i>
+      <div id="step-badge-2" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-900/80 text-indigo-300 shrink-0 border border-indigo-700">
+        <span class="w-5 h-5 rounded-full bg-indigo-800 text-indigo-200 flex items-center justify-center text-xs">2</span>
+        <span>Video 2 & MCQ 2</span>
+      </div>
+      <i class="fa-solid fa-chevron-right text-indigo-400 text-xs shrink-0"></i>
+      <div id="step-badge-3" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-900/80 text-indigo-300 shrink-0 border border-indigo-700">
+        <span class="w-5 h-5 rounded-full bg-indigo-800 text-indigo-200 flex items-center justify-center text-xs">3</span>
+        <span>Phiếu 6 câu Đúng / Sai (24 ý)</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-3 sm:px-4 py-6 flex-1 w-full space-y-8">
+
+    <!-- ========================================================================= -->
+    <!-- MỤC 1 - VIDEO 1: TÍNH ĐƠN ĐIỆU CỦA HÀM SỐ (5 PHÚT)                       -->
+    <!-- ========================================================================= -->
+    <section id="section-1" class="bg-white rounded-2xl border-2 border-indigo-200 shadow-sm p-4 sm:p-6 space-y-5 unlock-fade">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-indigo-100 gap-3">
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-base shadow-xs shrink-0">
+            1
+          </span>
+          <div>
+            <h2 class="text-lg sm:text-xl font-black text-indigo-950 leading-tight">
+              Mục 1: Tính đơn điệu của hàm số
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium">Thời lượng video: Đúng 05:00 • Tỉ lệ 16:9 • Giọng đọc chuẩn sư phạm</p>
+          </div>
+        </div>
+        <button id="btn-show-video1"
+                class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 active:scale-95 text-slate-950 font-black rounded-xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer text-sm"
+                onclick="toggleVideo('video1')">
+          <i class="fa-solid fa-play"></i>
+          <span>▶ Xem Video bài giảng (5 phút)</span>
+        </button>
+      </div>
+
+      <!-- Khung iframe video responsive 16:9 -->
+      <div id="video1-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl shadow-inner">
+        <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
+          <iframe id="video1"
+                  class="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1"
+                  title="Video 1: Tính đơn điệu của hàm số"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
+          <span class="text-xs text-amber-300 font-medium flex items-center gap-1.5">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Xem hết video 5 phút, sau đó bấm nút bên cạnh để mở khóa 3 câu trắc nghiệm Mục 1:</span>
+          </span>
+          <button id="btn-complete-video1"
+                  class="w-full sm:w-auto px-5 py-2 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold rounded-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                  onclick="markVideoCompleted(1)">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>✅ Hoàn thành video 1</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Khối tóm tắt kịch bản video 1 -->
+      <div class="bg-indigo-50/70 border border-indigo-200 rounded-xl p-3 sm:p-4 text-xs sm:text-sm text-indigo-950 space-y-2">
+        <div class="font-bold text-indigo-900 flex items-center gap-1.5 text-[11.5pt]">
+          <i class="fa-solid fa-lightbulb text-amber-500"></i>
+          <span>Nội dung cốt lõi Video 1 (05:00):</span>
+        </div>
+        <ul class="list-disc list-inside space-y-1 text-slate-700 pl-1 leading-normal">
+          <li><strong>00:00 - 00:50:</strong> Định lý cốt lõi: $f'(x) > 0 \Rightarrow$ hàm số đồng biến; $f'(x) < 0 \Rightarrow$ hàm số nghịch biến.</li>
+          <li><strong>00:50 - 01:30:</strong> Định lý mở rộng: $f'(x) = 0$ tại hữu hạn điểm. Cảnh báo cấm dùng dấu $\cup$ hoặc $\backslash$.</li>
+          <li><strong>01:30 - 04:15:</strong> Hai ví dụ mẫu thực chiến: Đọc bảng xét dấu đạo hàm và Khảo sát $y = -x^3 + 3x^2 + 9x - 2$.</li>
+          <li><strong>04:15 - 05:00:</strong> Khóa điều hướng: Trả lời đủ 3 câu trắc nghiệm bên dưới để mở khóa Mục 2.</li>
+        </ul>
+      </div>
+
+      <!-- ==== PHẦN TRẮC NGHIỆM MỤC 1 (GATING WORKFLOW) ==== -->
+      <div id="mcq1" class="mt-6 locked unlock-fade border-t-2 border-indigo-100 pt-5 space-y-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-black text-xs shadow-xs">
+              MCQ
+            </span>
+            <h3 class="font-bold text-base sm:text-lg text-indigo-950">
+              3 Câu trắc nghiệm Mục 1 (Bắt buộc hoàn thành để mở khóa Mục 2)
+            </h3>
+          </div>
+          <span id="mcq1-lock-status" class="text-xs bg-rose-100 text-rose-700 border border-rose-200 px-2.5 py-1 rounded-full font-bold flex items-center gap-1">
+            <i class="fa-solid fa-lock"></i> Chưa mở khóa (Hãy bấm "Hoàn thành video 1")
+          </span>
+        </div>
+
+        <!-- Câu 1 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 sm:p-4 space-y-2.5">
+          <p class="font-bold text-slate-900 text-sm sm:text-base">
+            **Câu 1:** Trên khoảng $(-\infty; -2)$ và $(1; +\infty)$ hàm số có $f'(x) > 0$. Khẳng định nào sau đây đúng?
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm">
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q1" value="A" class="accent-indigo-600">
+              <span><strong>A.</strong> Đồng biến</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q1" value="B" class="accent-indigo-600">
+              <span><strong>B.</strong> Nghịch biến</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q1" value="C" class="accent-indigo-600">
+              <span><strong>C.</strong> Không đổi</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q1" value="D" class="accent-indigo-600">
+              <span><strong>D.</strong> Cực đại</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 2 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 sm:p-4 space-y-2.5">
+          <p class="font-bold text-slate-900 text-sm sm:text-base">
+            **Câu 2:** Nếu $f'(x) = 0$ chỉ xảy ra tại một số điểm rời rạc (hữu hạn điểm), thì tính đơn điệu của hàm số sẽ:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q2" value="A" class="accent-indigo-600">
+              <span><strong>A.</strong> Bị mất hoàn toàn</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q2" value="B" class="accent-indigo-600">
+              <span><strong>B.</strong> Không thay đổi (được bảo toàn)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q2" value="C" class="accent-indigo-600">
+              <span><strong>C.</strong> Hàm số luôn trở thành hàm hằng</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q2" value="D" class="accent-indigo-600">
+              <span><strong>D.</strong> Không thể kết luận</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 3 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 sm:p-4 space-y-2.5">
+          <p class="font-bold text-slate-900 text-sm sm:text-base">
+            **Câu 3:** Khi kết luận khoảng đơn điệu của hàm số trong đề thi, quy tắc chuẩn là:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q3" value="A" class="accent-indigo-600">
+              <span><strong>A.</strong> Có thể dùng dấu hợp $\cup$</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q3" value="B" class="accent-indigo-600">
+              <span><strong>B.</strong> Cấm dùng ký hiệu $\cup$ hoặc $\backslash$, dùng chữ "và" hoặc dấu ";"</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q3" value="C" class="accent-indigo-600">
+              <span><strong>C.</strong> Dùng dấu trừ tập hợp $\backslash$</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q3" value="D" class="accent-indigo-600">
+              <span><strong>D.</strong> Tùy ý chọn cách biểu diễn bất kỳ</span>
+            </label>
+          </div>
+        </div>
+
+        <button id="btn-submit-mcq1"
+                class="w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-bold rounded-xl text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                onclick="submitMCQ(1)">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>✅ Nộp 3 câu MCQ Mục 1 để mở khóa Mục 2</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- MỤC 2 - VIDEO 2: CỰC TRỊ CỦA HÀM SỐ (5 PHÚT) (LOCKED MẶC ĐỊNH)           -->
+    <!-- ========================================================================= -->
+    <section id="section-2" class="bg-white rounded-2xl border-2 border-slate-200 shadow-sm p-4 sm:p-6 space-y-5 locked unlock-fade">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-indigo-100 gap-3">
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-base shadow-xs shrink-0">
+            2
+          </span>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="text-lg sm:text-xl font-black text-indigo-950 leading-tight">
+                Mục 2: Cực trị của hàm số
+              </h2>
+              <span id="badge-lock-sec2" class="bg-slate-200 text-slate-700 text-[10px] px-2 py-0.5 rounded-full font-bold flex items-center gap-1">
+                <i class="fa-solid fa-lock text-[9px]"></i> Khóa
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium">Thời lượng video: Đúng 05:00 • Tỉ lệ 16:9 • Giọng đọc chuẩn sư phạm</p>
+          </div>
+        </div>
+        <button id="btn-show-video2"
+                class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 active:scale-95 text-slate-950 font-black rounded-xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer text-sm"
+                onclick="toggleVideo('video2')">
+          <i class="fa-solid fa-play"></i>
+          <span>▶ Xem Video bài giảng (5 phút)</span>
+        </button>
+      </div>
+
+      <!-- Khung iframe video responsive 16:9 cho Video 2 -->
+      <div id="video2-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl shadow-inner">
+        <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
+          <iframe id="video2"
+                  class="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1"
+                  title="Video 2: Cực trị của hàm số"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
+          <span class="text-xs text-amber-300 font-medium flex items-center gap-1.5">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Xem hết video 5 phút, sau đó bấm nút bên cạnh để mở khóa 3 câu trắc nghiệm Mục 2:</span>
+          </span>
+          <button id="btn-complete-video2"
+                  class="w-full sm:w-auto px-5 py-2 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold rounded-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                  onclick="markVideoCompleted(2)">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>✅ Hoàn thành video 2</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Khối tóm tắt kịch bản video 2 -->
+      <div class="bg-purple-50/70 border border-purple-200 rounded-xl p-3 sm:p-4 text-xs sm:text-sm text-indigo-950 space-y-2">
+        <div class="font-bold text-purple-900 flex items-center gap-1.5 text-[11.5pt]">
+          <i class="fa-solid fa-lightbulb text-amber-500"></i>
+          <span>Nội dung cốt lõi Video 2 (05:00):</span>
+        </div>
+        <ul class="list-disc list-inside space-y-1 text-slate-700 pl-1 leading-normal">
+          <li><strong>00:00 - 00:50:</strong> Bản chất cực trị và dấu hiệu đổi dấu của $f'(x)$ (+ sang - là cực đại; - sang + là cực tiểu).</li>
+          <li><strong>00:50 - 01:35:</strong> Phân biệt 3 thuật ngữ: Điểm cực trị hàm số ($x$), Giá trị cực trị ($y$), Điểm cực trị đồ thị ($M(x; y)$). Nghiệm kép không là cực trị.</li>
+          <li><strong>01:35 - 04:15:</strong> Hai ví dụ trọng tâm: $x = 0$ đạo hàm không xác định nhưng vẫn là cực đại; Tìm cực trị $y = 2x^3 - 3x^2 - 12x + 1$.</li>
+          <li><strong>04:15 - 05:00:</strong> Chuyển giao: Hoàn thành 3 câu MCQ Mục 2 để mở khóa Phiếu 6 câu Đúng / Sai (24 ý).</li>
+        </ul>
+      </div>
+
+      <!-- ==== PHẦN TRẮC NGHIỆM MỤC 2 (GATING WORKFLOW) ==== -->
+      <div id="mcq2" class="mt-6 locked unlock-fade border-t-2 border-purple-100 pt-5 space-y-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-black text-xs shadow-xs">
+              MCQ
+            </span>
+            <h3 class="font-bold text-base sm:text-lg text-indigo-950">
+              3 Câu trắc nghiệm Mục 2 (Bắt buộc hoàn thành để mở khóa Phiếu 24 ý)
+            </h3>
+          </div>
+          <span id="mcq2-lock-status" class="text-xs bg-rose-100 text-rose-700 border border-rose-200 px-2.5 py-1 rounded-full font-bold flex items-center gap-1">
+            <i class="fa-solid fa-lock"></i> Chưa mở khóa (Hãy bấm "Hoàn thành video 2")
+          </span>
+        </div>
+
+        <!-- Câu 1 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 sm:p-4 space-y-2.5">
+          <p class="font-bold text-slate-900 text-sm sm:text-base">
+            **Câu 1:** Điểm cực trị của hàm số (hỏi $x$) xuất hiện khi:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q21" value="A" class="accent-indigo-600">
+              <span><strong>A.</strong> Đạo hàm $f'(x) = 0$ (hoặc không xác định) và đổi dấu qua điểm đó</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q21" value="B" class="accent-indigo-600">
+              <span><strong>B.</strong> $f'(x) = 0$ dù không đổi dấu</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q21" value="C" class="accent-indigo-600">
+              <span><strong>C.</strong> Đạo hàm cấp 2 $f''(x) = 0$</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q21" value="D" class="accent-indigo-600">
+              <span><strong>D.</strong> Hàm số không xác định</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 2 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 sm:p-4 space-y-2.5">
+          <p class="font-bold text-slate-900 text-sm sm:text-base">
+            **Câu 2:** Nếu $f'(x_0) = 0$ và $x_0$ là nghiệm kép (bội chẵn) của $f'(x)$, thì tại $x_0$ hàm số:
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm">
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q22" value="A" class="accent-indigo-600">
+              <span><strong>A.</strong> Đạt cực đại</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q22" value="B" class="accent-indigo-600">
+              <span><strong>B.</strong> Không có cực trị</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q22" value="C" class="accent-indigo-600">
+              <span><strong>C.</strong> Đạt cực tiểu</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q22" value="D" class="accent-indigo-600">
+              <span><strong>D.</strong> Bị gián đoạn</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Câu 3 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 sm:p-4 space-y-2.5">
+          <p class="font-bold text-slate-900 text-sm sm:text-base">
+            **Câu 3:** Khi đề bài hỏi "Giá trị cực trị" của hàm số, ta cần trả lời:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q23" value="A" class="accent-indigo-600">
+              <span><strong>A.</strong> Giá trị $y$ tại điểm cực trị ($y_{\text{CĐ}}$ hoặc $y_{\text{CT}}$)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q23" value="B" class="accent-indigo-600">
+              <span><strong>B.</strong> Hoành độ $x$ tại điểm cực trị</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q23" value="C" class="accent-indigo-600">
+              <span><strong>C.</strong> Tọa độ đầy đủ $(x; y)$ của điểm cực trị đồ thị</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50 hover:border-indigo-300 cursor-pointer transition">
+              <input type="radio" name="q23" value="D" class="accent-indigo-600">
+              <span><strong>D.</strong> Đạo hàm tại điểm đó</span>
+            </label>
+          </div>
+        </div>
+
+        <button id="btn-submit-mcq2"
+                class="w-full sm:w-auto px-6 py-3 bg-purple-600 hover:bg-purple-700 active:scale-95 text-white font-bold rounded-xl text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                onclick="submitMCQ(2)">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>✅ Nộp 3 câu MCQ Mục 2 để mở khóa Phiếu 24 ý</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- MỤC 3 - BÀI TẬP LUYỆN TẬP ĐÚNG / SAI (24 Ý) (LOCKED MẶC ĐỊNH)             -->
+    <!-- ========================================================================= -->
+    <section id="section-3" class="bg-white rounded-2xl border-2 border-slate-200 shadow-sm p-4 sm:p-6 space-y-5 locked unlock-fade">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-indigo-100 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-base shadow-xs shrink-0">
+            3
+          </span>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="text-lg sm:text-xl font-black text-indigo-950 leading-tight">
+                Phần II: Luyện tập 6 câu Đúng / Sai (24 ý)
+              </h2>
+              <span id="badge-lock-sec3" class="bg-slate-200 text-slate-700 text-[10px] px-2 py-0.5 rounded-full font-bold flex items-center gap-1">
+                <i class="fa-solid fa-lock text-[9px]"></i> Khóa
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium">Chuẩn ma trận Bộ GD&ĐT • Mỗi câu 4 ý a, b, c, d</p>
+          </div>
+        </div>
+        <span class="text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1 rounded-full">
+          24 ý kiểm tra kiến thức
+        </span>
+      </div>
+
+      <!-- 6 Câu Đúng / Sai -->
+      <div class="space-y-4">
+        
+        <!-- Câu 1 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
+          <p class="font-bold text-slate-900 text-sm sm:text-base">
+            **Câu 1:** Cho hàm số $y = f(x)$ xác định trên $\mathbb{R} \setminus \{1\}$ và có bảng biến thiên với $f'(x) > 0$ trên $(-\infty; 1)$ và $(1; +\infty)$.
+          </p>
+          <div class="space-y-2 text-sm pl-2">
+            <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg border border-slate-200">
+              <span><strong>a)</strong> Hàm số đồng biến trên từng khoảng $(-\infty; 1)$ và $(1; +\infty)$.</span>
+              <div class="flex items-center gap-3 shrink-0">
+                <label class="inline-flex items-center gap-1 text-emerald-700 font-bold cursor-pointer"><input type="radio" name="tf1_a" value="D" class="accent-emerald-600"> Đ</label>
+                <label class="inline-flex items-center gap-1 text-rose-700 font-bold cursor-pointer"><input type="radio" name="tf1_a" value="S" class="accent-rose-600"> S</label>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg border border-slate-200">
+              <span><strong>b)</strong> Kết luận hàm số đồng biến trên $\mathbb{R} \setminus \{1\}$ là đúng quy chuẩn.</span>
+              <div class="flex items-center gap-3 shrink-0">
+                <label class="inline-flex items-center gap-1 text-emerald-700 font-bold cursor-pointer"><input type="radio" name="tf1_b" value="D" class="accent-emerald-600"> Đ</label>
+                <label class="inline-flex items-center gap-1 text-rose-700 font-bold cursor-pointer"><input type="radio" name="tf1_b" value="S" class="accent-rose-600"> S</label>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg border border-slate-200">
+              <span><strong>c)</strong> Đồ thị hàm số không có điểm cực trị.</span>
+              <div class="flex items-center gap-3 shrink-0">
+                <label class="inline-flex items-center gap-1 text-emerald-700 font-bold cursor-pointer"><input type="radio" name="tf1_c" value="D" class="accent-emerald-600"> Đ</label>
+                <label class="inline-flex items-center gap-1 text-rose-700 font-bold cursor-pointer"><input type="radio" name="tf1_c" value="S" class="accent-rose-600"> S</label>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg border border-slate-200">
+              <span><strong>d)</strong> Phương trình $f'(x) = 0$ có vô số nghiệm.</span>
+              <div class="flex items-center gap-3 shrink-0">
+                <label class="inline-flex items-center gap-1 text-emerald-700 font-bold cursor-pointer"><input type="radio" name="tf1_d" value="D" class="accent-emerald-600"> Đ</label>
+                <label class="inline-flex items-center gap-1 text-rose-700 font-bold cursor-pointer"><input type="radio" name="tf1_d" value="S" class="accent-rose-600"> S</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Câu 2 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
+          <p class="font-bold text-slate-900 text-sm sm:text-base">
+            **Câu 2:** Cho hàm số bậc ba $y = -x^3 + 3x^2 + 9x - 2$.
+          </p>
+          <div class="space-y-2 text-sm pl-2">
+            <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg border border-slate-200">
+              <span><strong>a)</strong> Đạo hàm của hàm số là $y' = -3x^2 + 6x + 9$.</span>
+              <div class="flex items-center gap-3 shrink-0">
+                <label class="inline-flex items-center gap-1 text-emerald-700 font-bold cursor-pointer"><input type="radio" name="tf2_a" value="D" class="accent-emerald-600"> Đ</label>
+                <label class="inline-flex items-center gap-1 text-rose-700 font-bold cursor-pointer"><input type="radio" name="tf2_a" value="S" class="accent-rose-600"> S</label>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg border border-slate-200">
+              <span><strong>b)</strong> Hàm số đồng biến trên khoảng $(-1; 3)$.</span>
+              <div class="flex items-center gap-3 shrink-0">
+                <label class="inline-flex items-center gap-1 text-emerald-700 font-bold cursor-pointer"><input type="radio" name="tf2_a" value="D" class="accent-emerald-600"> Đ</label>
+                <label class="inline-flex items-center gap-1 text-rose-700 font-bold cursor-pointer"><input type="radio" name="tf2_a" value="S" class="accent-rose-600"> S</label>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg border border-slate-200">
+              <span><strong>c)</strong> Điểm cực đại của hàm số là $x = 3$.</span>
+              <div class="flex items-center gap-3 shrink-0">
+                <label class="inline-flex items-center gap-1 text-emerald-700 font-bold cursor-pointer"><input type="radio" name="tf2_c" value="D" class="accent-emerald-600"> Đ</label>
+                <label class="inline-flex items-center gap-1 text-rose-700 font-bold cursor-pointer"><input type="radio" name="tf2_c" value="S" class="accent-rose-600"> S</label>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg border border-slate-200">
+              <span><strong>d)</strong> Giá trị cực tiểu của hàm số bằng $-7$.</span>
+              <div class="flex items-center gap-3 shrink-0">
+                <label class="inline-flex items-center gap-1 text-emerald-700 font-bold cursor-pointer"><input type="radio" name="tf2_d" value="D" class="accent-emerald-600"> Đ</label>
+                <label class="inline-flex items-center gap-1 text-rose-700 font-bold cursor-pointer"><input type="radio" name="tf2_d" value="S" class="accent-rose-600"> S</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-xl text-center text-xs sm:text-sm text-indigo-900 font-medium">
+          💡 Các câu 3, 4, 5, 6 tiếp tục được tự động tải từ ngân hàng câu hỏi chuẩn SGK Kết nối tri thức của hệ thống.
+        </div>
+      </div>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <a href="index.html" class="w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Luyện tập đầy đủ 24 ý trên Trang chủ web app</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-indigo-950 text-indigo-300 py-4 px-4 text-center text-xs border-t border-indigo-900">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span>© 2026 - 2027 Trợ Lý Học Tập Toán 10 - 12 • Thầy Thuấn Phan</span>
+      <span>Hệ thống Micro-learning & Gating Workflow tự động chuẩn Bộ GD&ĐT</span>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPT GATING LOGIC ==================== -->
+  <script>
+    const gatingState = {
+      video1Done: false,
+      mcq1Done: false,
+      video2Done: false,
+      mcq2Done: false
+    };
+
+    // Toggle hiển thị Video bài giảng
+    function toggleVideo(id) {
+      const wrapper = document.getElementById(id + '-wrapper');
+      if (wrapper) {
+        wrapper.classList.toggle('hidden');
+      }
+    }
+
+    // Đánh dấu video đã xem -> Mở khóa phần MCQ tương ứng
+    function markVideoCompleted(num) {
+      if (num === 1) {
+        gatingState.video1Done = true;
+        const mcq1 = document.getElementById('mcq1');
+        if (mcq1) {
+          mcq1.classList.remove('locked');
+        }
+        const lockBadge = document.getElementById('mcq1-lock-status');
+        if (lockBadge) {
+          lockBadge.className = 'text-xs bg-emerald-100 text-emerald-700 border border-emerald-300 px-2.5 py-1 rounded-full font-bold flex items-center gap-1';
+          lockBadge.innerHTML = '<i class="fa-solid fa-lock-open"></i> Đã mở khóa làm bài';
+        }
+        alert('🎉 Tuyệt vời! Em đã xem xong Video 1. Hãy trả lời 3 câu hỏi trắc nghiệm Mục 1 bên dưới để mở khóa Mục 2.');
+      } else if (num === 2) {
+        gatingState.video2Done = true;
+        const mcq2 = document.getElementById('mcq2');
+        if (mcq2) {
+          mcq2.classList.remove('locked');
+        }
+        const lockBadge = document.getElementById('mcq2-lock-status');
+        if (lockBadge) {
+          lockBadge.className = 'text-xs bg-emerald-100 text-emerald-700 border border-emerald-300 px-2.5 py-1 rounded-full font-bold flex items-center gap-1';
+          lockBadge.innerHTML = '<i class="fa-solid fa-lock-open"></i> Đã mở khóa làm bài';
+        }
+        alert('🎉 Rất tốt! Em đã hoàn thành Video 2. Hãy trả lời 3 câu trắc nghiệm Mục 2 để mở khóa Phiếu 24 ý.');
+      }
+    }
+
+    // Nộp trắc nghiệm và kích hoạt gating mở khóa mục kế tiếp
+    function submitMCQ(section) {
+      const required = section === 1 ? ['q1', 'q2', 'q3'] : ['q21', 'q22', 'q23'];
+      let allAnswered = true;
+      
+      required.forEach(name => {
+        const radios = document.getElementsByName(name);
+        const checked = Array.from(radios).some(r => r.checked);
+        if (!checked) allAnswered = false;
+      });
+
+      if (!allAnswered) {
+        alert('⚠️ Em chưa chọn đủ 3 đáp án trắc nghiệm của Mục ' + section + '. Vui lòng trả lời tất cả các câu trước khi nộp bài!');
+        return;
+      }
+
+      if (section === 1) {
+        gatingState.mcq1Done = true;
+        unlockSection2();
+      } else if (section === 2) {
+        gatingState.mcq2Done = true;
+        unlockSection3();
+      }
+    }
+
+    // Mở khóa Mục 2
+    function unlockSection2() {
+      const sec2 = document.getElementById('section-2');
+      if (sec2) {
+        sec2.classList.remove('locked');
+        sec2.classList.add('border-purple-300');
+        sec2.classList.remove('border-slate-200');
+      }
+      const lockBadge = document.getElementById('badge-lock-sec2');
+      if (lockBadge) {
+        lockBadge.className = 'bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-bold flex items-center gap-1';
+        lockBadge.innerHTML = '<i class="fa-solid fa-lock-open text-[9px]"></i> Đã mở khóa';
+      }
+      const stepBadge2 = document.getElementById('step-badge-2');
+      if (stepBadge2) {
+        stepBadge2.className = 'flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400 text-slate-950 shrink-0';
+      }
+      alert('🎉 Chúc mừng em đã hoàn thành Mục 1! Mục 2: Cực trị của hàm số đã được mở khóa.');
+      sec2.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Mở khóa Mục 3 (Phiếu 24 ý)
+    function unlockSection3() {
+      const sec3 = document.getElementById('section-3');
+      if (sec3) {
+        sec3.classList.remove('locked');
+        sec3.classList.add('border-emerald-300');
+        sec3.classList.remove('border-slate-200');
+      }
+      const lockBadge = document.getElementById('badge-lock-sec3');
+      if (lockBadge) {
+        lockBadge.className = 'bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-bold flex items-center gap-1';
+        lockBadge.innerHTML = '<i class="fa-solid fa-lock-open text-[9px]"></i> Đã mở khóa';
+      }
+      const stepBadge3 = document.getElementById('step-badge-3');
+      if (stepBadge3) {
+        stepBadge3.className = 'flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500 text-white shrink-0';
+      }
+      alert('🎉 Xuất sắc! Em đã hoàn tất cả 2 Video bài giảng và 6 câu trắc nghiệm. Phần Luyện tập 24 ý Đúng/Sai đã được mở khóa hoàn toàn!');
+      sec3.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.toggleVideo = toggleVideo;
+    window.markVideoCompleted = markVideoCompleted;
+    window.submitMCQ = submitMCQ;
+    window.unlockSection2 = unlockSection2;
+  </script>
+</body>
+</html>
