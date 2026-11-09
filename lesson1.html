@@ -116,12 +116,11 @@
       <!-- Khung iframe video responsive 16:9 -->
       <div id="video1-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl shadow-inner">
         <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-          <iframe id="video1"
-                  class="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1"
-                  title="Video 1: Tính đơn điệu của hàm số"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+          <video id="player-muc1" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markVideoCompleted(1)">
+            <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+            <source src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+            <source src="/public/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+          </video>
         </div>
         
         <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
@@ -285,12 +284,11 @@
       <!-- Khung iframe video responsive 16:9 cho Video 2 -->
       <div id="video2-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl shadow-inner">
         <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-          <iframe id="video2"
-                  class="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1"
-                  title="Video 2: Cực trị của hàm số"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+          <video id="player-muc2" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markVideoCompleted(2)">
+            <source src="videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+            <source src="/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+            <source src="/public/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+          </video>
         </div>
         
         <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">

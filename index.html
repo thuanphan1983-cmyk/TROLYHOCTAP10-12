@@ -31130,7 +31130,12 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
   <!-- Khung iframe responsive 16:9 Video 1 -->
   <div id="video1-wrapper" class="hidden my-4 p-3 bg-slate-900 rounded-2xl shadow-xl space-y-3 not-prose">
     <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-      <iframe id="video1" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1" title="Video 1: Tính đơn điệu của hàm số" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <video id="player-muc1" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markLessonVideoCompleted(1)">
+        <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+        <source src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+        <source src="/public/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+        Trình duyệt không hỗ trợ thẻ video HTML5.
+      </video>
     </div>
     <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 bg-slate-800 rounded-xl text-white">
       <span class="text-xs text-amber-300 font-medium flex items-center gap-1.5">
@@ -31200,7 +31205,12 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
   <!-- Khung iframe responsive 16:9 Video 2 -->
   <div id="video2-wrapper" class="hidden my-4 p-3 bg-slate-900 rounded-2xl shadow-xl space-y-3 not-prose">
     <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-      <iframe id="video2" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1" title="Video 2: Cực trị của hàm số" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <video id="player-muc2" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markLessonVideoCompleted(2)">
+        <source src="videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+        <source src="/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+        <source src="/public/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+        Trình duyệt không hỗ trợ thẻ video HTML5.
+      </video>
     </div>
     <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 bg-slate-800 rounded-xl text-white">
       <span class="text-xs text-amber-300 font-medium flex items-center gap-1.5">
@@ -38637,7 +38647,11 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
           <!-- Video 1 Wrapper -->
           <div id="modal-video1-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl">
             <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1" title="Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <video id="player-modal-muc1" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black" preload="metadata" onended="markModalVideoCompleted(1)">
+                <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+                <source src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+                <source src="/public/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="flex items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
               <span class="text-xs text-amber-300">Xem xong video 5 phút, bấm nút để mở khóa 3 câu trắc nghiệm:</span>
@@ -38720,7 +38734,11 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
           <!-- Video 2 Wrapper -->
           <div id="modal-video2-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl">
             <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/gK6pI3_pU48?rel=0&modestbranding=1" title="Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <video id="player-modal-muc2" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black" preload="metadata" onended="markModalVideoCompleted(2)">
+                <source src="videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+                <source src="/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+                <source src="/public/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="flex items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
               <span class="text-xs text-amber-300">Xem xong video 5 phút, bấm nút để mở khóa 3 câu trắc nghiệm Mục 2:</span>
