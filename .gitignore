@@ -8,3 +8,4 @@ _video_temp/
 public/*
 !public/js/
 !public/index.html
+!public/audio/

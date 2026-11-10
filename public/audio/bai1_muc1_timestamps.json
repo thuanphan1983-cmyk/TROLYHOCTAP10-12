@@ -1,0 +1,116 @@
+{
+  "lessonId": "bai1_muc1",
+  "lessonTitle": "Bài 1: Tính đơn điệu và cực trị của hàm số",
+  "sectionId": "muc1",
+  "sectionTitle": "Mục 1: Tính đơn điệu của hàm số",
+  "audioSrc": "/audio/bai1_muc1_don_dieu.mp3",
+  "totalDuration": 341.24,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Định nghĩa & Định lý điều kiện cần/đủ",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Bảng xét dấu đạo hàm, bảng biến thiên & Đồ thị SVG",
+      "scenes": [
+        2,
+        3
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa từ cơ bản đến nâng cao",
+      "scenes": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm & Quy trình 4 bước",
+      "scenes": [
+        6
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 1: TÍNH ĐƠN ĐIỆU CỦA HÀM SỐ",
+      "subtitle": "MỤC 1 • KHÁI NIỆM & ĐỊNH LÝ MỞ RỘNG",
+      "startTime": 0.0,
+      "endTime": 49.7,
+      "duration": 49.7,
+      "mascotMode": "pointer",
+      "mascotTip": "<b>Ghi nhớ quy ước:</b> Dấu bằng của đạo hàm xảy ra tại hữu hạn điểm thì hàm số vẫn giữ nguyên tính đơn điệu!",
+      "bodyHtml": "\n        <div style=\"font-size: 28px; color: #fef08a; margin-bottom: 14px; font-weight: bold;\">\n          1. Định nghĩa tính đơn điệu trên khoảng $K$:\n        </div>\n        <div style=\"font-size: 26px; line-height: 1.7; color: #e2e8f0; margin-left: 20px;\">\n          • Hàm số $f(x)$ <b>đồng biến (tăng)</b> trên $K \\iff \\forall x_1, x_2 \\in K: x_1 < x_2 \\implies f(x_1) < f(x_2)$.<br>\n          • Hàm số $f(x)$ <b>nghịch biến (giảm)</b> trên $K \\iff \\forall x_1, x_2 \\in K: x_1 < x_2 \\implies f(x_1) > f(x_2)$.\n        </div>\n\n        <div style=\"font-size: 28px; color: #38bdf8; margin: 20px 0 14px 0; font-weight: bold;\">\n          2. Định lý mở rộng về dấu của đạo hàm (Điều kiện đủ):\n        </div>\n        <div style=\"font-size: 26px; line-height: 1.7; color: #e2e8f0; margin-left: 20px;\">\n          Giả sử hàm số $f(x)$ có đạo hàm trên khoảng $K$:<br>\n          • Nếu $f'(x) \\ge 0, \\; \\forall x \\in K$ và $f'(x) = 0$ tại <b>hữu hạn điểm</b> $\\implies f(x)$ <b>đồng biến</b> trên $K$.<br>\n          • Nếu $f'(x) \\le 0, \\; \\forall x \\in K$ và $f'(x) = 0$ tại <b>hữu hạn điểm</b> $\\implies f(x)$ <b>nghịch biến</b> trên $K$.\n        </div>\n        ",
+      "narration": "Chào các em học sinh thân mến! Hôm nay thầy sẽ hướng dẫn các em tìm hiểu Mục 1 của Bài 1: Tính đơn điệu của hàm số trong chương trình Toán lớp 12. Đầu tiên, về mặt định nghĩa: Hàm số f x đồng biến trên khoảng K nếu với mọi x 1 nhỏ hơn x 2 thì f x 1 luôn nhỏ hơn f x 2; nghĩa là khi biến số x tăng thì giá trị hàm số f x cũng tăng. Ngược lại, hàm số nghịch biến khi x tăng thì f x giảm. Về định lý mở rộng: Nếu đạo hàm f phẩy x lớn hơn hoặc bằng 0 trên khoảng K, và dấu bằng chỉ xảy ra tại một số hữu hạn điểm thì hàm số đồng biến trên khoảng K. Tương tự, nếu f phẩy x nhỏ hơn hoặc bằng 0 và bằng 0 tại hữu hạn điểm thì hàm số nghịch biến."
+    },
+    {
+      "sceneIndex": 2,
+      "title": "VÍ DỤ 1: ĐỌC TÍNH ĐƠN ĐIỆU TỪ BẢNG XÉT DẤU ĐẠO HÀM",
+      "subtitle": "MỤC 1 • KỸ NĂNG ĐỌC BẢNG XÉT DẤU",
+      "startTime": 49.7,
+      "endTime": 97.24,
+      "duration": 47.54,
+      "mascotMode": "magnifier",
+      "mascotTip": "<b>Cảnh báo bẫy:</b> Tuyệt đối <b>không dùng ký hiệu hợp ∪</b> để nối các khoảng! Bắt buộc viết từ <b>'và'</b> hoặc dấu phẩy.",
+      "bodyHtml": "\n        <div style=\"font-size: 27px; color: #fef08a; margin-bottom: 10px;\">\n          <b>Đề bài:</b> Cho hàm số $y = f(x)$ có bảng xét dấu của đạo hàm $f'(x)$ như sau:\n        </div>\n\n        <table class=\"bbt-table\">\n          <tr>\n            <td class=\"bbt-label\">$x$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; text-align: center; font-size: 26px;\">\n                <span>$-\\infty$</span><span></span><span style=\"color:#fef08a;\">$-3$</span><span></span><span style=\"color:#fef08a;\">$0$</span><span></span><span style=\"color:#fef08a;\">$2$</span><span></span><span>$+\\infty$</span>\n              </div>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"bbt-label\">$f'(x)$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; text-align: center; font-size: 28px; font-weight: bold;\">\n                <span></span><span style=\"color:#4ade80;\">$+$</span><span>$0$</span><span style=\"color:#f87171;\">$-$</span><span>$0$</span><span style=\"color:#4ade80;\">$+$</span><span>$0$</span><span style=\"color:#f87171;\">$-$</span><span></span>\n              </div>\n            </td>\n          </tr>\n        </table>\n\n        <div style=\"font-size: 25px; line-height: 1.6; color: #e2e8f0; margin-top: 14px;\">\n          • Khoảng mang dấu <b>$(+)$</b>: $f'(x) > 0 \\implies$ Hàm số <b>đồng biến</b>.<br>\n          • Khoảng mang dấu <b>$(-)$</b>: $f'(x) < 0 \\implies$ Hàm số <b>nghịch biến</b>.<br>\n          <div style=\"color: #67e8f9; margin-top: 8px; font-weight: bold;\">\n            Kết luận chuẩn SGK:\n          </div>\n          - Hàm số đồng biến trên các khoảng $(-\\infty; -3)$ <b>và</b> $(0; 2)$.<br>\n          - Hàm số nghịch biến trên các khoảng $(-3; 0)$ <b>và</b> $(2; +\\infty)$.\n        </div>\n        ",
+      "narration": "Chúng ta cùng đến với Ví dụ 1: Nhận diện tính đơn điệu từ bảng xét dấu của đạo hàm f phẩy x. Quan sát bảng xét dấu, các em hãy chú ý: Tại các khoảng mà f phẩy x mang dấu cộng, đó là khoảng hàm số đồng biến. Cụ thể ở đây, dấu cộng xuất hiện trên hai khoảng: từ âm vô cùng đến âm 3, và khoảng từ 0 đến 2. Tại các khoảng f phẩy x mang dấu trừ, đó là khoảng hàm số nghịch biến: gồm khoảng từ âm 3 đến 0, và khoảng từ 2 đến dương vô cùng. Thầy đặc biệt lưu ý các em: Khi ghi kết luận, chúng ta dùng từ và, hoặc dấu chấm phẩy để nối các khoảng riêng biệt. Tuyệt đối không dùng ký hiệu hợp chữ U, vì đây là lỗi sai kinh điển thường bị trừ điểm trong các đề thi trắc nghiệm và tự luận."
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 2: ĐỌC TÍNH ĐƠN ĐIỆU TỪ ĐỒ THỊ HÀM SỐ",
+      "subtitle": "MỤC 1 • QUY TẮC NHÌN ĐỒ THỊ TỪ TRÁI SANG PHẢI",
+      "startTime": 97.24,
+      "endTime": 148.98,
+      "duration": 51.74,
+      "mascotMode": "pointer",
+      "mascotTip": "<b>Mẹo chiếu tọa độ:</b> Chiếu vuông góc các đoạn đồ thị xuống <b>trục hoành Ox</b> để lấy khoảng biến $x$, không nhìn nhầm trục $Oy$!",
+      "bodyHtml": "\n        <div style=\"display: flex; gap: 40px; align-items: center;\">\n          <!-- SVG Graph -->\n          <div style=\"flex: 1.1; background: rgba(2, 6, 23, 0.7); border: 1.5px solid #38bdf8; border-radius: 16px; padding: 12px; display: flex; justify-content: center;\">\n            <svg width=\"480\" height=\"290\" viewBox=\"-4 -3 8 7\">\n              <!-- Axes -->\n              <line x1=\"-3.5\" y1=\"0\" x2=\"3.8\" y2=\"0\" stroke=\"#94a3b8\" stroke-width=\"0.08\"/>\n              <polygon points=\"3.8,0 3.5,0.1 3.5,-0.1\" fill=\"#94a3b8\"/>\n              <text x=\"3.5\" y=\"-0.3\" font-size=\"0.45\" fill=\"#94a3b8\" font-family=\"'Times New Roman'\">x</text>\n\n              <line x1=\"0\" y1=\"3.2\" x2=\"0\" y2=\"-2.8\" stroke=\"#94a3b8\" stroke-width=\"0.08\"/>\n              <polygon points=\"0,-2.8 -0.1,-2.5 0.1,-2.5\" fill=\"#94a3b8\"/>\n              <text x=\"0.2\" y=\"-2.5\" font-size=\"0.45\" fill=\"#94a3b8\" font-family=\"'Times New Roman'\">y</text>\n              <text x=\"-0.3\" y=\"0.4\" font-size=\"0.4\" fill=\"#94a3b8\" font-family=\"'Times New Roman'\">O</text>\n\n              <!-- Grid projection dashed -->\n              <line x1=\"-1\" y1=\"0\" x2=\"-1\" y2=\"-1.8\" stroke=\"#38bdf8\" stroke-width=\"0.05\" stroke-dasharray=\"0.1,0.1\"/>\n              <circle cx=\"-1\" cy=\"0\" r=\"0.08\" fill=\"#fef08a\"/>\n              <text x=\"-1.2\" y=\"0.4\" font-size=\"0.4\" fill=\"#fef08a\" font-family=\"'Times New Roman'\">-1</text>\n\n              <line x1=\"2\" y1=\"0\" x2=\"2\" y2=\"1.2\" stroke=\"#38bdf8\" stroke-width=\"0.05\" stroke-dasharray=\"0.1,0.1\"/>\n              <circle cx=\"2\" cy=\"0\" r=\"0.08\" fill=\"#fef08a\"/>\n              <text x=\"1.9\" y=\"-0.3\" font-size=\"0.4\" fill=\"#fef08a\" font-family=\"'Times New Roman'\">2</text>\n\n              <!-- Cubic Curve y = 0.4*(x^3 - 1.5*x^2 - 6*x + 2) scaled -->\n              <!-- Local Max at x=-1 (y=1.8), Local Min at x=2 (y=-1.2) -->\n              <path d=\"M -2.8,3.2 C -2.2,0.8 -1.5,-1.8 -1,-1.8 C -0.5,-1.8 1,1.2 2,1.2 C 2.5,1.2 2.8,-0.5 3.2,-2.8\"\n                    stroke=\"#38bdf8\" stroke-width=\"0.12\" fill=\"none\"/>\n              <circle cx=\"-1\" cy=\"-1.8\" r=\"0.1\" fill=\"#f43f5e\"/>\n              <circle cx=\"2\" cy=\"1.2\" r=\"0.1\" fill=\"#4ade80\"/>\n            </svg>\n          </div>\n\n          <!-- Analysis text -->\n          <div style=\"flex: 1.4; font-size: 25px; line-height: 1.6; color: #e2e8f0;\">\n            <div style=\"color: #fef08a; font-weight: bold; font-size: 27px; margin-bottom: 8px;\">\n              Quy tắc đọc từ TRÁI sang PHẢI ($x$ tăng):\n            </div>\n            • <b>Nét đồ thị đi lên:</b> Hàm số <b>đồng biến</b>.<br>\n            • <b>Nét đồ thị đi xuống:</b> Hàm số <b>nghịch biến</b>.<br><br>\n            <div style=\"background: rgba(56, 189, 248, 0.15); border-left: 4px solid #38bdf8; padding: 10px 16px; border-radius: 8px;\">\n              <b>Kết luận các khoảng đơn điệu:</b><br>\n              - Đồng biến trên: $(-\\infty; -1)$ <b>và</b> $(2; +\\infty)$.<br>\n              - Nghịch biến trên: $(-1; 2)$.\n            </div>\n          </div>\n        </div>\n        ",
+      "narration": "Ở Ví dụ 2, chúng ta cùng rèn luyện kỹ năng đọc khoảng đơn điệu từ đồ thị của hàm số y bằng f x. Quy tắc cơ bản là các em hãy quan sát dáng điệu đồ thị từ trái sang phải, tức là theo chiều tăng dần của biến x. Từ âm vô cùng đến x bằng âm 1, nét đồ thị đi lên từ dưới lên trên, tương ứng hàm số đồng biến. Từ x bằng âm 1 đến x bằng 2, nét đồ thị đi xuống, hàm số nghịch biến. Và từ x bằng 2 đến dương vô cùng, nét đồ thị lại đi lên, hàm số đồng biến. Điểm mấu chốt ở đây là: Các em phải gióng vuông góc các điểm uốn lượn xuống trục hoành O x để lấy khoảng giá trị của x, ví dụ khoảng âm vô cùng đến âm 1 và 2 đến dương vô cùng. Tuyệt đối không lấy nhầm giá trị trên trục tung O y."
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 3: HÀM CÓ ĐẠO HÀM DẠNG TÍCH (NGHIỆM BỘI)",
+      "subtitle": "MỤC 1 • QUY TẮC ĐAN DẤU NGHIỆM BỘI CHẴN / LẺ",
+      "startTime": 148.98,
+      "endTime": 219.8,
+      "duration": 70.82,
+      "mascotMode": "magnifier",
+      "mascotTip": "<b>Bí quyết vàng:</b> Qua nghiệm <b>bội chẵn</b> đạo hàm <b>KHÔNG đổi dấu</b>; chỉ đan dấu qua các nghiệm <b>bội lẻ</b>!",
+      "bodyHtml": "\n        <div style=\"font-size: 26px; color: #fef08a; margin-bottom: 8px;\">\n          <b>Đề bài:</b> Cho hàm số $y = f(x)$ có đạo hàm $f'(x) = (x-1)^2 (x+2)^3 (x-4)$. Tìm khoảng đơn điệu.\n        </div>\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0;\">\n          Giải $f'(x) = 0 \\iff x = 1$ (bội 2 - chẵn), $\\; x = -2$ (bội 3 - lẻ), $\\; x = 4$ (bội 1 - lẻ).<br>\n          • <b>Nghiệm bội chẵn $x = 1$:</b> $(x-1)^2 \\ge 0 \\implies f'(x)$ <b>không đổi dấu</b> khi qua $x = 1$.<br>\n          • <b>Nghiệm bội lẻ $x = -2$ và $x = 4$:</b> $f'(x)$ <b>đổi dấu</b> khi đi qua.\n        </div>\n\n        <table class=\"bbt-table\">\n          <tr>\n            <td class=\"bbt-label\">$x$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; text-align: center; font-size: 26px;\">\n                <span>$-\\infty$</span><span></span><span style=\"color:#fef08a;\">$-2$</span><span></span><span style=\"color:#f87171;\">$1$</span><span></span><span style=\"color:#fef08a;\">$4$</span><span></span><span>$+\\infty$</span>\n              </div>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"bbt-label\">$f'(x)$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; text-align: center; font-size: 28px; font-weight: bold;\">\n                <span></span><span style=\"color:#4ade80;\">$+$</span><span>$0$</span><span style=\"color:#f87171;\">$-$</span><span style=\"color:#94a3b8;\">$0$</span><span style=\"color:#f87171;\">$-$</span><span>$0$</span><span style=\"color:#4ade80;\">$+$</span><span></span>\n              </div>\n            </td>\n          </tr>\n        </table>\n\n        <div style=\"font-size: 24px; color: #67e8f9; font-weight: bold;\">\n          Kết luận: Hàm số đồng biến trên $(-\\infty; -2)$ và $(4; +\\infty)$; nghịch biến trên $(-2; 4)$ (do $f'=0$ tại $x=1$ rời rạc).\n        </div>\n        ",
+      "narration": "Ví dụ 3 là một dạng toán rất phổ biến trong đề thi: Cho đạo hàm f phẩy x dưới dạng tích các lũy thừa. Cụ thể: f phẩy x bằng x trừ 1 tất cả bình phương, nhân x cộng 2 tất cả mũ 3, nhân x trừ 4. Để xét dấu biểu thức này, các em giải f phẩy x bằng 0, thu được 3 nghiệm: x bằng âm 2, x bằng 1, và x bằng 4. Bí quyết then chốt ở đây là phân biệt nghiệm bội chẵn và nghiệm bội lẻ. Nghiệm x bằng 1 có số mũ 2 là bội chẵn, vì bình phương luôn không âm nên đạo hàm sẽ không đổi dấu khi đi qua x bằng 1. Ngược lại, x bằng âm 2 có số mũ 3 là bội lẻ, và x bằng 4 có số mũ 1 là bội lẻ, nên đạo hàm sẽ đan dấu qua hai nghiệm này. Thử một giá trị x bằng 5 lớn hơn 4, ta thấy f phẩy x mang dấu dương. Do đó ta điền dấu: qua 4 đổi sang âm, qua 1 giữ nguyên dấu âm, và qua âm 2 đổi sang dương. Kết luận: hàm số đồng biến trên khoảng âm vô cùng đến âm 2 và khoảng 4 đến dương vô cùng; nghịch biến trên khoảng âm 2 đến 4."
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 4: KHẢO SÁT TÍNH ĐƠN ĐIỆU CỦA HÀM BẬC BA",
+      "subtitle": "MỤC 1 • TRÌNH BÀY BẢNG BIẾN THIÊN MẪU MỰC",
+      "startTime": 219.8,
+      "endTime": 307.64,
+      "duration": 87.84,
+      "mascotMode": "pointer",
+      "mascotTip": "<b>Quy tắc tam thức bậc 2:</b> 'Trong trái ngoài cùng' — trong khoảng giữa 2 nghiệm mang dấu trái với hệ số $a = 3 > 0$!",
+      "bodyHtml": "\n        <div style=\"font-size: 26px; color: #fef08a; margin-bottom: 8px;\">\n          <b>Khảo sát tính đơn điệu:</b> $y = x^3 - 3x^2 - 9x + 2$\n        </div>\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0;\">\n          • TXĐ: $D = \\mathbb{R}$. Đạo hàm: $y' = 3x^2 - 6x - 9 = 3(x+1)(x-3)$.<br>\n          • $y' = 0 \\iff x = -1$ hoặc $x = 3$. Các giá trị tương ứng: $y(-1) = 7, \\; y(3) = -25$.\n        </div>\n\n        <table class=\"bbt-table\">\n          <tr>\n            <td class=\"bbt-label\">$x$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 90px 1fr 80px 1fr 80px 1fr 90px; text-align: center; font-size: 26px;\">\n                <span>$-\\infty$</span><span></span><span style=\"color:#fef08a; font-weight: bold;\">$-1$</span><span></span><span style=\"color:#fef08a; font-weight: bold;\">$3$</span><span></span><span>$+\\infty$</span>\n              </div>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"bbt-label\">$y'$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 90px 1fr 80px 1fr 80px 1fr 90px; text-align: center; font-size: 28px; font-weight: bold;\">\n                <span></span><span style=\"color:#4ade80;\">$+$</span><span>$0$</span><span style=\"color:#f87171;\">$-$</span><span>$0$</span><span style=\"color:#4ade80;\">$+$</span><span></span>\n              </div>\n            </td>\n          </tr>\n          <tr style=\"border-bottom: none;\">\n            <td class=\"bbt-label\">$y$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 90px 1fr 80px 1fr 80px 1fr 90px; height: 110px; align-items: center; text-align: center; font-size: 25px;\">\n                <div style=\"align-self: flex-end;\">$-\\infty$</div>\n                <div><svg width=\"100%\" height=\"60\" viewBox=\"0 0 160 60\"><line x1=\"10\" y1=\"50\" x2=\"150\" y2=\"10\" stroke=\"#4ade80\" stroke-width=\"3.5\"/><polygon points=\"150,10 140,12 144,20\" fill=\"#4ade80\"/></svg></div>\n                <div style=\"align-self: flex-start; color:#38bdf8; font-weight:bold;\">$7$</div>\n                <div><svg width=\"100%\" height=\"60\" viewBox=\"0 0 160 60\"><line x1=\"10\" y1=\"10\" x2=\"150\" y2=\"50\" stroke=\"#f87171\" stroke-width=\"3.5\"/><polygon points=\"150,50 144,40 140,48\" fill=\"#f87171\"/></svg></div>\n                <div style=\"align-self: flex-end; color:#f43f5e; font-weight:bold;\">$-25$</div>\n                <div><svg width=\"100%\" height=\"60\" viewBox=\"0 0 160 60\"><line x1=\"10\" y1=\"50\" x2=\"150\" y2=\"10\" stroke=\"#4ade80\" stroke-width=\"3.5\"/><polygon points=\"150,10 140,12 144,20\" fill=\"#4ade80\"/></svg></div>\n                <div style=\"align-self: flex-start;\">$+\\infty$</div>\n              </div>\n            </td>\n          </tr>\n        </table>\n\n        <div style=\"font-size: 24px; color: #a7f3d0;\">\n          <b>Kết luận:</b> Hàm số đồng biến trên $(-\\infty; -1)$ và $(3; +\\infty)$; nghịch biến trên $(-1; 3)$.\n        </div>\n        ",
+      "narration": "Bây giờ chúng ta cùng thực hiện một bài toán khảo sát hoàn chỉnh ở Ví dụ 4: Xét tính đơn điệu của hàm số bậc ba y bằng x mũ 3 trừ 3 x bình phương trừ 9 x cộng 2. Quy trình gồm 4 bước chuẩn mực: Bước 1, Tập xác định D bằng R. Bước 2, tính đạo hàm: y phẩy bằng 3 x bình trừ 6 x trừ 9, đặt 3 ra ngoài ta được 3 nhân mở ngoặc x bình trừ 2 x trừ 3 đóng ngoặc. Bước 3, giải phương trình y phẩy bằng 0, bấm máy tính hoặc nhẩm nghiệm a trừ b cộng c bằng 0, ta được x bằng âm 1 và x bằng 3. Bước 4, lập bảng biến thiên. Vì y phẩy là tam thức bậc hai có hệ số a bằng 3 dương, nên theo quy tắc trong trái ngoài cùng: trong khoảng giữa hai nghiệm âm 1 và 3, y phẩy mang dấu trừ. Ngoài khoảng hai nghiệm, y phẩy mang dấu cộng. Mũi tên của y sẽ đi lên từ âm vô cùng tới 7, đi xuống từ 7 về âm 25, rồi lại đi lên tới dương vô cùng. Kết luận: hàm số đồng biến trên hai khoảng âm vô cùng đến âm 1 và 3 đến dương vô cùng; nghịch biến trên khoảng âm 1 đến 3."
+    },
+    {
+      "sceneIndex": 6,
+      "title": "TỔNG KẾT MỤC 1 & CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "MỤC 1 • 2 BẪY KINH ĐIỂN CẦN TRÁNH",
+      "startTime": 307.64,
+      "endTime": 341.24,
+      "duration": 33.6,
+      "mascotMode": "cheer",
+      "mascotTip": "<b>Chúc mừng các em!</b> Hãy nắm chắc 4 bước và 2 bẫy sai lầm trên trước khi bước sang Mục 2: Cực trị của hàm số.",
+      "bodyHtml": "\n        <div style=\"font-size: 26px; color: #fef08a; font-weight: bold; margin-bottom: 12px;\">\n          1. Quy trình 4 bước chuẩn mực khảo sát đơn điệu:\n        </div>\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0; margin-left: 20px;\">\n          <b>Bước 1:</b> Tìm Tập xác định $D$.<br>\n          <b>Bước 2:</b> Tính đạo hàm $y' = f'(x)$.<br>\n          <b>Bước 3:</b> Giải phương trình $y' = 0$ và tìm điểm $y'$ không xác định.<br>\n          <b>Bước 4:</b> Lập bảng biến thiên và kết luận các khoảng riêng biệt.\n        </div>\n\n        <div style=\"font-size: 26px; color: #f43f5e; font-weight: bold; margin: 20px 0 10px 0;\">\n          2. Cú Thông Thái cảnh báo 2 bẫy nguy hiểm nhất:\n        </div>\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0; margin-left: 20px;\">\n          • <b>Bẫy 1:</b> Dùng ký hiệu hợp $\\cup$ như $(-\\infty; -1) \\cup (3; +\\infty)$ là <b>HOÀN TOÀN SAI</b>! Phải viết từ 'và'.<br>\n          • <b>Bẫy 2:</b> Nhầm đồ thị $f(x)$ với đồ thị đạo hàm $f'(x)$. Với đồ thị $f'(x)$, khoảng đồng biến là phần đồ thị <b>nằm phía trên trục hoành Ox</b> ($f'(x) > 0$), không phải phần đồ thị đi lên!\n        </div>\n        ",
+      "narration": "Để tổng kết Mục 1, thầy và Cú Thông Thái muốn nhắc các em quy trình 4 bước: tìm tập xác định, tính đạo hàm, giải phương trình đạo hàm bằng 0, và lập bảng biến thiên để kết luận. Hãy luôn khắc ghi hai cái bẫy thường gặp nhất: Thứ nhất, không bao giờ dùng ký hiệu hợp chữ U khi kết luận khoảng đồng biến nghịch biến; phải dùng từ và. Thứ hai, khi đề bài cho đồ thị, hãy đọc thật kỹ đề bài xem đó là đồ thị của f x hay đồ thị của đạo hàm f phẩy x. Với đồ thị đạo hàm, khoảng đồng biến là phần đồ thị nằm phía trên trục hoành. Xin chúc mừng các em đã làm chủ Mục 1! Bây giờ chúng ta cùng sẵn sàng bước sang Mục 2 về Cực trị của hàm số."
+    }
+  ]
+}
