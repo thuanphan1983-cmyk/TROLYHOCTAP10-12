@@ -387,6 +387,7 @@
 
   // Open the Interactive Web Lecture Modal
   function openInteractiveLecture(sec) {
+    document.head.insertAdjacentHTML('beforeend', '<style>#interactive-modal .lecture-content { font-size: 24px !important; line-height: 1.6 !important; } #interactive-modal .katex { font-size: 1.3em !important; } #interactive-modal svg { width: 98% !important; max-height: 48vh !important; } #interactive-modal header, #interactive-modal footer { height: 42px !important; min-height: 42px !important; padding: 2px 10px !important; } #modal-interactive-lecture #il-stage-body, #modal-interactive-lecture #il-stage-body * { font-size: 24px !important; line-height: 1.6 !important; } #modal-interactive-lecture .katex { font-size: 1.3em !important; } #modal-interactive-lecture svg { width: 98% !important; max-height: 48vh !important; } .il-header-bar, .il-footer-bar { height: 42px !important; min-height: 42px !important; padding: 2px 10px !important; }</style>');
     const modal = document.getElementById('modal-interactive-lecture');
     if (!modal) return;
 
