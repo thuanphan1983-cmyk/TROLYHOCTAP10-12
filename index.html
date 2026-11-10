@@ -31130,9 +31130,9 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
   <!-- Khung iframe responsive 16:9 Video 1 -->
   <div id="video1-wrapper" class="hidden my-4 p-3 bg-slate-900 rounded-2xl shadow-xl space-y-3 not-prose">
     <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-      <video id="player-muc1" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markLessonVideoCompleted(1)">
-        <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+      <video id="player-muc1" controls playsinline class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markLessonVideoCompleted(1)" src="/videos/bai1_muc1_don_dieu.mp4">
         <source src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+        <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
         Trình duyệt không hỗ trợ thẻ video HTML5.
       </video>
     </div>
@@ -31204,9 +31204,9 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
   <!-- Khung iframe responsive 16:9 Video 2 -->
   <div id="video2-wrapper" class="hidden my-4 p-3 bg-slate-900 rounded-2xl shadow-xl space-y-3 not-prose">
     <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-      <video id="player-muc2" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markLessonVideoCompleted(2)">
-        <source src="videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+      <video id="player-muc2" controls playsinline class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markLessonVideoCompleted(2)" src="/videos/bai1_muc2_cuc_tri.mp4">
         <source src="/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+        <source src="videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
         Trình duyệt không hỗ trợ thẻ video HTML5.
       </video>
     </div>
@@ -38611,9 +38611,9 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 
       <!-- 16:9 Video Container -->
       <div class="relative w-full bg-black overflow-hidden" style="padding-top: 56.25%;">
-        <video id="global-modal-video" controls playsinline class="absolute inset-0 w-full h-full object-contain bg-black" preload="auto" onended="handleVideoModalFinished()">
-          <source id="global-modal-video-source" src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
-          <source src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+        <video id="global-modal-video" controls playsinline class="absolute inset-0 w-full h-full object-contain bg-black" preload="auto" onended="handleVideoModalFinished()" src="/videos/bai1_muc1_don_dieu.mp4">
+          <source id="global-modal-video-source" src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+          <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
           Trình duyệt của bạn không hỗ trợ phát thẻ video HTML5.
         </video>
       </div>
@@ -38705,9 +38705,9 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
           <!-- Video 1 Wrapper -->
           <div id="modal-video1-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl">
             <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-              <video id="player-modal-muc1" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black" preload="metadata" onended="markModalVideoCompleted(1)">
-                <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+              <video id="player-modal-muc1" controls playsinline class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black" preload="metadata" onended="markModalVideoCompleted(1)" src="/videos/bai1_muc1_don_dieu.mp4">
                 <source src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+                <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
               </video>
             </div>
             <div class="flex items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
@@ -38791,9 +38791,9 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
           <!-- Video 2 Wrapper -->
           <div id="modal-video2-wrapper" class="hidden space-y-3 bg-slate-900 p-2 sm:p-3 rounded-2xl">
             <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-              <video id="player-modal-muc2" controls class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black" preload="metadata" onended="markModalVideoCompleted(2)">
-                <source src="videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+              <video id="player-modal-muc2" controls playsinline class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black" preload="metadata" onended="markModalVideoCompleted(2)" src="/videos/bai1_muc2_cuc_tri.mp4">
                 <source src="/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
+                <source src="videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
               </video>
             </div>
             <div class="flex items-center justify-between gap-2 p-2 bg-slate-800 rounded-xl text-white">
@@ -38919,7 +38919,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
       const badge = document.getElementById('modal-video-badge');
       const instruction = document.getElementById('modal-video-instruction');
 
-      const file = num === 1 ? 'videos/bai1_muc1_don_dieu.mp4' : 'videos/bai1_muc2_cuc_tri.mp4';
+      const file = num === 1 ? '/videos/bai1_muc1_don_dieu.mp4' : '/videos/bai1_muc2_cuc_tri.mp4';
       const label = num === 1 
         ? 'Mục 1: Tính đơn điệu của hàm số (Video 05:00)' 
         : 'Mục 2: Cực trị của hàm số (Video 05:00)';
