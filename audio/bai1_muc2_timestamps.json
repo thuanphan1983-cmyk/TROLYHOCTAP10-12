@@ -1,0 +1,116 @@
+{
+  "lessonId": "bai1_muc2",
+  "lessonTitle": "Bài 1: Tính đơn điệu và cực trị của hàm số",
+  "sectionId": "muc2",
+  "sectionTitle": "Mục 2: Cực trị của hàm số",
+  "audioSrc": "/audio/bai1_muc2_cuc_tri.mp3",
+  "totalDuration": 269.68,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Định nghĩa trực quan cực trị & Điều kiện cần/đủ (Dấu hiệu 1)",
+      "scenes": [
+        1,
+        2
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Bảng biến thiên có điểm không xác định chuẩn Bộ GD&ĐT",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa tiêu biểu từ cơ bản đến nâng cao",
+      "scenes": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm & Đạo hàm cấp hai (Dấu hiệu 2)",
+      "scenes": [
+        6
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 1: CỰC TRỊ CỦA HÀM SỐ",
+      "subtitle": "MỤC 2 • PHÂN BIỆT 3 THUẬT NGỮ CỐT LÕI",
+      "startTime": 0.0,
+      "endTime": 49.03,
+      "duration": 49.03,
+      "mascotMode": "pointer",
+      "mascotTip": "<b>Đọc kỹ câu hỏi:</b> Hỏi 'điểm cực trị của hàm số' là tìm <b>x</b>; hỏi 'giá trị cực trị' là tìm <b>y</b>; hỏi 'của đồ thị' là tìm cặp <b>(x; y)</b>!",
+      "bodyHtml": "\n        <div style=\"font-size: 27px; color: #fef08a; margin-bottom: 12px; font-weight: bold;\">\n          1. Định nghĩa trực quan cực đại & cực tiểu:\n        </div>\n        <div style=\"font-size: 25px; line-height: 1.6; color: #e2e8f0; margin-left: 20px;\">\n          • $x_0$ là <b>điểm cực đại</b> nếu $f(x) < f(x_0)$ với mọi $x$ trong lân cận của $x_0$ ($x \\ne x_0$).<br>\n          • $x_0$ là <b>điểm cực tiểu</b> nếu $f(x) > f(x_0)$ với mọi $x$ trong lân cận của $x_0$ ($x \\ne x_0$).\n        </div>\n\n        <div style=\"font-size: 27px; color: #38bdf8; margin: 20px 0 12px 0; font-weight: bold;\">\n          2. Phân biệt rõ 3 khái niệm học sinh rất hay nhầm lẫn:\n        </div>\n        <div style=\"font-size: 25px; line-height: 1.7; color: #e2e8f0; margin-left: 20px;\">\n          ① <b>Điểm cực trị của HÀM SỐ:</b> Là giá trị của biến số $x_0$ (Ví dụ: $x = -1, \\; x = 3$).<br>\n          ② <b>Cực trị (hoặc Giá trị cực trị) của HÀM SỐ:</b> Là giá trị $y_0 = f(x_0)$ (Ví dụ: $y_{CĐ} = 7, \\; y_{CT} = -25$).<br>\n          ③ <b>Điểm cực trị của ĐỒ THỊ hàm số:</b> Là điểm $M(x_0; y_0)$ trên mặt phẳng tọa độ $Oxy$ (Ví dụ: $M(-1; 7)$).\n        </div>\n        ",
+      "narration": "Chào các em! Thầy và Cú Thông Thái xin chào mừng các em đến với Mục 2 của Bài 1: Cực trị của hàm số. Trước tiên, các em cần nắm vững định nghĩa: Điểm cực đại là điểm mà tại đó giá trị hàm số lớn hơn mọi giá trị lân cận; còn điểm cực tiểu là điểm có giá trị nhỏ hơn mọi giá trị lân cận. Đặc biệt, trong đề thi trắc nghiệm Bộ Giáo dục, học sinh rất hay nhầm lẫn giữa 3 khái niệm: Một là Điểm cực trị của hàm số - đó chính là giá trị x 0. Hai là Cực trị hay Giá trị cực trị - đó là giá trị y 0 bằng f của x 0. Ba là Điểm cực trị của đồ thị hàm số - đây là một điểm có tọa độ M gồm cả hoành độ x 0 và tung độ y 0. Hãy đọc thật kỹ từng chữ trong câu hỏi để không bị mất điểm oan."
+    },
+    {
+      "sceneIndex": 2,
+      "title": "ĐIỀU KIỆN ĐỦ ĐỂ CÓ CỰC TRỊ (DẤU HIỆU 1)",
+      "subtitle": "MỤC 2 • SỰ ĐỔI DẤU CỦA ĐẠO HÀM f'(x)",
+      "startTime": 49.03,
+      "endTime": 91.15,
+      "duration": 42.12,
+      "mascotMode": "magnifier",
+      "mascotTip": "<b>Lưu ý vàng:</b> Tại $x_0$, đạo hàm có vạch kép $||$ nhưng hàm số <b>vẫn liên tục</b> thì $x_0$ <b>vẫn là điểm cực trị</b>!",
+      "bodyHtml": "\n        <div style=\"font-size: 27px; color: #fef08a; margin-bottom: 12px; font-weight: bold;\">\n          Định lý (Dấu hiệu 1 - Đổi dấu đạo hàm qua $x_0$):\n        </div>\n        <div style=\"font-size: 25px; line-height: 1.7; color: #e2e8f0; margin-left: 20px;\">\n          Giả sử hàm số $f(x)$ liên tục trên khoảng $(a; b)$ chứa $x_0$ và có đạo hàm trên $(a; b) \\setminus \\{x_0\\}$:<br>\n          • $f'(x)$ đổi dấu từ <b>$(+)$ sang $(-)$</b> khi qua $x_0 \\implies x_0$ là <b>điểm CỰC ĐẠI</b> (đỉnh núi $\\nearrow \\searrow$).<br>\n          • $f'(x)$ đổi dấu từ <b>$(-)$ sang $(+)$</b> khi qua $x_0 \\implies x_0$ là <b>điểm CỰC TIỂU</b> (thung lũng $\\searrow \\nearrow$).<br>\n          • $f'(x)$ <b>không đổi dấu</b> khi qua $x_0 \\implies x_0$ <b>không phải là cực trị</b>.\n        </div>\n\n        <div style=\"background: rgba(244, 63, 94, 0.15); border-left: 5px solid #f43f5e; padding: 14px 20px; border-radius: 10px; margin-top: 18px;\">\n          <div style=\"color: #f43f5e; font-size: 26px; font-weight: bold; margin-bottom: 4px;\">\n            ⚠ LƯU Ý ĐẶC BIỆT (BẪY THI TRẮC NGHIỆM THƯỜNG GẶP):\n          </div>\n          <div style=\"font-size: 24px; color: #fecdd3; line-height: 1.5;\">\n            Tại $x_0$, đạo hàm $f'(x_0)$ <b>có thể không xác định</b> (ký hiệu vạch kép $||$), nhưng nếu hàm số $f(x)$ <b>liên tục tại $x_0$</b> và $f'(x)$ đổi dấu thì $x_0$ <b>VẪN LÀ ĐIỂM CỰC TRỊ</b>!\n          </div>\n        </div>\n        ",
+      "narration": "Chúng ta cùng tìm hiểu Dấu hiệu 1 để tìm cực trị, đó là dựa vào sự đổi dấu của đạo hàm f phẩy x khi đi qua điểm x 0. Quy tắc rất trực quan: Nếu f phẩy đổi dấu từ dương sang âm, đồ thị đi lên rồi đi xuống như một đỉnh núi, thì x 0 là điểm cực đại. Nếu f phẩy đổi dấu từ âm sang dương, đồ thị đi xuống rồi đi lên như đáy thung lũng, thì x 0 là điểm cực tiểu. Nếu f phẩy không đổi dấu thì x 0 không phải là điểm cực trị. Và đây là điều Cú Thông Thái lưu ý đặc biệt cho các em: Tại điểm x 0, đạo hàm f phẩy có thể không tồn tại, tức là có vạch kẻ kép ở hàng đạo hàm, nhưng miễn là hàm số f x liên tục và xác định tại x 0, đồng thời đạo hàm hai bên đổi dấu, thì x 0 vẫn được công nhận là một điểm cực trị của hàm số."
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: ĐỌC CỰC TRỊ TỪ BẢNG BIẾN THIÊN",
+      "subtitle": "MỤC 2 • XỬ LÝ ĐIỂM CÓ ĐẠO HÀM KHÔNG XÁC ĐỊNH",
+      "startTime": 91.15,
+      "endTime": 119.73,
+      "duration": 28.58,
+      "mascotMode": "pointer",
+      "mascotTip": "<b>Quan sát kỹ:</b> Tại $x = 0$, hàng $f'(x)$ có vạch kép $||$ nhưng hàng $f(x)$ xác định bằng $-1$, nên $x = 0$ vẫn là điểm cực tiểu!",
+      "bodyHtml": "\n        <div style=\"font-size: 26px; color: #fef08a; margin-bottom: 8px;\">\n          <b>Đề bài:</b> Cho hàm số $y = f(x)$ liên tục trên $\\\\mathbb{R}$ có bảng biến thiên:\n        </div>\n\n        <table class=\"bbt-table\">\n          <tr>\n            <td class=\"bbt-label\">$x$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; text-align: center; font-size: 26px;\">\n                <span>$-\\\\infty$</span><span></span><span style=\"color:#fef08a;\">$-2$</span><span></span><span style=\"color:#38bdf8;\">$0$</span><span></span><span style=\"color:#fef08a;\">$3$</span><span></span><span>$+\\\\infty$</span>\n              </div>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"bbt-label\">$f'(x)$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; text-align: center; font-size: 27px; font-weight: bold;\">\n                <span></span><span style=\"color:#4ade80;\">$+$</span><span>$0$</span><span style=\"color:#f87171;\">$-$</span><span style=\"color:#f43f5e;\">$\\\\parallel$</span><span style=\"color:#4ade80;\">$+$</span><span>$0$</span><span style=\"color:#f87171;\">$-$</span><span></span>\n              </div>\n            </td>\n          </tr>\n          <tr style=\"border-bottom: none;\">\n            <td class=\"bbt-label\">$f(x)$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; height: 100px; align-items: center; text-align: center; font-size: 24px;\">\n                <div style=\"align-self: flex-end;\">$-\\\\infty$</div>\n                <div><svg width=\"100%\" height=\"50\" viewBox=\"0 0 100 50\"><line x1=\"5\" y1=\"42\" x2=\"95\" y2=\"8\" stroke=\"#4ade80\" stroke-width=\"3\"/><polygon points=\"95,8 86,10 90,16\" fill=\"#4ade80\"/></svg></div>\n                <div style=\"align-self: flex-start; color:#38bdf8; font-weight:bold;\">$5$</div>\n                <div><svg width=\"100%\" height=\"50\" viewBox=\"0 0 100 50\"><line x1=\"5\" y1=\"8\" x2=\"95\" y2=\"42\" stroke=\"#f87171\" stroke-width=\"3\"/><polygon points=\"95,42 90,34 86,40\" fill=\"#f87171\"/></svg></div>\n                <div style=\"align-self: flex-end; color:#f43f5e; font-weight:bold;\">$-1$</div>\n                <div><svg width=\"100%\" height=\"50\" viewBox=\"0 0 100 50\"><line x1=\"5\" y1=\"42\" x2=\"95\" y2=\"8\" stroke=\"#4ade80\" stroke-width=\"3\"/><polygon points=\"95,8 86,10 90,16\" fill=\"#4ade80\"/></svg></div>\n                <div style=\"align-self: flex-start; color:#38bdf8; font-weight:bold;\">$4$</div>\n                <div><svg width=\"100%\" height=\"50\" viewBox=\"0 0 100 50\"><line x1=\"5\" y1=\"8\" x2=\"95\" y2=\"42\" stroke=\"#f87171\" stroke-width=\"3\"/><polygon points=\"95,42 90,34 86,40\" fill=\"#f87171\"/></svg></div>\n                <div style=\"align-self: flex-end;\">$-\\\\infty$</div>\n              </div>\n            </td>\n          </tr>\n        </table>\n\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0;\">\n          • Tại $x = -2$: $f'$ đổi $(+)$ sang $(-)$ $\\implies x_{CĐ} = -2, \\\\; y_{CĐ} = 5$.<br>\n          • Tại $x = 0$: $f'(0)$ không xác định nhưng $f(0) = -1$ và $f'$ đổi $(-)$ sang $(+)$ $\\implies x_{CT} = 0, \\\\; y_{CT} = -1$.<br>\n          • Tại $x = 3$: $f'$ đổi $(+)$ sang $(-)$ $\\implies x_{CĐ} = 3, \\\\; y_{CĐ} = 4$.<br>\n          <span style=\"color: #67e8f9; font-weight: bold;\">Tổng kết: Hàm số có đúng 3 điểm cực trị (2 cực đại, 1 cực tiểu).</span>\n        </div>\n        ",
+      "narration": "Ở Ví dụ 1, chúng ta cùng đọc cực trị từ một bảng biến thiên có chứa điểm nhạy cảm. Hàm số f x liên tục trên R. Tại x bằng âm 2, f phẩy x đổi dấu từ dương sang âm, nên hàm số đạt cực đại tại x bằng âm 2, với giá trị cực đại y cực đại bằng 5. Tại x bằng 0, các em thấy ở hàng đạo hàm có vạch kép hai sọc, nghĩa là đạo hàm không xác định. Tuy nhiên, ở hàng f x, giá trị tại 0 vẫn tồn tại và bằng âm 1, và đạo hàm hai bên đổi dấu từ âm sang dương. Do đó, x bằng 0 vẫn là điểm cực tiểu hợp lệ, với y cực tiểu bằng âm 1. Tại x bằng 3, f phẩy đổi dấu từ dương sang âm, hàm số đạt cực đại với y cực đại bằng 4. Tổng kết lại: Hàm số này có tất cả 3 điểm cực trị, gồm 2 điểm cực đại và 1 điểm cực tiểu."
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 2: TÌM CỰC TRỊ TỪ ĐẠO HÀM DẠNG TÍCH",
+      "subtitle": "MỤC 2 • BÍ QUYẾT GIẢI NHANH TRONG 10 GIÂY",
+      "startTime": 119.73,
+      "endTime": 175.53,
+      "duration": 55.8,
+      "mascotMode": "magnifier",
+      "mascotTip": "<b>Mẹo bấm giây:</b> Gạch bỏ ngay tất cả các nhân tử có <b>số mũ chẵn</b>, chỉ đếm số nghiệm của các nhân tử có <b>số mũ lẻ</b>!",
+      "bodyHtml": "\n        <div style=\"font-size: 26px; color: #fef08a; margin-bottom: 8px;\">\n          <b>Đề bài:</b> Cho hàm số $f(x)$ có đạo hàm $f'(x) = x(x-1)^2 (x+3)^5$. Hỏi hàm số có bao nhiêu điểm cực trị?\n        </div>\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0;\">\n          <b style=\"color: #38bdf8;\">Định lý then chốt:</b> <i>\"Số điểm cực trị bằng số nghiệm BỘI LẺ của phương trình $f'(x) = 0$.\"</i><br>\n          Xét từng nhân tử khi giải phương trình $f'(x) = 0$:<br>\n          • $x = 0$: số mũ 1 (bội lẻ) $\\implies f'(x)$ <b>đổi dấu</b> qua $x = 0 \\\\implies$ <b>LÀ ĐIỂM CỰC TRỊ</b>.<br>\n          • $(x-1)^2 = 0 \\\\iff x = 1$: số mũ 2 (bội chẵn) $\\implies (x-1)^2 \\\\ge 0 \\\\implies$ <b>KHÔNG ĐỔI DẤU $\\\\implies$ LOẠI</b>.<br>\n          • $(x+3)^5 = 0 \\\\iff x = -3$: số mũ 5 (bội lẻ) $\\implies f'(x)$ <b>đổi dấu</b> qua $x = -3 \\\\implies$ <b>LÀ ĐIỂM CỰC TRỊ</b>.\n        </div>\n\n        <table class=\"bbt-table\" style=\"margin: 12px 0;\">\n          <tr>\n            <td class=\"bbt-label\">$x$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; text-align: center; font-size: 26px;\">\n                <span>$-\\\\infty$</span><span></span><span style=\"color:#fef08a;\">$-3$</span><span></span><span style=\"color:#fef08a;\">$0$</span><span></span><span style=\"color:#94a3b8;\">$1$</span><span></span><span>$+\\\\infty$</span>\n              </div>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"bbt-label\">$f'(x)$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 80px 1fr 70px 1fr 70px 1fr 70px 1fr 80px; text-align: center; font-size: 28px; font-weight: bold;\">\n                <span></span><span style=\"color:#4ade80;\">$+$</span><span>$0$</span><span style=\"color:#f87171;\">$-$</span><span>$0$</span><span style=\"color:#4ade80;\">$+$</span><span style=\"color:#94a3b8;\">$0$</span><span style=\"color:#4ade80;\">$+$</span><span></span>\n              </div>\n            </td>\n          </tr>\n        </table>\n\n        <div style=\"font-size: 24px; color: #4ade80; font-weight: bold;\">\n          Kết luận: Hàm số có đúng 2 điểm cực trị là $x = -3$ và $x = 0$ (qua $x=1$ đạo hàm giữ nguyên dấu cộng).\n        </div>\n        ",
+      "narration": "Ví dụ 2 là một dạng câu hỏi trắc nghiệm kinh điển xuất hiện trong hầu hết các đề thi tốt nghiệp THPT: Tìm số điểm cực trị của hàm số khi biết biểu thức đạo hàm f phẩy x bằng x nhân x trừ 1 tất cả bình phương nhân x cộng 3 tất cả mũ 5. Để giải nhanh bài này trong vòng 10 giây, Cú Thông Thái chỉ cho các em một nguyên tắc vàng: Số điểm cực trị chỉ bằng số nghiệm bội lẻ của phương trình đạo hàm bằng 0, các nghiệm bội chẵn bị vô hiệu hóa vì không làm đạo hàm đổi dấu. Ta phân tích từng nhân tử: x bằng 0 có số mũ 1 là bội lẻ, nên đây là điểm cực trị. Nhân tử x trừ 1 có số mũ 2 là bội chẵn, đạo hàm không đổi dấu khi qua 1 nên ta loại bỏ ngay lập tức. Nhân tử x cộng 3 có số mũ 5 là số lẻ, nên x bằng âm 3 là điểm cực trị. Như vậy, phương trình chỉ có hai nghiệm bội lẻ là x bằng âm 3 và x bằng 0. Ta kết luận ngay: hàm số có đúng 2 điểm cực trị. Hãy nhớ kỹ: Gạch bỏ mọi nhân tử mũ chẵn!"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 3: KHẢO SÁT CỰC TRỊ CỦA HÀM BẬC BA",
+      "subtitle": "MỤC 2 • ĐẦY ĐỦ CÁC BƯỚC KHẢO SÁT CHUẨN MỰC",
+      "startTime": 175.53,
+      "endTime": 236.03,
+      "duration": 60.5,
+      "mascotMode": "pointer",
+      "mascotTip": "<b>Hệ số $a = -3 < 0$:</b> Tam thức bậc 2 mang dấu âm ở ngoài khoảng hai nghiệm và mang dấu dương ở trong khoảng!",
+      "bodyHtml": "\n        <div style=\"font-size: 26px; color: #fef08a; margin-bottom: 8px;\">\n          <b>Khảo sát cực trị:</b> $y = -x^3 + 3x^2 + 9x - 1$\n        </div>\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0;\">\n          • TXĐ: $D = \\mathbb{R}$. Đạo hàm: $y' = -3x^2 + 6x + 9 = -3(x^2 - 2x - 3)$.<br>\n          • $y' = 0 \\iff x = -1$ hoặc $x = 3$. Tính giá trị: $y(-1) = -6, \\; y(3) = 26$.\n        </div>\n\n        <table class=\"bbt-table\">\n          <tr>\n            <td class=\"bbt-label\">$x$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 90px 1fr 80px 1fr 80px 1fr 90px; text-align: center; font-size: 26px;\">\n                <span>$-\\infty$</span><span></span><span style=\"color:#fef08a; font-weight: bold;\">$-1$</span><span></span><span style=\"color:#fef08a; font-weight: bold;\">$3$</span><span></span><span>$+\\infty$</span>\n              </div>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"bbt-label\">$y'$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 90px 1fr 80px 1fr 80px 1fr 90px; text-align: center; font-size: 28px; font-weight: bold;\">\n                <span></span><span style=\"color:#f87171;\">$-$</span><span>$0$</span><span style=\"color:#4ade80;\">$+$</span><span>$0$</span><span style=\"color:#f87171;\">$-$</span><span></span>\n              </div>\n            </td>\n          </tr>\n          <tr style=\"border-bottom: none;\">\n            <td class=\"bbt-label\">$y$</td>\n            <td class=\"bbt-data\">\n              <div style=\"display: grid; grid-template-columns: 90px 1fr 80px 1fr 80px 1fr 90px; height: 110px; align-items: center; text-align: center; font-size: 25px;\">\n                <div style=\"align-self: flex-start;\">$+\\infty$</div>\n                <div><svg width=\"100%\" height=\"60\" viewBox=\"0 0 160 60\"><line x1=\"10\" y1=\"10\" x2=\"150\" y2=\"50\" stroke=\"#f87171\" stroke-width=\"3.5\"/><polygon points=\"150,50 144,40 140,48\" fill=\"#f87171\"/></svg></div>\n                <div style=\"align-self: flex-end; color:#f43f5e; font-weight:bold;\">$-6$</div>\n                <div><svg width=\"100%\" height=\"60\" viewBox=\"0 0 160 60\"><line x1=\"10\" y1=\"50\" x2=\"150\" y2=\"10\" stroke=\"#4ade80\" stroke-width=\"3.5\"/><polygon points=\"150,10 140,12 144,20\" fill=\"#4ade80\"/></svg></div>\n                <div style=\"align-self: flex-start; color:#38bdf8; font-weight:bold;\">$26$</div>\n                <div><svg width=\"100%\" height=\"60\" viewBox=\"0 0 160 60\"><line x1=\"10\" y1=\"10\" x2=\"150\" y2=\"50\" stroke=\"#f87171\" stroke-width=\"3.5\"/><polygon points=\"150,50 144,40 140,48\" fill=\"#f87171\"/></svg></div>\n                <div style=\"align-self: flex-end;\">$-\\infty$</div>\n              </div>\n            </td>\n          </tr>\n        </table>\n\n        <div style=\"font-size: 24px; line-height: 1.5; color: #a7f3d0;\">\n          • Điểm cực tiểu: $x = -1, \\; y_{CT} = -6$. Điểm cực tiểu của đồ thị: $B(-1; -6)$.<br>\n          • Điểm cực đại: $x = 3, \\; y_{CĐ} = 26$. Điểm cực đại của đồ thị: $A(3; 26)$.\n        </div>\n        ",
+      "narration": "Ở Ví dụ 3, chúng ta tiến hành tìm cực trị của hàm số bậc ba y bằng trừ x mũ 3 cộng 3 x bình phương cộng 9 x trừ 1. Bước 1, tập xác định D bằng R. Bước 2, lấy đạo hàm: y phẩy bằng trừ 3 x bình cộng 6 x cộng 9. Bước 3, giải phương trình y phẩy bằng 0, ta chia cả hai vế cho trừ 3 được x bình trừ 2 x trừ 3 bằng 0, cho ra hai nghiệm x bằng âm 1 và x bằng 3. Bước 4, ta tính giá trị tương ứng: thay âm 1 vào hàm số ban đầu được y bằng âm 6; thay 3 vào hàm số ban đầu được y bằng 26. Lập bảng biến thiên: vì hệ số a của đạo hàm bằng trừ 3 âm, nên trong khoảng hai nghiệm y phẩy mang dấu cộng, ngoài khoảng mang dấu trừ. Mũi tên của y đi xuống âm 6, đi lên 26, rồi lại đi xuống âm vô cùng. Kết luận rành mạch: Điểm cực tiểu của hàm số là x bằng âm 1, giá trị cực tiểu là âm 6. Điểm cực đại của hàm số là x bằng 3, giá trị cực đại là 26. Điểm cực đại của đồ thị là A tọa độ 3 chấm phẩy 26, điểm cực tiểu của đồ thị là B tọa độ âm 1 chấm phẩy âm 6."
+    },
+    {
+      "sceneIndex": 6,
+      "title": "DẤU HIỆU 2 & CÚ THÔNG THÁI SOI BẪY TRẮC NGHIỆM",
+      "subtitle": "MỤC 2 • ĐẠO HÀM CẤP 2 & 2 SAI LẦM NGUY HIỂM",
+      "startTime": 236.03,
+      "endTime": 269.68,
+      "duration": 33.65,
+      "mascotMode": "cheer",
+      "mascotTip": "<b>Chúc các em tự tin!</b> Làm chủ vững vàng tính đơn điệu và cực trị để đạt điểm tối đa trong các kỳ thi sắp tới!",
+      "bodyHtml": "\n        <div style=\"font-size: 26px; color: #fef08a; font-weight: bold; margin-bottom: 10px;\">\n          1. Dấu hiệu 2 (Sử dụng đạo hàm cấp hai $y''$):\n        </div>\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0; margin-left: 20px;\">\n          Giả sử $f'(x_0) = 0$ và có $f''(x_0)$:<br>\n          • Nếu $f''(x_0) < 0 \\implies x_0$ là <b>điểm CỰC ĐẠI</b>.<br>\n          • Nếu $f''(x_0) > 0 \\implies x_0$ là <b>điểm CỰC TIỂU</b>.<br>\n          • Nếu $f''(x_0) = 0 \\implies$ Chưa kết luận được, phải quay lại dùng Dấu hiệu 1 (bảng biến thiên).\n        </div>\n\n        <div style=\"font-size: 26px; color: #f43f5e; font-weight: bold; margin: 18px 0 10px 0;\">\n          2. Cú Thông Thái cảnh báo 2 sai lầm chết người:\n        </div>\n        <div style=\"font-size: 24px; line-height: 1.6; color: #e2e8f0; margin-left: 20px;\">\n          • <b>Sai lầm 1: Đồng nhất Cực đại là GTLN!</b> Cực đại chỉ mang tính lân cận cục bộ, không phải giá trị lớn nhất trên toàn miền xác định. Giá trị cực đại ở điểm này hoàn toàn có thể nhỏ hơn giá trị cực tiểu ở nhánh khác!<br>\n          • <b>Sai lầm 2: $f'(x_0) = 0$ thì là cực trị.</b> Sai! Nếu đạo hàm không đổi dấu (như $y=x^3$ tại $x=0$) thì $x_0$ <b>không phải cực trị</b>.\n        </div>\n        ",
+      "narration": "Để khép lại bài học hôm nay, thầy giới thiệu thêm Dấu hiệu 2 dùng đạo hàm cấp hai f hai phẩy: Nếu f phẩy tại x 0 bằng 0 và f hai phẩy nhỏ hơn 0 thì x 0 là cực đại; nếu f hai phẩy lớn hơn 0 thì x 0 là cực tiểu. Cuối cùng, Cú Thông Thái nhắc các em khắc cốt ghi tâm hai sai lầm rất nguy hiểm: Sai lầm thứ nhất là nghĩ rằng Cực đại chính là Giá trị lớn nhất. Hoàn toàn sai! Cực đại chỉ mang tính lân cận cục bộ, thậm chí có những hàm số giá trị cực đại còn nhỏ hơn giá trị cực tiểu ở nhánh khác. Sai lầm thứ hai là thấy đạo hàm bằng 0 đã vội kết luận là cực trị; nếu đạo hàm không đổi dấu thì đó không phải là cực trị. Thầy chúc các em học tập thật tốt và làm chủ hoàn toàn Bài 1 Toán 12!"
+    }
+  ]
+}
