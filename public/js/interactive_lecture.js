@@ -337,96 +337,251 @@
     }
   }
 
-  // Navigation Options for Chapter 1 (18 sections across 6 topics)
-  const SECTION_OPTIONS = [
+  // Chapter 1 Comprehensive Navigation Config (6 Lessons & 18 Sections)
+  const CHAPTER1_MENU_CONFIG = [
     {
-      group: "Bài 1: Tính đơn điệu & Cực trị",
-      items: [
-        { key: "muc1", label: "Bài 1 - Mục 1: Tính đơn điệu của hàm số" },
-        { key: "muc2", label: "Bài 1 - Mục 2: Cực trị của hàm số" }
+      lessonId: "bai1",
+      lessonTitle: "Bài 1: Đơn điệu & Cực trị",
+      lessonBadge: "Bài 1",
+      sections: [
+        { key: "muc1", title: "Mục 1: Tính đơn điệu của hàm số", time: "05:41", icon: "📈" },
+        { key: "muc2", title: "Mục 2: Cực trị của hàm số", time: "04:29", icon: "⛰️" }
       ]
     },
     {
-      group: "Bài 2: Giá trị lớn nhất & GTNN",
-      items: [
-        { key: "bai2_muc1", label: "Bài 2 - Mục 1: Định nghĩa GTLN & GTNN" },
-        { key: "bai2_muc2", label: "Bài 2 - Mục 2: Tìm GTLN, GTNN trên đoạn [a; b]" },
-        { key: "bai2_muc3", label: "Bài 2 - Mục 3: Tìm GTLN, GTNN trên khoảng / nửa khoảng" }
+      lessonId: "bai2",
+      lessonTitle: "Bài 2: GTLN & GTNN",
+      lessonBadge: "Bài 2",
+      sections: [
+        { key: "bai2_muc1", title: "Mục 1: Định nghĩa GTLN & GTNN", time: "05:00", icon: "🎯" },
+        { key: "bai2_muc2", title: "Mục 2: Tìm GTLN, GTNN trên đoạn [a; b]", time: "05:00", icon: "📏" },
+        { key: "bai2_muc3", title: "Mục 3: Tìm GTLN, GTNN trên khoảng / nửa khoảng", time: "05:00", icon: "📊" }
       ]
     },
     {
-      group: "Bài 3: Đường tiệm cận của đồ thị",
-      items: [
-        { key: "bai3_muc1", label: "Bài 3 - Mục 1: Tiệm cận đứng" },
-        { key: "bai3_muc2", label: "Bài 3 - Mục 2: Tiệm cận ngang" },
-        { key: "bai3_muc3", label: "Bài 3 - Mục 3: Tiệm cận xiên" }
+      lessonId: "bai3",
+      lessonTitle: "Bài 3: Đường tiệm cận",
+      lessonBadge: "Bài 3",
+      sections: [
+        { key: "bai3_muc1", title: "Mục 1: Tiệm cận đứng (TCĐ)", time: "05:00", icon: "│" },
+        { key: "bai3_muc2", title: "Mục 2: Tiệm cận ngang (TCN)", time: "05:00", icon: "─" },
+        { key: "bai3_muc3", title: "Mục 3: Tiệm cận xiên (TCX)", time: "05:00", icon: "╱" }
       ]
     },
     {
-      group: "Bài 4: Khảo sát sự biến thiên & Vẽ đồ thị",
-      items: [
-        { key: "bai4_muc1", label: "Bài 4 - Mục 1: Sơ đồ khảo sát hàm số" },
-        { key: "bai4_muc2", label: "Bài 4 - Mục 2: Khảo sát hàm đa thức bậc ba" },
-        { key: "bai4_muc3", label: "Bài 4 - Mục 3: Khảo sát hàm phân thức bậc 1 / bậc 1" },
-        { key: "bai4_muc4", label: "Bài 4 - Mục 4: Khảo sát hàm phân thức bậc 2 / bậc 1" }
+      lessonId: "bai4",
+      lessonTitle: "Bài 4: Khảo sát & Vẽ đồ thị",
+      lessonBadge: "Bài 4",
+      sections: [
+        { key: "bai4_muc1", title: "Mục 1: Sơ đồ khảo sát hàm số 4 bước", time: "05:00", icon: "📋" },
+        { key: "bai4_muc2", title: "Mục 2: Khảo sát hàm đa thức bậc ba", time: "05:00", icon: "〽️" },
+        { key: "bai4_muc3", title: "Mục 3: Khảo sát hàm phân thức bậc 1/1", time: "05:00", icon: "➗" },
+        { key: "bai4_muc4", title: "Mục 4: Khảo sát hàm phân thức bậc 2/1", time: "05:00", icon: "📐" }
       ]
     },
     {
-      group: "Bài 5: Ứng dụng thực tế của đạo hàm",
-      items: [
-        { key: "bai5_muc1", label: "Bài 5 - Mục 1: Tối ưu hóa chi phí & Lợi nhuận" },
-        { key: "bai5_muc2", label: "Bài 5 - Mục 2: Tối ưu hóa hình học & Thể tích" },
-        { key: "bai5_muc3", label: "Bài 5 - Mục 3: Bài toán chuyển động trong Vật lý" }
+      lessonId: "bai5",
+      lessonTitle: "Bài 5: Ứng dụng thực tế đạo hàm",
+      lessonBadge: "Bài 5",
+      sections: [
+        { key: "bai5_muc1", title: "Mục 1: Tối ưu hóa chi phí & Lợi nhuận", time: "05:00", icon: "💰" },
+        { key: "bai5_muc2", title: "Mục 2: Tối ưu hóa hình học & Thể tích", time: "05:00", icon: "📦" },
+        { key: "bai5_muc3", title: "Mục 3: Bài toán chuyển động trong Vật lý", time: "05:00", icon: "🚀" }
       ]
     },
     {
-      group: "Ôn tập Chương 1",
-      items: [
-        { key: "ontap_muc1", label: "Ôn tập - Mục 1: Tổng ôn kiến thức cốt lõi & Sơ đồ" },
-        { key: "ontap_muc2", label: "Ôn tập - Mục 2: Bẫy trắc nghiệm & Kỹ thuật Casio" },
-        { key: "ontap_muc3", label: "Ôn tập - Mục 3: Đề thi thực chiến 3 phần chuẩn Bộ" }
+      lessonId: "ontap",
+      lessonTitle: "Ôn tập Chương 1",
+      lessonBadge: "Ôn tập",
+      sections: [
+        { key: "ontap_muc1", title: "Mục 1: Tổng ôn kiến thức cốt lõi & Sơ đồ", time: "05:00", icon: "🧠" },
+        { key: "ontap_muc2", title: "Mục 2: Bẫy trắc nghiệm & Kỹ thuật Casio", time: "05:00", icon: "💡" },
+        { key: "ontap_muc3", title: "Mục 3: Đề thi thực chiến 3 phần chuẩn Bộ", time: "05:00", icon: "🏆" }
       ]
     }
   ];
 
-  // Dynamically initialize the full Chapter 1 section selector
+  function buildOptionsHtml() {
+    let html = '';
+    CHAPTER1_MENU_CONFIG.forEach(grp => {
+      html += `<optgroup label="${grp.lessonTitle}" style="background:#0f172a; color:#38bdf8; font-weight:bold;">`;
+      grp.sections.forEach(s => {
+        html += `<option value="${s.key}" style="background:#1e293b; color:#f8fafc;">${s.icon} ${grp.lessonBadge} - ${s.title} (${s.time})</option>`;
+      });
+      html += `</optgroup>`;
+    });
+    return html;
+  }
+
+  // Visual Drawer Modal with 6 Lesson Cards & 18 Sections
+  function toggleLectureDrawer(show) {
+    let drawer = document.getElementById('il-chapter1-drawer');
+    if (!drawer) {
+      drawer = document.createElement('div');
+      drawer.id = 'il-chapter1-drawer';
+      drawer.className = 'fixed inset-0 z-[120] bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 transition-opacity';
+      drawer.onclick = function(e) {
+        if (e.target === drawer) toggleLectureDrawer(false);
+      };
+
+      let cardsHtml = '';
+      CHAPTER1_MENU_CONFIG.forEach(grp => {
+        let secButtons = '';
+        grp.sections.forEach(s => {
+          secButtons += `
+            <button type="button" onclick="window.openInteractiveLecture('${s.key}'); window.toggleLectureDrawer(false);" class="w-full text-left p-2.5 rounded-xl bg-slate-800/80 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700/80 hover:border-amber-300 transition group flex items-center justify-between gap-2 shadow-xs cursor-pointer">
+              <div class="flex items-center gap-2 truncate">
+                <span class="text-base">${s.icon}</span>
+                <span class="text-xs sm:text-sm font-semibold truncate group-hover:font-black">${s.title}</span>
+              </div>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-900 group-hover:bg-slate-950 text-amber-300 shrink-0 font-mono font-bold">${s.time}</span>
+            </button>
+          `;
+        });
+
+        cardsHtml += `
+          <div class="bg-slate-900/90 rounded-2xl p-4 border border-indigo-900/60 shadow-lg flex flex-col gap-2.5">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span class="text-xs sm:text-sm font-black text-amber-300 uppercase tracking-wide">${grp.lessonTitle}</span>
+              <span class="text-[11px] font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded-full">${grp.sections.length} mục</span>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              ${secButtons}
+            </div>
+          </div>
+        `;
+      });
+
+      drawer.innerHTML = `
+        <div class="bg-slate-950 border-2 border-indigo-800 rounded-3xl w-full max-w-5xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden font-serif">
+          <div class="p-4 sm:p-5 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border-b border-indigo-900 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center text-xl font-black shadow-md">🦉</div>
+              <div>
+                <h2 class="text-base sm:text-xl font-black text-amber-300 tracking-wide uppercase">DANH MỤC BÀI GIẢNG TƯƠNG TÁC CHƯƠNG 1</h2>
+                <p class="text-xs text-slate-400">SGK Kết nối tri thức với cuộc sống • Trọn bộ 18 Mục bài giảng KaTeX & SVG</p>
+              </div>
+            </div>
+            <button type="button" onclick="window.toggleLectureDrawer(false)" class="w-8 h-8 rounded-xl bg-slate-800 hover:bg-rose-600 text-slate-300 hover:text-white flex items-center justify-center font-bold text-sm transition cursor-pointer">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="p-4 sm:p-6 overflow-y-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            ${cardsHtml}
+          </div>
+          <div class="p-3 bg-slate-900/80 border-t border-slate-800 text-center text-xs text-slate-400">
+            Bấm chọn mục bất kỳ để học bài giảng trực quan cùng Thầy Thuấn Phan & Mascot Cú Thông Thái.
+          </div>
+        </div>
+      `;
+      document.body.appendChild(drawer);
+    }
+
+    if (show === false) {
+      drawer.classList.add('hidden');
+    } else if (show === true) {
+      drawer.classList.remove('hidden');
+    } else {
+      drawer.classList.toggle('hidden');
+    }
+  }
+
+  // Render persistent web banner on main web interface
+  function renderWebChapter1Bar() {
+    if (document.getElementById('web-chapter1-lecture-bar')) {
+      const selectEl = document.getElementById('web-chapter1-lecture-select');
+      if (selectEl) selectEl.value = currentSection;
+      return;
+    }
+
+    const lesson1Btn = document.getElementById('btn-open-lesson1-video');
+    if (lesson1Btn) {
+      lesson1Btn.innerHTML = '<i class="fa-solid fa-circle-play text-white animate-pulse"></i> <span>▶ Bài giảng tương tác (18 Mục)</span> <span class="bg-white/20 text-white text-[10px] px-1.5 py-0.2 rounded-full font-black">Full</span>';
+      lesson1Btn.title = 'Mở danh mục 18 bài giảng tương tác toàn bộ Chương 1';
+      lesson1Btn.onclick = function() { window.openInteractiveLecture(currentSection || 'muc1'); };
+    }
+
+    const bar = document.createElement('div');
+    bar.id = 'web-chapter1-lecture-bar';
+    bar.className = 'w-full bg-slate-900/95 border-b-2 border-amber-500/80 text-white px-3 sm:px-6 py-2 shadow-xl flex flex-wrap items-center justify-between gap-2.5 z-40 relative backdrop-blur-md';
+    bar.innerHTML = `
+      <div class="flex items-center gap-2 shrink-0">
+        <span class="w-7 h-7 rounded-xl bg-gradient-to-tr from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center font-black text-sm shadow-sm">🦉</span>
+        <div>
+          <span class="font-black text-xs sm:text-sm text-amber-300 tracking-wide uppercase">BÀI GIẢNG TƯƠNG TÁC CHƯƠNG 1</span>
+          <span class="hidden md:inline text-[11px] text-slate-300 ml-1.5 font-sans">(KaTeX • SVG • 18 Mục Toàn Diện)</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 flex-wrap">
+        <div class="relative flex items-center">
+          <span class="absolute left-2.5 text-amber-400 text-xs pointer-events-none">📚</span>
+          <select id="web-chapter1-lecture-select" onchange="window.openInteractiveLecture(this.value)" class="pl-7 pr-3 py-1.5 rounded-xl font-bold text-xs sm:text-sm bg-slate-800 text-amber-300 border border-amber-400/60 shadow-md cursor-pointer outline-none hover:bg-slate-700 transition max-w-[240px] sm:max-w-[360px] truncate" title="Chọn bài học tương tác">
+            ${buildOptionsHtml()}
+          </select>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-1">
+          <button type="button" onclick="window.openInteractiveLecture('muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 1</button>
+          <button type="button" onclick="window.openInteractiveLecture('bai2_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 2</button>
+          <button type="button" onclick="window.openInteractiveLecture('bai3_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 3</button>
+          <button type="button" onclick="window.openInteractiveLecture('bai4_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 4</button>
+          <button type="button" onclick="window.openInteractiveLecture('bai5_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 5</button>
+          <button type="button" onclick="window.openInteractiveLecture('ontap_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-indigo-800/80 hover:bg-amber-400 hover:text-slate-950 text-amber-200 border border-indigo-600 transition">Ôn tập</button>
+        </div>
+
+        <button type="button" onclick="window.toggleLectureDrawer()" class="px-3 py-1.5 rounded-xl font-black text-xs sm:text-sm bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 hover:brightness-110 shadow-md cursor-pointer transition flex items-center gap-1.5">
+          <i class="fa-solid fa-table-cells-large"></i>
+          <span>Danh sách 18 mục</span>
+        </button>
+      </div>
+    `;
+
+    const headerEl = document.querySelector('header') || document.querySelector('nav');
+    if (headerEl && headerEl.nextSibling) {
+      headerEl.parentNode.insertBefore(bar, headerEl.nextSibling);
+    } else {
+      document.body.insertBefore(bar, document.body.firstChild);
+    }
+  }
+
+  // Initialize the modal section switcher
   function initSectionSelector() {
-    if (document.getElementById('il-section-select')) return;
+    ensureMergedData();
 
     const tab1 = document.getElementById('il-tab-muc1');
-    const container = tab1 ? tab1.parentElement : (document.querySelector('.il-header-bar') || document.querySelector('#modal-interactive-lecture header'));
-    if (!container) return;
+    const tab2 = document.getElementById('il-tab-muc2');
+    const tabsWrapper = tab1 ? tab1.parentElement : null;
 
-    const select = document.createElement('select');
-    select.id = 'il-section-select';
-    select.className = 'px-3 py-1.5 rounded-xl font-bold text-xs sm:text-sm bg-slate-800 text-amber-300 border border-amber-400/50 shadow-md cursor-pointer outline-none transition hover:bg-slate-700 max-w-[280px] sm:max-w-[360px] truncate';
-    select.setAttribute('aria-label', 'Chọn bài học và mục bài giảng');
+    if (tabsWrapper && !document.getElementById('il-section-select')) {
+      tab1.style.display = 'none';
+      if (tab2) tab2.style.display = 'none';
 
-    SECTION_OPTIONS.forEach(grp => {
-      const optGroup = document.createElement('optgroup');
-      optGroup.label = grp.group;
-      optGroup.style.background = '#0f172a';
-      optGroup.style.color = '#38bdf8';
-      grp.items.forEach(it => {
-        const opt = document.createElement('option');
-        opt.value = it.key;
-        opt.textContent = it.label;
-        opt.style.background = '#1e293b';
-        opt.style.color = '#f8fafc';
-        optGroup.appendChild(opt);
-      });
-      select.appendChild(optGroup);
-    });
+      const selectBox = document.createElement('div');
+      selectBox.className = 'flex items-center gap-1.5';
+      selectBox.innerHTML = `
+        <div class="relative flex items-center">
+          <span class="absolute left-2.5 text-amber-400 text-xs pointer-events-none">📖</span>
+          <select id="il-section-select" class="pl-7 pr-3 py-1 rounded-lg font-bold text-xs sm:text-sm bg-slate-900 text-amber-300 border border-amber-400/60 shadow-md cursor-pointer outline-none transition hover:bg-slate-800 hover:border-amber-300 max-w-[210px] sm:max-w-[340px] truncate" title="Chọn bài học và mục bài giảng (18 mục)">
+            ${buildOptionsHtml()}
+          </select>
+        </div>
+        <button type="button" onclick="window.toggleLectureDrawer()" class="px-2.5 py-1 rounded-lg font-bold text-xs bg-indigo-700/80 hover:bg-indigo-600 text-amber-200 border border-indigo-500/50 shadow-xs cursor-pointer transition flex items-center gap-1 shrink-0" title="Mở danh mục toàn bộ 18 mục">
+          <i class="fa-solid fa-layer-group text-xs"></i>
+          <span class="hidden sm:inline">18 Mục</span>
+        </button>
+      `;
+      tabsWrapper.appendChild(selectBox);
 
-    select.addEventListener('change', function() {
-      switchSection(this.value);
-    });
-
-    if (tab1 && tab1.parentElement) {
-      tab1.parentElement.appendChild(select);
-    } else {
-      container.appendChild(select);
+      const selEl = document.getElementById('il-section-select');
+      if (selEl) {
+        selEl.addEventListener('change', function() {
+          switchSection(this.value);
+        });
+      }
     }
+
+    renderWebChapter1Bar();
   }
 
   // Switch between sections (Bài 1 Mục 1..2, Bài 2..5, Ôn tập - 18 mục)
@@ -461,32 +616,21 @@
     const data = LECTURE_DATA[secKey];
     if (!data) return;
 
-    // Update section switcher dropdown
-    const selectEl = document.getElementById('il-section-select');
-    if (selectEl && selectEl.value !== secKey) {
-      selectEl.value = secKey;
-    }
+    // Sync dropdown selections
+    const selModal = document.getElementById('il-section-select');
+    if (selModal) selModal.value = secKey;
+    const selWeb = document.getElementById('web-chapter1-lecture-select');
+    if (selWeb) selWeb.value = secKey;
 
-    // Update section switcher tabs if Bài 1
-    const tab1 = document.getElementById('il-tab-muc1');
-    const tab2 = document.getElementById('il-tab-muc2');
-    if (tab1 && tab2) {
-      if (secKey === 'muc1') {
-        tab1.className = 'px-4 py-2 rounded-xl font-black text-xs sm:text-sm bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 shadow-md cursor-pointer transition flex items-center gap-1.5';
-        tab2.className = 'px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 cursor-pointer transition flex items-center gap-1.5';
-      } else if (secKey === 'muc2') {
-        tab2.className = 'px-4 py-2 rounded-xl font-black text-xs sm:text-sm bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 shadow-md cursor-pointer transition flex items-center gap-1.5';
-        tab1.className = 'px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 cursor-pointer transition flex items-center gap-1.5';
-      } else {
-        tab1.className = 'px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 cursor-pointer transition flex items-center gap-1.5';
-        tab2.className = 'px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 cursor-pointer transition flex items-center gap-1.5';
-      }
-    }
-
-    // Update Header Title text if available
-    const headerTitle = document.getElementById('il-header-lesson-title');
-    if (headerTitle && data.lessonTitle) {
-      headerTitle.textContent = data.lessonTitle;
+    // Update Header Title in Modal
+    const headerTitle = document.getElementById('il-header-lesson-title') 
+      || document.querySelector('#modal-interactive-lecture .il-header-bar h3')
+      || document.querySelector('#modal-interactive-lecture h3');
+    if (headerTitle) {
+      headerTitle.id = 'il-header-lesson-title';
+      const secName = data.sectionTitle || data.title || '';
+      headerTitle.textContent = `${data.lessonTitle || ''} • ${secName}`;
+      headerTitle.title = `${data.lessonTitle || ''} • ${secName}`;
     }
 
     // Update Audio src
@@ -499,7 +643,7 @@
     }
     audio.currentTime = 0;
 
-    // Reset slide to 1
+    // Reset slide to 1 & pills
     renderSlide(1);
     updatePartPills();
 
@@ -698,12 +842,21 @@
     openInteractiveLecture(id || 'muc1');
   };
 
-  // Auto-init on DOMContentLoaded
-  document.addEventListener('DOMContentLoaded', function() {
-    // Pre-create audio element
+  window.toggleLectureDrawer = toggleLectureDrawer;
+  window.renderWebChapter1Bar = renderWebChapter1Bar;
+
+  // Auto-init
+  function initApp() {
     getOrCreateAudio();
     ensureMergedData();
     initSectionSelector();
-  });
+    renderWebChapter1Bar();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    initApp();
+  }
 
 })(window, document);
