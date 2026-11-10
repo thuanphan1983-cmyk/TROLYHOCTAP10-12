@@ -912,39 +912,7 @@
       <div id="chat-lesson-banner" class="bg-indigo-50/80 border-b border-indigo-100 px-3 sm:px-4 py-2 flex items-center justify-between text-xs sm:text-[11.5pt] text-indigo-900 shrink-0 gap-2 font-serif flex-wrap">
         <div class="flex items-center gap-1.5 sm:gap-2 truncate">
           <span class="bg-indigo-600 text-white text-[9.5pt] sm:text-[10pt] font-black px-2 py-0.5 rounded shadow-xs shrink-0">SGK</span>
-          <span class="truncate font-semibold"><strong id="chat-current-lesson" class="text-indigo-950 font-bold">Bài 1: Tính đơn điệu và cực trị của hàm số</strong>
-<div id="lesson-bai1" class="mt-6">
-  <h2 class="text-xl font-bold mb-2">🎉 CHÀO MỪNG CÁC EM ĐẾN VỚI LỚP HỌC TOÁN CỦA THẦY THUẤN PHAN</h2>
-  <!-- Mục 1 -->
-  <div class="mb-4">
-    <p class="font-semibold">Mục 1 – Tính đơn điệu</p>
-    <button onclick="playVideo('muc1')" class="bg-indigo-600 text-white px-4 py-2 rounded">▶ Xem Video bài giảng (5 phút)</button>
-    <video id="video-muc1" class="hidden w-full max-w-4xl rounded-lg mt-2" controls src="/videos/bai1_muc1_don_dieu.mp4"></video>
-  </div>
-  <div id="mcq-muc1" class="hidden">
-    <!-- MCQ placeholders for Mục 1 (3 câu) -->
-  </div>
-
-  <!-- Mục 2 (initially hidden) -->
-  <div id="section-muc2" class="hidden">
-    <p class="font-semibold">Mục 2 – Cực trị</p>
-    <button onclick="playVideo('muc2')" class="bg-indigo-600 text-white px-4 py-2 rounded">▶ Xem Video bài giảng (5 phút)</button>
-    <video id="video-muc2" class="hidden w-full max-w-4xl rounded-lg mt-2" controls src="/videos/bai1_muc2_cuc_tri.mp4"></video>
-  </div>
-  <div id="mcq-muc2" class="hidden">
-    <!-- MCQ placeholders for Mục 2 (3 câu) -->
-  </div>
-
-  <!-- True/False section (hidden) -->
-  <div id="section-true-false" class="hidden">
-    <!-- 6 True/False items -->
-  </div>
-
-  <!-- Progress bar -->
-  <div class="mt-4 w-full bg-gray-200 rounded h-2">
-    <div id="progress-bar" class="bg-indigo-600 h-2 w-0 rounded" style="transition: width 0.5s ease;"></div>
-  </div>
-</div></span>
+          <span class="truncate font-semibold"><strong id="chat-current-lesson" class="text-indigo-950 font-bold">Bài 1: Tính đơn điệu và cực trị của hàm số</strong></span>
         </div>
         <div class="flex items-center gap-2 shrink-0">
           <!-- Student Info Badge (Họ tên, Trường, Lớp) -->
@@ -38612,6 +38580,66 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 
 
   <!-- ========================================================================= -->
+  <!-- MODAL: VIDEO PLAYER POPUP (16:9 FULL HD - MICRO-LEARNING THẦY THUẤN PHAN)   -->
+  <!-- ========================================================================= -->
+  <div id="modal-video-player" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-[100] hidden items-center justify-center p-2 sm:p-4 font-serif overflow-y-auto" onclick="if(event.target===this) closeVideoModal()">
+    <div class="bg-slate-900 text-white rounded-3xl shadow-2xl max-w-4xl w-full border-2 border-indigo-400/50 flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200 my-auto">
+      
+      <!-- Modal Header -->
+      <div class="p-3.5 sm:p-4 bg-gradient-to-r from-indigo-950 via-purple-950 to-indigo-950 flex items-center justify-between border-b border-indigo-800 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-xl shadow-md shrink-0">
+            🦉
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span id="modal-video-badge" class="bg-amber-400 text-slate-950 text-[10px] sm:text-xs font-black px-2 py-0.5 rounded-full uppercase">Mục 1</span>
+              <h3 id="modal-video-title" class="text-sm sm:text-lg font-black text-amber-300 leading-tight">
+                Mục 1: Tính đơn điệu của hàm số (Video 05:00)
+              </h3>
+            </div>
+            <p class="text-[11px] sm:text-xs text-indigo-200 mt-0.5">
+              Thầy Thuấn Phan • Cú thông thái EdTech • Giọng đọc chuẩn sư phạm
+            </p>
+          </div>
+        </div>
+        <button type="button" onclick="closeVideoModal()" class="px-3 py-1.5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-1.5 shadow-md cursor-pointer transition active:scale-95 shrink-0 ml-2" title="Tắt video và dừng phát âm thanh">
+          <i class="fa-solid fa-xmark"></i>
+          <span>✕ Đóng video</span>
+        </button>
+      </div>
+
+      <!-- 16:9 Video Container -->
+      <div class="relative w-full bg-black overflow-hidden" style="padding-top: 56.25%;">
+        <video id="global-modal-video" controls playsinline class="absolute inset-0 w-full h-full object-contain bg-black" preload="auto" onended="handleVideoModalFinished()">
+          <source id="global-modal-video-source" src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+          <source src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
+          Trình duyệt của bạn không hỗ trợ phát thẻ video HTML5.
+        </video>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-3 sm:p-4 bg-slate-950/90 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm shrink-0">
+        <div class="flex items-center gap-2 text-amber-300 font-medium">
+          <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+          <span id="modal-video-instruction">Xem xong video để mở khóa phần trắc nghiệm tương ứng.</span>
+        </div>
+        <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+          <button type="button" onclick="handleVideoModalFinished()" class="flex-1 sm:flex-none px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold rounded-xl shadow-md transition cursor-pointer active:scale-95 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-check-double"></i>
+            <span>✅ Đã xem xong (Mở khóa)</span>
+          </button>
+          <button type="button" onclick="closeVideoModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold rounded-xl transition cursor-pointer">
+            ✕ Đóng
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
   <!-- MODAL: PHÒNG HỌC MICRO-LEARNING & GATING WORKFLOW (BÀI 1 TOÁN 12)        -->
   <!-- ========================================================================= -->
   <div id="modal-microlearning-video" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden items-center justify-center p-2 sm:p-4 font-serif overflow-y-auto">
@@ -38881,58 +38909,140 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
       mcq2Done: false
     };
 
-    function openMicrolearningVideoModal() {
-      const modal = document.getElementById('modal-microlearning-video');
-      if (modal) {
+    // 1. POPUP MODAL VIDEO (16:9 FULL HD)
+    function openVideoModal(sec) {
+      const num = (sec === 2 || sec === '2' || sec === 'muc2' || sec === 'video2') ? 2 : 1;
+      const modal = document.getElementById('modal-video-player');
+      const video = document.getElementById('global-modal-video');
+      const videoSource = document.getElementById('global-modal-video-source');
+      const title = document.getElementById('modal-video-title');
+      const badge = document.getElementById('modal-video-badge');
+      const instruction = document.getElementById('modal-video-instruction');
+
+      const file = num === 1 ? 'videos/bai1_muc1_don_dieu.mp4' : 'videos/bai1_muc2_cuc_tri.mp4';
+      const label = num === 1 
+        ? 'Mục 1: Tính đơn điệu của hàm số (Video 05:00)' 
+        : 'Mục 2: Cực trị của hàm số (Video 05:00)';
+
+      if (title) title.textContent = label;
+      if (badge) badge.textContent = `Mục ${num}`;
+      if (instruction) {
+        instruction.textContent = num === 1 
+          ? 'Xem xong Video 1 để mở khóa 3 câu trắc nghiệm Mục 1 & Mục 2.' 
+          : 'Xem xong Video 2 để mở khóa 3 câu trắc nghiệm Mục 2 & Phiếu 24 ý.';
+      }
+
+      // Also unhide & scroll to in-page video frame if present
+      const inlineWrapper = document.getElementById(num === 1 ? 'video1-wrapper' : 'video2-wrapper');
+      if (inlineWrapper) {
+        inlineWrapper.classList.remove('hidden');
+        inlineWrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        const inPageVid = document.getElementById(num === 1 ? 'player-muc1' : 'player-muc2');
+        if (inPageVid) {
+          try {
+            const p = inPageVid.play();
+            if (p && p.catch) p.catch(() => {});
+          } catch (e) {}
+        }
+      }
+
+      // Open popup modal
+      if (modal && video) {
         modal.classList.remove('hidden');
         modal.classList.add('flex');
-        renderMath(modal);
+        if (videoSource) videoSource.src = file;
+        video.src = file;
+        try {
+          video.currentTime = 0;
+          const p = video.play();
+          if (p && p.catch) {
+            p.catch(function(err) {
+              console.log('Autoplay ready - user can click play:', err);
+            });
+          }
+        } catch (e) {
+          console.log('Video play deferred:', e);
+        }
       }
     }
-    window.openMicrolearningVideoModal = openMicrolearningVideoModal;
+    window.openVideoModal = openVideoModal;
+    window.playVideo = openVideoModal;
+    window.playLessonVideo = openVideoModal;
 
-    function closeMicrolearningVideoModal() {
-      const modal = document.getElementById('modal-microlearning-video');
+    // 2. CLOSE MODAL & AUTO STOP VIDEO
+    function closeVideoModal() {
+      const modal = document.getElementById('modal-video-player');
+      const video = document.getElementById('global-modal-video');
+      if (video) {
+        try {
+          video.pause();
+        } catch (e) {}
+      }
       if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
       }
     }
-    window.closeMicrolearningVideoModal = closeMicrolearningVideoModal;
+    window.closeVideoModal = closeVideoModal;
 
+    // 3. FINISH VIDEO ACTION
+    function handleVideoModalFinished() {
+      const video = document.getElementById('global-modal-video');
+      const isSec2 = video && video.src && (video.src.includes('muc2') || video.src.includes('cuc_tri'));
+      const num = isSec2 ? 2 : 1;
+      closeVideoModal();
+      markLessonVideoCompleted(num);
+    }
+    window.handleVideoModalFinished = handleVideoModalFinished;
+
+    // 4. INLINE TOGGLE VIDEO
     function toggleLessonVideo(wrapperId) {
-      const el = document.getElementById(wrapperId + '-wrapper');
+      const num = (wrapperId === 'video2' || wrapperId === 2 || wrapperId === 'muc2') ? 2 : 1;
+      const el = document.getElementById('video' + num + '-wrapper') || document.getElementById(wrapperId + '-wrapper');
       if (el) {
         el.classList.toggle('hidden');
         if (!el.classList.contains('hidden')) {
           el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          const inPageVid = document.getElementById(num === 1 ? 'player-muc1' : 'player-muc2');
+          if (inPageVid) {
+            try {
+              const p = inPageVid.play();
+              if (p && p.catch) p.catch(() => {});
+            } catch (e) {}
+          }
+        } else {
+          const inPageVid = document.getElementById(num === 1 ? 'player-muc1' : 'player-muc2');
+          if (inPageVid) {
+            try { inPageVid.pause(); } catch (e) {}
+          }
         }
       }
+      // Also open popup modal for great UX
+      openVideoModal(num);
     }
     window.toggleLessonVideo = toggleLessonVideo;
     window.toggleVideo = toggleLessonVideo;
 
     function toggleModalVideo(id) {
-      const el = document.getElementById(id + '-wrapper');
-      if (el) {
-        el.classList.toggle('hidden');
-      }
+      const num = (id && id.includes('2')) ? 2 : 1;
+      openVideoModal(num);
     }
     window.toggleModalVideo = toggleModalVideo;
 
+    // 5. GATING & COMPLETION HANDLERS
     function markLessonVideoCompleted(num) {
       if (!window.lesson1GatingState) {
         window.lesson1GatingState = { video1Done: false, mcq1Done: false, video2Done: false, mcq2Done: false };
       }
       if (num === 1) {
         window.lesson1GatingState.video1Done = true;
-        alert('🎉 Tuyệt vời! Em đã xem xong Video 1. Hãy làm 3 câu trắc nghiệm Mục 1 bên dưới để tự động mở khóa Mục 2.');
+        alert('🎉 Tuyệt vời! Em đã hoàn thành Video 1. Hãy làm 3 câu trắc nghiệm Mục 1 để mở khóa Mục 2!');
         if (typeof handleGoToMCQ === 'function') {
           handleGoToMCQ(0);
         }
       } else if (num === 2) {
         window.lesson1GatingState.video2Done = true;
-        alert('🎉 Rất tốt! Em đã xem xong Video 2. Hãy hoàn thành 3 câu trắc nghiệm Mục 2 để mở khóa Phiếu 24 ý.');
+        alert('🎉 Rất tốt! Em đã hoàn thành Video 2. Hãy hoàn thành 3 câu trắc nghiệm Mục 2 để mở khóa Phiếu 24 ý!');
         if (typeof handleGoToMCQ === 'function') {
           handleGoToMCQ(0);
         }
@@ -38945,6 +39055,7 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
     window.markVideoCompleted = markLessonVideoCompleted;
 
     function markModalVideoCompleted(num) {
+      markLessonVideoCompleted(num);
       if (num === 1) {
         const mcq1 = document.getElementById('modal-mcq1');
         if (mcq1) mcq1.classList.remove('locked');
@@ -38953,7 +39064,6 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
           badge.className = 'text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-bold';
           badge.innerHTML = '🔓 Đã mở khóa';
         }
-        alert('🎉 Đã xem xong Video 1! Hãy trả lời 3 câu trắc nghiệm để mở khóa Mục 2.');
       } else if (num === 2) {
         const mcq2 = document.getElementById('modal-mcq2');
         if (mcq2) mcq2.classList.remove('locked');
@@ -38962,79 +39072,41 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
           badge.className = 'text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-bold';
           badge.innerHTML = '🔓 Đã mở khóa';
         }
-        alert('🎉 Đã xem xong Video 2! Hãy trả lời 3 câu trắc nghiệm để mở khóa Phiếu 24 ý.');
       }
     }
     window.markModalVideoCompleted = markModalVideoCompleted;
 
-    function submitModalMCQ(section) {
-      // Existing logic for modal MCQ submission
-      const names = section === 1 ? ['mq1', 'mq2', 'mq3'] : ['mq21', 'mq22', 'mq23'];
-      let ok = true;
-      names.forEach(n => {
-        const checked = Array.from(document.getElementsByName(n)).some(r => r.checked);
-        if (!checked) ok = false;
+    function openMicrolearningVideoModal() {
+      const modal = document.getElementById('modal-microlearning-video');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        if (typeof renderMath === 'function') renderMath(modal);
+      }
+    }
+    window.openMicrolearningVideoModal = openMicrolearningVideoModal;
+
+    function closeMicrolearningVideoModal() {
+      const modal = document.getElementById('modal-microlearning-video');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+      // Stop modal videos
+      ['player-modal-muc1', 'player-modal-muc2'].forEach(id => {
+        const v = document.getElementById(id);
+        if (v) { try { v.pause(); } catch(e) {} }
       });
-
-      if (!ok) {
-        alert('⚠️ Vui lòng chọn đáp án cho tất cả 3 câu trắc nghiệm trước khi nộp bài!');
-        return;
-      }
-
-      if (section === 1) {
-        window.lesson1GatingState.mcq1Done = true;
-        const sec2 = document.getElementById('modal-sec-2');
-        if (sec2) {
-          sec2.classList.remove('locked');
-          sec2.classList.add('border-purple-300');
-        }
-        const badge = document.getElementById('modal-sec2-badge');
-        if (badge) badge.innerHTML = '🔓 Đã mở khóa Mục 2';
-        // Unlock inline Mục 2 UI
-        const sec2Inline = document.getElementById('section-muc2');
-        if (sec2Inline) sec2Inline.classList.remove('hidden');
-        updateProgress(33);
-        return;
-      }
-
-      if (section === 2) {
-        window.lesson1GatingState.mcq2Done = true;
-        const tfSec = document.getElementById('section-true-false');
-        if (tfSec) tfSec.classList.remove('hidden');
-        updateProgress(100);
-        return;
-      }
     }
-
-    // ---- NEW INLINE GATING FUNCTIONS ----
-    function playVideo(section) {
-      const vid = document.getElementById('video-' + section);
-      if (!vid) return;
-      vid.classList.remove('hidden');
-      vid.play();
-      vid.onended = () => unlockAfterVideo(section);
-    }
-
-    function unlockAfterVideo(section) {
-      if (section === 'muc1') {
-        // Show MCQ for Muc 1
-        const mcq = document.getElementById('mcq-muc1');
-        if (mcq) mcq.classList.remove('hidden');
-        alert('✅ Xem xong Video 1. Hãy trả lời 3 câu trắc nghiệm để mở khóa Mục 2.');
-        updateProgress(33);
-      } else if (section === 'muc2') {
-        const mcq = document.getElementById('mcq-muc2');
-        if (mcq) mcq.classList.remove('hidden');
-        alert('✅ Xem xong Video 2. Hãy trả lời 3 câu trắc nghiệm để mở khóa phần Đúng/Sai.');
-        updateProgress(66);
-      }
-    }
+    window.closeMicrolearningVideoModal = closeMicrolearningVideoModal;
 
     function updateProgress(percent) {
       const bar = document.getElementById('progress-bar');
       if (bar) bar.style.width = percent + '%';
     }
+    window.updateProgress = updateProgress;
 
+    function submitModalMCQ(section) {
       const names = section === 1 ? ['mq1', 'mq2', 'mq3'] : ['mq21', 'mq22', 'mq23'];
       let ok = true;
       names.forEach(n => {
@@ -39065,6 +39137,9 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         }
         alert('🎉 Chúc mừng em đã hoàn thành Mục 1! Mục 2: Cực trị của hàm số đã được mở khóa.');
         if (sec2) sec2.scrollIntoView({ behavior: 'smooth' });
+        if (typeof renderTheoryPanel === 'function') {
+          renderTheoryPanel();
+        }
       } else if (section === 2) {
         window.lesson1GatingState.mcq2Done = true;
         const sec3 = document.getElementById('modal-sec-3');
@@ -39083,6 +39158,10 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         }
         alert('🎉 Xuất sắc! Em đã hoàn thành toàn bộ 2 video và 6 câu trắc nghiệm. Phiếu 24 ý đã mở khóa!');
         if (sec3) sec3.scrollIntoView({ behavior: 'smooth' });
+        if (typeof switchStudyTab === 'function') {
+          closeMicrolearningVideoModal();
+          switchStudyTab('tf');
+        }
       }
     }
     window.submitModalMCQ = submitModalMCQ;
