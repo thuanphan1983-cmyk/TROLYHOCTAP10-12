@@ -486,62 +486,143 @@
     }
   }
 
-  // Render persistent web banner on main web interface
-  function renderWebChapter1Bar() {
-    if (document.getElementById('web-chapter1-lecture-bar')) {
-      const selectEl = document.getElementById('web-chapter1-lecture-select');
-      if (selectEl) selectEl.value = currentSection;
-      return;
-    }
-
-    const lesson1Btn = document.getElementById('btn-open-lesson1-video');
-    if (lesson1Btn) {
-      lesson1Btn.innerHTML = '<i class="fa-solid fa-circle-play text-white animate-pulse"></i> <span>▶ Bài giảng tương tác (18 Mục)</span> <span class="bg-white/20 text-white text-[10px] px-1.5 py-0.2 rounded-full font-black">Full</span>';
-      lesson1Btn.title = 'Mở danh mục 18 bài giảng tương tác toàn bộ Chương 1';
-      lesson1Btn.onclick = function() { window.openInteractiveLecture(currentSection || 'muc1'); };
-    }
-
-    const bar = document.createElement('div');
-    bar.id = 'web-chapter1-lecture-bar';
-    bar.className = 'w-full bg-slate-900/95 border-b-2 border-amber-500/80 text-white px-3 sm:px-6 py-2 shadow-xl flex flex-wrap items-center justify-between gap-2.5 z-40 relative backdrop-blur-md';
-    bar.innerHTML = `
-      <div class="flex items-center gap-2 shrink-0">
-        <span class="w-7 h-7 rounded-xl bg-gradient-to-tr from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center font-black text-sm shadow-sm">🦉</span>
-        <div>
-          <span class="font-black text-xs sm:text-sm text-amber-300 tracking-wide uppercase">BÀI GIẢNG TƯƠNG TÁC CHƯƠNG 1</span>
-          <span class="hidden md:inline text-[11px] text-slate-300 ml-1.5 font-sans">(KaTeX • SVG • 18 Mục Toàn Diện)</span>
-        </div>
-      </div>
-
-      <div class="flex items-center gap-2 flex-wrap">
-        <div class="relative flex items-center">
-          <span class="absolute left-2.5 text-amber-400 text-xs pointer-events-none">📚</span>
-          <select id="web-chapter1-lecture-select" onchange="window.openInteractiveLecture(this.value)" class="pl-7 pr-3 py-1.5 rounded-xl font-bold text-xs sm:text-sm bg-slate-800 text-amber-300 border border-amber-400/60 shadow-md cursor-pointer outline-none hover:bg-slate-700 transition max-w-[240px] sm:max-w-[360px] truncate" title="Chọn bài học tương tác">
-            ${buildOptionsHtml()}
-          </select>
-        </div>
-
-        <div class="hidden lg:flex items-center gap-1">
-          <button type="button" onclick="window.openInteractiveLecture('muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 1</button>
-          <button type="button" onclick="window.openInteractiveLecture('bai2_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 2</button>
-          <button type="button" onclick="window.openInteractiveLecture('bai3_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 3</button>
-          <button type="button" onclick="window.openInteractiveLecture('bai4_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 4</button>
-          <button type="button" onclick="window.openInteractiveLecture('bai5_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition">Bài 5</button>
-          <button type="button" onclick="window.openInteractiveLecture('ontap_muc1')" class="px-2 py-1 rounded-lg text-xs font-bold bg-indigo-800/80 hover:bg-amber-400 hover:text-slate-950 text-amber-200 border border-indigo-600 transition">Ôn tập</button>
-        </div>
-
-        <button type="button" onclick="window.toggleLectureDrawer()" class="px-3 py-1.5 rounded-xl font-black text-xs sm:text-sm bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 hover:brightness-110 shadow-md cursor-pointer transition flex items-center gap-1.5">
-          <i class="fa-solid fa-table-cells-large"></i>
-          <span>Danh sách 18 mục</span>
-        </button>
-      </div>
+  // Inject the pulse animation CSS into the document head
+  (function ensurePulseStyle() {
+    if (typeof document === 'undefined') return;
+    if (document.getElementById('style-active-lecture-pulse')) return;
+    const style = document.createElement('style');
+    style.id = 'style-active-lecture-pulse';
+    style.textContent = `
+      @keyframes pulseLecture {
+        0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+        50% { transform: scale(1.04); box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+      }
+      .btn-lecture-pulse {
+        animation: pulseLecture 2.4s infinite ease-in-out;
+        transition: all 0.2s ease;
+      }
+      .btn-lecture-pulse:hover {
+        filter: brightness(1.18);
+        transform: scale(1.05);
+      }
+      .btn-lecture-pulse:active {
+        transform: scale(0.97);
+      }
+      #web-chapter1-lecture-bar {
+        display: none !important;
+      }
     `;
+    document.head.appendChild(style);
+  })();
 
-    const headerEl = document.querySelector('header') || document.querySelector('nav');
-    if (headerEl && headerEl.nextSibling) {
-      headerEl.parentNode.insertBefore(bar, headerEl.nextSibling);
+  // Determine current active Lesson & Section key for Chapter 1
+  function getCurrentLessonAndSectionKey() {
+    let lessonNum = 1;
+    let sectionNum = 1;
+
+    // 1. Check window.activeLesson
+    const al = (typeof window !== 'undefined' && window.activeLesson) ? window.activeLesson : null;
+    if (al) {
+      if (al.lessonNumber) {
+        lessonNum = parseInt(al.lessonNumber) || 1;
+      } else if (typeof al.id === 'string' && al.id.match(/bai(\d+)/i)) {
+        lessonNum = parseInt(al.id.match(/bai(\d+)/i)[1]) || 1;
+      } else if (al.lessonTitle) {
+        const m = al.lessonTitle.match(/Bài\s*(\d+)/i);
+        if (m) lessonNum = parseInt(m[1]) || 1;
+        else if (al.lessonTitle.toLowerCase().includes('ôn tập') || al.isChapterReview) lessonNum = 'ontap';
+      }
+    }
+
+    // 2. Check #sgk-focus-title DOM text
+    const titleEl = document.getElementById('sgk-focus-title');
+    if (titleEl && titleEl.textContent) {
+      const txt = titleEl.textContent;
+      const m = txt.match(/Bài\s*(\d+)/i);
+      if (m) lessonNum = parseInt(m[1]) || lessonNum;
+      else if (txt.toLowerCase().includes('ôn tập')) lessonNum = 'ontap';
+    }
+
+    // 3. Check active section index
+    if (typeof window !== 'undefined' && window.demoState && typeof window.demoState.sectionIndex === 'number') {
+      sectionNum = window.demoState.sectionIndex + 1;
     } else {
-      document.body.insertBefore(bar, document.body.firstChild);
+      const pillsContainer = document.getElementById('sgk-focus-section-pills');
+      if (pillsContainer) {
+        const activePill = pillsContainer.querySelector('.bg-amber-400') || pillsContainer.querySelector('button[class*="amber"]');
+        if (activePill && activePill.textContent) {
+          const sm = activePill.textContent.match(/Mục\s*(\d+)/i);
+          if (sm) sectionNum = parseInt(sm[1]) || 1;
+        }
+      }
+    }
+
+    // Map to chapter1_data.js keys
+    if (lessonNum === 'ontap') {
+      const s = Math.min(3, Math.max(1, sectionNum));
+      return `ontap_muc${s}`;
+    }
+    if (lessonNum === 1) {
+      return sectionNum === 2 ? 'muc2' : 'muc1';
+    }
+    if (lessonNum >= 2 && lessonNum <= 5) {
+      const maxSec = lessonNum === 4 ? 4 : 3;
+      const s = Math.min(maxSec, Math.max(1, sectionNum));
+      return `bai${lessonNum}_muc${s}`;
+    }
+    return 'muc1';
+  }
+
+  // Inject prominent "Xem Bài Giảng Tương Tác" button beside "Làm đề ôn tập"
+  function injectActiveLectureButton() {
+    // Hide/remove old top shared bar if present
+    const sharedBar = document.getElementById('web-chapter1-lecture-bar');
+    if (sharedBar) sharedBar.remove();
+
+    // 1. In #sgk-focus-nav (beside "Làm đề ôn tập")
+    const sgkNav = document.getElementById('sgk-focus-nav');
+    if (sgkNav) {
+      const practiceBtn = sgkNav.querySelector('button[onclick*="openLessonPracticeModal"]');
+      if (practiceBtn && practiceBtn.parentElement) {
+        let btn = document.getElementById('btn-active-lecture');
+        if (!btn) {
+          btn = document.createElement('button');
+          btn.id = 'btn-active-lecture';
+          btn.className = 'btn-lecture-pulse';
+          btn.setAttribute('style', 'background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff; font-weight: 600; padding: 6px 14px; border-radius: 8px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;');
+          btn.innerHTML = '🎬 Xem Bài Giảng Tương Tác';
+          btn.title = 'Xem bài giảng tương tác đa phương tiện bám sát bài học hiện tại';
+
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const targetKey = getCurrentLessonAndSectionKey();
+            openInteractiveLecture(targetKey);
+          });
+
+          practiceBtn.parentElement.insertBefore(btn, practiceBtn);
+        }
+      }
+    }
+
+    // 2. Also inject in main header navbar beside #tab-btn-lesson-exams if exists
+    const mainExamsBtn = document.getElementById('tab-btn-lesson-exams');
+    if (mainExamsBtn && mainExamsBtn.parentElement && !document.getElementById('btn-active-lecture-main')) {
+      const btnMain = document.createElement('button');
+      btnMain.id = 'btn-active-lecture-main';
+      btnMain.className = 'btn-lecture-pulse';
+      btnMain.setAttribute('style', 'background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff; font-weight: 600; padding: 6px 14px; border-radius: 8px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;');
+      btnMain.innerHTML = '🎬 Xem Bài Giảng Tương Tác';
+      btnMain.title = 'Xem bài giảng tương tác đa phương tiện bám sát bài học hiện tại';
+
+      btnMain.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const targetKey = getCurrentLessonAndSectionKey();
+        openInteractiveLecture(targetKey);
+      });
+
+      mainExamsBtn.parentElement.insertBefore(btnMain, mainExamsBtn);
     }
   }
 
@@ -581,7 +662,7 @@
       }
     }
 
-    renderWebChapter1Bar();
+    injectActiveLectureButton();
   }
 
   // Switch between sections (Bài 1 Mục 1..2, Bài 2..5, Ôn tập - 18 mục)
@@ -647,11 +728,24 @@
     renderSlide(1);
     updatePartPills();
 
-    // Play if modal is active
+    // Immediate Autoplay inside user click gesture
+    isPlaying = true;
+    updatePlayButtonState();
     try {
-      const p = audio.play();
-      if (p && p.catch) p.catch(() => {});
-    } catch(e) {}
+      const playPromise = audio.play();
+      if (playPromise && playPromise.then) {
+        playPromise.then(() => {
+          isPlaying = true;
+          updatePlayButtonState();
+        }).catch(err => {
+          console.warn('Autoplay handled by browser / click to play:', err);
+          isPlaying = false;
+          updatePlayButtonState();
+        });
+      }
+    } catch(e) {
+      console.warn('Audio play trigger error:', e);
+    }
   }
 
   // Seek audio to specific scene
@@ -712,7 +806,8 @@
 
     ensureMergedData();
     initSectionSelector();
-    switchSection(sec || 'muc1');
+    const targetSec = sec || getCurrentLessonAndSectionKey() || 'muc1';
+    switchSection(targetSec);
   }
 
   // Close the Interactive Web Lecture Modal
@@ -843,14 +938,17 @@
   };
 
   window.toggleLectureDrawer = toggleLectureDrawer;
-  window.renderWebChapter1Bar = renderWebChapter1Bar;
+  window.openLectureModal = openInteractiveLecture;
+  window.injectActiveLectureButton = injectActiveLectureButton;
+  window.getCurrentLessonAndSectionKey = getCurrentLessonAndSectionKey;
 
   // Auto-init
   function initApp() {
     getOrCreateAudio();
     ensureMergedData();
     initSectionSelector();
-    renderWebChapter1Bar();
+    injectActiveLectureButton();
+    setInterval(injectActiveLectureButton, 1000);
   }
 
   if (document.readyState === 'loading') {
