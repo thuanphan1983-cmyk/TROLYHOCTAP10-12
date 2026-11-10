@@ -53,6 +53,9 @@
   let audioEl = null;
   let isPlaying = false;
   let isSeeking = false;
+  let fallbackTimerId = null;
+  let virtualCurrentTime = 0;
+  let isFallbackRunning = false;
 
   // Mascot SVG generator
   function getOwlSvg(mode, tipText) {
@@ -98,24 +101,20 @@
       }
 
       audioEl.addEventListener('timeupdate', onTimeUpdate);
-      audioEl.addEventListener('play', () => { isPlaying = true; updatePlayButtonState(); });
-      audioEl.addEventListener('pause', () => { isPlaying = false; updatePlayButtonState(); });
+      audioEl.addEventListener('play', () => { isPlaying = true; updatePlayIcon(true); });
+      audioEl.addEventListener('pause', () => { isPlaying = false; updatePlayIcon(false); });
       audioEl.addEventListener('ended', onAudioEnded);
       audioEl.addEventListener('error', (e) => {
         console.warn('Audio playback error / falling back to alternative source:', e);
-        if (!audioEl._fallbackTried) {
-          audioEl._fallbackTried = true;
-          const cur = audioEl.src;
-          if (cur.includes('/audio/')) {
-            audioEl.src = 'audio/' + cur.split('/audio/').pop();
-          } else if (cur.includes('audio/')) {
-            audioEl.src = '/audio/' + cur.split('audio/').pop();
-          }
-          try {
-            const p = audioEl.play();
-            if (p && p.catch) p.catch(() => {});
-          } catch(err) {}
-        }
+        const data = LECTURE_DATA[currentSection] || {};
+        const currentLecture = {
+          ...data,
+          id: data.id || data.sectionId || currentSection,
+          audio_src: data.audio_src || data.audioSrc || '',
+          duration: data.duration || data.totalDuration || 60
+        };
+        startFallbackTimer(currentLecture.duration || 60);
+        updatePlayIcon(true);
       });
     }
     return audioEl;
@@ -254,30 +253,33 @@
     container.innerHTML = html;
   }
 
-  // Audio timeupdate handler
-  function onTimeUpdate() {
-    const audio = getOrCreateAudio();
-    if (!audio) return;
+  function stopFallbackTimer() {
+    if (fallbackTimerId) {
+      clearInterval(fallbackTimerId);
+      fallbackTimerId = null;
+    }
+    isFallbackRunning = false;
+  }
 
-    const cur = audio.currentTime;
-    const dur = audio.duration || LECTURE_DATA[currentSection].totalDuration || 300;
+  function syncTimelineWithTime(cur, dur) {
+    const data = LECTURE_DATA[currentSection] || {};
+    const totalDur = dur || data.duration || data.totalDuration || 60;
 
     // Time text
     const timeDisplay = document.getElementById('il-time-display');
     if (timeDisplay) {
-      timeDisplay.textContent = `${fmtTime(cur)} / ${fmtTime(dur)}`;
+      timeDisplay.textContent = `${fmtTime(cur)} / ${fmtTime(totalDur)}`;
     }
 
     // Progress bar
     const progBar = document.getElementById('il-progress-bar');
     if (progBar && !isSeeking) {
-      const pct = Math.min(100, Math.max(0, (cur / dur) * 100));
+      const pct = Math.min(100, Math.max(0, (cur / totalDur) * 100));
       progBar.style.width = pct + '%';
     }
 
     // Determine current scene from timestamps
-    const data = LECTURE_DATA[currentSection];
-    if (!data || !data.scenes) return;
+    if (!data || !data.scenes || !data.scenes.length) return;
 
     let activeIdx = 1;
     for (let i = 0; i < data.scenes.length; i++) {
@@ -297,6 +299,23 @@
     }
   }
 
+  // Audio timeupdate handler
+  function onTimeUpdate() {
+    const audio = getOrCreateAudio();
+    if (!audio) return;
+
+    const data = LECTURE_DATA[currentSection] || {};
+    const cur = audio.currentTime;
+    const dur = audio.duration || data.duration || data.totalDuration || 300;
+    virtualCurrentTime = cur;
+    syncTimelineWithTime(cur, dur);
+  }
+
+  function startTimelineSync() {
+    stopFallbackTimer();
+    onTimeUpdate();
+  }
+
   // Play Button state icon
   function updatePlayButtonState() {
     const btn = document.getElementById('il-btn-play');
@@ -312,10 +331,51 @@
     }
   }
 
+  function updatePlayIcon(active) {
+    if (active !== undefined) {
+      isPlaying = !!active;
+    }
+    updatePlayButtonState();
+  }
+
+  // 2. XỬ LÝ LỖI FILE MP3 THIẾU (FALLBACK TIMER):
+  // Viết hàm startFallbackTimer(totalSeconds): Sử dụng setInterval đếm tiến trình currentTime từ 0 -> totalSeconds, đồng bộ kích hoạt các mốc SVG/KaTeX tương ứng theo thời gian như khi có audio thật, đảm bảo học sinh luôn thấy bài giảng chuyển động mượt mà.
+  function startFallbackTimer(totalSeconds) {
+    stopFallbackTimer();
+    isFallbackRunning = true;
+    isPlaying = true;
+    updatePlayIcon(true);
+
+    const dur = Math.max(5, totalSeconds || 60);
+    const step = 0.25;
+
+    if (virtualCurrentTime >= dur) {
+      virtualCurrentTime = 0;
+    }
+
+    syncTimelineWithTime(virtualCurrentTime, dur);
+
+    fallbackTimerId = setInterval(() => {
+      if (!isPlaying) return;
+      virtualCurrentTime += step;
+      if (virtualCurrentTime >= dur) {
+        virtualCurrentTime = dur;
+        syncTimelineWithTime(virtualCurrentTime, dur);
+        stopFallbackTimer();
+        isPlaying = false;
+        updatePlayIcon(false);
+        onAudioEnded();
+        return;
+      }
+      syncTimelineWithTime(virtualCurrentTime, dur);
+    }, 250);
+  }
+
   // When Audio ends
   function onAudioEnded() {
+    stopFallbackTimer();
     isPlaying = false;
-    updatePlayButtonState();
+    updatePlayIcon(false);
 
     const secNum = (currentSection === 'muc2') ? 2 : 1;
     
@@ -697,6 +757,15 @@
     const data = LECTURE_DATA[secKey];
     if (!data) return;
 
+    const currentLecture = {
+      ...data,
+      id: data.id || data.sectionId || secKey,
+      audio_src: data.audio_src || data.audioSrc || '',
+      duration: data.duration || data.totalDuration || 60
+    };
+
+    console.log("Bắt đầu mở bài giảng:", currentLecture.id, currentLecture.audio_src);
+
     // Sync dropdown selections
     const selModal = document.getElementById('il-section-select');
     if (selModal) selModal.value = secKey;
@@ -709,90 +778,143 @@
       || document.querySelector('#modal-interactive-lecture h3');
     if (headerTitle) {
       headerTitle.id = 'il-header-lesson-title';
-      const secName = data.sectionTitle || data.title || '';
-      headerTitle.textContent = `${data.lessonTitle || ''} • ${secName}`;
-      headerTitle.title = `${data.lessonTitle || ''} • ${secName}`;
+      const secName = currentLecture.sectionTitle || currentLecture.title || '';
+      headerTitle.textContent = `${currentLecture.lessonTitle || ''} • ${secName}`;
+      headerTitle.title = `${currentLecture.lessonTitle || ''} • ${secName}`;
     }
 
-    // Update Audio src
-    const audio = getOrCreateAudio();
-    audio._fallbackTried = false;
-    const rawAudio = data.audioSrc || data.audio_src || '';
-    if (rawAudio) {
-      const resolvedSrc = (window.location.protocol === 'file:') ? rawAudio.replace(/^\//, '') : rawAudio;
-      audio.src = resolvedSrc;
-    }
-    audio.currentTime = 0;
+    // Stop previous fallback timer & reset virtual progress
+    stopFallbackTimer();
+    virtualCurrentTime = 0;
 
     // Reset slide to 1 & pills
     renderSlide(1);
     updatePartPills();
 
-    // Immediate Autoplay inside user click gesture
-    isPlaying = true;
-    updatePlayButtonState();
-    try {
-      const playPromise = audio.play();
-      if (playPromise && playPromise.then) {
+    // Check or create audioPlayer
+    let audioPlayer = audioEl;
+    if (!audioPlayer) {
+      audioPlayer = document.getElementById('interactive-lecture-audio');
+      if (!audioPlayer) {
+        audioPlayer = document.createElement('audio');
+        audioPlayer.id = 'interactive-lecture-audio';
+        document.body.appendChild(audioPlayer);
+      }
+      audioEl = audioPlayer;
+      audioPlayer.addEventListener('timeupdate', onTimeUpdate);
+      audioPlayer.addEventListener('play', () => { isPlaying = true; updatePlayIcon(true); });
+      audioPlayer.addEventListener('pause', () => { isPlaying = false; updatePlayIcon(false); });
+      audioPlayer.addEventListener('ended', onAudioEnded);
+      audioPlayer.addEventListener('error', (e) => {
+        console.warn('Audio playback error / falling back to alternative source:', e);
+        startFallbackTimer(currentLecture.duration || 60);
+        updatePlayIcon(true);
+      });
+    }
+
+    audioPlayer.preload = 'auto';
+    const rawAudio = currentLecture.audio_src;
+    if (rawAudio) {
+      const resolvedSrc = (window.location.protocol === 'file:') ? rawAudio.replace(/^\//, '') : rawAudio;
+      audioPlayer.src = resolvedSrc;
+    } else {
+      audioPlayer.src = '';
+    }
+    audioPlayer._fallbackTried = false;
+    try { audioPlayer.currentTime = 0; } catch(e) {}
+
+    // Immediate Autoplay inside user click gesture with fallback
+    if (!rawAudio) {
+      console.warn("Lỗi phát audio (File không tồn tại hoặc lỗi Autoplay):", "Không có audio_src");
+      startFallbackTimer(currentLecture.duration || 60);
+      updatePlayIcon(true);
+    } else {
+      audioPlayer.load();
+      const playPromise = audioPlayer.play();
+      if (playPromise !== undefined) {
         playPromise.then(() => {
-          isPlaying = true;
-          updatePlayButtonState();
+          console.log("Audio đang phát bình thường:", currentLecture.audio_src);
+          startTimelineSync();
+          updatePlayIcon(true);
         }).catch(err => {
-          console.warn('Autoplay handled by browser / click to play:', err);
-          isPlaying = false;
-          updatePlayButtonState();
+          console.warn("Lỗi phát audio (File không tồn tại hoặc lỗi Autoplay):", err);
+          // CƠ CHẾ DỰ PHÒNG (FALLBACK): Nếu file MP3 bị lỗi hoặc chưa có, tự động kích hoạt timer chạy dòng thời gian giả lập để bài giảng SVG/KaTeX vẫn tự động trình chiếu cho học sinh xem!
+          startFallbackTimer(currentLecture.duration || 60);
+          updatePlayIcon(true);
         });
       }
-    } catch(e) {
-      console.warn('Audio play trigger error:', e);
     }
   }
 
   // Seek audio to specific scene
   function seekToScene(sceneIdx) {
-    const data = LECTURE_DATA[currentSection];
+    const data = LECTURE_DATA[currentSection] || {};
+    const currentLecture = {
+      ...data,
+      id: data.id || data.sectionId || currentSection,
+      audio_src: data.audio_src || data.audioSrc || '',
+      duration: data.duration || data.totalDuration || 60
+    };
     if (!data || !data.scenes) return;
     const sc = data.scenes[sceneIdx - 1];
     if (!sc) return;
 
-    const audio = getOrCreateAudio();
-    audio.currentTime = sc.startTime;
+    virtualCurrentTime = sc.startTime;
+    const audioPlayer = getOrCreateAudio();
+    if (audioPlayer && audioPlayer.src && !isFallbackRunning) {
+      try { audioPlayer.currentTime = sc.startTime; } catch(e) {}
+    }
+
     renderSlide(sceneIdx);
     updatePartPills();
+    syncTimelineWithTime(virtualCurrentTime, currentLecture.duration);
 
     if (!isPlaying) {
-      try {
-        const p = audio.play();
-        if (p && p.catch) p.catch(() => {});
-      } catch(e) {}
+      togglePlayPause();
     }
   }
 
   // Seek relative (e.g. +/- 5s)
   function seekRelative(deltaSec) {
-    const audio = getOrCreateAudio();
-    if (!audio) return;
-    audio.currentTime = Math.max(0, Math.min(audio.duration || 9999, audio.currentTime + deltaSec));
+    const data = LECTURE_DATA[currentSection] || {};
+    const dur = data.duration || data.totalDuration || 60;
+    const audioPlayer = getOrCreateAudio();
+    if (isFallbackRunning || !audioPlayer || !audioPlayer.src) {
+      virtualCurrentTime = Math.max(0, Math.min(dur, virtualCurrentTime + deltaSec));
+      syncTimelineWithTime(virtualCurrentTime, dur);
+    } else {
+      try {
+        audioPlayer.currentTime = Math.max(0, Math.min(audioPlayer.duration || dur, audioPlayer.currentTime + deltaSec));
+        virtualCurrentTime = audioPlayer.currentTime;
+      } catch(e) {}
+    }
   }
 
   // Click on timeline progress bar
   function scrubToEvent(e) {
     const barContainer = document.getElementById('il-progress-container');
-    const audio = getOrCreateAudio();
-    if (!barContainer || !audio) return;
+    const audioPlayer = getOrCreateAudio();
+    if (!barContainer) return;
 
     const rect = barContainer.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const ratio = Math.max(0, Math.min(1, clickX / rect.width));
-    const dur = audio.duration || LECTURE_DATA[currentSection].totalDuration || 300;
-    audio.currentTime = ratio * dur;
+    const data = LECTURE_DATA[currentSection] || {};
+    const dur = (audioPlayer && audioPlayer.duration) || data.duration || data.totalDuration || 60;
+    const targetTime = ratio * dur;
+
+    virtualCurrentTime = targetTime;
+    if (!isFallbackRunning && audioPlayer && audioPlayer.src) {
+      try { audioPlayer.currentTime = targetTime; } catch(e) {}
+    }
+    syncTimelineWithTime(targetTime, dur);
   }
 
   // Set Speed
   function setSpeed(rate) {
-    const audio = getOrCreateAudio();
-    if (!audio) return;
-    audio.playbackRate = parseFloat(rate) || 1.0;
+    const audioPlayer = getOrCreateAudio();
+    if (!audioPlayer) return;
+    audioPlayer.playbackRate = parseFloat(rate) || 1.0;
   }
 
   // Open the Interactive Web Lecture Modal
@@ -823,23 +945,61 @@
       modal.classList.add('hidden');
       modal.classList.remove('flex', 'is-fullscreen');
     }
-    const audio = getOrCreateAudio();
-    if (audio) {
-      try { audio.pause(); } catch(e) {}
+    stopFallbackTimer();
+    isPlaying = false;
+    updatePlayIcon(false);
+    const audioPlayer = getOrCreateAudio();
+    if (audioPlayer) {
+      try { audioPlayer.pause(); } catch(e) {}
     }
   }
 
   // Toggle Play / Pause
   function togglePlayPause() {
-    const audio = getOrCreateAudio();
-    if (!audio) return;
-    if (audio.paused) {
-      try {
-        const p = audio.play();
-        if (p && p.catch) p.catch(() => {});
-      } catch(e) {}
+    const data = LECTURE_DATA[currentSection] || {};
+    const currentLecture = {
+      ...data,
+      id: data.id || data.sectionId || currentSection,
+      audio_src: data.audio_src || data.audioSrc || '',
+      duration: data.duration || data.totalDuration || 60
+    };
+
+    let audioPlayer = audioEl;
+    if (!audioPlayer) {
+      audioPlayer = getOrCreateAudio();
+    }
+
+    if (isPlaying) {
+      isPlaying = false;
+      stopFallbackTimer();
+      try { audioPlayer.pause(); } catch(e) {}
+      updatePlayIcon(false);
     } else {
-      try { audio.pause(); } catch(e) {}
+      isPlaying = true;
+      if (isFallbackRunning || !currentLecture.audio_src) {
+        startFallbackTimer(currentLecture.duration || 60);
+        updatePlayIcon(true);
+      } else {
+        audioPlayer.preload = 'auto';
+        if (!audioPlayer.src && currentLecture.audio_src) {
+          const rawAudio = currentLecture.audio_src;
+          audioPlayer.src = (window.location.protocol === 'file:') ? rawAudio.replace(/^\//, '') : rawAudio;
+        }
+        audioPlayer.load();
+        const playPromise = audioPlayer.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            console.log("Audio đang phát bình thường:", currentLecture.audio_src);
+            startTimelineSync();
+            updatePlayIcon(true);
+          }).catch(err => {
+            console.warn("Lỗi phát audio (File không tồn tại hoặc lỗi Autoplay):", err);
+            // CƠ CHẾ DỰ PHÒNG (FALLBACK): Nếu file MP3 bị lỗi hoặc chưa có, tự động kích hoạt timer chạy dòng thời gian giả lập để bài giảng SVG/KaTeX vẫn tự động trình chiếu cho học sinh xem!
+            startFallbackTimer(currentLecture.duration || 60);
+            updatePlayIcon(true);
+          });
+        }
+      }
     }
   }
 
@@ -925,6 +1085,9 @@
   window.toggleLectureFullscreen = toggleFullscreen;
   window.toggleFullscreen = toggleFullscreen;
   window.autoFitLectureStage = autoFitLectureStage;
+  window.startFallbackTimer = startFallbackTimer;
+  window.startTimelineSync = startTimelineSync;
+  window.updatePlayIcon = updatePlayIcon;
 
   // Intercept old video modal openers to seamlessly open Interactive Web Lecture!
   window.openVideoModal = openInteractiveLecture;
