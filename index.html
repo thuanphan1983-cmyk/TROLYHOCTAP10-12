@@ -519,6 +519,82 @@
       min-height: calc(100vh - 55px);
     }
 
+  
+    /* ========================================================================= */
+    /* FULLSCREEN MODE: BÀI GIẢNG TƯƠNG TÁC (INTERACTIVE WEB LECTURE)            */
+    /* ========================================================================= */
+    #modal-interactive-lecture:fullscreen,
+    #modal-interactive-lecture:-webkit-full-screen,
+    #modal-interactive-lecture.is-fullscreen {
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: 100vw !important;
+      max-height: 100vh !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      background: #090d16 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      overflow: hidden !important;
+      z-index: 99999 !important;
+    }
+
+    #modal-interactive-lecture:fullscreen > div,
+    #modal-interactive-lecture:-webkit-full-screen > div,
+    #modal-interactive-lecture.is-fullscreen > div {
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: 100vw !important;
+      max-height: 100vh !important;
+      border-radius: 0 !important;
+      border: none !important;
+      margin: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      background: #0b1120 !important;
+    }
+
+    /* Vùng nội dung chính (Blackboard Stage): Tự động mở rộng & cuộn mượt mà */
+    #modal-interactive-lecture:fullscreen #il-stage-body,
+    #modal-interactive-lecture:-webkit-full-screen #il-stage-body,
+    #modal-interactive-lecture.is-fullscreen #il-stage-body {
+      font-size: 1.125rem;
+      line-height: 1.75;
+    }
+
+    /* Bảng xét dấu / BBT & KaTeX co giãn mượt mà theo độ rộng màn hình */
+    #modal-interactive-lecture .bbt-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+    }
+
+    #modal-interactive-lecture .bbt-table td {
+      vertical-align: middle;
+    }
+
+    #modal-interactive-lecture svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #modal-interactive-lecture .katex-display {
+      margin: 0.5em 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    @media (max-width: 768px) {
+      #modal-interactive-lecture:fullscreen #il-stage-body,
+      #modal-interactive-lecture.is-fullscreen #il-stage-body {
+        font-size: 1rem;
+      }
+      #modal-interactive-lecture .bbt-table {
+        font-size: 0.85rem !important;
+      }
+    }
+
   </style>
   <script src="js/interactive_lecture.js" defer></script>
 </head>
@@ -38628,6 +38704,11 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
               <span>Mục 2 (04:29)</span>
             </button>
           </div>
+          <!-- Nút Phóng to / Thu nhỏ toàn màn hình (Fullscreen) -->
+          <button type="button" onclick="window.toggleLectureFullscreen()" class="btn-toggle-lecture-fullscreen px-2.5 sm:px-3 py-1.5 rounded-2xl bg-indigo-600/90 hover:bg-indigo-500 text-white flex items-center justify-center gap-1.5 font-bold text-xs sm:text-sm shadow-md cursor-pointer transition active:scale-95 shrink-0" title="Phóng to toàn màn hình (Fullscreen)">
+            <i class="fa-solid fa-expand il-icon-fullscreen"></i>
+            <span class="hidden sm:inline il-text-fullscreen">Toàn màn hình</span>
+          </button>
           <button type="button" onclick="closeInteractiveLecture()" class="w-9 h-9 rounded-2xl bg-rose-600/90 hover:bg-rose-600 text-white flex items-center justify-center font-bold text-sm shadow-md cursor-pointer transition active:scale-95 shrink-0" title="Đóng bài giảng">
             <i class="fa-solid fa-xmark"></i>
           </button>
@@ -38711,6 +38792,12 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
                 <option value="1.5">1.5x (Rất nhanh)</option>
               </select>
             </div>
+
+            <!-- Nút Fullscreen dưới thanh điều khiển -->
+            <button type="button" onclick="window.toggleLectureFullscreen()" class="btn-toggle-lecture-fullscreen px-2.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl font-bold text-xs flex items-center gap-1.5 border border-slate-700 transition cursor-pointer active:scale-95 shrink-0" title="Phóng to toàn màn hình">
+              <i class="fa-solid fa-expand il-icon-fullscreen"></i>
+              <span class="hidden md:inline il-text-fullscreen">Toàn màn hình</span>
+            </button>
 
             <!-- Complete Video Button -->
             <button type="button" onclick="window.markLessonVideoCompleted(1); window.markLessonVideoCompleted(2); closeInteractiveLecture();" class="px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold rounded-xl shadow-md transition cursor-pointer active:scale-95 flex items-center justify-center gap-1.5 text-xs sm:text-sm">

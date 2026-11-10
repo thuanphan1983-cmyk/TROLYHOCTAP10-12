@@ -402,10 +402,16 @@
 
   // Close the Interactive Web Lecture Modal
   function closeInteractiveLecture() {
+    if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+      try {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      } catch(e) {}
+    }
     const modal = document.getElementById('modal-interactive-lecture');
     if (modal) {
       modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      modal.classList.remove('flex', 'is-fullscreen');
     }
     const audio = getOrCreateAudio();
     if (audio) {
@@ -427,6 +433,72 @@
     }
   }
 
+  // Toggle Fullscreen mode for the Interactive Lecture
+  function toggleFullscreen() {
+    const modal = document.getElementById('modal-interactive-lecture');
+    if (!modal) return;
+
+    const isFull = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+
+    if (!isFull) {
+      if (modal.requestFullscreen) {
+        modal.requestFullscreen().catch(err => { console.warn('Fullscreen error:', err); });
+      } else if (modal.webkitRequestFullscreen) {
+        modal.webkitRequestFullscreen();
+      } else if (modal.msRequestFullscreen) {
+        modal.msRequestFullscreen();
+      } else if (modal.mozRequestFullScreen) {
+        modal.mozRequestFullScreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(err => { console.warn('Exit fullscreen error:', err); });
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      }
+    }
+  }
+
+  // Update Fullscreen Button UI icons & texts
+  function updateFullscreenUI() {
+    const modal = document.getElementById('modal-interactive-lecture');
+    const isFull = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+
+    if (modal) {
+      if (isFull) {
+        modal.classList.add('is-fullscreen');
+      } else {
+        modal.classList.remove('is-fullscreen');
+      }
+    }
+
+    const btns = document.querySelectorAll('.btn-toggle-lecture-fullscreen');
+    btns.forEach(b => {
+      const icon = b.querySelector('.il-icon-fullscreen') || b.querySelector('i');
+      const text = b.querySelector('.il-text-fullscreen') || b.querySelector('span');
+      if (icon) {
+        if (isFull) {
+          icon.className = 'fa-solid fa-compress il-icon-fullscreen';
+        } else {
+          icon.className = 'fa-solid fa-expand il-icon-fullscreen';
+        }
+      }
+      if (text) {
+        text.textContent = isFull ? 'Thu nhỏ' : 'Toàn màn hình';
+      }
+      b.title = isFull ? 'Thu nhỏ (Thoát toàn màn hình)' : 'Phóng to toàn màn hình (Fullscreen)';
+    });
+  }
+
+  document.addEventListener('fullscreenchange', updateFullscreenUI);
+  document.addEventListener('webkitfullscreenchange', updateFullscreenUI);
+  document.addEventListener('mozfullscreenchange', updateFullscreenUI);
+  document.addEventListener('MSFullscreenChange', updateFullscreenUI);
+
   // Attach Public APIs
   window.openInteractiveLecture = openInteractiveLecture;
   window.closeInteractiveLecture = closeInteractiveLecture;
@@ -436,6 +508,8 @@
   window.scrubLecture = scrubToEvent;
   window.setLectureSpeed = setSpeed;
   window.toggleLecturePlay = togglePlayPause;
+  window.toggleLectureFullscreen = toggleFullscreen;
+  window.toggleFullscreen = toggleFullscreen;
 
   // Intercept old video modal openers to seamlessly open Interactive Web Lecture!
   window.openVideoModal = openInteractiveLecture;
