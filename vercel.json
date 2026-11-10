@@ -1,11 +1,11 @@
 {
   "name": "trolyhoctaptoan10-12",
   "cleanUrls": true,
-  "routes": [
-    { "handle": "filesystem" },
+  "outputDirectory": ".",
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

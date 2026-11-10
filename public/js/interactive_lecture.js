@@ -7,6 +7,9 @@
 (function(window, document) {
   'use strict';
 
+  if (window._INTERACTIVE_LECTURE_LOADED) return;
+  window._INTERACTIVE_LECTURE_LOADED = true;
+
   // Auto-merge external Chapter 1 module data
   function ensureMergedData() {
     if (typeof window !== 'undefined' && window.CHAPTER1_LECTURES) {

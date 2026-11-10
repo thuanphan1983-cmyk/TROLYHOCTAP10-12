@@ -7,3 +7,4 @@ __pycache__/
 _video_temp/
 public/*
 !public/js/
+!public/index.html
