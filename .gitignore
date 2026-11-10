@@ -5,4 +5,5 @@ __pycache__/
 *.pyc
 
 _video_temp/
-public/
+public/*
+!public/js/
