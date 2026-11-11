@@ -656,337 +656,651 @@
   ]
 },
 
-    bai3_muc1: {
-      lessonId: "bai3",
-      lessonTitle: "Bài 3: Đường tiệm cận của đồ thị hàm số",
-      sectionId: "bai3_muc1",
-      sectionTitle: "Mục 1: Đường tiệm cận ngang (lim tại ±∞)",
-      audioSrc: "./audio/bai3_muc1.mp3",
-      totalDuration: 285.0,
-      audio_src: "./audio/bai3_muc1.mp3",
-      timestamp_src: "timestamps/bai3_muc1.json",
-      title: "Mục 1: Đường tiệm cận ngang (Định nghĩa & Kỹ năng tính lim tại vô cực)",
-      owl_tip: "Tiệm cận ngang là đường thẳng nằm ngang y = y0 khi x dần tới +∞ hoặc -∞. Một đồ thị có tối đa 2 tiệm cận ngang!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Định nghĩa tiệm cận ngang", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Phương pháp tìm TCN nhanh", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Các ví dụ hàm căn thức có 2 TCN", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy tập xác định chặn", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "BÀI 3: ĐƯỜNG TIỆM CẬN CỦA ĐỒ THỊ HÀM SỐ",
-          subtitle: "MỤC 1 • ĐỊNH NGHĨA TIỆM CẬN NGANG (TCN)",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> Tiệm cận ngang có phương trình dạng $y = y_0$, tuyệt đối không nhầm sang $x = x_0$!",
-          bodyHtml: `
-            <div style="font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:8px;">
-              Định nghĩa Đường tiệm cận ngang:
-            </div>
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              Đường thẳng $y = y_0$ được gọi là <b>đường tiệm cận ngang</b> (hay tiệm cận ngang) của đồ thị hàm số $y = f(x)$ nếu thỏa mãn ít nhất một trong các điều kiện sau:<br>
-              $$\\lim_{x \\to +\\infty} f(x) = y_0 \\quad \\text{hoặc} \\quad \\lim_{x \\to -\\infty} f(x) = y_0$$
-            </div>
-            <div style="font-size:21px; line-height:1.6; color:#38bdf8; margin-top:12px;">
-              • <b>Ý nghĩa hình học:</b> Khi điểm $M(x; y)$ trên đồ thị di chuyển ra xa vô tận về bên trái hoặc bên phải, khoảng cách từ $M$ đến đường thẳng $y = y_0$ tiến dần về $0$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "QUY TẮC NHẬN DIỆN NHANH TIỆM CẬN NGANG",
-          subtitle: "MỤC 1 • ÁP DỤNG CHO HÀM PHÂN THỨC HỮU TỶ",
-          startTime: 70.0,
-          endTime: 140.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Quy tắc so bậc:</b> Bậc tử < Bậc mẫu $\\implies y = 0$. Bậc tử = Bậc mẫu $\\implies y = \\frac{a}{b}$. Bậc tử > Bậc mẫu $\\implies$ Không có TCN!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              Xét hàm phân thức $f(x) = \\frac{P(x)}{Q(x)}$ với $P(x), Q(x)$ là các đa thức:
-            </div>
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>Trường hợp 1 (Bậc tử < Bậc mẫu):</b> Đồ thị luôn có đúng <b>1 TCN là trục hoành $y = 0$</b>.<br>
-              $\\quad$ Ví dụ: $y = \\frac{2x - 1}{x^2 + 3} \\implies \\lim_{x \\to \\pm\\infty} y = 0 \\implies$ TCN: $y = 0$.<br>
-              • <b>Trường hợp 2 (Bậc tử = Bậc mẫu):</b> Đồ thị có <b>1 TCN $y = \\frac{a}{c}$</b> (tỉ số 2 hệ số bậc cao nhất).<br>
-              $\\quad$ Ví dụ: $y = \\frac{3x - 5}{2x + 1} \\implies$ TCN: $y = \\frac{3}{2}$.<br>
-              • <b>Trường hợp 3 (Bậc tử > Bậc mẫu):</b> Đồ thị <b>không có tiệm cận ngang</b>.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "VÍ DỤ ĐẶC BIỆT: HÀM CĂN THỨC CÓ 2 TIỆM CẬN NGANG",
-          subtitle: "MỤC 1 • CỰC KỲ PHỔ BIẾN TRONG ĐỀ THI BỘ GD&ĐT",
-          startTime: 140.0,
-          endTime: 215.0,
-          duration: 75.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Lưu ý dấu căn:</b> Khi $x \\to -\\infty$ thì $\\sqrt{x^2} = |x| = -x$, tạo ra dấu trừ phía trước!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Đề bài:</b> Tìm các đường tiệm cận ngang của đồ thị hàm số $y = \\frac{\\sqrt{4x^2 + 1}}{x - 3}$.
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • TXĐ: $D = \\mathbb{R} \\setminus \\{3\\}$. Cả $-\\infty$ và $+\\infty$ đều thuộc tập xác định.<br>
-              • Khi $x \\to +\\infty$:<br>
-              $$\\lim_{x \\to +\\infty} \\frac{\\sqrt{4x^2+1}}{x-3} = \\lim_{x \\to +\\infty} \\frac{x\\sqrt{4 + \\frac{1}{x^2}}}{x(1 - \\frac{3}{x})} = \\frac{\\sqrt{4}}{1} = 2 \\implies y = 2.$$<br>
-              • Khi $x \\to -\\infty$:<br>
-              $$\\lim_{x \\to -\\infty} \\frac{\\sqrt{4x^2+1}}{x-3} = \\lim_{x \\to -\\infty} \\frac{-x\\sqrt{4 + \\frac{1}{x^2}}}{x(1 - \\frac{3}{x})} = \\frac{-\\sqrt{4}}{1} = -2 \\implies y = -2.$$<br>
-              • <b>Kết luận:</b> Đồ thị có <b>hai tiệm cận ngang</b> là $y = 2$ và $y = -2$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY TẬP XÁC ĐỊNH CHẶN",
-          subtitle: "MỤC 1 • ĐIỀU KIỆN CẦN ĐỂ TÍNH ĐƯỢC GIỚI HẠN VÔ CỰC",
-          startTime: 215.0,
-          endTime: 285.0,
-          duration: 70.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Nguyên tắc vàng:</b> Tập xác định phải chứa $+\\infty$ hoặc $-\\infty$ thì mới tồn tại giới hạn vô cực để xét TCN!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Tìm số đường tiệm cận ngang của $y = \\frac{\\sqrt{1 - x^2}}{x + 2}$.<br>
-              • Rất nhiều học sinh bấm máy hoặc chia bậc ra $y = 0$ $\\implies$ <b>SAI HOÀN TOÀN</b>!<br>
-              • Đúng: Điều kiện $1 - x^2 \\ge 0 \\iff -1 \\le x \\le 1 \\implies D = [-1; 1]$.<br>
-              • Tập xác định không chứa $\\pm\\infty$, ta không thể tính $\\lim_{x \\to \\pm\\infty}$. Do đó hàm số <b>KHÔNG CÓ TIỆM CẬN NGANG</b>!
-            </div>
-          `
-        }
+        bai3_muc1: {
+  "lessonId": "bai3",
+  "lessonTitle": "Bài 3: Đường tiệm cận của đồ thị hàm số",
+  "sectionId": "bai3_muc1",
+  "sectionTitle": "Mục 1: Tiệm cận ngang (lim tại ±∞)",
+  "audio": "/audio/bai3_muc1.mp3",
+  "audioSrc": "./audio/bai3_muc1.mp3",
+  "audio_src": "./audio/bai3_muc1.mp3",
+  "totalDuration": 142,
+  "duration": 142,
+  "title": "Mục 1: Tiệm cận ngang (Định nghĩa & So sánh bậc đa thức)",
+  "owl_tip": "Ghi nhớ: Tiệm cận ngang là đường nằm ngang y = y0 khi x dần tới +∞ hoặc -∞. Tối đa có 2 tiệm cận ngang!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 26.15,
+      "id": "part2"
+    },
+    {
+      "time": 48.12,
+      "id": "part3"
+    },
+    {
+      "time": 51.29,
+      "id": "vd1_q"
+    },
+    {
+      "time": 62.41,
+      "id": "vd1_a"
+    },
+    {
+      "time": 74.81,
+      "id": "vd2_q"
+    },
+    {
+      "time": 83.63,
+      "id": "vd2_a"
+    },
+    {
+      "time": 94.58,
+      "id": "vd3_q"
+    },
+    {
+      "time": 104.31,
+      "id": "vd3_a"
+    },
+    {
+      "time": 116.99,
+      "id": "part4"
+    },
+    {
+      "time": 129.93,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm cốt lõi</h3><p>Đường thẳng $y = y_0$ là Tiệm cận ngang (TCN) nếu:<br>$\\lim_{x \\to +\\infty} f(x) = y_0$ hoặc $\\lim_{x \\to -\\infty} f(x) = y_0$</p></div>\n      <div id=\"part2\"><h3>2. Phương pháp giải nhanh</h3><p>So sánh bậc của tử và mẫu:<br>+ Bậc tử &lt; Bậc mẫu: TCN $y = 0$<br>+ Bậc tử = Bậc mẫu: TCN $y = \\frac{a}{b}$ (Tỉ số hệ số cao nhất)<br>+ Bậc tử &gt; Bậc mẫu: Không có TCN.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm TCN của $y = \\frac{2x-1}{x+1}$.<br><i>(Suy nghĩ nhẩm nhanh...)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> Bậc tử (1) = Bậc mẫu (1). Tỉ số hệ số cao nhất $a/b = 2/1 = 2$.<br>$\\Rightarrow$ TCN: $y = 2$.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm TCN của $y = \\frac{x}{x^2+1}$.<br><i>(So sánh bậc đa thức...)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> Bậc tử (1) &lt; Bậc mẫu (2) $\\Rightarrow \\lim_{x \\to \\infty} y = 0$.<br>$\\Rightarrow$ TCN: $y = 0$ (trục hoành).</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Đọc TCN từ BBT sau:<br>\n          <table style=\"width:100%; max-width:350px; border-collapse: collapse; text-align:center; background:white; border:1px solid black; margin:10px auto;\">\n            <tr style=\"border-bottom:1px solid black;\">\n              <td style=\"border-right:1px solid black; padding:5px;\">$x$</td>\n              <td style=\"padding:5px;\">$-\\infty$</td> <td></td> <td style=\"padding:5px;\">$+\\infty$</td>\n            </tr>\n            <tr>\n              <td style=\"border-right:1px solid black; padding:5px;\">$y$</td>\n              <td style=\"vertical-align:top; padding:5px; color:red; font-weight:bold;\">$-1$</td>\n              <td>$\\nearrow$</td>\n              <td style=\"vertical-align:top; padding:5px; color:red; font-weight:bold;\">$3$</td>\n            </tr>\n          </table>\n        </div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> $\\lim_{x \\to -\\infty} = -1$ và $\\lim_{x \\to +\\infty} = 3$.<br>$\\Rightarrow$ Hàm số có 2 TCN là $y = 3$ và $y = -1$.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Tính $\\lim$ ra vô cực ($\\infty$) nhưng lại vội kết luận là Tiệm cận ngang.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Dùng Casio [CALC] tại $x = 10^9$ và $x = -10^9$ để test lim siêu tốc.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm cốt lõi",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Phương pháp giải nhanh",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Casio",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 3: ĐƯỜNG TIỆM CẬN CỦA ĐỒ THỊ HÀM SỐ",
+      "subtitle": "MỤC 1 • ĐỊNH NGHĨA TIỆM CẬN NGANG (TCN)",
+      "startTime": 0.0,
+      "endTime": 26.15,
+      "duration": 26.15,
+      "mascotMode": "pointer",
+      "mascotTip": "<b>Cú nhắc:</b> Tiệm cận ngang có dạng y = y0 khi x dần tới +∞ hoặc -∞. Tối đa có 2 TCN!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Khái niệm cốt lõi</div><div style=\"font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">Đường thẳng $y = y_0$ được gọi là <b>đường tiệm cận ngang</b> (TCN) của đồ thị hàm số $y = f(x)$ nếu thỏa mãn ít nhất một trong các điều kiện:<br>$$\\lim_{x \\to +\\infty} f(x) = y_0 \\quad \\text{hoặc} \\quad \\lim_{x \\to -\\infty} f(x) = y_0$$</div><div style=\"font-size:20px; line-height:1.6; color:#38bdf8; margin-top:14px; margin-left:14px;\">• <b>Ghi nhớ:</b> $x$ phải tiến ra vô cực ($\\pm\\infty$) và kết quả $y_0$ phải là một <b>hằng số thực hữu hạn</b>.</div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "PHƯƠNG PHÁP XÁC ĐỊNH TCN SIÊU NHANH",
+      "subtitle": "So sánh bậc của Tử số và Mẫu số",
+      "startTime": 26.15,
+      "endTime": 51.29,
+      "duration": 25.14,
+      "mascotMode": "pointer",
+      "mascotTip": "Bậc tử nhỏ hơn bậc mẫu thì y = 0 luôn là TCN!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Phương pháp giải nhanh (Phân thức đa thức)</div><div style=\"font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;\">• <b>Bậc tử &lt; Bậc mẫu:</b> Luôn có đúng 1 TCN là trục hoành: $y = 0$.<br>• <b>Bậc tử = Bậc mẫu:</b> Có đúng 1 TCN là tỉ số hai hệ số bậc cao nhất: $y = \\frac{a}{b}$.<br>• <b>Bậc tử &gt; Bậc mẫu:</b> Đồ thị <b>không có</b> tiệm cận ngang.</div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: TÌM TIỆM CẬN NGANG",
+      "subtitle": "Hàm phân thức bậc nhất trên bậc nhất",
+      "startTime": 51.29,
+      "endTime": 62.41,
+      "duration": 11.12,
+      "mascotMode": "pointer",
+      "mascotTip": "Bậc tử là 1, bậc mẫu là 1. Nhẩm nhanh tỉ số hệ số cao nhất!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm tiệm cận ngang của hàm số $y = \\frac{2x - 1}{x + 1}$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Các em có 15 giây để nhẩm bậc tử và bậc mẫu...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Tỉ số hệ số bậc cao nhất: a / b = 2 / 1 = 2",
+      "startTime": 62.41,
+      "endTime": 74.81,
+      "duration": 12.4,
+      "mascotMode": "cheer",
+      "mascotTip": "y = 2 là tiệm cận ngang!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 1:</b> Tìm TCN của $y = \\frac{2x-1}{x+1}$.</div><div id=\"vd1_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Bậc của tử: $1$; Bậc của mẫu: $1$ (Bậc tử bằng bậc mẫu).<br>• Hệ số cao nhất của tử là $2$, của mẫu là $1$.<br>• Tỉ số hệ số cao nhất: $\\lim_{x \\to \\pm\\infty} \\frac{2x-1}{x+1} = \\frac{2}{1} = 2$.<br><b style=\"color:#10b981;\">Kết luận:</b> Đồ thị hàm số có đúng 1 tiệm cận ngang là đường thẳng <b>$y = 2$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: BẬC TỬ NHỎ HƠN BẬC MẪU",
+      "subtitle": "y = x / (x^2 + 1)",
+      "startTime": 74.81,
+      "endTime": 83.63,
+      "duration": 8.82,
+      "mascotMode": "pointer",
+      "mascotTip": "Bậc tử là 1, bậc mẫu là 2. Chú ý so sánh bậc nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tiệm cận ngang của hàm số $y = \\frac{x}{x^2 + 1}$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(So sánh bậc tử và bậc mẫu...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Bậc tử < Bậc mẫu: TCN y = 0",
+      "startTime": 83.63,
+      "endTime": 94.58,
+      "duration": 10.95,
+      "mascotMode": "cheer",
+      "mascotTip": "Trục hoành y = 0 chính là đường tiệm cận ngang!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 2:</b> Tìm TCN của $y = \\frac{x}{x^2+1}$.</div><div id=\"vd2_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Bậc tử bằng $1$, bậc mẫu bằng $2$ (Bậc tử &lt; Bậc mẫu).<br>• Giới hạn ở vô cực: $\\lim_{x \\to \\pm\\infty} \\frac{x}{x^2+1} = \\lim_{x \\to \\pm\\infty} \\frac{1/x}{1 + 1/x^2} = 0$.<br><b style=\"color:#10b981;\">Kết luận:</b> Đồ thị có đúng 1 tiệm cận ngang là đường thẳng <b>$y = 0$</b> (trục hoành $Ox$).</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: ĐỌC TCN TỪ BẢNG BIẾN THIÊN",
+      "subtitle": "Quan sát hai đầu mút âm vô cực và dương vô cực",
+      "startTime": 94.58,
+      "endTime": 104.31,
+      "duration": 9.73,
+      "mascotMode": "pointer",
+      "mascotTip": "Gióng từ x ra -∞ và +∞ xem y tiến về giá trị nào!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Đọc tiệm cận ngang từ Bảng biến thiên sau:<table style=\"width:100%; max-width:380px; border-collapse: collapse; text-align:center; background:white; color:#000; border:1.5px solid black; margin:12px auto; border-radius:4px;\"><tr style=\"border-bottom:1px solid black;\"><td style=\"border-right:1px solid black; padding:6px; font-weight:bold;\">$x$</td><td style=\"padding:6px;\">$-\\infty$</td> <td></td> <td style=\"padding:6px;\">$+\\infty$</td></tr><tr><td style=\"border-right:1px solid black; padding:6px; font-weight:bold;\">$y$</td><td style=\"vertical-align:middle; padding:6px; color:#ef4444; font-weight:bold; font-size:18px;\">$-1$</td><td>$\\nearrow$</td><td style=\"vertical-align:middle; padding:6px; color:#ef4444; font-weight:bold; font-size:18px;\">$3$</td></tr></table></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Hai tiệm cận ngang: y = 3 và y = -1",
+      "startTime": 104.31,
+      "endTime": 116.99,
+      "duration": 12.68,
+      "mascotMode": "cheer",
+      "mascotTip": "Đồ thị có 2 TCN khác nhau ở hai phía âm và dương vô cực!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 3:</b> Đọc TCN từ BBT.</div><div id=\"vd3_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Khi $x \\to -\\infty$, giá trị $y \\to -1 \\implies \\lim_{x \\to -\\infty} y = -1 \\implies y = -1$ là TCN.<br>• Khi $x \\to +\\infty$, giá trị $y \\to 3 \\implies \\lim_{x \\to +\\infty} y = 3 \\implies y = 3$ là TCN.<br><b style=\"color:#10b981;\">Kết luận:</b> Đồ thị hàm số có <b>2 đường tiệm cận ngang</b> là <b>$y = 3$</b> và <b>$y = -1$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ TIỆM CẬN NGANG",
+      "subtitle": "PHẦN 4: VÔ CỰC KHÔNG PHẢI LÀ TIỆM CẬN NGANG",
+      "startTime": 116.99,
+      "endTime": 129.93,
+      "duration": 12.94,
+      "mascotMode": "magnifier",
+      "mascotTip": "Kết quả giới hạn phải là một số thực cụ thể, không được là vô cực!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy đề thi thường gặp</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• <b>Bẫy 1:</b> Nhiều bạn tính giới hạn khi $x \\to +\\infty$ ra kết quả là $+\\infty$ rồi vội kết luận $y = +\\infty$ là tiệm cận ngang. Đây là sai lầm nghiêm trọng vì $+\\infty$ không phải là số thực!<br>• <b>Bẫy 2:</b> Quên kiểm tra tập xác định của hàm số xem có chứa vô cực hay không (ví dụ hàm $y = \\sqrt{1-x^2}$ chỉ xác định trên $[-1; 1]$, không thể tiến ra $\\pm\\infty$ nên không có TCN).</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "MẸO CASIO CALC SIÊU TỐC",
+      "subtitle": "PHẦN 5: BẤM MÁY TÍNH TÌM TCN TRONG 3 GIÂY",
+      "startTime": 129.93,
+      "endTime": 142,
+      "duration": 12.07,
+      "mascotMode": "cheer",
+      "mascotTip": "CALC x = 10^9 để tìm TCN bên phải, CALC x = -10^9 để tìm TCN bên trái!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Thầy Cú & Casio bấm máy</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• <b>Bước 1:</b> Nhập biểu thức hàm số $f(x)$ vào máy tính Casio.<br>• <b>Bước 2:</b> Bấm phím [CALC], nhập $x = 10^9$ (đại diện cho $+\\infty$). Nếu màn hình ra số xấp xỉ một số thực $y_0$, thì $y = y_0$ là TCN.<br>• <b>Bước 3:</b> Bấm [CALC], nhập $x = -10^9$ (đại diện cho $-\\infty$) để kiểm tra tiệm cận ngang thứ 2!</div>"
+    }
+  ]
+},
 
     bai3_muc2: {
-      lessonId: "bai3",
-      lessonTitle: "Bài 3: Đường tiệm cận của đồ thị hàm số",
-      sectionId: "bai3_muc2",
-      sectionTitle: "Mục 2: Đường tiệm cận đứng (lim vô cực khi x -> x0±)",
-      audioSrc: "./audio/bai3_muc2.mp3",
-      totalDuration: 280.0,
-      audio_src: "./audio/bai3_muc2.mp3",
-      timestamp_src: "timestamps/bai3_muc2.json",
-      title: "Mục 2: Đường tiệm cận đứng (Định nghĩa & Kỹ thuật triệt tiêu nghiệm mẫu)",
-      owl_tip: "Tiệm cận đứng có dạng x = x0 (thẳng đứng). Nghiệm của mẫu số KHÔNG bị triệt tiêu bởi nghiệm tử số mới sinh ra TCĐ!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Định nghĩa tiệm cận đứng", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Phương pháp tìm TCĐ qua 2 bước", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Bẫy triệt tiêu nghiệm tử và mẫu", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy căn thức tập xác định", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "ĐỊNH NGHĨA ĐƯỜNG TIỆM CẬN ĐỨNG (TCĐ)",
-          subtitle: "MỤC 2 • KHI GIÁ TRỊ f(x) TIẾN TỚI VÔ CỰC",
-          startTime: 0.0,
-          endTime: 65.0,
-          duration: 65.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> Tiệm cận đứng có phương trình dạng $x = x_0$, đường thẳng song song hoặc trùng với trục tung $Oy$!",
-          bodyHtml: `
-            <div style="font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:8px;">
-              Định nghĩa Đường tiệm cận đứng:
-            </div>
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              Đường thẳng $x = x_0$ được gọi là <b>đường tiệm cận đứng</b> của đồ thị hàm số $y = f(x)$ nếu thỏa mãn ít nhất một trong bốn điều kiện sau:<br>
-              • $\\lim_{x \\to x_0^+} f(x) = +\\infty$ $\\quad$ hoặc $\\quad$ $\\lim_{x \\to x_0^+} f(x) = -\\infty$<br>
-              • $\\lim_{x \\to x_0^-} f(x) = +\\infty$ $\\quad$ hoặc $\\quad$ $\\lim_{x \\to x_0^-} f(x) = -\\infty$
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "QUY TRÌNH 2 BƯỚC TÌM TIỆM CẬN ĐỨNG",
-          subtitle: "MỤC 2 • LOẠI NGHIỆM KÉP VÀ NGHIỆM TRIỆT TIÊU",
-          startTime: 65.0,
-          endTime: 135.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Quy tắc then chốt:</b> Điểm $x_0$ là TCĐ khi và chỉ khi $x_0$ là nghiệm của mẫu nhưng KHÔNG LÀ nghiệm của tử (hoặc bội ở mẫu > bội ở tử)!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              Xét hàm phân thức $y = \\frac{P(x)}{Q(x)}$:
-            </div>
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              <b>Bước 1:</b> Tìm tập xác định của hàm số. Giải phương trình mẫu số $Q(x) = 0$ tìm các ứng viên $x_0$.<br>
-              <b>Bước 2:</b> Thay $x_0$ vào tử số $P(x)$:<br>
-              • Nếu $P(x_0) \\ne 0$: Chắc chắn $x = x_0$ là <b>đường tiệm cận đứng</b>.<br>
-              • Nếu $P(x_0) = 0$: Phân tích nhân tử rút gọn, nếu mẫu số vẫn còn nhân tử $(x - x_0)$ thì $x = x_0$ vẫn là tiệm cận đứng.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "VÍ DỤ MINH HỌA: TRIỆT TIÊU NGHIỆM VÀ ĐẾM TCĐ",
-          subtitle: "MỤC 2 • BÀI TOÁN KINH ĐIỂN MỨC ĐỘ THÔNG HIỂU",
-          startTime: 135.0,
-          endTime: 210.0,
-          duration: 75.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Cẩn thận:</b> Rất nhiều học sinh vội vàng thấy mẫu có 2 nghiệm kết luận ngay có 2 TCĐ mà quên rút gọn!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Đề bài:</b> Tìm số đường tiệm cận đứng của đồ thị hàm số $y = \\frac{x^2 - 1}{x^2 - 3x + 2}$.
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Giải mẫu số: $x^2 - 3x + 2 = 0 \\iff x = 1$ hoặc $x = 2$.<br>
-              • Phân tích cả tử và mẫu:<br>
-              $$y = \\frac{(x - 1)(x + 1)}{(x - 1)(x - 2)} = \\frac{x + 1}{x - 2} \\quad (\\text{với } x \\ne 1).$$<br>
-              • Tại $x = 1$: $\\lim_{x \\to 1} y = \\frac{1 + 1}{1 - 2} = -2$ (giới hạn hữu hạn $\\implies x = 1$ KHÔNG PHẢI TCĐ).<br>
-              • Tại $x = 2$: $\\lim_{x \\to 2^\\pm} y = \\pm\\infty$ $\\implies x = 2$ là <b>đường tiệm cận đứng duy nhất</b>!
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY ĐIỀU KIỆN CĂN THỨC",
-          subtitle: "MỤC 2 • NGHIỆM MẪU BỊ LOẠI DO ĐIỀU KIỆN TỬ SỐ",
-          startTime: 210.0,
-          endTime: 280.0,
-          duration: 70.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Cú cảnh báo:</b> Nghiệm của mẫu số phải thuộc tập xác định của các biểu thức căn ở tử thì mới được xét giới hạn!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Tìm số đường tiệm cận đứng của $y = \\frac{\\sqrt{x - 2}}{x^2 - 1}$.<br>
-              • Mẫu số có 2 nghiệm: $x = 1$ và $x = -1$.<br>
-              • Điều kiện tử số: $x - 2 \\ge 0 \\iff x \\ge 2 \\implies D = [2; +\\infty)$.<br>
-              • Cả hai số $x = 1$ và $x = -1$ đều <b>không thuộc tập xác định</b> $D$, không thể tiến tới từ lân cận.<br>
-              • <b>Kết luận:</b> Đồ thị hàm số <b>KHÔNG CÓ tiệm cận đứng nào</b>!
-            </div>
-          `
-        }
+  "lessonId": "bai3",
+  "lessonTitle": "Bài 3: Đường tiệm cận của đồ thị hàm số",
+  "sectionId": "bai3_muc2",
+  "sectionTitle": "Mục 2: Tiệm cận đứng (lim một bên vô cực)",
+  "audio": "/audio/bai3_muc2.mp3",
+  "audioSrc": "./audio/bai3_muc2.mp3",
+  "audio_src": "./audio/bai3_muc2.mp3",
+  "totalDuration": 131,
+  "duration": 131,
+  "title": "Mục 2: Tiệm cận đứng (Quy trình 2 bước & Soi bẫy nghiệm triệt tiêu)",
+  "owl_tip": "Ghi nhớ: Tiệm cận đứng có dạng x = x0 (đường thẳng đứng). Mẫu bằng 0 nhưng tử phải khác 0 thì mới là TCĐ!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 18.56,
+      "id": "part2"
+    },
+    {
+      "time": 39.73,
+      "id": "part3"
+    },
+    {
+      "time": 42.9,
+      "id": "vd1_q"
+    },
+    {
+      "time": 52.55,
+      "id": "vd1_a"
+    },
+    {
+      "time": 63.48,
+      "id": "vd2_q"
+    },
+    {
+      "time": 74.3,
+      "id": "vd2_a"
+    },
+    {
+      "time": 90.33,
+      "id": "vd3_q"
+    },
+    {
+      "time": 98.88,
+      "id": "vd3_a"
+    },
+    {
+      "time": 109.26,
+      "id": "part4"
+    },
+    {
+      "time": 118.77,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm cốt lõi</h3><p>Đường thẳng $x = x_0$ là Tiệm cận đứng (TCĐ) nếu:<br>$\\lim_{x \\to x_0^+} f(x) = \\pm\\infty$ hoặc $\\lim_{x \\to x_0^-} f(x) = \\pm\\infty$</p></div>\n      <div id=\"part2\"><h3>2. Phương pháp giải thực chiến</h3><p>B1: Tìm nghiệm của MẪU SỐ.<br>B2: Thay nghiệm đó lên TỬ SỐ.<br>+ Nếu Tử $\\neq 0 \\Rightarrow$ Chắc chắn là TCĐ.<br>+ Nếu Tử $= 0 \\Rightarrow$ Phải rút gọn nhân tử để kiểm tra.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ thực hành</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm TCĐ của $y = \\frac{2x-1}{x-3}$.</div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> Mẫu có nghiệm $x=3$. Thay lên tử được $2(3)-1 = 5 \\neq 0$.<br>$\\Rightarrow$ TCĐ: $x = 3$.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm TCĐ của $y = \\frac{x^2-1}{x-1}$.</div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> Mẫu có nghiệm $x=1$. Thay lên tử cũng bằng $0$.<br>Rút gọn: $y = \\frac{(x-1)(x+1)}{x-1} = x+1$<br>$\\Rightarrow$ Đã bị triệt tiêu, KHÔNG CÓ TCĐ.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Đọc TCĐ từ BBT sau:<br>\n          <table style=\"width:100%; max-width:350px; border-collapse: collapse; text-align:center; background:white; border:1px solid black; margin:10px auto;\">\n            <tr style=\"border-bottom:1px solid black;\">\n              <td style=\"border-right:1px solid black; padding:5px;\">$x$</td>\n              <td style=\"padding:5px;\">$0$</td> <td></td> <td style=\"padding:5px; color:blue;\">$2$</td> <td></td> <td style=\"padding:5px;\">$+\\infty$</td>\n            </tr>\n            <tr>\n              <td style=\"border-right:1px solid black; padding:5px;\">$y$</td>\n              <td style=\"vertical-align:top; padding:5px;\">$0$</td> <td>$\\nearrow$</td>\n              <td style=\"vertical-align:top; padding:5px; border-left:2px double black; border-right:2px double black; color:red; font-weight:bold;\">$+\\infty \\quad \\quad -\\infty$</td>\n              <td>$\\nearrow$</td> <td style=\"vertical-align:top; padding:5px;\">$0$</td>\n            </tr>\n          </table>\n        </div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> Tại $x=2$ có hai sọc ($||$), và giới hạn tiến ra vô cực.<br>$\\Rightarrow$ TCĐ: $x = 2$.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy trắc nghiệm</h3><p>Chỉ giải nghiệm mẫu mà không thử lại lên tử số.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Casio</h3><p>Bấm [CALC] tại $x = x_0 + 0.0001$. Nếu kết quả ra số siêu lớn, đó là TCĐ.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm cốt lõi",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Phương pháp giải thực chiến",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ thực hành (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy trắc nghiệm",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Casio bấm máy",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 3: ĐƯỜNG TIỆM CẬN CỦA ĐỒ THỊ HÀM SỐ",
+      "subtitle": "MỤC 2 • ĐỊNH NGHĨA TIỆM CẬN ĐỨNG (TCĐ)",
+      "startTime": 0.0,
+      "endTime": 18.56,
+      "duration": 18.56,
+      "mascotMode": "pointer",
+      "mascotTip": "Tiệm cận đứng có dạng x = x0 (đường thẳng đứng), tuyệt đối không nhầm sang y = y0!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Khái niệm cốt lõi</div><div style=\"font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">Đường thẳng $x = x_0$ được gọi là <b>đường tiệm cận đứng</b> (TCĐ) của đồ thị hàm số $y = f(x)$ nếu thỏa mãn ít nhất một trong bốn điều kiện sau:<br>$$\\lim_{x \\to x_0^+} f(x) = +\\infty, \\quad \\lim_{x \\to x_0^+} f(x) = -\\infty, \\quad \\lim_{x \\to x_0^-} f(x) = +\\infty, \\quad \\lim_{x \\to x_0^-} f(x) = -\\infty$$</div><div style=\"font-size:20px; line-height:1.6; color:#38bdf8; margin-top:14px; margin-left:14px;\">• <b>Ý nghĩa:</b> Khi $x$ tiến dần sát về giá trị $x_0$, tung độ $y$ bùng nổ vọt lên cao vô tận ($+\\infty$) hoặc tụt xuống sâu vô tận ($-\\infty$).</div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "QUY TRÌNH 2 BƯỚC TÌM TCĐ THỰC CHIẾN",
+      "subtitle": "Tìm nghiệm của Mẫu và thử lại lên Tử",
+      "startTime": 18.56,
+      "endTime": 42.9,
+      "duration": 24.34,
+      "mascotMode": "pointer",
+      "mascotTip": "Mẫu bằng 0 nhưng Tử phải khác 0 thì mới chắc chắn là TCĐ!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Phương pháp giải thực chiến</div><div style=\"font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;\">• <b>Bước 1:</b> Giải phương trình cho <b>MẪU SỐ BẰNG 0</b> để tìm các điểm nghi vấn $x = x_0$.<br>• <b>Bước 2:</b> Thay $x_0$ lên <b>TỬ SỐ</b>:<br>&nbsp;&nbsp;+ Nếu <b>Tử $\\neq 0$</b>: Kết luận ngay $x = x_0$ là tiệm cận đứng.<br>&nbsp;&nbsp;+ Nếu <b>Tử $= 0$</b>: Phải phân tích đa thức thành nhân tử để triệt tiêu thừa số $(x - x_0)$ rồi xét lại bậc của nghiệm.</div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: TÌM TIỆM CẬN ĐỨNG",
+      "subtitle": "Hàm phân thức y = (2x - 1) / (x - 3)",
+      "startTime": 42.9,
+      "endTime": 52.55,
+      "duration": 9.65,
+      "mascotMode": "pointer",
+      "mascotTip": "Nhẩm nhanh nghiệm của mẫu: x - 3 = 0 => x = 3!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm tiệm cận đứng của đồ thị hàm số $y = \\frac{2x - 1}{x - 3}$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Các em hãy nhẩm nhanh nghiệm của mẫu...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Nghiệm mẫu x = 3 làm tử khác 0 => x = 3 là TCĐ",
+      "startTime": 52.55,
+      "endTime": 63.48,
+      "duration": 10.93,
+      "mascotMode": "cheer",
+      "mascotTip": "Thay x = 3 vào tử được 5 khác 0. TCĐ: x = 3!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 1:</b> Tìm TCĐ của $y = \\frac{2x-1}{x-3}$.</div><div id=\"vd1_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Mẫu số có nghiệm: $x - 3 = 0 \\iff x = 3$.<br>• Thay $x = 3$ lên tử số: $2(3) - 1 = 5 \\neq 0$.<br>• Do đó: $\\lim_{x \\to 3^+} \\frac{2x-1}{x-3} = +\\infty$ và $\\lim_{x \\to 3^-} \\frac{2x-1}{x-3} = -\\infty$.<br><b style=\"color:#10b981;\">Kết luận:</b> Đồ thị hàm số có đúng 1 tiệm cận đứng là đường thẳng <b>$x = 3$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: BẪY NGHIỆM CỦA TỬ VÀ MẪU",
+      "subtitle": "y = (x^2 - 1) / (x - 1)",
+      "startTime": 63.48,
+      "endTime": 74.3,
+      "duration": 10.82,
+      "mascotMode": "pointer",
+      "mascotTip": "Chú ý nghiệm của mẫu có làm tử bằng 0 không nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tiệm cận đứng của hàm số $y = \\frac{x^2 - 1}{x - 1}$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Chú ý nghiệm của mẫu có làm tử bằng 0 không nhé...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Nhân tử (x - 1) bị triệt tiêu => KHÔNG CÓ TCĐ",
+      "startTime": 74.3,
+      "endTime": 90.33,
+      "duration": 16.03,
+      "mascotMode": "cheer",
+      "mascotTip": "Hàm số rút gọn thành y = x + 1, đường x = 1 đã bị triệt tiêu!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 2:</b> Tìm TCĐ của $y = \\frac{x^2-1}{x-1}$.</div><div id=\"vd2_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Mẫu có nghiệm: $x = 1$. Thay lên tử: $1^2 - 1 = 0$.<br>• Phân tích rút gọn: $y = \\frac{(x-1)(x+1)}{x-1} = x + 1$ (với $x \\neq 1$).<br>• Giới hạn khi $x \\to 1$: $\\lim_{x \\to 1} y = 1 + 1 = 2$ (là số hữu hạn, không ra vô cực).<br><b style=\"color:#ef4444;\">Kết luận:</b> Đồ thị hàm số <b>KHÔNG CÓ TIỆM CẬN ĐỨNG</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: ĐỌC TCĐ TỪ BẢNG BIẾN THIÊN",
+      "subtitle": "Quan sát vị trí có hai dấu gạch sọc không xác định",
+      "startTime": 90.33,
+      "endTime": 98.88,
+      "duration": 8.55,
+      "mascotMode": "pointer",
+      "mascotTip": "Tìm cột x có dấu vạch kép || và y tiến ra vô cực!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Đọc tiệm cận đứng từ Bảng biến thiên sau:<table style=\"width:100%; max-width:380px; border-collapse: collapse; text-align:center; background:white; color:#000; border:1.5px solid black; margin:12px auto; border-radius:4px;\"><tr style=\"border-bottom:1px solid black;\"><td style=\"border-right:1px solid black; padding:6px; font-weight:bold;\">$x$</td><td style=\"padding:6px;\">$0$</td> <td></td> <td style=\"padding:6px; color:#2563eb; font-weight:bold; font-size:18px;\">$2$</td> <td></td> <td style=\"padding:6px;\">$+\\infty$</td></tr><tr><td style=\"border-right:1px solid black; padding:6px; font-weight:bold;\">$y$</td><td style=\"vertical-align:bottom; padding:6px;\">$0$</td> <td>$\\nearrow$</td><td style=\"padding:6px; border-left:2px double black; border-right:2px double black; color:#ef4444; font-weight:bold; font-size:18px;\">$+\\infty \\quad -\\infty$</td><td>$\\nearrow$</td> <td style=\"vertical-align:bottom; padding:6px;\">$0$</td></tr></table></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Vạch kép tại x = 2 với lim ra vô cực => TCĐ: x = 2",
+      "startTime": 98.88,
+      "endTime": 109.26,
+      "duration": 10.38,
+      "mascotMode": "cheer",
+      "mascotTip": "Chỉ cần một phía tiến ra vô cực là đủ điều kiện kết luận TCĐ!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 3:</b> Đọc TCĐ từ BBT.</div><div id=\"vd3_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Tại điểm $x = 2$, hàm số không xác định (ký hiệu vạch kép $||$).<br>• Giới hạn bên trái: $\\lim_{x \\to 2^-} y = +\\infty$.<br>• Giới hạn bên phải: $\\lim_{x \\to 2^+} y = -\\infty$.<br><b style=\"color:#10b981;\">Kết luận:</b> Đường thẳng <b>$x = 2$</b> chính là <b>tiệm cận đứng</b> của đồ thị hàm số.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY TRẮC NGHIỆM TIỆM CẬN ĐỨNG",
+      "subtitle": "PHẦN 4: THÓI QUEN XẤU CHỈ CHO MẪU BẰNG 0",
+      "startTime": 109.26,
+      "endTime": 118.77,
+      "duration": 9.51,
+      "mascotMode": "magnifier",
+      "mascotTip": "Bắt buộc phải thử lại nghiệm của mẫu lên tử số hoặc kiểm tra bậc nghiệm!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy trắc nghiệm cần tránh</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• <b>Bẫy thường gặp:</b> Học sinh thường có thói quen bấm máy giải nghiệm mẫu rồi đếm số nghiệm và kết luận số tiệm cận đứng.<br>• <b>Cảnh báo:</b> Nếu nghiệm của mẫu trùng với nghiệm của tử, nghiệm đó có thể bị triệt tiêu hoàn toàn (nếu bậc nghiệm tử $\\ge$ bậc nghiệm mẫu). Hãy luôn phân tích thành nhân tử hoặc thử lại lên tử số!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "MẸO CASIO CALC BẮT TCĐ",
+      "subtitle": "PHẦN 5: BẤM MÁY TÍNH KIỂM TRA MỘT BÊN",
+      "startTime": 118.77,
+      "endTime": 131,
+      "duration": 12.23,
+      "mascotMode": "cheer",
+      "mascotTip": "CALC tại x0 + 0.0001, nếu kết quả ra số siêu to (mũ dương) thì đó là TCĐ!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Casio kiểm tra nhanh</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• <b>Bước 1:</b> Nhập biểu thức $f(x)$ vào máy tính.<br>• <b>Bước 2:</b> Bấm [CALC] tại $x = x_0 + 0.0001$ (để tính $\\lim_{x \\to x_0^+}$).<br>• <b>Bước 3:</b> Quan sát màn hình hiển thị: Nếu ra một số rất lớn (như $10^6, 10^7...$) thì đó là $+\\infty$; nếu ra âm rất lớn thì là $-\\infty \\implies x = x_0$ chắc chắn là TCĐ!</div>"
+    }
+  ]
+},
 
     bai3_muc3: {
-      lessonId: "bai3",
-      lessonTitle: "Bài 3: Đường tiệm cận của đồ thị hàm số",
-      sectionId: "bai3_muc3",
-      sectionTitle: "Mục 3: Đường tiệm cận xiên (lim [y - (ax+b)] = 0)",
-      audioSrc: "./audio/bai3_muc3.mp3",
-      totalDuration: 290.0,
-      audio_src: "./audio/bai3_muc3.mp3",
-      timestamp_src: "timestamps/bai3_muc3.json",
-      title: "Mục 3: Đường tiệm cận xiên (Chuẩn kiến thức GDPT 2018 - Hàm phân thức bậc 2/1)",
-      owl_tip: "Tiệm cận xiên y = ax + b (a ≠ 0) xuất hiện khi bậc tử lớn hơn bậc mẫu đúng 1 bậc! Dùng phép chia đa thức để tìm nhanh.",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Định nghĩa tiệm cận xiên (TCX)", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Phương pháp chia đa thức tìm TCX", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Công thức tổng quát tính a và b", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy nhầm lẫn giữa TCX và TCN", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "ĐỊNH NGHĨA ĐƯỜNG TIỆM CẬN XIÊN (TCX)",
-          subtitle: "MỤC 3 • KIẾN THỨC MỚI TRỌNG TÂM SGK 2018",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> Tiệm cận xiên có phương trình $y = ax + b$ với $a \\ne 0$. Nếu $a = 0$ thì nó trở thành tiệm cận ngang!",
-          bodyHtml: `
-            <div style="font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:8px;">
-              Định nghĩa Đường tiệm cận xiên:
-            </div>
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              Đường thẳng $y = ax + b$ ($a \\ne 0$) được gọi là <b>đường tiệm cận xiên</b> của đồ thị hàm số $y = f(x)$ nếu:<br>
-              $$\\lim_{x \\to +\\infty} [f(x) - (ax + b)] = 0 \\quad \\text{hoặc} \\quad \\lim_{x \\to -\\infty} [f(x) - (ax + b)] = 0.$$
-            </div>
-            <div style="font-size:21px; line-height:1.6; color:#38bdf8; margin-top:12px;">
-              • Dấu hiệu thường gặp: Đồ thị hàm phân thức có bậc tử lớn hơn bậc mẫu đúng $1$ đơn vị luôn có tiệm cận xiên.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "MẸO CHIA ĐA THỨC TÌM TIỆM CẬN XIÊN TRONG 5 GIÂY",
-          subtitle: "MỤC 3 • HÀM PHÂN THỨC BẬC HAI TRÊN BẬC NHẤT",
-          startTime: 70.0,
-          endTime: 145.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Kỹ thuật:</b> Thực hiện phép chia đa thức: $\\frac{P(x)}{Q(x)} = (ax + b) + \\frac{R}{Q(x)}$. Khi $x \\to \\pm\\infty$, phần dư tiến về 0, thương chính là TCX!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Đề bài:</b> Tìm đường tiệm cận xiên của hàm số $y = \\frac{2x^2 - 3x + 4}{x - 1}$.
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Thực hiện phép chia đa thức tử cho mẫu:<br>
-              $$2x^2 - 3x + 4 = (2x - 1)(x - 1) + 3 \\implies y = 2x - 1 + \\frac{3}{x - 1}.$$<br>
-              • Xét hiệu: $\\lim_{x \\to \\pm\\infty} [y - (2x - 1)] = \\lim_{x \\to \\pm\\infty} \\frac{3}{x - 1} = 0$.<br>
-              • <b>Kết luận:</b> Đường thẳng $y = 2x - 1$ là <b>đường tiệm cận xiên</b> của đồ thị hàm số.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "CÔNG THỨC TỔNG QUÁT TÌM HỆ SỐ a VÀ b",
-          subtitle: "MỤC 3 • DÀNH CHO CÁC HÀM CĂN THỨC VÀ PHỨC TẠP",
-          startTime: 145.0,
-          endTime: 215.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Công thức tìm a, b:</b> $a = \\lim_{x \\to \\pm\\infty} \\frac{f(x)}{x}$ và $b = \\lim_{x \\to \\pm\\infty} [f(x) - ax]$!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              Công thức giới hạn xác định tiệm cận xiên $y = ax + b$:
-            </div>
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              $$a = \\lim_{x \\to +\\infty} \\frac{f(x)}{x} \\quad (a \\ne 0)$$
-              $$b = \\lim_{x \\to +\\infty} [f(x) - ax]$$
-              (Tương tự khi $x \\to -\\infty$ có thể cho một đường tiệm cận xiên khác).<br>
-              • Ứng dụng: Dùng khi hàm số chứa căn bậc hai, ví dụ $y = \\sqrt{x^2 - 4x + 5} = \\sqrt{(x-2)^2 + 1} \\implies$ TCX: $y = x - 2$ khi $x \\to +\\infty$ và $y = -x + 2$ khi $x \\to -\\infty$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "TỔNG KẾT BÀI 3: PHÂN BIỆT 3 ĐƯỜNG TIỆM CẬN",
-          subtitle: "MỤC 3 • BẢNG SO SÁNH TOÀN DIỆN CỦA THẦY CÚ",
-          startTime: 215.0,
-          endTime: 290.0,
-          duration: 75.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Cú chốt:</b> Nếu đồ thị đã có Tiệm cận ngang ở một phía thì ở phía đó KHÔNG CÓ tiệm cận xiên!",
-          bodyHtml: `
-            <table class="bbt-table" style="width:100%; max-width:96%; margin:8px auto; border-collapse:collapse; background:rgba(15,23,42,0.85); border-top:2.5px solid #cbd5e1; border-bottom:2.5px solid #cbd5e1;">
-              <tr style="border-bottom:1.5px solid #64748b; background:rgba(30,41,59,0.7);">
-                <th style="padding:8px 12px; color:#fef08a; font-size:21px;">Loại tiệm cận</th>
-                <th style="padding:8px 12px; color:#38bdf8; font-size:21px;">Phương trình</th>
-                <th style="padding:8px 12px; color:#4ade80; font-size:21px;">Điều kiện giới hạn</th>
-              </tr>
-              <tr style="border-bottom:1px solid #334155;">
-                <td style="padding:8px 12px; color:#f8fafc; font-weight:bold; font-size:20px;">Tiệm cận ngang (TCN)</td>
-                <td style="padding:8px 12px; color:#cbd5e1; font-size:20px;">$y = y_0$</td>
-                <td style="padding:8px 12px; color:#cbd5e1; font-size:20px;">$\\lim_{x \\to \\pm\\infty} f(x) = y_0$</td>
-              </tr>
-              <tr style="border-bottom:1px solid #334155;">
-                <td style="padding:8px 12px; color:#f8fafc; font-weight:bold; font-size:20px;">Tiệm cận đứng (TCĐ)</td>
-                <td style="padding:8px 12px; color:#cbd5e1; font-size:20px;">$x = x_0$</td>
-                <td style="padding:8px 12px; color:#cbd5e1; font-size:20px;">$\\lim_{x \\to x_0^\\pm} f(x) = \\pm\\infty$</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 12px; color:#f8fafc; font-weight:bold; font-size:20px;">Tiệm cận xiên (TCX)</td>
-                <td style="padding:8px 12px; color:#cbd5e1; font-size:20px;">$y = ax + b$ ($a \\ne 0$)</td>
-                <td style="padding:8px 12px; color:#cbd5e1; font-size:20px;">$\\lim_{x \\to \\pm\\infty} [f(x) - (ax+b)] = 0$</td>
-              </tr>
-            </table>
-          `
-        }
+  "lessonId": "bai3",
+  "lessonTitle": "Bài 3: Đường tiệm cận của đồ thị hàm số",
+  "sectionId": "bai3_muc3",
+  "sectionTitle": "Mục 3: Tiệm cận xiên (Bậc tử = Bậc mẫu + 1)",
+  "audio": "/audio/bai3_muc3.mp3",
+  "audioSrc": "./audio/bai3_muc3.mp3",
+  "audio_src": "./audio/bai3_muc3.mp3",
+  "totalDuration": 127,
+  "duration": 127,
+  "title": "Mục 3: Tiệm cận xiên (Phép chia đa thức & Nhận diện trên đồ thị)",
+  "owl_tip": "Ghi nhớ: Tiệm cận xiên có dạng y = ax + b (với a ≠ 0). Chỉ xuất hiện khi Bậc tử lớn hơn Bậc mẫu đúng 1 bậc!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 18.88,
+      "id": "part2"
+    },
+    {
+      "time": 34.77,
+      "id": "part3"
+    },
+    {
+      "time": 37.94,
+      "id": "vd1_q"
+    },
+    {
+      "time": 48.34,
+      "id": "vd1_a"
+    },
+    {
+      "time": 63.04,
+      "id": "vd2_q"
+    },
+    {
+      "time": 73.48,
+      "id": "vd2_a"
+    },
+    {
+      "time": 86.41,
+      "id": "vd3_q"
+    },
+    {
+      "time": 96.66,
+      "id": "vd3_a"
+    },
+    {
+      "time": 106.45,
+      "id": "part4"
+    },
+    {
+      "time": 114.98,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm cốt lõi</h3><p>Đường thẳng $y = ax + b \\, (a \\neq 0)$ là Tiệm cận xiên (TCX) nếu:<br>$\\lim_{x \\to \\pm\\infty} [f(x) - (ax+b)] = 0$</p></div>\n      <div id=\"part2\"><h3>2. Phương pháp giải nhanh</h3><p>Dấu hiệu: Bậc tử = Bậc mẫu + 1.<br>Cách tìm: Lấy Tử chia cho Mẫu đa thức.<br>$y = (ax+b) + \\frac{r(x)}{mẫu} \\Rightarrow$ Thương $y = ax + b$ chính là TCX.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm TCX của $y = \\frac{x^2+2x+2}{x+1}$.</div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> Thực hiện chia đa thức:<br>$y = x + 1 + \\frac{1}{x+1}$<br>$\\Rightarrow$ Thương số là $x+1$, vậy TCX: $y = x + 1$.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm TCX của $y = \\frac{-2x^2+x}{x-2}$.</div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> Lấy tử chia mẫu:<br>$y = -2x - 3 - \\frac{6}{x-2}$<br>$\\Rightarrow$ Tiệm cận xiên: $y = -2x - 3$.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Nhận diện TCX trên đồ thị:<br>\n          <svg viewBox=\"-3 -3 6 6\" style=\"width:100%; max-width:200px; background:white; border:1px solid #ccc; display:block; margin:auto;\">\n            <line x1=\"-3\" y1=\"0\" x2=\"3\" y2=\"0\" stroke=\"black\"/> <!-- Ox -->\n            <line x1=\"0\" y1=\"-3\" x2=\"0\" y2=\"3\" stroke=\"black\"/> <!-- Oy -->\n            <line x1=\"-3\" y1=\"3\" x2=\"3\" y2=\"-3\" stroke=\"red\" stroke-dasharray=\"0.3\" stroke-width=\"0.15\"/> <!-- y = x trong SVG -->\n            <!-- Đồ thị hyperbol -->\n            <path d=\"M 0.5 -3 Q 1 -1 3 -2.5\" stroke=\"blue\" fill=\"none\" stroke-width=\"0.15\"/>\n            <path d=\"M -0.5 3 Q -1 1 -3 2.5\" stroke=\"blue\" fill=\"none\" stroke-width=\"0.15\"/>\n          </svg>\n        </div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> Đồ thị tiến sát về đường thẳng chéo đi qua gốc tọa độ nghiêng.<br>$\\Rightarrow$ TCX là đường phân giác: $y = x$.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Tính sai hệ số $a$ và $b$ bằng giới hạn lim, hoặc chia đa thức sai dấu.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo tư duy</h3><p>Dùng công thức đạo hàm L'Hôpital để tìm lim hệ số nhanh khi gặp bài chứa tham số.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm cốt lõi",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Phương pháp giải nhanh",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo tư duy & L'Hôpital",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 3: ĐƯỜNG TIỆM CẬN CỦA ĐỒ THỊ HÀM SỐ",
+      "subtitle": "MỤC 3 • ĐỊNH NGHĨA TIỆM CẬN XIÊN (TCX)",
+      "startTime": 0.0,
+      "endTime": 18.88,
+      "duration": 18.88,
+      "mascotMode": "pointer",
+      "mascotTip": "Tiệm cận xiên có dạng y = ax + b (với a khác 0), đường chéo nghiêng góc!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Khái niệm cốt lõi</div><div style=\"font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">Đường thẳng $y = ax + b$ (với $a \\neq 0$) được gọi là <b>đường tiệm cận xiên</b> (TCX) của đồ thị hàm số $y = f(x)$ nếu:<br>$$\\lim_{x \\to +\\infty} [f(x) - (ax + b)] = 0 \\quad \\text{hoặc} \\quad \\lim_{x \\to -\\infty} [f(x) - (ax + b)] = 0$$</div><div style=\"font-size:20px; line-height:1.6; color:#38bdf8; margin-top:14px; margin-left:14px;\">• <b>Ý nghĩa hình học:</b> Khi $x \\to \\pm\\infty$, đồ thị hàm số ngày càng tiến sát lại gần đường thẳng xiên $y = ax + b$.</div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "PHƯƠNG PHÁP TÌM TCX BẰNG PHÉP CHIA ĐA THỨC",
+      "subtitle": "Bậc tử lớn hơn bậc mẫu đúng 1 bậc: y = Thương + Dư / Mẫu",
+      "startTime": 18.88,
+      "endTime": 37.94,
+      "duration": 19.06,
+      "mascotMode": "pointer",
+      "mascotTip": "Lấy tử chia cho mẫu, phần thương y = ax + b chính là TCX!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Phương pháp giải nhanh (Phép chia đa thức)</div><div style=\"font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;\">• <b>Dấu hiệu nhận biết:</b> Đồ thị có tiệm cận xiên khi bậc của tử số lớn hơn bậc của mẫu số <b>đúng 1 bậc</b> (ví dụ bậc 2 trên bậc 1).<br>• <b>Quy trình thực hiện:</b> Thực hiện phép chia đa thức tử cho mẫu:<br>$$y = f(x) = (ax + b) + \\frac{r}{mẫu}$$<br>Khi $x \\to \\pm\\infty$, phần dư $\\frac{r}{mẫu} \\to 0$, do đó phần thương <b>$y = ax + b$</b> chính là tiệm cận xiên.</div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: TÌM TIỆM CẬN XIÊN",
+      "subtitle": "y = (x^2 + 2x + 2) / (x + 1)",
+      "startTime": 37.94,
+      "endTime": 48.34,
+      "duration": 10.4,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử cho mẫu: x^2 + 2x + 2 chia cho x + 1!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm tiệm cận xiên của hàm số $y = \\frac{x^2 + 2x + 2}{x + 1}$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Các em dùng phép chia đa thức nhé...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Thương là x + 1, dư 1 => TCX: y = x + 1",
+      "startTime": 48.34,
+      "endTime": 63.04,
+      "duration": 14.7,
+      "mascotMode": "cheer",
+      "mascotTip": "Tiệm cận xiên là y = x + 1!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 1:</b> Tìm TCX của $y = \\frac{x^2+2x+2}{x+1}$.</div><div id=\"vd1_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Thực hiện phép chia đa thức: $(x^2 + 2x + 2) : (x + 1)$ được thương $(x + 1)$ dư $1$.<br>• Ta viết lại: $y = x + 1 + \\frac{1}{x + 1}$.<br>• Vì $\\lim_{x \\to \\pm\\infty} \\frac{1}{x+1} = 0$ nên $\\lim_{x \\to \\pm\\infty} [y - (x+1)] = 0$.<br><b style=\"color:#10b981;\">Kết luận:</b> Đồ thị hàm số có tiệm cận xiên là đường thẳng <b>$y = x + 1$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: HỆ SỐ BẬC CAO ÂM",
+      "subtitle": "y = (-2x^2 + x) / (x - 2)",
+      "startTime": 63.04,
+      "endTime": 73.48,
+      "duration": 10.44,
+      "mascotMode": "pointer",
+      "mascotTip": "Các em có 15 giây nháp phép chia tử cho mẫu!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tiệm cận xiên của hàm số $y = \\frac{-2x^2 + x}{x - 2}$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Các em có 15 giây nháp phép chia...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Thương là -2x - 3, dư -6 => TCX: y = -2x - 3",
+      "startTime": 73.48,
+      "endTime": 86.41,
+      "duration": 12.93,
+      "mascotMode": "cheer",
+      "mascotTip": "Cẩn thận dấu trừ khi chia đa thức!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 2:</b> Tìm TCX của $y = \\frac{-2x^2+x}{x-2}$.</div><div id=\"vd2_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Chia tử cho mẫu: $(-2x^2 + x) : (x - 2)$ được thương là $(-2x - 3)$, dư $-6$.<br>• Biến đổi: $y = -2x - 3 - \\frac{6}{x - 2}$.<br>• Vì $\\lim_{x \\to \\pm\\infty} \\frac{-6}{x-2} = 0$, ta có $\\lim_{x \\to \\pm\\infty} [y - (-2x - 3)] = 0$.<br><b style=\"color:#10b981;\">Kết luận:</b> Tiệm cận xiên của đồ thị là đường thẳng <b>$y = -2x - 3$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: NHẬN DIỆN TCX TRÊN ĐỒ THỊ",
+      "subtitle": "Tìm đường thẳng mà đồ thị tiến sát vào khi x ra vô cực",
+      "startTime": 86.41,
+      "endTime": 96.66,
+      "duration": 10.25,
+      "mascotMode": "pointer",
+      "mascotTip": "Đường tiệm cận xiên đi qua gốc tọa độ O và điểm (1; 1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Nhận diện tiệm cận xiên trên đồ thị sau:<br><svg viewBox=\"-3.5 -3.5 7 7\" style=\"width:100%; max-width:260px; background:white; border:1px solid #ccc; display:block; margin:12px auto; border-radius:8px;\"><line x1=\"-3.2\" y1=\"0\" x2=\"3.2\" y2=\"0\" stroke=\"#333\" stroke-width=\"0.08\"/><line x1=\"0\" y1=\"-3.2\" x2=\"0\" y2=\"3.2\" stroke=\"#333\" stroke-width=\"0.08\"/><line x1=\"-3\" y1=\"3\" x2=\"3\" y2=\"-3\" stroke=\"#ef4444\" stroke-width=\"0.08\" stroke-dasharray=\"0.2\"/><path d=\"M 0.4 -3 Q 0.8 -1.2 3 -2.8\" stroke=\"#2563eb\" fill=\"none\" stroke-width=\"0.12\"/><path d=\"M -0.4 3 Q -0.8 1.2 -3 2.8\" stroke=\"#2563eb\" fill=\"none\" stroke-width=\"0.12\"/><circle cx=\"0\" cy=\"0\" r=\"0.1\" fill=\"#333\"/><text x=\"0.2\" y=\"0.4\" font-size=\"0.4\" font-style=\"italic\">O</text><text x=\"1.8\" y=\"-2\" font-size=\"0.4\" fill=\"#ef4444\" font-weight=\"bold\">y = x</text></svg></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Đồ thị đi dọc đường phân giác góc phần tư I và III: y = x",
+      "startTime": 96.66,
+      "endTime": 106.45,
+      "duration": 9.79,
+      "mascotMode": "cheer",
+      "mascotTip": "Tiệm cận xiên là đường phân giác y = x!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 3:</b> Nhận diện TCX trên đồ thị.</div><div id=\"vd3_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Quan sát hình vẽ, hai nhánh đồ thị hàm số khi $x \\to \\pm\\infty$ tiến sát vào đường nét đứt màu đỏ.<br>• Đường thẳng chéo này đi qua gốc tọa độ $O(0; 0)$ và điểm $(1; 1)$, nghiêng góc $45^\\circ$.<br><b style=\"color:#10b981;\">Kết luận:</b> Tiệm cận xiên của đồ thị là đường phân giác <b>$y = x$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI TIỆM CẬN XIÊN",
+      "subtitle": "PHẦN 4: NHỚ SAI CÔNG THỨC HỆ SỐ a VÀ b",
+      "startTime": 106.45,
+      "endTime": 114.98,
+      "duration": 8.53,
+      "mascotMode": "magnifier",
+      "mascotTip": "a = lim(f(x)/x), còn b = lim(f(x) - ax). Đừng quên trừ ax nhé!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy đề thi thường gặp</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• <b>Bẫy 1:</b> Nhớ sai công thức định nghĩa của $a$ và $b$ khi tính bằng giới hạn lim:<br>$$a = \\lim_{x \\to \\pm\\infty} \\frac{f(x)}{x}, \\quad b = \\lim_{x \\to \\pm\\infty} [f(x) - ax]$$<br>Nhiều bạn quên trừ $ax$ khi tính $b$, dẫn đến kết quả sai hoàn toàn!<br>• <b>Bẫy 2:</b> Chia đa thức sai dấu ở phần dư hoặc bỏ sót dấu của hệ số âm.</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "MẸO TƯ DUY & L'HÔPITAL",
+      "subtitle": "PHẦN 5: TÌM HỆ SỐ a VÀ b NHANH CHÓNG KHI CÓ THAM SỐ",
+      "startTime": 114.98,
+      "endTime": 127,
+      "duration": 12.02,
+      "mascotMode": "cheer",
+      "mascotTip": "Dùng đạo hàm L'Hôpital để tìm lim tỉ số nhanh khi gặp bài chứa tham số m!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo tư duy & Đạo hàm L'Hôpital</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• Nếu bài toán tiệm cận xiên có chứa tham số $m$, việc chia đa thức có thể cồng kềnh.<br>• Ta có thể tính ngay hệ số góc $a$ bằng công thức đạo hàm giới hạn:<br>$$a = \\lim_{x \\to \\pm\\infty} f'(x)$$<br>(với các hàm phân thức hữu tỉ thông thường). Giúp tìm nhanh hệ số $a$ trong tích tắc!</div>"
+    }
+  ]
+},
 
-    // =========================================================================
-    // BÀI 4: KHẢO SÁT SỰ BIẾN THIÊN VÀ VẼ ĐỒ THỊ CỦA HÀM SỐ (4 MỤC)
-    // =========================================================================
     bai4_muc1: {
       lessonId: "bai4",
       lessonTitle: "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
