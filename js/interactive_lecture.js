@@ -448,6 +448,16 @@
         { key: "bai5_muc3", title: "Mục 3: Ứng dụng trong Vật lý & Chuyển động", time: "05:00", icon: "🚀" }
       ]
     },
+        {
+      lessonId: "bai6",
+      lessonTitle: "Bài 6: Vectơ trong không gian",
+      lessonBadge: "Bài 6",
+      sections: [
+        { key: "bai6_muc1", title: "Mục 1: Định nghĩa & Khái niệm cơ bản", time: "05:00", icon: "➡️" },
+        { key: "bai6_muc2", title: "Mục 2: Các phép toán vectơ & Quy tắc hình hộp", time: "05:00", icon: "➕" },
+        { key: "bai6_muc3", title: "Mục 3: Tích vô hướng của hai vectơ", time: "05:00", icon: "📐" }
+      ]
+    },
     {
       lessonId: "ontap",
       lessonTitle: "Ôn tập Chương 1",
