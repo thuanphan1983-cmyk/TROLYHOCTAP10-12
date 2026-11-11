@@ -17,11 +17,34 @@
   "sectionId": "bai2_muc1",
   "sectionTitle": "Mục 1: Định nghĩa GTLN & GTNN của hàm số",
   "audioSrc": "./audio/bai2_muc1.mp3",
-  "totalDuration": 320,
+  "totalDuration": 165,
+  "duration": 165,
   "audio_src": "./audio/bai2_muc1.mp3",
   "timestamp_src": "timestamps/bai2_muc1.json",
   "title": "Mục 1: Định nghĩa GTLN & GTNN (Phân biệt Max/Min với Cực trị)",
   "owl_tip": "Ghi nhớ: GTLN/GTNN là giá trị toàn cục trên tập D, khác với Cực trị chỉ mang tính chất địa phương cục bộ!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 40,
+      "id": "part2"
+    },
+    {
+      "time": 75,
+      "id": "part3"
+    },
+    {
+      "time": 110,
+      "id": "part4"
+    },
+    {
+      "time": 135,
+      "id": "part5"
+    }
+  ],
   "parts": [
     {
       "partNumber": 1,
@@ -53,7 +76,7 @@
     },
     {
       "partNumber": 5,
-      "partTitle": "Phần 5: Mẹo Thầy Cú thông thái soi xét điều kiện tồn tại",
+      "partTitle": "Phần 5: Bí kíp Thầy Cú thông thái & Phân biệt câu hỏi trắc nghiệm",
       "scenes": [
         5
       ]
@@ -65,60 +88,60 @@
       "title": "BÀI 2: GTLN VÀ GTNN CỦA HÀM SỐ",
       "subtitle": "MỤC 1 • ĐỊNH NGHĨA CHUẨN MỰC BỘ GD&ĐT",
       "startTime": 0,
-      "endTime": 65,
-      "duration": 65,
+      "endTime": 40,
+      "duration": 40,
       "mascotMode": "pointer",
       "mascotTip": "<b>Điều kiện bắt buộc:</b> Muốn kết luận $M$ là GTLN thì bắt buộc phải chỉ ra ít nhất một điểm $x_0 \\in D$ sao cho $f(x_0) = M$!",
       "bodyHtml": "\n        <div style=\"font-size:clamp(15px, 2vh, 18px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n          1. Định nghĩa Giá trị lớn nhất (GTLN) trên tập $D$:\n        </div>\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); line-height:1.6; color:#e2e8f0; margin-left:14px; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px; border-left:3px solid #fef08a;\">\n          Cho hàm số $y = f(x)$ xác định trên tập hợp $D \\subset \\mathbb{R}$:<br>\n          Số $M$ được gọi là <b>giá trị lớn nhất</b> của $f(x)$ trên $D$ (kí hiệu $\\max_{x \\in D} f(x) = M$) nếu thỏa mãn đồng thời cả hai điều kiện:<br>\n          • $f(x) \\le M, \\quad \\forall x \\in D$<br>\n          • $\\exists x_0 \\in D$ sao cho $f(x_0) = M$.\n        </div>\n\n        <div style=\"font-size:clamp(15px, 2vh, 18px); color:#38bdf8; font-weight:bold; margin:12px 0 6px 0;\">\n          2. Định nghĩa Giá trị nhỏ nhất (GTNN) trên tập $D$:\n        </div>\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); line-height:1.6; color:#e2e8f0; margin-left:14px; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px; border-left:3px solid #38bdf8;\">\n          Số $m$ được gọi là <b>giá trị nhỏ nhất</b> của $f(x)$ trên $D$ (kí hiệu $\\min_{x \\in D} f(x) = m$) nếu thỏa mãn đồng thời cả hai điều kiện:<br>\n          • $f(x) \\ge m, \\quad \\forall x \\in D$<br>\n          • $\\exists x_0 \\in D$ sao cho $f(x_0) = m$.\n        </div>\n      ",
-      "narration": "Chào các em học sinh thân mến! Hôm nay thầy sẽ cùng các em tìm hiểu Mục 1 của Bài 2: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số trong chương trình Toán 12 Kết nối tri thức. Đầu tiên, chúng ta cùng nắm vững định nghĩa chuẩn mực: Cho hàm số f x xác định trên tập hợp D. Số M được gọi là giá trị lớn nhất của hàm số trên D nếu f x luôn bé hơn hoặc bằng M với mọi x thuộc D, và điều kiện cực kỳ quan trọng là phải tồn tại ít nhất một điểm x 0 thuộc D sao cho f x 0 đúng bằng M. Tương tự, số m được gọi là giá trị nhỏ nhất của f x trên D nếu f x luôn lớn hơn hoặc bằng m với mọi x thuộc D, và tồn tại điểm x 0 thuộc D sao cho f x 0 bằng m."
+      "narration": "Chào các em học sinh. Thầy Trợ lý cùng các em tìm hiểu Bài hai Mục một: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số. Phần một: Khái niệm cốt lõi. Cho hàm số f(x) xác định trên tập D. Số M được gọi là giá trị lớn nhất của hàm số f(x) trên tập D nếu thỏa mãn hai điều kiện: f(x) luôn nhỏ hơn hoặc bằng M với mọi x thuộc tập D, và tồn tại ít nhất một phần tử x không thuộc tập D sao cho f tại x không bằng M. Ký hiệu max f(x) trên tập D bằng M. Tương tự, số m là giá trị nhỏ nhất nếu f(x) luôn lớn hơn hoặc bằng m với mọi x thuộc tập D, và tồn tại x không thuộc tập D sao cho f tại x không bằng m."
     },
     {
       "sceneIndex": 2,
       "title": "PHÂN BIỆT RÕ GTLN/GTNN VỚI ĐIỂM CỰC TRỊ",
       "subtitle": "MỤC 1 • TOÀN CỤC TRÊN D vs ĐỊA PHƯƠNG CỤC BỘ",
-      "startTime": 65,
-      "endTime": 130,
-      "duration": 65,
+      "startTime": 40,
+      "endTime": 75,
+      "duration": 35,
       "mascotMode": "magnifier",
       "mascotTip": "<b>Khắc cốt ghi tâm:</b> Điểm cực đại chỉ là đỉnh đồi trong lân cận hẹp, còn GTLN là đỉnh Everest cao nhất trên toàn cõi tập D!",
       "bodyHtml": "\n        <table class=\"bbt-table\" style=\"width:100%; border-collapse:collapse; background:rgba(15,23,42,0.85); border-top:2px solid #cbd5e1; border-bottom:2px solid #cbd5e1; margin:6px 0;\">\n          <tr style=\"border-bottom:1.5px solid #64748b; background:rgba(30,41,59,0.7);\">\n            <th style=\"padding:8px 12px; text-align:left; color:#fef08a; font-size:clamp(14px, 1.8vh, 16px); width:32%;\">Tiêu chí</th>\n            <th style=\"padding:8px 12px; text-align:left; color:#a7f3d0; font-size:clamp(14px, 1.8vh, 16px); width:34%;\">Cực trị (CĐ / CT)</th>\n            <th style=\"padding:8px 12px; text-align:left; color:#38bdf8; font-size:clamp(14px, 1.8vh, 16px); width:34%;\">GTLN & GTNN (Max / Min)</th>\n          </tr>\n          <tr style=\"border-bottom:1px solid #334155;\">\n            <td style=\"padding:8px 12px; color:#f8fafc; font-weight:bold; font-size:clamp(12.5px, 1.5vh, 14.5px);\">1. Phạm vi khảo sát</td>\n            <td style=\"padding:8px 12px; color:#cbd5e1; font-size:clamp(12px, 1.45vh, 14px);\"><b>Địa phương:</b> Chỉ so sánh trong một lân cận hẹp $(x_0-\\varepsilon; x_0+\\varepsilon)$.</td>\n            <td style=\"padding:8px 12px; color:#cbd5e1; font-size:clamp(12px, 1.45vh, 14px);\"><b>Toàn cục:</b> So sánh trên toàn bộ tập xác định hoặc đoạn $D$.</td>\n          </tr>\n          <tr style=\"border-bottom:1px solid #334155;\">\n            <td style=\"padding:8px 12px; color:#f8fafc; font-weight:bold; font-size:clamp(12.5px, 1.5vh, 14.5px);\">2. Vị trí đạt được</td>\n            <td style=\"padding:8px 12px; color:#cbd5e1; font-size:clamp(12px, 1.45vh, 14px);\">Bắt buộc chỉ đạt tại <b>điểm trong</b> của tập xác định.</td>\n            <td style=\"padding:8px 12px; color:#cbd5e1; font-size:clamp(12px, 1.45vh, 14px);\">Có thể đạt tại điểm trong hoặc ngay tại <b>đầu mút biên</b>.</td>\n          </tr>\n          <tr>\n            <td style=\"padding:8px 12px; color:#f8fafc; font-weight:bold; font-size:clamp(12.5px, 1.5vh, 14.5px);\">3. Tương quan độ lớn</td>\n            <td style=\"padding:8px 12px; color:#cbd5e1; font-size:clamp(12px, 1.45vh, 14px);\">Giá trị cực đại $y_{\\text{CĐ}}$ hoàn toàn có thể <b>nhỏ hơn</b> giá trị cực tiểu $y_{\\text{CT}}$ ở nhánh khác!</td>\n            <td style=\"padding:8px 12px; color:#cbd5e1; font-size:clamp(12px, 1.45vh, 14px);\">$\\max_D f(x)$ luôn lớn hơn hoặc bằng mọi giá trị khác trên toàn tập $D$.</td>\n          </tr>\n        </table>\n      ",
-      "narration": "Sang phần thứ hai, các em cần phân biệt rạch ròi giữa Giá trị lớn nhất, nhỏ nhất với Điểm cực trị để không mắc bẫy trắc nghiệm. Về phạm vi: Cực trị chỉ mang tính địa phương trong một khoảng mở lân cận rất nhỏ quanh điểm x 0, còn Max và Min là tính chất toàn cục trên cả tập D. Về vị trí: Cực trị chỉ xảy ra tại điểm trong của tập xác định, không bao giờ nằm ở đầu mút. Ngược lại, Max và Min hoàn toàn có thể đạt được ngay tại các đầu mút của đoạn. Và điều thú vị là: Giá trị cực đại ở một nhánh này hoàn toàn có thể nhỏ hơn giá trị cực tiểu ở một nhánh khác, trong khi GTLN luôn đứng đầu bảng trên toàn bộ tập khảo sát."
+      "narration": "Phần hai: Phân biệt với cực trị. Cực đại, cực tiểu mang tính địa phương trong một lân cận nhỏ. Còn giá trị lớn nhất, nhỏ nhất mang tính toàn cục trên toàn bộ tập D. Hàm số có thể có nhiều cực trị nhưng chỉ có duy nhất một giá trị lớn nhất nếu có."
     },
     {
       "sceneIndex": 3,
       "title": "VÍ DỤ TRỰC QUAN & ĐỒ THỊ PARABOL SVG",
       "subtitle": "MỤC 1 • KHẢO SÁT HÀM SỐ y = 4 - x² TRÊN ĐOẠN [-1; 2]",
-      "startTime": 130,
-      "endTime": 200,
-      "duration": 70,
+      "startTime": 75,
+      "endTime": 110,
+      "duration": 35,
       "mascotMode": "pointer",
       "mascotTip": "<b>Quan sát đồ thị:</b> Đỉnh $I(0; 4)$ là điểm cao nhất $\\implies \\text{Max} = 4$. Điểm $(2; 0)$ là điểm thấp nhất $\\implies \\text{Min} = 0$!",
-      "bodyHtml": "\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); color:#fef08a; margin-bottom:4px;\">\n          <b>Ví dụ:</b> Tìm GTLN và GTNN của hàm số $y = 4 - x^2$ trên đoạn $[-1; 2]$.\n        </div>\n        <div style=\"display:flex; gap:12px; align-items:center; flex-wrap:wrap;\">\n          <div style=\"flex:1; min-width:220px; font-size:clamp(12px, 1.45vh, 14px); line-height:1.55; color:#e2e8f0;\">\n            • Đỉnh Parabol: $I(0; 4)$ có hoành độ $x = 0 \\in [-1; 2]$.<br>\n            • Điểm cao nhất trên đồ thị là đỉnh $I(0; 4)$ $\\implies$ $\\mathbf{\\max_{[-1; 2]} y = 4}$ tại $x = 0$.<br>\n            • Tính giá trị tại hai đầu mút:<br>\n            $\\quad y(-1) = 4 - (-1)^2 = 3$<br>\n            $\\quad y(2) = 4 - 2^2 = 0$<br>\n            • Điểm thấp nhất trên đồ thị là $(2; 0)$ $\\implies$ $\\mathbf{\\min_{[-1; 2]} y = 0}$ tại $x = 2$.\n          </div>\n          <div style=\"width:230px; flex-shrink:0;\">\n            <svg viewBox=\"0 0 230 150\" style=\"width:100%; height:auto; background:rgba(15,23,42,0.8); border-radius:8px; border:1px solid #334155;\">\n              <!-- Grid lines -->\n              <line x1=\"20\" y1=\"35\" x2=\"220\" y2=\"35\" stroke=\"#1e293b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n              <line x1=\"20\" y1=\"65\" x2=\"220\" y2=\"65\" stroke=\"#1e293b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n              <line x1=\"20\" y1=\"95\" x2=\"220\" y2=\"95\" stroke=\"#1e293b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n              <!-- Axes -->\n              <line x1=\"20\" y1=\"125\" x2=\"220\" y2=\"125\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n              <polygon points=\"220,125 212,122 212,128\" fill=\"#94a3b8\"/>\n              <text x=\"214\" y=\"140\" fill=\"#94a3b8\" font-size=\"11\" font-style=\"italic\">x</text>\n              <line x1=\"80\" y1=\"145\" x2=\"80\" y2=\"15\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n              <polygon points=\"80,15 77,23 83,23\" fill=\"#94a3b8\"/>\n              <text x=\"68\" y=\"18\" fill=\"#94a3b8\" font-size=\"11\" font-style=\"italic\">y</text>\n              <text x=\"68\" y=\"137\" fill=\"#94a3b8\" font-size=\"11\">O</text>\n              <!-- Axis tick markers -->\n              <text x=\"40\" y=\"138\" fill=\"#cbd5e1\" font-size=\"10\">-1</text>\n              <text x=\"135\" y=\"138\" fill=\"#cbd5e1\" font-size=\"10\">1</text>\n              <text x=\"190\" y=\"138\" fill=\"#cbd5e1\" font-size=\"10\">2</text>\n              <text x=\"68\" y=\"40\" fill=\"#cbd5e1\" font-size=\"10\">4</text>\n              <text x=\"68\" y=\"68\" fill=\"#cbd5e1\" font-size=\"10\">3</text>\n              <!-- Dotted projection for x=-1, y=3 -->\n              <line x1=\"45\" y1=\"125\" x2=\"45\" y2=\"65\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n              <line x1=\"45\" y1=\"65\" x2=\"80\" y2=\"65\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n              <!-- Parabola y = 4 - x^2 on [-1; 2] -->\n              <!-- x=-1 -> (45, 65); x=0 -> (80, 35); x=1 -> (138, 65); x=2 -> (195, 125) -->\n              <path d=\"M 45,65 C 60,35 70,35 80,35 C 105,35 155,60 195,125\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>\n              <!-- Extended ghost curve -->\n              <path d=\"M 30,105 L 45,65\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"1\" stroke-dasharray=\"2,2\" opacity=\"0.4\"/>\n              <path d=\"M 195,125 L 208,142\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"1\" stroke-dasharray=\"2,2\" opacity=\"0.4\"/>\n              <!-- Key points -->\n              <!-- Peak (0, 4) - Max -->\n              <circle cx=\"80\" cy=\"35\" r=\"4.5\" fill=\"#facc15\" stroke=\"#0f172a\" stroke-width=\"1.5\"/>\n              <text x=\"88\" y=\"32\" fill=\"#fef08a\" font-size=\"10\" font-weight=\"bold\">Max=4 (x=0)</text>\n              <!-- End point (-1, 3) -->\n              <circle cx=\"45\" cy=\"65\" r=\"3.5\" fill=\"#38bdf8\"/>\n              <!-- Lowest point (2, 0) - Min -->\n              <circle cx=\"195\" cy=\"125\" r=\"4.5\" fill=\"#f43f5e\" stroke=\"#0f172a\" stroke-width=\"1.5\"/>\n              <text x=\"145\" y=\"118\" fill=\"#fca5a5\" font-size=\"10\" font-weight=\"bold\">Min=0 (x=2)</text>\n            </svg>\n          </div>\n        </div>\n      ",
-      "narration": "Bây giờ, thầy và các em cùng xét ví dụ trực quan bằng đồ thị hàm số y bằng 4 trừ x bình phương trên đoạn âm 1 đến 2. Đồ thị là một parabol có bề lõm quay xuống dưới, đỉnh I tọa độ 0 chấm phẩy 4. Vì x bằng 0 thuộc đoạn âm 1 đến 2, nên đỉnh I chính là điểm cao nhất trên đồ thị, do đó GTLN của hàm số là 4 đạt tại x bằng 0. Khi tính giá trị tại hai đầu mút, ta thấy y tại âm 1 bằng 3, còn y tại 2 bằng 0. Điểm có tọa độ 2 chấm phẩy 0 là điểm thấp nhất của phần đồ thị đang xét, nên GTNN của hàm số là 0 đạt tại x bằng 2."
+      "bodyHtml": "\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); color:#fef08a; margin-bottom:4px;\">\n          <b>Ví dụ:</b> Tìm GTLN và GTNN của hàm số $y = 4 - x^2$ trên đoạn $[-1; 2]$.\n        </div>\n        <div style=\"display:flex; gap:12px; align-items:center; flex-wrap:wrap;\">\n          <div style=\"flex:1; min-width:220px; font-size:clamp(12px, 1.45vh, 14px); line-height:1.55; color:#e2e8f0;\">\n            • Đỉnh Parabol: $I(0; 4)$ có hoành độ $x = 0 \\in [-1; 2]$.<br>\n            • Điểm cao nhất trên đồ thị là đỉnh $I(0; 4)$ $\\implies$ $\\mathbf{\\max_{[-1; 2]} y = 4}$ tại $x = 0$.<br>\n            • Tính giá trị tại hai đầu mút:<br>\n            $\\quad y(-1) = 4 - (-1)^2 = 3$<br>\n            $\\quad y(2) = 4 - 2^2 = 0$<br>\n            • Điểm thấp nhất trên đồ thị là $(2; 0)$ $\\implies$ $\\mathbf{\\min_{[-1; 2]} y = 0}$ tại $x = 2$.\n          </div>\n          <div style=\"width:230px; flex-shrink:0;\">\n            <svg viewBox=\"0 0 230 150\" style=\"width:100%; height:auto; background:rgba(15,23,42,0.8); border-radius:8px; border:1px solid #334155;\">\n              <!-- Grid lines -->\n              <line x1=\"20\" y1=\"35\" x2=\"220\" y2=\"35\" stroke=\"#1e293b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n              <line x1=\"20\" y1=\"65\" x2=\"220\" y2=\"65\" stroke=\"#1e293b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n              <line x1=\"20\" y1=\"95\" x2=\"220\" y2=\"95\" stroke=\"#1e293b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n              <!-- Axes -->\n              <line x1=\"20\" y1=\"125\" x2=\"220\" y2=\"125\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n              <polygon points=\"220,125 212,122 212,128\" fill=\"#94a3b8\"/>\n              <text x=\"214\" y=\"140\" fill=\"#94a3b8\" font-size=\"11\" font-style=\"italic\">x</text>\n              <line x1=\"80\" y1=\"145\" x2=\"80\" y2=\"15\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n              <polygon points=\"80,15 77,23 83,23\" fill=\"#94a3b8\"/>\n              <text x=\"68\" y=\"18\" fill=\"#94a3b8\" font-size=\"11\" font-style=\"italic\">y</text>\n              <text x=\"68\" y=\"137\" fill=\"#94a3b8\" font-size=\"11\">O</text>\n              <!-- Axis tick markers -->\n              <text x=\"40\" y=\"138\" fill=\"#cbd5e1\" font-size=\"10\">-1</text>\n              <text x=\"135\" y=\"138\" fill=\"#cbd5e1\" font-size=\"10\">1</text>\n              <text x=\"190\" y=\"138\" fill=\"#cbd5e1\" font-size=\"10\">2</text>\n              <text x=\"68\" y=\"40\" fill=\"#cbd5e1\" font-size=\"10\">4</text>\n              <text x=\"68\" y=\"68\" fill=\"#cbd5e1\" font-size=\"10\">3</text>\n              <!-- Dotted projection for x=-1, y=3 -->\n              <line x1=\"45\" y1=\"125\" x2=\"45\" y2=\"65\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n              <line x1=\"45\" y1=\"65\" x2=\"80\" y2=\"65\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n              <!-- Parabola y = 4 - x^2 on [-1; 2] -->\n              <path d=\"M 45,65 C 60,35 70,35 80,35 C 105,35 155,60 195,125\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>\n              <!-- Key points -->\n              <circle cx=\"80\" cy=\"35\" r=\"4.5\" fill=\"#facc15\" stroke=\"#0f172a\" stroke-width=\"1.5\"/>\n              <text x=\"88\" y=\"32\" fill=\"#fef08a\" font-size=\"10\" font-weight=\"bold\">Max=4 (x=0)</text>\n              <circle cx=\"45\" cy=\"65\" r=\"3.5\" fill=\"#38bdf8\"/>\n              <circle cx=\"195\" cy=\"125\" r=\"4.5\" fill=\"#f43f5e\" stroke=\"#0f172a\" stroke-width=\"1.5\"/>\n              <text x=\"145\" y=\"118\" fill=\"#fca5a5\" font-size=\"10\" font-weight=\"bold\">Min=0 (x=2)</text>\n            </svg>\n          </div>\n        </div>\n      ",
+      "narration": "Phần ba: Ví dụ trực quan. Xét hàm y bằng bốn trừ x bình phương trên đoạn trừ một đến hai. Đỉnh parabol tại x bằng không có y bằng bốn là điểm cao nhất, vậy giá trị lớn nhất bằng bốn. Điểm thấp nhất trên đoạn đạt tại x bằng hai với y bằng không, vậy giá trị nhỏ nhất bằng không."
     },
     {
       "sceneIndex": 4,
       "title": "CẢNH BÁO 2 BẪY ĐỀ THI TRẮC NGHIỆM",
       "subtitle": "MỤC 1 • TRÁNH MẤT ĐIỂM OAN UỔNG KHI LÀM BÀI",
-      "startTime": 200,
-      "endTime": 260,
-      "duration": 60,
+      "startTime": 110,
+      "endTime": 135,
+      "duration": 25,
       "mascotMode": "magnifier",
       "mascotTip": "<b>Cú cảnh báo:</b> Luôn nhớ kiểm tra xem dấu bằng $f(x_0) = M$ có THỰC SỰ ĐẠT ĐƯỢC tại điểm nào trong tập $D$ hay không!",
-      "bodyHtml": "\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; margin-bottom:10px; font-size:clamp(12.5px, 1.5vh, 14.5px); color:#fecdd3; line-height:1.55;\">\n          <span style=\"font-weight:bold; color:#ff6b6b; font-size:clamp(13px, 1.6vh, 15px);\">Bẫy 1: Đồng nhất Cực đại với GTLN!</span><br>\n          Nhiều bạn thấy hàm số đạt cực đại tại $x = 1$ với $y_{\\text{CĐ}} = 3$ liền vội vàng khoanh $\\max = 3$. Nếu hàm số tiến tới $+\\infty$ khi $x \\to +\\infty$ thì hàm số <b>không có GTLN</b>!\n        </div>\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; font-size:clamp(12.5px, 1.5vh, 14.5px); color:#fecdd3; line-height:1.55;\">\n          <span style=\"font-weight:bold; color:#ff6b6b; font-size:clamp(13px, 1.6vh, 15px);\">Bẫy 2: Giá trị chỉ tiến tới tiệm cận mà không có dấu bằng!</span><br>\n          Xét $f(x) = \\frac{2x+1}{x+1}$ trên $[0; +\\infty)$. Ta có $f(x) < 2, \\forall x \\ge 0$ và $\\lim_{x \\to +\\infty} f(x) = 2$.<br>\n          Nhiều bạn kết luận $\\max = 2$ $\\implies$ <b>SAI HOÀN TOÀN</b>! Vì phương trình $f(x) = 2$ vô nghiệm, hàm số <b>không có GTLN</b> trên $[0; +\\infty)$!\n        </div>\n      ",
-      "narration": "Sang phần thứ tư, Cú Thông Thái gióng lên hồi chuông cảnh báo hai chiếc bẫy kinh điển trong đề thi. Bẫy số một: Đồng nhất giá trị cực đại là giá trị lớn nhất. Hãy nhớ cực đại chỉ là đỉnh đồi địa phương, nếu nhánh đồ thị phía sau vươn tới dương vô cùng thì hàm số không hề có GTLN. Bẫy số hai: Hàm số bị chặn trên bởi một số nhưng không tồn tại điểm x 0 nào để dấu bằng xảy ra. Ví dụ hàm 2x cộng 1 trên x cộng 1 luôn bé hơn 2 khi x không âm, nhưng 2 chỉ là tiệm cận ngang, dấu bằng không bao giờ đạt được, nên hàm số không có GTLN trên nửa khoảng này!"
+      "bodyHtml": "\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; margin-bottom:10px; font-size:clamp(12.5px, 1.5vh, 14.5px); color:#fecdd3; line-height:1.55;\">\n          <span style=\"font-weight:bold; color:#ff6b6b; font-size:clamp(13px, 1.6vh, 15px);\">Bẫy 1: Tìm được chặn M nhưng không tồn tại dấu bằng!</span><br>\n          Học sinh tìm được chặn trên $M$ nhưng không chỉ ra được điểm $x_0 \\in D$ để dấu bằng xảy ra. Nếu không tồn tại $x_0$ thì $M$ không phải là GTLN.\n        </div>\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; font-size:clamp(12.5px, 1.5vh, 14.5px); color:#fecdd3; line-height:1.55;\">\n          <span style=\"font-weight:bold; color:#ff6b6b; font-size:clamp(13px, 1.6vh, 15px);\">Bẫy 2: Nhầm lẫn giữa hỏi giá trị và hỏi điểm!</span><br>\n          Nhầm lẫn giữa hỏi <b>giá trị lớn nhất</b> (tung độ $y = M$) với <b>điểm đạt giá trị lớn nhất</b> (hoành độ $x = x_0$).\n        </div>\n      ",
+      "narration": "Phần tư: Bẫy đề thi. Tìm được M nhưng không chỉ ra được x không thuộc tập D để dấu bằng xảy ra. Hoặc nhầm lẫn giữa giá trị lớn nhất là tung độ với điểm đạt giá trị lớn nhất là hoành độ."
     },
     {
       "sceneIndex": 5,
-      "title": "MẸO THẦY CÚ THÔNG THÁI & LỜI KHUYÊN TƯ DUY NHANH",
+      "title": "BÍ KÍP THẦY CÚ GHI NHỚ & MẸO ĐỌC ĐỒ THỊ",
       "subtitle": "MỤC 1 • CÔNG THỨC VÀNG ĐẠT ĐIỂM TỐI ĐA",
-      "startTime": 260,
-      "endTime": 320,
-      "duration": 60,
+      "startTime": 135,
+      "endTime": 165,
+      "duration": 30,
       "mascotMode": "cheer",
-      "mascotTip": "<b>Thầy Cú chốt hạ:</b> Đề thi hỏi 'GTLN bằng bao nhiêu' là hỏi số $y = M$; hỏi 'đạt tại đâu' là hỏi số $x = x_0$!",
-      "bodyHtml": "\n        <div style=\"background:rgba(30,41,59,0.7); border:1.5px solid #38bdf8; border-radius:8px; padding:12px 16px;\">\n          <div style=\"font-size:clamp(14px, 1.8vh, 16px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n            🦉 2 Nguyên Tắc Vàng Của Thầy Cú:\n          </div>\n          <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.6; color:#e2e8f0;\">\n            <b>1. Nguyên tắc dấu bằng:</b> Bất cứ khi nào kết luận $M$ là Max hay $m$ là Min, hãy tự hỏi: Dấu bằng xảy ra khi nào? Giá trị $x_0$ đó có nằm trong tập xác định $D$ hay không?<br>\n            <b>2. Đọc kỹ câu hỏi trắc nghiệm để không bị lừa:</b><br>\n            • Đề hỏi <i>\"Giá trị lớn nhất của hàm số...\"</i> $\\implies$ Chọn giá trị của tung độ $y$.<br>\n            • Đề hỏi <i>\"Hàm số đạt GTLN tại điểm...\"</i> $\\implies$ Chọn hoành độ $x$.<br>\n            • Đề hỏi <i>\"Điểm cực trị của đồ thị hàm số...\"</i> $\\implies$ Chọn tọa độ đầy đủ $(x; y)$.\n          </div>\n        </div>\n      ",
-      "narration": "Để khép lại Mục 1, Thầy Cú gửi tặng các em hai lời khuyên tư duy cực kỳ đắt giá. Thứ nhất, khi tìm Max hay Min, hãy luôn kiểm tra xem dấu bằng xảy ra tại x 0 nào và x 0 đó có thuộc tập xác định hay không. Thứ hai, hãy đọc thật kỹ đề thi trắc nghiệm: Nếu hỏi Giá trị lớn nhất thì chọn số y, nếu hỏi đạt tại điểm nào thì chọn số x, còn nếu hỏi điểm của đồ thị thì phải chọn cặp tọa độ x chấm phẩy y. Chúc các em ghi nhớ vững vàng để tự tin bước sang Mục 2!"
+      "mascotTip": "<b>Thầy Cú chốt hạ:</b> Điểm nhô cao nhất là Max, điểm trũng sâu nhất là Min, gióng xuống trục hoành tìm x0!",
+      "bodyHtml": "\n        <div style=\"background:rgba(30,41,59,0.7); border:1.5px solid #38bdf8; border-radius:8px; padding:12px 16px;\">\n          <div style=\"font-size:clamp(14px, 1.8vh, 16px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n            🦉 Bí Kíp Thầy Cú Ghi Nhớ Nhanh:\n          </div>\n          <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.6; color:#e2e8f0;\">\n            • Nhìn trên đồ thị hoặc bảng biến thiên:<br>\n            $\\quad$ Điểm <b>nhô cao nhất toàn cục</b> chính là giá trị lớn nhất $\\max f(x)$.<br>\n            $\\quad$ Điểm <b>trũng sâu nhất toàn cục</b> chính là giá trị nhỏ nhất $\\min f(x)$.<br>\n            • Hãy luôn gióng vuông góc xuống trục hoành để đọc chính xác giá trị $x_0$ tương ứng!\n          </div>\n        </div>\n      ",
+      "narration": "Phần năm: Bí kíp Thầy Cú. Trên đồ thị, điểm nhô cao nhất toàn cục là giá trị lớn nhất, điểm trũng sâu nhất toàn cục là giá trị nhỏ nhất. Hãy luôn gióng xuống trục hoành để tìm x không."
     }
   ]
 },
@@ -129,43 +152,66 @@
   "sectionId": "bai2_muc2",
   "sectionTitle": "Mục 2: Quy tắc tìm GTLN, GTNN trên đoạn [a; b]",
   "audioSrc": "./audio/bai2_muc2.mp3",
-  "totalDuration": 290,
+  "totalDuration": 170,
+  "duration": 170,
   "audio_src": "./audio/bai2_muc2.mp3",
   "timestamp_src": "timestamps/bai2_muc2.json",
   "title": "Mục 2: Quy tắc tìm GTLN, GTNN trên đoạn [a; b] (Không cần lập BBT)",
   "owl_tip": "Trên đoạn [a; b], hàm số liên tục luôn có Max và Min. Chỉ cần so sánh f(a), f(b) và các f(x_i) có x_i thuộc khoảng (a; b)!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 20,
+      "id": "part2"
+    },
+    {
+      "time": 65,
+      "id": "part3"
+    },
+    {
+      "time": 120,
+      "id": "part4"
+    },
+    {
+      "time": 140,
+      "id": "part5"
+    }
+  ],
   "parts": [
     {
       "partNumber": 1,
-      "partTitle": "Phần 1: Cơ sở toán học & Định lý Weierstrass",
+      "partTitle": "Phần 1: Định lý nền tảng Weierstrass trên đoạn [a; b]",
       "scenes": [
         1
       ]
     },
     {
       "partNumber": 2,
-      "partTitle": "Phần 2: Quy trình 3 bước thực hành giải nhanh không cần BBT",
+      "partTitle": "Phần 2: Quy trình giải toán chuẩn mực 3 bước",
       "scenes": [
         2
       ]
     },
     {
       "partNumber": 3,
-      "partTitle": "Phần 3: Ví dụ minh họa hàm bậc ba y = x³ - 3x² + 2 trên [0; 3]",
+      "partTitle": "Phần 3: Ví dụ thực hành hàm bậc ba y = x³ - 3x² + 2",
       "scenes": [
         3
       ]
     },
     {
       "partNumber": 4,
-      "partTitle": "Phần 4: Cảnh báo bẫy nghiệm ngoài đoạn & gián đoạn",
+      "partTitle": "Phần 4: Cảnh báo bẫy thi trắc nghiệm",
       "scenes": [
         4
       ]
     },
     {
       "partNumber": 5,
-      "partTitle": "Phần 5: Mẹo Thầy Cú thông thái & Kỹ thuật bấm Casio Table Menu 8",
+      "partTitle": "Phần 5: Mẹo bấm máy tính Casio Menu 8 Thầy Cú",
       "scenes": [
         5
       ]
@@ -177,60 +223,60 @@
       "title": "CƠ SỞ TOÁN HỌC & ĐỊNH LÝ WEIERSTRASS",
       "subtitle": "MỤC 2 • ĐIỀU KIỆN ĐỦ ĐỂ CHẮC CHẮN TỒN TẠI MAX VÀ MIN",
       "startTime": 0,
-      "endTime": 55,
-      "duration": 55,
+      "endTime": 20,
+      "duration": 20,
       "mascotMode": "pointer",
       "mascotTip": "<b>Định lý then chốt:</b> Cứ hễ hàm số liên tục trên một <b>đoạn đóng $[a; b]$</b> thì chắc chắn $100\\%$ có cả GTLN và GTNN!",
-      "bodyHtml": "\n        <div style=\"font-size:clamp(15px, 2vh, 18px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n          1. Định lý Weierstrass về tính liên tục:\n        </div>\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); line-height:1.6; color:#e2e8f0; margin-left:14px; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px; border-left:3px solid #fef08a;\">\n          Mọi hàm số $y = f(x)$ <b>liên tục trên một đoạn đóng $[a; b]$</b> đều luôn luôn đạt được giá trị lớn nhất và giá trị nhỏ nhất trên đoạn đó.\n        </div>\n\n        <div style=\"font-size:clamp(15px, 2vh, 18px); color:#38bdf8; font-weight:bold; margin:12px 0 6px 0;\">\n          2. Bản chất vị trí đạt Max / Min:\n        </div>\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); line-height:1.6; color:#e2e8f0; margin-left:14px; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px; border-left:3px solid #38bdf8;\">\n          GTLN và GTNN của hàm số liên tục trên đoạn $[a; b]$ chỉ có thể đạt được tại:<br>\n          • Các điểm cực trị nằm trong khoảng mở $(a; b)$ (nơi $f'(x) = 0$ hoặc $f'(x)$ không xác định).<br>\n          • Hoặc tại hai điểm biên đầu mút $x = a$ và $x = b$.<br>\n          $\\implies$ <b>Vì thế: Ta hoàn toàn KHÔNG CẦN lập bảng biến thiên hay xét dấu đạo hàm!</b>\n        </div>\n      ",
-      "narration": "Chào các em! Chúng ta bước sang Mục 2: Quy tắc tìm GTLN và GTNN của hàm số trên đoạn đóng a b. Về cơ sở toán học, theo định lý Weierstrass lừng danh: Mọi hàm số liên tục trên một đoạn đóng a b đều chắc chắn tồn tại cả giá trị lớn nhất lẫn giá trị nhỏ nhất. Điểm đặc biệt là các giá trị này chỉ có thể rơi vào hai nhóm: Một là tại các điểm cực trị nằm bên trong khoảng mở a b, hai là ngay tại hai đầu mút a hoặc b. Nhờ tính chất tuyệt vời này, chúng ta hoàn toàn không cần lập bảng biến thiên hay xét dấu đạo hàm phức tạp, giúp tiết kiệm rất nhiều thời gian làm bài!"
+      "bodyHtml": "\n        <div style=\"font-size:clamp(15px, 2vh, 18px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n          Định lý Weierstrass:\n        </div>\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); line-height:1.6; color:#e2e8f0; margin-left:14px; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px; border-left:3px solid #fef08a;\">\n          Mọi hàm số $y = f(x)$ <b>liên tục trên đoạn đóng $[a; b]$</b> đều luôn luôn đạt được giá trị lớn nhất và giá trị nhỏ nhất trên đoạn đó. Điều này đảm bảo chúng ta chắc chắn tìm được đáp số mà không sợ hàm số không tồn tại Max, Min.\n        </div>\n      ",
+      "narration": "Chào các em học sinh. Chúng ta sang Bài hai Mục hai: Quy tắc tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số trên đoạn a b. Phần một: Định lý nền tảng. Mọi hàm số liên tục trên đoạn đóng từ a đến b đều luôn đạt được giá trị lớn nhất và nhỏ nhất trên đoạn đó."
     },
     {
       "sceneIndex": 2,
-      "title": "QUY TRÌNH 3 BƯỚC TÌM MAX / MIN TRÊN ĐOẠN [a; b]",
-      "subtitle": "MỤC 2 • CÔNG THỨC GIẢI TOÁN SIÊU TỐC TRONG 30 GIÂY",
-      "startTime": 55,
-      "endTime": 115,
-      "duration": 60,
+      "title": "QUY TRÌNH GIẢI TOÁN CHUẨN MỰC 3 BƯỚC",
+      "subtitle": "MỤC 2 • KHÔNG CẦN THIẾT PHẢI LẬP BẢNG BIẾN THIÊN",
+      "startTime": 20,
+      "endTime": 65,
+      "duration": 45,
       "mascotMode": "pointer",
-      "mascotTip": "<b>Bí quyết vàng:</b> Bước 2 chỉ nhận các nghiệm $x_i$ nằm TRONG khoảng mở $(a; b)$, nghiệm nào ngoài khoảng hoặc tại đầu mút thì không cần lấy lại!",
-      "bodyHtml": "\n        <div style=\"display:flex; flex-direction:column; gap:8px;\">\n          <div style=\"background:rgba(30,41,59,0.7); border-left:4px solid #fef08a; padding:8px 14px; border-radius:6px;\">\n            <b style=\"color:#fef08a; font-size:clamp(14px, 1.8vh, 16px);\">Bước 1: Tính đạo hàm $f'(x)$</b><br>\n            <span style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); color:#cbd5e1;\">Tính đạo hàm $f'(x)$ của hàm số trên đoạn khảo sát.</span>\n          </div>\n          <div style=\"background:rgba(30,41,59,0.7); border-left:4px solid #38bdf8; padding:8px 14px; border-radius:6px;\">\n            <b style=\"color:#38bdf8; font-size:clamp(14px, 1.8vh, 16px);\">Bước 2: Tìm nghiệm thuộc khoảng mở $(a; b)$</b><br>\n            <span style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); color:#cbd5e1;\">Giải phương trình $f'(x) = 0$ (hoặc tìm điểm đạo hàm không xác định). Chỉ chọn các nghiệm $x_1, x_2, \\dots, x_k \\in (a; b)$. Loại bỏ các nghiệm nằm ngoài khoảng.</span>\n          </div>\n          <div style=\"background:rgba(30,41,59,0.7); border-left:4px solid #4ade80; padding:8px 14px; border-radius:6px;\">\n            <b style=\"color:#4ade80; font-size:clamp(14px, 1.8vh, 16px);\">Bước 3: Tính các giá trị và kết luận so sánh</b><br>\n            <span style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); color:#cbd5e1;\">Tính $f(a), \\; f(b)$ và các $f(x_i)$. So sánh tất cả:<br>\n            • $\\max_{[a; b]} f(x)$ là số lớn nhất trong các giá trị vừa tính.<br>\n            • $\\min_{[a; b]} f(x)$ là số nhỏ nhất trong các giá trị vừa tính.</span>\n          </div>\n        </div>\n      ",
-      "narration": "Từ định lý trên, chúng ta đúc kết thành Quy trình 3 bước giải nhanh như sau: Bước 1, tính đạo hàm f phẩy x. Bước 2, giải phương trình f phẩy x bằng 0, chỉ giữ lại các nghiệm x i thuộc khoảng mở a b, loại bỏ toàn bộ các nghiệm nằm ngoài đoạn hoặc trùng với hai đầu mút. Bước 3, tính giá trị hàm số tại hai đầu mút f a, f b và tại các nghiệm x i vừa chọn. So sánh tất cả các kết quả này: Số lớn nhất chính là GTLN, số nhỏ nhất chính là GTNN trên đoạn a b."
+      "mascotTip": "<b>Bí quyết vàng:</b> Bước 2 chỉ nhận các nghiệm $x_i$ nằm TRONG khoảng mở $(a; b)$!",
+      "bodyHtml": "\n        <div style=\"display:flex; flex-direction:column; gap:8px;\">\n          <div style=\"background:rgba(30,41,59,0.7); border-left:4px solid #fef08a; padding:8px 14px; border-radius:6px;\">\n            <b style=\"color:#fef08a; font-size:clamp(14px, 1.8vh, 16px);\">Bước 1: Tính đạo hàm $f'(x)$</b><br>\n            <span style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); color:#cbd5e1;\">Tính $f'(x)$, giải $f'(x) = 0$ và tìm các điểm đạo hàm không xác định. Chỉ chọn các nghiệm $x_i \\in (a; b)$.</span>\n          </div>\n          <div style=\"background:rgba(30,41,59,0.7); border-left:4px solid #38bdf8; padding:8px 14px; border-radius:6px;\">\n            <b style=\"color:#38bdf8; font-size:clamp(14px, 1.8vh, 16px);\">Bước 2: Tính danh sách các giá trị</b><br>\n            <span style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); color:#cbd5e1;\">Tính giá trị tại hai đầu mút $f(a), \\; f(b)$ và giá trị tại các nghiệm $f(x_i)$.</span>\n          </div>\n          <div style=\"background:rgba(30,41,59,0.7); border-left:4px solid #4ade80; padding:8px 14px; border-radius:6px;\">\n            <b style=\"color:#4ade80; font-size:clamp(14px, 1.8vh, 16px);\">Bước 3: So sánh và kết luận</b><br>\n            <span style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); color:#cbd5e1;\">Số lớn nhất là $\\max_{[a; b]} f(x)$, số nhỏ nhất là $\\min_{[a; b]} f(x)$.</span>\n          </div>\n        </div>\n      ",
+      "narration": "Phần hai: Quy trình giải ba bước. Bước một: Tính đạo hàm f phẩy x, tìm nghiệm và các điểm đạo hàm không xác định, chỉ lấy các nghiệm x i thuộc khoảng mở a b. Bước hai: Tính giá trị f tại a, f tại b và f tại các nghiệm x i. Bước ba: So sánh các số vừa tính, số lớn nhất là giá trị lớn nhất, số nhỏ nhất là giá trị nhỏ nhất. Không cần lập bảng biến thiên."
     },
     {
       "sceneIndex": 3,
-      "title": "VÍ DỤ MINH HỌA TÍNH TOÁN CHI TIẾT",
+      "title": "VÍ DỤ THỰC HÀNH TỪNG BƯỚC",
       "subtitle": "MỤC 2 • XÉT HÀM SỐ y = x³ - 3x² + 2 TRÊN ĐOẠN [0; 3]",
-      "startTime": 115,
-      "endTime": 185,
-      "duration": 70,
+      "startTime": 65,
+      "endTime": 120,
+      "duration": 55,
       "mascotMode": "pointer",
       "mascotTip": "<b>So sánh nhanh:</b> Có 3 giá trị $f(0)=2, f(2)=-2, f(3)=2$. Số lớn nhất là 2, số nhỏ nhất là -2!",
-      "bodyHtml": "\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); color:#fef08a; margin-bottom:4px;\">\n          <b>Đề bài:</b> Tìm GTLN và GTNN của hàm số $f(x) = x^3 - 3x^2 + 2$ trên đoạn $[0; 3]$.\n        </div>\n        <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.6; color:#e2e8f0; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px;\">\n          • <b>Bước 1:</b> Hàm số liên tục trên $[0; 3]$. Đạo hàm: $f'(x) = 3x^2 - 6x = 3x(x - 2)$.<br>\n          • <b>Bước 2:</b> Giải $f'(x) = 0 \\iff \\left[ \\begin{array}{l} x = 0 \\\\ x = 2 \\end{array} \\right.$<br>\n          $\\quad$ Xét trong khoảng mở $(0; 3)$: Chọn $x = 2 \\in (0; 3)$ (nghiệm $x = 0$ trùng đầu mút).<br>\n          • <b>Bước 3:</b> Tính toán danh sách giá trị:<br>\n          $\\quad f(0) = 0^3 - 3(0)^2 + 2 = \\mathbf{2}$<br>\n          $\\quad f(2) = 2^3 - 3(2)^2 + 2 = 8 - 12 + 2 = \\mathbf{-2}$<br>\n          $\\quad f(3) = 3^3 - 3(3)^2 + 2 = 27 - 27 + 2 = \\mathbf{2}$<br>\n          • <b>Kết luận:</b><br>\n          $\\quad \\max_{[0; 3]} f(x) = \\mathbf{2}$ (đạt tại hai điểm $x = 0$ và $x = 3$).<br>\n          $\\quad \\min_{[0; 3]} f(x) = \\mathbf{-2}$ (đạt tại điểm $x = 2$).\n        </div>\n      ",
-      "narration": "Bây giờ, chúng ta cùng áp dụng quy trình vào một bài toán cụ thể: Tìm GTLN và GTNN của hàm bậc ba f x bằng x mũ 3 trừ 3 x bình phương cộng 2 trên đoạn 0 đến 3. Bước 1, đạo hàm f phẩy x bằng 3 x bình trừ 6 x. Bước 2, cho f phẩy bằng 0, ta có hai nghiệm là x bằng 0 và x bằng 2. So với khoảng mở 0 đến 3, ta chỉ nhận nghiệm x bằng 2, còn x bằng 0 là đầu mút. Bước 3, ta tính: f tại 0 bằng 2; f tại 2 bằng âm 2; và f tại 3 bằng 2. So sánh ba con số 2, âm 2 và 2, ta kết luận ngay: Giá trị lớn nhất bằng 2, đạt tại x bằng 0 và x bằng 3; còn giá trị nhỏ nhất bằng âm 2, đạt tại x bằng 2."
+      "bodyHtml": "\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); color:#fef08a; margin-bottom:4px;\">\n          <b>Đề bài:</b> Tìm GTLN và GTNN của $y = x^3 - 3x^2 + 2$ trên đoạn $[0; 3]$.\n        </div>\n        <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.6; color:#e2e8f0; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px;\">\n          • <b>Bước 1:</b> $y' = 3x^2 - 6x$. Nghiệm $x = 0$ bị loại vì trùng đầu mút, nghiệm $x = 2 \\in (0; 3)$ được nhận.<br>\n          • <b>Bước 2:</b> Tính các giá trị:<br>\n          $\\quad f(0) = 2$<br>\n          $\\quad f(2) = 2^3 - 3(2)^2 + 2 = -2$<br>\n          $\\quad f(3) = 3^3 - 3(3)^2 + 2 = 2$<br>\n          • <b>Bước 3:</b> So sánh ta có:<br>\n          $\\quad \\mathbf{\\max_{[0; 3]} y = 2}$ (đạt tại $x = 0$ và $x = 3$).<br>\n          $\\quad \\mathbf{\\min_{[0; 3]} y = -2}$ (đạt tại $x = 2$).\n        </div>\n      ",
+      "narration": "Phần ba: Ví dụ thực hành. Tìm giá trị lớn nhất, nhỏ nhất của y bằng x mũ ba trừ ba x bình phương cộng hai trên đoạn không đến ba. Bước một: y phẩy bằng ba x bình trừ sáu x. Nghiệm x bằng không bị loại vì trùng đầu mút, x bằng hai được nhận. Bước hai: f tại không bằng hai, f tại hai bằng trừ hai, f tại ba bằng hai. Bước ba: So sánh ta có giá trị lớn nhất bằng hai đạt tại x bằng không và x bằng ba; giá trị nhỏ nhất bằng trừ hai đạt tại x bằng hai."
     },
     {
       "sceneIndex": 4,
-      "title": "CẢNH BÁO 3 BẪY ĐỀ THI TRÊN ĐOẠN [a; b]",
-      "subtitle": "MỤC 2 • NHỮNG SAI LẦM HỌC SINH RẤT HAY MẮC PHẢI",
-      "startTime": 185,
-      "endTime": 240,
-      "duration": 55,
+      "title": "CẢNH BÁO BẪY THI TRẮC NGHIỆM",
+      "subtitle": "MỤC 2 • TRÁNH LẤY THỪA NGHIỆM NGOÀI ĐOẠN",
+      "startTime": 120,
+      "endTime": 140,
+      "duration": 20,
       "mascotMode": "magnifier",
-      "mascotTip": "<b>Cú cảnh báo đỏ:</b> Bẫy nguy hiểm nhất là áp dụng quy tắc 3 bước cho hàm phân thức có mẫu số bằng 0 nằm giữa đoạn $[a; b]$!",
-      "bodyHtml": "\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; margin-bottom:8px; font-size:clamp(12px, 1.45vh, 14px); color:#fecdd3; line-height:1.5;\">\n          <span style=\"font-weight:bold; color:#ff6b6b;\">Bẫy 1: Hàm số gián đoạn (mẫu bằng 0) bên trong đoạn [a; b]!</span><br>\n          Tìm Max/Min của $y = \\frac{2x-1}{x-1}$ trên đoạn $[0; 2]$. Điểm $x = 1 \\in [0; 2]$ làm hàm số không xác định, khi $x \\to 1^\\pm$ thì $y \\to \\pm\\infty$. Học sinh tính $y(0)=1, y(2)=3$ rồi kết luận $\\max=3, \\min=1$ là <b>sai nghiêm trọng</b>! Hàm số này không có Max và không có Min trên $[0; 2]$.\n        </div>\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; font-size:clamp(12px, 1.45vh, 14px); color:#fecdd3; line-height:1.5;\">\n          <span style=\"font-weight:bold; color:#ff6b6b;\">Bẫy 2: Lấy nhầm nghiệm đạo hàm nằm ngoài đoạn [a; b]!</span><br>\n          Giải $f'(x) = 0$ ra nghiệm $x = -1$ nhưng đoạn đang xét là $[1; 4]$. Nếu vẫn tính $f(-1)$ rồi đem so sánh thì kết quả chắc chắn sẽ bị sai lệch hoàn toàn.\n        </div>\n      ",
-      "narration": "Tại phần thứ tư, Thầy Cú đặc biệt lưu ý các em hai chiếc bẫy cực kỳ nguy hiểm. Bẫy số một: Quên kiểm tra tính liên tục của hàm số. Nếu hàm phân thức có mẫu số bằng 0 tại một điểm nằm ngay trong đoạn a b, ví dụ hàm số có mẫu x trừ 1 trên đoạn 0 đến 2, thì hàm số bị gián đoạn và tiến ra vô cực. Lúc này quy tắc 3 bước hoàn toàn vô tác dụng, hàm số không có Max và Min! Bẫy số hai: Lấy nhầm nghiệm đạo hàm nằm ngoài đoạn đang xét rồi đưa vào so sánh, dẫn tới việc chọn sai đáp án trắc nghiệm."
+      "mascotTip": "<b>Cú cảnh báo:</b> Luôn gạch bỏ ngay nghiệm $x_i$ nằm ngoài khoảng $(a; b)$ trước khi tính giá trị!",
+      "bodyHtml": "\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; font-size:clamp(12.5px, 1.5vh, 14.5px); color:#fecdd3; line-height:1.55;\">\n          <span style=\"font-weight:bold; color:#ff6b6b;\">Cảnh báo bẫy trắc nghiệm:</span><br>\n          • Quên không loại nghiệm đạo hàm nằm ngoài đoạn $[a; b]$, dẫn đến tính thừa giá trị và chọn sai đáp án.<br>\n          • Đề bài hỏi tổng $M + m$ hoặc tích $M \\cdot m$, học sinh tính nhầm giữa hoành độ $x$ và tung độ $y$.\n        </div>\n      ",
+      "narration": "Phần tư: Cảnh báo bẫy trắc nghiệm. Quên loại nghiệm đạo hàm nằm ngoài đoạn a b, dẫn đến tính thừa và chọn sai đáp án. Phần năm: Mẹo bấm máy tính. Dùng chức năng Table Menu tám, nhập hàm số, Start là a, End là b, Step là b trừ a tất cả chia hai mươi chín. Dò cột f(x) lấy Max, Min."
     },
     {
       "sceneIndex": 5,
-      "title": "MẸO THẦY CÚ & KỸ THUẬT CASIO TABLE MENU 8",
-      "subtitle": "MỤC 2 • DÒ TÌM MAX / MIN TRONG 15 GIÂY BẰNG MÁY TÍNH",
-      "startTime": 240,
-      "endTime": 290,
-      "duration": 50,
+      "title": "MẸO BẤM MÁY TÍNH THẦY CÚ (TABLE MENU 8)",
+      "subtitle": "MỤC 2 • DÒ TÌM MAX / MIN TRONG 15 GIÂY",
+      "startTime": 140,
+      "endTime": 170,
+      "duration": 30,
       "mascotMode": "cheer",
-      "mascotTip": "<b>Công thức Step vàng:</b> Luôn cài đặt $\\text{Step} = \\frac{\\text{End} - \\text{Start}}{29}$ để chia nhỏ bảng thành 30 giá trị quét!",
-      "bodyHtml": "\n        <div style=\"background:rgba(30,41,59,0.7); border:1.5px solid #4ade80; border-radius:8px; padding:12px 16px;\">\n          <div style=\"font-size:clamp(14px, 1.8vh, 16px); color:#4ade80; font-weight:bold; margin-bottom:6px;\">\n            📟 Kỹ Thuật Bấm Máy Casio fx-580VN X / fx-880BTG Siêu Tốc:\n          </div>\n          <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.6; color:#e2e8f0;\">\n            1. Bấm <b>[MENU] [8]</b> để mở bảng giá trị Table.<br>\n            2. Nhập hàm số: $f(x) = x^3 - 3x^2 + 2$. Nhấn <b>[=]</b>.<br>\n            3. Thiết lập thông số phạm vi (Table Range):<br>\n            $\\quad$ • <b>Start:</b> Nhập giá trị đầu mút $a$ (ví dụ: $0$).<br>\n            $\\quad$ • <b>End:</b> Nhập giá trị đầu mút $b$ (ví dụ: $3$).<br>\n            $\\quad$ • <b>Step:</b> Cài đặt bằng $\\frac{b - a}{29}$ (ví dụ: $\\frac{3 - 0}{29} \\approx 0.1$).<br>\n            4. Nhấn <b>[=]</b>, lướt cột $f(x)$: Giá trị cao nhất hiển thị là $2$, giá trị thấp nhất là $-2$. Dò nhanh chỉ trong 15 giây!\n          </div>\n        </div>\n      ",
-      "narration": "Để giúp các em tăng tốc độ xử lý câu hỏi trắc nghiệm, Thầy Cú hướng dẫn kỹ thuật quét bảng Table bằng máy tính Casio fx 580VN X hoặc 880BTG. Đầu tiên các em bấm Menu 8, nhập biểu thức hàm số f x. Tại phần thiết lập phạm vi: Start nhập đầu mút a, End nhập đầu mút b, và quan trọng nhất là Step cài đặt bằng b trừ a chia cho 29. Sau đó các em quan sát cột f x: số lớn nhất là GTLN và số bé nhất là GTNN. Kỹ thuật này giúp các em kiểm tra lại đáp án chỉ trong vòng 15 giây cực kỳ chuẩn xác!"
+      "mascotTip": "<b>Công thức Step vàng:</b> Cài đặt $\\text{Step} = \\frac{b - a}{29}$ để dò quét 30 giá trị liên tục!",
+      "bodyHtml": "\n        <div style=\"background:rgba(30,41,59,0.7); border:1.5px solid #4ade80; border-radius:8px; padding:12px 16px;\">\n          <div style=\"font-size:clamp(14px, 1.8vh, 16px); color:#4ade80; font-weight:bold; margin-bottom:6px;\">\n            📟 Quy Trình Bấm Máy Table Menu 8 Siêu Tốc:\n          </div>\n          <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.6; color:#e2e8f0;\">\n            1. Bấm <b>[MENU] [8]</b> trên máy tính Casio fx-580VN X / fx-880BTG.<br>\n            2. Nhập hàm số $f(x)$.<br>\n            3. Cài đặt phạm vi: <b>Start:</b> $a$ | <b>End:</b> $b$ | <b>Step:</b> $(b - a) / 29$.<br>\n            4. Dò cột $f(x)$: Giá trị to nhất hiển thị xấp xỉ chính là Max, bé nhất chính là Min!\n          </div>\n        </div>\n      ",
+      "narration": "Phần năm: Mẹo bấm máy tính. Dùng chức năng Table Menu tám, nhập hàm số, Start là a, End là b, Step là b trừ a tất cả chia hai mươi chín. Dò cột f(x) lấy Max, Min."
     }
   ]
 },
@@ -241,43 +287,66 @@
   "sectionId": "bai2_muc3",
   "sectionTitle": "Mục 3: Tìm GTLN, GTNN trên khoảng / nửa khoảng (dùng BBT)",
   "audioSrc": "./audio/bai2_muc3.mp3",
-  "totalDuration": 300,
+  "totalDuration": 160,
+  "duration": 160,
   "audio_src": "./audio/bai2_muc3.mp3",
   "timestamp_src": "timestamps/bai2_muc3.json",
   "title": "Mục 3: Tìm GTLN, GTNN trên khoảng / nửa khoảng (Bắt buộc dùng BBT)",
   "owl_tip": "Khi tập khảo sát là khoảng (a; b) hoặc có vô cực, bắt buộc phải lập Bảng biến thiên và tính giới hạn lim tại các đầu mút!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 25,
+      "id": "part2"
+    },
+    {
+      "time": 60,
+      "id": "part3"
+    },
+    {
+      "time": 110,
+      "id": "part4"
+    },
+    {
+      "time": 130,
+      "id": "part5"
+    }
+  ],
   "parts": [
     {
       "partNumber": 1,
-      "partTitle": "Phần 1: Khái niệm & Phương pháp lập BBT trên khoảng",
+      "partTitle": "Phần 1: Khái niệm cốt lõi & Bắt buộc dùng BBT",
       "scenes": [
         1
       ]
     },
     {
       "partNumber": 2,
-      "partTitle": "Phần 2: Định lý Cực trị duy nhất trên khoảng",
+      "partTitle": "Phần 2: Phương pháp và Định lý Cực trị duy nhất",
       "scenes": [
         2
       ]
     },
     {
       "partNumber": 3,
-      "partTitle": "Phần 3: Ví dụ y = x + 4/x trên (0; +∞) & Bảng biến thiên SVG chuẩn SGK",
+      "partTitle": "Phần 3: Ví dụ y = x + 4/x & Bảng biến thiên SVG chuẩn SGK",
       "scenes": [
         3
       ]
     },
     {
       "partNumber": 4,
-      "partTitle": "Phần 4: Cảnh báo bẫy tiệm cận vô cực & ngoặc tròn",
+      "partTitle": "Phần 4: Cảnh báo bẫy giới hạn vô cực",
       "scenes": [
         4
       ]
     },
     {
       "partNumber": 5,
-      "partTitle": "Phần 5: Mẹo Thầy Cú thông thái & Ứng dụng BĐT Cauchy AM-GM",
+      "partTitle": "Phần 5: Mẹo tư duy nhanh Thầy Cú & BĐT Cauchy",
       "scenes": [
         5
       ]
@@ -289,60 +358,60 @@
       "title": "PHƯƠNG PHÁP TÌM MAX / MIN TRÊN KHOẢNG",
       "subtitle": "MỤC 3 • TẠI SAO BẮT BUỘC PHẢI DÙNG BẢNG BIẾN THIÊN?",
       "startTime": 0,
-      "endTime": 60,
-      "duration": 60,
+      "endTime": 25,
+      "duration": 25,
       "mascotMode": "pointer",
-      "mascotTip": "<b>Lưu ý cốt lõi:</b> Trên khoảng $(a; b)$ không có 2 đầu mút đóng, nên hàm số có thể không đạt GTLN hoặc GTNN!",
-      "bodyHtml": "\n        <div style=\"font-size:clamp(15px, 2vh, 18px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n          1. Đặc điểm khi khảo sát trên khoảng hoặc nửa khoảng:\n        </div>\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); line-height:1.6; color:#e2e8f0; margin-left:14px; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px; border-left:3px solid #fef08a;\">\n          • Trên khoảng $(a; b)$, nửa khoảng $[a; b)$ hoặc khoảng vô hạn $(a; +\\infty)$, hàm số liên tục <b>chưa chắc đã đạt</b> GTLN hay GTNN.<br>\n          • Tại các đầu ngoặc tròn hoặc $\\pm\\infty$, ta bắt buộc phải tính giới hạn tiệm cận: $\\lim_{x \\to a^+} f(x), \\; \\lim_{x \\to b^-} f(x), \\; \\lim_{x \\to \\pm\\infty} f(x)$.\n        </div>\n\n        <div style=\"font-size:clamp(15px, 2vh, 18px); color:#38bdf8; font-weight:bold; margin:12px 0 6px 0;\">\n          2. Quy trình 4 bước bắt buộc dùng Bảng biến thiên:\n        </div>\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); line-height:1.6; color:#e2e8f0; margin-left:14px; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px; border-left:3px solid #38bdf8;\">\n          <b>Bước 1:</b> Tính đạo hàm $f'(x)$, giải $f'(x) = 0$ tìm nghiệm trong khoảng khảo sát.<br>\n          <b>Bước 2:</b> Lập bảng biến thiên hoàn chỉnh của hàm số trên khoảng đó.<br>\n          <b>Bước 3:</b> Điền đầy đủ giá trị cực trị và các giới hạn tại đầu mút.<br>\n          <b>Bước 4:</b> Quan sát chiều mũi tên biến thiên để kết luận Max và Min.\n        </div>\n      ",
-      "narration": "Chào các em! Chúng ta cùng bước vào Mục 3: Phương pháp tìm GTLN và GTNN trên khoảng hoặc nửa khoảng. Khác với đoạn đóng, trên một khoảng mở a b hoặc khoảng vô hạn, định lý Weierstrass không còn áp dụng được và hàm số chưa chắc đã đạt Max hoặc Min. Vì thế, chúng ta bắt buộc phải lập bảng biến thiên hoàn chỉnh, tính các giới hạn tại đầu mút mở, và quan sát chiều mũi tên để xác định xem đỉnh cao nhất hay đáy thấp nhất có thực sự đạt được tại một điểm x 0 cụ thể nào hay không."
+      "mascotTip": "<b>Lưu ý cốt lõi:</b> Trên khoảng mở hoặc khoảng vô cực, hàm số có thể không đạt Max hoặc Min!",
+      "bodyHtml": "\n        <div style=\"font-size:clamp(15px, 2vh, 18px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n          Khái niệm cốt lõi trên khoảng hoặc nửa khoảng:\n        </div>\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); line-height:1.6; color:#e2e8f0; margin-left:14px; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:8px; border-left:3px solid #fef08a;\">\n          Khác với đoạn đóng, trên một khoảng mở $(a; b)$ hoặc khoảng vô cực $(a; +\\infty)$, hàm số có thể không đạt giá trị lớn nhất hoặc không đạt giá trị nhỏ nhất. Do đó, quy tắc tính giá trị đầu mút không còn áp dụng được mà bắt buộc chúng ta phải khảo sát giới hạn $\\lim$ và lập bảng biến thiên đầy đủ.\n        </div>\n      ",
+      "narration": "Chào các em. Thầy Trợ lý hướng dẫn Bài hai Mục ba: Tìm giá trị lớn nhất và nhỏ nhất trên khoảng hoặc nửa khoảng bằng bảng biến thiên. Phần một: Khái niệm cốt lõi. Trên khoảng mở hoặc khoảng vô cực, hàm số có thể không đạt giá trị lớn nhất hoặc nhỏ nhất. Ta bắt buộc phải xét giới hạn lim và lập bảng biến thiên."
     },
     {
       "sceneIndex": 2,
-      "title": "ĐỊNH LÝ CỰC TRỊ DUY NHẤT TRÊN KHOẢNG",
+      "title": "PHƯƠNG PHÁP VÀ ĐỊNH LÝ CỰC TRỊ DUY NHẤT",
       "subtitle": "MỤC 3 • CÔNG CỤ ĐẮC LỰC CHO BÀI TOÁN TỐI ƯU HÓA",
-      "startTime": 60,
-      "endTime": 115,
-      "duration": 55,
+      "startTime": 25,
+      "endTime": 60,
+      "duration": 35,
       "mascotMode": "pointer",
-      "mascotTip": "<b>Định lý vàng:</b> Nếu hàm số chỉ có đúng 1 điểm cực trị trên khoảng $(a; b)$ thì Cực đại chính là Max, Cực tiểu chính là Min!",
-      "bodyHtml": "\n        <div style=\"background:rgba(30,41,59,0.7); border:1.5px solid #fef08a; border-radius:8px; padding:12px 16px; margin-bottom:10px;\">\n          <div style=\"font-size:clamp(14px, 1.8vh, 16px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n            ⭐ Định lý Cực trị duy nhất:\n          </div>\n          <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.65; color:#e2e8f0;\">\n            Giả sử hàm số $y = f(x)$ liên tục trên khoảng $(a; b)$ và chỉ có <b>duy nhất một điểm cực trị</b> $x_0 \\in (a; b)$:<br>\n            • Nếu $x_0$ là <b>điểm cực đại</b> $\\implies f(x_0)$ chính là <b>giá trị lớn nhất</b> của hàm số trên $(a; b)$:\n            $$\\max_{(a; b)} f(x) = f(x_0)$$\n            • Nếu $x_0$ là <b>điểm cực tiểu</b> $\\implies f(x_0)$ chính là <b>giá trị nhỏ nhất</b> của hàm số trên $(a; b)$:\n            $$\\min_{(a; b)} f(x) = f(x_0)$$\n          </div>\n        </div>\n        <div style=\"font-size:clamp(12.5px, 1.5vh, 14px); line-height:1.55; color:#a7f3d0;\">\n          💡 <b>Ý nghĩa ứng dụng:</b> Định lý này chính là chìa khóa then chốt giúp giải quyết toàn bộ các bài toán ứng dụng thực tế tối ưu hóa (chi phí thấp nhất, lợi nhuận lớn nhất) ở Bài 5 sau này!\n        </div>\n      ",
-      "narration": "Ở phần thứ hai, thầy giới thiệu Định lý Cực trị duy nhất, một công cụ giải toán cực mạnh. Giả sử hàm số f x liên tục trên khoảng a b và chỉ có đúng một điểm cực trị duy nhất x 0 trên khoảng đó: Nếu x 0 là điểm cực đại thì giá trị cực đại chính là GTLN trên toàn khoảng a b; nếu x 0 là điểm cực tiểu thì giá trị cực tiểu chính là GTNN trên toàn khoảng a b. Định lý này sẽ theo chân các em xuyên suốt các bài toán tối ưu hóa thực tế ở Bài 5."
+      "mascotTip": "<b>Định lý then chốt:</b> Nếu trên khoảng chỉ có 1 cực trị duy nhất, Cực đại là Max toàn cục, Cực tiểu là Min toàn cục!",
+      "bodyHtml": "\n        <div style=\"background:rgba(30,41,59,0.7); border:1.5px solid #fef08a; border-radius:8px; padding:12px 16px;\">\n          <div style=\"font-size:clamp(14px, 1.8vh, 16px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n            ⭐ Quy Trình & Định Lý Cực Trị Duy Nhất:\n          </div>\n          <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.65; color:#e2e8f0;\">\n            • <b>Quy trình:</b> Tìm tập xác định, tính đạo hàm, tìm nghiệm, xét dấu đạo hàm, tính giới hạn và vẽ bảng biến thiên.<br>\n            • <b>Định lý:</b> Nếu trên khoảng đang xét, hàm số chỉ có <b>duy nhất một điểm cực trị</b>:<br>\n            $\\quad$ Cực đại đó chính là <b>giá trị lớn nhất toàn cục</b>: $\\max f(x) = f(x_0)$.<br>\n            $\\quad$ Cực tiểu đó chính là <b>giá trị nhỏ nhất toàn cục</b>: $\\min f(x) = f(x_0)$.\n          </div>\n        </div>\n      ",
+      "narration": "Phần hai: Phương pháp và định lý cực trị duy nhất. Quy trình: Tìm tập xác định, tính đạo hàm, tìm nghiệm, xét dấu, tính giới hạn và vẽ bảng biến thiên. Định lý: Nếu trên khoảng chỉ có một cực trị duy nhất, cực đại đó chính là giá trị lớn nhất, hoặc cực tiểu đó chính là giá trị nhỏ nhất toàn cục."
     },
     {
       "sceneIndex": 3,
-      "title": "VÍ DỤ THỰC HÀNH & BẢNG BIẾN THIÊN SVG CHUẨN SGK",
+      "title": "VÍ DỤ MINH HỌA & BẢNG BIẾN THIÊN SVG CHUẨN SGK",
       "subtitle": "MỤC 3 • TÌM GTNN CỦA HÀM SỐ y = x + 4/x TRÊN (0; +∞)",
-      "startTime": 115,
-      "endTime": 195,
-      "duration": 80,
+      "startTime": 60,
+      "endTime": 110,
+      "duration": 50,
       "mascotMode": "pointer",
-      "mascotTip": "<b>Nhìn bảng biến thiên:</b> Tại $x = 2$, mũi tên đi xuống $4$ rồi đi lên $+\\infty$, nên $4$ là điểm thấp nhất toàn cục!",
-      "bodyHtml": "\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); color:#fef08a; margin-bottom:4px;\">\n          <b>Ví dụ:</b> Tìm GTNN của hàm số $f(x) = x + \\frac{4}{x}$ trên khoảng $(0; +\\infty)$.\n        </div>\n        <div style=\"font-size:clamp(12px, 1.45vh, 14px); line-height:1.5; color:#e2e8f0; margin-bottom:6px;\">\n          • Đạo hàm: $f'(x) = 1 - \\frac{4}{x^2} = \\frac{x^2 - 4}{x^2}$. Cho $f'(x) = 0 \\iff x^2 = 4 \\implies x = 2$ (do $x > 0$).<br>\n          • Giới hạn: $\\lim_{x \\to 0^+} f(x) = +\\infty$; $\\quad \\lim_{x \\to +\\infty} f(x) = +\\infty$. Giá trị tại cực trị: $f(2) = 2 + \\frac{4}{2} = 4$.\n        </div>\n\n        <!-- BẢNG BIẾN THIÊN SVG CHUẨN SGK / LATEX TKZ-TAB (QUY CHUẨN 2) -->\n        <div style=\"width:100%; max-width:480px; margin:4px auto;\">\n          <svg viewBox=\"0 0 480 150\" style=\"width:100%; height:auto; background:rgba(15,23,42,0.85); border-radius:8px; border:1px solid #334155;\">\n            <!-- 3 Đường kẻ ngang chuẩn SGK (top, divider, bottom) -->\n            <line x1=\"15\" y1=\"12\" x2=\"465\" y2=\"12\" stroke=\"#cbd5e1\" stroke-width=\"1.8\"/>\n            <line x1=\"15\" y1=\"46\" x2=\"465\" y2=\"46\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n            <line x1=\"15\" y1=\"78\" x2=\"465\" y2=\"78\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n            <line x1=\"15\" y1=\"140\" x2=\"465\" y2=\"140\" stroke=\"#cbd5e1\" stroke-width=\"1.8\"/>\n\n            <!-- DUY NHẤT 1 VẠCH KẺ DỌC NGĂN CỘT TIÊU ĐỀ VỚI VÙNG DỮ LIỆU -->\n            <line x1=\"75\" y1=\"12\" x2=\"75\" y2=\"140\" stroke=\"#cbd5e1\" stroke-width=\"1.8\"/>\n\n            <!-- CỘT TIÊU ĐỀ BÊN TRÁI -->\n            <text x=\"45\" y=\"34\" fill=\"#f8fafc\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" font-style=\"italic\">x</text>\n            <text x=\"45\" y=\"66\" fill=\"#f8fafc\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" font-style=\"italic\">f '(x)</text>\n            <text x=\"45\" y=\"112\" fill=\"#f8fafc\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" font-style=\"italic\">f (x)</text>\n\n            <!-- HÀNG x: Nghiệm x0 dóng thẳng đứng với số 0 hàng f' -->\n            <text x=\"115\" y=\"34\" fill=\"#fef08a\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">0</text>\n            <text x=\"270\" y=\"34\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">2</text>\n            <text x=\"430\" y=\"34\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">+∞</text>\n\n            <!-- VẠCH KÉP TẠI x = 0 (KHÔNG XÁC ĐỊNH) KÉO DÀI TỪ f' XUỐNG f -->\n            <line x1=\"113\" y1=\"46\" x2=\"113\" y2=\"140\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n            <line x1=\"117\" y1=\"46\" x2=\"117\" y2=\"140\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n\n            <!-- HÀNG f'(x): Dấu nằm chính giữa khoảng, số 0 dóng thẳng x=2 -->\n            <text x=\"190\" y=\"66\" fill=\"#f87171\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\">–</text>\n            <text x=\"270\" y=\"66\" fill=\"#fef08a\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">0</text>\n            <text x=\"350\" y=\"66\" fill=\"#4ade80\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\">+</text>\n\n            <!-- HÀNG f(x): Chiều mũi tên biến thiên đi xuống rồi đi lên -->\n            <text x=\"135\" y=\"96\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"bold\">+∞</text>\n            <!-- Mũi tên dốc xuống từ +∞ tới 4 -->\n            <line x1=\"155\" y1=\"100\" x2=\"250\" y2=\"126\" stroke=\"#f87171\" stroke-width=\"2\"/>\n            <polygon points=\"250,126 240,121 245,130\" fill=\"#f87171\"/>\n\n            <!-- Điểm đáy Min = 4 -->\n            <text x=\"270\" y=\"134\" fill=\"#38bdf8\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">4</text>\n\n            <!-- Mũi tên dốc lên từ 4 tới +∞ -->\n            <line x1=\"290\" y1=\"126\" x2=\"395\" y2=\"100\" stroke=\"#4ade80\" stroke-width=\"2\"/>\n            <polygon points=\"395,100 385,105 390,96\" fill=\"#4ade80\"/>\n            <text x=\"420\" y=\"96\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"bold\">+∞</text>\n          </svg>\n        </div>\n\n        <div style=\"font-size:clamp(12px, 1.45vh, 14px); line-height:1.5; color:#a7f3d0; margin-top:4px;\">\n          • <b>Kết luận:</b> $\\min_{(0; +\\infty)} f(x) = 4$ đạt được tại $x = 2$.\n        </div>\n      ",
-      "narration": "Bây giờ, thầy và các em thực hành ví dụ: Tìm GTNN của hàm số f x bằng x cộng 4 trên x với x dương. Đạo hàm f phẩy x bằng x bình trừ 4 trên x bình. Cho f phẩy bằng 0 ta được x bằng 2 vì x dương. Ta lập bảng biến thiên chuẩn SGK: Tại x bằng 0, có vạch kẻ kép không xác định. Đạo hàm mang dấu trừ trên khoảng 0 đến 2, và mang dấu cộng trên khoảng 2 đến dương vô cùng. Chiều mũi tên của f x xuất phát từ dương vô cùng đi dốc xuống 4 tại x bằng 2, rồi lại vươn lên dương vô cùng. Nhìn vào bảng biến thiên, giá trị 4 là điểm thấp nhất toàn cục, ta kết luận GTNN của hàm số trên khoảng 0 đến dương vô cùng bằng 4, đạt tại x bằng 2."
+      "mascotTip": "<b>Nhìn bảng biến thiên:</b> Đáy thấp nhất là 4 tại x = 2 $\\implies \\text{Min} = 4$!",
+      "bodyHtml": "\n        <div style=\"font-size:clamp(13px, 1.6vh, 15px); color:#fef08a; margin-bottom:4px;\">\n          <b>Ví dụ:</b> Tìm GTNN của hàm số $y = x + \\frac{4}{x}$ trên khoảng $(0; +\\infty)$.\n        </div>\n        <div style=\"font-size:clamp(12px, 1.45vh, 14px); line-height:1.5; color:#e2e8f0; margin-bottom:6px;\">\n          • Đạo hàm: $y' = 1 - \\frac{4}{x^2}$. Bằng không khi $x = 2$ (do $x > 0$).<br>\n          • $x \\in (0; 2): y' < 0 \\implies$ đồ thị đi xuống từ $+\\infty$ về $4$.<br>\n          • $x \\in (2; +\\infty): y' > 0 \\implies$ đồ thị đi lên từ $4$ đến $+\\infty$.\n        </div>\n\n        <!-- BẢNG BIẾN THIÊN SVG CHUẨN SGK / TKZ-TAB (QUY CHUẨN 2) -->\n        <div style=\"width:100%; max-width:480px; margin:4px auto;\">\n          <svg viewBox=\"0 0 480 150\" style=\"width:100%; height:auto; background:rgba(15,23,42,0.85); border-radius:8px; border:1px solid #334155;\">\n            <!-- 3 Đường kẻ ngang chuẩn SGK -->\n            <line x1=\"15\" y1=\"12\" x2=\"465\" y2=\"12\" stroke=\"#cbd5e1\" stroke-width=\"1.8\"/>\n            <line x1=\"15\" y1=\"46\" x2=\"465\" y2=\"46\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n            <line x1=\"15\" y1=\"78\" x2=\"465\" y2=\"78\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n            <line x1=\"15\" y1=\"140\" x2=\"465\" y2=\"140\" stroke=\"#cbd5e1\" stroke-width=\"1.8\"/>\n\n            <!-- DUY NHẤT 1 VẠCH KẺ DỌC NGĂN CỘT TIÊU ĐỀ VỚI VÙNG DỮ LIỆU -->\n            <line x1=\"75\" y1=\"12\" x2=\"75\" y2=\"140\" stroke=\"#cbd5e1\" stroke-width=\"1.8\"/>\n\n            <!-- CỘT TIÊU ĐỀ BÊN TRÁI -->\n            <text x=\"45\" y=\"34\" fill=\"#f8fafc\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" font-style=\"italic\">x</text>\n            <text x=\"45\" y=\"66\" fill=\"#f8fafc\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" font-style=\"italic\">f '(x)</text>\n            <text x=\"45\" y=\"112\" fill=\"#f8fafc\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" font-style=\"italic\">f (x)</text>\n\n            <!-- HÀNG x: Nghiệm x0 dóng thẳng đứng với số 0 hàng f' -->\n            <text x=\"115\" y=\"34\" fill=\"#fef08a\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">0</text>\n            <text x=\"270\" y=\"34\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">2</text>\n            <text x=\"430\" y=\"34\" fill=\"#cbd5e1\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">+∞</text>\n\n            <!-- VẠCH KÉP TẠI x = 0 (KHÔNG XÁC ĐỊNH) -->\n            <line x1=\"113\" y1=\"46\" x2=\"113\" y2=\"140\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n            <line x1=\"117\" y1=\"46\" x2=\"117\" y2=\"140\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n\n            <!-- HÀNG f'(x): Dấu nằm chính giữa khoảng, số 0 dóng thẳng x=2 -->\n            <text x=\"190\" y=\"66\" fill=\"#f87171\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\">–</text>\n            <text x=\"270\" y=\"66\" fill=\"#fef08a\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">0</text>\n            <text x=\"350\" y=\"66\" fill=\"#4ade80\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\">+</text>\n\n            <!-- HÀNG f(x): Chiều mũi tên biến thiên đi xuống rồi đi lên -->\n            <text x=\"135\" y=\"96\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"bold\">+∞</text>\n            <line x1=\"155\" y1=\"100\" x2=\"250\" y2=\"126\" stroke=\"#f87171\" stroke-width=\"2\"/>\n            <polygon points=\"250,126 240,121 245,130\" fill=\"#f87171\"/>\n\n            <text x=\"270\" y=\"134\" fill=\"#38bdf8\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">4</text>\n\n            <line x1=\"290\" y1=\"126\" x2=\"395\" y2=\"100\" stroke=\"#4ade80\" stroke-width=\"2\"/>\n            <polygon points=\"395,100 385,105 390,96\" fill=\"#4ade80\"/>\n            <text x=\"420\" y=\"96\" fill=\"#cbd5e1\" font-size=\"12\" font-weight=\"bold\">+∞</text>\n          </svg>\n        </div>\n\n        <div style=\"font-size:clamp(12px, 1.45vh, 14px); line-height:1.5; color:#a7f3d0; margin-top:4px;\">\n          • <b>Kết luận:</b> $\\min_{(0; +\\infty)} f(x) = \\mathbf{4}$ đạt được tại $x = 2$. Hàm số không có GTLN.\n        </div>\n      ",
+      "narration": "Phần ba: Ví dụ minh họa. Tìm giá trị nhỏ nhất của y bằng x cộng bốn chia x trên khoảng từ không đến dương vô cực. Đạo hàm y phẩy bằng một trừ bốn chia x bình. Bằng không khi x bằng hai. Bảng biến thiên: x từ không đến hai đồ thị đi xuống tới bốn, x từ hai đến dương vô cực đồ thị đi lên dương vô cực. Vậy giá trị nhỏ nhất bằng bốn đạt tại x bằng hai. Hàm số không có giá trị lớn nhất."
     },
     {
       "sceneIndex": 4,
-      "title": "CẢNH BÁO BẪY ĐẦU MÚT NGOẶC TRÒN & VÔ CỰC",
-      "subtitle": "MỤC 3 • PHÂN BIỆT RÕ GIỚI HẠN VÀ GIÁ TRỊ ĐẠT ĐƯỢC",
-      "startTime": 195,
-      "endTime": 250,
-      "duration": 55,
+      "title": "CẢNH BÁO BẪY ĐỀ THI KINH ĐIỂN",
+      "subtitle": "MỤC 3 • DƯƠNG VÔ CỰC KHÔNG PHẢI LÀ GTLN",
+      "startTime": 110,
+      "endTime": 130,
+      "duration": 20,
       "mascotMode": "magnifier",
-      "mascotTip": "<b>Cú cảnh báo bẫy:</b> Cứ thấy đầu ngoặc tròn $($ hoặc $)$ mà hàm số dốc về đó thì KHÔNG CÓ Max hoặc Min tại đầu mút đó!",
-      "bodyHtml": "\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; margin-bottom:8px; font-size:clamp(12px, 1.45vh, 14px); color:#fecdd3; line-height:1.5;\">\n          <span style=\"font-weight:bold; color:#ff6b6b;\">Bẫy 1: Kết luận Max / Min tại đầu ngoặc tròn!</span><br>\n          Xét hàm $f(x) = x^2$ trên khoảng mở $(0; 2)$. Ta thấy $f(x) > 0, \\forall x \\in (0; 2)$ và $\\lim_{x \\to 0^+} f(x) = 0$.<br>\n          Học sinh vội vàng khoanh $\\min = 0$ $\\implies$ <b>SAI!</b> Vì $x = 0 \\notin (0; 2)$, phương trình $f(x) = 0$ không có nghiệm trong khoảng $(0; 2)$. Tương tự, hàm số cũng <b>không có GTLN</b> trên $(0; 2)$ vì $x = 2$ là ngoặc tròn!\n        </div>\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; font-size:clamp(12px, 1.45vh, 14px); color:#fecdd3; line-height:1.5;\">\n          <span style=\"font-weight:bold; color:#ff6b6b;\">Bẫy 2: Nhầm lẫn tiệm cận vô cực với cực trị!</span><br>\n          Nếu trên bảng biến thiên có nhánh tiến tới $+\\infty$, hàm số chắc chắn <b>không có GTLN</b>. Nếu có nhánh tiến về $-\\infty$, hàm số chắc chắn <b>không có GTNN</b>.\n        </div>\n      ",
-      "narration": "Tại phần thứ tư, Thầy Cú cảnh báo hai lỗi sai kinh điển khi làm bài trên khoảng mở. Bẫy thứ nhất: Nhận giá trị tại đầu ngoặc tròn làm Max hoặc Min. Ví dụ hàm x bình trên khoảng mở 0 đến 2: Mặc dù khi x tiến về 0 thì f x tiến về 0, nhưng x bằng 0 không thuộc khoảng, nên hàm số không có GTNN! Tương tự, tại đầu mút 2 là ngoặc tròn nên hàm số cũng không có GTLN. Bẫy thứ hai: Khi thấy mũi tên tiến ra dương vô cùng hoặc âm vô cùng mà vẫn kết luận có Max hoặc Min là sai bản chất toán học."
+      "mascotTip": "<b>Cú cảnh báo bẫy:</b> Dương vô cực là xu hướng tiến ra xa, KHÔNG PHẢI là một số thực cụ thể!",
+      "bodyHtml": "\n        <div class=\"trap-warning-box\" style=\"padding:10px 14px; background:rgba(239,68,68,0.12); border-left:4px solid #ef4444; border-radius:6px; font-size:clamp(12.5px, 1.5vh, 14.5px); color:#fecdd3; line-height:1.55;\">\n          <span style=\"font-weight:bold; color:#ff6b6b;\">Bẫy đề thi:</span> Thấy giới hạn ra $+\\infty$ vội vã kết luận GTLN bằng $+\\infty$.<br>\n          Đây là sai lầm nghiêm trọng vì $+\\infty$ không phải là một số thực cụ thể. Khi đó kết luận chuẩn mực là: Hàm số <b>không có giá trị lớn nhất</b>.\n        </div>\n      ",
+      "narration": "Phần tư: Bẫy đề thi. Thấy giới hạn ra dương vô cực kết luận giá trị lớn nhất bằng dương vô cực. Đây là sai lầm vì dương vô cực không phải là một số thực cụ thể."
     },
     {
       "sceneIndex": 5,
-      "title": "MẸO THẦY CÚ & BẤT ĐẲNG THỨC CAUCHY (AM-GM)",
-      "subtitle": "MỤC 3 • BÍ KÍP GIẢI NHANH 5 GIÂY KHÔNG CẦN ĐẠO HÀM",
-      "startTime": 250,
-      "endTime": 300,
-      "duration": 50,
+      "title": "MẸO TƯ DUY NHANH THẦY CÚ (BĐT CAUCHY)",
+      "subtitle": "MỤC 3 • BÍ KÍP GIẢI NHANH 1 GIÂY KHÔNG CẦN ĐẠO HÀM",
+      "startTime": 130,
+      "endTime": 160,
+      "duration": 30,
       "mascotMode": "cheer",
-      "mascotTip": "<b>Cú chỉ chiêu:</b> Gặp dạng $A + \\frac{B}{A}$ với $A > 0$, hãy nghĩ ngay tới BĐT Cauchy để tìm Min trong 5 giây!",
-      "bodyHtml": "\n        <div style=\"background:rgba(30,41,59,0.7); border:1.5px solid #38bdf8; border-radius:8px; padding:12px 16px;\">\n          <div style=\"font-size:clamp(14px, 1.8vh, 16px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n            🦉 Bí Kíp Bất Đẳng Thức Cauchy (AM-GM) 5 Giây:\n          </div>\n          <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.6; color:#e2e8f0;\">\n            • Với hai số dương $a, b > 0$, ta luôn có: $a + b \\ge 2\\sqrt{ab}$. Dấu \"=\" xảy ra $\\iff a = b$.<br>\n            • <b>Áp dụng siêu tốc cho ví dụ trên:</b><br>\n            $\\quad$ Vì $x > 0$ nên $x$ và $\\frac{4}{x}$ là hai số dương. Ta có ngay:\n            $$x + \\frac{4}{x} \\ge 2\\sqrt{x \\cdot \\frac{4}{x}} = 2\\sqrt{4} = 4$$\n            $\\quad$ Dấu \"=\" xảy ra $\\iff x = \\frac{4}{x} \\iff x^2 = 4 \\iff x = 2$ (thỏa mãn $x > 0$).<br>\n            $\\implies$ <b>Kết luận ngay $\\min = 4$ tại $x = 2$ chỉ sau đúng 5 giây nhẩm!</b>\n          </div>\n        </div>\n      ",
-      "narration": "Để tổng kết toàn bộ Bài 2, Thầy Cú mách cho các em một tuyệt chiêu giải nhanh: Sử dụng Bất đẳng thức Cauchy cho hai số dương. Với biểu thức x cộng 4 trên x khi x dương, tích của chúng bằng 4 là một hằng số. Áp dụng Cauchy: Tổng lớn hơn hoặc bằng hai lần căn bậc hai của tích, tức là lớn hơn hoặc bằng 2 nhân căn 4 bằng 4. Dấu bằng xảy ra khi x bằng 4 trên x, tức x bằng 2. Ta tìm ra ngay GTNN bằng 4 chỉ trong 5 giây nhẩm mà không cần đặt bút tính đạo hàm. Chúc mừng các em đã làm chủ hoàn toàn Bài 2!"
+      "mascotTip": "<b>Cú chỉ chiêu:</b> Gặp dạng $x + \\frac{k}{x}$ trên miền dương, dùng ngay Cauchy: $\\min = 2\\sqrt{k}$!",
+      "bodyHtml": "\n        <div style=\"background:rgba(30,41,59,0.7); border:1.5px solid #38bdf8; border-radius:8px; padding:12px 16px;\">\n          <div style=\"font-size:clamp(14px, 1.8vh, 16px); color:#fef08a; font-weight:bold; margin-bottom:6px;\">\n            🦉 Bí Kíp Bất Đẳng Thức Cauchy 1 Giây:\n          </div>\n          <div style=\"font-size:clamp(12.5px, 1.5vh, 14.5px); line-height:1.6; color:#e2e8f0;\">\n            • Gặp bài toán $x + \\frac{\\text{hằng số}}{x}$ trên miền dương, dùng ngay Cauchy:<br>\n            $$x + \\frac{4}{x} \\ge 2\\sqrt{x \\cdot \\frac{4}{x}} = 2\\sqrt{4} = 4$$\n            • Dấu bằng xảy ra $\\iff x = \\frac{4}{x} \\iff x = 2$.<br>\n            $\\implies$ Xong ngay đáp số $\\min = 4$ chỉ trong 1 giây!\n          </div>\n        </div>\n      ",
+      "narration": "Phần năm: Mẹo tư duy nhanh. Gặp bài toán x cộng hằng số chia x trên miền dương, dùng ngay bất đẳng thức Cauchy. x cộng bốn chia x luôn lớn hơn hoặc bằng hai lần căn của x nhân bốn chia x, kết quả bằng bốn. Xong ngay trong một giây!"
     }
   ]
 },
