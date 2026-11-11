@@ -2166,314 +2166,652 @@
 
     // =========================================================================
     bai5_muc1: {
-      lessonId: "bai5",
-      lessonTitle: "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
-      sectionId: "bai5_muc1",
-      sectionTitle: "Mục 1: Tối ưu hóa hình học & đời sống (hộp, diện tích, chi phí)",
-      audioSrc: "./audio/bai5_muc1.mp3",
-      totalDuration: 295.0,
-      audio_src: "./audio/bai5_muc1.mp3",
-      timestamp_src: "timestamps/bai5_muc1.json",
-      title: "Mục 1: Tối ưu hóa hình học (Gấp hộp thể tích cực đại & Tiết kiệm vật liệu)",
-      owl_tip: "3 Bước mô hình hóa: 1. Đặt ẩn phụ x (chú ý điều kiện hình học) -> 2. Thiết lập hàm f(x) -> 3. Tìm Max/Min bằng đạo hàm!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Quy trình mô hình hóa toán học", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Bài toán gấp hộp thể tích cực đại", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Bài toán tối ưu chi phí làm bể nước", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy điều kiện cạnh", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "QUY TRÌNH 3 BƯỚC GIẢI BÀI TOÁN TỐI ƯU THỰC TẾ",
-          subtitle: "MỤC 1 • MÔ HÌNH HÓA TOÁN HỌC CHUẨN MỰC",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> Bước đặt ẩn x bắt buộc phải tìm điều kiện thực tế (ví dụ: x phải nhỏ hơn nửa cạnh của tấm tôn)!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              <b>Bước 1: Thiết lập mô hình toán học:</b><br>
-              • Chọn một đại lượng biến thiên làm biến số $x$. Tìm điều kiện thực tế của $x$ ($x \\in (a; b)$).<br>
-              • Biểu diễn đại lượng cần tối ưu (thể tích, diện tích, chi phí...) thành hàm số $y = f(x)$.<br>
-              <b>Bước 2: Tìm giá trị lớn nhất / nhỏ nhất:</b><br>
-              • Sử dụng công cụ đạo hàm để khảo sát hàm số $f(x)$ trên khoảng điều kiện.<br>
-              • Tìm nghiệm của $f'(x) = 0$ và lập bảng biến thiên.<br>
-              <b>Bước 3: Trả lời yêu cầu thực tế:</b> Đối chiếu nghiệm và kết luận bài toán.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "BÀI TOÁN KINH ĐIỂN: GẤP HỘP KHÔNG NẮP THỂ TÍCH MAX",
-          subtitle: "MỤC 1 • TỪ TẤM TÔN VUÔNG CẠNH a = 60cm",
-          startTime: 70.0,
-          endTime: 150.0,
-          duration: 80.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Bí quyết:</b> Cắt 4 góc vuông cạnh x. Đáy là hình vuông cạnh (60 - 2x), chiều cao là x!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Đề bài:</b> Một người muốn làm hộp không nắp từ tấm tôn vuông cạnh $60\\text{cm}$ bằng cách cắt 4 hình vuông cạnh $x$ ở 4 góc rồi gập lên. Tìm $x$ để thể tích hộp lớn nhất.
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Điều kiện: $0 < x < 30$.<br>
-              • Kích thước đáy: Cạnh $60 - 2x$; Chiều cao hộp: $x$.<br>
-              • Thể tích: $V(x) = x(60 - 2x)^2 = 4x(30 - x)^2 = 4(x^3 - 60x^2 + 900x)$.<br>
-              • Đạo hàm: $V'(x) = 4(3x^2 - 120x + 900) = 12(x^2 - 40x + 300) = 0 \\iff x = 10$ hoặc $x = 30$ (loại).<br>
-              • <b>Kết luận:</b> Cắt ở mỗi góc một hình vuông cạnh $x = 10\\text{cm}$ thì thể tích đạt cực đại $V_{\\max} = 16000\\text{cm}^3 = 16\\text{ lít}$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "BÀI TOÁN TỐI ƯU CHI PHÍ LÀM BỂ NƯỚC",
-          subtitle: "MỤC 1 • KẾT HỢP GIÁ VẬT LIỆU ĐÁY VÀ THÀNH BỂ",
-          startTime: 150.0,
-          endTime: 220.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Mẹo giải:</b> Chi phí = (Diện tích đáy × Giá đáy) + (Diện tích xung quanh × Giá thành)!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Mô hình bài toán chi phí:</b> Xây bể hình hộp chữ nhật thể tích $V_0$ cố định:
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Đáy hình vuông cạnh $x$, chiều cao $h = \\frac{V_0}{x^2}$.<br>
-              • Diện tích đáy: $S_{\\text{đáy}} = x^2$. Diện tích xung quanh: $S_{xq} = 4xh = 4x \\cdot \\frac{V_0}{x^2} = \\frac{4V_0}{x}$.<br>
-              • Tổng chi phí: $C(x) = c_1 x^2 + c_2 \\frac{4V_0}{x}$.<br>
-              • Lấy đạo hàm $C'(x) = 2c_1 x - \\frac{4c_2 V_0}{x^2} = 0 \\iff x = \\sqrt[3]{\\frac{2c_2 V_0}{c_1}}$.<br>
-              • Đây chính là kích thước đáy để tiết kiệm ngân sách nhất.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY ĐƠN VỊ ĐO LƯỜNG",
-          subtitle: "MỤC 1 • ĐỔI ĐỒNG NHẤT GIỮA CM, M VÀ LÍT",
-          startTime: 220.0,
-          endTime: 295.0,
-          duration: 75.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Cú nhắc:</b> $1\\text{m}^3 = 1000\\text{ lít} = 1000\\text{dm}^3 = 1000000\\text{cm}^3$. Rất nhiều bạn quên đổi đơn vị dẫn đến đáp số sai hàng triệu lần!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Nhầm lẫn đơn vị giữa mét và lít:<br>
-              • Khi đề cho thể tích bể $V = 10\\text{m}^3$ mà chi phí xây tính theo $\\text{nghìn đồng/m}^2$, nếu bài hỏi ra lít thì phải nhớ nhân với $1000$.<br>
-              • Luôn thống nhất đưa về cùng một đơn vị chuẩn trước khi thiết lập hàm số!
-            </div>
-          `
-        }
+  "lessonId": "bai5",
+  "lessonTitle": "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
+  "sectionId": "bai5_muc1",
+  "sectionTitle": "Mục 1: Tối ưu hóa hình học & Thể tích",
+  "audio": "/audio/bai5_muc1.mp3",
+  "audioSrc": "./audio/bai5_muc1.mp3",
+  "audio_src": "./audio/bai5_muc1.mp3",
+  "timestamp_src": "timestamps/bai5_muc1.json",
+  "totalDuration": 278.98,
+  "duration": 278.98,
+  "title": "Mục 1: Tối ưu hóa hình học & Thể tích (Hộp, diện tích, chi phí)",
+  "owl_tip": "Quy trình 4 bước: Chọn x có điều kiện -> Thiết lập hàm f(x) -> Đạo hàm & BBT -> Kết luận tối ưu!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 48.74,
+      "id": "part2"
+    },
+    {
+      "time": 66.43,
+      "id": "part3"
+    },
+    {
+      "time": 70.08,
+      "id": "vd1_q"
+    },
+    {
+      "time": 99.74,
+      "id": "vd1_a"
+    },
+    {
+      "time": 134.86,
+      "id": "vd2_q"
+    },
+    {
+      "time": 159.53,
+      "id": "vd2_a"
+    },
+    {
+      "time": 199.66,
+      "id": "vd3_q"
+    },
+    {
+      "time": 226.49,
+      "id": "vd3_a"
+    },
+    {
+      "time": 255.34,
+      "id": "part4"
+    },
+    {
+      "time": 265.56,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Quy trình 4 bước</h3>\n        <p><b>Bước 1:</b> Chọn biến số $x$ và tìm điều kiện hình học: $x \\in (a; b)$.<br>\n        <b>Bước 2:</b> Thiết lập hàm mục tiêu $f(x)$ (diện tích, thể tích, chi phí...).<br>\n        <b>Bước 3:</b> Khảo sát sự biến thiên: Tính đạo hàm $f'(x)$, tìm nghiệm, lập BBT.<br>\n        <b>Bước 4:</b> Kết luận giá trị lớn nhất / giá trị nhỏ nhất và trả lời câu hỏi.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Nguyên lý cốt lõi</h3>\n        <p>Hàm mục tiêu thực tế thường chỉ có 1 cực trị duy nhất trên $(a; b)$. Cực đại là GTLN, cực tiểu là GTNN.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Rào mảnh vườn chữ nhật 24m lưới thép sát bờ tường thẳng.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Gọi chiều rộng là $x$ ($0 < x < 12$). Chiều dài là $24 - 2x$.<br>\n          + Diện tích: $S(x) = x(24 - 2x) = -2x^2 + 24x$.<br>\n          + $S'(x) = -4x + 24 = 0 \\iff x = 6$. Chiều dài tương ứng: $12$ m.<br>\n          $\\implies$ Diện tích lớn nhất đạt <b>$72\\text{ m}^2$</b> khi rộng $6$ m, dài $12$ m.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Hộp hình trụ có nắp thể tích $V = 54\\pi\\text{ dm}^3$. Tìm bán kính $r$ để diện tích toàn phần nhỏ nhất.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + $V = \\pi r^2 h = 54\\pi \\implies h = \\frac{54}{r^2}$.<br>\n          + Diện tích toàn phần có nắp: $S(r) = 2\\pi r^2 + 2\\pi rh = 2\\pi r^2 + \\frac{108\\pi}{r}$.<br>\n          + $S'(r) = 4\\pi r - \\frac{108\\pi}{r^2} = 0 \\iff 4r^3 = 108 \\iff r^3 = 27 \\iff r = 3\\text{ dm}$.<br>\n          $\\implies$ Bán kính đáy tối ưu là <b>$r = 3\\text{ dm}$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Tấm tôn vuông $60\\text{ cm}$. Cắt 4 góc 4 hình vuông cạnh $x$ rồi gấp thành hộp không nắp.<br><i>(Thời gian làm nháp: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Chiều cao $x$ ($0 < x < 30$), đáy vuông cạnh $60 - 2x$.<br>\n          + Thể tích: $V(x) = x(60 - 2x)^2 = 4x^3 - 240x^2 + 3600x$.<br>\n          + $V'(x) = 12(x - 10)(x - 30) = 0 \\implies x = 10\\text{ cm}$.<br>\n          $\\implies$ Thể tích lớn nhất đạt <b>$16000\\text{ cm}^3$</b> khi $x = 10\\text{ cm}$.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Quên đặt điều kiện cho biến $x$, hoặc nhầm lẫn giữa hộp có nắp (2 đáy) và không nắp (1 đáy).</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Dùng BĐT Cô-si cho tích biến thiên $4x(60-2x)(60-2x)$ để nhẩm nhanh nghiệm cực trị trong 3 giây!</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ phương pháp",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Nguyên lý cốt lõi",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 5: TỐI ƯU HÓA HÌNH HỌC",
+      "subtitle": "PHẦN 1: QUY TRÌNH 4 BƯỚC GIẢI TOÁN THỰC TẾ",
+      "startTime": 0.0,
+      "endTime": 48.74,
+      "duration": 48.74,
+      "mascotMode": "pointer",
+      "mascotTip": "4 bước chuẩn: Chọn biến x và tìm ĐK -> Lập hàm f(x) -> Đạo hàm f'(x) & BBT -> Kết luận!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Quy trình 4 bước giải bài toán tối ưu hình học</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Chọn biến số thích hợp $x$ và xác định miền giá trị thực tế của $x$ ($a < x < b$).<br>• <b>Bước 2:</b> Thiết lập hàm mục tiêu $y = f(x)$ biểu thị đại lượng cần tối ưu (thể tích, diện tích, chi phí...).<br>• <b>Bước 3:</b> Khảo sát sự biến thiên của $f(x)$ trên $(a; b)$: Tính đạo hàm $f'(x)$, giải $f'(x) = 0$ và lập bảng biến thiên.<br>• <b>Bước 4:</b> Kết luận giá trị lớn nhất hoặc giá trị nhỏ nhất và trả lời đúng câu hỏi của bài toán.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "NGUYÊN LÝ CỐT LÕI TOÁN THỰC TẾ",
+      "subtitle": "PHẦN 2: ĐIỂM CỰC TRỊ DUY NHẤT LÀ GIÁ TRỊ TỐI ƯU",
+      "startTime": 48.74,
+      "endTime": 70.08,
+      "duration": 21.34,
+      "mascotMode": "pointer",
+      "mascotTip": "Hàm thực tế trên khoảng xác định thường chỉ có 1 cực trị duy nhất: Cực đại = GTLN, Cực tiểu = GTNN!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Nguyên lý một điểm cực trị duy nhất</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• Trong đại đa số bài toán thực tế, hàm số mục tiêu $y = f(x)$ liên tục trên khoảng $(a; b)$ và phương trình $f'(x) = 0$ chỉ có <b>duy nhất một nghiệm</b> $x_0 \\in (a; b)$.<br>• Khi đó:<br>&emsp;+ Nếu $x_0$ là điểm cực đại $\\implies \\max_{(a; b)} f(x) = f(x_0)$.<br>&emsp;+ Nếu $x_0$ là điểm cực tiểu $\\implies \\min_{(a; b)} f(x) = f(x_0)$.<br>• Không cần so sánh với hai đầu mút, giúp kết luận cực kỳ nhanh chóng!</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: RÀO VƯỜN DIỆN TÍCH LỚN NHẤT",
+      "subtitle": "24M LƯỚI THÉP SÁT BỜ TƯỜNG",
+      "startTime": 70.08,
+      "endTime": 99.74,
+      "duration": 29.66,
+      "mascotMode": "pointer",
+      "mascotTip": "Gọi chiều rộng là x (0 < x < 12) -> Chiều dài rào lưới là 24 - 2x. Diện tích S = x(24 - 2x)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Một nông dân có $24\\text{ m}$ lưới thép muốn rào mảnh vườn hình chữ nhật sát bức tường thẳng (bờ tường không cần rào). Tìm kích thước để diện tích mảnh vườn lớn nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Gọi chiều rộng là x, lập hàm diện tích S(x)...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "DIỆN TÍCH LỚN NHẤT S = 72 M² KHI RỘNG 6M, DÀI 12M",
+      "startTime": 99.74,
+      "endTime": 134.86,
+      "duration": 35.12,
+      "mascotMode": "cheer",
+      "mascotTip": "S' = -4x + 24 = 0 -> x = 6m -> Dài 12m, S_max = 72m²!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Gọi chiều rộng là $x$ ($0 < x < 12$). Chiều dài mảnh vườn là $24 - 2x$.<br>• Diện tích: $S(x) = x(24 - 2x) = -2x^2 + 24x$.<br>• Đạo hàm: $S'(x) = -4x + 24 = 0 \\iff x = 6\\text{ m}$.<br>• Chiều dài tương ứng: $24 - 2(6) = 12\\text{ m}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Diện tích lớn nhất là <b>$72\\text{ m}^2$</b> khi chiều rộng là $6\\text{ m}$ và chiều dài là $12\\text{ m}$.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: HỘP HÌNH TRỤ TIẾT KIỆM VẬT LIỆU",
+      "subtitle": "THỂ TÍCH V = 54π DM³",
+      "startTime": 134.86,
+      "endTime": 159.53,
+      "duration": 24.67,
+      "mascotMode": "pointer",
+      "mascotTip": "Hộp có nắp: S = 2πr² + 2πrh. Thay h = 54/r² vào tìm r!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Làm chiếc hộp hình trụ có nắp thể tích $V = 54\\pi\\text{ dm}^3$. Tìm bán kính đáy $r$ để diện tích toàn phần của hộp nhỏ nhất nhằm tiết kiệm vật liệu nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b><br><i>(Biểu diễn h theo r rồi lập hàm diện tích toàn phần...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "BÁN KÍNH TỐI ƯU r = 3 DM",
+      "startTime": 159.53,
+      "endTime": 199.66,
+      "duration": 40.13,
+      "mascotMode": "cheer",
+      "mascotTip": "S' = 4πr - 108π/r² = 0 -> 4r³ = 108 -> r³ = 27 -> r = 3 dm!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• $V = \\pi r^2 h = 54\\pi \\implies h = \\frac{54}{r^2}$.<br>• Diện tích toàn phần có nắp: $S(r) = 2\\pi r^2 + 2\\pi rh = 2\\pi r^2 + \\frac{108\\pi}{r}$.<br>• Đạo hàm: $S'(r) = 4\\pi r - \\frac{108\\pi}{r^2} = 0 \\iff 4r^3 = 108 \\iff r^3 = 27 \\iff r = 3\\text{ dm}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Bán kính đáy bằng <b>$3\\text{ dm}$</b> thì tiết kiệm vật liệu nhất.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: GẤP HỘP THỂ TÍCH CỰC ĐẠI",
+      "subtitle": "TẤM TÔN VUÔNG CẠNH 60 CM, CẮT 4 GÓC CẠNH x",
+      "startTime": 199.66,
+      "endTime": 226.49,
+      "duration": 26.83,
+      "mascotMode": "magnifier",
+      "mascotTip": "Đáy hộp là hình vuông cạnh 60 - 2x, chiều cao x. ĐK: 0 < x < 30!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Một tấm tôn hình vuông cạnh $60\\text{ cm}$. Cắt $4$ góc $4$ hình vuông cạnh $x$ rồi gấp lại thành chiếc hộp không nắp. Tìm $x$ để thể tích hộp lớn nhất.<div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "x = 10 CM -> THỂ TÍCH CỰC ĐẠI V = 16000 CM³",
+      "startTime": 226.49,
+      "endTime": 255.34,
+      "duration": 28.85,
+      "mascotMode": "cheer",
+      "mascotTip": "V' = 12(x - 10)(x - 30) = 0 -> x = 10 cm -> V_max = 10 * 40² = 16000 cm³!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Điều kiện: $0 < x < 30$. Đáy hộp cạnh $60 - 2x$, chiều cao $x$.<br>• Thể tích: $V(x) = x(60 - 2x)^2 = 4x^3 - 240x^2 + 3600x$.<br>• $V'(x) = 12x^2 - 480x + 3600 = 12(x - 10)(x - 30) = 0 \\implies x = 10\\text{ cm}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Khi <b>$x = 10\\text{ cm}$</b> thì thể tích hộp lớn nhất, đạt <b>$16000\\text{ cm}^3$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ ĐIỀU KIỆN HÌNH HỌC",
+      "subtitle": "PHẦN 4: QUÊN ĐIỀU KIỆN VÀ NHẦM LẪN CÓ NẮP / KHÔNG NẮP",
+      "startTime": 255.34,
+      "endTime": 265.56,
+      "duration": 10.22,
+      "mascotMode": "magnifier",
+      "mascotTip": "Hộp không nắp chỉ có 1 đáy (πr²), có nắp có 2 đáy (2πr²). Luôn kiểm tra điều kiện x!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi bài toán tối ưu hình học:</span><br>1. <b>Bẫy điều kiện biến số:</b> Tấm tôn cạnh $60\\text{ cm}$ thì bắt buộc $0 < x < 30$. Nếu không đặt điều kiện, học sinh dễ chọn nhầm nghiệm $x = 30$ (khi đó thể tích bằng $0$).<br>2. <b>Bẫy số đáy hình trụ:</b> Đọc thật kỹ đề: Hộp 'không nắp' chỉ có $1$ đáy ($S_{tp} = \\pi r^2 + 2\\pi rh$), hộp 'có nắp' có $2$ đáy ($S_{tp} = 2\\pi r^2 + 2\\pi rh$).</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: ÁP DỤNG BĐT CÔ-SI ĐỂ NHẨM CỰC NHANH",
+      "startTime": 265.56,
+      "endTime": 278.98,
+      "duration": 13.42,
+      "mascotMode": "cheer",
+      "mascotTip": "Tích 4x*(60-2x)*(60-2x) đạt Max khi 4x = 60-2x -> 6x = 60 -> x = 10 trong 2 giây!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo giải nhanh BĐT Cô-si cho bài toán thể tích:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• Với biểu thức $V = x(60 - 2x)^2$, ta nhân $4$ vào hai vế:<br>$$4V = 4x(60 - 2x)(60 - 2x) \\le \\left(\\frac{4x + (60 - 2x) + (60 - 2x)}{3}\\right)^3 = 40^3 = 64000$$<br>• Dấu bằng xảy ra khi $4x = 60 - 2x \\iff 6x = 60 \\iff \\mathbf{x = 10\\text{ cm}}$!<br>• Không cần đạo hàm, nhẩm ra đáp số chính xác chỉ trong 3 giây!</div>"
+    }
+  ]
+},
 
     bai5_muc2: {
-      lessonId: "bai5",
-      lessonTitle: "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
-      sectionId: "bai5_muc2",
-      sectionTitle: "Mục 2: Tối ưu hóa kinh tế (doanh thu, lợi nhuận, chi phí)",
-      audioSrc: "./audio/bai5_muc2.mp3",
-      totalDuration: 285.0,
-      audio_src: "./audio/bai5_muc2.mp3",
-      timestamp_src: "timestamps/bai5_muc2.json",
-      title: "Mục 2: Tối ưu hóa kinh tế (Hàm doanh thu, chi phí, lợi nhuận cực đại)",
-      owl_tip: "Quy tắc kinh tế vi mô: Lợi nhuận P(x) = Doanh thu R(x) - Chi phí C(x). Điểm tối ưu lợi nhuận khi Doanh thu biên = Chi phí biên (R'=C')!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Các khái niệm kinh tế cơ bản", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Bài toán tối đa hóa lợi nhuận", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Bài toán định giá vé máy bay/xe khách", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy nghiệm không nguyên", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "CÁC HÀM SỐ KINH TẾ CƠ BẢN",
-          subtitle: "MỤC 2 • DOANH THU, CHI PHÍ VÀ LỢI NHUẬN",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Khái niệm biên (Marginal):</b> Đạo hàm của hàm tổng được gọi là đại lượng 'biên' trong kinh tế học!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              Gọi $x$ là số lượng sản phẩm sản xuất và bán ra ($x \\ge 0$):<br>
-              • <b>Hàm cầu (Giá bán):</b> $p = p(x)$ là đơn giá của mỗi sản phẩm.<br>
-              • <b>Hàm Doanh thu:</b> $R(x) = x \\cdot p(x)$ (Số lượng nhân đơn giá).<br>
-              • <b>Hàm Chi phí:</b> $C(x)$ là tổng chi phí để sản xuất $x$ sản phẩm.<br>
-              • <b>Hàm Lợi nhuận:</b> $P(x) = R(x) - C(x)$ (Doanh thu trừ Chi phí).<br>
-              • <b>Nguyên lý tối ưu:</b> Lợi nhuận tối đa khi $P'(x) = 0 \\iff R'(x) = C'(x)$ (Doanh thu biên bằng Chi phí biên).
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "VÍ DỤ TÌM SỐ SẢN PHẨM ĐỂ LỢI NHUẬN TỐI ĐA",
-          subtitle: "MỤC 2 • BÀI TOÁN DOANH NGHIỆP ĐIỂN HÌNH",
-          startTime: 70.0,
-          endTime: 145.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> x phải là số nguyên dương (sản phẩm nguyên chiếc)!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Đề bài:</b> Một xưởng sản xuất $x$ chiếc xe đạp mỗi ngày với giá bán $p(x) = 500 - 2x$ (nghìn đồng) và chi phí sản xuất $C(x) = x^2 + 80x + 1200$ (nghìn đồng). Tìm $x$ để lợi nhuận cao nhất.
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Doanh thu: $R(x) = x(500 - 2x) = -2x^2 + 500x$.<br>
-              • Lợi nhuận: $P(x) = R(x) - C(x) = (-2x^2 + 500x) - (x^2 + 80x + 1200) = -3x^2 + 420x - 1200$.<br>
-              • Đạo hàm: $P'(x) = -6x + 420 = 0 \\iff x = 70$.<br>
-              • Vì $P(x)$ là tam thức bậc hai có $a = -3 < 0$, đồ thị là parabol bề lõm quay xuống.<br>
-              • <b>Kết luận:</b> Mỗi ngày sản xuất $70$ chiếc xe đạp thì lợi nhuận lớn nhất đạt $13500\\text{ nghìn đồng} = 13,5\\text{ triệu đồng}$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "BÀI TOÁN GIẢM GIÁ VÉ ĐỂ TĂNG KHÁCH",
-          subtitle: "MỤC 2 • QUY LUẬT CUNG CẦU THỰC TẾ",
-          startTime: 145.0,
-          endTime: 215.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Mô hình:</b> Cứ giảm giá x nghìn đồng thì số khách tăng thêm k người. Doanh thu = (Giá mới) × (Số khách mới)!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Mô hình giảm giá:</b> Giá vé hiện tại $p_0$, số khách $n_0$.
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Cứ giảm $10$ nghìn đồng giá vé thì lượng khách tăng thêm $20$ người.<br>
-              • Gọi $x$ là số lần giảm $10$ nghìn đồng ($x > 0$):<br>
-              $\\quad +$ Giá vé mới: $p(x) = p_0 - 10x$.<br>
-              $\\quad +$ Số khách mới: $n(x) = n_0 + 20x$.<br>
-              • Doanh thu: $R(x) = (p_0 - 10x)(n_0 + 20x) = -200x^2 + (20p_0 - 10n_0)x + p_0 n_0$.<br>
-              • Đây là hàm bậc hai, đỉnh parabol cho ta số lần giảm giá tối ưu nhất.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY SỐ NGUYÊN",
-          subtitle: "MỤC 2 • KHI ĐỈNH PARABOL LÀ SỐ THẬP PHÂN",
-          startTime: 215.0,
-          endTime: 285.0,
-          duration: 70.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Mẹo làm tròn:</b> Nếu x_0 = 12,4 chiếc máy, phải so sánh lợi nhuận tại 2 số nguyên liền kề x = 12 và x = 13!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Sản phẩm thực tế bắt buộc phải là số tự nhiên $x \\in \\mathbb{N}^*$:<br>
-              • Khi giải đạo hàm ra nghiệm lẻ như $x = 15,35$ sản phẩm, không được vội vàng làm tròn theo thói quen học đường.<br>
-              • Bắt buộc tính thử $P(15)$ và $P(16)$, số nào cho lợi nhuận lớn hơn thì chọn số đó!
-            </div>
-          `
-        }
+  "lessonId": "bai5",
+  "lessonTitle": "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
+  "sectionId": "bai5_muc2",
+  "sectionTitle": "Mục 2: Tối ưu hóa kinh tế & Lợi nhuận",
+  "audio": "/audio/bai5_muc2.mp3",
+  "audioSrc": "./audio/bai5_muc2.mp3",
+  "audio_src": "./audio/bai5_muc2.mp3",
+  "timestamp_src": "timestamps/bai5_muc2.json",
+  "totalDuration": 216.41,
+  "duration": 216.41,
+  "title": "Mục 2: Tối ưu hóa kinh tế & Lợi nhuận (Hàm doanh thu, chi phí, lợi nhuận)",
+  "owl_tip": "Quy tắc kinh tế: P(x) = R(x) - C(x). Điểm tối ưu lợi nhuận khi Doanh thu biên = Chi phí biên (R' = C')!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 35.88,
+      "id": "part2"
+    },
+    {
+      "time": 48.7,
+      "id": "part3"
+    },
+    {
+      "time": 52.39,
+      "id": "vd1_q"
+    },
+    {
+      "time": 82.2,
+      "id": "vd1_a"
+    },
+    {
+      "time": 88.08,
+      "id": "vd2_q"
+    },
+    {
+      "time": 112.99,
+      "id": "vd2_a"
+    },
+    {
+      "time": 148.34,
+      "id": "vd3_q"
+    },
+    {
+      "time": 168.96,
+      "id": "vd3_a"
+    },
+    {
+      "time": 187.44,
+      "id": "part4"
+    },
+    {
+      "time": 204.65,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Các đại lượng biên</h3>\n        <p>• Số lượng sản phẩm: $x \\ge 0$.<br>\n        • Doanh thu: $R(x) = x \\cdot p(x)$ (Số lượng $\\times$ Đơn giá).<br>\n        • Lợi nhuận: $P(x) = R(x) - C(x)$ (Doanh thu $-$ Chi phí).<br>\n        • Đại lượng biên: Chi phí biên $C'(x)$, Doanh thu biên $R'(x)$, Lợi nhuận biên $P'(x)$.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Nguyên tắc tối đa hóa lợi nhuận</h3>\n        <p>Lợi nhuận đạt cực đại khi $P'(x) = 0 \\iff R'(x) = C'(x)$ (Doanh thu biên bằng Chi phí biên).</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ thực hành</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Chi phí $C(x) = 100 + 20x + 0.1x^2$, Giá bán $50$ nghìn đồng/bộ. Tìm $x$ để lợi nhuận cao nhất.<br><i>(Thời gian nháp: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Doanh thu: $R(x) = 50x$.<br>\n          + Lợi nhuận: $P(x) = R(x) - C(x) = -0.1x^2 + 30x - 100$.<br>\n          + $P'(x) = -0.2x + 30 = 0 \\iff x = 150$.<br>\n          $\\implies$ Sản xuất <b>$150$ bộ quần áo/ngày</b> để đạt lợi nhuận tối đa.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Giá vé $100$ nghìn thì có $60$ khách. Cứ giảm $10$ nghìn thì tăng $10$ khách. Tìm giá vé tối ưu.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Gọi $x$ là số lần giảm $10$ nghìn đồng ($0 < x < 10$).<br>\n          + Giá mới: $100 - 10x$, Số khách mới: $60 + 10x$.<br>\n          + Doanh thu: $R(x) = (100 - 10x)(60 + 10x) = -100x^2 + 400x + 6000$.<br>\n          + $R'(x) = -200x + 400 = 0 \\iff x = 2$.<br>\n          $\\implies$ Giảm $20$ nghìn, giá vé tối ưu là <b>$80$ nghìn đồng/vé</b> (Doanh thu lớn nhất $6.400$ nghìn đồng).\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Bể nước rò rỉ với tốc độ $V'(t) = 10 - 2t$ (lít/giờ). Sau bao lâu nước ngừng rò rỉ?<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          Nước ngừng rò rỉ khi tốc độ rò rỉ triệt tiêu: $V'(t) = 0 \\iff 10 - 2t = 0 \\iff t = 5\\text{ giờ}$.<br>\n          $\\implies$ Sau đúng <b>$5$ giờ</b> thì bể nước hoàn toàn ngừng rò rỉ.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy trắc nghiệm</h3><p>Số lượng sản phẩm $x \\in \\mathbb{N}^*$. Khi ra nghiệm thập phân, phải so sánh lợi nhuận tại 2 số nguyên liền kề chứ không làm tròn tự do.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Với tam thức bậc hai $y = ax^2 + bx + c$, đỉnh parabol $x = -b/(2a)$ cho ngay số lượng hoặc mức giá tối ưu trong 2 giây!</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ phương pháp",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Nguyên lý cốt lõi",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 5: TỐI ƯU HÓA KINH TẾ",
+      "subtitle": "PHẦN 1: DOANH THU, CHI PHÍ VÀ CÁC ĐẠI LƯỢNG BIÊN",
+      "startTime": 0.0,
+      "endTime": 35.88,
+      "duration": 35.88,
+      "mascotMode": "pointer",
+      "mascotTip": "R(x) = x*p(x), P(x) = R(x) - C(x). Đạo hàm của hàm tổng được gọi là đại lượng 'biên'!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Các hàm số kinh tế cơ bản</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Gọi $x$ là số lượng sản phẩm ($x \\ge 0$):<br>• <b>Hàm doanh thu:</b> $R(x) = x \\cdot p(x)$ (Số lượng nhân đơn giá).<br>• <b>Hàm chi phí:</b> $C(x)$ là tổng chi phí sản xuất $x$ sản phẩm.<br>• <b>Hàm lợi nhuận:</b> $P(x) = R(x) - C(x)$ (Doanh thu trừ Chi phí).<br>• <b>Khái niệm biên (Marginal):</b> Đạo hàm biểu thị tốc độ thay đổi khi tăng thêm 1 đơn vị sản phẩm:<br>&emsp;+ $C'(x)$: Chi phí biên.<br>&emsp;+ $R'(x)$: Doanh thu biên.<br>&emsp;+ $P'(x)$: Lợi nhuận biên.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "NGUYÊN TẮC TỐI ĐA HÓA LỢI NHUẬN",
+      "subtitle": "PHẦN 2: DOANH THU BIÊN BẰNG CHI PHÍ BIÊN",
+      "startTime": 35.88,
+      "endTime": 52.39,
+      "duration": 16.51,
+      "mascotMode": "pointer",
+      "mascotTip": "Lợi nhuận P(x) cực đại khi P'(x) = 0, tức R'(x) = C'(x)!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Nguyên tắc tối đa hóa lợi nhuận</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• Để tối đa hóa lợi nhuận, doanh nghiệp cần tìm $x$ sao cho $P(x)$ đạt giá trị lớn nhất.<br>• Điều kiện cần: Đạo hàm lợi nhuận biên triệt tiêu:<br>$$P'(x) = 0 \\iff R'(x) - C'(x) = 0 \\iff \\mathbf{R'(x) = C'(x)}$$<br>• <b>Ý nghĩa kinh tế:</b> Khi sản xuất đến mức mà việc làm thêm một sản phẩm mang lại doanh thu bằng đúng chi phí bỏ ra, lợi nhuận toàn doanh nghiệp đạt cực đại.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: TÌM SỐ SẢN PHẨM LỢI NHUẬN CAO NHẤT",
+      "subtitle": "XƯỞNG MAY SẢN XUẤT ÁO",
+      "startTime": 52.39,
+      "endTime": 82.2,
+      "duration": 29.81,
+      "mascotMode": "pointer",
+      "mascotTip": "C(x) = 100 + 20x + 0.1x², Giá bán 50 -> R(x) = 50x. Lợi nhuận P(x) = R(x) - C(x)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Một xưởng may sản xuất $x$ bộ quần áo mỗi ngày với hàm chi phí $C(x) = 100 + 20x + 0.1x^2$ (nghìn đồng). Giá bán mỗi bộ là $50$ nghìn đồng. Tìm $x$ để lợi nhuận mỗi ngày cao nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Lập hàm P(x) = 50x - C(x), giải P'(x) = 0...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "SẢN XUẤT 150 BỘ QUẦN ÁO ĐỂ LỢI NHUẬN TỐI ĐA",
+      "startTime": 82.2,
+      "endTime": 88.08,
+      "duration": 5.88,
+      "mascotMode": "cheer",
+      "mascotTip": "P'(x) = -0.2x + 30 = 0 -> x = 150 bộ quần áo mỗi ngày!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Doanh thu: $R(x) = 50x$.<br>• Lợi nhuận: $P(x) = R(x) - C(x) = -0.1x^2 + 30x - 100$.<br>• Đạo hàm: $P'(x) = -0.2x + 30 = 0 \\iff x = 150$.<br>• Vì $a = -0.1 < 0$ nên đồ thị là parabol đỉnh quay lên, đạt cực đại tại $x = 150$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Xưởng cần sản xuất <b>$150$ bộ quần áo mỗi ngày</b> để đạt lợi nhuận tối đa.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: BÀI TOÁN ĐỊNH GIÁ VÉ XE KHÁCH",
+      "subtitle": "GIẢM 10 NGHÌN ĐỒNG TĂNG 10 KHÁCH",
+      "startTime": 88.08,
+      "endTime": 112.99,
+      "duration": 24.91,
+      "mascotMode": "pointer",
+      "mascotTip": "Gọi x là số lần giảm 10 nghìn: Giá vé 100 - 10x, Số khách 60 + 10x!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Xe khách bán vé $100$ nghìn đồng thì có $60$ khách/chuyến. Cứ giảm giá $10$ nghìn đồng thì khách tăng thêm $10$ người. Tìm giá vé để doanh thu mỗi chuyến lớn nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b><br><i>(Doanh thu = (Giá mới) × (Số khách mới)...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "GIÁ VÉ TỐI ƯU 80 NGHÌN ĐỒNG / VÉ",
+      "startTime": 112.99,
+      "endTime": 148.34,
+      "duration": 35.35,
+      "mascotMode": "cheer",
+      "mascotTip": "R'(x) = -200x + 400 = 0 -> x = 2 -> Giá vé 80 nghìn, doanh thu 6.400 nghìn đồng!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Gọi $x$ là số lần giảm $10$ nghìn đồng ($0 < x < 10$).<br>• Giá vé: $100 - 10x$, Số khách: $60 + 10x$.<br>• Doanh thu: $R(x) = (100 - 10x)(60 + 10x) = -100x^2 + 400x + 6000$.<br>• $R'(x) = -200x + 400 = 0 \\iff x = 2$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Giá vé tối ưu là $100 - 10(2) = \\mathbf{80\\text{ nghìn đồng/vé}}$ (Doanh thu lớn nhất $6.400$ nghìn đồng).</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: TỐC ĐỘ RÒ RỈ CỦA BỂ NƯỚC",
+      "subtitle": "V'(t) = 10 - 2t (LÍT / GIỜ)",
+      "startTime": 148.34,
+      "endTime": 168.96,
+      "duration": 20.62,
+      "mascotMode": "magnifier",
+      "mascotTip": "Nước ngừng rò rỉ khi tốc độ rò rỉ V'(t) = 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Một bể chứa nước có tốc độ rò rỉ tại thời điểm $t$ giờ được mô tả bởi hàm số $V'(t) = 10 - 2t$ (lít/giờ). Hỏi sau bao nhiêu giờ kể từ khi bắt đầu thì nước ngừng rò rỉ?<div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "NƯỚC NGỪNG RÒ RỈ SAU t = 5 GIỜ",
+      "startTime": 168.96,
+      "endTime": 187.44,
+      "duration": 18.48,
+      "mascotMode": "cheer",
+      "mascotTip": "10 - 2t = 0 -> t = 5 giờ!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Nước ngừng rò rỉ khi tốc độ rò rỉ triệt tiêu: $V'(t) = 0$.<br>• Phương trình: $10 - 2t = 0 \\iff 2t = 10 \\iff t = 5\\text{ giờ}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Sau đúng <b>$5\\text{ giờ}$</b> kể từ khi bắt đầu thì bể nước hoàn toàn ngừng rò rỉ.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY TRẮC NGHIỆM VỀ SỐ NGUYÊN DƯƠNG",
+      "subtitle": "PHẦN 4: SO SÁNH GIÁ TRỊ TẠI 2 SỐ NGUYÊN LIỀN KỀ",
+      "startTime": 187.44,
+      "endTime": 204.65,
+      "duration": 17.21,
+      "mascotMode": "magnifier",
+      "mascotTip": "Sản phẩm thực tế x phải là số nguyên dương. Nghiệm thập phân phải so sánh P(15) và P(16)!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy trắc nghiệm số lượng sản phẩm nguyên:</span><br>• Sản phẩm thực tế bắt buộc $x \\in \\mathbb{N}^*$.<br>• Nếu đạo hàm ra nghiệm lẻ như $x = 15,35$, không được tự tiện làm tròn theo quy tắc số học.<br>• Bắt buộc tính thử $P(15)$ và $P(16)$, giá trị nào cho lợi nhuận lớn hơn thì chọn số lượng đó!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: ĐỈNH PARABOL TRỪ b CHIA HAI a",
+      "startTime": 204.65,
+      "endTime": 216.41,
+      "duration": 11.76,
+      "mascotMode": "cheer",
+      "mascotTip": "Hàm bậc hai y = ax² + bx + c đạt Max tại đỉnh x = -b/(2a) trong 1 giây!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo nhẩm đỉnh cực trị hàm bậc hai:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• Hàm doanh thu hoặc lợi nhuận thực tế thường có dạng parabol $y = ax^2 + bx + c$ ($a < 0$).<br>• Hoành độ đỉnh cực đại luôn là: $$x = -\\frac{b}{2a}$$<br>• Ví dụ $R(x) = -100x^2 + 400x + 6000 \\implies x = -\\frac{400}{2(-100)} = 2$ lần giảm giá!<br>• Nhẩm ra kết quả ngay tức khắc mà không cần đặt bút viết đạo hàm!</div>"
+    }
+  ]
+},
 
     bai5_muc3: {
-      lessonId: "bai5",
-      lessonTitle: "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
-      sectionId: "bai5_muc3",
-      sectionTitle: "Mục 3: Ứng dụng trong vật lý (vận tốc v(t)=s', gia tốc a(t)=v'')",
-      audioSrc: "./audio/bai5_muc3.mp3",
-      totalDuration: 280.0,
-      audio_src: "./audio/bai5_muc3.mp3",
-      timestamp_src: "timestamps/bai5_muc3.json",
-      title: "Mục 3: Ứng dụng đạo hàm trong chuyển động vật lý (Vận tốc & Gia tốc)",
-      owl_tip: "Ghi nhớ hệ thống đạo hàm 2 cấp: v(t) = s'(t) (vận tốc là đạo hàm quãng đường); a(t) = v'(t) = s''(t) (gia tốc là đạo hàm vận tốc)!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Ý nghĩa vật lý của đạo hàm", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Bài toán tìm vận tốc lớn nhất", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Thời điểm vật dừng lại hoặc đổi chiều", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy thời điểm t ≥ 0", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "Ý NGHĨA VẬT LÝ CỦA ĐẠO HÀM CẤP 1 VÀ CẤP 2",
-          subtitle: "MỤC 3 • CHUYỂN ĐỘNG THẲNG BIẾN ĐỔI",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> Vận tốc tức thời là đạo hàm bậc nhất của quãng đường; Gia tốc tức thời là đạo hàm bậc nhất của vận tốc!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              Xét chất điểm chuyển động với phương trình quãng đường $s = s(t)$ (với $t \\ge 0$ là thời gian):<br>
-              • <b>Vận tốc tức thời tại thời điểm $t$:</b><br>
-              $$v(t) = s'(t) = \\lim_{\\Delta t \\to 0} \\frac{s(t + \\Delta t) - s(t)}{\\Delta t}.$$<br>
-              • <b>Gia tốc tức thời tại thời điểm $t$:</b><br>
-              $$a(t) = v'(t) = s''(t).$$<br>
-              • <b>Vật dừng lại hoặc chuyển hướng:</b> Khi vận tốc triệt tiêu $v(t) = 0$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "VÍ DỤ TÌM VẬN TỐC LỚN NHẤT CỦA VẬT",
-          subtitle: "MỤC 3 • CHUYỂN ĐỘNG VỚI QUÃNG ĐƯỜNG BẬC BA",
-          startTime: 70.0,
-          endTime: 140.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Quy trình:</b> Muốn tìm Max của v(t), phải lấy đạo hàm của v(t) chính là gia tốc a(t) = 0!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Đề bài:</b> Một vật chuyển động theo quy luật $s(t) = -t^3 + 9t^2 + t$ ($s$ tính bằng mét, $t$ tính bằng giây). Tìm vận tốc lớn nhất của vật.
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Hàm vận tốc: $v(t) = s'(t) = -3t^2 + 18t + 1$.<br>
-              • Đây là tam thức bậc hai của $t$. Lấy đạo hàm tìm cực đại vận tốc:<br>
-              $$v'(t) = a(t) = -6t + 18 = 0 \\iff t = 3\\text{ giây}.$$<br>
-              • Tại thời điểm $t = 3\\text{s}$:<br>
-              $$v_{\\max} = v(3) = -3(3^2) + 18(3) + 1 = -27 + 54 + 1 = 28\\text{ m/s}.$$<br>
-              • <b>Kết luận:</b> Sau 3 giây kể từ lúc bắt đầu chuyển động, vật đạt vận tốc lớn nhất là $28\\text{ m/s}$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "BÀI TOÁN XÁC ĐỊNH THỜI ĐIỂM CHẠM ĐẤT",
-          subtitle: "MỤC 3 • CHUYỂN ĐỘNG RƠI CỦA VẬT THỂ",
-          startTime: 140.0,
-          endTime: 210.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Phân biệt:</b> 'Chạm đất' nghĩa là độ cao h(t) = 0; 'Đạt độ cao cực đại' nghĩa là vận tốc v(t) = 0!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Phân biệt 2 câu hỏi học sinh hay nhầm lẫn:</b>
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              Một quả bóng được ném lên cao với độ cao $h(t) = -4,9t^2 + 20t + 1$ (mét):<br>
-              • <b>Câu hỏi 1: Độ cao lớn nhất quả bóng đạt được?</b><br>
-              $\\implies$ Giải $v(t) = h'(t) = -9,8t + 20 = 0 \\iff t \\approx 2,04\\text{s}$. Thay vào $h(2,04)$ ra độ cao cực đại.<br>
-              • <b>Câu hỏi 2: Sau bao lâu quả bóng chạm đất?</b><br>
-              $\\implies$ Cho $h(t) = 0 \\iff -4,9t^2 + 20t + 1 = 0 \\implies t \\approx 4,13\\text{s}$ (loại nghiệm âm).
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY THỜI GIAN ÂM",
-          subtitle: "MỤC 3 • ĐIỀU KIỆN VẬT LÝ t ≥ 0",
-          startTime: 210.0,
-          endTime: 280.0,
-          duration: 70.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Quy ước vật lý:</b> Thời gian t tính từ mốc t = 0 không bao giờ mang giá trị âm!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Nghiệm của phương trình vận tốc hoặc quãng đường ra số âm:<br>
-              • Phương trình giải ra $t_1 = -2$ và $t_2 = 4$.<br>
-              • Tuyệt đối phải loại ngay nghiệm âm $t_1 = -2$ vì trong mô hình chuyển động thực tế, thời gian bắt đầu từ $t = 0$.<br>
-              • Chỉ nhận các giá trị $t \\ge 0$.
-            </div>
-          `
-        }
+  "lessonId": "bai5",
+  "lessonTitle": "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
+  "sectionId": "bai5_muc3",
+  "sectionTitle": "Mục 3: Ứng dụng trong Vật lý & Chuyển động",
+  "audio": "/audio/bai5_muc3.mp3",
+  "audioSrc": "./audio/bai5_muc3.mp3",
+  "audio_src": "./audio/bai5_muc3.mp3",
+  "timestamp_src": "timestamps/bai5_muc3.json",
+  "totalDuration": 233.95,
+  "duration": 233.95,
+  "title": "Mục 3: Ứng dụng trong Vật lý & Chuyển động (Vận tốc v = s', Gia tốc a = v' = s'')",
+  "owl_tip": "Hệ thống 2 tầng: v(t) = s'(t) (vận tốc là đạo hàm quãng đường); a(t) = v'(t) = s''(t) (gia tốc là đạo hàm vận tốc)!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 30.38,
+      "id": "part2"
+    },
+    {
+      "time": 46.37,
+      "id": "part3"
+    },
+    {
+      "time": 50.02,
+      "id": "vd1_q"
+    },
+    {
+      "time": 77.16,
+      "id": "vd1_a"
+    },
+    {
+      "time": 104.47,
+      "id": "vd2_q"
+    },
+    {
+      "time": 128.14,
+      "id": "vd2_a"
+    },
+    {
+      "time": 151.39,
+      "id": "vd3_q"
+    },
+    {
+      "time": 176.11,
+      "id": "vd3_a"
+    },
+    {
+      "time": 200.66,
+      "id": "part4"
+    },
+    {
+      "time": 215.54,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Ý nghĩa vật lý</h3>\n        <p>• Phương trình chuyển động: $s = s(t)$ ($t \\ge 0$).<br>\n        • Vận tốc tức thời: $v(t) = s'(t)$ (Đạo hàm quãng đường).<br>\n        • Gia tốc tức thời: $a(t) = v'(t) = s''(t)$ (Đạo hàm vận tốc, đạo hàm cấp hai quãng đường).</p>\n      </div>\n      <div id=\"part2\"><h3>2. Nguyên tắc chuyển động vật lý</h3>\n        <p>• Vật dừng lại hoặc đổi chiều: Khi vận tốc triệt tiêu $v(t) = 0$.<br>\n        • Vật đạt vận tốc cực đại / cực tiểu: Khi gia tốc $a(t) = v'(t) = 0$.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Vật chuyển động $s(t) = -t^3 + 6t^2 + 2t$. Tìm thời điểm vận tốc lớn nhất.<br><i>(Thời gian làm nháp: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Vận tốc: $v(t) = s'(t) = -3t^2 + 12t + 2$.<br>\n          + Gia tốc: $a(t) = v'(t) = -6t + 12 = 0 \\iff t = 2\\text{ giây}$.<br>\n          $\\implies$ Vận tốc lớn nhất đạt <b>$14\\text{ m/s}$</b> tại thời điểm <b>$t = 2\\text{ giây}$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Ném bóng thẳng đứng lên cao $h(t) = 20t - 5t^2$ (m). Tìm độ cao cực đại.<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Vận tốc: $v(t) = h'(t) = 20 - 10t = 0 \\iff t = 2\\text{ giây}$.<br>\n          + Độ cao cực đại: $h(2) = 20(2) - 5(2^2) = 20\\text{ mét}$.<br>\n          $\\implies$ Độ cao lớn nhất quả bóng đạt được là <b>$20\\text{ mét}$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Tàu hãm phanh $s(t) = 30t - 1.5t^2$ (m). Sau bao lâu tàu dừng hẳn và đi được bao xa?<br><i>(Thời gian làm nháp: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Vận tốc: $v(t) = s'(t) = 30 - 3t = 0 \\iff t = 10\\text{ giây}$.<br>\n          + Quãng đường: $s(10) = 30(10) - 1.5(10^2) = 150\\text{ mét}$.<br>\n          $\\implies$ Tàu dừng hẳn sau <b>$10\\text{ giây}$</b> và đi được quãng đường <b>$150\\text{ mét}$</b>.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Nhầm giữa vận tốc $v(t)=s'$ và gia tốc $a(t)=s''$. Quên điều kiện thời gian thực tế $t \\ge 0$.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Nhớ quy tắc 2 tầng: $s \\xrightarrow{\\text{đạo hàm}} v \\xrightarrow{\\text{đạo hàm}} a$. Đỉnh cao nhất hay dừng lại cho $v = 0$; Vận tốc cực đại cho $a = 0$!</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ phương pháp",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Nguyên lý cốt lõi",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 5: VẬT LÝ VÀ CHUYỂN ĐỘNG",
+      "subtitle": "PHẦN 1: Ý NGHĨA VẬT LÝ CỦA ĐẠO HÀM CẤP 1 VÀ CẤP 2",
+      "startTime": 0.0,
+      "endTime": 30.38,
+      "duration": 30.38,
+      "mascotMode": "pointer",
+      "mascotTip": "Vận tốc tức thời v(t) = s'(t). Gia tốc tức thời a(t) = v'(t) = s''(t)!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Ý nghĩa vật lý của đạo hàm</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Cho chất điểm chuyển động thẳng với phương trình quãng đường $s = s(t)$ ($t \\ge 0$):<br>• <b>Vận tốc tức thời:</b> Là đạo hàm bậc nhất của quãng đường theo thời gian:<br>$$v(t) = s'(t)$$<br>• <b>Gia tốc tức thời:</b> Là đạo hàm bậc nhất của vận tốc, hay đạo hàm bậc hai của quãng đường:<br>$$a(t) = v'(t) = s''(t)$$</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "NGUYÊN TẮC CHUYỂN ĐỘNG VẬT LÝ",
+      "subtitle": "PHẦN 2: DỪNG LẠI, ĐỔI CHIỀU VÀ VẬN TỐC CỰC ĐẠI",
+      "startTime": 30.38,
+      "endTime": 50.02,
+      "duration": 19.64,
+      "mascotMode": "pointer",
+      "mascotTip": "Dừng lại / đổi chiều: v(t) = 0. Vận tốc cực đại / cực tiểu: a(t) = 0!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các trạng thái chuyển động đặc biệt</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Vật dừng lại hoặc đổi chiều chuyển động:</b> Xảy ra khi vận tốc tức thời triệt tiêu: $$v(t) = 0$$<br>• <b>Vật đạt vận tốc lớn nhất hoặc nhỏ nhất:</b> Xảy ra khi đạo hàm của vận tốc (tức gia tốc) triệt tiêu: $$a(t) = v'(t) = 0$$<br>• <b>Chạm đất:</b> Xảy ra khi độ cao $h(t) = 0$.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: TÌM VẬN TỐC LỚN NHẤT CỦA VẬT",
+      "subtitle": "s(t) = -t³ + 6t² + 2t (M)",
+      "startTime": 50.02,
+      "endTime": 77.16,
+      "duration": 27.14,
+      "mascotMode": "pointer",
+      "mascotTip": "v(t) = s'(t) = -3t² + 12t + 2. Lấy đạo hàm v'(t) = a(t) = 0 tìm t!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Một vật chuyển động với phương trình $s(t) = -t^3 + 6t^2 + 2t$ ($s$ tính bằng mét, $t$ tính bằng giây). Tìm thời điểm $t$ mà tại đó vận tốc của vật đạt giá trị lớn nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Tính v(t), sau đó giải v'(t) = a(t) = 0...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "VẬN TỐC CỰC ĐẠI v = 14 M/S TẠI t = 2 GIÂY",
+      "startTime": 77.16,
+      "endTime": 104.47,
+      "duration": 27.31,
+      "mascotMode": "cheer",
+      "mascotTip": "a(t) = -6t + 12 = 0 -> t = 2s -> v_max = 14 m/s!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Vận tốc: $v(t) = s'(t) = -3t^2 + 12t + 2$.<br>• Gia tốc: $a(t) = v'(t) = -6t + 12 = 0 \\iff t = 2\\text{ giây}$.<br>• Tại $t = 2\\text{s}$: $v(2) = -3(2^2) + 12(2) + 2 = -12 + 24 + 2 = 14\\text{ m/s}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Sau <b>$2\\text{ giây}$</b> kể từ lúc chuyển động, vật đạt vận tốc lớn nhất là <b>$14\\text{ m/s}$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: ĐỘ CAO CỰC ĐẠI KHI NÉM BÓNG",
+      "subtitle": "h(t) = 20t - 5t² (M)",
+      "startTime": 104.47,
+      "endTime": 128.14,
+      "duration": 23.67,
+      "mascotMode": "pointer",
+      "mascotTip": "Bóng đạt đỉnh cao nhất khi vận tốc v(t) = h'(t) = 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Một quả bóng được ném thẳng đứng lên cao từ mặt đất với phương trình độ cao $h(t) = 20t - 5t^2$ (mét). Tìm độ cao cực đại mà quả bóng có thể đạt được.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b><br><i>(Cho v(t) = h'(t) = 0 tìm thời điểm đạt độ cao cực đại...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ĐỘ CAO LỚN NHẤT h = 20 MET TẠI t = 2 GIÂY",
+      "startTime": 128.14,
+      "endTime": 151.39,
+      "duration": 23.25,
+      "mascotMode": "cheer",
+      "mascotTip": "v = 20 - 10t = 0 -> t = 2s -> h_max = 20m!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Vận tốc: $v(t) = h'(t) = 20 - 10t$.<br>• Bóng đạt độ cao cực đại khi vận tốc bằng không: $20 - 10t = 0 \\iff t = 2\\text{ giây}$.<br>• Độ cao cực đại: $h(2) = 20(2) - 5(2^2) = 40 - 20 = 20\\text{ mét}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Quả bóng đạt độ cao lớn nhất là <b>$20\\text{ mét}$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: ĐOÀN TÀU HÃM PHANH",
+      "subtitle": "s(t) = 30t - 1.5t² (M)",
+      "startTime": 151.39,
+      "endTime": 176.11,
+      "duration": 24.72,
+      "mascotMode": "magnifier",
+      "mascotTip": "Tàu dừng hẳn khi vận tốc v(t) = s'(t) = 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Một đoàn tàu hãm phanh với phương trình quãng đường $s(t) = 30t - 1.5t^2$ (mét). Sau bao lâu đoàn tàu dừng hẳn và quãng đường tàu đi được là bao nhiêu?<div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÀU DỪNG SAU 10 GIÂY, ĐI ĐƯỢC 150 MÉT",
+      "startTime": 176.11,
+      "endTime": 200.66,
+      "duration": 24.55,
+      "mascotMode": "cheer",
+      "mascotTip": "v = 30 - 3t = 0 -> t = 10s -> s(10) = 150m!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Vận tốc tức thời: $v(t) = s'(t) = 30 - 3t$.<br>• Tàu dừng hẳn khi $v(t) = 0 \\iff 30 - 3t = 0 \\iff t = 10\\text{ giây}$.<br>• Quãng đường: $s(10) = 30(10) - 1.5(10^2) = 300 - 150 = 150\\text{ mét}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Đoàn tàu dừng hẳn sau <b>$10\\text{ giây}$</b> và đi được quãng đường <b>$150\\text{ mét}$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ THỜI GIAN VÀ CẤP ĐẠO HÀM",
+      "subtitle": "PHẦN 4: ĐIỀU KIỆN t ≥ 0 VÀ NHẦM LẪN GIỮA v VÀ a",
+      "startTime": 200.66,
+      "endTime": 215.54,
+      "duration": 14.88,
+      "mascotMode": "magnifier",
+      "mascotTip": "Thời gian t luôn không âm (t >= 0). Quãng đường -> v (cấp 1) -> a (cấp 2)!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi bài toán chuyển động vật lý:</span><br>1. <b>Bẫy thời gian âm:</b> Thời gian chuyển động bắt đầu từ $t = 0$. Phương trình ra nghiệm âm $t = -2$ bắt buộc phải loại bỏ ngay lập tức.<br>2. <b>Bẫy cấp đạo hàm:</b> $v(t) = s'(t)$ (đạo hàm cấp 1) còn $a(t) = s''(t)$ (đạo hàm cấp 2). Khi hỏi 'vận tốc lớn nhất' phải giải $v'(t) = a(t) = 0$, không được giải $s'(t) = 0$!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: QUY TẮC CHUYỂN DỊCH 2 TẦNG",
+      "startTime": 215.54,
+      "endTime": 233.95,
+      "duration": 18.41,
+      "mascotMode": "cheer",
+      "mascotTip": "s -> v -> a. Dừng lại / chạm đỉnh: v = 0. Vận tốc lớn nhất: a = 0!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Bí kíp nhớ nhanh sơ đồ 2 tầng:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Sơ đồ:</b> $$s(t) \\xrightarrow{\\text{Đạo hàm}} v(t) \\xrightarrow{\\text{Đạo hàm}} a(t)$$<br>• <b>Dừng lại / Độ cao lớn nhất:</b> Cho $v(t) = 0$.<br>• <b>Vận tốc lớn nhất:</b> Cho $a(t) = 0$.<br>• <b>Chạm đất:</b> Cho $h(t) = 0$.<br>Nhớ đúng 3 công thức này, giải quyết mọi bài toán vật lý trong đề thi!</div>"
+    }
+  ]
+},
 
     // =========================================================================
     // ÔN TẬP CHƯƠNG 1: ỨNG DỤNG ĐẠO HÀM (3 MỤC)
@@ -3680,5 +4018,661 @@ if(typeof window.CHAPTER1_LECTURES !== 'undefined') {
     bai4_muc2: window.CHAPTER1_DATA.bai4_muc2,
     bai4_muc3: window.CHAPTER1_DATA.bai4_muc3,
     bai4_muc4: window.CHAPTER1_DATA.bai4_muc4
+  });
+}
+
+if(typeof window.CHAPTER1_DATA === 'undefined') window.CHAPTER1_DATA = {};
+Object.assign(window.CHAPTER1_DATA, {
+  bai5_muc1: {
+  "lessonId": "bai5",
+  "lessonTitle": "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
+  "sectionId": "bai5_muc1",
+  "sectionTitle": "Mục 1: Tối ưu hóa hình học & Thể tích",
+  "audio": "/audio/bai5_muc1.mp3",
+  "audioSrc": "./audio/bai5_muc1.mp3",
+  "audio_src": "./audio/bai5_muc1.mp3",
+  "timestamp_src": "timestamps/bai5_muc1.json",
+  "totalDuration": 278.98,
+  "duration": 278.98,
+  "title": "Mục 1: Tối ưu hóa hình học & Thể tích (Hộp, diện tích, chi phí)",
+  "owl_tip": "Quy trình 4 bước: Chọn x có điều kiện -> Thiết lập hàm f(x) -> Đạo hàm & BBT -> Kết luận tối ưu!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 48.74,
+      "id": "part2"
+    },
+    {
+      "time": 66.43,
+      "id": "part3"
+    },
+    {
+      "time": 70.08,
+      "id": "vd1_q"
+    },
+    {
+      "time": 99.74,
+      "id": "vd1_a"
+    },
+    {
+      "time": 134.86,
+      "id": "vd2_q"
+    },
+    {
+      "time": 159.53,
+      "id": "vd2_a"
+    },
+    {
+      "time": 199.66,
+      "id": "vd3_q"
+    },
+    {
+      "time": 226.49,
+      "id": "vd3_a"
+    },
+    {
+      "time": 255.34,
+      "id": "part4"
+    },
+    {
+      "time": 265.56,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Quy trình 4 bước</h3>\n        <p><b>Bước 1:</b> Chọn biến số $x$ và tìm điều kiện hình học: $x \\in (a; b)$.<br>\n        <b>Bước 2:</b> Thiết lập hàm mục tiêu $f(x)$ (diện tích, thể tích, chi phí...).<br>\n        <b>Bước 3:</b> Khảo sát sự biến thiên: Tính đạo hàm $f'(x)$, tìm nghiệm, lập BBT.<br>\n        <b>Bước 4:</b> Kết luận giá trị lớn nhất / giá trị nhỏ nhất và trả lời câu hỏi.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Nguyên lý cốt lõi</h3>\n        <p>Hàm mục tiêu thực tế thường chỉ có 1 cực trị duy nhất trên $(a; b)$. Cực đại là GTLN, cực tiểu là GTNN.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Rào mảnh vườn chữ nhật 24m lưới thép sát bờ tường thẳng.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Gọi chiều rộng là $x$ ($0 < x < 12$). Chiều dài là $24 - 2x$.<br>\n          + Diện tích: $S(x) = x(24 - 2x) = -2x^2 + 24x$.<br>\n          + $S'(x) = -4x + 24 = 0 \\iff x = 6$. Chiều dài tương ứng: $12$ m.<br>\n          $\\implies$ Diện tích lớn nhất đạt <b>$72\\text{ m}^2$</b> khi rộng $6$ m, dài $12$ m.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Hộp hình trụ có nắp thể tích $V = 54\\pi\\text{ dm}^3$. Tìm bán kính $r$ để diện tích toàn phần nhỏ nhất.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + $V = \\pi r^2 h = 54\\pi \\implies h = \\frac{54}{r^2}$.<br>\n          + Diện tích toàn phần có nắp: $S(r) = 2\\pi r^2 + 2\\pi rh = 2\\pi r^2 + \\frac{108\\pi}{r}$.<br>\n          + $S'(r) = 4\\pi r - \\frac{108\\pi}{r^2} = 0 \\iff 4r^3 = 108 \\iff r^3 = 27 \\iff r = 3\\text{ dm}$.<br>\n          $\\implies$ Bán kính đáy tối ưu là <b>$r = 3\\text{ dm}$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Tấm tôn vuông $60\\text{ cm}$. Cắt 4 góc 4 hình vuông cạnh $x$ rồi gấp thành hộp không nắp.<br><i>(Thời gian làm nháp: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Chiều cao $x$ ($0 < x < 30$), đáy vuông cạnh $60 - 2x$.<br>\n          + Thể tích: $V(x) = x(60 - 2x)^2 = 4x^3 - 240x^2 + 3600x$.<br>\n          + $V'(x) = 12(x - 10)(x - 30) = 0 \\implies x = 10\\text{ cm}$.<br>\n          $\\implies$ Thể tích lớn nhất đạt <b>$16000\\text{ cm}^3$</b> khi $x = 10\\text{ cm}$.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Quên đặt điều kiện cho biến $x$, hoặc nhầm lẫn giữa hộp có nắp (2 đáy) và không nắp (1 đáy).</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Dùng BĐT Cô-si cho tích biến thiên $4x(60-2x)(60-2x)$ để nhẩm nhanh nghiệm cực trị trong 3 giây!</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ phương pháp",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Nguyên lý cốt lõi",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 5: TỐI ƯU HÓA HÌNH HỌC",
+      "subtitle": "PHẦN 1: QUY TRÌNH 4 BƯỚC GIẢI TOÁN THỰC TẾ",
+      "startTime": 0.0,
+      "endTime": 48.74,
+      "duration": 48.74,
+      "mascotMode": "pointer",
+      "mascotTip": "4 bước chuẩn: Chọn biến x và tìm ĐK -> Lập hàm f(x) -> Đạo hàm f'(x) & BBT -> Kết luận!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Quy trình 4 bước giải bài toán tối ưu hình học</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Chọn biến số thích hợp $x$ và xác định miền giá trị thực tế của $x$ ($a < x < b$).<br>• <b>Bước 2:</b> Thiết lập hàm mục tiêu $y = f(x)$ biểu thị đại lượng cần tối ưu (thể tích, diện tích, chi phí...).<br>• <b>Bước 3:</b> Khảo sát sự biến thiên của $f(x)$ trên $(a; b)$: Tính đạo hàm $f'(x)$, giải $f'(x) = 0$ và lập bảng biến thiên.<br>• <b>Bước 4:</b> Kết luận giá trị lớn nhất hoặc giá trị nhỏ nhất và trả lời đúng câu hỏi của bài toán.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "NGUYÊN LÝ CỐT LÕI TOÁN THỰC TẾ",
+      "subtitle": "PHẦN 2: ĐIỂM CỰC TRỊ DUY NHẤT LÀ GIÁ TRỊ TỐI ƯU",
+      "startTime": 48.74,
+      "endTime": 70.08,
+      "duration": 21.34,
+      "mascotMode": "pointer",
+      "mascotTip": "Hàm thực tế trên khoảng xác định thường chỉ có 1 cực trị duy nhất: Cực đại = GTLN, Cực tiểu = GTNN!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Nguyên lý một điểm cực trị duy nhất</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• Trong đại đa số bài toán thực tế, hàm số mục tiêu $y = f(x)$ liên tục trên khoảng $(a; b)$ và phương trình $f'(x) = 0$ chỉ có <b>duy nhất một nghiệm</b> $x_0 \\in (a; b)$.<br>• Khi đó:<br>&emsp;+ Nếu $x_0$ là điểm cực đại $\\implies \\max_{(a; b)} f(x) = f(x_0)$.<br>&emsp;+ Nếu $x_0$ là điểm cực tiểu $\\implies \\min_{(a; b)} f(x) = f(x_0)$.<br>• Không cần so sánh với hai đầu mút, giúp kết luận cực kỳ nhanh chóng!</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: RÀO VƯỜN DIỆN TÍCH LỚN NHẤT",
+      "subtitle": "24M LƯỚI THÉP SÁT BỜ TƯỜNG",
+      "startTime": 70.08,
+      "endTime": 99.74,
+      "duration": 29.66,
+      "mascotMode": "pointer",
+      "mascotTip": "Gọi chiều rộng là x (0 < x < 12) -> Chiều dài rào lưới là 24 - 2x. Diện tích S = x(24 - 2x)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Một nông dân có $24\\text{ m}$ lưới thép muốn rào mảnh vườn hình chữ nhật sát bức tường thẳng (bờ tường không cần rào). Tìm kích thước để diện tích mảnh vườn lớn nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Gọi chiều rộng là x, lập hàm diện tích S(x)...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "DIỆN TÍCH LỚN NHẤT S = 72 M² KHI RỘNG 6M, DÀI 12M",
+      "startTime": 99.74,
+      "endTime": 134.86,
+      "duration": 35.12,
+      "mascotMode": "cheer",
+      "mascotTip": "S' = -4x + 24 = 0 -> x = 6m -> Dài 12m, S_max = 72m²!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Gọi chiều rộng là $x$ ($0 < x < 12$). Chiều dài mảnh vườn là $24 - 2x$.<br>• Diện tích: $S(x) = x(24 - 2x) = -2x^2 + 24x$.<br>• Đạo hàm: $S'(x) = -4x + 24 = 0 \\iff x = 6\\text{ m}$.<br>• Chiều dài tương ứng: $24 - 2(6) = 12\\text{ m}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Diện tích lớn nhất là <b>$72\\text{ m}^2$</b> khi chiều rộng là $6\\text{ m}$ và chiều dài là $12\\text{ m}$.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: HỘP HÌNH TRỤ TIẾT KIỆM VẬT LIỆU",
+      "subtitle": "THỂ TÍCH V = 54π DM³",
+      "startTime": 134.86,
+      "endTime": 159.53,
+      "duration": 24.67,
+      "mascotMode": "pointer",
+      "mascotTip": "Hộp có nắp: S = 2πr² + 2πrh. Thay h = 54/r² vào tìm r!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Làm chiếc hộp hình trụ có nắp thể tích $V = 54\\pi\\text{ dm}^3$. Tìm bán kính đáy $r$ để diện tích toàn phần của hộp nhỏ nhất nhằm tiết kiệm vật liệu nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b><br><i>(Biểu diễn h theo r rồi lập hàm diện tích toàn phần...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "BÁN KÍNH TỐI ƯU r = 3 DM",
+      "startTime": 159.53,
+      "endTime": 199.66,
+      "duration": 40.13,
+      "mascotMode": "cheer",
+      "mascotTip": "S' = 4πr - 108π/r² = 0 -> 4r³ = 108 -> r³ = 27 -> r = 3 dm!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• $V = \\pi r^2 h = 54\\pi \\implies h = \\frac{54}{r^2}$.<br>• Diện tích toàn phần có nắp: $S(r) = 2\\pi r^2 + 2\\pi rh = 2\\pi r^2 + \\frac{108\\pi}{r}$.<br>• Đạo hàm: $S'(r) = 4\\pi r - \\frac{108\\pi}{r^2} = 0 \\iff 4r^3 = 108 \\iff r^3 = 27 \\iff r = 3\\text{ dm}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Bán kính đáy bằng <b>$3\\text{ dm}$</b> thì tiết kiệm vật liệu nhất.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: GẤP HỘP THỂ TÍCH CỰC ĐẠI",
+      "subtitle": "TẤM TÔN VUÔNG CẠNH 60 CM, CẮT 4 GÓC CẠNH x",
+      "startTime": 199.66,
+      "endTime": 226.49,
+      "duration": 26.83,
+      "mascotMode": "magnifier",
+      "mascotTip": "Đáy hộp là hình vuông cạnh 60 - 2x, chiều cao x. ĐK: 0 < x < 30!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Một tấm tôn hình vuông cạnh $60\\text{ cm}$. Cắt $4$ góc $4$ hình vuông cạnh $x$ rồi gấp lại thành chiếc hộp không nắp. Tìm $x$ để thể tích hộp lớn nhất.<div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "x = 10 CM -> THỂ TÍCH CỰC ĐẠI V = 16000 CM³",
+      "startTime": 226.49,
+      "endTime": 255.34,
+      "duration": 28.85,
+      "mascotMode": "cheer",
+      "mascotTip": "V' = 12(x - 10)(x - 30) = 0 -> x = 10 cm -> V_max = 10 * 40² = 16000 cm³!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Điều kiện: $0 < x < 30$. Đáy hộp cạnh $60 - 2x$, chiều cao $x$.<br>• Thể tích: $V(x) = x(60 - 2x)^2 = 4x^3 - 240x^2 + 3600x$.<br>• $V'(x) = 12x^2 - 480x + 3600 = 12(x - 10)(x - 30) = 0 \\implies x = 10\\text{ cm}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Khi <b>$x = 10\\text{ cm}$</b> thì thể tích hộp lớn nhất, đạt <b>$16000\\text{ cm}^3$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ ĐIỀU KIỆN HÌNH HỌC",
+      "subtitle": "PHẦN 4: QUÊN ĐIỀU KIỆN VÀ NHẦM LẪN CÓ NẮP / KHÔNG NẮP",
+      "startTime": 255.34,
+      "endTime": 265.56,
+      "duration": 10.22,
+      "mascotMode": "magnifier",
+      "mascotTip": "Hộp không nắp chỉ có 1 đáy (πr²), có nắp có 2 đáy (2πr²). Luôn kiểm tra điều kiện x!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi bài toán tối ưu hình học:</span><br>1. <b>Bẫy điều kiện biến số:</b> Tấm tôn cạnh $60\\text{ cm}$ thì bắt buộc $0 < x < 30$. Nếu không đặt điều kiện, học sinh dễ chọn nhầm nghiệm $x = 30$ (khi đó thể tích bằng $0$).<br>2. <b>Bẫy số đáy hình trụ:</b> Đọc thật kỹ đề: Hộp 'không nắp' chỉ có $1$ đáy ($S_{tp} = \\pi r^2 + 2\\pi rh$), hộp 'có nắp' có $2$ đáy ($S_{tp} = 2\\pi r^2 + 2\\pi rh$).</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: ÁP DỤNG BĐT CÔ-SI ĐỂ NHẨM CỰC NHANH",
+      "startTime": 265.56,
+      "endTime": 278.98,
+      "duration": 13.42,
+      "mascotMode": "cheer",
+      "mascotTip": "Tích 4x*(60-2x)*(60-2x) đạt Max khi 4x = 60-2x -> 6x = 60 -> x = 10 trong 2 giây!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo giải nhanh BĐT Cô-si cho bài toán thể tích:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• Với biểu thức $V = x(60 - 2x)^2$, ta nhân $4$ vào hai vế:<br>$$4V = 4x(60 - 2x)(60 - 2x) \\le \\left(\\frac{4x + (60 - 2x) + (60 - 2x)}{3}\\right)^3 = 40^3 = 64000$$<br>• Dấu bằng xảy ra khi $4x = 60 - 2x \\iff 6x = 60 \\iff \\mathbf{x = 10\\text{ cm}}$!<br>• Không cần đạo hàm, nhẩm ra đáp số chính xác chỉ trong 3 giây!</div>"
+    }
+  ]
+},
+  bai5_muc2: {
+  "lessonId": "bai5",
+  "lessonTitle": "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
+  "sectionId": "bai5_muc2",
+  "sectionTitle": "Mục 2: Tối ưu hóa kinh tế & Lợi nhuận",
+  "audio": "/audio/bai5_muc2.mp3",
+  "audioSrc": "./audio/bai5_muc2.mp3",
+  "audio_src": "./audio/bai5_muc2.mp3",
+  "timestamp_src": "timestamps/bai5_muc2.json",
+  "totalDuration": 216.41,
+  "duration": 216.41,
+  "title": "Mục 2: Tối ưu hóa kinh tế & Lợi nhuận (Hàm doanh thu, chi phí, lợi nhuận)",
+  "owl_tip": "Quy tắc kinh tế: P(x) = R(x) - C(x). Điểm tối ưu lợi nhuận khi Doanh thu biên = Chi phí biên (R' = C')!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 35.88,
+      "id": "part2"
+    },
+    {
+      "time": 48.7,
+      "id": "part3"
+    },
+    {
+      "time": 52.39,
+      "id": "vd1_q"
+    },
+    {
+      "time": 82.2,
+      "id": "vd1_a"
+    },
+    {
+      "time": 88.08,
+      "id": "vd2_q"
+    },
+    {
+      "time": 112.99,
+      "id": "vd2_a"
+    },
+    {
+      "time": 148.34,
+      "id": "vd3_q"
+    },
+    {
+      "time": 168.96,
+      "id": "vd3_a"
+    },
+    {
+      "time": 187.44,
+      "id": "part4"
+    },
+    {
+      "time": 204.65,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Các đại lượng biên</h3>\n        <p>• Số lượng sản phẩm: $x \\ge 0$.<br>\n        • Doanh thu: $R(x) = x \\cdot p(x)$ (Số lượng $\\times$ Đơn giá).<br>\n        • Lợi nhuận: $P(x) = R(x) - C(x)$ (Doanh thu $-$ Chi phí).<br>\n        • Đại lượng biên: Chi phí biên $C'(x)$, Doanh thu biên $R'(x)$, Lợi nhuận biên $P'(x)$.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Nguyên tắc tối đa hóa lợi nhuận</h3>\n        <p>Lợi nhuận đạt cực đại khi $P'(x) = 0 \\iff R'(x) = C'(x)$ (Doanh thu biên bằng Chi phí biên).</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ thực hành</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Chi phí $C(x) = 100 + 20x + 0.1x^2$, Giá bán $50$ nghìn đồng/bộ. Tìm $x$ để lợi nhuận cao nhất.<br><i>(Thời gian nháp: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Doanh thu: $R(x) = 50x$.<br>\n          + Lợi nhuận: $P(x) = R(x) - C(x) = -0.1x^2 + 30x - 100$.<br>\n          + $P'(x) = -0.2x + 30 = 0 \\iff x = 150$.<br>\n          $\\implies$ Sản xuất <b>$150$ bộ quần áo/ngày</b> để đạt lợi nhuận tối đa.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Giá vé $100$ nghìn thì có $60$ khách. Cứ giảm $10$ nghìn thì tăng $10$ khách. Tìm giá vé tối ưu.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Gọi $x$ là số lần giảm $10$ nghìn đồng ($0 < x < 10$).<br>\n          + Giá mới: $100 - 10x$, Số khách mới: $60 + 10x$.<br>\n          + Doanh thu: $R(x) = (100 - 10x)(60 + 10x) = -100x^2 + 400x + 6000$.<br>\n          + $R'(x) = -200x + 400 = 0 \\iff x = 2$.<br>\n          $\\implies$ Giảm $20$ nghìn, giá vé tối ưu là <b>$80$ nghìn đồng/vé</b> (Doanh thu lớn nhất $6.400$ nghìn đồng).\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Bể nước rò rỉ với tốc độ $V'(t) = 10 - 2t$ (lít/giờ). Sau bao lâu nước ngừng rò rỉ?<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          Nước ngừng rò rỉ khi tốc độ rò rỉ triệt tiêu: $V'(t) = 0 \\iff 10 - 2t = 0 \\iff t = 5\\text{ giờ}$.<br>\n          $\\implies$ Sau đúng <b>$5$ giờ</b> thì bể nước hoàn toàn ngừng rò rỉ.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy trắc nghiệm</h3><p>Số lượng sản phẩm $x \\in \\mathbb{N}^*$. Khi ra nghiệm thập phân, phải so sánh lợi nhuận tại 2 số nguyên liền kề chứ không làm tròn tự do.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Với tam thức bậc hai $y = ax^2 + bx + c$, đỉnh parabol $x = -b/(2a)$ cho ngay số lượng hoặc mức giá tối ưu trong 2 giây!</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ phương pháp",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Nguyên lý cốt lõi",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 5: TỐI ƯU HÓA KINH TẾ",
+      "subtitle": "PHẦN 1: DOANH THU, CHI PHÍ VÀ CÁC ĐẠI LƯỢNG BIÊN",
+      "startTime": 0.0,
+      "endTime": 35.88,
+      "duration": 35.88,
+      "mascotMode": "pointer",
+      "mascotTip": "R(x) = x*p(x), P(x) = R(x) - C(x). Đạo hàm của hàm tổng được gọi là đại lượng 'biên'!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Các hàm số kinh tế cơ bản</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Gọi $x$ là số lượng sản phẩm ($x \\ge 0$):<br>• <b>Hàm doanh thu:</b> $R(x) = x \\cdot p(x)$ (Số lượng nhân đơn giá).<br>• <b>Hàm chi phí:</b> $C(x)$ là tổng chi phí sản xuất $x$ sản phẩm.<br>• <b>Hàm lợi nhuận:</b> $P(x) = R(x) - C(x)$ (Doanh thu trừ Chi phí).<br>• <b>Khái niệm biên (Marginal):</b> Đạo hàm biểu thị tốc độ thay đổi khi tăng thêm 1 đơn vị sản phẩm:<br>&emsp;+ $C'(x)$: Chi phí biên.<br>&emsp;+ $R'(x)$: Doanh thu biên.<br>&emsp;+ $P'(x)$: Lợi nhuận biên.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "NGUYÊN TẮC TỐI ĐA HÓA LỢI NHUẬN",
+      "subtitle": "PHẦN 2: DOANH THU BIÊN BẰNG CHI PHÍ BIÊN",
+      "startTime": 35.88,
+      "endTime": 52.39,
+      "duration": 16.51,
+      "mascotMode": "pointer",
+      "mascotTip": "Lợi nhuận P(x) cực đại khi P'(x) = 0, tức R'(x) = C'(x)!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Nguyên tắc tối đa hóa lợi nhuận</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• Để tối đa hóa lợi nhuận, doanh nghiệp cần tìm $x$ sao cho $P(x)$ đạt giá trị lớn nhất.<br>• Điều kiện cần: Đạo hàm lợi nhuận biên triệt tiêu:<br>$$P'(x) = 0 \\iff R'(x) - C'(x) = 0 \\iff \\mathbf{R'(x) = C'(x)}$$<br>• <b>Ý nghĩa kinh tế:</b> Khi sản xuất đến mức mà việc làm thêm một sản phẩm mang lại doanh thu bằng đúng chi phí bỏ ra, lợi nhuận toàn doanh nghiệp đạt cực đại.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: TÌM SỐ SẢN PHẨM LỢI NHUẬN CAO NHẤT",
+      "subtitle": "XƯỞNG MAY SẢN XUẤT ÁO",
+      "startTime": 52.39,
+      "endTime": 82.2,
+      "duration": 29.81,
+      "mascotMode": "pointer",
+      "mascotTip": "C(x) = 100 + 20x + 0.1x², Giá bán 50 -> R(x) = 50x. Lợi nhuận P(x) = R(x) - C(x)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Một xưởng may sản xuất $x$ bộ quần áo mỗi ngày với hàm chi phí $C(x) = 100 + 20x + 0.1x^2$ (nghìn đồng). Giá bán mỗi bộ là $50$ nghìn đồng. Tìm $x$ để lợi nhuận mỗi ngày cao nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Lập hàm P(x) = 50x - C(x), giải P'(x) = 0...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "SẢN XUẤT 150 BỘ QUẦN ÁO ĐỂ LỢI NHUẬN TỐI ĐA",
+      "startTime": 82.2,
+      "endTime": 88.08,
+      "duration": 5.88,
+      "mascotMode": "cheer",
+      "mascotTip": "P'(x) = -0.2x + 30 = 0 -> x = 150 bộ quần áo mỗi ngày!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Doanh thu: $R(x) = 50x$.<br>• Lợi nhuận: $P(x) = R(x) - C(x) = -0.1x^2 + 30x - 100$.<br>• Đạo hàm: $P'(x) = -0.2x + 30 = 0 \\iff x = 150$.<br>• Vì $a = -0.1 < 0$ nên đồ thị là parabol đỉnh quay lên, đạt cực đại tại $x = 150$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Xưởng cần sản xuất <b>$150$ bộ quần áo mỗi ngày</b> để đạt lợi nhuận tối đa.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: BÀI TOÁN ĐỊNH GIÁ VÉ XE KHÁCH",
+      "subtitle": "GIẢM 10 NGHÌN ĐỒNG TĂNG 10 KHÁCH",
+      "startTime": 88.08,
+      "endTime": 112.99,
+      "duration": 24.91,
+      "mascotMode": "pointer",
+      "mascotTip": "Gọi x là số lần giảm 10 nghìn: Giá vé 100 - 10x, Số khách 60 + 10x!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Xe khách bán vé $100$ nghìn đồng thì có $60$ khách/chuyến. Cứ giảm giá $10$ nghìn đồng thì khách tăng thêm $10$ người. Tìm giá vé để doanh thu mỗi chuyến lớn nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b><br><i>(Doanh thu = (Giá mới) × (Số khách mới)...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "GIÁ VÉ TỐI ƯU 80 NGHÌN ĐỒNG / VÉ",
+      "startTime": 112.99,
+      "endTime": 148.34,
+      "duration": 35.35,
+      "mascotMode": "cheer",
+      "mascotTip": "R'(x) = -200x + 400 = 0 -> x = 2 -> Giá vé 80 nghìn, doanh thu 6.400 nghìn đồng!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Gọi $x$ là số lần giảm $10$ nghìn đồng ($0 < x < 10$).<br>• Giá vé: $100 - 10x$, Số khách: $60 + 10x$.<br>• Doanh thu: $R(x) = (100 - 10x)(60 + 10x) = -100x^2 + 400x + 6000$.<br>• $R'(x) = -200x + 400 = 0 \\iff x = 2$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Giá vé tối ưu là $100 - 10(2) = \\mathbf{80\\text{ nghìn đồng/vé}}$ (Doanh thu lớn nhất $6.400$ nghìn đồng).</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: TỐC ĐỘ RÒ RỈ CỦA BỂ NƯỚC",
+      "subtitle": "V'(t) = 10 - 2t (LÍT / GIỜ)",
+      "startTime": 148.34,
+      "endTime": 168.96,
+      "duration": 20.62,
+      "mascotMode": "magnifier",
+      "mascotTip": "Nước ngừng rò rỉ khi tốc độ rò rỉ V'(t) = 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Một bể chứa nước có tốc độ rò rỉ tại thời điểm $t$ giờ được mô tả bởi hàm số $V'(t) = 10 - 2t$ (lít/giờ). Hỏi sau bao nhiêu giờ kể từ khi bắt đầu thì nước ngừng rò rỉ?<div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "NƯỚC NGỪNG RÒ RỈ SAU t = 5 GIỜ",
+      "startTime": 168.96,
+      "endTime": 187.44,
+      "duration": 18.48,
+      "mascotMode": "cheer",
+      "mascotTip": "10 - 2t = 0 -> t = 5 giờ!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Nước ngừng rò rỉ khi tốc độ rò rỉ triệt tiêu: $V'(t) = 0$.<br>• Phương trình: $10 - 2t = 0 \\iff 2t = 10 \\iff t = 5\\text{ giờ}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Sau đúng <b>$5\\text{ giờ}$</b> kể từ khi bắt đầu thì bể nước hoàn toàn ngừng rò rỉ.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY TRẮC NGHIỆM VỀ SỐ NGUYÊN DƯƠNG",
+      "subtitle": "PHẦN 4: SO SÁNH GIÁ TRỊ TẠI 2 SỐ NGUYÊN LIỀN KỀ",
+      "startTime": 187.44,
+      "endTime": 204.65,
+      "duration": 17.21,
+      "mascotMode": "magnifier",
+      "mascotTip": "Sản phẩm thực tế x phải là số nguyên dương. Nghiệm thập phân phải so sánh P(15) và P(16)!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy trắc nghiệm số lượng sản phẩm nguyên:</span><br>• Sản phẩm thực tế bắt buộc $x \\in \\mathbb{N}^*$.<br>• Nếu đạo hàm ra nghiệm lẻ như $x = 15,35$, không được tự tiện làm tròn theo quy tắc số học.<br>• Bắt buộc tính thử $P(15)$ và $P(16)$, giá trị nào cho lợi nhuận lớn hơn thì chọn số lượng đó!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: ĐỈNH PARABOL TRỪ b CHIA HAI a",
+      "startTime": 204.65,
+      "endTime": 216.41,
+      "duration": 11.76,
+      "mascotMode": "cheer",
+      "mascotTip": "Hàm bậc hai y = ax² + bx + c đạt Max tại đỉnh x = -b/(2a) trong 1 giây!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo nhẩm đỉnh cực trị hàm bậc hai:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• Hàm doanh thu hoặc lợi nhuận thực tế thường có dạng parabol $y = ax^2 + bx + c$ ($a < 0$).<br>• Hoành độ đỉnh cực đại luôn là: $$x = -\\frac{b}{2a}$$<br>• Ví dụ $R(x) = -100x^2 + 400x + 6000 \\implies x = -\\frac{400}{2(-100)} = 2$ lần giảm giá!<br>• Nhẩm ra kết quả ngay tức khắc mà không cần đặt bút viết đạo hàm!</div>"
+    }
+  ]
+},
+  bai5_muc3: {
+  "lessonId": "bai5",
+  "lessonTitle": "Bài 5: Ứng dụng đạo hàm giải quyết bài toán thực tiễn",
+  "sectionId": "bai5_muc3",
+  "sectionTitle": "Mục 3: Ứng dụng trong Vật lý & Chuyển động",
+  "audio": "/audio/bai5_muc3.mp3",
+  "audioSrc": "./audio/bai5_muc3.mp3",
+  "audio_src": "./audio/bai5_muc3.mp3",
+  "timestamp_src": "timestamps/bai5_muc3.json",
+  "totalDuration": 233.95,
+  "duration": 233.95,
+  "title": "Mục 3: Ứng dụng trong Vật lý & Chuyển động (Vận tốc v = s', Gia tốc a = v' = s'')",
+  "owl_tip": "Hệ thống 2 tầng: v(t) = s'(t) (vận tốc là đạo hàm quãng đường); a(t) = v'(t) = s''(t) (gia tốc là đạo hàm vận tốc)!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 30.38,
+      "id": "part2"
+    },
+    {
+      "time": 46.37,
+      "id": "part3"
+    },
+    {
+      "time": 50.02,
+      "id": "vd1_q"
+    },
+    {
+      "time": 77.16,
+      "id": "vd1_a"
+    },
+    {
+      "time": 104.47,
+      "id": "vd2_q"
+    },
+    {
+      "time": 128.14,
+      "id": "vd2_a"
+    },
+    {
+      "time": 151.39,
+      "id": "vd3_q"
+    },
+    {
+      "time": 176.11,
+      "id": "vd3_a"
+    },
+    {
+      "time": 200.66,
+      "id": "part4"
+    },
+    {
+      "time": 215.54,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Ý nghĩa vật lý</h3>\n        <p>• Phương trình chuyển động: $s = s(t)$ ($t \\ge 0$).<br>\n        • Vận tốc tức thời: $v(t) = s'(t)$ (Đạo hàm quãng đường).<br>\n        • Gia tốc tức thời: $a(t) = v'(t) = s''(t)$ (Đạo hàm vận tốc, đạo hàm cấp hai quãng đường).</p>\n      </div>\n      <div id=\"part2\"><h3>2. Nguyên tắc chuyển động vật lý</h3>\n        <p>• Vật dừng lại hoặc đổi chiều: Khi vận tốc triệt tiêu $v(t) = 0$.<br>\n        • Vật đạt vận tốc cực đại / cực tiểu: Khi gia tốc $a(t) = v'(t) = 0$.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Vật chuyển động $s(t) = -t^3 + 6t^2 + 2t$. Tìm thời điểm vận tốc lớn nhất.<br><i>(Thời gian làm nháp: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Vận tốc: $v(t) = s'(t) = -3t^2 + 12t + 2$.<br>\n          + Gia tốc: $a(t) = v'(t) = -6t + 12 = 0 \\iff t = 2\\text{ giây}$.<br>\n          $\\implies$ Vận tốc lớn nhất đạt <b>$14\\text{ m/s}$</b> tại thời điểm <b>$t = 2\\text{ giây}$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Ném bóng thẳng đứng lên cao $h(t) = 20t - 5t^2$ (m). Tìm độ cao cực đại.<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Vận tốc: $v(t) = h'(t) = 20 - 10t = 0 \\iff t = 2\\text{ giây}$.<br>\n          + Độ cao cực đại: $h(2) = 20(2) - 5(2^2) = 20\\text{ mét}$.<br>\n          $\\implies$ Độ cao lớn nhất quả bóng đạt được là <b>$20\\text{ mét}$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Tàu hãm phanh $s(t) = 30t - 1.5t^2$ (m). Sau bao lâu tàu dừng hẳn và đi được bao xa?<br><i>(Thời gian làm nháp: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + Vận tốc: $v(t) = s'(t) = 30 - 3t = 0 \\iff t = 10\\text{ giây}$.<br>\n          + Quãng đường: $s(10) = 30(10) - 1.5(10^2) = 150\\text{ mét}$.<br>\n          $\\implies$ Tàu dừng hẳn sau <b>$10\\text{ giây}$</b> và đi được quãng đường <b>$150\\text{ mét}$</b>.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Nhầm giữa vận tốc $v(t)=s'$ và gia tốc $a(t)=s''$. Quên điều kiện thời gian thực tế $t \\ge 0$.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Nhớ quy tắc 2 tầng: $s \\xrightarrow{\\text{đạo hàm}} v \\xrightarrow{\\text{đạo hàm}} a$. Đỉnh cao nhất hay dừng lại cho $v = 0$; Vận tốc cực đại cho $a = 0$!</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ phương pháp",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Nguyên lý cốt lõi",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 5: VẬT LÝ VÀ CHUYỂN ĐỘNG",
+      "subtitle": "PHẦN 1: Ý NGHĨA VẬT LÝ CỦA ĐẠO HÀM CẤP 1 VÀ CẤP 2",
+      "startTime": 0.0,
+      "endTime": 30.38,
+      "duration": 30.38,
+      "mascotMode": "pointer",
+      "mascotTip": "Vận tốc tức thời v(t) = s'(t). Gia tốc tức thời a(t) = v'(t) = s''(t)!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Ý nghĩa vật lý của đạo hàm</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Cho chất điểm chuyển động thẳng với phương trình quãng đường $s = s(t)$ ($t \\ge 0$):<br>• <b>Vận tốc tức thời:</b> Là đạo hàm bậc nhất của quãng đường theo thời gian:<br>$$v(t) = s'(t)$$<br>• <b>Gia tốc tức thời:</b> Là đạo hàm bậc nhất của vận tốc, hay đạo hàm bậc hai của quãng đường:<br>$$a(t) = v'(t) = s''(t)$$</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "NGUYÊN TẮC CHUYỂN ĐỘNG VẬT LÝ",
+      "subtitle": "PHẦN 2: DỪNG LẠI, ĐỔI CHIỀU VÀ VẬN TỐC CỰC ĐẠI",
+      "startTime": 30.38,
+      "endTime": 50.02,
+      "duration": 19.64,
+      "mascotMode": "pointer",
+      "mascotTip": "Dừng lại / đổi chiều: v(t) = 0. Vận tốc cực đại / cực tiểu: a(t) = 0!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các trạng thái chuyển động đặc biệt</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Vật dừng lại hoặc đổi chiều chuyển động:</b> Xảy ra khi vận tốc tức thời triệt tiêu: $$v(t) = 0$$<br>• <b>Vật đạt vận tốc lớn nhất hoặc nhỏ nhất:</b> Xảy ra khi đạo hàm của vận tốc (tức gia tốc) triệt tiêu: $$a(t) = v'(t) = 0$$<br>• <b>Chạm đất:</b> Xảy ra khi độ cao $h(t) = 0$.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: TÌM VẬN TỐC LỚN NHẤT CỦA VẬT",
+      "subtitle": "s(t) = -t³ + 6t² + 2t (M)",
+      "startTime": 50.02,
+      "endTime": 77.16,
+      "duration": 27.14,
+      "mascotMode": "pointer",
+      "mascotTip": "v(t) = s'(t) = -3t² + 12t + 2. Lấy đạo hàm v'(t) = a(t) = 0 tìm t!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Một vật chuyển động với phương trình $s(t) = -t^3 + 6t^2 + 2t$ ($s$ tính bằng mét, $t$ tính bằng giây). Tìm thời điểm $t$ mà tại đó vận tốc của vật đạt giá trị lớn nhất.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Tính v(t), sau đó giải v'(t) = a(t) = 0...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "VẬN TỐC CỰC ĐẠI v = 14 M/S TẠI t = 2 GIÂY",
+      "startTime": 77.16,
+      "endTime": 104.47,
+      "duration": 27.31,
+      "mascotMode": "cheer",
+      "mascotTip": "a(t) = -6t + 12 = 0 -> t = 2s -> v_max = 14 m/s!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Vận tốc: $v(t) = s'(t) = -3t^2 + 12t + 2$.<br>• Gia tốc: $a(t) = v'(t) = -6t + 12 = 0 \\iff t = 2\\text{ giây}$.<br>• Tại $t = 2\\text{s}$: $v(2) = -3(2^2) + 12(2) + 2 = -12 + 24 + 2 = 14\\text{ m/s}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Sau <b>$2\\text{ giây}$</b> kể từ lúc chuyển động, vật đạt vận tốc lớn nhất là <b>$14\\text{ m/s}$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: ĐỘ CAO CỰC ĐẠI KHI NÉM BÓNG",
+      "subtitle": "h(t) = 20t - 5t² (M)",
+      "startTime": 104.47,
+      "endTime": 128.14,
+      "duration": 23.67,
+      "mascotMode": "pointer",
+      "mascotTip": "Bóng đạt đỉnh cao nhất khi vận tốc v(t) = h'(t) = 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Một quả bóng được ném thẳng đứng lên cao từ mặt đất với phương trình độ cao $h(t) = 20t - 5t^2$ (mét). Tìm độ cao cực đại mà quả bóng có thể đạt được.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b><br><i>(Cho v(t) = h'(t) = 0 tìm thời điểm đạt độ cao cực đại...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ĐỘ CAO LỚN NHẤT h = 20 MET TẠI t = 2 GIÂY",
+      "startTime": 128.14,
+      "endTime": 151.39,
+      "duration": 23.25,
+      "mascotMode": "cheer",
+      "mascotTip": "v = 20 - 10t = 0 -> t = 2s -> h_max = 20m!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Vận tốc: $v(t) = h'(t) = 20 - 10t$.<br>• Bóng đạt độ cao cực đại khi vận tốc bằng không: $20 - 10t = 0 \\iff t = 2\\text{ giây}$.<br>• Độ cao cực đại: $h(2) = 20(2) - 5(2^2) = 40 - 20 = 20\\text{ mét}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Quả bóng đạt độ cao lớn nhất là <b>$20\\text{ mét}$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: ĐOÀN TÀU HÃM PHANH",
+      "subtitle": "s(t) = 30t - 1.5t² (M)",
+      "startTime": 151.39,
+      "endTime": 176.11,
+      "duration": 24.72,
+      "mascotMode": "magnifier",
+      "mascotTip": "Tàu dừng hẳn khi vận tốc v(t) = s'(t) = 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Một đoàn tàu hãm phanh với phương trình quãng đường $s(t) = 30t - 1.5t^2$ (mét). Sau bao lâu đoàn tàu dừng hẳn và quãng đường tàu đi được là bao nhiêu?<div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÀU DỪNG SAU 10 GIÂY, ĐI ĐƯỢC 150 MÉT",
+      "startTime": 176.11,
+      "endTime": 200.66,
+      "duration": 24.55,
+      "mascotMode": "cheer",
+      "mascotTip": "v = 30 - 3t = 0 -> t = 10s -> s(10) = 150m!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Vận tốc tức thời: $v(t) = s'(t) = 30 - 3t$.<br>• Tàu dừng hẳn khi $v(t) = 0 \\iff 30 - 3t = 0 \\iff t = 10\\text{ giây}$.<br>• Quãng đường: $s(10) = 30(10) - 1.5(10^2) = 300 - 150 = 150\\text{ mét}$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Đoàn tàu dừng hẳn sau <b>$10\\text{ giây}$</b> và đi được quãng đường <b>$150\\text{ mét}$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ THỜI GIAN VÀ CẤP ĐẠO HÀM",
+      "subtitle": "PHẦN 4: ĐIỀU KIỆN t ≥ 0 VÀ NHẦM LẪN GIỮA v VÀ a",
+      "startTime": 200.66,
+      "endTime": 215.54,
+      "duration": 14.88,
+      "mascotMode": "magnifier",
+      "mascotTip": "Thời gian t luôn không âm (t >= 0). Quãng đường -> v (cấp 1) -> a (cấp 2)!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi bài toán chuyển động vật lý:</span><br>1. <b>Bẫy thời gian âm:</b> Thời gian chuyển động bắt đầu từ $t = 0$. Phương trình ra nghiệm âm $t = -2$ bắt buộc phải loại bỏ ngay lập tức.<br>2. <b>Bẫy cấp đạo hàm:</b> $v(t) = s'(t)$ (đạo hàm cấp 1) còn $a(t) = s''(t)$ (đạo hàm cấp 2). Khi hỏi 'vận tốc lớn nhất' phải giải $v'(t) = a(t) = 0$, không được giải $s'(t) = 0$!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: QUY TẮC CHUYỂN DỊCH 2 TẦNG",
+      "startTime": 215.54,
+      "endTime": 233.95,
+      "duration": 18.41,
+      "mascotMode": "cheer",
+      "mascotTip": "s -> v -> a. Dừng lại / chạm đỉnh: v = 0. Vận tốc lớn nhất: a = 0!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Bí kíp nhớ nhanh sơ đồ 2 tầng:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Sơ đồ:</b> $$s(t) \\xrightarrow{\\text{Đạo hàm}} v(t) \\xrightarrow{\\text{Đạo hàm}} a(t)$$<br>• <b>Dừng lại / Độ cao lớn nhất:</b> Cho $v(t) = 0$.<br>• <b>Vận tốc lớn nhất:</b> Cho $a(t) = 0$.<br>• <b>Chạm đất:</b> Cho $h(t) = 0$.<br>Nhớ đúng 3 công thức này, giải quyết mọi bài toán vật lý trong đề thi!</div>"
+    }
+  ]
+}
+});
+if(typeof window.CHAPTER1_LECTURES !== 'undefined') {
+  Object.assign(window.CHAPTER1_LECTURES, {
+    bai5_muc1: window.CHAPTER1_DATA.bai5_muc1,
+    bai5_muc2: window.CHAPTER1_DATA.bai5_muc2,
+    bai5_muc3: window.CHAPTER1_DATA.bai5_muc3
   });
 }

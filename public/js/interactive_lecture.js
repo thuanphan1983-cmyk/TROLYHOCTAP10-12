@@ -443,9 +443,9 @@
       lessonTitle: "Bài 5: Ứng dụng thực tế đạo hàm",
       lessonBadge: "Bài 5",
       sections: [
-        { key: "bai5_muc1", title: "Mục 1: Tối ưu hóa chi phí & Lợi nhuận", time: "05:00", icon: "💰" },
-        { key: "bai5_muc2", title: "Mục 2: Tối ưu hóa hình học & Thể tích", time: "05:00", icon: "📦" },
-        { key: "bai5_muc3", title: "Mục 3: Bài toán chuyển động trong Vật lý", time: "05:00", icon: "🚀" }
+        { key: "bai5_muc1", title: "Mục 1: Tối ưu hóa hình học & Thể tích", time: "05:00", icon: "📦" },
+        { key: "bai5_muc2", title: "Mục 2: Tối ưu hóa kinh tế & Lợi nhuận", time: "05:00", icon: "💰" },
+        { key: "bai5_muc3", title: "Mục 3: Ứng dụng trong Vật lý & Chuyển động", time: "05:00", icon: "🚀" }
       ]
     },
     {
