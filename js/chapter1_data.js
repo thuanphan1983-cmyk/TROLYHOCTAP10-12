@@ -2817,330 +2817,880 @@
     // ÔN TẬP CHƯƠNG 1: ỨNG DỤNG ĐẠO HÀM (3 MỤC)
     // =========================================================================
     ontap_muc1: {
-      lessonId: "ontap",
-      lessonTitle: "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
-      sectionId: "ontap_muc1",
-      sectionTitle: "Mục 1: Sơ đồ tư duy liên kết công cụ đạo hàm",
-      audioSrc: "./audio/ontap_muc1.mp3",
-      totalDuration: 300.0,
-      audio_src: "./audio/ontap_muc1.mp3",
-      timestamp_src: "timestamps/ontap_muc1.json",
-      title: "Mục 1: Sơ đồ tư duy tổng hợp toàn bộ 5 bài học Chương 1",
-      owl_tip: "Đạo hàm là sợi chỉ đỏ xuyên suốt: Dấu đạo hàm cho Đơn điệu & Cực trị; Giới hạn cho Tiệm cận; Khảo sát kết hợp toàn bộ!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Trục liên kết 5 bài học", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Ma trận câu hỏi thi tốt nghiệp", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Bảng tra cứu công thức vàng", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú đồng hành khen ngợi", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "SƠ ĐỒ TƯ DUY TỔNG QUAN CHƯƠNG 1",
-          subtitle: "MỤC 1 • MỐI QUAN HỆ HỮU CƠ GIỮA CÁC ĐƠN VỊ KIẾN THỨC",
-          startTime: 0.0,
-          endTime: 75.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú kết nối:</b> Đạo hàm f'(x) giải quyết Đơn điệu (Bài 1), Cực trị (Bài 1), GTLN/GTNN (Bài 2), Vẽ đồ thị (Bài 4) và Tối ưu (Bài 5)!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>Bài 1 (Đơn điệu & Cực trị):</b> $f'(x) \\ge 0 \\implies$ Đồng biến; $f'(x) \\le 0 \\implies$ Nghịch biến; Đổi dấu $\\implies$ Cực trị.<br>
-              • <b>Bài 2 (Giá trị lớn nhất, nhỏ nhất):</b> Tìm Max/Min trên đoạn $[a; b]$ hoặc trên khoảng $(a; b)$ thông qua BBT.<br>
-              • <b>Bài 3 (Đường tiệm cận):</b> Tiệm cận đứng ($x \\to x_0$), Tiệm cận ngang ($x \\to \\pm\\infty$), Tiệm cận xiên ($x \\to \\pm\\infty$).<br>
-              • <b>Bài 4 (Khảo sát & Đồ thị):</b> Tổng hợp tính chất thành bức tranh hình học hoàn chỉnh (Hàm bậc 3, phân thức 1/1, phân thức 2/1).<br>
-              • <b>Bài 5 (Ứng dụng thực tiễn):</b> Mô hình hóa bài toán kinh tế, đời sống, chuyển động thành bài toán tìm Max/Min.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "MA TRẬN CÂU HỎI THI TỐT NGHIỆP THPT CHƯƠNG 1",
-          subtitle: "MỤC 1 • PHÂN BỐ CÂU HỎI THEO ĐỀ BỘ GD&ĐT",
-          startTime: 75.0,
-          endTime: 150.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Chiến lược:</b> Chương 1 chiếm khoảng 10 - 12 câu trong đề thi (khoảng 2.5 - 3.0 điểm). Bắt buộc phải ăn trọn điểm nhận biết và thông hiểu!",
-          bodyHtml: `
-            <table class="bbt-table" style="width:100%; max-width:96%; margin:8px auto; border-collapse:collapse; background:rgba(15,23,42,0.85); border-top:2.5px solid #cbd5e1; border-bottom:2.5px solid #cbd5e1;">
-              <tr style="border-bottom:1.5px solid #64748b; background:rgba(30,41,59,0.7);">
-                <th style="padding:8px; color:#fef08a; font-size:21px;">Chủ đề</th>
-                <th style="padding:8px; color:#38bdf8; font-size:21px;">Nhận biết / Thông hiểu</th>
-                <th style="padding:8px; color:#f43f5e; font-size:21px;">Vận dụng / VDC</th>
-              </tr>
-              <tr style="border-bottom:1px solid #334155;">
-                <td style="padding:8px; color:#f8fafc; font-size:20px;">1. Đơn điệu & Cực trị</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Đọc BBT, nhận diện điểm cực đại/tiểu</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Bài toán chứa tham số $m$, hàm ẩn $f(u)$</td>
-              </tr>
-              <tr style="border-bottom:1px solid #334155;">
-                <td style="padding:8px; color:#f8fafc; font-size:20px;">2. Max / Min & Tiệm cận</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Tính Max/Min trên đoạn, đếm số tiệm cận</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Tiệm cận đồ thị chứa căn phức tạp</td>
-              </tr>
-              <tr>
-                <td style="padding:8px; color:#f8fafc; font-size:20px;">3. Đồ thị & Thực tế</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Nhận dạng hình dáng đồ thị hàm số</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Bài toán tối ưu chi phí, thể tích thực tế</td>
-              </tr>
-            </table>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "BẢNG TRA CỨU CÔNG THỨC GIẢI NHANH CHƯƠNG 1",
-          subtitle: "MỤC 1 • CÔNG CỤ TỐI TÂN CỦA HỌC SINH THẦY THUẤN",
-          startTime: 150.0,
-          endTime: 225.0,
-          duration: 75.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Học thuộc nằm lòng:</b> Đạo hàm nhanh phân thức 1/1: ad - bc; phân thức 2/1: (ap)x^2 + 2(aq)x + (bq - cp)!",
-          bodyHtml: `
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • Đạo hàm phân thức $y = \\frac{ax+b}{cx+d} \\implies y' = \\frac{ad - bc}{(cx+d)^2}$.<br>
-              • Đạo hàm phân thức $y = \\frac{ax^2+bx+c}{px+q} \\implies y' = \\frac{ap \\cdot x^2 + 2aq \\cdot x + (bq - cp)}{(px+q)^2}$.<br>
-              • Tọa độ tâm đối xứng đồ thị bậc 3: $x_0 = -\\frac{b}{3a}, \\; y_0 = f(x_0)$.<br>
-              • Tiệm cận xiên của $y = \\frac{ax^2+bx+c}{px+q}$: $y = \\frac{a}{p}x + \\frac{bp - aq}{p^2}$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI ĐỒNG HÀNH & TIẾP NĂNG LƯỢNG",
-          subtitle: "MỤC 1 • TỰ TIN BƯỚC VÀO PHẦN LUYỆN TẬP PHÂN LOẠI",
-          startTime: 225.0,
-          endTime: 300.0,
-          duration: 75.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Lời dặn dò:</b> Hãy bình tĩnh, đọc kỹ từng chữ trong đề, quan sát trục tọa độ và dấu ngoặc tròn/vuông để không bị mất điểm!",
-          bodyHtml: `
-            <div style="font-size:24px; color:#4ade80; font-weight:bold; margin-bottom:8px;">
-              🎉 Chúc mừng các em đã nắm vững toàn bộ khung lý thuyết Chương 1!
-            </div>
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Các em đã làm chủ 5 bài học nền tảng quan trọng nhất trong học kỳ 1 Toán 12.<br>
-              • Hãy tiếp tục theo dõi 2 mục ôn tập tiếp theo để luyện kỹ năng nhận dạng đồ thị chớp nhoáng và triệt tiêu toàn bộ bẫy đề thi!
-            </div>
-          `
-        }
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc1",
+  "sectionTitle": "Mục 1: Hệ thống hóa kiến thức trọng tâm",
+  "audio": "/audio/ontap_muc1.mp3",
+  "audioSrc": "./audio/ontap_muc1.mp3",
+  "audio_src": "./audio/ontap_muc1.mp3",
+  "timestamp_src": "timestamps/ontap_muc1.json",
+  "totalDuration": 105.62,
+  "duration": 105.62,
+  "title": "Mục 1: Hệ thống hóa toàn bộ kiến thức trọng tâm Chương 1",
+  "owl_tip": "Đạo hàm là sợi chỉ đỏ xuyên suốt: Dấu đạo hàm cho Đơn điệu & Cực trị; Giới hạn cho Tiệm cận; Khảo sát kết hợp toàn bộ!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 33.17,
+      "id": "part2"
+    },
+    {
+      "time": 49.9,
+      "id": "part3"
+    },
+    {
+      "time": 67.78,
+      "id": "part4"
+    },
+    {
+      "time": 88.82,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Tính đơn điệu của hàm số</h3>\n        <p>• $f'(x) \\ge 0, \\forall x \\in K \\iff f(x)$ đồng biến trên $K$.<br>\n        • $f'(x) \\le 0, \\forall x \\in K \\iff f(x)$ nghịch biến trên $K$.<br>\n        <i>(Dấu bằng chỉ xảy ra tại hữu hạn điểm trên $K$).</i></p>\n      </div>\n      <div id=\"part2\"><h3>2. Cực trị của hàm số</h3>\n        <p>• $x_0$ là điểm cực trị $\\iff f'(x)$ đổi dấu khi qua $x_0$.<br>\n        • Đổi dấu từ $+$ sang $-$: Điểm <b>Cực đại</b>.<br>\n        • Đổi dấu từ $-$ sang $+$: Điểm <b>Cực tiểu</b>.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Giá trị lớn nhất & nhỏ nhất (trên $[a; b]$)</h3>\n        <p><b>Bước 1:</b> Tính $f'(x)$, tìm các nghiệm $x_i \\in (a; b)$.<br>\n        <b>Bước 2:</b> Tính giá trị $f(a), f(b), f(x_i)$.<br>\n        <b>Bước 3:</b> So sánh: Số lớn nhất là $\\max$, số nhỏ nhất là $\\min$.</p>\n      </div>\n      <div id=\"part4\"><h3>4. Các đường tiệm cận của đồ thị</h3>\n        <p>• <b>Tiệm cận đứng (TCĐ):</b> $\\lim_{x \\to x_0^\\pm} y = \\pm\\infty \\implies x = x_0$.<br>\n        • <b>Tiệm cận ngang (TCN):</b> $\\lim_{x \\to \\pm\\infty} y = y_0 \\implies y = y_0$.<br>\n        • <b>Tiệm cận xiên (TCX):</b> $y = ax + b$ khi chia đa thức cho hàm phân thức bậc 2 / bậc 1.</p>\n      </div>\n      <div id=\"part5\"><h3>5. Ba dạng đồ thị cốt lõi</h3>\n        <p>• <b>Hàm bậc 3:</b> Luôn có tâm đối xứng là điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$.<br>\n        • <b>Hàm phân thức bậc 1 / bậc 1:</b> Tâm đối xứng $I(x_0; y_0)$ là giao điểm 2 tiệm cận.<br>\n        • <b>Hàm phân thức bậc 2 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCX.</p>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tính đơn điệu của hàm số",
+      "scenes": [
+        1
       ]
     },
-
-    ontap_muc2: {
-      lessonId: "ontap",
-      lessonTitle: "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
-      sectionId: "ontap_muc2",
-      sectionTitle: "Mục 2: Kỹ năng nhận dạng đồ thị và bảng biến thiên",
-      audioSrc: "./audio/ontap_muc2.mp3",
-      totalDuration: 290.0,
-      audio_src: "./audio/ontap_muc2.mp3",
-      timestamp_src: "timestamps/ontap_muc2.json",
-      title: "Mục 2: Kỹ năng nhận dạng đồ thị và BBT nhanh trong đề thi trắc nghiệm",
-      owl_tip: "Thứ tự nhận diện: 1. Hình dáng tổng thể -> 2. Tiệm cận -> 3. Giao điểm với các trục tọa độ -> 4. Tọa độ điểm cực trị!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Cây quyết định nhận dạng 3 loại hàm", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Bài tập thực hành nhận dạng nhanh", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Phân biệt đồ thị f(x), f'(x) và f''(x)", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy trục tọa độ", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "CÂY QUYẾT ĐỊNH NHẬN DẠNG 3 LOẠI HÀM SỐ",
-          subtitle: "MỤC 2 • LOẠI TRỪ PHƯƠNG ÁN TRONG 15 GIÂY",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cây quyết định:</b> Có đường đứt nét tiệm cận không? Nếu không có -> Hàm bậc 3. Nếu có 2 đường vuông góc -> Hàm phân thức 1/1. Nếu có đường xiên -> Hàm phân thức 2/1!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>Bước 1: Quan sát đường tiệm cận:</b><br>
-              $\\quad +$ Đồ thị liền mạch, không có tiệm cận $\\implies$ Loại ngay các hàm phân thức, chọn <b>hàm bậc ba</b>.<br>
-              $\\quad +$ Đồ thị có 1 đứng + 1 ngang $\\implies$ <b>Hàm phân thức $y = \\frac{ax+b}{cx+d}$</b>.<br>
-              $\\quad +$ Đồ thị có 1 đứng + 1 xiên $\\implies$ <b>Hàm phân thức $y = \\frac{ax^2+bx+c}{px+q}$</b>.<br>
-              • <b>Bước 2: Quan sát nhánh ngoài cùng bên phải:</b> Xác định dấu của hệ số $a$.<br>
-              • <b>Bước 3: Giao điểm với trục tung $Oy$ ($x = 0$):</b> Đọc giá trị $y(0)$ để loại các đáp án sai hệ số tự do.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "VÍ DỤ THỰC HÀNH LOẠI TRỪ ĐÁP ÁN",
-          subtitle: "MỤC 2 • KỸ NĂNG XỬ LÝ 4 PHƯƠNG ÁN A, B, C, D",
-          startTime: 70.0,
-          endTime: 145.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Kỹ năng:</b> Đừng giải từ đầu đến cuối! Hãy tìm 1 đặc điểm mâu thuẫn để gạch bỏ từng phương án sai!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:6px;">
-              <b>Ví dụ:</b> Đồ thị có hình chữ N, đi qua $(0; 1)$, có cực đại tại $(-1; 3)$ và cực tiểu tại $(1; -1)$:
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Dáng chữ N $\\implies a > 0$. Gạch phương án có $a < 0$.<br>
-              • Cắt $Oy$ tại $(0; 1) \\implies d = 1$. Gạch phương án có hệ số tự do khác 1.<br>
-              • Có 2 điểm cực trị đối xứng qua $Oy$ $\\implies x_1 + x_2 = 0 \\implies b = 0$. Gạch phương án có $x^2$.<br>
-              • Chỉ trong 10 giây ta khoanh ngay được hàm số chính xác là $y = x^3 - 3x + 1$!
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "PHÂN BIỆT ĐỒ THỊ f(x) VÀ ĐỒ THỊ f'(x)",
-          subtitle: "MỤC 2 • BẢNG ĐỐI CHIẾU 2 BỨC TRANH HÌNH HỌC",
-          startTime: 145.0,
-          endTime: 215.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Chìa khóa:</b> Cực trị của f(x) là GIAO ĐIỂM của f'(x) với trục Ox!",
-          bodyHtml: `
-            <table class="bbt-table" style="width:100%; max-width:96%; margin:8px auto; border-collapse:collapse; background:rgba(15,23,42,0.85); border-top:2.5px solid #cbd5e1; border-bottom:2.5px solid #cbd5e1;">
-              <tr style="border-bottom:1.5px solid #64748b; background:rgba(30,41,59,0.7);">
-                <th style="padding:8px; color:#fef08a; font-size:21px;">Thuộc tính</th>
-                <th style="padding:8px; color:#38bdf8; font-size:21px;">Nếu là đồ thị $y = f(x)$</th>
-                <th style="padding:8px; color:#4ade80; font-size:21px;">Nếu là đồ thị $y = f'(x)$</th>
-              </tr>
-              <tr style="border-bottom:1px solid #334155;">
-                <td style="padding:8px; color:#f8fafc; font-size:20px;">Đồng biến</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Đồ thị có nét <b>đi lên</b></td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Đồ thị nằm <b>phía trên trục $Ox$</b></td>
-              </tr>
-              <tr style="border-bottom:1px solid #334155;">
-                <td style="padding:8px; color:#f8fafc; font-size:20px;">Nghịch biến</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Đồ thị có nét <b>đi xuống</b></td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Đồ thị nằm <b>phía dưới trục $Ox$</b></td>
-              </tr>
-              <tr>
-                <td style="padding:8px; color:#f8fafc; font-size:20px;">Điểm cực trị</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Các đỉnh uốn lượn lồi / lõm</td>
-                <td style="padding:8px; color:#cbd5e1; font-size:20px;">Điểm cắt xuyên qua trục $Ox$</td>
-              </tr>
-            </table>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY GỐC TỌA ĐỘ BỊ GIẤU",
-          subtitle: "MỤC 2 • BẪY ĐỀ THI KHÔNG GHI RÕ SỐ TRÊN TRỤC",
-          startTime: 215.0,
-          endTime: 290.0,
-          duration: 75.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Cú cảnh báo:</b> Luôn tìm gốc O(0; 0) trước tiên để xác định miền âm miền dương, tránh nhầm tiệm cận với trục tọa độ!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Nhầm đường tiệm cận với trục tọa độ $Oxy$:<br>
-              • Đề thi thường vẽ trục $Ox, Oy$ nét liền có mũi tên, còn đường tiệm cận nét đứt (hoặc nét mảnh).<br>
-              • Nhiều bạn nhìn nhầm khoảng cách đến tiệm cận thành khoảng cách đến trục tọa độ, dẫn đến đọc sai dấu nghiệm!
-            </div>
-          `
-        }
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Cực trị của hàm số",
+      "scenes": [
+        2
       ]
     },
-
-    ontap_muc3: {
-      lessonId: "ontap",
-      lessonTitle: "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
-      sectionId: "ontap_muc3",
-      sectionTitle: "Mục 3: Các bẫy đề thi và lỗi sai kinh điển",
-      audioSrc: "./audio/ontap_muc3.mp3",
-      totalDuration: 300.0,
-      audio_src: "./audio/ontap_muc3.mp3",
-      timestamp_src: "timestamps/ontap_muc3.json",
-      title: "Mục 3: Cẩm nang 10 Bẫy đề thi kinh điển - Bảo toàn điểm số tuyệt đối",
-      owl_tip: "Khắc phục triệt để 10 sai lầm: Dấu hợp ∪, nghiệm bội chẵn, tiệm cận triệt tiêu, Max/Min ngoặc tròn, điều kiện căn thức!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Top 5 bẫy Đại số & Đạo hàm", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Top 5 bẫy Giới hạn & Tiệm cận", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Check-list kiểm tra trước khi tô đáp án", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú trao huân chương hoàn thành", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "TOP 5 BẪY ĐẠI SỐ & ĐẠO HÀM HAY GẶP NHẤT",
-          subtitle: "MỤC 3 • RÀ SOÁT TỔNG THỂ ĐỂ ZERO LỖI SAI",
-          startTime: 0.0,
-          endTime: 75.0,
-          duration: 75.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Cú rà soát:</b> Hãy kiểm tra xem mình có từng phạm phải 5 sai lầm này không nhé!",
-          bodyHtml: `
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>1. Bẫy dấu hợp $\\cup$:</b> Viết khoảng đồng biến/nghịch biến nối bằng dấu $\\cup$ hoặc $\\setminus$ $\\implies$ SAI.<br>
-              • <b>2. Bẫy nghiệm bội chẵn:</b> Nghĩ rằng cứ $f'(x) = 0$ là có cực trị mà quên quy tắc nghiệm bội chẵn không đổi dấu $\\implies$ SAI.<br>
-              • <b>3. Bẫy hỏi điểm cực trị:</b> Đề hỏi \"Điểm cực trị của hàm số\" lại đi trả lời giá trị $y$ (hoặc tọa độ $M(x; y)$) $\\implies$ SAI.<br>
-              • <b>4. Bẫy đạo hàm bằng 0:</b> Hàm số đồng biến trên $K$ thì $f'(x) \\ge 0$ và bằng $0$ tại <b>hữu hạn điểm</b>.<br>
-              • <b>5. Bẫy hàm hằng:</b> Nếu $f'(x) = 0, \\forall x \\in K$ thì hàm số là hàm hằng (không đồng biến, không nghịch biến).
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "TOP 5 BẪY GIỚI HẠN & TIỆM CẬN",
-          subtitle: "MỤC 3 • CHỐỐNG MẤT ĐIỂM OAN Ở CÁC CÂU THÔNG HIỂU",
-          startTime: 75.0,
-          endTime: 150.0,
-          duration: 75.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Chú ý:</b> Luôn bấm máy thử giới hạn 2 bên x_0 + 0.0001 và x_0 - 0.0001 để khẳng định tiệm cận đứng!",
-          bodyHtml: `
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>6. Bẫy nghiệm mẫu bị triệt tiêu:</b> Nghiệm mẫu cũng là nghiệm tử bậc cao hơn $\\implies$ Không có TCĐ.<br>
-              • <b>7. Bẫy tập xác định chặn:</b> $D = [1; 3]$ không chứa vô cực $\\implies$ Không bao giờ có Tiệm cận ngang!<br>
-              • <b>8. Bẫy dấu trừ khi $x \\to -\\infty$:</b> Căn bậc hai $\\sqrt{x^2} = |x| = -x$ khi $x < 0$ $\\implies$ Sinh ra 2 TCN đối dấu.<br>
-              • <b>9. Bẫy tiệm cận xiên:</b> Nhầm giữa tiệm cận xiên ($a \\ne 0$) và tiệm cận ngang ($a = 0$).<br>
-              • <b>10. Bẫy nhầm trục:</b> Nhầm phương trình TCĐ $x = x_0$ với TCN $y = y_0$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "CHECK-LIST 4 BƯỚC KIỂM TRA TRƯỚC KHI TÔ ĐÁP ÁN",
-          subtitle: "MỤC 3 • KỸ THUẬT LÀM BÀI ĐẠT ĐIỂM 10 TUYỆT ĐỐI",
-          startTime: 150.0,
-          endTime: 225.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú khuyên:</b> Dành đúng 5 giây đọc lại từ khóa trong đề trước khi đặt bút tô đáp án!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              4 Câu hỏi tự vấn trước khi chọn đáp án cuối cùng:
-            </div>
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              <b>1.</b> Đề bài đang hỏi $x$ (hoành độ) hay hỏi $y$ (giá trị) hay hỏi tọa độ điểm $(x; y)$?<br>
-              <b>2.</b> Đề bài cho đồ thị của hàm số $f(x)$ hay đồ thị của đạo hàm $f'(x)$?<br>
-              <b>3.</b> Khoảng khảo sát là đoạn vuông $[a; b]$ hay khoảng tròn $(a; b)$?<br>
-              <b>4.</b> Đề bài hỏi khẳng định ĐÚNG hay khẳng định SAI? (Nhiều bạn nhìn thấy câu đúng đầu tiên đã vội tô mà quên đề hỏi câu sai).
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "HOÀN THÀNH XUẤT SẮC TOÀN BỘ CHƯƠNG 1",
-          subtitle: "MỤC 3 • CHÚC MỪNG CÁC EM ĐÃ CHINH PHỤC ĐỈNH CAO!",
-          startTime: 225.0,
-          endTime: 300.0,
-          duration: 75.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Thầy Thuấn & Cú Thông Thái chúc mừng:</b> Em đã nắm trọn vẹn toàn bộ 5 bài học và 18 mục kiến thức chuẩn mực của Chương 1 Toán 12!",
-          bodyHtml: `
-            <div style="text-align:center; padding:15px; background:rgba(30,41,59,0.8); border:2px solid #fbbf24; border-radius:14px;">
-              <div style="font-size:48px; margin-bottom:8px;">🏆</div>
-              <div style="font-size:26px; color:#fbbf24; font-weight:bold; margin-bottom:6px;">
-                HUÂN CHƯƠNG CHIẾN THẮNG CHƯƠNG 1 TOÁN 12
-              </div>
-              <div style="font-size:22px; color:#f8fafc; line-height:1.6;">
-                Em đã hoàn thành trọn vẹn 18 Mục bài giảng tương tác (KaTeX + SVG Vector + Âm thanh).<br>
-                Chúc các em đạt kết quả cao nhất trong các bài kiểm tra định kỳ và kỳ thi Tốt nghiệp THPT Quốc gia!
-              </div>
-            </div>
-          `
-        }
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Giá trị lớn nhất & nhỏ nhất",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Các đường tiệm cận đồ thị",
+      "scenes": [
+        4
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Ba dạng đồ thị cơ bản",
+      "scenes": [
+        5
       ]
     }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "ÔN TẬP CHƯƠNG 1: TÍNH ĐƠN ĐIỆU",
+      "subtitle": "PHẦN 1: ĐIỀU KIỆN ĐỒNG BIẾN & NGHỊCH BIẾN",
+      "startTime": 0.0,
+      "endTime": 33.17,
+      "duration": 33.17,
+      "mascotMode": "pointer",
+      "mascotTip": "f'(x) >= 0: Đồng biến; f'(x) <= 0: Nghịch biến. Dấu bằng chỉ xảy ra tại hữu hạn điểm!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Tính đơn điệu của hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• $f'(x) \\ge 0, \\forall x \\in K \\iff f(x)$ đồng biến trên $K$.<br>• $f'(x) \\le 0, \\forall x \\in K \\iff f(x)$ nghịch biến trên $K$.<br>• Dấu bằng chỉ xảy ra tại một số hữu hạn điểm rời rạc trên $K$.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CỰC TRỊ CỦA HÀM SỐ",
+      "subtitle": "PHẦN 2: DẤU HIỆU ĐỔI DẤU CỦA ĐẠO HÀM",
+      "startTime": 33.17,
+      "endTime": 49.9,
+      "duration": 16.73,
+      "mascotMode": "pointer",
+      "mascotTip": "Qua x0 đổi dấu từ (+) sang (-) là Cực đại; từ (-) sang (+) là Cực tiểu!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Cực trị của hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• $x_0$ là điểm cực trị $\\iff f'(x)$ đổi dấu khi $x$ đi qua $x_0$.<br>• Đổi dấu từ <b>dương (+)</b> sang <b>âm (-)</b> $\\implies$ Điểm <b>Cực đại</b>.<br>• Đổi dấu từ <b>âm (-)</b> sang <b>dương (+)</b> $\\implies$ Điểm <b>Cực tiểu</b>.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "GIÁ TRỊ LỚN NHẤT & NHỎ NHẤT",
+      "subtitle": "PHẦN 3: QUY TRÌNH 3 BƯỚC TÌM TRÊN ĐOẠN [a; b]",
+      "startTime": 49.9,
+      "endTime": 67.78,
+      "duration": 17.88,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính đạo hàm -> Tìm nghiệm xi thuộc (a; b) -> Tính f(a), f(b), f(xi) rồi so sánh!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#a78bfa; font-weight:bold; margin-bottom:10px;\">3. GTLN & GTNN trên đoạn $[a; b]$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Tính $f'(x)$, tìm các nghiệm $x_i \\in (a; b)$ làm cho $f'(x) = 0$ hoặc $f'(x)$ không xác định.<br>• <b>Bước 2:</b> Tính các giá trị $f(a), f(b), f(x_i)$.<br>• <b>Bước 3:</b> Giá trị lớn nhất trong số đó là $\\max$, nhỏ nhất là $\\min$.</p></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "CÁC ĐƯỜNG TIỆM CẬN ĐỒ THỊ",
+      "subtitle": "PHẦN 4: TIỆM CẬN ĐỨNG, NGANG VÀ XIÊN",
+      "startTime": 67.78,
+      "endTime": 88.82,
+      "duration": 21.04,
+      "mascotMode": "magnifier",
+      "mascotTip": "x tiến tới x0 ra vô cực: TCĐ x = x0. x tiến tới vô cực ra y0: TCN y = y0. Phân thức bậc 2/1: TCX y = ax + b!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fb923c; font-weight:bold; margin-bottom:10px;\">4. Đường tiệm cận của đồ thị hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Tiệm cận đứng (TCĐ):</b> $\\lim_{x \\to x_0^\\pm} y = \\pm\\infty \\implies x = x_0$.<br>• <b>Tiệm cận ngang (TCN):</b> $\\lim_{x \\to \\pm\\infty} y = y_0 \\implies y = y_0$.<br>• <b>Tiệm cận xiên (TCX):</b> Khi chia đa thức hàm bậc 2 / bậc 1: $y = ax + b + \\frac{r}{px+q} \\implies y = ax + b$.</p></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "BA DẠNG ĐỒ THỊ CƠ BẢN",
+      "subtitle": "PHẦN 5: TÂM ĐỐI XỨNG & ĐẶC TRƯNG HÌNH HỌC",
+      "startTime": 88.82,
+      "endTime": 105.62,
+      "duration": 16.8,
+      "mascotMode": "cheer",
+      "mascotTip": "Bậc 3: Tâm đối xứng là điểm uốn U. Bậc 1/1 và Bậc 2/1: Tâm đối xứng là giao điểm 2 đường tiệm cận!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#4ade80; font-weight:bold; margin-bottom:10px;\">5. Ba dạng đồ thị cơ bản cần nhớ</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Hàm bậc 3:</b> Luôn có tâm đối xứng là điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$.<br>• <b>Hàm phân thức bậc 1 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCN.<br>• <b>Hàm phân thức bậc 2 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCX.</p></div>"
+    }
+  ]
+},
+
+    ontap_muc2: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc2",
+  "sectionTitle": "Mục 2: Rèn luyện 4 bài toán then chốt",
+  "audio": "/audio/ontap_muc2.mp3",
+  "audioSrc": "./audio/ontap_muc2.mp3",
+  "audio_src": "./audio/ontap_muc2.mp3",
+  "timestamp_src": "timestamps/ontap_muc2.json",
+  "totalDuration": 174.91,
+  "duration": 174.91,
+  "title": "Mục 2: Rèn luyện 4 bài toán then chốt thường gặp trong đề thi tốt nghiệp",
+  "owl_tip": "4 bài toán đinh: Đơn điệu chứa m, GTLN/GTNN trên BBT, Tiệm cận xiên hàm bậc 2/1, Nhận diện đồ thị!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 10.37,
+      "id": "vd1_q"
+    },
+    {
+      "time": 41.3,
+      "id": "vd1_a"
+    },
+    {
+      "time": 70.34,
+      "id": "vd2_q"
+    },
+    {
+      "time": 93.12,
+      "id": "vd2_a"
+    },
+    {
+      "time": 112.78,
+      "id": "vd3_q"
+    },
+    {
+      "time": 132.34,
+      "id": "vd3_a"
+    },
+    {
+      "time": 148.87,
+      "id": "vd4_q"
+    },
+    {
+      "time": 164.38,
+      "id": "vd4_a"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>Rèn luyện 4 bài toán then chốt</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Bài tập 1:</b> Tìm $m$ để hàm số $y = \\frac{1}{3}x^3 - mx^2 + 4x + 1$ đồng biến trên $\\mathbb{R}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + $y' = x^2 - 2mx + 4$.<br>\n          + Hàm số đồng biến trên $\\mathbb{R} \\iff y' \\ge 0, \\forall x \\in \\mathbb{R} \\iff \\Delta' = m^2 - 4 \\le 0 \\iff -2 \\le m \\le 2$.<br>\n          $\\implies$ Vậy <b>$-2 \\le m \\le 2$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Bài tập 2:</b> Cho hàm số có bảng biến thiên trên $[-1; 3]$:<br>\n          <table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\">\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td>\n              <td style=\"padding:6px; color:#111827 !important;\">$-1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$3$</td>\n            </tr>\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td>\n              <td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td></td>\n            </tr>\n            <tr style=\"height:65px;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td>\n              <td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-4$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$2$</td>\n            </tr>\n          </table>\n          Tìm $\\max_{[-1; 3]} y$ và $\\min_{[-1; 3]} y$. <i>(Thời gian suy nghĩ: 20s)</i>\n        </div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Dựa vào BBT: <b>$\\max_{[-1; 3]} y = 5$</b> tại $x=1$; <b>$\\min_{[-1; 3]} y = -4$</b> tại $x=-1$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Bài tập 3:</b> Tìm phương trình đường tiệm cận xiên của $y = \\frac{2x^2 - 3x + 1}{x + 2}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Thực hiện phép chia đa thức tử cho mẫu:<br>\n          $y = 2x - 7 + \\frac{15}{x + 2}$.<br>\n          $\\implies$ Phương trình tiệm cận xiên là đường thẳng <b>$y = 2x - 7$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd4_q\"><b>Bài tập 4:</b> Nhận diện hàm số có TCĐ $x = -1$, TCN $y = 2$ và cắt trục hoành tại $(1; 0)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd4_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Hàm số phân thức bậc nhất trên bậc nhất cần tìm là <b>$y = \\frac{2x - 2}{x + 1}$</b>.\n        </div>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tổng quan 4 bài toán then chốt",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Bài toán 1 - Đơn điệu chứa tham số m",
+      "scenes": [
+        2,
+        3
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Bài toán 2 - GTLN & GTNN trên bảng biến thiên",
+      "scenes": [
+        4,
+        5
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bài toán 3 - Tìm đường tiệm cận xiên",
+      "scenes": [
+        6,
+        7
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Bài toán 4 - Nhận diện đồ thị hàm số",
+      "scenes": [
+        8,
+        9
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "RÈN LUYỆN 4 BÀI TOÁN THEN CHỐT",
+      "subtitle": "PHẦN 1: TỔNG QUAN CÁC DẠNG TOÁN THI TỐT NGHIỆP",
+      "startTime": 0.0,
+      "endTime": 10.37,
+      "duration": 10.37,
+      "mascotMode": "pointer",
+      "mascotTip": "4 bài toán then chốt: Đơn điệu chứa tham số m, Đọc BBT tìm GTLN/GTNN, Tìm tiệm cận xiên, Nhận diện đồ thị!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">Rèn luyện 4 bài toán then chốt Chương 1</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>1. <b>Bài toán 1:</b> Tìm tham số $m$ để hàm số đơn điệu trên $\\mathbb{R}$.<br>2. <b>Bài toán 2:</b> Tìm GTLN và GTNN dựa vào bảng biến thiên.<br>3. <b>Bài toán 3:</b> Xác định phương trình đường tiệm cận xiên.<br>4. <b>Bài toán 4:</b> Nhận diện đồ thị hàm số từ các đường tiệm cận và giao điểm.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "BÀI TẬP 1: ĐƠN ĐIỆU CHỨA THAM SỐ m",
+      "subtitle": "CÂU HỎI THỰC CHIẾN",
+      "startTime": 10.37,
+      "endTime": 41.3,
+      "duration": 30.93,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính y' = x² - 2mx + 4. Để đồng biến trên R thì delta' <= 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 1:</b> Tìm tất cả các giá trị của tham số $m$ để hàm số $y = \\frac{1}{3}x^3 - mx^2 + 4x + 1$ đồng biến trên toàn bộ tập số thực $\\mathbb{R}$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "BÀI TẬP 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ÁP DỤNG ĐIỀU KIỆN TAM THỨC BẬC HAI",
+      "startTime": 41.3,
+      "endTime": 70.34,
+      "duration": 29.04,
+      "mascotMode": "pointer",
+      "mascotTip": "y' >= 0, mọi x in R <=> delta' = m² - 4 <= 0 <=> -2 <= m <= 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd1_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải chi tiết Bài tập 1:</b><br>• Ta có đạo hàm: $y' = x^2 - 2mx + 4$.<br>• Hàm số đồng biến trên $\\mathbb{R} \\iff y' \\ge 0, \\forall x \\in \\mathbb{R}$.<br>• Vì hệ số $a = 1 > 0$ nên điều này tương đương:<br>&emsp;$$\\Delta' = m^2 - 4 \\le 0 \\iff -2 \\le m \\le 2$$<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> $m \\in [-2; 2]$.</div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "BÀI TẬP 2: GTLN & GTNN TRÊN BẢNG BIẾN THIÊN",
+      "subtitle": "CÂU HỎI QUAN SÁT BBT TRÊN [-1; 3]",
+      "startTime": 70.34,
+      "endTime": 93.12,
+      "duration": 22.78,
+      "mascotMode": "magnifier",
+      "mascotTip": "Quan sát kỹ hàng y trên đoạn [-1; 3]: Đỉnh cao nhất là GTLN, điểm thấp nhất là GTNN!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 2:</b> Cho hàm số $f(x)$ có bảng biến thiên trên đoạn $[-1; 3]$ như sau:<br><table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$3$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-4$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$2$</td></tr></table>Tìm $\\max_{[-1; 3]} y$ và $\\min_{[-1; 3]} y$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "BÀI TẬP 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ĐỌC CHUẨN XÁC DÒNG y",
+      "startTime": 93.12,
+      "endTime": 112.78,
+      "duration": 19.66,
+      "mascotMode": "pointer",
+      "mascotTip": "Điểm cao nhất tại đỉnh x = 1 cho y = 5 (max); Điểm thấp nhất tại mút x = -1 cho y = -4 (min)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd2_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 2:</b><br>• Quan sát dòng giá trị của $y$ trên đoạn $[-1; 3]$:<br>&emsp;+ Giá trị cao nhất đạt được là $y = 5$ tại $x = 1$.<br>&emsp;+ Giá trị thấp nhất đạt được là $y = -4$ tại $x = -1$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> <b>$\\max_{[-1; 3]} y = 5$</b> và <b>$\\min_{[-1; 3]} y = -4$</b>.</div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "BÀI TẬP 3: TÌM TIỆM CẬN XIÊN",
+      "subtitle": "CÂU HỎI THỰC HIỆN PHÉP CHIA ĐA THỨC",
+      "startTime": 112.78,
+      "endTime": 132.34,
+      "duration": 19.56,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử (2x² - 3x + 1) cho mẫu (x + 2) tìm phần thương bậc nhất!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 3:</b> Tìm phương trình đường tiệm cận xiên của đồ thị hàm số $y = \\frac{2x^2 - 3x + 1}{x + 2}$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "BÀI TẬP 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "PHÉP CHIA ĐA THỨC CHUẨN XÁC",
+      "startTime": 132.34,
+      "endTime": 148.87,
+      "duration": 16.53,
+      "mascotMode": "pointer",
+      "mascotTip": "y = 2x - 7 + 15/(x+2). Khi x -> vo cuc thi 15/(x+2) -> 0 => TCX la y = 2x - 7!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd3_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 3:</b><br>• Thực hiện phép chia đa thức tử cho mẫu:<br>&emsp;$$y = \\frac{2x^2 - 3x + 1}{x + 2} = 2x - 7 + \\frac{15}{x + 2}$$<br>• Do $\\lim_{x \\to \\pm\\infty} \\frac{15}{x + 2} = 0$ nên:<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tiệm cận xiên là đường thẳng <b>$y = 2x - 7$</b>.</div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "BÀI TẬP 4: NHẬN DIỆN ĐỒ THỊ HÀM SỐ",
+      "subtitle": "CÂU HỎI TỔNG HỢP TIỆM CẬN VÀ GIAO ĐIỂM",
+      "startTime": 148.87,
+      "endTime": 164.38,
+      "duration": 15.51,
+      "mascotMode": "magnifier",
+      "mascotTip": "TCĐ x = -1 -> Mẫu x + 1; TCN y = 2 -> Hệ số x ở tử là 2; Cắt Ox tại (1; 0) -> Tử là 2(x - 1) = 2x - 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd4_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 4:</b> Xác định phương trình hàm số phân thức có tiệm cận đứng $x = -1$, tiệm cận ngang $y = 2$ và cắt trục hoành tại điểm $(1; 0)$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BÀI TẬP 4: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT LUẬN HÀM SỐ TƯƠNG ỨNG",
+      "startTime": 164.38,
+      "endTime": 174.91,
+      "duration": 10.53,
+      "mascotMode": "cheer",
+      "mascotTip": "Phương trình tương ứng chuẩn: y = (2x - 2)/(x + 1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd4_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 4:</b><br>• Dạng hàm phân thức bậc 1 / bậc 1: $y = \\frac{ax + b}{cx + d}$.<br>• TCĐ $x = -1 \\implies$ Mẫu số là $x + 1$.<br>• TCN $y = 2 \\implies$ Tỉ số hệ số bậc nhất là $2 \\implies y = \\frac{2x + b}{x + 1}$.<br>• Đồ thị cắt trục hoành tại $(1; 0) \\implies 2(1) + b = 0 \\implies b = -2$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Hàm số cần tìm là <b>$y = \\frac{2x - 2}{x + 1}$</b>.</div></div>"
+    }
+  ]
+},
+
+    ontap_muc3: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc3",
+  "sectionTitle": "Mục 3: Bẫy đề thi, Mẹo Casio & Lời khuyên ôn tập",
+  "audio": "/audio/ontap_muc3.mp3",
+  "audioSrc": "./audio/ontap_muc3.mp3",
+  "audio_src": "./audio/ontap_muc3.mp3",
+  "timestamp_src": "timestamps/ontap_muc3.json",
+  "totalDuration": 88.27,
+  "duration": 88.27,
+  "title": "Mục 3: Tổng hợp bẫy đề thi kinh điển, Mẹo Casio & Lời khuyên ôn tập Thầy Thuấn Phan",
+  "owl_tip": "Khắc cốt ghi tâm: Cực trị hàm số là y; Điểm cực trị hàm số là x. Bấm CALC x = 10^6 tìm ngay TCN!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 10.34,
+      "id": "part2"
+    },
+    {
+      "time": 37.37,
+      "id": "part3"
+    },
+    {
+      "time": 67.56,
+      "id": "part4"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>Tổng kết: Bẫy đề thi, Kỹ thuật Casio & Lời khuyên ôn tập</h3></div>\n      <div id=\"part2\"><h3>1. Bẫy đề thi trắc nghiệm kinh điển</h3>\n        <p>• <b>Bẫy 1:</b> Nhầm lẫn giữa cực trị của hàm số ($y$), điểm cực trị của hàm số ($x$), và điểm cực trị của đồ thị ($(x; y)$).<br>\n        • <b>Bẫy 2:</b> Dùng ký hiệu hợp $\\cup$ khi kết luận các khoảng đồng biến, nghịch biến thay vì dùng chữ \"và\".<br>\n        • <b>Bẫy 3:</b> Vội vàng kết luận điểm cực trị khi đạo hàm triệt tiêu nhưng không đổi dấu qua nghiệm kép.</p>\n      </div>\n      <div id=\"part3\"><h3>2. Tuyệt chiêu máy tính Casio bỏ túi</h3>\n        <p>• <b>Tiệm cận ngang & Giới hạn:</b> Bấm [CALC] với $x = 10^6$ hoặc $-10^6$.<br>\n        • <b>GTLN - GTNN trên đoạn:</b> Dùng [Menu 8] (TABLE) quét giá trị với $\\text{Step} = \\frac{b - a}{29}$.<br>\n        • <b>Giao trục tung $Oy$:</b> Bấm [CALC] tại $x = 0$ để loại nhanh phương án sai trong 2 giây.</p>\n      </div>\n      <div id=\"part4\"><h3>3. Lời khuyên ôn tập từ Thầy Thuấn Phan</h3>\n        <p>Rèn luyện thói quen phác nhanh BBT ra nháp, nắm chắc dạng 3 đồ thị cốt lõi và luôn kiểm tra điều kiện thực tế của biến số trong bài toán ứng dụng!</p>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Giới thiệu Bẫy đề thi & Kỹ thuật Casio",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 3 Bẫy trắc nghiệm kinh điển",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Tuyệt chiêu máy tính Casio bỏ túi",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Lời khuyên ôn tập từ Thầy Thuấn Phan",
+      "scenes": [
+        4
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "TỔNG KẾT: BẪY ĐỀ THI & CASIO",
+      "subtitle": "PHẦN 1: BÍ KÍP ĐẠT ĐIỂM TỐI ĐA",
+      "startTime": 0.0,
+      "endTime": 10.34,
+      "duration": 10.34,
+      "mascotMode": "pointer",
+      "mascotTip": "Tổng kết 3 bẫy đề thi kinh điển, 3 tuyệt chiêu Casio và lời khuyên ôn tập thực chiến!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">Tổng kết Chương 1: Bí kíp đạt điểm tối đa</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Mục tiêu:</b> Tránh mất điểm oan ở các câu hỏi bẫy khái niệm.<br>• <b>Kỹ thuật:</b> Sử dụng máy tính cầm tay Casio để kiểm tra nhanh kết quả trong 5 giây.<br>• <b>Phương pháp:</b> Nắm chắc quy tắc vẽ phác BBT và nhận diện hàm số.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "3 BẪY ĐỀ THI TRẮC NGHIỆM KINH ĐIỂN",
+      "subtitle": "PHẦN 2: CẢNH BÁO CÁC LỖI SAI PHỔ BIẾN",
+      "startTime": 10.34,
+      "endTime": 37.37,
+      "duration": 27.03,
+      "mascotMode": "magnifier",
+      "mascotTip": "Cực trị hàm số là y; Điểm cực trị hàm số là x; Điểm cực trị đồ thị là (x; y). Không dùng dấu hợp khi kết luận đồng biến!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">3 Bẫy trắc nghiệm kinh điển:</span><br>1. <b>Bẫy thuật ngữ cực trị:</b> \"Cực trị hàm số\" là giá trị $y$; \"Điểm cực trị hàm số\" là $x$; \"Điểm cực trị của đồ thị\" là cặp $(x; y)$.<br>2. <b>Bẫy ký hiệu đơn điệu:</b> Tuyệt đối không dùng dấu hợp $\\cup$ khi kết luận khoảng đồng biến (Ví dụ: $(-\\infty; 1) \\cup (1; +\\infty)$ là <b>SAI</b>, phải viết \"và\").<br>3. <b>Bẫy nghiệm bội chẵn:</b> Khi $f'(x) = 0$ tại $x_0$ nhưng qua $x_0$ đạo hàm không đổi dấu thì $x_0$ <b>KHÔNG</b> là điểm cực trị!</div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3 TUYỆT CHIÊU MÁY TÍNH CASIO",
+      "subtitle": "PHẦN 3: PHẢN XẠ GIẢI NHANH TRONG PHÒNG THI",
+      "startTime": 37.37,
+      "endTime": 67.56,
+      "duration": 30.19,
+      "mascotMode": "pointer",
+      "mascotTip": "CALC x = 10^6 tìm TCN; TABLE Menu 8 tìm GTLN/GTNN; CALC x = 0 tìm giao Oy!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:8px;\">3 Mẹo Casio phản xạ giải nhanh:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1 (Tiệm cận ngang & Giới hạn):</b> Nhập biểu thức $y$, bấm [CALC] với $x = 10^6$ hoặc $-10^6$. Nếu ra số xấp xỉ hằng số $y_0$ thì $y = y_0$ là TCN.<br>• <b>Mẹo 2 (GTLN & GTNN trên đoạn $[a; b]$):</b> Vào [Menu 8] (TABLE), nhập hàm số với $\\text{Start} = a$, $\\text{End} = b$, $\\text{Step} = \\frac{b-a}{29}$. Quét cột $f(x)$ để tìm max, min.<br>• <b>Mẹo 3 (Giao điểm trục tung $Oy$):</b> Bấm [CALC] tại $x = 0$ để xem tung độ giao điểm, loại ngay 2 phương án sai trong 2 giây!</div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "LỜI KHUYÊN ÔN TẬP TỪ THẦY THUẤN PHAN",
+      "subtitle": "PHẦN 4: CHÚC CÁC EM ĐẠT ĐIỂM CAO",
+      "startTime": 67.56,
+      "endTime": 88.27,
+      "duration": 20.71,
+      "mascotMode": "cheer",
+      "mascotTip": "Vẽ phác BBT ra nháp + Nhớ 3 dạng đồ thị cơ bản + Kiểm tra điều kiện bài toán thực tế!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">Lời khuyên ôn tập từ Thầy Thuấn Phan:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">1. Luôn rèn kỹ năng vẽ phác nhanh bảng biến thiên ra nháp khi gặp bất kỳ câu hỏi nào về đơn điệu, cực trị hay số nghiệm phương trình.<br>2. Ghi nhớ hình ảnh 3 dạng đồ thị cơ bản: Bậc 3, Phân thức bậc 1 / bậc 1, Phân thức bậc 2 / bậc 1.<br>3. Trong các bài toán ứng dụng thực tế (Bài 5), luôn đặt điều kiện cho ẩn số trước khi lấy đạo hàm.<br><b style=\"color:#fef08a; font-size:22px;\">Chúc các em ôn tập xuất sắc và tự tin đạt điểm tối đa Chương 1!</b></div>"
+    }
+  ]
+},
+
+    ontap_chuong1_muc1: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc1",
+  "sectionTitle": "Mục 1: Hệ thống hóa kiến thức trọng tâm",
+  "audio": "/audio/ontap_muc1.mp3",
+  "audioSrc": "./audio/ontap_muc1.mp3",
+  "audio_src": "./audio/ontap_muc1.mp3",
+  "timestamp_src": "timestamps/ontap_muc1.json",
+  "totalDuration": 105.62,
+  "duration": 105.62,
+  "title": "Mục 1: Hệ thống hóa toàn bộ kiến thức trọng tâm Chương 1",
+  "owl_tip": "Đạo hàm là sợi chỉ đỏ xuyên suốt: Dấu đạo hàm cho Đơn điệu & Cực trị; Giới hạn cho Tiệm cận; Khảo sát kết hợp toàn bộ!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 33.17,
+      "id": "part2"
+    },
+    {
+      "time": 49.9,
+      "id": "part3"
+    },
+    {
+      "time": 67.78,
+      "id": "part4"
+    },
+    {
+      "time": 88.82,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Tính đơn điệu của hàm số</h3>\n        <p>• $f'(x) \\ge 0, \\forall x \\in K \\iff f(x)$ đồng biến trên $K$.<br>\n        • $f'(x) \\le 0, \\forall x \\in K \\iff f(x)$ nghịch biến trên $K$.<br>\n        <i>(Dấu bằng chỉ xảy ra tại hữu hạn điểm trên $K$).</i></p>\n      </div>\n      <div id=\"part2\"><h3>2. Cực trị của hàm số</h3>\n        <p>• $x_0$ là điểm cực trị $\\iff f'(x)$ đổi dấu khi qua $x_0$.<br>\n        • Đổi dấu từ $+$ sang $-$: Điểm <b>Cực đại</b>.<br>\n        • Đổi dấu từ $-$ sang $+$: Điểm <b>Cực tiểu</b>.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Giá trị lớn nhất & nhỏ nhất (trên $[a; b]$)</h3>\n        <p><b>Bước 1:</b> Tính $f'(x)$, tìm các nghiệm $x_i \\in (a; b)$.<br>\n        <b>Bước 2:</b> Tính giá trị $f(a), f(b), f(x_i)$.<br>\n        <b>Bước 3:</b> So sánh: Số lớn nhất là $\\max$, số nhỏ nhất là $\\min$.</p>\n      </div>\n      <div id=\"part4\"><h3>4. Các đường tiệm cận của đồ thị</h3>\n        <p>• <b>Tiệm cận đứng (TCĐ):</b> $\\lim_{x \\to x_0^\\pm} y = \\pm\\infty \\implies x = x_0$.<br>\n        • <b>Tiệm cận ngang (TCN):</b> $\\lim_{x \\to \\pm\\infty} y = y_0 \\implies y = y_0$.<br>\n        • <b>Tiệm cận xiên (TCX):</b> $y = ax + b$ khi chia đa thức cho hàm phân thức bậc 2 / bậc 1.</p>\n      </div>\n      <div id=\"part5\"><h3>5. Ba dạng đồ thị cốt lõi</h3>\n        <p>• <b>Hàm bậc 3:</b> Luôn có tâm đối xứng là điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$.<br>\n        • <b>Hàm phân thức bậc 1 / bậc 1:</b> Tâm đối xứng $I(x_0; y_0)$ là giao điểm 2 tiệm cận.<br>\n        • <b>Hàm phân thức bậc 2 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCX.</p>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tính đơn điệu của hàm số",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Cực trị của hàm số",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Giá trị lớn nhất & nhỏ nhất",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Các đường tiệm cận đồ thị",
+      "scenes": [
+        4
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Ba dạng đồ thị cơ bản",
+      "scenes": [
+        5
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "ÔN TẬP CHƯƠNG 1: TÍNH ĐƠN ĐIỆU",
+      "subtitle": "PHẦN 1: ĐIỀU KIỆN ĐỒNG BIẾN & NGHỊCH BIẾN",
+      "startTime": 0.0,
+      "endTime": 33.17,
+      "duration": 33.17,
+      "mascotMode": "pointer",
+      "mascotTip": "f'(x) >= 0: Đồng biến; f'(x) <= 0: Nghịch biến. Dấu bằng chỉ xảy ra tại hữu hạn điểm!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Tính đơn điệu của hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• $f'(x) \\ge 0, \\forall x \\in K \\iff f(x)$ đồng biến trên $K$.<br>• $f'(x) \\le 0, \\forall x \\in K \\iff f(x)$ nghịch biến trên $K$.<br>• Dấu bằng chỉ xảy ra tại một số hữu hạn điểm rời rạc trên $K$.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CỰC TRỊ CỦA HÀM SỐ",
+      "subtitle": "PHẦN 2: DẤU HIỆU ĐỔI DẤU CỦA ĐẠO HÀM",
+      "startTime": 33.17,
+      "endTime": 49.9,
+      "duration": 16.73,
+      "mascotMode": "pointer",
+      "mascotTip": "Qua x0 đổi dấu từ (+) sang (-) là Cực đại; từ (-) sang (+) là Cực tiểu!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Cực trị của hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• $x_0$ là điểm cực trị $\\iff f'(x)$ đổi dấu khi $x$ đi qua $x_0$.<br>• Đổi dấu từ <b>dương (+)</b> sang <b>âm (-)</b> $\\implies$ Điểm <b>Cực đại</b>.<br>• Đổi dấu từ <b>âm (-)</b> sang <b>dương (+)</b> $\\implies$ Điểm <b>Cực tiểu</b>.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "GIÁ TRỊ LỚN NHẤT & NHỎ NHẤT",
+      "subtitle": "PHẦN 3: QUY TRÌNH 3 BƯỚC TÌM TRÊN ĐOẠN [a; b]",
+      "startTime": 49.9,
+      "endTime": 67.78,
+      "duration": 17.88,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính đạo hàm -> Tìm nghiệm xi thuộc (a; b) -> Tính f(a), f(b), f(xi) rồi so sánh!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#a78bfa; font-weight:bold; margin-bottom:10px;\">3. GTLN & GTNN trên đoạn $[a; b]$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Tính $f'(x)$, tìm các nghiệm $x_i \\in (a; b)$ làm cho $f'(x) = 0$ hoặc $f'(x)$ không xác định.<br>• <b>Bước 2:</b> Tính các giá trị $f(a), f(b), f(x_i)$.<br>• <b>Bước 3:</b> Giá trị lớn nhất trong số đó là $\\max$, nhỏ nhất là $\\min$.</p></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "CÁC ĐƯỜNG TIỆM CẬN ĐỒ THỊ",
+      "subtitle": "PHẦN 4: TIỆM CẬN ĐỨNG, NGANG VÀ XIÊN",
+      "startTime": 67.78,
+      "endTime": 88.82,
+      "duration": 21.04,
+      "mascotMode": "magnifier",
+      "mascotTip": "x tiến tới x0 ra vô cực: TCĐ x = x0. x tiến tới vô cực ra y0: TCN y = y0. Phân thức bậc 2/1: TCX y = ax + b!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fb923c; font-weight:bold; margin-bottom:10px;\">4. Đường tiệm cận của đồ thị hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Tiệm cận đứng (TCĐ):</b> $\\lim_{x \\to x_0^\\pm} y = \\pm\\infty \\implies x = x_0$.<br>• <b>Tiệm cận ngang (TCN):</b> $\\lim_{x \\to \\pm\\infty} y = y_0 \\implies y = y_0$.<br>• <b>Tiệm cận xiên (TCX):</b> Khi chia đa thức hàm bậc 2 / bậc 1: $y = ax + b + \\frac{r}{px+q} \\implies y = ax + b$.</p></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "BA DẠNG ĐỒ THỊ CƠ BẢN",
+      "subtitle": "PHẦN 5: TÂM ĐỐI XỨNG & ĐẶC TRƯNG HÌNH HỌC",
+      "startTime": 88.82,
+      "endTime": 105.62,
+      "duration": 16.8,
+      "mascotMode": "cheer",
+      "mascotTip": "Bậc 3: Tâm đối xứng là điểm uốn U. Bậc 1/1 và Bậc 2/1: Tâm đối xứng là giao điểm 2 đường tiệm cận!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#4ade80; font-weight:bold; margin-bottom:10px;\">5. Ba dạng đồ thị cơ bản cần nhớ</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Hàm bậc 3:</b> Luôn có tâm đối xứng là điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$.<br>• <b>Hàm phân thức bậc 1 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCN.<br>• <b>Hàm phân thức bậc 2 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCX.</p></div>"
+    }
+  ]
+},
+
+    ontap_chuong1_muc2: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc2",
+  "sectionTitle": "Mục 2: Rèn luyện 4 bài toán then chốt",
+  "audio": "/audio/ontap_muc2.mp3",
+  "audioSrc": "./audio/ontap_muc2.mp3",
+  "audio_src": "./audio/ontap_muc2.mp3",
+  "timestamp_src": "timestamps/ontap_muc2.json",
+  "totalDuration": 174.91,
+  "duration": 174.91,
+  "title": "Mục 2: Rèn luyện 4 bài toán then chốt thường gặp trong đề thi tốt nghiệp",
+  "owl_tip": "4 bài toán đinh: Đơn điệu chứa m, GTLN/GTNN trên BBT, Tiệm cận xiên hàm bậc 2/1, Nhận diện đồ thị!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 10.37,
+      "id": "vd1_q"
+    },
+    {
+      "time": 41.3,
+      "id": "vd1_a"
+    },
+    {
+      "time": 70.34,
+      "id": "vd2_q"
+    },
+    {
+      "time": 93.12,
+      "id": "vd2_a"
+    },
+    {
+      "time": 112.78,
+      "id": "vd3_q"
+    },
+    {
+      "time": 132.34,
+      "id": "vd3_a"
+    },
+    {
+      "time": 148.87,
+      "id": "vd4_q"
+    },
+    {
+      "time": 164.38,
+      "id": "vd4_a"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>Rèn luyện 4 bài toán then chốt</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Bài tập 1:</b> Tìm $m$ để hàm số $y = \\frac{1}{3}x^3 - mx^2 + 4x + 1$ đồng biến trên $\\mathbb{R}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + $y' = x^2 - 2mx + 4$.<br>\n          + Hàm số đồng biến trên $\\mathbb{R} \\iff y' \\ge 0, \\forall x \\in \\mathbb{R} \\iff \\Delta' = m^2 - 4 \\le 0 \\iff -2 \\le m \\le 2$.<br>\n          $\\implies$ Vậy <b>$-2 \\le m \\le 2$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Bài tập 2:</b> Cho hàm số có bảng biến thiên trên $[-1; 3]$:<br>\n          <table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\">\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td>\n              <td style=\"padding:6px; color:#111827 !important;\">$-1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$3$</td>\n            </tr>\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td>\n              <td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td></td>\n            </tr>\n            <tr style=\"height:65px;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td>\n              <td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-4$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$2$</td>\n            </tr>\n          </table>\n          Tìm $\\max_{[-1; 3]} y$ và $\\min_{[-1; 3]} y$. <i>(Thời gian suy nghĩ: 20s)</i>\n        </div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Dựa vào BBT: <b>$\\max_{[-1; 3]} y = 5$</b> tại $x=1$; <b>$\\min_{[-1; 3]} y = -4$</b> tại $x=-1$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Bài tập 3:</b> Tìm phương trình đường tiệm cận xiên của $y = \\frac{2x^2 - 3x + 1}{x + 2}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Thực hiện phép chia đa thức tử cho mẫu:<br>\n          $y = 2x - 7 + \\frac{15}{x + 2}$.<br>\n          $\\implies$ Phương trình tiệm cận xiên là đường thẳng <b>$y = 2x - 7$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd4_q\"><b>Bài tập 4:</b> Nhận diện hàm số có TCĐ $x = -1$, TCN $y = 2$ và cắt trục hoành tại $(1; 0)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd4_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Hàm số phân thức bậc nhất trên bậc nhất cần tìm là <b>$y = \\frac{2x - 2}{x + 1}$</b>.\n        </div>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tổng quan 4 bài toán then chốt",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Bài toán 1 - Đơn điệu chứa tham số m",
+      "scenes": [
+        2,
+        3
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Bài toán 2 - GTLN & GTNN trên bảng biến thiên",
+      "scenes": [
+        4,
+        5
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bài toán 3 - Tìm đường tiệm cận xiên",
+      "scenes": [
+        6,
+        7
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Bài toán 4 - Nhận diện đồ thị hàm số",
+      "scenes": [
+        8,
+        9
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "RÈN LUYỆN 4 BÀI TOÁN THEN CHỐT",
+      "subtitle": "PHẦN 1: TỔNG QUAN CÁC DẠNG TOÁN THI TỐT NGHIỆP",
+      "startTime": 0.0,
+      "endTime": 10.37,
+      "duration": 10.37,
+      "mascotMode": "pointer",
+      "mascotTip": "4 bài toán then chốt: Đơn điệu chứa tham số m, Đọc BBT tìm GTLN/GTNN, Tìm tiệm cận xiên, Nhận diện đồ thị!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">Rèn luyện 4 bài toán then chốt Chương 1</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>1. <b>Bài toán 1:</b> Tìm tham số $m$ để hàm số đơn điệu trên $\\mathbb{R}$.<br>2. <b>Bài toán 2:</b> Tìm GTLN và GTNN dựa vào bảng biến thiên.<br>3. <b>Bài toán 3:</b> Xác định phương trình đường tiệm cận xiên.<br>4. <b>Bài toán 4:</b> Nhận diện đồ thị hàm số từ các đường tiệm cận và giao điểm.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "BÀI TẬP 1: ĐƠN ĐIỆU CHỨA THAM SỐ m",
+      "subtitle": "CÂU HỎI THỰC CHIẾN",
+      "startTime": 10.37,
+      "endTime": 41.3,
+      "duration": 30.93,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính y' = x² - 2mx + 4. Để đồng biến trên R thì delta' <= 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 1:</b> Tìm tất cả các giá trị của tham số $m$ để hàm số $y = \\frac{1}{3}x^3 - mx^2 + 4x + 1$ đồng biến trên toàn bộ tập số thực $\\mathbb{R}$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "BÀI TẬP 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ÁP DỤNG ĐIỀU KIỆN TAM THỨC BẬC HAI",
+      "startTime": 41.3,
+      "endTime": 70.34,
+      "duration": 29.04,
+      "mascotMode": "pointer",
+      "mascotTip": "y' >= 0, mọi x in R <=> delta' = m² - 4 <= 0 <=> -2 <= m <= 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd1_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải chi tiết Bài tập 1:</b><br>• Ta có đạo hàm: $y' = x^2 - 2mx + 4$.<br>• Hàm số đồng biến trên $\\mathbb{R} \\iff y' \\ge 0, \\forall x \\in \\mathbb{R}$.<br>• Vì hệ số $a = 1 > 0$ nên điều này tương đương:<br>&emsp;$$\\Delta' = m^2 - 4 \\le 0 \\iff -2 \\le m \\le 2$$<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> $m \\in [-2; 2]$.</div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "BÀI TẬP 2: GTLN & GTNN TRÊN BẢNG BIẾN THIÊN",
+      "subtitle": "CÂU HỎI QUAN SÁT BBT TRÊN [-1; 3]",
+      "startTime": 70.34,
+      "endTime": 93.12,
+      "duration": 22.78,
+      "mascotMode": "magnifier",
+      "mascotTip": "Quan sát kỹ hàng y trên đoạn [-1; 3]: Đỉnh cao nhất là GTLN, điểm thấp nhất là GTNN!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 2:</b> Cho hàm số $f(x)$ có bảng biến thiên trên đoạn $[-1; 3]$ như sau:<br><table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$3$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-4$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$2$</td></tr></table>Tìm $\\max_{[-1; 3]} y$ và $\\min_{[-1; 3]} y$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "BÀI TẬP 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ĐỌC CHUẨN XÁC DÒNG y",
+      "startTime": 93.12,
+      "endTime": 112.78,
+      "duration": 19.66,
+      "mascotMode": "pointer",
+      "mascotTip": "Điểm cao nhất tại đỉnh x = 1 cho y = 5 (max); Điểm thấp nhất tại mút x = -1 cho y = -4 (min)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd2_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 2:</b><br>• Quan sát dòng giá trị của $y$ trên đoạn $[-1; 3]$:<br>&emsp;+ Giá trị cao nhất đạt được là $y = 5$ tại $x = 1$.<br>&emsp;+ Giá trị thấp nhất đạt được là $y = -4$ tại $x = -1$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> <b>$\\max_{[-1; 3]} y = 5$</b> và <b>$\\min_{[-1; 3]} y = -4$</b>.</div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "BÀI TẬP 3: TÌM TIỆM CẬN XIÊN",
+      "subtitle": "CÂU HỎI THỰC HIỆN PHÉP CHIA ĐA THỨC",
+      "startTime": 112.78,
+      "endTime": 132.34,
+      "duration": 19.56,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử (2x² - 3x + 1) cho mẫu (x + 2) tìm phần thương bậc nhất!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 3:</b> Tìm phương trình đường tiệm cận xiên của đồ thị hàm số $y = \\frac{2x^2 - 3x + 1}{x + 2}$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "BÀI TẬP 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "PHÉP CHIA ĐA THỨC CHUẨN XÁC",
+      "startTime": 132.34,
+      "endTime": 148.87,
+      "duration": 16.53,
+      "mascotMode": "pointer",
+      "mascotTip": "y = 2x - 7 + 15/(x+2). Khi x -> vo cuc thi 15/(x+2) -> 0 => TCX la y = 2x - 7!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd3_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 3:</b><br>• Thực hiện phép chia đa thức tử cho mẫu:<br>&emsp;$$y = \\frac{2x^2 - 3x + 1}{x + 2} = 2x - 7 + \\frac{15}{x + 2}$$<br>• Do $\\lim_{x \\to \\pm\\infty} \\frac{15}{x + 2} = 0$ nên:<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tiệm cận xiên là đường thẳng <b>$y = 2x - 7$</b>.</div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "BÀI TẬP 4: NHẬN DIỆN ĐỒ THỊ HÀM SỐ",
+      "subtitle": "CÂU HỎI TỔNG HỢP TIỆM CẬN VÀ GIAO ĐIỂM",
+      "startTime": 148.87,
+      "endTime": 164.38,
+      "duration": 15.51,
+      "mascotMode": "magnifier",
+      "mascotTip": "TCĐ x = -1 -> Mẫu x + 1; TCN y = 2 -> Hệ số x ở tử là 2; Cắt Ox tại (1; 0) -> Tử là 2(x - 1) = 2x - 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd4_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 4:</b> Xác định phương trình hàm số phân thức có tiệm cận đứng $x = -1$, tiệm cận ngang $y = 2$ và cắt trục hoành tại điểm $(1; 0)$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BÀI TẬP 4: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT LUẬN HÀM SỐ TƯƠNG ỨNG",
+      "startTime": 164.38,
+      "endTime": 174.91,
+      "duration": 10.53,
+      "mascotMode": "cheer",
+      "mascotTip": "Phương trình tương ứng chuẩn: y = (2x - 2)/(x + 1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd4_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 4:</b><br>• Dạng hàm phân thức bậc 1 / bậc 1: $y = \\frac{ax + b}{cx + d}$.<br>• TCĐ $x = -1 \\implies$ Mẫu số là $x + 1$.<br>• TCN $y = 2 \\implies$ Tỉ số hệ số bậc nhất là $2 \\implies y = \\frac{2x + b}{x + 1}$.<br>• Đồ thị cắt trục hoành tại $(1; 0) \\implies 2(1) + b = 0 \\implies b = -2$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Hàm số cần tìm là <b>$y = \\frac{2x - 2}{x + 1}$</b>.</div></div>"
+    }
+  ]
+},
+
+    ontap_chuong1_muc3: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc3",
+  "sectionTitle": "Mục 3: Bẫy đề thi, Mẹo Casio & Lời khuyên ôn tập",
+  "audio": "/audio/ontap_muc3.mp3",
+  "audioSrc": "./audio/ontap_muc3.mp3",
+  "audio_src": "./audio/ontap_muc3.mp3",
+  "timestamp_src": "timestamps/ontap_muc3.json",
+  "totalDuration": 88.27,
+  "duration": 88.27,
+  "title": "Mục 3: Tổng hợp bẫy đề thi kinh điển, Mẹo Casio & Lời khuyên ôn tập Thầy Thuấn Phan",
+  "owl_tip": "Khắc cốt ghi tâm: Cực trị hàm số là y; Điểm cực trị hàm số là x. Bấm CALC x = 10^6 tìm ngay TCN!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 10.34,
+      "id": "part2"
+    },
+    {
+      "time": 37.37,
+      "id": "part3"
+    },
+    {
+      "time": 67.56,
+      "id": "part4"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>Tổng kết: Bẫy đề thi, Kỹ thuật Casio & Lời khuyên ôn tập</h3></div>\n      <div id=\"part2\"><h3>1. Bẫy đề thi trắc nghiệm kinh điển</h3>\n        <p>• <b>Bẫy 1:</b> Nhầm lẫn giữa cực trị của hàm số ($y$), điểm cực trị của hàm số ($x$), và điểm cực trị của đồ thị ($(x; y)$).<br>\n        • <b>Bẫy 2:</b> Dùng ký hiệu hợp $\\cup$ khi kết luận các khoảng đồng biến, nghịch biến thay vì dùng chữ \"và\".<br>\n        • <b>Bẫy 3:</b> Vội vàng kết luận điểm cực trị khi đạo hàm triệt tiêu nhưng không đổi dấu qua nghiệm kép.</p>\n      </div>\n      <div id=\"part3\"><h3>2. Tuyệt chiêu máy tính Casio bỏ túi</h3>\n        <p>• <b>Tiệm cận ngang & Giới hạn:</b> Bấm [CALC] với $x = 10^6$ hoặc $-10^6$.<br>\n        • <b>GTLN - GTNN trên đoạn:</b> Dùng [Menu 8] (TABLE) quét giá trị với $\\text{Step} = \\frac{b - a}{29}$.<br>\n        • <b>Giao trục tung $Oy$:</b> Bấm [CALC] tại $x = 0$ để loại nhanh phương án sai trong 2 giây.</p>\n      </div>\n      <div id=\"part4\"><h3>3. Lời khuyên ôn tập từ Thầy Thuấn Phan</h3>\n        <p>Rèn luyện thói quen phác nhanh BBT ra nháp, nắm chắc dạng 3 đồ thị cốt lõi và luôn kiểm tra điều kiện thực tế của biến số trong bài toán ứng dụng!</p>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Giới thiệu Bẫy đề thi & Kỹ thuật Casio",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 3 Bẫy trắc nghiệm kinh điển",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Tuyệt chiêu máy tính Casio bỏ túi",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Lời khuyên ôn tập từ Thầy Thuấn Phan",
+      "scenes": [
+        4
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "TỔNG KẾT: BẪY ĐỀ THI & CASIO",
+      "subtitle": "PHẦN 1: BÍ KÍP ĐẠT ĐIỂM TỐI ĐA",
+      "startTime": 0.0,
+      "endTime": 10.34,
+      "duration": 10.34,
+      "mascotMode": "pointer",
+      "mascotTip": "Tổng kết 3 bẫy đề thi kinh điển, 3 tuyệt chiêu Casio và lời khuyên ôn tập thực chiến!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">Tổng kết Chương 1: Bí kíp đạt điểm tối đa</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Mục tiêu:</b> Tránh mất điểm oan ở các câu hỏi bẫy khái niệm.<br>• <b>Kỹ thuật:</b> Sử dụng máy tính cầm tay Casio để kiểm tra nhanh kết quả trong 5 giây.<br>• <b>Phương pháp:</b> Nắm chắc quy tắc vẽ phác BBT và nhận diện hàm số.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "3 BẪY ĐỀ THI TRẮC NGHIỆM KINH ĐIỂN",
+      "subtitle": "PHẦN 2: CẢNH BÁO CÁC LỖI SAI PHỔ BIẾN",
+      "startTime": 10.34,
+      "endTime": 37.37,
+      "duration": 27.03,
+      "mascotMode": "magnifier",
+      "mascotTip": "Cực trị hàm số là y; Điểm cực trị hàm số là x; Điểm cực trị đồ thị là (x; y). Không dùng dấu hợp khi kết luận đồng biến!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">3 Bẫy trắc nghiệm kinh điển:</span><br>1. <b>Bẫy thuật ngữ cực trị:</b> \"Cực trị hàm số\" là giá trị $y$; \"Điểm cực trị hàm số\" là $x$; \"Điểm cực trị của đồ thị\" là cặp $(x; y)$.<br>2. <b>Bẫy ký hiệu đơn điệu:</b> Tuyệt đối không dùng dấu hợp $\\cup$ khi kết luận khoảng đồng biến (Ví dụ: $(-\\infty; 1) \\cup (1; +\\infty)$ là <b>SAI</b>, phải viết \"và\").<br>3. <b>Bẫy nghiệm bội chẵn:</b> Khi $f'(x) = 0$ tại $x_0$ nhưng qua $x_0$ đạo hàm không đổi dấu thì $x_0$ <b>KHÔNG</b> là điểm cực trị!</div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3 TUYỆT CHIÊU MÁY TÍNH CASIO",
+      "subtitle": "PHẦN 3: PHẢN XẠ GIẢI NHANH TRONG PHÒNG THI",
+      "startTime": 37.37,
+      "endTime": 67.56,
+      "duration": 30.19,
+      "mascotMode": "pointer",
+      "mascotTip": "CALC x = 10^6 tìm TCN; TABLE Menu 8 tìm GTLN/GTNN; CALC x = 0 tìm giao Oy!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:8px;\">3 Mẹo Casio phản xạ giải nhanh:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1 (Tiệm cận ngang & Giới hạn):</b> Nhập biểu thức $y$, bấm [CALC] với $x = 10^6$ hoặc $-10^6$. Nếu ra số xấp xỉ hằng số $y_0$ thì $y = y_0$ là TCN.<br>• <b>Mẹo 2 (GTLN & GTNN trên đoạn $[a; b]$):</b> Vào [Menu 8] (TABLE), nhập hàm số với $\\text{Start} = a$, $\\text{End} = b$, $\\text{Step} = \\frac{b-a}{29}$. Quét cột $f(x)$ để tìm max, min.<br>• <b>Mẹo 3 (Giao điểm trục tung $Oy$):</b> Bấm [CALC] tại $x = 0$ để xem tung độ giao điểm, loại ngay 2 phương án sai trong 2 giây!</div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "LỜI KHUYÊN ÔN TẬP TỪ THẦY THUẤN PHAN",
+      "subtitle": "PHẦN 4: CHÚC CÁC EM ĐẠT ĐIỂM CAO",
+      "startTime": 67.56,
+      "endTime": 88.27,
+      "duration": 20.71,
+      "mascotMode": "cheer",
+      "mascotTip": "Vẽ phác BBT ra nháp + Nhớ 3 dạng đồ thị cơ bản + Kiểm tra điều kiện bài toán thực tế!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">Lời khuyên ôn tập từ Thầy Thuấn Phan:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">1. Luôn rèn kỹ năng vẽ phác nhanh bảng biến thiên ra nháp khi gặp bất kỳ câu hỏi nào về đơn điệu, cực trị hay số nghiệm phương trình.<br>2. Ghi nhớ hình ảnh 3 dạng đồ thị cơ bản: Bậc 3, Phân thức bậc 1 / bậc 1, Phân thức bậc 2 / bậc 1.<br>3. Trong các bài toán ứng dụng thực tế (Bài 5), luôn đặt điều kiện cho ẩn số trước khi lấy đạo hàm.<br><b style=\"color:#fef08a; font-size:22px;\">Chúc các em ôn tập xuất sắc và tự tin đạt điểm tối đa Chương 1!</b></div>"
+    }
+  ]
+}
   };
 
   // Export to window
@@ -4674,5 +5224,889 @@ if(typeof window.CHAPTER1_LECTURES !== 'undefined') {
     bai5_muc1: window.CHAPTER1_DATA.bai5_muc1,
     bai5_muc2: window.CHAPTER1_DATA.bai5_muc2,
     bai5_muc3: window.CHAPTER1_DATA.bai5_muc3
+  });
+}
+
+if(typeof window.CHAPTER1_DATA === 'undefined') window.CHAPTER1_DATA = {};
+Object.assign(window.CHAPTER1_DATA, {
+  ontap_muc1: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc1",
+  "sectionTitle": "Mục 1: Hệ thống hóa kiến thức trọng tâm",
+  "audio": "/audio/ontap_muc1.mp3",
+  "audioSrc": "./audio/ontap_muc1.mp3",
+  "audio_src": "./audio/ontap_muc1.mp3",
+  "timestamp_src": "timestamps/ontap_muc1.json",
+  "totalDuration": 105.62,
+  "duration": 105.62,
+  "title": "Mục 1: Hệ thống hóa toàn bộ kiến thức trọng tâm Chương 1",
+  "owl_tip": "Đạo hàm là sợi chỉ đỏ xuyên suốt: Dấu đạo hàm cho Đơn điệu & Cực trị; Giới hạn cho Tiệm cận; Khảo sát kết hợp toàn bộ!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 33.17,
+      "id": "part2"
+    },
+    {
+      "time": 49.9,
+      "id": "part3"
+    },
+    {
+      "time": 67.78,
+      "id": "part4"
+    },
+    {
+      "time": 88.82,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Tính đơn điệu của hàm số</h3>\n        <p>• $f'(x) \\ge 0, \\forall x \\in K \\iff f(x)$ đồng biến trên $K$.<br>\n        • $f'(x) \\le 0, \\forall x \\in K \\iff f(x)$ nghịch biến trên $K$.<br>\n        <i>(Dấu bằng chỉ xảy ra tại hữu hạn điểm trên $K$).</i></p>\n      </div>\n      <div id=\"part2\"><h3>2. Cực trị của hàm số</h3>\n        <p>• $x_0$ là điểm cực trị $\\iff f'(x)$ đổi dấu khi qua $x_0$.<br>\n        • Đổi dấu từ $+$ sang $-$: Điểm <b>Cực đại</b>.<br>\n        • Đổi dấu từ $-$ sang $+$: Điểm <b>Cực tiểu</b>.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Giá trị lớn nhất & nhỏ nhất (trên $[a; b]$)</h3>\n        <p><b>Bước 1:</b> Tính $f'(x)$, tìm các nghiệm $x_i \\in (a; b)$.<br>\n        <b>Bước 2:</b> Tính giá trị $f(a), f(b), f(x_i)$.<br>\n        <b>Bước 3:</b> So sánh: Số lớn nhất là $\\max$, số nhỏ nhất là $\\min$.</p>\n      </div>\n      <div id=\"part4\"><h3>4. Các đường tiệm cận của đồ thị</h3>\n        <p>• <b>Tiệm cận đứng (TCĐ):</b> $\\lim_{x \\to x_0^\\pm} y = \\pm\\infty \\implies x = x_0$.<br>\n        • <b>Tiệm cận ngang (TCN):</b> $\\lim_{x \\to \\pm\\infty} y = y_0 \\implies y = y_0$.<br>\n        • <b>Tiệm cận xiên (TCX):</b> $y = ax + b$ khi chia đa thức cho hàm phân thức bậc 2 / bậc 1.</p>\n      </div>\n      <div id=\"part5\"><h3>5. Ba dạng đồ thị cốt lõi</h3>\n        <p>• <b>Hàm bậc 3:</b> Luôn có tâm đối xứng là điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$.<br>\n        • <b>Hàm phân thức bậc 1 / bậc 1:</b> Tâm đối xứng $I(x_0; y_0)$ là giao điểm 2 tiệm cận.<br>\n        • <b>Hàm phân thức bậc 2 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCX.</p>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tính đơn điệu của hàm số",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Cực trị của hàm số",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Giá trị lớn nhất & nhỏ nhất",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Các đường tiệm cận đồ thị",
+      "scenes": [
+        4
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Ba dạng đồ thị cơ bản",
+      "scenes": [
+        5
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "ÔN TẬP CHƯƠNG 1: TÍNH ĐƠN ĐIỆU",
+      "subtitle": "PHẦN 1: ĐIỀU KIỆN ĐỒNG BIẾN & NGHỊCH BIẾN",
+      "startTime": 0.0,
+      "endTime": 33.17,
+      "duration": 33.17,
+      "mascotMode": "pointer",
+      "mascotTip": "f'(x) >= 0: Đồng biến; f'(x) <= 0: Nghịch biến. Dấu bằng chỉ xảy ra tại hữu hạn điểm!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Tính đơn điệu của hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• $f'(x) \\ge 0, \\forall x \\in K \\iff f(x)$ đồng biến trên $K$.<br>• $f'(x) \\le 0, \\forall x \\in K \\iff f(x)$ nghịch biến trên $K$.<br>• Dấu bằng chỉ xảy ra tại một số hữu hạn điểm rời rạc trên $K$.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CỰC TRỊ CỦA HÀM SỐ",
+      "subtitle": "PHẦN 2: DẤU HIỆU ĐỔI DẤU CỦA ĐẠO HÀM",
+      "startTime": 33.17,
+      "endTime": 49.9,
+      "duration": 16.73,
+      "mascotMode": "pointer",
+      "mascotTip": "Qua x0 đổi dấu từ (+) sang (-) là Cực đại; từ (-) sang (+) là Cực tiểu!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Cực trị của hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• $x_0$ là điểm cực trị $\\iff f'(x)$ đổi dấu khi $x$ đi qua $x_0$.<br>• Đổi dấu từ <b>dương (+)</b> sang <b>âm (-)</b> $\\implies$ Điểm <b>Cực đại</b>.<br>• Đổi dấu từ <b>âm (-)</b> sang <b>dương (+)</b> $\\implies$ Điểm <b>Cực tiểu</b>.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "GIÁ TRỊ LỚN NHẤT & NHỎ NHẤT",
+      "subtitle": "PHẦN 3: QUY TRÌNH 3 BƯỚC TÌM TRÊN ĐOẠN [a; b]",
+      "startTime": 49.9,
+      "endTime": 67.78,
+      "duration": 17.88,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính đạo hàm -> Tìm nghiệm xi thuộc (a; b) -> Tính f(a), f(b), f(xi) rồi so sánh!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#a78bfa; font-weight:bold; margin-bottom:10px;\">3. GTLN & GTNN trên đoạn $[a; b]$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Tính $f'(x)$, tìm các nghiệm $x_i \\in (a; b)$ làm cho $f'(x) = 0$ hoặc $f'(x)$ không xác định.<br>• <b>Bước 2:</b> Tính các giá trị $f(a), f(b), f(x_i)$.<br>• <b>Bước 3:</b> Giá trị lớn nhất trong số đó là $\\max$, nhỏ nhất là $\\min$.</p></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "CÁC ĐƯỜNG TIỆM CẬN ĐỒ THỊ",
+      "subtitle": "PHẦN 4: TIỆM CẬN ĐỨNG, NGANG VÀ XIÊN",
+      "startTime": 67.78,
+      "endTime": 88.82,
+      "duration": 21.04,
+      "mascotMode": "magnifier",
+      "mascotTip": "x tiến tới x0 ra vô cực: TCĐ x = x0. x tiến tới vô cực ra y0: TCN y = y0. Phân thức bậc 2/1: TCX y = ax + b!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fb923c; font-weight:bold; margin-bottom:10px;\">4. Đường tiệm cận của đồ thị hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Tiệm cận đứng (TCĐ):</b> $\\lim_{x \\to x_0^\\pm} y = \\pm\\infty \\implies x = x_0$.<br>• <b>Tiệm cận ngang (TCN):</b> $\\lim_{x \\to \\pm\\infty} y = y_0 \\implies y = y_0$.<br>• <b>Tiệm cận xiên (TCX):</b> Khi chia đa thức hàm bậc 2 / bậc 1: $y = ax + b + \\frac{r}{px+q} \\implies y = ax + b$.</p></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "BA DẠNG ĐỒ THỊ CƠ BẢN",
+      "subtitle": "PHẦN 5: TÂM ĐỐI XỨNG & ĐẶC TRƯNG HÌNH HỌC",
+      "startTime": 88.82,
+      "endTime": 105.62,
+      "duration": 16.8,
+      "mascotMode": "cheer",
+      "mascotTip": "Bậc 3: Tâm đối xứng là điểm uốn U. Bậc 1/1 và Bậc 2/1: Tâm đối xứng là giao điểm 2 đường tiệm cận!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#4ade80; font-weight:bold; margin-bottom:10px;\">5. Ba dạng đồ thị cơ bản cần nhớ</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Hàm bậc 3:</b> Luôn có tâm đối xứng là điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$.<br>• <b>Hàm phân thức bậc 1 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCN.<br>• <b>Hàm phân thức bậc 2 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCX.</p></div>"
+    }
+  ]
+},
+  ontap_muc2: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc2",
+  "sectionTitle": "Mục 2: Rèn luyện 4 bài toán then chốt",
+  "audio": "/audio/ontap_muc2.mp3",
+  "audioSrc": "./audio/ontap_muc2.mp3",
+  "audio_src": "./audio/ontap_muc2.mp3",
+  "timestamp_src": "timestamps/ontap_muc2.json",
+  "totalDuration": 174.91,
+  "duration": 174.91,
+  "title": "Mục 2: Rèn luyện 4 bài toán then chốt thường gặp trong đề thi tốt nghiệp",
+  "owl_tip": "4 bài toán đinh: Đơn điệu chứa m, GTLN/GTNN trên BBT, Tiệm cận xiên hàm bậc 2/1, Nhận diện đồ thị!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 10.37,
+      "id": "vd1_q"
+    },
+    {
+      "time": 41.3,
+      "id": "vd1_a"
+    },
+    {
+      "time": 70.34,
+      "id": "vd2_q"
+    },
+    {
+      "time": 93.12,
+      "id": "vd2_a"
+    },
+    {
+      "time": 112.78,
+      "id": "vd3_q"
+    },
+    {
+      "time": 132.34,
+      "id": "vd3_a"
+    },
+    {
+      "time": 148.87,
+      "id": "vd4_q"
+    },
+    {
+      "time": 164.38,
+      "id": "vd4_a"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>Rèn luyện 4 bài toán then chốt</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Bài tập 1:</b> Tìm $m$ để hàm số $y = \\frac{1}{3}x^3 - mx^2 + 4x + 1$ đồng biến trên $\\mathbb{R}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + $y' = x^2 - 2mx + 4$.<br>\n          + Hàm số đồng biến trên $\\mathbb{R} \\iff y' \\ge 0, \\forall x \\in \\mathbb{R} \\iff \\Delta' = m^2 - 4 \\le 0 \\iff -2 \\le m \\le 2$.<br>\n          $\\implies$ Vậy <b>$-2 \\le m \\le 2$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Bài tập 2:</b> Cho hàm số có bảng biến thiên trên $[-1; 3]$:<br>\n          <table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\">\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td>\n              <td style=\"padding:6px; color:#111827 !important;\">$-1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$3$</td>\n            </tr>\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td>\n              <td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td></td>\n            </tr>\n            <tr style=\"height:65px;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td>\n              <td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-4$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$2$</td>\n            </tr>\n          </table>\n          Tìm $\\max_{[-1; 3]} y$ và $\\min_{[-1; 3]} y$. <i>(Thời gian suy nghĩ: 20s)</i>\n        </div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Dựa vào BBT: <b>$\\max_{[-1; 3]} y = 5$</b> tại $x=1$; <b>$\\min_{[-1; 3]} y = -4$</b> tại $x=-1$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Bài tập 3:</b> Tìm phương trình đường tiệm cận xiên của $y = \\frac{2x^2 - 3x + 1}{x + 2}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Thực hiện phép chia đa thức tử cho mẫu:<br>\n          $y = 2x - 7 + \\frac{15}{x + 2}$.<br>\n          $\\implies$ Phương trình tiệm cận xiên là đường thẳng <b>$y = 2x - 7$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd4_q\"><b>Bài tập 4:</b> Nhận diện hàm số có TCĐ $x = -1$, TCN $y = 2$ và cắt trục hoành tại $(1; 0)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd4_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Hàm số phân thức bậc nhất trên bậc nhất cần tìm là <b>$y = \\frac{2x - 2}{x + 1}$</b>.\n        </div>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tổng quan 4 bài toán then chốt",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Bài toán 1 - Đơn điệu chứa tham số m",
+      "scenes": [
+        2,
+        3
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Bài toán 2 - GTLN & GTNN trên bảng biến thiên",
+      "scenes": [
+        4,
+        5
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bài toán 3 - Tìm đường tiệm cận xiên",
+      "scenes": [
+        6,
+        7
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Bài toán 4 - Nhận diện đồ thị hàm số",
+      "scenes": [
+        8,
+        9
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "RÈN LUYỆN 4 BÀI TOÁN THEN CHỐT",
+      "subtitle": "PHẦN 1: TỔNG QUAN CÁC DẠNG TOÁN THI TỐT NGHIỆP",
+      "startTime": 0.0,
+      "endTime": 10.37,
+      "duration": 10.37,
+      "mascotMode": "pointer",
+      "mascotTip": "4 bài toán then chốt: Đơn điệu chứa tham số m, Đọc BBT tìm GTLN/GTNN, Tìm tiệm cận xiên, Nhận diện đồ thị!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">Rèn luyện 4 bài toán then chốt Chương 1</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>1. <b>Bài toán 1:</b> Tìm tham số $m$ để hàm số đơn điệu trên $\\mathbb{R}$.<br>2. <b>Bài toán 2:</b> Tìm GTLN và GTNN dựa vào bảng biến thiên.<br>3. <b>Bài toán 3:</b> Xác định phương trình đường tiệm cận xiên.<br>4. <b>Bài toán 4:</b> Nhận diện đồ thị hàm số từ các đường tiệm cận và giao điểm.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "BÀI TẬP 1: ĐƠN ĐIỆU CHỨA THAM SỐ m",
+      "subtitle": "CÂU HỎI THỰC CHIẾN",
+      "startTime": 10.37,
+      "endTime": 41.3,
+      "duration": 30.93,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính y' = x² - 2mx + 4. Để đồng biến trên R thì delta' <= 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 1:</b> Tìm tất cả các giá trị của tham số $m$ để hàm số $y = \\frac{1}{3}x^3 - mx^2 + 4x + 1$ đồng biến trên toàn bộ tập số thực $\\mathbb{R}$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "BÀI TẬP 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ÁP DỤNG ĐIỀU KIỆN TAM THỨC BẬC HAI",
+      "startTime": 41.3,
+      "endTime": 70.34,
+      "duration": 29.04,
+      "mascotMode": "pointer",
+      "mascotTip": "y' >= 0, mọi x in R <=> delta' = m² - 4 <= 0 <=> -2 <= m <= 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd1_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải chi tiết Bài tập 1:</b><br>• Ta có đạo hàm: $y' = x^2 - 2mx + 4$.<br>• Hàm số đồng biến trên $\\mathbb{R} \\iff y' \\ge 0, \\forall x \\in \\mathbb{R}$.<br>• Vì hệ số $a = 1 > 0$ nên điều này tương đương:<br>&emsp;$$\\Delta' = m^2 - 4 \\le 0 \\iff -2 \\le m \\le 2$$<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> $m \\in [-2; 2]$.</div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "BÀI TẬP 2: GTLN & GTNN TRÊN BẢNG BIẾN THIÊN",
+      "subtitle": "CÂU HỎI QUAN SÁT BBT TRÊN [-1; 3]",
+      "startTime": 70.34,
+      "endTime": 93.12,
+      "duration": 22.78,
+      "mascotMode": "magnifier",
+      "mascotTip": "Quan sát kỹ hàng y trên đoạn [-1; 3]: Đỉnh cao nhất là GTLN, điểm thấp nhất là GTNN!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 2:</b> Cho hàm số $f(x)$ có bảng biến thiên trên đoạn $[-1; 3]$ như sau:<br><table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$3$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-4$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$2$</td></tr></table>Tìm $\\max_{[-1; 3]} y$ và $\\min_{[-1; 3]} y$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "BÀI TẬP 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ĐỌC CHUẨN XÁC DÒNG y",
+      "startTime": 93.12,
+      "endTime": 112.78,
+      "duration": 19.66,
+      "mascotMode": "pointer",
+      "mascotTip": "Điểm cao nhất tại đỉnh x = 1 cho y = 5 (max); Điểm thấp nhất tại mút x = -1 cho y = -4 (min)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd2_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 2:</b><br>• Quan sát dòng giá trị của $y$ trên đoạn $[-1; 3]$:<br>&emsp;+ Giá trị cao nhất đạt được là $y = 5$ tại $x = 1$.<br>&emsp;+ Giá trị thấp nhất đạt được là $y = -4$ tại $x = -1$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> <b>$\\max_{[-1; 3]} y = 5$</b> và <b>$\\min_{[-1; 3]} y = -4$</b>.</div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "BÀI TẬP 3: TÌM TIỆM CẬN XIÊN",
+      "subtitle": "CÂU HỎI THỰC HIỆN PHÉP CHIA ĐA THỨC",
+      "startTime": 112.78,
+      "endTime": 132.34,
+      "duration": 19.56,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử (2x² - 3x + 1) cho mẫu (x + 2) tìm phần thương bậc nhất!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 3:</b> Tìm phương trình đường tiệm cận xiên của đồ thị hàm số $y = \\frac{2x^2 - 3x + 1}{x + 2}$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "BÀI TẬP 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "PHÉP CHIA ĐA THỨC CHUẨN XÁC",
+      "startTime": 132.34,
+      "endTime": 148.87,
+      "duration": 16.53,
+      "mascotMode": "pointer",
+      "mascotTip": "y = 2x - 7 + 15/(x+2). Khi x -> vo cuc thi 15/(x+2) -> 0 => TCX la y = 2x - 7!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd3_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 3:</b><br>• Thực hiện phép chia đa thức tử cho mẫu:<br>&emsp;$$y = \\frac{2x^2 - 3x + 1}{x + 2} = 2x - 7 + \\frac{15}{x + 2}$$<br>• Do $\\lim_{x \\to \\pm\\infty} \\frac{15}{x + 2} = 0$ nên:<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tiệm cận xiên là đường thẳng <b>$y = 2x - 7$</b>.</div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "BÀI TẬP 4: NHẬN DIỆN ĐỒ THỊ HÀM SỐ",
+      "subtitle": "CÂU HỎI TỔNG HỢP TIỆM CẬN VÀ GIAO ĐIỂM",
+      "startTime": 148.87,
+      "endTime": 164.38,
+      "duration": 15.51,
+      "mascotMode": "magnifier",
+      "mascotTip": "TCĐ x = -1 -> Mẫu x + 1; TCN y = 2 -> Hệ số x ở tử là 2; Cắt Ox tại (1; 0) -> Tử là 2(x - 1) = 2x - 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd4_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 4:</b> Xác định phương trình hàm số phân thức có tiệm cận đứng $x = -1$, tiệm cận ngang $y = 2$ và cắt trục hoành tại điểm $(1; 0)$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BÀI TẬP 4: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT LUẬN HÀM SỐ TƯƠNG ỨNG",
+      "startTime": 164.38,
+      "endTime": 174.91,
+      "duration": 10.53,
+      "mascotMode": "cheer",
+      "mascotTip": "Phương trình tương ứng chuẩn: y = (2x - 2)/(x + 1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd4_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 4:</b><br>• Dạng hàm phân thức bậc 1 / bậc 1: $y = \\frac{ax + b}{cx + d}$.<br>• TCĐ $x = -1 \\implies$ Mẫu số là $x + 1$.<br>• TCN $y = 2 \\implies$ Tỉ số hệ số bậc nhất là $2 \\implies y = \\frac{2x + b}{x + 1}$.<br>• Đồ thị cắt trục hoành tại $(1; 0) \\implies 2(1) + b = 0 \\implies b = -2$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Hàm số cần tìm là <b>$y = \\frac{2x - 2}{x + 1}$</b>.</div></div>"
+    }
+  ]
+},
+  ontap_muc3: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc3",
+  "sectionTitle": "Mục 3: Bẫy đề thi, Mẹo Casio & Lời khuyên ôn tập",
+  "audio": "/audio/ontap_muc3.mp3",
+  "audioSrc": "./audio/ontap_muc3.mp3",
+  "audio_src": "./audio/ontap_muc3.mp3",
+  "timestamp_src": "timestamps/ontap_muc3.json",
+  "totalDuration": 88.27,
+  "duration": 88.27,
+  "title": "Mục 3: Tổng hợp bẫy đề thi kinh điển, Mẹo Casio & Lời khuyên ôn tập Thầy Thuấn Phan",
+  "owl_tip": "Khắc cốt ghi tâm: Cực trị hàm số là y; Điểm cực trị hàm số là x. Bấm CALC x = 10^6 tìm ngay TCN!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 10.34,
+      "id": "part2"
+    },
+    {
+      "time": 37.37,
+      "id": "part3"
+    },
+    {
+      "time": 67.56,
+      "id": "part4"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>Tổng kết: Bẫy đề thi, Kỹ thuật Casio & Lời khuyên ôn tập</h3></div>\n      <div id=\"part2\"><h3>1. Bẫy đề thi trắc nghiệm kinh điển</h3>\n        <p>• <b>Bẫy 1:</b> Nhầm lẫn giữa cực trị của hàm số ($y$), điểm cực trị của hàm số ($x$), và điểm cực trị của đồ thị ($(x; y)$).<br>\n        • <b>Bẫy 2:</b> Dùng ký hiệu hợp $\\cup$ khi kết luận các khoảng đồng biến, nghịch biến thay vì dùng chữ \"và\".<br>\n        • <b>Bẫy 3:</b> Vội vàng kết luận điểm cực trị khi đạo hàm triệt tiêu nhưng không đổi dấu qua nghiệm kép.</p>\n      </div>\n      <div id=\"part3\"><h3>2. Tuyệt chiêu máy tính Casio bỏ túi</h3>\n        <p>• <b>Tiệm cận ngang & Giới hạn:</b> Bấm [CALC] với $x = 10^6$ hoặc $-10^6$.<br>\n        • <b>GTLN - GTNN trên đoạn:</b> Dùng [Menu 8] (TABLE) quét giá trị với $\\text{Step} = \\frac{b - a}{29}$.<br>\n        • <b>Giao trục tung $Oy$:</b> Bấm [CALC] tại $x = 0$ để loại nhanh phương án sai trong 2 giây.</p>\n      </div>\n      <div id=\"part4\"><h3>3. Lời khuyên ôn tập từ Thầy Thuấn Phan</h3>\n        <p>Rèn luyện thói quen phác nhanh BBT ra nháp, nắm chắc dạng 3 đồ thị cốt lõi và luôn kiểm tra điều kiện thực tế của biến số trong bài toán ứng dụng!</p>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Giới thiệu Bẫy đề thi & Kỹ thuật Casio",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 3 Bẫy trắc nghiệm kinh điển",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Tuyệt chiêu máy tính Casio bỏ túi",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Lời khuyên ôn tập từ Thầy Thuấn Phan",
+      "scenes": [
+        4
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "TỔNG KẾT: BẪY ĐỀ THI & CASIO",
+      "subtitle": "PHẦN 1: BÍ KÍP ĐẠT ĐIỂM TỐI ĐA",
+      "startTime": 0.0,
+      "endTime": 10.34,
+      "duration": 10.34,
+      "mascotMode": "pointer",
+      "mascotTip": "Tổng kết 3 bẫy đề thi kinh điển, 3 tuyệt chiêu Casio và lời khuyên ôn tập thực chiến!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">Tổng kết Chương 1: Bí kíp đạt điểm tối đa</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Mục tiêu:</b> Tránh mất điểm oan ở các câu hỏi bẫy khái niệm.<br>• <b>Kỹ thuật:</b> Sử dụng máy tính cầm tay Casio để kiểm tra nhanh kết quả trong 5 giây.<br>• <b>Phương pháp:</b> Nắm chắc quy tắc vẽ phác BBT và nhận diện hàm số.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "3 BẪY ĐỀ THI TRẮC NGHIỆM KINH ĐIỂN",
+      "subtitle": "PHẦN 2: CẢNH BÁO CÁC LỖI SAI PHỔ BIẾN",
+      "startTime": 10.34,
+      "endTime": 37.37,
+      "duration": 27.03,
+      "mascotMode": "magnifier",
+      "mascotTip": "Cực trị hàm số là y; Điểm cực trị hàm số là x; Điểm cực trị đồ thị là (x; y). Không dùng dấu hợp khi kết luận đồng biến!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">3 Bẫy trắc nghiệm kinh điển:</span><br>1. <b>Bẫy thuật ngữ cực trị:</b> \"Cực trị hàm số\" là giá trị $y$; \"Điểm cực trị hàm số\" là $x$; \"Điểm cực trị của đồ thị\" là cặp $(x; y)$.<br>2. <b>Bẫy ký hiệu đơn điệu:</b> Tuyệt đối không dùng dấu hợp $\\cup$ khi kết luận khoảng đồng biến (Ví dụ: $(-\\infty; 1) \\cup (1; +\\infty)$ là <b>SAI</b>, phải viết \"và\").<br>3. <b>Bẫy nghiệm bội chẵn:</b> Khi $f'(x) = 0$ tại $x_0$ nhưng qua $x_0$ đạo hàm không đổi dấu thì $x_0$ <b>KHÔNG</b> là điểm cực trị!</div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3 TUYỆT CHIÊU MÁY TÍNH CASIO",
+      "subtitle": "PHẦN 3: PHẢN XẠ GIẢI NHANH TRONG PHÒNG THI",
+      "startTime": 37.37,
+      "endTime": 67.56,
+      "duration": 30.19,
+      "mascotMode": "pointer",
+      "mascotTip": "CALC x = 10^6 tìm TCN; TABLE Menu 8 tìm GTLN/GTNN; CALC x = 0 tìm giao Oy!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:8px;\">3 Mẹo Casio phản xạ giải nhanh:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1 (Tiệm cận ngang & Giới hạn):</b> Nhập biểu thức $y$, bấm [CALC] với $x = 10^6$ hoặc $-10^6$. Nếu ra số xấp xỉ hằng số $y_0$ thì $y = y_0$ là TCN.<br>• <b>Mẹo 2 (GTLN & GTNN trên đoạn $[a; b]$):</b> Vào [Menu 8] (TABLE), nhập hàm số với $\\text{Start} = a$, $\\text{End} = b$, $\\text{Step} = \\frac{b-a}{29}$. Quét cột $f(x)$ để tìm max, min.<br>• <b>Mẹo 3 (Giao điểm trục tung $Oy$):</b> Bấm [CALC] tại $x = 0$ để xem tung độ giao điểm, loại ngay 2 phương án sai trong 2 giây!</div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "LỜI KHUYÊN ÔN TẬP TỪ THẦY THUẤN PHAN",
+      "subtitle": "PHẦN 4: CHÚC CÁC EM ĐẠT ĐIỂM CAO",
+      "startTime": 67.56,
+      "endTime": 88.27,
+      "duration": 20.71,
+      "mascotMode": "cheer",
+      "mascotTip": "Vẽ phác BBT ra nháp + Nhớ 3 dạng đồ thị cơ bản + Kiểm tra điều kiện bài toán thực tế!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">Lời khuyên ôn tập từ Thầy Thuấn Phan:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">1. Luôn rèn kỹ năng vẽ phác nhanh bảng biến thiên ra nháp khi gặp bất kỳ câu hỏi nào về đơn điệu, cực trị hay số nghiệm phương trình.<br>2. Ghi nhớ hình ảnh 3 dạng đồ thị cơ bản: Bậc 3, Phân thức bậc 1 / bậc 1, Phân thức bậc 2 / bậc 1.<br>3. Trong các bài toán ứng dụng thực tế (Bài 5), luôn đặt điều kiện cho ẩn số trước khi lấy đạo hàm.<br><b style=\"color:#fef08a; font-size:22px;\">Chúc các em ôn tập xuất sắc và tự tin đạt điểm tối đa Chương 1!</b></div>"
+    }
+  ]
+},
+  ontap_chuong1_muc1: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc1",
+  "sectionTitle": "Mục 1: Hệ thống hóa kiến thức trọng tâm",
+  "audio": "/audio/ontap_muc1.mp3",
+  "audioSrc": "./audio/ontap_muc1.mp3",
+  "audio_src": "./audio/ontap_muc1.mp3",
+  "timestamp_src": "timestamps/ontap_muc1.json",
+  "totalDuration": 105.62,
+  "duration": 105.62,
+  "title": "Mục 1: Hệ thống hóa toàn bộ kiến thức trọng tâm Chương 1",
+  "owl_tip": "Đạo hàm là sợi chỉ đỏ xuyên suốt: Dấu đạo hàm cho Đơn điệu & Cực trị; Giới hạn cho Tiệm cận; Khảo sát kết hợp toàn bộ!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 33.17,
+      "id": "part2"
+    },
+    {
+      "time": 49.9,
+      "id": "part3"
+    },
+    {
+      "time": 67.78,
+      "id": "part4"
+    },
+    {
+      "time": 88.82,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Tính đơn điệu của hàm số</h3>\n        <p>• $f'(x) \\ge 0, \\forall x \\in K \\iff f(x)$ đồng biến trên $K$.<br>\n        • $f'(x) \\le 0, \\forall x \\in K \\iff f(x)$ nghịch biến trên $K$.<br>\n        <i>(Dấu bằng chỉ xảy ra tại hữu hạn điểm trên $K$).</i></p>\n      </div>\n      <div id=\"part2\"><h3>2. Cực trị của hàm số</h3>\n        <p>• $x_0$ là điểm cực trị $\\iff f'(x)$ đổi dấu khi qua $x_0$.<br>\n        • Đổi dấu từ $+$ sang $-$: Điểm <b>Cực đại</b>.<br>\n        • Đổi dấu từ $-$ sang $+$: Điểm <b>Cực tiểu</b>.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Giá trị lớn nhất & nhỏ nhất (trên $[a; b]$)</h3>\n        <p><b>Bước 1:</b> Tính $f'(x)$, tìm các nghiệm $x_i \\in (a; b)$.<br>\n        <b>Bước 2:</b> Tính giá trị $f(a), f(b), f(x_i)$.<br>\n        <b>Bước 3:</b> So sánh: Số lớn nhất là $\\max$, số nhỏ nhất là $\\min$.</p>\n      </div>\n      <div id=\"part4\"><h3>4. Các đường tiệm cận của đồ thị</h3>\n        <p>• <b>Tiệm cận đứng (TCĐ):</b> $\\lim_{x \\to x_0^\\pm} y = \\pm\\infty \\implies x = x_0$.<br>\n        • <b>Tiệm cận ngang (TCN):</b> $\\lim_{x \\to \\pm\\infty} y = y_0 \\implies y = y_0$.<br>\n        • <b>Tiệm cận xiên (TCX):</b> $y = ax + b$ khi chia đa thức cho hàm phân thức bậc 2 / bậc 1.</p>\n      </div>\n      <div id=\"part5\"><h3>5. Ba dạng đồ thị cốt lõi</h3>\n        <p>• <b>Hàm bậc 3:</b> Luôn có tâm đối xứng là điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$.<br>\n        • <b>Hàm phân thức bậc 1 / bậc 1:</b> Tâm đối xứng $I(x_0; y_0)$ là giao điểm 2 tiệm cận.<br>\n        • <b>Hàm phân thức bậc 2 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCX.</p>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tính đơn điệu của hàm số",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Cực trị của hàm số",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Giá trị lớn nhất & nhỏ nhất",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Các đường tiệm cận đồ thị",
+      "scenes": [
+        4
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Ba dạng đồ thị cơ bản",
+      "scenes": [
+        5
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "ÔN TẬP CHƯƠNG 1: TÍNH ĐƠN ĐIỆU",
+      "subtitle": "PHẦN 1: ĐIỀU KIỆN ĐỒNG BIẾN & NGHỊCH BIẾN",
+      "startTime": 0.0,
+      "endTime": 33.17,
+      "duration": 33.17,
+      "mascotMode": "pointer",
+      "mascotTip": "f'(x) >= 0: Đồng biến; f'(x) <= 0: Nghịch biến. Dấu bằng chỉ xảy ra tại hữu hạn điểm!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Tính đơn điệu của hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• $f'(x) \\ge 0, \\forall x \\in K \\iff f(x)$ đồng biến trên $K$.<br>• $f'(x) \\le 0, \\forall x \\in K \\iff f(x)$ nghịch biến trên $K$.<br>• Dấu bằng chỉ xảy ra tại một số hữu hạn điểm rời rạc trên $K$.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CỰC TRỊ CỦA HÀM SỐ",
+      "subtitle": "PHẦN 2: DẤU HIỆU ĐỔI DẤU CỦA ĐẠO HÀM",
+      "startTime": 33.17,
+      "endTime": 49.9,
+      "duration": 16.73,
+      "mascotMode": "pointer",
+      "mascotTip": "Qua x0 đổi dấu từ (+) sang (-) là Cực đại; từ (-) sang (+) là Cực tiểu!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Cực trị của hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• $x_0$ là điểm cực trị $\\iff f'(x)$ đổi dấu khi $x$ đi qua $x_0$.<br>• Đổi dấu từ <b>dương (+)</b> sang <b>âm (-)</b> $\\implies$ Điểm <b>Cực đại</b>.<br>• Đổi dấu từ <b>âm (-)</b> sang <b>dương (+)</b> $\\implies$ Điểm <b>Cực tiểu</b>.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "GIÁ TRỊ LỚN NHẤT & NHỎ NHẤT",
+      "subtitle": "PHẦN 3: QUY TRÌNH 3 BƯỚC TÌM TRÊN ĐOẠN [a; b]",
+      "startTime": 49.9,
+      "endTime": 67.78,
+      "duration": 17.88,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính đạo hàm -> Tìm nghiệm xi thuộc (a; b) -> Tính f(a), f(b), f(xi) rồi so sánh!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#a78bfa; font-weight:bold; margin-bottom:10px;\">3. GTLN & GTNN trên đoạn $[a; b]$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Tính $f'(x)$, tìm các nghiệm $x_i \\in (a; b)$ làm cho $f'(x) = 0$ hoặc $f'(x)$ không xác định.<br>• <b>Bước 2:</b> Tính các giá trị $f(a), f(b), f(x_i)$.<br>• <b>Bước 3:</b> Giá trị lớn nhất trong số đó là $\\max$, nhỏ nhất là $\\min$.</p></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "CÁC ĐƯỜNG TIỆM CẬN ĐỒ THỊ",
+      "subtitle": "PHẦN 4: TIỆM CẬN ĐỨNG, NGANG VÀ XIÊN",
+      "startTime": 67.78,
+      "endTime": 88.82,
+      "duration": 21.04,
+      "mascotMode": "magnifier",
+      "mascotTip": "x tiến tới x0 ra vô cực: TCĐ x = x0. x tiến tới vô cực ra y0: TCN y = y0. Phân thức bậc 2/1: TCX y = ax + b!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fb923c; font-weight:bold; margin-bottom:10px;\">4. Đường tiệm cận của đồ thị hàm số</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Tiệm cận đứng (TCĐ):</b> $\\lim_{x \\to x_0^\\pm} y = \\pm\\infty \\implies x = x_0$.<br>• <b>Tiệm cận ngang (TCN):</b> $\\lim_{x \\to \\pm\\infty} y = y_0 \\implies y = y_0$.<br>• <b>Tiệm cận xiên (TCX):</b> Khi chia đa thức hàm bậc 2 / bậc 1: $y = ax + b + \\frac{r}{px+q} \\implies y = ax + b$.</p></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "BA DẠNG ĐỒ THỊ CƠ BẢN",
+      "subtitle": "PHẦN 5: TÂM ĐỐI XỨNG & ĐẶC TRƯNG HÌNH HỌC",
+      "startTime": 88.82,
+      "endTime": 105.62,
+      "duration": 16.8,
+      "mascotMode": "cheer",
+      "mascotTip": "Bậc 3: Tâm đối xứng là điểm uốn U. Bậc 1/1 và Bậc 2/1: Tâm đối xứng là giao điểm 2 đường tiệm cận!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#4ade80; font-weight:bold; margin-bottom:10px;\">5. Ba dạng đồ thị cơ bản cần nhớ</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Hàm bậc 3:</b> Luôn có tâm đối xứng là điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$.<br>• <b>Hàm phân thức bậc 1 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCN.<br>• <b>Hàm phân thức bậc 2 / bậc 1:</b> Tâm đối xứng $I$ là giao điểm giữa TCĐ và TCX.</p></div>"
+    }
+  ]
+},
+  ontap_chuong1_muc2: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc2",
+  "sectionTitle": "Mục 2: Rèn luyện 4 bài toán then chốt",
+  "audio": "/audio/ontap_muc2.mp3",
+  "audioSrc": "./audio/ontap_muc2.mp3",
+  "audio_src": "./audio/ontap_muc2.mp3",
+  "timestamp_src": "timestamps/ontap_muc2.json",
+  "totalDuration": 174.91,
+  "duration": 174.91,
+  "title": "Mục 2: Rèn luyện 4 bài toán then chốt thường gặp trong đề thi tốt nghiệp",
+  "owl_tip": "4 bài toán đinh: Đơn điệu chứa m, GTLN/GTNN trên BBT, Tiệm cận xiên hàm bậc 2/1, Nhận diện đồ thị!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 10.37,
+      "id": "vd1_q"
+    },
+    {
+      "time": 41.3,
+      "id": "vd1_a"
+    },
+    {
+      "time": 70.34,
+      "id": "vd2_q"
+    },
+    {
+      "time": 93.12,
+      "id": "vd2_a"
+    },
+    {
+      "time": 112.78,
+      "id": "vd3_q"
+    },
+    {
+      "time": 132.34,
+      "id": "vd3_a"
+    },
+    {
+      "time": 148.87,
+      "id": "vd4_q"
+    },
+    {
+      "time": 164.38,
+      "id": "vd4_a"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>Rèn luyện 4 bài toán then chốt</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Bài tập 1:</b> Tìm $m$ để hàm số $y = \\frac{1}{3}x^3 - mx^2 + 4x + 1$ đồng biến trên $\\mathbb{R}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + $y' = x^2 - 2mx + 4$.<br>\n          + Hàm số đồng biến trên $\\mathbb{R} \\iff y' \\ge 0, \\forall x \\in \\mathbb{R} \\iff \\Delta' = m^2 - 4 \\le 0 \\iff -2 \\le m \\le 2$.<br>\n          $\\implies$ Vậy <b>$-2 \\le m \\le 2$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Bài tập 2:</b> Cho hàm số có bảng biến thiên trên $[-1; 3]$:<br>\n          <table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\">\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td>\n              <td style=\"padding:6px; color:#111827 !important;\">$-1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$3$</td>\n            </tr>\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td>\n              <td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td></td>\n            </tr>\n            <tr style=\"height:65px;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td>\n              <td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-4$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$2$</td>\n            </tr>\n          </table>\n          Tìm $\\max_{[-1; 3]} y$ và $\\min_{[-1; 3]} y$. <i>(Thời gian suy nghĩ: 20s)</i>\n        </div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Dựa vào BBT: <b>$\\max_{[-1; 3]} y = 5$</b> tại $x=1$; <b>$\\min_{[-1; 3]} y = -4$</b> tại $x=-1$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Bài tập 3:</b> Tìm phương trình đường tiệm cận xiên của $y = \\frac{2x^2 - 3x + 1}{x + 2}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Thực hiện phép chia đa thức tử cho mẫu:<br>\n          $y = 2x - 7 + \\frac{15}{x + 2}$.<br>\n          $\\implies$ Phương trình tiệm cận xiên là đường thẳng <b>$y = 2x - 7$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd4_q\"><b>Bài tập 4:</b> Nhận diện hàm số có TCĐ $x = -1$, TCN $y = 2$ và cắt trục hoành tại $(1; 0)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd4_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Hàm số phân thức bậc nhất trên bậc nhất cần tìm là <b>$y = \\frac{2x - 2}{x + 1}$</b>.\n        </div>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tổng quan 4 bài toán then chốt",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Bài toán 1 - Đơn điệu chứa tham số m",
+      "scenes": [
+        2,
+        3
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Bài toán 2 - GTLN & GTNN trên bảng biến thiên",
+      "scenes": [
+        4,
+        5
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bài toán 3 - Tìm đường tiệm cận xiên",
+      "scenes": [
+        6,
+        7
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Bài toán 4 - Nhận diện đồ thị hàm số",
+      "scenes": [
+        8,
+        9
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "RÈN LUYỆN 4 BÀI TOÁN THEN CHỐT",
+      "subtitle": "PHẦN 1: TỔNG QUAN CÁC DẠNG TOÁN THI TỐT NGHIỆP",
+      "startTime": 0.0,
+      "endTime": 10.37,
+      "duration": 10.37,
+      "mascotMode": "pointer",
+      "mascotTip": "4 bài toán then chốt: Đơn điệu chứa tham số m, Đọc BBT tìm GTLN/GTNN, Tìm tiệm cận xiên, Nhận diện đồ thị!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">Rèn luyện 4 bài toán then chốt Chương 1</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>1. <b>Bài toán 1:</b> Tìm tham số $m$ để hàm số đơn điệu trên $\\mathbb{R}$.<br>2. <b>Bài toán 2:</b> Tìm GTLN và GTNN dựa vào bảng biến thiên.<br>3. <b>Bài toán 3:</b> Xác định phương trình đường tiệm cận xiên.<br>4. <b>Bài toán 4:</b> Nhận diện đồ thị hàm số từ các đường tiệm cận và giao điểm.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "BÀI TẬP 1: ĐƠN ĐIỆU CHỨA THAM SỐ m",
+      "subtitle": "CÂU HỎI THỰC CHIẾN",
+      "startTime": 10.37,
+      "endTime": 41.3,
+      "duration": 30.93,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính y' = x² - 2mx + 4. Để đồng biến trên R thì delta' <= 0!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 1:</b> Tìm tất cả các giá trị của tham số $m$ để hàm số $y = \\frac{1}{3}x^3 - mx^2 + 4x + 1$ đồng biến trên toàn bộ tập số thực $\\mathbb{R}$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "BÀI TẬP 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ÁP DỤNG ĐIỀU KIỆN TAM THỨC BẬC HAI",
+      "startTime": 41.3,
+      "endTime": 70.34,
+      "duration": 29.04,
+      "mascotMode": "pointer",
+      "mascotTip": "y' >= 0, mọi x in R <=> delta' = m² - 4 <= 0 <=> -2 <= m <= 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd1_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải chi tiết Bài tập 1:</b><br>• Ta có đạo hàm: $y' = x^2 - 2mx + 4$.<br>• Hàm số đồng biến trên $\\mathbb{R} \\iff y' \\ge 0, \\forall x \\in \\mathbb{R}$.<br>• Vì hệ số $a = 1 > 0$ nên điều này tương đương:<br>&emsp;$$\\Delta' = m^2 - 4 \\le 0 \\iff -2 \\le m \\le 2$$<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> $m \\in [-2; 2]$.</div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "BÀI TẬP 2: GTLN & GTNN TRÊN BẢNG BIẾN THIÊN",
+      "subtitle": "CÂU HỎI QUAN SÁT BBT TRÊN [-1; 3]",
+      "startTime": 70.34,
+      "endTime": 93.12,
+      "duration": 22.78,
+      "mascotMode": "magnifier",
+      "mascotTip": "Quan sát kỹ hàng y trên đoạn [-1; 3]: Đỉnh cao nhất là GTLN, điểm thấp nhất là GTNN!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 2:</b> Cho hàm số $f(x)$ có bảng biến thiên trên đoạn $[-1; 3]$ như sau:<br><table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$3$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-4$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$2$</td></tr></table>Tìm $\\max_{[-1; 3]} y$ và $\\min_{[-1; 3]} y$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "BÀI TẬP 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "ĐỌC CHUẨN XÁC DÒNG y",
+      "startTime": 93.12,
+      "endTime": 112.78,
+      "duration": 19.66,
+      "mascotMode": "pointer",
+      "mascotTip": "Điểm cao nhất tại đỉnh x = 1 cho y = 5 (max); Điểm thấp nhất tại mút x = -1 cho y = -4 (min)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd2_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 2:</b><br>• Quan sát dòng giá trị của $y$ trên đoạn $[-1; 3]$:<br>&emsp;+ Giá trị cao nhất đạt được là $y = 5$ tại $x = 1$.<br>&emsp;+ Giá trị thấp nhất đạt được là $y = -4$ tại $x = -1$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> <b>$\\max_{[-1; 3]} y = 5$</b> và <b>$\\min_{[-1; 3]} y = -4$</b>.</div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "BÀI TẬP 3: TÌM TIỆM CẬN XIÊN",
+      "subtitle": "CÂU HỎI THỰC HIỆN PHÉP CHIA ĐA THỨC",
+      "startTime": 112.78,
+      "endTime": 132.34,
+      "duration": 19.56,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử (2x² - 3x + 1) cho mẫu (x + 2) tìm phần thương bậc nhất!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 3:</b> Tìm phương trình đường tiệm cận xiên của đồ thị hàm số $y = \\frac{2x^2 - 3x + 1}{x + 2}$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "BÀI TẬP 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "PHÉP CHIA ĐA THỨC CHUẨN XÁC",
+      "startTime": 132.34,
+      "endTime": 148.87,
+      "duration": 16.53,
+      "mascotMode": "pointer",
+      "mascotTip": "y = 2x - 7 + 15/(x+2). Khi x -> vo cuc thi 15/(x+2) -> 0 => TCX la y = 2x - 7!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd3_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 3:</b><br>• Thực hiện phép chia đa thức tử cho mẫu:<br>&emsp;$$y = \\frac{2x^2 - 3x + 1}{x + 2} = 2x - 7 + \\frac{15}{x + 2}$$<br>• Do $\\lim_{x \\to \\pm\\infty} \\frac{15}{x + 2} = 0$ nên:<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tiệm cận xiên là đường thẳng <b>$y = 2x - 7$</b>.</div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "BÀI TẬP 4: NHẬN DIỆN ĐỒ THỊ HÀM SỐ",
+      "subtitle": "CÂU HỎI TỔNG HỢP TIỆM CẬN VÀ GIAO ĐIỂM",
+      "startTime": 148.87,
+      "endTime": 164.38,
+      "duration": 15.51,
+      "mascotMode": "magnifier",
+      "mascotTip": "TCĐ x = -1 -> Mẫu x + 1; TCN y = 2 -> Hệ số x ở tử là 2; Cắt Ox tại (1; 0) -> Tử là 2(x - 1) = 2x - 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd4_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Bài tập 4:</b> Xác định phương trình hàm số phân thức có tiệm cận đứng $x = -1$, tiệm cận ngang $y = 2$ và cắt trục hoành tại điểm $(1; 0)$.<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BÀI TẬP 4: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT LUẬN HÀM SỐ TƯƠNG ỨNG",
+      "startTime": 164.38,
+      "endTime": 174.91,
+      "duration": 10.53,
+      "mascotMode": "cheer",
+      "mascotTip": "Phương trình tương ứng chuẩn: y = (2x - 2)/(x + 1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd4_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Bài tập 4:</b><br>• Dạng hàm phân thức bậc 1 / bậc 1: $y = \\frac{ax + b}{cx + d}$.<br>• TCĐ $x = -1 \\implies$ Mẫu số là $x + 1$.<br>• TCN $y = 2 \\implies$ Tỉ số hệ số bậc nhất là $2 \\implies y = \\frac{2x + b}{x + 1}$.<br>• Đồ thị cắt trục hoành tại $(1; 0) \\implies 2(1) + b = 0 \\implies b = -2$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Hàm số cần tìm là <b>$y = \\frac{2x - 2}{x + 1}$</b>.</div></div>"
+    }
+  ]
+},
+  ontap_chuong1_muc3: {
+  "lessonId": "ontap",
+  "lessonTitle": "Ôn tập Chương 1: Ứng dụng đạo hàm khảo sát hàm số",
+  "sectionId": "ontap_muc3",
+  "sectionTitle": "Mục 3: Bẫy đề thi, Mẹo Casio & Lời khuyên ôn tập",
+  "audio": "/audio/ontap_muc3.mp3",
+  "audioSrc": "./audio/ontap_muc3.mp3",
+  "audio_src": "./audio/ontap_muc3.mp3",
+  "timestamp_src": "timestamps/ontap_muc3.json",
+  "totalDuration": 88.27,
+  "duration": 88.27,
+  "title": "Mục 3: Tổng hợp bẫy đề thi kinh điển, Mẹo Casio & Lời khuyên ôn tập Thầy Thuấn Phan",
+  "owl_tip": "Khắc cốt ghi tâm: Cực trị hàm số là y; Điểm cực trị hàm số là x. Bấm CALC x = 10^6 tìm ngay TCN!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 10.34,
+      "id": "part2"
+    },
+    {
+      "time": 37.37,
+      "id": "part3"
+    },
+    {
+      "time": 67.56,
+      "id": "part4"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>Tổng kết: Bẫy đề thi, Kỹ thuật Casio & Lời khuyên ôn tập</h3></div>\n      <div id=\"part2\"><h3>1. Bẫy đề thi trắc nghiệm kinh điển</h3>\n        <p>• <b>Bẫy 1:</b> Nhầm lẫn giữa cực trị của hàm số ($y$), điểm cực trị của hàm số ($x$), và điểm cực trị của đồ thị ($(x; y)$).<br>\n        • <b>Bẫy 2:</b> Dùng ký hiệu hợp $\\cup$ khi kết luận các khoảng đồng biến, nghịch biến thay vì dùng chữ \"và\".<br>\n        • <b>Bẫy 3:</b> Vội vàng kết luận điểm cực trị khi đạo hàm triệt tiêu nhưng không đổi dấu qua nghiệm kép.</p>\n      </div>\n      <div id=\"part3\"><h3>2. Tuyệt chiêu máy tính Casio bỏ túi</h3>\n        <p>• <b>Tiệm cận ngang & Giới hạn:</b> Bấm [CALC] với $x = 10^6$ hoặc $-10^6$.<br>\n        • <b>GTLN - GTNN trên đoạn:</b> Dùng [Menu 8] (TABLE) quét giá trị với $\\text{Step} = \\frac{b - a}{29}$.<br>\n        • <b>Giao trục tung $Oy$:</b> Bấm [CALC] tại $x = 0$ để loại nhanh phương án sai trong 2 giây.</p>\n      </div>\n      <div id=\"part4\"><h3>3. Lời khuyên ôn tập từ Thầy Thuấn Phan</h3>\n        <p>Rèn luyện thói quen phác nhanh BBT ra nháp, nắm chắc dạng 3 đồ thị cốt lõi và luôn kiểm tra điều kiện thực tế của biến số trong bài toán ứng dụng!</p>\n      </div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Giới thiệu Bẫy đề thi & Kỹ thuật Casio",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 3 Bẫy trắc nghiệm kinh điển",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Tuyệt chiêu máy tính Casio bỏ túi",
+      "scenes": [
+        3
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Lời khuyên ôn tập từ Thầy Thuấn Phan",
+      "scenes": [
+        4
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "TỔNG KẾT: BẪY ĐỀ THI & CASIO",
+      "subtitle": "PHẦN 1: BÍ KÍP ĐẠT ĐIỂM TỐI ĐA",
+      "startTime": 0.0,
+      "endTime": 10.34,
+      "duration": 10.34,
+      "mascotMode": "pointer",
+      "mascotTip": "Tổng kết 3 bẫy đề thi kinh điển, 3 tuyệt chiêu Casio và lời khuyên ôn tập thực chiến!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">Tổng kết Chương 1: Bí kíp đạt điểm tối đa</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Mục tiêu:</b> Tránh mất điểm oan ở các câu hỏi bẫy khái niệm.<br>• <b>Kỹ thuật:</b> Sử dụng máy tính cầm tay Casio để kiểm tra nhanh kết quả trong 5 giây.<br>• <b>Phương pháp:</b> Nắm chắc quy tắc vẽ phác BBT và nhận diện hàm số.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "3 BẪY ĐỀ THI TRẮC NGHIỆM KINH ĐIỂN",
+      "subtitle": "PHẦN 2: CẢNH BÁO CÁC LỖI SAI PHỔ BIẾN",
+      "startTime": 10.34,
+      "endTime": 37.37,
+      "duration": 27.03,
+      "mascotMode": "magnifier",
+      "mascotTip": "Cực trị hàm số là y; Điểm cực trị hàm số là x; Điểm cực trị đồ thị là (x; y). Không dùng dấu hợp khi kết luận đồng biến!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">3 Bẫy trắc nghiệm kinh điển:</span><br>1. <b>Bẫy thuật ngữ cực trị:</b> \"Cực trị hàm số\" là giá trị $y$; \"Điểm cực trị hàm số\" là $x$; \"Điểm cực trị của đồ thị\" là cặp $(x; y)$.<br>2. <b>Bẫy ký hiệu đơn điệu:</b> Tuyệt đối không dùng dấu hợp $\\cup$ khi kết luận khoảng đồng biến (Ví dụ: $(-\\infty; 1) \\cup (1; +\\infty)$ là <b>SAI</b>, phải viết \"và\").<br>3. <b>Bẫy nghiệm bội chẵn:</b> Khi $f'(x) = 0$ tại $x_0$ nhưng qua $x_0$ đạo hàm không đổi dấu thì $x_0$ <b>KHÔNG</b> là điểm cực trị!</div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3 TUYỆT CHIÊU MÁY TÍNH CASIO",
+      "subtitle": "PHẦN 3: PHẢN XẠ GIẢI NHANH TRONG PHÒNG THI",
+      "startTime": 37.37,
+      "endTime": 67.56,
+      "duration": 30.19,
+      "mascotMode": "pointer",
+      "mascotTip": "CALC x = 10^6 tìm TCN; TABLE Menu 8 tìm GTLN/GTNN; CALC x = 0 tìm giao Oy!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:8px;\">3 Mẹo Casio phản xạ giải nhanh:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1 (Tiệm cận ngang & Giới hạn):</b> Nhập biểu thức $y$, bấm [CALC] với $x = 10^6$ hoặc $-10^6$. Nếu ra số xấp xỉ hằng số $y_0$ thì $y = y_0$ là TCN.<br>• <b>Mẹo 2 (GTLN & GTNN trên đoạn $[a; b]$):</b> Vào [Menu 8] (TABLE), nhập hàm số với $\\text{Start} = a$, $\\text{End} = b$, $\\text{Step} = \\frac{b-a}{29}$. Quét cột $f(x)$ để tìm max, min.<br>• <b>Mẹo 3 (Giao điểm trục tung $Oy$):</b> Bấm [CALC] tại $x = 0$ để xem tung độ giao điểm, loại ngay 2 phương án sai trong 2 giây!</div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "LỜI KHUYÊN ÔN TẬP TỪ THẦY THUẤN PHAN",
+      "subtitle": "PHẦN 4: CHÚC CÁC EM ĐẠT ĐIỂM CAO",
+      "startTime": 67.56,
+      "endTime": 88.27,
+      "duration": 20.71,
+      "mascotMode": "cheer",
+      "mascotTip": "Vẽ phác BBT ra nháp + Nhớ 3 dạng đồ thị cơ bản + Kiểm tra điều kiện bài toán thực tế!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">Lời khuyên ôn tập từ Thầy Thuấn Phan:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">1. Luôn rèn kỹ năng vẽ phác nhanh bảng biến thiên ra nháp khi gặp bất kỳ câu hỏi nào về đơn điệu, cực trị hay số nghiệm phương trình.<br>2. Ghi nhớ hình ảnh 3 dạng đồ thị cơ bản: Bậc 3, Phân thức bậc 1 / bậc 1, Phân thức bậc 2 / bậc 1.<br>3. Trong các bài toán ứng dụng thực tế (Bài 5), luôn đặt điều kiện cho ẩn số trước khi lấy đạo hàm.<br><b style=\"color:#fef08a; font-size:22px;\">Chúc các em ôn tập xuất sắc và tự tin đạt điểm tối đa Chương 1!</b></div>"
+    }
+  ]
+}
+});
+if(typeof window.CHAPTER1_LECTURES !== 'undefined') {
+  Object.assign(window.CHAPTER1_LECTURES, {
+    ontap_muc1: window.CHAPTER1_DATA.ontap_muc1,
+    ontap_muc2: window.CHAPTER1_DATA.ontap_muc2,
+    ontap_muc3: window.CHAPTER1_DATA.ontap_muc3,
+    ontap_chuong1_muc1: window.CHAPTER1_DATA.ontap_muc1,
+    ontap_chuong1_muc2: window.CHAPTER1_DATA.ontap_muc2,
+    ontap_chuong1_muc3: window.CHAPTER1_DATA.ontap_muc3
   });
 }

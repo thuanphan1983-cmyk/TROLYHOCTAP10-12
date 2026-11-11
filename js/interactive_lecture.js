@@ -453,9 +453,9 @@
       lessonTitle: "Ôn tập Chương 1",
       lessonBadge: "Ôn tập",
       sections: [
-        { key: "ontap_muc1", title: "Mục 1: Tổng ôn kiến thức cốt lõi & Sơ đồ", time: "05:00", icon: "🧠" },
-        { key: "ontap_muc2", title: "Mục 2: Bẫy trắc nghiệm & Kỹ thuật Casio", time: "05:00", icon: "💡" },
-        { key: "ontap_muc3", title: "Mục 3: Đề thi thực chiến 3 phần chuẩn Bộ", time: "05:00", icon: "🏆" }
+        { key: "ontap_muc1", title: "Mục 1: Hệ thống hóa kiến thức trọng tâm", time: "05:00", icon: "🧠" },
+        { key: "ontap_muc2", title: "Mục 2: Rèn luyện 4 bài toán then chốt", time: "05:00", icon: "📝" },
+        { key: "ontap_muc3", title: "Mục 3: Bẫy đề thi, Mẹo Casio & Lời khuyên", time: "05:00", icon: "💡" }
       ]
     }
   ];
