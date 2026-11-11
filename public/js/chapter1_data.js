@@ -1300,468 +1300,870 @@
     }
   ]
 },
-
     bai4_muc1: {
-      lessonId: "bai4",
-      lessonTitle: "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
-      sectionId: "bai4_muc1",
-      sectionTitle: "Mục 1: Sơ đồ tổng quát 4 bước khảo sát hàm số",
-      audioSrc: "./audio/bai4_muc1.mp3",
-      totalDuration: 280.0,
-      audio_src: "./audio/bai4_muc1.mp3",
-      timestamp_src: "timestamps/bai4_muc1.json",
-      title: "Mục 1: Sơ đồ tổng quát khảo sát hàm số chuẩn Bộ GD&ĐT",
-      owl_tip: "Sơ đồ 3 phần lớn: Khảo sát biến thiên, Lập bảng biến thiên, và Vẽ đồ thị (tìm điểm đặc biệt, tâm/trục đối xứng)!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Sơ đồ tổng quát 3 giai đoạn", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Tâm đối xứng & Trục đối xứng", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Điểm uốn và đạo hàm cấp hai", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy giao điểm các trục", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "SƠ ĐỒ TỔNG QUÁT KHẢO SÁT HÀM SỐ",
-          subtitle: "MỤC 1 • KHUNG SƯ PHẠM CHUẨN MỰC BỘ GD&ĐT",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Ghi nhớ 3 bước lớn:</b> 1. Tập xác định & Đạo hàm; 2. Bảng biến thiên & Tiệm cận; 3. Điểm đặc biệt & Vẽ đồ thị!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              <b style="color:#fef08a; font-size:24px;">1. Khảo sát sự biến thiên:</b><br>
-              • Tìm tập xác định $D$ của hàm số.<br>
-              • Tính đạo hàm $y' = f'(x)$. Tìm các nghiệm của $y' = 0$ và điểm $y'$ không xác định.<br>
-              • Tìm giới hạn tại vô cực và tìm các đường tiệm cận (nếu có).<br>
-              • Lập bảng biến thiên: Xét dấu $y'$ và thể hiện chiều biến thiên của $y$.<br>
-              <b style="color:#38bdf8; font-size:24px; display:inline-block; margin-top:8px;">2. Vẽ đồ thị hàm số:</b><br>
-              • Xác định các điểm đặc biệt: Cực trị, giao với trục tung $Oy$ ($x = 0$), giao với trục hoành $Ox$ ($y = 0$).<br>
-              • Xác định tâm đối xứng, trục đối xứng của đồ thị (nếu có).
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "TÂM ĐỐI XỨNG & TRỤC ĐỐI XỨNG ĐỒ THỊ",
-          subtitle: "MỤC 1 • CÁC TÍNH CHẤT ĐỐI XỨNG CẦN NHỚ",
-          startTime: 70.0,
-          endTime: 140.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> Đồ thị hàm bậc 3 nhận điểm uốn làm tâm đối xứng; đồ thị hàm phân thức nhận giao điểm 2 đường tiệm cận làm tâm đối xứng!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>Hàm bậc ba $y = ax^3 + bx^2 + cx + d$:</b><br>
-              $\\implies$ Luôn nhận <b>điểm uốn $I(x_0; y_0)$</b> (với $x_0 = -\\frac{b}{3a}$ là nghiệm của $y'' = 0$) làm <b>tâm đối xứng</b>.<br>
-              • <b>Hàm phân thức $y = \\frac{ax+b}{cx+d}$:</b><br>
-              $\\implies$ Nhận giao điểm của tiệm cận đứng $x = -\\frac{d}{c}$ và tiệm cận ngang $y = \\frac{a}{c}$ là $I(-\\frac{d}{c}; \\frac{a}{c})$ làm <b>tâm đối xứng</b>.<br>
-              • <b>Hàm phân thức $y = \\frac{ax^2+bx+c}{px+q}$:</b><br>
-              $\\implies$ Nhận giao điểm của tiệm cận đứng và tiệm cận xiên làm <b>tâm đối xứng</b>.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "ĐIỂM ĐẶC BIỆT KHI VẼ ĐỒ THỊ",
-          subtitle: "MỤC 1 • KỸ NĂNG VẼ CHUẨN XÁC VÀ THẨM MỸ",
-          startTime: 140.0,
-          endTime: 210.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Bí quyết:</b> Luôn tìm giao điểm với trục tung Oy bằng cách thay x = 0; tìm giao điểm với trục hoành Ox bằng cách giải y = 0!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              Quy tắc lấy thêm các điểm phụ trợ để vẽ đồ thị chính xác:
-            </div>
-            <div style="font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • Giao điểm với trục tung $Oy$: Cho $x = 0 \\implies y = f(0)$. Điểm $A(0; f(0))$.<br>
-              • Giao điểm với trục hoành $Ox$: Cho $y = 0 \\implies f(x) = 0$. Tìm nghiệm $x$.<br>
-              • Các điểm cực trị (nếu có): $A(x_{\\text{CĐ}}; y_{\\text{CĐ}}), \\; B(x_{\\text{CT}}; y_{\\text{CT}})$.<br>
-              • Uốn lượn: Nét vẽ đi từ trái sang phải khớp đúng chiều mũi tên trong Bảng biến thiên.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY TIẾP XÚC TRỤC",
-          subtitle: "MỤC 1 • BẪY NGHIỆM KÉP VÀ CẮT NHAU",
-          startTime: 210.0,
-          endTime: 280.0,
-          duration: 70.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Lưu ý:</b> Nghiệm đơn thì đồ thị CẮT XUYÊN QUA trục Ox; nghiệm kép (bội chẵn) thì đồ thị TIẾP XÚC không xuyên qua trục Ox!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Nhầm lẫn giữa cắt và tiếp xúc trục hoành:<br>
-              • Ví dụ: Hàm số $y = (x-1)^2 (x+2)$. Điểm $x = 1$ là nghiệm kép nên đồ thị <b>tiếp xúc với trục $Ox$ tại $(1; 0)$</b> và không đổi dấu qua điểm này.<br>
-              • Điểm $x = -2$ là nghiệm đơn nên đồ thị <b>cắt xuyên qua trục $Ox$ tại $(-2; 0)$</b>.
-            </div>
-          `
-        }
+  "lessonId": "bai4",
+  "lessonTitle": "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "sectionId": "bai4_muc1",
+  "sectionTitle": "Mục 1: Hàm số bậc ba y = ax³ + bx² + cx + d (a ≠ 0)",
+  "audio": "/audio/bai4_muc1.mp3",
+  "audioSrc": "./audio/bai4_muc1.mp3",
+  "audio_src": "./audio/bai4_muc1.mp3",
+  "timestamp_src": "timestamps/bai4_muc1.json",
+  "totalDuration": 207.58,
+  "duration": 207.58,
+  "title": "Mục 1: Hàm số bậc ba y = ax³ + bx² + cx + d (a ≠ 0)",
+  "owl_tip": "Ghi nhớ: Hàm bậc ba luôn có tâm đối xứng là điểm uốn U(-b/(3a); y_U). Đồ thị có 2 cực trị khi y' = 0 có 2 nghiệm phân biệt!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 47.42,
+      "id": "part2"
+    },
+    {
+      "time": 68.67,
+      "id": "part3"
+    },
+    {
+      "time": 72.22,
+      "id": "vd1_q"
+    },
+    {
+      "time": 90.03,
+      "id": "vd1_a"
+    },
+    {
+      "time": 119.92,
+      "id": "vd2_q"
+    },
+    {
+      "time": 135.43,
+      "id": "vd2_a"
+    },
+    {
+      "time": 150.47,
+      "id": "vd3_q"
+    },
+    {
+      "time": 163.85,
+      "id": "vd3_a"
+    },
+    {
+      "time": 180.96,
+      "id": "part4"
+    },
+    {
+      "time": 193.07,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Sơ đồ khảo sát</h3>\n        <p>Hàm số bậc ba: $y = ax^3 + bx^2 + cx + d \\, (a \\neq 0)$<br>\n        <b>Bước 1:</b> $D = \\mathbb{R}$.<br>\n        <b>Bước 2:</b> Đạo hàm $y' = 3ax^2 + 2bx + c$. Xét dấu $y'$, tìm cực trị, khoảng đơn điệu. Tính $\\lim_{x \\to \\pm\\infty} y$ và lập BBT.<br>\n        <b>Bước 3:</b> Vẽ đồ thị: Xác định giao điểm $Ox, Oy$ và <b>Điểm uốn</b> (tâm đối xứng) $U\\left(-\\frac{b}{3a}; y_U\\right)$.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Các dạng đồ thị hàm bậc ba</h3>\n        <p>+ $y' = 0$ có 2 nghiệm phân biệt $\\Rightarrow$ Đồ thị có 2 cực trị (chữ N nếu $a>0$, chữ N ngược nếu $a<0$).<br>\n        + $y' = 0$ vô nghiệm hoặc có nghiệm kép $\\Rightarrow$ Hàm số không có cực trị, luôn đơn điệu trên $\\mathbb{R}$.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Khảo sát và vẽ đồ thị $y = x^3 - 3x + 1$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + $D = \\mathbb{R}$. $y' = 3x^2 - 3 = 0 \\Leftrightarrow x = \\pm 1$.<br>\n          + Cực đại tại $(-1; 3)$, Cực tiểu tại $(1; -1)$. Điểm uốn $U(0; 1)$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm tâm đối xứng của $y = -x^3 + 3x^2 - 2$.<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> $x_U = -\\frac{b}{3a} = 1 \\Rightarrow y_U = 0$. Tâm đối xứng là <b>$U(1; 0)$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Nhận diện đồ thị hàm bậc ba từ BBT sau:<br>\n          <table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\">\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td>\n              <td style=\"padding:6px; color:#111827 !important;\">$-\\infty$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$0$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$2$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$+\\infty$</td>\n            </tr>\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td>\n              <td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td>$0$</td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td></td>\n            </tr>\n            <tr style=\"height:65px;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td>\n              <td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$-\\infty$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$2$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-2$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; padding:6px; color:#111827 !important;\">$+\\infty$</td>\n            </tr>\n          </table>\n          <i>(Thời gian suy nghĩ: 20s)</i>\n        </div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Giải chi tiết:</b> Nhánh ngoài cùng đi lên $\\Rightarrow a > 0$. Đạt CĐ tại $(0; 2)$ và CT tại $(2; -2) \\Rightarrow$ Hàm số: <b>$y = x^3 - 3x^2 + 2$</b>.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Nhầm giữa điểm cực trị hàm số ($x$), giá trị cực trị ($y$) và điểm cực trị đồ thị ($(x; y)$).</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Giao điểm với trục tung $Oy$ cho biết ngay hệ số $d$.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ khảo sát",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Các dạng đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 4: KHẢO SÁT HÀM SỐ BẬC BA",
+      "subtitle": "PHẦN 1: SƠ ĐỒ KHẢO SÁT TỔNG QUÁT 3 BƯỚC",
+      "startTime": 0.0,
+      "endTime": 47.42,
+      "duration": 47.42,
+      "mascotMode": "pointer",
+      "mascotTip": "Ghi nhớ 3 bước chuẩn: TXĐ -> Biến thiên (y', nghiệm, BBT, lim) -> Đồ thị (Điểm uốn U, giao Ox, Oy)!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Sơ đồ khảo sát tổng quát hàm số bậc ba</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Xét hàm số bậc ba: $y = ax^3 + bx^2 + cx + d \\quad (a \\neq 0)$<br>• <b>Bước 1:</b> Tập xác định $D = \\mathbb{R}$.<br>• <b>Bước 2:</b> Khảo sát sự biến thiên:<br>&emsp;+ Tính đạo hàm: $y' = 3ax^2 + 2bx + c$. Giải phương trình $y' = 0$.<br>&emsp;+ Xét dấu $y'$ để tìm các khoảng đồng biến, nghịch biến và điểm cực trị.<br>&emsp;+ Tìm giới hạn vô cực: $\\lim_{x \\to +\\infty} y$ và $\\lim_{x \\to -\\infty} y$. Lập bảng biến thiên.<br>• <b>Bước 3:</b> Vẽ đồ thị hàm số:<br>&emsp;+ Giao điểm với trục tung $Oy$: Cho $x = 0 \\implies y = d$.<br>&emsp;+ Giao điểm với trục hoành $Ox$: Cho $y = 0 \\implies ax^3+bx^2+cx+d=0$.<br>&emsp;+ <b>Điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$</b> là <b>Tâm đối xứng</b> của đồ thị bậc ba.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC DẠNG ĐỒ THỊ HÀM BẬC BA",
+      "subtitle": "PHẦN 2: DỰA VÀO DẤU CỦA a VÀ SỐ NGHIỆM ĐẠO HÀM",
+      "startTime": 47.42,
+      "endTime": 72.22,
+      "duration": 24.8,
+      "mascotMode": "pointer",
+      "mascotTip": "y' = 0 có 2 nghiệm: đồ thị có 2 cực trị (hình chữ N). y' vô nghiệm hoặc nghiệm kép: hàm số đơn điệu trên R!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các dạng đồ thị của hàm bậc ba</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Trường hợp 1:</b> Phương trình $y' = 0$ có 2 nghiệm phân biệt ($\\Delta_{y'} > 0$):<br>&emsp;$\\Rightarrow$ Hàm số có 2 điểm cực trị.<br>&emsp;+ Nếu $a > 0$: Đồ thị có hình chữ <b>N</b> (đi lên &rarr; đi xuống &rarr; đi lên).<br>&emsp;+ Nếu $a < 0$: Đồ thị có hình chữ <b>N ngược</b> (đi xuống &rarr; đi lên &rarr; đi xuống).<br>• <b>Trường hợp 2:</b> Phương trình $y' = 0$ vô nghiệm hoặc có nghiệm kép ($\\Delta_{y'} \\le 0$):<br>&emsp;$\\Rightarrow$ Hàm số không có cực trị, luôn đơn điệu trên $\\mathbb{R}$.<br>&emsp;+ Nếu $a > 0$: Đồ thị luôn đi lên từ trái sang phải.<br>&emsp;+ Nếu $a < 0$: Đồ thị luôn đi xuống từ trái sang phải.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: KHẢO SÁT & VẼ ĐỒ THỊ",
+      "subtitle": "y = x^3 - 3x + 1",
+      "startTime": 72.22,
+      "endTime": 90.03,
+      "duration": 17.81,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính nhanh: y' = 3x^2 - 3. Cho y' = 0 tìm nghiệm x và tọa độ điểm uốn nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Khảo sát sự biến thiên và vẽ đồ thị hàm số: $$y = x^3 - 3x + 1$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Tính y', tìm cực trị và hoành độ điểm uốn x_U...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & BẢNG BIẾN THIÊN",
+      "subtitle": "HÀM SỐ ĐỒNG BIẾN, NGHỊCH BIẾN VÀ CỰC TRỊ",
+      "startTime": 90.03,
+      "endTime": 119.92,
+      "duration": 29.89,
+      "mascotMode": "cheer",
+      "mascotTip": "Hàm số đồng biến trên (-∞; -1) và (1; +∞); nghịch biến trên (-1; 1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Tập xác định: $D = \\mathbb{R}$.<br>• Đạo hàm: $y' = 3x^2 - 3 = 0 \\iff x = \\pm 1$.<br>• Cực đại tại $(-1; 3)$, Cực tiểu tại $(1; -1)$. Điểm uốn: $U(0; 1)$ là tâm đối xứng.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: TÌM TÂM ĐỐI XỨNG CỦA ĐỒ THỊ",
+      "subtitle": "y = -x^3 + 3x^2 - 2",
+      "startTime": 119.92,
+      "endTime": 135.43,
+      "duration": 15.51,
+      "mascotMode": "pointer",
+      "mascotTip": "Công thức hoành độ điểm uốn: x_U = -b / (3a). Nhẩm nhanh trong 15s nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tọa độ tâm đối xứng của đồ thị hàm số: $$y = -x^3 + 3x^2 - 2$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b><br><i>(Áp dụng công thức hoành độ điểm uốn x_U = -b / (3a)...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÂM ĐỐI XỨNG U(1; 0)",
+      "startTime": 135.43,
+      "endTime": 150.47,
+      "duration": 15.04,
+      "mascotMode": "cheer",
+      "mascotTip": "x_U = -3 / (3*(-1)) = 1 -> y_U = -(1)^3 + 3(1)^2 - 2 = 0 -> U(1; 0)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Ta có các hệ số: $a = -1, \\; b = 3, \\; c = 0, \\; d = -2$.<br>• Hoành độ điểm uốn (tâm đối xứng): $$x_U = -\\frac{b}{3a} = -\\frac{3}{3(-1)} = 1$$<br>• Thay $x = 1$ vào hàm số: $y_U = -(1)^3 + 3(1)^2 - 2 = 0$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tâm đối xứng của đồ thị là điểm <b>$U(1; 0)$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: NHẬN DIỆN HÀM BẬC BA TỪ BBT",
+      "subtitle": "ĐỌC DẤU HỆ SỐ a VÀ CÁC ĐIỂM CỰC TRỊ",
+      "startTime": 150.47,
+      "endTime": 163.85,
+      "duration": 13.38,
+      "mascotMode": "magnifier",
+      "mascotTip": "Nhánh ngoài cùng bên phải đi lên +∞ -> a > 0! Cực đại (0; 2), Cực tiểu (2; -2)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Nhận diện hàm số bậc ba từ Bảng biến thiên sau:<table style=\"width:100%; max-width:400px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-\\infty$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$0$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$2$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$+\\infty$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td>$0$</td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$-\\infty$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold; font-size:17px;\">$2$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold; font-size:17px;\">$-2$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; padding:6px; color:#111827 !important;\">$+\\infty$</td></tr></table><div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "y = x^3 - 3x^2 + 2",
+      "startTime": 163.85,
+      "endTime": 180.96,
+      "duration": 17.11,
+      "mascotMode": "cheer",
+      "mascotTip": "Nhánh phải đi lên -> a > 0. Cực đại (0; 2) -> d = 2. Cực tiểu (2; -2) -> y = x^3 - 3x^2 + 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Nhánh ngoài cùng bên phải đi lên: $\\lim_{x \\to +\\infty} y = +\\infty \\implies a > 0$.<br>• Đồ thị đạt cực đại tại điểm $(0; 2) \\implies y(0) = d = 2$.<br>• Đạt cực tiểu tại điểm $(2; -2)$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Đây chính là bảng biến thiên của hàm số <b>$y = x^3 - 3x^2 + 2$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ CỰC TRỊ",
+      "subtitle": "PHẦN 4: PHÂN BIỆT ĐIỂM VÀ GIÁ TRỊ",
+      "startTime": 180.96,
+      "endTime": 193.07,
+      "duration": 12.11,
+      "mascotMode": "magnifier",
+      "mascotTip": "Điểm cực trị hàm số: x. Giá trị cực trị: y. Điểm cực trị đồ thị: (x; y)!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi: Nhầm lẫn giữa 3 khái niệm cực trị:</span><br>1. <b>Điểm cực trị của hàm số:</b> Là các giá trị của biến số $x$ (ví dụ: $x = 0, \\; x = 2$).<br>2. <b>Giá trị cực trị của hàm số:</b> Là các giá trị của hàm số $y$ (ví dụ: $y_{CĐ} = 2, \\; y_{CT} = -2$).<br>3. <b>Điểm cực trị của đồ thị hàm số:</b> Là cặp tọa độ $(x; y)$ trên mặt phẳng toạ độ (ví dụ: $(0; 2), \\; (2; -2)$).</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: ĐỌC DẤU a VÀ HỆ SỐ d",
+      "startTime": 193.07,
+      "endTime": 207.58,
+      "duration": 14.51,
+      "mascotMode": "cheer",
+      "mascotTip": "Nhánh phải đi lên -> a > 0! Cắt Oy tại điểm nào thì d bằng tung độ điểm đó!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo nhận diện nhanh hàm số bậc ba:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1: Dấu của hệ số $a$:</b> Nhìn nhánh ngoài cùng bên phải, nếu vươn lên thì $a > 0$, nếu cắm xuống thì $a < 0$.<br>• <b>Mẹo 2: Hệ số tự do $d$:</b> Giao điểm của đồ thị với trục tung $Oy$ chính là điểm $(0; d)$.<br>• <b>Mẹo 3: Tâm đối xứng:</b> Là trung điểm của đoạn thẳng nối hai điểm cực trị!</div>"
+    }
+  ]
+},
 
     bai4_muc2: {
-      lessonId: "bai4",
-      lessonTitle: "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
-      sectionId: "bai4_muc2",
-      sectionTitle: "Mục 2: Khảo sát hàm đa thức bậc ba y = ax³ + bx² + cx + d",
-      audioSrc: "./audio/bai4_muc2.mp3",
-      totalDuration: 295.0,
-      audio_src: "./audio/bai4_muc2.mp3",
-      timestamp_src: "timestamps/bai4_muc2.json",
-      title: "Mục 2: Khảo sát & Nhận dạng đồ thị hàm số bậc ba (6 dạng dáng điệu)",
-      owl_tip: "Hàm bậc ba có 2 cực trị khi Δ_y' > 0, không có cực trị khi Δ_y' ≤ 0. Hệ số a quyết định nhánh cuối cùng đi lên hay đi xuống!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: 6 Dạng dáng điệu đồ thị bậc ba", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Ví dụ khảo sát hoàn chỉnh", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Kỹ thuật nhận dạng hệ số a, b, c, d", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy điểm uốn đối xứng", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "6 DẠNG ĐỒ THỊ CỦA HÀM SỐ BẬC BA",
-          subtitle: "MỤC 2 • QUY LUẬT DẤU CỦA a VÀ BIỆT THỨC Δ",
-          startTime: 0.0,
-          endTime: 75.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Mẹo nhận dạng:</b> Nhìn nhánh ngoài cùng bên phải: Hướng lên $\\implies a > 0$; hướng xuống $\\implies a < 0$!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              Xét hàm số $y = ax^3 + bx^2 + cx + d$ ($a \\ne 0$). Đạo hàm $y' = 3ax^2 + 2bx + c$ (tam thức bậc 2 có $\\Delta' = b^2 - 3ac$):
-            </div>
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>Trường hợp 1 ($\\Delta' > 0$):</b> Phương trình $y'=0$ có 2 nghiệm phân biệt $\\implies$ Hàm số có <b>2 điểm cực trị</b>.<br>
-              $\\quad +$ Nếu $a > 0$: Đồ thị hình chữ $N$ (nhánh cuối đi lên).<br>
-              $\\quad +$ Nếu $a < 0$: Đồ thị hình chữ $N$ ngược (nhánh cuối đi xuống).<br>
-              • <b>Trường hợp 2 ($\\Delta' \\le 0$):</b> Phương trình $y'=0$ có nghiệm kép hoặc vô nghiệm $\\implies$ Hàm số <b>không có cực trị</b> (luôn đơn điệu trên $\\mathbb{R}$).
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "VÍ DỤ KHẢO SÁT HOÀN CHỈNH HÀM BẬC BA",
-          subtitle: "MỤC 2 • y = x³ - 3x² + 2 (KÈM BBT VÀ TÂM ĐỐI XỨNG)",
-          startTime: 75.0,
-          endTime: 155.0,
-          duration: 80.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Điểm uốn I(1; 0):</b> Thay x = 1 vào y'' = 6x - 6 = 0, y(1) = 0. Đồ thị nhận I(1; 0) làm tâm đối xứng!",
-          bodyHtml: `
-            <div style="font-size:21px; line-height:1.6; color:#e2e8f0; margin-left:14px;">
-              • TXĐ: $D = \\mathbb{R}$. Đạo hàm: $y' = 3x^2 - 6x = 3x(x - 2) = 0 \\iff x = 0$ hoặc $x = 2$.<br>
-              • Cực trị: Cực đại tại $x = 0 \\implies y_{\\text{CĐ}} = 2$; Cực tiểu tại $x = 2 \\implies y_{\\text{CT}} = -2$.<br>
-              • Giới hạn: $\\lim_{x \\to -\\infty} y = -\\infty; \\quad \\lim_{x \\to +\\infty} y = +\\infty$.
-            </div>
-            <table class="bbt-table" style="width:100%; max-width:96%; margin:8px auto; border-collapse:collapse; background:rgba(15,23,42,0.8); border-top:2.5px solid #cbd5e1; border-bottom:2.5px solid #cbd5e1;">
-              <tr style="border-bottom:1.5px solid #64748b;">
-                <td class="bbt-label" style="width:80px; text-align:center; font-weight:bold; font-size:22px; border-right:2.5px solid #cbd5e1; padding:5px 0; color:#f8fafc;">$x$</td>
-                <td class="bbt-data" style="padding:5px 16px;">
-                  <div style="display:flex; justify-content:space-between; font-size:22px; font-weight:bold;">
-                    <span>$-\\infty$</span><span style="color:#fef08a;">$0$</span><span style="color:#fef08a;">$2$</span><span>$+\\infty$</span>
-                  </div>
-                </td>
-              </tr>
-              <tr style="border-bottom:1.5px solid #64748b;">
-                <td class="bbt-label" style="width:80px; text-align:center; font-weight:bold; font-size:22px; border-right:2.5px solid #cbd5e1; padding:5px 0; color:#f8fafc;">$y'$</td>
-                <td class="bbt-data" style="padding:5px 16px;">
-                  <div style="display:flex; justify-content:space-between; font-size:22px; font-weight:bold;">
-                    <span style="width:16px;"></span><span style="color:#4ade80;">$+$</span><span>$0$</span><span style="color:#f87171;">$-$</span><span>$0$</span><span style="color:#4ade80;">$+$</span><span style="width:16px;"></span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="bbt-label" style="width:80px; text-align:center; font-weight:bold; font-size:22px; border-right:2.5px solid #cbd5e1; padding:5px 0; color:#f8fafc;">$y$</td>
-                <td class="bbt-data" style="padding:5px 16px;">
-                  <div style="display:flex; align-items:center; height:56px; font-size:22px;">
-                    <span style="align-self:flex-end; color:#cbd5e1;">$-\\infty$</span>
-                    <div style="flex:1; display:flex; align-items:center; padding:0 6px;"><svg width="100%" height="32" viewBox="0 0 100 32" preserveAspectRatio="none"><line x1="10" y1="26" x2="90" y2="6" stroke="#4ade80" stroke-width="2.5"/><polygon points="90,6 80,7 84,15" fill="#4ade80"/></svg></div>
-                    <span style="align-self:flex-start; color:#38bdf8; font-weight:bold;">$2$</span>
-                    <div style="flex:1; display:flex; align-items:center; padding:0 6px;"><svg width="100%" height="32" viewBox="0 0 100 32" preserveAspectRatio="none"><line x1="10" y1="6" x2="90" y2="26" stroke="#f87171" stroke-width="2.5"/><polygon points="90,26 84,18 80,25" fill="#f87171"/></svg></div>
-                    <span style="align-self:flex-end; color:#f43f5e; font-weight:bold;">$-2$</span>
-                    <div style="flex:1; display:flex; align-items:center; padding:0 6px;"><svg width="100%" height="32" viewBox="0 0 100 32" preserveAspectRatio="none"><line x1="10" y1="26" x2="90" y2="6" stroke="#4ade80" stroke-width="2.5"/><polygon points="90,6 80,7 84,15" fill="#4ade80"/></svg></div>
-                    <span style="align-self:flex-start; color:#cbd5e1;">$+\\infty$</span>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "BÍ QUYẾT XÁC ĐỊNH DẤU HỆ SỐ a, b, c, d",
-          subtitle: "MỤC 2 • KỸ NĂNG NHẬN DẠNG NHANH CÂU HỎI TRẮC NGHIỆM",
-          startTime: 155.0,
-          endTime: 225.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Thứ tự 4 bước vàng:</b> 1. Dấu của a (nhánh cuối) -> 2. Dấu của d (giao Oy) -> 3. Dấu của b (tâm đối xứng x_I) -> 4. Dấu của c (tích x1*x2)!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              4 Bước xác định chính xác dấu của 4 hệ số $a, b, c, d$:
-            </div>
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>Dấu $a$:</b> Nhánh ngoài cùng bên phải đi lên $\\implies a > 0$; đi xuống $\\implies a < 0$.<br>
-              • <b>Dấu $d$:</b> Giao điểm của đồ thị với trục tung $Oy$ tại $(0; d)$. Nằm trên $Ox \\implies d > 0$; dưới $Ox \\implies d < 0$.<br>
-              • <b>Dấu $b$:</b> Hoành độ điểm uốn $x_I = -\\frac{b}{3a}$. Nằm bên phải trục tung $\\implies -\\frac{b}{3a} > 0 \\implies a, b$ trái dấu.<br>
-              • <b>Dấu $c$:</b> Tích 2 điểm cực trị $x_1 x_2 = \\frac{c}{3a}$. Cùng dấu $\\implies c, a$ cùng dấu; trái dấu $\\implies c, a$ trái dấu.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY ĐỒ THỊ f'(x)",
-          subtitle: "MỤC 2 • BẪY KINH HOÀNG NHẤT TRONG KỲ THI",
-          startTime: 225.0,
-          endTime: 295.0,
-          duration: 70.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Cú hét to:</b> Hãy đọc kỹ xem đề bài cho đồ thị của HÀM SỐ y = f(x) hay đồ thị của ĐẠO HÀM y = f'(x)!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Nhầm giữa đồ thị $f(x)$ và $f'(x)$:<br>
-              • Nếu là đồ thị $f(x)$: Đỉnh núi là Cực đại, đáy thung lũng là Cực tiểu.<br>
-              • Nếu là đồ thị $f'(x)$: Cực trị là <b>giao điểm cắt xuyên qua trục hoành $Ox$</b>! Điểm nằm trên $Ox$ là khoảng đồng biến, điểm nằm dưới $Ox$ là khoảng nghịch biến.
-            </div>
-          `
-        }
+  "lessonId": "bai4",
+  "lessonTitle": "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "sectionId": "bai4_muc2",
+  "sectionTitle": "Mục 2: Hàm phân thức bậc nhất / bậc nhất y = (ax+b)/(cx+d)",
+  "audio": "/audio/bai4_muc2.mp3",
+  "audioSrc": "./audio/bai4_muc2.mp3",
+  "audio_src": "./audio/bai4_muc2.mp3",
+  "timestamp_src": "timestamps/bai4_muc2.json",
+  "totalDuration": 169.61,
+  "duration": 169.61,
+  "title": "Mục 2: Hàm phân thức bậc nhất / bậc nhất y = (ax+b)/(cx+d)",
+  "owl_tip": "Ghi nhớ: y' = (ad - bc)/(cx+d)^2 cùng dấu với ad - bc. Đồ thị KHÔNG CÓ CỰC TRỊ, tâm đối xứng I(-d/c; a/c)!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 44.1,
+      "id": "part2"
+    },
+    {
+      "time": 51.6,
+      "id": "part3"
+    },
+    {
+      "time": 55.22,
+      "id": "vd1_q"
+    },
+    {
+      "time": 69.39,
+      "id": "vd1_a"
+    },
+    {
+      "time": 95.67,
+      "id": "vd2_q"
+    },
+    {
+      "time": 109.46,
+      "id": "vd2_a"
+    },
+    {
+      "time": 124.67,
+      "id": "vd3_q"
+    },
+    {
+      "time": 139.43,
+      "id": "vd3_a"
+    },
+    {
+      "time": 148.94,
+      "id": "part4"
+    },
+    {
+      "time": 158.71,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Sơ đồ khảo sát</h3>\n        <p>Hàm số: $y = \\frac{ax+b}{cx+d} \\, (c \\neq 0, ad-bc \\neq 0)$<br>\n        <b>Bước 1:</b> $D = \\mathbb{R} \\setminus \\left\\{-\\frac{d}{c}\\right\\}$.<br>\n        <b>Bước 2:</b> Đạo hàm $y' = \\frac{ad-bc}{(cx+d)^2}$. Hàm số luôn đồng biến nếu $ad-bc>0$; nghịch biến nếu $ad-bc<0$. Không có cực trị.<br>\n        + TCĐ: $x = -\\frac{d}{c}$, TCN: $y = \\frac{a}{c}$. Tâm đối xứng: $I\\left(-\\frac{d}{c}; \\frac{a}{c}\\right)$.<br>\n        <b>Bước 3:</b> Vẽ đồ thị 2 nhánh hypebol.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Hình dạng đồ thị</h3>\n        <p>Đồ thị là đường hypebol nhận giao điểm hai tiệm cận $I$ làm tâm đối xứng.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ thực hành</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Khảo sát hàm số $y = \\frac{2x+1}{x-1}$.<br><i>(Thời gian nháp: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> $D = \\mathbb{R} \\setminus \\{1\\}$. $y' = \\frac{-3}{(x-1)^2} < 0$. Nghịch biến trên từng khoảng xác định. TCĐ: $x = 1$, TCN: $y = 2$, Tâm đối xứng $I(1; 2)$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm tâm đối xứng của $y = \\frac{3-x}{x+2}$.<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ: $x = -2$, TCN: $y = -1$. Tâm đối xứng là <b>$I(-2; -1)$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Xác định hàm số có TCĐ $x = 1$, TCN $y = 2$ và cắt $Oy$ tại $(0; -1)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Hàm số cần tìm là <b>$y = \\frac{2x+1}{x-1}$</b>.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy trắc nghiệm</h3><p>Dùng dấu hợp $\\cup$ khi kết luận đồng biến, nghịch biến là sai.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Casio</h3><p>Bấm [CALC] tại $x=0$ để tìm giao điểm trục tung $Oy$ nhằm loại phương án sai.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ khảo sát",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Các dạng đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 4: HÀM PHÂN THỨC BẬC NHẤT / BẬC NHẤT",
+      "subtitle": "PHẦN 1: SƠ ĐỒ KHẢO SÁT & TIỆM CẬN",
+      "startTime": 0.0,
+      "endTime": 44.1,
+      "duration": 44.1,
+      "mascotMode": "pointer",
+      "mascotTip": "Hàm bậc nhất / bậc nhất: y' = (ad-bc)/(cx+d)^2 không bao giờ bằng 0. Đồ thị KHÔNG CÓ CỰC TRỊ!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Sơ đồ khảo sát hàm phân thức $y = \\frac{ax+b}{cx+d}$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Điều kiện: $c \\neq 0$ và $ad - bc \\neq 0$.<br>• <b>Bước 1:</b> Tập xác định: $D = \\mathbb{R} \\setminus \\left\\{-\\frac{d}{c}\\right\\}$.<br>• <b>Bước 2:</b> Đạo hàm: $y' = \\frac{ad - bc}{(cx+d)^2}$.<br>&emsp;+ Nếu $ad - bc > 0 \\implies y' > 0$: Hàm số luôn đồng biến trên từng khoảng xác định.<br>&emsp;+ Nếu $ad - bc < 0 \\implies y' < 0$: Hàm số luôn nghịch biến trên từng khoảng xác định.<br>&emsp;+ <b>Cực trị:</b> Hàm số <b>không bao giờ có cực trị</b>.<br>&emsp;+ <b>Đường tiệm cận:</b> Tiệm cận đứng $x = -\\frac{d}{c}$; Tiệm cận ngang $y = \\frac{a}{c}$.<br>&emsp;+ <b>Tâm đối xứng:</b> Giao điểm hai tiệm cận $I\\left(-\\frac{d}{c}; \\frac{a}{c}\\right)$.<br>• <b>Bước 3:</b> Vẽ đồ thị 2 nhánh hypebol đối xứng qua điểm $I$.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC DẠNG ĐỒ THỊ PHÂN THỨC BẬC 1/1",
+      "subtitle": "PHẦN 2: HAI NHÁNH HYPEBOL ĐỐI XỨNG QUA GIAO ĐIỂM TIỆM CẬN",
+      "startTime": 44.1,
+      "endTime": 55.22,
+      "duration": 11.12,
+      "mascotMode": "pointer",
+      "mascotTip": "ad-bc > 0: đồ thị ở góc phần tư II và IV; ad-bc < 0: đồ thị ở góc phần tư I và III!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các dạng đồ thị phân thức bậc nhất / bậc nhất</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Đồ thị là đường hypebol gồm hai nhánh rời nhau, nhận giao điểm hai đường tiệm cận $I\\left(-\\frac{d}{c}; \\frac{a}{c}\\right)$ làm tâm đối xứng:<br>• <b>Nếu $ad - bc > 0$ (Đồng biến):</b><br>&emsp;Hai nhánh hypebol nằm ở góc phần tư thứ <b>II và IV</b> so với hai đường tiệm cận.<br>• <b>Nếu $ad - bc < 0$ (Nghịch biến):</b><br>&emsp;Hai nhánh hypebol nằm ở góc phần tư thứ <b>I và III</b> so với hai đường tiệm cận.<br>• Đồ thị không bao giờ cắt hai đường tiệm cận.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: KHẢO SÁT & VẼ ĐỒ THỊ",
+      "subtitle": "y = (2x + 1) / (x - 1)",
+      "startTime": 55.22,
+      "endTime": 69.39,
+      "duration": 14.17,
+      "mascotMode": "pointer",
+      "mascotTip": "Tích chéo: 2*(-1) - 1*1 = -3 < 0 -> Hàm luôn nghịch biến trên từng khoảng!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Khảo sát sự biến thiên và vẽ đồ thị hàm số: $$y = \\frac{2x+1}{x-1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Tính y', tìm TCĐ, TCN và tọa độ tâm đối xứng I...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & BẢNG BIẾN THIÊN",
+      "subtitle": "TCĐ x = 1, TCN y = 2, TÂM ĐỐI XỨNG I(1; 2)",
+      "startTime": 69.39,
+      "endTime": 95.67,
+      "duration": 26.28,
+      "mascotMode": "cheer",
+      "mascotTip": "Hàm số nghịch biến trên (-∞; 1) và (1; +∞). Không bao giờ dùng dấu hợp ∪!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Tập xác định: $D = \\mathbb{R} \\setminus \\{1\\}$.<br>• Đạo hàm: $y' = \\frac{2(-1) - 1(1)}{(x-1)^2} = \\frac{-3}{(x-1)^2} < 0, \\; \\forall x \\neq 1$.<br>• BBT: Hàm số nghịch biến trên $(-\\infty; 1)$ và $(1; +\\infty)$.<br>• Tiệm cận đứng: $x = 1$; Tiệm cận ngang: $y = 2$.<br>• Tâm đối xứng: $I(1; 2)$. Giao trục tung: $(0; -1)$; Giao trục hoành: $\\left(-\\frac{1}{2}; 0\\right)$.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: TÌM TÂM ĐỐI XỨNG CỦA ĐỒ THỊ",
+      "subtitle": "y = (3 - x) / (x + 2)",
+      "startTime": 95.67,
+      "endTime": 109.46,
+      "duration": 13.79,
+      "mascotMode": "pointer",
+      "mascotTip": "Chú ý đổi thứ tự tử số: y = (-x + 3)/(x + 2). TCN y = -1/1 = -1!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tâm đối xứng của đồ thị hàm số: $$y = \\frac{3-x}{x+2}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b><br><i>(Viết lại tử số theo đúng chuẩn -x + 3 trước khi tìm TCN...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÂM ĐỐI XỨNG I(-2; -1)",
+      "startTime": 109.46,
+      "endTime": 124.67,
+      "duration": 15.21,
+      "mascotMode": "cheer",
+      "mascotTip": "TCĐ x = -2, TCN y = -1 -> I(-2; -1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Viết lại hàm số: $y = \\frac{-x+3}{x+2}$.<br>• Tiệm cận đứng: $x = -2$.<br>• Tiệm cận ngang: $y = \\frac{-1}{1} = -1$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tâm đối xứng của đồ thị là <b>$I(-2; -1)$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: XÁC ĐỊNH HÀM SỐ TỪ ĐỒ THỊ",
+      "subtitle": "DỰA VÀO TIỆM CẬN VÀ GIAO ĐIỂM TRỤC TUNG",
+      "startTime": 124.67,
+      "endTime": 139.43,
+      "duration": 14.76,
+      "mascotMode": "magnifier",
+      "mascotTip": "TCĐ x = 1, TCN y = 2 -> y = (2x+b)/(x-1). Cắt Oy tại (0; -1) -> b = 1!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Xác định hàm số có đồ thị hypebol nhận đường thẳng $x = 1$ làm tiệm cận đứng, đường thẳng $y = 2$ làm tiệm cận ngang và cắt trục tung tại điểm $(0; -1)$.<div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "y = (2x + 1) / (x - 1)",
+      "startTime": 139.43,
+      "endTime": 148.94,
+      "duration": 9.51,
+      "mascotMode": "cheer",
+      "mascotTip": "Giao Oy: x = 0 -> y = b / (-1) = -1 -> b = 1!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Dạng hàm số: $y = \\frac{2x+b}{x-1}$.<br>• Đồ thị cắt trục tung tại $(0; -1) \\implies \\frac{2(0)+b}{0-1} = -1 \\implies b = 1$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Hàm số cần tìm là <b>$y = \\frac{2x+1}{x-1}$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY TRẮC NGHIỆM VỀ KẾT LUẬN ĐỒNG BIẾN",
+      "subtitle": "PHẦN 4: DÙNG KÝ HIỆU HỢP LÀ SAI HOÀN TOÀN",
+      "startTime": 148.94,
+      "endTime": 158.71,
+      "duration": 9.77,
+      "mascotMode": "magnifier",
+      "mascotTip": "Tuyệt đối không dùng dấu hợp ∪ hoặc R \\ {x_0}. Phải kết luận trên TỪNG KHOẢNG XÁC ĐỊNH!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy trắc nghiệm: Sai lầm khi kết luận khoảng đơn điệu:</span><br>• <b>SAI:</b> Hàm số đồng biến (hoặc nghịch biến) trên $\\mathbb{R} \\setminus \\{1\\}$.<br>• <b>SAI:</b> Hàm số đồng biến trên $(-\\infty; 1) \\cup (1; +\\infty)$.<br>• <b>ĐÚNG CHUẨN BỘ GD&ĐT:</b> Hàm số nghịch biến trên từng khoảng $(-\\infty; 1)$ và $(1; +\\infty)$ (hoặc dùng dấu chấm phẩy ;).</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: TÍCH CHÉO VÀ GIAO ĐIỂM TRỤC TUNG",
+      "startTime": 158.71,
+      "endTime": 169.61,
+      "duration": 10.9,
+      "mascotMode": "cheer",
+      "mascotTip": "Bấm [CALC] x = 0 ra ngay giao điểm Oy = b/d, loại trừ phương án sai cực nhanh!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Casio giải nhanh hàm phân thức bậc nhất / bậc nhất:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1 (Đạo hàm nhanh):</b> Nhẩm $y' = \\frac{ad - bc}{(cx+d)^2}$ trong 1 giây.<br>• <b>Mẹo 2 (CALC giao điểm $Oy$):</b> Bấm CALC tại $x = 0$ để tìm ngay giao điểm với trục tung $y = \\frac{b}{d}$.<br>• <b>Mẹo 3 (Tâm đối xứng):</b> $I = \\text{Giao}(TCĐ, TCN) = \\left(-\\frac{d}{c}; \\frac{a}{c}\\right)$.</div>"
+    }
+  ]
+},
 
     bai4_muc3: {
-      lessonId: "bai4",
-      lessonTitle: "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
-      sectionId: "bai4_muc3",
-      sectionTitle: "Mục 3: Khảo sát hàm phân thức y = (ax+b)/(cx+d)",
-      audioSrc: "./audio/bai4_muc3.mp3",
-      totalDuration: 285.0,
-      audio_src: "./audio/bai4_muc3.mp3",
-      timestamp_src: "timestamps/bai4_muc3.json",
-      title: "Mục 3: Khảo sát hàm phân thức hữu tỷ bậc nhất / bậc nhất (Đồ thị Hyperbol)",
-      owl_tip: "Hàm nhất biến luôn đồng biến hoặc nghịch biến trên từng khoảng xác định, không có cực trị. Tâm đối xứng là giao 2 đường tiệm cận!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Tính chất của hàm nhất biến", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Ví dụ khảo sát & Vẽ 2 nhánh Hyperbol", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Nhận dạng hệ số a, b, c, d", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy dấu hợp", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "TÍNH CHẤT HÀM PHÂN THỨC BẬC NHẤT / BẬC NHẤT",
-          subtitle: "MỤC 3 • y = (ax + b)/(cx + d) (ad - bc ≠ 0, c ≠ 0)",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> Đạo hàm y' = (ad - bc)/(cx + d)^2. Tử số là hằng số, quyết định hàm luôn tăng hoặc luôn giảm!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              • <b>Tập xác định:</b> $D = \\mathbb{R} \\setminus \\{-\\frac{d}{c}\\}$.<br>
-              • <b>Đạo hàm:</b> $y' = \\frac{ad - bc}{(cx + d)^2}$.<br>
-              $\\quad +$ Nếu $ad - bc > 0 \\implies y' > 0$: Hàm số <b>đồng biến</b> trên từng khoảng $(-\\infty; -\\frac{d}{c})$ và $(-\\frac{d}{c}; +\\infty)$.<br>
-              $\\quad +$ Nếu $ad - bc < 0 \\implies y' < 0$: Hàm số <b>nghịch biến</b> trên từng khoảng $(-\\infty; -\\frac{d}{c})$ và $(-\\frac{d}{c}; +\\infty)$.<br>
-              • <b>Cực trị:</b> Hàm số <b>không có cực trị</b>.<br>
-              • <b>Tiệm cận:</b> TCĐ: $x = -\\frac{d}{c}$; $\\quad$ TCN: $y = \\frac{a}{c}$. Tâm đối xứng: $I(-\\frac{d}{c}; \\frac{a}{c})$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "VÍ DỤ KHẢO SÁT HÀM SỐ y = (2x - 1)/(x + 1)",
-          subtitle: "MỤC 3 • ĐẦY ĐỦ BẢNG BIẾN THIÊN VÀ VẠCH KÉP ||",
-          startTime: 70.0,
-          endTime: 145.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Vạch kép song song ||:</b> Tại x = -1 cả hàng y' và y đều không xác định, kéo dài vạch kép xuống hết bảng!",
-          bodyHtml: `
-            <div style="font-size:21px; line-height:1.6; color:#e2e8f0; margin-left:14px;">
-              • TXĐ: $D = \\mathbb{R} \\setminus \\{-1\\}$. Đạo hàm: $y' = \\frac{2(1) - (-1)(1)}{(x+1)^2} = \\frac{3}{(x+1)^2} > 0, \\; \\forall x \\ne -1$.<br>
-              • Tiệm cận đứng: $x = -1$; $\\quad$ Tiệm cận ngang: $y = 2$.
-            </div>
-            <table class="bbt-table" style="width:100%; max-width:96%; margin:8px auto; border-collapse:collapse; background:rgba(15,23,42,0.8); border-top:2.5px solid #cbd5e1; border-bottom:2.5px solid #cbd5e1;">
-              <tr style="border-bottom:1.5px solid #64748b;">
-                <td class="bbt-label" style="width:80px; text-align:center; font-weight:bold; font-size:22px; border-right:2.5px solid #cbd5e1; padding:5px 0; color:#f8fafc;">$x$</td>
-                <td class="bbt-data" style="padding:5px 16px;">
-                  <div style="display:flex; justify-content:space-between; font-size:22px; font-weight:bold;">
-                    <span>$-\\infty$</span><span style="color:#fef08a;">$-1$</span><span>$+\\infty$</span>
-                  </div>
-                </td>
-              </tr>
-              <tr style="border-bottom:1.5px solid #64748b;">
-                <td class="bbt-label" style="width:80px; text-align:center; font-weight:bold; font-size:22px; border-right:2.5px solid #cbd5e1; padding:5px 0; color:#f8fafc;">$y'$</td>
-                <td class="bbt-data" style="padding:5px 16px;">
-                  <div style="display:flex; justify-content:space-between; font-size:22px; font-weight:bold;">
-                    <span style="width:20px;"></span><span style="color:#4ade80;">$+$</span>
-                    <span style="color:#f43f5e; font-weight:bold;">||</span>
-                    <span style="color:#4ade80;">$+$</span><span style="width:20px;"></span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="bbt-label" style="width:80px; text-align:center; font-weight:bold; font-size:22px; border-right:2.5px solid #cbd5e1; padding:5px 0; color:#f8fafc;">$y$</td>
-                <td class="bbt-data" style="padding:5px 16px;">
-                  <div style="display:flex; align-items:center; height:56px; font-size:22px;">
-                    <span style="color:#cbd5e1;">$2$</span>
-                    <div style="flex:1; display:flex; align-items:center; padding:0 6px;"><svg width="100%" height="32" viewBox="0 0 100 32" preserveAspectRatio="none"><line x1="10" y1="26" x2="90" y2="6" stroke="#4ade80" stroke-width="2.5"/><polygon points="90,6 80,7 84,15" fill="#4ade80"/></svg></div>
-                    <span style="color:#38bdf8; font-weight:bold;">$+\\infty$</span>
-                    <span style="color:#f43f5e; font-weight:bold; margin:0 8px;">||</span>
-                    <span style="color:#38bdf8; font-weight:bold;">$-\\infty$</span>
-                    <div style="flex:1; display:flex; align-items:center; padding:0 6px;"><svg width="100%" height="32" viewBox="0 0 100 32" preserveAspectRatio="none"><line x1="10" y1="26" x2="90" y2="6" stroke="#4ade80" stroke-width="2.5"/><polygon points="90,6 80,7 84,15" fill="#4ade80"/></svg></div>
-                    <span style="color:#cbd5e1;">$2$</span>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "KỸ NĂNG NHẬN DẠNG NHANH ĐỒ THỊ NHẤT BIẾN",
-          subtitle: "MỤC 3 • 4 THÔNG SỐ ĐỌC ĐỒ THỊ TRONG 10 GIÂY",
-          startTime: 145.0,
-          endTime: 215.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>4 Điểm then chốt:</b> 1. Tiệm cận đứng -> 2. Tiệm cận ngang -> 3. Giao Oy (x = 0) -> 4. Giao Ox (y = 0)!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              Bảng quy tắc đọc đồ thị $y = \\frac{ax+b}{cx+d}$:
-            </div>
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>1. Đường thẳng đứng:</b> Đó là $x = -\\frac{d}{c}$. Xác định vị trí âm/dương so với trục tung.<br>
-              • <b>2. Đường nằm ngang:</b> Đó là $y = \\frac{a}{c}$. Xác định vị trí âm/dương so với trục hoành.<br>
-              • <b>3. Cắt trục tung $Oy$:</b> Tại điểm $(0; \\frac{b}{d})$.<br>
-              • <b>4. Cắt trục hoành $Ox$:</b> Tại điểm $(-\\frac{b}{a}; 0)$.<br>
-              • <b>5. Dáng điệu:</b> Nằm ở góc phần tư II và IV là $y' > 0$ (đồng biến); nằm ở góc I và III là $y' < 0$ (nghịch biến).
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY KẾT LUẬN ĐỒNG BIẾN",
-          subtitle: "MỤC 3 • LỖI SAI KINH ĐIỂN VỀ TẬP HỢP",
-          startTime: 215.0,
-          endTime: 285.0,
-          duration: 70.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Nhắc lại ngàn lần:</b> KHÔNG BAO GIỜ viết $y$ đồng biến trên $\\mathbb{R} \\setminus \\{-1\\}$ hay dùng dấu hợp $\\cup$!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Khẳng định nào sau đây là SAI:<br>
-              • \"Hàm số đồng biến trên $(-\\infty; -1) \\cup (-1; +\\infty)$\" $\\implies$ <b>SAI HOÀN TOÀN</b>!<br>
-              • \"Hàm số đồng biến trên $\\mathbb{R} \\setminus \\{-1\\}$\" $\\implies$ <b>SAI HOÀN TOÀN</b>!<br>
-              • ĐÚNG CHUẨN: \"Hàm số đồng biến trên từng khoảng $(-\\infty; -1)$ <b>và</b> $(-1; +\\infty)$\"!
-            </div>
-          `
-        }
+  "lessonId": "bai4",
+  "lessonTitle": "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "sectionId": "bai4_muc3",
+  "sectionTitle": "Mục 3: Hàm phân thức bậc hai / bậc nhất y = (ax²+bx+c)/(px+q)",
+  "audio": "/audio/bai4_muc3.mp3",
+  "audioSrc": "./audio/bai4_muc3.mp3",
+  "audio_src": "./audio/bai4_muc3.mp3",
+  "timestamp_src": "timestamps/bai4_muc3.json",
+  "totalDuration": 170.57,
+  "duration": 170.57,
+  "title": "Mục 3: Hàm phân thức bậc hai / bậc nhất y = (ax²+bx+c)/(px+q)",
+  "owl_tip": "Dạng mới GDPT 2018: Chia tử cho mẫu y = a_1 x + b_1 + r/(px+q). Tiệm cận xiên là y = a_1 x + b_1!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 35.28,
+      "id": "part2"
+    },
+    {
+      "time": 51.39,
+      "id": "part3"
+    },
+    {
+      "time": 54.96,
+      "id": "vd1_q"
+    },
+    {
+      "time": 69.64,
+      "id": "vd1_a"
+    },
+    {
+      "time": 94.47,
+      "id": "vd2_q"
+    },
+    {
+      "time": 106.91,
+      "id": "vd2_a"
+    },
+    {
+      "time": 125.57,
+      "id": "vd3_q"
+    },
+    {
+      "time": 140.77,
+      "id": "vd3_a"
+    },
+    {
+      "time": 152.27,
+      "id": "part4"
+    },
+    {
+      "time": 161.61,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Sơ đồ khảo sát</h3>\n        <p>Hàm số: $y = \\frac{ax^2+bx+c}{px+q} \\, (p \\neq 0)$<br>\n        <b>Bước 1:</b> $D = \\mathbb{R} \\setminus \\left\\{-\\frac{q}{p}\\right\\}$.<br>\n        <b>Bước 2:</b> Chia đa thức: $y = a_1 x + b_1 + \\frac{r}{px+q}$.<br>\n        + TCĐ: $x = -\\frac{q}{p}$; TCX: $y = a_1 x + b_1$. Tâm đối xứng $I$ là giao điểm 2 tiệm cận.<br>\n        <b>Bước 3:</b> Tính $y'$, lập BBT và vẽ đồ thị.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Các dạng đồ thị</h3>\n        <p>Đồ thị có 2 điểm cực trị nằm về 2 phía tiệm cận đứng. Giá trị $y_{CĐ}$ có thể nhỏ hơn $y_{CT}$.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Khảo sát hàm số $y = \\frac{x^2-x+1}{x-1}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Chia đa thức: $y = x + \\frac{1}{x-1}$. TCĐ: $x = 1$, TCX: $y = x$, $I(1; 1)$. CĐ $(0; -1)$, CT $(2; 3)$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm tâm đối xứng $I$ của $y = \\frac{2x^2+x-3}{x+1}$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ: $x = -1$, TCX: $y = 2x - 1$. Thay $x = -1 \\Rightarrow y = -3$. Tâm đối xứng <b>$I(-1; -3)$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Đọc BBT hàm phân thức bậc 2 trên bậc 1 có TCĐ $x = 1$, CĐ $(0; 1)$ và CT $(2; 5)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ là $x = 1$. Cực đại có tung độ $y = 1$ nhỏ hơn cực tiểu $y = 5$.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Hoang mang khi thấy giá trị cực đại nhỏ hơn cực tiểu.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Tâm đối xứng $I$ luôn là giao điểm của tiệm cận đứng và tiệm cận xiên.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ khảo sát",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Các dạng đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 4: HÀM PHÂN THỨC BẬC HAI / BẬC NHẤT",
+      "subtitle": "PHẦN 1: SƠ ĐỒ KHẢO SÁT & TIỆM CẬN XIÊN",
+      "startTime": 0.0,
+      "endTime": 35.28,
+      "duration": 35.28,
+      "mascotMode": "pointer",
+      "mascotTip": "Dạng mới GDPT 2018: Chia tử cho mẫu y = a_1 x + b_1 + r/(px+q). Tiệm cận xiên là y = a_1 x + b_1!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Sơ đồ khảo sát hàm $y = \\frac{ax^2+bx+c}{px+q} \\quad (p \\neq 0)$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Tập xác định: $D = \\mathbb{R} \\setminus \\left\\{-\\frac{q}{p}\\right\\}$.<br>• <b>Bước 2:</b> Chia đa thức tử cho mẫu:<br>$$y = a_1 x + b_1 + \\frac{r}{px+q}$$<br>&emsp;+ <b>Tiệm cận đứng:</b> $x = -\\frac{q}{p}$.<br>&emsp;+ <b>Tiệm cận xiên:</b> $y = a_1 x + b_1$.<br>&emsp;+ <b>Tâm đối xứng $I$:</b> Là giao điểm của tiệm cận xiên và tiệm cận đứng.<br>• <b>Bước 3:</b> Tính $y'$, lập bảng biến thiên và vẽ đồ thị hypebol xiên.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC DẠNG ĐỒ THỊ BẬC HAI / BẬC NHẤT",
+      "subtitle": "PHẦN 2: ĐẶC ĐIỂM CỰC TRỊ VÀ HAI NHÁNH ĐỒ THỊ",
+      "startTime": 35.28,
+      "endTime": 54.96,
+      "duration": 19.68,
+      "mascotMode": "pointer",
+      "mascotTip": "Đồ thị có 2 cực trị nằm về 2 phía của tiệm cận đứng. Giá trị Cực đại CÓ THỂ NHỎ HƠN Cực tiểu!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các dạng đồ thị phân thức bậc hai / bậc nhất</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Trường hợp 1:</b> Phương trình $y' = 0$ có 2 nghiệm phân biệt:<br>&emsp;+ Đồ thị có 2 điểm cực trị nằm về hai phía của đường tiệm cận đứng.<br>&emsp;+ Tâm đối xứng $I$ chính là trung điểm của đoạn thẳng nối 2 điểm cực trị!<br>&emsp;+ <b>Hiện tượng đặc biệt:</b> Giá trị cực đại $y_{CĐ}$ có thể <b>nhỏ hơn</b> giá trị cực tiểu $y_{CT}$.<br>• <b>Trường hợp 2:</b> Phương trình $y' = 0$ vô nghiệm:<br>&emsp;+ Hàm số luôn đơn điệu trên từng khoảng xác định và không có cực trị.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: KHẢO SÁT & VẼ ĐỒ THỊ",
+      "subtitle": "y = (x^2 - x + 1) / (x - 1)",
+      "startTime": 54.96,
+      "endTime": 69.64,
+      "duration": 14.68,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia đa thức: (x^2 - x + 1)/(x - 1) = x + 1/(x - 1). TCĐ x = 1, TCX y = x!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Khảo sát sự biến thiên và vẽ đồ thị hàm số: $$y = \\frac{x^2 - x + 1}{x - 1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b><br><i>(Chia tử cho mẫu, tìm TCĐ, TCX và giải y' = 0...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & BẢNG BIẾN THIÊN",
+      "subtitle": "CỰC ĐẠI (0; -1), CỰC TIỂU (2; 3), TÂM ĐỐI XỨNG I(1; 1)",
+      "startTime": 69.64,
+      "endTime": 94.47,
+      "duration": 24.83,
+      "mascotMode": "cheer",
+      "mascotTip": "y_CĐ = -1 nhỏ hơn y_CT = 3! Đây là bản chất hoàn toàn tự nhiên vì cực trị mang tính địa phương!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• $D = \\mathbb{R} \\setminus \\{1\\}$. Chia đa thức: $y = x + \\frac{1}{x - 1}$.<br>• TCĐ: $x = 1$; Tiệm cận xiên: $y = x$. Tâm đối xứng $I(1; 1)$.<br>• $y' = 1 - \\frac{1}{(x-1)^2} = \\frac{x(x-2)}{(x-1)^2} = 0 \\iff x = 0$ hoặc $x = 2$.<br>• Cực đại tại $(0; -1)$, Cực tiểu tại $(2; 3)$. Trung điểm của 2 cực trị chính là $I(1; 1)$.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: TÌM TÂM ĐỐI XỨNG CỦA ĐỒ THỊ",
+      "subtitle": "y = (2x^2 + x - 3) / (x + 1)",
+      "startTime": 94.47,
+      "endTime": 106.91,
+      "duration": 12.44,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử cho mẫu: thương là 2x - 1. Thay x = -1 vào TCX tìm tung độ y = -3!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tọa độ tâm đối xứng $I$ của đồ thị hàm số: $$y = \\frac{2x^2+x-3}{x+1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b><br><i>(Tìm giao điểm của Tiệm cận đứng và Tiệm cận xiên...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÂM ĐỐI XỨNG I(-1; -3)",
+      "startTime": 106.91,
+      "endTime": 125.57,
+      "duration": 18.66,
+      "mascotMode": "cheer",
+      "mascotTip": "TCĐ x = -1, TCX y = 2x - 1 -> Giao điểm là I(-1; -3)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Nghiệm của mẫu số: $x + 1 = 0 \\implies$ Tiệm cận đứng là $x = -1$.<br>• Thực hiện phép chia đa thức tử cho mẫu:<br>$$2x^2 + x - 3 = (x + 1)(2x - 1) - 2 \\implies y = 2x - 1 - \\frac{2}{x+1}$$<br>$\\implies$ Đường tiệm cận xiên là <b>$y = 2x - 1$</b>.<br>• Thay hoành độ $x = -1$ vào phương trình TCX: $y = 2(-1) - 1 = -3$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tâm đối xứng của đồ thị là <b>$I(-1; -3)$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: ĐỌC BBT HÀM BẬC HAI / BẬC NHẤT",
+      "subtitle": "TCĐ x = 1, CỰC ĐẠI (0; 1), CỰC TIỂU (2; 5)",
+      "startTime": 125.57,
+      "endTime": 140.77,
+      "duration": 15.2,
+      "mascotMode": "magnifier",
+      "mascotTip": "Quan sát kỹ BBT: y_CĐ = 1 nhỏ hơn y_CT = 5 vì 2 nhánh nằm về 2 phía TCĐ!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Đọc bảng biến thiên của hàm phân thức bậc 2 trên bậc 1 sau:<table style=\"width:100%; max-width:440px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-\\infty$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$0$</td><td></td><td style=\"padding:6px; color:#111827 !important; background:#fee2e2;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$2$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$+\\infty$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td style=\"color:#dc2626 !important; font-weight:bold;\">$||$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td>$0$</td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$-\\infty$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold; font-size:17px;\">$1$</td><td>$\\searrow$</td><td style=\"color:#dc2626 !important; font-weight:bold;\">$||$</td><td style=\"vertical-align:top; color:#111827 !important;\">$+\\infty$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold; font-size:17px;\">$5$</td><td>$\\nearrow$</td></tr></table><div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "GIÁ TRỊ CỰC ĐẠI NHỎ HƠN CỰC TIỂU LÀ BÌNH THƯỜNG",
+      "startTime": 140.77,
+      "endTime": 152.27,
+      "duration": 11.5,
+      "mascotMode": "cheer",
+      "mascotTip": "Cực đại y_CĐ = 1 là điểm cao nhất trên nhánh trái, cực tiểu y_CT = 5 là điểm thấp nhất trên nhánh phải!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Đồ thị có tiệm cận đứng là $x = 1$ (tại đây có vạch kép $||$).<br>• Điểm cực đại là $A(0; 1)$, điểm cực tiểu là $B(2; 5)$.<br>• Giá trị cực đại $y_{CĐ} = 1$ nhỏ hơn giá trị cực tiểu $y_{CT} = 5$.<br>• Điều này hoàn toàn chính xác vì cực trị chỉ mang tính địa phương trong một khoảng lân cận, không phải là Giá trị lớn nhất hay Giá trị nhỏ nhất toàn cục.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ CỰC ĐẠI & CỰC TIỂU",
+      "subtitle": "PHẦN 4: HOANG MANG KHI y_CĐ < y_CT",
+      "startTime": 152.27,
+      "endTime": 161.61,
+      "duration": 9.34,
+      "mascotMode": "magnifier",
+      "mascotTip": "Đừng vội vàng sửa dấu đạo hàm khi thấy y_CĐ < y_CT! Với hàm bậc 2/1, điều này hoàn toàn tự nhiên!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi: Hoang mang khi thấy giá trị Cực đại nhỏ hơn Cực tiểu:</span><br>• Học sinh tính ra $y_{CĐ} = -1$ và $y_{CT} = 3$ rồi vội cho rằng mình tính sai và sửa lại bảng biến thiên $\\implies$ <b>SAI LẦM</b>!<br>• Nhớ rằng: Cực đại chỉ là đỉnh cao nhất trong <b>lân cận nhánh bên trái</b> của tiệm cận đứng. Nhánh bên phải tiệm cận đứng có thể vươn lên rất cao nên điểm cực tiểu của nó hoàn toàn có thể lớn hơn điểm cực đại của nhánh bên kia!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: TÂM ĐỐI XỨNG LÀ GIAO CỦA TCĐ VÀ TCX",
+      "startTime": 161.61,
+      "endTime": 170.57,
+      "duration": 8.96,
+      "mascotMode": "cheer",
+      "mascotTip": "Tâm đối xứng I = Giao(TCĐ, TCX). Đồng thời I là trung điểm của 2 điểm cực trị!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo giải nhanh hàm phân thức bậc hai / bậc nhất:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1:</b> Tâm đối xứng $I$ luôn là giao điểm của đường tiệm cận đứng và đường tiệm cận xiên.<br>• <b>Mẹo 2:</b> Nếu hàm số có 2 điểm cực trị $A(x_1; y_1)$ và $B(x_2; y_2)$ thì tâm đối xứng $I$ chính là trung điểm của đoạn thẳng $AB$: $$x_I = \\frac{x_1 + x_2}{2}, \\quad y_I = \\frac{y_1 + y_2}{2}$$Giúp tìm cực trị hoặc tâm đối xứng chỉ trong 2 giây!</div>"
+    }
+  ]
+},
 
     bai4_muc4: {
-      lessonId: "bai4",
-      lessonTitle: "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
-      sectionId: "bai4_muc4",
-      sectionTitle: "Mục 4: Khảo sát hàm phân thức y = (ax² + bx + c)/(px + q)",
-      audioSrc: "./audio/bai4_muc4.mp3",
-      totalDuration: 290.0,
-      audio_src: "./audio/bai4_muc4.mp3",
-      timestamp_src: "timestamps/bai4_muc4.json",
-      title: "Mục 4: Khảo sát hàm phân thức bậc hai / bậc nhất (Có tiệm cận xiên)",
-      owl_tip: "Hàm phân thức bậc 2/1 có 1 tiệm cận đứng và 1 tiệm cận xiên. Giao 2 tiệm cận là tâm đối xứng của đồ thị!",
-      parts: [
-        { partNumber: 1, partTitle: "Phần 1: Dạng đồ thị & Phương pháp khảo sát", scenes: [1] },
-        { partNumber: 2, partTitle: "Phần 2: Ví dụ khảo sát mẫu mực", scenes: [2] },
-        { partNumber: 3, partTitle: "Phần 3: Tâm đối xứng và cực trị", scenes: [3] },
-        { partNumber: 4, partTitle: "Phần 4: Mascot Cú soi bẫy nghiệm triệt tiêu", scenes: [4] }
-      ],
-      scenes: [
-        {
-          sceneIndex: 1,
-          title: "ĐẶC TRƯNG HÀM PHÂN THỨC BẬC HAI / BẬC NHẤT",
-          subtitle: "MỤC 4 • DẠNG TOÁN MỚI TRỌNG TÂM SGK GDPT 2018",
-          startTime: 0.0,
-          endTime: 70.0,
-          duration: 70.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Cú nhắc:</b> Đồ thị có 2 đường tiệm cận: 1 Tiệm cận đứng và 1 Tiệm cận xiên!",
-          bodyHtml: `
-            <div style="font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;">
-              Xét hàm số $y = \\frac{ax^2 + bx + c}{px + q}$ ($a \\ne 0, \\; p \\ne 0$ và đa thức tử không chia hết cho mẫu):<br>
-              • <b>Tập xác định:</b> $D = \\mathbb{R} \\setminus \\{-\\frac{q}{p}\\}$.<br>
-              • <b>Tiệm cận đứng:</b> Đường thẳng $x = -\\frac{q}{p}$.<br>
-              • <b>Tiệm cận xiên:</b> Chia tử cho mẫu: $y = mx + n + \\frac{r}{px + q} \\implies$ TCX: $y = mx + n$.<br>
-              • <b>Tâm đối xứng:</b> Giao điểm $I$ của tiệm cận đứng và tiệm cận xiên.<br>
-              • <b>Cực trị:</b> Đạo hàm $y' = 0$ có thể có 2 nghiệm phân biệt (hàm có 2 cực trị) hoặc vô nghiệm (hàm không có cực trị).
-            </div>
-          `
-        },
-        {
-          sceneIndex: 2,
-          title: "VÍ DỤ KHẢO SÁT: y = (x² - x + 1)/(x - 1)",
-          subtitle: "MỤC 4 • PHÂN TÍCH TỪNG BƯỚC MẪU MỰC",
-          startTime: 70.0,
-          endTime: 145.0,
-          duration: 75.0,
-          mascotMode: "pointer",
-          mascotTip: "<b>Phép chia:</b> (x² - x + 1)/(x - 1) = x + 1/(x - 1). Tiệm cận xiên là y = x!",
-          bodyHtml: `
-            <div style="font-size:21px; line-height:1.6; color:#e2e8f0; margin-left:14px;">
-              • TXĐ: $D = \\mathbb{R} \\setminus \\{1\\}$. Biến đổi: $y = x + \\frac{1}{x - 1}$.<br>
-              • Đạo hàm: $y' = 1 - \\frac{1}{(x-1)^2} = \\frac{(x-1)^2 - 1}{(x-1)^2} = \\frac{x(x-2)}{(x-1)^2}$.<br>
-              • Cho $y' = 0 \\iff x = 0$ hoặc $x = 2$.<br>
-              $\\quad +$ Cực đại: $x = 0 \\implies y = -1$.<br>
-              $\\quad +$ Cực tiểu: $x = 2 \\implies y = 3$.<br>
-              • Tiệm cận đứng: $x = 1$; $\\quad$ Tiệm cận xiên: $y = x$.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 3,
-          title: "TÂM ĐỐI XỨNG & ĐẶC ĐIỂM CỰC TRỊ",
-          subtitle: "MỤC 4 • GIÁ TRỊ CỰC TIỂU LỚN HƠN GIÁ TRỊ CỰC ĐẠI",
-          startTime: 145.0,
-          endTime: 215.0,
-          duration: 70.0,
-          mascotMode: "magnifier",
-          mascotTip: "<b>Hiện tượng thú vị:</b> Ở ví dụ trên, y_CT = 3 LỚN HƠN y_CĐ = -1! Đây là bằng chứng Cực đại không phải là GTLN!",
-          bodyHtml: `
-            <div style="font-size:22px; color:#fef08a; margin-bottom:8px;">
-              Hai tính chất hình học cực đẹp của đồ thị:
-            </div>
-            <div style="font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;">
-              • <b>1. Tâm đối xứng:</b> Là giao điểm của TCĐ $x = 1$ và TCX $y = x \\implies I(1; 1)$.<br>
-              Trung điểm nối 2 điểm cực trị $A(0; -1)$ và $B(2; 3)$ chính là điểm $I(1; 1)$!<br>
-              • <b>2. Vị trí hai điểm cực trị:</b> Hai điểm cực trị luôn nằm về <b>hai nhánh khác nhau</b> của đồ thị và nằm về hai phía của đường tiệm cận đứng.
-            </div>
-          `
-        },
-        {
-          sceneIndex: 4,
-          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY RÚT GỌN THÀNH ĐƯỜNG THẲNG",
-          subtitle: "MỤC 4 • BẪY ĐA THỨC TỬ CHIA HẾT CHO MẪU",
-          startTime: 215.0,
-          endTime: 290.0,
-          duration: 75.0,
-          mascotMode: "cheer",
-          mascotTip: "<b>Cú cảnh báo:</b> Nếu tử số chia hết cho mẫu số, đồ thị suy biến thành đường thẳng có 1 điểm thủng!",
-          bodyHtml: `
-            <div class="trap-warning-box" style="margin-top:10px; padding:12px 18px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:22px !important; line-height:1.5; font-weight:600; color:#fecdd3;">
-              <span class="trap-title" style="font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-right:4px;">Bẫy đề thi:</span> Khảo sát đồ thị $y = \\frac{x^2 - 1}{x - 1}$.<br>
-              • Học sinh chia tử cho mẫu: $y = x + 1$ và kết luận đồ thị là đường thẳng có tiệm cận $\\implies$ <b>SAI HOÀN TOÀN</b>!<br>
-              • Đúng: Hàm số có TXĐ $D = \\mathbb{R} \\setminus \\{1\\}$. Đồ thị của hàm số là <b>đường thẳng $y = x + 1$ bỏ đi điểm $(1; 2)$</b> (điểm thủng) và <b>hoàn toàn không có đường tiệm cận nào</b>!
-            </div>
-          `
-        }
+  "lessonId": "bai4",
+  "lessonTitle": "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "sectionId": "bai4_muc3",
+  "sectionTitle": "Mục 3: Hàm phân thức bậc hai / bậc nhất y = (ax²+bx+c)/(px+q)",
+  "audio": "/audio/bai4_muc3.mp3",
+  "audioSrc": "./audio/bai4_muc3.mp3",
+  "audio_src": "./audio/bai4_muc3.mp3",
+  "timestamp_src": "timestamps/bai4_muc3.json",
+  "totalDuration": 170.57,
+  "duration": 170.57,
+  "title": "Mục 3: Hàm phân thức bậc hai / bậc nhất y = (ax²+bx+c)/(px+q)",
+  "owl_tip": "Dạng mới GDPT 2018: Chia tử cho mẫu y = a_1 x + b_1 + r/(px+q). Tiệm cận xiên là y = a_1 x + b_1!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 35.28,
+      "id": "part2"
+    },
+    {
+      "time": 51.39,
+      "id": "part3"
+    },
+    {
+      "time": 54.96,
+      "id": "vd1_q"
+    },
+    {
+      "time": 69.64,
+      "id": "vd1_a"
+    },
+    {
+      "time": 94.47,
+      "id": "vd2_q"
+    },
+    {
+      "time": 106.91,
+      "id": "vd2_a"
+    },
+    {
+      "time": 125.57,
+      "id": "vd3_q"
+    },
+    {
+      "time": 140.77,
+      "id": "vd3_a"
+    },
+    {
+      "time": 152.27,
+      "id": "part4"
+    },
+    {
+      "time": 161.61,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Sơ đồ khảo sát</h3>\n        <p>Hàm số: $y = \\frac{ax^2+bx+c}{px+q} \\, (p \\neq 0)$<br>\n        <b>Bước 1:</b> $D = \\mathbb{R} \\setminus \\left\\{-\\frac{q}{p}\\right\\}$.<br>\n        <b>Bước 2:</b> Chia đa thức: $y = a_1 x + b_1 + \\frac{r}{px+q}$.<br>\n        + TCĐ: $x = -\\frac{q}{p}$; TCX: $y = a_1 x + b_1$. Tâm đối xứng $I$ là giao điểm 2 tiệm cận.<br>\n        <b>Bước 3:</b> Tính $y'$, lập BBT và vẽ đồ thị.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Các dạng đồ thị</h3>\n        <p>Đồ thị có 2 điểm cực trị nằm về 2 phía tiệm cận đứng. Giá trị $y_{CĐ}$ có thể nhỏ hơn $y_{CT}$.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Khảo sát hàm số $y = \\frac{x^2-x+1}{x-1}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Chia đa thức: $y = x + \\frac{1}{x-1}$. TCĐ: $x = 1$, TCX: $y = x$, $I(1; 1)$. CĐ $(0; -1)$, CT $(2; 3)$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm tâm đối xứng $I$ của $y = \\frac{2x^2+x-3}{x+1}$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ: $x = -1$, TCX: $y = 2x - 1$. Thay $x = -1 \\Rightarrow y = -3$. Tâm đối xứng <b>$I(-1; -3)$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Đọc BBT hàm phân thức bậc 2 trên bậc 1 có TCĐ $x = 1$, CĐ $(0; 1)$ và CT $(2; 5)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ là $x = 1$. Cực đại có tung độ $y = 1$ nhỏ hơn cực tiểu $y = 5$.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Hoang mang khi thấy giá trị cực đại nhỏ hơn cực tiểu.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Tâm đối xứng $I$ luôn là giao điểm của tiệm cận đứng và tiệm cận xiên.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ khảo sát",
+      "scenes": [
+        1
       ]
     },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Các dạng đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 4: HÀM PHÂN THỨC BẬC HAI / BẬC NHẤT",
+      "subtitle": "PHẦN 1: SƠ ĐỒ KHẢO SÁT & TIỆM CẬN XIÊN",
+      "startTime": 0.0,
+      "endTime": 35.28,
+      "duration": 35.28,
+      "mascotMode": "pointer",
+      "mascotTip": "Dạng mới GDPT 2018: Chia tử cho mẫu y = a_1 x + b_1 + r/(px+q). Tiệm cận xiên là y = a_1 x + b_1!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Sơ đồ khảo sát hàm $y = \\frac{ax^2+bx+c}{px+q} \\quad (p \\neq 0)$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Tập xác định: $D = \\mathbb{R} \\setminus \\left\\{-\\frac{q}{p}\\right\\}$.<br>• <b>Bước 2:</b> Chia đa thức tử cho mẫu:<br>$$y = a_1 x + b_1 + \\frac{r}{px+q}$$<br>&emsp;+ <b>Tiệm cận đứng:</b> $x = -\\frac{q}{p}$.<br>&emsp;+ <b>Tiệm cận xiên:</b> $y = a_1 x + b_1$.<br>&emsp;+ <b>Tâm đối xứng $I$:</b> Là giao điểm của tiệm cận xiên và tiệm cận đứng.<br>• <b>Bước 3:</b> Tính $y'$, lập bảng biến thiên và vẽ đồ thị hypebol xiên.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC DẠNG ĐỒ THỊ BẬC HAI / BẬC NHẤT",
+      "subtitle": "PHẦN 2: ĐẶC ĐIỂM CỰC TRỊ VÀ HAI NHÁNH ĐỒ THỊ",
+      "startTime": 35.28,
+      "endTime": 54.96,
+      "duration": 19.68,
+      "mascotMode": "pointer",
+      "mascotTip": "Đồ thị có 2 cực trị nằm về 2 phía của tiệm cận đứng. Giá trị Cực đại CÓ THỂ NHỎ HƠN Cực tiểu!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các dạng đồ thị phân thức bậc hai / bậc nhất</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Trường hợp 1:</b> Phương trình $y' = 0$ có 2 nghiệm phân biệt:<br>&emsp;+ Đồ thị có 2 điểm cực trị nằm về hai phía của đường tiệm cận đứng.<br>&emsp;+ Tâm đối xứng $I$ chính là trung điểm của đoạn thẳng nối 2 điểm cực trị!<br>&emsp;+ <b>Hiện tượng đặc biệt:</b> Giá trị cực đại $y_{CĐ}$ có thể <b>nhỏ hơn</b> giá trị cực tiểu $y_{CT}$.<br>• <b>Trường hợp 2:</b> Phương trình $y' = 0$ vô nghiệm:<br>&emsp;+ Hàm số luôn đơn điệu trên từng khoảng xác định và không có cực trị.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: KHẢO SÁT & VẼ ĐỒ THỊ",
+      "subtitle": "y = (x^2 - x + 1) / (x - 1)",
+      "startTime": 54.96,
+      "endTime": 69.64,
+      "duration": 14.68,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia đa thức: (x^2 - x + 1)/(x - 1) = x + 1/(x - 1). TCĐ x = 1, TCX y = x!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Khảo sát sự biến thiên và vẽ đồ thị hàm số: $$y = \\frac{x^2 - x + 1}{x - 1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b><br><i>(Chia tử cho mẫu, tìm TCĐ, TCX và giải y' = 0...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & BẢNG BIẾN THIÊN",
+      "subtitle": "CỰC ĐẠI (0; -1), CỰC TIỂU (2; 3), TÂM ĐỐI XỨNG I(1; 1)",
+      "startTime": 69.64,
+      "endTime": 94.47,
+      "duration": 24.83,
+      "mascotMode": "cheer",
+      "mascotTip": "y_CĐ = -1 nhỏ hơn y_CT = 3! Đây là bản chất hoàn toàn tự nhiên vì cực trị mang tính địa phương!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• $D = \\mathbb{R} \\setminus \\{1\\}$. Chia đa thức: $y = x + \\frac{1}{x - 1}$.<br>• TCĐ: $x = 1$; Tiệm cận xiên: $y = x$. Tâm đối xứng $I(1; 1)$.<br>• $y' = 1 - \\frac{1}{(x-1)^2} = \\frac{x(x-2)}{(x-1)^2} = 0 \\iff x = 0$ hoặc $x = 2$.<br>• Cực đại tại $(0; -1)$, Cực tiểu tại $(2; 3)$. Trung điểm của 2 cực trị chính là $I(1; 1)$.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: TÌM TÂM ĐỐI XỨNG CỦA ĐỒ THỊ",
+      "subtitle": "y = (2x^2 + x - 3) / (x + 1)",
+      "startTime": 94.47,
+      "endTime": 106.91,
+      "duration": 12.44,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử cho mẫu: thương là 2x - 1. Thay x = -1 vào TCX tìm tung độ y = -3!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tọa độ tâm đối xứng $I$ của đồ thị hàm số: $$y = \\frac{2x^2+x-3}{x+1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b><br><i>(Tìm giao điểm của Tiệm cận đứng và Tiệm cận xiên...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÂM ĐỐI XỨNG I(-1; -3)",
+      "startTime": 106.91,
+      "endTime": 125.57,
+      "duration": 18.66,
+      "mascotMode": "cheer",
+      "mascotTip": "TCĐ x = -1, TCX y = 2x - 1 -> Giao điểm là I(-1; -3)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Nghiệm của mẫu số: $x + 1 = 0 \\implies$ Tiệm cận đứng là $x = -1$.<br>• Thực hiện phép chia đa thức tử cho mẫu:<br>$$2x^2 + x - 3 = (x + 1)(2x - 1) - 2 \\implies y = 2x - 1 - \\frac{2}{x+1}$$<br>$\\implies$ Đường tiệm cận xiên là <b>$y = 2x - 1$</b>.<br>• Thay hoành độ $x = -1$ vào phương trình TCX: $y = 2(-1) - 1 = -3$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tâm đối xứng của đồ thị là <b>$I(-1; -3)$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: ĐỌC BBT HÀM BẬC HAI / BẬC NHẤT",
+      "subtitle": "TCĐ x = 1, CỰC ĐẠI (0; 1), CỰC TIỂU (2; 5)",
+      "startTime": 125.57,
+      "endTime": 140.77,
+      "duration": 15.2,
+      "mascotMode": "magnifier",
+      "mascotTip": "Quan sát kỹ BBT: y_CĐ = 1 nhỏ hơn y_CT = 5 vì 2 nhánh nằm về 2 phía TCĐ!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Đọc bảng biến thiên của hàm phân thức bậc 2 trên bậc 1 sau:<table style=\"width:100%; max-width:440px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-\\infty$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$0$</td><td></td><td style=\"padding:6px; color:#111827 !important; background:#fee2e2;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$2$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$+\\infty$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td style=\"color:#dc2626 !important; font-weight:bold;\">$||$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td>$0$</td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$-\\infty$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold; font-size:17px;\">$1$</td><td>$\\searrow$</td><td style=\"color:#dc2626 !important; font-weight:bold;\">$||$</td><td style=\"vertical-align:top; color:#111827 !important;\">$+\\infty$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold; font-size:17px;\">$5$</td><td>$\\nearrow$</td></tr></table><div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "GIÁ TRỊ CỰC ĐẠI NHỎ HƠN CỰC TIỂU LÀ BÌNH THƯỜNG",
+      "startTime": 140.77,
+      "endTime": 152.27,
+      "duration": 11.5,
+      "mascotMode": "cheer",
+      "mascotTip": "Cực đại y_CĐ = 1 là điểm cao nhất trên nhánh trái, cực tiểu y_CT = 5 là điểm thấp nhất trên nhánh phải!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Đồ thị có tiệm cận đứng là $x = 1$ (tại đây có vạch kép $||$).<br>• Điểm cực đại là $A(0; 1)$, điểm cực tiểu là $B(2; 5)$.<br>• Giá trị cực đại $y_{CĐ} = 1$ nhỏ hơn giá trị cực tiểu $y_{CT} = 5$.<br>• Điều này hoàn toàn chính xác vì cực trị chỉ mang tính địa phương trong một khoảng lân cận, không phải là Giá trị lớn nhất hay Giá trị nhỏ nhất toàn cục.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ CỰC ĐẠI & CỰC TIỂU",
+      "subtitle": "PHẦN 4: HOANG MANG KHI y_CĐ < y_CT",
+      "startTime": 152.27,
+      "endTime": 161.61,
+      "duration": 9.34,
+      "mascotMode": "magnifier",
+      "mascotTip": "Đừng vội vàng sửa dấu đạo hàm khi thấy y_CĐ < y_CT! Với hàm bậc 2/1, điều này hoàn toàn tự nhiên!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi: Hoang mang khi thấy giá trị Cực đại nhỏ hơn Cực tiểu:</span><br>• Học sinh tính ra $y_{CĐ} = -1$ và $y_{CT} = 3$ rồi vội cho rằng mình tính sai và sửa lại bảng biến thiên $\\implies$ <b>SAI LẦM</b>!<br>• Nhớ rằng: Cực đại chỉ là đỉnh cao nhất trong <b>lân cận nhánh bên trái</b> của tiệm cận đứng. Nhánh bên phải tiệm cận đứng có thể vươn lên rất cao nên điểm cực tiểu của nó hoàn toàn có thể lớn hơn điểm cực đại của nhánh bên kia!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: TÂM ĐỐI XỨNG LÀ GIAO CỦA TCĐ VÀ TCX",
+      "startTime": 161.61,
+      "endTime": 170.57,
+      "duration": 8.96,
+      "mascotMode": "cheer",
+      "mascotTip": "Tâm đối xứng I = Giao(TCĐ, TCX). Đồng thời I là trung điểm của 2 điểm cực trị!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo giải nhanh hàm phân thức bậc hai / bậc nhất:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1:</b> Tâm đối xứng $I$ luôn là giao điểm của đường tiệm cận đứng và đường tiệm cận xiên.<br>• <b>Mẹo 2:</b> Nếu hàm số có 2 điểm cực trị $A(x_1; y_1)$ và $B(x_2; y_2)$ thì tâm đối xứng $I$ chính là trung điểm của đoạn thẳng $AB$: $$x_I = \\frac{x_1 + x_2}{2}, \\quad y_I = \\frac{y_1 + y_2}{2}$$Giúp tìm cực trị hoặc tâm đối xứng chỉ trong 2 giây!</div>"
+    }
+  ]
+},
 
-    // =========================================================================
-    // BÀI 5: ỨNG DỤNG ĐẠO HÀM ĐỂ GIẢI QUYẾT BÀI TOÁN THỰC TIỄN (3 MỤC)
     // =========================================================================
     bai5_muc1: {
       lessonId: "bai5",
@@ -2408,3 +2810,875 @@
   window.CHAPTER1_DATA = CHAPTER1_LECTURES;
 
 })(window);
+
+if(typeof window.CHAPTER1_DATA === 'undefined') window.CHAPTER1_DATA = {};
+Object.assign(window.CHAPTER1_DATA, {
+  bai4_muc1: {
+  "lessonId": "bai4",
+  "lessonTitle": "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "sectionId": "bai4_muc1",
+  "sectionTitle": "Mục 1: Hàm số bậc ba y = ax³ + bx² + cx + d (a ≠ 0)",
+  "audio": "/audio/bai4_muc1.mp3",
+  "audioSrc": "./audio/bai4_muc1.mp3",
+  "audio_src": "./audio/bai4_muc1.mp3",
+  "timestamp_src": "timestamps/bai4_muc1.json",
+  "totalDuration": 207.58,
+  "duration": 207.58,
+  "title": "Mục 1: Hàm số bậc ba y = ax³ + bx² + cx + d (a ≠ 0)",
+  "owl_tip": "Ghi nhớ: Hàm bậc ba luôn có tâm đối xứng là điểm uốn U(-b/(3a); y_U). Đồ thị có 2 cực trị khi y' = 0 có 2 nghiệm phân biệt!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 47.42,
+      "id": "part2"
+    },
+    {
+      "time": 68.67,
+      "id": "part3"
+    },
+    {
+      "time": 72.22,
+      "id": "vd1_q"
+    },
+    {
+      "time": 90.03,
+      "id": "vd1_a"
+    },
+    {
+      "time": 119.92,
+      "id": "vd2_q"
+    },
+    {
+      "time": 135.43,
+      "id": "vd2_a"
+    },
+    {
+      "time": 150.47,
+      "id": "vd3_q"
+    },
+    {
+      "time": 163.85,
+      "id": "vd3_a"
+    },
+    {
+      "time": 180.96,
+      "id": "part4"
+    },
+    {
+      "time": 193.07,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Sơ đồ khảo sát</h3>\n        <p>Hàm số bậc ba: $y = ax^3 + bx^2 + cx + d \\, (a \\neq 0)$<br>\n        <b>Bước 1:</b> $D = \\mathbb{R}$.<br>\n        <b>Bước 2:</b> Đạo hàm $y' = 3ax^2 + 2bx + c$. Xét dấu $y'$, tìm cực trị, khoảng đơn điệu. Tính $\\lim_{x \\to \\pm\\infty} y$ và lập BBT.<br>\n        <b>Bước 3:</b> Vẽ đồ thị: Xác định giao điểm $Ox, Oy$ và <b>Điểm uốn</b> (tâm đối xứng) $U\\left(-\\frac{b}{3a}; y_U\\right)$.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Các dạng đồ thị hàm bậc ba</h3>\n        <p>+ $y' = 0$ có 2 nghiệm phân biệt $\\Rightarrow$ Đồ thị có 2 cực trị (chữ N nếu $a>0$, chữ N ngược nếu $a<0$).<br>\n        + $y' = 0$ vô nghiệm hoặc có nghiệm kép $\\Rightarrow$ Hàm số không có cực trị, luôn đơn điệu trên $\\mathbb{R}$.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Khảo sát và vẽ đồ thị $y = x^3 - 3x + 1$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          + $D = \\mathbb{R}$. $y' = 3x^2 - 3 = 0 \\Leftrightarrow x = \\pm 1$.<br>\n          + Cực đại tại $(-1; 3)$, Cực tiểu tại $(1; -1)$. Điểm uốn $U(0; 1)$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm tâm đối xứng của $y = -x^3 + 3x^2 - 2$.<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> $x_U = -\\frac{b}{3a} = 1 \\Rightarrow y_U = 0$. Tâm đối xứng là <b>$U(1; 0)$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Nhận diện đồ thị hàm bậc ba từ BBT sau:<br>\n          <table style=\"width:100%; max-width:380px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\">\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td>\n              <td style=\"padding:6px; color:#111827 !important;\">$-\\infty$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$0$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$2$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$+\\infty$</td>\n            </tr>\n            <tr style=\"border-bottom:1.5px solid #374151;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td>\n              <td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td>$0$</td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td></td>\n            </tr>\n            <tr style=\"height:65px;\">\n              <td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td>\n              <td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$-\\infty$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold;\">$2$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold;\">$-2$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; padding:6px; color:#111827 !important;\">$+\\infty$</td>\n            </tr>\n          </table>\n          <i>(Thời gian suy nghĩ: 20s)</i>\n        </div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Giải chi tiết:</b> Nhánh ngoài cùng đi lên $\\Rightarrow a > 0$. Đạt CĐ tại $(0; 2)$ và CT tại $(2; -2) \\Rightarrow$ Hàm số: <b>$y = x^3 - 3x^2 + 2$</b>.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Nhầm giữa điểm cực trị hàm số ($x$), giá trị cực trị ($y$) và điểm cực trị đồ thị ($(x; y)$).</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Giao điểm với trục tung $Oy$ cho biết ngay hệ số $d$.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ khảo sát",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Các dạng đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 4: KHẢO SÁT HÀM SỐ BẬC BA",
+      "subtitle": "PHẦN 1: SƠ ĐỒ KHẢO SÁT TỔNG QUÁT 3 BƯỚC",
+      "startTime": 0.0,
+      "endTime": 47.42,
+      "duration": 47.42,
+      "mascotMode": "pointer",
+      "mascotTip": "Ghi nhớ 3 bước chuẩn: TXĐ -> Biến thiên (y', nghiệm, BBT, lim) -> Đồ thị (Điểm uốn U, giao Ox, Oy)!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Sơ đồ khảo sát tổng quát hàm số bậc ba</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Xét hàm số bậc ba: $y = ax^3 + bx^2 + cx + d \\quad (a \\neq 0)$<br>• <b>Bước 1:</b> Tập xác định $D = \\mathbb{R}$.<br>• <b>Bước 2:</b> Khảo sát sự biến thiên:<br>&emsp;+ Tính đạo hàm: $y' = 3ax^2 + 2bx + c$. Giải phương trình $y' = 0$.<br>&emsp;+ Xét dấu $y'$ để tìm các khoảng đồng biến, nghịch biến và điểm cực trị.<br>&emsp;+ Tìm giới hạn vô cực: $\\lim_{x \\to +\\infty} y$ và $\\lim_{x \\to -\\infty} y$. Lập bảng biến thiên.<br>• <b>Bước 3:</b> Vẽ đồ thị hàm số:<br>&emsp;+ Giao điểm với trục tung $Oy$: Cho $x = 0 \\implies y = d$.<br>&emsp;+ Giao điểm với trục hoành $Ox$: Cho $y = 0 \\implies ax^3+bx^2+cx+d=0$.<br>&emsp;+ <b>Điểm uốn $U\\left(-\\frac{b}{3a}; y_U\\right)$</b> là <b>Tâm đối xứng</b> của đồ thị bậc ba.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC DẠNG ĐỒ THỊ HÀM BẬC BA",
+      "subtitle": "PHẦN 2: DỰA VÀO DẤU CỦA a VÀ SỐ NGHIỆM ĐẠO HÀM",
+      "startTime": 47.42,
+      "endTime": 72.22,
+      "duration": 24.8,
+      "mascotMode": "pointer",
+      "mascotTip": "y' = 0 có 2 nghiệm: đồ thị có 2 cực trị (hình chữ N). y' vô nghiệm hoặc nghiệm kép: hàm số đơn điệu trên R!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các dạng đồ thị của hàm bậc ba</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Trường hợp 1:</b> Phương trình $y' = 0$ có 2 nghiệm phân biệt ($\\Delta_{y'} > 0$):<br>&emsp;$\\Rightarrow$ Hàm số có 2 điểm cực trị.<br>&emsp;+ Nếu $a > 0$: Đồ thị có hình chữ <b>N</b> (đi lên &rarr; đi xuống &rarr; đi lên).<br>&emsp;+ Nếu $a < 0$: Đồ thị có hình chữ <b>N ngược</b> (đi xuống &rarr; đi lên &rarr; đi xuống).<br>• <b>Trường hợp 2:</b> Phương trình $y' = 0$ vô nghiệm hoặc có nghiệm kép ($\\Delta_{y'} \\le 0$):<br>&emsp;$\\Rightarrow$ Hàm số không có cực trị, luôn đơn điệu trên $\\mathbb{R}$.<br>&emsp;+ Nếu $a > 0$: Đồ thị luôn đi lên từ trái sang phải.<br>&emsp;+ Nếu $a < 0$: Đồ thị luôn đi xuống từ trái sang phải.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: KHẢO SÁT & VẼ ĐỒ THỊ",
+      "subtitle": "y = x^3 - 3x + 1",
+      "startTime": 72.22,
+      "endTime": 90.03,
+      "duration": 17.81,
+      "mascotMode": "pointer",
+      "mascotTip": "Tính nhanh: y' = 3x^2 - 3. Cho y' = 0 tìm nghiệm x và tọa độ điểm uốn nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Khảo sát sự biến thiên và vẽ đồ thị hàm số: $$y = x^3 - 3x + 1$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Tính y', tìm cực trị và hoành độ điểm uốn x_U...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & BẢNG BIẾN THIÊN",
+      "subtitle": "HÀM SỐ ĐỒNG BIẾN, NGHỊCH BIẾN VÀ CỰC TRỊ",
+      "startTime": 90.03,
+      "endTime": 119.92,
+      "duration": 29.89,
+      "mascotMode": "cheer",
+      "mascotTip": "Hàm số đồng biến trên (-∞; -1) và (1; +∞); nghịch biến trên (-1; 1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Tập xác định: $D = \\mathbb{R}$.<br>• Đạo hàm: $y' = 3x^2 - 3 = 0 \\iff x = \\pm 1$.<br>• Cực đại tại $(-1; 3)$, Cực tiểu tại $(1; -1)$. Điểm uốn: $U(0; 1)$ là tâm đối xứng.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: TÌM TÂM ĐỐI XỨNG CỦA ĐỒ THỊ",
+      "subtitle": "y = -x^3 + 3x^2 - 2",
+      "startTime": 119.92,
+      "endTime": 135.43,
+      "duration": 15.51,
+      "mascotMode": "pointer",
+      "mascotTip": "Công thức hoành độ điểm uốn: x_U = -b / (3a). Nhẩm nhanh trong 15s nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tọa độ tâm đối xứng của đồ thị hàm số: $$y = -x^3 + 3x^2 - 2$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b><br><i>(Áp dụng công thức hoành độ điểm uốn x_U = -b / (3a)...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÂM ĐỐI XỨNG U(1; 0)",
+      "startTime": 135.43,
+      "endTime": 150.47,
+      "duration": 15.04,
+      "mascotMode": "cheer",
+      "mascotTip": "x_U = -3 / (3*(-1)) = 1 -> y_U = -(1)^3 + 3(1)^2 - 2 = 0 -> U(1; 0)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Ta có các hệ số: $a = -1, \\; b = 3, \\; c = 0, \\; d = -2$.<br>• Hoành độ điểm uốn (tâm đối xứng): $$x_U = -\\frac{b}{3a} = -\\frac{3}{3(-1)} = 1$$<br>• Thay $x = 1$ vào hàm số: $y_U = -(1)^3 + 3(1)^2 - 2 = 0$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tâm đối xứng của đồ thị là điểm <b>$U(1; 0)$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: NHẬN DIỆN HÀM BẬC BA TỪ BBT",
+      "subtitle": "ĐỌC DẤU HỆ SỐ a VÀ CÁC ĐIỂM CỰC TRỊ",
+      "startTime": 150.47,
+      "endTime": 163.85,
+      "duration": 13.38,
+      "mascotMode": "magnifier",
+      "mascotTip": "Nhánh ngoài cùng bên phải đi lên +∞ -> a > 0! Cực đại (0; 2), Cực tiểu (2; -2)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Nhận diện hàm số bậc ba từ Bảng biến thiên sau:<table style=\"width:100%; max-width:400px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-\\infty$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$0$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$2$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$+\\infty$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td>$0$</td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$-\\infty$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold; font-size:17px;\">$2$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold; font-size:17px;\">$-2$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; padding:6px; color:#111827 !important;\">$+\\infty$</td></tr></table><div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "y = x^3 - 3x^2 + 2",
+      "startTime": 163.85,
+      "endTime": 180.96,
+      "duration": 17.11,
+      "mascotMode": "cheer",
+      "mascotTip": "Nhánh phải đi lên -> a > 0. Cực đại (0; 2) -> d = 2. Cực tiểu (2; -2) -> y = x^3 - 3x^2 + 2!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Nhánh ngoài cùng bên phải đi lên: $\\lim_{x \\to +\\infty} y = +\\infty \\implies a > 0$.<br>• Đồ thị đạt cực đại tại điểm $(0; 2) \\implies y(0) = d = 2$.<br>• Đạt cực tiểu tại điểm $(2; -2)$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Đây chính là bảng biến thiên của hàm số <b>$y = x^3 - 3x^2 + 2$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ CỰC TRỊ",
+      "subtitle": "PHẦN 4: PHÂN BIỆT ĐIỂM VÀ GIÁ TRỊ",
+      "startTime": 180.96,
+      "endTime": 193.07,
+      "duration": 12.11,
+      "mascotMode": "magnifier",
+      "mascotTip": "Điểm cực trị hàm số: x. Giá trị cực trị: y. Điểm cực trị đồ thị: (x; y)!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi: Nhầm lẫn giữa 3 khái niệm cực trị:</span><br>1. <b>Điểm cực trị của hàm số:</b> Là các giá trị của biến số $x$ (ví dụ: $x = 0, \\; x = 2$).<br>2. <b>Giá trị cực trị của hàm số:</b> Là các giá trị của hàm số $y$ (ví dụ: $y_{CĐ} = 2, \\; y_{CT} = -2$).<br>3. <b>Điểm cực trị của đồ thị hàm số:</b> Là cặp tọa độ $(x; y)$ trên mặt phẳng toạ độ (ví dụ: $(0; 2), \\; (2; -2)$).</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: ĐỌC DẤU a VÀ HỆ SỐ d",
+      "startTime": 193.07,
+      "endTime": 207.58,
+      "duration": 14.51,
+      "mascotMode": "cheer",
+      "mascotTip": "Nhánh phải đi lên -> a > 0! Cắt Oy tại điểm nào thì d bằng tung độ điểm đó!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo nhận diện nhanh hàm số bậc ba:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1: Dấu của hệ số $a$:</b> Nhìn nhánh ngoài cùng bên phải, nếu vươn lên thì $a > 0$, nếu cắm xuống thì $a < 0$.<br>• <b>Mẹo 2: Hệ số tự do $d$:</b> Giao điểm của đồ thị với trục tung $Oy$ chính là điểm $(0; d)$.<br>• <b>Mẹo 3: Tâm đối xứng:</b> Là trung điểm của đoạn thẳng nối hai điểm cực trị!</div>"
+    }
+  ]
+},
+  bai4_muc2: {
+  "lessonId": "bai4",
+  "lessonTitle": "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "sectionId": "bai4_muc2",
+  "sectionTitle": "Mục 2: Hàm phân thức bậc nhất / bậc nhất y = (ax+b)/(cx+d)",
+  "audio": "/audio/bai4_muc2.mp3",
+  "audioSrc": "./audio/bai4_muc2.mp3",
+  "audio_src": "./audio/bai4_muc2.mp3",
+  "timestamp_src": "timestamps/bai4_muc2.json",
+  "totalDuration": 169.61,
+  "duration": 169.61,
+  "title": "Mục 2: Hàm phân thức bậc nhất / bậc nhất y = (ax+b)/(cx+d)",
+  "owl_tip": "Ghi nhớ: y' = (ad - bc)/(cx+d)^2 cùng dấu với ad - bc. Đồ thị KHÔNG CÓ CỰC TRỊ, tâm đối xứng I(-d/c; a/c)!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 44.1,
+      "id": "part2"
+    },
+    {
+      "time": 51.6,
+      "id": "part3"
+    },
+    {
+      "time": 55.22,
+      "id": "vd1_q"
+    },
+    {
+      "time": 69.39,
+      "id": "vd1_a"
+    },
+    {
+      "time": 95.67,
+      "id": "vd2_q"
+    },
+    {
+      "time": 109.46,
+      "id": "vd2_a"
+    },
+    {
+      "time": 124.67,
+      "id": "vd3_q"
+    },
+    {
+      "time": 139.43,
+      "id": "vd3_a"
+    },
+    {
+      "time": 148.94,
+      "id": "part4"
+    },
+    {
+      "time": 158.71,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Sơ đồ khảo sát</h3>\n        <p>Hàm số: $y = \\frac{ax+b}{cx+d} \\, (c \\neq 0, ad-bc \\neq 0)$<br>\n        <b>Bước 1:</b> $D = \\mathbb{R} \\setminus \\left\\{-\\frac{d}{c}\\right\\}$.<br>\n        <b>Bước 2:</b> Đạo hàm $y' = \\frac{ad-bc}{(cx+d)^2}$. Hàm số luôn đồng biến nếu $ad-bc>0$; nghịch biến nếu $ad-bc<0$. Không có cực trị.<br>\n        + TCĐ: $x = -\\frac{d}{c}$, TCN: $y = \\frac{a}{c}$. Tâm đối xứng: $I\\left(-\\frac{d}{c}; \\frac{a}{c}\\right)$.<br>\n        <b>Bước 3:</b> Vẽ đồ thị 2 nhánh hypebol.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Hình dạng đồ thị</h3>\n        <p>Đồ thị là đường hypebol nhận giao điểm hai tiệm cận $I$ làm tâm đối xứng.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ thực hành</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Khảo sát hàm số $y = \\frac{2x+1}{x-1}$.<br><i>(Thời gian nháp: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> $D = \\mathbb{R} \\setminus \\{1\\}$. $y' = \\frac{-3}{(x-1)^2} < 0$. Nghịch biến trên từng khoảng xác định. TCĐ: $x = 1$, TCN: $y = 2$, Tâm đối xứng $I(1; 2)$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm tâm đối xứng của $y = \\frac{3-x}{x+2}$.<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ: $x = -2$, TCN: $y = -1$. Tâm đối xứng là <b>$I(-2; -1)$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Xác định hàm số có TCĐ $x = 1$, TCN $y = 2$ và cắt $Oy$ tại $(0; -1)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Hàm số cần tìm là <b>$y = \\frac{2x+1}{x-1}$</b>.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy trắc nghiệm</h3><p>Dùng dấu hợp $\\cup$ khi kết luận đồng biến, nghịch biến là sai.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Casio</h3><p>Bấm [CALC] tại $x=0$ để tìm giao điểm trục tung $Oy$ nhằm loại phương án sai.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ khảo sát",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Các dạng đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 4: HÀM PHÂN THỨC BẬC NHẤT / BẬC NHẤT",
+      "subtitle": "PHẦN 1: SƠ ĐỒ KHẢO SÁT & TIỆM CẬN",
+      "startTime": 0.0,
+      "endTime": 44.1,
+      "duration": 44.1,
+      "mascotMode": "pointer",
+      "mascotTip": "Hàm bậc nhất / bậc nhất: y' = (ad-bc)/(cx+d)^2 không bao giờ bằng 0. Đồ thị KHÔNG CÓ CỰC TRỊ!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Sơ đồ khảo sát hàm phân thức $y = \\frac{ax+b}{cx+d}$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Điều kiện: $c \\neq 0$ và $ad - bc \\neq 0$.<br>• <b>Bước 1:</b> Tập xác định: $D = \\mathbb{R} \\setminus \\left\\{-\\frac{d}{c}\\right\\}$.<br>• <b>Bước 2:</b> Đạo hàm: $y' = \\frac{ad - bc}{(cx+d)^2}$.<br>&emsp;+ Nếu $ad - bc > 0 \\implies y' > 0$: Hàm số luôn đồng biến trên từng khoảng xác định.<br>&emsp;+ Nếu $ad - bc < 0 \\implies y' < 0$: Hàm số luôn nghịch biến trên từng khoảng xác định.<br>&emsp;+ <b>Cực trị:</b> Hàm số <b>không bao giờ có cực trị</b>.<br>&emsp;+ <b>Đường tiệm cận:</b> Tiệm cận đứng $x = -\\frac{d}{c}$; Tiệm cận ngang $y = \\frac{a}{c}$.<br>&emsp;+ <b>Tâm đối xứng:</b> Giao điểm hai tiệm cận $I\\left(-\\frac{d}{c}; \\frac{a}{c}\\right)$.<br>• <b>Bước 3:</b> Vẽ đồ thị 2 nhánh hypebol đối xứng qua điểm $I$.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC DẠNG ĐỒ THỊ PHÂN THỨC BẬC 1/1",
+      "subtitle": "PHẦN 2: HAI NHÁNH HYPEBOL ĐỐI XỨNG QUA GIAO ĐIỂM TIỆM CẬN",
+      "startTime": 44.1,
+      "endTime": 55.22,
+      "duration": 11.12,
+      "mascotMode": "pointer",
+      "mascotTip": "ad-bc > 0: đồ thị ở góc phần tư II và IV; ad-bc < 0: đồ thị ở góc phần tư I và III!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các dạng đồ thị phân thức bậc nhất / bậc nhất</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Đồ thị là đường hypebol gồm hai nhánh rời nhau, nhận giao điểm hai đường tiệm cận $I\\left(-\\frac{d}{c}; \\frac{a}{c}\\right)$ làm tâm đối xứng:<br>• <b>Nếu $ad - bc > 0$ (Đồng biến):</b><br>&emsp;Hai nhánh hypebol nằm ở góc phần tư thứ <b>II và IV</b> so với hai đường tiệm cận.<br>• <b>Nếu $ad - bc < 0$ (Nghịch biến):</b><br>&emsp;Hai nhánh hypebol nằm ở góc phần tư thứ <b>I và III</b> so với hai đường tiệm cận.<br>• Đồ thị không bao giờ cắt hai đường tiệm cận.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: KHẢO SÁT & VẼ ĐỒ THỊ",
+      "subtitle": "y = (2x + 1) / (x - 1)",
+      "startTime": 55.22,
+      "endTime": 69.39,
+      "duration": 14.17,
+      "mascotMode": "pointer",
+      "mascotTip": "Tích chéo: 2*(-1) - 1*1 = -3 < 0 -> Hàm luôn nghịch biến trên từng khoảng!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Khảo sát sự biến thiên và vẽ đồ thị hàm số: $$y = \\frac{2x+1}{x-1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 20 giây</b><br><i>(Tính y', tìm TCĐ, TCN và tọa độ tâm đối xứng I...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & BẢNG BIẾN THIÊN",
+      "subtitle": "TCĐ x = 1, TCN y = 2, TÂM ĐỐI XỨNG I(1; 2)",
+      "startTime": 69.39,
+      "endTime": 95.67,
+      "duration": 26.28,
+      "mascotMode": "cheer",
+      "mascotTip": "Hàm số nghịch biến trên (-∞; 1) và (1; +∞). Không bao giờ dùng dấu hợp ∪!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Tập xác định: $D = \\mathbb{R} \\setminus \\{1\\}$.<br>• Đạo hàm: $y' = \\frac{2(-1) - 1(1)}{(x-1)^2} = \\frac{-3}{(x-1)^2} < 0, \\; \\forall x \\neq 1$.<br>• BBT: Hàm số nghịch biến trên $(-\\infty; 1)$ và $(1; +\\infty)$.<br>• Tiệm cận đứng: $x = 1$; Tiệm cận ngang: $y = 2$.<br>• Tâm đối xứng: $I(1; 2)$. Giao trục tung: $(0; -1)$; Giao trục hoành: $\\left(-\\frac{1}{2}; 0\\right)$.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: TÌM TÂM ĐỐI XỨNG CỦA ĐỒ THỊ",
+      "subtitle": "y = (3 - x) / (x + 2)",
+      "startTime": 95.67,
+      "endTime": 109.46,
+      "duration": 13.79,
+      "mascotMode": "pointer",
+      "mascotTip": "Chú ý đổi thứ tự tử số: y = (-x + 3)/(x + 2). TCN y = -1/1 = -1!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tâm đối xứng của đồ thị hàm số: $$y = \\frac{3-x}{x+2}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b><br><i>(Viết lại tử số theo đúng chuẩn -x + 3 trước khi tìm TCN...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÂM ĐỐI XỨNG I(-2; -1)",
+      "startTime": 109.46,
+      "endTime": 124.67,
+      "duration": 15.21,
+      "mascotMode": "cheer",
+      "mascotTip": "TCĐ x = -2, TCN y = -1 -> I(-2; -1)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Viết lại hàm số: $y = \\frac{-x+3}{x+2}$.<br>• Tiệm cận đứng: $x = -2$.<br>• Tiệm cận ngang: $y = \\frac{-1}{1} = -1$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tâm đối xứng của đồ thị là <b>$I(-2; -1)$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: XÁC ĐỊNH HÀM SỐ TỪ ĐỒ THỊ",
+      "subtitle": "DỰA VÀO TIỆM CẬN VÀ GIAO ĐIỂM TRỤC TUNG",
+      "startTime": 124.67,
+      "endTime": 139.43,
+      "duration": 14.76,
+      "mascotMode": "magnifier",
+      "mascotTip": "TCĐ x = 1, TCN y = 2 -> y = (2x+b)/(x-1). Cắt Oy tại (0; -1) -> b = 1!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Xác định hàm số có đồ thị hypebol nhận đường thẳng $x = 1$ làm tiệm cận đứng, đường thẳng $y = 2$ làm tiệm cận ngang và cắt trục tung tại điểm $(0; -1)$.<div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "y = (2x + 1) / (x - 1)",
+      "startTime": 139.43,
+      "endTime": 148.94,
+      "duration": 9.51,
+      "mascotMode": "cheer",
+      "mascotTip": "Giao Oy: x = 0 -> y = b / (-1) = -1 -> b = 1!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Dạng hàm số: $y = \\frac{2x+b}{x-1}$.<br>• Đồ thị cắt trục tung tại $(0; -1) \\implies \\frac{2(0)+b}{0-1} = -1 \\implies b = 1$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Hàm số cần tìm là <b>$y = \\frac{2x+1}{x-1}$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY TRẮC NGHIỆM VỀ KẾT LUẬN ĐỒNG BIẾN",
+      "subtitle": "PHẦN 4: DÙNG KÝ HIỆU HỢP LÀ SAI HOÀN TOÀN",
+      "startTime": 148.94,
+      "endTime": 158.71,
+      "duration": 9.77,
+      "mascotMode": "magnifier",
+      "mascotTip": "Tuyệt đối không dùng dấu hợp ∪ hoặc R \\ {x_0}. Phải kết luận trên TỪNG KHOẢNG XÁC ĐỊNH!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy trắc nghiệm: Sai lầm khi kết luận khoảng đơn điệu:</span><br>• <b>SAI:</b> Hàm số đồng biến (hoặc nghịch biến) trên $\\mathbb{R} \\setminus \\{1\\}$.<br>• <b>SAI:</b> Hàm số đồng biến trên $(-\\infty; 1) \\cup (1; +\\infty)$.<br>• <b>ĐÚNG CHUẨN BỘ GD&ĐT:</b> Hàm số nghịch biến trên từng khoảng $(-\\infty; 1)$ và $(1; +\\infty)$ (hoặc dùng dấu chấm phẩy ;).</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: TÍCH CHÉO VÀ GIAO ĐIỂM TRỤC TUNG",
+      "startTime": 158.71,
+      "endTime": 169.61,
+      "duration": 10.9,
+      "mascotMode": "cheer",
+      "mascotTip": "Bấm [CALC] x = 0 ra ngay giao điểm Oy = b/d, loại trừ phương án sai cực nhanh!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Casio giải nhanh hàm phân thức bậc nhất / bậc nhất:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1 (Đạo hàm nhanh):</b> Nhẩm $y' = \\frac{ad - bc}{(cx+d)^2}$ trong 1 giây.<br>• <b>Mẹo 2 (CALC giao điểm $Oy$):</b> Bấm CALC tại $x = 0$ để tìm ngay giao điểm với trục tung $y = \\frac{b}{d}$.<br>• <b>Mẹo 3 (Tâm đối xứng):</b> $I = \\text{Giao}(TCĐ, TCN) = \\left(-\\frac{d}{c}; \\frac{a}{c}\\right)$.</div>"
+    }
+  ]
+},
+  bai4_muc3: {
+  "lessonId": "bai4",
+  "lessonTitle": "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "sectionId": "bai4_muc3",
+  "sectionTitle": "Mục 3: Hàm phân thức bậc hai / bậc nhất y = (ax²+bx+c)/(px+q)",
+  "audio": "/audio/bai4_muc3.mp3",
+  "audioSrc": "./audio/bai4_muc3.mp3",
+  "audio_src": "./audio/bai4_muc3.mp3",
+  "timestamp_src": "timestamps/bai4_muc3.json",
+  "totalDuration": 170.57,
+  "duration": 170.57,
+  "title": "Mục 3: Hàm phân thức bậc hai / bậc nhất y = (ax²+bx+c)/(px+q)",
+  "owl_tip": "Dạng mới GDPT 2018: Chia tử cho mẫu y = a_1 x + b_1 + r/(px+q). Tiệm cận xiên là y = a_1 x + b_1!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 35.28,
+      "id": "part2"
+    },
+    {
+      "time": 51.39,
+      "id": "part3"
+    },
+    {
+      "time": 54.96,
+      "id": "vd1_q"
+    },
+    {
+      "time": 69.64,
+      "id": "vd1_a"
+    },
+    {
+      "time": 94.47,
+      "id": "vd2_q"
+    },
+    {
+      "time": 106.91,
+      "id": "vd2_a"
+    },
+    {
+      "time": 125.57,
+      "id": "vd3_q"
+    },
+    {
+      "time": 140.77,
+      "id": "vd3_a"
+    },
+    {
+      "time": 152.27,
+      "id": "part4"
+    },
+    {
+      "time": 161.61,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Sơ đồ khảo sát</h3>\n        <p>Hàm số: $y = \\frac{ax^2+bx+c}{px+q} \\, (p \\neq 0)$<br>\n        <b>Bước 1:</b> $D = \\mathbb{R} \\setminus \\left\\{-\\frac{q}{p}\\right\\}$.<br>\n        <b>Bước 2:</b> Chia đa thức: $y = a_1 x + b_1 + \\frac{r}{px+q}$.<br>\n        + TCĐ: $x = -\\frac{q}{p}$; TCX: $y = a_1 x + b_1$. Tâm đối xứng $I$ là giao điểm 2 tiệm cận.<br>\n        <b>Bước 3:</b> Tính $y'$, lập BBT và vẽ đồ thị.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Các dạng đồ thị</h3>\n        <p>Đồ thị có 2 điểm cực trị nằm về 2 phía tiệm cận đứng. Giá trị $y_{CĐ}$ có thể nhỏ hơn $y_{CT}$.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Khảo sát hàm số $y = \\frac{x^2-x+1}{x-1}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Chia đa thức: $y = x + \\frac{1}{x-1}$. TCĐ: $x = 1$, TCX: $y = x$, $I(1; 1)$. CĐ $(0; -1)$, CT $(2; 3)$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm tâm đối xứng $I$ của $y = \\frac{2x^2+x-3}{x+1}$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ: $x = -1$, TCX: $y = 2x - 1$. Thay $x = -1 \\Rightarrow y = -3$. Tâm đối xứng <b>$I(-1; -3)$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Đọc BBT hàm phân thức bậc 2 trên bậc 1 có TCĐ $x = 1$, CĐ $(0; 1)$ và CT $(2; 5)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ là $x = 1$. Cực đại có tung độ $y = 1$ nhỏ hơn cực tiểu $y = 5$.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Hoang mang khi thấy giá trị cực đại nhỏ hơn cực tiểu.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Tâm đối xứng $I$ luôn là giao điểm của tiệm cận đứng và tiệm cận xiên.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ khảo sát",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Các dạng đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 4: HÀM PHÂN THỨC BẬC HAI / BẬC NHẤT",
+      "subtitle": "PHẦN 1: SƠ ĐỒ KHẢO SÁT & TIỆM CẬN XIÊN",
+      "startTime": 0.0,
+      "endTime": 35.28,
+      "duration": 35.28,
+      "mascotMode": "pointer",
+      "mascotTip": "Dạng mới GDPT 2018: Chia tử cho mẫu y = a_1 x + b_1 + r/(px+q). Tiệm cận xiên là y = a_1 x + b_1!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Sơ đồ khảo sát hàm $y = \\frac{ax^2+bx+c}{px+q} \\quad (p \\neq 0)$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Tập xác định: $D = \\mathbb{R} \\setminus \\left\\{-\\frac{q}{p}\\right\\}$.<br>• <b>Bước 2:</b> Chia đa thức tử cho mẫu:<br>$$y = a_1 x + b_1 + \\frac{r}{px+q}$$<br>&emsp;+ <b>Tiệm cận đứng:</b> $x = -\\frac{q}{p}$.<br>&emsp;+ <b>Tiệm cận xiên:</b> $y = a_1 x + b_1$.<br>&emsp;+ <b>Tâm đối xứng $I$:</b> Là giao điểm của tiệm cận xiên và tiệm cận đứng.<br>• <b>Bước 3:</b> Tính $y'$, lập bảng biến thiên và vẽ đồ thị hypebol xiên.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC DẠNG ĐỒ THỊ BẬC HAI / BẬC NHẤT",
+      "subtitle": "PHẦN 2: ĐẶC ĐIỂM CỰC TRỊ VÀ HAI NHÁNH ĐỒ THỊ",
+      "startTime": 35.28,
+      "endTime": 54.96,
+      "duration": 19.68,
+      "mascotMode": "pointer",
+      "mascotTip": "Đồ thị có 2 cực trị nằm về 2 phía của tiệm cận đứng. Giá trị Cực đại CÓ THỂ NHỎ HƠN Cực tiểu!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các dạng đồ thị phân thức bậc hai / bậc nhất</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Trường hợp 1:</b> Phương trình $y' = 0$ có 2 nghiệm phân biệt:<br>&emsp;+ Đồ thị có 2 điểm cực trị nằm về hai phía của đường tiệm cận đứng.<br>&emsp;+ Tâm đối xứng $I$ chính là trung điểm của đoạn thẳng nối 2 điểm cực trị!<br>&emsp;+ <b>Hiện tượng đặc biệt:</b> Giá trị cực đại $y_{CĐ}$ có thể <b>nhỏ hơn</b> giá trị cực tiểu $y_{CT}$.<br>• <b>Trường hợp 2:</b> Phương trình $y' = 0$ vô nghiệm:<br>&emsp;+ Hàm số luôn đơn điệu trên từng khoảng xác định và không có cực trị.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: KHẢO SÁT & VẼ ĐỒ THỊ",
+      "subtitle": "y = (x^2 - x + 1) / (x - 1)",
+      "startTime": 54.96,
+      "endTime": 69.64,
+      "duration": 14.68,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia đa thức: (x^2 - x + 1)/(x - 1) = x + 1/(x - 1). TCĐ x = 1, TCX y = x!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Khảo sát sự biến thiên và vẽ đồ thị hàm số: $$y = \\frac{x^2 - x + 1}{x - 1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b><br><i>(Chia tử cho mẫu, tìm TCĐ, TCX và giải y' = 0...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & BẢNG BIẾN THIÊN",
+      "subtitle": "CỰC ĐẠI (0; -1), CỰC TIỂU (2; 3), TÂM ĐỐI XỨNG I(1; 1)",
+      "startTime": 69.64,
+      "endTime": 94.47,
+      "duration": 24.83,
+      "mascotMode": "cheer",
+      "mascotTip": "y_CĐ = -1 nhỏ hơn y_CT = 3! Đây là bản chất hoàn toàn tự nhiên vì cực trị mang tính địa phương!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• $D = \\mathbb{R} \\setminus \\{1\\}$. Chia đa thức: $y = x + \\frac{1}{x - 1}$.<br>• TCĐ: $x = 1$; Tiệm cận xiên: $y = x$. Tâm đối xứng $I(1; 1)$.<br>• $y' = 1 - \\frac{1}{(x-1)^2} = \\frac{x(x-2)}{(x-1)^2} = 0 \\iff x = 0$ hoặc $x = 2$.<br>• Cực đại tại $(0; -1)$, Cực tiểu tại $(2; 3)$. Trung điểm của 2 cực trị chính là $I(1; 1)$.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: TÌM TÂM ĐỐI XỨNG CỦA ĐỒ THỊ",
+      "subtitle": "y = (2x^2 + x - 3) / (x + 1)",
+      "startTime": 94.47,
+      "endTime": 106.91,
+      "duration": 12.44,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử cho mẫu: thương là 2x - 1. Thay x = -1 vào TCX tìm tung độ y = -3!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tọa độ tâm đối xứng $I$ của đồ thị hàm số: $$y = \\frac{2x^2+x-3}{x+1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b><br><i>(Tìm giao điểm của Tiệm cận đứng và Tiệm cận xiên...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÂM ĐỐI XỨNG I(-1; -3)",
+      "startTime": 106.91,
+      "endTime": 125.57,
+      "duration": 18.66,
+      "mascotMode": "cheer",
+      "mascotTip": "TCĐ x = -1, TCX y = 2x - 1 -> Giao điểm là I(-1; -3)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Nghiệm của mẫu số: $x + 1 = 0 \\implies$ Tiệm cận đứng là $x = -1$.<br>• Thực hiện phép chia đa thức tử cho mẫu:<br>$$2x^2 + x - 3 = (x + 1)(2x - 1) - 2 \\implies y = 2x - 1 - \\frac{2}{x+1}$$<br>$\\implies$ Đường tiệm cận xiên là <b>$y = 2x - 1$</b>.<br>• Thay hoành độ $x = -1$ vào phương trình TCX: $y = 2(-1) - 1 = -3$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tâm đối xứng của đồ thị là <b>$I(-1; -3)$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: ĐỌC BBT HÀM BẬC HAI / BẬC NHẤT",
+      "subtitle": "TCĐ x = 1, CỰC ĐẠI (0; 1), CỰC TIỂU (2; 5)",
+      "startTime": 125.57,
+      "endTime": 140.77,
+      "duration": 15.2,
+      "mascotMode": "magnifier",
+      "mascotTip": "Quan sát kỹ BBT: y_CĐ = 1 nhỏ hơn y_CT = 5 vì 2 nhánh nằm về 2 phía TCĐ!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Đọc bảng biến thiên của hàm phân thức bậc 2 trên bậc 1 sau:<table style=\"width:100%; max-width:440px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-\\infty$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$0$</td><td></td><td style=\"padding:6px; color:#111827 !important; background:#fee2e2;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$2$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$+\\infty$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td style=\"color:#dc2626 !important; font-weight:bold;\">$||$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td>$0$</td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$-\\infty$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold; font-size:17px;\">$1$</td><td>$\\searrow$</td><td style=\"color:#dc2626 !important; font-weight:bold;\">$||$</td><td style=\"vertical-align:top; color:#111827 !important;\">$+\\infty$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold; font-size:17px;\">$5$</td><td>$\\nearrow$</td></tr></table><div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "GIÁ TRỊ CỰC ĐẠI NHỎ HƠN CỰC TIỂU LÀ BÌNH THƯỜNG",
+      "startTime": 140.77,
+      "endTime": 152.27,
+      "duration": 11.5,
+      "mascotMode": "cheer",
+      "mascotTip": "Cực đại y_CĐ = 1 là điểm cao nhất trên nhánh trái, cực tiểu y_CT = 5 là điểm thấp nhất trên nhánh phải!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Đồ thị có tiệm cận đứng là $x = 1$ (tại đây có vạch kép $||$).<br>• Điểm cực đại là $A(0; 1)$, điểm cực tiểu là $B(2; 5)$.<br>• Giá trị cực đại $y_{CĐ} = 1$ nhỏ hơn giá trị cực tiểu $y_{CT} = 5$.<br>• Điều này hoàn toàn chính xác vì cực trị chỉ mang tính địa phương trong một khoảng lân cận, không phải là Giá trị lớn nhất hay Giá trị nhỏ nhất toàn cục.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ CỰC ĐẠI & CỰC TIỂU",
+      "subtitle": "PHẦN 4: HOANG MANG KHI y_CĐ < y_CT",
+      "startTime": 152.27,
+      "endTime": 161.61,
+      "duration": 9.34,
+      "mascotMode": "magnifier",
+      "mascotTip": "Đừng vội vàng sửa dấu đạo hàm khi thấy y_CĐ < y_CT! Với hàm bậc 2/1, điều này hoàn toàn tự nhiên!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi: Hoang mang khi thấy giá trị Cực đại nhỏ hơn Cực tiểu:</span><br>• Học sinh tính ra $y_{CĐ} = -1$ và $y_{CT} = 3$ rồi vội cho rằng mình tính sai và sửa lại bảng biến thiên $\\implies$ <b>SAI LẦM</b>!<br>• Nhớ rằng: Cực đại chỉ là đỉnh cao nhất trong <b>lân cận nhánh bên trái</b> của tiệm cận đứng. Nhánh bên phải tiệm cận đứng có thể vươn lên rất cao nên điểm cực tiểu của nó hoàn toàn có thể lớn hơn điểm cực đại của nhánh bên kia!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: TÂM ĐỐI XỨNG LÀ GIAO CỦA TCĐ VÀ TCX",
+      "startTime": 161.61,
+      "endTime": 170.57,
+      "duration": 8.96,
+      "mascotMode": "cheer",
+      "mascotTip": "Tâm đối xứng I = Giao(TCĐ, TCX). Đồng thời I là trung điểm của 2 điểm cực trị!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo giải nhanh hàm phân thức bậc hai / bậc nhất:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1:</b> Tâm đối xứng $I$ luôn là giao điểm của đường tiệm cận đứng và đường tiệm cận xiên.<br>• <b>Mẹo 2:</b> Nếu hàm số có 2 điểm cực trị $A(x_1; y_1)$ và $B(x_2; y_2)$ thì tâm đối xứng $I$ chính là trung điểm của đoạn thẳng $AB$: $$x_I = \\frac{x_1 + x_2}{2}, \\quad y_I = \\frac{y_1 + y_2}{2}$$Giúp tìm cực trị hoặc tâm đối xứng chỉ trong 2 giây!</div>"
+    }
+  ]
+},
+  bai4_muc4: {
+  "lessonId": "bai4",
+  "lessonTitle": "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "sectionId": "bai4_muc3",
+  "sectionTitle": "Mục 3: Hàm phân thức bậc hai / bậc nhất y = (ax²+bx+c)/(px+q)",
+  "audio": "/audio/bai4_muc3.mp3",
+  "audioSrc": "./audio/bai4_muc3.mp3",
+  "audio_src": "./audio/bai4_muc3.mp3",
+  "timestamp_src": "timestamps/bai4_muc3.json",
+  "totalDuration": 170.57,
+  "duration": 170.57,
+  "title": "Mục 3: Hàm phân thức bậc hai / bậc nhất y = (ax²+bx+c)/(px+q)",
+  "owl_tip": "Dạng mới GDPT 2018: Chia tử cho mẫu y = a_1 x + b_1 + r/(px+q). Tiệm cận xiên là y = a_1 x + b_1!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 35.28,
+      "id": "part2"
+    },
+    {
+      "time": 51.39,
+      "id": "part3"
+    },
+    {
+      "time": 54.96,
+      "id": "vd1_q"
+    },
+    {
+      "time": 69.64,
+      "id": "vd1_a"
+    },
+    {
+      "time": 94.47,
+      "id": "vd2_q"
+    },
+    {
+      "time": 106.91,
+      "id": "vd2_a"
+    },
+    {
+      "time": 125.57,
+      "id": "vd3_q"
+    },
+    {
+      "time": 140.77,
+      "id": "vd3_a"
+    },
+    {
+      "time": 152.27,
+      "id": "part4"
+    },
+    {
+      "time": 161.61,
+      "id": "part5"
+    }
+  ],
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm & Sơ đồ khảo sát</h3>\n        <p>Hàm số: $y = \\frac{ax^2+bx+c}{px+q} \\, (p \\neq 0)$<br>\n        <b>Bước 1:</b> $D = \\mathbb{R} \\setminus \\left\\{-\\frac{q}{p}\\right\\}$.<br>\n        <b>Bước 2:</b> Chia đa thức: $y = a_1 x + b_1 + \\frac{r}{px+q}$.<br>\n        + TCĐ: $x = -\\frac{q}{p}$; TCX: $y = a_1 x + b_1$. Tâm đối xứng $I$ là giao điểm 2 tiệm cận.<br>\n        <b>Bước 3:</b> Tính $y'$, lập BBT và vẽ đồ thị.</p>\n      </div>\n      <div id=\"part2\"><h3>2. Các dạng đồ thị</h3>\n        <p>Đồ thị có 2 điểm cực trị nằm về 2 phía tiệm cận đứng. Giá trị $y_{CĐ}$ có thể nhỏ hơn $y_{CT}$.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Khảo sát hàm số $y = \\frac{x^2-x+1}{x-1}$.<br><i>(Thời gian làm nháp: 30s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> Chia đa thức: $y = x + \\frac{1}{x-1}$. TCĐ: $x = 1$, TCX: $y = x$, $I(1; 1)$. CĐ $(0; -1)$, CT $(2; 3)$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm tâm đối xứng $I$ của $y = \\frac{2x^2+x-3}{x+1}$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ: $x = -1$, TCX: $y = 2x - 1$. Thay $x = -1 \\Rightarrow y = -3$. Tâm đối xứng <b>$I(-1; -3)$</b>.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Đọc BBT hàm phân thức bậc 2 trên bậc 1 có TCĐ $x = 1$, CĐ $(0; 1)$ và CT $(2; 5)$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <b>Lời giải:</b> TCĐ là $x = 1$. Cực đại có tung độ $y = 1$ nhỏ hơn cực tiểu $y = 5$.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Hoang mang khi thấy giá trị cực đại nhỏ hơn cực tiểu.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Tâm đối xứng $I$ luôn là giao điểm của tiệm cận đứng và tiệm cận xiên.</p></div>\n    ",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Sơ đồ khảo sát",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Các dạng đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bẫy đề thi",
+      "scenes": [
+        9
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "scenes": [
+        10
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 4: HÀM PHÂN THỨC BẬC HAI / BẬC NHẤT",
+      "subtitle": "PHẦN 1: SƠ ĐỒ KHẢO SÁT & TIỆM CẬN XIÊN",
+      "startTime": 0.0,
+      "endTime": 35.28,
+      "duration": 35.28,
+      "mascotMode": "pointer",
+      "mascotTip": "Dạng mới GDPT 2018: Chia tử cho mẫu y = a_1 x + b_1 + r/(px+q). Tiệm cận xiên là y = a_1 x + b_1!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Sơ đồ khảo sát hàm $y = \\frac{ax^2+bx+c}{px+q} \\quad (p \\neq 0)$</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Bước 1:</b> Tập xác định: $D = \\mathbb{R} \\setminus \\left\\{-\\frac{q}{p}\\right\\}$.<br>• <b>Bước 2:</b> Chia đa thức tử cho mẫu:<br>$$y = a_1 x + b_1 + \\frac{r}{px+q}$$<br>&emsp;+ <b>Tiệm cận đứng:</b> $x = -\\frac{q}{p}$.<br>&emsp;+ <b>Tiệm cận xiên:</b> $y = a_1 x + b_1$.<br>&emsp;+ <b>Tâm đối xứng $I$:</b> Là giao điểm của tiệm cận xiên và tiệm cận đứng.<br>• <b>Bước 3:</b> Tính $y'$, lập bảng biến thiên và vẽ đồ thị hypebol xiên.</p></div>"
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC DẠNG ĐỒ THỊ BẬC HAI / BẬC NHẤT",
+      "subtitle": "PHẦN 2: ĐẶC ĐIỂM CỰC TRỊ VÀ HAI NHÁNH ĐỒ THỊ",
+      "startTime": 35.28,
+      "endTime": 54.96,
+      "duration": 19.68,
+      "mascotMode": "pointer",
+      "mascotTip": "Đồ thị có 2 cực trị nằm về 2 phía của tiệm cận đứng. Giá trị Cực đại CÓ THỂ NHỎ HƠN Cực tiểu!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Các dạng đồ thị phân thức bậc hai / bậc nhất</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• <b>Trường hợp 1:</b> Phương trình $y' = 0$ có 2 nghiệm phân biệt:<br>&emsp;+ Đồ thị có 2 điểm cực trị nằm về hai phía của đường tiệm cận đứng.<br>&emsp;+ Tâm đối xứng $I$ chính là trung điểm của đoạn thẳng nối 2 điểm cực trị!<br>&emsp;+ <b>Hiện tượng đặc biệt:</b> Giá trị cực đại $y_{CĐ}$ có thể <b>nhỏ hơn</b> giá trị cực tiểu $y_{CT}$.<br>• <b>Trường hợp 2:</b> Phương trình $y' = 0$ vô nghiệm:<br>&emsp;+ Hàm số luôn đơn điệu trên từng khoảng xác định và không có cực trị.</p></div>"
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ 1: KHẢO SÁT & VẼ ĐỒ THỊ",
+      "subtitle": "y = (x^2 - x + 1) / (x - 1)",
+      "startTime": 54.96,
+      "endTime": 69.64,
+      "duration": 14.68,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia đa thức: (x^2 - x + 1)/(x - 1) = x + 1/(x - 1). TCĐ x = 1, TCX y = x!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Khảo sát sự biến thiên và vẽ đồ thị hàm số: $$y = \\frac{x^2 - x + 1}{x - 1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian làm nháp: 30 giây</b><br><i>(Chia tử cho mẫu, tìm TCĐ, TCX và giải y' = 0...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & BẢNG BIẾN THIÊN",
+      "subtitle": "CỰC ĐẠI (0; -1), CỰC TIỂU (2; 3), TÂM ĐỐI XỨNG I(1; 1)",
+      "startTime": 69.64,
+      "endTime": 94.47,
+      "duration": 24.83,
+      "mascotMode": "cheer",
+      "mascotTip": "y_CĐ = -1 nhỏ hơn y_CT = 3! Đây là bản chất hoàn toàn tự nhiên vì cực trị mang tính địa phương!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• $D = \\mathbb{R} \\setminus \\{1\\}$. Chia đa thức: $y = x + \\frac{1}{x - 1}$.<br>• TCĐ: $x = 1$; Tiệm cận xiên: $y = x$. Tâm đối xứng $I(1; 1)$.<br>• $y' = 1 - \\frac{1}{(x-1)^2} = \\frac{x(x-2)}{(x-1)^2} = 0 \\iff x = 0$ hoặc $x = 2$.<br>• Cực đại tại $(0; -1)$, Cực tiểu tại $(2; 3)$. Trung điểm của 2 cực trị chính là $I(1; 1)$.</p></div></div>"
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 2: TÌM TÂM ĐỐI XỨNG CỦA ĐỒ THỊ",
+      "subtitle": "y = (2x^2 + x - 3) / (x + 1)",
+      "startTime": 94.47,
+      "endTime": 106.91,
+      "duration": 12.44,
+      "mascotMode": "pointer",
+      "mascotTip": "Chia tử cho mẫu: thương là 2x - 1. Thay x = -1 vào TCX tìm tung độ y = -3!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm tọa độ tâm đối xứng $I$ của đồ thị hàm số: $$y = \\frac{2x^2+x-3}{x+1}$$<div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b><br><i>(Tìm giao điểm của Tiệm cận đứng và Tiệm cận xiên...)</i></div></div></div>"
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "TÂM ĐỐI XỨNG I(-1; -3)",
+      "startTime": 106.91,
+      "endTime": 125.57,
+      "duration": 18.66,
+      "mascotMode": "cheer",
+      "mascotTip": "TCĐ x = -1, TCX y = 2x - 1 -> Giao điểm là I(-1; -3)!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Nghiệm của mẫu số: $x + 1 = 0 \\implies$ Tiệm cận đứng là $x = -1$.<br>• Thực hiện phép chia đa thức tử cho mẫu:<br>$$2x^2 + x - 3 = (x + 1)(2x - 1) - 2 \\implies y = 2x - 1 - \\frac{2}{x+1}$$<br>$\\implies$ Đường tiệm cận xiên là <b>$y = 2x - 1$</b>.<br>• Thay hoành độ $x = -1$ vào phương trình TCX: $y = 2(-1) - 1 = -3$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Tâm đối xứng của đồ thị là <b>$I(-1; -3)$</b>.</p></div></div>"
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 3: ĐỌC BBT HÀM BẬC HAI / BẬC NHẤT",
+      "subtitle": "TCĐ x = 1, CỰC ĐẠI (0; 1), CỰC TIỂU (2; 5)",
+      "startTime": 125.57,
+      "endTime": 140.77,
+      "duration": 15.2,
+      "mascotMode": "magnifier",
+      "mascotTip": "Quan sát kỹ BBT: y_CĐ = 1 nhỏ hơn y_CT = 5 vì 2 nhánh nằm về 2 phía TCĐ!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Đọc bảng biến thiên của hàm phân thức bậc 2 trên bậc 1 sau:<table style=\"width:100%; max-width:440px; border-collapse:collapse; text-align:center; background:#ffffff !important; color:#111827 !important; border:2px solid #374151; margin:12px auto; font-size:15px; font-weight:600;\"><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"width:45px; border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$x$</td><td style=\"padding:6px; color:#111827 !important;\">$-\\infty$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$0$</td><td></td><td style=\"padding:6px; color:#111827 !important; background:#fee2e2;\">$1$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$2$</td><td></td><td style=\"padding:6px; color:#111827 !important;\">$+\\infty$</td></tr><tr style=\"border-bottom:1.5px solid #374151;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y'$</td><td></td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td>$0$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td style=\"color:#dc2626 !important; font-weight:bold;\">$||$</td><td style=\"color:#dc2626 !important; font-size:16px;\">$-$</td><td>$0$</td><td style=\"color:#2563eb !important; font-size:16px;\">$+$</td><td></td></tr><tr style=\"height:65px;\"><td style=\"border-right:1.5px solid #374151; padding:6px; background:#f3f4f6; color:#111827 !important;\">$y$</td><td style=\"vertical-align:bottom; padding:6px; color:#111827 !important;\">$-\\infty$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; color:#dc2626 !important; font-weight:bold; font-size:17px;\">$1$</td><td>$\\searrow$</td><td style=\"color:#dc2626 !important; font-weight:bold;\">$||$</td><td style=\"vertical-align:top; color:#111827 !important;\">$+\\infty$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; color:#2563eb !important; font-weight:bold; font-size:17px;\">$5$</td><td>$\\nearrow$</td></tr></table><div style=\"margin-top:10px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "GIÁ TRỊ CỰC ĐẠI NHỎ HƠN CỰC TIỂU LÀ BÌNH THƯỜNG",
+      "startTime": 140.77,
+      "endTime": 152.27,
+      "duration": 11.5,
+      "mascotMode": "cheer",
+      "mascotTip": "Cực đại y_CĐ = 1 là điểm cao nhất trên nhánh trái, cực tiểu y_CT = 5 là điểm thấp nhất trên nhánh phải!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_a\" style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải chi tiết:</b><br>• Đồ thị có tiệm cận đứng là $x = 1$ (tại đây có vạch kép $||$).<br>• Điểm cực đại là $A(0; 1)$, điểm cực tiểu là $B(2; 5)$.<br>• Giá trị cực đại $y_{CĐ} = 1$ nhỏ hơn giá trị cực tiểu $y_{CT} = 5$.<br>• Điều này hoàn toàn chính xác vì cực trị chỉ mang tính địa phương trong một khoảng lân cận, không phải là Giá trị lớn nhất hay Giá trị nhỏ nhất toàn cục.</p></div></div>"
+    },
+    {
+      "sceneIndex": 9,
+      "title": "BẪY ĐỀ THI VỀ CỰC ĐẠI & CỰC TIỂU",
+      "subtitle": "PHẦN 4: HOANG MANG KHI y_CĐ < y_CT",
+      "startTime": 152.27,
+      "endTime": 161.61,
+      "duration": 9.34,
+      "mascotMode": "magnifier",
+      "mascotTip": "Đừng vội vàng sửa dấu đạo hàm khi thấy y_CĐ < y_CT! Với hàm bậc 2/1, điều này hoàn toàn tự nhiên!",
+      "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi: Hoang mang khi thấy giá trị Cực đại nhỏ hơn Cực tiểu:</span><br>• Học sinh tính ra $y_{CĐ} = -1$ và $y_{CT} = 3$ rồi vội cho rằng mình tính sai và sửa lại bảng biến thiên $\\implies$ <b>SAI LẦM</b>!<br>• Nhớ rằng: Cực đại chỉ là đỉnh cao nhất trong <b>lân cận nhánh bên trái</b> của tiệm cận đứng. Nhánh bên phải tiệm cận đứng có thể vươn lên rất cao nên điểm cực tiểu của nó hoàn toàn có thể lớn hơn điểm cực đại của nhánh bên kia!</div>"
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BÍ KÍP & MẸO THẦY CÚ",
+      "subtitle": "PHẦN 5: TÂM ĐỐI XỨNG LÀ GIAO CỦA TCĐ VÀ TCX",
+      "startTime": 161.61,
+      "endTime": 170.57,
+      "duration": 8.96,
+      "mascotMode": "cheer",
+      "mascotTip": "Tâm đối xứng I = Giao(TCĐ, TCX). Đồng thời I là trung điểm của 2 điểm cực trị!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo giải nhanh hàm phân thức bậc hai / bậc nhất:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Mẹo 1:</b> Tâm đối xứng $I$ luôn là giao điểm của đường tiệm cận đứng và đường tiệm cận xiên.<br>• <b>Mẹo 2:</b> Nếu hàm số có 2 điểm cực trị $A(x_1; y_1)$ và $B(x_2; y_2)$ thì tâm đối xứng $I$ chính là trung điểm của đoạn thẳng $AB$: $$x_I = \\frac{x_1 + x_2}{2}, \\quad y_I = \\frac{y_1 + y_2}{2}$$Giúp tìm cực trị hoặc tâm đối xứng chỉ trong 2 giây!</div>"
+    }
+  ]
+}
+});
+if(typeof window.CHAPTER1_LECTURES !== 'undefined') {
+  Object.assign(window.CHAPTER1_LECTURES, {
+    bai4_muc1: window.CHAPTER1_DATA.bai4_muc1,
+    bai4_muc2: window.CHAPTER1_DATA.bai4_muc2,
+    bai4_muc3: window.CHAPTER1_DATA.bai4_muc3,
+    bai4_muc4: window.CHAPTER1_DATA.bai4_muc4
+  });
+}

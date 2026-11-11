@@ -433,10 +433,9 @@
       lessonTitle: "Bài 4: Khảo sát & Vẽ đồ thị",
       lessonBadge: "Bài 4",
       sections: [
-        { key: "bai4_muc1", title: "Mục 1: Sơ đồ khảo sát hàm số 4 bước", time: "05:00", icon: "📋" },
-        { key: "bai4_muc2", title: "Mục 2: Khảo sát hàm đa thức bậc ba", time: "05:00", icon: "〽️" },
-        { key: "bai4_muc3", title: "Mục 3: Khảo sát hàm phân thức bậc 1/1", time: "05:00", icon: "➗" },
-        { key: "bai4_muc4", title: "Mục 4: Khảo sát hàm phân thức bậc 2/1", time: "05:00", icon: "📐" }
+        { key: "bai4_muc1", title: "Mục 1: Hàm số bậc ba", time: "05:00", icon: "〽️" },
+        { key: "bai4_muc2", title: "Mục 2: Hàm phân thức bậc 1/1", time: "05:00", icon: "➗" },
+        { key: "bai4_muc3", title: "Mục 3: Hàm phân thức bậc 2/1", time: "05:00", icon: "📐" }
       ]
     },
     {
