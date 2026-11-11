@@ -11,7 +11,7 @@
     // =========================================================================
     // BÀI 2: GIÁ TRỊ LỚN NHẤT VÀ GIÁ TRỊ NHỎ NHẤT CỦA HÀM SỐ (3 MỤC)
     // =========================================================================
-                        bai2_muc1: {
+                            bai2_muc1: {
   "lessonId": "bai2",
   "lessonTitle": "Bài 2: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số",
   "sectionId": "bai2_muc1",
@@ -19,8 +19,8 @@
   "audio": "/audio/bai2_muc1.mp3",
   "audioSrc": "./audio/bai2_muc1.mp3",
   "audio_src": "./audio/bai2_muc1.mp3",
-  "totalDuration": 149,
-  "duration": 149,
+  "totalDuration": 180,
+  "duration": 180,
   "title": "Mục 1: Định nghĩa GTLN & GTNN (Phân biệt Max/Min với Cực trị)",
   "owl_tip": "Ghi nhớ: GTLN/GTNN là giá trị toàn cục trên tập D, khác với Cực trị chỉ mang tính chất địa phương cục bộ!",
   "timeline": [
@@ -29,47 +29,47 @@
       "id": "part1"
     },
     {
-      "time": 37.4,
+      "time": 39.35,
       "id": "part2"
     },
     {
-      "time": 48.54,
+      "time": 52.17,
       "id": "part3"
     },
     {
-      "time": 51.79,
+      "time": 55.82,
       "id": "vd1_q"
     },
     {
-      "time": 67.56,
+      "time": 83.57,
       "id": "vd1_a"
     },
     {
-      "time": 83.29,
+      "time": 97.03,
       "id": "vd2_q"
     },
     {
-      "time": 96.15,
+      "time": 116.67,
       "id": "vd2_a"
     },
     {
-      "time": 105.54,
+      "time": 130.35,
       "id": "vd3_q"
     },
     {
-      "time": 116.76,
+      "time": 148.86,
       "id": "vd3_a"
     },
     {
-      "time": 127.58,
+      "time": 161.47,
       "id": "part4"
     },
     {
-      "time": 136.93,
+      "time": 168.46,
       "id": "part5"
     }
   ],
-  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm cốt lõi</h3><p>Cho hàm số $y=f(x)$ xác định trên $D$.<br>+ $\\max_{D} f(x) = M \\iff f(x) \\le M \\, \\forall x \\in D$ và $\\exists x_0 \\in D: f(x_0)=M$.<br>+ $\\min_{D} f(x) = m \\iff f(x) \\ge m \\, \\forall x \\in D$ và $\\exists x_0 \\in D: f(x_0)=m$.</p></div>\n      <div id=\"part2\"><h3>2. Phân biệt với Cực trị</h3><p>Cực đại, cực tiểu là tính địa phương. GTLN, GTNN là tính toàn cục trên $D$.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm GTLN, GTNN của $y = 4 - x^2$ trên $[-1; 2]$.<br><i>(Lấy nháp ra tính toán...)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <svg viewBox=\"0 0 200 180\" style=\"width:100%; max-width:250px; background:white; border:1px solid #ccc; display:block; margin:auto;\">\n            <line x1=\"20\" y1=\"140\" x2=\"180\" y2=\"140\" stroke=\"black\"/> \n            <line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"160\" stroke=\"black\"/>\n            <polyline points=\"70,50 85,27.5 100,20 115,27.5 130,50 145,87.5 160,140\" stroke=\"blue\" fill=\"none\" stroke-width=\"2\"/>\n            <circle cx=\"100\" cy=\"20\" r=\"4\" fill=\"red\"/>\n            <text x=\"108\" y=\"25\" font-size=\"14\" font-weight=\"bold\">4</text>\n            <circle cx=\"160\" cy=\"140\" r=\"4\" fill=\"red\"/>\n            <text x=\"70\" y=\"155\" font-size=\"12\">-1</text>\n            <text x=\"155\" y=\"155\" font-size=\"12\">2</text>\n          </svg>\n          <p><b>Giải chi tiết:</b> Đỉnh cao nhất tại $x=0 \\Rightarrow \\max y = 4$. Điểm thấp nhất tại $x=2 \\Rightarrow \\min y = 0$.</p>\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Hàm $y = 2x - 1$ trên khoảng $(0; 2)$ có Max Min không?</div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> Đồ thị đi từ $y=-1$ đến $y=3$ KHÔNG lấy mút. Không tồn tại $x_0$ để dấu bằng xảy ra $\\Rightarrow$ KHÔNG CÓ max, min.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Đọc Max/Min từ Bảng biến thiên sau trên $[-2; 3]$:<br>\n          <table style=\"width:100%; max-width:350px; border-collapse: collapse; text-align:center; background:white; border:1px solid black; margin:10px auto;\">\n            <tr style=\"border-bottom:1px solid black;\">\n              <td style=\"border-right:1px solid black; padding:5px;\">$x$</td>\n              <td style=\"padding:5px;\">$-2$</td> <td></td> <td>$1$</td> <td></td> <td style=\"padding:5px;\">$3$</td>\n            </tr>\n            <tr style=\"border-bottom:1px solid black;\">\n              <td style=\"border-right:1px solid black; padding:5px;\">$y'$</td>\n              <td></td> <td>$+$</td> <td>$0$</td> <td>$-$</td> <td></td>\n            </tr>\n            <tr>\n              <td style=\"border-right:1px solid black; padding:5px;\">$y$</td>\n              <td style=\"vertical-align:bottom; padding:5px;\">$-2$</td>\n              <td>$\\nearrow$</td>\n              <td style=\"vertical-align:top; padding:5px; color:red; font-weight:bold;\">$5$</td>\n              <td>$\\searrow$</td>\n              <td style=\"vertical-align:bottom; padding:5px;\">$1$</td>\n            </tr>\n          </table>\n        </div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> Quét dọc bảng, điểm cao nhất là $5$, trũng nhất là $-2 \\Rightarrow \\max = 5, \\min = -2$.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Tìm được $M$ nhưng không tồn tại $x_0 \\in D$.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Gióng điểm cao nhất/thấp nhất xuống trục $Ox$ để tìm $x_0$.</p></div>\n    ",
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm cốt lõi</h3><p>Cho hàm số $y=f(x)$ xác định trên $D$.<br>+ $\\max_{D} f(x) = M \\Leftrightarrow f(x) \\le M \\, \\forall x \\in D$ và $\\exists x_0 \\in D: f(x_0)=M$.<br>+ $\\min_{D} f(x) = m \\Leftrightarrow f(x) \\ge m \\, \\forall x \\in D$ và $\\exists x_0 \\in D: f(x_0)=m$.</p></div>\n      <div id=\"part2\"><h3>2. Phân biệt với Cực trị</h3><p>Cực đại, cực tiểu là tính địa phương. GTLN, GTNN là tính toàn cục trên $D$.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm GTLN, GTNN của $y = 4 - x^2$ trên $[-1; 2]$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\">\n          <svg viewBox=\"0 0 200 180\" style=\"width:100%; max-width:250px; background:white; border:1px solid #ccc; display:block; margin:auto;\">\n            <line x1=\"20\" y1=\"140\" x2=\"180\" y2=\"140\" stroke=\"black\"/> <line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"160\" stroke=\"black\"/>\n            <polyline points=\"70,50 85,27.5 100,20 115,27.5 130,50 145,87.5 160,140\" stroke=\"blue\" fill=\"none\" stroke-width=\"2\"/>\n            <circle cx=\"100\" cy=\"20\" r=\"4\" fill=\"red\"/>\n            <text x=\"108\" y=\"25\" font-size=\"14\" font-weight=\"bold\">4</text>\n            <circle cx=\"160\" cy=\"140\" r=\"4\" fill=\"red\"/>\n            <text x=\"70\" y=\"155\" font-size=\"12\">-1</text>\n            <text x=\"155\" y=\"155\" font-size=\"12\">2</text>\n          </svg>\n          <p><b>Giải chi tiết:</b> Đỉnh cao nhất tại $x=0 \\Rightarrow \\max y = 4$. Điểm thấp nhất tại $x=2 \\Rightarrow \\min y = 0$.</p>\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Hàm $y = 2x - 1$ trên khoảng $(0; 2)$ có Max Min không?<br><i>(Thời gian suy nghĩ: 15s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> Đồ thị đi từ $y=-1$ đến $y=3$ KHÔNG lấy mút. Không tồn tại $x_0$ để dấu bằng xảy ra $\\Rightarrow$ KHÔNG CÓ max, min.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> Đọc Max/Min từ Bảng biến thiên sau trên $[-2; 3]$:<br>\n          <table style=\"width:100%; max-width:350px; border-collapse: collapse; text-align:center; background:white; border:1px solid black; margin:10px auto;\">\n            <tr style=\"border-bottom:1px solid black;\"><td style=\"border-right:1px solid black; padding:5px;\">$x$</td><td style=\"padding:5px;\">$-2$</td> <td></td> <td>$1$</td> <td></td> <td style=\"padding:5px;\">$3$</td></tr>\n            <tr style=\"border-bottom:1px solid black;\"><td style=\"border-right:1px solid black; padding:5px;\">$y'$</td><td></td> <td>$+$</td> <td>$0$</td> <td>$-$</td> <td></td></tr>\n            <tr><td style=\"border-right:1px solid black; padding:5px;\">$y$</td><td style=\"vertical-align:bottom; padding:5px;\">$-2$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; padding:5px; color:red; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:5px;\">$1$</td></tr>\n          </table>\n          <i>(Thời gian suy nghĩ: 20s)</i>\n        </div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> Quét dọc bảng, điểm cao nhất là $5$, trũng nhất là $-2 \\Rightarrow \\max = 5, \\min = -2$.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Tìm được $M$ nhưng không tồn tại $x_0 \\in D$.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Thầy Cú</h3><p>Gióng điểm cao nhất/thấp nhất xuống trục $Ox$ để tìm $x_0$.</p></div>\n    ",
   "parts": [
     {
       "partNumber": 1,
@@ -80,7 +80,7 @@
     },
     {
       "partNumber": 2,
-      "partTitle": "Phần 2: Phân biệt với Cực trị",
+      "partTitle": "Phần 2: Phương pháp giải nhanh",
       "scenes": [
         2
       ]
@@ -106,7 +106,7 @@
     },
     {
       "partNumber": 5,
-      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "partTitle": "Phần 5: Mẹo tư duy & Casio",
       "scenes": [
         10
       ]
@@ -115,113 +115,113 @@
   "scenes": [
     {
       "sceneIndex": 1,
-      "title": "BÀI 2: GIÁ TRỊ LỚN NHẤT & NHỎ NHẤT",
-      "subtitle": "PHẦN 1: KHÁI NIỆM CỐT LÕI (SGK)",
+      "title": "BÀI 2: GIÁ TRỊ LỚN NHẤT VÀ GIÁ TRỊ NHỎ NHẤT CỦA HÀM SỐ",
+      "subtitle": "PHẦN 1: KHÁI NIỆM CỐT LÕI",
       "startTime": 0.0,
-      "endTime": 37.4,
-      "duration": 37.4,
+      "endTime": 39.35,
+      "duration": 39.35,
       "mascotMode": "pointer",
-      "mascotTip": "GTLN và GTNN bắt buộc phải tồn tại dấu bằng xảy ra tại x0 thuộc D!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#fef08a; font-weight:bold; margin-bottom:8px;\">1. Khái niệm cốt lõi</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">Cho hàm số $y=f(x)$ xác định trên tập $D$:<br>• Số $M$ là <b>giá trị lớn nhất</b> (GTLN) trên $D$ khi và chỉ khi:<br>&nbsp;&nbsp; $f(x) \\le M, \\; \\forall x \\in D$ và $\\exists x_0 \\in D: f(x_0) = M$. Ký hiệu: $\\max_D f(x) = M$.<br>• Số $m$ là <b>giá trị nhỏ nhất</b> (GTNN) trên $D$ khi và chỉ khi:<br>&nbsp;&nbsp; $f(x) \\ge m, \\; \\forall x \\in D$ và $\\exists x_0 \\in D: f(x_0) = m$. Ký hiệu: $\\min_D f(x) = m$.</div>"
+      "mascotTip": "Ghi nhớ: GTLN/GTNN là giá trị toàn cục trên tập D, khác với Cực trị chỉ mang tính chất địa phương cục bộ!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Khái niệm cốt lõi</div><div style=\"font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">\n      <h3>1. Khái niệm cốt lõi</h3><p>Cho hàm số $y=f(x)$ xác định trên $D$.<br>+ $\\max_{D} f(x) = M \\Leftrightarrow f(x) \\le M \\, \\forall x \\in D$ và $\\exists x_0 \\in D: f(x_0)=M$.<br>+ $\\min_{D} f(x) = m \\Leftrightarrow f(x) \\ge m \\, \\forall x \\in D$ và $\\exists x_0 \\in D: f(x_0)=m$.</p></div>"
     },
     {
       "sceneIndex": 2,
-      "title": "BÀI 2: PHÂN BIỆT BẢN CHẤT VỚI CỰC TRỊ",
-      "subtitle": "PHẦN 2: SO SÁNH TOÀN CỤC VÀ ĐỊA PHƯƠNG",
-      "startTime": 37.4,
-      "endTime": 51.79,
-      "duration": 14.39,
-      "mascotMode": "magnifier",
-      "mascotTip": "Cực trị chỉ mang tính địa phương trong lân cận hẹp. Max/Min mang tính toàn cục trên toàn bộ tập D!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:8px;\">2. Phân biệt GTLN/GTNN với Cực trị</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• <b>Cực trị (Cực đại, cực tiểu):</b> Mang tính chất <b>địa phương</b> trong một lân cận hẹp.<br>• <b>GTLN, GTNN:</b> Mang tính chất <b>toàn cục</b> trên toàn bộ tập xác định $D$.<br>• Hàm số có thể có nhiều điểm cực đại, nhưng chỉ có tối đa <b>một giá trị lớn nhất</b> duy nhất trên $D$!</div>"
+      "title": "PHƯƠNG PHÁP GIẢI & QUY TRÌNH CHUẨN",
+      "subtitle": "PHẦN 2: BẢN CHẤT VÀ NGUYÊN TẮC GIẢI TOÁN",
+      "startTime": 39.35,
+      "endTime": 55.82,
+      "duration": 16.47,
+      "mascotMode": "pointer",
+      "mascotTip": "Nắm vững lý thuyết để không bị nhầm lẫn khi làm bài!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Phương pháp giải</div><div style=\"font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;\"><h3>2. Phân biệt với Cực trị</h3><p>Cực đại, cực tiểu là tính địa phương. GTLN, GTNN là tính toàn cục trên $D$.</p></div>"
     },
     {
       "sceneIndex": 3,
-      "title": "VÍ DỤ 1: ĐỀ BÀI (THỜI GIAN NHÁP)",
-      "subtitle": "Các em hãy lấy giấy nháp ra thử sức...",
-      "startTime": 51.79,
-      "endTime": 67.56,
-      "duration": 15.77,
+      "title": "VÍ DỤ 1: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 1",
+      "startTime": 55.82,
+      "endTime": 83.57,
+      "duration": 27.75,
       "mascotMode": "pointer",
-      "mascotTip": "Chú ý bề lõm của parabol và kiểm tra đỉnh x=0 có nằm trong [-1; 2] không!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm GTLN, GTNN của hàm số $y = 4 - x^2$ trên đoạn $[-1; 2]$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Lấy nháp ra tính toán...)</i></div></div></div>"
+      "mascotTip": "Lấy nháp ra tính toán thử sức trước khi xem lời giải nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm GTLN, GTNN của $y = 4 - x^2$ trên $[-1; 2]$.<br><i>(Thời gian suy nghĩ: 20s)</i></div></div>"
     },
     {
       "sceneIndex": 4,
-      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT & ĐỒ THỊ PARABOL",
-      "subtitle": "Đỉnh cao nhất tại x=0, thấp nhất tại x=2",
-      "startTime": 67.56,
-      "endTime": 83.29,
-      "duration": 15.73,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 83.57,
+      "endTime": 97.03,
+      "duration": 13.46,
       "mascotMode": "cheer",
-      "mascotTip": "Max = 4 tại x = 0, Min = 0 tại x = 2!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:20px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 1:</b> Tìm GTLN, GTNN của $y = 4 - x^2$ trên $[-1; 2]$.</div><div id=\"vd1_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><div style=\"display:flex; justify-content:center; margin:6px 0;\"><svg viewBox=\"0 0 200 180\" style=\"width:100%; max-width:230px; background:white; border:1px solid #ccc; border-radius:8px; display:block; margin:auto;\"><line x1=\"20\" y1=\"140\" x2=\"180\" y2=\"140\" stroke=\"black\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"160\" stroke=\"black\" stroke-width=\"1.5\"/><polyline points=\"70,50 85,27.5 100,20 115,27.5 130,50 145,87.5 160,140\" stroke=\"blue\" fill=\"none\" stroke-width=\"2.5\"/><circle cx=\"100\" cy=\"20\" r=\"4\" fill=\"red\"/><text x=\"108\" y=\"25\" font-size=\"14\" font-weight=\"bold\" fill=\"#000\">4</text><circle cx=\"160\" cy=\"140\" r=\"4\" fill=\"red\"/><text x=\"65\" y=\"155\" font-size=\"12\" fill=\"#000\">-1</text><text x=\"155\" y=\"155\" font-size=\"12\" fill=\"#000\">2</text></svg></div><p><b>Giải chi tiết:</b> Dựa vào đồ thị parabol, đỉnh cao nhất tại $x=0 \\implies \\max_{[-1;2]} y = 4$. Điểm thấp nhất trên đoạn đạt tại $x=2 \\implies \\min_{[-1;2]} y = 0$.</p></div></div>"
+      "mascotTip": "Đối chiếu xem em tính đúng chưa nào!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\">\n          <svg viewBox=\"0 0 200 180\" style=\"width:100%; max-width:250px; background:white; border:1px solid #ccc; display:block; margin:auto;\">\n            <line x1=\"20\" y1=\"140\" x2=\"180\" y2=\"140\" stroke=\"black\"/> <line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"160\" stroke=\"black\"/>\n            <polyline points=\"70,50 85,27.5 100,20 115,27.5 130,50 145,87.5 160,140\" stroke=\"blue\" fill=\"none\" stroke-width=\"2\"/>\n            <circle cx=\"100\" cy=\"20\" r=\"4\" fill=\"red\"/>\n            <text x=\"108\" y=\"25\" font-size=\"14\" font-weight=\"bold\">4</text>\n            <circle cx=\"160\" cy=\"140\" r=\"4\" fill=\"red\"/>\n            <text x=\"70\" y=\"155\" font-size=\"12\">-1</text>\n            <text x=\"155\" y=\"155\" font-size=\"12\">2</text>\n          </svg>\n          <p><b>Giải chi tiết:</b> Đỉnh cao nhất tại $x=0 \\Rightarrow \\max y = 4$. Điểm thấp nhất tại $x=2 \\Rightarrow \\min y = 0$.</p>\n        </div></div>"
     },
     {
       "sceneIndex": 5,
-      "title": "VÍ DỤ 2: ĐỀ BÀI (THỜI GIAN NHÁP)",
-      "subtitle": "Hàm số trên khoảng mở (0; 2)",
-      "startTime": 83.29,
-      "endTime": 96.15,
-      "duration": 12.86,
+      "title": "VÍ DỤ 2: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 2",
+      "startTime": 97.03,
+      "endTime": 116.67,
+      "duration": 19.64,
       "mascotMode": "pointer",
-      "mascotTip": "Khoảng mở (0; 2) không lấy hai đầu mút 0 và 2, chú ý điều kiện tồn tại dấu bằng!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Hàm số $y = 2x - 1$ trên khoảng mở $(0; 2)$ có Max Min không?<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Chú ý đây là khoảng mở không lấy mút nhé...)</i></div></div></div>"
+      "mascotTip": "Chú ý các điều kiện giả thiết và tập xác định!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Hàm $y = 2x - 1$ trên khoảng $(0; 2)$ có Max Min không?<br><i>(Thời gian suy nghĩ: 15s)</i></div></div>"
     },
     {
       "sceneIndex": 6,
       "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
-      "subtitle": "Kết luận không tồn tại Max và Min",
-      "startTime": 96.15,
-      "endTime": 105.54,
-      "duration": 9.39,
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 116.67,
+      "endTime": 130.35,
+      "duration": 13.68,
       "mascotMode": "cheer",
-      "mascotTip": "Vì không lấy mút nên không tồn tại x0 thuộc (0; 2) để dấu bằng xảy ra!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:20px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 2:</b> Hàm số $y = 2x - 1$ trên khoảng mở $(0; 2)$.</div><div id=\"vd2_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Giải chi tiết:</b> Đồ thị đi từ $y=-1$ đến $y=3$ nhưng KHÔNG lấy hai đầu mút.<br>Không tồn tại $x_0 \\in (0; 2)$ để dấu bằng xảy ra.<br><b style=\"color:#ef4444;\">Đáp án:</b> Hàm số <b>KHÔNG CÓ</b> giá trị lớn nhất và nhỏ nhất!</p></div></div>"
+      "mascotTip": "Tuyệt vời! Nắm chắc bước biến đổi quan trọng này!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><b>Giải chi tiết:</b> Đồ thị đi từ $y=-1$ đến $y=3$ KHÔNG lấy mút. Không tồn tại $x_0$ để dấu bằng xảy ra $\\Rightarrow$ KHÔNG CÓ max, min.</div></div>"
     },
     {
       "sceneIndex": 7,
-      "title": "VÍ DỤ 3: BẢNG BIẾN THIÊN TRÊN [-2; 3]",
-      "subtitle": "Đọc Max/Min từ Bảng biến thiên KaTeX siêu nét",
-      "startTime": 105.54,
-      "endTime": 116.76,
-      "duration": 11.22,
+      "title": "VÍ DỤ 3: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 3 (Đồ thị / Bảng biến thiên)",
+      "startTime": 130.35,
+      "endTime": 148.86,
+      "duration": 18.51,
       "mascotMode": "pointer",
-      "mascotTip": "Quan sát các mũi tên biến thiên trên màn hình: điểm cao nhất và thấp nhất là bao nhiêu?",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Đọc Max/Min từ Bảng biến thiên sau trên đoạn $[-2; 3]$:<table style=\"width:100%; max-width:350px; border-collapse: collapse; text-align:center; background:white; color:#000; border:1.5px solid black; margin:10px auto; border-radius:4px;\"><tr style=\"border-bottom:1px solid black;\"><td style=\"border-right:1px solid black; padding:5px; font-weight:bold;\">$x$</td><td style=\"padding:5px;\">$-2$</td> <td></td> <td>$1$</td> <td></td> <td style=\"padding:5px;\">$3$</td></tr><tr style=\"border-bottom:1px solid black;\"><td style=\"border-right:1px solid black; padding:5px; font-weight:bold;\">$y'$</td><td></td> <td>$+$</td> <td>$0$</td> <td>$-$</td> <td></td></tr><tr><td style=\"border-right:1px solid black; padding:5px; font-weight:bold;\">$y$</td><td style=\"vertical-align:bottom; padding:5px;\">$-2$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; padding:5px; color:red; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:5px;\">$1$</td></tr></table></div></div>"
+      "mascotTip": "Quan sát kỹ bảng biến thiên hoặc đồ thị trực quan!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> Đọc Max/Min từ Bảng biến thiên sau trên $[-2; 3]$:<br>\n          <table style=\"width:100%; max-width:350px; border-collapse: collapse; text-align:center; background:white; border:1px solid black; margin:10px auto;\">\n            <tr style=\"border-bottom:1px solid black;\"><td style=\"border-right:1px solid black; padding:5px;\">$x$</td><td style=\"padding:5px;\">$-2$</td> <td></td> <td>$1$</td> <td></td> <td style=\"padding:5px;\">$3$</td></tr>\n            <tr style=\"border-bottom:1px solid black;\"><td style=\"border-right:1px solid black; padding:5px;\">$y'$</td><td></td> <td>$+$</td> <td>$0$</td> <td>$-$</td> <td></td></tr>\n            <tr><td style=\"border-right:1px solid black; padding:5px;\">$y$</td><td style=\"vertical-align:bottom; padding:5px;\">$-2$</td><td>$\\nearrow$</td><td style=\"vertical-align:top; padding:5px; color:red; font-weight:bold;\">$5$</td><td>$\\searrow$</td><td style=\"vertical-align:bottom; padding:5px;\">$1$</td></tr>\n          </table>\n          <i>(Thời gian suy nghĩ: 20s)</i>\n        </div></div>"
     },
     {
       "sceneIndex": 8,
-      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT TỪ BBT",
-      "subtitle": "Quét dọc bảng: Max = 5, Min = -2",
-      "startTime": 116.76,
-      "endTime": 127.58,
-      "duration": 10.82,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 148.86,
+      "endTime": 161.47,
+      "duration": 12.61,
       "mascotMode": "cheer",
-      "mascotTip": "Mũi tên đi lên đỉnh 5 là Max toàn cục, trũng xuống -2 là Min!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:18px; color:#94a3b8; margin-bottom:4px;\"><b>Ví dụ 3:</b> Đọc Max/Min từ Bảng biến thiên trên đoạn $[-2; 3]$.</div><div id=\"vd3_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Giải chi tiết:</b> Nhìn vào bảng biến thiên:<br>• Mũi tên đi lên số $5$ là điểm cao nhất toàn cục $\\implies \\max_{[-2;3]} y = 5$ (tại $x=1$).<br>• Đi xuống $-2$ là điểm trũng sâu nhất $\\implies \\min_{[-2;3]} y = -2$ (tại $x=-2$).</p></div></div>"
+      "mascotTip": "Hoàn thành xuất sắc 3 ví dụ thực hành!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><b>Giải chi tiết:</b> Quét dọc bảng, điểm cao nhất là $5$, trũng nhất là $-2 \\Rightarrow \\max = 5, \\min = -2$.</div></div>"
     },
     {
       "sceneIndex": 9,
-      "title": "BÀI 2: BẪY ĐỀ THI CẦN TRÁNH",
+      "title": "BẪY ĐỀ THI CẦN TRÁNH",
       "subtitle": "PHẦN 4: CẢNH BÁO BẪY SAI LẦM",
-      "startTime": 127.58,
-      "endTime": 136.93,
-      "duration": 9.35,
+      "startTime": 161.47,
+      "endTime": 168.46,
+      "duration": 6.99,
       "mascotMode": "magnifier",
-      "mascotTip": "Sai lầm lớn nhất là tìm được M nhưng hàm số không bao giờ đạt được do x0 không thuộc D!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy đề thi</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• Sai lầm lớn nhất là tìm được giá trị $M$ nhưng hàm số <b>không bao giờ đạt được</b> giá trị đó do $x_0$ không thuộc tập $D$.<br>• Luôn kiểm tra kỹ xem dấu bằng $f(x_0)=M$ có tồn tại nghiệm $x_0 \\in D$ hay không!</div>"
+      "mascotTip": "Ghi nhớ bẫy này để không bị mất điểm oan uổng!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy đề thi</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\"><h3>4. Bẫy đề thi</h3><p>Tìm được $M$ nhưng không tồn tại $x_0 \\in D$.</p></div>"
     },
     {
       "sceneIndex": 10,
-      "title": "BÀI 2: MẸO THẦY CÚ THÔNG THÁI",
-      "subtitle": "PHẦN 5: BÍ QUYẾT GIÓNG TRỤC HOÀNH",
-      "startTime": 136.93,
-      "endTime": 149,
-      "duration": 12.07,
+      "title": "MẸO THẦY CÚ & CASIO BẤM MÁY",
+      "subtitle": "PHẦN 5: BÍ QUYẾT TƯ DUY TỐC ĐỘ",
+      "startTime": 168.46,
+      "endTime": 180,
+      "duration": 11.54,
       "mascotMode": "cheer",
-      "mascotTip": "Luôn gióng điểm nhô cao nhất và trũng sâu nhất trên đồ thị xuống thẳng trục hoành để đọc chính xác x0!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Thầy Cú thông thái</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• Luôn gióng điểm nhô cao nhất và trũng sâu nhất trên đồ thị xuống thẳng trục hoành $Ox$ để đọc chính xác $x_0$.<br>• Ghi nhớ: Hỏi \"giá trị\" là trả lời $y$, hỏi \"tại điểm nào\" là trả lời $x$!</div>"
+      "mascotTip": "Áp dụng mẹo này để giải nhanh câu trắc nghiệm chỉ trong vài giây!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Thầy Cú thông thái</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\"><h3>5. Mẹo Thầy Cú</h3><p>Gióng điểm cao nhất/thấp nhất xuống trục $Ox$ để tìm $x_0$.</p></div>"
     }
   ]
 },
@@ -230,61 +230,61 @@
   "lessonId": "bai2",
   "lessonTitle": "Bài 2: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số",
   "sectionId": "bai2_muc2",
-  "sectionTitle": "Mục 2: Quy tắc tìm GTLN, GTNN trên một đoạn",
+  "sectionTitle": "Mục 2: Tìm GTLN & GTNN trên một đoạn",
   "audio": "/audio/bai2_muc2.mp3",
   "audioSrc": "./audio/bai2_muc2.mp3",
   "audio_src": "./audio/bai2_muc2.mp3",
-  "totalDuration": 141,
-  "duration": 141,
-  "title": "Mục 2: Quy tắc tìm GTLN & GTNN trên đoạn [a; b]",
-  "owl_tip": "Quy tắc 3 bước: Tính đạo hàm -> Lấy nghiệm trong (a;b) -> So sánh giá trị hai đầu mút và nghiệm.",
+  "totalDuration": 182,
+  "duration": 182,
+  "title": "Mục 2: Quy tắc tìm Max/Min trên đoạn [a; b] (Quy trình chuẩn BGD)",
+  "owl_tip": "Ghi nhớ: Hàm liên tục trên [a;b] luôn có Max và Min. Tính y' -> lấy nghiệm trong khoảng -> so sánh giá trị!",
   "timeline": [
     {
       "time": 0.0,
       "id": "part1"
     },
     {
-      "time": 17.97,
+      "time": 16.38,
       "id": "part2"
     },
     {
-      "time": 37.7,
+      "time": 38.05,
       "id": "part3"
     },
     {
-      "time": 40.87,
+      "time": 41.61,
       "id": "vd1_q"
     },
     {
-      "time": 53.31,
+      "time": 65.83,
       "id": "vd1_a"
     },
     {
-      "time": 71.08,
+      "time": 86.32,
       "id": "vd2_q"
     },
     {
-      "time": 82.67,
+      "time": 106.88,
       "id": "vd2_a"
     },
     {
-      "time": 96.44,
+      "time": 122.21,
       "id": "vd3_q"
     },
     {
-      "time": 108.26,
+      "time": 145.74,
       "id": "vd3_a"
     },
     {
-      "time": 119.79,
+      "time": 160.8,
       "id": "part4"
     },
     {
-      "time": 127.69,
+      "time": 169.61,
       "id": "part5"
     }
   ],
-  "content": "\n      <div id=\"part1\"><h3>1. Định lý</h3><p>Hàm số liên tục trên đoạn $[a;b]$ luôn có Max và Min.</p></div>\n      <div id=\"part2\"><h3>2. Quy trình BGD</h3><p>B1: Tính $y'$. Tìm nghiệm $x_i \\in (a;b)$.<br>B2: Tính $y(a), y(b), y(x_i)$.<br>B3: Số lớn nhất là Max, nhỏ nhất là Min.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ thực hành</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm Max, Min của $y = x^3 - 3x^2 + 2$ trên $[0; 3]$.</div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> $y' = 3x^2 - 6x = 0 \\Leftrightarrow x=0 \\text{ (loại)}, x=2 \\text{ (nhận)}$.<br>Ta có: $y(0)=2, y(2)=-2, y(3)=2$. Vậy $\\max = 2, \\min = -2$.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm Max, Min của $y = \\frac{x+1}{x-1}$ trên $[2; 4]$.</div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> $y' = \\frac{-2}{(x-1)^2} < 0 \\, \\forall x$. Ta có $y(2)=3, y(4)=\\frac{5}{3}$. Vậy $\\max = 3, \\min = \\frac{5}{3}$.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> $y = x + \\sqrt{4-x^2}$ trên $[-2; 2]$.</div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> $y' = 1 - \\frac{x}{\\sqrt{4-x^2}}=0 \\Rightarrow x=\\sqrt{2}$. Ta có $\\max y = 2\\sqrt{2}, \\min y = -2$.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy trắc nghiệm</h3><p>Quên loại nghiệm $x_i \\notin (a;b)$.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Casio</h3><p>Dùng TABLE [Menu 8], Start=a, End=b, Step=(b-a)/29.</p></div>\n    ",
+  "content": "\n      <div id=\"part1\"><h3>1. Định lý</h3><p>Hàm số liên tục trên đoạn $[a;b]$ luôn có Max và Min.</p></div>\n      <div id=\"part2\"><h3>2. Quy trình BGD</h3><p>B1: Tính $y'$. Tìm nghiệm $x_i \\in (a;b)$.<br>B2: Tính $y(a), y(b), y(x_i)$.<br>B3: Số lớn nhất là Max, nhỏ nhất là Min.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ thực hành</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm Max, Min của $y = x^3 - 3x^2 + 2$ trên $[0; 3]$.<br><i>(Thời gian nháp: 25s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> $y' = 3x^2 - 6x = 0 \\Leftrightarrow x=0 \\text{ (loại)}, x=2 \\text{ (nhận)}$.<br>Ta có: $y(0)=2, y(2)=-2, y(3)=2$. Vậy $\\max = 2, \\min = -2$.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> Tìm Max, Min của $y = \\frac{x+1}{x-1}$ trên $[2; 4]$.<br><i>(Thời gian nháp: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> $y' = \\frac{-2}{(x-1)^2} < 0 \\, \\forall x$. Ta có $y(2)=3, y(4)=\\frac{5}{3}$. Vậy $\\max = 3, \\min = \\frac{5}{3}$.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> $y = x + \\sqrt{4-x^2}$ trên $[-2; 2]$.<br><i>(Thời gian nháp: 30s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> $y' = 1 - \\frac{x}{\\sqrt{4-x^2}}=0 \\Rightarrow x=\\sqrt{2}$. Ta có $\\max y = 2\\sqrt{2}, \\min y = -2$.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy trắc nghiệm</h3><p>Quên loại nghiệm $x_i \\notin (a;b)$.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo Casio</h3><p>Dùng TABLE [Menu 8], Start=a, End=b, Step=(b-a)/29.</p></div>\n    ",
   "parts": [
     {
       "partNumber": 1,
@@ -295,7 +295,7 @@
     },
     {
       "partNumber": 2,
-      "partTitle": "Phần 2: Phân biệt với Cực trị",
+      "partTitle": "Phần 2: Phương pháp giải nhanh",
       "scenes": [
         2
       ]
@@ -321,7 +321,7 @@
     },
     {
       "partNumber": 5,
-      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "partTitle": "Phần 5: Mẹo tư duy & Casio",
       "scenes": [
         10
       ]
@@ -330,113 +330,113 @@
   "scenes": [
     {
       "sceneIndex": 1,
-      "title": "BÀI 2 - MỤC 2: TÌM MAX/MIN TRÊN ĐOẠN [a; b]",
-      "subtitle": "PHẦN 1: ĐỊNH LÝ NỀN TẢNG",
+      "title": "BÀI 2: GIÁ TRỊ LỚN NHẤT VÀ GIÁ TRỊ NHỎ NHẤT CỦA HÀM SỐ",
+      "subtitle": "PHẦN 1: KHÁI NIỆM CỐT LÕI",
       "startTime": 0.0,
-      "endTime": 17.97,
-      "duration": 17.97,
+      "endTime": 16.38,
+      "duration": 16.38,
       "mascotMode": "pointer",
-      "mascotTip": "Hàm số liên tục trên đoạn đóng [a; b] thì chắc chắn luôn đạt GTLN và GTNN!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#fef08a; font-weight:bold; margin-bottom:8px;\">1. Định lý nền tảng</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">Theo định lý, mọi hàm số liên tục trên đoạn đóng $[a; b]$ đều chắc chắn đạt được giá trị lớn nhất và giá trị nhỏ nhất trên đoạn đó.</div>"
+      "mascotTip": "Ghi nhớ: Hàm liên tục trên [a;b] luôn có Max và Min. Tính y' -> lấy nghiệm trong khoảng -> so sánh giá trị!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Khái niệm cốt lõi</div><div style=\"font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">\n      <h3>1. Định lý</h3><p>Hàm số liên tục trên đoạn $[a;b]$ luôn có Max và Min.</p></div>"
     },
     {
       "sceneIndex": 2,
-      "title": "QUY TRÌNH GIẢI CỦA BỘ GIÁO DỤC",
-      "subtitle": "PHẦN 2: 3 BƯỚC CHUẨN MỰC KHÔNG CẦN VẼ BBT",
-      "startTime": 17.97,
-      "endTime": 40.87,
-      "duration": 22.9,
+      "title": "PHƯƠNG PHÁP GIẢI & QUY TRÌNH CHUẨN",
+      "subtitle": "PHẦN 2: BẢN CHẤT VÀ NGUYÊN TẮC GIẢI TOÁN",
+      "startTime": 16.38,
+      "endTime": 41.61,
+      "duration": 25.23,
       "mascotMode": "pointer",
-      "mascotTip": "Chỉ lấy các nghiệm nằm lọt trong khoảng mở (a; b)!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:8px;\">2. Quy trình giải 3 bước của Bộ Giáo dục</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• <b>Bước 1:</b> Tính đạo hàm $y'$, tìm nghiệm, chỉ giữ lại các nghiệm nằm lọt trong khoảng mở $(a; b)$.<br>• <b>Bước 2:</b> Tính giá trị hàm số tại hai đầu mút $y(a), y(b)$ và tại các nghiệm nhận được.<br>• <b>Bước 3:</b> Số lớn nhất là Max, số bé nhất là Min.</div>"
+      "mascotTip": "Nắm vững lý thuyết để không bị nhầm lẫn khi làm bài!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Phương pháp giải</div><div style=\"font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;\"><h3>2. Quy trình BGD</h3><p>B1: Tính $y'$. Tìm nghiệm $x_i \\in (a;b)$.<br>B2: Tính $y(a), y(b), y(x_i)$.<br>B3: Số lớn nhất là Max, nhỏ nhất là Min.</p></div>"
     },
     {
       "sceneIndex": 3,
-      "title": "VÍ DỤ 1: ĐA THỨC BẬC BA (THỬ SỨC)",
-      "subtitle": "Các em hãy tính nhanh đạo hàm...",
-      "startTime": 40.87,
-      "endTime": 53.31,
-      "duration": 12.44,
+      "title": "VÍ DỤ 1: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 1",
+      "startTime": 41.61,
+      "endTime": 65.83,
+      "duration": 24.22,
       "mascotMode": "pointer",
-      "mascotTip": "Tính y' = 3x^2 - 6x, kiểm tra nghiệm có lọt vào (0; 3) không!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm Max, Min của $y = x^3 - 3x^2 + 2$ trên đoạn $[0; 3]$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Tính nhanh đạo hàm và kiểm tra nghiệm...)</i></div></div></div>"
+      "mascotTip": "Lấy nháp ra tính toán thử sức trước khi xem lời giải nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm Max, Min của $y = x^3 - 3x^2 + 2$ trên $[0; 3]$.<br><i>(Thời gian nháp: 25s)</i></div></div>"
     },
     {
       "sceneIndex": 4,
       "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
-      "subtitle": "Loại nghiệm trùng mút, Max = 2, Min = -2",
-      "startTime": 53.31,
-      "endTime": 71.08,
-      "duration": 17.77,
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 65.83,
+      "endTime": 86.32,
+      "duration": 20.49,
       "mascotMode": "cheer",
-      "mascotTip": "x = 0 bị loại do trùng mút, x = 2 nhận => Max = 2, Min = -2!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:20px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 1:</b> Tìm Max, Min của $y = x^3 - 3x^2 + 2$ trên $[0; 3]$.</div><div id=\"vd1_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải:</b><br>• Đạo hàm $y' = 3x^2 - 6x = 0 \\iff x = 0 \\text{ (loại do trùng mút)}, \\; x = 2 \\text{ (nhận)}$.<br>• Tính giá trị: $f(0) = 2, \\; f(2) = -2, \\; f(3) = 2$.<br><b style=\"color:#10b981;\">Kết luận:</b> $\\max_{[0;3]} y = 2, \\; \\min_{[0;3]} y = -2$.</p></div></div>"
+      "mascotTip": "Đối chiếu xem em tính đúng chưa nào!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><b>Giải chi tiết:</b> $y' = 3x^2 - 6x = 0 \\Leftrightarrow x=0 \\text{ (loại)}, x=2 \\text{ (nhận)}$.<br>Ta có: $y(0)=2, y(2)=-2, y(3)=2$. Vậy $\\max = 2, \\min = -2$.</div></div>"
     },
     {
       "sceneIndex": 5,
-      "title": "VÍ DỤ 2: HÀM PHÂN THỨC (THỬ SỨC)",
-      "subtitle": "Đạo hàm ad - bc luôn âm",
-      "startTime": 71.08,
-      "endTime": 82.67,
-      "duration": 11.59,
+      "title": "VÍ DỤ 2: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 2",
+      "startTime": 86.32,
+      "endTime": 106.88,
+      "duration": 20.56,
       "mascotMode": "pointer",
-      "mascotTip": "Các em tự tính đạo hàm: y' luôn âm đúng không?",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm Max, Min của $y = \\frac{x+1}{x-1}$ trên đoạn $[2; 4]$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Đạo hàm luôn mang một dấu...)</i></div></div></div>"
+      "mascotTip": "Chú ý các điều kiện giả thiết và tập xác định!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Tìm Max, Min của $y = \\frac{x+1}{x-1}$ trên $[2; 4]$.<br><i>(Thời gian nháp: 20s)</i></div></div>"
     },
     {
       "sceneIndex": 6,
       "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
-      "subtitle": "Tính giá trị tại hai đầu mút",
-      "startTime": 82.67,
-      "endTime": 96.44,
-      "duration": 13.77,
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 106.88,
+      "endTime": 122.21,
+      "duration": 15.33,
       "mascotMode": "cheer",
-      "mascotTip": "y(2) = 3, y(4) = 5/3 => Max = 3, Min = 5/3!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:20px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 2:</b> Tìm Max, Min của $y = \\frac{x+1}{x-1}$ trên đoạn $[2; 4]$.</div><div id=\"vd2_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải:</b><br>• $y' = \\frac{-2}{(x-1)^2} < 0, \\; \\forall x \\in [2; 4]$ (luôn âm).<br>• Tính $f(2) = 3, \\; f(4) = \\frac{5}{3}$.<br><b style=\"color:#10b981;\">Kết luận:</b> $\\max_{[2;4]} y = 3, \\; \\min_{[2;4]} y = \\frac{5}{3}$.</p></div></div>"
+      "mascotTip": "Tuyệt vời! Nắm chắc bước biến đổi quan trọng này!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><b>Giải chi tiết:</b> $y' = \\frac{-2}{(x-1)^2} < 0 \\, \\forall x$. Ta có $y(2)=3, y(4)=\\frac{5}{3}$. Vậy $\\max = 3, \\min = \\frac{5}{3}$.</div></div>"
     },
     {
       "sceneIndex": 7,
-      "title": "VÍ DỤ 3: HÀM CĂN THỨC (THỬ SỨC)",
-      "subtitle": "Đạo hàm căn u cẩn thận",
-      "startTime": 96.44,
-      "endTime": 108.26,
-      "duration": 11.82,
+      "title": "VÍ DỤ 3: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 3 (Đồ thị / Bảng biến thiên)",
+      "startTime": 122.21,
+      "endTime": 145.74,
+      "duration": 23.53,
       "mascotMode": "pointer",
-      "mascotTip": "Quy đồng và giải nghiệm của 1 - x / căn(4-x^2) = 0!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 3:</b> Tìm Max, Min của $y = x + \\sqrt{4-x^2}$ trên đoạn $[-2; 2]$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Quy đồng giải nghiệm...)</i></div></div></div>"
+      "mascotTip": "Quan sát kỹ bảng biến thiên hoặc đồ thị trực quan!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> $y = x + \\sqrt{4-x^2}$ trên $[-2; 2]$.<br><i>(Thời gian nháp: 30s)</i></div></div>"
     },
     {
       "sceneIndex": 8,
       "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
-      "subtitle": "So sánh các giá trị: Max = 2 căn 2, Min = -2",
-      "startTime": 108.26,
-      "endTime": 119.79,
-      "duration": 11.53,
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 145.74,
+      "endTime": 160.8,
+      "duration": 15.06,
       "mascotMode": "cheer",
-      "mascotTip": "x = căn 2 thuộc (-2; 2) => Max = 2 căn 2, Min = -2!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 3:</b> $y = x + \\sqrt{4-x^2}$ trên $[-2; 2]$.</div><div id=\"vd3_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải:</b><br>• $y' = 1 - \\frac{x}{\\sqrt{4-x^2}} = 0 \\iff x = \\sqrt{2} \\in (-2; 2)$.<br>• So sánh: $y(-2) = -2, \\; y(2) = 2, \\; y(\\sqrt{2}) = 2\\sqrt{2}$.<br><b style=\"color:#10b981;\">Kết luận:</b> $\\max = 2\\sqrt{2}, \\; \\min = -2$.</p></div></div>"
+      "mascotTip": "Hoàn thành xuất sắc 3 ví dụ thực hành!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><b>Giải chi tiết:</b> $y' = 1 - \\frac{x}{\\sqrt{4-x^2}}=0 \\Rightarrow x=\\sqrt{2}$. Ta có $\\max y = 2\\sqrt{2}, \\min y = -2$.</div></div>"
     },
     {
       "sceneIndex": 9,
-      "title": "BẪY TRẮC NGHIỆM",
-      "subtitle": "PHẦN 4: QUÊN LOẠI NGHIỆM NGOÀI ĐOẠN",
-      "startTime": 119.79,
-      "endTime": 127.69,
-      "duration": 7.9,
+      "title": "BẪY ĐỀ THI CẦN TRÁNH",
+      "subtitle": "PHẦN 4: CẢNH BÁO BẪY SAI LẦM",
+      "startTime": 160.8,
+      "endTime": 169.61,
+      "duration": 8.81,
       "mascotMode": "magnifier",
-      "mascotTip": "Quên loại nghiệm y' nằm ngoài đoạn a b dẫn đến chọn nhầm đáp án!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy trắc nghiệm</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• Quên loại nghiệm $y'$ nằm ngoài đoạn $[a; b]$ dẫn đến chọn nhầm đáp án.<br>• Luôn đối chiếu điều kiện $x_i \\in (a; b)$ trước khi tính giá trị!</div>"
+      "mascotTip": "Ghi nhớ bẫy này để không bị mất điểm oan uổng!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy đề thi</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\"><h3>4. Bẫy trắc nghiệm</h3><p>Quên loại nghiệm $x_i \\notin (a;b)$.</p></div>"
     },
     {
       "sceneIndex": 10,
-      "title": "MẸO CASIO",
-      "subtitle": "PHẦN 5: MENU 8 TABLE",
-      "startTime": 127.69,
-      "endTime": 141,
-      "duration": 13.31,
+      "title": "MẸO THẦY CÚ & CASIO BẤM MÁY",
+      "subtitle": "PHẦN 5: BÍ QUYẾT TƯ DUY TỐC ĐỘ",
+      "startTime": 169.61,
+      "endTime": 182,
+      "duration": 12.39,
       "mascotMode": "cheer",
-      "mascotTip": "Dùng TABLE Menu tám, Start a, End b, Step (b-a)/29 để quét cực nhanh nhé!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Casio</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• Dùng <b>TABLE [Menu 8]</b>: Nhập $f(x)$, Start = $a$, End = $b$, Step = $\\frac{b-a}{29}$ để dò giá trị cực nhanh!</div>"
+      "mascotTip": "Áp dụng mẹo này để giải nhanh câu trắc nghiệm chỉ trong vài giây!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Thầy Cú thông thái</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\"><h3>5. Mẹo Casio</h3><p>Dùng TABLE [Menu 8], Start=a, End=b, Step=(b-a)/29.</p></div>"
     }
   ]
 },
@@ -445,61 +445,61 @@
   "lessonId": "bai2",
   "lessonTitle": "Bài 2: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số",
   "sectionId": "bai2_muc3",
-  "sectionTitle": "Mục 3: Tìm GTLN, GTNN trên khoảng bằng BBT",
+  "sectionTitle": "Mục 3: Tìm GTLN & GTNN trên khoảng, nửa khoảng",
   "audio": "/audio/bai2_muc3.mp3",
   "audioSrc": "./audio/bai2_muc3.mp3",
   "audio_src": "./audio/bai2_muc3.mp3",
-  "totalDuration": 127,
-  "duration": 127,
-  "title": "Mục 3: Tìm GTLN & GTNN trên khoảng (Bảng biến thiên)",
-  "owl_tip": "Trên khoảng mở hoặc vô cực, ta bắt buộc tính giới hạn và vẽ bảng biến thiên đầy đủ!",
+  "totalDuration": 162,
+  "duration": 162,
+  "title": "Mục 3: Tìm Max/Min trên khoảng, nửa khoảng (Dùng BBT & Cực trị duy nhất)",
+  "owl_tip": "Ghi nhớ: Trên khoảng bắt buộc phải vẽ BBT và tính lim ở các đầu mút vô cực!",
   "timeline": [
     {
       "time": 0.0,
       "id": "part1"
     },
     {
-      "time": 15.95,
+      "time": 15.39,
       "id": "part2"
     },
     {
-      "time": 29.22,
+      "time": 27.64,
       "id": "part3"
     },
     {
-      "time": 32.36,
+      "time": 31.18,
       "id": "vd1_q"
     },
     {
-      "time": 43.66,
+      "time": 54.33,
       "id": "vd1_a"
     },
     {
-      "time": 57.29,
+      "time": 70.75,
       "id": "vd2_q"
     },
     {
-      "time": 64.76,
+      "time": 88.86,
       "id": "vd2_a"
     },
     {
-      "time": 76.3,
+      "time": 102.32,
       "id": "vd3_q"
     },
     {
-      "time": 87.95,
+      "time": 122.5,
       "id": "vd3_a"
     },
     {
-      "time": 101.45,
+      "time": 137.69,
       "id": "part4"
     },
     {
-      "time": 113.86,
+      "time": 149.68,
       "id": "part5"
     }
   ],
-  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm</h3><p>Trên khoảng/nửa khoảng, bắt buộc xét giới hạn và vẽ BBT.</p></div>\n      <div id=\"part2\"><h3>2. Định lý cực trị duy nhất</h3><p>Nếu hàm số có ĐÚNG 1 cực trị trên miền $D$, thì CĐ chính là Max, hoặc CT chính là Min.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm GTNN của $y = x + \\frac{4}{x}$ trên $(0; +\\infty)$.</div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> $y' = 1 - \\frac{4}{x^2}=0 \\Leftrightarrow x=2$. BBT đi từ $+\\infty$ xuống $4$ rồi lên $+\\infty \\Rightarrow \\min = 4$, Không có Max.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> $y = -x^2 + 2x + 3$ trên $\\mathbb{R}$.</div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> $y'=-2x+2=0 \\Rightarrow x=1$. Đồ thị đi lên $4$ rồi đi xuống $\\Rightarrow \\max = 4$, Không có Min.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> $y = \\frac{x^2+1}{x}$ trên $(-\\infty; 0)$.</div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải:</b> $y'=1-\\frac{1}{x^2}=0 \\Rightarrow x=-1$. BBT đi lên $-2$ rồi đi xuống $\\Rightarrow \\max = -2$, Không có Min.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Giới hạn ra $\\infty$ kết luận luôn là Max/Min.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo tư duy</h3><p>Dùng BĐT Cauchy (AM-GM) cho miền dương để nhẩm cực nhanh.</p></div>\n    ",
+  "content": "\n      <div id=\"part1\"><h3>1. Khái niệm</h3><p>Trên khoảng/nửa khoảng, bắt buộc xét giới hạn và vẽ BBT.</p></div>\n      <div id=\"part2\"><h3>2. Định lý cực trị duy nhất</h3><p>Nếu hàm số có ĐÚNG 1 cực trị trên miền $D$, thì CĐ chính là Max, hoặc CT chính là Min.</p></div>\n      <div id=\"part3\"><h3>3. Các ví dụ điển hình</h3></div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd1_q\"><b>Ví dụ 1:</b> Tìm GTNN của $y = x + \\frac{4}{x}$ trên $(0; +\\infty)$.<br><i>(Thời gian suy nghĩ: 25s)</i></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> $y' = 1 - \\frac{4}{x^2}=0 \\Leftrightarrow x=2$. BBT đi từ $+\\infty$ xuống $4$ rồi lên $+\\infty \\Rightarrow \\min = 4$, Không có Max.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd2_q\"><b>Ví dụ 2:</b> $y = -x^2 + 2x + 3$ trên $\\mathbb{R}$.<br><i>(Thời gian suy nghĩ: 20s)</i></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> $y'=-2x+2=0 \\Rightarrow x=1$. Đồ thị đi lên $4$ rồi đi xuống $\\Rightarrow \\max = 4$, Không có Min.</div>\n      </div>\n      <div class=\"slide\" style=\"border:1px solid #ccc; padding:10px; margin:5px 0;\">\n        <div id=\"vd3_q\"><b>Ví dụ 3:</b> $y = \\frac{x^2+1}{x}$ trên $(-\\infty; 0)$.<br><i>(Thời gian suy nghĩ: 25s)</i></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;\"><b>Giải chi tiết:</b> $y'=1-\\frac{1}{x^2}=0 \\Rightarrow x=-1$. BBT đi lên $-2$ rồi đi xuống $\\Rightarrow \\max = -2$, Không có Min.</div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy đề thi</h3><p>Giới hạn ra $\\infty$ kết luận luôn là Max/Min.</p></div>\n      <div id=\"part5\"><h3>5. Mẹo tư duy</h3><p>Dùng BĐT Cauchy (AM-GM) cho miền dương để nhẩm cực nhanh.</p></div>\n    ",
   "parts": [
     {
       "partNumber": 1,
@@ -510,7 +510,7 @@
     },
     {
       "partNumber": 2,
-      "partTitle": "Phần 2: Phân biệt với Cực trị",
+      "partTitle": "Phần 2: Phương pháp giải nhanh",
       "scenes": [
         2
       ]
@@ -536,7 +536,7 @@
     },
     {
       "partNumber": 5,
-      "partTitle": "Phần 5: Mẹo Thầy Cú",
+      "partTitle": "Phần 5: Mẹo tư duy & Casio",
       "scenes": [
         10
       ]
@@ -545,118 +545,118 @@
   "scenes": [
     {
       "sceneIndex": 1,
-      "title": "BÀI 2 - MỤC 3: TÌM MAX/MIN TRÊN KHOẢNG",
-      "subtitle": "PHẦN 1: BẮT BUỘC TÍNH GIỚI HẠN VÀ VẼ BBT",
+      "title": "BÀI 2: GIÁ TRỊ LỚN NHẤT VÀ GIÁ TRỊ NHỎ NHẤT CỦA HÀM SỐ",
+      "subtitle": "PHẦN 1: KHÁI NIỆM CỐT LÕI",
       "startTime": 0.0,
-      "endTime": 15.95,
-      "duration": 15.95,
+      "endTime": 15.39,
+      "duration": 15.39,
       "mascotMode": "pointer",
-      "mascotTip": "Trên khoảng mở hoặc vô cực, bắt buộc tính giới hạn và vẽ bảng biến thiên!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#fef08a; font-weight:bold; margin-bottom:8px;\">1. Khái niệm & Yêu cầu vẽ BBT</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">Khác với đoạn đóng, trên một khoảng mở hoặc vô cực, ta bắt buộc phải tính giới hạn $\\lim$ và vẽ bảng biến thiên đầy đủ.</div>"
+      "mascotTip": "Ghi nhớ: Trên khoảng bắt buộc phải vẽ BBT và tính lim ở các đầu mút vô cực!",
+      "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Khái niệm cốt lõi</div><div style=\"font-size:22px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">\n      <h3>1. Khái niệm</h3><p>Trên khoảng/nửa khoảng, bắt buộc xét giới hạn và vẽ BBT.</p></div>"
     },
     {
       "sceneIndex": 2,
-      "title": "ĐỊNH LÝ CỰC TRỊ DUY NHẤT",
-      "subtitle": "PHẦN 2: CỰC TRỊ TRỞ THÀNH MAX/MIN TOÀN CỤC",
-      "startTime": 15.95,
-      "endTime": 32.36,
-      "duration": 16.41,
+      "title": "PHƯƠNG PHÁP GIẢI & QUY TRÌNH CHUẨN",
+      "subtitle": "PHẦN 2: BẢN CHẤT VÀ NGUYÊN TẮC GIẢI TOÁN",
+      "startTime": 15.39,
+      "endTime": 31.18,
+      "duration": 15.79,
       "mascotMode": "pointer",
-      "mascotTip": "Nếu chỉ có đúng 1 điểm cực trị trên khoảng, thì CĐ là Max, hoặc CT là Min!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:8px;\">2. Định lý cực trị duy nhất</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">Nếu hàm số chỉ có đúng một điểm cực trị trên khoảng đang xét, thì cực đại đó sẽ là <b>giá trị lớn nhất</b>, hoặc cực tiểu đó sẽ là <b>giá trị nhỏ nhất</b> toàn cục.</div>"
+      "mascotTip": "Nắm vững lý thuyết để không bị nhầm lẫn khi làm bài!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Phương pháp giải</div><div style=\"font-size:21px; line-height:1.7; color:#e2e8f0; margin-left:14px;\"><h3>2. Định lý cực trị duy nhất</h3><p>Nếu hàm số có ĐÚNG 1 cực trị trên miền $D$, thì CĐ chính là Max, hoặc CT chính là Min.</p></div>"
     },
     {
       "sceneIndex": 3,
-      "title": "VÍ DỤ 1: ĐỀ BÀI (THỬ SỨC)",
-      "subtitle": "Đạo hàm và lập bảng biến thiên",
-      "startTime": 32.36,
-      "endTime": 43.66,
-      "duration": 11.3,
+      "title": "VÍ DỤ 1: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 1",
+      "startTime": 31.18,
+      "endTime": 54.33,
+      "duration": 23.15,
       "mascotMode": "pointer",
-      "mascotTip": "Đạo hàm 1 - 4/x^2, tìm nghiệm dương x = 2!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm GTNN của $y = x + \\frac{4}{x}$ trên $(0; +\\infty)$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Các em hãy đạo hàm và xét dấu...)</i></div></div></div>"
+      "mascotTip": "Lấy nháp ra tính toán thử sức trước khi xem lời giải nhé!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Tìm GTNN của $y = x + \\frac{4}{x}$ trên $(0; +\\infty)$.<br><i>(Thời gian suy nghĩ: 25s)</i></div></div>"
     },
     {
       "sceneIndex": 4,
       "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
-      "subtitle": "Min = 4, hàm không có Max",
-      "startTime": 43.66,
-      "endTime": 57.29,
-      "duration": 13.63,
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 54.33,
+      "endTime": 70.75,
+      "duration": 16.42,
       "mascotMode": "cheer",
-      "mascotTip": "Bảng biến thiên đi xuống tới 4 rồi đi lên => Min = 4, không có Max!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:20px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 1:</b> Tìm GTNN của $y = x + \\frac{4}{x}$ trên $(0; +\\infty)$.</div><div id=\"vd1_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải:</b><br>• $y' = 1 - \\frac{4}{x^2} = 0 \\iff x = 2$ (do $x > 0$).<br>• Bảng biến thiên đi xuống tới $4$ rồi đi lên.<br><b style=\"color:#10b981;\">Kết luận:</b> $\\min = 4$, hàm số không có max.</p></div></div>"
+      "mascotTip": "Đối chiếu xem em tính đúng chưa nào!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><b>Giải chi tiết:</b> $y' = 1 - \\frac{4}{x^2}=0 \\Leftrightarrow x=2$. BBT đi từ $+\\infty$ xuống $4$ rồi lên $+\\infty \\Rightarrow \\min = 4$, Không có Max.</div></div>"
     },
     {
       "sceneIndex": 5,
-      "title": "VÍ DỤ 2: PARABOL TRÊN R (THỬ SỨC)",
-      "subtitle": "Hàm bậc hai bề lõm quay xuống",
-      "startTime": 57.29,
-      "endTime": 64.76,
-      "duration": 7.47,
+      "title": "VÍ DỤ 2: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 2",
+      "startTime": 70.75,
+      "endTime": 88.86,
+      "duration": 18.11,
       "mascotMode": "pointer",
-      "mascotTip": "Câu này rất cơ bản: parabol có đỉnh là điểm cao nhất!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Xét parabol $y = -x^2 + 2x + 3$ trên $\\mathbb{R}$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Xác định nhanh tọa độ đỉnh...)</i></div></div></div>"
+      "mascotTip": "Chú ý các điều kiện giả thiết và tập xác định!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> $y = -x^2 + 2x + 3$ trên $\\mathbb{R}$.<br><i>(Thời gian suy nghĩ: 20s)</i></div></div>"
     },
     {
       "sceneIndex": 6,
       "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
-      "subtitle": "Đồ thị đi lên 4 rồi đi xuống: Max = 4, không có Min",
-      "startTime": 64.76,
-      "endTime": 76.3,
-      "duration": 11.54,
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 88.86,
+      "endTime": 102.32,
+      "duration": 13.46,
       "mascotMode": "cheer",
-      "mascotTip": "y' = -2x + 2 = 0 => x = 1. Max = 4, không có Min!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:20px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 2:</b> $y = -x^2 + 2x + 3$ trên $\\mathbb{R}$.</div><div id=\"vd2_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải:</b><br>• $y' = -2x + 2 = 0 \\iff x = 1$.<br>• Đồ thị đi lên $4$ rồi đi xuống.<br><b style=\"color:#10b981;\">Kết luận:</b> $\\max = 4$, không có min.</p></div></div>"
+      "mascotTip": "Tuyệt vời! Nắm chắc bước biến đổi quan trọng này!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><b>Giải chi tiết:</b> $y'=-2x+2=0 \\Rightarrow x=1$. Đồ thị đi lên $4$ rồi đi xuống $\\Rightarrow \\max = 4$, Không có Min.</div></div>"
     },
     {
       "sceneIndex": 7,
-      "title": "VÍ DỤ 3: HÀM PHÂN THỨC TRÊN MIỀN ÂM (THỬ SỨC)",
-      "subtitle": "Đạo hàm u/v trên khoảng (- vô cực; 0)",
-      "startTime": 76.3,
-      "endTime": 87.95,
-      "duration": 11.65,
+      "title": "VÍ DỤ 3: ĐỀ BÀI VÀ THỜI GIAN NHÁP",
+      "subtitle": "Ví dụ điển hình 3 (Đồ thị / Bảng biến thiên)",
+      "startTime": 102.32,
+      "endTime": 122.5,
+      "duration": 20.18,
       "mascotMode": "pointer",
-      "mascotTip": "Dùng quy tắc u chia v, nhớ chỉ xét trên miền âm!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:22px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 3:</b> Hàm số $y = \\frac{x^2+1}{x}$ trên $(-\\infty; 0)$.<br><div style=\"margin-top:14px; padding:10px 16px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:20px;\">⏱️ <b>Thử sức:</b> <i>(Đạo hàm u/v và tìm nghiệm âm...)</i></div></div></div>"
+      "mascotTip": "Quan sát kỹ bảng biến thiên hoặc đồ thị trực quan!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.5; color:#f8fafc;\"><b>Ví dụ 3:</b> $y = \\frac{x^2+1}{x}$ trên $(-\\infty; 0)$.<br><i>(Thời gian suy nghĩ: 25s)</i></div></div>"
     },
     {
       "sceneIndex": 8,
       "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
-      "subtitle": "Bảng biến thiên đi lên -2 rồi đi xuống",
-      "startTime": 87.95,
-      "endTime": 101.45,
-      "duration": 13.5,
+      "subtitle": "Đối chiếu kết quả",
+      "startTime": 122.5,
+      "endTime": 137.69,
+      "duration": 15.19,
       "mascotMode": "cheer",
-      "mascotTip": "Nghiệm âm x = -1 => Max = -2, hàm không có Min!",
-      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:20px; color:#94a3b8; margin-bottom:6px;\"><b>Ví dụ 3:</b> $y = \\frac{x^2+1}{x}$ trên $(-\\infty; 0)$.</div><div id=\"vd3_a\" style=\"border-top:1px dashed #64748b; padding-top:10px; font-size:20px; line-height:1.6; color:#f8fafc;\"><p><b>Lời giải:</b><br>• Đạo hàm $y' = 1 - \\frac{1}{x^2} = 0 \\iff x = -1$ (vì $x < 0$).<br>• Bảng biến thiên đi lên $-2$ rồi đi xuống.<br><b style=\"color:#10b981;\">Kết luận:</b> $\\max = -2$, hàm không có min.</p></div></div>"
+      "mascotTip": "Hoàn thành xuất sắc 3 ví dụ thực hành!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div style=\"font-size:20px; line-height:1.6; color:#f8fafc;\"><b>Giải chi tiết:</b> $y'=1-\\frac{1}{x^2}=0 \\Rightarrow x=-1$. BBT đi lên $-2$ rồi đi xuống $\\Rightarrow \\max = -2$, Không có Min.</div></div>"
     },
     {
       "sceneIndex": 9,
-      "title": "BẪY ĐỀ THI VÔ CỰC",
-      "subtitle": "PHẦN 4: VÔ CỰC KHÔNG PHẢI LÀ SỐ THỰC",
-      "startTime": 101.45,
-      "endTime": 113.86,
-      "duration": 12.41,
+      "title": "BẪY ĐỀ THI CẦN TRÁNH",
+      "subtitle": "PHẦN 4: CẢNH BÁO BẪY SAI LẦM",
+      "startTime": 137.69,
+      "endTime": 149.68,
+      "duration": 11.99,
       "mascotMode": "magnifier",
-      "mascotTip": "Khi thấy giới hạn tiến ra dương vô cực, kết luận luôn Max = vô cực là sai!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy đề thi</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• Khi thấy giới hạn tiến ra dương vô cực, nhiều bạn kết luận luôn Max bằng vô cực.<br>• Đây là sai lầm vì vô cực không phải là số thực!</div>"
+      "mascotTip": "Ghi nhớ bẫy này để không bị mất điểm oan uổng!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#f43f5e; font-weight:bold; margin-bottom:8px;\">4. Bẫy đề thi</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\"><h3>4. Bẫy đề thi</h3><p>Giới hạn ra $\\infty$ kết luận luôn là Max/Min.</p></div>"
     },
     {
       "sceneIndex": 10,
-      "title": "MẸO TƯ DUY CAUCHY",
-      "subtitle": "PHẦN 5: BẤT ĐẲNG THỨC AM-GM",
-      "startTime": 113.86,
-      "endTime": 127,
-      "duration": 13.14,
+      "title": "MẸO THẦY CÚ & CASIO BẤM MÁY",
+      "subtitle": "PHẦN 5: BÍ QUYẾT TƯ DUY TỐC ĐỘ",
+      "startTime": 149.68,
+      "endTime": 162,
+      "duration": 12.32,
       "mascotMode": "cheer",
-      "mascotTip": "Dùng ngay bất đẳng thức Cauchy để nhẩm ra đáp án trong một giây!",
-      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo tư duy</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\">• Nếu gặp hàm chứa $x + \\frac{a}{x}$ trên miền dương, dùng ngay bất đẳng thức Cauchy để nhẩm ra đáp án trong một giây!</div>"
+      "mascotTip": "Áp dụng mẹo này để giải nhanh câu trắc nghiệm chỉ trong vài giây!",
+      "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Mẹo Thầy Cú thông thái</div><div style=\"font-size:20px; line-height:1.6; color:#e2e8f0; margin-left:14px;\"><h3>5. Mẹo tư duy</h3><p>Dùng BĐT Cauchy (AM-GM) cho miền dương để nhẩm cực nhanh.</p></div>"
     }
   ]
 },
 
-        bai3_muc1: {
+    bai3_muc1: {
   "lessonId": "bai3",
   "lessonTitle": "Bài 3: Đường tiệm cận của đồ thị hàm số",
   "sectionId": "bai3_muc1",
