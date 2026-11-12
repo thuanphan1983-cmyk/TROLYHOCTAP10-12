@@ -32,6 +32,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <style>
+
+/* CSS đảm bảo mũi tên véc tơ hiển thị 100% không phụ thuộc KaTeX */
+.v-vec, .v-vec-red, .v-vec-white {
+  display: inline-block;
+  position: relative;
+  font-style: italic;
+  font-family: 'Times New Roman', serif;
+  margin-right: 2px;
+  line-height: 1.2;
+}
+.v-vec::before, .v-vec-red::before, .v-vec-white::before {
+  content: "→";
+  position: absolute;
+  top: -0.55em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.85em;
+  font-style: normal;
+  font-weight: bold;
+  color: #38bdf8;
+}
+.v-vec-red::before {
+  color: #f43f5e;
+}
+.v-vec-white::before {
+  color: #f8fafc;
+}
+
     /* ==========================================================================
        QUY CHUẨN ĐỒ HOẠ SƯ PHẠM:
        - FONT CHỮ: TIMES NEW ROMAN (TIMNEWROMAN / TINOS)
