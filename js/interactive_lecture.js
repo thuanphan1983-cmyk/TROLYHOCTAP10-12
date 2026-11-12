@@ -487,6 +487,16 @@
         { key: "bai6_muc3", title: "Mục 3: Tích vô hướng của hai vectơ", time: "05:00", icon: "📐" }
       ]
     },
+        {
+      lessonId: "bai7",
+      lessonTitle: "Bài 7: Hệ trục toạ độ trong không gian",
+      lessonBadge: "Bài 7",
+      sections: [
+        { key: "bai7_muc1", title: "Mục 1: Hệ trục toạ độ Oxyz", time: "05:00", icon: "🌐" },
+        { key: "bai7_muc2", title: "Mục 2: Toạ độ của điểm & Toạ độ của véc tơ", time: "05:00", icon: "📍" },
+        { key: "bai7_muc3", title: "Mục 3: Biểu thức toạ độ của các phép toán véc tơ", time: "05:00", icon: "🧮" }
+      ]
+    },
     {
       lessonId: "ontap",
       lessonTitle: "Ôn tập Chương 1",
