@@ -173,6 +173,9 @@
         window.renderMath(bodyEl);
       } else if (typeof window.renderMathInElement === 'function') {
         window.renderMathInElement(bodyEl, {
+          macros: {
+            "\\vec": "\\overrightarrow"
+          },
           delimiters: [
             { left: '$$', right: '$$', display: true },
             { left: '$', right: '$', display: false }
@@ -186,6 +189,9 @@
       mascotContainer.innerHTML = getOwlSvg(scene.mascotMode, scene.mascotTip);
       if (typeof renderMathInElement === 'function') {
         renderMathInElement(mascotContainer, {
+          macros: {
+            "\\vec": "\\overrightarrow"
+          },
           delimiters: [{ left: '$', right: '$', display: false }],
           throwOnError: false
         });

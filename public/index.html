@@ -33,35 +33,82 @@
 
   <style>
 
-/* CSS đảm bảo mũi tên véc tơ hiển thị 100% không phụ thuộc KaTeX */
-.v-vec, .v-vec-red, .v-vec-white {
+
+/* ==========================================================================
+   QUY CHUẨN VÉC TƠ CHUẨN SGK BỘ GD&ĐT:
+   - Mũi tên nằm ngang trải dài trên toàn bộ ký tự (A, AB, AA', ...)
+   - Đầu mũi tên nhọn chuẩn toán học ở phía bên phải
+   - Đảm bảo hiển thị 100% không phụ thuộc KaTeX hay tải font ngoài
+   ========================================================================== */
+.v-vec, .v-vec-red, .v-vec-blue, .v-vec-white, .v-vec-gold {
   display: inline-block;
   position: relative;
   font-style: italic;
   font-family: 'Times New Roman', serif;
   margin-right: 2px;
-  line-height: 1.2;
-}
-.v-vec::before, .v-vec-red::before, .v-vec-white::before {
-  content: "→";
-  position: absolute;
-  top: -0.55em;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 0.85em;
-  font-style: normal;
-  font-weight: bold;
-  color: #38bdf8;
-}
-.v-vec-red::before {
-  color: #f43f5e;
-}
-.v-vec-white::before {
-  color: #f8fafc;
+  padding-top: 0.28em;
+  line-height: 1.1;
+  vertical-align: baseline;
 }
 
-    /* ==========================================================================
+/* Mũi tên chuẩn SGK: Đường ngang kéo dài + ngọn mũi tên chuẩn xác */
+.v-vec::before,
+.v-vec-blue::before {
+  content: "";
+  position: absolute;
+  top: 0.04em;
+  left: 1px;
+  right: 1px;
+  height: 0.32em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cline x1='0' y1='10' x2='94' y2='10' stroke='%2338bdf8' stroke-width='2.6'/%3E%3Cpath d='M82 3 L96 10 L82 17' fill='none' stroke='%2338bdf8' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.v-vec-white::before {
+  content: "";
+  position: absolute;
+  top: 0.04em;
+  left: 1px;
+  right: 1px;
+  height: 0.32em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cline x1='0' y1='10' x2='94' y2='10' stroke='%23f8fafc' stroke-width='2.6'/%3E%3Cpath d='M82 3 L96 10 L82 17' fill='none' stroke='%23f8fafc' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.v-vec-red::before {
+  content: "";
+  position: absolute;
+  top: 0.04em;
+  left: 1px;
+  right: 1px;
+  height: 0.32em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cline x1='0' y1='10' x2='94' y2='10' stroke='%23f43f5e' stroke-width='2.6'/%3E%3Cpath d='M82 3 L96 10 L82 17' fill='none' stroke='%23f43f5e' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.v-vec-gold::before {
+  content: "";
+  position: absolute;
+  top: 0.04em;
+  left: 1px;
+  right: 1px;
+  height: 0.32em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cline x1='0' y1='10' x2='94' y2='10' stroke='%23fbbf24' stroke-width='2.6'/%3E%3Cpath d='M82 3 L96 10 L82 17' fill='none' stroke='%23fbbf24' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Bảo vệ KaTeX: Không ép Times New Roman lên các phần tử con của KaTeX */
+.katex svg {
+  display: block !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* ==========================================================================
        QUY CHUẨN ĐỒ HOẠ SƯ PHẠM:
        - FONT CHỮ: TIMES NEW ROMAN (TIMNEWROMAN / TINOS)
        - CỠ CHỮ: 13pt (CHUẨN THỂ THỨC VĂN BẢN VÀ ĐỀ THI TOÁN CỦA BỘ GD&ĐT)
@@ -74,7 +121,7 @@
     }
 
     /* Toàn bộ trang web ưu tiên font Times New Roman */
-    *, html, body, button, input, select, textarea, .font-sans, .font-serif, .prose-math {
+    *:not(.katex):not(.katex *), html, body, button, input, select, textarea, .font-sans, .font-serif {
       font-family: var(--font-times) !important;
     }
 
@@ -30962,8 +31009,8 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         [/\\to\b|\\rightarrow/g, '→'],
         [/\\Rightarrow/g, '⇒'],
         [/\\Leftrightarrow/g, '⇔'],
-        [/\\vec\{([A-Za-z0-9]+)\}/g, '$1⃗'],
-        [/\\overrightarrow\{([A-Za-z0-9]+)\}/g, '$1⃗'],
+        [/\\vec\{([A-Za-z0-9'\s]+)\}/g, '<span class="v-vec">$1</span>'],
+        [/\\overrightarrow\{([A-Za-z0-9'\s]+)\}/g, '<span class="v-vec">$1</span>'],
         [/\\mathbf\{([^}]+)\}/g, '$1'],
         [/\\mathrm\{([^}]+)\}/g, '$1'],
         [/\\text\{([^}]+)\}/g, '$1'],
