@@ -659,8 +659,8 @@ window.CHAPTER2_DATA.bai7_muc1 = {
   "audioSrc": "./audio/bai7_muc1.mp3",
   "audio_src": "./audio/bai7_muc1.mp3",
   "timestamp_src": "timestamps/bai7_muc1.json",
-  "totalDuration": 237.06,
-  "duration": 237.06,
+  "totalDuration": 245.09,
+  "duration": 245.09,
   "title": "Mục 1: Hệ trục toạ độ Oxyz trong không gian",
   "owl_tip": "Hệ Oxyz gồm ba trục Ox, Oy, Oz đôi một vuông góc. Độ dài ba véc tơ đơn vị i, j, k đều bằng 1!",
   "timeline": [
@@ -669,43 +669,43 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "id": "part1"
     },
     {
-      "time": 47.21,
+      "time": 50.42,
       "id": "part2"
     },
     {
-      "time": 79.01,
+      "time": 82.8,
       "id": "part3"
     },
     {
-      "time": 82.8,
+      "time": 85.61,
       "id": "vd1_q"
     },
     {
-      "time": 107.3,
+      "time": 110.09,
       "id": "vd1_a"
     },
     {
-      "time": 131.4,
+      "time": 134.16,
       "id": "vd2_q"
     },
     {
-      "time": 148.5,
+      "time": 151.49,
       "id": "vd2_a"
     },
     {
-      "time": 170.2,
+      "time": 172.99,
       "id": "vd3_q"
     },
     {
-      "time": 193.89,
+      "time": 197.69,
       "id": "vd3_a"
     },
     {
-      "time": 207.76,
+      "time": 213.02,
       "id": "part4"
     },
     {
-      "time": 224.86,
+      "time": 231.12,
       "id": "part5"
     }
   ],
@@ -758,8 +758,8 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "title": "BÀI 7: HỆ TRỤC TỌA ĐỘ TRONG KHÔNG GIAN",
       "subtitle": "PHẦN 1: HỆ TRỤC TỌA ĐỘ Oxyz",
       "startTime": 0.0,
-      "endTime": 47.21,
-      "duration": 47.21,
+      "endTime": 50.42,
+      "duration": 50.42,
       "mascotMode": "pointer",
       "mascotTip": "Hệ Oxyz gồm ba trục Ox, Oy, Oz đôi một vuông góc. Độ dài ba véc tơ đơn vị i, j, k đều bằng 1!",
       "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Hệ trục toạ độ $Oxyz$ trong không gian</div>\n      <div style=\"text-align:center; margin:12px 0;\">\n        <svg width=\"260\" height=\"180\" viewBox=\"0 0 260 180\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n          \n            <defs>\n              <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n              <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n              <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n              <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n            </defs>\n    \n          <!-- Trục Oz thẳng đứng -->\n          <line x1=\"100\" y1=\"120\" x2=\"100\" y2=\"20\" stroke=\"#38bdf8\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n          <!-- Trục Oy nằm ngang -->\n          <line x1=\"100\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"#34d399\" stroke-width=\"2\" marker-end=\"url(#arrG)\"/>\n          <!-- Trục Ox xiên chéo ra trước -->\n          <line x1=\"100\" y1=\"120\" x2=\"35\" y2=\"165\" stroke=\"#f43f5e\" stroke-width=\"2\" marker-end=\"url(#arrR)\"/>\n          <!-- Vector đơn vị k trên Oz -->\n          <line x1=\"100\" y1=\"120\" x2=\"100\" y2=\"70\" stroke=\"#fbbf24\" stroke-width=\"3\" marker-end=\"url(#arrY)\"/>\n          <!-- Vector đơn vị j trên Oy -->\n          <line x1=\"100\" y1=\"120\" x2=\"155\" y2=\"120\" stroke=\"#fbbf24\" stroke-width=\"3\" marker-end=\"url(#arrY)\"/>\n          <!-- Vector đơn vị i trên Ox -->\n          <line x1=\"100\" y1=\"120\" x2=\"60\" y2=\"148\" stroke=\"#fbbf24\" stroke-width=\"3\" marker-end=\"url(#arrY)\"/>\n          <!-- Ký hiệu góc vuông tại O -->\n          <rect x=\"100\" y=\"105\" width=\"12\" height=\"15\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1\"/>\n          <!-- Nhãn -->\n          <text x=\"82\" y=\"130\" fill=\"#f8fafc\" font-size=\"14\" font-weight=\"bold\">O</text>\n          <text x=\"96\" y=\"15\" fill=\"#38bdf8\" font-size=\"14\" font-weight=\"bold\">z</text>\n          <text x=\"235\" y=\"125\" fill=\"#34d399\" font-size=\"14\" font-weight=\"bold\">y</text>\n          <text x=\"22\" y=\"172\" fill=\"#f43f5e\" font-size=\"14\" font-weight=\"bold\">x</text>\n          <text x=\"105\" y=\"65\" fill=\"#fbbf24\" font-size=\"13\" font-style=\"italic\" font-weight=\"bold\">k&#x20D7;</text>\n          <text x=\"150\" y=\"112\" fill=\"#fbbf24\" font-size=\"13\" font-style=\"italic\" font-weight=\"bold\">j&#x20D7;</text>\n          <text x=\"68\" y=\"145\" fill=\"#fbbf24\" font-size=\"13\" font-style=\"italic\" font-weight=\"bold\">i&#x20D7;</text>\n        </svg>\n        <div style=\"font-size:13px; color:#94a3b8; margin-top:4px;\">Hệ trục toạ độ Đề-các vuông góc $Oxyz$ và các véc tơ đơn vị $\\vec{i}, \\vec{j}, \\vec{k}$</div>\n      </div>\n    "
@@ -768,9 +768,9 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 2,
       "title": "CÁC MẶT PHẲNG TỌA ĐỘ",
       "subtitle": "PHẦN 2: (Oxy), (Oyz), (Ozx)",
-      "startTime": 47.21,
-      "endTime": 82.8,
-      "duration": 35.59,
+      "startTime": 50.42,
+      "endTime": 85.61,
+      "duration": 35.19,
       "mascotMode": "pointer",
       "mascotTip": "Quy tắc khuyết chữ: (Oxy) khuyết z -> z=0; (Oyz) khuyết x -> x=0; (Ozx) khuyết y -> y=0!",
       "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Ba mặt phẳng toạ độ</div>\n      <div style=\"text-align:center; margin:12px 0;\">\n        <svg width=\"260\" height=\"180\" viewBox=\"0 0 260 180\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n          \n            <defs>\n              <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n              <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n              <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n              <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n            </defs>\n    \n          <!-- Mặt phẳng (Oxy) đáy -->\n          <polygon points=\"100,120 200,120 150,155 50,155\" fill=\"rgba(56,189,248,0.2)\" stroke=\"#38bdf8\" stroke-width=\"1\"/>\n          <!-- Mặt phẳng (Oyz) bên phải -->\n          <polygon points=\"100,120 200,120 200,50 100,50\" fill=\"rgba(52,211,153,0.18)\" stroke=\"#34d399\" stroke-width=\"1\"/>\n          <!-- Mặt phẳng (Ozx) bên trái -->\n          <polygon points=\"100,120 50,155 50,85 100,50\" fill=\"rgba(244,63,94,0.18)\" stroke=\"#f43f5e\" stroke-width=\"1\"/>\n          <!-- Các trục -->\n          <line x1=\"100\" y1=\"120\" x2=\"100\" y2=\"20\" stroke=\"#f8fafc\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n          <line x1=\"100\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"#f8fafc\" stroke-width=\"2\" marker-end=\"url(#arrG)\"/>\n          <line x1=\"100\" y1=\"120\" x2=\"35\" y2=\"165\" stroke=\"#f8fafc\" stroke-width=\"2\" marker-end=\"url(#arrR)\"/>\n          <text x=\"85\" y=\"130\" fill=\"#f8fafc\" font-size=\"13\" font-weight=\"bold\">O</text>\n          <text x=\"96\" y=\"15\" fill=\"#f8fafc\" font-size=\"13\" font-weight=\"bold\">z</text>\n          <text x=\"235\" y=\"125\" fill=\"#f8fafc\" font-size=\"13\" font-weight=\"bold\">y</text>\n          <text x=\"22\" y=\"172\" fill=\"#f8fafc\" font-size=\"13\" font-weight=\"bold\">x</text>\n          <!-- Tên 3 mặt phẳng -->\n          <text x=\"125\" y=\"145\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">(Oxy): z=0</text>\n          <text x=\"155\" y=\"85\" fill=\"#34d399\" font-size=\"12\" font-weight=\"bold\">(Oyz): x=0</text>\n          <text x=\"42\" y=\"115\" fill=\"#f43f5e\" font-size=\"12\" font-weight=\"bold\">(Ozx): y=0</text>\n        </svg>\n        <div style=\"font-size:13px; color:#94a3b8; margin-top:4px;\">Ba mặt phẳng tọa độ: $(Oxy)$ (khuyết $z$), $(Oyz)$ (khuyết $x$), $(Ozx)$ (khuyết $y$)</div>\n      </div>\n    "
@@ -779,9 +779,9 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 3,
       "title": "VÍ DỤ 1: TÍCH VÔ HƯỚNG CÁC VÉC TƠ ĐƠN VỊ",
       "subtitle": "TÍNH CHẤT CỦA i, j, k",
-      "startTime": 82.8,
-      "endTime": 107.3,
-      "duration": 24.5,
+      "startTime": 85.61,
+      "endTime": 110.09,
+      "duration": 24.48,
       "mascotMode": "pointer",
       "mascotTip": "Các véc tơ đơn vị đôi một vuông góc nên tích vô hướng từng cặp bằng 0. i² = |i|² = 1!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Trong không gian $Oxyz$, tính tích vô hướng $\\vec{i} \\cdot \\vec{j}, \\vec{j} \\cdot \\vec{k}, \\vec{k} \\cdot \\vec{i}$ và tính $\\vec{i}^2$.<div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b></div></div></div>"
@@ -790,9 +790,9 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 4,
       "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
       "subtitle": "TÍCH VÔ HƯỚNG BẰNG 0",
-      "startTime": 107.3,
-      "endTime": 131.4,
-      "duration": 24.1,
+      "startTime": 110.09,
+      "endTime": 134.16,
+      "duration": 24.07,
       "mascotMode": "pointer",
       "mascotTip": "i . j = j . k = k . i = 0 và i² = 1!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd1_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 1:</b><br>• Do $\\vec{i}, \\vec{j}, \\vec{k}$ đôi một vuông góc nên: $\\vec{i} \\cdot \\vec{j} = 0, \\; \\vec{j} \\cdot \\vec{k} = 0, \\; \\vec{k} \\cdot \\vec{i} = 0$.<br>• Bình phương vô hướng: $\\vec{i}^2 = |\\vec{i}|^2 = 1^2 = 1$.</div></div>"
@@ -801,9 +801,9 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 5,
       "title": "VÍ DỤ 2: ĐIỂM THUỘC TRỤC & MẶT PHẲNG TỌA ĐỘ",
       "subtitle": "TỌA ĐỘ BẰNG 0",
-      "startTime": 131.4,
-      "endTime": 148.5,
-      "duration": 17.1,
+      "startTime": 134.16,
+      "endTime": 151.49,
+      "duration": 17.33,
       "mascotMode": "pointer",
       "mascotTip": "Thuộc trục Ox khuyết y, z -> y=0, z=0. Thuộc (Oxy) khuyết z -> z=0!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Điểm $A$ nằm trên trục hoành $Ox$, điểm $B$ nằm trong mặt phẳng toạ độ $(Oxy)$. Những toạ độ nào của $A$ và $B$ chắc chắn bằng $0$?<div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b></div></div></div>"
@@ -812,9 +812,9 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 6,
       "title": "VÍ DỤ 2: LỜI GIẢI",
       "subtitle": "A(x; 0; 0) & B(x; y; 0)",
-      "startTime": 148.5,
-      "endTime": 170.2,
-      "duration": 21.7,
+      "startTime": 151.49,
+      "endTime": 172.99,
+      "duration": 21.5,
       "mascotMode": "cheer",
       "mascotTip": "A(x; 0; 0) và B(x; y; 0)!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd2_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 2:</b><br>• $A \\in Ox \\implies y = 0$ và $z = 0 \\implies \\mathbf{A(x; 0; 0)}$.<br>• $B \\in (Oxy) \\implies z = 0 \\implies \\mathbf{B(x; y; 0)}$.</div></div>"
@@ -823,9 +823,9 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 7,
       "title": "VÍ DỤ 3: HÌNH LẬP PHƯƠNG GỐC O",
       "subtitle": "XÁC ĐỊNH MẶT PHẲNG ĐÁY",
-      "startTime": 170.2,
-      "endTime": 193.89,
-      "duration": 23.69,
+      "startTime": 172.99,
+      "endTime": 197.69,
+      "duration": 24.7,
       "mascotMode": "pointer",
       "mascotTip": "Đáy OABC chứa gốc O, tia Ox và tia Oy -> đó chính là mặt phẳng (Oxy)!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 3:</b> Cho hình lập phương $OABC.O'A'B'C'$ có đỉnh $O$ trùng gốc tọa độ, các đỉnh $A, C, O'$ lần lượt nằm trên các tia $Ox, Oy, Oz$. Mặt phẳng chứa mặt đáy $OABC$ là mặt phẳng tọa độ nào?\n      <div style=\"text-align:center; margin:10px 0;\">\n        <svg width=\"240\" height=\"160\" viewBox=\"0 0 240 160\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n          \n            <defs>\n              <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n              <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n              <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n              <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n            </defs>\n    \n          <!-- Các trục tọa độ -->\n          <line x1=\"80\" y1=\"110\" x2=\"80\" y2=\"20\" stroke=\"#38bdf8\" stroke-width=\"1.5\" marker-end=\"url(#arrB)\"/>\n          <line x1=\"80\" y1=\"110\" x2=\"200\" y2=\"110\" stroke=\"#34d399\" stroke-width=\"1.5\" marker-end=\"url(#arrG)\"/>\n          <line x1=\"80\" y1=\"110\" x2=\"30\" y2=\"145\" stroke=\"#f43f5e\" stroke-width=\"1.5\" marker-end=\"url(#arrR)\"/>\n          <!-- Khối lập phương OABC.O'A'B'C' -->\n          <line x1=\"80\" y1=\"110\" x2=\"50\" y2=\"130\" stroke=\"#f43f5e\" stroke-width=\"2.5\"/>\n          <line x1=\"80\" y1=\"110\" x2=\"150\" y2=\"110\" stroke=\"#34d399\" stroke-width=\"2.5\"/>\n          <line x1=\"80\" y1=\"110\" x2=\"80\" y2=\"45\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>\n          <polygon points=\"50,130 120,130 150,110\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n          <polygon points=\"80,45 150,45 120,65 50,65\" fill=\"rgba(56,189,248,0.15)\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n          <line x1=\"50\" y1=\"130\" x2=\"50\" y2=\"65\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n          <line x1=\"120\" y1=\"130\" x2=\"120\" y2=\"65\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n          <line x1=\"150\" y1=\"110\" x2=\"150\" y2=\"45\" stroke=\"#64748b\" stroke-width=\"1.5\"/>\n          <text x=\"70\" y=\"118\" fill=\"#f8fafc\" font-size=\"12\" font-weight=\"bold\">O</text>\n          <text x=\"35\" y=\"138\" fill=\"#f43f5e\" font-size=\"12\" font-weight=\"bold\">A</text>\n          <text x=\"120\" y=\"142\" fill=\"#f8fafc\" font-size=\"12\">B</text>\n          <text x=\"155\" y=\"115\" fill=\"#34d399\" font-size=\"12\" font-weight=\"bold\">C</text>\n          <text x=\"68\" y=\"42\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">O'</text>\n          <text x=\"155\" y=\"42\" fill=\"#f8fafc\" font-size=\"12\">C'</text>\n        </svg>\n      </div>\n    <div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b></div></div></div>"
@@ -834,9 +834,9 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 8,
       "title": "VÍ DỤ 3: LỜI GIẢI",
       "subtitle": "MẶT PHẲNG (Oxy)",
-      "startTime": 193.89,
-      "endTime": 207.76,
-      "duration": 13.87,
+      "startTime": 197.69,
+      "endTime": 213.02,
+      "duration": 15.33,
       "mascotMode": "pointer",
       "mascotTip": "Mặt đáy OABC chính là mặt phẳng toạ độ (Oxy)!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd3_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 3:</b><br>Mặt đáy $OABC$ chứa điểm $O$, cạnh $OA \\subset Ox$ và $OC \\subset Oy$.<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> Mặt phẳng chứa mặt đáy $OABC$ là <b>$(Oxy)$</b>.</div></div>"
@@ -845,9 +845,9 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 9,
       "title": "BẪY ĐỀ THI: PHƯƠNG TRÌNH MẶT PHẲNG TỌA ĐỘ",
       "subtitle": "PHẦN 4: KHUYẾT CHỮ NÀO BẰNG 0 CHỮ ĐÓ",
-      "startTime": 207.76,
-      "endTime": 224.86,
-      "duration": 17.1,
+      "startTime": 213.02,
+      "endTime": 231.12,
+      "duration": 18.1,
       "mascotMode": "magnifier",
       "mascotTip": "(Oxy) có z=0; (Oyz) có x=0; (Ozx) có y=0. Khuyết chữ nào chữ đó bằng 0!",
       "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi mặt phẳng toạ độ:</span><br>• Mặt phẳng $(Oxy)$ có phương trình là $z = 0$.<br>• Mặt phẳng $(Oyz)$ có phương trình là $x = 0$.<br>• Mặt phẳng $(Ozx)$ có phương trình là $y = 0$.<br>Quy tắc: <b>Khuyết chữ nào thì biến đó bằng $0$!</b></div>"
@@ -856,15 +856,16 @@ window.CHAPTER2_DATA.bai7_muc1 = {
       "sceneIndex": 10,
       "title": "BÍ KÍP & MẸO THẦY CÚ",
       "subtitle": "PHẦN 5: KHẨU QUYẾT TỌA ĐỘ VÀNG",
-      "startTime": 224.86,
-      "endTime": 237.06,
-      "duration": 12.2,
+      "startTime": 231.12,
+      "endTime": 245.09,
+      "duration": 13.97,
       "mascotMode": "cheer",
       "mascotTip": "Thuộc trục giữ 1 biến; thuộc mặt giữ 2 biến; biến khuyết cho bằng 0!",
       "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Khẩu quyết vàng Thầy Cú:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Thuộc trục:</b> Chỉ giữ biến của trục đó, 2 biến còn lại bằng $0$ (VD: $M \\in Oz \\implies M(0; 0; z)$).<br>• <b>Thuộc mặt:</b> Giữ 2 biến của mặt phẳng đó, biến khuyết bằng $0$ (VD: $N \\in (Oyz) \\implies N(0; y; z)$).</div>"
     }
   ]
 };
+
 window.CHAPTER2_DATA.bai7_muc2 = {
   "lessonId": "bai7",
   "lessonTitle": "Bài 7: Hệ trục toạ độ trong không gian",
@@ -874,8 +875,8 @@ window.CHAPTER2_DATA.bai7_muc2 = {
   "audioSrc": "./audio/bai7_muc2.mp3",
   "audio_src": "./audio/bai7_muc2.mp3",
   "timestamp_src": "timestamps/bai7_muc2.json",
-  "totalDuration": 257.18,
-  "duration": 257.18,
+  "totalDuration": 261.02,
+  "duration": 261.02,
   "title": "Mục 2: Toạ độ của điểm và toạ độ của véc tơ trong không gian",
   "owl_tip": "u = x i + y j + z k <=> u = (x; y; z). Véc tơ AB lấy ngọn B trừ gốc A!",
   "timeline": [
@@ -884,43 +885,43 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "id": "part1"
     },
     {
-      "time": 37.4,
+      "time": 39.22,
       "id": "part2"
     },
     {
-      "time": 78.0,
+      "time": 77.95,
       "id": "part3"
     },
     {
-      "time": 83.0,
+      "time": 80.74,
       "id": "vd1_q"
     },
     {
-      "time": 104.38,
+      "time": 104.09,
       "id": "vd1_a"
     },
     {
-      "time": 129.58,
+      "time": 128.3,
       "id": "vd2_q"
     },
     {
-      "time": 148.78,
+      "time": 147.67,
       "id": "vd2_a"
     },
     {
-      "time": 181.68,
+      "time": 182.18,
       "id": "vd3_q"
     },
     {
-      "time": 202.98,
+      "time": 203.86,
       "id": "vd3_a"
     },
     {
-      "time": 226.78,
+      "time": 227.62,
       "id": "part4"
     },
     {
-      "time": 247.08,
+      "time": 249.14,
       "id": "part5"
     }
   ],
@@ -973,8 +974,8 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "title": "TỌA ĐỘ CỦA VÉC TƠ TRONG KHÔNG GIAN",
       "subtitle": "PHẦN 1: ĐỊNH NGHĨA TỌA ĐỘ VÉC TƠ",
       "startTime": 0.0,
-      "endTime": 37.4,
-      "duration": 37.4,
+      "endTime": 39.22,
+      "duration": 39.22,
       "mascotMode": "pointer",
       "mascotTip": "u = x i + y j + z k <=> u = (x; y; z)!",
       "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Toạ độ của véc tơ trong không gian</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>• Trong không gian $Oxyz$, mỗi véc tơ $\\vec{u}$ luôn phân tích duy nhất:<br>&emsp;$$\\vec{u} = x\\vec{i} + y\\vec{j} + z\\vec{k} \\iff \\mathbf{\\vec{u} = (x; y; z)}$$<br>• Hai véc tơ bằng nhau $\\iff$ Các toạ độ tương ứng bằng nhau.</p></div>"
@@ -983,9 +984,9 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 2,
       "title": "TỌA ĐỘ CỦA ĐIỂM TRONG KHÔNG GIAN",
       "subtitle": "PHẦN 2: OM = (x; y; z) <=> M(x; y; z)",
-      "startTime": 37.4,
-      "endTime": 83.0,
-      "duration": 45.6,
+      "startTime": 39.22,
+      "endTime": 80.74,
+      "duration": 41.52,
       "mascotMode": "pointer",
       "mascotTip": "Véc tơ AB lấy ngọn B trừ gốc A. Trung điểm cộng đôi chia hai!",
       "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Toạ độ của điểm trong không gian</div>\n      <div style=\"text-align:center; margin:12px 0;\">\n        <svg width=\"260\" height=\"180\" viewBox=\"0 0 260 180\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n          \n            <defs>\n              <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n              <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n              <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n              <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n            </defs>\n    \n          <!-- Trục tọa độ -->\n          <line x1=\"90\" y1=\"120\" x2=\"90\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\" marker-end=\"url(#arrB)\"/>\n          <line x1=\"90\" y1=\"120\" x2=\"225\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\" marker-end=\"url(#arrG)\"/>\n          <line x1=\"90\" y1=\"120\" x2=\"30\" y2=\"165\" stroke=\"#64748b\" stroke-width=\"1.5\" marker-end=\"url(#arrR)\"/>\n          <!-- Hình hộp xác định điểm M(x, y, z) -->\n          <line x1=\"90\" y1=\"120\" x2=\"55\" y2=\"145\" stroke=\"#f43f5e\" stroke-width=\"2\"/>\n          <line x1=\"90\" y1=\"120\" x2=\"165\" y2=\"120\" stroke=\"#34d399\" stroke-width=\"2\"/>\n          <line x1=\"90\" y1=\"120\" x2=\"90\" y2=\"60\" stroke=\"#38bdf8\" stroke-width=\"2\"/>\n          <!-- Đường gióng nét đứt -->\n          <line x1=\"55\" y1=\"145\" x2=\"130\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3\"/>\n          <line x1=\"165\" y1=\"120\" x2=\"130\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3\"/>\n          <line x1=\"130\" y1=\"145\" x2=\"130\" y2=\"85\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3\"/>\n          <line x1=\"90\" y1=\"60\" x2=\"130\" y2=\"85\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3\"/>\n          <!-- Véc tơ OM -->\n          <line x1=\"90\" y1=\"120\" x2=\"126\" y2=\"88\" stroke=\"#fbbf24\" stroke-width=\"3\" marker-end=\"url(#arrY)\"/>\n          <circle cx=\"130\" cy=\"85\" r=\"3.5\" fill=\"#fbbf24\"/>\n          <text x=\"76\" y=\"125\" fill=\"#f8fafc\" font-size=\"12\">O</text>\n          <text x=\"96\" y=\"22\" fill=\"#38bdf8\" font-size=\"12\">z</text>\n          <text x=\"228\" y=\"125\" fill=\"#34d399\" font-size=\"12\">y</text>\n          <text x=\"22\" y=\"170\" fill=\"#f43f5e\" font-size=\"12\">x</text>\n          <text x=\"135\" y=\"80\" fill=\"#fbbf24\" font-size=\"14\" font-weight=\"bold\">M(x; y; z)</text>\n          <text x=\"135\" y=\"152\" fill=\"#94a3b8\" font-size=\"11\">M'(x; y; 0)</text>\n        </svg>\n        <div style=\"font-size:13px; color:#fde047; font-weight:bold; margin-top:4px;\">$\\vec{OM} = x\\vec{i} + y\\vec{j} + z\\vec{k} \\iff M(x; y; z)$</div>\n      </div>\n    "
@@ -994,9 +995,9 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 3,
       "title": "VÍ DỤ 1: XÁC ĐỊNH TỌA ĐỘ VÉC TƠ",
       "subtitle": "PHÂN TÍCH THEO i, j, k",
-      "startTime": 83.0,
-      "endTime": 104.38,
-      "duration": 21.38,
+      "startTime": 80.74,
+      "endTime": 104.09,
+      "duration": 23.35,
       "mascotMode": "pointer",
       "mascotTip": "b = i - 4k khuyết j nên tung độ bằng 0 -> b = (1; 0; -4)!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Cho $\\vec{a} = 2\\vec{i} - 3\\vec{j} + \\vec{k}$ và $\\vec{b} = \\vec{i} - 4\\vec{k}$. Tìm toạ độ của $\\vec{a}$ và $\\vec{b}$.<div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
@@ -1005,9 +1006,9 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 4,
       "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
       "subtitle": "CHÚ Ý THÀNH PHẦN KHUYẾT",
-      "startTime": 104.38,
-      "endTime": 129.58,
-      "duration": 25.2,
+      "startTime": 104.09,
+      "endTime": 128.3,
+      "duration": 24.21,
       "mascotMode": "pointer",
       "mascotTip": "a = (2; -3; 1) và b = (1; 0; -4)!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd1_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 1:</b><br>• $\\vec{a} = 2\\vec{i} - 3\\vec{j} + 1\\vec{k} \\implies \\mathbf{\\vec{a} = (2; -3; 1)}.<br>• $\\vec{b} = 1\\vec{i} + 0\\vec{j} - 4\\vec{k} \\implies \\mathbf{\\vec{b} = (1; 0; -4)}$.</div></div>"
@@ -1016,9 +1017,9 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 5,
       "title": "VÍ DỤ 2: VÉC TƠ AB VÀ TRUNG ĐIỂM",
       "subtitle": "NGỌN TRỪ GỐC & TRUNG BÌNH CỘNG",
-      "startTime": 129.58,
-      "endTime": 148.78,
-      "duration": 19.2,
+      "startTime": 128.3,
+      "endTime": 147.67,
+      "duration": 19.37,
       "mascotMode": "pointer",
       "mascotTip": "AB lấy B trừ A. Trung điểm M lấy (A+B)/2!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Cho $A(1; -2; 3)$ và $B(3; 0; -1)$. Tìm toạ độ $\\vec{AB}$ và toạ độ trung điểm $M$ của $AB$.\n      <div style=\"text-align:center; margin:10px 0;\">\n        <svg width=\"240\" height=\"110\" viewBox=\"0 0 240 110\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n          \n            <defs>\n              <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n              <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n              <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n              <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n            </defs>\n    \n          <line x1=\"30\" y1=\"80\" x2=\"200\" y2=\"30\" stroke=\"#38bdf8\" stroke-width=\"2.5\" marker-end=\"url(#arrB)\"/>\n          <circle cx=\"30\" cy=\"80\" r=\"3.5\" fill=\"#38bdf8\"/>\n          <circle cx=\"205\" cy=\"28\" r=\"3.5\" fill=\"#38bdf8\"/>\n          <!-- Trung điểm M -->\n          <circle cx=\"118\" cy=\"54\" r=\"4\" fill=\"#f43f5e\"/>\n          <text x=\"15\" y=\"95\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">A(1; -2; 3)</text>\n          <text x=\"190\" y=\"22\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">B(3; 0; -1)</text>\n          <text x=\"105\" y=\"44\" fill=\"#f43f5e\" font-size=\"13\" font-weight=\"bold\">M(2; -1; 1)</text>\n        </svg>\n        <div style=\"color:#94a3b8; font-size:12px; margin-top:2px;\">$\\vec{AB} = (x_B - x_A; y_B - y_A; z_B - z_A) = (2; 2; -4)$</div>\n      </div>\n    <div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
@@ -1027,9 +1028,9 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 6,
       "title": "VÍ DỤ 2: LỜI GIẢI",
       "subtitle": "AB = (2; 2; -4) & M(2; -1; 1)",
-      "startTime": 148.78,
-      "endTime": 181.68,
-      "duration": 32.9,
+      "startTime": 147.67,
+      "endTime": 182.18,
+      "duration": 34.51,
       "mascotMode": "cheer",
       "mascotTip": "AB = (2; 2; -4) và M(2; -1; 1)!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd2_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 2:</b><br>• $\\vec{AB} = (3-1; 0 - (-2); -1 - 3) = \\mathbf{(2; 2; -4)}.<br>• $M = \\left(\\frac{1+3}{2}; \\frac{-2+0}{2}; \\frac{3+(-1)}{2}\\right) = \\mathbf{M(2; -1; 1)}$.</div></div>"
@@ -1038,9 +1039,9 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 7,
       "title": "VÍ DỤ 3: TRỌNG TÂM TAM GIÁC ABC",
       "subtitle": "CỘNG BA CHIA BA",
-      "startTime": 181.68,
-      "endTime": 202.98,
-      "duration": 21.3,
+      "startTime": 182.18,
+      "endTime": 203.86,
+      "duration": 21.68,
       "mascotMode": "pointer",
       "mascotTip": "G = (A + B + C) / 3!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 3:</b> Cho tam giác $ABC$ với $A(1; 0; 2), B(-2; 1; 3), C(4; 2; -2)$. Tìm toạ độ trọng tâm $G$ của tam giác $ABC$.\n      <div style=\"text-align:center; margin:10px 0;\">\n        <svg width=\"220\" height=\"120\" viewBox=\"0 0 220 120\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n          <polygon points=\"110,15 35,95 185,95\" fill=\"rgba(56,189,248,0.15)\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n          <!-- Đường trung tuyến -->\n          <line x1=\"110\" y1=\"15\" x2=\"110\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"3\"/>\n          <circle cx=\"110\" cy=\"68\" r=\"4\" fill=\"#facc15\"/>\n          <text x=\"105\" y=\"12\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">A</text>\n          <text x=\"18\" y=\"105\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">B</text>\n          <text x=\"190\" y=\"105\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">C</text>\n          <text x=\"120\" y=\"72\" fill=\"#facc15\" font-size=\"13\" font-weight=\"bold\">G(1; 1; 1)</text>\n        </svg>\n      </div>\n    <div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b></div></div></div>"
@@ -1049,9 +1050,9 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 8,
       "title": "VÍ DỤ 3: LỜI GIẢI",
       "subtitle": "G(1; 1; 1)",
-      "startTime": 202.98,
-      "endTime": 226.78,
-      "duration": 23.8,
+      "startTime": 203.86,
+      "endTime": 227.62,
+      "duration": 23.76,
       "mascotMode": "pointer",
       "mascotTip": "G = ((1-2+4)/3; (0+1+2)/3; (2+3-2)/3) = G(1; 1; 1)!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd3_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 3:</b><br>$x_G = \\frac{1-2+4}{3} = 1; \\quad y_G = \\frac{0+1+2}{3} = 1; \\quad z_G = \\frac{2+3-2}{3} = 1$<br><b style=\"color:#10b981; font-size:22px;\">Kết luận:</b> <b>G(1; 1; 1)</b>.</div></div>"
@@ -1060,9 +1061,9 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 9,
       "title": "BẪY ĐỀ THI: VÉC TƠ KHUYẾT THÀNH PHẦN",
       "subtitle": "PHẦN 4: ĐỪNG NHẦM THỨ TỰ TỌA ĐỘ",
-      "startTime": 226.78,
-      "endTime": 247.08,
-      "duration": 20.3,
+      "startTime": 227.62,
+      "endTime": 249.14,
+      "duration": 21.52,
       "mascotMode": "magnifier",
       "mascotTip": "Thành phần gắn với i là x, với j là y, với k là z. Khuyết véc tơ nào gán số 0 vào vị trí đó!",
       "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi tọa độ véc tơ:</span><br>Khi véc tơ khuyết $\\vec{j}$, ví dụ $\\vec{b} = \\vec{i} - 4\\vec{k}$, học sinh hay viết $(1; -4; 0)$ là <b>HOÀN TOÀN SAI</b>! Vị trí thứ 2 là tung độ $y$ đi với $\\vec{j}$, phải viết đúng là <b>$(1; 0; -4)$</b>!</div>"
@@ -1071,15 +1072,16 @@ window.CHAPTER2_DATA.bai7_muc2 = {
       "sceneIndex": 10,
       "title": "BÍ KÍP & MẸO THẦY CÚ",
       "subtitle": "PHẦN 5: KHẨU QUYẾT TỌA ĐỘ",
-      "startTime": 247.08,
-      "endTime": 257.18,
-      "duration": 10.1,
+      "startTime": 249.14,
+      "endTime": 261.02,
+      "duration": 11.88,
       "mascotMode": "cheer",
       "mascotTip": "Véc tơ ngọn trừ gốc; Trung điểm cộng đôi chia hai; Trọng tâm cộng ba chia ba!",
       "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Khẩu quyết vàng Thầy Cú:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Véc tơ $\\vec{AB}$:</b> Lấy ngọn $B$ trừ gốc $A$.<br>• <b>Trung điểm:</b> Cộng đôi chia hai.<br>• <b>Trọng tâm:</b> Cộng ba chia ba!</div>"
     }
   ]
 };
+
 window.CHAPTER2_DATA.bai7_muc3 = {
   "lessonId": "bai7",
   "lessonTitle": "Bài 7: Hệ trục toạ độ trong không gian",
@@ -1089,8 +1091,8 @@ window.CHAPTER2_DATA.bai7_muc3 = {
   "audioSrc": "./audio/bai7_muc3.mp3",
   "audio_src": "./audio/bai7_muc3.mp3",
   "timestamp_src": "timestamps/bai7_muc3.json",
-  "totalDuration": 245.61,
-  "duration": 245.61,
+  "totalDuration": 246.26,
+  "duration": 246.26,
   "title": "Mục 3: Biểu thức toạ độ của các phép toán véc tơ, tích vô hướng & khoảng cách",
   "owl_tip": "u . v = xx' + yy' + zz'. Hai véc tơ vuông góc khi và chỉ khi tích vô hướng bằng 0!",
   "timeline": [
@@ -1099,43 +1101,43 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "id": "part1"
     },
     {
-      "time": 38.1,
+      "time": 36.82,
       "id": "part2"
     },
     {
-      "time": 83.9,
+      "time": 80.4,
       "id": "part3"
     },
     {
-      "time": 87.69,
+      "time": 83.21,
       "id": "vd1_q"
     },
     {
-      "time": 107.59,
+      "time": 104.06,
       "id": "vd1_a"
     },
     {
-      "time": 135.89,
+      "time": 133.39,
       "id": "vd2_q"
     },
     {
-      "time": 152.31,
+      "time": 149.3,
       "id": "vd2_a"
     },
     {
-      "time": 177.11,
+      "time": 174.46,
       "id": "vd3_q"
     },
     {
-      "time": 199.11,
+      "time": 196.75,
       "id": "vd3_a"
     },
     {
-      "time": 215.51,
+      "time": 213.96,
       "id": "part4"
     },
     {
-      "time": 232.31,
+      "time": 231.82,
       "id": "part5"
     }
   ],
@@ -1188,8 +1190,8 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "title": "CÁC PHÉP TOÁN VÉC TƠ THEO TỌA ĐỘ",
       "subtitle": "PHẦN 1: CỘNG, TRỪ VÀ NHÂN VỚI MỘT SỐ",
       "startTime": 0.0,
-      "endTime": 38.1,
-      "duration": 38.1,
+      "endTime": 36.82,
+      "duration": 36.82,
       "mascotMode": "pointer",
       "mascotTip": "Cộng trừ theo từng tọa độ: x±x', y±y', z±z'. Nhân với số k: kx, ky, kz!",
       "bodyHtml": "<div style=\"font-size:24px; color:#fef08a; font-weight:bold; margin-bottom:10px;\">1. Phép toán véc tơ theo toạ độ</div><div style=\"font-size:21px; line-height:1.65; color:#e2e8f0; margin-left:14px;\"><p>Cho $\\vec{u} = (x; y; z)$ và $\\vec{v} = (x'; y'; z')$:<br>• $\\vec{u} + \\vec{v} = (x+x'; y+y'; z+z')$<br>• $\\vec{u} - \\vec{v} = (x-x'; y-y'; z-z')$<br>• $k\\vec{u} = (kx; ky; kz)$<br>• Cùng phương: $\\frac{x'}{x} = \\frac{y'}{y} = \\frac{z'}{z} = k$.</p></div>"
@@ -1198,9 +1200,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 2,
       "title": "TÍCH VÔ HƯỚNG & KHOẢNG CÁCH",
       "subtitle": "PHẦN 2: CÔNG THỨC TÍNH ĐỘ DÀI VÀ GÓC",
-      "startTime": 38.1,
-      "endTime": 87.69,
-      "duration": 49.59,
+      "startTime": 36.82,
+      "endTime": 83.21,
+      "duration": 46.39,
       "mascotMode": "pointer",
       "mascotTip": "u . v = xx' + yy' + zz'. Vuông góc <=> u . v = 0!",
       "bodyHtml": "<div style=\"font-size:24px; color:#38bdf8; font-weight:bold; margin-bottom:10px;\">2. Tích vô hướng, độ dài & khoảng cách</div>\n      <div style=\"text-align:center; margin:12px 0;\">\n        <svg width=\"250\" height=\"140\" viewBox=\"0 0 250 140\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n          \n            <defs>\n              <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n              <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n              <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n              <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n            </defs>\n    \n          <!-- Khối hộp chữ nhật minh họa khoảng cách AB -->\n          <polygon points=\"40,95 130,95 170,120 80,120\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n          <polygon points=\"40,35 130,35 170,60 80,60\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n          <line x1=\"40\" y1=\"95\" x2=\"40\" y2=\"35\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n          <line x1=\"130\" y1=\"95\" x2=\"130\" y2=\"35\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n          <line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"60\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n          <line x1=\"80\" y1=\"120\" x2=\"80\" y2=\"60\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n          <!-- Đoạn thẳng AB là đường chéo khối hộp -->\n          <line x1=\"40\" y1=\"95\" x2=\"170\" y2=\"60\" stroke=\"#f43f5e\" stroke-width=\"3\" stroke-dasharray=\"4\" marker-end=\"url(#arrR)\"/>\n          <circle cx=\"40\" cy=\"95\" r=\"3.5\" fill=\"#38bdf8\"/>\n          <circle cx=\"170\" cy=\"60\" r=\"3.5\" fill=\"#f43f5e\"/>\n          <text x=\"24\" y=\"105\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">A</text>\n          <text x=\"175\" y=\"62\" fill=\"#f43f5e\" font-size=\"12\" font-weight=\"bold\">B</text>\n          <text x=\"100\" y=\"70\" fill=\"#fbbf24\" font-size=\"13\" font-weight=\"bold\">d(A, B)</text>\n        </svg>\n        <div style=\"color:#fde047; font-size:13px; font-weight:bold; margin-top:4px;\">$AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2 + (z_B - z_A)^2}$</div>\n      </div>\n    "
@@ -1209,9 +1211,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 3,
       "title": "VÍ DỤ 1: ĐỘ DÀI & TÍCH VÔ HƯỚNG",
       "subtitle": "TÍNH TOÁN CƠ BẢN",
-      "startTime": 87.69,
-      "endTime": 107.59,
-      "duration": 19.9,
+      "startTime": 83.21,
+      "endTime": 104.06,
+      "duration": 20.85,
       "mascotMode": "pointer",
       "mascotTip": "|u| = sqrt(1² + (-2)² + 2²) = 3. |v| = 5. u . v = 3 + 0 - 8 = -5!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd1_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 1:</b> Cho $\\vec{u} = (1; -2; 2)$ và $\\vec{v} = (3; 0; -4)$. Tính $|\\vec{u}|, |\\vec{v}|$ và tích vô hướng $\\vec{u} \\cdot \\vec{v}$.<div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
@@ -1220,9 +1222,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 4,
       "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
       "subtitle": "|u| = 3, |v| = 5, u . v = -5",
-      "startTime": 107.59,
-      "endTime": 135.89,
-      "duration": 28.3,
+      "startTime": 104.06,
+      "endTime": 133.39,
+      "duration": 29.33,
       "mascotMode": "pointer",
       "mascotTip": "|u| = 3, |v| = 5, u . v = -5!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd1_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 1:</b><br>• $|\\vec{u}| = \\sqrt{1^2 + (-2)^2 + 2^2} = \\sqrt{9} = \\mathbf{3}.<br>• $|\\vec{v}| = \\sqrt{3^2 + 0^2 + (-4)^2} = \\sqrt{25} = \\mathbf{5}.<br>• $\\vec{u} \\cdot \\vec{v} = 1 \\cdot 3 + (-2) \\cdot 0 + 2 \\cdot (-4) = 3 + 0 - 8 = \\mathbf{-5}$.</div></div>"
@@ -1231,9 +1233,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 5,
       "title": "VÍ DỤ 2: KHOẢNG CÁCH GIỮA HAI ĐIỂM",
       "subtitle": "CÔNG THỨC PYTHAGORE 3D",
-      "startTime": 135.89,
-      "endTime": 152.31,
-      "duration": 16.42,
+      "startTime": 133.39,
+      "endTime": 149.3,
+      "duration": 15.91,
       "mascotMode": "pointer",
       "mascotTip": "AB = sqrt( (4-2)² + (1+1)² + (2-3)² ) = sqrt(4+4+1) = 3!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd2_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 2:</b> Cho hai điểm $A(2; -1; 3)$ và $B(4; 1; 2)$. Tính khoảng cách giữa hai điểm $A$ và $B$.<div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 15 giây</b></div></div></div>"
@@ -1242,9 +1244,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 6,
       "title": "VÍ DỤ 2: LỜI GIẢI",
       "subtitle": "AB = 3",
-      "startTime": 152.31,
-      "endTime": 177.11,
-      "duration": 24.8,
+      "startTime": 149.3,
+      "endTime": 174.46,
+      "duration": 25.16,
       "mascotMode": "cheer",
       "mascotTip": "Khoảng cách AB = 3!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd2_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 2:</b><br>$$AB = \\sqrt{(4-2)^2 + (1-(-1))^2 + (2-3)^2} = \\sqrt{2^2 + 2^2 + (-1)^2} = \\sqrt{9} = \\mathbf{3}.$$</div></div>"
@@ -1253,9 +1255,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 7,
       "title": "VÍ DỤ 3: TÌM THAM SỐ ĐỂ HAI VÉC TƠ VUÔNG GÓC",
       "subtitle": "ĐIỀU KIỆN a . b = 0",
-      "startTime": 177.11,
-      "endTime": 199.11,
-      "duration": 22.0,
+      "startTime": 174.46,
+      "endTime": 196.75,
+      "duration": 22.29,
       "mascotMode": "pointer",
       "mascotTip": "1 . 4 + 2 . (-2) + m . 1 = 0 <=> 4 - 4 + m = 0 <=> m = 0!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; padding:16px; border-radius:12px; background:rgba(30,41,59,0.7);\"><div id=\"vd3_q\" style=\"font-size:21px; line-height:1.6; color:#f8fafc;\"><b>Ví dụ 3:</b> Cho $\\vec{a} = (1; 2; m)$ và $\\vec{b} = (4; -2; 1)$. Tìm giá trị của $m$ để $\\vec{a} \\perp \\vec{b}$.\n      <div style=\"text-align:center; margin:10px 0;\">\n        <svg width=\"200\" height=\"110\" viewBox=\"0 0 200 110\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n          \n            <defs>\n              <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n              <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n              <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n              <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n            </defs>\n    \n          <line x1=\"40\" y1=\"85\" x2=\"160\" y2=\"85\" stroke=\"#38bdf8\" stroke-width=\"2.5\" marker-end=\"url(#arrB)\"/>\n          <line x1=\"40\" y1=\"85\" x2=\"40\" y2=\"20\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrG)\"/>\n          <rect x=\"40\" y=\"70\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"1.5\"/>\n          <text x=\"22\" y=\"90\" fill=\"#f8fafc\" font-size=\"12\">O</text>\n          <text x=\"165\" y=\"90\" fill=\"#38bdf8\" font-size=\"13\" font-weight=\"bold\">\\vec{a}</text>\n          <text x=\"35\" y=\"15\" fill=\"#34d399\" font-size=\"13\" font-weight=\"bold\">\\vec{b}</text>\n        </svg>\n        <div style=\"color:#34d399; font-size:12px; font-weight:bold; margin-top:2px;\">$\\vec{a} \\perp \\vec{b} \\iff 1 \\cdot 4 + 2 \\cdot (-2) + m \\cdot 1 = 0 \\iff m = 0$</div>\n      </div>\n    <div style=\"margin-top:10px; padding:8px 14px; background:rgba(234,179,8,0.15); border:1.5px solid #eab308; border-radius:8px; color:#fef08a; font-size:19px;\">⏱️ <b>Thời gian suy nghĩ: 20 giây</b></div></div></div>"
@@ -1264,9 +1266,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 8,
       "title": "VÍ DỤ 3: LỜI GIẢI",
       "subtitle": "m = 0",
-      "startTime": 199.11,
-      "endTime": 215.51,
-      "duration": 16.4,
+      "startTime": 196.75,
+      "endTime": 213.96,
+      "duration": 17.21,
       "mascotMode": "pointer",
       "mascotTip": "Tích vô hướng bằng 0 -> m = 0!",
       "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #10b981; padding:18px; border-radius:12px; background:rgba(16,185,129,0.1);\"><div id=\"vd3_a\" style=\"font-size:21px; line-height:1.65; color:#f8fafc;\"><b style=\"color:#34d399; font-size:23px;\">Lời giải Ví dụ 3:</b><br>$$\\vec{a} \\perp \\vec{b} \\iff \\vec{a} \\cdot \\vec{b} = 0 \\iff 1 \\cdot 4 + 2 \\cdot (-2) + m \\cdot 1 = 0 \\iff 4 - 4 + m = 0 \\iff \\mathbf{m = 0}.$$</div></div>"
@@ -1275,9 +1277,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 9,
       "title": "BẪY ĐỀ THI: TÍCH VÔ HƯỚNG RA SỐ THỰC",
       "subtitle": "PHẦN 4: ĐỪNG QUÊN DẤU CĂN BẬC HAI",
-      "startTime": 215.51,
-      "endTime": 232.31,
-      "duration": 16.8,
+      "startTime": 213.96,
+      "endTime": 231.82,
+      "duration": 17.86,
       "mascotMode": "magnifier",
       "mascotTip": "Tích vô hướng là một số, không phải véc tơ! Độ dài và khoảng cách bắt buộc phải có căn bậc hai!",
       "bodyHtml": "<div class=\"trap-warning-box\" style=\"margin-top:10px; padding:16px 20px; background:rgba(239,68,68,0.15); border-left:5px solid #ef4444; border-radius:8px; font-size:21px !important; line-height:1.6; font-weight:600; color:#fecdd3;\"><span class=\"trap-title\" style=\"font-size:24px !important; font-weight:700; color:#ff6b6b; display:inline-block; margin-bottom:6px;\">Bẫy đề thi tích vô hướng & độ dài:</span><br>• Tích vô hướng $\\vec{u} \\cdot \\vec{v}$ là một <b>SỐ THỰC</b> (có thể âm, dương hoặc bằng $0$). Tuyệt đối không viết thành dạng toạ độ véc tơ!<br>• Khi tính độ dài véc tơ hoặc khoảng cách $AB$, luôn nhớ <b>lấy căn bậc hai</b>!</div>"
@@ -1286,9 +1288,9 @@ window.CHAPTER2_DATA.bai7_muc3 = {
       "sceneIndex": 10,
       "title": "BÍ KÍP & MẸO THẦY CÚ",
       "subtitle": "PHẦN 5: CÔNG CỤ VÀNG CHỨNG MINH VUÔNG GÓC",
-      "startTime": 232.31,
-      "endTime": 245.61,
-      "duration": 13.3,
+      "startTime": 231.82,
+      "endTime": 246.26,
+      "duration": 14.44,
       "mascotMode": "cheer",
       "mascotTip": "Hoành nhân hoành cộng tung nhân tung cộng cao nhân cao. Cứ vuông góc cho bằng 0!",
       "bodyHtml": "<div style=\"font-size:22px; color:#4ade80; font-weight:bold; margin-bottom:8px;\">5. Khẩu quyết vàng Thầy Cú:</div><div style=\"font-size:20px; line-height:1.65; color:#e2e8f0; margin-left:14px;\">• <b>Tích vô hướng:</b> $x x' + y y' + z z'$.<br>• <b>Vuông góc:</b> $x x' + y y' + z z' = 0$.<br>• <b>Cùng phương:</b> $\\frac{x}{x'} = \\frac{y}{y'} = \\frac{z}{z'}$.</div>"
