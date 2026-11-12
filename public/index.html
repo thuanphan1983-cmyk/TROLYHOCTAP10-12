@@ -31089,6 +31089,9 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       try {
         if (typeof window.renderMathInElement === 'function') {
           window.renderMathInElement(element, {
+            macros: {
+              "\\vec": "\\overrightarrow"
+            },
             delimiters: [
               { left: '$$', right: '$$', display: true },
               { left: '$', right: '$', display: false },

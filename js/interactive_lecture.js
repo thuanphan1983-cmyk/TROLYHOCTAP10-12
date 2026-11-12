@@ -10,36 +10,54 @@
   if (window._INTERACTIVE_LECTURE_LOADED) return;
   window._INTERACTIVE_LECTURE_LOADED = true;
 
-  // Auto-merge external Chapter 1 module data
+  // Auto-merge external Chapter 1 & Chapter 2 module data
   function ensureMergedData() {
-    if (typeof window !== 'undefined' && window.CHAPTER1_LECTURES) {
-      Object.assign(LECTURE_DATA, window.CHAPTER1_LECTURES);
+    if (typeof window !== 'undefined') {
+      if (window.CHAPTER1_LECTURES) Object.assign(LECTURE_DATA, window.CHAPTER1_LECTURES);
+      if (window.CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.CHAPTER1_DATA);
+      if (window.CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.CHAPTER2_DATA);
     }
   }
 
-  // Dynamic script loader for Chapter 1 data scaffold
+  // Dynamic script loader for Chapter data scaffolds
   (function tryLoadChapterData() {
-    if (typeof window !== 'undefined' && !window.CHAPTER1_LECTURES && typeof document !== 'undefined') {
-      const script = document.createElement('script');
-      script.src = (window.location.protocol === 'file:') ? 'js/chapter1_data.js' : '/js/chapter1_data.js';
-      script.onload = function() {
-        if (window.CHAPTER1_LECTURES) {
-          Object.assign(LECTURE_DATA, window.CHAPTER1_LECTURES);
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      if (!window.CHAPTER1_LECTURES) {
+        const s1 = document.createElement('script');
+        s1.src = (window.location.protocol === 'file:') ? 'js/chapter1_data.js' : '/js/chapter1_data.js';
+        s1.onload = function() {
+          if (window.CHAPTER1_LECTURES) Object.assign(LECTURE_DATA, window.CHAPTER1_LECTURES);
           if (typeof initSectionSelector === 'function') initSectionSelector();
-        }
-      };
-      script.onerror = function() {
-        const script2 = document.createElement('script');
-        script2.src = 'public/js/chapter1_data.js';
-        script2.onload = function() {
-          if (window.CHAPTER1_LECTURES) {
-            Object.assign(LECTURE_DATA, window.CHAPTER1_LECTURES);
-            if (typeof initSectionSelector === 'function') initSectionSelector();
-          }
         };
-        document.head.appendChild(script2);
-      };
-      document.head.appendChild(script);
+        s1.onerror = function() {
+          const s1b = document.createElement('script');
+          s1b.src = 'public/js/chapter1_data.js';
+          s1b.onload = function() {
+            if (window.CHAPTER1_LECTURES) Object.assign(LECTURE_DATA, window.CHAPTER1_LECTURES);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(s1b);
+        };
+        document.head.appendChild(s1);
+      }
+      if (!window.CHAPTER2_DATA) {
+        const s2 = document.createElement('script');
+        s2.src = (window.location.protocol === 'file:') ? 'js/chapter2_data.js' : '/js/chapter2_data.js';
+        s2.onload = function() {
+          if (window.CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.CHAPTER2_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        s2.onerror = function() {
+          const s2b = document.createElement('script');
+          s2b.src = 'public/js/chapter2_data.js';
+          s2b.onload = function() {
+            if (window.CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.CHAPTER2_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(s2b);
+        };
+        document.head.appendChild(s2);
+      }
     }
   })();
 
@@ -169,9 +187,7 @@
     if (bodyEl) {
       bodyEl.innerHTML = scene.bodyHtml;
       // Trigger KaTeX rendering
-      if (typeof window.renderMath === 'function') {
-        window.renderMath(bodyEl);
-      } else if (typeof window.renderMathInElement === 'function') {
+      if (typeof window.renderMathInElement === 'function') {
         window.renderMathInElement(bodyEl, {
           macros: {
             "\\vec": "\\overrightarrow"
@@ -182,19 +198,26 @@
           ],
           throwOnError: false
         });
+      } else if (typeof window.renderMath === 'function') {
+        window.renderMath(bodyEl);
       }
     }
 
     if (mascotContainer) {
       mascotContainer.innerHTML = getOwlSvg(scene.mascotMode, scene.mascotTip);
-      if (typeof renderMathInElement === 'function') {
-        renderMathInElement(mascotContainer, {
+      if (typeof window.renderMathInElement === 'function') {
+        window.renderMathInElement(mascotContainer, {
           macros: {
             "\\vec": "\\overrightarrow"
           },
-          delimiters: [{ left: '$', right: '$', display: false }],
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false }
+          ],
           throwOnError: false
         });
+      } else if (typeof window.renderMath === 'function') {
+        window.renderMath(mascotContainer);
       }
     }
 
