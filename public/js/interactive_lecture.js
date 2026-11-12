@@ -497,6 +497,16 @@
         { key: "bai7_muc3", title: "Mục 3: Biểu thức toạ độ của các phép toán véc tơ", time: "05:00", icon: "🧮" }
       ]
     },
+        {
+      lessonId: "ontap_c2",
+      lessonTitle: "Ôn tập Chương 2: Vectơ & Hệ toạ độ Oxyz",
+      lessonBadge: "Ôn tập C2",
+      sections: [
+        { key: "ontap_c2_muc1", title: "Mục 1: Hệ thống hoá kiến thức trọng tâm", time: "05:00", icon: "🧠" },
+        { key: "ontap_c2_muc2", title: "Mục 2: Rèn luyện 4 dạng toán then chốt", time: "05:00", icon: "📝" },
+        { key: "ontap_c2_muc3", title: "Mục 3: Bẫy đề thi & Kỹ thuật Casio Vectơ", time: "05:00", icon: "💡" }
+      ]
+    },
     {
       lessonId: "ontap",
       lessonTitle: "Ôn tập Chương 1",

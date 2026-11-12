@@ -1298,6 +1298,548 @@ window.CHAPTER2_DATA.bai7_muc3 = {
   ]
 };
 
+
+window.CHAPTER2_DATA.ontap_c2_muc1 = {
+  "lessonId": "ontap_c2",
+  "lessonTitle": "Ôn tập Chương 2: Vectơ & Hệ toạ độ Oxyz",
+  "sectionId": "ontap_c2_muc1",
+  "sectionTitle": "Mục 1: Hệ thống hoá kiến thức trọng tâm",
+  "audio": "/audio/ontap_c2_muc1.mp3",
+  "audioSrc": "./audio/ontap_c2_muc1.mp3",
+  "audio_src": "./audio/ontap_c2_muc1.mp3",
+  "timestamp_src": "timestamps/ontap_c2_muc1.json",
+  "totalDuration": 276.46,
+  "duration": 276.46,
+  "title": "Mục 1: Hệ thống hoá kiến thức trọng tâm Chương 2",
+  "owl_tip": "Nắm vững quy tắc hình hộp, tích vô hướng và các biểu thức tọa độ cơ bản!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 37.94,
+      "id": "part2"
+    },
+    {
+      "time": 84.12,
+      "id": "part3"
+    },
+    {
+      "time": 108.89,
+      "id": "vd1_q"
+    },
+    {
+      "time": 129.67,
+      "id": "vd1_a"
+    },
+    {
+      "time": 148.99,
+      "id": "vd2_q"
+    },
+    {
+      "time": 167.86,
+      "id": "vd2_a"
+    },
+    {
+      "time": 191.59,
+      "id": "vd3_q"
+    },
+    {
+      "time": 213.5,
+      "id": "vd3_a"
+    },
+    {
+      "time": 238.8,
+      "id": "part4"
+    },
+    {
+      "time": 264.48,
+      "id": "part5"
+    }
+  ],
+  "content": "\n        <div id=\"part1\">\n          <h3>1. Khái niệm vectơ trong không gian</h3>\n          <p>• Vectơ trong không gian là đoạn thẳng có hướng: $\\vec{a}, \\vec{b}, \\vec{AB}$.<br>\n          • Hai vectơ cùng phương khi giá của chúng song song hoặc trùng nhau.<br>\n          • Hai vectơ bằng nhau khi cùng hướng và cùng độ dài.</p>\n        </div>\n        <div id=\"part2\">\n          <h3>2. Các quy tắc vectơ hình học</h3>\n          <p>• <b>Quy tắc 3 điểm:</b> $\\vec{AB} + \\vec{BC} = \\vec{AC}$<br>\n          • <b>Quy tắc Hình bình hành:</b> $\\vec{AB} + \\vec{AD} = \\vec{AC}$<br>\n          • <b>Quy tắc Hình hộp:</b> $\\vec{AB} + \\vec{AD} + \\vec{AA'} = \\vec{AC'}$</p>\n        </div>\n        <div id=\"part3\">\n          <h3>3. Ví dụ rèn luyện</h3>\n        </div>\n        <div id=\"vd1_q\">\n          <p><b>Ví dụ 1:</b> Rút gọn $\\vec{AB} + \\vec{AD} + \\vec{AA'}$ trong hình hộp $ABCD.A'B'C'D'$.</p>\n        </div>\n        <div id=\"vd1_a\">\n          <p><b>Lời giải:</b> Áp dụng quy tắc hình hộp: tổng ba cạnh chung gốc bằng đường chéo $\\vec{AC'}$.</p>\n        </div>\n        <div id=\"vd2_q\">\n          <p><b>Ví dụ 2:</b> Cho $|\\vec{u}|=3, |\\vec{v}|=4, (\\vec{u}, \\vec{v})=120^\\circ$. Tính $\\vec{u} \\cdot \\vec{v}$.</p>\n        </div>\n        <div id=\"vd2_a\">\n          <p><b>Lời giải:</b> $\\vec{u} \\cdot \\vec{v} = 3 \\cdot 4 \\cdot \\cos 120^\\circ = -6$.</p>\n        </div>\n        <div id=\"vd3_q\">\n          <p><b>Ví dụ 3:</b> Cho $\\vec{u}=(1; -2; 2), \\vec{v}=(-2; 1; m)$. Tìm $m$ để $\\vec{u} \\perp \\vec{v}$.</p>\n        </div>\n        <div id=\"vd3_a\">\n          <p><b>Lời giải:</b> $\\vec{u} \\cdot \\vec{v} = 1(-2) + (-2)(1) + 2m = 0 \\implies m = 2$.</p>\n        </div>\n        <div id=\"part4\">\n          <h3>4. Bẫy đề thi</h3>\n          <p>Góc giữa hai đường thẳng luôn $\\le 90^\\circ$. Góc giữa hai vectơ có thể lên tới $180^\\circ$!</p>\n        </div>\n        <div id=\"part5\">\n          <h3>5. Mẹo Thầy Cú</h3>\n          <p>Hình hộp ba cạnh cộng lại ra đường chéo. Tích vô hướng bằng 0 chứng minh vuông góc!</p>\n        </div>\n        ",
+  "parts": {
+    "part1": "1. Khái niệm & Hệ thống kiến thức",
+    "part2": "2. Nguyên lý & Các quy tắc cốt lõi",
+    "part3": "3. Rèn luyện ví dụ kinh điển",
+    "part4": "4. Bẫy đề thi hay gặp",
+    "part5": "5. Kỹ thuật Casio & Mẹo Thầy Cú"
+  },
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "ÔN TẬP CHƯƠNG 2: VECTƠ & HỆ TỌA ĐỘ",
+      "subtitle": "PHẦN 1: HỆ THỐNG KIẾN THỨC TRỌNG TÂM",
+      "startTime": 0.0,
+      "endTime": 37.94,
+      "duration": 37.94,
+      "mascotMode": "welcome",
+      "mascotTip": "Nắm chắc lý thuyết vectơ trong không gian để giải quyết bài toán hình học và tọa độ!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.65; color:#e2e8f0;\">\n          <b style=\"color:#38bdf8;\">1. Định nghĩa vectơ trong không gian:</b><br>\n          • Vectơ là một đoạn thẳng có hướng: ký hiệu $\\vec{a}, \\vec{b}$ hoặc $\\vec{AB}$ ($A$ là gốc, $B$ là ngọn).<br>\n          • Hai vectơ <b>cùng phương</b> khi giá của chúng song song hoặc trùng nhau.<br>\n          • Hai vectơ <b>bằng nhau</b> khi cùng hướng và cùng độ dài: $|\\vec{a}| = |\\vec{b}|$.\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÁC QUY TẮC HÌNH HỌC KINH ĐIỂN",
+      "subtitle": "QUY TẮC 3 ĐIỂM, HÌNH BÌNH HÀNH & HÌNH HỘP",
+      "startTime": 37.94,
+      "endTime": 84.12,
+      "duration": 46.18,
+      "mascotMode": "think",
+      "mascotTip": "Quy tắc hình hộp là mở rộng 3 chiều của quy tắc hình bình hành!",
+      "bodyHtml": "\n        <div style=\"font-size:16px; line-height:1.6; color:#e2e8f0;\">\n          • <b>Quy tắc 3 điểm:</b> $\\vec{AB} + \\vec{BC} = \\vec{AC}$<br>\n          • <b>Quy tắc Hình bình hành:</b> $\\vec{AB} + \\vec{AD} = \\vec{AC}$<br>\n          • <b>Quy tắc Hình hộp:</b> $\\vec{AB} + \\vec{AD} + \\vec{AA'} = \\vec{AC'}$ (đường chéo).<br>\n          • <b>Trung điểm & Trọng tâm:</b> $M$ là trung điểm $AB \\implies \\vec{OA} + \\vec{OB} = 2\\vec{OM}$; $G$ là trọng tâm $\\triangle ABC \\implies \\vec{OA} + \\vec{OB} + \\vec{OC} = 3\\vec{OG}$.\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"260\" height=\"170\" viewBox=\"0 0 260 170\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <line x1=\"50\" y1=\"120\" x2=\"110\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"80\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"50\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/>\n        <line x1=\"110\" y1=\"120\" x2=\"140\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"80\" y1=\"85\" x2=\"140\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"110\" y1=\"120\" x2=\"110\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"80\" y1=\"85\" x2=\"80\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"140\" y1=\"85\" x2=\"140\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"50\" y1=\"60\" x2=\"110\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"110\" y1=\"60\" x2=\"140\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"140\" y1=\"25\" x2=\"80\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"80\" y1=\"25\" x2=\"50\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"105\" y2=\"120\" stroke=\"#38bdf8\" stroke-width=\"2.5\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"76\" y2=\"90\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrG)\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"50\" y2=\"65\" stroke=\"#fbbf24\" stroke-width=\"2.5\" marker-end=\"url(#arrY)\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"135\" y2=\"29\" stroke=\"#f43f5e\" stroke-width=\"2.5\" stroke-dasharray=\"4\" marker-end=\"url(#arrR)\"/>\n        <text x=\"36\" y=\"128\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">A</text>\n        <text x=\"114\" y=\"128\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">B</text>\n        <text x=\"144\" y=\"90\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">C</text>\n        <text x=\"82\" y=\"80\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">D</text>\n        <text x=\"36\" y=\"58\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">A'</text>\n        <text x=\"144\" y=\"22\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">C'</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">Quy tắc hình hộp: $\\vec{AB} + \\vec{AD} + \\vec{AA'} = \\vec{AC'}$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "TÍCH VÔ HƯỚNG & ĐIỀU KIỆN VUÔNG GÓC",
+      "subtitle": "CÔNG CỤ TÍNH GÓC VÀ ĐỘ DÀI",
+      "startTime": 84.12,
+      "endTime": 108.89,
+      "duration": 24.77,
+      "mascotMode": "magnifier",
+      "mascotTip": "Tích vô hướng bằng 0 là chìa khóa chứng minh hai vectơ vuông góc!",
+      "bodyHtml": "\n        <div style=\"font-size:16px; line-height:1.6; color:#e2e8f0;\">\n          • <b>Tích vô hướng:</b> $\\vec{u} \\cdot \\vec{v} = |\\vec{u}| \\cdot |\\vec{v}| \\cos(\\vec{u}, \\vec{v})$.<br>\n          • <b>Hai vectơ vuông góc:</b> $\\vec{u} \\perp \\vec{v} \\iff \\vec{u} \\cdot \\vec{v} = 0$.<br>\n          • <b>Góc giữa hai vectơ:</b> $\\cos(\\vec{u}, \\vec{v}) = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}| \\cdot |\\vec{v}|}$ ($0^\\circ \\le (\\vec{u}, \\vec{v}) \\le 180^\\circ$).\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"220\" height=\"130\" viewBox=\"0 0 220 130\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <line x1=\"70\" y1=\"95\" x2=\"180\" y2=\"95\" stroke=\"#38bdf8\" stroke-width=\"2.5\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"70\" y1=\"95\" x2=\"20\" y2=\"35\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrG)\"/>\n        <path d=\"M 100 95 A 30 30 0 0 0 50 70\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"1.5\"/>\n        <text x=\"75\" y=\"70\" fill=\"#fbbf24\" font-size=\"11\">120°</text>\n        <text x=\"185\" y=\"98\" fill=\"#38bdf8\" font-size=\"12\">v</text>\n        <text x=\"15\" y=\"30\" fill=\"#34d399\" font-size=\"12\">u</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">$\\vec{u} \\cdot \\vec{v} = |\\vec{u}| \\cdot |\\vec{v}| \\cos 120^\\circ$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: RÚT GỌN VECTƠ HÌNH HỘP",
+      "subtitle": "ÁP DỤNG QUY TẮC ĐƯỜNG CHÉO",
+      "startTime": 108.89,
+      "endTime": 129.67,
+      "duration": 20.78,
+      "mascotMode": "think",
+      "mascotTip": "Các vectơ xuất phát từ cùng đỉnh A gồm 2 cạnh đáy và 1 cạnh bên!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 1:</b> Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. Rút gọn tổng ba vectơ:<br>\n          $$\\vec{S} = \\vec{AB} + \\vec{AD} + \\vec{AA'}$$\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"260\" height=\"170\" viewBox=\"0 0 260 170\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <line x1=\"50\" y1=\"120\" x2=\"110\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"80\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"50\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/>\n        <line x1=\"110\" y1=\"120\" x2=\"140\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"80\" y1=\"85\" x2=\"140\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"110\" y1=\"120\" x2=\"110\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"80\" y1=\"85\" x2=\"80\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"140\" y1=\"85\" x2=\"140\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"50\" y1=\"60\" x2=\"110\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"110\" y1=\"60\" x2=\"140\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"140\" y1=\"25\" x2=\"80\" y2=\"25\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"80\" y1=\"25\" x2=\"50\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"105\" y2=\"120\" stroke=\"#38bdf8\" stroke-width=\"2.5\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"76\" y2=\"90\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrG)\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"50\" y2=\"65\" stroke=\"#fbbf24\" stroke-width=\"2.5\" marker-end=\"url(#arrY)\"/>\n        <line x1=\"50\" y1=\"120\" x2=\"135\" y2=\"29\" stroke=\"#f43f5e\" stroke-width=\"2.5\" stroke-dasharray=\"4\" marker-end=\"url(#arrR)\"/>\n        <text x=\"36\" y=\"128\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">A</text>\n        <text x=\"114\" y=\"128\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">B</text>\n        <text x=\"144\" y=\"90\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">C</text>\n        <text x=\"82\" y=\"80\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">D</text>\n        <text x=\"36\" y=\"58\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">A'</text>\n        <text x=\"144\" y=\"22\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">C'</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">Quy tắc hình hộp: $\\vec{AB} + \\vec{AD} + \\vec{AA'} = \\vec{AC'}$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ ĐƯỜNG CHÉO AC'",
+      "startTime": 129.67,
+      "endTime": 148.99,
+      "duration": 19.32,
+      "mascotMode": "cheer",
+      "mascotTip": "Chỉ cần 1 bước áp dụng trực tiếp quy tắc hình hộp!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          • Hai vectơ đáy: $\\vec{AB} + \\vec{AD} = \\vec{AC}$ (theo quy tắc hình bình hành $ABCD$).<br>\n          • Cộng thêm cạnh bên: $\\vec{AC} + \\vec{AA'} = \\vec{AC'}$ (theo quy tắc hình bình hành $ACC'A'$).<br>\n          $$\\implies \\vec{AB} + \\vec{AD} + \\vec{AA'} = \\vec{AC'}$$\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: TÍNH TÍCH VÔ HƯỚNG GÓC TÙ",
+      "subtitle": "GÓC 120 ĐỘ & CÔ SIN ÂM",
+      "startTime": 148.99,
+      "endTime": 167.86,
+      "duration": 18.87,
+      "mascotMode": "think",
+      "mascotTip": "Cẩn thận dấu âm khi góc giữa hai vectơ lớn hơn 90 độ!",
+      "bodyHtml": "\n        <div style=\"background:rgba(251,191,36,0.1); border-left:4px solid #fbbf24; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 2:</b> Cho hai vectơ $\\vec{u}, \\vec{v}$ thỏa mãn $|\\vec{u}| = 3, |\\vec{v}| = 4$, và $(\\vec{u}, \\vec{v}) = 120^\\circ$.<br>\n          Tính tích vô hướng $\\vec{u} \\cdot \\vec{v}$.\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"220\" height=\"130\" viewBox=\"0 0 220 130\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <line x1=\"70\" y1=\"95\" x2=\"180\" y2=\"95\" stroke=\"#38bdf8\" stroke-width=\"2.5\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"70\" y1=\"95\" x2=\"20\" y2=\"35\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrG)\"/>\n        <path d=\"M 100 95 A 30 30 0 0 0 50 70\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"1.5\"/>\n        <text x=\"75\" y=\"70\" fill=\"#fbbf24\" font-size=\"11\">120°</text>\n        <text x=\"185\" y=\"98\" fill=\"#38bdf8\" font-size=\"12\">v</text>\n        <text x=\"15\" y=\"30\" fill=\"#34d399\" font-size=\"12\">u</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">$\\vec{u} \\cdot \\vec{v} = |\\vec{u}| \\cdot |\\vec{v}| \\cos 120^\\circ$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ TÍCH VÔ HƯỚNG ÂM",
+      "startTime": 167.86,
+      "endTime": 191.59,
+      "duration": 23.73,
+      "mascotMode": "cheer",
+      "mascotTip": "Nhớ cos(120°) = -1/2!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          $$\\vec{u} \\cdot \\vec{v} = |\\vec{u}| \\cdot |\\vec{v}| \\cos 120^\\circ = 3 \\cdot 4 \\cdot \\left(-\\frac{1}{2}\\right) = -6$$\n          <div style=\"color:#fbbf24; margin-top:8px;\">★ Lưu ý: Tích vô hướng có thể nhận giá trị âm khi góc tù!</div>\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TÌM THAM SỐ VUÔNG GÓC TOẠ ĐỘ",
+      "subtitle": "ĐIỀU KIỆN TÍCH VÔ HƯỚNG BẰNG 0",
+      "startTime": 191.59,
+      "endTime": 213.5,
+      "duration": 21.91,
+      "mascotMode": "think",
+      "mascotTip": "Hoành nhân hoành + Tung nhân tung + Cao nhân cao = 0!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 3:</b> Trong không gian $Oxyz$, cho $\\vec{u} = (1; -2; 2)$ và $\\vec{v} = (-2; 1; m)$.<br>\n          Tìm $m$ để $\\vec{u} \\perp \\vec{v}$.\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "GIẢI PHƯƠNG TRÌNH BẬC NHẤT",
+      "startTime": 213.5,
+      "endTime": 238.8,
+      "duration": 25.3,
+      "mascotMode": "cheer",
+      "mascotTip": "Ra m = 2 nhanh chóng và chính xác tuyệt đối!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          $$\\vec{u} \\perp \\vec{v} \\iff \\vec{u} \\cdot \\vec{v} = 0$$\n          $$\\iff 1(-2) + (-2)(1) + 2(m) = 0$$\n          $$\\iff -2 - 2 + 2m = 0 \\iff 2m = 4 \\iff m = 2$$\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BẪY ĐỀ THI & KHẨU QUYẾT THẦY CÚ",
+      "subtitle": "PHẦN 4 & 5: KINH NGHIỆM PHÒNG THI",
+      "startTime": 238.8,
+      "endTime": 276.46,
+      "duration": 37.66,
+      "mascotMode": "alert",
+      "mascotTip": "Góc 2 đường thẳng <= 90°, góc 2 vectơ có thể lên tới 180°!",
+      "bodyHtml": "\n        <div style=\"background:rgba(239,68,68,0.15); border-left:4px solid #ef4444; padding:12px; border-radius:6px; font-size:16px; color:#fecdd3; margin-bottom:10px;\">\n          <b>Bẫy đề thi:</b> Đừng nhầm góc 2 đường thẳng với góc 2 vectơ!<br>\n          $$\\cos(a, b) = |\\cos(\\vec{u}, \\vec{v})| = \\frac{|\\vec{u} \\cdot \\vec{v}|}{|\\vec{u}| \\cdot |\\vec{v}|} \\ge 0$$\n        </div>\n        <div style=\"background:rgba(34,197,94,0.15); border-left:4px solid #22c55e; padding:12px; border-radius:6px; font-size:16px; color:#bbf7d0;\">\n          <b>Khẩu quyết Thầy Cú:</b><br>\n          Hình hộp ba cạnh cộng lại ra đường chéo. Tích vô hướng bằng 0 là chìa khóa vuông góc!\n        </div>\n        "
+    }
+  ]
+};
+window.CHAPTER2_DATA.ontap_c2_muc2 = {
+  "lessonId": "ontap_c2",
+  "lessonTitle": "Ôn tập Chương 2: Vectơ & Hệ toạ độ Oxyz",
+  "sectionId": "ontap_c2_muc2",
+  "sectionTitle": "Mục 2: Rèn luyện 4 dạng toán then chốt",
+  "audio": "/audio/ontap_c2_muc2.mp3",
+  "audioSrc": "./audio/ontap_c2_muc2.mp3",
+  "audio_src": "./audio/ontap_c2_muc2.mp3",
+  "timestamp_src": "timestamps/ontap_c2_muc2.json",
+  "totalDuration": 297.55,
+  "duration": 297.55,
+  "title": "Mục 2: Rèn luyện 4 dạng toán then chốt thi THPT",
+  "owl_tip": "Nhớ công thức nhẩm đỉnh hình bình hành D = A + C - B cực nhanh!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 32.45,
+      "id": "part2"
+    },
+    {
+      "time": 57.0,
+      "id": "part3"
+    },
+    {
+      "time": 86.18,
+      "id": "vd1_q"
+    },
+    {
+      "time": 106.39,
+      "id": "vd1_a"
+    },
+    {
+      "time": 130.46,
+      "id": "vd2_q"
+    },
+    {
+      "time": 157.94,
+      "id": "vd2_a"
+    },
+    {
+      "time": 198.17,
+      "id": "vd3_q"
+    },
+    {
+      "time": 226.03,
+      "id": "vd3_a"
+    },
+    {
+      "time": 257.93,
+      "id": "part4"
+    },
+    {
+      "time": 279.79,
+      "id": "part5"
+    }
+  ],
+  "content": "\n        <div id=\"part1\">\n          <h3>1. 4 dạng toán then chốt Chương 2</h3>\n          <p>• Dạng 1: Đẳng thức vectơ và phân tích vectơ.<br>\n          • Dạng 2: Tọa độ điểm, trung điểm, trọng tâm, đỉnh hình bình hành.<br>\n          • Dạng 3: Tích vô hướng, tính góc, độ dài và khoảng cách.<br>\n          • Dạng 4: Bài toán mô hình hóa thực tế gắn hệ trục $Oxyz$.</p>\n        </div>\n        <div id=\"part2\">\n          <h3>2. Nguyên lý giải toán</h3>\n          <p>Hình bình hành $ABCD \\iff \\vec{AD} = \\vec{BC} \\iff D = A + C - B$.</p>\n        </div>\n        <div id=\"part3\">\n          <h3>3. Ví dụ rèn luyện</h3>\n        </div>\n        <div id=\"vd1_q\">\n          <p><b>Ví dụ 1:</b> Tìm điểm $M$ thỏa mãn $\\vec{MA} + \\vec{MB} + \\vec{MC} + \\vec{MD} = \\vec{0}$.</p>\n        </div>\n        <div id=\"vd1_a\">\n          <p><b>Lời giải:</b> Chèn trọng tâm $G$ tứ diện: $4\\vec{MG} = \\vec{0} \\iff M \\equiv G$.</p>\n        </div>\n        <div id=\"vd2_q\">\n          <p><b>Ví dụ 2:</b> Cho $A(1; 0; 2), B(2; 1; -1), C(-1; 3; 2)$. Tìm tọa độ đỉnh $D$ của hình bình hành $ABCD$.</p>\n        </div>\n        <div id=\"vd2_a\">\n          <p><b>Lời giải:</b> $\\vec{AD} = \\vec{BC} \\implies D(-2; 2; 5)$.</p>\n        </div>\n        <div id=\"vd3_q\">\n          <p><b>Ví dụ 3:</b> Drone bay từ $O(0;0;0)$ đến $A(100; 200; 50)$ (mét). Tính khoảng cách bay.</p>\n        </div>\n        <div id=\"vd3_a\">\n          <p><b>Lời giải:</b> $OA = \\sqrt{100^2+200^2+50^2} \\approx 229$ mét.</p>\n        </div>\n        <div id=\"part4\">\n          <h3>4. Bẫy đề thi</h3>\n          <p>Thứ tự đỉnh hình bình hành $ABCD$: $\\vec{AD} = \\vec{BC}$, không được nhầm $\\vec{AD} = \\vec{CB}$.</p>\n        </div>\n        <div id=\"part5\">\n          <h3>5. Mẹo Thầy Cú</h3>\n          <p>Hình bình hành $ABCD \\implies D = A + C - B$. Nhẩm tọa độ 3 giây!</p>\n        </div>\n        ",
+  "parts": {
+    "part1": "1. Khái niệm & Hệ thống kiến thức",
+    "part2": "2. Nguyên lý & Các quy tắc cốt lõi",
+    "part3": "3. Rèn luyện ví dụ kinh điển",
+    "part4": "4. Bẫy đề thi hay gặp",
+    "part5": "5. Kỹ thuật Casio & Mẹo Thầy Cú"
+  },
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "4 DẠNG TOÁN THEN CHỐT CHƯƠNG 2",
+      "subtitle": "PHẦN 1: TỔNG QUAN PHÂN LOẠI",
+      "startTime": 0.0,
+      "endTime": 32.45,
+      "duration": 32.45,
+      "mascotMode": "welcome",
+      "mascotTip": "Nắm vững 4 dạng toán này là nắm trọn điểm phần Hình học Chương 2!",
+      "bodyHtml": "\n        <div style=\"font-size:16px; line-height:1.65; color:#e2e8f0;\">\n          • <b>Dạng 1:</b> Đẳng thức vectơ và phân tích vectơ trong không gian.<br>\n          • <b>Dạng 2:</b> Tìm tọa độ điểm, trung điểm, trọng tâm, đỉnh hình bình hành.<br>\n          • <b>Dạng 3:</b> Tích vô hướng, tính góc, độ dài và khoảng cách.<br>\n          • <b>Dạng 4:</b> Bài toán mô hình hóa thực tế gắn hệ trục $Oxyz$.\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "PHƯƠNG PHÁP DẠNG 1 & DẠNG 2",
+      "subtitle": "ĐẲNG THỨC VECTƠ & TOẠ ĐỘ ĐIỂM",
+      "startTime": 32.45,
+      "endTime": 57.0,
+      "duration": 24.55,
+      "mascotMode": "think",
+      "mascotTip": "Hình bình hành ABCD thì vectơ AD bằng vectơ BC (cùng hướng)!",
+      "bodyHtml": "\n        <div style=\"font-size:16px; line-height:1.6; color:#e2e8f0;\">\n          • <b>Đỉnh hình bình hành $ABCD$:</b> $\\vec{AD} = \\vec{BC} \\iff D = A + C - B$.<br>\n          • <b>Trung điểm $I$ của $AB$:</b> $x_I = \\frac{x_A+x_B}{2}, y_I = \\frac{y_A+y_B}{2}, z_I = \\frac{z_A+z_B}{2}$.<br>\n          • <b>Trọng tâm $G$ tứ diện $ABCD$:</b> $G = \\frac{A + B + C + D}{4}$.\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"240\" height=\"130\" viewBox=\"0 0 240 130\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <line x1=\"40\" y1=\"95\" x2=\"140\" y2=\"95\" stroke=\"#38bdf8\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"80\" y1=\"35\" x2=\"180\" y2=\"35\" stroke=\"#38bdf8\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"40\" y1=\"95\" x2=\"80\" y2=\"35\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"140\" y1=\"95\" x2=\"180\" y2=\"35\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"40\" y1=\"95\" x2=\"76\" y2=\"40\" stroke=\"#f43f5e\" stroke-width=\"2\" marker-end=\"url(#arrR)\"/>\n        <line x1=\"140\" y1=\"95\" x2=\"176\" y2=\"40\" stroke=\"#f43f5e\" stroke-width=\"2\" marker-end=\"url(#arrR)\"/>\n        <text x=\"26\" y=\"102\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">A</text>\n        <text x=\"146\" y=\"102\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">B</text>\n        <text x=\"186\" y=\"38\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">C</text>\n        <text x=\"70\" y=\"30\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">D</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">Hình bình hành $ABCD \\iff \\vec{AD} = \\vec{BC}$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "PHƯƠNG PHÁP DẠNG 3 & DẠNG 4",
+      "subtitle": "GÓC, ĐỘ DÀI & MÔ HÌNH THỰC TẾ",
+      "startTime": 57.0,
+      "endTime": 86.18,
+      "duration": 29.18,
+      "mascotMode": "magnifier",
+      "mascotTip": "Chọn gốc O và các tia Ox, Oy, Oz vuông góc sao cho số liệu đẹp nhất!",
+      "bodyHtml": "\n        <div style=\"font-size:16px; line-height:1.6; color:#e2e8f0;\">\n          • <b>Độ dài đoạn thẳng $AB$:</b> $AB = |\\vec{AB}| = \\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2 + (z_B-z_A)^2}$.<br>\n          • <b>Góc giữa 2 vectơ:</b> $\\cos(\\vec{u}, \\vec{v}) = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}| \\cdot |\\vec{v}|}$.<br>\n          • <b>Gắn hệ trục $Oxyz$:</b> Chuyển đổi vị trí máy bay, vệ tinh, góc nghiêng sang tọa độ số.\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: ĐIỂM CÂN BẰNG TỨ DIỆN",
+      "subtitle": "DẠNG 1: ĐẲNG THỨC VECTƠ",
+      "startTime": 86.18,
+      "endTime": 106.39,
+      "duration": 20.21,
+      "mascotMode": "think",
+      "mascotTip": "Chèn điểm G vào 4 vectơ MA, MB, MC, MD!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 1:</b> Cho tứ diện $ABCD$. Tìm vị trí điểm $M$ thỏa mãn:<br>\n          $$\\vec{MA} + \\vec{MB} + \\vec{MC} + \\vec{MD} = \\vec{0}$$\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "M TRÙNG TRỌNG TÂM TỨ DIỆN G",
+      "startTime": 106.39,
+      "endTime": 130.46,
+      "duration": 24.07,
+      "mascotMode": "cheer",
+      "mascotTip": "M chính là trọng tâm tứ diện ABCD!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          Gọi $G$ là trọng tâm tứ diện $ABCD$ (thỏa mãn $\\vec{GA} + \\vec{GB} + \\vec{GC} + \\vec{GD} = \\vec{0}$).<br>\n          Chèn điểm $G$ vào vế trái:<br>\n          $$(\\vec{MG}+\\vec{GA}) + (\\vec{MG}+\\vec{GB}) + (\\vec{MG}+\\vec{GC}) + (\\vec{MG}+\\vec{GD}) = 4\\vec{MG} = \\vec{0}$$\n          $$\\implies \\vec{MG} = \\vec{0} \\iff M \\equiv G$$\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: TÌM ĐỈNH THỨ TƯ HÌNH BÌNH HÀNH",
+      "subtitle": "DẠNG 2: TOẠ ĐỘ ĐIỂM VÀ VECTƠ",
+      "startTime": 130.46,
+      "endTime": 157.94,
+      "duration": 27.48,
+      "mascotMode": "think",
+      "mascotTip": "Nhớ đúng thứ tự: A -> B -> C -> D, suy ra vectơ AD = vectơ BC!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 2:</b> Trong $Oxyz$, cho $A(1; 0; 2), B(2; 1; -1), C(-1; 3; 2)$.<br>\n          Tìm tọa độ đỉnh $D$ để tứ giác $ABCD$ là hình bình hành.\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"240\" height=\"130\" viewBox=\"0 0 240 130\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <line x1=\"40\" y1=\"95\" x2=\"140\" y2=\"95\" stroke=\"#38bdf8\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"80\" y1=\"35\" x2=\"180\" y2=\"35\" stroke=\"#38bdf8\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"40\" y1=\"95\" x2=\"80\" y2=\"35\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"140\" y1=\"95\" x2=\"180\" y2=\"35\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n        <line x1=\"40\" y1=\"95\" x2=\"76\" y2=\"40\" stroke=\"#f43f5e\" stroke-width=\"2\" marker-end=\"url(#arrR)\"/>\n        <line x1=\"140\" y1=\"95\" x2=\"176\" y2=\"40\" stroke=\"#f43f5e\" stroke-width=\"2\" marker-end=\"url(#arrR)\"/>\n        <text x=\"26\" y=\"102\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">A</text>\n        <text x=\"146\" y=\"102\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">B</text>\n        <text x=\"186\" y=\"38\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">C</text>\n        <text x=\"70\" y=\"30\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">D</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">Hình bình hành $ABCD \\iff \\vec{AD} = \\vec{BC}$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "D(-2; 2; 5)",
+      "startTime": 157.94,
+      "endTime": 198.17,
+      "duration": 40.23,
+      "mascotMode": "cheer",
+      "mascotTip": "Áp dụng nhẩm: D = A + C - B = (1-1-2; 0+3-1; 2+2-(-1)) = (-2; 2; 5)!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          • $\\vec{BC} = (x_C-x_B; y_C-y_B; z_C-z_B) = (-3; 2; 3)$<br>\n          • $\\vec{AD} = (x_D-1; y_D-0; z_D-2)$<br>\n          $$\\vec{AD} = \\vec{BC} \\iff x_D - 1 = -3; y_D = 2; z_D - 2 = 3 \\implies D(-2; 2; 5)$$\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: BÀI TOÁN THỰC TẾ DRONE BAY",
+      "subtitle": "DẠNG 4: MÔ HÌNH HÓA OXYZ",
+      "startTime": 198.17,
+      "endTime": 226.03,
+      "duration": 27.86,
+      "mascotMode": "think",
+      "mascotTip": "Quãng đường bay từ O(0;0;0) đến A(100;200;50) là độ dài vectơ OA!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 3 (Thực tế):</b> Drone bay từ $O(0; 0; 0)$ đến $A(100; 200; 50)$ (đơn vị: mét).<br>\n          Tính khoảng cách từ điểm xuất phát $O$ đến $A$ (làm tròn đến mét).\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"250\" height=\"160\" viewBox=\"0 0 250 160\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <line x1=\"60\" y1=\"120\" x2=\"60\" y2=\"25\" stroke=\"#38bdf8\" stroke-width=\"1.5\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"60\" y1=\"120\" x2=\"220\" y2=\"120\" stroke=\"#38bdf8\" stroke-width=\"1.5\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"60\" y1=\"120\" x2=\"20\" y2=\"150\" stroke=\"#38bdf8\" stroke-width=\"1.5\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"60\" y1=\"120\" x2=\"160\" y2=\"120\" stroke=\"#94a3b8\" stroke-dasharray=\"3\"/>\n        <line x1=\"160\" y1=\"120\" x2=\"140\" y2=\"140\" stroke=\"#94a3b8\" stroke-dasharray=\"3\"/>\n        <line x1=\"140\" y1=\"140\" x2=\"140\" y2=\"70\" stroke=\"#94a3b8\" stroke-dasharray=\"3\"/>\n        <line x1=\"60\" y1=\"120\" x2=\"136\" y2=\"74\" stroke=\"#f43f5e\" stroke-width=\"2.5\" marker-end=\"url(#arrR)\"/>\n        <circle cx=\"140\" cy=\"70\" r=\"4\" fill=\"#fbbf24\"/>\n        <text x=\"48\" y=\"125\" fill=\"#f8fafc\" font-size=\"12\" font-style=\"italic\">O</text>\n        <text x=\"146\" y=\"68\" fill=\"#fbbf24\" font-size=\"12\" font-weight=\"bold\">A(100; 200; 50)</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">Quãng đường bay: $OA = |\\vec{OA}| = \\sqrt{x^2+y^2+z^2}$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KHOẢNG CÁCH BAY XẤP XỈ 229M",
+      "startTime": 226.03,
+      "endTime": 257.93,
+      "duration": 31.9,
+      "mascotMode": "cheer",
+      "mascotTip": "Khoảng cách bay là 229 mét!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          $$OA = |\\vec{OA}| = \\sqrt{100^2 + 200^2 + 50^2}$$\n          $$= \\sqrt{10000 + 40000 + 2500} = \\sqrt{52500} \\approx 229.13\\text{ m}$$\n          Làm tròn đến hàng đơn vị: <b>229 m</b>.\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BẪY THỨ TỰ ĐỈNH & MẸO NHẨM 3 GIÂY",
+      "subtitle": "PHẦN 4 & 5: KINH NGHIỆM ĐỀ THI",
+      "startTime": 257.93,
+      "endTime": 297.55,
+      "duration": 39.62,
+      "mascotMode": "alert",
+      "mascotTip": "ABCD là hình bình hành: D = A + C - B. Đừng viết nhầm AD = CB!",
+      "bodyHtml": "\n        <div style=\"background:rgba(239,68,68,0.15); border-left:4px solid #ef4444; padding:12px; border-radius:6px; font-size:16px; color:#fecdd3; margin-bottom:10px;\">\n          <b>Bẫy thứ tự đỉnh:</b> $ABCD$ là hình bình hành thì $\\vec{AD} = \\vec{BC}$ (cùng chiều). Tuyệt đối không viết $\\vec{AD} = \\vec{CB}$!\n        </div>\n        <div style=\"background:rgba(34,197,94,0.15); border-left:4px solid #22c55e; padding:12px; border-radius:6px; font-size:16px; color:#bbf7d0;\">\n          <b>Mẹo tính nhẩm Thầy Cú:</b> $A + C = B + D \\implies D = A + C - B$. Tính nhẩm cực nhanh trong 3 giây!\n        </div>\n        "
+    }
+  ]
+};
+window.CHAPTER2_DATA.ontap_c2_muc3 = {
+  "lessonId": "ontap_c2",
+  "lessonTitle": "Ôn tập Chương 2: Vectơ & Hệ toạ độ Oxyz",
+  "sectionId": "ontap_c2_muc3",
+  "sectionTitle": "Mục 3: Bẫy đề thi & Kỹ thuật Casio Vectơ",
+  "audio": "/audio/ontap_c2_muc3.mp3",
+  "audioSrc": "./audio/ontap_c2_muc3.mp3",
+  "audio_src": "./audio/ontap_c2_muc3.mp3",
+  "timestamp_src": "timestamps/ontap_c2_muc3.json",
+  "totalDuration": 258.38,
+  "duration": 258.38,
+  "title": "Mục 3: Bẫy đề thi hay gặp & Kỹ thuật Casio Vectơ 3 chiều",
+  "owl_tip": "Tận dụng Casio Menu 5 để kiểm tra vuông góc và tính góc cực nhanh!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 19.73,
+      "id": "part2"
+    },
+    {
+      "time": 50.88,
+      "id": "part3"
+    },
+    {
+      "time": 80.76,
+      "id": "vd1_q"
+    },
+    {
+      "time": 101.4,
+      "id": "vd1_a"
+    },
+    {
+      "time": 122.3,
+      "id": "vd2_q"
+    },
+    {
+      "time": 141.12,
+      "id": "vd2_a"
+    },
+    {
+      "time": 170.95,
+      "id": "vd3_q"
+    },
+    {
+      "time": 186.46,
+      "id": "vd3_a"
+    },
+    {
+      "time": 213.12,
+      "id": "part4"
+    },
+    {
+      "time": 233.81,
+      "id": "part5"
+    }
+  ],
+  "content": "\n        <div id=\"part1\">\n          <h3>1. Tổng quan bẫy đề thi & Casio</h3>\n          <p>Kỹ năng thực chiến giúp không mất điểm oan và tối ưu hóa thời gian làm bài.</p>\n        </div>\n        <div id=\"part2\">\n          <h3>2. 4 bẫy đề thi kinh điển</h3>\n          <p>• Bẫy 1: Ngọn trừ gốc, đừng lấy gốc trừ ngọn.<br>\n          • Bẫy 2: Quên căn bậc hai khi tính độ dài.<br>\n          • Bẫy 3: Chiếu lên mặt phẳng tọa độ: chiếu lên $(Oxy) \\implies z = 0$.<br>\n          • Bẫy 4: Góc giữa hai đường thẳng luôn $\\le 90^\\circ$.</p>\n        </div>\n        <div id=\"part3\">\n          <h3>3. Kỹ thuật bấm máy Casio FX-580VNX / FX-880BTG</h3>\n        </div>\n        <div id=\"vd1_q\">\n          <p><b>Ví dụ 1:</b> Tìm hình chiếu vuông góc của $A(2; -3; 4)$ lên $(Oxy)$.</p>\n        </div>\n        <div id=\"vd1_a\">\n          <p><b>Lời giải:</b> Giữ nguyên $x=2, y=-3$, cho $z=0 \\implies A'(2; -3; 0)$.</p>\n        </div>\n        <div id=\"vd2_q\">\n          <p><b>Ví dụ 2:</b> Tính góc giữa $\\vec{u}=(1; 1; 0)$ và $\\vec{v}=(0; 1; 1)$.</p>\n        </div>\n        <div id=\"vd2_a\">\n          <p><b>Lời giải:</b> $\\cos = 1/2 \\implies$ góc $= 60^\\circ$.</p>\n        </div>\n        <div id=\"vd3_q\">\n          <p><b>Ví dụ 3:</b> Cho $|\\vec{a}|=2, |\\vec{b}|=3, (\\vec{a}, \\vec{b})=60^\\circ$. Tính $|\\vec{a} + \\vec{b}|$.</p>\n        </div>\n        <div id=\"vd3_a\">\n          <p><b>Lời giải:</b> $|\\vec{a}+\\vec{b}|^2 = 2^2+3^2+2(2)(3)\\cos 60^\\circ = 19 \\implies \\sqrt{19}$.</p>\n        </div>\n        <div id=\"part4\">\n          <h3>4. Kỹ thuật Casio kiểm tra vuông góc</h3>\n          <p>Bấm VctA Dot VctB = 0 $\\implies$ vuông góc. Tính khoảng cách bằng Abs(VctB - VctA).</p>\n        </div>\n        <div id=\"part5\">\n          <h3>5. Lời khuyên & Khẩu quyết Thầy Cú</h3>\n          <p>Chiếu lên trục nào giữ biến đó. Ngọn trừ gốc ra vectơ. Vuông góc tích bằng 0. Độ dài nhớ căn bậc hai!</p>\n        </div>\n        ",
+  "parts": {
+    "part1": "1. Khái niệm & Hệ thống kiến thức",
+    "part2": "2. Nguyên lý & Các quy tắc cốt lõi",
+    "part3": "3. Rèn luyện ví dụ kinh điển",
+    "part4": "4. Bẫy đề thi hay gặp",
+    "part5": "5. Kỹ thuật Casio & Mẹo Thầy Cú"
+  },
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BẪY ĐỀ THI & THỦ THUẬT CASIO",
+      "subtitle": "PHẦN 1: TỐI ƯU HÓA ĐIỂM SỐ",
+      "startTime": 0.0,
+      "endTime": 19.73,
+      "duration": 19.73,
+      "mascotMode": "welcome",
+      "mascotTip": "Tránh bẫy và bấm Casio nhanh giúp em tự tin lấy trọn vẹn điểm số!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.65; color:#e2e8f0;\">\n          • Tổng hợp 4 bẫy đề thi kinh điển học sinh hay mắc phải.<br>\n          • Kỹ thuật bấm máy tính Casio FX-580VNX & FX-880BTG xử lý vectơ 3 chiều.<br>\n          • Tính nhanh góc, khoảng cách, kiểm tra đồng phẳng và vuông góc trong 5 giây!\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "4 BẪY ĐỀ THI KINH ĐIỂN CHƯƠNG 2",
+      "subtitle": "ĐỌC KỸ TRÁNH MẤT ĐIỂM OAN",
+      "startTime": 19.73,
+      "endTime": 50.88,
+      "duration": 31.15,
+      "mascotMode": "alert",
+      "mascotTip": "Nhớ đúng: Ngọn trừ gốc; Chiếu lên đâu giữ biến đó; Độ dài nhớ căn bậc hai!",
+      "bodyHtml": "\n        <div style=\"font-size:16px; line-height:1.6; color:#e2e8f0;\">\n          1. <b>Bẫy ngọn trừ gốc:</b> $\\vec{AB} = (x_B-x_A; y_B-y_A; z_B-z_A)$. Đừng lấy $A - B$!<br>\n          2. <b>Bẫy quên căn bậc hai:</b> Độ dài $|\\vec{u}| = \\sqrt{x^2+y^2+z^2}$.<br>\n          3. <b>Bẫy khuyết tọa độ:</b> Thuộc $(Oxy) \\implies z = 0$; thuộc trục $Ox \\implies y=z=0$.<br>\n          4. <b>Bẫy góc đường thẳng vs góc vectơ:</b> Góc giữa 2 đường thẳng luôn $\\le 90^\\circ$.\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "HƯỚNG DẪN BẤM CASIO 580VNX / 880BTG",
+      "subtitle": "CHẾ ĐỘ VECTOR 3 CHIỀU",
+      "startTime": 50.88,
+      "endTime": 80.76,
+      "duration": 29.88,
+      "mascotMode": "magnifier",
+      "mascotTip": "Casio 580: Menu 5 -> Kích thước 3. Casio 880: Home -> Vector!",
+      "bodyHtml": "\n        <div style=\"font-size:16px; line-height:1.6; color:#e2e8f0;\">\n          • <b>Bật chế độ Vectơ:</b> [MENU] [5] (FX-580VNX) $\\to$ Chọn [1: VctA] $\\to$ Kích thước 3.<br>\n          • <b>Nhập VctB:</b> [OPTN] [1: Tạo vectơ] $\\to$ Chọn [2: VctB] $\\to$ Kích thước 3.<br>\n          • <b>Tích vô hướng:</b> [OPTN] [3: VctA] [OPTN] [v] [2: Tích vô hướng] [OPTN] [4: VctB] [=].<br>\n          • <b>Góc 2 vectơ:</b> [OPTN] [v] [3: Góc] VctA, VctB [)] [=].\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: NHẬN DIỆN BẪY HÌNH CHIẾU",
+      "subtitle": "CHIẾU LÊN MẶT PHẲNG TỌA ĐỘ",
+      "startTime": 80.76,
+      "endTime": 101.4,
+      "duration": 20.64,
+      "mascotMode": "think",
+      "mascotTip": "Chiếu lên (Oxy) thì chỉ giữ x và y, cao độ z bằng 0!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 1:</b> Cho điểm $A(2; -3; 4)$. Tìm tọa độ hình chiếu vuông góc của $A$ lên mặt phẳng tọa độ $(Oxy)$.\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"240\" height=\"150\" viewBox=\"0 0 240 150\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <polygon points=\"40,110 180,110 210,75 70,75\" fill=\"#334155\" opacity=\"0.6\"/>\n        <line x1=\"130\" y1=\"35\" x2=\"130\" y2=\"92\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-dasharray=\"3\" marker-end=\"url(#arrR)\"/>\n        <circle cx=\"130\" cy=\"35\" r=\"4\" fill=\"#38bdf8\"/>\n        <circle cx=\"130\" cy=\"92\" r=\"4\" fill=\"#34d399\"/>\n        <text x=\"138\" y=\"38\" fill=\"#38bdf8\" font-size=\"12\" font-weight=\"bold\">A(2; -3; 4)</text>\n        <text x=\"138\" y=\"98\" fill=\"#34d399\" font-size=\"12\" font-weight=\"bold\">A'(2; -3; 0)</text>\n        <text x=\"50\" y=\"95\" fill=\"#94a3b8\" font-size=\"11\">Mặt phẳng (Oxy)</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">Chiếu lên $(Oxy) \\implies z = 0$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "A'(2; -3; 0)",
+      "startTime": 101.4,
+      "endTime": 122.3,
+      "duration": 20.9,
+      "mascotMode": "cheer",
+      "mascotTip": "Rất dễ: giữ x, y, cho z = 0!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          Hình chiếu vuông góc của điểm $A(x_0; y_0; z_0)$ lên mặt phẳng tọa độ $(Oxy)$ có cao độ $z = 0$, giữ nguyên $x, y$.<br>\n          $$\\implies A'(2; -3; 0)$$\n          <div style=\"color:#ef4444; margin-top:8px;\">Cảnh giác: Không nhầm với hình chiếu lên trục $Oz$ là $(0; 0; 4)$!</div>\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: BẤM CASIO TÍNH GÓC 2 VECTƠ",
+      "subtitle": "u(1; 1; 0) VÀ v(0; 1; 1)",
+      "startTime": 122.3,
+      "endTime": 141.12,
+      "duration": 18.82,
+      "mascotMode": "think",
+      "mascotTip": "Bấm cos(u, v) = u.v / (|u|.|v|) hoặc dùng chức năng Angle!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 2:</b> Tính góc giữa hai vectơ $\\vec{u} = (1; 1; 0)$ và $\\vec{v} = (0; 1; 1)$.\n        </div>\n        \n    <div style=\"text-align:center; margin:12px 0;\">\n      <svg width=\"240\" height=\"170\" viewBox=\"0 0 240 170\" style=\"background:#1e293b; border-radius:8px; border:1px solid #334155;\">\n        \n    <defs>\n      <marker id=\"arrB\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#38bdf8\"/></marker>\n      <marker id=\"arrR\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#f43f5e\"/></marker>\n      <marker id=\"arrG\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#34d399\"/></marker>\n      <marker id=\"arrY\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\"><path d=\"M0 1 L10 5 L0 9 z\" fill=\"#fbbf24\"/></marker>\n    </defs>\n    \n        <line x1=\"90\" y1=\"120\" x2=\"90\" y2=\"20\" stroke=\"#38bdf8\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"90\" y1=\"120\" x2=\"210\" y2=\"120\" stroke=\"#38bdf8\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"90\" y1=\"120\" x2=\"30\" y2=\"155\" stroke=\"#38bdf8\" stroke-width=\"2\" marker-end=\"url(#arrB)\"/>\n        <line x1=\"90\" y1=\"120\" x2=\"60\" y2=\"137\" stroke=\"#f43f5e\" stroke-width=\"2.5\" marker-end=\"url(#arrR)\"/>\n        <line x1=\"90\" y1=\"120\" x2=\"135\" y2=\"120\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arrG)\"/>\n        <line x1=\"90\" y1=\"120\" x2=\"90\" y2=\"75\" stroke=\"#fbbf24\" stroke-width=\"2.5\" marker-end=\"url(#arrY)\"/>\n        <text x=\"75\" y=\"125\" fill=\"#f8fafc\" font-size=\"13\" font-style=\"italic\">O</text>\n        <text x=\"20\" y=\"160\" fill=\"#38bdf8\" font-size=\"13\" font-style=\"italic\">x</text>\n        <text x=\"215\" y=\"125\" fill=\"#38bdf8\" font-size=\"13\" font-style=\"italic\">y</text>\n        <text x=\"95\" y=\"25\" fill=\"#38bdf8\" font-size=\"13\" font-style=\"italic\">z</text>\n        <text x=\"45\" y=\"138\" fill=\"#f43f5e\" font-size=\"11\">i</text>\n        <text x=\"120\" y=\"112\" fill=\"#34d399\" font-size=\"11\">j</text>\n        <text x=\"96\" y=\"80\" fill=\"#fbbf24\" font-size=\"11\">k</text>\n      </svg>\n      <div style=\"font-size:12px; color:#cbd5e1; margin-top:4px;\">Ba vectơ đơn vị: $|\\vec{i}| = |\\vec{j}| = |\\vec{k}| = 1$</div>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI & BẤM MÁY",
+      "subtitle": "GÓC BẰNG 60 ĐỘ",
+      "startTime": 141.12,
+      "endTime": 170.95,
+      "duration": 29.83,
+      "mascotMode": "cheer",
+      "mascotTip": "cos = 1/2 suy ra góc 60 độ!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          • $\\vec{u} \\cdot \\vec{v} = 1(0) + 1(1) + 0(1) = 1$<br>\n          • $|\\vec{u}| = \\sqrt{1^2+1^2+0^2} = \\sqrt{2}$, $|\\vec{v}| = \\sqrt{0^2+1^2+1^2} = \\sqrt{2}$<br>\n          $$\\cos(\\vec{u}, \\vec{v}) = \\frac{1}{\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{1}{2} \\implies (\\vec{u}, \\vec{v}) = 60^\\circ$$\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TÍNH ĐỘ DÀI VECTƠ TỔNG",
+      "subtitle": "KHAI TRIỂN BÌNH PHƯƠNG VÔ HƯỚNG",
+      "startTime": 170.95,
+      "endTime": 186.46,
+      "duration": 15.51,
+      "mascotMode": "think",
+      "mascotTip": "|a + b|^2 = |a|^2 + |b|^2 + 2 a.b!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:17px; color:#e2e8f0;\">\n          <b>Ví dụ 3:</b> Cho $|\\vec{a}| = 2, |\\vec{b}| = 3$, góc $(\\vec{a}, \\vec{b}) = 60^\\circ$.<br>\n          Tính độ dài của vectơ tổng $|\\vec{a} + \\vec{b}|$.\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ CĂN 19",
+      "startTime": 186.46,
+      "endTime": 213.12,
+      "duration": 26.66,
+      "mascotMode": "cheer",
+      "mascotTip": "Nhớ lấy căn bậc hai ở bước cuối cùng!",
+      "bodyHtml": "\n        <div style=\"font-size:17px; line-height:1.7; color:#e2e8f0;\">\n          <b style=\"color:#4ade80;\">Lời giải:</b><br>\n          $$|\\vec{a} + \\vec{b}|^2 = |\\vec{a}|^2 + |\\vec{b}|^2 + 2|\\vec{a}||\\vec{b}| \\cos 60^\\circ$$\n          $$= 2^2 + 3^2 + 2 \\cdot 2 \\cdot 3 \\cdot \\frac{1}{2} = 4 + 9 + 6 = 19$$\n          $$\\implies |\\vec{a} + \\vec{b}| = \\sqrt{19}$$\n        </div>\n        "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "BẢNG PHÍM TẮT & KHẨU QUYẾT VÀNG",
+      "subtitle": "PHẦN 4 & 5: TỔNG KẾT TOÀN DIỆN",
+      "startTime": 213.12,
+      "endTime": 258.38,
+      "duration": 45.26,
+      "mascotMode": "cheer",
+      "mascotTip": "Chúc các em tự tin làm bài thi tốt nghiệp đạt điểm 10 tuyệt đối!",
+      "bodyHtml": "\n        <div style=\"background:rgba(56,189,248,0.15); border-left:4px solid #38bdf8; padding:12px; border-radius:6px; font-size:16px; color:#e2e8f0; margin-bottom:10px;\">\n          <b>Phím tắt Casio 580:</b><br>\n          • Khoảng cách $AB$: [SHIFT] [)] (Abs) [OPTN] [4] [-] [OPTN] [3] [)] [=].<br>\n          • Kiểm tra vuông góc: VctA Dot VctB = 0 $\\implies$ Vuông góc!\n        </div>\n        <div style=\"background:rgba(34,197,94,0.15); border-left:4px solid #22c55e; padding:12px; border-radius:6px; font-size:16px; color:#bbf7d0;\">\n          <b>Khẩu quyết vàng Thầy Cú:</b><br>\n          Chiếu lên trục nào giữ biến đó. Ngọn trừ gốc ra vectơ. Tích vô hướng hoành nhân hoành, tung nhân tung, cao nhân cao. Vuông góc tích bằng 0. Độ dài nhớ căn bậc hai!\n        </div>\n        "
+    }
+  ]
+};
+
 // Tương thích ngược: Đồng bộ sang CHAPTER1_DATA & CHAPTER1_LECTURES
 if (typeof window.CHAPTER1_DATA === 'undefined') window.CHAPTER1_DATA = {};
 Object.assign(window.CHAPTER1_DATA, window.CHAPTER2_DATA);
