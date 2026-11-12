@@ -116,11 +116,18 @@
                 </p>
               </div>
             </div>
-            <div class="flex sm:flex-col items-center sm:items-end justify-between gap-1.5 shrink-0">
-              <span class="text-xs text-indigo-200">Tổng quan chương:</span>
+            <div class="flex sm:flex-col items-center sm:items-end justify-between gap-2 shrink-0">
               <span class="px-3 py-1 rounded-xl bg-amber-400 text-indigo-950 font-black text-xs shadow-xs">
                 ${branches.length} Nhánh Kiến Thức
               </span>
+              <button 
+                type="button" 
+                onclick="window.openInteractiveLecture && window.openInteractiveLecture((chapterInfo.chapterNumber === 2 || chapterInfo.chapterNumber === '2') ? 'ontap_c2_muc1' : 'ontap_muc1')" 
+                class="px-3.5 py-1.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 text-slate-950 font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer active:scale-95 shrink-0"
+              >
+                <i class="fa-solid fa-play text-[10px]"></i>
+                <span>Xem Video Ôn Tập</span>
+              </button>
             </div>
           </div>
           <div class="mt-4 pt-3 border-t border-indigo-400/30 text-xs sm:text-[12.5pt] text-indigo-100 leading-relaxed">
@@ -196,6 +203,14 @@
             Hãy bắt đầu ngay với <strong>Phần 1: 6 câu trắc nghiệm nhiều lựa chọn</strong> ở Tab 2 phía trên, sau đó chuyển tiếp qua <strong>Phần 2 (4 câu Đúng/Sai - 16 ý)</strong> và <strong>Phần 3 (4 câu Trả lời ngắn)</strong>!
           </p>
           <div class="flex flex-col sm:flex-row gap-2.5 justify-center pt-1">
+            <button 
+              type="button" 
+              onclick="window.openInteractiveLecture && window.openInteractiveLecture((chapterInfo.chapterNumber === 2 || chapterInfo.chapterNumber === '2') ? 'ontap_c2_muc1' : 'ontap_muc1')" 
+              class="px-5 py-3.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 text-slate-950 font-black rounded-2xl text-xs sm:text-sm transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg cursor-pointer active:scale-95"
+            >
+              <i class="fa-solid fa-play"></i>
+              <span>🎬 Xem Video Bài Giảng Ôn Tập</span>
+            </button>
             <button 
               type="button" 
               onclick="switchStudyTab('mcq')" 

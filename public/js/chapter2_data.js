@@ -1359,13 +1359,13 @@ window.CHAPTER2_DATA.ontap_c2_muc1 = {
     }
   ],
   "content": "\n        <div id=\"part1\">\n          <h3>1. Khái niệm vectơ trong không gian</h3>\n          <p>• Vectơ trong không gian là đoạn thẳng có hướng: $\\vec{a}, \\vec{b}, \\vec{AB}$.<br>\n          • Hai vectơ cùng phương khi giá của chúng song song hoặc trùng nhau.<br>\n          • Hai vectơ bằng nhau khi cùng hướng và cùng độ dài.</p>\n        </div>\n        <div id=\"part2\">\n          <h3>2. Các quy tắc vectơ hình học</h3>\n          <p>• <b>Quy tắc 3 điểm:</b> $\\vec{AB} + \\vec{BC} = \\vec{AC}$<br>\n          • <b>Quy tắc Hình bình hành:</b> $\\vec{AB} + \\vec{AD} = \\vec{AC}$<br>\n          • <b>Quy tắc Hình hộp:</b> $\\vec{AB} + \\vec{AD} + \\vec{AA'} = \\vec{AC'}$</p>\n        </div>\n        <div id=\"part3\">\n          <h3>3. Ví dụ rèn luyện</h3>\n        </div>\n        <div id=\"vd1_q\">\n          <p><b>Ví dụ 1:</b> Rút gọn $\\vec{AB} + \\vec{AD} + \\vec{AA'}$ trong hình hộp $ABCD.A'B'C'D'$.</p>\n        </div>\n        <div id=\"vd1_a\">\n          <p><b>Lời giải:</b> Áp dụng quy tắc hình hộp: tổng ba cạnh chung gốc bằng đường chéo $\\vec{AC'}$.</p>\n        </div>\n        <div id=\"vd2_q\">\n          <p><b>Ví dụ 2:</b> Cho $|\\vec{u}|=3, |\\vec{v}|=4, (\\vec{u}, \\vec{v})=120^\\circ$. Tính $\\vec{u} \\cdot \\vec{v}$.</p>\n        </div>\n        <div id=\"vd2_a\">\n          <p><b>Lời giải:</b> $\\vec{u} \\cdot \\vec{v} = 3 \\cdot 4 \\cdot \\cos 120^\\circ = -6$.</p>\n        </div>\n        <div id=\"vd3_q\">\n          <p><b>Ví dụ 3:</b> Cho $\\vec{u}=(1; -2; 2), \\vec{v}=(-2; 1; m)$. Tìm $m$ để $\\vec{u} \\perp \\vec{v}$.</p>\n        </div>\n        <div id=\"vd3_a\">\n          <p><b>Lời giải:</b> $\\vec{u} \\cdot \\vec{v} = 1(-2) + (-2)(1) + 2m = 0 \\implies m = 2$.</p>\n        </div>\n        <div id=\"part4\">\n          <h3>4. Bẫy đề thi</h3>\n          <p>Góc giữa hai đường thẳng luôn $\\le 90^\\circ$. Góc giữa hai vectơ có thể lên tới $180^\\circ$!</p>\n        </div>\n        <div id=\"part5\">\n          <h3>5. Mẹo Thầy Cú</h3>\n          <p>Hình hộp ba cạnh cộng lại ra đường chéo. Tích vô hướng bằng 0 chứng minh vuông góc!</p>\n        </div>\n        ",
-  "parts": {
-    "part1": "1. Khái niệm & Hệ thống kiến thức",
-    "part2": "2. Nguyên lý & Các quy tắc cốt lõi",
-    "part3": "3. Rèn luyện ví dụ kinh điển",
-    "part4": "4. Bẫy đề thi hay gặp",
-    "part5": "5. Kỹ thuật Casio & Mẹo Thầy Cú"
-  },
+  "parts": [
+    { "partNumber": 1, "partTitle": "Phần 1: Khái niệm & Hệ thống kiến thức", "scenes": [1] },
+    { "partNumber": 2, "partTitle": "Phần 2: Nguyên lý & Các quy tắc cốt lõi", "scenes": [2] },
+    { "partNumber": 3, "partTitle": "Phần 3: Rèn luyện 3 ví dụ kinh điển", "scenes": [3, 4, 5, 6, 7, 8] },
+    { "partNumber": 4, "partTitle": "Phần 4: Bẫy đề thi hay gặp", "scenes": [9] },
+    { "partNumber": 5, "partTitle": "Phần 5: Kỹ thuật Casio & Mẹo Thầy Cú", "scenes": [10] }
+  ],
   "scenes": [
     {
       "sceneIndex": 1,
@@ -1539,13 +1539,13 @@ window.CHAPTER2_DATA.ontap_c2_muc2 = {
     }
   ],
   "content": "\n        <div id=\"part1\">\n          <h3>1. 4 dạng toán then chốt Chương 2</h3>\n          <p>• Dạng 1: Đẳng thức vectơ và phân tích vectơ.<br>\n          • Dạng 2: Tọa độ điểm, trung điểm, trọng tâm, đỉnh hình bình hành.<br>\n          • Dạng 3: Tích vô hướng, tính góc, độ dài và khoảng cách.<br>\n          • Dạng 4: Bài toán mô hình hóa thực tế gắn hệ trục $Oxyz$.</p>\n        </div>\n        <div id=\"part2\">\n          <h3>2. Nguyên lý giải toán</h3>\n          <p>Hình bình hành $ABCD \\iff \\vec{AD} = \\vec{BC} \\iff D = A + C - B$.</p>\n        </div>\n        <div id=\"part3\">\n          <h3>3. Ví dụ rèn luyện</h3>\n        </div>\n        <div id=\"vd1_q\">\n          <p><b>Ví dụ 1:</b> Tìm điểm $M$ thỏa mãn $\\vec{MA} + \\vec{MB} + \\vec{MC} + \\vec{MD} = \\vec{0}$.</p>\n        </div>\n        <div id=\"vd1_a\">\n          <p><b>Lời giải:</b> Chèn trọng tâm $G$ tứ diện: $4\\vec{MG} = \\vec{0} \\iff M \\equiv G$.</p>\n        </div>\n        <div id=\"vd2_q\">\n          <p><b>Ví dụ 2:</b> Cho $A(1; 0; 2), B(2; 1; -1), C(-1; 3; 2)$. Tìm tọa độ đỉnh $D$ của hình bình hành $ABCD$.</p>\n        </div>\n        <div id=\"vd2_a\">\n          <p><b>Lời giải:</b> $\\vec{AD} = \\vec{BC} \\implies D(-2; 2; 5)$.</p>\n        </div>\n        <div id=\"vd3_q\">\n          <p><b>Ví dụ 3:</b> Drone bay từ $O(0;0;0)$ đến $A(100; 200; 50)$ (mét). Tính khoảng cách bay.</p>\n        </div>\n        <div id=\"vd3_a\">\n          <p><b>Lời giải:</b> $OA = \\sqrt{100^2+200^2+50^2} \\approx 229$ mét.</p>\n        </div>\n        <div id=\"part4\">\n          <h3>4. Bẫy đề thi</h3>\n          <p>Thứ tự đỉnh hình bình hành $ABCD$: $\\vec{AD} = \\vec{BC}$, không được nhầm $\\vec{AD} = \\vec{CB}$.</p>\n        </div>\n        <div id=\"part5\">\n          <h3>5. Mẹo Thầy Cú</h3>\n          <p>Hình bình hành $ABCD \\implies D = A + C - B$. Nhẩm tọa độ 3 giây!</p>\n        </div>\n        ",
-  "parts": {
-    "part1": "1. Khái niệm & Hệ thống kiến thức",
-    "part2": "2. Nguyên lý & Các quy tắc cốt lõi",
-    "part3": "3. Rèn luyện ví dụ kinh điển",
-    "part4": "4. Bẫy đề thi hay gặp",
-    "part5": "5. Kỹ thuật Casio & Mẹo Thầy Cú"
-  },
+  "parts": [
+    { "partNumber": 1, "partTitle": "Phần 1: Tổng quan 4 dạng toán then chốt", "scenes": [1] },
+    { "partNumber": 2, "partTitle": "Phần 2: Phương pháp giải các dạng toán", "scenes": [2] },
+    { "partNumber": 3, "partTitle": "Phần 3: Rèn luyện thực chiến", "scenes": [3, 4, 5, 6, 7, 8] },
+    { "partNumber": 4, "partTitle": "Phần 4: Bẫy trắc nghiệm hay gặp", "scenes": [9] },
+    { "partNumber": 5, "partTitle": "Phần 5: Mascot Cú tổng kết", "scenes": [10] }
+  ],
   "scenes": [
     {
       "sceneIndex": 1,
@@ -1719,13 +1719,13 @@ window.CHAPTER2_DATA.ontap_c2_muc3 = {
     }
   ],
   "content": "\n        <div id=\"part1\">\n          <h3>1. Tổng quan bẫy đề thi & Casio</h3>\n          <p>Kỹ năng thực chiến giúp không mất điểm oan và tối ưu hóa thời gian làm bài.</p>\n        </div>\n        <div id=\"part2\">\n          <h3>2. 4 bẫy đề thi kinh điển</h3>\n          <p>• Bẫy 1: Ngọn trừ gốc, đừng lấy gốc trừ ngọn.<br>\n          • Bẫy 2: Quên căn bậc hai khi tính độ dài.<br>\n          • Bẫy 3: Chiếu lên mặt phẳng tọa độ: chiếu lên $(Oxy) \\implies z = 0$.<br>\n          • Bẫy 4: Góc giữa hai đường thẳng luôn $\\le 90^\\circ$.</p>\n        </div>\n        <div id=\"part3\">\n          <h3>3. Kỹ thuật bấm máy Casio FX-580VNX / FX-880BTG</h3>\n        </div>\n        <div id=\"vd1_q\">\n          <p><b>Ví dụ 1:</b> Tìm hình chiếu vuông góc của $A(2; -3; 4)$ lên $(Oxy)$.</p>\n        </div>\n        <div id=\"vd1_a\">\n          <p><b>Lời giải:</b> Giữ nguyên $x=2, y=-3$, cho $z=0 \\implies A'(2; -3; 0)$.</p>\n        </div>\n        <div id=\"vd2_q\">\n          <p><b>Ví dụ 2:</b> Tính góc giữa $\\vec{u}=(1; 1; 0)$ và $\\vec{v}=(0; 1; 1)$.</p>\n        </div>\n        <div id=\"vd2_a\">\n          <p><b>Lời giải:</b> $\\cos = 1/2 \\implies$ góc $= 60^\\circ$.</p>\n        </div>\n        <div id=\"vd3_q\">\n          <p><b>Ví dụ 3:</b> Cho $|\\vec{a}|=2, |\\vec{b}|=3, (\\vec{a}, \\vec{b})=60^\\circ$. Tính $|\\vec{a} + \\vec{b}|$.</p>\n        </div>\n        <div id=\"vd3_a\">\n          <p><b>Lời giải:</b> $|\\vec{a}+\\vec{b}|^2 = 2^2+3^2+2(2)(3)\\cos 60^\\circ = 19 \\implies \\sqrt{19}$.</p>\n        </div>\n        <div id=\"part4\">\n          <h3>4. Kỹ thuật Casio kiểm tra vuông góc</h3>\n          <p>Bấm VctA Dot VctB = 0 $\\implies$ vuông góc. Tính khoảng cách bằng Abs(VctB - VctA).</p>\n        </div>\n        <div id=\"part5\">\n          <h3>5. Lời khuyên & Khẩu quyết Thầy Cú</h3>\n          <p>Chiếu lên trục nào giữ biến đó. Ngọn trừ gốc ra vectơ. Vuông góc tích bằng 0. Độ dài nhớ căn bậc hai!</p>\n        </div>\n        ",
-  "parts": {
-    "part1": "1. Khái niệm & Hệ thống kiến thức",
-    "part2": "2. Nguyên lý & Các quy tắc cốt lõi",
-    "part3": "3. Rèn luyện ví dụ kinh điển",
-    "part4": "4. Bẫy đề thi hay gặp",
-    "part5": "5. Kỹ thuật Casio & Mẹo Thầy Cú"
-  },
+  "parts": [
+    { "partNumber": 1, "partTitle": "Phần 1: Giới thiệu Bẫy & Kỹ thuật Casio", "scenes": [1] },
+    { "partNumber": 2, "partTitle": "Phần 2: 3 Bẫy trắc nghiệm kinh điển", "scenes": [2] },
+    { "partNumber": 3, "partTitle": "Phần 3: Thực hành Casio Vectơ & Tích vô hướng", "scenes": [3, 4, 5, 6, 7, 8] },
+    { "partNumber": 4, "partTitle": "Phần 4: Bẫy góc & Khoảng cách", "scenes": [9] },
+    { "partNumber": 5, "partTitle": "Phần 5: Lời khuyên ôn tập từ Thầy Cú", "scenes": [10] }
+  ],
   "scenes": [
     {
       "sceneIndex": 1,

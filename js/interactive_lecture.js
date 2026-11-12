@@ -256,26 +256,41 @@
     navContainer.innerHTML = html;
   }
 
-  // Update 4-Part Pedagogical Pills
+  // Update 4-Part Pedagogical Pills (Safe & Defensive)
   function updatePartPills() {
     const container = document.getElementById('il-part-pills');
     if (!container) return;
 
     const data = LECTURE_DATA[currentSection];
-    if (!data || !data.parts) return;
+    if (!data || !data.parts) {
+      container.innerHTML = '';
+      return;
+    }
+
+    let partsList = [];
+    if (Array.isArray(data.parts)) {
+      partsList = data.parts;
+    } else if (typeof data.parts === 'object') {
+      partsList = Object.keys(data.parts).map((k, idx) => ({
+        partNumber: idx + 1,
+        partTitle: typeof data.parts[k] === 'string' ? data.parts[k] : `Phần ${idx + 1}`,
+        scenes: [idx + 1]
+      }));
+    }
 
     let html = '';
-    data.parts.forEach(p => {
-      const isPartActive = p.scenes.includes(currentSceneIndex);
+    partsList.forEach(p => {
+      const scenes = Array.isArray(p.scenes) ? p.scenes : [p.partNumber || 1];
+      const isPartActive = scenes.includes(currentSceneIndex);
       const activeClass = isPartActive 
         ? 'bg-indigo-600 text-white font-bold border-indigo-400 shadow-sm' 
         : 'bg-slate-900 text-indigo-300 border-slate-800 hover:bg-slate-800';
 
-      const firstScene = p.scenes[0];
+      const firstScene = scenes[0] || 1;
       html += `
         <button type="button" onclick="window.seekLectureToScene(${firstScene})"
           class="px-2.5 py-1 rounded-lg text-xs font-medium border transition cursor-pointer whitespace-nowrap ${activeClass}">
-          ${p.partTitle}
+          ${p.partTitle || ('Phần ' + (p.partNumber || 1))}
         </button>
       `;
     });
@@ -675,16 +690,27 @@
       }
     }
 
-    // Map to chapter1_data.js keys
-    if (lessonNum === 'ontap') {
+    // Map to chapter1_data.js & chapter2_data.js keys
+    if (lessonNum === 'ontap' || lessonNum === 'ontap_c2') {
+      let isC2 = (lessonNum === 'ontap_c2');
+      if (al) {
+        if (al.chapterNumber === 2 || al.chapterNumber === '2' || (typeof al.key === 'string' && al.key.includes('_2'))) isC2 = true;
+        if (al.chapterShortTitle && (al.chapterShortTitle.includes('Chương II') || al.chapterShortTitle.includes('Chương 2') || al.chapterShortTitle.toLowerCase().includes('vectơ'))) isC2 = true;
+        if (al.lessonTitle && (al.lessonTitle.includes('Chương II') || al.lessonTitle.includes('chương II') || al.lessonTitle.includes('Chương 2') || al.lessonTitle.includes('chương 2') || al.lessonTitle.toLowerCase().includes('vectơ'))) isC2 = true;
+      }
+      const titleEl = document.getElementById('sgk-focus-title');
+      if (titleEl && titleEl.textContent) {
+        const t = titleEl.textContent;
+        if (t.includes('Chương II') || t.includes('chương II') || t.includes('Chương 2') || t.includes('chương 2') || t.toLowerCase().includes('vectơ')) isC2 = true;
+      }
       const s = Math.min(3, Math.max(1, sectionNum));
-      return `ontap_muc${s}`;
+      return isC2 ? `ontap_c2_muc${s}` : `ontap_muc${s}`;
     }
     if (lessonNum === 1) {
       return sectionNum === 2 ? 'muc2' : 'muc1';
     }
-    if (lessonNum >= 2 && lessonNum <= 5) {
-      const maxSec = lessonNum === 4 ? 4 : 3;
+    if (lessonNum >= 2 && lessonNum <= 7) {
+      const maxSec = (lessonNum === 4) ? 4 : 3;
       const s = Math.min(maxSec, Math.max(1, sectionNum));
       return `bai${lessonNum}_muc${s}`;
     }
@@ -790,6 +816,8 @@
     let secKey = 'muc1';
     if (sec === 1 || sec === '1') secKey = 'muc1';
     else if (sec === 2 || sec === '2') secKey = 'muc2';
+    else if (sec === 'ontap' || sec === 'ontap_c1' || sec === 'ontap_chuong1') secKey = 'ontap_muc1';
+    else if (sec === 'ontap_c2' || sec === 'ontap_chuong2') secKey = 'ontap_c2_muc1';
     else if (typeof sec === 'string') {
       if (LECTURE_DATA[sec]) {
         secKey = sec;
