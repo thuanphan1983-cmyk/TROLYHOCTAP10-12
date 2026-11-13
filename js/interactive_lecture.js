@@ -803,7 +803,7 @@
     if (lessonNum === 1) {
       return sectionNum === 2 ? 'muc2' : 'muc1';
     }
-    if (lessonNum >= 2 && lessonNum <= 9) {
+    if (lessonNum >= 2 && lessonNum <= 10) {
       const maxSec = (lessonNum === 4) ? 4 : 3;
       const s = Math.min(maxSec, Math.max(1, sectionNum));
       return `bai${lessonNum}_muc${s}`;

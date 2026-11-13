@@ -687,3 +687,691 @@ window.CHAPTER3_DATA.bai9_muc3 = {
     }
   ]
 };
+
+
+/* =========================================================================
+   BÀI 10: PHƯƠNG SAI VÀ ĐỘ LỆCH CHUẨN CỦA MẪU SỐ LIỆU GHÉP NHÓM (NON-OVERLAPPING 15s/30s)
+   ========================================================================= */
+window.CHAPTER3_DATA.bai10_muc1 = {
+  "lessonId": "bai10",
+  "lessonTitle": "Bài 10: Phương sai & Độ lệch chuẩn",
+  "sectionId": "bai10_muc1",
+  "sectionTitle": "Mục 1: Công thức tính phương sai và độ lệch chuẩn",
+  "audio": "/audio/bai10_muc1.mp3",
+  "audioSrc": "./audio/bai10_muc1.mp3",
+  "audio_src": "./audio/bai10_muc1.mp3",
+  "timestamp_src": "timestamps/bai10_muc1.json",
+  "totalDuration": 365.97,
+  "duration": 365.97,
+  "title": "Mục 1: Công thức tính phương sai và độ lệch chuẩn",
+  "owl_tip": "Phương sai s² là bình phương độ lệch, độ lệch chuẩn s là căn bậc hai của s²!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 58.13,
+      "id": "part2"
+    },
+    {
+      "time": 112.83,
+      "id": "part3"
+    },
+    {
+      "time": 121.54,
+      "id": "vd1_q"
+    },
+    {
+      "time": 140.72,
+      "id": "vd1_a"
+    },
+    {
+      "time": 165.73,
+      "id": "vd2_q"
+    },
+    {
+      "time": 190.83,
+      "id": "vd2_a"
+    },
+    {
+      "time": 214.09,
+      "id": "vd3_q"
+    },
+    {
+      "time": 251.94,
+      "id": "vd3_a"
+    },
+    {
+      "time": 310.62,
+      "id": "part4"
+    },
+    {
+      "time": 339.83,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Giá trị đại diện & Số trung bình",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Công thức phương sai & Độ lệch chuẩn",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ rèn luyện điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Cú Thông Thái cảnh báo bẫy",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú ghi nhớ nhanh",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "content": "\n      <div id=\"part1\">\n        <h3>1. Giá trị đại diện & Số trung bình của mẫu ghép nhóm</h3>\n        <p>Cho mẫu số liệu ghép nhóm gồm $k$ nhóm $[a_1; a_2), [a_2; a_3), \\dots, [a_k; a_{k+1})$ với tần số tương ứng $m_1, m_2, \\dots, m_k$. Cỡ mẫu $n = \\sum_{i=1}^k m_i$.<br>\n        • <b>Giá trị đại diện:</b> của nhóm $[a_i; a_{i+1})$ là trung bình cộng hai đầu mút:\n        $$c_i = \\frac{a_i + a_{i+1}}{2}$$\n        • <b>Số trung bình $\\bar{x}$:</b>\n        $$\\bar{x} = \\frac{m_1 c_1 + m_2 c_2 + \\dots + m_k c_k}{n} = \\frac{1}{n} \\sum_{i=1}^k m_i c_i$$</p>\n      </div>\n      <div id=\"part2\">\n        <h3>2. Phương sai và độ lệch chuẩn của mẫu số liệu ghép nhóm</h3>\n        <p>• <b>Phương sai, ký hiệu $s^2$:</b> là số đặc trưng đo độ phân tán của dữ liệu xung quanh số trung bình $\\bar{x}$:\n        $$s^2 = \\frac{1}{n} \\sum_{i=1}^k m_i (c_i - \\bar{x})^2$$\n        • <b>Công thức tính nhanh (rút gọn):</b>\n        $$s^2 = \\frac{1}{n} \\left(\\sum_{i=1}^k m_i c_i^2\\right) - (\\bar{x})^2$$\n        • <b>Độ lệch chuẩn, ký hiệu $s$:</b> là căn bậc hai số học của phương sai:\n        $$s = \\sqrt{s^2}$$\n        <i>(Lưu ý quan trọng: Vì $m_i > 0$ và $(c_i - \\bar{x})^2 \\ge 0$ nên luôn có $s^2 \\ge 0$ và $s \\ge 0$).</i></p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ rèn luyện điển hình</h3></div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Áp dụng công thức rút gọn</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd1_q\"><p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Cho mẫu số liệu ghép nhóm có cỡ mẫu $n = 50$, $\\sum m_i c_i = 300$, và $\\sum m_i c_i^2 = 2500$.<br>Hãy tính số trung bình $\\bar{x}$, phương sai $s^2$ và độ lệch chuẩn $s$.</p></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          • Số trung bình: $\\bar{x} = \\frac{300}{50} = 6$.<br>\n          • Phương sai: $s^2 = \\frac{2500}{50} - 6^2 = 50 - 36 = 14$.<br>\n          • Độ lệch chuẩn: $s = \\sqrt{14} \\approx 3{,}74$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Mối quan hệ giữa s và s²</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd2_q\"><p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">a) Cho mẫu số liệu có phương sai $s^2 = 6{,}25$. Tính độ lệch chuẩn $s$.<br>b) Cho mẫu số liệu có độ lệch chuẩn $s = 3{,}5$. Tính phương sai $s^2$.</p></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải:</b><br>\n          a) $s = \\sqrt{s^2} = \\sqrt{6{,}25} = 2{,}5$.<br>\n          b) $s^2 = (3{,}5)^2 = 12{,}25$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Bảng ghép nhóm nhiều bước</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd3_q\"><p style=\"font-size:17px; color:#f8fafc; margin-bottom:12px;\">Khảo sát thời gian hoàn thành sản phẩm của 40 công nhân (phút):</p>\n    <table style=\"width:100%; border-collapse:collapse; text-align:center; font-size:16px; margin-bottom:12px;\">\n      <tr style=\"background:#1e293b; color:#38bdf8;\">\n        <th style=\"border:1px solid #475569; padding:6px;\">Thời gian (phút)</th>\n        <th style=\"border:1px solid #475569; padding:6px;\">$[10; 14)$</th>\n        <th style=\"border:1px solid #475569; padding:6px;\">$[14; 18)$</th>\n        <th style=\"border:1px solid #475569; padding:6px;\">$[18; 22)$</th>\n        <th style=\"border:1px solid #475569; padding:6px;\">$[22; 26)$</th>\n      </tr>\n      <tr style=\"background:rgba(30,41,59,0.6); color:#f8fafc;\">\n        <td style=\"border:1px solid #475569; padding:6px; font-weight:bold;\">Số công nhân ($m_i$)</td>\n        <td style=\"border:1px solid #475569; padding:6px;\">6</td>\n        <td style=\"border:1px solid #475569; padding:6px;\">14</td>\n        <td style=\"border:1px solid #475569; padding:6px;\">12</td>\n        <td style=\"border:1px solid #475569; padding:6px;\">8</td>\n      </tr>\n    </table>\n    <p style=\"font-size:17px; color:#fcd34d;\">Tìm $c_i$, tính số trung bình $\\bar{x}$, phương sai $s^2$ và độ lệch chuẩn $s$.</p></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          • Giá trị đại diện: $c_1 = 12, c_2 = 16, c_3 = 20, c_4 = 24$.<br>\n          • $\\sum m_i c_i = 6(12) + 14(16) + 12(20) + 8(24) = 728 \\implies \\bar{x} = \\frac{728}{40} = 18{,}2\\text{ (phút)}$.<br>\n          • $\\sum m_i c_i^2 = 6(144) + 14(256) + 12(400) + 8(576) = 13856$.<br>\n          • $s^2 = \\frac{13856}{40} - (18{,}2)^2 = 346{,}4 - 331{,}24 = 15{,}16\\text{ (phút}^2\\text{)}$.<br>\n          • $s = \\sqrt{15{,}16} \\approx 3{,}89\\text{ (phút)}$.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy quên trừ x ngang bình phương</h3><p>Nhớ: s² = (Tổng m_i c_i²)/n - (x_ngang)²!</p></div>\n      <div id=\"part5\"><h3>5. Mẹo lập thêm 2 cột phụ</h3><p>Kẻ thêm cột m_i c_i và m_i c_i² để tính chuẩn 100%.</p></div>\n    ",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 10: PHƯƠNG SAI & ĐỘ LỆCH CHUẨN",
+      "subtitle": "PHẦN 1: GIÁ TRỊ ĐẠI DIỆN & SỐ TRUNG BÌNH",
+      "startTime": 0.0,
+      "endTime": 58.13,
+      "duration": 58.13,
+      "mascotMode": "talking",
+      "mascotTip": "Giá trị đại diện c_i = (đầu mút trái + đầu mút phải)/2!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.65; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:12px;\">1. Giá trị đại diện & Số trung bình $\\bar{x}$</h3>\n                  <div style=\"background:rgba(15,23,42,0.8); border:1px solid #38bdf8; border-radius:10px; padding:16px; margin-bottom:14px;\">\n                    <b style=\"color:#38bdf8; font-size:19px;\">Giá trị đại diện của nhóm $[a_i; a_{i+1})$:</b>\n                    <div style=\"font-size:22px; color:#fde047; font-weight:700; margin:8px 0;\">$$c_i = \\frac{a_i + a_{i+1}}{2}$$</div>\n                    Đại diện cho toàn bộ các quan sát nằm trong nhóm đó.\n                  </div>\n                  <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px 16px; border-radius:6px;\">\n                    <b style=\"color:#38bdf8; font-size:19px;\">Số trung bình của mẫu số liệu ghép nhóm:</b>\n                    <div style=\"font-size:20px; color:#f8fafc; margin-top:4px;\">$$\\bar{x} = \\frac{1}{n} \\sum_{i=1}^k m_i c_i = \\frac{m_1 c_1 + m_2 c_2 + \\dots + m_k c_k}{n}$$</div>\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÔNG THỨC PHƯƠNG SAI VÀ ĐỘ LỆCH CHUẨN",
+      "subtitle": "PHẦN 2: ĐỊNH NGHĨA & CÔNG THỨC RÚT GỌN",
+      "startTime": 58.13,
+      "endTime": 112.83,
+      "duration": 54.7,
+      "mascotMode": "thinking",
+      "mascotTip": "Phương sai luôn không âm (s² >= 0)!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.65; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:12px;\">2. Phương sai $s^2$ & Độ lệch chuẩn $s$</h3>\n                  <div style=\"background:rgba(15,23,42,0.8); border:1px solid #38bdf8; border-radius:10px; padding:14px; margin-bottom:12px;\">\n                    <b style=\"color:#38bdf8; font-size:18px;\">Công thức định nghĩa phương sai:</b>\n                    <div style=\"font-size:19px; color:#f8fafc; margin:6px 0;\">$$s^2 = \\frac{1}{n} \\sum_{i=1}^k m_i (c_i - \\bar{x})^2$$</div>\n                  </div>\n                  <div style=\"background:rgba(16,185,129,0.12); border:1.5px solid #10b981; border-radius:10px; padding:14px; margin-bottom:12px;\">\n                    <b style=\"color:#34d399; font-size:18px;\">⭐ Công thức tính nhanh rút gọn (Khuyên dùng):</b>\n                    <div style=\"font-size:21px; color:#fde047; font-weight:700; margin:6px 0;\">$$s^2 = \\frac{1}{n}\\left(\\sum_{i=1}^k m_i c_i^2\\right) - (\\bar{x})^2$$</div>\n                  </div>\n                  <div style=\"background:rgba(245,158,11,0.12); border-left:4px solid #f59e0b; padding:10px 14px; border-radius:6px; color:#fef08a;\">\n                    <b>Độ lệch chuẩn:</b> $s = \\sqrt{s^2}$ (luôn có cùng đơn vị đo với dữ liệu gốc).\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "LUYỆN TẬP VÍ DỤ",
+      "subtitle": "PHẦN 3: CÁC VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "startTime": 112.83,
+      "endTime": 121.54,
+      "duration": 8.71,
+      "mascotMode": "talking",
+      "mascotTip": "Câu dễ 15s, câu nhiều bước 30s!",
+      "bodyHtml": "\n                <div style=\"text-align:center; padding:40px 20px;\">\n                  <h2 style=\"color:#38bdf8; font-size:28px; margin-bottom:15px;\">Phần 3: Các ví dụ rèn luyện điển hình</h2>\n                  <p style=\"font-size:18px; color:#94a3b8; max-width:550px; margin:0 auto 20px;\">\n                    Luyện tập 3 bài toán tính phương sai và độ lệch chuẩn cùng <b>đồng hồ đếm ngược thông minh 15s / 30s</b>!\n                  </p>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: CÔNG THỨC RÚT GỌN",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 121.54,
+      "endTime": 140.72,
+      "duration": 19.18,
+      "mascotMode": "thinking",
+      "mascotTip": "x_ngang = 300/50 = 6, s² = 2500/50 - 6²!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Áp dụng công thức rút gọn</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Cho mẫu số liệu ghép nhóm có cỡ mẫu $n = 50$, $\\sum m_i c_i = 300$, và $\\sum m_i c_i^2 = 2500$.<br>Hãy tính số trung bình $\\bar{x}$, phương sai $s^2$ và độ lệch chuẩn $s$.</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: x = 6, s² = 14, s ≈ 3,74",
+      "startTime": 140.72,
+      "endTime": 165.73,
+      "duration": 25.01,
+      "mascotMode": "talking",
+      "mascotTip": "s² = 50 - 36 = 14, s = √14 ≈ 3,74!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1:</h3>\n                  <div style=\"font-size:18px; line-height:1.75; color:#f8fafc;\">\n                    • <b>Số trung bình:</b> $\\bar{x} = \\frac{300}{50} = 6$.<br>\n                    • <b>Phương sai:</b> $s^2 = \\frac{2500}{50} - 6^2 = 50 - 36 = 14$.<br>\n                    • <b>Độ lệch chuẩn:</b> $s = \\sqrt{14} \\approx 3{,}74$.\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: QUAN HỆ GIỮA S VÀ S²",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 165.73,
+      "endTime": 190.83,
+      "duration": 25.1,
+      "mascotMode": "thinking",
+      "mascotTip": "s = √(6,25) = 2,5; s² = 3,5² = 12,25!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Mối quan hệ giữa s và s²</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">a) Cho mẫu số liệu có phương sai $s^2 = 6{,}25$. Tính độ lệch chuẩn $s$.<br>b) Cho mẫu số liệu có độ lệch chuẩn $s = 3{,}5$. Tính phương sai $s^2$.</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: s = 2,5 & s² = 12,25",
+      "startTime": 190.83,
+      "endTime": 214.09,
+      "duration": 23.26,
+      "mascotMode": "talking",
+      "mascotTip": "Phương sai là bình phương của độ lệch chuẩn!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2:</h3>\n                  <div style=\"font-size:18px; line-height:1.75; color:#f8fafc;\">\n                    • Câu a: Độ lệch chuẩn $s = \\sqrt{s^2} = \\sqrt{6{,}25} = 2{,}5$.<br>\n                    • Câu b: Phương sai $s^2 = (3{,}5)^2 = 12{,}25$.\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TÍNH TRÊN BẢNG GHÉP NHÓM",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 214.09,
+      "endTime": 251.94,
+      "duration": 37.85,
+      "mascotMode": "thinking",
+      "mascotTip": "Lập 4 giá trị đại diện: 12, 16, 20, 24!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Bảng ghép nhóm nhiều bước</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:17px; color:#f8fafc; margin-bottom:12px;\">Khảo sát thời gian hoàn thành sản phẩm của 40 công nhân (phút):</p>\n    <table style=\"width:100%; border-collapse:collapse; text-align:center; font-size:16px; margin-bottom:12px;\">\n      <tr style=\"background:#1e293b; color:#38bdf8;\">\n        <th style=\"border:1px solid #475569; padding:6px;\">Thời gian (phút)</th>\n        <th style=\"border:1px solid #475569; padding:6px;\">$[10; 14)$</th>\n        <th style=\"border:1px solid #475569; padding:6px;\">$[14; 18)$</th>\n        <th style=\"border:1px solid #475569; padding:6px;\">$[18; 22)$</th>\n        <th style=\"border:1px solid #475569; padding:6px;\">$[22; 26)$</th>\n      </tr>\n      <tr style=\"background:rgba(30,41,59,0.6); color:#f8fafc;\">\n        <td style=\"border:1px solid #475569; padding:6px; font-weight:bold;\">Số công nhân ($m_i$)</td>\n        <td style=\"border:1px solid #475569; padding:6px;\">6</td>\n        <td style=\"border:1px solid #475569; padding:6px;\">14</td>\n        <td style=\"border:1px solid #475569; padding:6px;\">12</td>\n        <td style=\"border:1px solid #475569; padding:6px;\">8</td>\n      </tr>\n    </table>\n    <p style=\"font-size:17px; color:#fcd34d;\">Tìm $c_i$, tính số trung bình $\\bar{x}$, phương sai $s^2$ và độ lệch chuẩn $s$.</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: x = 18,2, s² = 15,16, s ≈ 3,89",
+      "startTime": 251.94,
+      "endTime": 310.62,
+      "duration": 58.68,
+      "mascotMode": "talking",
+      "mascotTip": "s² = 346,4 - 331,24 = 15,16!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3:</h3>\n                  <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                    • <b>Giá trị đại diện:</b> $c_1 = 12, \\, c_2 = 16, \\, c_3 = 20, \\, c_4 = 24$.<br>\n                    • $\\sum m_i c_i = 6(12) + 14(16) + 12(20) + 8(24) = 728 \\implies \\bar{x} = \\frac{728}{40} = 18{,}2\\text{ (phút)}$.<br>\n                    • $\\sum m_i c_i^2 = 6(144) + 14(256) + 12(400) + 8(576) = 13856$.<br>\n                    • <b>Phương sai:</b> $s^2 = \\frac{13856}{40} - (18{,}2)^2 = 346{,}4 - 331{,}24 = 15{,}16\\text{ (phút}^2\\text{)}$.<br>\n                    • <b>Độ lệch chuẩn:</b> $s = \\sqrt{15{,}16} \\approx 3{,}89\\text{ (phút)}$.\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI CẢNH BÁO BẪY",
+      "subtitle": "PHẦN 4: 2 BẪY KHI TÍNH PHƯƠNG SAI",
+      "startTime": 310.62,
+      "endTime": 339.83,
+      "duration": 29.21,
+      "mascotMode": "warning",
+      "mascotTip": "Luôn nhớ trừ đi (x_ngang)² ở cuối công thức!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:14px;\">4. Hai bẫy sai lầm kinh điển khi tính phương sai</h3>\n                  <div style=\"display:flex; flex-direction:column; gap:12px;\">\n                    <div style=\"background:rgba(244,63,94,0.12); border-left:4px solid #f43f5e; padding:14px 18px; border-radius:8px;\">\n                      <b style=\"color:#f43f5e; font-size:19px;\">Bẫy 1: Quên trừ đi $(\\bar{x})^2$ ở cuối công thức</b><br>\n                      Nhiều bạn chỉ tính $\\frac{1}{n}\\sum m_i c_i^2$ mà quên mất trừ đi $(\\bar{x})^2$. Điều này làm kết quả bị sai lệch nghiêm trọng!\n                    </div>\n                    <div style=\"background:rgba(251,191,36,0.12); border-left:4px solid #fbbf24; padding:14px 18px; border-radius:8px;\">\n                      <b style=\"color:#fbbf24; font-size:19px;\">Bẫy 2: Nhầm giữa giá trị đại diện $c_i$ và tần số $m_i$</b><br>\n                      Hãy nhớ: Chỉ bình phương giá trị đại diện $c_i^2$, tuyệt đối không bình phương tần số $m_i$!\n                    </div>\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ KẺ CỘT PHỤ",
+      "subtitle": "PHẦN 5: BÍ QUYẾT TÍNH ĐÚNG 100%",
+      "startTime": 339.83,
+      "endTime": 365.97,
+      "duration": 26.14,
+      "mascotMode": "talking",
+      "mascotTip": "Kẻ thêm 2 cột: m_i c_i và m_i c_i²!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:14px;\">5. Bí quyết Thầy Cú: Kẻ 2 cột phụ trong bảng số liệu</h3>\n                  <div style=\"background:rgba(15,23,42,0.8); border:1px solid #38bdf8; border-radius:10px; padding:16px; margin-bottom:12px;\">\n                    Trong bài thi tự luận hoặc kiểm tra trên lớp, hãy kẻ thêm:\n                    <ul style=\"margin:8px 0; padding-left:24px; color:#bae6fd;\">\n                      <li><b>Cột 1:</b> Tích $m_i \\cdot c_i$ $\\to$ dòng tổng cộng cho ngay $\\sum m_i c_i$.</li>\n                      <li><b>Cột 2:</b> Tích $m_i \\cdot c_i^2$ $\\to$ dòng tổng cộng cho ngay $\\sum m_i c_i^2$.</li>\n                    </ul>\n                    Lắp vào công thức: $s^2 = \\frac{\\text{Tổng cột 2}}{n} - \\left(\\frac{\\text{Tổng cột 1}}{n}\\right)^2$. Nhanh và chính xác tuyệt đối!\n                  </div>\n                </div>\n            "
+    }
+  ]
+};
+
+window.CHAPTER3_DATA.bai10_muc2 = {
+  "lessonId": "bai10",
+  "lessonTitle": "Bài 10: Phương sai & Độ lệch chuẩn",
+  "sectionId": "bai10_muc2",
+  "sectionTitle": "Mục 2: Ý nghĩa thực tế & So sánh mức độ phân tán",
+  "audio": "/audio/bai10_muc2.mp3",
+  "audioSrc": "./audio/bai10_muc2.mp3",
+  "audio_src": "./audio/bai10_muc2.mp3",
+  "timestamp_src": "timestamps/bai10_muc2.json",
+  "totalDuration": 292.41,
+  "duration": 292.41,
+  "title": "Mục 2: Ý nghĩa thực tế & So sánh mức độ phân tán",
+  "owl_tip": "Độ lệch chuẩn s càng nhỏ thì dữ liệu càng đồng đều, phong độ càng ổn định!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 35.3,
+      "id": "part2"
+    },
+    {
+      "time": 70.53,
+      "id": "part3"
+    },
+    {
+      "time": 78.98,
+      "id": "vd1_q"
+    },
+    {
+      "time": 105.57,
+      "id": "vd1_a"
+    },
+    {
+      "time": 126.71,
+      "id": "vd2_q"
+    },
+    {
+      "time": 162.95,
+      "id": "vd2_a"
+    },
+    {
+      "time": 198.76,
+      "id": "vd3_q"
+    },
+    {
+      "time": 229.17,
+      "id": "vd3_a"
+    },
+    {
+      "time": 248.63,
+      "id": "part4"
+    },
+    {
+      "time": 281.08,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Ý nghĩa thống kê của s² và s",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Nguyên tắc so sánh độ phân tán",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ rèn luyện điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Cú Thông Thái cảnh báo bẫy",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú ghi nhớ nhanh",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "content": "\n      <div id=\"part1\">\n        <h3>1. Ý nghĩa thống kê của phương sai và độ lệch chuẩn</h3>\n        <p>• Phương sai $s^2$ và độ lệch chuẩn $s$ phản ánh <b>mức độ phân tán</b> (độ biến thiên, độ rải rác) của các quan sát xung quanh giá trị trung bình $\\bar{x}$.<br>\n        • Khác với khoảng biến thiên $R$ chỉ phụ thuộc vào 2 mút ngoài cùng, $s$ khai thác triệt để thông tin của <b>toàn bộ các nhóm số liệu</b> trong mẫu.</p>\n      </div>\n      <div id=\"part2\">\n        <h3>2. Nguyên tắc so sánh mức độ phân tán giữa hai mẫu</h3>\n        <p>Khi hai mẫu số liệu có cùng đơn vị đo và có số trung bình xấp xỉ nhau:<br>\n        • Mẫu nào có $s$ (hoặc $s^2$) <b>càng nhỏ</b> $\\implies$ số liệu càng tập trung sát giá trị trung bình, <b>mức độ đồng đều càng cao</b>, độ ổn định càng lớn, mức rủi ro càng thấp.<br>\n        • Mẫu nào có $s$ (hoặc $s^2$) <b>càng lớn</b> $\\implies$ số liệu phân tán càng xa giá trị trung bình, <b>độ biến động mạnh</b>, mức rủi ro càng cao.</p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ rèn luyện điển hình</h3></div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: So sánh điểm thi hai lớp 12</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd1_q\"><p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Lớp 12A1 và 12A2 cùng thi thử môn Toán có điểm trung bình $\\bar{x}_1 = \\bar{x}_2 = 7{,}5$.<br>Độ lệch chuẩn điểm số: $s_1 = 0{,}8$ (12A1) và $s_2 = 1{,}5$ (12A2).<br>Theo em, kết quả học tập của lớp nào đồng đều hơn?</p></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải:</b><br>\n          Vì $s_1 = 0{,}8 < s_2 = 1{,}5$ nên điểm số của lớp 12A1 ít bị phân tán hơn.<br>\n          $\\implies$ <b>Lớp 12A1 có kết quả học tập đồng đều hơn lớp 12A2.</b>\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Đánh giá rủi ro đầu tư cổ phiếu</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng thực tế)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd2_q\"><p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Hai mã cổ phiếu X và Y có cùng mức sinh lời trung bình $12\\%$/năm trong 30 tháng.<br>Độ lệch chuẩn lợi nhuận: $s_X = 2{,}1\\%$ và $s_Y = 5{,}6\\%$.<br>Nhà đầu tư cẩn trọng nên chọn cổ phiếu nào? Mã nào có độ rủi ro cao hơn?</p></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          • $s_X = 2{,}1\\% < s_Y = 5{,}6\\% \\implies$ Cổ phiếu X dao động ít hơn, rủi ro thấp, thích hợp cho nhà đầu tư thích an toàn, ổn định.<br>\n          • Cổ phiếu Y có độ lệch chuẩn cao gấp gần 3 lần $\\implies$ biên độ dao động mạnh, rủi ro cao hơn nhưng có tiềm năng sinh lời đột biến cho nhà đầu tư mạo hiểm.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Kiểm định máy đóng gói chuẩn</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd3_q\"><p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Hai máy đóng gói A và B kiểm tra khối lượng bánh kẹo (chuẩn 500g):<br>Cả hai máy đều đạt trung bình 500g. Độ lệch chuẩn: $s_A = 1{,}2\\text{ g}$ và $s_B = 3{,}8\\text{ g}$.<br>Máy nào đóng gói chuẩn xác và ổn định hơn?</p></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải:</b><br>\n          Vì $s_A = 1{,}2\\text{ g} < s_B = 3{,}8\\text{ g}$ nên các gói hàng của máy A có khối lượng dao động ít hơn.<br>\n          $\\implies$ <b>Máy A đóng gói chuẩn xác và ổn định hơn máy B.</b>\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy so sánh khi khác trung bình</h3><p>Chỉ so sánh s trực tiếp khi hai trung bình xấp xỉ nhau!</p></div>\n      <div id=\"part5\"><h3>5. Mẹo câu thần chú</h3><p>Cùng trung bình: s nhỏ là đều, s lớn là phân tán!</p></div>\n    ",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 10: Ý NGHĨA PHƯƠNG SAI & ĐỘ LỆCH CHUẨN",
+      "subtitle": "PHẦN 1: Ý NGHĨA THỐNG KÊ",
+      "startTime": 0.0,
+      "endTime": 35.3,
+      "duration": 35.3,
+      "mascotMode": "talking",
+      "mascotTip": "Đo độ rải rác xung quanh số trung bình!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.65; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:12px;\">1. Ý nghĩa của phương sai & độ lệch chuẩn</h3>\n                  <div style=\"background:rgba(15,23,42,0.8); border:1px solid #38bdf8; border-radius:10px; padding:16px; margin-bottom:14px;\">\n                    <b style=\"color:#fbbf24; font-size:19px;\">Khác biệt cốt lõi với khoảng biến thiên:</b><br>\n                    • Khoảng biến thiên $R$ chỉ nhìn vào 2 điểm mút ngoài cùng.<br>\n                    • Phương sai $s^2$ và độ lệch chuẩn $s$ <b>sử dụng dữ liệu của từng nhóm</b>, đo khoảng cách trung bình từ các số liệu đến tâm $\\bar{x}$.\n                  </div>\n                  <div style=\"background:rgba(16,185,129,0.12); border-left:4px solid #10b981; padding:12px 16px; border-radius:6px;\">\n                    <b style=\"color:#34d399;\">Ưu điểm vượt trội:</b> Cho cái nhìn toàn diện, chính xác và khoa học nhất về cấu trúc phân bố dữ liệu.\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "NGUYÊN TẮC SO SÁNH ĐỘ PHÂN TÁN",
+      "subtitle": "PHẦN 2: NGUYÊN TẮC SO SÁNH",
+      "startTime": 35.3,
+      "endTime": 70.53,
+      "duration": 35.23,
+      "mascotMode": "thinking",
+      "mascotTip": "s nhỏ = đồng đều, ổn định; s lớn = dao động mạnh!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.65; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:12px;\">2. Nguyên tắc so sánh hai mẫu số liệu</h3>\n                  <div style=\"display:flex; flex-direction:column; gap:12px;\">\n                    <div style=\"background:rgba(16,185,129,0.15); border-left:4px solid #10b981; padding:12px 16px; border-radius:8px;\">\n                      <b style=\"color:#34d399; font-size:18px;\">Khi $s$ càng nhỏ:</b><br>\n                      Các giá trị tập trung sát số trung bình $\\bar{x}$ $\\implies$ <b>Độ đồng đều cao, phong độ ổn định, độ rủi ro thấp</b>.\n                    </div>\n                    <div style=\"background:rgba(244,63,94,0.15); border-left:4px solid #f43f5e; padding:12px 16px; border-radius:8px;\">\n                      <b style=\"color:#f43f5e; font-size:18px;\">Khi $s$ càng lớn:</b><br>\n                      Các giá trị tản mác xa số trung bình $\\bar{x}$ $\\implies$ <b>Độ phân tán lớn, biến động mạnh, mức rủi ro cao</b>.\n                    </div>\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "LUYỆN TẬP VÍ DỤ",
+      "subtitle": "PHẦN 3: CÁC VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "startTime": 70.53,
+      "endTime": 78.98,
+      "duration": 8.45,
+      "mascotMode": "talking",
+      "mascotTip": "Phân tích 3 bài toán ứng dụng thực tế!",
+      "bodyHtml": "\n                <div style=\"text-align:center; padding:40px 20px;\">\n                  <h2 style=\"color:#38bdf8; font-size:28px; margin-bottom:15px;\">Phần 3: Các ví dụ rèn luyện điển hình</h2>\n                  <p style=\"font-size:18px; color:#94a3b8; max-width:550px; margin:0 auto 20px;\">\n                    Ứng dụng độ lệch chuẩn vào so sánh điểm thi, tài chính chứng khoán và kiểm soát chất lượng sản xuất.\n                  </p>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: ĐIỂM THI HAI LỚP 12",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 78.98,
+      "endTime": 105.57,
+      "duration": 26.59,
+      "mascotMode": "thinking",
+      "mascotTip": "s1 = 0,8 < s2 = 1,5!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: So sánh điểm thi hai lớp 12</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Lớp 12A1 và 12A2 cùng thi thử môn Toán có điểm trung bình $\\bar{x}_1 = \\bar{x}_2 = 7{,}5$.<br>Độ lệch chuẩn điểm số: $s_1 = 0{,}8$ (12A1) và $s_2 = 1{,}5$ (12A2).<br>Theo em, kết quả học tập của lớp nào đồng đều hơn?</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: LỚP 12A1 ĐỒNG ĐỀU HƠN",
+      "startTime": 105.57,
+      "endTime": 126.71,
+      "duration": 21.14,
+      "mascotMode": "talking",
+      "mascotTip": "s1 = 0,8 < s2 = 1,5 nên 12A1 đồng đều hơn!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1:</h3>\n                  <div style=\"font-size:18px; line-height:1.75; color:#f8fafc;\">\n                    • Hai lớp có cùng điểm trung bình $\\bar{x}_1 = \\bar{x}_2 = 7{,}5$.<br>\n                    • Độ lệch chuẩn $s_1 = 0{,}8 < s_2 = 1{,}5 \\implies$ Điểm của học sinh lớp 12A1 phân tán ít hơn.<br>\n                    <div style=\"margin-top:10px; color:#34d399; font-weight:700;\">\n                      Kết luận: Học sinh lớp 12A1 có kết quả học tập đồng đều hơn nhiều so với lớp 12A2.\n                    </div>\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: RỦI RO ĐẦU TƯ CỔ PHIẾU",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 126.71,
+      "endTime": 162.95,
+      "duration": 36.24,
+      "mascotMode": "thinking",
+      "mascotTip": "s_X = 2,1% (an toàn), s_Y = 5,6% (mạo hiểm)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Đánh giá rủi ro đầu tư cổ phiếu</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng thực tế)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Hai mã cổ phiếu X và Y có cùng mức sinh lời trung bình $12\\%$/năm trong 30 tháng.<br>Độ lệch chuẩn lợi nhuận: $s_X = 2{,}1\\%$ và $s_Y = 5{,}6\\%$.<br>Nhà đầu tư cẩn trọng nên chọn cổ phiếu nào? Mã nào có độ rủi ro cao hơn?</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: X AN TOÀN, Y RỦI RO CAO",
+      "startTime": 162.95,
+      "endTime": 198.76,
+      "duration": 35.81,
+      "mascotMode": "talking",
+      "mascotTip": "Cổ phiếu X biến động ít, cổ phiếu Y biến động mạnh!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2:</h3>\n                  <div style=\"font-size:18px; line-height:1.75; color:#f8fafc;\">\n                    • <b>Cổ phiếu X ($s_X = 2{,}1\\%$):</b> Độ lệch chuẩn nhỏ $\\implies$ biên độ dao động hẹp, tỉ suất sinh lời ổn định, rủi ro thấp. Phù hợp cho nhà đầu tư cẩn trọng.<br>\n                    • <b>Cổ phiếu Y ($s_Y = 5{,}6\\%$):</b> Độ lệch chuẩn lớn gần gấp 3 lần $\\implies$ biên độ dao động mạnh, rủi ro cao. Phù hợp cho nhà đầu tư mạo hiểm đón sóng lớn.\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: MÁY ĐÓNG GÓI TỰ ĐỘNG",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 198.76,
+      "endTime": 229.17,
+      "duration": 30.41,
+      "mascotMode": "thinking",
+      "mascotTip": "s_A = 1,2g < s_B = 3,8g!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Kiểm định máy đóng gói chuẩn</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Hai máy đóng gói A và B kiểm tra khối lượng bánh kẹo (chuẩn 500g):<br>Cả hai máy đều đạt trung bình 500g. Độ lệch chuẩn: $s_A = 1{,}2\\text{ g}$ và $s_B = 3{,}8\\text{ g}$.<br>Máy nào đóng gói chuẩn xác và ổn định hơn?</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: MÁY A VẬN HÀNH ỔN ĐỊNH HƠN",
+      "startTime": 229.17,
+      "endTime": 248.63,
+      "duration": 19.46,
+      "mascotMode": "talking",
+      "mascotTip": "Máy A có độ lệch thấp hơn, chuẩn xác hơn!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3:</h3>\n                  <div style=\"font-size:18px; line-height:1.75; color:#f8fafc;\">\n                    • Vì $s_A = 1{,}2\\text{ g} < s_B = 3{,}8\\text{ g}$ nên các gói hàng của máy A dao động ít hơn quanh mức chuẩn 500g.<br>\n                    <div style=\"margin-top:10px; color:#34d399; font-weight:700;\">\n                      Kết luận: Máy A đóng gói chuẩn xác và có độ ổn định kỹ thuật cao hơn máy B.\n                    </div>\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI CẢNH BÁO BẪY",
+      "subtitle": "PHẦN 4: BẪY SO SÁNH KHÁC TRUNG BÌNH",
+      "startTime": 248.63,
+      "endTime": 281.08,
+      "duration": 32.45,
+      "mascotMode": "warning",
+      "mascotTip": "Chỉ so sánh trực tiếp khi cùng đơn vị và cùng trung bình!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:14px;\">4. Bẫy sai lầm khi so sánh độ lệch chuẩn trực tiếp</h3>\n                  <div style=\"background:rgba(244,63,94,0.12); border-left:4px solid #f43f5e; padding:14px 18px; border-radius:8px;\">\n                    <b style=\"color:#f43f5e; font-size:19px;\">Điều kiện bắt buộc để so sánh trực tiếp $s_1$ và $s_2$:</b><br>\n                    1. Phải <b>cùng đơn vị đo lường</b>.<br>\n                    2. Phải có <b>số trung bình xấp xỉ nhau</b> ($\\bar{x}_1 \\approx \\bar{x}_2$).<br>\n                    <i>Nếu số trung bình chênh lệch quá xa (ví dụ so sánh cân nặng của Voi và Thỏ), bắt buộc phải dùng Hệ số biến thiên $CV = \\frac{s}{\\bar{x}}$, không được so sánh trực tiếp $s$!</i>\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ GHI NHỚ",
+      "subtitle": "PHẦN 5: CÂU THẦN CHÚ SO SÁNH",
+      "startTime": 281.08,
+      "endTime": 292.41,
+      "duration": 11.33,
+      "mascotMode": "talking",
+      "mascotTip": "Cùng trung bình: s nhỏ là đều, s lớn là phân tán!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:14px;\">5. Thần chú ghi nhớ trong 3 giây</h3>\n                  <div style=\"background:rgba(15,23,42,0.8); border:1.5px solid #38bdf8; border-radius:10px; padding:20px; text-align:center;\">\n                    <div style=\"font-size:22px; color:#fde047; font-weight:800; margin-bottom:10px;\">\n                      \"CÙNG TRUNG BÌNH: $s$ NHỎ LÀ ĐỀU - $s$ LỚN LÀ PHÂN TÁN!\"\n                    </div>\n                    <p style=\"color:#94a3b8; margin:0;\">\n                      Gặp đề trắc nghiệm hỏi lớp nào đồng đều hơn, máy nào chuẩn xác hơn $\\to$ Tìm mẫu có $s$ nhỏ nhất!\n                    </p>\n                  </div>\n                </div>\n            "
+    }
+  ]
+};
+
+window.CHAPTER3_DATA.bai10_muc3 = {
+  "lessonId": "bai10",
+  "lessonTitle": "Bài 10: Phương sai & Độ lệch chuẩn",
+  "sectionId": "bai10_muc3",
+  "sectionTitle": "Mục 3: Tính chất biến đổi, đơn vị đo & Kỹ thuật Casio",
+  "audio": "/audio/bai10_muc3.mp3",
+  "audioSrc": "./audio/bai10_muc3.mp3",
+  "audio_src": "./audio/bai10_muc3.mp3",
+  "timestamp_src": "timestamps/bai10_muc3.json",
+  "totalDuration": 334.65,
+  "duration": 334.65,
+  "title": "Mục 3: Tính chất biến đổi tuyến tính, đơn vị đo & Kỹ thuật Casio 580",
+  "owl_tip": "Cộng hằng số thì phương sai không đổi; nhân hằng số k thì phương sai nhân k²!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 52.87,
+      "id": "part2"
+    },
+    {
+      "time": 88.97,
+      "id": "part3"
+    },
+    {
+      "time": 96.72,
+      "id": "vd1_q"
+    },
+    {
+      "time": 118.13,
+      "id": "vd1_a"
+    },
+    {
+      "time": 138.96,
+      "id": "vd2_q"
+    },
+    {
+      "time": 167.35,
+      "id": "vd2_a"
+    },
+    {
+      "time": 196.32,
+      "id": "vd3_q"
+    },
+    {
+      "time": 220.94,
+      "id": "vd3_a"
+    },
+    {
+      "time": 254.49,
+      "id": "part4"
+    },
+    {
+      "time": 292.96,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Tính chất biến đổi tuyến tính",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Quy tắc đơn vị đo lường",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Các ví dụ rèn luyện điển hình (3 Ví dụ)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Cú Thông Thái cảnh báo bẫy Casio",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Quy trình bấm máy Casio 580",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "content": "\n      <div id=\"part1\">\n        <h3>1. Tính chất biến đổi tuyến tính của phương sai</h3>\n        <p>Cho mẫu số liệu có phương sai $s^2$ và độ lệch chuẩn $s$:<br>\n        • <b>Khi tịnh tiến (cộng hằng số $c$):</b> Mỗi giá trị $x_i' = x_i + c$. Khi đó độ phân tán không đổi:\n        $$s_{mới}^2 = s^2, \\quad s_{mới} = s$$\n        • <b>Khi co giãn (nhân hằng số $k > 0$):</b> Mỗi giá trị $x_i' = k x_i$. Khi đó:\n        $$s_{mới}^2 = k^2 s^2, \\quad s_{mới} = k s$$</p>\n      </div>\n      <div id=\"part2\">\n        <h3>2. Quy tắc đơn vị đo lường</h3>\n        <p>• Nếu mẫu số liệu gốc có đơn vị đo là $U$ (như cm, kg, phút, triệu đồng):<br>\n        - Số trung bình $\\bar{x}$ và Độ lệch chuẩn $s$ có cùng đơn vị là $U$.<br>\n        - Riêng <b>Phương sai $s^2$</b> có đơn vị là $U^2$ (như $\\text{cm}^2, \\text{kg}^2, \\text{phút}^2$).<br>\n        <i>(Vì thế trong thực tiễn người ta ưa chuộng dùng độ lệch chuẩn $s$ hơn vì cùng bậc đo).</i></p>\n      </div>\n      <div id=\"part3\"><h3>3. Các ví dụ rèn luyện điển hình</h3></div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Tính chất khi cộng và nhân hằng số</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd1_q\"><p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Một mẫu số liệu có phương sai $s^2 = 9$.<br>a) Nếu cộng thêm 5 vào mỗi số liệu thì phương sai mới bằng bao nhiêu?<br>b) Nếu nhân mỗi số liệu với 3 thì phương sai mới và độ lệch chuẩn mới bằng bao nhiêu?</p></div>\n        <div id=\"vd1_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải:</b><br>\n          a) Cộng hằng số 5 không đổi độ phân tán $\\implies s_{mới}^2 = 9$.<br>\n          b) Nhân với 3 $\\implies s_{mới}^2 = 3^2 \\times 9 = 81$; $\\, s_{mới} = 3 \\times \\sqrt{9} = 9$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Đơn vị đo khi đổi từ cm sang mét</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd2_q\"><p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Khảo sát chiều cao học sinh (cm): $\\bar{x} = 165$, $s^2 = 25$, $s = 5$.<br>Hãy xác định đơn vị đo cho từng đại lượng. Nếu đổi đơn vị sang mét, phương sai mới bằng bao nhiêu?</p></div>\n        <div id=\"vd2_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải:</b><br>\n          • Đơn vị: $\\bar{x} = 165\\text{ cm}$, $s = 5\\text{ cm}$, $s^2 = 25\\text{ cm}^2$.<br>\n          • Đổi sang mét: chia cho $100$ ($k = \\frac{1}{100}$) $\\implies s_{mới}^2 = \\frac{25}{100^2} = 0{,}0025\\text{ m}^2$.\n        </div>\n      </div>\n      <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:18px; margin:10px 0; background:#0f172a;\">\n        \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Quy đổi thang điểm thi tuyển sinh</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n        <div id=\"vd3_q\"><p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Điểm thi thang 50 có $\\bar{x} = 32$ điểm và $s^2 = 16$.<br>Quy đổi sang thang điểm 10 theo công thức: $Y = \\frac{X}{5}$.<br>Tính số trung bình $\\bar{y}$, phương sai $s_Y^2$ và độ lệch chuẩn $s_Y$ mới.</p></div>\n        <div id=\"vd3_a\" style=\"margin-top:10px; border-top:1px dashed #475569; padding-top:10px;\">\n          <b>Lời giải chi tiết:</b><br>\n          • Biến đổi: $Y = \\frac{1}{5}X \\implies k = 0{,}2$.<br>\n          • Điểm trung bình mới: $\\bar{y} = \\frac{32}{5} = 6{,}4$ điểm.<br>\n          • Phương sai mới: $s_Y^2 = \\left(\\frac{1}{5}\\right)^2 \\times 16 = \\frac{16}{25} = 0{,}64$.<br>\n          • Độ lệch chuẩn mới: $s_Y = \\sqrt{0{,}64} = 0{,}8$ điểm.\n        </div>\n      </div>\n      <div id=\"part4\"><h3>4. Bẫy Casio sigma x và s x</h3><p>Nhớ: SGK KNTT dùng sigma x và sigma² x!</p></div>\n      <div id=\"part5\"><h3>5. Quy trình bấm máy Casio 580</h3><p>Menu 6 -> 1 biến -> nhập x và Freq -> Option 2.</p></div>\n    ",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 10: TÍNH CHẤT BIẾN ĐỔI TUYẾN TÍNH",
+      "subtitle": "PHẦN 1: CỘNG & NHÂN HẰNG SỐ",
+      "startTime": 0.0,
+      "endTime": 52.87,
+      "duration": 52.87,
+      "mascotMode": "talking",
+      "mascotTip": "Cộng hằng số c: s² không đổi; Nhân hằng số k: s² nhân k²!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.65; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:12px;\">1. Tính chất biến đổi tuyến tính</h3>\n                  <div style=\"display:flex; flex-direction:column; gap:12px;\">\n                    <div style=\"background:rgba(56,189,248,0.12); border-left:4px solid #38bdf8; padding:12px 16px; border-radius:8px;\">\n                      <b style=\"color:#38bdf8; font-size:18px;\">1. Phép tịnh tiến (Cộng hằng số $c$): $x_i' = x_i + c$</b><br>\n                      Toàn bộ mẫu dịch chuyển cùng cự ly $\\implies$ Độ phân tán không đổi:\n                      <div style=\"font-size:20px; color:#fde047; font-weight:700; margin-top:4px;\">$$s_{mới}^2 = s^2, \\quad s_{mới} = s$$</div>\n                    </div>\n                    <div style=\"background:rgba(16,185,129,0.12); border-left:4px solid #10b981; padding:12px 16px; border-radius:8px;\">\n                      <b style=\"color:#34d399; font-size:18px;\">2. Phép co giãn (Nhân hằng số $k > 0$): $x_i' = k x_i$</b><br>\n                      Phương sai tăng theo bình phương, độ lệch chuẩn tăng theo bậc nhất:\n                      <div style=\"font-size:20px; color:#fde047; font-weight:700; margin-top:4px;\">$$s_{mới}^2 = k^2 s^2, \\quad s_{mới} = k s$$</div>\n                    </div>\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "QUY TẮC ĐƠN VỊ ĐO LƯỜNG",
+      "subtitle": "PHẦN 2: ĐƠN VỊ ĐO",
+      "startTime": 52.87,
+      "endTime": 88.97,
+      "duration": 36.1,
+      "mascotMode": "thinking",
+      "mascotTip": "Phương sai có đơn vị bình phương U²!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.65; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:12px;\">2. Quy tắc đơn vị đo lường</h3>\n                  <div style=\"background:rgba(15,23,42,0.8); border:1px solid #38bdf8; border-radius:10px; padding:16px; margin-bottom:12px;\">\n                    Giả sử biến lượng ban đầu có đơn vị đo là $U$ (như $\\text{cm}, \\text{kg}, \\text{phút}$):\n                    <table style=\"width:100%; border-collapse:collapse; margin-top:10px; font-size:17px; text-align:center;\">\n                      <tr style=\"background:#1e293b; color:#38bdf8;\">\n                        <th style=\"border:1px solid #475569; padding:8px;\">Đại lượng</th>\n                        <th style=\"border:1px solid #475569; padding:8px;\">Số trung bình $\\bar{x}$</th>\n                        <th style=\"border:1px solid #475569; padding:8px;\">Độ lệch chuẩn $s$</th>\n                        <th style=\"border:1px solid #475569; padding:8px; color:#fbbf24;\">Phương sai $s^2$</th>\n                      </tr>\n                      <tr style=\"color:#f8fafc;\">\n                        <td style=\"border:1px solid #475569; padding:8px; font-weight:bold;\">Đơn vị đo</td>\n                        <td style=\"border:1px solid #475569; padding:8px;\">$U$</td>\n                        <td style=\"border:1px solid #475569; padding:8px;\">$U$</td>\n                        <td style=\"border:1px solid #475569; padding:8px; color:#fbbf24; font-weight:bold;\">$U^2$</td>\n                      </tr>\n                    </table>\n                  </div>\n                  <div style=\"background:rgba(251,191,36,0.12); border-left:4px solid #fbbf24; padding:10px 14px; border-radius:6px; color:#fde047;\">\n                    <b>Lưu ý:</b> Khi đổi đơn vị từ $\\text{cm}$ sang $\\text{m}$, phương sai giảm $100^2 = 10000$ lần!\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "LUYỆN TẬP VÍ DỤ",
+      "subtitle": "PHẦN 3: CÁC VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "startTime": 88.97,
+      "endTime": 96.72,
+      "duration": 7.75,
+      "mascotMode": "talking",
+      "mascotTip": "Luyện 3 bài toán biến đổi tuyến tính hay!",
+      "bodyHtml": "\n                <div style=\"text-align:center; padding:40px 20px;\">\n                  <h2 style=\"color:#38bdf8; font-size:28px; margin-bottom:15px;\">Phần 3: Các ví dụ rèn luyện điển hình</h2>\n                  <p style=\"font-size:18px; color:#94a3b8; max-width:550px; margin:0 auto 20px;\">\n                    Vận dụng tính chất tịnh tiến, đổi đơn vị và quy đổi thang điểm chuẩn cùng <b>đồng hồ 15s / 30s</b>.\n                  </p>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: CỘNG VÀ NHÂN HẰNG SỐ",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 96.72,
+      "endTime": 118.13,
+      "duration": 21.41,
+      "mascotMode": "thinking",
+      "mascotTip": "a) s² không đổi = 9; b) s² mới = 3² * 9 = 81!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Tính chất khi cộng và nhân hằng số</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Một mẫu số liệu có phương sai $s^2 = 9$.<br>a) Nếu cộng thêm 5 vào mỗi số liệu thì phương sai mới bằng bao nhiêu?<br>b) Nếu nhân mỗi số liệu với 3 thì phương sai mới và độ lệch chuẩn mới bằng bao nhiêu?</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: a) s² = 9; b) s² = 81, s = 9",
+      "startTime": 118.13,
+      "endTime": 138.96,
+      "duration": 20.83,
+      "mascotMode": "talking",
+      "mascotTip": "Cộng hằng số không làm đổi độ phân tán!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1:</h3>\n                  <div style=\"font-size:18px; line-height:1.75; color:#f8fafc;\">\n                    • <b>Câu a:</b> Khi cộng thêm cùng một hằng số 5, cự ly giữa các điểm không đổi $\\implies s_{mới}^2 = 9$.<br>\n                    • <b>Câu b:</b> Khi nhân với $k = 3$:<br>\n                    - Phương sai mới: $s_{mới}^2 = 3^2 \\times 9 = 9 \\times 9 = 81$.<br>\n                    - Độ lệch chuẩn mới: $s_{mới} = 3 \\times \\sqrt{9} = 3 \\times 3 = 9$.\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: ĐƠN VỊ ĐO KHI ĐỔI SANG MÉT",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 138.96,
+      "endTime": 167.35,
+      "duration": 28.39,
+      "mascotMode": "thinking",
+      "mascotTip": "1 cm = 0,01 m => phương sai chia 100² = 10000!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Đơn vị đo khi đổi từ cm sang mét</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Khảo sát chiều cao học sinh (cm): $\\bar{x} = 165$, $s^2 = 25$, $s = 5$.<br>Hãy xác định đơn vị đo cho từng đại lượng. Nếu đổi đơn vị sang mét, phương sai mới bằng bao nhiêu?</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: s²_mới = 0,0025 m²",
+      "startTime": 167.35,
+      "endTime": 196.32,
+      "duration": 28.97,
+      "mascotMode": "talking",
+      "mascotTip": "25 / 10000 = 0,0025 m²!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2:</h3>\n                  <div style=\"font-size:18px; line-height:1.75; color:#f8fafc;\">\n                    • Đơn vị đo tương ứng: $\\bar{x} = 165\\text{ cm}$, $s = 5\\text{ cm}$, $s^2 = 25\\text{ cm}^2$.<br>\n                    • Đổi sang mét: $1\\text{ cm} = \\frac{1}{100}\\text{ m} \\implies k = 0{,}01$.<br>\n                    $$s_{mới}^2 = \\frac{25}{100^2} = \\frac{25}{10000} = 0{,}0025\\text{ (m}^2\\text{)}$$\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: QUY ĐỔI THANG ĐIỂM THI",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 196.32,
+      "endTime": 220.94,
+      "duration": 24.62,
+      "mascotMode": "thinking",
+      "mascotTip": "Y = X/5 => y_ngang = 32/5 = 6,4; s_Y = 4/5 = 0,8!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Quy đổi thang điểm thi tuyển sinh</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n      <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Điểm thi thang 50 có $\\bar{x} = 32$ điểm và $s^2 = 16$.<br>Quy đổi sang thang điểm 10 theo công thức: $Y = \\frac{X}{5}$.<br>Tính số trung bình $\\bar{y}$, phương sai $s_Y^2$ và độ lệch chuẩn $s_Y$ mới.</p>\n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "KẾT QUẢ: y = 6,4; s_Y² = 0,64; s_Y = 0,8",
+      "startTime": 220.94,
+      "endTime": 254.49,
+      "duration": 33.55,
+      "mascotMode": "talking",
+      "mascotTip": "k = 1/5 => s_Y = 0,8 điểm!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; padding:20px; border-radius:12px; background:rgba(16,185,129,0.08);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3:</h3>\n                  <div style=\"font-size:18px; line-height:1.75; color:#f8fafc;\">\n                    • Ta có: $Y = \\frac{1}{5} X \\implies k = \\frac{1}{5} = 0{,}2$.<br>\n                    • <b>Điểm trung bình mới:</b> $\\bar{y} = \\frac{\\bar{x}}{5} = \\frac{32}{5} = 6{,}4$ điểm.<br>\n                    • <b>Phương sai mới:</b> $s_Y^2 = \\left(\\frac{1}{5}\\right)^2 \\times 16 = \\frac{16}{25} = 0{,}64$.<br>\n                    • <b>Độ lệch chuẩn mới:</b> $s_Y = \\sqrt{0{,}64} = 0{,}8$ điểm.\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI CẢNH BÁO BẪY CASIO",
+      "subtitle": "PHẦN 4: BẪY SIGMA X VÀ S X",
+      "startTime": 254.49,
+      "endTime": 292.96,
+      "duration": 38.47,
+      "mascotMode": "warning",
+      "mascotTip": "Lấy sigma x (chia n), không lấy s x (chia n-1)!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:14px;\">4. Cảnh báo bẫy Casio: Phân biệt $\\sigma x$ và $s x$</h3>\n                  <div style=\"background:rgba(244,63,94,0.12); border-left:4px solid #f43f5e; padding:14px 18px; border-radius:8px;\">\n                    <b style=\"color:#f43f5e; font-size:19px;\">Màn hình Casio fx-580VNX hiển thị cả hai:</b><br>\n                    • $\\mathbf{\\sigma x}$ và $\\mathbf{\\sigma^2 x}$: Công thức chia cho $n$ $\\implies$ <b>ĐÚNG CHUẨN SGK TOÁN 12 KẾT NỐI TRI THỨC</b>.<br>\n                    • $\\mathbf{s x}$ và $\\mathbf{s^2 x}$: Công thức hiệu chỉnh chia cho $n-1$ (dùng cho thống kê đại học).<br>\n                    <div style=\"margin-top:8px; color:#fde047; font-weight:700;\">\n                      👉 Học sinh lớp 12 bắt buộc lấy $\\sigma^2 x$ làm Phương sai và $\\sigma x$ làm Độ lệch chuẩn!\n                    </div>\n                  </div>\n                </div>\n            "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "QUY TRÌNH BẤM MÁY CASIO 580",
+      "subtitle": "PHẦN 5: BẤM TRONG 10 GIÂY",
+      "startTime": 292.96,
+      "endTime": 334.65,
+      "duration": 41.69,
+      "mascotMode": "talking",
+      "mascotTip": "Shift Menu -> Thống kê -> Bật tần số!",
+      "bodyHtml": "\n                <div style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:14px;\">5. Quy trình 4 bước bấm Casio fx-580VNX</h3>\n                  <div style=\"background:rgba(15,23,42,0.8); border:1px solid #38bdf8; border-radius:10px; padding:16px;\">\n                    • <b>Bước 1:</b> Bật tần số: <kbd style=\"background:#334155; padding:2px 6px; border-radius:4px;\">SHIFT</kbd> <kbd style=\"background:#334155; padding:2px 6px; border-radius:4px;\">MENU</kbd> $\\to$ bấm mũi tên <b>[▼]</b> $\\to$ chọn <b>3: Thống kê</b> $\\to$ chọn <b>1: Bật</b>.<br>\n                    • <b>Bước 2:</b> Vào mode thống kê: <kbd style=\"background:#334155; padding:2px 6px; border-radius:4px;\">MENU</kbd> <kbd style=\"background:#334155; padding:2px 6px; border-radius:4px;\">6</kbd> $\\to$ chọn <b>1: 1-Variable</b>.<br>\n                    • <b>Bước 3:</b> Cột $x$ nhập giá trị đại diện $c_i$; cột $Freq$ nhập tần số $m_i$.<br>\n                    • <b>Bước 4:</b> Bấm <kbd style=\"background:#dc2626; padding:2px 6px; border-radius:4px; color:#fff;\">AC</kbd> $\\to$ <kbd style=\"background:#334155; padding:2px 6px; border-radius:4px;\">OPTN</kbd> <kbd style=\"background:#334155; padding:2px 6px; border-radius:4px;\">2</kbd> $\\to$ Màn hình hiện đầy đủ $\\bar{x}$, $\\sigma^2 x$, $\\sigma x$!\n                  </div>\n                  <div style=\"margin-top:12px; background:rgba(52,211,153,0.15); border:1px solid #34d399; border-radius:8px; padding:12px; color:#a7f3d0; text-align:center; font-weight:700;\">\n                    🎉 Chúc mừng các em đã hoàn thành toàn diện Bài 10 & Toàn bộ Chương 3 Thống kê Toán 12 KNTT!\n                  </div>\n                </div>\n            "
+    }
+  ]
+};

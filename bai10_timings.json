@@ -1,0 +1,215 @@
+{
+  "bai10_muc1": {
+    "totalDuration": 365.97,
+    "timeline": [
+      {
+        "id": "part1",
+        "startTime": 0.0,
+        "endTime": 58.13,
+        "duration": 58.13
+      },
+      {
+        "id": "part2",
+        "startTime": 58.13,
+        "endTime": 112.83,
+        "duration": 54.7
+      },
+      {
+        "id": "part3",
+        "startTime": 112.83,
+        "endTime": 121.54,
+        "duration": 8.71
+      },
+      {
+        "id": "vd1_q",
+        "startTime": 121.54,
+        "endTime": 140.72,
+        "duration": 19.18
+      },
+      {
+        "id": "vd1_a",
+        "startTime": 140.72,
+        "endTime": 165.73,
+        "duration": 25.01
+      },
+      {
+        "id": "vd2_q",
+        "startTime": 165.73,
+        "endTime": 190.83,
+        "duration": 25.1
+      },
+      {
+        "id": "vd2_a",
+        "startTime": 190.83,
+        "endTime": 214.09,
+        "duration": 23.26
+      },
+      {
+        "id": "vd3_q",
+        "startTime": 214.09,
+        "endTime": 251.94,
+        "duration": 37.85
+      },
+      {
+        "id": "vd3_a",
+        "startTime": 251.94,
+        "endTime": 310.62,
+        "duration": 58.68
+      },
+      {
+        "id": "part4",
+        "startTime": 310.62,
+        "endTime": 339.83,
+        "duration": 29.21
+      },
+      {
+        "id": "part5",
+        "startTime": 339.83,
+        "endTime": 365.97,
+        "duration": 26.14
+      }
+    ]
+  },
+  "bai10_muc2": {
+    "totalDuration": 292.41,
+    "timeline": [
+      {
+        "id": "part1",
+        "startTime": 0.0,
+        "endTime": 35.3,
+        "duration": 35.3
+      },
+      {
+        "id": "part2",
+        "startTime": 35.3,
+        "endTime": 70.53,
+        "duration": 35.23
+      },
+      {
+        "id": "part3",
+        "startTime": 70.53,
+        "endTime": 78.98,
+        "duration": 8.45
+      },
+      {
+        "id": "vd1_q",
+        "startTime": 78.98,
+        "endTime": 105.57,
+        "duration": 26.59
+      },
+      {
+        "id": "vd1_a",
+        "startTime": 105.57,
+        "endTime": 126.71,
+        "duration": 21.14
+      },
+      {
+        "id": "vd2_q",
+        "startTime": 126.71,
+        "endTime": 162.95,
+        "duration": 36.24
+      },
+      {
+        "id": "vd2_a",
+        "startTime": 162.95,
+        "endTime": 198.76,
+        "duration": 35.81
+      },
+      {
+        "id": "vd3_q",
+        "startTime": 198.76,
+        "endTime": 229.17,
+        "duration": 30.41
+      },
+      {
+        "id": "vd3_a",
+        "startTime": 229.17,
+        "endTime": 248.63,
+        "duration": 19.46
+      },
+      {
+        "id": "part4",
+        "startTime": 248.63,
+        "endTime": 281.08,
+        "duration": 32.45
+      },
+      {
+        "id": "part5",
+        "startTime": 281.08,
+        "endTime": 292.41,
+        "duration": 11.33
+      }
+    ]
+  },
+  "bai10_muc3": {
+    "totalDuration": 334.65,
+    "timeline": [
+      {
+        "id": "part1",
+        "startTime": 0.0,
+        "endTime": 52.87,
+        "duration": 52.87
+      },
+      {
+        "id": "part2",
+        "startTime": 52.87,
+        "endTime": 88.97,
+        "duration": 36.1
+      },
+      {
+        "id": "part3",
+        "startTime": 88.97,
+        "endTime": 96.72,
+        "duration": 7.75
+      },
+      {
+        "id": "vd1_q",
+        "startTime": 96.72,
+        "endTime": 118.13,
+        "duration": 21.41
+      },
+      {
+        "id": "vd1_a",
+        "startTime": 118.13,
+        "endTime": 138.96,
+        "duration": 20.83
+      },
+      {
+        "id": "vd2_q",
+        "startTime": 138.96,
+        "endTime": 167.35,
+        "duration": 28.39
+      },
+      {
+        "id": "vd2_a",
+        "startTime": 167.35,
+        "endTime": 196.32,
+        "duration": 28.97
+      },
+      {
+        "id": "vd3_q",
+        "startTime": 196.32,
+        "endTime": 220.94,
+        "duration": 24.62
+      },
+      {
+        "id": "vd3_a",
+        "startTime": 220.94,
+        "endTime": 254.49,
+        "duration": 33.55
+      },
+      {
+        "id": "part4",
+        "startTime": 254.49,
+        "endTime": 292.96,
+        "duration": 38.47
+      },
+      {
+        "id": "part5",
+        "startTime": 292.96,
+        "endTime": 334.65,
+        "duration": 41.69
+      }
+    ]
+  }
+}
