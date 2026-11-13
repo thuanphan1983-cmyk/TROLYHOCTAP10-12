@@ -757,7 +757,7 @@
       } else if (al.lessonTitle) {
         const m = al.lessonTitle.match(/Bài\s*(\d+)/i);
         if (m) lessonNum = parseInt(m[1]) || 1;
-        else if (al.lessonTitle.toLowerCase().includes('ôn tập') || al.isChapterReview) lessonNum = 'ontap';
+        else if (al.lessonTitle.toLowerCase().includes('ôn tập') || al.lessonTitle.toLowerCase().includes('cuối chương') || al.isChapterReview) lessonNum = 'ontap';
       }
     }
 
@@ -767,7 +767,7 @@
       const txt = titleEl.textContent;
       const m = txt.match(/Bài\s*(\d+)/i);
       if (m) lessonNum = parseInt(m[1]) || lessonNum;
-      else if (txt.toLowerCase().includes('ôn tập')) lessonNum = 'ontap';
+      else if (txt.toLowerCase().includes('ôn tập') || txt.toLowerCase().includes('cuối chương')) lessonNum = 'ontap';
     }
 
     // 3. Check active section index
@@ -784,21 +784,31 @@
       }
     }
 
-    // Map to chapter1_data.js & chapter2_data.js keys
-    if (lessonNum === 'ontap' || lessonNum === 'ontap_c2') {
+    // Map to chapter1_data.js, chapter2_data.js & chapter3_data.js keys
+    if (lessonNum === 'ontap' || lessonNum === 'ontap_c2' || lessonNum === 'ontap_c3') {
+      let isC3 = (lessonNum === 'ontap_c3');
       let isC2 = (lessonNum === 'ontap_c2');
       if (al) {
-        if (al.chapterNumber === 2 || al.chapterNumber === '2' || (typeof al.key === 'string' && al.key.includes('_2'))) isC2 = true;
-        if (al.chapterShortTitle && (al.chapterShortTitle.includes('Chương II') || al.chapterShortTitle.includes('Chương 2') || al.chapterShortTitle.toLowerCase().includes('vectơ'))) isC2 = true;
-        if (al.lessonTitle && (al.lessonTitle.includes('Chương II') || al.lessonTitle.includes('chương II') || al.lessonTitle.includes('Chương 2') || al.lessonTitle.includes('chương 2') || al.lessonTitle.toLowerCase().includes('vectơ'))) isC2 = true;
+        if (al.chapterNumber === 3 || al.chapterNumber === '3' || (typeof al.key === 'string' && al.key.includes('_3'))) isC3 = true;
+        if (al.chapterShortTitle && (al.chapterShortTitle.includes('Chương III') || al.chapterShortTitle.includes('Chương 3') || al.chapterShortTitle.toLowerCase().includes('phân tán') || al.chapterShortTitle.toLowerCase().includes('thống kê'))) isC3 = true;
+        if (al.lessonTitle && (al.lessonTitle.includes('Chương III') || al.lessonTitle.includes('chương III') || al.lessonTitle.includes('Chương 3') || al.lessonTitle.includes('chương 3') || al.lessonTitle.toLowerCase().includes('phân tán'))) isC3 = true;
+
+        if (!isC3) {
+          if (al.chapterNumber === 2 || al.chapterNumber === '2' || (typeof al.key === 'string' && al.key.includes('_2'))) isC2 = true;
+          if (al.chapterShortTitle && (al.chapterShortTitle.includes('Chương II') || al.chapterShortTitle.includes('Chương 2') || al.chapterShortTitle.toLowerCase().includes('vectơ'))) isC2 = true;
+          if (al.lessonTitle && (al.lessonTitle.includes('Chương II') || al.lessonTitle.includes('chương II') || al.lessonTitle.includes('Chương 2') || al.lessonTitle.includes('chương 2') || al.lessonTitle.toLowerCase().includes('vectơ'))) isC2 = true;
+        }
       }
       const titleEl = document.getElementById('sgk-focus-title');
       if (titleEl && titleEl.textContent) {
         const t = titleEl.textContent;
-        if (t.includes('Chương II') || t.includes('chương II') || t.includes('Chương 2') || t.includes('chương 2') || t.toLowerCase().includes('vectơ')) isC2 = true;
+        if (t.includes('Chương III') || t.includes('chương III') || t.includes('Chương 3') || t.includes('chương 3') || t.toLowerCase().includes('phân tán')) isC3 = true;
+        else if (t.includes('Chương II') || t.includes('chương II') || t.includes('Chương 2') || t.includes('chương 2') || t.toLowerCase().includes('vectơ')) isC2 = true;
       }
       const s = Math.min(3, Math.max(1, sectionNum));
-      return isC2 ? `ontap_c2_muc${s}` : `ontap_muc${s}`;
+      if (isC3) return `ontap_c3_muc${s}`;
+      if (isC2) return `ontap_c2_muc${s}`;
+      return `ontap_muc${s}`;
     }
     if (lessonNum === 1) {
       return sectionNum === 2 ? 'muc2' : 'muc1';
