@@ -515,11 +515,17 @@
     }
   }
 
-  // Chapter 1 Comprehensive Navigation Config (6 Lessons & 18 Sections)
-  const CHAPTER1_MENU_CONFIG = [
+  // =========================================================================
+  // MỤC LỤC TOÀN BỘ SÁCH GIÁO KHOA TOÁN 12 KẾT NỐI TRI THỨC VỚI CUỘC SỐNG
+  // Trọn bộ 6 Chương • 19 Bài học & 6 Bài tập cuối chương (75 Mục chuẩn SGK)
+  // =========================================================================
+  const SGK12_MENU_CONFIG = [
+    // ----------------- CHƯƠNG I -----------------
     {
+      chapterNumber: 1,
+      chapterTitle: "Chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số",
       lessonId: "bai1",
-      lessonTitle: "Bài 1: Đơn điệu & Cực trị",
+      lessonTitle: "Bài 1: Tính đơn điệu và cực trị của hàm số",
       lessonBadge: "Bài 1",
       sections: [
         { key: "muc1", title: "Mục 1: Tính đơn điệu của hàm số", time: "05:41", icon: "📈" },
@@ -527,8 +533,10 @@
       ]
     },
     {
+      chapterNumber: 1,
+      chapterTitle: "Chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số",
       lessonId: "bai2",
-      lessonTitle: "Bài 2: GTLN & GTNN",
+      lessonTitle: "Bài 2: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số",
       lessonBadge: "Bài 2",
       sections: [
         { key: "bai2_muc1", title: "Mục 1: Định nghĩa GTLN & GTNN", time: "05:00", icon: "🎯" },
@@ -537,8 +545,10 @@
       ]
     },
     {
+      chapterNumber: 1,
+      chapterTitle: "Chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số",
       lessonId: "bai3",
-      lessonTitle: "Bài 3: Đường tiệm cận",
+      lessonTitle: "Bài 3: Đường tiệm cận của đồ thị hàm số",
       lessonBadge: "Bài 3",
       sections: [
         { key: "bai3_muc1", title: "Mục 1: Tiệm cận đứng (TCĐ)", time: "05:00", icon: "│" },
@@ -547,26 +557,46 @@
       ]
     },
     {
+      chapterNumber: 1,
+      chapterTitle: "Chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số",
       lessonId: "bai4",
-      lessonTitle: "Bài 4: Khảo sát & Vẽ đồ thị",
+      lessonTitle: "Bài 4: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
       lessonBadge: "Bài 4",
       sections: [
-        { key: "bai4_muc1", title: "Mục 1: Hàm số bậc ba", time: "05:00", icon: "〽️" },
-        { key: "bai4_muc2", title: "Mục 2: Hàm phân thức bậc 1/1", time: "05:00", icon: "➗" },
-        { key: "bai4_muc3", title: "Mục 3: Hàm phân thức bậc 2/1", time: "05:00", icon: "📐" }
+        { key: "bai4_muc1", title: "Mục 1: Khảo sát hàm đa thức bậc ba", time: "05:00", icon: "〽️" },
+        { key: "bai4_muc2", title: "Mục 2: Khảo sát hàm phân thức bậc 1/1", time: "05:00", icon: "➗" },
+        { key: "bai4_muc3", title: "Mục 3: Khảo sát hàm phân thức bậc 2/1", time: "05:00", icon: "📐" }
       ]
     },
     {
+      chapterNumber: 1,
+      chapterTitle: "Chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số",
       lessonId: "bai5",
-      lessonTitle: "Bài 5: Ứng dụng thực tế đạo hàm",
+      lessonTitle: "Bài 5: Ứng dụng đạo hàm để giải quyết một số bài toán thực tiễn",
       lessonBadge: "Bài 5",
       sections: [
-        { key: "bai5_muc1", title: "Mục 1: Tối ưu hóa hình học & Thể tích", time: "05:00", icon: "📦" },
-        { key: "bai5_muc2", title: "Mục 2: Tối ưu hóa kinh tế & Lợi nhuận", time: "05:00", icon: "💰" },
-        { key: "bai5_muc3", title: "Mục 3: Ứng dụng trong Vật lý & Chuyển động", time: "05:00", icon: "🚀" }
+        { key: "bai5_muc1", title: "Mục 1: Tối ưu hoá hình học & Thể tích", time: "05:00", icon: "📦" },
+        { key: "bai5_muc2", title: "Mục 2: Tối ưu hoá kinh tế & Lợi nhuận", time: "05:00", icon: "💰" },
+        { key: "bai5_muc3", title: "Mục 3: Ứng dụng trong Vật lí & Chuyển động", time: "05:00", icon: "🚀" }
       ]
     },
-        {
+    {
+      chapterNumber: 1,
+      chapterTitle: "Chương I: Ứng dụng đạo hàm để khảo sát và vẽ đồ thị của hàm số",
+      lessonId: "ontap_c1",
+      lessonTitle: "Bài tập cuối chương I: Ứng dụng đạo hàm",
+      lessonBadge: "Ôn tập C1",
+      sections: [
+        { key: "ontap_muc1", title: "Mục 1: Hệ thống hoá kiến thức trọng tâm", time: "05:00", icon: "🧠" },
+        { key: "ontap_muc2", title: "Mục 2: Rèn luyện 4 bài toán then chốt", time: "05:00", icon: "📝" },
+        { key: "ontap_muc3", title: "Mục 3: Bẫy đề thi, Mẹo Casio & Lời khuyên", time: "05:00", icon: "💡" }
+      ]
+    },
+
+    // ----------------- CHƯƠNG II -----------------
+    {
+      chapterNumber: 2,
+      chapterTitle: "Chương II: Vectơ và hệ trục toạ độ trong không gian",
       lessonId: "bai6",
       lessonTitle: "Bài 6: Vectơ trong không gian",
       lessonBadge: "Bài 6",
@@ -576,17 +606,21 @@
         { key: "bai6_muc3", title: "Mục 3: Tích vô hướng của hai vectơ", time: "05:00", icon: "📐" }
       ]
     },
-        {
+    {
+      chapterNumber: 2,
+      chapterTitle: "Chương II: Vectơ và hệ trục toạ độ trong không gian",
       lessonId: "bai7",
       lessonTitle: "Bài 7: Hệ trục toạ độ trong không gian",
       lessonBadge: "Bài 7",
       sections: [
-        { key: "bai7_muc1", title: "Mục 1: Hệ trục toạ độ Oxyz", time: "05:00", icon: "🌐" },
-        { key: "bai7_muc2", title: "Mục 2: Toạ độ của điểm & Toạ độ của véc tơ", time: "05:00", icon: "📍" },
-        { key: "bai7_muc3", title: "Mục 3: Biểu thức toạ độ của các phép toán véc tơ", time: "05:00", icon: "🧮" }
+        { key: "bai7_muc1", title: "Mục 1: Hệ trục toạ độ Oxyz trong không gian", time: "05:00", icon: "🌐" },
+        { key: "bai7_muc2", title: "Mục 2: Toạ độ của điểm & Toạ độ của vectơ", time: "05:00", icon: "📍" },
+        { key: "bai7_muc3", title: "Mục 3: Biểu thức toạ độ của các phép toán vectơ", time: "05:00", icon: "🧮" }
       ]
     },
     {
+      chapterNumber: 2,
+      chapterTitle: "Chương II: Vectơ và hệ trục toạ độ trong không gian",
       lessonId: "bai8",
       lessonTitle: "Bài 8: Biểu thức toạ độ của các phép toán vectơ",
       lessonBadge: "Bài 8",
@@ -596,19 +630,11 @@
         { key: "bai8_muc3", title: "Mục 3: Góc giữa hai vectơ & Bài toán thực tế", time: "05:18", icon: "🎯" }
       ]
     },
-        {
-      lessonId: "bai9",
-      lessonTitle: "Bài 9: Khoảng biến thiên & Khoảng tứ phân vị",
-      lessonBadge: "Bài 9",
-      sections: [
-        { key: "bai9_muc1", title: "Mục 1: Khoảng biến thiên của mẫu số liệu ghép nhóm", time: "05:00", icon: "📊" },
-        { key: "bai9_muc2", title: "Mục 2: Tứ phân vị và khoảng tứ phân vị", time: "05:00", icon: "📐" },
-        { key: "bai9_muc3", title: "Mục 3: Giá trị ngoại lai & So sánh độ phân tán", time: "05:00", icon: "🎯" }
-      ]
-    },
-        {
+    {
+      chapterNumber: 2,
+      chapterTitle: "Chương II: Vectơ và hệ trục toạ độ trong không gian",
       lessonId: "ontap_c2",
-      lessonTitle: "Ôn tập Chương 2: Vectơ & Hệ toạ độ Oxyz",
+      lessonTitle: "Bài tập cuối chương II: Vectơ & Hệ toạ độ Oxyz",
       lessonBadge: "Ôn tập C2",
       sections: [
         { key: "ontap_c2_muc1", title: "Mục 1: Hệ thống hoá kiến thức trọng tâm", time: "05:00", icon: "🧠" },
@@ -616,21 +642,209 @@
         { key: "ontap_c2_muc3", title: "Mục 3: Bẫy đề thi & Kỹ thuật Casio Vectơ", time: "05:00", icon: "💡" }
       ]
     },
+
+    // ----------------- CHƯƠNG III -----------------
     {
-      lessonId: "ontap",
-      lessonTitle: "Ôn tập Chương 1",
-      lessonBadge: "Ôn tập",
+      chapterNumber: 3,
+      chapterTitle: "Chương III: Các số đặc trưng đo mức độ phân tán của mẫu số liệu ghép nhóm",
+      lessonId: "bai9",
+      lessonTitle: "Bài 9: Khoảng biến thiên và khoảng tứ phân vị",
+      lessonBadge: "Bài 9",
       sections: [
-        { key: "ontap_muc1", title: "Mục 1: Hệ thống hóa kiến thức trọng tâm", time: "05:00", icon: "🧠" },
-        { key: "ontap_muc2", title: "Mục 2: Rèn luyện 4 bài toán then chốt", time: "05:00", icon: "📝" },
-        { key: "ontap_muc3", title: "Mục 3: Bẫy đề thi, Mẹo Casio & Lời khuyên", time: "05:00", icon: "💡" }
+        { key: "bai9_muc1", title: "Mục 1: Khoảng biến thiên của mẫu số liệu ghép nhóm", time: "05:00", icon: "📊" },
+        { key: "bai9_muc2", title: "Mục 2: Tứ phân vị và khoảng tứ phân vị", time: "05:00", icon: "📐" },
+        { key: "bai9_muc3", title: "Mục 3: Giá trị ngoại lai & So sánh độ phân tán", time: "05:00", icon: "🎯" }
+      ]
+    },
+    {
+      chapterNumber: 3,
+      chapterTitle: "Chương III: Các số đặc trưng đo mức độ phân tán của mẫu số liệu ghép nhóm",
+      lessonId: "bai10",
+      lessonTitle: "Bài 10: Phương sai và độ lệch chuẩn",
+      lessonBadge: "Bài 10",
+      sections: [
+        { key: "bai10_muc1", title: "Mục 1: Phương sai & Độ lệch chuẩn của mẫu số liệu", time: "05:00", icon: "📉" },
+        { key: "bai10_muc2", title: "Mục 2: Ý nghĩa & So sánh mức độ phân tán", time: "05:00", icon: "⚖️" },
+        { key: "bai10_muc3", title: "Mục 3: Tính chất biến đổi tuyến tính & Casio 580", time: "05:34", icon: "🧮" }
+      ]
+    },
+    {
+      chapterNumber: 3,
+      chapterTitle: "Chương III: Các số đặc trưng đo mức độ phân tán của mẫu số liệu ghép nhóm",
+      lessonId: "ontap_c3",
+      lessonTitle: "Bài tập cuối chương III: Mức độ phân tán mẫu số liệu",
+      lessonBadge: "Ôn tập C3",
+      sections: [
+        { key: "ontap_c3_muc1", title: "Mục 1: Khoảng biến thiên, Tứ phân vị & Khoảng tứ phân vị", time: "05:27", icon: "📊" },
+        { key: "ontap_c3_muc2", title: "Mục 2: Phương sai, Độ lệch chuẩn & So sánh mức độ phân tán", time: "05:04", icon: "⚖️" },
+        { key: "ontap_c3_muc3", title: "Mục 3: Giá trị ngoại lai, Biến đổi tuyến tính & Casio 580", time: "05:21", icon: "💡" }
+      ]
+    },
+
+    // ----------------- CHƯƠNG IV -----------------
+    {
+      chapterNumber: 4,
+      chapterTitle: "Chương IV: Nguyên hàm và tích phân",
+      lessonId: "bai11",
+      lessonTitle: "Bài 11: Nguyên hàm",
+      lessonBadge: "Bài 11",
+      sections: [
+        { key: "bai11_muc1", title: "Mục 1: Khái niệm nguyên hàm", time: "05:00", icon: "∫" },
+        { key: "bai11_muc2", title: "Mục 2: Tính chất cơ bản của nguyên hàm", time: "05:00", icon: "⚡" },
+        { key: "bai11_muc3", title: "Mục 3: Bảng nguyên hàm các hàm số sơ cấp", time: "05:00", icon: "📋" }
+      ]
+    },
+    {
+      chapterNumber: 4,
+      chapterTitle: "Chương IV: Nguyên hàm và tích phân",
+      lessonId: "bai12",
+      lessonTitle: "Bài 12: Tích phân",
+      lessonBadge: "Bài 12",
+      sections: [
+        { key: "bai12_muc1", title: "Mục 1: Diện tích hình thang cong & Định nghĩa tích phân", time: "05:00", icon: "📏" },
+        { key: "bai12_muc2", title: "Mục 2: Các tính chất của tích phân", time: "05:00", icon: "✨" },
+        { key: "bai12_muc3", title: "Mục 3: Phương pháp tính tích phân (Đổi biến & Từng phần)", time: "05:00", icon: "🔄" }
+      ]
+    },
+    {
+      chapterNumber: 4,
+      chapterTitle: "Chương IV: Nguyên hàm và tích phân",
+      lessonId: "bai13",
+      lessonTitle: "Bài 13: Ứng dụng hình học của tích phân",
+      lessonBadge: "Bài 13",
+      sections: [
+        { key: "bai13_muc1", title: "Mục 1: Tính diện tích hình phẳng", time: "05:00", icon: "📐" },
+        { key: "bai13_muc2", title: "Mục 2: Tính thể tích vật thể & Khối tròn xoay", time: "05:00", icon: "🏺" },
+        { key: "bai13_muc3", title: "Mục 3: Ứng dụng tích phân trong bài toán thực tế", time: "05:00", icon: "🌉" }
+      ]
+    },
+    {
+      chapterNumber: 4,
+      chapterTitle: "Chương IV: Nguyên hàm và tích phân",
+      lessonId: "ontap_c4",
+      lessonTitle: "Bài tập cuối chương IV: Nguyên hàm và tích phân",
+      lessonBadge: "Ôn tập C4",
+      sections: [
+        { key: "ontap_c4_muc1", title: "Mục 1: Hệ thống hoá Bảng nguyên hàm & Tích phân", time: "05:00", icon: "🧠" },
+        { key: "ontap_c4_muc2", title: "Mục 2: Rèn luyện tính diện tích, thể tích & ứng dụng", time: "05:00", icon: "📝" },
+        { key: "ontap_c4_muc3", title: "Mục 3: Bẫy đề thi, Phương pháp chọn hàm & Casio Tích phân", time: "05:00", icon: "💡" }
+      ]
+    },
+
+    // ----------------- CHƯƠNG V -----------------
+    {
+      chapterNumber: 5,
+      chapterTitle: "Chương V: Phương pháp toạ độ trong không gian",
+      lessonId: "bai14",
+      lessonTitle: "Bài 14: Phương trình mặt phẳng",
+      lessonBadge: "Bài 14",
+      sections: [
+        { key: "bai14_muc1", title: "Mục 1: Vectơ pháp tuyến & Cặp VTCP của mặt phẳng", time: "05:00", icon: "🧭" },
+        { key: "bai14_muc2", title: "Mục 2: Phương trình tổng quát của mặt phẳng", time: "05:00", icon: "📄" },
+        { key: "bai14_muc3", title: "Mục 3: Điều kiện song song & Vuông góc hai mặt phẳng", time: "05:00", icon: "📐" },
+        { key: "bai14_muc4", title: "Mục 4: Khoảng cách từ một điểm đến mặt phẳng", time: "05:00", icon: "📏" }
+      ]
+    },
+    {
+      chapterNumber: 5,
+      chapterTitle: "Chương V: Phương pháp toạ độ trong không gian",
+      lessonId: "bai15",
+      lessonTitle: "Bài 15: Phương trình đường thẳng trong không gian",
+      lessonBadge: "Bài 15",
+      sections: [
+        { key: "bai15_muc1", title: "Mục 1: Vectơ chỉ phương & PT tham số đường thẳng", time: "05:00", icon: "↗️" },
+        { key: "bai15_muc2", title: "Mục 2: Phương trình chính tắc của đường thẳng", time: "05:00", icon: "📏" },
+        { key: "bai15_muc3", title: "Mục 3: Vị trí tương đối giữa hai đường thẳng", time: "05:00", icon: "✂️" }
+      ]
+    },
+    {
+      chapterNumber: 5,
+      chapterTitle: "Chương V: Phương pháp toạ độ trong không gian",
+      lessonId: "bai16",
+      lessonTitle: "Bài 16: Công thức tính góc trong không gian",
+      lessonBadge: "Bài 16",
+      sections: [
+        { key: "bai16_muc1", title: "Mục 1: Góc giữa hai đường thẳng", time: "05:00", icon: "📐" },
+        { key: "bai16_muc2", title: "Mục 2: Góc giữa đường thẳng và mặt phẳng", time: "05:00", icon: "📐" },
+        { key: "bai16_muc3", title: "Mục 3: Góc giữa hai mặt phẳng", time: "05:00", icon: "📐" }
+      ]
+    },
+    {
+      chapterNumber: 5,
+      chapterTitle: "Chương V: Phương pháp toạ độ trong không gian",
+      lessonId: "bai17",
+      lessonTitle: "Bài 17: Phương trình mặt cầu",
+      lessonBadge: "Bài 17",
+      sections: [
+        { key: "bai17_muc1", title: "Mục 1: Định nghĩa & Phương trình chính tắc mặt cầu", time: "05:00", icon: "⚽" },
+        { key: "bai17_muc2", title: "Mục 2: Phương trình tổng quát dạng khai triển", time: "05:00", icon: "🌐" },
+        { key: "bai17_muc3", title: "Mục 3: Vị trí tương đối giữa mặt cầu và mặt phẳng", time: "05:00", icon: "🎯" }
+      ]
+    },
+    {
+      chapterNumber: 5,
+      chapterTitle: "Chương V: Phương pháp toạ độ trong không gian",
+      lessonId: "ontap_c5",
+      lessonTitle: "Bài tập cuối chương V: Phương pháp toạ độ trong không gian",
+      lessonBadge: "Ôn tập C5",
+      sections: [
+        { key: "ontap_c5_muc1", title: "Mục 1: Hệ thống hoá PT Mặt phẳng, Đường thẳng, Mặt cầu", time: "05:00", icon: "🧠" },
+        { key: "ontap_c5_muc2", title: "Mục 2: Rèn luyện 4 dạng toán toạ độ Oxyz then chốt", time: "05:00", icon: "📝" },
+        { key: "ontap_c5_muc3", title: "Mục 3: Bẫy đề thi hình toạ độ & Tuyệt chiêu Casio Oxyz", time: "05:00", icon: "💡" }
+      ]
+    },
+
+    // ----------------- CHƯƠNG VI -----------------
+    {
+      chapterNumber: 6,
+      chapterTitle: "Chương VI: Xác suất có điều kiện",
+      lessonId: "bai18",
+      lessonTitle: "Bài 18: Xác suất có điều kiện",
+      lessonBadge: "Bài 18",
+      sections: [
+        { key: "bai18_muc1", title: "Mục 1: Khái niệm xác suất có điều kiện P(A|B)", time: "05:00", icon: "🎲" },
+        { key: "bai18_muc2", title: "Mục 2: Công thức nhân xác suất", time: "05:00", icon: "✖️" },
+        { key: "bai18_muc3", title: "Mục 3: Sơ đồ hình cây và ứng dụng tính xác suất", time: "05:00", icon: "🌳" }
+      ]
+    },
+    {
+      chapterNumber: 6,
+      chapterTitle: "Chương VI: Xác suất có điều kiện",
+      lessonId: "bai19",
+      lessonTitle: "Bài 19: Công thức xác suất toàn phần và công thức Bayes",
+      lessonBadge: "Bài 19",
+      sections: [
+        { key: "bai19_muc1", title: "Mục 1: Công thức xác suất toàn phần", time: "05:00", icon: "∑" },
+        { key: "bai19_muc2", title: "Mục 2: Công thức Bayes và ý nghĩa chẩn đoán thực tế", time: "05:00", icon: "🧬" },
+        { key: "bai19_muc3", title: "Mục 3: Rèn luyện bài toán xác suất thực tế chuẩn Bộ GD", time: "05:00", icon: "🎯" }
+      ]
+    },
+    {
+      chapterNumber: 6,
+      chapterTitle: "Chương VI: Xác suất có điều kiện",
+      lessonId: "ontap_c6",
+      lessonTitle: "Bài tập cuối chương VI: Xác suất có điều kiện",
+      lessonBadge: "Ôn tập C6",
+      sections: [
+        { key: "ontap_c6_muc1", title: "Mục 1: Hệ thống hoá Xác suất có điều kiện, Toàn phần & Bayes", time: "05:00", icon: "🧠" },
+        { key: "ontap_c6_muc2", title: "Mục 2: Rèn luyện các dạng bài thực tế then chốt & Sơ đồ cây", time: "05:00", icon: "📝" },
+        { key: "ontap_c6_muc3", title: "Mục 3: Bẫy đề thi xác suất, Nhận diện công thức & Kỹ thuật Casio", time: "05:00", icon: "💡" }
       ]
     }
   ];
 
+  // Backwards compatibility alias
+  const CHAPTER1_MENU_CONFIG = SGK12_MENU_CONFIG;
+  const TOTAL_SECTIONS_COUNT = SGK12_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0);
+
   function buildOptionsHtml() {
     let html = '';
-    CHAPTER1_MENU_CONFIG.forEach(grp => {
+    let currentCh = -1;
+    SGK12_MENU_CONFIG.forEach(grp => {
+      if (grp.chapterNumber !== currentCh) {
+        currentCh = grp.chapterNumber;
+        html += `<optgroup label="━━━━━━━━ ${grp.chapterTitle.toUpperCase()} ━━━━━━━━" style="background:#090d16; color:#fbbf24; font-weight:900;"></optgroup>`;
+      }
       html += `<optgroup label="${grp.lessonTitle}" style="background:#0f172a; color:#38bdf8; font-weight:bold;">`;
       grp.sections.forEach(s => {
         html += `<option value="${s.key}" style="background:#1e293b; color:#f8fafc;">${s.icon} ${grp.lessonBadge} - ${s.title} (${s.time})</option>`;
@@ -640,7 +854,30 @@
     return html;
   }
 
-  // Visual Drawer Modal with 6 Lesson Cards & 18 Sections
+  // Filter drawer cards by chapter
+  function filterDrawerChapter(chNum) {
+    const cards = document.querySelectorAll('.il-drawer-lesson-card');
+    cards.forEach(c => {
+      if (!chNum || chNum === 'all' || c.getAttribute('data-chapter') === String(chNum)) {
+        c.style.display = 'flex';
+      } else {
+        c.style.display = 'none';
+      }
+    });
+
+    const filterBtns = document.querySelectorAll('.il-drawer-filter-btn');
+    filterBtns.forEach(btn => {
+      const match = (String(chNum) === btn.getAttribute('data-filter-chapter'));
+      if (match) {
+        btn.className = 'il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 border border-amber-300 shadow-sm cursor-pointer transition';
+      } else {
+        btn.className = 'il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition';
+      }
+    });
+  }
+  if (typeof window !== 'undefined') window.filterDrawerChapter = filterDrawerChapter;
+
+  // Visual Drawer Modal with 25 Lesson Cards & 75 Sections (All 6 Chapters)
   function toggleLectureDrawer(show) {
     let drawer = document.getElementById('il-chapter1-drawer');
     if (!drawer) {
@@ -652,7 +889,7 @@
       };
 
       let cardsHtml = '';
-      CHAPTER1_MENU_CONFIG.forEach(grp => {
+      SGK12_MENU_CONFIG.forEach(grp => {
         let secButtons = '';
         grp.sections.forEach(s => {
           secButtons += `
@@ -667,10 +904,13 @@
         });
 
         cardsHtml += `
-          <div class="bg-slate-900/90 rounded-2xl p-4 border border-indigo-900/60 shadow-lg flex flex-col gap-2.5">
+          <div class="il-drawer-lesson-card bg-slate-900/90 rounded-2xl p-4 border border-indigo-900/60 shadow-lg flex flex-col gap-2.5 transition-all" data-chapter="${grp.chapterNumber}">
             <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-              <span class="text-xs sm:text-sm font-black text-amber-300 uppercase tracking-wide">${grp.lessonTitle}</span>
-              <span class="text-[11px] font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded-full">${grp.sections.length} mục</span>
+              <div class="flex items-center gap-1.5 truncate">
+                <span class="text-[10px] font-black uppercase px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 shrink-0">C${grp.chapterNumber}</span>
+                <span class="text-xs sm:text-sm font-black text-amber-300 uppercase tracking-wide truncate" title="${grp.lessonTitle}">${grp.lessonTitle}</span>
+              </div>
+              <span class="text-[11px] font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded-full shrink-0">${grp.sections.length} mục</span>
             </div>
             <div class="flex flex-col gap-1.5">
               ${secButtons}
@@ -680,19 +920,45 @@
       });
 
       drawer.innerHTML = `
-        <div class="bg-slate-950 border-2 border-indigo-800 rounded-3xl w-full max-w-5xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden font-serif">
+        <div class="bg-slate-950 border-2 border-indigo-800 rounded-3xl w-full max-w-6xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden font-serif">
           <div class="p-4 sm:p-5 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border-b border-indigo-900 flex items-center justify-between">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center text-xl font-black shadow-md">🦉</div>
               <div>
-                <h2 class="text-base sm:text-xl font-black text-amber-300 tracking-wide uppercase">DANH MỤC BÀI GIẢNG TƯƠNG TÁC CHƯƠNG 1</h2>
-                <p class="text-xs text-slate-400">SGK Kết nối tri thức với cuộc sống • Trọn bộ 18 Mục bài giảng KaTeX & SVG</p>
+                <h2 class="text-base sm:text-xl font-black text-amber-300 tracking-wide uppercase">MỤC LỤC BÀI GIẢNG TƯƠNG TÁC TOÁN 12 KNTT</h2>
+                <p class="text-xs text-slate-400">SGK Kết nối tri thức với cuộc sống • Trọn bộ 6 Chương (19 Bài học & 6 Bài tập cuối chương) • ${TOTAL_SECTIONS_COUNT} Mục</p>
               </div>
             </div>
             <button type="button" onclick="window.toggleLectureDrawer(false)" class="w-8 h-8 rounded-xl bg-slate-800 hover:bg-rose-600 text-slate-300 hover:text-white flex items-center justify-center font-bold text-sm transition cursor-pointer">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
+
+          <!-- Chapter Filter Tabs -->
+          <div class="px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 flex items-center gap-2 overflow-x-auto">
+            <button type="button" onclick="window.filterDrawerChapter('all')" data-filter-chapter="all" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 border border-amber-300 shadow-sm cursor-pointer transition">
+              Tất cả (${TOTAL_SECTIONS_COUNT})
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(1)" data-filter-chapter="1" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+              Chương I (17)
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(2)" data-filter-chapter="2" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+              Chương II (12)
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(3)" data-filter-chapter="3" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+              Chương III (9)
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(4)" data-filter-chapter="4" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+              Chương IV (12)
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(5)" data-filter-chapter="5" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+              Chương V (16)
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(6)" data-filter-chapter="6" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+              Chương VI (9)
+            </button>
+          </div>
+
           <div class="p-4 sm:p-6 overflow-y-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             ${cardsHtml}
           </div>
@@ -747,6 +1013,18 @@
     let lessonNum = 1;
     let sectionNum = 1;
 
+    function parseRomanOrArabic(str) {
+      if (!str) return 1;
+      const s = str.trim().toUpperCase();
+      if (s === 'I' || s === '1') return 1;
+      if (s === 'II' || s === '2') return 2;
+      if (s === 'III' || s === '3') return 3;
+      if (s === 'IV' || s === '4') return 4;
+      if (s === 'V' || s === '5') return 5;
+      if (s === 'VI' || s === '6') return 6;
+      return parseInt(s) || 1;
+    }
+
     // 1. Check window.activeLesson
     const al = (typeof window !== 'undefined' && window.activeLesson) ? window.activeLesson : null;
     if (al) {
@@ -784,37 +1062,35 @@
       }
     }
 
-    // Map to chapter1_data.js, chapter2_data.js & chapter3_data.js keys
-    if (lessonNum === 'ontap' || lessonNum === 'ontap_c2' || lessonNum === 'ontap_c3') {
-      let isC3 = (lessonNum === 'ontap_c3');
-      let isC2 = (lessonNum === 'ontap_c2');
+    // Map to chapter keys
+    if (lessonNum === 'ontap' || (typeof lessonNum === 'string' && lessonNum.startsWith('ontap'))) {
+      let ch = 1;
       if (al) {
-        if (al.chapterNumber === 3 || al.chapterNumber === '3' || (typeof al.key === 'string' && al.key.includes('_3'))) isC3 = true;
-        if (al.chapterShortTitle && (al.chapterShortTitle.includes('Chương III') || al.chapterShortTitle.includes('Chương 3') || al.chapterShortTitle.toLowerCase().includes('phân tán') || al.chapterShortTitle.toLowerCase().includes('thống kê'))) isC3 = true;
-        if (al.lessonTitle && (al.lessonTitle.includes('Chương III') || al.lessonTitle.includes('chương III') || al.lessonTitle.includes('Chương 3') || al.lessonTitle.includes('chương 3') || al.lessonTitle.toLowerCase().includes('phân tán'))) isC3 = true;
-
-        if (!isC3) {
-          if (al.chapterNumber === 2 || al.chapterNumber === '2' || (typeof al.key === 'string' && al.key.includes('_2'))) isC2 = true;
-          if (al.chapterShortTitle && (al.chapterShortTitle.includes('Chương II') || al.chapterShortTitle.includes('Chương 2') || al.chapterShortTitle.toLowerCase().includes('vectơ'))) isC2 = true;
-          if (al.lessonTitle && (al.lessonTitle.includes('Chương II') || al.lessonTitle.includes('chương II') || al.lessonTitle.includes('Chương 2') || al.lessonTitle.includes('chương 2') || al.lessonTitle.toLowerCase().includes('vectơ'))) isC2 = true;
+        if (al.chapterNumber) ch = parseInt(al.chapterNumber) || 1;
+        else if (typeof al.key === 'string' && al.key.match(/_(\d+)/)) ch = parseInt(al.key.match(/_(\d+)/)[1]) || 1;
+        else if (al.chapterShortTitle) {
+          const m = al.chapterShortTitle.match(/Chương\s*([IVX]+|\d+)/i);
+          if (m) ch = parseRomanOrArabic(m[1]);
+        }
+        else if (al.lessonTitle) {
+          const m = al.lessonTitle.match(/chương\s*([IVX]+|\d+)/i);
+          if (m) ch = parseRomanOrArabic(m[1]);
         }
       }
-      const titleEl = document.getElementById('sgk-focus-title');
       if (titleEl && titleEl.textContent) {
-        const t = titleEl.textContent;
-        if (t.includes('Chương III') || t.includes('chương III') || t.includes('Chương 3') || t.includes('chương 3') || t.toLowerCase().includes('phân tán')) isC3 = true;
-        else if (t.includes('Chương II') || t.includes('chương II') || t.includes('Chương 2') || t.includes('chương 2') || t.toLowerCase().includes('vectơ')) isC2 = true;
+        const m = titleEl.textContent.match(/chương\s*([IVX]+|\d+)/i);
+        if (m) ch = parseRomanOrArabic(m[1]);
       }
       const s = Math.min(3, Math.max(1, sectionNum));
-      if (isC3) return `ontap_c3_muc${s}`;
-      if (isC2) return `ontap_c2_muc${s}`;
-      return `ontap_muc${s}`;
+      if (ch === 1) return `ontap_muc${s}`;
+      return `ontap_c${ch}_muc${s}`;
     }
+
     if (lessonNum === 1) {
       return sectionNum === 2 ? 'muc2' : 'muc1';
     }
-    if (lessonNum >= 2 && lessonNum <= 10) {
-      const maxSec = (lessonNum === 4) ? 4 : 3;
+    if (lessonNum >= 2 && lessonNum <= 19) {
+      const maxSec = (lessonNum === 4 || lessonNum === 14) ? 4 : 3;
       const s = Math.min(maxSec, Math.max(1, sectionNum));
       return `bai${lessonNum}_muc${s}`;
     }
@@ -891,13 +1167,13 @@
       selectBox.innerHTML = `
         <div class="relative flex items-center">
           <span class="absolute left-2.5 text-amber-400 text-xs pointer-events-none">📖</span>
-          <select id="il-section-select" class="pl-7 pr-3 py-1 rounded-lg font-bold text-xs sm:text-sm bg-slate-900 text-amber-300 border border-amber-400/60 shadow-md cursor-pointer outline-none transition hover:bg-slate-800 hover:border-amber-300 max-w-[210px] sm:max-w-[340px] truncate" title="Chọn bài học và mục bài giảng (18 mục)">
+          <select id="il-section-select" class="pl-7 pr-3 py-1 rounded-lg font-bold text-xs sm:text-sm bg-slate-900 text-amber-300 border border-amber-400/60 shadow-md cursor-pointer outline-none transition hover:bg-slate-800 hover:border-amber-300 max-w-[210px] sm:max-w-[340px] truncate" title="Chọn bài học và mục bài giảng (${TOTAL_SECTIONS_COUNT} mục chuẩn SGK Toán 12 KNTT)">
             ${buildOptionsHtml()}
           </select>
         </div>
-        <button type="button" onclick="window.toggleLectureDrawer()" class="px-2.5 py-1 rounded-lg font-bold text-xs bg-indigo-700/80 hover:bg-indigo-600 text-amber-200 border border-indigo-500/50 shadow-xs cursor-pointer transition flex items-center gap-1 shrink-0" title="Mở danh mục toàn bộ 18 mục">
+        <button type="button" onclick="window.toggleLectureDrawer()" class="px-2.5 py-1 rounded-lg font-bold text-xs bg-indigo-700/80 hover:bg-indigo-600 text-amber-200 border border-indigo-500/50 shadow-xs cursor-pointer transition flex items-center gap-1 shrink-0" title="Mở toàn bộ mục lục SGK Toán 12 KNTT (${TOTAL_SECTIONS_COUNT} mục)">
           <i class="fa-solid fa-layer-group text-xs"></i>
-          <span class="hidden sm:inline">18 Mục</span>
+          <span class="hidden sm:inline">Mục lục SGK (${TOTAL_SECTIONS_COUNT} Mục)</span>
         </button>
       `;
       tabsWrapper.appendChild(selectBox);
@@ -914,6 +1190,133 @@
   }
 
   // Switch between sections (Bài 1 Mục 1..2, Bài 2..5, Ôn tập - 18 mục)
+  // Create structured interactive lecture for any SGK section pending rich media
+  function createPlaceholderLecture(grp, sec) {
+    const title = `${grp.lessonBadge} - ${sec.title}`;
+    const owlTip = `Khám phá kiến thức cốt lõi: ${sec.title} - SGK Toán 12 Kết Nối Tri Thức.`;
+    return {
+      lessonId: grp.lessonId,
+      lessonTitle: grp.lessonTitle,
+      sectionId: sec.key,
+      sectionTitle: sec.title,
+      audio_src: '',
+      audioSrc: '',
+      duration: 60,
+      totalDuration: 60,
+      title: title,
+      owl_tip: owlTip,
+      timeline: [
+        { time: 0, id: 'part1', duration: 15, startTime: 0, endTime: 15 },
+        { time: 15, id: 'part2', duration: 15, startTime: 15, endTime: 30 },
+        { time: 30, id: 'part3', duration: 15, startTime: 30, endTime: 45 },
+        { time: 45, id: 'part4', duration: 15, startTime: 45, endTime: 60 }
+      ],
+      parts: [
+        { partNumber: 1, partTitle: "Phần 1: Khái niệm & Định nghĩa cơ bản", scenes: [1] },
+        { partNumber: 2, partTitle: "Phần 2: Công thức trọng tâm chuẩn SGK KNTT", scenes: [2] },
+        { partNumber: 3, partTitle: "Phần 3: Ví dụ rèn luyện điển hình (Đồng hồ 15s/30s)", scenes: [3] },
+        { partNumber: 4, partTitle: "Phần 4: Mascot Cú Thông Thái cảnh báo bẫy & Mẹo thi", scenes: [4] }
+      ],
+      content: `<div id="part1"><h3>1. Khái niệm & Định nghĩa</h3><p>Nội dung chuẩn mực theo SGK Toán 12 Kết Nối Tri Thức.</p></div><div id="part2"><h3>2. Công thức trọng tâm</h3><p>Hệ thống công thức và phương pháp giải toán cốt lõi.</p></div><div id="part3"><h3>3. Ví dụ rèn luyện</h3><p>Rèn luyện ví dụ điển hình cùng đồng hồ đếm ngược.</p></div><div id="part4"><h3>4. Cú Thông Thái cảnh báo bẫy</h3><p>Lưu ý tránh các sai lầm phổ biến khi làm bài thi.</p></div>`,
+      scenes: [
+        {
+          sceneIndex: 1,
+          title: grp.lessonTitle.toUpperCase(),
+          subtitle: `PHẦN 1: KHÁI NIỆM & ĐỊNH NGHĨA (${sec.title.toUpperCase()})`,
+          startTime: 0,
+          endTime: 15,
+          duration: 15,
+          mascotMode: "talking",
+          mascotTip: owlTip,
+          bodyHtml: `
+            <div style="font-size:18px; line-height:1.7; color:#f8fafc;">
+              <h3 style="color:#38bdf8; font-size:24px; margin-bottom:12px;">${sec.title}</h3>
+              <div style="background:rgba(15,23,42,0.85); border:1.5px solid #38bdf8; border-radius:12px; padding:18px; margin-bottom:14px;">
+                <b style="color:#fde047; font-size:19px;">📖 Trọng tâm bài học SGK Toán 12 KNTT:</b><br>
+                Chào mừng các em đến với <b>${grp.lessonTitle}</b>. Ở phần này, các em sẽ nắm vững bản chất khái niệm và phương pháp tư duy toán học chuẩn chương trình mới.
+              </div>
+              <div style="background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px 16px; border-radius:8px; color:#bae6fd;">
+                💡 <i>Mẹo học tập:</i> Hãy ghi nhớ các định nghĩa và điều kiện áp dụng trước khi bắt đầu giải bài tập!
+              </div>
+            </div>
+          `
+        },
+        {
+          sceneIndex: 2,
+          title: "HỆ THỐNG CÔNG THỨC TRỌNG TÂM",
+          subtitle: "PHẦN 2: QUY TẮC & PHƯƠNG PHÁP GIẢI TOÁN",
+          startTime: 15,
+          endTime: 30,
+          duration: 15,
+          mascotMode: "thinking",
+          mascotTip: "Nắm vững công thức cốt lõi và điều kiện áp dụng!",
+          bodyHtml: `
+            <div style="font-size:18px; line-height:1.7; color:#f8fafc;">
+              <h3 style="color:#34d399; font-size:24px; margin-bottom:12px;">Hệ thống hoá công thức & Phương pháp giải</h3>
+              <div style="background:rgba(16,185,129,0.12); border:1.5px solid #10b981; border-radius:12px; padding:18px; margin-bottom:14px;">
+                <b style="color:#34d399; font-size:19px;">⚡ Quy tắc cốt lõi:</b><br>
+                Bám sát các định lí, hệ quả và bảng công thức trong SGK Toán 12 KNTT để suy luận nhanh chóng và chính xác.
+              </div>
+            </div>
+          `
+        },
+        {
+          sceneIndex: 3,
+          title: "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+          subtitle: "PHẦN 3: ĐỒNG HỒ ĐẾM NGƯỢC 30S",
+          startTime: 30,
+          endTime: 45,
+          duration: 15,
+          mascotMode: "thinking",
+          mascotTip: "Thử sức suy nghĩ trước khi xem lời giải chi tiết!",
+          bodyHtml: `
+            <div class="slide" style="border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);">
+                <div style="flex:1; min-width:0;">
+                  <h3 style="color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;">Ví dụ rèn luyện trọng tâm: ${sec.title}</h3>
+                  <span style="font-size:13px; color:#94a3b8; font-weight:500;">⏱️ Thời gian suy nghĩ: <b style="color:#fbbf24;">30 giây</b> (Thông hiểu / Vận dụng)</span>
+                </div>
+                <div class="countdown-clock-widget cd-30s" data-seconds="30" style="flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);">
+                  <svg width="24" height="24" viewBox="0 0 36 36" style="display:block;">
+                    <circle cx="18" cy="18" r="15.5" fill="none" stroke="#334155" stroke-width="3"/>
+                    <circle class="countdown-circle-svg" cx="18" cy="18" r="15.5" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="97.4" stroke-dashoffset="0" stroke-linecap="round" style="transform:rotate(-90deg); transform-origin:50% 50%;"/>
+                  </svg>
+                  <div style="display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;">
+                    <span style="font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;">Suy nghĩ</span>
+                    <span class="countdown-number-val" style="font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;">30s</span>
+                  </div>
+                </div>
+              </div>
+              <div style="font-size:18px; line-height:1.7; color:#f8fafc;">
+                Áp dụng kiến thức của <b>${sec.title}</b> vào giải quyết bài toán điển hình theo cấu trúc định dạng đề thi mới của Bộ GD&ĐT.
+              </div>
+            </div>
+          `
+        },
+        {
+          sceneIndex: 4,
+          title: "CÚ THÔNG THÁI CẢNH BÁO BẪY & CASIO",
+          subtitle: "PHẦN 4: LỜI KHUYÊN & TUYỆT KỸ PHÒNG THI",
+          startTime: 45,
+          endTime: 60,
+          duration: 15,
+          mascotMode: "warning",
+          mascotTip: "Chú ý điều kiện xác định và kiểm tra lại bằng máy tính Casio!",
+          bodyHtml: `
+            <div style="font-size:18px; line-height:1.7; color:#f8fafc;">
+              <h3 style="color:#f43f5e; font-size:22px; margin-bottom:14px;">🦉 Lời khuyên Thầy Cú & Cảnh báo bẫy</h3>
+              <div style="background:rgba(244,63,94,0.12); border-left:4px solid #f43f5e; padding:14px 18px; border-radius:8px;">
+                • Luôn đọc kỹ giả thiết, xác định đúng dạng toán.<br>
+                • Kết hợp máy tính Casio fx-580VNX để kiểm tra kết quả trung gian.<br>
+                • Chúc các em học tốt và tự tin chinh phục chuyên đề này!
+              </div>
+            </div>
+          `
+        }
+      ]
+    };
+  }
+
   function switchSection(sec) {
     ensureMergedData();
 
@@ -940,7 +1343,23 @@
     }
 
     if (!LECTURE_DATA[secKey]) {
-      secKey = 'muc1';
+      let matchedSec = null;
+      let matchedGrp = null;
+      for (const grp of SGK12_MENU_CONFIG) {
+        for (const s of grp.sections) {
+          if (s.key === secKey) {
+            matchedSec = s;
+            matchedGrp = grp;
+            break;
+          }
+        }
+        if (matchedSec) break;
+      }
+      if (matchedSec && matchedGrp) {
+        LECTURE_DATA[secKey] = createPlaceholderLecture(matchedGrp, matchedSec);
+      } else {
+        secKey = 'muc1';
+      }
     }
 
     currentSection = secKey;
