@@ -358,51 +358,55 @@
       }
     }
 
-        // Dynamic 30s countdown clock synchronization
-    const countdownEl = document.querySelector('.countdown-clock-30s');
+        // Dynamic countdown clock synchronization (supports both 15s and 30s, non-overlapping flex layout)
+    const countdownEl = document.querySelector('.countdown-clock-widget') || document.querySelector('.countdown-clock-30s');
     if (countdownEl && data && data.scenes && data.scenes[activeIdx - 1]) {
       const sc = data.scenes[activeIdx - 1];
+      const totalSec = parseInt(countdownEl.dataset.seconds) || (countdownEl.classList.contains('cd-15s') ? 15 : 30);
       const countdownEnd = sc.endTime - 2.5;
-      const countdownStart = countdownEnd - 30;
-      let remaining = 30;
+      const countdownStart = countdownEnd - totalSec;
+      let remaining = totalSec;
       let fraction = 0;
       if (cur < countdownStart) {
-        remaining = 30;
+        remaining = totalSec;
         fraction = 0;
       } else if (cur >= countdownStart && cur <= countdownEnd) {
         remaining = Math.max(0, Math.ceil(countdownEnd - cur));
-        fraction = (cur - countdownStart) / 30;
+        fraction = (cur - countdownStart) / totalSec;
       } else {
         remaining = 0;
         fraction = 1;
       }
       const numVal = countdownEl.querySelector('.countdown-number-val');
       const circleSvg = countdownEl.querySelector('.countdown-circle-svg');
+      const urgentThresh = totalSec === 15 ? 3 : 5;
+      const warnThresh = totalSec === 15 ? 7 : 15;
+
       if (numVal) {
         numVal.textContent = remaining + 's';
-        if (remaining <= 5) {
+        if (remaining <= urgentThresh) {
           numVal.style.color = '#ef4444';
           countdownEl.style.borderColor = '#ef4444';
           countdownEl.style.boxShadow = '0 0 16px rgba(239,68,68,0.5)';
-        } else if (remaining <= 15) {
+        } else if (remaining <= warnThresh) {
           numVal.style.color = '#f97316';
           countdownEl.style.borderColor = '#f97316';
           countdownEl.style.boxShadow = '0 0 14px rgba(249,115,22,0.4)';
         } else {
-          numVal.style.color = '#fbbf24';
-          countdownEl.style.borderColor = '#f59e0b';
-          countdownEl.style.boxShadow = '0 0 12px rgba(245,158,11,0.35)';
+          numVal.style.color = totalSec === 15 ? '#34d399' : '#fbbf24';
+          countdownEl.style.borderColor = totalSec === 15 ? '#10b981' : '#f59e0b';
+          countdownEl.style.boxShadow = totalSec === 15 ? '0 0 12px rgba(16,185,129,0.35)' : '0 0 12px rgba(245,158,11,0.35)';
         }
       }
       if (circleSvg) {
         circleSvg.style.animation = 'none';
         circleSvg.style.strokeDashoffset = (fraction * 97.4).toFixed(1);
-        if (remaining <= 5) {
+        if (remaining <= urgentThresh) {
           circleSvg.setAttribute('stroke', '#ef4444');
-        } else if (remaining <= 15) {
+        } else if (remaining <= warnThresh) {
           circleSvg.setAttribute('stroke', '#f97316');
         } else {
-          circleSvg.setAttribute('stroke', '#f59e0b');
+          circleSvg.setAttribute('stroke', totalSec === 15 ? '#10b981' : '#f59e0b');
         }
       }
     }
@@ -1098,7 +1102,7 @@
 
   // Open the Interactive Web Lecture Modal
   function openInteractiveLecture(sec) {
-    document.head.insertAdjacentHTML('beforeend', '<style>@keyframes countdownCircle30 { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 97.4; } } .countdown-clock-30s { transition: border-color 0.3s ease, box-shadow 0.3s ease; } #interactive-modal .lecture-content { font-size: 24px !important; line-height: 1.6 !important; } #interactive-modal .katex { font-size: 1.3em !important; } #interactive-modal svg { width: 98% !important; max-height: 48vh !important; } #interactive-modal header, #interactive-modal footer { height: 42px !important; min-height: 42px !important; padding: 2px 10px !important; } #modal-interactive-lecture #il-stage-body, #modal-interactive-lecture #il-stage-body * { font-size: 24px !important; line-height: 1.6 !important; } #modal-interactive-lecture .katex { font-size: 1.3em !important; } #modal-interactive-lecture svg { width: 98% !important; max-height: 48vh !important; } .il-header-bar, .il-footer-bar { height: 42px !important; min-height: 42px !important; padding: 2px 10px !important; } .trap-warning-box, [class*="trap-warning"] { font-size: 22px !important; line-height: 1.5 !important; font-weight: 600 !important; border-left: 5px solid #ef4444 !important; background: rgba(239, 68, 68, 0.15) !important; padding: 12px 18px !important; border-radius: 8px !important; } .trap-title, .trap-warning-box .trap-title { font-size: 24px !important; font-weight: 700 !important; color: #ff6b6b !important; } #il-stage-mascot, #il-stage-mascot * { font-size: 19px !important; font-weight: 500 !important; color: #f8fafc !important; }</style>');
+    document.head.insertAdjacentHTML('beforeend', '<style>@keyframes countdownCircle15 { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 97.4; } } @keyframes countdownCircle30 { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 97.4; } } .countdown-clock-widget, .countdown-clock-30s { transition: border-color 0.3s ease, box-shadow 0.3s ease; } #interactive-modal .lecture-content { font-size: 24px !important; line-height: 1.6 !important; } #interactive-modal .katex { font-size: 1.3em !important; } #interactive-modal svg { width: 98% !important; max-height: 48vh !important; } #interactive-modal header, #interactive-modal footer { height: 42px !important; min-height: 42px !important; padding: 2px 10px !important; } #modal-interactive-lecture #il-stage-body, #modal-interactive-lecture #il-stage-body * { font-size: 24px !important; line-height: 1.6 !important; } #modal-interactive-lecture .katex { font-size: 1.3em !important; } #modal-interactive-lecture svg { width: 98% !important; max-height: 48vh !important; } .il-header-bar, .il-footer-bar { height: 42px !important; min-height: 42px !important; padding: 2px 10px !important; } .trap-warning-box, [class*="trap-warning"] { font-size: 22px !important; line-height: 1.5 !important; font-weight: 600 !important; border-left: 5px solid #ef4444 !important; background: rgba(239, 68, 68, 0.15) !important; padding: 12px 18px !important; border-radius: 8px !important; } .trap-title, .trap-warning-box .trap-title { font-size: 24px !important; font-weight: 700 !important; color: #ff6b6b !important; } #il-stage-mascot, #il-stage-mascot * { font-size: 19px !important; font-weight: 500 !important; color: #f8fafc !important; }</style>');
     const modal = document.getElementById('modal-interactive-lecture');
     if (!modal) return;
 
