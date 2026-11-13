@@ -689,4 +689,687 @@ if (typeof window !== 'undefined') {
     }
   ]
 };
+
+
+  window.CHAPTER4_DATA.bai12_muc1 = {
+  "lessonId": "bai12",
+  "lessonTitle": "Bài 12: Tích phân",
+  "sectionId": "bai12_muc1",
+  "sectionTitle": "Mục 1: Diện tích hình thang cong & Định nghĩa tích phân",
+  "audio": "/audio/bai12_muc1.mp3",
+  "audioSrc": "./audio/bai12_muc1.mp3",
+  "audio_src": "./audio/bai12_muc1.mp3",
+  "timestamp_src": "timestamps/bai12_muc1.json",
+  "totalDuration": 273.89,
+  "duration": 273.89,
+  "title": "Mục 1: Diện tích hình thang cong & Định nghĩa tích phân",
+  "owl_tip": "∫_a^b f(x)dx = F(b) - F(a): Luôn lấy F(cận trên) trừ F(cận dưới)!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 41.76,
+      "id": "part2"
+    },
+    {
+      "time": 90.65,
+      "id": "part3"
+    },
+    {
+      "time": 103.27,
+      "id": "vd1_q"
+    },
+    {
+      "time": 111.57,
+      "id": "vd1_a"
+    },
+    {
+      "time": 130.46,
+      "id": "vd2_q"
+    },
+    {
+      "time": 138.91,
+      "id": "vd2_a"
+    },
+    {
+      "time": 151.77,
+      "id": "vd3_q"
+    },
+    {
+      "time": 178.94,
+      "id": "vd3_a"
+    },
+    {
+      "time": 223.03,
+      "id": "part4"
+    },
+    {
+      "time": 250.56,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Bài toán diện tích hình thang cong",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Định nghĩa tích phân & Công thức Newton - Leibniz",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú ghi nhớ nhanh & Casio",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 12: TÍCH PHÂN",
+      "subtitle": "MỤC 1 • DIỆN TÍCH HÌNH THANG CONG",
+      "startTime": 0.0,
+      "endTime": 41.76,
+      "duration": 41.76,
+      "mascotMode": "pointer",
+      "mascotTip": "Hình thang cong được giới hạn bởi đồ thị y = f(x) ≥ 0, trục Ox và x = a, x = b!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Bài toán diện tích hình thang cong</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Cho hàm số $y = f(x)$ liên tục, không âm trên đoạn $[a; b]$ ($a < b$).</p>\n                  <p>• Hình phẳng giới hạn bởi đồ thị hàm số $y = f(x)$, trục hoành $Ox$ và hai đường thẳng $x = a$, $x = b$ được gọi là <b>hình thang cong</b>.</p>\n                  <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:12px 16px; margin:14px 0; border-radius:0 8px 8px 0;\">\n                    <b>Ý tưởng tích phân:</b> Chia nhỏ đoạn $[a; b]$ thành $n$ đoạn con, xấp xỉ diện tích hình thang cong bằng tổng diện tích các hình chữ nhật nhỏ. Khi $n \\to +\\infty$, giới hạn tổng đó chính là <b>diện tích chính xác $S$</b>.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "ĐỊNH NGHĨA TÍCH PHÂN",
+      "subtitle": "MỤC 1 • CÔNG THỨC NEWTON - LEIBNIZ",
+      "startTime": 41.76,
+      "endTime": 90.65,
+      "duration": 48.89,
+      "mascotMode": "talking",
+      "mascotTip": "∫_a^b f(x)dx = F(b) - F(a): Luôn lấy F(cận trên) trừ F(cận dưới)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fde047; font-size:22px; margin-bottom:12px;\">2. Định nghĩa tích phân (Công thức Newton - Leibniz)</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho $f(x)$ liên tục trên đoạn $[a; b]$. Giả sử $F(x)$ là một nguyên hàm của $f(x)$ trên $[a; b]$.</p>\n                  <div style=\"background:rgba(254,240,138,0.15); border:1.5px solid #fde047; border-radius:10px; padding:14px; text-align:center; margin:12px 0;\">\n                    <span style=\"font-size:22px; color:#fef08a; font-weight:700;\">$$\\int_a^b f(x) dx = \\left. F(x) \\right|_a^b = F(b) - F(a)$$</span>\n                  </div>\n                  <p>• $a$: Cận dưới, $b$: Cận trên, $f(x)dx$: Biểu thức dưới dấu tích phân.</p>\n                  <div style=\"display:flex; justify-content:space-between; margin-top:10px; font-size:15px; color:#94a3b8;\">\n                    <span>📌 $\\int_a^a f(x)dx = 0$</span>\n                    <span>📌 $\\int_a^b f(x)dx = -\\int_b^a f(x)dx$</span>\n                    <span>📌 Không phụ thuộc biến: $\\int_a^b f(x)dx = \\int_a^b f(t)dt$</span>\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 1 • RÈN LUYỆN KỸ NĂNG VÀ ĐỒNG HỒ ĐẾM NGƯỢC",
+      "startTime": 90.65,
+      "endTime": 103.27,
+      "duration": 12.62,
+      "mascotMode": "cheering",
+      "mascotTip": "Cùng bắt đầu rèn luyện 3 ví dụ nền tảng với đồng hồ đếm ngược 15s và 30s!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">3. Hệ thống ví dụ rèn luyện điển hình Mục 1</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>Cùng thầy chinh phục 3 dạng toán cốt lõi:</p>\n                  <ul style=\"margin-left:20px;\">\n                    <li><b>Ví dụ 1 (15s):</b> Tính tích phân đa thức cơ bản (Nhận biết).</li>\n                    <li><b>Ví dụ 2 (15s):</b> Tính tích phân lượng giác cơ bản (Thông hiểu).</li>\n                    <li><b>Ví dụ 3 (30s):</b> Bài toán chuyển động thực tế: Quãng đường phanh ô tô (Vận dụng).</li>\n                  </ul>\n                  <p style=\"color:#38bdf8; margin-top:12px;\">👉 Đồng hồ đếm ngược nằm gọn ở góc trên phải, không che chắn đề bài!</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: TÍNH TÍCH PHÂN ĐA THỨC",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 103.27,
+      "endTime": 111.57,
+      "duration": 8.3,
+      "mascotMode": "thinking",
+      "mascotTip": "Nguyên hàm của 3x² là x³, sau đó thế cận 2 và 1!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Tính tích phân cơ bản</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Tính tích phân sau:</p>\n                <div style=\"text-align:center; font-size:24px; color:#fef08a; margin:16px 0;\">\n                  $$I = \\int_1^2 3x^2 dx$$\n                </div>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 111.57,
+      "endTime": 130.46,
+      "duration": 18.89,
+      "mascotMode": "magnifier",
+      "mascotTip": "F(2) - F(1) = 2³ - 1³ = 8 - 1 = 7. Chuẩn xác!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Một nguyên hàm của $f(x) = 3x^2$ là $F(x) = x^3$.</p>\n                  <p>• Áp dụng công thức Newton - Leibniz thế cận từ $1$ đến $2$:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:12px 0; text-align:center;\">\n                    $$I = \\int_1^2 3x^2 dx = \\left. x^3 \\right|_1^2 = 2^3 - 1^3 = 8 - 1 = 7$$\n                  </div>\n                  <p><b>Kết luận:</b> $I = 7$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: TÍCH PHÂN LƯỢNG GIÁC",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 130.46,
+      "endTime": 138.91,
+      "duration": 8.45,
+      "mascotMode": "thinking",
+      "mascotTip": "Nguyên hàm của cos x là sin x. Chú ý sin(π/2) = 1, sin(0) = 0!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Tích phân hàm lượng giác</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Tính tích phân sau:</p>\n                <div style=\"text-align:center; font-size:24px; color:#fef08a; margin:16px 0;\">\n                  $$J = \\int_0^{\\frac{\\pi}{2}} \\cos x dx$$\n                </div>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 138.91,
+      "endTime": 151.77,
+      "duration": 12.86,
+      "mascotMode": "magnifier",
+      "mascotTip": "sin(π/2) - sin(0) = 1 - 0 = 1. Quá nhanh gọn!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Một nguyên hàm của hàm số $\\cos x$ là $\\sin x$.</p>\n                  <p>• Áp dụng công thức Newton - Leibniz:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:12px 0; text-align:center;\">\n                    $$J = \\int_0^{\\frac{\\pi}{2}} \\cos x dx = \\left. \\sin x \\right|_0^{\\frac{\\pi}{2}} = \\sin\\left(\\frac{\\pi}{2}\\right) - \\sin 0 = 1 - 0 = 1$$\n                  </div>\n                  <p><b>Kết luận:</b> $J = 1$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: BÀI TOÁN PHANH XE Ô TÔ",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 151.77,
+      "endTime": 178.94,
+      "duration": 27.17,
+      "mascotMode": "thinking",
+      "mascotTip": "Bước 1: Tìm thời điểm dừng khi v(t) = 0. Bước 2: Quãng đường s = ∫ v(t)dt!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Quãng đường chuyển động phanh xe</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng thực tế)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:17px; line-height:1.65; color:#f8fafc;\">\n                  Một ô tô đang chạy với vận tốc $20\\text{ m/s}$ thì người lái đạp phanh. Kể từ thời điểm đó, ô tô chuyển động chậm dần đều với vận tốc $v(t) = 20 - 4t\\text{ (m/s)}$, trong đó $t$ tính bằng giây kể từ lúc đạp phanh.\n                </p>\n                <p style=\"font-size:17px; line-height:1.65; color:#fde047;\">\n                  a) Sau bao lâu kể từ lúc đạp phanh thì ô tô dừng hẳn?<br>\n                  b) Tính quãng đường ô tô đi được từ lúc đạp phanh đến khi dừng hẳn.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 178.94,
+      "endTime": 223.03,
+      "duration": 44.09,
+      "mascotMode": "magnifier",
+      "mascotTip": "t = 5s và s = ∫_0^5 (20 - 4t)dt = 50m. Tuyệt đối chính xác!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p><b>a) Thời điểm ô tô dừng hẳn:</b></p>\n                  <p>Ô tô dừng hẳn khi vận tốc triệt tiêu: $v(t) = 0 \\iff 20 - 4t = 0 \\iff t = 5\\text{ (giây)}$.</p>\n                  <p><b>b) Quãng đường ô tô đi được:</b></p>\n                  <p>Áp dụng ý nghĩa vật lý của tích phân, quãng đường từ $t = 0$ đến $t = 5$ là:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:10px 0; text-align:center;\">\n                    $$s = \\int_0^5 (20 - 4t) dt = \\left. \\left(20t - 2t^2\\right) \\right|_0^5 = (20 \\cdot 5 - 2 \\cdot 5^2) - 0 = 100 - 50 = 50\\text{ (m)}$$\n                  </div>\n                  <p><b>Kết luận:</b> Ô tô dừng hẳn sau $5$ giây và đi được quãng đường $50\\text{ m}$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: 2 BẪY TÍCH PHÂN THƯỜNG GẶP",
+      "startTime": 223.03,
+      "endTime": 250.56,
+      "duration": 27.53,
+      "mascotMode": "magnifier",
+      "mascotTip": "Nhớ: Luôn lấy F(cận trên) trừ F(cận dưới), không cần cộng C!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px;\">⚠️ Cú Thông Thái cảnh báo 2 bẫy nguy hiểm</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div class=\"trap-warning-box\" style=\"margin-bottom:14px; background:rgba(239,68,68,0.15); border-left:4px solid #ef4444; padding:12px 16px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fca5a5;\">Bẫy 1: Ngược cận (Thế cận dưới trừ cận trên)</b><br>\n                    Công thức chuẩn là $\\left. F(x) \\right|_a^b = F(b) - F(a)$ (Cận trên $b$ trừ cận dưới $a$). Nếu lấy $F(a) - F(b)$ kết quả sẽ bị ngược dấu!\n                  </div>\n                  <div class=\"trap-warning-box\" style=\"background:rgba(245,158,11,0.15); border-left:4px solid #f59e0b; padding:12px 16px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fde047;\">Bẫy 2: Viết thừa hằng số C</b><br>\n                    Trong tích phân xác định, hằng số $C$ bị triệt tiêu: $[F(b) + C] - [F(a) + C] = F(b) - F(a)$. Vì vậy không ghi $+ C$ khi thế cận.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ GHI NHỚ NHANH",
+      "subtitle": "PHẦN 5: BÀI TOÁN CHUYỂN ĐỘNG & BẤM CASIO",
+      "startTime": 250.56,
+      "endTime": 273.89,
+      "duration": 23.33,
+      "mascotMode": "lightbulb",
+      "mascotTip": "Bấm phím ∫ trên Casio fx-580VNX để kiểm tra kết quả trong 3 giây!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">💡 Mẹo Thầy Cú ghi nhớ nhanh</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p><b>1. Ý nghĩa chuyển động:</b></p>\n                  <p>• Quãng đường $s = \\int_{t_1}^{t_2} v(t) dt$.</p>\n                  <p>• Vận tốc $v(t) = \\int a(t) dt$.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:14px; margin-top:14px;\">\n                    <b style=\"color:#7dd3fc;\">2. Tuyệt kỹ kiểm tra Casio fx-580VNX:</b><br>\n                    Nhấn trực tiếp phím $\\int_{\\square}^{\\square}$ (ngay dưới phím ALPHA), nhập hàm số và cận dưới, cận trên rồi bấm dấu bằng [=]. Kết quả sẽ hiện ra ngay lập tức!\n                  </div>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER4_DATA.bai12_muc2 = {
+  "lessonId": "bai12",
+  "lessonTitle": "Bài 12: Tích phân",
+  "sectionId": "bai12_muc2",
+  "sectionTitle": "Mục 2: Các tính chất của tích phân",
+  "audio": "/audio/bai12_muc2.mp3",
+  "audioSrc": "./audio/bai12_muc2.mp3",
+  "audio_src": "./audio/bai12_muc2.mp3",
+  "timestamp_src": "timestamps/bai12_muc2.json",
+  "totalDuration": 256.95,
+  "duration": 256.95,
+  "title": "Mục 2: Các tính chất của tích phân",
+  "owl_tip": "Chèn cận c: ∫_a^b = ∫_a^c + ∫_c^b. Đảo cận đổi dấu: ∫_b^a = -∫_a^b!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 35.11,
+      "id": "part2"
+    },
+    {
+      "time": 72.77,
+      "id": "part3"
+    },
+    {
+      "time": 79.85,
+      "id": "vd1_q"
+    },
+    {
+      "time": 97.99,
+      "id": "vd1_a"
+    },
+    {
+      "time": 113.85,
+      "id": "vd2_q"
+    },
+    {
+      "time": 137.63,
+      "id": "vd2_a"
+    },
+    {
+      "time": 155.65,
+      "id": "vd3_q"
+    },
+    {
+      "time": 164.46,
+      "id": "vd3_a"
+    },
+    {
+      "time": 216.56,
+      "id": "part4"
+    },
+    {
+      "time": 236.12,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Đưa thừa số ra ngoài & Tích phân đạo hàm",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Tách tổng hiệu & Tính chất chèn cận / nối cận",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Quy tắc trục số định hướng",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 12: TÍCH PHÂN",
+      "subtitle": "MỤC 2 • CÁC TÍNH CHẤT CƠ BẢN",
+      "startTime": 0.0,
+      "endTime": 35.11,
+      "duration": 35.11,
+      "mascotMode": "pointer",
+      "mascotTip": "Đưa hằng số k ra ngoài, và tích phân của f'(x) chính là f(b) - f(a)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Tính chất cơ bản của tích phân</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho các hàm số $f(x), g(x)$ liên tục trên đoạn $[a; b]$ và $k \\in \\mathbb{R}$:</p>\n                  <div style=\"background:rgba(56,189,248,0.12); border-left:4px solid #38bdf8; padding:12px 16px; margin:10px 0; border-radius:0 8px 8px 0;\">\n                    <b>Tính chất 1:</b> $$\\int_a^b f'(x) dx = \\left. f(x) \\right|_a^b = f(b) - f(a)$$\n                  </div>\n                  <div style=\"background:rgba(56,189,248,0.12); border-left:4px solid #38bdf8; padding:12px 16px; margin:10px 0; border-radius:0 8px 8px 0;\">\n                    <b>Tính chất 2 (Đưa hằng số ra ngoài):</b> $$\\int_a^b k f(x) dx = k \\int_a^b f(x) dx$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "TÁCH TỔNG HIỆU & NỐI CẬN",
+      "subtitle": "MỤC 2 • TÍNH CHẤT TUYẾN TÍNH & CHÈN CẬN",
+      "startTime": 35.11,
+      "endTime": 72.77,
+      "duration": 37.66,
+      "mascotMode": "talking",
+      "mascotTip": "Chèn cận c: ∫_a^b = ∫_a^c + ∫_c^b. Đảo cận đổi dấu: ∫_b^a = -∫_a^b!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fde047; font-size:22px; margin-bottom:12px;\">2. Tính chất tách tổng hiệu & chèn cận</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div style=\"background:rgba(254,240,138,0.12); border-left:4px solid #fde047; padding:12px 16px; margin:10px 0; border-radius:0 8px 8px 0;\">\n                    <b>Tính chất 3 (Tách tổng, hiệu):</b>\n                    $$\\int_a^b [f(x) \\pm g(x)] dx = \\int_a^b f(x) dx \\pm \\int_a^b g(x) dx$$\n                  </div>\n                  <div style=\"background:rgba(254,240,138,0.12); border-left:4px solid #fde047; padding:12px 16px; margin:10px 0; border-radius:0 8px 8px 0;\">\n                    <b>Tính chất 4 (Chèn điểm / Nối cận):</b> Với mọi số thực $c$:\n                    $$\\int_a^b f(x) dx = \\int_a^c f(x) dx + \\int_c^b f(x) dx$$\n                  </div>\n                  <p style=\"color:#94a3b8; font-size:14px; margin-top:6px;\">⚠️ Đặc biệt: $\\int_b^a f(x)dx = -\\int_a^b f(x)dx$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 2 • 3 BÀI TOÁN TRỌNG TÂM TÍNH CHẤT",
+      "startTime": 72.77,
+      "endTime": 79.85,
+      "duration": 7.08,
+      "mascotMode": "cheering",
+      "mascotTip": "Áp dụng tính chất tuyến tính và chèn cận giải quyết 3 bài toán sau!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">3. Ba ví dụ rèn luyện điển hình Mục 2</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"margin-left:20px;\">\n                    <li><b>Ví dụ 1 (15s):</b> Tuyến tính hằng số và tổng hiệu $\\int [2f(x) - 3g(x)]dx$ (Nhận biết).</li>\n                    <li><b>Ví dụ 2 (15s):</b> Nối cận và đảo cận (Thông hiểu).</li>\n                    <li><b>Ví dụ 3 (30s):</b> Tích phân hàm chứa dấu giá trị tuyệt đối $|x - 1|$ (Vận dụng).</li>\n                  </ul>\n                  <p style=\"color:#38bdf8; margin-top:12px;\">👉 Đồng hồ đếm ngược thiết kế nhỏ gọn, không che chắn đề bài!</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: TUYẾN TÍNH HẰNG SỐ & HIỆU",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 79.85,
+      "endTime": 97.99,
+      "duration": 18.14,
+      "mascotMode": "thinking",
+      "mascotTip": "I = 2(3) - 3(-2) = 6 + 6 = 12!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Tính chất tuyến tính</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:17px; line-height:1.65; color:#f8fafc;\">\n                  Cho $\\int_1^4 f(x) dx = 3$ và $\\int_1^4 g(x) dx = -2$. Tính tích phân:\n                </p>\n                <div style=\"text-align:center; font-size:24px; color:#fef08a; margin:16px 0;\">\n                  $$I = \\int_1^4 [2f(x) - 3g(x)] dx$$\n                </div>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 97.99,
+      "endTime": 113.85,
+      "duration": 15.86,
+      "mascotMode": "magnifier",
+      "mascotTip": "2*(3) - 3*(-2) = 6 + 6 = 12. Rất chuẩn!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Áp dụng tính chất tách hiệu và đưa thừa số ra ngoài:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:12px 0; text-align:center;\">\n                    $$I = 2 \\int_1^4 f(x) dx - 3 \\int_1^4 g(x) dx$$\n                  </div>\n                  <p>• Thay giá trị giả thiết đã cho vào biểu thức:</p>\n                  <p>$$I = 2 \\cdot (3) - 3 \\cdot (-2) = 6 + 6 = 12$$</p>\n                  <p><b>Kết luận:</b> $I = 12$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: CHÈN CẬN VÀ ĐẢO CẬN",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 113.85,
+      "endTime": 137.63,
+      "duration": 23.78,
+      "mascotMode": "thinking",
+      "mascotTip": "∫_0^5 = ∫_0^2 + ∫_2^5 = 5 + 3 = 8; Đảo cận: ∫_5^2 = -∫_2^5 = -3!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Chèn cận và đảo cận</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:17px; line-height:1.65; color:#f8fafc;\">\n                  Cho $\\int_0^2 f(x) dx = 5$ và $\\int_2^5 f(x) dx = 3$. Hãy tính:\n                </p>\n                <div style=\"text-align:center; font-size:22px; color:#fef08a; margin:14px 0;\">\n                  $$I = \\int_0^5 f(x) dx \\quad \\text{và} \\quad J = \\int_5^2 f(x) dx$$\n                </div>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 137.63,
+      "endTime": 155.65,
+      "duration": 18.02,
+      "mascotMode": "magnifier",
+      "mascotTip": "Nối cận ra 8, đảo cận ra -3. Nhớ quy tắc đảo cận đổi dấu!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                  <p><b>1. Tính $I = \\int_0^5 f(x) dx$:</b></p>\n                  <p>Chèn điểm $c = 2$: $I = \\int_0^2 f(x) dx + \\int_2^5 f(x) dx = 5 + 3 = 8$.</p>\n                  <p><b>2. Tính $J = \\int_5^2 f(x) dx$:</b></p>\n                  <p>Áp dụng quy tắc đảo cận: $J = -\\int_2^5 f(x) dx = -3$.</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin-top:10px; text-align:center;\">\n                    <b>Đáp số:</b> $I = 8$ và $J = -3$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TÍCH PHÂN CHỨA TRỊ TUYỆT ĐỐI",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 155.65,
+      "endTime": 164.46,
+      "duration": 8.81,
+      "mascotMode": "thinking",
+      "mascotTip": "Nghiệm x = 1 chia đoạn [0; 3] thành [0; 1] và [1; 3] để phá dấu trị tuyệt đối!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Tích phân chứa giá trị tuyệt đối</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Tính tích phân sau:</p>\n                <div style=\"text-align:center; font-size:24px; color:#fef08a; margin:16px 0;\">\n                  $$I = \\int_0^3 |x - 1| dx$$\n                </div>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 164.46,
+      "endTime": 216.56,
+      "duration": 52.1,
+      "mascotMode": "magnifier",
+      "mascotTip": "∫_0^1 (1-x)dx = 1/2; ∫_1^3 (x-1)dx = 2 => I = 1/2 + 2 = 5/2 = 2.5!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Phá trị tuyệt đối: $|x - 1| = 1 - x$ khi $x \\in [0; 1]$ và $|x - 1| = x - 1$ khi $x \\in [1; 3]$.</p>\n                  <p>• Chèn điểm $x = 1$ để tách tích phân:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$I = \\int_0^1 (1 - x) dx + \\int_1^3 (x - 1) dx$$\n                  </div>\n                  <p>• $\\int_0^1 (1 - x) dx = \\left. \\left(x - \\frac{x^2}{2}\\right) \\right|_0^1 = 1 - \\frac{1}{2} = \\frac{1}{2}$.</p>\n                  <p>• $\\int_1^3 (x - 1) dx = \\left. \\left(\\frac{x^2}{2} - x\\right) \\right|_1^3 = \\left(\\frac{9}{2} - 3\\right) - \\left(\\frac{1}{2} - 1\\right) = \\frac{3}{2} + \\frac{1}{2} = 2$.</p>\n                  <p><b>Kết luận:</b> $I = \\frac{1}{2} + 2 = \\frac{5}{2} = 2{,}5$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY TÁCH TÍCH THƯƠNG",
+      "startTime": 216.56,
+      "endTime": 236.12,
+      "duration": 19.56,
+      "mascotMode": "magnifier",
+      "mascotTip": "Tuyệt đối không có tính chất ∫ f(x)g(x)dx = ∫ f(x)dx * ∫ g(x)dx!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px;\">⚠️ Cú Thông Thái cảnh báo bẫy tách tích thương</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div class=\"trap-warning-box\" style=\"background:rgba(239,68,68,0.15); border-left:4px solid #ef4444; padding:14px 18px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fca5a5; font-size:18px;\">Sai lầm chết người: Tự ý tách tích thương!</b><br>\n                    <span style=\"color:#fecdd3; font-size:17px;\">$$\\int_a^b f(x)g(x) dx \\ne \\left(\\int_a^b f(x)dx\\right) \\cdot \\left(\\int_a^b g(x)dx\\right)$$</span>\n                    Muốn tính tích phân của một tích, ta <b>bắt buộc phải sử dụng phương pháp đổi biến số hoặc tích phân từng phần</b>!\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ GHI NHỚ NHANH",
+      "subtitle": "PHẦN 5: QUY TẮC TRỤC SỐ ĐỊNH HƯỚNG",
+      "startTime": 236.12,
+      "endTime": 256.95,
+      "duration": 20.83,
+      "mascotMode": "lightbulb",
+      "mascotTip": "Vẽ trục số: đi từ trái sang phải (+) mang dấu cộng, đi ngược lại (-) mang dấu trừ!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">💡 Mẹo Thầy Cú: Quy tắc trục số định hướng</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Khi gặp bài toán trắc nghiệm cho nhiều tích phân với các cận đan xen (ví dụ cận $0, 2, 5, 7$):</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:14px; margin:12px 0;\">\n                    • <b>Bước 1:</b> Vẽ trục số và sắp xếp các cận theo thứ tự tăng dần.<br>\n                    • <b>Bước 2:</b> Đi xuôi từ trái sang phải mang dấu cộng $(+)$.<br>\n                    • <b>Bước 3:</b> Đi ngược từ phải sang trái mang dấu trừ $(-)$.\n                  </div>\n                  <p>Quy tắc này giúp các em giải quyết bài toán chèn cận trong 5 giây mà không bao giờ nhầm lẫn!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER4_DATA.bai12_muc3 = {
+  "lessonId": "bai12",
+  "lessonTitle": "Bài 12: Tích phân",
+  "sectionId": "bai12_muc3",
+  "sectionTitle": "Mục 3: Phương pháp tính tích phân (Đổi biến & Từng phần)",
+  "audio": "/audio/bai12_muc3.mp3",
+  "audioSrc": "./audio/bai12_muc3.mp3",
+  "audio_src": "./audio/bai12_muc3.mp3",
+  "timestamp_src": "timestamps/bai12_muc3.json",
+  "totalDuration": 316.43,
+  "duration": 316.43,
+  "title": "Mục 3: Phương pháp tính tích phân (Đổi biến & Từng phần)",
+  "owl_tip": "Đổi biến thì PHẢI ĐỔI CẬN! Từng phần: Nhất log, nhì đa, tam lượng, tứ mũ!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 42.82,
+      "id": "part2"
+    },
+    {
+      "time": 81.15,
+      "id": "part3"
+    },
+    {
+      "time": 91.04,
+      "id": "vd1_q"
+    },
+    {
+      "time": 104.46,
+      "id": "vd1_a"
+    },
+    {
+      "time": 137.36,
+      "id": "vd2_q"
+    },
+    {
+      "time": 149.02,
+      "id": "vd2_a"
+    },
+    {
+      "time": 188.43,
+      "id": "vd3_q"
+    },
+    {
+      "time": 205.52,
+      "id": "vd3_a"
+    },
+    {
+      "time": 257.82,
+      "id": "part4"
+    },
+    {
+      "time": 283.02,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Phương pháp đổi biến số & Quy trình 3 bước",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Phương pháp từng phần & Khẩu quyết đặt u",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Tuyệt kỹ Casio fx-580VNX",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 12: TÍCH PHÂN",
+      "subtitle": "MỤC 3 • PHƯƠNG PHÁP ĐỔI BIẾN SỐ",
+      "startTime": 0.0,
+      "endTime": 42.82,
+      "duration": 42.82,
+      "mascotMode": "pointer",
+      "mascotTip": "Đặt u = u(x) => du = u'(x)dx. BẮT BUỘC PHẢI ĐỔI CẬN NGAY!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Phương pháp đổi biến số</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Giả sử cần tính tích phân $I = \\int_a^b f(u(x)) u'(x) dx$:</p>\n                  <div style=\"background:rgba(56,189,248,0.12); border-left:4px solid #38bdf8; padding:12px 16px; margin:10px 0; border-radius:0 8px 8px 0;\">\n                    <b>Công thức:</b>\n                    $$\\int_a^b f(u(x)) u'(x) dx = \\int_{u(a)}^{u(b)} f(u) du$$\n                  </div>\n                  <p><b>Quy trình 3 bước:</b></p>\n                  <p>1. Đặt ẩn phụ $u = u(x)$, lấy vi phân $du = u'(x)dx$.</p>\n                  <p>2. <b>Đổi cận:</b> $x = a \\implies u = u(a)$; $x = b \\implies u = u(b)$.</p>\n                  <p>3. Thay vào tính tích phân mới theo biến $u$ (không cần chuyển ngược về biến $x$!).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "PHƯƠNG PHÁP TỪNG PHẦN",
+      "subtitle": "MỤC 3 • CÔNG THỨC & THỨ TỰ ƯU TIÊN ĐẶT U",
+      "startTime": 42.82,
+      "endTime": 81.15,
+      "duration": 38.33,
+      "mascotMode": "talking",
+      "mascotTip": "∫_a^b u dv = uv|_a^b - ∫_a^b v du. Khẩu quyết: Nhất log, nhì đa, tam lượng, tứ mũ!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fde047; font-size:22px; margin-bottom:12px;\">2. Phương pháp tích phân từng phần</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div style=\"background:rgba(254,240,138,0.15); border:1.5px solid #fde047; border-radius:10px; padding:12px; margin:10px 0; text-align:center;\">\n                    <span style=\"font-size:20px; color:#fef08a; font-weight:700;\">$$\\int_a^b u dv = \\left. uv \\right|_a^b - \\int_a^b v du$$</span>\n                  </div>\n                  <div style=\"background:rgba(15,23,42,0.85); border-left:4px solid #38bdf8; padding:10px 14px; margin-top:10px; border-radius:0 8px 8px 0;\">\n                    <b>Khẩu quyết chọn ẩn $u$ kinh điển:</b><br>\n                    <span style=\"color:#34d399; font-weight:700; font-size:17px;\">\"Nhất log — Nhì đa — Tam lượng — Tứ mũ\"</span><br>\n                    $\\ln x \\implies P(x) \\implies \\sin x, \\cos x \\implies e^x$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 3 • ĐỔI BIẾN & TỪNG PHẦN CHỐNG BẤM MÁY",
+      "startTime": 81.15,
+      "endTime": 91.04,
+      "duration": 9.89,
+      "mascotMode": "cheering",
+      "mascotTip": "Cùng rèn luyện 3 ví dụ then chốt với đồng hồ đếm ngược 15s và 30s!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">3. Ba ví dụ rèn luyện điển hình Mục 3</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"margin-left:20px;\">\n                    <li><b>Ví dụ 1 (15s):</b> Đổi biến số cơ bản $u = x^2 + 1$ (Thông hiểu).</li>\n                    <li><b>Ví dụ 2 (15s):</b> Từng phần lượng giác $\\int_0^{\\pi/2} x \\cos x dx$ (Thông hiểu).</li>\n                    <li><b>Ví dụ 3 (30s):</b> Từng phần logarit dạng tham số $a, b$ chống Casio (Vận dụng).</li>\n                  </ul>\n                  <p style=\"color:#38bdf8; margin-top:12px;\">👉 Đồng hồ đếm ngược thiết kế nhỏ gọn, không che chắn nội dung!</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: ĐỔI BIẾN SỐ ĐA THỨC",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 91.04,
+      "endTime": 104.46,
+      "duration": 13.42,
+      "mascotMode": "thinking",
+      "mascotTip": "Đặt u = x² + 1 => du = 2x dx. Đổi cận: x = 0 => u = 1; x = 1 => u = 2!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Phương pháp đổi biến số</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Tính tích phân sau bằng phương pháp đổi biến số:</p>\n                <div style=\"text-align:center; font-size:24px; color:#fef08a; margin:16px 0;\">\n                  $$I = \\int_0^1 2x(x^2 + 1)^3 dx$$\n                </div>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 104.46,
+      "endTime": 137.36,
+      "duration": 32.9,
+      "mascotMode": "magnifier",
+      "mascotTip": "∫_1^2 u³ du = u⁴/4|_1^2 = (16 - 1)/4 = 15/4 = 3.75. Tuyệt vời!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Đặt $u = x^2 + 1 \\implies du = 2x dx$.</p>\n                  <p>• <b>Đổi cận:</b> Khi $x = 0 \\implies u = 1$; Khi $x = 1 \\implies u = 2$.</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:10px 0; text-align:center;\">\n                    $$I = \\int_1^2 u^3 du = \\left. \\frac{u^4}{4} \\right|_1^2 = \\frac{2^4}{4} - \\frac{1^4}{4} = \\frac{16 - 1}{4} = \\frac{15}{4} = 3{,}75$$\n                  </div>\n                  <p><b>Kết luận:</b> $I = \\frac{15}{4}$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: TÍCH PHÂN TỪNG PHẦN LƯỢNG GIÁC",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 137.36,
+      "endTime": 149.02,
+      "duration": 11.66,
+      "mascotMode": "thinking",
+      "mascotTip": "Nhì đa tam lượng: Đặt u = x, dv = cos x dx => du = dx, v = sin x!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Phương pháp từng phần</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">Tính tích phân sau bằng phương pháp từng phần:</p>\n                <div style=\"text-align:center; font-size:24px; color:#fef08a; margin:16px 0;\">\n                  $$J = \\int_0^{\\frac{\\pi}{2}} x \\cos x dx$$\n                </div>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 149.02,
+      "endTime": 188.43,
+      "duration": 39.41,
+      "mascotMode": "magnifier",
+      "mascotTip": "x sin x|_0^(π/2) - ∫_0^(π/2) sin x dx = π/2 - 1. Chuẩn xác!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Đặt $\\begin{cases} u = x \\\\ dv = \\cos x dx \\end{cases} \\implies \\begin{cases} du = dx \\\\ v = \\sin x \\end{cases}$</p>\n                  <p>• Theo công thức tích phân từng phần:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$J = \\left. (x \\sin x) \\right|_0^{\\frac{\\pi}{2}} - \\int_0^{\\frac{\\pi}{2}} \\sin x dx$$\n                  </div>\n                  <p>• $\\left. (x \\sin x) \\right|_0^{\\frac{\\pi}{2}} = \\frac{\\pi}{2} \\sin\\left(\\frac{\\pi}{2}\\right) - 0 = \\frac{\\pi}{2}$.</p>\n                  <p>• $-\\int_0^{\\frac{\\pi}{2}} \\sin x dx = \\left. \\cos x \\right|_0^{\\frac{\\pi}{2}} = \\cos\\left(\\frac{\\pi}{2}\\right) - \\cos 0 = 0 - 1 = -1$.</p>\n                  <p><b>Kết luận:</b> $J = \\frac{\\pi}{2} - 1$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TỪNG PHẦN DẠNG THAM SỐ a, b",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 188.43,
+      "endTime": 205.52,
+      "duration": 17.09,
+      "mascotMode": "thinking",
+      "mascotTip": "Nhất log nhì đa: Đặt u = ln x, dv = x dx. Tính I để tìm a và b!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Từng phần logarit chống Casio</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng cao)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:17px; line-height:1.65; color:#f8fafc;\">\n                  Biết tích phân $\\int_1^e x \\ln x dx = \\frac{a \\cdot e^2 + b}{4}$ với $a, b$ là các số nguyên.\n                </p>\n                <p style=\"font-size:18px; line-height:1.65; color:#fde047;\">\n                  Hãy tính giá trị của biểu thức: $T = a + b$.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 205.52,
+      "endTime": 257.82,
+      "duration": 52.3,
+      "mascotMode": "magnifier",
+      "mascotTip": "I = (e² + 1)/4 => a = 1, b = 1 => T = a + b = 2!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Đặt $\\begin{cases} u = \\ln x \\\\ dv = x dx \\end{cases} \\implies \\begin{cases} du = \\frac{1}{x} dx \\\\ v = \\frac{x^2}{2} \\end{cases}$</p>\n                  <p>• Áp dụng công thức từng phần:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$I = \\left. \\left(\\frac{x^2}{2} \\ln x\\right) \\right|_1^e - \\int_1^e \\frac{x^2}{2} \\cdot \\frac{1}{x} dx = \\frac{e^2}{2} - \\frac{1}{2} \\int_1^e x dx$$\n                  </div>\n                  <p>• $I = \\frac{e^2}{2} - \\left. \\frac{x^2}{4} \\right|_1^e = \\frac{e^2}{2} - \\frac{e^2 - 1}{4} = \\frac{2e^2 - e^2 + 1}{4} = \\frac{e^2 + 1}{4}$.</p>\n                  <p>• Đồng nhất với $\\frac{a \\cdot e^2 + b}{4} \\implies a = 1, b = 1$.</p>\n                  <p><b>Kết luận:</b> $T = a + b = 1 + 1 = 2$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: 2 BẪY TÍNH TÍCH PHÂN SỐNG CÒN",
+      "startTime": 257.82,
+      "endTime": 283.02,
+      "duration": 25.2,
+      "mascotMode": "magnifier",
+      "mascotTip": "Đổi biến thì PHẢI ĐỔI CẬN; Cẩn thận dấu trừ của công thức từng phần!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px;\">⚠️ Cú Thông Thái cảnh báo 2 bẫy nguy hiểm</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div class=\"trap-warning-box\" style=\"margin-bottom:14px; background:rgba(239,68,68,0.15); border-left:4px solid #ef4444; padding:12px 16px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fca5a5;\">Bẫy 1: Đổi biến nhưng quên đổi cận</b><br>\n                    Trong tích phân, khi đổi sang biến $u$, cận $a, b$ phải đổi thành $u(a), u(b)$. Giữ nguyên cận của $x$ sẽ ra đáp án sai hoàn toàn!\n                  </div>\n                  <div class=\"trap-warning-box\" style=\"background:rgba(245,158,11,0.15); border-left:4px solid #f59e0b; padding:12px 16px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fde047;\">Bẫy 2: Dấu trừ kép trong tích phân từng phần</b><br>\n                    Công thức là $\\left. uv \\right|_a^b - \\int_a^b v du$. Khi $v$ có sẵn dấu trừ (như $\\int \\sin x dx = -\\cos x$), hai dấu trừ biến thành dấu cộng!\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & KỸ THUẬT CASIO 580",
+      "subtitle": "PHẦN 5: TÌM THAM SỐ a, b BẰNG TABLE CASIO",
+      "startTime": 283.02,
+      "endTime": 316.43,
+      "duration": 33.41,
+      "mascotMode": "lightbulb",
+      "mascotTip": "Bấm tích phân lưu STO A, giải hệ hoặc Table Menu 8 tìm a, b!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">💡 Tuyệt kỹ Casio fx-580VNX chống bài toán tham số</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p><b>Quy trình bấm máy với dạng $I = \\frac{a \\cdot e^2 + b}{4}$:</b></p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px 16px; margin:10px 0;\">\n                    1. Bấm tích phân $\\int_1^e x \\ln x dx$ rồi bấm <b>STO $\\to$ A</b>.<br>\n                    2. Ta có phương trình: $4A = a \\cdot e^2 + b \\implies b = 4A - a \\cdot e^2$.<br>\n                    3. Vào <b>MENU 8 (Table)</b>, nhập hàm: $f(x) = 4A - x \\cdot e^2$.<br>\n                    4. Cho $x$ chạy từ $-5$ đến $5$, Step 1. Tìm cặp $(x; f(x))$ nhận giá trị nguyên đẹp $\\implies x = a = 1, b = 1$!\n                  </div>\n                  <p style=\"color:#34d399; font-weight:700;\">Tìm ra đáp số $T = a + b = 2$ chỉ trong 10 giây!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
 }
