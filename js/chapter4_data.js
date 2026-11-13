@@ -1372,4 +1372,687 @@ if (typeof window !== 'undefined') {
   ]
 };
 
+
+
+  window.CHAPTER4_DATA.bai13_muc1 = {
+  "lessonId": "bai13",
+  "lessonTitle": "Bài 13: Ứng dụng hình học của tích phân",
+  "sectionId": "bai13_muc1",
+  "sectionTitle": "Mục 1: Tính diện tích hình phẳng",
+  "audio": "/audio/bai13_muc1.mp3",
+  "audioSrc": "./audio/bai13_muc1.mp3",
+  "audio_src": "./audio/bai13_muc1.mp3",
+  "timestamp_src": "timestamps/bai13_muc1.json",
+  "totalDuration": 293.1,
+  "duration": 293.1,
+  "title": "Mục 1: Tính diện tích hình phẳng",
+  "owl_tip": "S = ∫_a^b |f(x) - g(x)|dx: Luôn nhớ dấu giá trị tuyệt đối!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 43.46,
+      "id": "part2"
+    },
+    {
+      "time": 84.69,
+      "id": "part3"
+    },
+    {
+      "time": 95.3,
+      "id": "vd1_q"
+    },
+    {
+      "time": 108.67,
+      "id": "vd1_a"
+    },
+    {
+      "time": 141.89,
+      "id": "vd2_q"
+    },
+    {
+      "time": 151.51,
+      "id": "vd2_a"
+    },
+    {
+      "time": 179.25,
+      "id": "vd3_q"
+    },
+    {
+      "time": 189.4,
+      "id": "vd3_a"
+    },
+    {
+      "time": 240.88,
+      "id": "part4"
+    },
+    {
+      "time": 263.75,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Diện tích hình phẳng giới hạn bởi đồ thị và trục Ox",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Diện tích hình phẳng giới hạn bởi hai đồ thị",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Tuyệt kỹ Casio fx-580VNX",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 13: ỨNG DỤNG HÌNH HỌC TÍCH PHÂN",
+      "subtitle": "MỤC 1 • DIỆN TÍCH HÌNH PHẲNG GIỚI HẠN BỞI ĐỒ THỊ & TRỤC OX",
+      "startTime": 0.0,
+      "endTime": 43.46,
+      "duration": 43.46,
+      "mascotMode": "pointer",
+      "mascotTip": "Diện tích luôn có giá trị tuyệt đối: S = ∫_a^b |f(x)|dx!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Diện tích hình phẳng giới hạn bởi đồ thị $y = f(x)$ và trục $Ox$</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho hàm số $y = f(x)$ liên tục trên đoạn $[a; b]$. Diện tích hình phẳng giới hạn bởi đồ thị $y = f(x)$, trục hoành $Ox$ ($y = 0$) và hai đường thẳng $x = a, x = b$ ($a < b$) được tính bởi:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; text-align:center; margin:12px 0;\">\n                    <span style=\"font-size:22px; color:#fef08a; font-weight:700;\">$$S = \\int_a^b |f(x)| dx$$</span>\n                  </div>\n                  <p><b>Quy tắc tính:</b> Tìm các nghiệm của $f(x) = 0$ trên đoạn $[a; b]$ để chia nhỏ tích phân thành các đoạn không đổi dấu, sau đó phá dấu giá trị tuyệt đối.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "DIỆN TÍCH GIỮA HAI ĐỒ THỊ",
+      "subtitle": "MỤC 1 • CÔNG THỨC DIỆN TÍCH TỔNG QUÁT",
+      "startTime": 43.46,
+      "endTime": 84.69,
+      "duration": 41.23,
+      "mascotMode": "talking",
+      "mascotTip": "S = ∫_a^b |f(x) - g(x)|dx. Nếu chưa có cận, giải f(x) = g(x) tìm cận a, b!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fde047; font-size:22px; margin-bottom:12px;\">2. Diện tích hình phẳng giới hạn bởi hai đồ thị hàm số</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho $y = f(x)$ và $y = g(x)$ liên tục trên đoạn $[a; b]$. Diện tích hình phẳng giới hạn bởi hai đường cong và hai đường thẳng $x = a, x = b$ là:</p>\n                  <div style=\"background:rgba(254,240,138,0.15); border:1.5px solid #fde047; border-radius:10px; padding:12px; text-align:center; margin:12px 0;\">\n                    <span style=\"font-size:22px; color:#fef08a; font-weight:700;\">$$S = \\int_a^b |f(x) - g(x)| dx$$</span>\n                  </div>\n                  <div style=\"background:rgba(15,23,42,0.85); border-left:4px solid #38bdf8; padding:10px 14px; margin-top:10px; border-radius:0 8px 8px 0;\">\n                    <b>Trường hợp không cho cận $x = a, x = b$:</b><br>\n                    Giải phương trình hoành độ giao điểm $f(x) = g(x)$. Cận dưới $a$ là nghiệm nhỏ nhất, cận trên $b$ là nghiệm lớn nhất.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 1 • 3 DẠNG TOÁN TÍNH DIỆN TÍCH TRỌNG TÂM",
+      "startTime": 84.69,
+      "endTime": 95.3,
+      "duration": 10.61,
+      "mascotMode": "cheering",
+      "mascotTip": "Cùng thầy rèn luyện 3 bài toán tính diện tích với đồng hồ đếm ngược 15s và 30s!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">3. Ba ví dụ rèn luyện điển hình Mục 1</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"margin-left:20px;\">\n                    <li><b>Ví dụ 1 (15s):</b> Diện tích giới hạn bởi parabol $y = x^2 - 4$ và trục hoành (Nhận biết).</li>\n                    <li><b>Ví dụ 2 (15s):</b> Diện tích giới hạn bởi parabol $y = x^2$ và đường thẳng $y = 2x$ (Thông hiểu).</li>\n                    <li><b>Ví dụ 3 (30s):</b> Diện tích giới hạn bởi hàm bậc ba $y = x^3 - 3x$ và trục hoành (Vận dụng đối xứng).</li>\n                  </ul>\n                  <p style=\"color:#38bdf8; margin-top:12px;\">👉 Đồng hồ đếm ngược thiết kế nhỏ gọn, không che chắn đề bài!</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: DIỆN TÍCH PARABOL & TRỤC OX",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 95.3,
+      "endTime": 108.67,
+      "duration": 13.37,
+      "mascotMode": "thinking",
+      "mascotTip": "Trên [0; 2], x² - 4 ≤ 0 nên |x² - 4| = 4 - x²!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Tính diện tích hình phẳng cơ bản</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2 - 4$, trục hoành $Ox$ và hai đường thẳng $x = 0, x = 2$.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 108.67,
+      "endTime": 141.89,
+      "duration": 33.22,
+      "mascotMode": "magnifier",
+      "mascotTip": "S = ∫_0^2 (4 - x²)dx = (4x - x³/3)|_0^2 = 8 - 8/3 = 16/3!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Với $x \\in [0; 2]$, ta có $x^2 - 4 \\le 0 \\implies |x^2 - 4| = 4 - x^2$.</p>\n                  <p>• Áp dụng công thức tính diện tích hình phẳng:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:10px 0; text-align:center;\">\n                    $$S = \\int_0^2 |x^2 - 4| dx = \\int_0^2 (4 - x^2) dx = \\left. \\left(4x - \\frac{x^3}{3}\\right) \\right|_0^2 = 8 - \\frac{8}{3} = \\frac{16}{3}$$\n                  </div>\n                  <p><b>Kết luận:</b> $S = \\frac{16}{3}$ (đơn vị diện tích).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: DIỆN TÍCH GIỮA HAI ĐƯỜNG CONG",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 141.89,
+      "endTime": 151.51,
+      "duration": 9.62,
+      "mascotMode": "thinking",
+      "mascotTip": "Giải x² = 2x => x = 0, x = 2. Trên [0; 2], đường thẳng 2x nằm trên x²!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Diện tích giới hạn bởi hai đồ thị</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  Tính diện tích hình phẳng giới hạn bởi parabol $y = x^2$ và đường thẳng $y = 2x$.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 151.51,
+      "endTime": 179.25,
+      "duration": 27.74,
+      "mascotMode": "magnifier",
+      "mascotTip": "S = ∫_0^2 (2x - x²)dx = (x² - x³/3)|_0^2 = 4 - 8/3 = 4/3!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Phương trình hoành độ giao điểm: $x^2 = 2x \\iff x(x - 2) = 0 \\iff x = 0$ hoặc $x = 2$.</p>\n                  <p>• Trên $[0; 2]$, ta thấy $2x \\ge x^2$, do đó:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:10px 0; text-align:center;\">\n                    $$S = \\int_0^2 (2x - x^2) dx = \\left. \\left(x^2 - \\frac{x^3}{3}\\right) \\right|_0^2 = 4 - \\frac{8}{3} = \\frac{4}{3}$$\n                  </div>\n                  <p><b>Kết luận:</b> $S = \\frac{4}{3}$ (đơn vị diện tích).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: HÀM BẬC BA ĐỐI XỨNG",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 179.25,
+      "endTime": 189.4,
+      "duration": 10.15,
+      "mascotMode": "thinking",
+      "mascotTip": "x³ - 3x = 0 => x = -√3, 0, √3. Đồ thị đối xứng qua O => S = 2 * S_[0; √3]!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Diện tích giới hạn bởi đồ thị hàm bậc ba</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^3 - 3x$ và trục hoành $Ox$.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 189.4,
+      "endTime": 240.88,
+      "duration": 51.48,
+      "mascotMode": "magnifier",
+      "mascotTip": "S = 2 * (3x²/2 - x⁴/4)|_0^√3 = 2 * (9/2 - 9/4) = 9/2 = 4.5!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Phương trình hoành độ giao điểm: $x^3 - 3x = 0 \\iff x \\in \\{-\\sqrt{3}; 0; \\sqrt{3}\\}$.</p>\n                  <p>• Vì hàm số $f(x) = x^3 - 3x$ là hàm lẻ, đồ thị đối xứng qua gốc $O$ nên diện tích hai phần bằng nhau:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$S = 2 \\int_0^{\\sqrt{3}} |x^3 - 3x| dx = 2 \\int_0^{\\sqrt{3}} (3x - x^3) dx = 2 \\left. \\left(\\frac{3x^2}{2} - \\frac{x^4}{4}\\right) \\right|_0^{\\sqrt{3}}$$\n                  </div>\n                  <p>• $S = 2 \\left(\\frac{3 \\cdot 3}{2} - \\frac{9}{4}\\right) = 2 \\left(\\frac{9}{2} - \\frac{9}{4}\\right) = 2 \\cdot \\frac{9}{4} = \\frac{9}{2} = 4{,}5$.</p>\n                  <p><b>Kết luận:</b> $S = \\frac{9}{2} = 4{,}5$ (đơn vị diện tích).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY QUÊN DẤU GIÁ TRỊ TUYỆT ĐỐI",
+      "startTime": 240.88,
+      "endTime": 263.75,
+      "duration": 22.87,
+      "mascotMode": "magnifier",
+      "mascotTip": "Không có giá trị tuyệt đối, tích phân từ -√3 đến √3 của x³ - 3x bằng 0!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px;\">⚠️ Cú Thông Thái cảnh báo bẫy diện tích</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div class=\"trap-warning-box\" style=\"background:rgba(239,68,68,0.15); border-left:4px solid #ef4444; padding:14px 18px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fca5a5; font-size:18px;\">Sai lầm chết người: Bỏ quên dấu giá trị tuyệt đối!</b><br>\n                    Ví dụ ở câu 3, nếu tính $\\int_{-\\sqrt{3}}^{\\sqrt{3}} (x^3 - 3x)dx$, kết quả sẽ ra $0$ vì phần đồ thị phía dưới triệt tiêu phần phía trên!<br>\n                    <span style=\"color:#fde047;\">Khắc cốt ghi tâm: Diện tích hình phẳng luôn là số dương $S > 0$, công thức luôn chứa $|f(x) - g(x)|$!</span>\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: BẤM SHIFT ABS TÍNH DIỆN TÍCH NHANH",
+      "startTime": 263.75,
+      "endTime": 293.1,
+      "duration": 29.35,
+      "mascotMode": "lightbulb",
+      "mascotTip": "Bấm ∫ + Shift Abs [x] để Casio tự động phá trị tuyệt đối trong 3 giây!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">💡 Tuyệt kỹ bấm máy tính Casio fx-580VNX</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Khi giải các bài trắc nghiệm tính diện tích:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:14px; margin:12px 0;\">\n                    • <b>Bước 1:</b> Bấm phím tích phân $\\int_{\\square}^{\\square}$.<br>\n                    • <b>Bước 2:</b> Bấm <b>SHIFT + [ ( ] (Abs)</b> để xuất hiện dấu $|\\square|$.<br>\n                    • <b>Bước 3:</b> Nhập hiệu hai hàm số $f(x) - g(x)$ và hai cận $a, b$.<br>\n                    • <b>Bước 4:</b> Bấm [=] để nhận ngay kết quả diện tích chính xác 100%!\n                  </div>\n                  <p style=\"color:#34d399; font-weight:700;\">Không cần mất công xét dấu hay vẽ đồ thị phân chia đoạn!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER4_DATA.bai13_muc2 = {
+  "lessonId": "bai13",
+  "lessonTitle": "Bài 13: Ứng dụng hình học của tích phân",
+  "sectionId": "bai13_muc2",
+  "sectionTitle": "Mục 2: Tính thể tích vật thể & Khối tròn xoay",
+  "audio": "/audio/bai13_muc2.mp3",
+  "audioSrc": "./audio/bai13_muc2.mp3",
+  "audio_src": "./audio/bai13_muc2.mp3",
+  "timestamp_src": "timestamps/bai13_muc2.json",
+  "totalDuration": 303.03,
+  "duration": 303.03,
+  "title": "Mục 2: Tính thể tích vật thể & Khối tròn xoay",
+  "owl_tip": "Thiết diện S(x): không có π. Khối tròn xoay quanh Ox: V = π ∫ [f(x)]² dx!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 43.15,
+      "id": "part2"
+    },
+    {
+      "time": 84.5,
+      "id": "part3"
+    },
+    {
+      "time": 93.81,
+      "id": "vd1_q"
+    },
+    {
+      "time": 118.17,
+      "id": "vd1_a"
+    },
+    {
+      "time": 148.7,
+      "id": "vd2_q"
+    },
+    {
+      "time": 167.61,
+      "id": "vd2_a"
+    },
+    {
+      "time": 196.99,
+      "id": "vd3_q"
+    },
+    {
+      "time": 209.28,
+      "id": "vd3_a"
+    },
+    {
+      "time": 256.97,
+      "id": "part4"
+    },
+    {
+      "time": 281.31,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Thể tích vật thể bất kỳ theo thiết diện S(x)",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Thể tích khối tròn xoay quanh trục Ox",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú phân biệt 2 công thức thể tích",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 13: ỨNG DỤNG HÌNH HỌC TÍCH PHÂN",
+      "subtitle": "MỤC 2 • THỂ TÍCH VẬT THỂ BẤT KỲ CẮT THEO THIẾT DIỆN",
+      "startTime": 0.0,
+      "endTime": 43.15,
+      "duration": 43.15,
+      "mascotMode": "pointer",
+      "mascotTip": "Thể tích vật thể cắt theo thiết diện S(x): V = ∫_a^b S(x)dx (KHÔNG CÓ π)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Thể tích vật thể bất kỳ (Thiết diện vuông góc với $Ox$)</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cắt vật thể bởi hai mặt phẳng vuông góc với trục $Ox$ tại $x = a$ và $x = b$ ($a < b$).</p>\n                  <p>Mặt phẳng vuông góc với $Ox$ tại điểm có hoành độ $x$ ($a \\le x \\le b$) cắt vật thể theo thiết diện có diện tích là $S(x)$ ($S(x)$ liên tục trên $[a; b]$):</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; text-align:center; margin:12px 0;\">\n                    <span style=\"font-size:22px; color:#fef08a; font-weight:700;\">$$V = \\int_a^b S(x) dx$$</span>\n                  </div>\n                  <p style=\"color:#94a3b8;\">⚠️ Lưu ý quan trọng: Công thức thiết diện $S(x)$ <b>không có hằng số $\\pi$</b> phía trước.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "THỂ TÍCH KHỐI TRÒN XOAY",
+      "subtitle": "MỤC 2 • QUAY QUANH TRỤC HOÀNH OX",
+      "startTime": 43.15,
+      "endTime": 84.5,
+      "duration": 41.35,
+      "mascotMode": "talking",
+      "mascotTip": "V = π ∫_a^b [f(x)]² dx: Bắt buộc CÓ π ở trước và [f(x)]² bên trong!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fde047; font-size:22px; margin-bottom:12px;\">2. Thể tích khối tròn xoay quay quanh trục $Ox$</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho hình phẳng giới hạn bởi đồ thị hàm số $y = f(x)$ liên tục trên đoạn $[a; b]$, trục hoành $Ox$ và hai đường thẳng $x = a, x = b$. Khi quay hình phẳng quanh trục $Ox$:</p>\n                  <div style=\"background:rgba(254,240,138,0.15); border:1.5px solid #fde047; border-radius:10px; padding:14px; text-align:center; margin:12px 0;\">\n                    <span style=\"font-size:22px; color:#fef08a; font-weight:700;\">$$V = \\pi \\int_a^b [f(x)]^2 dx$$</span>\n                  </div>\n                  <div style=\"background:rgba(15,23,42,0.85); border-left:4px solid #38bdf8; padding:10px 14px; margin-top:10px; border-radius:0 8px 8px 0;\">\n                    <b>Khối tròn xoay giới hạn bởi hai đồ thị $y = f(x)$ và $y = g(x)$:</b><br>\n                    $$V = \\pi \\int_a^b \\left| [f(x)]^2 - [g(x)]^2 \\right| dx$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 2 • 3 BÀI TOÁN THỂ TÍCH TRỌNG TÂM",
+      "startTime": 84.5,
+      "endTime": 93.81,
+      "duration": 9.31,
+      "mascotMode": "cheering",
+      "mascotTip": "Cùng thầy thực hành 3 bài toán thể tích với đồng hồ 15s và 30s!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">3. Ba ví dụ rèn luyện điển hình Mục 2</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"margin-left:20px;\">\n                    <li><b>Ví dụ 1 (15s):</b> Thể tích vật thể có diện tích thiết diện $S(x)$ (Nhận biết).</li>\n                    <li><b>Ví dụ 2 (15s):</b> Thể tích khối tròn xoay cơ bản quay quanh $Ox$ (Thông hiểu).</li>\n                    <li><b>Ví dụ 3 (30s):</b> Thể tích khối tròn xoay giới hạn bởi 2 đường cong $y = x^2$ và $y = \\sqrt{x}$ (Vận dụng).</li>\n                  </ul>\n                  <p style=\"color:#38bdf8; margin-top:12px;\">👉 Đồng hồ đếm ngược thiết kế nhỏ gọn, không che chắn đề bài!</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: THỂ TÍCH THIẾT DIỆN S(x)",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 93.81,
+      "endTime": 118.17,
+      "duration": 24.36,
+      "mascotMode": "thinking",
+      "mascotTip": "S(x) = x * 2√x = 2x^(3/2). V = ∫_0^3 S(x)dx (KHÔNG có π)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Thể tích vật thể theo thiết diện</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:17px; line-height:1.65; color:#f8fafc;\">\n                  Cho một vật thể nằm giữa hai mặt phẳng $x = 0$ và $x = 3$. Thiết diện của vật thể khi cắt bởi mặt phẳng vuông góc với trục $Ox$ tại hoành độ $x$ là một hình chữ nhật có kích thước $x$ và $2\\sqrt{x}$. Tính thể tích $V$ của vật thể.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 118.17,
+      "endTime": 148.7,
+      "duration": 30.53,
+      "mascotMode": "magnifier",
+      "mascotTip": "V = ∫_0^3 2x^(3/2)dx = (4/5)x²√x|_0^3 = (4/5)*9√3 = 36√3/5!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Diện tích thiết diện tại hoành độ $x$: $S(x) = x \\cdot 2\\sqrt{x} = 2x^{3/2}$.</p>\n                  <p>• Thể tích vật thể là:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:10px 0; text-align:center;\">\n                    $$V = \\int_0^3 S(x) dx = \\int_0^3 2x^{3/2} dx = \\left. \\left(2 \\cdot \\frac{x^{5/2}}{5/2}\\right) \\right|_0^3 = \\left. \\frac{4}{5} x^2\\sqrt{x} \\right|_0^3 = \\frac{4}{5} \\cdot 9\\sqrt{3} = \\frac{36\\sqrt{3}}{5}$$\n                  </div>\n                  <p><b>Kết luận:</b> $V = \\frac{36\\sqrt{3}}{5}$ (đơn vị thể tích).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: THỂ TÍCH KHỐI TRÒN XOAY",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 148.7,
+      "endTime": 167.61,
+      "duration": 18.91,
+      "mascotMode": "thinking",
+      "mascotTip": "V = π ∫_0^4 (√x)² dx = π ∫_0^4 x dx = π * x²/2|_0^4 = 8π!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Thể tích khối tròn xoay quanh Ox</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  Tính thể tích khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi đồ thị $y = \\sqrt{x}$, trục hoành $Ox$ và hai đường thẳng $x = 0, x = 4$ xung quanh trục $Ox$.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 167.61,
+      "endTime": 196.99,
+      "duration": 29.38,
+      "mascotMode": "magnifier",
+      "mascotTip": "V = π * 16/2 = 8π. Nhớ phải có π và bình phương hàm số!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Áp dụng công thức thể tích khối tròn xoay quanh trục $Ox$:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:10px 0; text-align:center;\">\n                    $$V = \\pi \\int_0^4 (\\sqrt{x})^2 dx = \\pi \\int_0^4 x dx = \\left. \\pi \\cdot \\frac{x^2}{2} \\right|_0^4 = \\pi \\cdot \\frac{16}{2} = 8\\pi$$\n                  </div>\n                  <p><b>Kết luận:</b> $V = 8\\pi$ (đơn vị thể tích).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: QUAY HÌNH PHẲNG GIỮA 2 ĐỒ THỊ",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 196.99,
+      "endTime": 209.28,
+      "duration": 12.29,
+      "mascotMode": "thinking",
+      "mascotTip": "Giao điểm x = 0, x = 1. V = π ∫_0^1 |(√x)² - (x²)²| dx = π ∫_0^1 (x - x⁴)dx!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Quay hình phẳng giới hạn bởi 2 đường cong</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  Tính thể tích khối tròn xoay sinh ra khi quay hình phẳng giới hạn bởi hai đường cong $y = x^2$ và $y = \\sqrt{x}$ xung quanh trục $Ox$.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 209.28,
+      "endTime": 256.97,
+      "duration": 47.69,
+      "mascotMode": "magnifier",
+      "mascotTip": "V = π * (1/2 - 1/5) = 3π/10. Tuyệt đối chuẩn xác!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Phương trình hoành độ giao điểm: $x^2 = \\sqrt{x} \\iff x^4 = x \\iff x = 0$ hoặc $x = 1$.</p>\n                  <p>• Trên $[0; 1]$, ta có $\\sqrt{x} \\ge x^2 \\implies (\\sqrt{x})^2 \\ge (x^2)^2$.</p>\n                  <p>• Thể tích khối tròn xoay là:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$V = \\pi \\int_0^1 (x - x^4) dx = \\left. \\pi \\left(\\frac{x^2}{2} - \\frac{x^5}{5}\\right) \\right|_0^1 = \\pi \\left(\\frac{1}{2} - \\frac{1}{5}\\right) = \\frac{3\\pi}{10}$$\n                  </div>\n                  <p><b>Kết luận:</b> $V = \\frac{3\\pi}{10}$ (đơn vị thể tích).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: 2 BẪY TÍNH THỂ TÍCH THƯỜNG GẶP",
+      "startTime": 256.97,
+      "endTime": 281.31,
+      "duration": 24.34,
+      "mascotMode": "magnifier",
+      "mascotTip": "Nhớ: Bắt buộc CÓ π và BÌNH PHƯƠNG hàm số khi tính khối tròn xoay!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px;\">⚠️ Cú Thông Thái cảnh báo 2 bẫy nguy hiểm</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div class=\"trap-warning-box\" style=\"margin-bottom:14px; background:rgba(239,68,68,0.15); border-left:4px solid #ef4444; padding:12px 16px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fca5a5;\">Bẫy 1: Quên nhân $\\pi$ ở phía trước</b><br>\n                    Công thức thể tích khối tròn xoay là $V = \\pi \\int_a^b [f(x)]^2 dx$. Rất nhiều bạn quên số $\\pi$ dẫn đến chọn sai phương án trắc nghiệm!\n                  </div>\n                  <div class=\"trap-warning-box\" style=\"background:rgba(245,158,11,0.15); border-left:4px solid #f59e0b; padding:12px 16px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fde047;\">Bẫy 2: Quên bình phương hàm số</b><br>\n                    Nhiều bạn nhầm lẫn công thức diện tích sang thể tích, lấy $\\pi \\int f(x)dx$ thay vì $\\pi \\int [f(x)]^2 dx$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ PHÂN BIỆT THỂ TÍCH",
+      "subtitle": "PHẦN 5: BẢNG SO SÁNH 2 DẠNG BÀI TOÁN THỂ TÍCH",
+      "startTime": 281.31,
+      "endTime": 303.03,
+      "duration": 21.72,
+      "mascotMode": "lightbulb",
+      "mascotTip": "Thiết diện S(x) => KHÔNG có π. Khối tròn xoay => BẮT BUỘC có π và [f(x)]²!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">💡 Mẹo Thầy Cú phân biệt 2 công thức thể tích</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <table style=\"width:100%; border-collapse:collapse; margin-top:8px;\">\n                    <tr style=\"background:rgba(56,189,248,0.2); border-bottom:2px solid #38bdf8;\">\n                      <th style=\"padding:10px; text-align:left;\">Đặc điểm đề bài</th>\n                      <th style=\"padding:10px; text-align:left;\">Công thức chuẩn</th>\n                      <th style=\"padding:10px; text-align:left;\">Có $\\pi$ không?</th>\n                    </tr>\n                    <tr style=\"border-bottom:1px solid rgba(255,255,255,0.1);\">\n                      <td style=\"padding:10px;\">Cắt theo thiết diện diện tích $S(x)$</td>\n                      <td style=\"padding:10px; color:#fde047;\">$V = \\int_a^b S(x) dx$</td>\n                      <td style=\"padding:10px; color:#ef4444; font-weight:700;\">KHÔNG CÓ $\\pi$</td>\n                    </tr>\n                    <tr>\n                      <td style=\"padding:10px;\">Quay hình phẳng quanh trục $Ox$</td>\n                      <td style=\"padding:10px; color:#34d399;\">$V = \\pi \\int_a^b [f(x)]^2 dx$</td>\n                      <td style=\"padding:10px; color:#34d399; font-weight:700;\">BẮT BUỘC CÓ $\\pi$</td>\n                    </tr>\n                  </table>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER4_DATA.bai13_muc3 = {
+  "lessonId": "bai13",
+  "lessonTitle": "Bài 13: Ứng dụng hình học của tích phân",
+  "sectionId": "bai13_muc3",
+  "sectionTitle": "Mục 3: Ứng dụng tích phân trong bài toán thực tế",
+  "audio": "/audio/bai13_muc3.mp3",
+  "audioSrc": "./audio/bai13_muc3.mp3",
+  "audio_src": "./audio/bai13_muc3.mp3",
+  "timestamp_src": "timestamps/bai13_muc3.json",
+  "totalDuration": 341.76,
+  "duration": 341.76,
+  "title": "Mục 3: Ứng dụng tích phân trong bài toán thực tế",
+  "owl_tip": "Đặt gốc O đối xứng => y = -ax² + h. Công thức Archimedes: S = (2/3)*h*d!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 37.01,
+      "id": "part2"
+    },
+    {
+      "time": 75.63,
+      "id": "part3"
+    },
+    {
+      "time": 85.95,
+      "id": "vd1_q"
+    },
+    {
+      "time": 101.19,
+      "id": "vd1_a"
+    },
+    {
+      "time": 150.92,
+      "id": "vd2_q"
+    },
+    {
+      "time": 177.08,
+      "id": "vd2_a"
+    },
+    {
+      "time": 214.23,
+      "id": "vd3_q"
+    },
+    {
+      "time": 238.42,
+      "id": "vd3_a"
+    },
+    {
+      "time": 287.64,
+      "id": "part4"
+    },
+    {
+      "time": 307.06,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Ứng dụng thực tế của tích phân trong đời sống",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Mô hình hoá toán học & Quy trình 3 bước",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Công thức Archimedes",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 13: ỨNG DỤNG HÌNH HỌC TÍCH PHÂN",
+      "subtitle": "MỤC 3 • ỨNG DỤNG TÍCH PHÂN THỰC TẾ ĐỜI SỐNG",
+      "startTime": 0.0,
+      "endTime": 37.01,
+      "duration": 37.01,
+      "mascotMode": "pointer",
+      "mascotTip": "Cổng parabol, thùng rượu gỗ, bồn hoa lát gạch - tất cả đều giải bằng tích phân!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Các bài toán ứng dụng thực tế của tích phân</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Tích phân là công cụ toán học không thể thiếu trong kỹ thuật, kiến trúc và kinh tế:</p>\n                  <ul style=\"margin-left:20px;\">\n                    <li><b>Kiến trúc & Xây dựng:</b> Tính diện tích mái vòm, cửa sổ parabol, vòm cầu, mặt bằng cảnh quan sân vườn.</li>\n                    <li><b>Sản xuất & Công nghiệp:</b> Tính thể tích và dung tích bồn chứa chất lỏng, bình hoa nghệ thuật, thùng rượu gỗ tròn xoay.</li>\n                    <li><b>Kinh tế & Dự toán:</b> Tính chi phí nhân công, vật liệu lát gạch men, phủ sơn, lắp kính cường lực theo mét vuông.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "MÔ HÌNH HÓA TOÁN HỌC",
+      "subtitle": "MỤC 3 • QUY TRÌNH 3 BƯỚC CHỌN HỆ TRỤC OXY",
+      "startTime": 37.01,
+      "endTime": 75.63,
+      "duration": 38.62,
+      "mascotMode": "talking",
+      "mascotTip": "Đặt gốc O tại tâm đối xứng để parabol có dạng chẵn đẹp: y = -ax² + h!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fde047; font-size:22px; margin-bottom:12px;\">2. Quy trình 3 bước giải bài toán thực tế</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div style=\"background:rgba(254,240,138,0.12); border-left:4px solid #fde047; padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0;\">\n                    <b>Bước 1: Chọn hệ trục toạ độ $Oxy$ tối ưu:</b><br>\n                    Khéo léo chọn gốc toạ độ $O$ tại điểm đối xứng (trung điểm đáy hoặc đỉnh) để hàm số có dạng chẵn đơn giản nhất $y = -ax^2 + h$.\n                  </div>\n                  <div style=\"background:rgba(56,189,248,0.12); border-left:4px solid #38bdf8; padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0;\">\n                    <b>Bước 2: Lập phương trình các đường biên:</b><br>\n                    Xác định toạ độ các điểm đặc biệt từ giả thiết hình vẽ (chiều cao, bề rộng đáy) để tìm hệ số của hàm số.\n                  </div>\n                  <div style=\"background:rgba(52,211,153,0.12); border-left:4px solid #10b981; padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0;\">\n                    <b>Bước 3: Thiết lập tích phân & tính toán:</b><br>\n                    Áp dụng công thức $S = \\int |f - g| dx$ hoặc $V = \\pi \\int f^2 dx$, kết hợp đơn giá để tìm chi phí.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 3 • 3 BÀI TOÁN THỰC TẾ CHỌN LỌC",
+      "startTime": 75.63,
+      "endTime": 85.95,
+      "duration": 10.32,
+      "mascotMode": "cheering",
+      "mascotTip": "Cùng thầy giải quyết 3 bài toán thực tế thú vị với đồng hồ 15s và 30s!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">3. Ba ví dụ rèn luyện điển hình Mục 3</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"margin-left:20px;\">\n                    <li><b>Ví dụ 1 (15s):</b> Diện tích cổng trường hình parabol cao 4m, rộng 4m (Thông hiểu).</li>\n                    <li><b>Ví dụ 2 (15s):</b> Dung tích thùng rượu gỗ tròn xoay (Thông hiểu).</li>\n                    <li><b>Ví dụ 3 (30s):</b> Dự toán chi phí lát gạch men trang trí bồn hoa hình 2 parabol (Vận dụng cao).</li>\n                  </ul>\n                  <p style=\"color:#38bdf8; margin-top:12px;\">👉 Đồng hồ đếm ngược thiết kế nhỏ gọn, không che chắn đề bài!</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: DIỆN TÍCH CỔNG TRƯỜNG PARABOL",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 85.95,
+      "endTime": 101.19,
+      "duration": 15.24,
+      "mascotMode": "thinking",
+      "mascotTip": "Parabol đỉnh (0; 4), qua (2; 0) => y = 4 - x². S = ∫_(-2)^2 (4 - x²)dx!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Diện tích cánh cổng hình Parabol</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:18px; line-height:1.7; color:#f8fafc;\">\n                  Một cánh cổng trường học có dạng hình parabol có chiều cao $4\\text{ m}$ và bề rộng chân cổng là $4\\text{ m}$. Hãy tính diện tích mặt phẳng của cánh cổng đó.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 101.19,
+      "endTime": 150.92,
+      "duration": 49.73,
+      "mascotMode": "magnifier",
+      "mascotTip": "S = 2 * (8 - 8/3) = 32/3 m² ≈ 10.67 m²!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Chọn hệ trục $Oxy$ với gốc $O$ là trung điểm chân cổng. Đỉnh $I(0; 4)$, chân cổng là $A(-2; 0)$ và $B(2; 0)$.</p>\n                  <p>• Parabol có dạng: $y = -ax^2 + 4$. Điểm $B(2; 0) \\implies -4a + 4 = 0 \\implies a = 1 \\implies y = 4 - x^2$.</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$S = \\int_{-2}^2 (4 - x^2) dx = 2 \\int_0^2 (4 - x^2) dx = 2 \\left. \\left(4x - \\frac{x^3}{3}\\right) \\right|_0^2 = 2 \\left(8 - \\frac{8}{3}\\right) = \\frac{32}{3}\\text{ (m}^2)$$\n                  </div>\n                  <p><b>Kết luận:</b> Diện tích cổng là $S = \\frac{32}{3}\\text{ m}^2 \\approx 10{,}67\\text{ m}^2$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: DUNG TÍCH THÙNG RƯỢU GỖ",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 150.92,
+      "endTime": 177.08,
+      "duration": 26.16,
+      "mascotMode": "thinking",
+      "mascotTip": "V = π ∫_(-40)^40 (-x²/200 + 30)² dx. Đổi cm³ ra lít chia cho 1000!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Dung tích thùng rượu gỗ tròn xoay</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:17px; line-height:1.65; color:#f8fafc;\">\n                  Một thùng rượu vang bằng gỗ có dạng khối tròn xoay được tạo thành khi quay cung parabol $y = -\\frac{1}{200}x^2 + 30\\text{ (cm)}$ với $x \\in [-40; 40]$ quanh trục đối xứng $Ox$. Hãy tính thể tích thùng rượu theo đơn vị lít.\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 177.08,
+      "endTime": 214.23,
+      "duration": 37.15,
+      "mascotMode": "magnifier",
+      "mascotTip": "V ≈ 189199 cm³ ≈ 189.2 lít. Rất thực tế và chuẩn xác!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Thể tích thùng rượu là thể tích khối tròn xoay quanh trục $Ox$:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$V = \\pi \\int_{-40}^{40} \\left(-\\frac{1}{200}x^2 + 30\\right)^2 dx = 2\\pi \\int_0^{40} \\left(\\frac{x^4}{40000} - 0{,}3x^2 + 900\\right) dx$$\n                  </div>\n                  <p>• Tính toán tích phân: $V = 2\\pi \\cdot 30112 = 60224\\pi \\approx 189199\\text{ cm}^3$.</p>\n                  <p>• Đổi sang đơn vị lít ($1\\text{ lít} = 1000\\text{ cm}^3$): $V \\approx 189{,}2\\text{ lít}$.</p>\n                  <p><b>Kết luận:</b> Thùng rượu có dung tích xấp xỉ $189{,}2\\text{ lít}$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: CHI PHÍ LÁT GẠCH BỒN HOA",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 214.23,
+      "endTime": 238.42,
+      "duration": 24.19,
+      "mascotMode": "thinking",
+      "mascotTip": "4 - x² = x² - 4 => x = ±2. S = ∫_(-2)^2 (8 - 2x²)dx. Chi phí = S * 250.000đ!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Dự toán chi phí thi công bồn hoa</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng cao)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <p style=\"font-size:17px; line-height:1.65; color:#f8fafc;\">\n                  Một bồn hoa có dạng hình phẳng giới hạn bởi hai parabol đối xứng nhau: $y = 4 - x^2$ và $y = x^2 - 4\\text{ (m)}$. Nhà trường muốn lát gạch men trang trí toàn bộ bồn hoa với đơn giá $250.000\\text{ đồng/m}^2$.\n                </p>\n                <p style=\"font-size:17px; line-height:1.65; color:#fde047;\">\n                  Hỏi tổng chi phí cần chi trả là bao nhiêu tiền (làm tròn đến hàng nghìn đồng)?\n                </p>\n                \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 238.42,
+      "endTime": 287.64,
+      "duration": 49.22,
+      "mascotMode": "magnifier",
+      "mascotTip": "S = 64/3 m² => Chi phí = (64/3)*250.000 ≈ 5.333.000 đồng!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Phương trình giao điểm: $4 - x^2 = x^2 - 4 \\iff 2x^2 = 8 \\iff x = \\pm 2$.</p>\n                  <p>• Diện tích bồn hoa:</p>\n                  <div style=\"background:rgba(52,211,153,0.12); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$S = \\int_{-2}^2 [(4 - x^2) - (x^2 - 4)] dx = \\int_{-2}^2 (8 - 2x^2) dx = \\left. \\left(8x - \\frac{2x^3}{3}\\right) \\right|_{-2}^2 = \\frac{64}{3}\\text{ (m}^2)$$\n                  </div>\n                  <p>• Tổng chi phí lát gạch men:</p>\n                  <p>$$\\text{Chi phí} = \\frac{64}{3} \\times 250.000 = \\frac{16.000.000}{3} \\approx 5.333.333\\text{ (đồng)}$$</p>\n                  <p><b>Kết luận:</b> Tổng chi phí xấp xỉ $5.333.000\\text{ đồng}$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY ĐƠN VỊ ĐO TRONG BÀI TOÁN THỰC TẾ",
+      "startTime": 287.64,
+      "endTime": 307.06,
+      "duration": 19.42,
+      "mascotMode": "magnifier",
+      "mascotTip": "Luôn kiểm tra đơn vị: cm³ ra lít phải chia 1000; kích thước mét mới nhân đơn giá m²!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px;\">⚠️ Cú Thông Thái cảnh báo bẫy đơn vị đo lường</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div class=\"trap-warning-box\" style=\"background:rgba(239,68,68,0.15); border-left:4px solid #ef4444; padding:14px 18px; border-radius:0 8px 8px 0;\">\n                    <b style=\"color:#fca5a5; font-size:18px;\">Sai lầm chết người: Không đồng nhất đơn vị đo lường!</b><br>\n                    • Nếu toạ độ tính bằng $\\text{cm}$ thì thể tích là $\\text{cm}^3$. Đổi ra <b>lít</b> phải chia cho $1.000$ ($1\\text{ dm}^3 = 1\\text{ lít} = 1.000\\text{ cm}^3$).<br>\n                    • Nếu toạ độ tính bằng $\\text{m}$ thì thể tích là $\\text{m}^3$. Đổi ra <b>lít</b> phải nhân với $1.000$ ($1\\text{ m}^3 = 1.000\\text{ lít}$).<br>\n                    <span style=\"color:#fde047;\">Luôn quy đổi đơn vị chuẩn xác trước khi tính chi phí hoặc trả lời đáp số!</span>\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & CÔNG THỨC VÀNG",
+      "subtitle": "PHẦN 5: CÔNG THỨC TÍNH NHANH DIỆN TÍCH PARABOL",
+      "startTime": 307.06,
+      "endTime": 341.76,
+      "duration": 34.7,
+      "mascotMode": "lightbulb",
+      "mascotTip": "Công thức Archimedes: S_parabol = (2/3) * h * d (chiều cao h, bề rộng đáy d)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">💡 Công thức vàng tính nhanh diện tích Parabol (Archimedes)</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Với hình phẳng giới hạn bởi một parabol và đường thẳng vuông góc với trục đối xứng (như cánh cổng hoặc vòm cầu):</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:14px; text-align:center; margin:12px 0;\">\n                    <span style=\"font-size:22px; color:#fde047; font-weight:700;\">$$S = \\frac{2}{3} \\cdot h \\cdot d$$</span><br>\n                    <span style=\"font-size:15px; color:#cbd5e1;\">(trong đó: $h$ là chiều cao từ đỉnh đến đáy, $d$ là bề rộng đáy)</span>\n                  </div>\n                  <p><b>Áp dụng ngay Ví dụ 1:</b> $h = 4\\text{ m}$, $d = 4\\text{ m} \\implies S = \\frac{2}{3} \\times 4 \\times 4 = \\frac{32}{3}\\text{ m}^2$ trong đúng 3 giây!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
 }
