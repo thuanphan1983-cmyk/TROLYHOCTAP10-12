@@ -16,6 +16,7 @@
       if (window.CHAPTER1_LECTURES) Object.assign(LECTURE_DATA, window.CHAPTER1_LECTURES);
       if (window.CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.CHAPTER1_DATA);
       if (window.CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.CHAPTER2_DATA);
+      if (window.CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.CHAPTER3_DATA);
     }
   }
 
@@ -40,11 +41,30 @@
         };
         document.head.appendChild(s1);
       }
+            if (!window.CHAPTER3_DATA) {
+        const s3 = document.createElement('script');
+        s3.src = (window.location.protocol === 'file:') ? 'js/chapter3_data.js' : '/js/chapter3_data.js';
+        s3.onload = function() {
+          if (window.CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.CHAPTER3_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        s3.onerror = function() {
+          const s3b = document.createElement('script');
+          s3b.src = 'public/js/chapter3_data.js';
+          s3b.onload = function() {
+            if (window.CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.CHAPTER3_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(s3b);
+        };
+        document.head.appendChild(s3);
+      }
       if (!window.CHAPTER2_DATA) {
         const s2 = document.createElement('script');
         s2.src = (window.location.protocol === 'file:') ? 'js/chapter2_data.js' : '/js/chapter2_data.js';
         s2.onload = function() {
           if (window.CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.CHAPTER2_DATA);
+      if (window.CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.CHAPTER3_DATA);
           if (typeof initSectionSelector === 'function') initSectionSelector();
         };
         s2.onerror = function() {
@@ -52,6 +72,7 @@
           s2b.src = 'public/js/chapter2_data.js';
           s2b.onload = function() {
             if (window.CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.CHAPTER2_DATA);
+      if (window.CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.CHAPTER3_DATA);
             if (typeof initSectionSelector === 'function') initSectionSelector();
           };
           document.head.appendChild(s2b);
@@ -572,6 +593,16 @@
       ]
     },
         {
+      lessonId: "bai9",
+      lessonTitle: "Bài 9: Khoảng biến thiên & Khoảng tứ phân vị",
+      lessonBadge: "Bài 9",
+      sections: [
+        { key: "bai9_muc1", title: "Mục 1: Khoảng biến thiên của mẫu số liệu ghép nhóm", time: "05:00", icon: "📊" },
+        { key: "bai9_muc2", title: "Mục 2: Tứ phân vị và khoảng tứ phân vị", time: "05:00", icon: "📐" },
+        { key: "bai9_muc3", title: "Mục 3: Giá trị ngoại lai & So sánh độ phân tán", time: "05:00", icon: "🎯" }
+      ]
+    },
+        {
       lessonId: "ontap_c2",
       lessonTitle: "Ôn tập Chương 2: Vectơ & Hệ toạ độ Oxyz",
       lessonBadge: "Ôn tập C2",
@@ -768,7 +799,7 @@
     if (lessonNum === 1) {
       return sectionNum === 2 ? 'muc2' : 'muc1';
     }
-    if (lessonNum >= 2 && lessonNum <= 8) {
+    if (lessonNum >= 2 && lessonNum <= 9) {
       const maxSec = (lessonNum === 4) ? 4 : 3;
       const s = Math.min(maxSec, Math.max(1, sectionNum));
       return `bai${lessonNum}_muc${s}`;

@@ -1,0 +1,248 @@
+{
+  "bai9_muc1": {
+    "totalDuration": 334.06,
+    "timeline": [
+      {
+        "sceneIndex": 1,
+        "id": "part1",
+        "startTime": 0.0,
+        "endTime": 62.28,
+        "duration": 62.28
+      },
+      {
+        "sceneIndex": 2,
+        "id": "part2",
+        "startTime": 62.28,
+        "endTime": 91.9,
+        "duration": 29.62
+      },
+      {
+        "sceneIndex": 3,
+        "id": "part3",
+        "startTime": 91.9,
+        "endTime": 95.28,
+        "duration": 3.38
+      },
+      {
+        "sceneIndex": 4,
+        "id": "vd1_q",
+        "startTime": 95.28,
+        "endTime": 150.17,
+        "duration": 54.89
+      },
+      {
+        "sceneIndex": 5,
+        "id": "vd1_a",
+        "startTime": 150.17,
+        "endTime": 173.76,
+        "duration": 23.59
+      },
+      {
+        "sceneIndex": 6,
+        "id": "vd2_q",
+        "startTime": 173.76,
+        "endTime": 218.83,
+        "duration": 45.07
+      },
+      {
+        "sceneIndex": 7,
+        "id": "vd2_a",
+        "startTime": 218.83,
+        "endTime": 253.63,
+        "duration": 34.8
+      },
+      {
+        "sceneIndex": 8,
+        "id": "vd3_q",
+        "startTime": 253.63,
+        "endTime": 302.64,
+        "duration": 49.01
+      },
+      {
+        "sceneIndex": 9,
+        "id": "vd3_a",
+        "startTime": 302.64,
+        "endTime": 306.6,
+        "duration": 3.96
+      },
+      {
+        "sceneIndex": 10,
+        "id": "part4",
+        "startTime": 306.6,
+        "endTime": 330.31,
+        "duration": 23.71
+      },
+      {
+        "sceneIndex": 11,
+        "id": "part5",
+        "startTime": 330.31,
+        "endTime": 349.2,
+        "duration": 18.89
+      }
+    ]
+  },
+  "bai9_muc2": {
+    "totalDuration": 378.02,
+    "timeline": [
+      {
+        "sceneIndex": 1,
+        "id": "part1",
+        "startTime": 0.0,
+        "endTime": 41.59,
+        "duration": 41.59
+      },
+      {
+        "sceneIndex": 2,
+        "id": "part2",
+        "startTime": 41.59,
+        "endTime": 100.85,
+        "duration": 59.26
+      },
+      {
+        "sceneIndex": 3,
+        "id": "part3",
+        "startTime": 100.85,
+        "endTime": 104.23,
+        "duration": 3.38
+      },
+      {
+        "sceneIndex": 4,
+        "id": "vd1_q",
+        "startTime": 104.23,
+        "endTime": 153.55,
+        "duration": 49.32
+      },
+      {
+        "sceneIndex": 5,
+        "id": "vd1_a",
+        "startTime": 153.55,
+        "endTime": 190.51,
+        "duration": 36.96
+      },
+      {
+        "sceneIndex": 6,
+        "id": "vd2_q",
+        "startTime": 190.51,
+        "endTime": 232.37,
+        "duration": 41.86
+      },
+      {
+        "sceneIndex": 7,
+        "id": "vd2_a",
+        "startTime": 232.37,
+        "endTime": 271.08,
+        "duration": 38.71
+      },
+      {
+        "sceneIndex": 8,
+        "id": "vd3_q",
+        "startTime": 271.08,
+        "endTime": 302.35,
+        "duration": 31.27
+      },
+      {
+        "sceneIndex": 9,
+        "id": "vd3_a",
+        "startTime": 302.35,
+        "endTime": 336.24,
+        "duration": 33.89
+      },
+      {
+        "sceneIndex": 10,
+        "id": "part4",
+        "startTime": 336.24,
+        "endTime": 357.5,
+        "duration": 21.26
+      },
+      {
+        "sceneIndex": 11,
+        "id": "part5",
+        "startTime": 357.5,
+        "endTime": 378.86,
+        "duration": 21.36
+      }
+    ]
+  },
+  "bai9_muc3": {
+    "totalDuration": 342.47,
+    "timeline": [
+      {
+        "sceneIndex": 1,
+        "id": "part1",
+        "startTime": 0.0,
+        "endTime": 44.14,
+        "duration": 44.14
+      },
+      {
+        "sceneIndex": 2,
+        "id": "part2",
+        "startTime": 44.14,
+        "endTime": 77.64,
+        "duration": 33.5
+      },
+      {
+        "sceneIndex": 3,
+        "id": "part3",
+        "startTime": 77.64,
+        "endTime": 81.02,
+        "duration": 3.38
+      },
+      {
+        "sceneIndex": 4,
+        "id": "vd1_q",
+        "startTime": 81.02,
+        "endTime": 119.97,
+        "duration": 38.95
+      },
+      {
+        "sceneIndex": 5,
+        "id": "vd1_a",
+        "startTime": 119.97,
+        "endTime": 157.48,
+        "duration": 37.51
+      },
+      {
+        "sceneIndex": 6,
+        "id": "vd2_q",
+        "startTime": 157.48,
+        "endTime": 195.26,
+        "duration": 37.78
+      },
+      {
+        "sceneIndex": 7,
+        "id": "vd2_a",
+        "startTime": 195.26,
+        "endTime": 228.64,
+        "duration": 33.38
+      },
+      {
+        "sceneIndex": 8,
+        "id": "vd3_q",
+        "startTime": 228.64,
+        "endTime": 270.54,
+        "duration": 41.9
+      },
+      {
+        "sceneIndex": 9,
+        "id": "vd3_a",
+        "startTime": 270.54,
+        "endTime": 304.57,
+        "duration": 34.03
+      },
+      {
+        "sceneIndex": 10,
+        "id": "part4",
+        "startTime": 304.57,
+        "endTime": 323.82,
+        "duration": 19.25
+      },
+      {
+        "sceneIndex": 11,
+        "id": "part5",
+        "startTime": 323.82,
+        "endTime": 343.31,
+        "duration": 19.49
+      }
+    ]
+  }
+}
