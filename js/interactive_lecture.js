@@ -17,12 +17,31 @@
       if (window.CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.CHAPTER1_DATA);
       if (window.CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.CHAPTER2_DATA);
       if (window.CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.CHAPTER3_DATA);
+      if (window.CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.CHAPTER4_DATA);
     }
   }
 
   // Dynamic script loader for Chapter data scaffolds
   (function tryLoadChapterData() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      if (!window.CHAPTER4_DATA) {
+        const s4 = document.createElement('script');
+        s4.src = (window.location.protocol === 'file:') ? 'js/chapter4_data.js' : '/js/chapter4_data.js';
+        s4.onload = function() {
+          if (window.CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.CHAPTER4_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        s4.onerror = function() {
+          const s4b = document.createElement('script');
+          s4b.src = 'public/js/chapter4_data.js';
+          s4b.onload = function() {
+            if (window.CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.CHAPTER4_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(s4b);
+        };
+        document.head.appendChild(s4);
+      }
       if (!window.CHAPTER1_LECTURES) {
         const s1 = document.createElement('script');
         s1.src = (window.location.protocol === 'file:') ? 'js/chapter1_data.js' : '/js/chapter1_data.js';
