@@ -3,6 +3,7 @@
    Bài 14: Phương trình mặt phẳng (Mục 1, 2, 3, 4)
    Bài 15: Phương trình đường thẳng trong không gian (Mục 1, 2, 3)
    Bài 16: Công thức tính góc trong không gian (Mục 1, 2, 3)
+   Bài 17: Phương trình mặt cầu (Mục 1, 2, 3)
    Rich Interactive Slides & Audio chuẩn SGK Kết Nối Tri Thức
    ========================================================================= */
 
@@ -2275,6 +2276,687 @@ if (typeof window !== 'undefined') {
       "mascotMode": "talking",
       "mascotTip": "Nhập n1 vào VctA, n2 vào VctB -> Angle(VctA, VctB) -> Nhọn lấy luôn, Tù lấy 180° - Ans!",
       "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX tính góc 2 mặt phẳng</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• <b>Bước 1:</b> <code>MENU 5</code> $\\rightarrow$ Nhập $\\vec{n}_1$ vào <b>VctA</b>, nhập $\\vec{n}_2$ vào <b>VctB</b>.</p>\n                  <p>• <b>Bước 2:</b> Bấm <code>AC</code> $\\rightarrow$ <code>OPTN</code> $\\rightarrow$ Mũi tên xuống $\\rightarrow$ Chọn <code>3: Angle</code>.</p>\n                  <p>• <b>Bước 3:</b> Bấm <code>OPTN 3</code> (VctA) $\\rightarrow$ <code>Shift )</code> $\\rightarrow$ <code>OPTN 4</code> (VctB) $\\rightarrow$ <code>=</code>.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    • Nếu màn hình hiển thị góc $\\le 90^\\circ \\implies$ Đó chính là số đo góc giữa hai mặt phẳng.<br>\n                    • Nếu góc $> 90^\\circ \\implies$ Bấm tiếp <code>180 - Ans =</code> là ra ngay kết quả chính xác 100%!\n                  </div>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER5_DATA.bai17_muc1 = {
+  "lessonId": "bai17",
+  "lessonTitle": "Bài 17: Phương trình mặt cầu",
+  "sectionId": "bai17_muc1",
+  "sectionTitle": "Mục 1: Định nghĩa & Phương trình chính tắc mặt cầu",
+  "audio": "/audio/bai17_muc1.mp3",
+  "audioSrc": "./audio/bai17_muc1.mp3",
+  "audio_src": "./audio/bai17_muc1.mp3",
+  "timestamp_src": "timestamps/bai17_muc1.json",
+  "totalDuration": 320.94,
+  "duration": 320.94,
+  "title": "Mục 1: Định nghĩa & Phương trình chính tắc mặt cầu",
+  "owl_tip": "Tâm I(a; b; c), bán kính R: (x - a)² + (y - b)² + (z - c)² = R². Vế phải luôn là R bình!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 30.98,
+      "id": "part2"
+    },
+    {
+      "time": 69.19,
+      "id": "part3"
+    },
+    {
+      "time": 83.45,
+      "id": "vd1_q"
+    },
+    {
+      "time": 103.27,
+      "id": "vd1_a"
+    },
+    {
+      "time": 126.05,
+      "id": "vd2_q"
+    },
+    {
+      "time": 140.02,
+      "id": "vd2_a"
+    },
+    {
+      "time": 194.43,
+      "id": "vd3_q"
+    },
+    {
+      "time": 209.41,
+      "id": "vd3_a"
+    },
+    {
+      "time": 255.25,
+      "id": "part4"
+    },
+    {
+      "time": 281.58,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm & Định nghĩa mặt cầu trong không gian",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Phương trình chính tắc của mặt cầu",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Bấm Casio 580 tính bán kính",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 17: PHƯƠNG TRÌNH MẶT CẦU",
+      "subtitle": "MỤC 1 • ĐỊNH NGHĨA MẶT CẦU TRONG KHÔNG GIAN",
+      "startTime": 0,
+      "endTime": 30.98,
+      "duration": 30.98,
+      "mascotMode": "pointer",
+      "mascotTip": "Mặt cầu tâm I bán kính R là tập hợp các điểm M sao cho IM = R!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Định nghĩa mặt cầu trong không gian $Oxyz$</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Trong không gian, tập hợp tất cả các điểm $M$ cách điểm $I$ cố định một khoảng bằng số thực dương $R$ gọi là <b>mặt cầu</b> tâm $I$, bán kính $R$.</p>\n                  <p>• Ký hiệu: $S(I; R) = \\{M \\mid IM = R\\}$.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:12px 0;\">\n                    <b>Khối cầu:</b> Tập hợp tất cả các điểm $M$ nằm trên mặt cầu và nằm bên trong mặt cầu ($IM \\le R$) được gọi là khối cầu tâm $I$, bán kính $R$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "PHƯƠNG TRÌNH CHÍNH TẮC CỦA MẶT CẦU",
+      "subtitle": "MỤC 1 • DẠNG CHUẨN TÂM I(a; b; c) VÀ BÁN KÍNH R",
+      "startTime": 30.98,
+      "endTime": 69.19,
+      "duration": 38.21,
+      "mascotMode": "talking",
+      "mascotTip": "(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2. Nhớ vế phải là R bình phương!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Phương trình chính tắc của mặt cầu</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Trong không gian $Oxyz$, mặt cầu $(S)$ tâm $I(a; b; c)$ và bán kính $R > 0$ có phương trình chính tắc:</p>\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:14px; margin:12px 0; text-align:center; font-size:19px;\">\n                    $$(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$$\n                  </div>\n                  <div style=\"background:rgba(251,191,36,0.15); border:1.5px solid #fbbf24; border-radius:10px; padding:10px; margin:10px 0;\">\n                    <b>Trường hợp đặc biệt:</b> Mặt cầu có tâm tại gốc toạ độ $O(0; 0; 0)$ có phương trình:\n                    $$x^2 + y^2 + z^2 = R^2$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 1 • 3 BÀI TOÁN TÂM, BÁN KÍNH & LẬP PHƯƠNG TRÌNH",
+      "startTime": 69.19,
+      "endTime": 83.45,
+      "duration": 14.26,
+      "mascotMode": "thinking",
+      "mascotTip": "Cùng rèn luyện kỹ năng đọc tâm, bán kính và lập PT mặt cầu điển hình!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 dạng toán trọng tâm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Xác định toạ độ tâm $I$ và bán kính $R$ từ PT chính tắc.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Viết phương trình mặt cầu đường kính $AB$ với hai đầu mút cho trước.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Viết PT mặt cầu có tâm $I$ và tiếp xúc với mặt phẳng $(P)$.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: ĐỌC TOẠ ĐỘ TÂM VÀ BÁN KÍNH",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 83.45,
+      "endTime": 103.27,
+      "duration": 19.82,
+      "mascotMode": "thinking",
+      "mascotTip": "Tâm I: đổi dấu các số trong ngoặc! R = căn bậc hai của vế phải.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: ĐỌC TÂM VÀ BÁN KÍNH MẶT CẦU</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho mặt cầu $(S)$ có phương trình:\n                  $$(x - 2)^2 + (y + 1)^2 + (z - 4)^2 = 25$$\n                  Hãy tìm toạ độ tâm $I$ và tính bán kính $R$ của mặt cầu $(S)$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 103.27,
+      "endTime": 126.05,
+      "duration": 22.78,
+      "mascotMode": "talking",
+      "mascotTip": "x - 2 = 0 -> 2; y + 1 = 0 -> -1; z - 4 = 0 -> 4. R = căn 25 = 5!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Đối chiếu với phương trình chính tắc $(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$:</p>\n                  <p>$$a = 2; \\quad b = -1; \\quad c = 4$$</p>\n                  <p>• Vế phải là $R^2 = 25 \\implies R = \\sqrt{25} = 5$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center;\">\n                    <b>Kết luận:</b> Tâm $I(2; -1; 4)$ và bán kính $R = 5$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: PHƯƠNG TRÌNH MẶT CẦU ĐƯỜNG KÍNH AB",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 126.05,
+      "endTime": 140.02,
+      "duration": 13.97,
+      "mascotMode": "thinking",
+      "mascotTip": "Tâm I là trung điểm của AB! Bán kính R = AB / 2.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: PT MẶT CẦU ĐƯỜNG KÍNH AB</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, viết phương trình mặt cầu nhận đoạn thẳng $AB$ làm đường kính, biết $A(1; 2; -1)$ và $B(3; 0; 3)$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 140.02,
+      "endTime": 194.43,
+      "duration": 54.41,
+      "mascotMode": "talking",
+      "mascotTip": "Tâm I(2; 1; 1). R = căn(6) -> R^2 = 6. Lập phương trình nhanh gọn!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Tâm $I$ là trung điểm của $AB$:</p>\n                  <p>$$x_I = \\frac{1+3}{2} = 2, \\quad y_I = \\frac{2+0}{2} = 1, \\quad z_I = \\frac{-1+3}{2} = 1 \\implies I(2; 1; 1)$$</p>\n                  <p>• Độ dài đường kính: $AB = \\sqrt{(3-1)^2 + (0-2)^2 + (3-(-1))^2} = \\sqrt{4+4+16} = \\sqrt{24} = 2\\sqrt{6}$.</p>\n                  <p>• Bán kính: $R = \\frac{AB}{2} = \\sqrt{6} \\implies R^2 = 6$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center;\">\n                    <b>Phương trình $(S)$:</b> $(x - 2)^2 + (y - 1)^2 + (z - 1)^2 = 6$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: MẶT CẦU TIẾP XÚC MẶT PHẲNG",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 194.43,
+      "endTime": 209.41,
+      "duration": 14.98,
+      "mascotMode": "thinking",
+      "mascotTip": "Mặt cầu tiếp xúc với mặt phẳng thì bán kính R = d(I, (P))!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: PT MẶT CẦU TIẾP XÚC MẶT PHẲNG</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, viết phương trình mặt cầu $(S)$ có tâm $I(1; -2; 3)$ và tiếp xúc với mặt phẳng $(P): 2x - 2y + z + 3 = 0$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 209.41,
+      "endTime": 255.25,
+      "duration": 45.84,
+      "mascotMode": "talking",
+      "mascotTip": "d(I, (P)) = |2(1) - 2(-2) + 3 + 3| / 3 = 12/3 = 4 -> R^2 = 16!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Vì $(S)$ tiếp xúc với mặt phẳng $(P)$ nên bán kính $R = d(I, (P))$:</p>\n                  <p>$$R = \\frac{|2(1) - 2(-2) + 1(3) + 3|}{\\sqrt{2^2+(-2)^2+1^2}} = \\frac{|2 + 4 + 3 + 3|}{\\sqrt{9}} = \\frac{12}{3} = 4$$</p>\n                  <p>• Suy ra $R^2 = 4^2 = 16$.</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:12px; margin:8px 0; text-align:center;\">\n                    <b>Phương trình mặt cầu $(S)$:</b>\n                    $$(x - 1)^2 + (y + 2)^2 + (z - 3)^2 = 16$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY NHẦM BÁN KÍNH VỚI R^2 & NHẦM DẤU TÂM",
+      "startTime": 255.25,
+      "endTime": 281.58,
+      "duration": 26.33,
+      "mascotMode": "magnifier",
+      "mascotTip": "Vế phải là R^2! Đừng quên căn bậc hai khi đọc bán kính.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">⚠️ BẪY 1: NHẦM LẪN GIỮA R VÀ R²</div>\n                  <p style=\"margin:6px 0 0 0; font-size:16.5px; color:#fecaca;\">\n                    Cho mặt cầu $(x-1)^2 + (y-2)^2 + z^2 = 25$. Rất nhiều bạn ghi $R = 25$ ❌ SAI!<br>\n                    <b>Chuẩn xác:</b> Vế phải là $R^2 = 25 \\implies R = \\sqrt{25} = 5$ ✅!\n                  </p>\n                </div>\n                <div style=\"background:rgba(244,63,94,0.15); border:1.5px solid #f43f5e; border-radius:10px; padding:12px;\">\n                  <b style=\"color:#fda4af;\">⚠️ BẪY 2: NHẦM DẤU TOẠ ĐỘ TÂM</b>\n                  <p style=\"margin:4px 0 0 0; font-size:15px; color:#f8fafc;\">\n                    Dạng chuẩn là $(x-a)^2, (y-b)^2, (z-c)^2$. Khi thấy $(y+1)^2$, toạ độ tâm phải là $b = -1$!\n                  </p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: TÍNH KHOẢNG CÁCH TÂM ĐẾN MẶT PHẲNG BẰNG CALC",
+      "startTime": 281.58,
+      "endTime": 320.94,
+      "duration": 39.36,
+      "mascotMode": "talking",
+      "mascotTip": "Nhập phân số khoảng cách Abs(Ax+By+Cz+D)/√(A²+B²+C²) rồi CALC!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX tính nhanh bán kính tiếp xúc</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Để tính bán kính $R = d(I, (P))$ với $(P): Ax + By + Cz + D = 0$ và tâm $I(x_0; y_0; z_0)$:</p>\n                  <p>• <b>Bước 1:</b> Nhập biểu thức phân số: <code>Abs(2A - 2B + C + 3) / √(2² + (-2)² + 1²)</code>.</p>\n                  <p>• <b>Bước 2:</b> Bấm <code>CALC</code> $\\rightarrow$ máy hỏi: $A$? bấm <code>1 =</code>; $B$? bấm <code>-2 =</code>; $C$? bấm <code>3 =</code>.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Kết quả màn hình:</b> Hiện ngay $R = 4$. Bấm thêm <code>x² =</code> ra ngay $R^2 = 16$!\n                  </div>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER5_DATA.bai17_muc2 = {
+  "lessonId": "bai17",
+  "lessonTitle": "Bài 17: Phương trình mặt cầu",
+  "sectionId": "bai17_muc2",
+  "sectionTitle": "Mục 2: Phương trình tổng quát dạng khai triển",
+  "audio": "/audio/bai17_muc2.mp3",
+  "audioSrc": "./audio/bai17_muc2.mp3",
+  "audio_src": "./audio/bai17_muc2.mp3",
+  "timestamp_src": "timestamps/bai17_muc2.json",
+  "totalDuration": 368.18,
+  "duration": 368.18,
+  "title": "Mục 2: Phương trình tổng quát dạng khai triển",
+  "owl_tip": "x² + y² + z² - 2ax - 2by - 2cz + d = 0 là mặt cầu khi a² + b² + c² - d > 0!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 38.62,
+      "id": "part2"
+    },
+    {
+      "time": 87.41,
+      "id": "part3"
+    },
+    {
+      "time": 98.33,
+      "id": "vd1_q"
+    },
+    {
+      "time": 120.1,
+      "id": "vd1_a"
+    },
+    {
+      "time": 150.2,
+      "id": "vd2_q"
+    },
+    {
+      "time": 167.65,
+      "id": "vd2_a"
+    },
+    {
+      "time": 214.81,
+      "id": "vd3_q"
+    },
+    {
+      "time": 241.93,
+      "id": "vd3_a"
+    },
+    {
+      "time": 303.47,
+      "id": "part4"
+    },
+    {
+      "time": 335.92,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Dạng tổng quát khai triển của mặt cầu",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Điều kiện mặt cầu & Cách tìm tâm, bán kính",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Tuyệt kỹ Casio fx-580VNX",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 17: PHƯƠNG TRÌNH MẶT CẦU",
+      "subtitle": "MỤC 2 • PHƯƠNG TRÌNH TỔNG QUÁT DẠNG KHAI TRIỂN",
+      "startTime": 0,
+      "endTime": 38.62,
+      "duration": 38.62,
+      "mascotMode": "pointer",
+      "mascotTip": "Khai triển PT chính tắc ta được x² + y² + z² - 2ax - 2by - 2cz + d = 0!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Dạng tổng quát khai triển của mặt cầu</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Từ phương trình chính tắc: $(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$.</p>\n                  <p>• Khai triển các hằng đẳng thức và đặt $d = a^2 + b^2 + c^2 - R^2$, ta được phương trình dạng:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:14px; margin:12px 0; text-align:center; font-size:18px;\">\n                    $$x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$$\n                  </div>\n                  <p>👉 Đây là phương trình tổng quát (dạng khai triển) của mặt cầu trong không gian.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "ĐIỀU KIỆN MẶT CẦU & CÁCH TÌM TÂM, BÁN KÍNH",
+      "subtitle": "MỤC 2 • ĐIỀU KIỆN TIÊN QUYẾT: a² + b² + c² - d > 0",
+      "startTime": 38.62,
+      "endTime": 87.41,
+      "duration": 48.79,
+      "mascotMode": "talking",
+      "mascotTip": "Lấy hệ số x, y, z chia cho -2 ra tâm I(a; b; c). Bán kính R = √(a² + b² + c² - d)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Điều kiện mặt cầu & Công thức tâm, bán kính</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Điều kiện trở thành mặt cầu:</b>\n                    $$a^2 + b^2 + c^2 - d > 0$$\n                  </div>\n                  <p>Khi điều kiện được thoả mãn, mặt cầu có:</p>\n                  <p>• <b>Tâm:</b> $I(a; b; c)$ với $a = \\frac{\\text{hệ số } x}{-2}$, $b = \\frac{\\text{hệ số } y}{-2}$, $c = \\frac{\\text{hệ số } z}{-2}$.</p>\n                  <p>• <b>Bán kính:</b> $R = \\sqrt{a^2 + b^2 + c^2 - d}$.</p>\n                  <p>⚠️ <i>Nếu hệ số trước $x^2, y^2, z^2$ bằng $k \\ne 1$, bắt buộc chia cả hai vế cho $k$ trước!</i></p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 2 • 3 BÀI TOÁN XÁC ĐỊNH TÂM, BÁN KÍNH & THAM SỐ",
+      "startTime": 87.41,
+      "endTime": 98.33,
+      "duration": 10.92,
+      "mascotMode": "thinking",
+      "mascotTip": "Cùng rèn luyện kiểm tra điều kiện, xử lý hệ số chia 2 và bài toán tham số m!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 bài toán trọng tâm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Kiểm tra điều kiện và tìm tâm, bán kính của mặt cầu khai triển.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Xử lý phương trình có hệ số trước $x^2, y^2, z^2$ khác 1.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Tìm tham số $m$ để phương trình là mặt cầu có bán kính $R = 5$.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: TÌM TÂM VÀ BÁN KÍNH DẠNG KHAI TRIỂN",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 98.33,
+      "endTime": 120.1,
+      "duration": 21.77,
+      "mascotMode": "thinking",
+      "mascotTip": "Chia hệ số x, y, z cho -2. Nhớ d = -11, trừ d thành +11!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: TÌM TÂM & BÁN KÍNH DẠNG KHAI TRIỂN</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho phương trình:\n                  $$x^2 + y^2 + z^2 - 4x + 6y - 2z - 11 = 0$$\n                  Chứng minh đây là phương trình mặt cầu và tìm toạ độ tâm $I$, bán kính $R$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 120.1,
+      "endTime": 150.2,
+      "duration": 30.1,
+      "mascotMode": "talking",
+      "mascotTip": "a = 2, b = -3, c = 1, d = -11. a² + b² + c² - d = 25 > 0 -> R = 5!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Xác định các hệ số:</p>\n                  <p>$$a = \\frac{-4}{-2} = 2; \\quad b = \\frac{6}{-2} = -3; \\quad c = \\frac{-2}{-2} = 1; \\quad d = -11$$</p>\n                  <p>• Kiểm tra điều kiện:</p>\n                  <p>$$a^2 + b^2 + c^2 - d = 2^2 + (-3)^2 + 1^2 - (-11) = 4 + 9 + 1 + 11 = 25 > 0$$</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center;\">\n                    <b>Kết luận:</b> Tâm $I(2; -3; 1)$ và bán kính $R = \\sqrt{25} = 5$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: XỬ LÝ HỆ SỐ KHÁC 1",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 150.2,
+      "endTime": 167.65,
+      "duration": 17.45,
+      "mascotMode": "thinking",
+      "mascotTip": "Hệ số trước x², y², z² là 2! Bước 1 bắt buộc chia cả 2 vế cho 2.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: XỬ LÝ HỆ SỐ KHÁC 1</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho phương trình:\n                  $$2x^2 + 2y^2 + 2z^2 - 8x + 4y - 6 = 0$$\n                  Xác định toạ độ tâm $I$ và bán kính $R$ của mặt cầu.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 167.65,
+      "endTime": 214.81,
+      "duration": 47.16,
+      "mascotMode": "talking",
+      "mascotTip": "Chia 2 -> x² + y² + z² - 4x + 2y - 3 = 0. a=2, b=-1, c=0, d=-3 -> R = 2√2!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Chia cả hai vế của phương trình cho 2:</p>\n                  <p>$$x^2 + y^2 + z^2 - 4x + 2y - 3 = 0$$</p>\n                  <p>• Các hệ số: $a = 2; \\quad b = -1; \\quad c = 0$ (khuyết $z$); $\\quad d = -3$.</p>\n                  <p>• Bán kính: $R = \\sqrt{2^2 + (-1)^2 + 0^2 - (-3)} = \\sqrt{4 + 1 + 3} = \\sqrt{8} = 2\\sqrt{2}$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center;\">\n                    <b>Mặt cầu có:</b> Tâm $I(2; -1; 0)$ và bán kính $R = 2\\sqrt{2}$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TÌM THAM SỐ m ĐỂ BÁN KÍNH R = 5",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 214.81,
+      "endTime": 241.93,
+      "duration": 27.12,
+      "mascotMode": "thinking",
+      "mascotTip": "Tính R² theo m: R² = a² + b² + c² - d = 25. Giải phương trình bậc hai tìm m!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: TÌM m ĐỂ MẶT CẦU CÓ BÁN KÍNH R = 5</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, tìm tất cả các giá trị của tham số $m$ để phương trình:\n                  $$x^2 + y^2 + z^2 - 2(m+1)x + 4my - 2z + 6m^2 - 26 = 0$$\n                  là phương trình của một mặt cầu có bán kính $R = 5$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 241.93,
+      "endTime": 303.47,
+      "duration": 61.54,
+      "mascotMode": "talking",
+      "mascotTip": "R² = -m² + 2m + 28 = 25 -> m² - 2m - 3 = 0 -> m = 3 hoặc m = -1!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Hệ số: $a = m+1; \\quad b = -2m; \\quad c = 1; \\quad d = 6m^2 - 26$.</p>\n                  <p>• Biểu thức bán kính bình phương:</p>\n                  <p>$$R^2 = (m+1)^2 + (-2m)^2 + 1^2 - (6m^2 - 26) = -m^2 + 2m + 28$$</p>\n                  <p>• Để mặt cầu có bán kính $R = 5 \\implies R^2 = 25$:</p>\n                  <p>$$-m^2 + 2m + 28 = 25 \\iff m^2 - 2m - 3 = 0 \\iff \\begin{bmatrix} m = 3 \\\\ m = -1 \\end{bmatrix}$$</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Giá trị cần tìm:</b> $m = 3$ hoặc $m = -1$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY CHIA HỆ SỐ & NHẦM DẤU d TRONG CĂN",
+      "startTime": 303.47,
+      "endTime": 335.92,
+      "duration": 32.45,
+      "mascotMode": "magnifier",
+      "mascotTip": "Trước khi chia -2, hệ số x², y², z² bắt buộc phải bằng 1!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">⚠️ BẪY 1: QUÊN CHIA HỆ SỐ KHÁC 1</div>\n                  <p style=\"margin:6px 0 0 0; font-size:16.5px; color:#fecaca;\">\n                    Phương trình $2x^2 + 2y^2 + 2z^2 - 8x + ... = 0$.<br>\n                    Nhiều bạn lấy ngay $a = -8 / (-2) = 4$ ❌ SAI HOÀN TOÀN!<br>\n                    <b>Chuẩn xác:</b> Phải chia cả 2 vế cho 2 trước: $x^2 + ... - 4x + ... = 0 \\implies a = -4/(-2) = 2$ ✅.\n                  </p>\n                </div>\n                <div style=\"background:rgba(244,63,94,0.15); border:1.5px solid #f43f5e; border-radius:10px; padding:12px;\">\n                  <b style=\"color:#fda4af;\">⚠️ BẪY 2: NHẦM DẤU d TRONG CÔNG THỨC BÁN KÍNH</b>\n                  <p style=\"margin:4px 0 0 0; font-size:15px; color:#f8fafc;\">\n                    Công thức là $R = \\sqrt{a^2 + b^2 + c^2 - d}$. Nếu $d = -11$, thì $-d$ phải là $-(-11) = +11$!\n                  </p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: LẬP PHƯƠNG TRÌNH MẶT CẦU QUA 4 ĐIỂM",
+      "startTime": 335.92,
+      "endTime": 368.18,
+      "duration": 32.26,
+      "mascotMode": "talking",
+      "mascotTip": "Bấm MENU 9 1 4 giải hệ 4 phương trình 4 ẩn a, b, c, d cực nhanh!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX lập mặt cầu qua 4 điểm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Khi bài toán yêu cầu viết PT mặt cầu đi qua 4 điểm $A, B, C, D$:</p>\n                  <p>• Thay toạ độ 4 điểm vào phương trình: $-2ax - 2by - 2cz + d = -(x^2 + y^2 + z^2)$.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Thao tác Casio 580:</b><br>\n                    • Bấm <code>MENU 9 1 4</code> (Hệ phương trình bậc nhất 4 ẩn).<br>\n                    • Nhập các hệ số ứng với 4 điểm $\\rightarrow$ Bấm <code>=</code> máy tính sẽ hiện ngay $a, b, c, d$ chuẩn xác 100%!\n                  </div>\n                  <p>👉 Tiết kiệm ít nhất 5 phút biến đổi đại số thủ công!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER5_DATA.bai17_muc3 = {
+  "lessonId": "bai17",
+  "lessonTitle": "Bài 17: Phương trình mặt cầu",
+  "sectionId": "bai17_muc3",
+  "sectionTitle": "Mục 3: Vị trí tương đối giữa mặt cầu và mặt phẳng",
+  "audio": "/audio/bai17_muc3.mp3",
+  "audioSrc": "./audio/bai17_muc3.mp3",
+  "audio_src": "./audio/bai17_muc3.mp3",
+  "timestamp_src": "timestamps/bai17_muc3.json",
+  "totalDuration": 387.88,
+  "duration": 387.88,
+  "title": "Mục 3: Vị trí tương đối giữa mặt cầu và mặt phẳng",
+  "owl_tip": "h = d(I, (P)). h > R: không cắt; h = R: tiếp xúc; h < R: cắt theo đường tròn r = √(R² - h²)!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 45.72,
+      "id": "part2"
+    },
+    {
+      "time": 81.79,
+      "id": "part3"
+    },
+    {
+      "time": 92.71,
+      "id": "vd1_q"
+    },
+    {
+      "time": 115.05,
+      "id": "vd1_a"
+    },
+    {
+      "time": 150.26,
+      "id": "vd2_q"
+    },
+    {
+      "time": 170.85,
+      "id": "vd2_a"
+    },
+    {
+      "time": 230.47,
+      "id": "vd3_q"
+    },
+    {
+      "time": 259.22,
+      "id": "vd3_a"
+    },
+    {
+      "time": 323.06,
+      "id": "part4"
+    },
+    {
+      "time": 359.08,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 3 Vị trí tương đối giữa mặt cầu và mặt phẳng",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Hệ thức Pythagore & Đường tròn giao tuyến",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Casio fx-580VNX",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 17: PHƯƠNG TRÌNH MẶT CẦU",
+      "subtitle": "MỤC 3 • VỊ TRÍ TƯƠNG ĐỐI GIỮA MẶT CẦU VÀ MẶT PHẲNG",
+      "startTime": 0,
+      "endTime": 45.72,
+      "duration": 45.72,
+      "mascotMode": "pointer",
+      "mascotTip": "So sánh khoảng cách h = d(I, (P)) với bán kính R để phân biệt 3 vị trí!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Ba vị trí tương đối giữa $(S)$ và $(P)$</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho mặt cầu $S(I; R)$ và mặt phẳng $(P)$. Đặt $h = d(I, (P))$:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    • <b>$h > R$:</b> Mặt phẳng $(P)$ và mặt cầu $(S)$ <b>không có điểm chung</b>.<br>\n                    • <b>$h = R$:</b> Mặt phẳng $(P)$ <b>tiếp xúc</b> với $(S)$ tại điểm $H$ (tiếp điểm).<br>\n                    • <b>$h < R$:</b> Mặt phẳng $(P)$ <b>cắt</b> mặt cầu $(S)$ theo giao tuyến là một đường tròn $(C)$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "HỆ THỨC PYTHAGORE & ĐƯỜNG TRÒN GIAO TUYẾN",
+      "subtitle": "MỤC 3 • MỐI LIÊN HỆ R² = h² + r² VÀ MẶT PHẲNG KÍNH",
+      "startTime": 45.72,
+      "endTime": 81.79,
+      "duration": 36.07,
+      "mascotMode": "talking",
+      "mascotTip": "r = √(R² - h²). Khi h = 0 giao tuyến là đường tròn lớn!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Hệ thức Pythagore trong giao tuyến</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Khi $h = d(I, (P)) < R$, giao tuyến là đường tròn $(C)$ có tâm $H$ và bán kính $r$:</p>\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:14px; margin:12px 0; text-align:center; font-size:19px;\">\n                    $$R^2 = h^2 + r^2 \\iff r = \\sqrt{R^2 - h^2}$$\n                  </div>\n                  <div style=\"background:rgba(251,191,36,0.15); border:1.5px solid #fbbf24; border-radius:10px; padding:10px; margin:10px 0;\">\n                    <b>Đặc biệt (Mặt phẳng kính):</b> Khi $h = 0$ (mặt phẳng $(P)$ đi qua tâm $I$), đường tròn giao tuyến có bán kính lớn nhất $r = R$ (gọi là <i>đường tròn lớn</i>).\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 3 • 3 BÀI TOÁN VỊ TRÍ TƯƠNG ĐỐI & MẶT PHẲNG TIẾP XÚC",
+      "startTime": 81.79,
+      "endTime": 92.71,
+      "duration": 10.92,
+      "mascotMode": "thinking",
+      "mascotTip": "Cùng rèn luyện xét không điểm chung, tính bán kính r và viết PT tiếp diện!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 bài toán trọng tâm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Xét vị trí tương đối giữa mặt cầu và mặt phẳng qua khoảng cách.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Tính bán kính $r$ của đường tròn giao tuyến khi $(P)$ cắt $(S)$.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Lập phương trình các mặt phẳng song song và tiếp xúc mặt cầu.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: XÉT VỊ TRÍ TƯƠNG ĐỐI GIỮA (S) VÀ (P)",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 92.71,
+      "endTime": 115.05,
+      "duration": 22.34,
+      "mascotMode": "thinking",
+      "mascotTip": "Tìm tâm I(1; 0; -2), R = 3. Tính khoảng cách h = d(I, (P)) và so sánh!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: XÉT VỊ TRÍ TƯƠNG ĐỐI GIỮA (S) VÀ (P)</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, xét vị trí tương đối giữa mặt cầu $(S)$ và mặt phẳng $(P)$:\n                  $$(S): (x-1)^2 + y^2 + (z+2)^2 = 9 \\quad \\text{và} \\quad (P): 2x - y + 2z - 9 = 0$$\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 115.05,
+      "endTime": 150.26,
+      "duration": 35.21,
+      "mascotMode": "talking",
+      "mascotTip": "h = 11/3 > 3 = R -> (S) và (P) không có điểm chung!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Mặt cầu $(S)$ có tâm $I(1; 0; -2)$ và bán kính $R = \\sqrt{9} = 3$.</p>\n                  <p>• Khoảng cách từ tâm $I$ đến mặt phẳng $(P)$:</p>\n                  <p>$$h = d(I, (P)) = \\frac{|2(1) - 0 + 2(-2) - 9|}{\\sqrt{2^2+(-1)^2+2^2}} = \\frac{|-11|}{\\sqrt{9}} = \\frac{11}{3}$$</p>\n                  <p>• So sánh: $h = \\frac{11}{3} > 3 = R$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center;\">\n                    <b>Kết luận:</b> Mặt phẳng $(P)$ và mặt cầu $(S)$ <b>không có điểm chung</b>.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: TÍNH BÁN KÍNH ĐƯỜNG TRÒN GIAO TUYẾN",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 150.26,
+      "endTime": 170.85,
+      "duration": 20.59,
+      "mascotMode": "thinking",
+      "mascotTip": "Tính R = 3, h = 1/3. Dùng Pythagore: r = √(R² - h²)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: TÍNH BÁN KÍNH ĐƯỜNG TRÒN GIAO TUYẾN</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho mặt cầu $(S): x^2 + y^2 + z^2 - 2x + 4y - 4 = 0$ và mặt phẳng $(P): x + 2y - 2z + 2 = 0$. Chứng minh $(P)$ cắt $(S)$ theo một đường tròn và tính bán kính $r$ của đường tròn đó.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 170.85,
+      "endTime": 230.47,
+      "duration": 59.62,
+      "mascotMode": "talking",
+      "mascotTip": "h = 1/3 < 3 -> cắt nhau. r = √(9 - 1/9) = √(80/9) = 4√5 / 3!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $(S)$ có tâm $I(1; -2; 0)$ và bán kính $R = \\sqrt{1^2+(-2)^2+0^2 - (-4)} = \\sqrt{9} = 3$.</p>\n                  <p>• Khoảng cách: $h = d(I, (P)) = \\frac{|1(1) + 2(-2) - 2(0) + 2|}{\\sqrt{1^2+2^2+(-2)^2}} = \\frac{|-1|}{3} = \\frac{1}{3}$.</p>\n                  <p>• Vì $h = \\frac{1}{3} < 3 = R \\implies (P)$ cắt mặt cầu $(S)$ theo đường tròn $(C)$.</p>\n                  <p>• Bán kính đường tròn giao tuyến:</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center; font-size:17px;\">\n                    $$r = \\sqrt{R^2 - h^2} = \\sqrt{3^2 - \\left(\\frac{1}{3}\\right)^2} = \\sqrt{9 - \\frac{1}{9}} = \\sqrt{\\frac{80}{9}} = \\frac{4\\sqrt{5}}{3}$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: MẶT PHẲNG TIẾP XÚC MẶT CẦU",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 230.47,
+      "endTime": 259.22,
+      "duration": 28.75,
+      "mascotMode": "thinking",
+      "mascotTip": "Mặt phẳng (P) // (α) có dạng 2x - 2y + z + D = 0 (D ≠ 1). Cho d(I, (P)) = 5!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: PT MẶT PHẲNG TIẾP XÚC MẶT CẦU</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho mặt cầu $(S): (x-2)^2 + (y+1)^2 + (z-1)^2 = 25$. Viết phương trình các mặt phẳng song song với mặt phẳng $(\\alpha): 2x - 2y + z + 1 = 0$ và tiếp xúc với mặt cầu $(S)$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 259.22,
+      "endTime": 323.06,
+      "duration": 63.84,
+      "mascotMode": "talking",
+      "mascotTip": "|D + 7| = 15 -> D = 8 hoặc D = -22. Có 2 mặt phẳng tiếp xúc thoả mãn!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $(S)$ có tâm $I(2; -1; 1)$ và bán kính $R = 5$.</p>\n                  <p>• Mặt phẳng $(P) \\parallel (\\alpha)$ có dạng: $2x - 2y + z + D = 0$ ($D \\ne 1$).</p>\n                  <p>• Vì $(P)$ tiếp xúc với $(S)$ nên $d(I, (P)) = R = 5$:</p>\n                  <p>$$\\frac{|2(2) - 2(-1) + 1(1) + D|}{\\sqrt{2^2+(-2)^2+1^2}} = 5 \\iff \\frac{|D + 7|}{3} = 5 \\iff |D + 7| = 15$$</p>\n                  <p>• Giải ra: $D + 7 = 15 \\implies D = 8$; hoặc $D + 7 = -15 \\implies D = -22$ (đều nhận vì $D \\ne 1$).</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Hai mặt phẳng cần tìm:</b><br>\n                    $(P_1): 2x - 2y + z + 8 = 0 \\quad \\text{và} \\quad (P_2): 2x - 2y + z - 22 = 0$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY ĐIỀU KIỆN SONG SONG & NHẦM LẪN R VÀ r",
+      "startTime": 323.06,
+      "endTime": 359.08,
+      "duration": 36.02,
+      "mascotMode": "magnifier",
+      "mascotTip": "Luôn nhớ: R² = h² + r². R là bán kính mặt cầu, r là bán kính đường tròn giao tuyến!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">⚠️ BẪY 1: QUÊN ĐIỀU KIỆN D KHÁC D₀ KHI SONG SONG</div>\n                  <p style=\"margin:6px 0 0 0; font-size:16.5px; color:#fecaca;\">\n                    Khi viết phương trình mặt phẳng song song $(\\alpha)$, nếu $D = D_0$ thì hai mặt phẳng trùng nhau, không còn song song! Bắt buộc phải đối chiếu điều kiện $D \\ne D_0$.\n                  </p>\n                </div>\n                <div style=\"background:rgba(244,63,94,0.15); border:1.5px solid #f43f5e; border-radius:10px; padding:12px;\">\n                  <b style=\"color:#fda4af;\">⚠️ BẪY 2: NHẦM BÁN KÍNH MẶT CẦU R VỚI BÁN KÍNH GIAO TUYẾN r</b>\n                  <p style=\"margin:4px 0 0 0; font-size:15px; color:#f8fafc;\">\n                    $R$ là bán kính của cả khối cầu (cạnh huyền tam giác vuông), còn $r$ là bán kính thiết diện cắt (cạnh góc vuông). Luôn luôn có $r \\le R$!\n                  </p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: BẤM NHANH BÁN KÍNH GIAO TUYẾN TRÊN CASIO",
+      "startTime": 359.08,
+      "endTime": 387.88,
+      "duration": 28.8,
+      "mascotMode": "talking",
+      "mascotTip": "Tính h bằng phân số CALC, sau đó bấm √(R² - Ans²) ra ngay r!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX tính bán kính giao tuyến</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• <b>Bước 1:</b> Nhập biểu thức khoảng cách $h$ vào màn hình, bấm <code>CALC</code> tìm được $h = \\frac{1}{3}$.</p>\n                  <p>• <b>Bước 2:</b> Bấm ngay: <code>√(3² - Ans²) =</code>.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Màn hình hiển thị:</b> $\\frac{4\\sqrt{5}}{3}$ chuẩn xác $100\\%$ dạng phân số căn thức!\n                  </div>\n                  <p>👉 Không cần đặt bút tính nhẩm mẫu số chung, xử lý trắc nghiệm siêu tốc!</p>\n                </div>\n            \n    </div>\n    "
     }
   ]
 };

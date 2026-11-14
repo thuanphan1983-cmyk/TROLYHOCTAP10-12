@@ -814,9 +814,9 @@
       lessonTitle: "Bài 17: Phương trình mặt cầu",
       lessonBadge: "Bài 17",
       sections: [
-        { key: "bai17_muc1", title: "Mục 1: Định nghĩa & Phương trình chính tắc mặt cầu", time: "05:00", icon: "⚽" },
-        { key: "bai17_muc2", title: "Mục 2: Phương trình tổng quát dạng khai triển", time: "05:00", icon: "🌐" },
-        { key: "bai17_muc3", title: "Mục 3: Vị trí tương đối giữa mặt cầu và mặt phẳng", time: "05:00", icon: "🎯" }
+        { key: "bai17_muc1", title: "Mục 1: Định nghĩa & Phương trình chính tắc mặt cầu", time: "05:21", icon: "⚽" },
+        { key: "bai17_muc2", title: "Mục 2: Phương trình tổng quát dạng khai triển", time: "06:08", icon: "🌐" },
+        { key: "bai17_muc3", title: "Mục 3: Vị trí tương đối giữa mặt cầu và mặt phẳng", time: "06:28", icon: "🎯" }
       ]
     },
     {
