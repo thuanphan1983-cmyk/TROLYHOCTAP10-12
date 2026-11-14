@@ -871,9 +871,9 @@
       lessonTitle: "Bài 19: Công thức xác suất toàn phần và công thức Bayes",
       lessonBadge: "Bài 19",
       sections: [
-        { key: "bai19_muc1", title: "Mục 1: Công thức xác suất toàn phần", time: "05:00", icon: "∑" },
-        { key: "bai19_muc2", title: "Mục 2: Công thức Bayes và ý nghĩa chẩn đoán thực tế", time: "05:00", icon: "🧬" },
-        { key: "bai19_muc3", title: "Mục 3: Rèn luyện bài toán xác suất thực tế chuẩn Bộ GD", time: "05:00", icon: "🎯" }
+        { key: "bai19_muc1", title: "Mục 1: Công thức xác suất toàn phần", time: "06:21", icon: "∑" },
+        { key: "bai19_muc2", title: "Mục 2: Công thức Bayes và ý nghĩa chẩn đoán thực tế", time: "06:00", icon: "🧬" },
+        { key: "bai19_muc3", title: "Mục 3: Rèn luyện bài toán xác suất thực tế chuẩn Bộ GD", time: "05:11", icon: "🎯" }
       ]
     },
     {
