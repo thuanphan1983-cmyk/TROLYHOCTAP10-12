@@ -19,12 +19,31 @@
       if (window.CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.CHAPTER3_DATA);
       if (window.CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.CHAPTER4_DATA);
       if (window.CHAPTER5_DATA) Object.assign(LECTURE_DATA, window.CHAPTER5_DATA);
+      if (window.CHAPTER6_DATA) Object.assign(LECTURE_DATA, window.CHAPTER6_DATA);
     }
   }
 
   // Dynamic script loader for Chapter data scaffolds
   (function tryLoadChapterData() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      if (!window.CHAPTER6_DATA) {
+        const s6 = document.createElement('script');
+        s6.src = (window.location.protocol === 'file:') ? 'js/chapter6_data.js' : '/js/chapter6_data.js';
+        s6.onload = function() {
+          if (window.CHAPTER6_DATA) Object.assign(LECTURE_DATA, window.CHAPTER6_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        s6.onerror = function() {
+          const s6b = document.createElement('script');
+          s6b.src = 'public/js/chapter6_data.js';
+          s6b.onload = function() {
+            if (window.CHAPTER6_DATA) Object.assign(LECTURE_DATA, window.CHAPTER6_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(s6b);
+        };
+        document.head.appendChild(s6);
+      }
       if (!window.CHAPTER5_DATA) {
         const s5 = document.createElement('script');
         s5.src = (window.location.protocol === 'file:') ? 'js/chapter5_data.js' : '/js/chapter5_data.js';
@@ -840,9 +859,9 @@
       lessonTitle: "Bài 18: Xác suất có điều kiện",
       lessonBadge: "Bài 18",
       sections: [
-        { key: "bai18_muc1", title: "Mục 1: Khái niệm xác suất có điều kiện P(A|B)", time: "05:00", icon: "🎲" },
-        { key: "bai18_muc2", title: "Mục 2: Công thức nhân xác suất", time: "05:00", icon: "✖️" },
-        { key: "bai18_muc3", title: "Mục 3: Sơ đồ hình cây và ứng dụng tính xác suất", time: "05:00", icon: "🌳" }
+        { key: "bai18_muc1", title: "Mục 1: Khái niệm xác suất có điều kiện P(A|B)", time: "05:57", icon: "🎲" },
+        { key: "bai18_muc2", title: "Mục 2: Công thức nhân xác suất", time: "05:24", icon: "✖️" },
+        { key: "bai18_muc3", title: "Mục 3: Sơ đồ hình cây và ứng dụng tính xác suất", time: "05:22", icon: "🌳" }
       ]
     },
     {
