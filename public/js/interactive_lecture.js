@@ -1046,50 +1046,119 @@
     document.head.appendChild(style);
   })();
 
-  // Determine current active Lesson & Section key for Chapter 1
-  function getCurrentLessonAndSectionKey() {
-    let lessonNum = 1;
-    let sectionNum = 1;
+  // Helper to parse Roman numerals or Arabic numbers for Chapter
+  function parseRomanOrArabic(str) {
+    if (!str) return 1;
+    const s = String(str).trim().toUpperCase();
+    if (s === 'I' || s === '1') return 1;
+    if (s === 'II' || s === '2') return 2;
+    if (s === 'III' || s === '3') return 3;
+    if (s === 'IV' || s === '4') return 4;
+    if (s === 'V' || s === '5') return 5;
+    if (s === 'VI' || s === '6') return 6;
+    return parseInt(s) || 1;
+  }
 
-    function parseRomanOrArabic(str) {
-      if (!str) return 1;
-      const s = str.trim().toUpperCase();
-      if (s === 'I' || s === '1') return 1;
-      if (s === 'II' || s === '2') return 2;
-      if (s === 'III' || s === '3') return 3;
-      if (s === 'IV' || s === '4') return 4;
-      if (s === 'V' || s === '5') return 5;
-      if (s === 'VI' || s === '6') return 6;
-      return parseInt(s) || 1;
+  // Parse lesson info from text
+  function parseLessonInfoFromText(text) {
+    if (!text || typeof text !== 'string') return null;
+    const lower = text.toLowerCase();
+    if (lower.includes('ôn tập') || lower.includes('cuối chương') || lower.includes('bài tập cuối chương')) {
+      let ch = 1;
+      const mCh = text.match(/chương\s*([IVX]+|\d+)/i);
+      if (mCh) ch = parseRomanOrArabic(mCh[1]);
+      return { isReview: true, chapter: ch, lessonNum: 'ontap' };
     }
+    const mBai = text.match(/(?:bài|bai)\s*(\d+)/i);
+    if (mBai) {
+      return { isReview: false, lessonNum: parseInt(mBai[1]) };
+    }
+    const mNum = text.match(/^(\d+)[\s:\.\-]/);
+    if (mNum) {
+      return { isReview: false, lessonNum: parseInt(mNum[1]) };
+    }
+    return null;
+  }
+
+  // Determine current active Lesson & Section key dynamically across all 5 Chapters
+  function getCurrentLessonAndSectionKey() {
+    let lessonNum = null;
+    let sectionNum = 1;
+    let chapterNum = null;
+    let isReview = false;
 
     // 1. Check window.activeLesson
     const al = (typeof window !== 'undefined' && window.activeLesson) ? window.activeLesson : null;
     if (al) {
-      if (al.lessonNumber) {
-        lessonNum = parseInt(al.lessonNumber) || 1;
+      if (al.lessonNumber && !isNaN(parseInt(al.lessonNumber))) {
+        lessonNum = parseInt(al.lessonNumber);
       } else if (typeof al.id === 'string' && al.id.match(/bai(\d+)/i)) {
-        lessonNum = parseInt(al.id.match(/bai(\d+)/i)[1]) || 1;
-      } else if (al.lessonTitle) {
-        const m = al.lessonTitle.match(/Bài\s*(\d+)/i);
-        if (m) lessonNum = parseInt(m[1]) || 1;
-        else if (al.lessonTitle.toLowerCase().includes('ôn tập') || al.lessonTitle.toLowerCase().includes('cuối chương') || al.isChapterReview) lessonNum = 'ontap';
+        lessonNum = parseInt(al.id.match(/bai(\d+)/i)[1]);
+      } else if (al.lessonTitle || al.title) {
+        const res = parseLessonInfoFromText(al.lessonTitle || al.title);
+        if (res) {
+          if (res.isReview) { isReview = true; chapterNum = res.chapter; lessonNum = 'ontap'; }
+          else { lessonNum = res.lessonNum; }
+        }
+      }
+      if (al.isChapterReview) {
+        isReview = true;
+        lessonNum = 'ontap';
+        if (al.chapterNumber) chapterNum = parseInt(al.chapterNumber);
+        else if (al.chapterShortTitle) {
+          const m = al.chapterShortTitle.match(/chương\s*([IVX]+|\d+)/i);
+          if (m) chapterNum = parseRomanOrArabic(m[1]);
+        }
       }
     }
 
-    // 2. Check #sgk-focus-title DOM text
-    const titleEl = document.getElementById('sgk-focus-title');
-    if (titleEl && titleEl.textContent) {
-      const txt = titleEl.textContent;
-      const m = txt.match(/Bài\s*(\d+)/i);
-      if (m) lessonNum = parseInt(m[1]) || lessonNum;
-      else if (txt.toLowerCase().includes('ôn tập') || txt.toLowerCase().includes('cuối chương')) lessonNum = 'ontap';
+    // 2. Check window.studentInfo?.lesson
+    if (lessonNum === null) {
+      const sLesson = (typeof window !== 'undefined' && window.studentInfo && window.studentInfo.lesson) ? window.studentInfo.lesson : null;
+      const res = parseLessonInfoFromText(sLesson);
+      if (res) {
+        if (res.isReview) { isReview = true; chapterNum = res.chapter; lessonNum = 'ontap'; }
+        else { lessonNum = res.lessonNum; }
+      }
     }
 
-    // 3. Check active section index
+    // 3. Check localStorage
+    if (lessonNum === null && typeof localStorage !== 'undefined') {
+      const stored = localStorage.getItem('STUDENT_LESSON') || localStorage.getItem('student_lesson');
+      const res = parseLessonInfoFromText(stored);
+      if (res) {
+        if (res.isReview) { isReview = true; chapterNum = res.chapter; lessonNum = 'ontap'; }
+        else { lessonNum = res.lessonNum; }
+      }
+    }
+
+    // 4. Check DOM titles
+    if (lessonNum === null && typeof document !== 'undefined') {
+      const domEls = [
+        document.getElementById('sgk-focus-title'),
+        document.getElementById('chat-current-lesson'),
+        document.getElementById('setup-kntt-select'),
+        document.getElementById('badge-lesson')
+      ];
+      for (const el of domEls) {
+        if (!el) continue;
+        const txt = el.value || el.textContent;
+        const res = parseLessonInfoFromText(txt);
+        if (res) {
+          if (res.isReview) { isReview = true; chapterNum = res.chapter; lessonNum = 'ontap'; }
+          else { lessonNum = res.lessonNum; }
+          break;
+        }
+      }
+    }
+
+    // Default fallback
+    if (lessonNum === null) lessonNum = 1;
+
+    // Detect section index
     if (typeof window !== 'undefined' && window.demoState && typeof window.demoState.sectionIndex === 'number') {
       sectionNum = window.demoState.sectionIndex + 1;
-    } else {
+    } else if (typeof document !== 'undefined') {
       const pillsContainer = document.getElementById('sgk-focus-section-pills');
       if (pillsContainer) {
         const activePill = pillsContainer.querySelector('.bg-amber-400') || pillsContainer.querySelector('button[class*="amber"]');
@@ -1101,24 +1170,8 @@
     }
 
     // Map to chapter keys
-    if (lessonNum === 'ontap' || (typeof lessonNum === 'string' && lessonNum.startsWith('ontap'))) {
-      let ch = 1;
-      if (al) {
-        if (al.chapterNumber) ch = parseInt(al.chapterNumber) || 1;
-        else if (typeof al.key === 'string' && al.key.match(/_(\d+)/)) ch = parseInt(al.key.match(/_(\d+)/)[1]) || 1;
-        else if (al.chapterShortTitle) {
-          const m = al.chapterShortTitle.match(/Chương\s*([IVX]+|\d+)/i);
-          if (m) ch = parseRomanOrArabic(m[1]);
-        }
-        else if (al.lessonTitle) {
-          const m = al.lessonTitle.match(/chương\s*([IVX]+|\d+)/i);
-          if (m) ch = parseRomanOrArabic(m[1]);
-        }
-      }
-      if (titleEl && titleEl.textContent) {
-        const m = titleEl.textContent.match(/chương\s*([IVX]+|\d+)/i);
-        if (m) ch = parseRomanOrArabic(m[1]);
-      }
+    if (isReview || lessonNum === 'ontap') {
+      const ch = chapterNum || 1;
       const s = Math.min(3, Math.max(1, sectionNum));
       if (ch === 1) return `ontap_muc${s}`;
       return `ontap_c${ch}_muc${s}`;
@@ -1127,12 +1180,74 @@
     if (lessonNum === 1) {
       return sectionNum === 2 ? 'muc2' : 'muc1';
     }
-    if (lessonNum >= 2 && lessonNum <= 19) {
+    if (lessonNum >= 2 && lessonNum <= 24) {
       const maxSec = (lessonNum === 4 || lessonNum === 14) ? 4 : 3;
       const s = Math.min(maxSec, Math.max(1, sectionNum));
       return `bai${lessonNum}_muc${s}`;
     }
     return 'muc1';
+  }
+
+  // Update navbar & action buttons with the active lesson title
+  function updateActiveLessonVideoUI() {
+    let shortLabel = 'Bài 1';
+    let fullTitle = 'Bài 1: Tính đơn điệu và cực trị của hàm số';
+
+    const al = (typeof window !== 'undefined' && window.activeLesson) ? window.activeLesson : null;
+    const sLesson = (typeof window !== 'undefined' && window.studentInfo && window.studentInfo.lesson) ? window.studentInfo.lesson : null;
+    const rawTitle = (al && (al.lessonTitle || al.title))
+      || sLesson
+      || (typeof localStorage !== 'undefined' ? (localStorage.getItem('STUDENT_LESSON') || localStorage.getItem('student_lesson')) : null)
+      || (typeof document !== 'undefined' ? document.getElementById('sgk-focus-title')?.textContent : null)
+      || '';
+
+    if (rawTitle) {
+      fullTitle = rawTitle.trim();
+      const mBai = fullTitle.match(/(?:bài|bai)\s*(\d+)/i);
+      if (mBai) {
+        shortLabel = `Bài ${mBai[1]}`;
+      } else if (fullTitle.toLowerCase().includes('ôn tập') || fullTitle.toLowerCase().includes('cuối chương')) {
+        const mCh = fullTitle.match(/chương\s*([IVX]+|\d+)/i);
+        shortLabel = mCh ? `Ôn tập C${mCh[1]}` : 'Ôn tập';
+      } else {
+        shortLabel = fullTitle.split(':')[0] || 'Bài học';
+      }
+    }
+
+    // 1. Update top navbar button (#btn-open-lesson1-video / #btn-open-lesson-video)
+    const topBtn = document.getElementById('btn-open-lesson1-video') || document.getElementById('btn-open-lesson-video');
+    if (topBtn) {
+      topBtn.id = 'btn-open-lesson-video';
+      topBtn.title = `Xem video bài giảng tương tác: ${fullTitle}`;
+      topBtn.onclick = function(e) {
+        if (e) { e.preventDefault(); e.stopPropagation(); }
+        openInteractiveLecture(getCurrentLessonAndSectionKey());
+      };
+      
+      const labelSpan = topBtn.querySelector('span:not(.bg-white\\/20)');
+      if (labelSpan) {
+        labelSpan.textContent = `▶ Videos tương tác: ${shortLabel}`;
+      } else {
+        topBtn.innerHTML = `
+          <i class="fa-solid fa-circle-play text-white animate-pulse"></i>
+          <span>▶ Videos tương tác: ${shortLabel}</span>
+          <span class="bg-white/20 text-white text-[10px] px-1.5 py-0.2 rounded-full font-black">HD</span>
+        `;
+      }
+    }
+
+    // 2. Update SGK Focus Nav button if present
+    const focusBtn = document.getElementById('btn-active-lecture');
+    if (focusBtn) {
+      focusBtn.innerHTML = `🎬 Xem Videos: ${shortLabel}`;
+      focusBtn.title = `Xem video bài giảng tương tác ${fullTitle}`;
+    }
+
+    // 3. Remove duplicate #btn-active-lecture-main if topBtn already exists
+    const duplicateMain = document.getElementById('btn-active-lecture-main');
+    if (duplicateMain && topBtn) {
+      duplicateMain.remove();
+    }
   }
 
   // Inject prominent "Xem Bài Giảng Tương Tác" button beside "Làm đề ôn tập"
@@ -1167,25 +1282,8 @@
       }
     }
 
-    // 2. Also inject in main header navbar beside #tab-btn-lesson-exams if exists
-    const mainExamsBtn = document.getElementById('tab-btn-lesson-exams');
-    if (mainExamsBtn && mainExamsBtn.parentElement && !document.getElementById('btn-active-lecture-main')) {
-      const btnMain = document.createElement('button');
-      btnMain.id = 'btn-active-lecture-main';
-      btnMain.className = 'btn-lecture-pulse';
-      btnMain.setAttribute('style', 'background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff; font-weight: 600; padding: 6px 14px; border-radius: 8px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;');
-      btnMain.innerHTML = '🎬 Xem Bài Giảng Tương Tác';
-      btnMain.title = 'Xem bài giảng tương tác đa phương tiện bám sát bài học hiện tại';
-
-      btnMain.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const targetKey = getCurrentLessonAndSectionKey();
-        openInteractiveLecture(targetKey);
-      });
-
-      mainExamsBtn.parentElement.insertBefore(btnMain, mainExamsBtn);
-    }
+    // 2. Sync navbar buttons
+    updateActiveLessonVideoUI();
   }
 
   // Initialize the modal section switcher
@@ -1358,23 +1456,37 @@
   function switchSection(sec) {
     ensureMergedData();
 
-    let secKey = 'muc1';
-    if (sec === 1 || sec === '1') secKey = 'muc1';
-    else if (sec === 2 || sec === '2') secKey = 'muc2';
-    else if (sec === 'ontap' || sec === 'ontap_c1' || sec === 'ontap_chuong1') secKey = 'ontap_muc1';
-    else if (sec === 'ontap_c2' || sec === 'ontap_chuong2') secKey = 'ontap_c2_muc1';
-    else if (typeof sec === 'string') {
-      if (LECTURE_DATA[sec]) {
-        secKey = sec;
+    let secKey = sec;
+    if (!secKey) {
+      secKey = getCurrentLessonAndSectionKey();
+    } else if (typeof secKey === 'number' || (typeof secKey === 'string' && (secKey.match(/^(video)?\d+$/i) || secKey === 'video1' || secKey === 'video2' || secKey === 'video3' || secKey === 'video4'))) {
+      const num = typeof secKey === 'number' ? secKey : (parseInt(secKey.replace(/\D/g, '')) || 1);
+      const curKey = getCurrentLessonAndSectionKey();
+      secKey = curKey.replace(/_muc\d+$/, `_muc${num}`);
+    } else if (typeof secKey === 'string' && secKey.match(/^bai\d+$/i)) {
+      secKey = secKey.toLowerCase() + '_muc1';
+    } else if (typeof secKey === 'string' && secKey.match(/^ontap_c\d+$/i)) {
+      secKey = secKey.toLowerCase() + '_muc1';
+    } else if (secKey === 'ontap' || secKey === 'ontap_c1' || secKey === 'ontap_chuong1') {
+      secKey = 'ontap_muc1';
+    } else if (secKey === 'ontap_c2' || secKey === 'ontap_chuong2') {
+      secKey = 'ontap_c2_muc1';
+    } else if (secKey === 'ontap_c3' || secKey === 'ontap_chuong3') {
+      secKey = 'ontap_c3_muc1';
+    } else if (secKey === 'ontap_c4' || secKey === 'ontap_chuong4') {
+      secKey = 'ontap_c4_muc1';
+    } else if (secKey === 'ontap_c5' || secKey === 'ontap_chuong5') {
+      secKey = 'ontap_c5_muc1';
+    } else if (typeof secKey === 'string') {
+      if (LECTURE_DATA[secKey]) {
+        // secKey is valid
       } else {
-        const clean = sec.replace(/^video_?/, '');
+        const clean = secKey.replace(/^video_?/, '');
         if (LECTURE_DATA[clean]) {
           secKey = clean;
-        } else if (clean === '1') secKey = 'muc1';
-        else if (clean === '2') secKey = 'muc2';
-        else {
+        } else {
           const keys = Object.keys(LECTURE_DATA);
-          const found = keys.find(k => k === sec || (LECTURE_DATA[k] && (LECTURE_DATA[k].lessonId === sec || LECTURE_DATA[k].sectionId === sec)));
+          const found = keys.find(k => k === secKey || (LECTURE_DATA[k] && (LECTURE_DATA[k].lessonId === secKey || LECTURE_DATA[k].sectionId === secKey)));
           if (found) secKey = found;
         }
       }
@@ -1746,16 +1858,26 @@
   window.openVideoModal = openInteractiveLecture;
   window.playVideo = openInteractiveLecture;
   window.playLessonVideo = openInteractiveLecture;
+  window.openMicrolearningVideoModal = function() {
+    openInteractiveLecture(getCurrentLessonAndSectionKey());
+  };
   window.toggleModalVideo = function(id) {
-    openInteractiveLecture(id || 'muc1');
+    let secNum = 1;
+    if (typeof id === 'number') secNum = id;
+    else if (typeof id === 'string') {
+      const m = id.match(/\d+/);
+      if (m) secNum = parseInt(m[0]) || 1;
+    }
+    const currentKey = getCurrentLessonAndSectionKey();
+    const targetKey = currentKey.replace(/_muc\d+$/, `_muc${secNum}`);
+    openInteractiveLecture(targetKey);
   };
-  window.toggleLessonVideo = function(id) {
-    openInteractiveLecture(id || 'muc1');
-  };
+  window.toggleLessonVideo = window.toggleModalVideo;
 
   window.toggleLectureDrawer = toggleLectureDrawer;
   window.openLectureModal = openInteractiveLecture;
   window.injectActiveLectureButton = injectActiveLectureButton;
+  window.updateActiveLessonVideoUI = updateActiveLessonVideoUI;
   window.getCurrentLessonAndSectionKey = getCurrentLessonAndSectionKey;
 
   // Auto-init
@@ -1764,7 +1886,11 @@
     ensureMergedData();
     initSectionSelector();
     injectActiveLectureButton();
-    setInterval(injectActiveLectureButton, 1000);
+    updateActiveLessonVideoUI();
+    setInterval(function() {
+      injectActiveLectureButton();
+      updateActiveLessonVideoUI();
+    }, 1200);
   }
 
   if (document.readyState === 'loading') {

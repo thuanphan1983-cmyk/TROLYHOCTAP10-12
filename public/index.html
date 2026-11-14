@@ -921,13 +921,13 @@
 
             <button 
         id="btn-open-lesson1-video" 
-        onclick="openMicrolearningVideoModal()" 
+        onclick="if(typeof openInteractiveLecture==='function'){openInteractiveLecture(getCurrentLessonAndSectionKey());}else{openMicrolearningVideoModal();}" 
         class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-black text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-rose-600 via-rose-500 to-red-600 text-white shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
-        title="Xem 2 Video Bài Giảng 5 phút & Luồng Khóa Gating Workflow"
+        title="Xem video bài giảng tương tác chuẩn Bộ GD&ĐT bám sát bài học"
       >
         <i class="fa-solid fa-circle-play text-white animate-pulse"></i>
-        <span>▶ Bài giảng tương tác Bài 1</span>
-        <span class="bg-white/20 text-white text-[10px] px-1.5 py-0.2 rounded-full font-black">Hot</span>
+        <span id="btn-open-lesson-video-label">▶ Videos tương tác</span>
+        <span class="bg-white/20 text-white text-[10px] px-1.5 py-0.2 rounded-full font-black">HD</span>
       </button>
 
       <button 
@@ -4867,13 +4867,20 @@
         activeSAQuestions = activeLesson.saQuestions || [];
       }
 
+      window.activeLesson = activeLesson;
+      window.studentInfo = studentInfo;
       demoState.sectionIndex = 0;
+      window.demoState = demoState;
+
       closeSgkLessonSelectorModal();
       enterSgkFocusMode(lessonTitle, grade);
       switchStudyTab('theory');
       renderTheoryPanel();
       updateSgkFocusNav();
       updateStudentDisplayInfo();
+      if (typeof window.updateActiveLessonVideoUI === 'function') {
+        window.updateActiveLessonVideoUI();
+      }
     }
 
     // Kích hoạt Chế Độ Học Tập Toàn Màn Hình (Focus Mode)
@@ -4903,6 +4910,7 @@
     function goToSgkSection(idx) {
       if (!activeLesson || !activeLesson.sections || !activeLesson.sections[idx]) return;
       demoState.sectionIndex = idx;
+      window.demoState = demoState;
       renderTheoryPanel();
       updateSgkFocusNav();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -31344,7 +31352,38 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       const secNum = section.sectionNumber || 1;
       
       let videoBannerHTML = '';
-      if (isLesson1) {
+      const effectiveTitle = lessonTitle || (activeLesson && (activeLesson.lessonTitle || activeLesson.title)) || (studentInfo && studentInfo.lesson) || 'Bài 1: Tính đơn điệu và cực trị của hàm số';
+
+      if (!isLesson1) {
+        videoBannerHTML = `
+  <!-- Grand Banner & Video Micro-learning Tương Tác Chuẩn SGK -->
+  <div class="theory-grand-banner p-4 sm:p-5 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-950 rounded-2xl text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 border-2 border-amber-400 mb-4 not-prose">
+    <div class="flex items-center gap-3.5 text-center sm:text-left">
+      <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-2xl font-black shadow-md shrink-0">
+        🎬
+      </div>
+      <div>
+        <h2 class="text-base sm:text-xl font-black tracking-tight text-white leading-tight">
+          LỚP HỌC TOÁN TƯƠNG TÁC • THẦY THUẤN PHAN
+        </h2>
+        <p class="text-xs sm:text-sm text-indigo-200 mt-0.5">
+          ${effectiveTitle} • <strong>Mục ${secNum}: ${section.sectionTitle || ''}</strong> (Video AI & Đồng hồ 15s-30s)
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 shrink-0 flex-wrap justify-center">
+      <button type="button" onclick="openInteractiveLecture(getCurrentLessonAndSectionKey())" class="px-4 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-md transition flex items-center gap-2 cursor-pointer active:scale-95" title="Mở phòng học bài giảng tương tác đa phương tiện đúng vị trí mục bài học này">
+        <i class="fa-solid fa-play"></i>
+        <span>▶ Học Videos tương tác</span>
+      </button>
+      <button type="button" onclick="openInteractiveLecture(getCurrentLessonAndSectionKey())" class="px-3 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center gap-1.5 cursor-pointer" title="Mở phòng học toàn màn hình">
+        <i class="fa-solid fa-expand"></i>
+        <span class="hidden sm:inline">Toàn màn hình</span>
+      </button>
+    </div>
+  </div>
+`;
+      } else {
         if (secNum === 1) {
           videoBannerHTML = `
   <!-- Grand Banner & Video 1 (Chuẩn EdTech Micro-learning) -->
@@ -31363,65 +31402,20 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       </div>
     </div>
     <div class="flex items-center gap-2 shrink-0 flex-wrap justify-center">
-      <button type="button" onclick="toggleLessonVideo('video1')" class="px-4 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-md transition flex items-center gap-2 cursor-pointer active:scale-95">
+      <button type="button" onclick="openInteractiveLecture('muc1')" class="px-4 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-md transition flex items-center gap-2 cursor-pointer active:scale-95">
         <i class="fa-solid fa-play"></i>
         <span>▶ Học Bài giảng tương tác</span>
       </button>
-      <button type="button" onclick="openMicrolearningVideoModal()" class="px-3 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center gap-1.5 cursor-pointer" title="Mở phòng học Micro-learning toàn màn hình với luồng khóa liên hoàn">
+      <button type="button" onclick="openInteractiveLecture('muc1')" class="px-3 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center gap-1.5 cursor-pointer" title="Mở phòng học Micro-learning toàn màn hình">
         <i class="fa-solid fa-expand"></i>
-        <span class="hidden sm:inline">Phòng học</span> Gating
-      </button>
-    </div>
-  </div>
-
-  <!-- Khung iframe responsive 16:9 Video 1 -->
-  <div id="video1-wrapper" class="hidden my-4 p-3 bg-slate-900 rounded-2xl shadow-xl space-y-3 not-prose">
-    <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-      <video id="player-muc1" controls playsinline class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markLessonVideoCompleted(1)" src="/videos/bai1_muc1_don_dieu.mp4">
-        <source src="/videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
-        <source src="videos/bai1_muc1_don_dieu.mp4" type="video/mp4">
-        Trình duyệt không hỗ trợ thẻ video HTML5.
-      </video>
-    </div>
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 bg-slate-800 rounded-xl text-white">
-      <span class="text-xs text-amber-300 font-medium flex items-center gap-1.5">
-        <i class="fa-solid fa-circle-info text-amber-400"></i>
-        <span>Xem hết video 5 phút, bấm nút bên cạnh để hoàn thành và mở khóa trắc nghiệm:</span>
-      </span>
-      <button type="button" onclick="markLessonVideoCompleted(1)" class="w-full sm:w-auto px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>✅ Hoàn thành video 1</span>
+        <span class="hidden sm:inline">Phòng học</span> Toàn màn hình
       </button>
     </div>
   </div>
 `;
         } else if (secNum === 2) {
-          if (!window.lesson1GatingState || !window.lesson1GatingState.mcq1Done) {
-            videoBannerHTML = `
-  <!-- Thông báo Khóa Gating Mục 2 -->
-  <div class="my-4 p-5 bg-amber-50 border-2 border-amber-300 rounded-2xl text-center space-y-3 not-prose">
-    <div class="w-12 h-12 mx-auto bg-amber-200 text-amber-900 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-xs">
-      🔒
-    </div>
-    <h3 class="text-base sm:text-lg font-black text-amber-950">Mục 2: Cực trị của hàm số đang bị khóa theo lộ trình</h3>
-    <p class="text-xs sm:text-sm text-amber-800 max-w-lg mx-auto">
-      Theo luồng chặn học tập (Gating Workflow), em cần hoàn thành <strong>Video 1</strong> và nộp đủ <strong>3 câu trắc nghiệm Mục 1</strong> để tự động mở khóa Mục 2!
-    </p>
-    <div class="flex items-center justify-center gap-2 pt-1">
-      <button type="button" onclick="goToSgkSection(0)" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-sm transition shadow-md cursor-pointer active:scale-95 flex items-center gap-2">
-        <i class="fa-solid fa-arrow-left"></i>
-        <span>Quay lại Mục 1 làm bài</span>
-      </button>
-      <button type="button" onclick="openMicrolearningVideoModal()" class="px-4 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl text-xs sm:text-sm transition shadow-md cursor-pointer active:scale-95 flex items-center gap-1.5">
-        <i class="fa-solid fa-laptop-code"></i>
-        <span>Mở Phòng học Gating</span>
-      </button>
-    </div>
-  </div>
-`;
-          } else {
-            videoBannerHTML = `
-  <!-- Grand Banner & Video 2 (Mục 2 đã mở khóa) -->
+          videoBannerHTML = `
+  <!-- Grand Banner & Video 2 (Mục 2) -->
   <div class="theory-grand-banner p-4 sm:p-5 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-950 rounded-2xl text-white shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 border-2 border-purple-400 mb-4 not-prose">
     <div class="flex items-center gap-3.5 text-center sm:text-left">
       <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center text-2xl font-black shadow-md shrink-0">
@@ -31432,44 +31426,22 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
           CHÀO MỪNG CÁC EM ĐẾN VỚI LỚP HỌC TOÁN CỦA THẦY THUẤN PHAN
         </h2>
         <p class="text-xs sm:text-sm text-purple-200 mt-0.5">
-          Micro-learning Toán 12 • Mục 2: Cực trị của hàm số (Đã mở khóa thành công!)
+          Micro-learning Toán 12 • Mục 2: Cực trị của hàm số
         </p>
       </div>
     </div>
     <div class="flex items-center gap-2 shrink-0 flex-wrap justify-center">
-      <button type="button" onclick="toggleLessonVideo('video2')" class="px-4 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-md transition flex items-center gap-2 cursor-pointer active:scale-95">
+      <button type="button" onclick="openInteractiveLecture('muc2')" class="px-4 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black rounded-xl text-xs sm:text-sm shadow-md transition flex items-center gap-2 cursor-pointer active:scale-95">
         <i class="fa-solid fa-play"></i>
         <span>▶ Học Bài giảng tương tác</span>
       </button>
-      <button type="button" onclick="openMicrolearningVideoModal()" class="px-3 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+      <button type="button" onclick="openInteractiveLecture('muc2')" class="px-3 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl text-xs sm:text-sm shadow-sm transition flex items-center gap-1.5 cursor-pointer">
         <i class="fa-solid fa-expand"></i>
-        <span class="hidden sm:inline">Phòng học</span> Gating
-      </button>
-    </div>
-  </div>
-
-  <!-- Khung iframe responsive 16:9 Video 2 -->
-  <div id="video2-wrapper" class="hidden my-4 p-3 bg-slate-900 rounded-2xl shadow-xl space-y-3 not-prose">
-    <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
-      <video id="player-muc2" controls playsinline class="absolute inset-0 w-full h-full object-contain rounded-xl bg-black shadow-lg" preload="metadata" onended="markLessonVideoCompleted(2)" src="/videos/bai1_muc2_cuc_tri.mp4">
-        <source src="/videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
-        <source src="videos/bai1_muc2_cuc_tri.mp4" type="video/mp4">
-        Trình duyệt không hỗ trợ thẻ video HTML5.
-      </video>
-    </div>
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 bg-slate-800 rounded-xl text-white">
-      <span class="text-xs text-amber-300 font-medium flex items-center gap-1.5">
-        <i class="fa-solid fa-circle-info text-amber-400"></i>
-        <span>Xem hết video 5 phút, bấm nút bên cạnh để hoàn thành và mở khóa trắc nghiệm Mục 2:</span>
-      </span>
-      <button type="button" onclick="markLessonVideoCompleted(2)" class="w-full sm:w-auto px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>✅ Hoàn thành video 2</span>
+        <span class="hidden sm:inline">Phòng học</span> Toàn màn hình
       </button>
     </div>
   </div>
 `;
-          }
         }
       }
       
@@ -37594,6 +37566,12 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         if (!activeLesson || !activeLesson.sections || !activeLesson.sections[0]) {
           activeLesson = resolveKNTTLesson("Bài 1: Tính đơn điệu và cực trị của hàm số", "Lớp 12");
         }
+        window.activeLesson = activeLesson;
+        window.studentInfo = studentInfo;
+        window.demoState = demoState;
+        if (typeof window.updateActiveLessonVideoUI === 'function') {
+          window.updateActiveLessonVideoUI();
+        }
         activeTFQuestions = (activeLesson && activeLesson.tfQuestions) ? activeLesson.tfQuestions : [];
         activeSAQuestions = (activeLesson && activeLesson.saQuestions) ? activeLesson.saQuestions : [];
         currentSAIndex = 0;
@@ -38679,6 +38657,12 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         if (!activeLesson || (activeLesson.lessonTitle && studentInfo.lesson && !activeLesson.lessonTitle.includes(studentInfo.lesson))) {
           activeLesson = resolveKNTTLesson(studentInfo.lesson, studentInfo.grade || initialGrade);
           activeTFQuestions = activeLesson ? activeLesson.tfQuestions : [];
+        }
+        window.activeLesson = activeLesson;
+        window.studentInfo = studentInfo;
+        window.demoState = demoState;
+        if (typeof window.updateActiveLessonVideoUI === 'function') {
+          window.updateActiveLessonVideoUI();
         }
         buildAnswerSheetUI();
         renderTheoryPanel();
