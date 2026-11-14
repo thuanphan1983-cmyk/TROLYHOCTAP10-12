@@ -826,9 +826,9 @@
       lessonTitle: "Bài tập cuối chương V: Phương pháp toạ độ trong không gian",
       lessonBadge: "Ôn tập C5",
       sections: [
-        { key: "ontap_c5_muc1", title: "Mục 1: Hệ thống hoá PT Mặt phẳng, Đường thẳng, Mặt cầu", time: "05:00", icon: "🧠" },
-        { key: "ontap_c5_muc2", title: "Mục 2: Rèn luyện 4 dạng toán toạ độ Oxyz then chốt", time: "05:00", icon: "📝" },
-        { key: "ontap_c5_muc3", title: "Mục 3: Bẫy đề thi hình toạ độ & Tuyệt chiêu Casio Oxyz", time: "05:00", icon: "💡" }
+        { key: "ontap_c5_muc1", title: "Mục 1: Hệ thống hoá PT Mặt phẳng, Đường thẳng, Mặt cầu", time: "05:56", icon: "🧠" },
+        { key: "ontap_c5_muc2", title: "Mục 2: Rèn luyện 4 dạng toán toạ độ Oxyz then chốt", time: "05:41", icon: "📝" },
+        { key: "ontap_c5_muc3", title: "Mục 3: Bẫy đề thi hình toạ độ & Tuyệt chiêu Casio Oxyz", time: "05:46", icon: "💡" }
       ]
     },
 
