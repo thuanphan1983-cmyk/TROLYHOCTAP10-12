@@ -9,7 +9,7 @@
   window.DEDICATED_LESSONS_DB = window.DEDICATED_LESSONS_DB || {};
 
   function createStandardTheoryHTML(lessonTitle, grade, partNum, sectionTitle, sgkHtml, noteHtml, mistakeHtml, tipHtml) {
-    if (typeof window.createStandardTheoryHTML === 'function') {
+    if (typeof window.createStandardTheoryHTML === 'function' && window.createStandardTheoryHTML !== createStandardTheoryHTML) {
       return window.createStandardTheoryHTML(lessonTitle, grade, partNum, sectionTitle, sgkHtml, noteHtml, mistakeHtml, tipHtml);
     }
     return `<div class="space-y-4 sm:space-y-5 font-serif theory-expanded-card">
@@ -48,6 +48,8 @@
   </div>
 </div>`;
   }
+
+  window.createStandardTheoryHTML = createStandardTheoryHTML;
 
   // BÀI 1: GIÁ TRỊ LƯỢNG GIÁC CỦA GÓC LƯỢNG GIÁC (CHUẨN 4 MỤC SGK KNTT & ĐỒNG BỘ VIDEO BÀI GIẢNG)
   window.DEDICATED_LESSONS_DB["toan11_bai1"] = {
@@ -319,7 +321,7 @@
       }
     ]
   };
-  // BÀI 2: CÔNG THỨC LƯỢNG GIÁC
+  // BÀI 2: CÔNG THỨC LƯỢNG GIÁC (CHUẨN 3 MỤC SGK KNTT & ĐỒNG BỘ VIDEO BÀI GIẢNG)
   window.DEDICATED_LESSONS_DB["toan11_bai2"] = {
     id: "toan11_bai2",
     lessonTitle: "Bài 2: Công thức lượng giác",
@@ -331,92 +333,159 @@
     sections: [
       {
         sectionNumber: 1,
-        sectionTitle: "Mục 1: Công thức cộng và công thức nhân đôi, hạ bậc",
+        sectionTitle: "Mục 1: Công thức cộng",
         theory: createStandardTheoryHTML(
           "Bài 2: Công thức lượng giác", "Lớp 11", 1,
-          "Công thức cộng và công thức nhân đôi, hạ bậc",
-          `<p>Công thức cộng, nhân đôi và hạ bậc trong lượng giác:</p>
+          "Công thức cộng",
+          `<p>Bộ công thức cộng mở rộng cho sin, cosin và tang:</p>
           <ul class="list-disc ml-5 space-y-1.5">
-            <li>$\\cos(a \\pm b) = \\cos a \\cos b \\mp \\sin a \\sin b$</li>
-            <li>$\\sin(a \\pm b) = \\sin a \\cos b \\pm \\cos a \\sin b$</li>
-            <li>$\\sin 2a = 2\\sin a \\cos a$</li>
-            <li>$\\cos 2a = \\cos^2 a - \\sin^2 a = 2\\cos^2 a - 1 = 1 - 2\\sin^2 a$</li>
-            <li>$\\sin^2 a = \\frac{1 - \\cos 2a}{2}, \\quad \\cos^2 a = \\frac{1 + \\cos 2a}{2}$</li>
+            <li><strong>Công thức cộng của Cosin:</strong><br/>
+              • $\cos(a - b) = \cos a \cos b + \sin a \sin b$<br/>
+              • $\cos(a + b) = \cos a \cos b - \sin a \sin b$
+            </li>
+            <li><strong>Công thức cộng của Sin:</strong><br/>
+              • $\sin(a - b) = \sin a \cos b - \cos a \sin b$<br/>
+              • $\sin(a + b) = \sin a \cos b + \cos a \sin b$
+            </li>
+            <li><strong>Công thức cộng của Tang:</strong><br/>
+              • $\tan(a - b) = \dfrac{\tan a - \tan b}{1 + \tan a \tan b}$<br/>
+              • $\tan(a + b) = \dfrac{\tan a + \tan b}{1 - \tan a \tan b}$
+            </li>
           </ul>`,
-          `<li>Cos thì đổi dấu, Sin thì giữ nguyên dấu.</li>`,
-          `<li>Quên đổi dấu trong $\\cos(a+b)$.</li>`,
-          `<li><em>"Cos cos sin sin dấu đổi – Sin cos cos sin dấu cùng!"</em></li>`
+          `<li>Thần chú ghi nhớ: <em>"Cos cos sin sin dấu đổi - Sin cos cos sin dấu cùng"</em>.</li>
+          <li>Với tang: Tử số cùng dấu với vế trái, mẫu số đổi dấu và có số 1 đứng đầu!</li>`,
+          `<li>Quên đổi dấu trong công thức cosin của tổng: $\cos(a+b) = \cos a\cos b - \sin a\sin b$ (dấu TRỪ chứ không phải dấu CỘNG).</li>
+          <li>Nhầm dấu ở mẫu số của $\tan(a+b)$ thành $1 + \tan a\tan b$.</li>`,
+          `<li><em>"Cos thì cos cos sin sin dấu đổi - Sin thì sin cos cos sin dấu cùng!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Giá trị của $\\cos 75^\\circ$ bằng:",
-            options: ["A. $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$", "B. $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$", "C. $\\frac{\\sqrt{2} - \\sqrt{6}}{4}$", "D. $\\frac{\\sqrt{3} - 1}{2}$"],
+            question: "Giá trị chính xác của $\cos 75^\circ$ bằng:",
+            options: ["A. $\frac{\sqrt{6} - \sqrt{2}}{4}$", "B. $\frac{\sqrt{6} + \sqrt{2}}{4}$", "C. $\frac{\sqrt{2} - \sqrt{6}}{4}$", "D. $\frac{\sqrt{3} - 1}{2}$"],
             correct: "A",
-            explanation: "$\\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ \\cos 30^\\circ - \\sin 45^\\circ \\sin 30^\\circ = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$.",
-            hint1: "Áp dụng công thức cộng $\\cos(45+30)$.",
-            hint2: "$\\frac{\\sqrt{2}}{2}\\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2}\\frac{1}{2}$."
+            explanation: "Tách $75^\circ = 45^\circ + 30^\circ$:\n$$\cos 75^\circ = \cos(45^\circ + 30^\circ) = \cos 45^\circ\cos 30^\circ - \sin 45^\circ\sin 30^\circ = \frac{\sqrt{2}}{2}\frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2}\frac{1}{2} = \frac{\sqrt{6} - \sqrt{2}}{4}.$$",
+            hint1: "Áp dụng công thức cộng $\cos(45^\circ + 30^\circ)$.",
+            hint2: "$\cos 45^\circ\cos 30^\circ - \sin 45^\circ\sin 30^\circ$."
           },
           {
-            question: "Cho $\\cos a = \\frac{1}{3}$. Giá trị của $\\cos 2a$ bằng:",
-            options: ["A. $-\\frac{7}{9}$", "B. $\\frac{7}{9}$", "C. $-\\frac{1}{9}$", "D. $\\frac{2}{3}$"],
+            question: "Cho $\sin a = \frac{3}{5}$ (với $\frac{\pi}{2} < a < \pi$) và $\cos b = \frac{12}{13}$ (với $0 < b < \frac{\pi}{2}$). Giá trị của $\sin(a + b)$ bằng:",
+            options: ["A. $\frac{16}{65}$", "B. $\frac{56}{65}$", "C. $-\frac{16}{65}$", "D. $\frac{33}{65}$"],
             correct: "A",
-            explanation: "$\\cos 2a = 2\\cos^2 a - 1 = 2(1/9) - 1 = -\\frac{7}{9}$.",
-            hint1: "$\\cos 2a = 2\\cos^2 a - 1$.",
-            hint2: "$2/9 - 1 = -7/9$."
+            explanation: "Vì $\frac{\pi}{2} < a < \pi$ nên $\cos a = -\sqrt{1 - 9/25} = -\frac{4}{5}$.\nVì $0 < b < \frac{\pi}{2}$ nên $\sin b = \sqrt{1 - 144/169} = \frac{5}{13}$.\n$$\sin(a + b) = \sin a\cos b + \cos a\sin b = \frac{3}{5}\frac{12}{13} + \left(-\frac{4}{5}\right)\frac{5}{13} = \frac{36 - 20}{65} = \frac{16}{65}.$$",
+            hint1: "Tìm $\cos a = -4/5$ và $\sin b = 5/13$.",
+            hint2: "$\sin(a+b) = \sin a\cos b + \cos a\sin b$."
           },
           {
-            question: "Biểu thức $\\sin x \\cos x$ được viết gọn là:",
-            options: ["A. $\\frac{1}{2}\\sin 2x$", "B. $\\sin 2x$", "C. $2\\sin 2x$", "D. $\\frac{1}{2}\\cos 2x$"],
+            question: "Cho $\tan a = 2$ và $\tan b = 3$. Giá trị của $\tan(a + b)$ bằng:",
+            options: ["A. $-1$", "B. $1$", "C. $5$", "D. $-\frac{5}{7}$"],
             correct: "A",
-            explanation: "Từ $\\sin 2x = 2\\sin x \\cos x \\Rightarrow \\sin x \\cos x = \\frac{1}{2}\\sin 2x$.",
-            hint1: "Chia công thức nhân đôi cho 2.",
-            hint2: "$\\frac{1}{2}\\sin 2x$."
+            explanation: "Áp dụng công thức cộng tang:\n$$\tan(a + b) = \frac{\tan a + \tan b}{1 - \tan a\tan b} = \frac{2 + 3}{1 - 2 \times 3} = \frac{5}{-5} = -1.$$",
+            hint1: "Áp dụng công thức $\tan(a+b) = \frac{\tan a + \tan b}{1 - \tan a\tan b}$.",
+            hint2: "$\frac{2+3}{1 - 6} = \frac{5}{-5} = -1$."
           }
         ]
       },
       {
         sectionNumber: 2,
-        sectionTitle: "Mục 2: Công thức biến đổi tích thành tổng và tổng thành tích",
+        sectionTitle: "Mục 2: Công thức nhân đôi và công thức hạ bậc",
         theory: createStandardTheoryHTML(
           "Bài 2: Công thức lượng giác", "Lớp 11", 2,
-          "Công thức biến đổi tích thành tổng và tổng thành tích",
-          `<p>Biến đổi tích thành tổng và tổng thành tích:</p>
+          "Công thức nhân đôi và công thức hạ bậc",
+          `<p>Hệ thống công thức nhân đôi và hạ bậc then chốt:</p>
           <ul class="list-disc ml-5 space-y-1.5">
-            <li>$\\cos a \\cos b = \\frac{1}{2}[\\cos(a - b) + \\cos(a + b)]$</li>
-            <li>$\\sin a \\sin b = \\frac{1}{2}[\\cos(a - b) - \\cos(a + b)]$</li>
-            <li>$\\sin a \\cos b = \\frac{1}{2}[\\sin(a - b) + \\sin(a + b)]$</li>
-            <li>$\\cos u + \\cos v = 2\\cos\\frac{u+v}{2}\\cos\\frac{u-v}{2}$</li>
-            <li>$\\cos u - \\cos v = -2\\sin\\frac{u+v}{2}\\sin\\frac{u-v}{2}$</li>
-            <li>$\\sin u \\pm \\sin v = 2\\sin\\frac{u \\pm v}{2}\\cos\\frac{u \\mp v}{2}$</li>
+            <li><strong>Công thức nhân đôi:</strong><br/>
+              • $\sin 2a = 2\sin a \cos a$<br/>
+              • $\cos 2a = \cos^2 a - \sin^2 a = 2\cos^2 a - 1 = 1 - 2\sin^2 a$<br/>
+              • $\tan 2a = \dfrac{2\tan a}{1 - \tan^2 a}$
+            </li>
+            <li><strong>Công thức hạ bậc:</strong><br/>
+              • $\sin^2 a = \dfrac{1 - \cos 2a}{2}$<br/>
+              • $\cos^2 a = \dfrac{1 + \cos 2a}{2}$
+            </li>
           </ul>`,
-          `<li>Chú ý dấu trừ ở công thức $\\cos u - \\cos v$.</li>`,
-          `<li>Quên chia đôi góc khi chuyển thành tích.</li>`,
-          `<li><em>"Cos cộng cos bằng hai cos cos – Cos trừ cos bằng trừ hai sin sin!"</em></li>`
+          `<li>$\cos 2a$ có 3 dạng biến đổi tương đương linh hoạt.</li>
+          <li>Hạ bậc làm giảm số mũ từ 2 xuống 1 và làm tăng góc lên gấp đôi.</li>`,
+          `<li>Nhầm lẫn tự tiện ném hệ số 2 ra ngoài: $\sin 2a \neq 2\sin a$!</li>
+          <li>Nhầm dấu giữa hai dạng hạ bậc: $\sin^2$ mang dấu TRỪ, $\cos^2$ mang dấu CỘNG.</li>`,
+          `<li><em>"Sin gấp đôi bằng hai sin cos - Hạ bậc góc nhân đôi: Sin trừ, Cos cộng!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Giá trị của biểu thức $P = \\cos 75^\\circ \\cos 15^\\circ$ bằng:",
-            options: ["A. $\\frac{1}{4}$", "B. $\\frac{1}{2}$", "C. $\\frac{\\sqrt{3}}{4}$", "D. $\\frac{\\sqrt{2}}{4}$"],
+            question: "Cho $\cos a = -\frac{3}{5}$ với $\pi < a < \frac{3\pi}{2}$. Giá trị của $\sin 2a$ bằng:",
+            options: ["A. $\frac{24}{25}$", "B. $-\frac{24}{25}$", "C. $\frac{7}{25}$", "D. $-\frac{7}{25}$"],
             correct: "A",
-            explanation: "$\\frac{1}{2}[\\cos 60^\\circ + \\cos 90^\\circ] = \\frac{1}{2}(0.5 + 0) = \\frac{1}{4}$.",
-            hint1: "Áp dụng biến đổi tích thành tổng.",
-            hint2: "$\\frac{1}{2}\\cos 60^\\circ = 1/4$."
+            explanation: "Vì $\pi < a < \frac{3\pi}{2}$ nên $\sin a = -\sqrt{1 - 9/25} = -\frac{4}{5}$.\nDo đó $\sin 2a = 2\sin a\cos a = 2\left(-\frac{4}{5}\right)\left(-\frac{3}{5}\right) = \frac{24}{25}$.",
+            hint1: "Tìm $\sin a = -4/5$.",
+            hint2: "$\sin 2a = 2(-4/5)(-3/5) = 24/25$."
           },
           {
-            question: "Rút gọn biểu thức $S = \\sin 3x + \\sin x$ ta được:",
-            options: ["A. $2\\sin 2x \\cos x$", "B. $2\\cos 2x \\sin x$", "C. $\\sin 4x$", "D. $2\\sin 4x$"],
+            question: "Giá trị của $\cos^2\frac{\pi}{8}$ tính theo công thức hạ bậc bằng:",
+            options: ["A. $\frac{2 + \sqrt{2}}{4}$", "B. $\frac{2 - \sqrt{2}}{4}$", "C. $\frac{\sqrt{2 + \sqrt{2}}}{2}$", "D. $\frac{1 + \sqrt{2}}{2}$"],
             correct: "A",
-            explanation: "$\\sin 3x + \\sin x = 2\\sin\\frac{3x+x}{2}\\cos\\frac{3x-x}{2} = 2\\sin 2x \\cos x$.",
-            hint1: "Tổng thành tích của sin.",
-            hint2: "$2\\sin 2x \\cos x$."
+            explanation: "Áp dụng công thức hạ bậc:\n$$\cos^2\frac{\pi}{8} = \frac{1 + \cos\frac{\pi}{4}}{2} = \frac{1 + \frac{\sqrt{2}}{2}}{2} = \frac{2 + \sqrt{2}}{4}.$$",
+            hint1: "Áp dụng $\cos^2 x = \frac{1 + \cos 2x}{2}$.",
+            hint2: "Góc nhân đôi là $\frac{\pi}{4}$ có $\cos\frac{\pi}{4} = \frac{\sqrt{2}}{2}$."
           },
           {
-            question: "Rút gọn biểu thức $\\cos 5x - \\cos x$ ta được:",
-            options: ["A. $-2\\sin 3x \\sin 2x$", "B. $2\\cos 3x \\cos 2x$", "C. $2\\sin 3x \\sin 2x$", "D. $-\\sin 4x$"],
+            question: "Rút gọn biểu thức $B = \frac{1 - \cos 2x + \sin 2x}{1 + \cos 2x + \sin 2x}$ ta được:",
+            options: ["A. $\tan x$", "B. $\cot x$", "C. $\sin x$", "D. $\cos x$"],
             correct: "A",
-            explanation: "$\\cos 5x - \\cos x = -2\\sin\\frac{5x+x}{2}\\sin\\frac{5x-x}{2} = -2\\sin 3x \\sin 2x$.",
-            hint1: "Công thức $\\cos u - \\cos v = -2\\sin\\frac{u+v}{2}\\sin\\frac{u-v}{2}$.",
-            hint2: "Có dấu trừ phía trước."
+            explanation: "Biến đổi tử số: $(1 - \cos 2x) + \sin 2x = 2\sin^2 x + 2\sin x\cos x = 2\sin x(\sin x + \cos x)$.\nBiến đổi mẫu số: $(1 + \cos 2x) + \sin 2x = 2\cos^2 x + 2\sin x\cos x = 2\cos x(\cos x + \sin x)$.\nRút gọn ta được $\frac{\sin x}{\cos x} = \tan x$.",
+            hint1: "Thay $1 - \cos 2x = 2\sin^2 x$ và $1 + \cos 2x = 2\cos^2 x$.",
+            hint2: "Đặt nhân tử chung và triệt tiêu $(\sin x + \cos x)$."
+          }
+        ]
+      },
+      {
+        sectionNumber: 3,
+        sectionTitle: "Mục 3: Công thức biến đổi tích thành tổng và tổng thành tích",
+        theory: createStandardTheoryHTML(
+          "Bài 2: Công thức lượng giác", "Lớp 11", 3,
+          "Công thức biến đổi tích thành tổng và tổng thành tích",
+          `<p>Hệ thống công thức biến đổi tích - tổng trong giải toán lượng giác:</p>
+          <ul class="list-disc ml-5 space-y-1.5">
+            <li><strong>Biến đổi tích thành tổng:</strong><br/>
+              • $\cos a \cos b = \dfrac{1}{2}\left[\cos(a - b) + \cos(a + b)\right]$<br/>
+              • $\sin a \sin b = \dfrac{1}{2}\left[\cos(a - b) - \cos(a + b)\right]$<br/>
+              • $\sin a \cos b = \dfrac{1}{2}\left[\sin(a - b) + \sin(a + b)\right]$
+            </li>
+            <li><strong>Biến đổi tổng thành tích:</strong><br/>
+              • $\cos u + \cos v = 2\cos\dfrac{u+v}{2} \cos\dfrac{u-v}{2}$<br/>
+              • $\cos u - \cos v = -2\sin\dfrac{u+v}{2} \sin\dfrac{u-v}{2}$<br/>
+              • $\sin u + \sin v = 2\sin\dfrac{u+v}{2} \cos\dfrac{u-v}{2}$<br/>
+              • $\sin u - \sin v = 2\cos\dfrac{u+v}{2} \sin\dfrac{u-v}{2}$
+            </li>
+          </ul>`,
+          `<li>Bài ca lượng giác: <em>"Cos cộng cos bằng hai cos cos - Cos trừ cos bằng trừ hai sin sin - Sin cộng sin bằng hai sin cos - Sin trừ sin bằng hai cos sin"</em>.</li>
+          <li>Khi tích thành tổng: Luôn có $\frac{1}{2}$ phía trước và viết góc hiệu $(a-b)$ trước góc tổng $(a+b)$.</li>`,
+          `<li>Quên dấu trừ phía trước ở công thức $\cos u - \cos v = -2\sin\frac{u+v}{2}\sin\frac{u-v}{2}$.</li>
+          <li>Quên chia đôi góc khi chuyển từ tổng thành tích.</li>`,
+          `<li><em>"Cos cộng cos bằng hai cos cos - Cos trừ cos bằng trừ hai sin sin!"</em></li>`
+        ),
+        mcqs: [
+          {
+            question: "Giá trị chính xác của biểu thức $P = \sin 75^\circ \cos 15^\circ$ bằng:",
+            options: ["A. $\frac{2 + \sqrt{3}}{4}$", "B. $\frac{2 - \sqrt{3}}{4}$", "C. $\frac{1}{4}$", "D. $\frac{\sqrt{3}}{4}$"],
+            correct: "A",
+            explanation: "Áp dụng biến đổi tích thành tổng:\n$$P = \frac{1}{2}[\sin(75^\circ - 15^\circ) + \sin(75^\circ + 15^\circ)] = \frac{1}{2}[\sin 60^\circ + \sin 90^\circ] = \frac{1}{2}\left(\frac{\sqrt{3}}{2} + 1\right) = \frac{2 + \sqrt{3}}{4}.$$",
+            hint1: "Áp dụng $\sin a\cos b = \frac{1}{2}[\sin(a-b) + \sin(a+b)]$.",
+            hint2: "$\frac{1}{2}(\sin 60^\circ + \sin 90^\circ)$."
+          },
+          {
+            question: "Rút gọn biểu thức $K = \frac{\sin x + \sin 3x + \sin 5x}{\cos x + \cos 3x + \cos 5x}$ ta được:",
+            options: ["A. $\tan 3x$", "B. $\cot 3x$", "C. $\tan x$", "D. $\tan 5x$"],
+            correct: "A",
+            explanation: "Ghép đối xứng:\n$$\sin 5x + \sin x = 2\sin 3x\cos 2x \Rightarrow \text{Tử} = \sin 3x(2\cos 2x + 1).$$" + "\n" + "$$\cos 5x + \cos x = 2\cos 3x\cos 2x \Rightarrow \text{Mẫu} = \cos 3x(2\cos 2x + 1).$$" + "\n" + "Rút gọn được $\frac{\sin 3x}{\cos 3x} = \tan 3x$.",
+            hint1: "Ghép $\sin 5x$ với $\sin x$ và $\cos 5x$ với $\cos x$.",
+            hint2: "Đặt nhân tử chung $2\cos 2x + 1$."
+          },
+          {
+            question: "Giá trị của tích chuỗi $T = \cos\frac{\pi}{7}\cos\frac{2\pi}{7}\cos\frac{4\pi}{7}$ bằng:",
+            options: ["A. $-\frac{1}{8}$", "B. $\frac{1}{8}$", "C. $-\frac{1}{4}$", "D. $\frac{1}{16}$"],
+            correct: "A",
+            explanation: "Nhân hai vế với $\sin\frac{\pi}{7}$:\n$$T\sin\frac{\pi}{7} = \frac{1}{8}\sin\frac{8\pi}{7} = -\frac{1}{8}\sin\frac{\pi}{7} \implies T = -\frac{1}{8}.$$",
+            hint1: "Nhân hai vế với $\sin\frac{\pi}{7}$.",
+            hint2: "Áp dụng liên tiếp công thức nhân đôi sin."
           }
         ]
       }

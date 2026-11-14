@@ -1024,6 +1024,773 @@ if (typeof window !== 'undefined') {
   "duration": 282.51
 };
 
+
+  window.G11_CHAPTER1_DATA.g11_bai2_muc1 = {
+  "lessonId": "toan11_bai2",
+  "lessonTitle": "Bài 2: Công thức lượng giác",
+  "sectionId": "g11_bai2_muc1",
+  "sectionTitle": "Mục 1: Công thức cộng",
+  "audio": "/audio/g11_bai2_muc1.mp3",
+  "audioSrc": "./audio/g11_bai2_muc1.mp3",
+  "audio_src": "./audio/g11_bai2_muc1.mp3",
+  "title": "Mục 1: Công thức cộng (Sin, Cos, Tan)",
+  "owl_tip": "Thần chú nhớ công thức cộng: Cos thì đổi dấu (cos cos sin sin), Sin thì cùng dấu (sin cos cos sin)!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Công thức cộng Cos và Sin",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Công thức cộng Tang & Quy tắc nhớ",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Bốn ví dụ rèn luyện tiêu biểu (Đồng hồ 15s/30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Cảnh báo bẫy trắc nghiệm & Sai lầm thường gặp",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Tổng kết mục 1 & Bí kíp Cú Thông Thái",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. CÔNG THỨC CỘNG CỦA COSIN VÀ SIN",
+      "subtitle": "MỤC 1 • CÔNG THỨC CỘNG",
+      "mascotMode": "talking",
+      "mascotTip": "Quy tắc vàng: 'Cos cos sin sin dấu đổi - Sin cos cos sin dấu cùng'!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">📖 Công thức cộng của Cosin và Sin</h3>\n                  <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:14px; margin-bottom:14px; border-radius:4px;\">\n                    <p style=\"color:#f8fafc; font-size:16px; line-height:1.8; margin:0;\">\n                      Với mọi góc lượng giác $a$ và $b$, ta luôn có:<br/>\n                      • $\\cos(a - b) = \\cos a \\cos b + \\sin a \\sin b$<br/>\n                      • $\\cos(a + b) = \\cos a \\cos b - \\sin a \\sin b$<br/>\n                      • $\\sin(a - b) = \\sin a \\cos b - \\cos a \\sin b$<br/>\n                      • $\\sin(a + b) = \\sin a \\cos b + \\cos a \\sin b$\n                    </p>\n                  </div>\n                  <div style=\"background:rgba(250,204,21,0.12); border:1px solid #facc15; border-radius:8px; padding:12px; color:#fef08a; font-size:15px;\">\n                    💡 <b>Bí kíp nhớ siêu tốc:</b> Cos thì đi cặp (cos cos, sin sin) và bị <i>đổi dấu</i>. Sin thì đan xen (sin cos, cos sin) và <i>giữ nguyên dấu</i>!\n                  </div>\n                </div>\n                ",
+      "narration": "Chào mừng các em đến với Bài 2: Công thức lượng giác trong chương trình Toán 11 Kết nối tri thức. Mục 1 mở đầu bằng bộ công thức quan trọng bậc nhất: Công thức cộng. Đối với cosin: cos của a trừ b bằng cos a cos b cộng sin a sin b; cos của a cộng b bằng cos a cos b trừ sin a sin b. Đối với sin: sin của a trừ b bằng sin a cos b trừ cos a sin b; sin của a cộng b bằng sin a cos b cộng cos a sin b. Thầy tóm gọn câu thần chú: Cos cos sin sin dấu đổi; Sin cos cos sin dấu cùng!",
+      "startTime": 0.0,
+      "endTime": 30.43,
+      "duration": 30.43
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. CÔNG THỨC CỘNG CỦA TANG & ĐIỀU KIỆN",
+      "subtitle": "MỤC 1 • CÔNG THỨC CỘNG",
+      "mascotMode": "talking",
+      "mascotTip": "Tử số cùng dấu với vế trái, mẫu số đổi dấu và có số 1 đứng đầu!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #818cf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#818cf8; font-size:22px; margin-bottom:12px; font-weight:700;\">📖 Công thức cộng của Tang</h3>\n                  <div style=\"background:rgba(129,140,248,0.1); border-left:4px solid #818cf8; padding:14px; margin-bottom:14px; border-radius:4px;\">\n                    <p style=\"color:#f8fafc; font-size:16px; line-height:1.9; margin:0;\">\n                      Khi các biểu thức đều có nghĩa, ta có:<br/>\n                      • $\\tan(a - b) = \\dfrac{\\tan a - \\tan b}{1 + \\tan a \\tan b}$<br/>\n                      • $\\tan(a + b) = \\dfrac{\\tan a + \\tan b}{1 - \\tan a \\tan b}$\n                    </p>\n                  </div>\n                  <div style=\"background:rgba(244,63,94,0.15); border:1px solid #f43f5e; border-radius:8px; padding:12px; color:#fecdd3; font-size:14.5px;\">\n                    ⚠️ <b>Điều kiện xác định:</b> $a, b, a \\pm b \\neq \\dfrac{\\pi}{2} + k\\pi$ và tích $\\tan a \\tan b \\neq \\pm 1$.\n                  </div>\n                </div>\n                ",
+      "narration": "Tiếp theo là công thức cộng của tang. Khi các giá trị tang đều xác định, tang của a trừ b bằng tang a trừ tang b trên một cộng tang a tang b; tang của a cộng b bằng tang a cộng tang b trên một trừ tang a tang b. Hãy ghi nhớ: Trên tử thì dấu cùng với vế trái, dưới mẫu thì đổi dấu và có số 1 đứng đầu!",
+      "startTime": 30.43,
+      "endTime": 48.6,
+      "duration": 18.17
+    },
+    {
+      "sceneIndex": 3,
+      "title": "Ví dụ 1: Tính giá trị lượng giác góc đặc biệt",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Phân tích 75 độ = 45 độ + 30 độ; 15 độ = 45 độ - 30 độ!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #f59e0b; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#f59e0b; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; rounded-full:8px; border-radius:6px;\">VÍ DỤ 1 • MỨC NHẬN BIẾT</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#fbbf24; font-size:18px; margin:0 0 10px 0;\">Không dùng máy tính, tính giá trị chính xác của:</h4>\n                  <div style=\"background:rgba(245,158,11,0.08); border-left:4px solid #f59e0b; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    a) $\\cos 75^\\circ$<br/>\n                    b) $\\sin 15^\\circ$<br/>\n                    c) So sánh hai kết quả trên và giải thích vì sao.\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 1 là bài toán nhận biết nền tảng: Không dùng máy tính bỏ túi, hãy tính giá trị chính xác của cos 75 độ và sin 15 độ, sau đó so sánh hai kết quả. Các em có 15 giây suy nghĩ!",
+      "startTime": 48.6,
+      "endTime": 61.49,
+      "duration": 12.89
+    },
+    {
+      "sceneIndex": 4,
+      "title": "Ví dụ 1: Lời giải chi tiết & Phân tích",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Hai góc phụ nhau có tổng bằng 90 độ thì sin góc này bằng cos góc kia!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 1</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>a) Tính $\\cos 75^\\circ$:</b> Ta tách $75^\\circ = 45^\\circ + 30^\\circ$<br/>\n                      $\\cos 75^\\circ = \\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ \\cos 30^\\circ - \\sin 45^\\circ \\sin 30^\\circ$<br/>\n                      $= \\dfrac{\\sqrt{2}}{2} \\cdot \\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2} \\cdot \\dfrac{1}{2} = \\mathbf{\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}}$.\n                    </p>\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>b) Tính $\\sin 15^\\circ$:</b> Ta tách $15^\\circ = 45^\\circ - 30^\\circ$<br/>\n                      $\\sin 15^\\circ = \\sin(45^\\circ - 30^\\circ) = \\sin 45^\\circ \\cos 30^\\circ - \\cos 45^\\circ \\sin 30^\\circ$<br/>\n                      $= \\dfrac{\\sqrt{2}}{2} \\cdot \\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2} \\cdot \\dfrac{1}{2} = \\mathbf{\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}}$.\n                    </p>\n                    <p style=\"margin:0; color:#fde047;\">\n                      <b>c) Kết luận:</b> $\\cos 75^\\circ = \\sin 15^\\circ$ vì $75^\\circ + 15^\\circ = 90^\\circ$ (hai góc phụ nhau thì chéo hàm).\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Ở câu a, tách 75 độ bằng 45 độ cộng 30 độ. Áp dụng cos của tổng, ta có căn 2 trên 2 nhân căn 3 trên 2 trừ căn 2 trên 2 nhân 1 phần 2, ra căn 6 trừ căn 2 trên 4. Ở câu b, tách 15 độ bằng 45 trừ 30 độ, áp dụng sin của hiệu cũng ra đúng căn 6 trừ căn 2 trên 4. Hai kết quả bằng nhau vì 75 độ và 15 độ là hai góc phụ nhau!",
+      "startTime": 61.49,
+      "endTime": 88.47,
+      "duration": 26.98
+    },
+    {
+      "sceneIndex": 5,
+      "title": "Ví dụ 2: Tính sin(a+b) và cos(a-b)",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Nhớ xét góc phần tư để lấy dấu âm dương khi tính cos a và sin b!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#38bdf8; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 2 • MỨC THÔNG HIỂU</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#7dd3fc; font-size:18px; margin:0 0 10px 0;\">Cho hai góc lượng giác $a$ và $b$ thỏa mãn:</h4>\n                  <div style=\"background:rgba(56,189,248,0.08); border-left:4px solid #38bdf8; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    • $\\sin a = \\dfrac{3}{5}$ với $\\dfrac{\\pi}{2} < a < \\pi$ (Góc phần tư II)<br/>\n                    • $\\cos b = \\dfrac{12}{13}$ với $0 < b < \\dfrac{\\pi}{2}$ (Góc phần tư I)<br/>\n                    Hãy tính giá trị của: <b>a)</b> $\\sin(a + b)$ và <b>b)</b> $\\cos(a - b)$.\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 2 là bài toán thông hiểu cốt lõi: Cho sin a bằng 3 phần 5 trong góc phần tư thứ hai, và cos b bằng 12 phần 13 trong góc phần tư thứ nhất. Hãy tính sin của a cộng b và cos của a trừ b. Các em có 15 giây chuẩn bị!",
+      "startTime": 88.47,
+      "endTime": 103.18,
+      "duration": 14.71
+    },
+    {
+      "sceneIndex": 6,
+      "title": "Ví dụ 2: Lời giải chi tiết & Xét dấu",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Góc a ở góc phần tư II nên cos a mang dấu âm: cos a = -4/5!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 2</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>Bước 1: Tìm $\\cos a$ và $\\sin b$:</b><br/>\n                      • Vì $\\frac{\\pi}{2} < a < \\pi$ nên $\\cos a < 0 \\Rightarrow \\cos a = -\\sqrt{1 - \\sin^2 a} = -\\sqrt{1 - \\frac{9}{25}} = -\\dfrac{4}{5}$.<br/>\n                      • Vì $0 < b < \\frac{\\pi}{2}$ nên $\\sin b > 0 \\Rightarrow \\sin b = \\sqrt{1 - \\cos^2 b} = \\sqrt{1 - \\frac{144}{169}} = \\dfrac{5}{13}$.\n                    </p>\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>Bước 2: Áp dụng công thức cộng:</b><br/>\n                      • $\\sin(a + b) = \\sin a \\cos b + \\cos a \\sin b = \\dfrac{3}{5} \\cdot \\dfrac{12}{13} + \\left(-\\dfrac{4}{5}\\right) \\cdot \\dfrac{5}{13} = \\dfrac{36 - 20}{65} = \\mathbf{\\dfrac{16}{65}}$.<br/>\n                      • $\\cos(a - b) = \\cos a \\cos b + \\sin a \\sin b = \\left(-\\dfrac{4}{5}\\right) \\cdot \\dfrac{12}{13} + \\dfrac{3}{5} \\cdot \\dfrac{5}{13} = \\dfrac{-48 + 15}{65} = \\mathbf{-\\dfrac{33}{65}}$.\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Bước 1 tìm các giá trị còn lại. Do a thuộc góc phần tư thứ hai nên cos a âm, bằng trừ 4 phần 5. Do b thuộc góc phần tư thứ nhất nên sin b dương, bằng 5 phần 13. Bước 2 áp dụng công thức: sin a cộng b bằng 3 phần 5 nhân 12 phần 13 cộng trừ 4 phần 5 nhân 5 phần 13, rút gọn được 16 phần 65. Cos a trừ b bằng trừ 48 cộng 15 trên 65, bằng trừ 33 phần 65.",
+      "startTime": 103.18,
+      "endTime": 133.8,
+      "duration": 30.62
+    },
+    {
+      "sceneIndex": 7,
+      "title": "Ví dụ 3: Rút gọn biểu thức lượng giác",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Khai triển bình phương rồi ghép sin^2 + cos^2 = 1 và gom cụm công thức cộng!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #a855f7; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#a855f7; color:#ffffff; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 3 • MỨC VẬN DỤNG</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#d8b4fe; font-size:18px; margin:0 0 10px 0;\">Cho hai góc $x$ và $y$ thỏa mãn $x - y = \\dfrac{\\pi}{3}$.</h4>\n                  <div style=\"background:rgba(168,85,247,0.08); border-left:4px solid #a855f7; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    Tính giá trị của biểu thức:<br/>\n                    $$A = (\\cos x + \\cos y)^2 + (\\sin x + \\sin y)^2$$\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 3 là bài toán vận dụng rất hay xuất hiện trong các đề kiểm tra: Cho hai góc x và y thỏa mãn x trừ y bằng pi phần 3. Hãy tính giá trị của biểu thức A bằng cos x cộng cos y tất cả bình phương cộng sin x cộng sin y tất cả bình phương. Các em có 30 giây suy nghĩ!",
+      "startTime": 133.8,
+      "endTime": 151.37,
+      "duration": 17.57
+    },
+    {
+      "sceneIndex": 8,
+      "title": "Ví dụ 3: Lời giải chi tiết & Nghệ thuật gom nhóm",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Xuất hiện cos x cos y + sin x sin y chính là cos(x - y)!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 3</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      Khai triển hai hằng đẳng thức bình phương:<br/>\n                      $A = (\\cos^2 x + 2\\cos x \\cos y + \\cos^2 y) + (\\sin^2 x + 2\\sin x \\sin y + \\sin^2 y)$\n                    </p>\n                    <p style=\"margin:0 0 8px 0;\">\n                      Nhóm các hạng tử lượng giác cơ bản:<br/>\n                      $A = (\\cos^2 x + \\sin^2 x) + (\\cos^2 y + \\sin^2 y) + 2(\\cos x \\cos y + \\sin x \\sin y)$<br/>\n                      $A = 1 + 1 + 2\\cos(x - y) = 2 + 2\\cos(x - y)$.\n                    </p>\n                    <p style=\"margin:0; color:#34d399;\">\n                      Thay $x - y = \\dfrac{\\pi}{3}$ vào biểu thức:<br/>\n                      $A = 2 + 2\\cos\\dfrac{\\pi}{3} = 2 + 2 \\cdot \\dfrac{1}{2} = 2 + 1 = \\mathbf{3}$.\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Khai triển hai bình phương ra sáu số hạng. Nhóm cos bình x với sin bình x bằng 1; cos bình y với sin bình y bằng 1; còn lại hai lần tích cos x cos y cộng sin x sin y chính là hai lần cos của x trừ y! Vậy biểu thức thu gọn thành 2 cộng 2 cos của x trừ y. Thay x trừ y bằng pi phần 3 với cos pi phần 3 bằng 1 phần 2, ta thu được đáp số tuyệt đẹp bằng 3.",
+      "startTime": 151.37,
+      "endTime": 174.99,
+      "duration": 23.62
+    },
+    {
+      "sceneIndex": 9,
+      "title": "Ví dụ 4: Bài toán thực tế tổng hợp dao động điều hòa",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Áp dụng công thức cộng cos(a - b) để tìm biên độ và pha dao động tổng hợp!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #ec4899; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#ec4899; color:#ffffff; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 4 • MỨC VẬN DỤNG CAO / THỰC TẾ</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#f472b6; font-size:18px; margin:0 0 10px 0;\">Ứng dụng vật lý trong tổng hợp dao động:</h4>\n                  <div style=\"background:rgba(236,72,153,0.08); border-left:4px solid #ec4899; padding:14px; border-radius:4px; font-size:15.5px; color:#f8fafc; line-height:1.8;\">\n                    Một vật thực hiện đồng thời hai dao động điều hòa cùng phương, cùng tần số:<br/>\n                    $x_1 = 3\\cos\\left(10\\pi t + \\dfrac{\\pi}{6}\\right)\\text{ (cm)}$ và $x_2 = 3\\sqrt{3}\\cos\\left(10\\pi t - \\dfrac{\\pi}{3}\\right)\\text{ (cm)}$.<br/>\n                    Hãy viết phương trình dao động tổng hợp $x = x_1 + x_2$ dưới dạng $A\\cos(10\\pi t + \\varphi)$.\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 4 là bài toán liên môn vật lý vận dụng cao: Một vật tham gia đồng thời hai dao động điều hòa cùng phương cùng tần số: x1 bằng 3 cos 10 pi t cộng pi phần 6 xen-ti-mét và x2 bằng 3 căn 3 cos 10 pi t trừ pi phần 3 xen-ti-mét. Hãy tìm biên độ và pha ban đầu để viết phương trình dao động tổng hợp. Các em có 30 giây suy nghĩ!",
+      "startTime": 174.99,
+      "endTime": 195.77,
+      "duration": 20.78
+    },
+    {
+      "sceneIndex": 10,
+      "title": "Ví dụ 4: Lời giải chi tiết & Mô hình pha",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Hai dao động lệch pha nhau pi/2 (vuông pha) nên A = căn(A1^2 + A2^2) = 6 cm!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 4</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>Bước 1: Tính độ lệch pha giữa hai dao động:</b><br/>\n                      $\\Delta\\varphi = \\dfrac{\\pi}{6} - \\left(-\\dfrac{\\pi}{3}\\right) = \\dfrac{\\pi}{2}$ (hai dao động vuông pha với nhau).\n                    </p>\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>Bước 2: Tìm biên độ dao động tổng hợp $A$:</b><br/>\n                      $A = \\sqrt{A_1^2 + A_2^2} = \\sqrt{3^2 + (3\\sqrt{3})^2} = \\sqrt{9 + 27} = \\sqrt{36} = \\mathbf{6\\text{ cm}}$.\n                    </p>\n                    <p style=\"margin:0; color:#fde047;\">\n                      <b>Bước 3: Xác định pha ban đầu $\\varphi$:</b><br/>\n                      $\\tan\\varphi = \\dfrac{A_1\\sin\\varphi_1 + A_2\\sin\\varphi_2}{A_1\\cos\\varphi_1 + A_2\\cos\\varphi_2} = \\dfrac{3\\sin\\frac{\\pi}{6} + 3\\sqrt{3}\\sin(-\\frac{\\pi}{3})}{3\\cos\\frac{\\pi}{6} + 3\\sqrt{3}\\cos(-\\frac{\\pi}{3})} = -\\dfrac{1}{\\sqrt{3}} \\Rightarrow \\varphi = -\\dfrac{\\pi}{6}$.<br/>\n                      Vậy phương trình tổng hợp là: $\\mathbf{x = 6\\cos\\left(10\\pi t - \\dfrac{\\pi}{6}\\right)\\text{ (cm)}}$.\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Nhận xét độ lệch pha giữa hai dao động là pi phần 6 trừ cho trừ pi phần 3 bằng pi phần 2, tức hai dao động vuông pha nhau. Biên độ dao động tổng hợp tính theo định lý Pythagoras bằng căn bậc hai của 3 bình cộng 3 căn 3 tất cả bình, ra đúng 6 xen-ti-mét. Áp dụng công thức cộng tính tang phi ra trừ 1 trên căn 3, suy ra pha ban đầu phi bằng trừ pi phần 6. Ta kết luận phương trình dao động tổng hợp là x bằng 6 cos 10 pi t trừ pi phần 6 xen-ti-mét.",
+      "startTime": 195.77,
+      "endTime": 225.41,
+      "duration": 29.64
+    },
+    {
+      "sceneIndex": 11,
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM & SAI LẦM PHỔ BIẾN",
+      "subtitle": "MỤC 1 • LƯU Ý TRÁNH MẤT ĐIỂM OAN",
+      "mascotMode": "warning",
+      "mascotTip": "Hãy luôn khắc sâu: Cos thì ĐỔI DẤU, Sin thì CÙNG DẤU!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #ef4444; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px; font-weight:700;\">⚠️ 3 Bẫy trắc nghiệm công thức cộng cần tránh</h3>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; margin-bottom:10px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 1: Quên đổi dấu trong công thức Cosin</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">Nhiều bạn viết $\\cos(a+b) = \\cos a\\cos b + \\sin a\\sin b$ là <b>SAI HOÀN TOÀN</b>! Phải là dấu TRỪ: $\\cos(a+b) = \\cos a\\cos b - \\sin a\\sin b$.</p>\n                  </div>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; margin-bottom:10px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 2: Nhầm dấu ở mẫu số của Tang</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">Trong $\\tan(a+b)$, tử số mang dấu CỘNG nhưng mẫu số phải mang dấu TRỪ: $1 - \\tan a\\tan b$.</p>\n                  </div>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 3: Quên xét dấu khi khai căn từ $\\sin^2 + \\cos^2 = 1$</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">Luôn phải kiểm tra góc phần tư trước khi viết dấu cộng hay trừ cho giá trị lượng giác.</p>\n                  </div>\n                </div>\n                ",
+      "narration": "Cú Thông Thái cảnh báo 3 bẫy kinh điển: Thứ nhất, quên đổi dấu trong công thức cosin; nhớ rằng cos của tổng thì phải mang dấu trừ. Thứ hai, nhầm dấu ở mẫu số của tang; tang của tổng thì dưới mẫu mang dấu trừ. Thứ ba, quên kiểm tra góc phần tư khi khai căn dẫn đến sai toàn bộ bài toán tính toán phía sau!",
+      "startTime": 225.41,
+      "endTime": 244.95,
+      "duration": 19.54
+    },
+    {
+      "sceneIndex": 12,
+      "title": "4. TỔNG KẾT MỤC 1 & BÍ KÍP CÚ THÔNG THÁI",
+      "subtitle": "MỤC 1 • GHI NHỚ KHẮC SÂU",
+      "mascotMode": "cheer",
+      "mascotTip": "Cos cos sin sin dấu đổi - Sin cos cos sin dấu cùng!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px; font-weight:700;\">🌟 Bí kíp nằm lòng Mục 1</h3>\n                  <div style=\"background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); border-radius:8px; padding:16px; color:#f8fafc; font-size:16px; line-height:1.9;\">\n                    • <b>Thần chú Sin và Cos:</b><br/>\n                    <i>\"Cos thì cos cos sin sin, dấu trừ đổi cộng dấu cộng đổi trừ.<br/>\n                    Sin thì sin cos cos sin, dấu cùng giữ lại chẳng phiền lòng ai!\"</i><br/>\n                    • <b>Thần chú Tang:</b><br/>\n                    <i>\"Tang tổng thì lấy tổng tang, chia cho một trừ tích tang rõ ràng!\"</i>\n                  </div>\n                </div>\n                ",
+      "narration": "Chúc mừng các em đã hoàn thành xuất sắc Mục 1: Công thức cộng. Hãy đọc to câu thần chú: Cos thì cos cos sin sin, dấu cộng đổi trừ dấu trừ đổi cộng. Sin thì sin cos cos sin, dấu cùng giữ lại chẳng phiền lòng ai. Nắm vững điều này, các em sẽ tự tin bước tiếp sang Mục 2: Công thức nhân đôi và hạ bậc!",
+      "startTime": 244.95,
+      "endTime": 265.28,
+      "duration": 20.33
+    }
+  ],
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 30.43,
+      "id": "part2"
+    },
+    {
+      "time": 48.6,
+      "id": "vd1_q"
+    },
+    {
+      "time": 61.49,
+      "id": "vd1_a"
+    },
+    {
+      "time": 88.47,
+      "id": "vd2_q"
+    },
+    {
+      "time": 103.18,
+      "id": "vd2_a"
+    },
+    {
+      "time": 133.8,
+      "id": "vd3_q"
+    },
+    {
+      "time": 151.37,
+      "id": "vd3_a"
+    },
+    {
+      "time": 174.99,
+      "id": "vd4_q"
+    },
+    {
+      "time": 195.77,
+      "id": "vd4_a"
+    },
+    {
+      "time": 225.41,
+      "id": "part4"
+    },
+    {
+      "time": 244.95,
+      "id": "part5"
+    }
+  ],
+  "totalDuration": 265.28,
+  "duration": 265.28
+};
+
+  window.G11_CHAPTER1_DATA.g11_bai2_muc2 = {
+  "lessonId": "toan11_bai2",
+  "lessonTitle": "Bài 2: Công thức lượng giác",
+  "sectionId": "g11_bai2_muc2",
+  "sectionTitle": "Mục 2: Công thức nhân đôi và công thức hạ bậc",
+  "audio": "/audio/g11_bai2_muc2.mp3",
+  "audioSrc": "./audio/g11_bai2_muc2.mp3",
+  "audio_src": "./audio/g11_bai2_muc2.mp3",
+  "title": "Mục 2: Công thức nhân đôi & Hạ bậc",
+  "owl_tip": "Sin 2a = 2 sin a cos a; Cos 2a có 3 dạng biểu diễn: cos^2 - sin^2 = 2cos^2 - 1 = 1 - 2sin^2!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Công thức nhân đôi (Sin 2a, Cos 2a, Tan 2a)",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Công thức hạ bậc & Ý nghĩa biến đổi",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Bốn ví dụ rèn luyện tiêu biểu (Đồng hồ 15s/30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Cảnh báo bẫy trắc nghiệm & Sai lầm thường gặp",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Tổng kết mục 2 & Bí kíp Cú Thông Thái",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. HỆ THỐNG CÔNG THỨC NHÂN ĐÔI",
+      "subtitle": "MỤC 2 • CÔNG THỨC NHÂN ĐÔI & HẠ BẬC",
+      "mascotMode": "talking",
+      "mascotTip": "Công thức nhân đôi chính là trường hợp đặc biệt của công thức cộng khi b = a!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">📖 Công thức nhân đôi</h3>\n                  <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:14px; margin-bottom:14px; border-radius:4px;\">\n                    <p style=\"color:#f8fafc; font-size:16px; line-height:1.9; margin:0;\">\n                      • $\\sin 2a = 2\\sin a \\cos a$<br/>\n                      • $\\cos 2a = \\cos^2 a - \\sin^2 a = 2\\cos^2 a - 1 = 1 - 2\\sin^2 a$<br/>\n                      • $\\tan 2a = \\dfrac{2\\tan a}{1 - \\tan^2 a}$\n                    </p>\n                  </div>\n                  <div style=\"background:rgba(250,204,21,0.12); border:1px solid #facc15; border-radius:8px; padding:12px; color:#fef08a; font-size:15px;\">\n                    💡 <b>Lưu ý quan trọng:</b> $\\cos 2a$ có tới <b>3 dạng biến đổi tương đương</b>! Tùy vào đề bài cho $\\sin$ hay $\\cos$ mà ta chọn dạng thích hợp nhất.\n                  </div>\n                </div>\n                ",
+      "narration": "Chào mừng các em đến với Mục 2: Công thức nhân đôi và hạ bậc. Khi cho b bằng a trong công thức cộng, ta thu được bộ công thức nhân đôi cực kỳ quan trọng: sin 2a bằng 2 sin a cos a; cos 2a bằng cos bình a trừ sin bình a, bằng 2 cos bình a trừ 1, hoặc bằng 1 trừ 2 sin bình a; tang 2a bằng 2 tang a trên 1 trừ tang bình a. Hãy chú ý cos 2a có 3 dạng biến đổi, giúp ta linh hoạt giải quyết mọi bài toán!",
+      "startTime": 0.0,
+      "endTime": 24.98,
+      "duration": 24.98
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. CÔNG THỨC HẠ BẬC & Ý NGHĨA",
+      "subtitle": "MỤC 2 • CÔNG THỨC NHÂN ĐÔI & HẠ BẬC",
+      "mascotMode": "talking",
+      "mascotTip": "Hạ bậc thì góc gấp đôi: Sin bình mang dấu trừ, Cos bình mang dấu cộng!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #818cf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#818cf8; font-size:22px; margin-bottom:12px; font-weight:700;\">📖 Công thức hạ bậc</h3>\n                  <div style=\"background:rgba(129,140,248,0.1); border-left:4px solid #818cf8; padding:14px; margin-bottom:14px; border-radius:4px;\">\n                    <p style=\"color:#f8fafc; font-size:16.5px; line-height:2.0; margin:0;\">\n                      Từ $\\cos 2a = 2\\cos^2 a - 1 = 1 - 2\\sin^2 a$, ta rút ra:<br/>\n                      • $\\sin^2 a = \\dfrac{1 - \\cos 2a}{2}$<br/>\n                      • $\\cos^2 a = \\dfrac{1 + \\cos 2a}{2}$\n                    </p>\n                  </div>\n                  <div style=\"background:rgba(16,185,129,0.12); border:1px solid #10b981; border-radius:8px; padding:12px; color:#a7f3d0; font-size:15px;\">\n                    ✨ <b>Tác dụng của hạ bậc:</b> Biến số mũ 2 phức tạp về hàm số bậc 1 đơn giản, rất quan trọng khi giải phương trình lượng giác lớp 11 và tích phân lớp 12!\n                  </div>\n                </div>\n                ",
+      "narration": "Từ công thức cos 2a, khi rút sin bình và cos bình ra, ta có công thức hạ bậc: sin bình a bằng 1 trừ cos 2a tất cả chia 2; cos bình a bằng 1 cộng cos 2a tất cả chia 2. Nhớ thần chú: Hạ bậc góc gấp đôi; sin bình mang dấu trừ, cos bình mang dấu cộng. Công thức này giúp giảm bậc từ 2 xuống bậc 1, là chìa khóa vàng cho lượng giác 11 và tích phân 12 sau này!",
+      "startTime": 24.98,
+      "endTime": 48.76,
+      "duration": 23.78
+    },
+    {
+      "sceneIndex": 3,
+      "title": "Ví dụ 1: Tính sin 2a, cos 2a, tan 2a",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Tìm sin a trước, lưu ý góc ở phần tư thứ III thì sin a mang dấu âm!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #f59e0b; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#f59e0b; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 1 • MỨC NHẬN BIẾT</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#fbbf24; font-size:18px; margin:0 0 10px 0;\">Cho góc lượng giác $a$ thỏa mãn:</h4>\n                  <div style=\"background:rgba(245,158,11,0.08); border-left:4px solid #f59e0b; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    $\\cos a = -\\dfrac{3}{5}$ với $\\pi < a < \\dfrac{3\\pi}{2}$ (Góc phần tư thứ III).<br/>\n                    Hãy tính giá trị của: <b>a)</b> $\\sin 2a$, <b>b)</b> $\\cos 2a$, và <b>c)</b> $\\tan 2a$.\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 1 là bài toán nhận biết áp dụng công thức nhân đôi: Cho cos a bằng trừ 3 phần 5 với a nằm trong góc phần tư thứ ba. Hãy tính sin 2a, cos 2a và tang 2a. Các em có 15 giây suy nghĩ!",
+      "startTime": 48.76,
+      "endTime": 63.16,
+      "duration": 14.4
+    },
+    {
+      "sceneIndex": 4,
+      "title": "Ví dụ 1: Lời giải chi tiết & Bước suy luận",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Sin 2a = 2.(-4/5).(-3/5) = 24/25 > 0 vì âm nhân âm ra dương!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 1</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>Bước 1: Tính $\\sin a$:</b><br/>\n                      Vì $\\pi < a < \\frac{3\\pi}{2}$ (góc phần tư III) nên $\\sin a < 0$:<br/>\n                      $\\sin a = -\\sqrt{1 - \\cos^2 a} = -\\sqrt{1 - \\frac{9}{25}} = -\\dfrac{4}{5}$.\n                    </p>\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>Bước 2: Áp dụng công thức nhân đôi:</b><br/>\n                      • $\\sin 2a = 2\\sin a \\cos a = 2\\left(-\\dfrac{4}{5}\\right)\\left(-\\dfrac{3}{5}\\right) = \\mathbf{\\dfrac{24}{25}}$.<br/>\n                      • $\\cos 2a = 2\\cos^2 a - 1 = 2\\left(\\dfrac{9}{25}\\right) - 1 = \\dfrac{18}{25} - 1 = \\mathbf{-\\dfrac{7}{25}}$.<br/>\n                      • $\\tan 2a = \\dfrac{\\sin 2a}{\\cos 2a} = \\dfrac{24/25}{-7/25} = \\mathbf{-\\dfrac{24}{7}}$.\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Bước 1, vì a nằm ở góc phần tư thứ ba nên sin a âm, bằng trừ 4 phần 5. Bước 2 áp dụng công thức: sin 2a bằng 2 nhân trừ 4 phần 5 nhân trừ 3 phần 5, ra dương 24 phần 25. Cos 2a bằng 2 nhân 9 phần 25 trừ 1, bằng trừ 7 phần 25. Tang 2a lấy sin 2a chia cos 2a, ra trừ 24 phần 7.",
+      "startTime": 63.16,
+      "endTime": 89.22,
+      "duration": 26.06
+    },
+    {
+      "sceneIndex": 5,
+      "title": "Ví dụ 2: Dùng công thức hạ bậc tính cos(pi/8)",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Góc pi/8 nhân đôi lên thành pi/4: Áp dụng cos^2(pi/8) = (1 + cos(pi/4))/2!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#38bdf8; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 2 • MỨC THÔNG HIỂU</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#7dd3fc; font-size:18px; margin:0 0 10px 0;\">Áp dụng công thức hạ bậc:</h4>\n                  <div style=\"background:rgba(56,189,248,0.08); border-left:4px solid #38bdf8; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    Không dùng máy tính bỏ túi, hãy tính giá trị chính xác dạng căn lồng nhau của:<br/>\n                    <b>a)</b> $\\cos\\dfrac{\\pi}{8}$<br/>\n                    <b>b)</b> $\\sin\\dfrac{\\pi}{8}$\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 2 là ứng dụng xuất sắc của công thức hạ bậc: Không dùng máy tính bỏ túi, hãy tính giá trị chính xác dạng căn lồng nhau của cos pi phần 8 và sin pi phần 8. Các em có 15 giây suy nghĩ!",
+      "startTime": 89.22,
+      "endTime": 101.56,
+      "duration": 12.34
+    },
+    {
+      "sceneIndex": 6,
+      "title": "Ví dụ 2: Lời giải chi tiết & Căn lồng nhau",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Vì pi/8 thuộc góc phần tư thứ I nên cả cos và sin đều dương!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 2</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>a) Tính $\\cos\\dfrac{\\pi}{8}$:</b><br/>\n                      Áp dụng công thức hạ bậc: $\\cos^2\\dfrac{\\pi}{8} = \\dfrac{1 + \\cos\\frac{\\pi}{4}}{2} = \\dfrac{1 + \\frac{\\sqrt{2}}{2}}{2} = \\dfrac{2 + \\sqrt{2}}{4}$.<br/>\n                      Vì $0 < \\dfrac{\\pi}{8} < \\dfrac{\\pi}{2}$ nên $\\cos\\dfrac{\\pi}{8} > 0 \\Rightarrow \\mathbf{\\cos\\dfrac{\\pi}{8} = \\dfrac{\\sqrt{2 + \\sqrt{2}}}{2}}$.\n                    </p>\n                    <p style=\"margin:0; color:#fde047;\">\n                      <b>b) Tính $\\sin\\dfrac{\\pi}{8}$:</b><br/>\n                      Tương tự: $\\sin^2\\dfrac{\\pi}{8} = \\dfrac{1 - \\cos\\frac{\\pi}{4}}{2} = \\dfrac{1 - \\frac{\\sqrt{2}}{2}}{2} = \\dfrac{2 - \\sqrt{2}}{4}$.<br/>\n                      Do $\\sin\\dfrac{\\pi}{8} > 0 \\Rightarrow \\mathbf{\\sin\\dfrac{\\pi}{8} = \\dfrac{\\sqrt{2 - \\sqrt{2}}}{2}}$.\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Ở câu a, áp dụng công thức hạ bậc, cos bình pi phần 8 bằng 1 cộng cos pi phần 4 trên 2. Thay cos pi phần 4 bằng căn 2 trên 2, ta được 2 cộng căn 2 trên 4. Do pi phần 8 ở góc phần tư thứ nhất nên cos dương, khai căn được căn của 2 cộng căn 2 trên 2. Tương tự ở câu b, sin bình pi phần 8 bằng 1 trừ cos pi phần 4 trên 2, ta thu được sin pi phần 8 bằng căn của 2 trừ căn 2 trên 2.",
+      "startTime": 101.56,
+      "endTime": 129.76,
+      "duration": 28.2
+    },
+    {
+      "sceneIndex": 7,
+      "title": "Ví dụ 3: Rút gọn biểu thức lượng giác phân thức",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Biến đổi 1 - cos 2x = 2sin^2 x và 1 + cos 2x = 2cos^2 x!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #a855f7; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#a855f7; color:#ffffff; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 3 • MỨC VẬN DỤNG</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#d8b4fe; font-size:18px; margin:0 0 10px 0;\">Chứng minh đẳng thức lượng giác:</h4>\n                  <div style=\"background:rgba(168,85,247,0.08); border-left:4px solid #a855f7; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    Rút gọn biểu thức sau với mọi $x$ làm cho biểu thức có nghĩa:<br/>\n                    $$B = \\dfrac{1 - \\cos 2x + \\sin 2x}{1 + \\cos 2x + \\sin 2x}$$\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 3 là bài toán biến đổi vận dụng quen thuộc: Rút gọn biểu thức B bằng 1 trừ cos 2x cộng sin 2x trên 1 cộng cos 2x cộng sin 2x. Các em có 30 giây suy nghĩ!",
+      "startTime": 129.76,
+      "endTime": 141.16,
+      "duration": 11.4
+    },
+    {
+      "sceneIndex": 8,
+      "title": "Ví dụ 3: Lời giải chi tiết & Tuyệt kỹ nhóm nhân tử",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Nhóm 1 - cos 2x thành 2 sin^2 x và 1 + cos 2x thành 2 cos^2 x để đặt nhân tử chung!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 3</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      Áp dụng các công thức nhân đôi và hạ bậc:<br/>\n                      • Tử số: $(1 - \\cos 2x) + \\sin 2x = 2\\sin^2 x + 2\\sin x \\cos x = 2\\sin x(\\sin x + \\cos x)$.<br/>\n                      • Mẫu số: $(1 + \\cos 2x) + \\sin 2x = 2\\cos^2 x + 2\\sin x \\cos x = 2\\cos x(\\cos x + \\sin x)$.\n                    </p>\n                    <p style=\"margin:0; color:#34d399;\">\n                      Chia cả tử và mẫu cho $2(\\sin x + \\cos x)$:<br/>\n                      $$B = \\dfrac{2\\sin x(\\sin x + \\cos x)}{2\\cos x(\\cos x + \\sin x)} = \\dfrac{\\sin x}{\\cos x} = \\mathbf{\\tan x}.$$\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Hãy quan sát số 1 đi với cos 2x. Ở trên tử, 1 trừ cos 2x bằng 2 sin bình x, cộng với 2 sin x cos x ta rút 2 sin x ra ngoài còn sin x cộng cos x. Ở dưới mẫu, 1 cộng cos 2x bằng 2 cos bình x, cộng 2 sin x cos x ta rút 2 cos x ra ngoài còn cos x cộng sin x. Triệt tiêu nhân tử chung sin x cộng cos x, ta còn lại sin x chia cos x bằng tang x. Một kết quả vô cùng gọn đẹp!",
+      "startTime": 141.16,
+      "endTime": 166.84,
+      "duration": 25.68
+    },
+    {
+      "sceneIndex": 9,
+      "title": "Ví dụ 4: Bài toán ném bóng & Tầm xa cực đại",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Tầm xa L = (v0^2 . sin 2alpha) / g: Khảo sát cực trị của sin 2alpha!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #ec4899; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#ec4899; color:#ffffff; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 4 • MỨC VẬN DỤNG CAO / THỰC TẾ</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#f472b6; font-size:18px; margin:0 0 10px 0;\">Mô hình hóa chuyển động ném xiên trong thể thao:</h4>\n                  <div style=\"background:rgba(236,72,153,0.08); border-left:4px solid #ec4899; padding:14px; border-radius:4px; font-size:15px; color:#f8fafc; line-height:1.8;\">\n                    Một cầu thủ sút bóng với vận tốc ban đầu $v_0 = 20\\text{ m/s}$ nghiêng góc $\\alpha$ so với mặt đất ($0^\\circ < \\alpha < 90^\\circ$). Tầm xa quả bóng đạt được là:<br/>\n                    $$L(\\alpha) = \\dfrac{v_0^2 \\sin 2\\alpha}{g} = 40\\sin 2\\alpha\\text{ (mét)} \\quad (\\text{với } g = 10\\text{ m/s}^2)$$\n                    <b>a)</b> Góc sút $\\alpha$ bằng bao nhiêu để bóng bay xa nhất? Tầm xa cực đại là bao nhiêu?<br/>\n                    <b>b)</b> Để bóng rơi đúng vị trí đồng đội cách $20\\text{ m}$, cầu thủ có thể sút theo những góc $\\alpha$ nào?\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 4 là bài toán thực tế vật lý thể thao: Một cầu thủ sút bóng với vận tốc 20 mét trên giây nghiêng góc alpha. Tầm xa đạt được là L bằng 40 nhân sin 2 alpha mét. Câu a: Góc sút alpha bằng bao nhiêu để bóng bay xa nhất và tầm xa cực đại là bao nhiêu? Câu b: Muốn bóng rơi đúng vị trí đồng đội cách 20 mét thì có những góc sút alpha nào? Các em có 30 giây suy nghĩ!",
+      "startTime": 166.84,
+      "endTime": 192.47,
+      "duration": 25.63
+    },
+    {
+      "sceneIndex": 10,
+      "title": "Ví dụ 4: Lời giải chi tiết & Ý nghĩa vật lý",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Góc 45 độ cho tầm xa cực đại; hai góc phụ nhau 15 độ và 75 độ cho cùng tầm xa 20m!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 4</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>a) Tìm góc sút để tầm xa lớn nhất:</b><br/>\n                      Vì $\\sin 2\\alpha \\le 1$ nên $L(\\alpha) \\le 40\\text{ m}$.<br/>\n                      Dấu \"=\" xảy ra $\\Leftrightarrow \\sin 2\\alpha = 1 \\Leftrightarrow 2\\alpha = 90^\\circ \\Leftrightarrow \\mathbf{\\alpha = 45^\\circ}$.<br/>\n                      Vậy sút góc $\\mathbf{45^\\circ}$ thì bóng bay xa nhất, đạt $\\mathbf{L_{\\max} = 40\\text{ m}}$.\n                    </p>\n                    <p style=\"margin:0; color:#fde047;\">\n                      <b>b) Để tầm xa đạt $L = 20\\text{ m}$:</b><br/>\n                      $40\\sin 2\\alpha = 20 \\Leftrightarrow \\sin 2\\alpha = \\dfrac{1}{2} \\Rightarrow \\left[\\begin{array}{l} 2\\alpha = 30^\\circ \\\\ 2\\alpha = 150^\\circ \\end{array}\\right. \\Rightarrow \\mathbf{\\left[\\begin{array}{l} \\alpha_1 = 15^\\circ \\\\ \\alpha_2 = 75^\\circ \\end{array}\\right.}$.<br/>\n                      <i>Ý nghĩa:</i> Góc $15^\\circ$ là đường bóng chìm sát mặt cỏ, góc $75^\\circ$ là đường bóng rót bổng cầu vồng!\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Ở câu a, vì sin của 2 alpha lớn nhất bằng 1 nên tầm xa lớn nhất bằng 40 mét. Đạt được khi 2 alpha bằng 90 độ, tức góc sút alpha bằng 45 độ. Ở câu b, để tầm xa bằng 20 mét, ta giải sin 2 alpha bằng 1 phần 2. Suy ra 2 alpha bằng 30 độ hoặc 150 độ, dẫn tới hai góc sút là 15 độ và 75 độ. Góc 15 độ là đường chuyền căng sệt sát mặt cỏ, còn góc 75 độ là cú rót bổng cầu vồng qua đầu đối phương!",
+      "startTime": 192.47,
+      "endTime": 224.7,
+      "duration": 32.23
+    },
+    {
+      "sceneIndex": 11,
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM KHI NHÂN ĐÔI & HẠ BẬC",
+      "subtitle": "MỤC 2 • LƯU Ý TRÁNH MẤT ĐIỂM OAN",
+      "mascotMode": "warning",
+      "mascotTip": "Đừng nhầm sin 2a = 2 sin a, và nhớ chia 2 ở mẫu khi hạ bậc!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #ef4444; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px; font-weight:700;\">⚠️ 3 Sai lầm học sinh rất hay mắc phải</h3>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; margin-bottom:10px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 1: Tự tiện đưa hệ số 2 ra ngoài hàm số</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">Nhiều bạn ngộ nhận $\\sin 2a = 2\\sin a$ hoặc $\\cos 2a = 2\\cos a$. Đây là sai lầm sơ đẳng nhất! Nhớ $\\sin 2a = 2\\sin a\\cos a$.</p>\n                  </div>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; margin-bottom:10px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 2: Nhầm dấu trong ba dạng của Cos 2a</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">$\\cos 2a = 2\\cos^2 a - 1$ nhưng lại là $1 - 2\\sin^2 a$ (số 1 đảo vị trí và đổi dấu).</p>\n                  </div>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 3: Quên nhân đôi góc khi áp dụng hạ bậc</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">Khi hạ bậc $\\sin^2 2x$, góc phải nhân đôi thành $4x$: $\\sin^2 2x = \\dfrac{1 - \\cos 4x}{2}$, chứ không phải $\\cos 2x$.</p>\n                  </div>\n                </div>\n                ",
+      "narration": "Cú Thông Thái cảnh báo 3 sai lầm kinh điển: Thứ nhất, tự tiện ném số 2 ra ngoài, ngộ nhận sin 2a bằng 2 sin a. Thứ hai, nhầm vị trí số 1 trong cos 2a: 2 cos bình trừ 1 nhưng lại là 1 trừ 2 sin bình. Thứ ba, quên nhân đôi góc khi hạ bậc: hạ bậc sin bình của 2x thì góc phải nhảy lên 4x!",
+      "startTime": 224.7,
+      "endTime": 243.64,
+      "duration": 18.94
+    },
+    {
+      "sceneIndex": 12,
+      "title": "4. TỔNG KẾT MỤC 2 & BÍ KÍP CÚ THÔNG THÁI",
+      "subtitle": "MỤC 2 • GHI NHỚ KHẮC SÂU",
+      "mascotMode": "cheer",
+      "mascotTip": "Sin gấp đôi bằng 2 sin cos - Hạ bậc góc nhân đôi!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px; font-weight:700;\">🌟 Bí kíp nằm lòng Mục 2</h3>\n                  <div style=\"background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); border-radius:8px; padding:16px; color:#f8fafc; font-size:16px; line-height:1.9;\">\n                    • <b>Thần chú nhân đôi:</b><br/>\n                    <i>\"Sin gấp đôi bằng hai sin cos, Cos gấp đôi có tới ba đường:<br/>\n                    Cos bình trừ sin bình tỏa sáng, hai cos bình trừ một vững vàng,<br/>\n                    Một trừ hai sin bình hiên ngang!\"</i><br/>\n                    • <b>Thần chú hạ bậc:</b> <i>\"Hạ bậc góc tăng gấp đôi, sin mang dấu trừ, cos mang dấu cộng!\"</i>\n                  </div>\n                </div>\n                ",
+      "narration": "Chúc mừng các em đã làm chủ trọn vẹn Mục 2: Công thức nhân đôi và hạ bậc. Hãy nhớ câu thơ: Sin gấp đôi bằng hai sin cos; Cos gấp đôi có tới ba đường: Cos bình trừ sin bình tỏa sáng, hai cos bình trừ một vững vàng, một trừ hai sin bình hiên ngang. Bây giờ, chúng ta cùng tiến bước sang Mục 3: Biến đổi tích thành tổng và tổng thành tích!",
+      "startTime": 243.64,
+      "endTime": 264.74,
+      "duration": 21.1
+    }
+  ],
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 24.98,
+      "id": "part2"
+    },
+    {
+      "time": 48.76,
+      "id": "vd1_q"
+    },
+    {
+      "time": 63.16,
+      "id": "vd1_a"
+    },
+    {
+      "time": 89.22,
+      "id": "vd2_q"
+    },
+    {
+      "time": 101.56,
+      "id": "vd2_a"
+    },
+    {
+      "time": 129.76,
+      "id": "vd3_q"
+    },
+    {
+      "time": 141.16,
+      "id": "vd3_a"
+    },
+    {
+      "time": 166.84,
+      "id": "vd4_q"
+    },
+    {
+      "time": 192.47,
+      "id": "vd4_a"
+    },
+    {
+      "time": 224.7,
+      "id": "part4"
+    },
+    {
+      "time": 243.64,
+      "id": "part5"
+    }
+  ],
+  "totalDuration": 264.74,
+  "duration": 264.74
+};
+
+  window.G11_CHAPTER1_DATA.g11_bai2_muc3 = {
+  "lessonId": "toan11_bai2",
+  "lessonTitle": "Bài 2: Công thức lượng giác",
+  "sectionId": "g11_bai2_muc3",
+  "sectionTitle": "Mục 3: Công thức biến đổi tích thành tổng và tổng thành tích",
+  "audio": "/audio/g11_bai2_muc3.mp3",
+  "audioSrc": "./audio/g11_bai2_muc3.mp3",
+  "audio_src": "./audio/g11_bai2_muc3.mp3",
+  "title": "Mục 3: Tích thành tổng & Tổng thành tích",
+  "owl_tip": "Cos cộng cos bằng 2 cos cos; Cos trừ cos bằng trừ 2 sin sin; Sin cộng sin bằng 2 sin cos; Sin trừ sin bằng 2 cos sin!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Công thức biến đổi tích thành tổng",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Công thức biến đổi tổng thành tích & Bài ca lượng giác",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Bốn ví dụ rèn luyện tiêu biểu (Đồng hồ 15s/30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Cảnh báo bẫy trắc nghiệm & Sai lầm thường gặp",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Tổng kết toàn Bài 2 & Lời chúc Thầy Thuấn Phan",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. CÔNG THỨC BIẾN ĐỔI TÍCH THÀNH TỔNG",
+      "subtitle": "MỤC 3 • TÍCH THÀNH TỔNG & TỔNG THÀNH TÍCH",
+      "mascotMode": "talking",
+      "mascotTip": "Cả 3 công thức đều có thừa số 1/2 phía trước: Luôn lấy (a - b) trước rồi đến (a + b)!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">📖 Công thức biến đổi tích thành tổng</h3>\n                  <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:14px; margin-bottom:14px; border-radius:4px;\">\n                    <p style=\"color:#f8fafc; font-size:16px; line-height:2.0; margin:0;\">\n                      • $\\cos a \\cos b = \\dfrac{1}{2}\\left[\\cos(a - b) + \\cos(a + b)\\right]$<br/>\n                      • $\\sin a \\sin b = \\dfrac{1}{2}\\left[\\cos(a - b) - \\cos(a + b)\\right]$<br/>\n                      • $\\sin a \\cos b = \\dfrac{1}{2}\\left[\\sin(a - b) + \\sin(a + b)\\right]$\n                    </p>\n                  </div>\n                  <div style=\"background:rgba(250,204,21,0.12); border:1px solid #facc15; border-radius:8px; padding:12px; color:#fef08a; font-size:15px;\">\n                    💡 <b>Quy tắc nhớ:</b> Luôn viết góc hiệu $(a - b)$ trước góc tổng $(a + b)$. Riêng tích $\\sin \\sin$ thì ở giữa là dấu <b>TRỪ</b>!\n                  </div>\n                </div>\n                ",
+      "narration": "Chào mừng các em đến với Mục 3: Công thức biến đổi tích thành tổng và tổng thành tích. Đầu tiên là biến đổi tích thành tổng: cos a cos b bằng 1 phần 2 thừa số cho cos của a trừ b cộng cos của a cộng b; sin a sin b bằng 1 phần 2 thừa số cho cos của a trừ b trừ cos của a cộng b; sin a cos b bằng 1 phần 2 thừa số cho sin của a trừ b cộng sin của a cộng b. Nhớ rằng góc hiệu a trừ b luôn viết trước góc tổng a cộng b, và riêng tích hai sin thì ở giữa là dấu trừ!",
+      "startTime": 0.0,
+      "endTime": 27.53,
+      "duration": 27.53
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. CÔNG THỨC BIẾN ĐỔI TỔNG THÀNH TÍCH",
+      "subtitle": "MỤC 3 • TÍCH THÀNH TỔNG & TỔNG THÀNH TÍCH",
+      "mascotMode": "talking",
+      "mascotTip": "Góc nửa tổng (u+v)/2 đi trước, góc nửa hiệu (u-v)/2 đi sau!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #818cf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#818cf8; font-size:22px; margin-bottom:12px; font-weight:700;\">📖 Công thức biến đổi tổng thành tích</h3>\n                  <div style=\"background:rgba(129,140,248,0.1); border-left:4px solid #818cf8; padding:14px; margin-bottom:14px; border-radius:4px;\">\n                    <p style=\"color:#f8fafc; font-size:16px; line-height:2.0; margin:0;\">\n                      • $\\cos u + \\cos v = 2\\cos\\dfrac{u+v}{2} \\cos\\dfrac{u-v}{2}$<br/>\n                      • $\\cos u - \\cos v = -2\\sin\\dfrac{u+v}{2} \\sin\\dfrac{u-v}{2}$<br/>\n                      • $\\sin u + \\sin v = 2\\sin\\dfrac{u+v}{2} \\cos\\dfrac{u-v}{2}$<br/>\n                      • $\\sin u - \\sin v = 2\\cos\\dfrac{u+v}{2} \\sin\\dfrac{u-v}{2}$\n                    </p>\n                  </div>\n                  <div style=\"background:rgba(244,63,94,0.15); border:1px solid #f43f5e; border-radius:8px; padding:12px; color:#fecdd3; font-size:15px;\">\n                    ⚠️ <b>Chú ý đặc biệt:</b> Trong công thức $\\cos u - \\cos v$, phía trước phải có <b>DẤU TRỪ</b> ($-2\\sin\\sin$)!\n                  </div>\n                </div>\n                ",
+      "narration": "Tiếp theo là biến đổi tổng thành tích, vũ khí tối thượng để phân tích nhân tử giải phương trình lượng giác. Thầy có bài vè lượng giác nằm lòng: Cos cộng cos bằng hai cos cos; Cos trừ cos bằng trừ hai sin sin; Sin cộng sin bằng hai sin cos; Sin trừ sin bằng hai cos sin. Các góc luôn theo thứ tự: nửa tổng u cộng v trên 2 đứng trước, nửa hiệu u trừ v trên 2 đứng sau. Nhớ kỹ: cos trừ cos có dấu trừ phía trước!",
+      "startTime": 27.53,
+      "endTime": 53.67,
+      "duration": 26.14
+    },
+    {
+      "sceneIndex": 3,
+      "title": "Ví dụ 1: Biến đổi tích thành tổng tính giá trị",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Áp dụng sin.cos = 1/2 [sin(hiệu) + sin(tổng)] và sin.sin = 1/2 [cos(hiệu) - cos(tổng)]!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #f59e0b; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#f59e0b; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 1 • MỨC NHẬN BIẾT</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#fbbf24; font-size:18px; margin:0 0 10px 0;\">Không dùng máy tính, tính giá trị chính xác của:</h4>\n                  <div style=\"background:rgba(245,158,11,0.08); border-left:4px solid #f59e0b; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    <b>a)</b> $P = \\sin 75^\\circ \\cos 15^\\circ$<br/>\n                    <b>b)</b> $Q = \\sin 75^\\circ \\sin 15^\\circ$\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 1 là bài toán nhận biết áp dụng biến đổi tích thành tổng: Không dùng máy tính bỏ túi, hãy tính giá trị chính xác của biểu thức P bằng sin 75 độ nhân cos 15 độ và Q bằng sin 75 độ nhân sin 15 độ. Các em có 15 giây suy nghĩ!",
+      "startTime": 53.67,
+      "endTime": 68.93,
+      "duration": 15.26
+    },
+    {
+      "sceneIndex": 4,
+      "title": "Ví dụ 1: Lời giải chi tiết & Bước suy luận",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Góc 60 độ và 90 độ là các góc lượng giác đặc biệt trong bảng giá trị!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 1</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>a) Tính $P = \\sin 75^\\circ \\cos 15^\\circ$:</b><br/>\n                      $P = \\dfrac{1}{2}\\left[\\sin(75^\\circ - 15^\\circ) + \\sin(75^\\circ + 15^\\circ)\\right] = \\dfrac{1}{2}\\left[\\sin 60^\\circ + \\sin 90^\\circ\\right]$<br/>\n                      $= \\dfrac{1}{2}\\left(\\dfrac{\\sqrt{3}}{2} + 1\\right) = \\mathbf{\\dfrac{2 + \\sqrt{3}}{4}}$.\n                    </p>\n                    <p style=\"margin:0; color:#fde047;\">\n                      <b>b) Tính $Q = \\sin 75^\\circ \\sin 15^\\circ$:</b><br/>\n                      $Q = \\dfrac{1}{2}\\left[\\cos(75^\\circ - 15^\\circ) - \\cos(75^\\circ + 15^\\circ)\\right] = \\dfrac{1}{2}\\left[\\cos 60^\\circ - \\cos 90^\\circ\\right]$<br/>\n                      $= \\dfrac{1}{2}\\left(\\dfrac{1}{2} - 0\\right) = \\mathbf{\\dfrac{1}{4}}$.\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Ở câu a, tích sin nhân cos bằng 1 phần 2 sin của hiệu 60 độ cộng sin của tổng 90 độ. Sin 60 độ bằng căn 3 trên 2, sin 90 độ bằng 1, ta được 2 cộng căn 3 trên 4. Ở câu b, tích hai sin bằng 1 phần 2 cos của hiệu 60 độ trừ cos của tổng 90 độ. Cos 60 độ bằng 1 phần 2, cos 90 độ bằng 0, nhân 1 phần 2 bên ngoài ta được kết quả bằng 1 phần 4.",
+      "startTime": 68.93,
+      "endTime": 95.57,
+      "duration": 26.64
+    },
+    {
+      "sceneIndex": 5,
+      "title": "Ví dụ 2: Rút gọn biểu thức tổng thành tích",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Ghép nhóm đối xứng: sin 5x với sin x, cos 5x với cos x để lộ nhân tử chung 3x!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#38bdf8; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 2 • MỨC THÔNG HIỂU</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#7dd3fc; font-size:18px; margin:0 0 10px 0;\">Rút gọn biểu thức lượng giác phân thức:</h4>\n                  <div style=\"background:rgba(56,189,248,0.08); border-left:4px solid #38bdf8; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    Rút gọn biểu thức với mọi $x$ làm cho biểu thức có nghĩa:<br/>\n                    $$K = \\dfrac{\\sin x + \\sin 3x + \\sin 5x}{\\cos x + \\cos 3x + \\cos 5x}$$\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 2 là dạng toán thông hiểu kinh điển trong các đề kiểm tra: Rút gọn biểu thức K bằng sin x cộng sin 3x cộng sin 5x trên cos x cộng cos 3x cộng cos 5x. Các em có 15 giây chuẩn bị!",
+      "startTime": 95.57,
+      "endTime": 108.22,
+      "duration": 12.65
+    },
+    {
+      "sceneIndex": 6,
+      "title": "Ví dụ 2: Lời giải chi tiết & Ghép nhóm đối xứng",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Sin 5x + sin x = 2 sin 3x cos 2x, rút sin 3x ra ngoài!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 2</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>Ghép hai số hạng đối xứng ở đầu và cuối:</b><br/>\n                      • Tử số: $(\\sin 5x + \\sin x) + \\sin 3x = 2\\sin\\dfrac{5x+x}{2}\\cos\\dfrac{5x-x}{2} + \\sin 3x$<br/>\n                      $= 2\\sin 3x \\cos 2x + \\sin 3x = \\sin 3x(2\\cos 2x + 1)$.\n                    </p>\n                    <p style=\"margin:0 0 8px 0;\">\n                      • Mẫu số: $(\\cos 5x + \\cos x) + \\cos 3x = 2\\cos\\dfrac{5x+x}{2}\\cos\\dfrac{5x-x}{2} + \\cos 3x$<br/>\n                      $= 2\\cos 3x \\cos 2x + \\cos 3x = \\cos 3x(2\\cos 2x + 1)$.\n                    </p>\n                    <p style=\"margin:0; color:#34d399;\">\n                      <b>Triệt tiêu nhân tử chung:</b><br/>\n                      $$K = \\dfrac{\\sin 3x(2\\cos 2x + 1)}{\\cos 3x(2\\cos 2x + 1)} = \\dfrac{\\sin 3x}{\\cos 3x} = \\mathbf{\\tan 3x}.$$\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Bí quyết ở đây là ghép số hạng bậc cao nhất với thấp nhất: sin 5x ghép với sin x, áp dụng sin cộng sin bằng 2 sin cos, ta được 2 sin 3x cos 2x. Đặt sin 3x làm nhân tử chung, trong ngoặc còn 2 cos 2x cộng 1. Tương tự dưới mẫu, cos 5x cộng cos x bằng 2 cos 3x cos 2x, rút cos 3x ra ngoài cũng còn 2 cos 2x cộng 1. Rút gọn nhân tử chung, ta được sin 3x chia cos 3x bằng tang 3x.",
+      "startTime": 108.22,
+      "endTime": 137.52,
+      "duration": 29.3
+    },
+    {
+      "sceneIndex": 7,
+      "title": "Ví dụ 3: Tính tích chuỗi cos(pi/7)cos(2pi/7)cos(4pi/7)",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Nhân thêm sin(pi/7) vào cả hai vế để kích hoạt chuỗi nhân đôi liên hoàn!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #a855f7; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#a855f7; color:#ffffff; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 3 • MỨC VẬN DỤNG</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#d8b4fe; font-size:18px; margin:0 0 10px 0;\">Tuyệt chiêu tính tích không dùng máy tính:</h4>\n                  <div style=\"background:rgba(168,85,247,0.08); border-left:4px solid #a855f7; padding:14px; border-radius:4px; font-size:16px; color:#f8fafc; line-height:1.8;\">\n                    Tính giá trị chính xác của tích chuỗi cosin sau:<br/>\n                    $$T = \\cos\\dfrac{\\pi}{7} \\cdot \\cos\\dfrac{2\\pi}{7} \\cdot \\cos\\dfrac{4\\pi}{7}$$\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 3 là bài toán vận dụng đỉnh cao: Tính giá trị chính xác của biểu thức T bằng cos pi phần 7 nhân cos 2 pi phần 7 nhân cos 4 pi phần 7 mà không dùng máy tính bỏ túi. Các em có 30 giây suy nghĩ!",
+      "startTime": 137.52,
+      "endTime": 150.34,
+      "duration": 12.82
+    },
+    {
+      "sceneIndex": 8,
+      "title": "Ví dụ 3: Lời giải chi tiết & Hiệu ứng Domino nhân đôi",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Sin(8pi/7) = sin(pi + pi/7) = -sin(pi/7) giúp triệt tiêu cả hai vế!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 3</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      Nhân cả hai vế với $\\sin\\dfrac{\\pi}{7} \\neq 0$:<br/>\n                      $T \\sin\\dfrac{\\pi}{7} = \\left(\\sin\\dfrac{\\pi}{7} \\cos\\dfrac{\\pi}{7}\\right) \\cos\\dfrac{2\\pi}{7} \\cos\\dfrac{4\\pi}{7}$<br/>\n                      $= \\dfrac{1}{2}\\left(\\sin\\dfrac{2\\pi}{7} \\cos\\dfrac{2\\pi}{7}\\right) \\cos\\dfrac{4\\pi}{7} = \\dfrac{1}{4}\\left(\\sin\\dfrac{4\\pi}{7} \\cos\\dfrac{4\\pi}{7}\\right) = \\dfrac{1}{8}\\sin\\dfrac{8\\pi}{7}$.\n                    </p>\n                    <p style=\"margin:0; color:#34d399;\">\n                      Mặt khác, theo công thức góc hơn kém $\\pi$:<br/>\n                      $\\sin\\dfrac{8\\pi}{7} = \\sin\\left(\\pi + \\dfrac{\\pi}{7}\\right) = -\\sin\\dfrac{\\pi}{7}$.<br/>\n                      Suy ra: $T \\sin\\dfrac{\\pi}{7} = -\\dfrac{1}{8}\\sin\\dfrac{\\pi}{7} \\implies \\mathbf{T = -\\dfrac{1}{8}}$.\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Nhận thấy các góc tăng gấp đôi: pi phần 7, 2 pi phần 7, 4 pi phần 7. Ta nhân cả hai vế với sin pi phần 7. Cặp sin cos đầu tiên gom thành 1 phần 2 sin 2 pi phần 7. Tiếp tục gom với cos 2 pi phần 7 thành 1 phần 4 sin 4 pi phần 7. Gom tiếp với cos 4 pi phần 7 thành 1 phần 8 sin 8 pi phần 7. Mà sin 8 pi phần 7 bằng trừ sin pi phần 7. Triệt tiêu sin pi phần 7 ở hai vế, ta thu được kết quả tuyệt đẹp: T bằng trừ 1 phần 8!",
+      "startTime": 150.34,
+      "endTime": 185.09,
+      "duration": 34.75
+    },
+    {
+      "sceneIndex": 9,
+      "title": "Ví dụ 4: Mô hình sóng âm & Hiện tượng phách",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "mascotMode": "thinking",
+      "mascotTip": "Áp dụng cos u + cos v = 2 cos((u-v)/2) cos((u+v)/2) trong âm học!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #ec4899; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;\">\n                    <span style=\"background:#ec4899; color:#ffffff; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">VÍ DỤ 4 • MỨC VẬN DỤNG CAO / THỰC TẾ</span>\n                    \n    <div class=\"countdown-clock-widget cd-{seconds}s\" style=\"display:flex; align-items:center; gap:8px; background:rgba(239,68,68,0.15); border:1.5px solid #ef4444; border-radius:30px; padding:4px 14px; width:fit-content; margin:10px 0;\">\n      <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n        <polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      <span style=\"color:#fecaca; font-weight:800; font-size:14px; letter-spacing:0.5px;\">THỜI GIAN SUY NGHĨ: {seconds} GIÂY</span>\n    </div>\n    \n                  </div>\n                  <h4 style=\"color:#f472b6; font-size:18px; margin:0 0 10px 0;\">Ứng dụng lượng giác trong âm học và nhạc cụ:</h4>\n                  <div style=\"background:rgba(236,72,153,0.08); border-left:4px solid #ec4899; padding:14px; border-radius:4px; font-size:15px; color:#f8fafc; line-height:1.8;\">\n                    Hai âm thoa phát ra hai sóng âm có phương trình li độ tại một điểm:<br/>\n                    $y_1 = 0{,}02\\cos(1000\\pi t)\\text{ (mm)}$ và $y_2 = 0{,}02\\cos(1004\\pi t)\\text{ (mm)}$ ($t$ tính bằng giây).<br/>\n                    <b>a)</b> Dùng công thức tổng thành tích, viết phương trình sóng tổng hợp $y = y_1 + y_2$.<br/>\n                    <b>b)</b> Tìm tần số của âm nghe được và tần số phách (số lần âm thanh to lên trong 1 giây).\n                  </div>\n                </div>\n                ",
+      "narration": "Ví dụ 4 là bài toán thực tế âm học về hiện tượng phách: Hai âm thoa phát ra hai sóng âm y1 bằng 0,02 cos 1000 pi t mm và y2 bằng 0,02 cos 1004 pi t mm. Câu a: Dùng công thức tổng thành tích viết phương trình sóng âm tổng hợp. Câu b: Tìm tần số âm nghe được và tần số phách. Các em có 30 giây suy nghĩ!",
+      "startTime": 185.09,
+      "endTime": 208.54,
+      "duration": 23.45
+    },
+    {
+      "sceneIndex": 10,
+      "title": "Ví dụ 4: Lời giải chi tiết & Ứng dụng lên dây đàn",
+      "subtitle": "LỜI GIẢI CHI TIẾT • BƯỚC SUY LUẬN",
+      "mascotMode": "explaining",
+      "mascotTip": "Tần số phách bằng độ chênh lệch tần số giữa hai sóng: f_phách = |f2 - f1| = 2 Hz!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <span style=\"background:#10b981; color:#0f172a; font-weight:800; font-size:13px; padding:3px 10px; border-radius:6px;\">LỜI GIẢI VÍ DỤ 4</span>\n                  <div style=\"margin-top:12px; font-size:15px; color:#e2e8f0; line-height:1.8;\">\n                    <p style=\"margin:0 0 8px 0;\">\n                      <b>a) Viết phương trình sóng tổng hợp:</b><br/>\n                      Áp dụng $\\cos u + \\cos v = 2\\cos\\frac{u-v}{2}\\cos\\frac{u+v}{2}$:<br/>\n                      $y = 0{,}02[\\cos(1004\\pi t) + \\cos(1000\\pi t)]$<br/>\n                      $= 0{,}02 \\cdot 2\\cos\\left(\\dfrac{1004\\pi - 1000\\pi}{2}t\\right) \\cos\\left(\\dfrac{1004\\pi + 1000\\pi}{2}t\\right)$<br/>\n                      $= \\mathbf{0{,}04\\cos(2\\pi t)\\cos(1002\\pi t)\\text{ (mm)}}$.\n                    </p>\n                    <p style=\"margin:0; color:#fde047;\">\n                      <b>b) Tần số âm và tần số phách:</b><br/>\n                      • Tần số âm nghe được: $f = \\dfrac{\\omega}{2\\pi} = \\dfrac{1002\\pi}{2\\pi} = \\mathbf{501\\text{ Hz}}$.<br/>\n                      • Tần số phách (độ biến thiên biên độ): $f_{\\text{phách}} = |f_2 - f_1| = \\dfrac{1004\\pi - 1000\\pi}{2\\pi} = \\mathbf{2\\text{ Hz}}$ (mỗi giây âm thanh to lên rồi nhỏ đi 2 lần).<br/>\n                      <i>Ứng dụng:</i> Người lên dây đàn ghita dựa vào hiện tượng phách để chỉnh hai dây về cùng tần số!\n                    </p>\n                  </div>\n                </div>\n                ",
+      "narration": "Lời giải chi tiết: Ở câu a, áp dụng cos cộng cos bằng 2 cos cos, hiệu hai tần số chia đôi là 2 pi t, tổng chia đôi là 1002 pi t. Vậy li độ tổng hợp là 0,04 cos 2 pi t nhân cos 1002 pi t mm. Ở câu b, sóng mang có tần số 1002 pi chia 2 pi bằng 501 Héc. Tần số phách bằng độ lệch tần số là 2 Héc, nghĩa là mỗi giây âm thanh sẽ to lên rồi nhỏ đi 2 lần. Các nhạc công chuyên nghiệp dựa vào số lần phách này để vặn khóa đàn ghita hay piano cho đến khi tiếng phách biến mất hoàn toàn!",
+      "startTime": 208.54,
+      "endTime": 243.03,
+      "duration": 34.49
+    },
+    {
+      "sceneIndex": 11,
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM KHI BIẾN ĐỔI",
+      "subtitle": "MỤC 3 • LƯU Ý TRÁNH MẤT ĐIỂM OAN",
+      "mascotMode": "warning",
+      "mascotTip": "Nhớ chia đôi góc (u+v)/2 và (u-v)/2 khi chuyển sang tích!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #ef4444; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#f43f5e; font-size:22px; margin-bottom:12px; font-weight:700;\">⚠️ 3 Sai lầm biến đổi học sinh rất hay mắc</h3>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; margin-bottom:10px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 1: Quên dấu trừ trong $\\cos u - \\cos v$</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">$\\cos u - \\cos v = \\mathbf{-2}\\sin\\frac{u+v}{2}\\sin\\frac{u-v}{2}$. Rất nhiều bạn quên dấu trừ phía trước!</p>\n                  </div>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; margin-bottom:10px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 2: Quên chia đôi góc khi tổng thành tích</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">Chuyển $\\sin u + \\sin v$ phải là $2\\sin\\frac{u+v}{2}\\cos\\frac{u-v}{2}$, không được viết nhầm thành $2\\sin(u+v)\\cos(u-v)$.</p>\n                  </div>\n                  <div style=\"background:rgba(244,63,94,0.1); border-left:4px solid #f43f5e; padding:14px; border-radius:4px;\">\n                    <b style=\"color:#fda4af; font-size:16px;\">Bẫy 3: Quên hệ số $1/2$ khi tích thành tổng</b>\n                    <p style=\"color:#e2e8f0; font-size:15px; margin:4px 0 0 0;\">Cả ba công thức tích thành tổng đều có thừa số $\\frac{1}{2}$ đứng đầu.</p>\n                  </div>\n                </div>\n                ",
+      "narration": "Cú Thông Thái nhắc nhở 3 sai lầm biến đổi thường gặp: Thứ nhất, quên dấu trừ phía trước công thức cos trừ cos. Thứ hai, quên chia đôi góc khi chuyển từ tổng thành tích. Thứ ba, quên hệ số 1 phần 2 khi biến đổi từ tích thành tổng!",
+      "startTime": 243.03,
+      "endTime": 258.34,
+      "duration": 15.31
+    },
+    {
+      "sceneIndex": 12,
+      "title": "4. TỔNG KẾT BÀI 2 & LỜI CHÚC THẦY THUẤN PHAN",
+      "subtitle": "MỤC 3 • CHÚC MỪNG CÁC EM LÀM CHỦ BÀI 2 TOÁN 11 KNTT",
+      "mascotMode": "cheer",
+      "mascotTip": "Thầy chúc các em luôn yêu thích môn Toán và đạt điểm 10 rực rỡ!",
+      "bodyHtml": "\n                <div class=\"slide\" style=\"border:2px solid #a855f7; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n                  <h3 style=\"color:#c084fc; font-size:22px; margin-bottom:12px; font-weight:700;\">🎉 Bứt phá kiến thức Bài 2 Toán 11</h3>\n                  <div style=\"background:rgba(168,85,247,0.15); border:1px solid rgba(168,85,247,0.4); padding:16px; border-radius:8px; line-height:1.9; color:#f8fafc; font-size:15.5px;\">\n                    <p style=\"margin:0;\">\n                      Chúc mừng các em đã xuất sắc hoàn thành trọn vẹn cả <b>3 mục bài giảng tương tác của Bài 2: Công thức lượng giác</b>!<br/>\n                      • <b>Mục 1:</b> Công thức cộng: Cos cos sin sin dấu đổi - Sin cos cos sin dấu cùng.<br/>\n                      • <b>Mục 2:</b> Công thức nhân đôi và hạ bậc: Sin gấp đôi bằng 2 sin cos - Hạ bậc góc nhân đôi.<br/>\n                      • <b>Mục 3:</b> Tích thành tổng & Tổng thành tích: Cos cộng cos bằng 2 cos cos - Cos trừ cos bằng trừ 2 sin sin.\n                    </p>\n                  </div>\n                  <p style=\"text-align:center; margin-top:14px; font-size:16px; color:#fef08a; font-weight:bold;\">\n                    ✨ Thầy Thuấn Phan chúc các em học sinh lớp 11 luôn tự tin và bứt phá điểm số tối đa!\n                  </p>\n                </div>\n                ",
+      "narration": "Chúc mừng tất cả các em đã xuất sắc hoàn thành toàn bộ 3 mục bài giảng tương tác của Bài 2: Công thức lượng giác trong chương trình Toán 11 Kết nối tri thức. Nắm vững trọn bộ công thức cộng, nhân đôi, hạ bậc và biến đổi tích tổng chính là nền tảng vững chắc nhất để các em chinh phục hàm số lượng giác và phương trình lượng giác ở các bài học tiếp theo. Thầy Thuấn Phan chúc các em luôn chăm chỉ, học tập say mê và đạt nhiều điểm 10 rực rỡ!",
+      "startTime": 258.34,
+      "endTime": 282.89,
+      "duration": 24.55
+    }
+  ],
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 27.53,
+      "id": "part2"
+    },
+    {
+      "time": 53.67,
+      "id": "vd1_q"
+    },
+    {
+      "time": 68.93,
+      "id": "vd1_a"
+    },
+    {
+      "time": 95.57,
+      "id": "vd2_q"
+    },
+    {
+      "time": 108.22,
+      "id": "vd2_a"
+    },
+    {
+      "time": 137.52,
+      "id": "vd3_q"
+    },
+    {
+      "time": 150.34,
+      "id": "vd3_a"
+    },
+    {
+      "time": 185.09,
+      "id": "vd4_q"
+    },
+    {
+      "time": 208.54,
+      "id": "vd4_a"
+    },
+    {
+      "time": 243.03,
+      "id": "part4"
+    },
+    {
+      "time": 258.34,
+      "id": "part5"
+    }
+  ],
+  "totalDuration": 282.89,
+  "duration": 282.89
+};
+
+  window.G11_CHAPTER1_DATA.toan11_bai2_muc1 = window.G11_CHAPTER1_DATA.g11_bai2_muc1;
+  window.G11_CHAPTER1_DATA.toan11_bai2_muc2 = window.G11_CHAPTER1_DATA.g11_bai2_muc2;
+  window.G11_CHAPTER1_DATA.toan11_bai2_muc3 = window.G11_CHAPTER1_DATA.g11_bai2_muc3;
+
   // Aliases for compatibility
   window.G11_CHAPTER1_DATA.toan11_bai1_muc1 = window.G11_CHAPTER1_DATA.g11_bai1_muc1;
   window.G11_CHAPTER1_DATA.toan11_bai1_muc2 = window.G11_CHAPTER1_DATA.g11_bai1_muc2;

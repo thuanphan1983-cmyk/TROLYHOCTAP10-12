@@ -914,13 +914,25 @@
       chapterNumber: 1101,
       chapterTitle: "Toán 11 - Chương I: Hàm số lượng giác và phương trình lượng giác",
       lessonId: "toan11_bai1",
-      lessonTitle: "Bài 1: Giá trị lượng giác của góc lượng giác (Lớp 11 KNTT)",
+      lessonTitle: "Bài 1: Giá trị lượng giác của góc lượng giác",
       lessonBadge: "Toán 11 • Bài 1",
       sections: [
         { key: "g11_bai1_muc1", title: "Mục 1: Góc lượng giác, đơn vị radian và độ dài cung tròn", time: "05:04", icon: "📐" },
-        { key: "g11_bai1_muc2", title: "Mục 2: Đường tròn lượng giác & Điểm biểu diễn góc lượng giác", time: "05:10", icon: "⭕" },
-        { key: "g11_bai1_muc3", title: "Mục 3: Giá trị lượng giác của góc lượng giác & Dấu theo các góc phần tư", time: "05:25", icon: "🎯" },
-        { key: "g11_bai1_muc4", title: "Mục 4: Các hệ thức lượng giác cơ bản & Cung liên quan đặc biệt", time: "05:35", icon: "✨" }
+        { key: "g11_bai1_muc2", title: "Mục 2: Đường tròn lượng giác & Điểm biểu diễn góc lượng giác", time: "05:03", icon: "⭕" },
+        { key: "g11_bai1_muc3", title: "Mục 3: Giá trị lượng giác của góc lượng giác & Dấu theo các góc phần tư", time: "04:51", icon: "🎯" },
+        { key: "g11_bai1_muc4", title: "Mục 4: Các hệ thức lượng giác cơ bản & Cung liên quan đặc biệt", time: "04:42", icon: "✨" }
+      ]
+    },
+    {
+      chapterNumber: 1101,
+      chapterTitle: "Toán 11 - Chương I: Hàm số lượng giác và phương trình lượng giác",
+      lessonId: "toan11_bai2",
+      lessonTitle: "Bài 2: Công thức lượng giác",
+      lessonBadge: "Toán 11 • Bài 2",
+      sections: [
+        { key: "g11_bai2_muc1", title: "Mục 1: Công thức cộng (Sin, Cos, Tan)", time: "05:10", icon: "➕" },
+        { key: "g11_bai2_muc2", title: "Mục 2: Công thức nhân đôi và công thức hạ bậc", time: "05:15", icon: "✖️" },
+        { key: "g11_bai2_muc3", title: "Mục 3: Công thức biến đổi tích thành tổng và tổng thành tích", time: "05:20", icon: "🔄" }
       ]
     }
   ];
@@ -1253,6 +1265,10 @@
       if (lessonNum === 1 || lessonNum === null) {
         const s = Math.min(4, Math.max(1, sectionNum));
         return `g11_bai1_muc${s}`;
+      }
+      if (lessonNum === 2) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai2_muc${s}`;
       }
     }
 
