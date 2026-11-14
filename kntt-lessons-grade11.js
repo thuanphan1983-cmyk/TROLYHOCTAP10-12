@@ -566,91 +566,174 @@
     sections: [
       {
         sectionNumber: 1,
-        sectionTitle: "Mục 1: Hàm số sin và hàm số côsin (Tập xác định, tính chẵn lẻ, chu kỳ, đồ thị)",
+        sectionTitle: "Mục 1: Khái niệm hàm số lượng giác, tính chẵn - lẻ và chu kỳ tuần hoàn",
         theory: createStandardTheoryHTML(
           "Bài 3: Hàm số lượng giác", "Lớp 11", 1,
-          "Hàm số sin và hàm số côsin (Tập xác định, tính chẵn lẻ, chu kỳ, đồ thị)",
-          `<p>Hai hàm số lượng giác cơ bản $y = \\sin x$ và $y = \\cos x$:</p>
+          "Khái niệm hàm số lượng giác, tính chẵn - lẻ và chu kỳ tuần hoàn",
+          `<p>Kiến thức cơ bản về hàm số lượng giác, tính tuần hoàn và tính chẵn - lẻ chuẩn SGK Toán 11 KNTT:</p>
           <ul class="list-disc ml-5 space-y-1.5">
-            <li>$y = \\sin x$: TXĐ $\\mathbb{R}$, tập giá trị $[-1; 1]$, hàm số lẻ, tuần hoàn chu kỳ $2\\pi$.</li>
-            <li>$y = \\cos x$: TXĐ $\\mathbb{R}$, tập giá trị $[-1; 1]$, hàm số chẵn, tuần hoàn chu kỳ $2\\pi$.</li>
-            <li>Chu kỳ của $y = \\sin(\\omega x + \\varphi)$ và $y = \\cos(\\omega x + \\varphi)$ là $T = \\frac{2\\pi}{|\\omega|}$.</li>
+            <li><strong>Khái niệm hàm số lượng giác:</strong> Các quy tắc đặt tương ứng mỗi số thực $x$ với $\\sin x, \\cos x, \\tan x, \\cot x$.</li>
+            <li><strong>Hàm số tuần hoàn:</strong> Hàm số $y = f(x)$ xác định trên $D$ được gọi là tuần hoàn nếu tồn tại số $T \\ne 0$ sao cho $\\forall x \\in D \\Rightarrow x \\pm T \\in D$ và $f(x+T) = f(x)$. Số $T > 0$ nhỏ nhất thỏa mãn gọi là <em>chu kỳ</em> của hàm số.</li>
+            <li><strong>Chu kỳ chuẩn:</strong>
+              <br/>• $y = \\sin(\\omega x + \\varphi)$ và $y = \\cos(\\omega x + \\varphi)$ có chu kỳ $T = \\frac{2\\pi}{|\\omega|}$.
+              <br/>• $y = \\tan(\\omega x + \\varphi)$ và $y = \\cot(\\omega x + \\varphi)$ có chu kỳ $T = \\frac{\\pi}{|\\omega|}$.
+            </li>
+            <li><strong>Tính chẵn - lẻ:</strong>
+              <br/>• $y = \\cos x$ là hàm số chẵn: $\\cos(-x) = \\cos x$ (đối xứng qua trục $Oy$).
+              <br/>• $y = \\sin x, y = \\tan x, y = \\cot x$ là hàm số lẻ (đối xứng qua gốc tọa độ $O$).
+            </li>
           </ul>`,
-          `<li>Hàm cosin nhận trục tung $Oy$ làm trục đối xứng.</li>`,
-          `<li>Nhầm chu kỳ của $\\cos 2x$ là $2\\pi$ (đúng là $\\pi$).</li>`,
-          `<li><em>"Cos chẵn trục Oy – Sin lẻ gốc O – Chu kỳ hai pi chia omega!"</em></li>`
+          `<li>Hàm cosin là hàm duy nhất trong 4 hàm lượng giác cơ bản là hàm số chẵn.</li>
+          <li>Khi tìm chu kỳ $T = \\frac{2\\pi}{|\\omega|}$ hoặc $T = \\frac{\\pi}{|\\omega|}$, luôn lấy trị tuyệt đối của hệ số $\\omega$.</li>
+          <li>Điều kiện xác định: phân thức mẫu khác 0, biểu thức trong căn bậc hai không âm.</li>`,
+          `<li>Nhầm chu kỳ của $\\tan$ và $\\cot$ thành $2\\pi$ (thực tế chỉ là $\\pi$).</li>
+          <li>Quên xét tính đối xứng của tập xác định $D$ trước khi kết luận tính chẵn - lẻ.</li>`,
+          `<li><em>"Cos chẵn trục Oy – Sin, Tan, Cot lẻ nhận gốc O – Chu kỳ sin, cos hai pi – Tan, cot chỉ một pi!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Tập giá trị của hàm số $y = 3\\sin 2x - 1$ là:",
-            options: ["A. $[-4; 2]$", "B. $[-1; 1]$", "C. $[-3; 3]$", "D. $[-2; 4]$"],
-            correct: "A",
-            explanation: "$-3 - 1 \\le y \\le 3 - 1 \\Leftrightarrow -4 \\le y \\le 2$.",
-            hint1: "$-1 \\le \\sin 2x \\le 1$.",
-            hint2: "Nhân 3 rồi trừ 1."
-          },
-          {
             question: "Chu kỳ tuần hoàn của hàm số $y = \\cos 4x$ là:",
-            options: ["A. $\\frac{\\pi}{2}$", "B. $2\\pi$", "C. $\\frac{\\pi}{4}$", "D. $8\\pi$"],
+            options: ["A. $T = \\frac{\\pi}{2}$", "B. $T = 2\\pi$", "C. $T = \\pi$", "D. $T = 4\\pi$"],
             correct: "A",
-            explanation: "$T = \\frac{2\\pi}{4} = \\frac{\\pi}{2}$.",
-            hint1: "$T = \\frac{2\\pi}{\\omega}$.",
+            explanation: "Áp dụng công thức chu kỳ hàm cosin: $T = \\frac{2\\pi}{\\omega} = \\frac{2\\pi}{4} = \\frac{\\pi}{2}$.",
+            hint1: "Công thức $T = \\frac{2\\pi}{|\\omega|}$.",
             hint2: "$\\frac{2\\pi}{4} = \\frac{\\pi}{2}$."
           },
           {
             question: "Trong các hàm số sau, hàm số nào là hàm số chẵn?",
             options: ["A. $y = \\cos 3x$", "B. $y = \\sin 2x$", "C. $y = \\tan x$", "D. $y = \\sin x + \\cos x$"],
             correct: "A",
-            explanation: "$\\cos(-3x) = \\cos 3x$ nên hàm số chẵn.",
-            hint1: "Hàm cosin là hàm chẵn.",
-            hint2: "$\\cos(-x) = \\cos x$."
+            explanation: "TXĐ $D = \\mathbb{R}$. Ta có $f(-x) = \\cos(-3x) = \\cos 3x = f(x)$, vậy hàm số chẵn.",
+            hint1: "Hàm cosin là hàm số chẵn.",
+            hint2: "$\\cos(-\\alpha) = \\cos \\alpha$."
+          },
+          {
+            question: "Chu kỳ tuần hoàn của hàm số $y = \\tan\\left(\\frac{x}{3} - \\frac{\\pi}{6}\\right)$ là:",
+            options: ["A. $T = 3\\pi$", "B. $T = \\frac{\\pi}{3}$", "C. $T = 6\\pi$", "D. $T = \\pi$"],
+            correct: "A",
+            explanation: "Chu kỳ hàm tang là $T = \\frac{\\pi}{|\\omega|} = \\frac{\\pi}{1/3} = 3\\pi$.",
+            hint1: "Chu kỳ hàm tang: $T = \\frac{\\pi}{|\\omega|}$.",
+            hint2: "$\\omega = \\frac{1}{3} \\Rightarrow T = 3\\pi$."
           }
         ]
       },
       {
         sectionNumber: 2,
-        sectionTitle: "Mục 2: Hàm số tang và hàm số côtang",
+        sectionTitle: "Mục 2: Đồ thị và tính chất của hàm số sin và côsin",
         theory: createStandardTheoryHTML(
           "Bài 3: Hàm số lượng giác", "Lớp 11", 2,
-          "Hàm số tang và hàm số côtang",
-          `<p>Hai hàm số lượng giác gián đoạn $y = \\tan x$ và $y = \\cot x$:</p>
+          "Đồ thị và tính chất của hàm số sin và côsin",
+          `<p>Khảo sát toàn diện hai hàm số sóng $y = \\sin x$ và $y = \\cos x$ chuẩn SGK Toán 11 KNTT:</p>
           <ul class="list-disc ml-5 space-y-1.5">
-            <li>$y = \\tan x$: TXĐ $\\mathbb{R} \\setminus \\{\\pi/2 + k\\pi\\}$, tập giá trị $\\mathbb{R}$, hàm lẻ, tuần hoàn chu kỳ $\\pi$, luôn đồng biến trên từng khoảng xác định.</li>
-            <li>$y = \\cot x$: TXĐ $\\mathbb{R} \\setminus \\{k\\pi\\}$, tập giá trị $\\mathbb{R}$, hàm lẻ, tuần hoàn chu kỳ $\\pi$, luôn nghịch biến trên từng khoảng xác định.</li>
+            <li><strong>Hàm số $y = \\sin x$:</strong>
+              <br/>• Tập xác định: $D = \\mathbb{R}$; Tập giá trị: $[-1; 1]$.
+              <br/>• Tuần hoàn chu kỳ $2\\pi$; là hàm số lẻ, đồ thị nhận gốc $O(0;0)$ làm tâm đối xứng.
+              <br/>• Đồng biến trên mỗi khoảng $\\left(-\\frac{\\pi}{2} + k2\\pi; \\frac{\\pi}{2} + k2\\pi\\right)$, nghịch biến trên mỗi khoảng $\\left(\\frac{\\pi}{2} + k2\\pi; \\frac{3\\pi}{2} + k2\\pi\\right)$.
+              <br/>• Đồ thị là đường hình sin (sinusoid) đi qua gốc $O(0;0)$.
+            </li>
+            <li><strong>Hàm số $y = \\cos x$:</strong>
+              <br/>• Tập xác định: $D = \\mathbb{R}$; Tập giá trị: $[-1; 1]$.
+              <br/>• Tuần hoàn chu kỳ $2\\pi$; là hàm số chẵn, đồ thị nhận trục tung $Oy$ làm trục đối xứng.
+              <br/>• Đồng biến trên mỗi khoảng $(-\\pi + k2\\pi; k2\\pi)$, nghịch biến trên mỗi khoảng $(k2\\pi; \\pi + k2\\pi)$.
+              <br/>• Đồ thị là đường hình sin đi qua điểm $(0; 1)$.
+            </li>
           </ul>`,
-          `<li>Chu kỳ của $\\tan$ và $\\cot$ là $\\pi$.</li>`,
-          `<li>Nhầm tập giá trị của $\\tan$ thành $[-1; 1]$.</li>`,
-          `<li><em>"Tan tăng, cot giảm – Chu kỳ một pi!"</em></li>`
+          `<li>$-1 \\le \\sin x \\le 1$ và $-1 \\le \\cos x \\le 1$ với mọi $x \\in \\mathbb{R}$.</li>
+          <li>Đồ thị hàm số $y = \\cos x$ thu được bằng cách tịnh tiến đồ thị $y = \\sin x$ sang trái một đoạn $\\frac{\\pi}{2}$ vì $\\cos x = \\sin(x + \\frac{\\pi}{2})$.</li>`,
+          `<li>Nhầm lẫn khoảng đồng biến và nghịch biến giữa sin và cosin.</li>
+          <li>Quên chặn $-1 \\le \\sin, \\cos \\le 1$ khi tìm GTLN, GTNN dẫn đến kết quả sai.</li>`,
+          `<li><em>"Sin qua gốc O lẻ loi – Cos qua đỉnh (0;1) chẵn đôi – Biên độ từ trừ 1 tới 1!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Tập xác định của hàm số $y = \\tan x$ là:",
+            question: "Tập giá trị của hàm số $y = 3\\sin 2x - 1$ là:",
+            options: ["A. $[-4; 2]$", "B. $[-1; 1]$", "C. $[-3; 3]$", "D. $[-2; 4]$"],
+            correct: "A",
+            explanation: "Vì $-1 \\le \\sin 2x \\le 1 \\Rightarrow -3 \\le 3\\sin 2x \\le 3 \\Rightarrow -4 \\le y \\le 2$.",
+            hint1: "$-1 \\le \\sin 2x \\le 1$.",
+            hint2: "Nhân 3 rồi trừ 1."
+          },
+          {
+            question: "Giá trị lớn nhất của hàm số $y = 2\\cos\\left(x - \\frac{\\pi}{3}\\right) + 5$ là:",
+            options: ["A. 7", "B. 5", "C. 3", "D. 2"],
+            correct: "A",
+            explanation: "Vì $\\cos\\left(x - \\frac{\\pi}{3}\\right) \\le 1 \\Rightarrow y \\le 2(1) + 5 = 7$.",
+            hint1: "$\\cos \\le 1$.",
+            hint2: "$2(1) + 5 = 7$."
+          },
+          {
+            question: "Hàm số $y = \\cos x$ nghịch biến trên khoảng nào sau đây?",
+            options: ["A. $(0; \\pi)$", "B. $(-\\pi; 0)$", "C. $\\left(-\\frac{\\pi}{2}; \\frac{\\pi}{2}\\right)$", "D. $(\\pi; 2\\pi)$"],
+            correct: "A",
+            explanation: "Hàm số $y = \\cos x$ nghịch biến trên mỗi khoảng $(k2\\pi; \\pi + k2\\pi)$. Với $k = 0$, hàm nghịch biến trên $(0; \\pi)$.",
+            hint1: "Trên nửa trên đường tròn lượng giác từ 0 đến $\\pi$, hoành độ giảm dần từ 1 về -1.",
+            hint2: "Khoảng $(0; \\pi)$."
+          }
+        ]
+      },
+      {
+        sectionNumber: 3,
+        sectionTitle: "Mục 3: Đồ thị và tính chất của hàm số tang và côtang",
+        theory: createStandardTheoryHTML(
+          "Bài 3: Hàm số lượng giác", "Lớp 11", 3,
+          "Đồ thị và tính chất của hàm số tang và côtang",
+          `<p>Khảo sát toàn diện hai hàm số gián đoạn $y = \\tan x$ và $y = \\cot x$ chuẩn SGK Toán 11 KNTT:</p>
+          <ul class="list-disc ml-5 space-y-1.5">
+            <li><strong>Hàm số $y = \\tan x$:</strong>
+              <br/>• Tập xác định: $D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{2} + k\\pi, k \\in \\mathbb{Z}\\right\\}$.
+              <br/>• Tập giá trị: $\\mathbb{R}$; Tuần hoàn chu kỳ $\\pi$.
+              <br/>• Là hàm số lẻ, đồ thị nhận gốc $O(0;0)$ làm tâm đối xứng.
+              <br/>• Luôn đồng biến trên mỗi khoảng xác định $\\left(-\\frac{\\pi}{2} + k\\pi; \\frac{\\pi}{2} + k\\pi\\right)$.
+              <br/>• Các đường tiệm cận đứng là $x = \\frac{\\pi}{2} + k\\pi$.
+            </li>
+            <li><strong>Hàm số $y = \\cot x$:</strong>
+              <br/>• Tập xác định: $D = \\mathbb{R} \\setminus \\{k\\pi, k \\in \\mathbb{Z}\\}$.
+              <br/>• Tập giá trị: $\\mathbb{R}$; Tuần hoàn chu kỳ $\\pi$.
+              <br/>• Là hàm số lẻ, đồ thị nhận mỗi điểm $(\\frac{\\pi}{2} + k\\pi; 0)$ làm tâm đối xứng.
+              <br/>• Luôn nghịch biến trên mỗi khoảng xác định $(k\\pi; \\pi + k\\pi)$.
+              <br/>• Các đường tiệm cận đứng là $x = k\\pi$.
+            </li>
+          </ul>`,
+          `<li>Hàm số $y = \\tan x$ luôn đồng biến trên TỪNG khoảng xác định, tuyệt đối không nói đồng biến trên $\\mathbb{R}$ hay trên $D$.</li>
+          <li>Tập giá trị của $\\tan$ và $\\cot$ là toàn bộ $\\mathbb{R}$, do đó chúng không có GTLN và GTNN trên tập xác định của chúng.</li>`,
+          `<li>Nói hàm số $y = \\tan x$ đồng biến trên tập xác định $D$ là SAI (phải là trên từng khoảng xác định).</li>
+          <li>Nhầm tập xác định của $\\tan$ (mẫu $\\cos x \\ne 0$) với $\\cot$ (mẫu $\\sin x \\ne 0$).</li>`,
+          `<li><em>"Tan tăng liên tục, cot giảm đều – Chu kỳ một pi, tiệm cận đứng theo chân!"</em></li>`
+        ),
+        mcqs: [
+          {
+            question: "Tập xác định của hàm số $y = \\tan 2x$ là:",
             options: [
-              "A. $D = \\mathbb{R} \\setminus \\{\\frac{\\pi}{2} + k\\pi, k \\in \\mathbb{Z}\\}$",
-              "B. $D = \\mathbb{R} \\setminus \\{k\\pi, k \\in \\mathbb{Z}\\}$",
-              "C. $D = \\mathbb{R}$",
-              "D. $D = \\mathbb{R} \\setminus \\{\\frac{\\pi}{2} + k2\\pi\\}$"
+              "A. $D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{4} + k\\frac{\\pi}{2}, k \\in \\mathbb{Z}\\right\\}$",
+              "B. $D = \\mathbb{R} \\setminus \\left\\{\\frac{\pi}{2} + k\\pi, k \\in \\mathbb{Z}\\right\\}$",
+              "C. $D = \\mathbb{R} \\setminus \\left\\{k\\frac{\\pi}{2}, k \\in \\mathbb{Z}\\right\\}$",
+              "D. $D = \\mathbb{R}$"
             ],
             correct: "A",
-            explanation: "Điều kiện $\\cos x \\neq 0 \\Leftrightarrow x \\neq \\frac{\\pi}{2} + k\\pi$.",
-            hint1: "Mẫu số $\\cos x \\neq 0$.",
-            hint2: "$x \\neq \\frac{\\pi}{2} + k\\pi$."
+            explanation: "ĐK: $\\cos 2x \\ne 0 \\Leftrightarrow 2x \\ne \\frac{\\pi}{2} + k\\pi \\Leftrightarrow x \\ne \\frac{\\pi}{4} + k\\frac{\\pi}{2}, k \\in \\mathbb{Z}$.",
+            hint1: "Mẫu $\\cos 2x \\ne 0$.",
+            hint2: "$x \\ne \\frac{\\pi}{4} + k\\frac{\\pi}{2}$."
           },
           {
-            question: "Chu kỳ của hàm số $y = \\tan 2x$ là:",
-            options: ["A. $\\frac{\\pi}{2}$", "B. $\\pi$", "C. $2\\pi$", "D. $\\frac{\\pi}{4}$"],
+            question: "Chu kỳ tuần hoàn của hàm số $y = \\cot 3x$ là:",
+            options: ["A. $T = \\frac{\\pi}{3}$", "B. $T = \\pi$", "C. $T = \\frac{2\\pi}{3}$", "D. $T = 3\\pi$"],
             correct: "A",
-            explanation: "$T = \\frac{\\pi}{2}$.",
-            hint1: "Chu kỳ của $\\tan$ là $\\frac{\\pi}{\\omega}$.",
-            hint2: "$\\frac{\\pi}{2}$."
+            explanation: "Chu kỳ hàm côtang là $T = \\frac{\\pi}{|\\omega|} = \\frac{\\pi}{3}$.",
+            hint1: "$T = \\frac{\\pi}{\\omega}$.",
+            hint2: "$\\frac{\\pi}{3}$."
           },
           {
-            question: "Hàm số $y = \\tan x$ đồng biến trên khoảng nào sau đây?",
-            options: ["A. $(-\\frac{\\pi}{2}; \\frac{\\pi}{2})$", "B. $(0; \\pi)$", "C. $(0; \\frac{\\pi}{2})$", "D. $(-\\pi; 0)$"],
+            question: "Mệnh đề nào sau đây là ĐÚNG?",
+            options: [
+              "A. Hàm số $y = \\tan x$ đồng biến trên khoảng $\\left(-\\frac{\\pi}{2}; \\frac{\\pi}{2}\\right)$.",
+              "B. Hàm số $y = \\tan x$ đồng biến trên $\\mathbb{R}$.",
+              "C. Hàm số $y = \\cot x$ đồng biến trên khoảng $(0; \\pi)$.",
+              "D. Hàm số $y = \\tan x$ có giá trị lớn nhất bằng 1."
+            ],
             correct: "A",
-            explanation: "Đồng biến trên mỗi khoảng $(\\frac{-\\pi}{2} + k\\pi; \\frac{\\pi}{2} + k\\pi)$.",
-            hint1: "Hàm tang đồng biến trên khoảng xác định cơ bản.",
-            hint2: "$(-\\pi/2; \\pi/2)$."
+            explanation: "Hàm số $y = \\tan x$ đồng biến trên mỗi khoảng xác định $\\left(-\\frac{\\pi}{2} + k\\pi; \\frac{\\pi}{2} + k\\pi\\right)$.",
+            hint1: "Hàm tang luôn đồng biến trên từng khoảng xác định.",
+            hint2: "Phương án A đúng."
           }
         ]
       }

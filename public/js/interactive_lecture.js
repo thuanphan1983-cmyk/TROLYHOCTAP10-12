@@ -934,6 +934,18 @@
         { key: "g11_bai2_muc2", title: "Mục 2: Công thức nhân đôi và công thức hạ bậc", time: "05:15", icon: "✖️" },
         { key: "g11_bai2_muc3", title: "Mục 3: Công thức biến đổi tích thành tổng và tổng thành tích", time: "05:20", icon: "🔄" }
       ]
+    },
+    {
+      chapterNumber: 1101,
+      chapterTitle: "Toán 11 - Chương I: Hàm số lượng giác và phương trình lượng giác",
+      lessonId: "toan11_bai3",
+      lessonTitle: "Bài 3: Hàm số lượng giác",
+      lessonBadge: "Toán 11 • Bài 3",
+      sections: [
+        { key: "g11_bai3_muc1", title: "Mục 1: Khái niệm hàm số lượng giác, tính chẵn - lẻ & chu kỳ", time: "05:15", icon: "🔄" },
+        { key: "g11_bai3_muc2", title: "Mục 2: Đồ thị và tính chất của hàm số sin và côsin", time: "05:20", icon: "📈" },
+        { key: "g11_bai3_muc3", title: "Mục 3: Đồ thị và tính chất của hàm số tang và côtang", time: "05:25", icon: "📐" }
+      ]
     }
   ];
 
@@ -1269,6 +1281,10 @@
       if (lessonNum === 2) {
         const s = Math.min(3, Math.max(1, sectionNum));
         return `g11_bai2_muc${s}`;
+      }
+      if (lessonNum === 3) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai3_muc${s}`;
       }
     }
 

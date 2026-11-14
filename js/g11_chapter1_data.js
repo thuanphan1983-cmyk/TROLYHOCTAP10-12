@@ -1791,6 +1791,707 @@ if (typeof window !== 'undefined') {
   window.G11_CHAPTER1_DATA.toan11_bai2_muc2 = window.G11_CHAPTER1_DATA.g11_bai2_muc2;
   window.G11_CHAPTER1_DATA.toan11_bai2_muc3 = window.G11_CHAPTER1_DATA.g11_bai2_muc3;
 
+
+  window.G11_CHAPTER1_DATA.g11_bai3_muc1 = {
+  "lessonId": "toan11_bai3",
+  "lessonTitle": "Bài 3: Hàm số lượng giác",
+  "sectionId": "g11_bai3_muc1",
+  "sectionTitle": "Mục 1: Khái niệm hàm số lượng giác, tính chẵn - lẻ và chu kỳ tuần hoàn",
+  "title": "Mục 1: Khái niệm hàm số lượng giác, tính chẵn - lẻ & chu kỳ",
+  "audio": "/audio/g11_bai3_muc1.mp3",
+  "audioSrc": "./audio/g11_bai3_muc1.mp3",
+  "audio_src": "./audio/g11_bai3_muc1.mp3",
+  "owl_tip": "Nhớ quy tắc vàng: Cosin là hàm số chẵn duy nhất! Sin, Tang và Côtang đều là hàm số lẻ. Chu kỳ của Sin và Cos là 2 pi chia omega, còn Tang và Côtang chu kỳ chỉ là pi chia omega!",
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Khái niệm & Tính tuần hoàn",
+      "start": 0
+    },
+    {
+      "id": "part2",
+      "title": "Tính chẵn - lẻ & Chu kỳ chuẩn",
+      "start": 0
+    },
+    {
+      "id": "part3",
+      "title": "4 Ví dụ minh họa trọng tâm",
+      "start": 0
+    },
+    {
+      "id": "part4",
+      "title": "Bẫy trắc nghiệm & Bí kíp Cú Thông Thái",
+      "start": 0
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "1. ĐỊNH NGHĨA HÀM SỐ LƯỢNG GIÁC & TẬP XÁC ĐỊNH",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/30\">\n    <h3 class=\"text-emerald-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-emerald-500/20 rounded text-emerald-300 text-sm\">Trọng tâm</span>\n      ĐỊNH NGHĨA 4 HÀM SỐ LƯỢNG GIÁC CƠ BẢN\n    </h3>\n    <p class=\"text-slate-200 mt-2 text-sm leading-relaxed\">\n      Quy tắc đặt tương ứng mỗi số thực $x$ với một giá trị lượng giác xác định:\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-sm\">\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">1. Hàm số sin:</span> $y = \\sin x$<br/>\n        <span class=\"text-slate-300\">• TXĐ:</span> $D = \\mathbb{R}$<br/>\n        <span class=\"text-slate-300\">• Tập giá trị:</span> $[-1; 1]$\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">2. Hàm số côsin:</span> $y = \\cos x$<br/>\n        <span class=\"text-slate-300\">• TXĐ:</span> $D = \\mathbb{R}$<br/>\n        <span class=\"text-slate-300\">• Tập giá trị:</span> $[-1; 1]$\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-emerald-400 font-bold\">3. Hàm số tang:</span> $y = \\tan x = \\frac{\\sin x}{\\cos x}$<br/>\n        <span class=\"text-slate-300\">• TXĐ:</span> $D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{2} + k\\pi, k \\in \\mathbb{Z}\\right\\}$<br/>\n        <span class=\"text-slate-300\">• Tập giá trị:</span> $\\mathbb{R}$\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-rose-400 font-bold\">4. Hàm số côtang:</span> $y = \\cot x = \\frac{\\cos x}{\\sin x}$<br/>\n        <span class=\"text-slate-300\">• TXĐ:</span> $D = \\mathbb{R} \\setminus \\{k\\pi, k \\in \\mathbb{Z}\\}$<br/>\n        <span class=\"text-slate-300\">• Tập giá trị:</span> $\\mathbb{R}$\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em học sinh lớp 11 đến với bài học số 3: Hàm số lượng giác. Trong mục đầu tiên này, thầy và các em sẽ cùng tìm hiểu về định nghĩa bốn hàm số lượng giác cơ bản, tập xác định, tính chẵn lẻ và chu kỳ tuần hoàn. Hãy ghi nhớ rằng hàm sin và cosin xác định trên toàn bộ tập số thực R với tập giá trị từ trừ một đến một. Còn hàm tang và côtang là các hàm phân thức lượng giác, có tập xác định bị gián đoạn và tập giá trị trải dài trên toàn bộ trục số thực R.",
+      "startTime": 0.0,
+      "endTime": 28.92,
+      "duration": 28.92
+    },
+    {
+      "id": "scene_2",
+      "title": "2. HÀM SỐ TUẦN HOÀN, CHU KỲ VÀ TÍNH CHẴN - LẺ",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-sky-500/30\">\n      <h4 class=\"text-sky-300 font-bold text-base mb-2\">🔄 TÍNH TUẦN HOÀN VÀ CHU KỲ $T$</h4>\n      <p class=\"text-slate-300 text-sm leading-relaxed\">\n        Hàm số $y = f(x)$ tuần hoàn nếu tồn tại $T \\ne 0$ sao cho $f(x+T) = f(x)$. Chu kỳ là số dương $T$ nhỏ nhất:\n      </p>\n      <div class=\"mt-2 space-y-1.5 text-sm bg-slate-800/80 p-3 rounded-lg border border-slate-700\">\n        <p class=\"text-amber-300\">• $y = \\sin(\\omega x + \\varphi)$ và $y = \\cos(\\omega x + \\varphi)$ có chu kỳ:</p>\n        <p class=\"text-center font-bold text-base text-yellow-400\">$$T = \\frac{2\\pi}{|\\omega|}$$</p>\n        <p class=\"text-emerald-300\">• $y = \\tan(\\omega x + \\varphi)$ và $y = \\cot(\\omega x + \\varphi)$ có chu kỳ:</p>\n        <p class=\"text-center font-bold text-base text-emerald-400\">$$T = \\frac{\\pi}{|\\omega|}$$</p>\n      </div>\n    </div>\n\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-purple-500/30\">\n      <h4 class=\"text-purple-300 font-bold text-base mb-2\">⚖️ TÍNH CHẴN - LẺ CỦA HÀM SỐ</h4>\n      <div class=\"space-y-2 text-sm\">\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-pink-400 font-bold\">HÀM SỐ CHẴN ($f(-x) = f(x)$):</span>\n          <p class=\"text-slate-200 mt-1\">$y = \\cos x$ là hàm số chẵn duy nhất!</p>\n          <p class=\"text-slate-400 text-xs mt-0.5\">Đồ thị đối xứng qua trục tung $Oy$.</p>\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-indigo-400 font-bold\">HÀM SỐ LẺ ($f(-x) = -f(x)$):</span>\n          <p class=\"text-slate-200 mt-1\">$y = \\sin x$, $y = \\tan x$, $y = \\cot x$ đều là hàm lẻ.</p>\n          <p class=\"text-slate-400 text-xs mt-0.5\">Đồ thị đối xứng qua gốc tọa độ $O(0;0)$.</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Tiếp theo, một đặc tính vô cùng độc đáo của hàm lượng giác là tính tuần hoàn. Chu kỳ tuần hoàn là khoảng cách nhỏ nhất sau đó giá trị hàm số lặp lại y hệt ban đầu. Với sin và cosin, chu kỳ là hai pi chia cho trị tuyệt đối của omega. Còn với tang và côtang, chu kỳ cơ bản chỉ là một pi chia trị tuyệt đối của omega. Về tính chẵn lẻ, các em chỉ cần khắc sâu: cosin là hàm chẵn vì cos trừ x bằng cos x, còn ba hàm còn lại là sin, tang và côtang đều là hàm số lẻ.",
+      "startTime": 28.92,
+      "endTime": 60.34,
+      "duration": 31.42
+    },
+    {
+      "id": "scene_3",
+      "title": "Ví dụ 1: Tìm chu kỳ tuần hoàn của hàm số lượng giác (Mức Nhận biết)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/50 to-indigo-900/40 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-blue-500 text-white text-xs font-bold rounded\">VÍ DỤ 1 • NHẬN BIẾT</span>\n      <span class=\"text-slate-400 text-xs\">Mục 1 • Khái niệm & Chu kỳ</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Xác định chu kỳ tuần hoàn $T$ của các hàm số sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $y = \\sin 3x$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $y = \\cos\\left(2x - \\frac{\\pi}{4}\\right)$</p>\n      <p><strong class=\"text-emerald-400\">c)</strong> $y = \\tan\\frac{x}{2}$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Chúng ta cùng đến với ví dụ 1 ở mức độ nhận biết. Đề bài yêu cầu tìm chu kỳ tuần hoàn T của ba hàm số: câu a y bằng sin 3x, câu b y bằng cos 2x trừ pi phần 4, và câu c y bằng tan của x chia 2. Các em hãy quan sát hệ số omega trước biến x và áp dụng công thức trong 15 giây suy nghĩ.",
+      "startTime": 60.34,
+      "endTime": 80.48,
+      "duration": 20.14
+    },
+    {
+      "id": "scene_4",
+      "title": "Ví dụ 1: Lời giải chi tiết & Phân tích chu kỳ chuẩn",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-emerald-500/40\">\n    <h4 class=\"text-emerald-300 font-bold text-base mb-2 flex items-center gap-2\">\n      <i class=\"fa-solid fa-circle-check text-emerald-400\"></i> LỜI GIẢI CHI TIẾT VÍ DỤ 1\n    </h4>\n    <div class=\"space-y-3 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) Với hàm số $y = \\sin 3x$:</strong>\n        <p class=\"mt-1\">Hệ số của $x$ là $\\omega = 3$.</p>\n        <p class=\"text-emerald-300 font-semibold mt-1\">$$\\Rightarrow T_1 = \\frac{2\\pi}{|\\omega|} = \\frac{2\\pi}{3}$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) Với hàm số $y = \\cos\\left(2x - \\frac{\\pi}{4}\\right)$:</strong>\n        <p class=\"mt-1\">Hệ số của $x$ là $\\omega = 2$ (hằng số pha $-\\frac{\\pi}{4}$ không ảnh hưởng đến chu kỳ).</p>\n        <p class=\"text-emerald-300 font-semibold mt-1\">$$\\Rightarrow T_2 = \\frac{2\\pi}{|\\omega|} = \\frac{2\\pi}{2} = \\pi$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-emerald-400\">c) Với hàm số $y = \\tan\\frac{x}{2}$:</strong>\n        <p class=\"mt-1\">Hàm tang có chu kỳ cơ sở là $\\pi$. Hệ số $\\omega = \\frac{1}{2}$.</p>\n        <p class=\"text-emerald-300 font-semibold mt-1\">$$\\Rightarrow T_3 = \\frac{\\pi}{|\\omega|} = \\frac{\\pi}{1/2} = 2\\pi$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 1 như sau. Ở câu a, hàm số sin 3x có omega bằng 3, nên chu kỳ T1 bằng hai pi chia 3. Ở câu b, hàm cosin có omega bằng 2, góc pha trừ pi phần 4 chỉ làm tịnh tiến đồ thị chứ không đổi chu kỳ, nên T2 bằng hai pi chia 2 bằng pi. Ở câu c, đây là hàm tang, các em nhớ tử số chỉ là pi, chia cho omega là một phần hai, kết quả ra hai pi. Rất chuẩn xác và ngắn gọn.",
+      "startTime": 80.48,
+      "endTime": 110.12,
+      "duration": 29.64
+    },
+    {
+      "id": "scene_5",
+      "title": "Ví dụ 2: Xét tính chẵn, lẻ của hàm số lượng giác (Mức Thông hiểu)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-900/50 to-indigo-900/40 p-4 rounded-xl border border-purple-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-purple-500 text-white text-xs font-bold rounded\">VÍ DỤ 2 • THÔNG HIỂU</span>\n      <span class=\"text-slate-400 text-xs\">Mục 1 • Khái niệm & Tính chẵn lẻ</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Xét tính chẵn, lẻ của các hàm số sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $f(x) = x \\cdot \\sin 2x$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $g(x) = \\sin x + \\cos x$</p>\n      <p><strong class=\"text-emerald-400\">c)</strong> $h(x) = \\frac{\\tan x}{x^2 + 1}$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ số 2 là bài toán thông hiểu về tính chẵn lẻ của hàm số lượng giác. Hãy xét tính chẵn lẻ của ba hàm: câu a hàm f x bằng x nhân sin 2x; câu b hàm g x bằng sin x cộng cos x; và câu c hàm h x bằng tan x trên x bình cộng 1. Các em có 30 giây để kiểm tra tập xác định đối xứng và tính giá trị f tại trừ x.",
+      "startTime": 110.12,
+      "endTime": 131.17,
+      "duration": 21.05
+    },
+    {
+      "id": "scene_6",
+      "title": "Ví dụ 2: Lời giải chi tiết & Phân tích bước suy luận",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-purple-500/40\">\n    <h4 class=\"text-purple-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 2:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) $f(x) = x \\cdot \\sin 2x$:</strong>\n        <p class=\"text-slate-300\">• TXĐ: $D = \\mathbb{R}$ đối xứng (với mọi $x \\in D \\Rightarrow -x \\in D$).</p>\n        <p class=\"text-slate-300\">• $f(-x) = (-x) \\cdot \\sin(-2x) = (-x) \\cdot [-\\sin(2x)] = x \\sin 2x = f(x)$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">Kết luận: $f(x)$ là hàm số CHẴN.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) $g(x) = \\sin x + \\cos x$:</strong>\n        <p class=\"text-slate-300\">• TXĐ: $D = \\mathbb{R}$.</p>\n        <p class=\"text-slate-300\">• $g(-x) = \\sin(-x) + \\cos(-x) = -\\sin x + \\cos x$.</p>\n        <p class=\"text-slate-300\">• Nhận thấy $g(-x) \\ne g(x)$ và $g(-x) \\ne -g(x) = -\\sin x - \\cos x$.</p>\n        <p class=\"text-amber-300 font-bold mt-1\">Kết luận: $g(x)$ là hàm số KHÔNG CHẴN, KHÔNG LẺ.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-emerald-400\">c) $h(x) = \\frac{\\tan x}{x^2 + 1}$:</strong>\n        <p class=\"text-slate-300\">• TXĐ: $D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{2} + k\\pi\\right\\}$ là tập đối xứng.</p>\n        <p class=\"text-slate-300\">• $h(-x) = \\frac{\\tan(-x)}{(-x)^2 + 1} = \\frac{-\\tan x}{x^2 + 1} = -h(x)$.</p>\n        <p class=\"text-indigo-300 font-bold mt-1\">Kết luận: $h(x)$ là hàm số LẺ.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Cùng phân tích lời giải ví dụ 2. Ở câu a, khi thay x bằng trừ x, dấu trừ của x nhân với dấu trừ rút ra từ sin trừ 2x tạo thành dấu cộng, trả lại đúng hàm số ban đầu, nên fx là hàm số chẵn. Ở câu b, g của trừ x bằng trừ sin x cộng cos x, không bằng gx mà cũng không bằng trừ gx, do đó gx không chẵn không lẻ. Ở câu c, tử số tan trừ x bằng trừ tan x, còn mẫu số giữ nguyên, cho ra kết quả bằng trừ hx, nên hx là hàm số lẻ.",
+      "startTime": 131.17,
+      "endTime": 163.19,
+      "duration": 32.02
+    },
+    {
+      "id": "scene_7",
+      "title": "Ví dụ 3: Tìm tập xác định của hàm số lượng giác (Mức Vận dụng)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-900/50 to-orange-900/40 p-4 rounded-xl border border-amber-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-amber-500 text-slate-900 text-xs font-bold rounded\">VÍ DỤ 3 • VẬN DỤNG</span>\n      <span class=\"text-slate-400 text-xs\">Mục 1 • Tập xác định</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Tìm tập xác định $D$ của các hàm số sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $y = \\frac{1}{\\cos x - 1}$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $y = \\tan\\left(2x + \\frac{\\pi}{3}\\right)$</p>\n      <p><strong class=\"text-emerald-400\">c)</strong> $y = \\sqrt{\\frac{1 + \\cos x}{2 - \\sin x}}$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3 là bài toán vận dụng tìm tập xác định của ba hàm số lượng giác: câu a y bằng 1 chia cho cos x trừ 1; câu b y bằng tan của 2x cộng pi phần 3; và câu c y bằng căn bậc hai của 1 cộng cos x chia cho 2 trừ sin x. Các em hãy chú ý điều kiện mẫu khác không và điều kiện trong căn không âm trong 30 giây suy nghĩ.",
+      "startTime": 163.19,
+      "endTime": 181.72,
+      "duration": 18.53
+    },
+    {
+      "id": "scene_8",
+      "title": "Ví dụ 3: Lời giải chi tiết & Kỹ năng giải điều kiện xác định",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-amber-500/40\">\n    <h4 class=\"text-amber-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 3:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) $y = \\frac{1}{\\cos x - 1}$:</strong>\n        <p class=\"text-slate-300\">• Điều kiện: $\\cos x - 1 \\ne 0 \\Leftrightarrow \\cos x \\ne 1 \\Leftrightarrow x \\ne k2\\pi$ ($k \\in \\mathbb{Z}$).</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow D = \\mathbb{R} \\setminus \\{k2\\pi, k \\in \\mathbb{Z}\\}$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) $y = \\tan\\left(2x + \\frac{\\pi}{3}\\right)$:</strong>\n        <p class=\"text-slate-300\">• Điều kiện của hàm tang: $\\cos\\left(2x + \\frac{\\pi}{3}\\right) \\ne 0$</p>\n        <p class=\"text-slate-300\">$$\\Leftrightarrow 2x + \\frac{\\pi}{3} \\ne \\frac{\\pi}{2} + k\\pi \\Leftrightarrow 2x \\ne \\frac{\\pi}{6} + k\\pi \\Leftrightarrow x \\ne \\frac{\\pi}{12} + k\\frac{\\pi}{2}$$</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{12} + k\\frac{\\pi}{2}, k \\in \\mathbb{Z}\\right\\}$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-emerald-400\">c) $y = \\sqrt{\\frac{1 + \\cos x}{2 - \\sin x}}$:</strong>\n        <p class=\"text-slate-300\">• Vì $-1 \\le \\cos x \\le 1 \\Rightarrow 1 + \\cos x \\ge 0$ với mọi $x \\in \\mathbb{R}$.</p>\n        <p class=\"text-slate-300\">• Vì $-1 \\le \\sin x \\le 1 \\Rightarrow 2 - \\sin x \\ge 2 - 1 = 1 > 0$ với mọi $x \\in \\mathbb{R}$.</p>\n        <p class=\"text-slate-300\">• Phân thức luôn có mẫu dương và tử không âm trên toàn $\\mathbb{R}$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow D = \\mathbb{R}$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải chi tiết ví dụ 3 như sau. Ở câu a, mẫu khác không khi cos x khác 1, tương đương x khác k hai pi. Ở câu b, hàm tang có nghĩa khi biểu thức góc khác pi phần hai cộng k pi, chuyển vế ta được 2x khác pi phần 6 cộng k pi, chia hai vế cho 2 ta được x khác pi phần 12 cộng k pi chia hai. Ở câu c, đây là bẫy tư duy rất hay: tử số một cộng cos x luôn lớn hơn hoặc bằng không, còn mẫu số hai trừ sin x luôn lớn hơn hoặc bằng một, tức luôn dương với mọi x. Do đó tập xác định của hàm số là toàn bộ tập số thực R.",
+      "startTime": 181.72,
+      "endTime": 215.18,
+      "duration": 33.46
+    },
+    {
+      "id": "scene_9",
+      "title": "Ví dụ 4: Bài toán thực tế chu kỳ mực nước thủy triều (Mức Vận dụng cao)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-rose-900/50 to-red-900/40 p-4 rounded-xl border border-rose-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-rose-500 text-white text-xs font-bold rounded\">VÍ DỤ 4 • VẬN DỤNG CAO</span>\n      <span class=\"text-slate-400 text-xs\">Thực tế • Chu kỳ thủy triều</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Mô hình toán học về mực nước tại cảng biển:</h4>\n    <p class=\"text-slate-300 text-sm leading-relaxed mt-2\">\n      Độ sâu mực nước $h(t)$ (đơn vị mét) tại một cảng biển sau $t$ giờ tính từ lúc $0\\text{h}$ sáng được cho bởi công thức:\n    </p>\n    <div class=\"bg-slate-900/90 p-3 rounded-lg border border-slate-700 text-center font-bold text-amber-300 text-lg\">\n      $$h(t) = 5 + 3\\cos\\left(\\frac{\\pi t}{6}\\right) \\quad (0 \\le t \\le 24)$$\n    </div>\n    <div class=\"mt-2 space-y-1.5 text-sm text-slate-200\">\n      <p><strong class=\"text-sky-300\">a)</strong> Tìm chu kỳ tuần hoàn của mực nước thủy triều.</p>\n      <p><strong class=\"text-emerald-300\">b)</strong> Mực nước cao nhất và thấp nhất là bao nhiêu mét? Đạt được vào những thời điểm nào trong ngày?</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4 là bài toán vận dụng cao mô hình hóa thực tế về mực nước thủy triều tại một cảng biển. Mực nước h t sau t giờ được tính theo công thức: h t bằng 5 cộng 3 nhân cos của pi nhân t chia 6, với t từ 0 đến 24 giờ. Câu a yêu cầu tìm chu kỳ tuần hoàn của thủy triều. Câu b yêu cầu tìm mực nước cao nhất và thấp nhất, cùng các mốc thời gian đạt được trong ngày. 30 giây suy nghĩ cho các em.",
+      "startTime": 215.18,
+      "endTime": 241.7,
+      "duration": 26.52
+    },
+    {
+      "id": "scene_10",
+      "title": "Ví dụ 4: Lời giải chi tiết & Ý nghĩa mô hình thực tế",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-rose-500/40\">\n    <h4 class=\"text-rose-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 4:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-300\">a) Chu kỳ tuần hoàn của mực nước biển:</strong>\n        <p class=\"mt-1\">Hàm số có dạng $h(t) = 5 + 3\\cos(\\omega t)$ với $\\omega = \\frac{\\pi}{6}$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow T = \\frac{2\\pi}{\\omega} = \\frac{2\\pi}{\\pi/6} = 12 \\text{ (giờ)}$$</p>\n        <p class=\"text-slate-400 text-xs\">Cứ sau đúng 12 giờ thì hiện tượng thủy triều lại lặp lại một chu kỳ hoàn chỉnh.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-emerald-300\">b) Giá trị cao nhất, thấp nhất và thời điểm:</strong>\n        <p>Vì $-1 \\le \\cos\\left(\\frac{\\pi t}{6}\\right) \\le 1$ nên:</p>\n        <p class=\"text-center font-bold text-amber-300\">$$5 - 3 \\le h(t) \\le 5 + 3 \\Leftrightarrow 2\\text{ m} \\le h(t) \\le 8\\text{ m}$$</p>\n        <p class=\"text-slate-300 mt-1\">• <strong>Mực nước cao nhất là $8\\text{ m}$</strong> khi $\\cos\\left(\\frac{\\pi t}{6}\\right) = 1 \\Leftrightarrow \\frac{\\pi t}{6} = k2\\pi \\Leftrightarrow t = 12k$.</p>\n        <p class=\"text-slate-200 ml-4\">Với $0 \\le t \\le 24$, ta có $k \\in \\{0, 1, 2\\} \\Rightarrow$ Đạt lúc <span class=\"text-yellow-400 font-bold\">0h, 12h trưa và 24h đêm</span>.</p>\n        <p class=\"text-slate-300 mt-1\">• <strong>Mực nước thấp nhất là $2\\text{ m}$</strong> khi $\\cos\\left(\\frac{\\pi t}{6}\\right) = -1 \\Leftrightarrow \\frac{\\pi t}{6} = \\pi + k2\\pi \\Leftrightarrow t = 6 + 12k$.</p>\n        <p class=\"text-slate-200 ml-4\">Với $0 \\le t \\le 24$, ta có $k \\in \\{0, 1\\} \\Rightarrow$ Đạt lúc <span class=\"text-sky-400 font-bold\">6h sáng và 18h chiều</span>.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 4 như sau: Ở câu a, tần số góc omega bằng pi phần 6, áp dụng công thức chu kỳ T bằng hai pi chia omega, ta tính được T bằng 12 giờ. Tức là thủy triều tại cảng biển lặp lại theo chu kỳ bán nhật triều 12 tiếng. Ở câu b, vì cos nằm từ trừ một đến một, nên mực nước dao động từ 2 mét đến 8 mét. Mực nước đạt cực đại 8 mét khi cos bằng 1, tức vào các thời điểm 0 giờ sáng, 12 giờ trưa và 24 giờ đêm. Mực nước rút thấp nhất xuống 2 mét khi cos bằng trừ 1, đạt vào lúc 6 giờ sáng và 18 giờ chiều. Rất thiết thực trong hàng hải!",
+      "startTime": 241.7,
+      "endTime": 280.12,
+      "duration": 38.42
+    },
+    {
+      "id": "scene_11",
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM KHI TÌM CHU KỲ VÀ TẬP XÁC ĐỊNH",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-red-950/70 to-rose-950/50 p-4 rounded-xl border border-red-500/40\">\n    <h3 class=\"text-red-300 font-bold text-base flex items-center gap-2\">\n      <i class=\"fa-solid fa-triangle-exclamation text-red-400 text-lg\"></i>\n      3 BẪY SAI LẦM KINH ĐIỂN CỦA HỌC SINH\n    </h3>\n    <div class=\"mt-3 space-y-3 text-sm\">\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 1: Quên trị tuyệt đối của hệ số $\\omega$ khi tính chu kỳ</p>\n        <p class=\"text-slate-300 mt-1\">Khi gặp $y = \\cos(-3x)$, nhiều bạn tính $T = \\frac{2\\pi}{-3}$ là SAI. Chu kỳ $T$ bắt buộc phải là số dương: $T = \\frac{2\\pi}{|-3|} = \\frac{2\\pi}{3}$.</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 2: Nhầm chu kỳ của tang và côtang thành $2\\pi$</p>\n        <p class=\"text-slate-300 mt-1\">Chu kỳ của hàm số $y = \\tan x$ và $y = \\cot x$ chỉ là $\\pi$. Do đó $y = \\tan(2x)$ có chu kỳ $T = \\frac{\\pi}{2}$, không phải $\\pi$.</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 3: Quên tập xác định khi xét tính chẵn lẻ</p>\n        <p class=\"text-slate-300 mt-1\">Nếu tập xác định $D$ không đối xứng qua gốc $O$ (tức tồn tại $x_0 \\in D$ mà $-x_0 \\notin D$), ta lập tức kết luận hàm số KHÔNG CHẴN, KHÔNG LẺ mà không cần kiểm tra $f(-x)$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Trước khi kết thúc mục 1, thầy Nam Minh muốn các em lưu tâm ba bẫy trắc nghiệm kinh điển. Bẫy thứ nhất: chu kỳ T bắt buộc là số dương, khi công thức có dấu âm ở biến x thì phải lấy trị tuyệt đối của omega. Bẫy thứ hai: chu kỳ của tang và côtang là một pi chia omega, rất nhiều bạn quen tay lấy hai pi là mất điểm oan. Bẫy thứ ba: khi xét tính chẵn lẻ, bao giờ cũng phải kiểm tra tập xác định đối xứng trước tiên.",
+      "startTime": 280.12,
+      "endTime": 306.78,
+      "duration": 26.66
+    },
+    {
+      "id": "scene_12",
+      "title": "4. TỔNG KẾT MỤC 1 & BÍ KÍP CÚ THÔNG THÁI",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-900/60 to-yellow-900/40 p-4 rounded-xl border border-amber-500/40\">\n    <h3 class=\"text-amber-300 font-bold text-lg flex items-center gap-2\">\n      <i class=\"fa-solid fa-award text-yellow-400\"></i>\n      BÍ KÍP CÚ THÔNG THÁI • KHẮC CỐT GHI TÂM\n    </h3>\n    <div class=\"mt-3 p-4 bg-slate-900/90 rounded-xl border border-slate-700 text-sm leading-relaxed space-y-2\">\n      <p class=\"text-emerald-300 font-bold\">📖 BÀI THƠ GHI NHỚ TÍNH CHẤT LƯỢNG GIÁC:</p>\n      <div class=\"bg-slate-800/80 p-3 rounded-lg border border-emerald-500/30 text-amber-200 font-serif italic text-center space-y-1\">\n        <p>Cos chẵn nhận trục Oy làm gương chiếu,</p>\n        <p>Sin, Tan, Cot lẻ nhận gốc O đối xứng thay.</p>\n        <p>Chu kỳ Sin, Cos: Hai pi chia omega chuẩn mực,</p>\n        <p>Tan và Côtang: Một pi chia omega nhớ ngay!</p>\n      </div>\n      <p class=\"text-slate-300 mt-2\">\n        Chúc các em làm chủ vững vàng Mục 1! Hãy sẵn sàng bước sang Mục 2 để cùng khám phá đồ thị hình sin tuyệt đẹp!\n      </p>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúc mừng các em đã xuất sắc hoàn thành Mục 1. Hãy đọc to bốn câu thơ bí kíp của Cú Thông Thái: Cos chẵn nhận trục Oy làm gương chiếu - Sin, Tan, Cot lẻ nhận gốc O đối xứng thay - Chu kỳ Sin, Cos: Hai pi chia omega chuẩn mực - Tan và Côtang: Một pi chia omega nhớ ngay. Hẹn gặp lại các em ở Mục 2 để cùng vẽ đồ thị hình sin!",
+      "startTime": 306.78,
+      "endTime": 329.03,
+      "duration": 22.25
+    }
+  ],
+  "totalDuration": 329.03,
+  "duration": 329.03,
+  "timeline": [
+    {
+      "sceneId": "scene_1",
+      "title": "1. ĐỊNH NGHĨA HÀM SỐ LƯỢNG GIÁC & TẬP XÁC ĐỊNH",
+      "startTime": 0.0,
+      "endTime": 28.92,
+      "duration": 28.92
+    },
+    {
+      "sceneId": "scene_2",
+      "title": "2. HÀM SỐ TUẦN HOÀN, CHU KỲ VÀ TÍNH CHẴN - LẺ",
+      "startTime": 28.92,
+      "endTime": 60.34,
+      "duration": 31.42
+    },
+    {
+      "sceneId": "scene_3",
+      "title": "Ví dụ 1: Tìm chu kỳ tuần hoàn của hàm số lượng giác (Mức Nhận biết)",
+      "startTime": 60.34,
+      "endTime": 80.48,
+      "duration": 20.14
+    },
+    {
+      "sceneId": "scene_4",
+      "title": "Ví dụ 1: Lời giải chi tiết & Phân tích chu kỳ chuẩn",
+      "startTime": 80.48,
+      "endTime": 110.12,
+      "duration": 29.64
+    },
+    {
+      "sceneId": "scene_5",
+      "title": "Ví dụ 2: Xét tính chẵn, lẻ của hàm số lượng giác (Mức Thông hiểu)",
+      "startTime": 110.12,
+      "endTime": 131.17,
+      "duration": 21.05
+    },
+    {
+      "sceneId": "scene_6",
+      "title": "Ví dụ 2: Lời giải chi tiết & Phân tích bước suy luận",
+      "startTime": 131.17,
+      "endTime": 163.19,
+      "duration": 32.02
+    },
+    {
+      "sceneId": "scene_7",
+      "title": "Ví dụ 3: Tìm tập xác định của hàm số lượng giác (Mức Vận dụng)",
+      "startTime": 163.19,
+      "endTime": 181.72,
+      "duration": 18.53
+    },
+    {
+      "sceneId": "scene_8",
+      "title": "Ví dụ 3: Lời giải chi tiết & Kỹ năng giải điều kiện xác định",
+      "startTime": 181.72,
+      "endTime": 215.18,
+      "duration": 33.46
+    },
+    {
+      "sceneId": "scene_9",
+      "title": "Ví dụ 4: Bài toán thực tế chu kỳ mực nước thủy triều (Mức Vận dụng cao)",
+      "startTime": 215.18,
+      "endTime": 241.7,
+      "duration": 26.52
+    },
+    {
+      "sceneId": "scene_10",
+      "title": "Ví dụ 4: Lời giải chi tiết & Ý nghĩa mô hình thực tế",
+      "startTime": 241.7,
+      "endTime": 280.12,
+      "duration": 38.42
+    },
+    {
+      "sceneId": "scene_11",
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM KHI TÌM CHU KỲ VÀ TẬP XÁC ĐỊNH",
+      "startTime": 280.12,
+      "endTime": 306.78,
+      "duration": 26.66
+    },
+    {
+      "sceneId": "scene_12",
+      "title": "4. TỔNG KẾT MỤC 1 & BÍ KÍP CÚ THÔNG THÁI",
+      "startTime": 306.78,
+      "endTime": 329.03,
+      "duration": 22.25
+    }
+  ]
+};
+
+  window.G11_CHAPTER1_DATA.g11_bai3_muc2 = {
+  "lessonId": "toan11_bai3",
+  "lessonTitle": "Bài 3: Hàm số lượng giác",
+  "sectionId": "g11_bai3_muc2",
+  "sectionTitle": "Mục 2: Đồ thị và tính chất của hàm số sin và côsin",
+  "title": "Mục 2: Đồ thị và tính chất của hàm số sin và côsin",
+  "audio": "/audio/g11_bai3_muc2.mp3",
+  "audioSrc": "./audio/g11_bai3_muc2.mp3",
+  "audio_src": "./audio/g11_bai3_muc2.mp3",
+  "owl_tip": "Đồ thị của y = sin x đi qua gốc tọa độ O(0,0), còn đồ thị của y = cos x đi qua điểm (0,1). Cả hai đều có biên độ dao động từ -1 đến 1 và chu kỳ 2 pi!",
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Khảo sát hàm số sin và côsin",
+      "start": 0
+    },
+    {
+      "id": "part2",
+      "title": "Đồ thị hình sin chuẩn mực",
+      "start": 0
+    },
+    {
+      "id": "part3",
+      "title": "4 Ví dụ minh họa trọng tâm",
+      "start": 0
+    },
+    {
+      "id": "part4",
+      "title": "Bẫy trắc nghiệm & Tổng kết",
+      "start": 0
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "1. TÍNH CHẤT TOÀN DIỆN CỦA HÀM SỐ SIN & CÔSIN",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/60 to-cyan-900/40 p-4 rounded-xl border border-blue-500/30\">\n    <h3 class=\"text-blue-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-blue-500/20 rounded text-blue-300 text-sm\">Trọng tâm</span>\n      BẢNG SO SÁNH TÍNH CHẤT HÀM SỐ $y = \\sin x$ VÀ $y = \\cos x$\n    </h3>\n    <div class=\"overflow-x-auto mt-3\">\n      <table class=\"w-full text-left text-xs sm:text-sm text-slate-200 border-collapse\">\n        <thead>\n          <tr class=\"bg-slate-800 text-amber-300 border-b border-slate-700\">\n            <th class=\"p-2.5\">Đặc tính</th>\n            <th class=\"p-2.5 text-sky-300\">Hàm số $y = \\sin x$</th>\n            <th class=\"p-2.5 text-emerald-300\">Hàm số $y = \\cos x$</th>\n          </tr>\n        </thead>\n        <tbody class=\"divide-y divide-slate-800 bg-slate-900/80\">\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Tập xác định & Giá trị</td>\n            <td class=\"p-2.5\">$D = \\mathbb{R}$; TGT: $[-1; 1]$</td>\n            <td class=\"p-2.5\">$D = \\mathbb{R}$; TGT: $[-1; 1]$</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Tính chẵn - lẻ</td>\n            <td class=\"p-2.5 text-indigo-300 font-semibold\">Hàm số LẺ (tâm đối xứng $O$)</td>\n            <td class=\"p-2.5 text-pink-300 font-semibold\">Hàm số CHẴN (trục đối xứng $Oy$)</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Chu kỳ tuần hoàn</td>\n            <td class=\"p-2.5\">$T = 2\\pi$</td>\n            <td class=\"p-2.5\">$T = 2\\pi$</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Khoảng đồng biến</td>\n            <td class=\"p-2.5\">$\\left(-\\frac{\\pi}{2} + k2\\pi; \\frac{\\pi}{2} + k2\\pi\\right)$</td>\n            <td class=\"p-2.5\">$(-\\pi + k2\\pi; k2\\pi)$</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Khoảng nghịch biến</td>\n            <td class=\"p-2.5\">$\\left(\\frac{\\pi}{2} + k2\\pi; \\frac{3\\pi}{2} + k2\\pi\\right)$</td>\n            <td class=\"p-2.5\">$(k2\\pi; \\pi + k2\\pi)$</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Mục 2: Đồ thị và tính chất của hàm số sin và côsin. Hai hàm số này là nền tảng cốt lõi của toàn bộ toán học và vật lý sóng. Hãy quan sát bảng so sánh: cả hai hàm đều có tập xác định R, tập giá trị từ trừ một đến một, và chu kỳ tuần hoàn hai pi. Điểm khác biệt quan trọng: sin x là hàm lẻ nhận gốc tọa độ O làm tâm đối xứng, còn cos x là hàm chẵn nhận trục tung Oy làm trục đối xứng.",
+      "startTime": 0.0,
+      "endTime": 27.55,
+      "duration": 27.55
+    },
+    {
+      "id": "scene_2",
+      "title": "2. ĐẶC ĐIỂM HÌNH HỌC CỦA ĐỒ THỊ HÌNH SIN",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-sky-500/30\">\n      <h4 class=\"text-sky-300 font-bold text-base mb-2\">📈 ĐỒ THỊ $y = \\sin x$ (HÌNH SIN)</h4>\n      <p class=\"text-slate-300 text-sm leading-relaxed\">\n        • Đường cong lượn sóng liên tục vô tận.<br/>\n        • Đi qua gốc tọa độ: $O(0; 0)$.<br/>\n        • Điểm cao nhất (cực đại): $\\left(\\frac{\\pi}{2} + k2\\pi; 1\\right)$.<br/>\n        • Điểm thấp nhất (cực tiểu): $\\left(-\\frac{\\pi}{2} + k2\\pi; -1\\right)$.<br/>\n        • Cắt trục hoành $Ox$ tại các điểm uốn: $x = k\\pi$.\n      </p>\n    </div>\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-emerald-500/30\">\n      <h4 class=\"text-emerald-300 font-bold text-base mb-2\">📉 ĐỒ THỊ $y = \\cos x$</h4>\n      <p class=\"text-slate-300 text-sm leading-relaxed\">\n        • Cũng là đường hình sin nhưng lệch pha.<br/>\n        • Đi qua đỉnh trên trục tung: $(0; 1)$.<br/>\n        • Cắt trục hoành $Ox$ tại: $x = \\frac{\\pi}{2} + k\\pi$.<br/>\n        • Điểm thấp nhất: $(\\pi + k2\\pi; -1)$.<br/>\n        • Mối quan hệ: Tịnh tiến đồ thị $y = \\sin x$ sang trái một đoạn $\\frac{\\pi}{2}$ ta được đồ thị $y = \\cos x$.\n      </p>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Về mặt hình học, đồ thị của cả sin và cosin đều là những đường lượn sóng hình sin mềm mại, liên tục trên toàn bộ trục số thực. Đồ thị sin x đi qua gốc tọa độ không không, đạt đỉnh tại pi phần hai và đáy tại trừ pi phần hai. Trong khi đó, đồ thị cos x đi qua đỉnh điểm không một trên trục tung. Các em chỉ cần tịnh tiến đồ thị hàm sin sang bên trái một khoảng bằng pi phần hai là thu được trọn vẹn đồ thị của hàm cosin.",
+      "startTime": 27.55,
+      "endTime": 53.4,
+      "duration": 25.85
+    },
+    {
+      "id": "scene_3",
+      "title": "Ví dụ 1: Tìm GTLN và GTNN của hàm số (Mức Nhận biết)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/50 to-indigo-900/40 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-blue-500 text-white text-xs font-bold rounded\">VÍ DỤ 1 • NHẬN BIẾT</span>\n      <span class=\"text-slate-400 text-xs\">Mục 2 • Giá trị lớn nhất & nhỏ nhất</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Tìm giá trị lớn nhất (GTLN) và giá trị nhỏ nhất (GTNN) của các hàm số sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $y = 3\\sin 2x - 5$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $y = 4 - 2\\cos\\left(x + \\frac{\\pi}{3}\\right)$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1 ở mức độ nhận biết: Tìm giá trị lớn nhất và giá trị nhỏ nhất của hai hàm số sau. Câu a: y bằng 3 sin 2x trừ 5. Câu b: y bằng 4 trừ 2 cos của x cộng pi phần 3. Hãy xuất phát từ tính chất chặn từ trừ một đến một của sin và cos trong 15 giây suy nghĩ.",
+      "startTime": 53.4,
+      "endTime": 73.03,
+      "duration": 19.63
+    },
+    {
+      "id": "scene_4",
+      "title": "Ví dụ 1: Lời giải chi tiết & Bước chặn biên độ",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-emerald-500/40\">\n    <h4 class=\"text-emerald-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 1:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) $y = 3\\sin 2x - 5$:</strong>\n        <p class=\"mt-1\">Với mọi $x \\in \\mathbb{R}$, ta luôn có: $-1 \\le \\sin 2x \\le 1$.</p>\n        <p class=\"mt-0.5\">Nhân 3 hai vế: $-3 \\le 3\\sin 2x \\le 3$.</p>\n        <p class=\"mt-0.5\">Trừ 5 hai vế: $-3 - 5 \\le 3\\sin 2x - 5 \\le 3 - 5 \\Leftrightarrow -8 \\le y \\le -2$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow \\max y = -2 \\quad \\text{và} \\quad \\min y = -8$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) $y = 4 - 2\\cos\\left(x + \\frac{\\pi}{3}\\right)$:</strong>\n        <p class=\"mt-1\">Ta có: $-1 \\le \\cos\\left(x + \\frac{\\pi}{3}\\right) \\le 1$.</p>\n        <p class=\"mt-0.5\">Nhân với $-2$ (đổi chiều bất đẳng thức): $2 \\ge -2\\cos\\left(x + \\frac{\\pi}{3}\\right) \\ge -2$.</p>\n        <p class=\"mt-0.5\">Cộng thêm 4: $4 + 2 \\ge y \\ge 4 - 2 \\Leftrightarrow 6 \\ge y \\ge 2$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow \\max y = 6 \\quad \\text{và} \\quad \\min y = 2$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 1 như sau: Ở câu a, sin 2x dao động từ trừ một đến một, nhân 3 rồi trừ 5 ta được y nằm trong đoạn từ trừ 8 đến trừ 2. Vậy giá trị lớn nhất là trừ 2 và giá trị nhỏ nhất là trừ 8. Ở câu b, chú ý khi nhân với số âm trừ 2 thì bất đẳng thức đổi chiều, cộng thêm 4 ta được y chạy từ 2 đến 6. Do đó giá trị lớn nhất bằng 6 và nhỏ nhất bằng 2.",
+      "startTime": 73.03,
+      "endTime": 98.78,
+      "duration": 25.75
+    },
+    {
+      "id": "scene_5",
+      "title": "Ví dụ 2: Xét chiều biến thiên của hàm số trên khoảng (Mức Thông hiểu)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-900/50 to-indigo-900/40 p-4 rounded-xl border border-purple-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-purple-500 text-white text-xs font-bold rounded\">VÍ DỤ 2 • THÔNG HIỂU</span>\n      <span class=\"text-slate-400 text-xs\">Mục 2 • Chiều biến thiên</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Xét sự đồng biến, nghịch biến của các hàm số sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> Hàm số $y = \\sin x$ trên khoảng $\\left(0; \\frac{3\\pi}{4}\\right)$.</p>\n      <p><strong class=\"text-sky-400\">b)</strong> Hàm số $y = \\cos x$ trên khoảng $\\left(\\pi; \\frac{3\\pi}{2}\\right)$.</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2 là bài toán thông hiểu về chiều biến thiên của hàm số sin và cosin. Xét xem: câu a hàm số y bằng sin x đồng biến hay nghịch biến trên khoảng từ 0 đến 3 pi phần 4. Câu b hàm số y bằng cos x đồng biến hay nghịch biến trên khoảng từ pi đến 3 pi phần 2. Hãy đối chiếu với đường tròn lượng giác hoặc đồ thị trong 30 giây suy nghĩ.",
+      "startTime": 98.78,
+      "endTime": 120.57,
+      "duration": 21.79
+    },
+    {
+      "id": "scene_6",
+      "title": "Ví dụ 2: Lời giải chi tiết & Quan sát đường tròn lượng giác",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-purple-500/40\">\n    <h4 class=\"text-purple-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 2:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) Khảo sát $y = \\sin x$ trên $\\left(0; \\frac{3\\pi}{4}\\right)$:</strong>\n        <p class=\"text-slate-300\">• Chia khoảng qua điểm cực đại $\\frac{\\pi}{2}$:</p>\n        <p class=\"text-slate-300\">• Trên $\\left(0; \\frac{\\pi}{2}\\right)$: Khi $x$ tăng từ $0$ đến $\\frac{\\pi}{2}$, giá trị $\\sin x$ tăng từ $0$ lên $1$ $\\Rightarrow$ Hàm số <strong>ĐỒNG BIẾN</strong>.</p>\n        <p class=\"text-slate-300\">• Trên $\\left(\\frac{\\pi}{2}; \\frac{3\\pi}{4}\\right)$: Khi $x$ tăng, giá trị $\\sin x$ giảm từ $1$ xuống $\\frac{\\sqrt{2}}{2}$ $\\Rightarrow$ Hàm số <strong>NGHỊCH BIẾN</strong>.</p>\n        <p class=\"text-yellow-300 font-bold mt-1\">Kết luận: Trên toàn khoảng $\\left(0; \\frac{3\\pi}{4}\\right)$, hàm số KHÔNG ĐƠN ĐIỆU (vừa tăng vừa giảm).</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) Khảo sát $y = \\cos x$ trên $\\left(\\pi; \\frac{3\\pi}{2}\\right)$:</strong>\n        <p class=\"text-slate-300\">• Khoảng này thuộc góc phần tư thứ III.</p>\n        <p class=\"text-slate-300\">• Khi $x$ tăng từ $\\pi$ đến $\\frac{3\\pi}{2}$, hoành độ điểm biểu diễn tăng từ $-1$ lên $0$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">Kết luận: Hàm số $y = \\cos x$ ĐỒNG BIẾN trên khoảng $\\left(\\pi; \\frac{3\\pi}{2}\\right)$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 2 như sau. Ở câu a, khoảng từ 0 đến 3 pi phần 4 chứa điểm đỉnh pi phần hai. Từ 0 đến pi phần hai sin tăng từ 0 lên 1 nên đồng biến, nhưng từ pi phần hai đến 3 pi phần 4 sin lại giảm từ 1 xuống căn hai phần hai nên nghịch biến. Do đó trên toàn khoảng này hàm số không đơn điệu. Ở câu b, trên khoảng từ pi đến 3 pi phần 2 thuộc góc phần tư thứ ba, giá trị cos tăng từ trừ một lên không, nên hàm số cos x đồng biến.",
+      "startTime": 120.57,
+      "endTime": 149.87,
+      "duration": 29.3
+    },
+    {
+      "id": "scene_7",
+      "title": "Ví dụ 3: Tìm tập giá trị của hàm số quy về bậc hai (Mức Vận dụng)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-900/50 to-orange-900/40 p-4 rounded-xl border border-amber-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-amber-500 text-slate-900 text-xs font-bold rounded\">VÍ DỤ 3 • VẬN DỤNG</span>\n      <span class=\"text-slate-400 text-xs\">Mục 2 • Biến đổi lượng giác</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Tìm tập giá trị (GTLN và GTNN) của các hàm số sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $y = 2\\sin^2 x - \\cos 2x + 3$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $y = \\sqrt{3}\\sin x - \\cos x + 1$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3 là bài toán vận dụng tìm tập giá trị: Câu a y bằng 2 sin bình phương x trừ cos 2x cộng 3. Câu b y bằng căn 3 sin x trừ cos x cộng 1. Các em hãy vận dụng công thức nhân đôi ở câu a và dạng asinx cộng bcosx ở câu b trong 30 giây suy nghĩ.",
+      "startTime": 149.87,
+      "endTime": 167.58,
+      "duration": 17.71
+    },
+    {
+      "id": "scene_8",
+      "title": "Ví dụ 3: Lời giải chi tiết & Tuyệt kỹ hạ bậc quy về một hàm",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-amber-500/40\">\n    <h4 class=\"text-amber-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 3:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) $y = 2\\sin^2 x - \\cos 2x + 3$:</strong>\n        <p class=\"text-slate-300\">• Dùng công thức nhân đôi: $\\cos 2x = 1 - 2\\sin^2 x$.</p>\n        <p class=\"text-slate-300\">$$\\Rightarrow y = 2\\sin^2 x - (1 - 2\\sin^2 x) + 3 = 4\\sin^2 x + 2$$</p>\n        <p class=\"text-slate-300\">• Vì $0 \\le \\sin^2 x \\le 1 \\Rightarrow 0 \\le 4\\sin^2 x \\le 4 \\Rightarrow 2 \\le y \\le 6$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow \\text{Tập giá trị là } TGT = [2; 6] \\quad (\\max y = 6, \\min y = 2)$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) $y = \\sqrt{3}\\sin x - \\cos x + 1$:</strong>\n        <p class=\"text-slate-300\">• Biến đổi dạng $a\\sin x + b\\cos x$: chia và nhân với $\\sqrt{(\\sqrt{3})^2 + (-1)^2} = 2$:</p>\n        <p class=\"text-slate-300\">$$\\sqrt{3}\\sin x - \\cos x = 2\\left(\\frac{\\sqrt{3}}{2}\\sin x - \\frac{1}{2}\\cos x\\right) = 2\\sin\\left(x - \\frac{\\pi}{6}\\right)$$</p>\n        <p class=\"text-slate-300\">$$\\Rightarrow y = 2\\sin\\left(x - \\frac{\\pi}{6}\\right) + 1$$</p>\n        <p class=\"text-slate-300\">• Vì $-1 \\le \\sin\\left(x - \\frac{\\pi}{6}\\right) \\le 1 \\Rightarrow -2 \\le 2\\sin \\le 2 \\Rightarrow -1 \\le y \\le 3$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow \\text{Tập giá trị là } TGT = [-1; 3] \\quad (\\max y = 3, \\min y = -1)$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải chi tiết ví dụ 3 như sau. Ở câu a, ta thay cos 2x bằng 1 trừ 2 sin bình x, biểu thức rút gọn về dạng 4 sin bình x cộng 2. Vì sin bình nằm từ không đến một, nên y dao động từ 2 đến 6, tập giá trị là đoạn từ 2 đến 6. Ở câu b, biểu thức căn 3 sin x trừ cos x được rút gọn thành 2 lần sin của x trừ pi phần 6. Cộng thêm 1, ta được khoảng giá trị từ trừ một đến 3. Tuyệt đối chính xác và nhanh chóng.",
+      "startTime": 167.58,
+      "endTime": 198.04,
+      "duration": 30.46
+    },
+    {
+      "id": "scene_9",
+      "title": "Ví dụ 4: Mô hình dao động điều hòa của con lắc (Mức Vận dụng cao)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-rose-900/50 to-red-900/40 p-4 rounded-xl border border-rose-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-rose-500 text-white text-xs font-bold rounded\">VÍ DỤ 4 • VẬN DỤNG CAO</span>\n      <span class=\"text-slate-400 text-xs\">Vật lý • Dao động điều hòa</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Phương trình li độ dao động điều hòa của vật:</h4>\n    <p class=\"text-slate-300 text-sm leading-relaxed mt-2\">\n      Một vật dao động điều hòa quanh vị trí cân bằng theo phương trình:\n    </p>\n    <div class=\"bg-slate-900/90 p-3 rounded-lg border border-slate-700 text-center font-bold text-cyan-300 text-lg\">\n      $$x(t) = 4\\cos\\left(5\\pi t - \\frac{\\pi}{3}\\right) \\quad (x\\text{ đo bằng cm, } t\\text{ đo bằng giây})$$\n    </div>\n    <div class=\"mt-2 space-y-1.5 text-sm text-slate-200\">\n      <p><strong class=\"text-sky-300\">a)</strong> Xác định biên độ dao động $A$, chu kỳ $T$ và tần số $f$.</p>\n      <p><strong class=\"text-emerald-300\">b)</strong> Trong khoảng thời gian $0 \\le t \\le 1$ giây đầu tiên, vật đi qua vị trí cân bằng ($x = 0$) bao nhiêu lần và tại những thời điểm nào?</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4 là bài toán vận dụng cao liên môn giữa hàm số lượng giác và Vật lý 11 về dao động điều hòa. Một vật dao động theo phương trình li độ: x t bằng 4 cos của 5 pi t trừ pi phần 3, với x tính bằng xăng ti mét và t tính bằng giây. Câu a tìm biên độ A, chu kỳ T và tần số f. Câu b tìm số lần và các thời điểm vật đi qua vị trí cân bằng trong 1 giây đầu tiên. Các em có 30 giây suy nghĩ.",
+      "startTime": 198.04,
+      "endTime": 223.84,
+      "duration": 25.8
+    },
+    {
+      "id": "scene_10",
+      "title": "Ví dụ 4: Lời giải chi tiết & Đếm số nghiệm thời gian",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-rose-500/40\">\n    <h4 class=\"text-rose-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 4:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-300\">a) Biên độ, chu kỳ và tần số:</strong>\n        <p class=\"mt-1\">• Biên độ dao động: <span class=\"text-yellow-400 font-bold\">$A = 4\\text{ cm}$</span>.</p>\n        <p>• Tần số góc $\\omega = 5\\pi\\text{ rad/s} \\Rightarrow$ Chu kỳ: <span class=\"text-emerald-300 font-bold\">$$T = \\frac{2\\pi}{\\omega} = \\frac{2\\pi}{5\\pi} = 0.4\\text{ giây}$$</span></p>\n        <p>• Tần số dao động: <span class=\"text-cyan-300 font-bold\">$$f = \\frac{1}{T} = \\frac{1}{0.4} = 2.5\\text{ Hz}$$</span></p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-emerald-300\">b) Vị trí cân bằng $x(t) = 0$ trong $1\\text{ s}$ đầu:</strong>\n        <p class=\"text-slate-300\">$$\\cos\\left(5\\pi t - \\frac{\\pi}{3}\\right) = 0 \\Leftrightarrow 5\\pi t - \\frac{\\pi}{3} = \\frac{\\pi}{2} + k\\pi \\Leftrightarrow 5\\pi t = \\frac{5\\pi}{6} + k\\pi$$</p>\n        <p class=\"text-center font-bold text-amber-300\">$$\\Leftrightarrow t = \\frac{1}{6} + \\frac{k}{5} \\quad (k \\in \\mathbb{Z})$$</p>\n        <p class=\"text-slate-300\">Vì $0 \\le t \\le 1 \\Leftrightarrow 0 \\le \\frac{1}{6} + \\frac{k}{5} \\le 1 \\Leftrightarrow -\\frac{5}{6} \\le k \\le \\frac{25}{6} \\approx 4.16$.</p>\n        <p class=\"text-slate-300\">Vì $k \\in \\mathbb{Z} \\Rightarrow k \\in \\{0, 1, 2, 3, 4\\}$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">Kết luận: Vật qua VTCB đúng <span class=\"text-yellow-300\">5 lần</span> tại các thời điểm: $t_0 = \\frac{1}{6}\\text{s}$, $t_1 = \\frac{11}{30}\\text{s}$, $t_2 = \\frac{17}{30}\\text{s}$, $t_3 = \\frac{23}{30}\\text{s}$, $t_4 = \\frac{29}{30}\\text{s}$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 4 như sau: Ở câu a, biên độ A bằng 4 cm, tần số góc 5 pi ra đi an trên giây, suy ra chu kỳ T bằng 0.4 giây và tần số f bằng 2.5 Héc. Ở câu b, vật qua vị trí cân bằng khi cos bằng 0, tức 5 pi t trừ pi phần 3 bằng pi phần hai cộng k pi. Giải ra ta được t bằng 1 phần 6 cộng k phần 5. Chặn t từ 0 đến 1, ta tìm được đúng 5 giá trị k nguyên từ 0 đến 4. Như vậy trong 1 giây đầu tiên, vật đi qua vị trí cân bằng đúng 5 lần. Một ứng dụng tuyệt đẹp của hàm số lượng giác!",
+      "startTime": 223.84,
+      "endTime": 246.28,
+      "duration": 22.44
+    },
+    {
+      "id": "scene_11",
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM ĐỒ THỊ VÀ TẬP GIÁ TRỊ",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-red-950/70 to-rose-950/50 p-4 rounded-xl border border-red-500/40\">\n    <h3 class=\"text-red-300 font-bold text-base flex items-center gap-2\">\n      <i class=\"fa-solid fa-triangle-exclamation text-red-400 text-lg\"></i>\n      3 BẪY SAI LẦM PHỔ BIẾN KHI KHẢO SÁT HÀM SIN VÀ COS\n    </h3>\n    <div class=\"mt-3 space-y-3 text-sm\">\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 1: Nhầm lẫn điểm đi qua của đồ thị tại $x = 0$</p>\n        <p class=\"text-slate-300 mt-1\">Đồ thị $y = \\sin x$ luôn đi qua gốc tọa độ $(0; 0)$, còn đồ thị $y = \\cos x$ luôn đi qua điểm cực đại $(0; 1)$ trên trục tung.</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 2: Nhầm khoảng đồng biến nghịch biến của cosin</p>\n        <p class=\"text-slate-300 mt-1\">Hàm số $y = \\cos x$ NGHỊCH BIẾN trên $(0; \\pi)$ và ĐỒNG BIẾN trên $(-\\pi; 0)$. Rất nhiều bạn nhớ nhầm thành đồng biến trên $(0; \\pi)$.</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 3: Quên chặn điều kiện ẩn phụ khi đặt $t = \\sin x$ hoặc $t = \\cos x$</p>\n        <p class=\"text-slate-300 mt-1\">Khi đưa về hàm số bậc hai theo $t$, bắt buộc phải kèm điều kiện $t \\in [-1; 1]$. Đỉnh parabol nằm ngoài đoạn này sẽ không thể lấy làm GTLN hay GTNN.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Trước khi tổng kết Mục 2, hãy ghi nhớ ba bẫy sai lầm phổ biến: Thứ nhất, đồ thị sin đi qua gốc không không, còn cos đi qua không một. Thứ hai, hàm cos nghịch biến trên khoảng từ 0 đến pi chứ không phải đồng biến. Thứ ba, khi đặt ẩn phụ t bằng sin x hay cos x, tuyệt đối không được quên điều kiện t thuộc đoạn từ trừ một đến một.",
+      "startTime": 246.28,
+      "endTime": 266.78,
+      "duration": 20.5
+    },
+    {
+      "id": "scene_12",
+      "title": "4. TỔNG KẾT MỤC 2 & BÍ KÍP CÚ THÔNG THÁI",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/40\">\n    <h3 class=\"text-emerald-300 font-bold text-lg flex items-center gap-2\">\n      <i class=\"fa-solid fa-trophy text-yellow-400\"></i>\n      TỔNG KẾT MỤC 2 • BÍ KÍP VÀNG\n    </h3>\n    <div class=\"mt-3 p-4 bg-slate-900/90 rounded-xl border border-slate-700 text-sm leading-relaxed space-y-2\">\n      <p class=\"text-amber-300 font-bold\">🌟 THẦN CHÚ KHẮC SÂU ĐỒ THỊ HÌNH SIN:</p>\n      <div class=\"bg-slate-800/80 p-3 rounded-lg border border-amber-500/30 text-emerald-200 font-serif italic text-center space-y-1\">\n        <p>Sin xuất phát từ không, uốn lượn nhịp nhàng quanh trục hoành,</p>\n        <p>Cos xuất phát từ một, hạ dần về đáy rồi vút lên cao.</p>\n        <p>Đỉnh cao nhất là một, đáy sâu nhất trừ một chẳng sai,</p>\n        <p>Hai pi trọn một vòng đời lặp lại muôn năm!</p>\n      </div>\n      <p class=\"text-slate-300 mt-2\">\n        Các em đã nắm vững toàn bộ kiến thức về hàm sin và cosin. Cùng bước sang Mục 3 để chinh phục nốt hai hàm số tang và côtang nhé!\n      </p>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúc mừng các em đã hoàn thành xuất sắc Mục 2. Hãy đọc lại bốn câu thần chú ghi nhớ: Sin xuất phát từ không, uốn lượn nhịp nhàng quanh trục hoành - Cos xuất phát từ một, hạ dần về đáy rồi vút lên cao - Đỉnh cao nhất là một, đáy sâu nhất trừ một chẳng sai - Hai pi trọn một vòng đời lặp lại muôn năm. Thầy hẹn gặp các em ở Mục 3!",
+      "startTime": 266.78,
+      "endTime": 289.92,
+      "duration": 23.14
+    }
+  ],
+  "totalDuration": 289.92,
+  "duration": 289.92,
+  "timeline": [
+    {
+      "sceneId": "scene_1",
+      "title": "1. TÍNH CHẤT TOÀN DIỆN CỦA HÀM SỐ SIN & CÔSIN",
+      "startTime": 0.0,
+      "endTime": 27.55,
+      "duration": 27.55
+    },
+    {
+      "sceneId": "scene_2",
+      "title": "2. ĐẶC ĐIỂM HÌNH HỌC CỦA ĐỒ THỊ HÌNH SIN",
+      "startTime": 27.55,
+      "endTime": 53.4,
+      "duration": 25.85
+    },
+    {
+      "sceneId": "scene_3",
+      "title": "Ví dụ 1: Tìm GTLN và GTNN của hàm số (Mức Nhận biết)",
+      "startTime": 53.4,
+      "endTime": 73.03,
+      "duration": 19.63
+    },
+    {
+      "sceneId": "scene_4",
+      "title": "Ví dụ 1: Lời giải chi tiết & Bước chặn biên độ",
+      "startTime": 73.03,
+      "endTime": 98.78,
+      "duration": 25.75
+    },
+    {
+      "sceneId": "scene_5",
+      "title": "Ví dụ 2: Xét chiều biến thiên của hàm số trên khoảng (Mức Thông hiểu)",
+      "startTime": 98.78,
+      "endTime": 120.57,
+      "duration": 21.79
+    },
+    {
+      "sceneId": "scene_6",
+      "title": "Ví dụ 2: Lời giải chi tiết & Quan sát đường tròn lượng giác",
+      "startTime": 120.57,
+      "endTime": 149.87,
+      "duration": 29.3
+    },
+    {
+      "sceneId": "scene_7",
+      "title": "Ví dụ 3: Tìm tập giá trị của hàm số quy về bậc hai (Mức Vận dụng)",
+      "startTime": 149.87,
+      "endTime": 167.58,
+      "duration": 17.71
+    },
+    {
+      "sceneId": "scene_8",
+      "title": "Ví dụ 3: Lời giải chi tiết & Tuyệt kỹ hạ bậc quy về một hàm",
+      "startTime": 167.58,
+      "endTime": 198.04,
+      "duration": 30.46
+    },
+    {
+      "sceneId": "scene_9",
+      "title": "Ví dụ 4: Mô hình dao động điều hòa của con lắc (Mức Vận dụng cao)",
+      "startTime": 198.04,
+      "endTime": 223.84,
+      "duration": 25.8
+    },
+    {
+      "sceneId": "scene_10",
+      "title": "Ví dụ 4: Lời giải chi tiết & Đếm số nghiệm thời gian",
+      "startTime": 223.84,
+      "endTime": 246.28,
+      "duration": 22.44
+    },
+    {
+      "sceneId": "scene_11",
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM ĐỒ THỊ VÀ TẬP GIÁ TRỊ",
+      "startTime": 246.28,
+      "endTime": 266.78,
+      "duration": 20.5
+    },
+    {
+      "sceneId": "scene_12",
+      "title": "4. TỔNG KẾT MỤC 2 & BÍ KÍP CÚ THÔNG THÁI",
+      "startTime": 266.78,
+      "endTime": 289.92,
+      "duration": 23.14
+    }
+  ]
+};
+
+  window.G11_CHAPTER1_DATA.g11_bai3_muc3 = {
+  "lessonId": "toan11_bai3",
+  "lessonTitle": "Bài 3: Hàm số lượng giác",
+  "sectionId": "g11_bai3_muc3",
+  "sectionTitle": "Mục 3: Đồ thị và tính chất của hàm số tang và côtang",
+  "title": "Mục 3: Đồ thị và tính chất của hàm số tang và côtang",
+  "audio": "/audio/g11_bai3_muc3.mp3",
+  "audioSrc": "./audio/g11_bai3_muc3.mp3",
+  "audio_src": "./audio/g11_bai3_muc3.mp3",
+  "owl_tip": "Hàm số tang luôn đồng biến trên từng khoảng xác định, còn côtang luôn nghịch biến trên từng khoảng xác định. Cả hai đều có tập giá trị là toàn bộ tập số thực R!",
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Khảo sát hàm số tang và côtang",
+      "start": 0
+    },
+    {
+      "id": "part2",
+      "title": "Đồ thị và đường tiệm cận đứng",
+      "start": 0
+    },
+    {
+      "id": "part3",
+      "title": "4 Ví dụ minh họa trọng tâm",
+      "start": 0
+    },
+    {
+      "id": "part4",
+      "title": "Bẫy trắc nghiệm & Tổng kết bài học",
+      "start": 0
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "title": "1. TÍNH CHẤT TOÀN DIỆN CỦA HÀM SỐ TANG & CÔTANG",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/30\">\n    <h3 class=\"text-emerald-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-emerald-500/20 rounded text-emerald-300 text-sm\">Trọng tâm</span>\n      BẢNG SO SÁNH TÍNH CHẤT HÀM SỐ $y = \\tan x$ VÀ $y = \\cot x$\n    </h3>\n    <div class=\"overflow-x-auto mt-3\">\n      <table class=\"w-full text-left text-xs sm:text-sm text-slate-200 border-collapse\">\n        <thead>\n          <tr class=\"bg-slate-800 text-amber-300 border-b border-slate-700\">\n            <th class=\"p-2.5\">Đặc tính</th>\n            <th class=\"p-2.5 text-emerald-300\">Hàm số $y = \\tan x$</th>\n            <th class=\"p-2.5 text-sky-300\">Hàm số $y = \\cot x$</th>\n          </tr>\n        </thead>\n        <tbody class=\"divide-y divide-slate-800 bg-slate-900/80\">\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Tập xác định ($D$)</td>\n            <td class=\"p-2.5\">$D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{2} + k\\pi, k \\in \\mathbb{Z}\\right\\}$</td>\n            <td class=\"p-2.5\">$D = \\mathbb{R} \\setminus \\{k\\pi, k \\in \\mathbb{Z}\\}$</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Tập giá trị ($TGT$)</td>\n            <td class=\"p-2.5 text-amber-300 font-bold\">$\\mathbb{R}$ (toàn trục số)</td>\n            <td class=\"p-2.5 text-amber-300 font-bold\">$\\mathbb{R}$ (toàn trục số)</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Tính chẵn - lẻ</td>\n            <td class=\"p-2.5 text-indigo-300 font-semibold\">Hàm số LẺ (tâm đối xứng $O$)</td>\n            <td class=\"p-2.5 text-indigo-300 font-semibold\">Hàm số LẺ</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Chu kỳ tuần hoàn</td>\n            <td class=\"p-2.5 text-yellow-400 font-bold\">$T = \\pi$</td>\n            <td class=\"p-2.5 text-yellow-400 font-bold\">$T = \\pi$</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Chiều biến thiên</td>\n            <td class=\"p-2.5 text-emerald-400 font-bold\">Luôn ĐỒNG BIẾN trên mỗi $\\left(-\\frac{\\pi}{2} + k\\pi; \\frac{\\pi}{2} + k\\pi\\right)$</td>\n            <td class=\"p-2.5 text-rose-400 font-bold\">Luôn NGHỊCH BIẾN trên mỗi $(k\\pi; \\pi + k\\pi)$</td>\n          </tr>\n          <tr>\n            <td class=\"p-2.5 font-bold text-slate-300\">Tiệm cận đứng</td>\n            <td class=\"p-2.5\">$x = \\frac{\\pi}{2} + k\\pi$</td>\n            <td class=\"p-2.5\">$x = k\\pi$</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Mục 3: Đồ thị và tính chất của hàm số tang và côtang. Khác với sin và cosin vốn là các hàm số bị chặn và liên tục trên R, hàm tang và côtang là các hàm phân thức lượng giác có đồ thị gián đoạn với vô số nhánh. Tập giá trị của chúng là toàn bộ trục số thực R, chu kỳ tuần hoàn chỉ bằng một pi. Đặc biệt, hàm tang luôn đồng biến trên từng khoảng xác định, còn hàm côtang luôn nghịch biến trên từng khoảng xác định.",
+      "startTime": 0.0,
+      "endTime": 27.17,
+      "duration": 27.17
+    },
+    {
+      "id": "scene_2",
+      "title": "2. HÌNH DÁNG ĐỒ THỊ VÀ TIỆM CẬN ĐỨNG",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-emerald-500/30\">\n      <h4 class=\"text-emerald-300 font-bold text-base mb-2\">🌿 ĐỒ THỊ $y = \\tan x$</h4>\n      <p class=\"text-slate-300 text-sm leading-relaxed\">\n        • Gồm vô số nhánh rời rạc cách nhau một khoảng $\\pi$.<br/>\n        • Mỗi nhánh đi lên từ trái sang phải (đồng biến).<br/>\n        • Đi qua gốc tọa độ $O(0; 0)$ và là tâm đối xứng.<br/>\n        • Bị kẹp giữa hai đường tiệm cận đứng $x = -\\frac{\\pi}{2}$ và $x = \\frac{\\pi}{2}$.<br/>\n        • Khi $x \\to \\frac{\\pi}{2}^-$, $y \\to +\\infty$; khi $x \\to -\\frac{\\pi}{2}^+$, $y \\to -\\infty$.\n      </p>\n    </div>\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-sky-500/30\">\n      <h4 class=\"text-sky-300 font-bold text-base mb-2\">🌊 ĐỒ THỊ $y = \\cot x$</h4>\n      <p class=\"text-slate-300 text-sm leading-relaxed\">\n        • Gồm vô số nhánh rời rạc cách nhau chu kỳ $\\pi$.<br/>\n        • Mỗi nhánh đi xuống từ trái sang phải (nghịch biến).<br/>\n        • Cắt trục hoành tại các điểm $\\left(\\frac{\\pi}{2} + k\\pi; 0\\right)$.<br/>\n        • Bị kẹp giữa hai đường tiệm cận đứng $x = 0$ (trục $Oy$) và $x = \\pi$.<br/>\n        • Khi $x \\to 0^+$, $y \\to +\\infty$; khi $x \\to \\pi^-$, $y \\to -\\infty$.\n      </p>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Về mặt hình học, đồ thị của hàm tang gồm các nhánh lượn sóng đi lên từ trái qua phải, nhận các đường thẳng x bằng pi phần hai cộng k pi làm tiệm cận đứng. Đồ thị hàm côtang lại có các nhánh lượn dốc xuống từ trái qua phải, nhận các đường thẳng x bằng k pi làm tiệm cận đứng. Hãy nhớ rằng các nhánh này lặp lại y hệt nhau sau mỗi chu kỳ bằng pi.",
+      "startTime": 27.17,
+      "endTime": 48.6,
+      "duration": 21.43
+    },
+    {
+      "id": "scene_3",
+      "title": "Ví dụ 1: Tìm tập xác định của hàm số tang và côtang (Mức Nhận biết)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/50 to-indigo-900/40 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-blue-500 text-white text-xs font-bold rounded\">VÍ DỤ 1 • NHẬN BIẾT</span>\n      <span class=\"text-slate-400 text-xs\">Mục 3 • Tập xác định</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Tìm tập xác định của các hàm số sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $y = \\tan 3x$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $y = \\cot\\left(x - \\frac{\\pi}{4}\\right)$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1 ở mức độ nhận biết: Tìm tập xác định của hai hàm số sau. Câu a: y bằng tan 3x. Câu b: y bằng cot của x trừ pi phần 4. Các em hãy nhớ điều kiện hàm tang là cos khác không và hàm côtang là sin khác không trong 15 giây suy nghĩ.",
+      "startTime": 48.6,
+      "endTime": 66.58,
+      "duration": 17.98
+    },
+    {
+      "id": "scene_4",
+      "title": "Ví dụ 1: Lời giải chi tiết & Điều kiện xác định chuẩn",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-emerald-500/40\">\n    <h4 class=\"text-emerald-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 1:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) $y = \\tan 3x$:</strong>\n        <p class=\"mt-1\">Hàm số xác định khi và chỉ khi:</p>\n        <p class=\"text-slate-300\">$$\\cos 3x \\ne 0 \\Leftrightarrow 3x \\ne \\frac{\\pi}{2} + k\\pi \\Leftrightarrow x \\ne \\frac{\\pi}{6} + k\\frac{\\pi}{3} \\quad (k \\in \\mathbb{Z})$$</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{6} + k\\frac{\\pi}{3}, k \\in \\mathbb{Z}\\right\\}$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) $y = \\cot\\left(x - \\frac{\\pi}{4}\\right)$:</strong>\n        <p class=\"mt-1\">Hàm số xác định khi và chỉ khi:</p>\n        <p class=\"text-slate-300\">$$\\sin\\left(x - \\frac{\\pi}{4}\\right) \\ne 0 \\Leftrightarrow x - \\frac{\\pi}{4} \\ne k\\pi \\Leftrightarrow x \\ne \\frac{\\pi}{4} + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{4} + k\\pi, k \\in \\mathbb{Z}\\right\\}$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 1 như sau. Ở câu a, tan 3x xác định khi cos 3x khác không, tức 3x khác pi phần hai cộng k pi. Chia cả hai vế cho 3 ta được x khác pi phần 6 cộng k pi chia 3. Ở câu b, côtang xác định khi sin khác không, tức góc x trừ pi phần 4 khác k pi, chuyển vế ta được x khác pi phần 4 cộng k pi. Rất mạch lạc và chính xác.",
+      "startTime": 66.58,
+      "endTime": 80.38,
+      "duration": 13.8
+    },
+    {
+      "id": "scene_5",
+      "title": "Ví dụ 2: So sánh giá trị không dùng máy tính cầm tay (Mức Thông hiểu)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-900/50 to-indigo-900/40 p-4 rounded-xl border border-purple-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-purple-500 text-white text-xs font-bold rounded\">VÍ DỤ 2 • THÔNG HIỂU</span>\n      <span class=\"text-slate-400 text-xs\">Mục 3 • Tính đơn điệu</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Dựa vào tính đơn điệu, hãy so sánh:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> So sánh $\\tan 15^\\circ$ và $\\tan 40^\\circ$.</p>\n      <p><strong class=\"text-sky-400\">b)</strong> So sánh $\\cot\\frac{\\pi}{5}$ và $\\cot\\frac{2\\pi}{5}$.</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2 là câu hỏi thông hiểu dựa vào tính đơn điệu để so sánh giá trị lượng giác mà không cần bấm máy tính. Câu a hãy so sánh tan 15 độ và tan 40 độ. Câu b hãy so sánh cot pi phần 5 và cot 2 pi phần 5. Các em có 30 giây suy nghĩ dựa trên tính chất tăng hay giảm của hàm số.",
+      "startTime": 80.38,
+      "endTime": 94.42,
+      "duration": 14.04
+    },
+    {
+      "id": "scene_6",
+      "title": "Ví dụ 2: Lời giải chi tiết & Vận dụng tính đồng biến, nghịch biến",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-purple-500/40\">\n    <h4 class=\"text-purple-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 2:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) So sánh $\\tan 15^\\circ$ và $\\tan 40^\\circ$:</strong>\n        <p class=\"text-slate-300\">• Ta thấy hai góc $15^\\circ$ và $40^\\circ$ đều thuộc khoảng xác định $\\left(0^\\circ; 90^\\circ\\right)$ tức $\\left(0; \\frac{\\pi}{2}\\right)$.</p>\n        <p class=\"text-slate-300\">• Vì hàm số $y = \\tan x$ luôn <strong>ĐỒNG BIẾN</strong> trên $\\left(0; \\frac{\\pi}{2}\\right)$ và $15^\\circ < 40^\\circ$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow \\tan 15^\\circ < \\tan 40^\\circ$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) So sánh $\\cot\\frac{\\pi}{5}$ và $\\cot\\frac{2\\pi}{5}$:</strong>\n        <p class=\"text-slate-300\">• Cả hai góc $\\frac{\\pi}{5}$ và $\\frac{2\\pi}{5}$ đều thuộc khoảng xác định $(0; \\pi)$.</p>\n        <p class=\"text-slate-300\">• Vì hàm số $y = \\cot x$ luôn <strong>NGHỊCH BIẾN</strong> trên $(0; \\pi)$ và $\\frac{\\pi}{5} < \\frac{2\\pi}{5}$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow \\cot\\frac{\\pi}{5} > \\cot\\frac{2\\pi}{5}$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 2 như sau. Ở câu a, hai góc 15 độ và 40 độ cùng thuộc khoảng từ 0 đến 90 độ. Do hàm tang đồng biến trên khoảng này và 15 độ nhỏ hơn 40 độ, nên tan 15 độ nhỏ hơn tan 40 độ. Ở câu b, hai góc pi phần 5 và 2 pi phần 5 cùng thuộc khoảng từ 0 đến pi. Vì hàm côtang nghịch biến trên khoảng xác định nên góc lớn hơn sẽ có giá trị côtang nhỏ hơn. Do đó cot pi phần 5 lớn hơn cot 2 pi phần 5.",
+      "startTime": 94.42,
+      "endTime": 115.18,
+      "duration": 20.76
+    },
+    {
+      "id": "scene_7",
+      "title": "Ví dụ 3: Tìm GTLN và GTNN của hàm số trên đoạn (Mức Vận dụng)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-900/50 to-orange-900/40 p-4 rounded-xl border border-amber-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-amber-500 text-slate-900 text-xs font-bold rounded\">VÍ DỤ 3 • VẬN DỤNG</span>\n      <span class=\"text-slate-400 text-xs\">Mục 3 • Tối ưu hóa</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Tìm giá trị lớn nhất và nhỏ nhất của hàm số:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> Hàm số $y = \\tan^2 x - 2\\tan x + 3$ trên đoạn $\\left[0; \\frac{\\pi}{4}\\right]$.</p>\n      <p><strong class=\"text-sky-400\">b)</strong> Trên tập xác định $D$, hàm số $y = \\tan x$ có GTLN và GTNN hay không? Vì sao?</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3 là bài toán vận dụng: Câu a yêu cầu tìm giá trị lớn nhất và nhỏ nhất của hàm số y bằng tan bình x trừ 2 tan x cộng 3 trên đoạn từ 0 đến pi phần 4. Câu b hỏi trên toàn bộ tập xác định D, hàm số y bằng tan x có giá trị lớn nhất và nhỏ nhất hay không. 30 giây suy nghĩ cho các em.",
+      "startTime": 115.18,
+      "endTime": 134.64,
+      "duration": 19.46
+    },
+    {
+      "id": "scene_8",
+      "title": "Ví dụ 3: Lời giải chi tiết & Kỹ thuật đặt ẩn phụ",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-amber-500/40\">\n    <h4 class=\"text-amber-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 3:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-amber-400\">a) $y = \\tan^2 x - 2\\tan x + 3$ trên $\\left[0; \\frac{\\pi}{4}\\right]$:</strong>\n        <p class=\"text-slate-300\">• Đặt $t = \\tan x$. Vì $x \\in \\left[0; \\frac{\\pi}{4}\\right]$ và hàm tang đồng biến nên $t \\in [\\tan 0; \\tan(\\pi/4)] = [0; 1]$.</p>\n        <p class=\"text-slate-300\">• Hàm số trở thành: $f(t) = t^2 - 2t + 3 = (t - 1)^2 + 2$.</p>\n        <p class=\"text-slate-300\">• Đỉnh parabol tại $t = 1 \\in [0; 1]$.</p>\n        <p class=\"text-slate-300\">• Tính giá trị biên: $f(0) = 3$; $f(1) = 2$.</p>\n        <p class=\"text-emerald-300 font-bold mt-1\">$$\\Rightarrow \\max_{\\left[0; \\frac{\\pi}{4}\\right]} y = 3 \\text{ (tại } x = 0) \\quad \\text{và} \\quad \\min_{\\left[0; \\frac{\\pi}{4}\\right]} y = 2 \\text{ (tại } x = \\frac{\\pi}{4})$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-400\">b) Trên toàn miền xác định $D$:</strong>\n        <p class=\"text-slate-300\">• Tập giá trị của $y = \\tan x$ là toàn bộ $\\mathbb{R}$ (chạy từ $-\\infty$ đến $+\\infty$).</p>\n        <p class=\"text-rose-400 font-bold mt-1\">Kết luận: Hàm số $y = \\tan x$ KHÔNG CÓ GTLN VÀ KHÔNG CÓ GTNN trên toàn miền xác định $D$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 3 như sau. Ở câu a, khi đặt t bằng tan x với x từ 0 đến pi phần 4, ta được t thuộc đoạn từ 0 đến 1. Hàm số f t bằng t bình trừ 2t cộng 3 có đỉnh tại t bằng 1. Ta tính được f tại không bằng 3 và f tại một bằng 2. Do đó giá trị lớn nhất bằng 3 đạt tại x bằng 0, và giá trị nhỏ nhất bằng 2 đạt tại x bằng pi phần 4. Ở câu b, vì tập giá trị của tang là toàn bộ R không bị chặn nên hàm tang không có giá trị lớn nhất và không có giá trị nhỏ nhất trên toàn tập xác định.",
+      "startTime": 134.64,
+      "endTime": 148.8,
+      "duration": 14.16
+    },
+    {
+      "id": "scene_9",
+      "title": "Ví dụ 4: Bài toán vệt sáng ngọn hải đăng quét trên bờ biển (Mức Vận dụng cao)",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-rose-900/50 to-red-900/40 p-4 rounded-xl border border-rose-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-rose-500 text-white text-xs font-bold rounded\">VÍ DỤ 4 • VẬN DỤNG CAO</span>\n      <span class=\"text-slate-400 text-xs\">Thực tế • Vệt sáng hải đăng</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Mô hình toán học chuyển động vệt sáng:</h4>\n    <p class=\"text-slate-300 text-sm leading-relaxed mt-2\">\n      Một ngọn hải đăng đặt tại điểm $H$ ngoài biển cách bờ biển thẳng một khoảng $d = 3\\text{ km}$. Đèn hải đăng quay đều với tốc độ góc $\\omega = 4\\pi\\text{ rad/phút}$ (2 vòng/phút). Gọi $O$ là điểm trên bờ gần hải đăng nhất ($HO \\perp$ bờ). Khoảng cách $x(t)$ (km) từ vệt sáng đến $O$ tại thời điểm $t$ (phút) được cho bởi:\n    </p>\n    <div class=\"bg-slate-900/90 p-3 rounded-lg border border-slate-700 text-center font-bold text-amber-300 text-lg\">\n      $$x(t) = 3\\tan(4\\pi t) \\quad \\left(-\\frac{1}{8} < t < \\frac{1}{8}\\right)$$\n    </div>\n    <div class=\"mt-2 space-y-1.5 text-sm text-slate-200\">\n      <p><strong class=\"text-sky-300\">a)</strong> Tính khoảng cách từ vệt sáng đến $O$ tại thời điểm $t = \\frac{1}{16}$ phút ($3.75$ giây).</p>\n      <p><strong class=\"text-emerald-300\">b)</strong> Giải thích hiện tượng hình học: Tại sao khi $t$ tiến dần đến $\\frac{1}{8}$ phút, vệt sáng lại quét ra xa vô tận với tốc độ cực lớn dọc theo bờ biển?</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4 là bài toán thực tế vận dụng cao về vệt sáng của ngọn hải đăng quét dọc bờ biển. Một ngọn hải đăng cách bờ biển thẳng 3 km, quay với tốc độ góc 4 pi radian mỗi phút. Vị trí vệt sáng x t tính theo công thức 3 nhân tan của 4 pi t. Câu a tính khoảng cách vệt sáng tại thời điểm t bằng 1 phần 16 phút. Câu b giải thích tại sao khi t tiến dần tới 1 phần 8 phút thì vệt sáng lại chạy ra xa vô cực với vận tốc cực lớn. 30 giây suy nghĩ cho các em.",
+      "startTime": 148.8,
+      "endTime": 178.08,
+      "duration": 29.28
+    },
+    {
+      "id": "scene_10",
+      "title": "Ví dụ 4: Lời giải chi tiết & Ý nghĩa đường tiệm cận đứng",
+      "content": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-rose-500/40\">\n    <h4 class=\"text-rose-300 font-bold text-base mb-2\">Lời giải chi tiết Ví dụ 4:</h4>\n    <div class=\"space-y-2.5 text-sm text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-sky-300\">a) Tính khoảng cách tại $t = \\frac{1}{16}$ phút:</strong>\n        <p class=\"mt-1\">Thay $t = \\frac{1}{16}$ vào công thức:</p>\n        <p class=\"text-center font-bold text-emerald-300\">$$x\\left(\\frac{1}{16}\\right) = 3\\tan\\left(4\\pi \\cdot \\frac{1}{16}\\right) = 3\\tan\\frac{\\pi}{4} = 3 \\cdot 1 = 3\\text{ km}$$</p>\n        <p class=\"text-slate-300\">Tại thời điểm $3.75\\text{ s}$, vệt sáng cách điểm $O$ đúng $3\\text{ km}$.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <strong class=\"text-emerald-300\">b) Bản chất hiện tượng tiệm cận đứng khi $t \\to \\frac{1}{8}^-$:</strong>\n        <p class=\"text-slate-300\">• Khi $t \\to \\frac{1}{8}^-$, góc quay của chùm sáng: $\\theta = 4\\pi t \\to 4\\pi \\cdot \\frac{1}{8} = \\frac{\\pi}{2}^-$.</p>\n        <p class=\"text-slate-300\">• Khi góc quay tiến tới $90^\\circ$, chùm tia sáng quét gần như <strong>song song với bờ biển</strong>.</p>\n        <p class=\"text-slate-300\">• Vì $\\lim_{t \\to \\frac{1}{8}^-} 3\\tan(4\\pi t) = +\\infty$, đồ thị có <strong>tiệm cận đứng</strong> tại $t = \\frac{1}{8}$.</p>\n        <p class=\"text-amber-300 font-bold mt-1\">Ý nghĩa vật lý: Chỉ một góc quay cực nhỏ cũng làm vệt sáng trên bờ biển di chuyển một khoảng cách khổng lồ, tạo ra hiện tượng vệt sáng quét với vận tốc dường như lớn hơn cả tốc độ ánh sáng!</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Lời giải ví dụ 4 như sau: Ở câu a, thay t bằng một phần 16 phút vào, góc lượng giác là pi phần 4 có tan bằng 1, do đó khoảng cách x bằng 3 km. Ở câu b, khi t tiến dần tới một phần 8 phút, góc quay 4 pi t tiến tới pi phần 2, tức 90 độ. Khi đó chùm tia sáng quét gần như song song với bờ biển, và tan tiến ra dương vô cực. Đây chính là hình ảnh trực quan của đường tiệm cận đứng trong toán học! Khi chùm sáng quét song song bờ, vệt sáng trên bờ biển dịch chuyển với tốc độ vô cùng lớn ra xa vô tận.",
+      "startTime": 178.08,
+      "endTime": 195.48,
+      "duration": 17.4
+    },
+    {
+      "id": "scene_11",
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM ĐỒ THỊ TANG VÀ CÔTANG",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-red-950/70 to-rose-950/50 p-4 rounded-xl border border-red-500/40\">\n    <h3 class=\"text-red-300 font-bold text-base flex items-center gap-2\">\n      <i class=\"fa-solid fa-triangle-exclamation text-red-400 text-lg\"></i>\n      3 BẪY SAI LẦM KHI LÀM BÀI TẬP TANG VÀ CÔTANG\n    </h3>\n    <div class=\"mt-3 space-y-3 text-sm\">\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 1: Kết luận sai cách về tính đồng biến của hàm tang</p>\n        <p class=\"text-slate-300 mt-1\">Câu nói: \"Hàm số $y = \\tan x$ đồng biến trên tập xác định $D$\" là HOÀN TOÀN SAI. Phải nói: \"Đồng biến trên TỪNG khoảng xác định\" $\\left(-\\frac{\\pi}{2} + k\\pi; \\frac{\\pi}{2} + k\\pi\\right)$.</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 2: Nhầm lẫn tiệm cận đứng giữa tang và côtang</p>\n        <p class=\"text-slate-300 mt-1\">Hàm tang nhận $x = \\frac{\\pi}{2} + k\\pi$ làm tiệm cận đứng. Còn hàm côtang nhận $x = k\\pi$ (bao gồm cả trục tung $Oy$ khi $k=0$) làm tiệm cận đứng.</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/90 rounded-lg border border-red-500/20\">\n        <p class=\"text-rose-400 font-bold\">⚠️ Bẫy 3: Nhầm tập giá trị của tang với sin và cosin</p>\n        <p class=\"text-slate-300 mt-1\">Nhớ rằng tập giá trị của tang và côtang là toàn bộ $\\mathbb{R}$, không bị chặn trong $[-1; 1]$ như sin và cosin.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Trước khi kết thúc Mục 3, thầy nhắc nhở các em ba bẫy sai lầm quan trọng: Thứ nhất, hàm tang luôn đồng biến trên từng khoảng xác định chứ không được nói đồng biến trên R hay trên D. Thứ hai, tiệm cận đứng của hàm tang là x bằng pi phần hai cộng k pi, còn của hàm cot là x bằng k pi. Thứ ba, tập giá trị của tang và cot là toàn bộ trục số thực R.",
+      "startTime": 195.48,
+      "endTime": 216.43,
+      "duration": 20.95
+    },
+    {
+      "id": "scene_12",
+      "title": "4. TỔNG KẾT BÀI 3 & LỜI CHÚC THẦY NAM MINH",
+      "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-900/60 to-yellow-900/40 p-4 rounded-xl border border-amber-500/40\">\n    <h3 class=\"text-amber-300 font-bold text-lg flex items-center gap-2\">\n      <i class=\"fa-solid fa-graduation-cap text-yellow-400\"></i>\n      TỔNG KẾT BÀI 3 • HÀM SỐ LƯỢNG GIÁC\n    </h3>\n    <div class=\"mt-3 p-4 bg-slate-900/90 rounded-xl border border-slate-700 text-sm leading-relaxed space-y-3\">\n      <p class=\"text-emerald-300 font-bold\">🎉 CHÚC MỪNG CÁC EM ĐÃ HOÀN THÀNH TOÀN DIỆN BÀI 3:</p>\n      <div class=\"grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-200\">\n        <div class=\"p-2.5 bg-slate-800/80 rounded border border-slate-700\">\n          <span class=\"text-sky-300 font-bold\">• Mục 1:</span> Nắm vững định nghĩa, TXĐ, tính chẵn lẻ và chu kỳ tuần hoàn.\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded border border-slate-700\">\n          <span class=\"text-blue-300 font-bold\">• Mục 2:</span> Khảo sát trọn vẹn đồ thị và tính chất của hàm số sin và côsin.\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded border border-slate-700\">\n          <span class=\"text-emerald-300 font-bold\">• Mục 3:</span> Làm chủ đồ thị hàm tang, côtang và ứng dụng tiệm cận đứng thực tế.\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded border border-slate-700\">\n          <span class=\"text-amber-300 font-bold\">• 12 Ví dụ:</span> Trải đều từ Nhận biết, Thông hiểu đến Vận dụng cao.\n        </div>\n      </div>\n      <p class=\"text-amber-200 text-center font-semibold mt-2\">\n        \"Kiên trì tích lũy từng ngày - Thành công rực rỡ trong tầm tay!\" Thầy Nam Minh chúc các em học tốt!\n      </p>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúc mừng các em học sinh thân mến đã hoàn thành xuất sắc toàn bộ bài học số 3: Hàm số lượng giác. Qua 3 mục bài học và 12 ví dụ minh họa tiêu biểu, các em đã nắm chắc trọn vẹn lý thuyết, kỹ năng giải toán và mô hình hóa thực tế. Thầy Nam Minh chúc các em luôn giữ vững niềm đam mê và tự tin chinh phục các bài học tiếp theo của Toán 11 Kết nối tri thức!",
+      "startTime": 216.43,
+      "endTime": 222.31,
+      "duration": 5.88
+    }
+  ],
+  "totalDuration": 222.31,
+  "duration": 222.31,
+  "timeline": [
+    {
+      "sceneId": "scene_1",
+      "title": "1. TÍNH CHẤT TOÀN DIỆN CỦA HÀM SỐ TANG & CÔTANG",
+      "startTime": 0.0,
+      "endTime": 27.17,
+      "duration": 27.17
+    },
+    {
+      "sceneId": "scene_2",
+      "title": "2. HÌNH DÁNG ĐỒ THỊ VÀ TIỆM CẬN ĐỨNG",
+      "startTime": 27.17,
+      "endTime": 48.6,
+      "duration": 21.43
+    },
+    {
+      "sceneId": "scene_3",
+      "title": "Ví dụ 1: Tìm tập xác định của hàm số tang và côtang (Mức Nhận biết)",
+      "startTime": 48.6,
+      "endTime": 66.58,
+      "duration": 17.98
+    },
+    {
+      "sceneId": "scene_4",
+      "title": "Ví dụ 1: Lời giải chi tiết & Điều kiện xác định chuẩn",
+      "startTime": 66.58,
+      "endTime": 80.38,
+      "duration": 13.8
+    },
+    {
+      "sceneId": "scene_5",
+      "title": "Ví dụ 2: So sánh giá trị không dùng máy tính cầm tay (Mức Thông hiểu)",
+      "startTime": 80.38,
+      "endTime": 94.42,
+      "duration": 14.04
+    },
+    {
+      "sceneId": "scene_6",
+      "title": "Ví dụ 2: Lời giải chi tiết & Vận dụng tính đồng biến, nghịch biến",
+      "startTime": 94.42,
+      "endTime": 115.18,
+      "duration": 20.76
+    },
+    {
+      "sceneId": "scene_7",
+      "title": "Ví dụ 3: Tìm GTLN và GTNN của hàm số trên đoạn (Mức Vận dụng)",
+      "startTime": 115.18,
+      "endTime": 134.64,
+      "duration": 19.46
+    },
+    {
+      "sceneId": "scene_8",
+      "title": "Ví dụ 3: Lời giải chi tiết & Kỹ thuật đặt ẩn phụ",
+      "startTime": 134.64,
+      "endTime": 148.8,
+      "duration": 14.16
+    },
+    {
+      "sceneId": "scene_9",
+      "title": "Ví dụ 4: Bài toán vệt sáng ngọn hải đăng quét trên bờ biển (Mức Vận dụng cao)",
+      "startTime": 148.8,
+      "endTime": 178.08,
+      "duration": 29.28
+    },
+    {
+      "sceneId": "scene_10",
+      "title": "Ví dụ 4: Lời giải chi tiết & Ý nghĩa đường tiệm cận đứng",
+      "startTime": 178.08,
+      "endTime": 195.48,
+      "duration": 17.4
+    },
+    {
+      "sceneId": "scene_11",
+      "title": "3. CẢNH BÁO BẪY TRẮC NGHIỆM ĐỒ THỊ TANG VÀ CÔTANG",
+      "startTime": 195.48,
+      "endTime": 216.43,
+      "duration": 20.95
+    },
+    {
+      "sceneId": "scene_12",
+      "title": "4. TỔNG KẾT BÀI 3 & LỜI CHÚC THẦY NAM MINH",
+      "startTime": 216.43,
+      "endTime": 222.31,
+      "duration": 5.88
+    }
+  ]
+};
+
+  window.G11_CHAPTER1_DATA.toan11_bai3_muc1 = window.G11_CHAPTER1_DATA.g11_bai3_muc1;
+  window.G11_CHAPTER1_DATA.toan11_bai3_muc2 = window.G11_CHAPTER1_DATA.g11_bai3_muc2;
+  window.G11_CHAPTER1_DATA.toan11_bai3_muc3 = window.G11_CHAPTER1_DATA.g11_bai3_muc3;
+
   // Aliases for compatibility
   window.G11_CHAPTER1_DATA.toan11_bai1_muc1 = window.G11_CHAPTER1_DATA.g11_bai1_muc1;
   window.G11_CHAPTER1_DATA.toan11_bai1_muc2 = window.G11_CHAPTER1_DATA.g11_bai1_muc2;
