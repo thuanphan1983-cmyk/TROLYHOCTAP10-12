@@ -1,6 +1,8 @@
 /* =========================================================================
    CHƯƠNG V: PHƯƠNG PHÁP TOẠ ĐỘ TRONG KHÔNG GIAN - TOÁN 12 KNTT
-   Bài 14: Phương trình mặt phẳng (Mục 1, 2, 3, 4) - Rich Interactive Slides & Audio
+   Bài 14: Phương trình mặt phẳng (Mục 1, 2, 3, 4)
+   Bài 15: Phương trình đường thẳng trong không gian (Mục 1, 2, 3)
+   Rich Interactive Slides & Audio chuẩn SGK Kết Nối Tri Thức
    ========================================================================= */
 
 if (typeof window !== 'undefined') {
@@ -21,7 +23,7 @@ if (typeof window !== 'undefined') {
   "owl_tip": "n = [u, v]: Tích có hướng của 2 VTCP chính là 1 VTPT của mặt phẳng!",
   "timeline": [
     {
-      "time": 0.0,
+      "time": 0,
       "id": "part1"
     },
     {
@@ -57,7 +59,7 @@ if (typeof window !== 'undefined') {
       "id": "vd3_a"
     },
     {
-      "time": 219.0,
+      "time": 219,
       "id": "part4"
     },
     {
@@ -113,7 +115,7 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 1,
       "title": "BÀI 14: PHƯƠNG TRÌNH MẶT PHẲNG",
       "subtitle": "MỤC 1 • VECTƠ PHÁP TUYẾN CỦA MẶT PHẲNG",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 49.82,
       "duration": 49.82,
       "mascotMode": "pointer",
@@ -202,7 +204,7 @@ if (typeof window !== 'undefined') {
       "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
       "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
       "startTime": 190.87,
-      "endTime": 219.0,
+      "endTime": 219,
       "duration": 28.13,
       "mascotMode": "magnifier",
       "mascotTip": "[AB, AC] = (3; 0; 3) chia 3 => n = (1; 0; 1). Tuyệt vời!",
@@ -212,7 +214,7 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 10,
       "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
       "subtitle": "PHẦN 4: BẪY DẤU Ở TUNG ĐỘ TÍCH CÓ HƯỚNG",
-      "startTime": 219.0,
+      "startTime": 219,
       "endTime": 239.35,
       "duration": 20.35,
       "mascotMode": "magnifier",
@@ -248,7 +250,7 @@ if (typeof window !== 'undefined') {
   "owl_tip": "A(x-x0) + B(y-y0) + C(z-z0) = 0. Đoạn chắn: x/a + y/b + z/c = 1!",
   "timeline": [
     {
-      "time": 0.0,
+      "time": 0,
       "id": "part1"
     },
     {
@@ -340,7 +342,7 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 1,
       "title": "BÀI 14: PHƯƠNG TRÌNH MẶT PHẲNG",
       "subtitle": "MỤC 2 • PHƯƠNG TRÌNH TỔNG QUÁT CỦA MẶT PHẲNG",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 43.08,
       "duration": 43.08,
       "mascotMode": "pointer",
@@ -475,7 +477,7 @@ if (typeof window !== 'undefined') {
   "owl_tip": "Vuông góc: n1.n2 = 0. Song song: n1 = k*n2 và D1 ≠ k*D2!",
   "timeline": [
     {
-      "time": 0.0,
+      "time": 0,
       "id": "part1"
     },
     {
@@ -567,7 +569,7 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 1,
       "title": "BÀI 14: PHƯƠNG TRÌNH MẶT PHẲNG",
       "subtitle": "MỤC 3 • VỊ TRÍ TƯƠNG ĐỐI GIỮA HAI MẶT PHẲNG",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 23.18,
       "duration": 23.18,
       "mascotMode": "pointer",
@@ -702,7 +704,7 @@ if (typeof window !== 'undefined') {
   "owl_tip": "d(M0, α) = |Ax0 + By0 + Cz0 + D| / √(A² + B² + C²). Dưới mẫu là độ dài VTPT!",
   "timeline": [
     {
-      "time": 0.0,
+      "time": 0,
       "id": "part1"
     },
     {
@@ -794,7 +796,7 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 1,
       "title": "BÀI 14: PHƯƠNG TRÌNH MẶT PHẲNG",
       "subtitle": "MỤC 4 • KHOẢNG CÁCH TỪ ĐIỂM ĐẾN MẶT PHẲNG",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 44.88,
       "duration": 44.88,
       "mascotMode": "pointer",
@@ -914,4 +916,688 @@ if (typeof window !== 'undefined') {
   ]
 };
 
+  window.CHAPTER5_DATA.bai15_muc1 = {
+  "lessonId": "bai15",
+  "lessonTitle": "Bài 15: Phương trình đường thẳng trong không gian",
+  "sectionId": "bai15_muc1",
+  "sectionTitle": "Mục 1: Vectơ chỉ phương & Phương trình tham số của đường thẳng",
+  "audio": "/audio/bai15_muc1.mp3",
+  "audioSrc": "./audio/bai15_muc1.mp3",
+  "audio_src": "./audio/bai15_muc1.mp3",
+  "timestamp_src": "timestamps/bai15_muc1.json",
+  "totalDuration": 324.15,
+  "duration": 324.15,
+  "title": "Mục 1: Vectơ chỉ phương & Phương trình tham số của đường thẳng",
+  "owl_tip": "VTCP song song hoặc trùng đường thẳng. PT tham số: x = x0 + at, y = y0 + bt, z = z0 + ct.",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 55.97,
+      "id": "part2"
+    },
+    {
+      "time": 92.02,
+      "id": "part3"
+    },
+    {
+      "time": 101.67,
+      "id": "vd1_q"
+    },
+    {
+      "time": 117.8,
+      "id": "vd1_a"
+    },
+    {
+      "time": 145.11,
+      "id": "vd2_q"
+    },
+    {
+      "time": 161.41,
+      "id": "vd2_a"
+    },
+    {
+      "time": 191.79,
+      "id": "vd3_q"
+    },
+    {
+      "time": 210.77,
+      "id": "vd3_a"
+    },
+    {
+      "time": 271.35,
+      "id": "part4"
+    },
+    {
+      "time": 296.41,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Khái niệm Vectơ chỉ phương của đường thẳng",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Phương trình tham số của đường thẳng",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Tuyệt kỹ kiểm tra điểm",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 15: PHƯƠNG TRÌNH ĐƯỜNG THẲNG",
+      "subtitle": "MỤC 1 • VECTƠ CHỈ PHƯƠNG CỦA ĐƯỜNG THẲNG",
+      "startTime": 0,
+      "endTime": 55.97,
+      "duration": 55.97,
+      "mascotMode": "pointer",
+      "mascotTip": "VTCP song song hoặc trùng với đường thẳng. k*u (k ≠ 0) cũng là VTCP!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Vectơ chỉ phương của đường thẳng</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Vectơ $\\vec{u} \\ne \\vec{0}$ được gọi là <b>vectơ chỉ phương (VTCP)</b> của đường thẳng $\\Delta$ nếu giá của nó song song hoặc trùng với $\\Delta$.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:12px 0;\">\n                    <b>Tính chất:</b> Nếu $\\vec{u}$ là một VTCP của $\\Delta$ thì với mọi $k \\ne 0$, vectơ $k\\vec{u}$ cũng là một VTCP của $\\Delta$.\n                  </div>\n                  <p>👉 Ba trục toạ độ $Ox, Oy, Oz$ lần lượt nhận $\\vec{i}=(1;0;0)$, $\\vec{j}=(0;1;0)$, $\\vec{k}=(0;0;1)$ làm VTCP.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "PHƯƠNG TRÌNH THAM SỐ CỦA ĐƯỜNG THẲNG",
+      "subtitle": "MỤC 1 • CÔNG THỨC THAM SỐ CHUẨN SGK",
+      "startTime": 55.97,
+      "endTime": 92.02,
+      "duration": 36.05,
+      "mascotMode": "talking",
+      "mascotTip": "Mỗi giá trị tham số t xác định duy nhất 1 điểm trên đường thẳng!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Phương trình tham số của đường thẳng</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Trong không gian $Oxyz$, đường thẳng $\\Delta$ đi qua điểm $M_0(x_0; y_0; z_0)$ và nhận $\\vec{u}=(a; b; c)$ làm VTCP có phương trình tham số:</p>\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:14px; margin:12px 0; text-align:center; font-size:18px;\">\n                    $$\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} \\quad (t \\in \\mathbb{R})$$\n                  </div>\n                  <p>👉 Điểm $M(x; y; z) \\in \\Delta \\iff \\exists t \\in \\mathbb{R}: M(x_0 + at; y_0 + bt; z_0 + ct)$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 1 • 3 BÀI TOÁN XÁC ĐỊNH VTCP & PT THAM SỐ",
+      "startTime": 92.02,
+      "endTime": 101.67,
+      "duration": 9.65,
+      "mascotMode": "thinking",
+      "mascotTip": "Cùng bấm đồng hồ 15s và 30s để rèn phản xạ nhận biết và tính toán!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 dạng toán then chốt</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Nhận dạng VTCP và tìm điểm thuộc đường thẳng từ PT tham số.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Viết phương trình tham số của đường thẳng đi qua 2 điểm $A, B$.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Viết PT tham số đường thẳng vuông góc mặt phẳng & Tìm giao điểm.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: ĐỌC VTCP VÀ ĐIỂM THUỘC ĐƯỜNG THẲNG",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 101.67,
+      "endTime": 117.8,
+      "duration": 16.13,
+      "mascotMode": "thinking",
+      "mascotTip": "Hệ số của t là toạ độ VTCP; hệ số tự do là toạ độ điểm đi qua!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: ĐỌC VTCP & ĐIỂM THUỘC ĐƯỜNG THẲNG</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho đường thẳng $d$ có phương trình tham số:\n                  $$\\begin{cases} x = 1 - 2t \\\\ y = 3 + 4t \\\\ z = -2 + t \\end{cases}$$\n                  Tìm toạ độ một vectơ chỉ phương của $d$ và toạ độ một điểm $M_0$ thuộc $d$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 117.8,
+      "endTime": 145.11,
+      "duration": 27.31,
+      "mascotMode": "talking",
+      "mascotTip": "Lấy hệ số gắn với t làm VTCP. Cho t = 0 tìm ngay được 1 điểm!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Hệ số của $t$ trong ba phương trình lần lượt là $-2; 4; 1$.</p>\n                  <p>👉 Một vectơ chỉ phương của $d$ là: $\\vec{u} = (-2; 4; 1)$ hoặc $\\vec{u}' = (2; -4; -1)$.</p>\n                  <p>• Thay $t = 0$ vào phương trình, ta được toạ độ điểm thuộc $d$ là:</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0;\">\n                    $$M_0(1; 3; -2) \\in d$$\n                  </div>\n                  <p>✨ <i>Ghi chú: Mỗi giá trị thực của $t$ cho một điểm thuộc $d$ (Ví dụ: $t=1 \\implies M_1(-1; 7; -1) \\in d$).</i></p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: PT THAM SỐ QUA HAI ĐIỂM",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 145.11,
+      "endTime": 161.41,
+      "duration": 16.3,
+      "mascotMode": "thinking",
+      "mascotTip": "VTCP chính là vectơ AB! Tính toạ độ vectơ: lấy toạ độ B trừ toạ độ A.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: PT THAM SỐ QUA HAI ĐIỂM</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, viết phương trình tham số của đường thẳng $\\Delta$ đi qua hai điểm $A(1; 2; -1)$ và $B(3; 0; 2)$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 161.41,
+      "endTime": 191.79,
+      "duration": 30.38,
+      "mascotMode": "talking",
+      "mascotTip": "Chọn điểm đi qua là A hoặc B đều đúng. Đề thi thường chọn điểm A!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Vectơ chỉ phương của đường thẳng $\\Delta$ là:</p>\n                  <p>$$\\vec{u} = \\vec{AB} = (3-1; 0-2; 2-(-1)) = (2; -2; 3)$$</p>\n                  <p>• Đường thẳng $\\Delta$ đi qua điểm $A(1; 2; -1)$ nhận $\\vec{u}=(2; -2; 3)$ làm VTCP có PT tham số:</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:10px 0; text-align:center;\">\n                    $$\\begin{cases} x = 1 + 2t \\\\ y = 2 - 2t \\\\ z = -1 + 3t \\end{cases} \\quad (t \\in \\mathbb{R})$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: ĐƯỜNG THẲNG VUÔNG GÓC MẶT PHẲNG",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 191.79,
+      "endTime": 210.77,
+      "duration": 18.98,
+      "mascotMode": "thinking",
+      "mascotTip": "Δ ⊥ (P) thì VTCP của Δ chính là VTPT của (P)! Tham số hoá toạ độ giao điểm H.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: PT ĐƯỜNG THẲNG VUÔNG GÓC MẶT PHẲNG</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, viết phương trình tham số của đường thẳng $\\Delta$ đi qua điểm $M(1; 0; -2)$ và vuông góc với mặt phẳng $(P): 2x - y + 2z - 7 = 0$. Tìm toạ độ giao điểm $H$ của $\\Delta$ và $(P)$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 210.77,
+      "endTime": 271.35,
+      "duration": 60.58,
+      "mascotMode": "talking",
+      "mascotTip": "Thay toạ độ H(t) vào phương trình mặt phẳng giải tìm t = 1, suy ra H(3; -1; 0)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Vì $\\Delta \\perp (P)$ nên VTCP của $\\Delta$ là VTPT của $(P)$: $\\vec{u} = \\vec{n}_P = (2; -1; 2)$.</p>\n                  <p>• Phương trình tham số của $\\Delta$: $\\begin{cases} x = 1 + 2t \\\\ y = -t \\\\ z = -2 + 2t \\end{cases} \\; (t \\in \\mathbb{R})$.</p>\n                  <p>• Vì $H = \\Delta \\cap (P) \\implies H(1+2t; -t; -2+2t)$. Thay vào $(P)$:</p>\n                  <p>$$2(1+2t) - (-t) + 2(-2+2t) - 7 = 0 \\iff 9t - 9 = 0 \\iff t = 1$$</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Toạ độ giao điểm:</b> $H(3; -1; 0)$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY KHUYẾT THAM SỐ & ĐỔI DẤU",
+      "startTime": 271.35,
+      "endTime": 296.41,
+      "duration": 25.06,
+      "mascotMode": "magnifier",
+      "mascotTip": "Khi khuyết biến t, toạ độ VTCP bằng 0 chứ không phải hệ số tự do!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">⚠️ BẪY 1: KHUYẾT THAM SỐ t TRONG PHƯƠNG TRÌNH</div>\n                  <p style=\"margin:6px 0 0 0; font-size:16.5px; color:#fecaca;\">\n                    Cho đường thẳng: $\\begin{cases} x = 2 - t \\\\ y = 3 \\\\ z = 1 + 2t \\end{cases}$. Rất nhiều bạn đọc VTCP là $(-1; 3; 2)$ ❌ SAI LẦM!<br>\n                    <b>Chuẩn xác:</b> $y = 3 = 3 + 0\\cdot t \\implies$ VTCP phải là $\\vec{u} = (-1; 0; 2)$ ✅.\n                  </p>\n                </div>\n                <div style=\"background:rgba(244,63,94,0.15); border:1.5px solid #f43f5e; border-radius:10px; padding:12px;\">\n                  <b style=\"color:#fda4af;\">⚠️ BẪY 2: NHẦM DẤU ĐIỂM ĐI QUA</b>\n                  <p style=\"margin:4px 0 0 0; font-size:15px; color:#f8fafc;\">\n                    Trong phương trình tham số: $x = x_0 + at$, dấu của $x_0$ giữ nguyên, không đổi dấu!\n                  </p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & KIỂM TRA ĐIỂM NHANH",
+      "subtitle": "PHẦN 5: KIỂM TRA ĐIỂM THUỘC ĐƯỜNG THẲNG TRONG 5 GIÂY",
+      "startTime": 296.41,
+      "endTime": 324.15,
+      "duration": 27.74,
+      "mascotMode": "talking",
+      "mascotTip": "Tính nhẩm 3 giá trị t. Cả 3 giá trị bằng nhau thì điểm thuộc đường thẳng!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ nhẩm nhanh điểm thuộc đường thẳng</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Để kiểm tra điểm $M(x_M; y_M; z_M)$ có thuộc đường thẳng $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases}$ hay không:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Quy tắc 3 giá trị $t$:</b> Tính $t_1 = \\frac{x_M - x_0}{a}$, $t_2 = \\frac{y_M - y_0}{b}$, $t_3 = \\frac{z_M - z_0}{c}$.<br>\n                    • Nếu $t_1 = t_2 = t_3 = t_0 \\implies M \\in \\Delta$.<br>\n                    • Nếu có bất kỳ hai giá trị nào khác nhau $\\implies M \\notin \\Delta$.\n                  </div>\n                  <p>👉 Giúp em loại trừ ngay các phương án trắc nghiệm trong 5 giây!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER5_DATA.bai15_muc2 = {
+  "lessonId": "bai15",
+  "lessonTitle": "Bài 15: Phương trình đường thẳng trong không gian",
+  "sectionId": "bai15_muc2",
+  "sectionTitle": "Mục 2: Phương trình chính tắc của đường thẳng",
+  "audio": "/audio/bai15_muc2.mp3",
+  "audioSrc": "./audio/bai15_muc2.mp3",
+  "audio_src": "./audio/bai15_muc2.mp3",
+  "timestamp_src": "timestamps/bai15_muc2.json",
+  "totalDuration": 291.41,
+  "duration": 291.41,
+  "title": "Mục 2: Phương trình chính tắc của đường thẳng",
+  "owl_tip": "(x - x0)/a = (y - y0)/b = (z - z0)/c với abc ≠ 0. Hệ số x, y, z trên tử bắt buộc bằng +1!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 46.27,
+      "id": "part2"
+    },
+    {
+      "time": 74.66,
+      "id": "part3"
+    },
+    {
+      "time": 83.18,
+      "id": "vd1_q"
+    },
+    {
+      "time": 99.43,
+      "id": "vd1_a"
+    },
+    {
+      "time": 125.54,
+      "id": "vd2_q"
+    },
+    {
+      "time": 146.37,
+      "id": "vd2_a"
+    },
+    {
+      "time": 167.95,
+      "id": "vd3_q"
+    },
+    {
+      "time": 186.02,
+      "id": "vd3_a"
+    },
+    {
+      "time": 245.73,
+      "id": "part4"
+    },
+    {
+      "time": 268.51,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Định nghĩa & Điều kiện phương trình chính tắc",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Kỹ năng đọc toạ độ chuẩn xác",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Tuyệt kỹ Casio fx-580VNX",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 15: PHƯƠNG TRÌNH ĐƯỜNG THẲNG",
+      "subtitle": "MỤC 2 • PHƯƠNG TRÌNH CHÍNH TẮC CỦA ĐƯỜNG THẲNG",
+      "startTime": 0,
+      "endTime": 46.27,
+      "duration": 46.27,
+      "mascotMode": "pointer",
+      "mascotTip": "ĐK cần và đủ để có PT chính tắc là cả 3 toạ độ của VTCP phải khác 0!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Phương trình chính tắc của đường thẳng</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Trong không gian $Oxyz$, đường thẳng $\\Delta$ đi qua điểm $M_0(x_0; y_0; z_0)$ và nhận $\\vec{u}=(a; b; c)$ làm VTCP với <b>$a \\ne 0, b \\ne 0, c \\ne 0$</b> có phương trình chính tắc:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:14px; margin:12px 0; text-align:center; font-size:19px;\">\n                    $$\\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c}$$\n                  </div>\n                  <p>⚠️ <b>Lưu ý cực quan trọng:</b> Nếu ít nhất một trong ba toạ độ $a, b, c$ bằng 0 thì đường thẳng <b>không có</b> phương trình chính tắc (chỉ có PT tham số).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "KỸ NĂNG ĐỌC TOẠ ĐỘ CHUẨN XÁC",
+      "subtitle": "MỤC 2 • ĐỔI HỆ SỐ TỬ SỐ VỀ DƯƠNG 1",
+      "startTime": 46.27,
+      "endTime": 74.66,
+      "duration": 28.39,
+      "mascotMode": "talking",
+      "mascotTip": "Hệ số x, y, z trên tử bắt buộc phải là +1! Nếu có dấu trừ phải đổi cả tử và mẫu.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Kỹ năng đọc toạ độ từ phương trình chính tắc</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Dạng chuẩn bắt buộc: hệ số trước $x, y, z$ ở tử số phải là <b>$+1$</b>:</p>\n                  <p>$$\\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c}$$</p>\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:12px; margin:12px 0;\">\n                    <b>Quy tắc đổi dấu:</b> Nếu gặp $\\frac{x_0 - x}{a}$, bắt buộc nhân cả tử và mẫu với $-1$ thành:\n                    $$\\frac{x - x_0}{-a}$$\n                  </div>\n                  <p>👉 Khi đó mẫu số mới chính là toạ độ thực của VTCP!</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 2 • 3 BÀI TOÁN PHƯƠNG TRÌNH CHÍNH TẮC TRỌNG TÂM",
+      "startTime": 74.66,
+      "endTime": 83.18,
+      "duration": 8.52,
+      "mascotMode": "thinking",
+      "mascotTip": "Cùng thầy rèn luyện nhận dạng, bẫy đổi dấu và viết PT qua tích có hướng!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 bài toán trọng tâm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Xác định toạ độ VTCP và điểm thuộc đường thẳng chính tắc.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Xử lý bẫy đổi dấu tử số và đưa về dạng chuẩn.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Lập phương trình chính tắc đường thẳng song song 2 mặt phẳng.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: ĐỌC TOẠ ĐỘ TỪ PT CHÍNH TẮC",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 83.18,
+      "endTime": 99.43,
+      "duration": 16.25,
+      "mascotMode": "thinking",
+      "mascotTip": "Mẫu số cho VTCP; tử số cho toạ độ điểm đi qua (nhớ đổi dấu!).",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: ĐỌC TOẠ ĐỘ TỪ PT CHÍNH TẮC</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho đường thẳng $d$ có phương trình chính tắc:\n                  $$\\frac{x - 3}{2} = \\frac{y + 1}{-4} = \\frac{z - 5}{3}$$\n                  Xác định toạ độ một điểm $M_0$ thuộc $d$ và toạ độ một vectơ chỉ phương của $d$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 99.43,
+      "endTime": 125.54,
+      "duration": 26.11,
+      "mascotMode": "talking",
+      "mascotTip": "Mẫu số là (2; -4; 3). Tử số đổi dấu: x-3=0 -> 3; y+1=0 -> -1; z-5=0 -> 5.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Nhìn vào mẫu số của ba phân thức, ta có một vectơ chỉ phương của $d$ là:</p>\n                  <p>$$\\vec{u} = (2; -4; 3)$$</p>\n                  <p>• Nhìn vào tử số, giải $x - 3 = 0, y + 1 = 0, z - 5 = 0$, ta được điểm đi qua:</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$M_0(3; -1; 5) \\in d$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: BẪY ĐỔI DẤU TỬ THỨC",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 125.54,
+      "endTime": 146.37,
+      "duration": 20.83,
+      "mascotMode": "thinking",
+      "mascotTip": "Tử số là 2 - x, chưa phải dạng x - x0! Bắt buộc đổi dấu tử và mẫu.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: BẪY ĐỔI DẤU TỬ THỨC</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho đường thẳng $d$ có phương trình:\n                  $$\\frac{2 - x}{3} = \\frac{y + 4}{1} = \\frac{z - 1}{-2}$$\n                  Hãy viết lại phương trình chính tắc chuẩn của $d$ và tìm một vectơ chỉ phương của $d$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 146.37,
+      "endTime": 167.95,
+      "duration": 21.58,
+      "mascotMode": "talking",
+      "mascotTip": "(2 - x)/3 = (x - 2)/(-3). Mẫu số VTCP phải là -3 chứ không phải +3!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Ta có $\\frac{2 - x}{3} = \\frac{-(x - 2)}{3} = \\frac{x - 2}{-3}$.</p>\n                  <p>• Viết lại phương trình chính tắc chuẩn của $d$:</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    $$\\frac{x - 2}{-3} = \\frac{y + 4}{1} = \\frac{z - 1}{-2}$$\n                  </div>\n                  <p>👉 Một vectơ chỉ phương của $d$ là: $\\vec{u} = (-3; 1; -2)$ hoặc $\\vec{u}' = (3; -1; 2)$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: PT CHÍNH TẮC SONG SONG HAI MẶT PHẲNG",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 167.95,
+      "endTime": 186.02,
+      "duration": 18.07,
+      "mascotMode": "thinking",
+      "mascotTip": "Δ song song với cả (P) và (Q) thì VTCP u = [nP, nQ]!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: PT CHÍNH TẮC SONG SONG HAI MP</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, viết phương trình chính tắc của đường thẳng $\\Delta$ đi qua điểm $A(1; -2; 3)$ và song song với hai mặt phẳng $(P): x + 2y - z + 1 = 0$ và $(Q): 2x - y + z - 4 = 0$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 186.02,
+      "endTime": 245.73,
+      "duration": 59.71,
+      "mascotMode": "talking",
+      "mascotTip": "Tích có hướng [nP, nQ] = (1; -3; -5). Lập PT chính tắc đi qua A(1; -2; 3).",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $(P)$ có VTPT $\\vec{n}_1 = (1; 2; -1)$; $(Q)$ có VTPT $\\vec{n}_2 = (2; -1; 1)$.</p>\n                  <p>• Vì $\\Delta \\parallel (P)$ và $\\Delta \\parallel (Q)$ nên VTCP của $\\Delta$ là:</p>\n                  <p>$$\\vec{u} = [\\vec{n}_1, \\vec{n}_2] = (2\\cdot 1 - (-1)(-1); (-1)\\cdot 2 - 1\\cdot 1; 1(-1) - 2\\cdot 2) = (1; -3; -5)$$</p>\n                  <p>• Phương trình chính tắc của $\\Delta$ đi qua $A(1; -2; 3)$ là:</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:12px; margin:8px 0; text-align:center; font-size:17px;\">\n                    $$\\frac{x - 1}{1} = \\frac{y + 2}{-3} = \\frac{z - 3}{-5}$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY TOẠ ĐỘ VTCP BẰNG 0",
+      "startTime": 245.73,
+      "endTime": 268.51,
+      "duration": 22.78,
+      "mascotMode": "magnifier",
+      "mascotTip": "Nếu VTCP có toạ độ bằng 0 thì KHÔNG CÓ phương trình chính tắc!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">⚠️ BẪY: ĐƯỜNG THẲNG CÓ VTCP CHỨA SỐ 0</div>\n                  <p style=\"margin:6px 0 0 0; font-size:16.5px; color:#fecaca;\">\n                    Cho đường thẳng đi qua $A(1; 2; 3)$ có VTCP $\\vec{u} = (2; 0; -1)$.<br>\n                    Rất nhiều bạn viết: $\\frac{x - 1}{2} = \\frac{y - 2}{0} = \\frac{z - 3}{-1}$ ❌ HOÀN TOÀN SAI BẢN CHẤT TOÁN HỌC!<br>\n                    <b>Chuẩn xác:</b> Phép chia cho 0 không xác định. Trong trường hợp này, đường thẳng <b>chỉ có phương trình tham số</b>, không có phương trình chính tắc!\n                  </p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: TÍNH TÍCH CÓ HƯỚNG TÌM VTCP TRÊN CASIO",
+      "startTime": 268.51,
+      "endTime": 291.41,
+      "duration": 22.9,
+      "mascotMode": "talking",
+      "mascotTip": "Menu 5 -> Nhập VctA, VctB -> Option 3 * Option 4!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX tìm VTCP</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• <b>Bước 1:</b> Bấm <code>MENU 5 1 3</code> nhập VTPT $\\vec{n}_1 = (1; 2; -1)$.</p>\n                  <p>• <b>Bước 2:</b> Bấm <code>OPTN 1 2 3</code> nhập VTPT $\\vec{n}_2 = (2; -1; 1)$.</p>\n                  <p>• <b>Bước 3:</b> Bấm <code>AC</code> $\\rightarrow$ bấm <code>OPTN 3 \\times OPTN 4 =</code>.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Kết quả màn hình:</b> $(1; -3; -5)$ chính là VTCP cần tìm! Cực kỳ nhanh và chính xác 100%.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER5_DATA.bai15_muc3 = {
+  "lessonId": "bai15",
+  "lessonTitle": "Bài 15: Phương trình đường thẳng trong không gian",
+  "sectionId": "bai15_muc3",
+  "sectionTitle": "Mục 3: Vị trí tương đối giữa hai đường thẳng",
+  "audio": "/audio/bai15_muc3.mp3",
+  "audioSrc": "./audio/bai15_muc3.mp3",
+  "audio_src": "./audio/bai15_muc3.mp3",
+  "timestamp_src": "timestamps/bai15_muc3.json",
+  "totalDuration": 330.06,
+  "duration": 330.06,
+  "title": "Mục 3: Vị trí tương đối giữa hai đường thẳng",
+  "owl_tip": "Kiểm tra cùng phương trước. Nếu không cùng phương, giải hệ t, t' để phân biệt Cắt nhau hay Chéo nhau!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 39.82,
+      "id": "part2"
+    },
+    {
+      "time": 73.85,
+      "id": "part3"
+    },
+    {
+      "time": 86.09,
+      "id": "vd1_q"
+    },
+    {
+      "time": 107.04,
+      "id": "vd1_a"
+    },
+    {
+      "time": 141.58,
+      "id": "vd2_q"
+    },
+    {
+      "time": 170.24,
+      "id": "vd2_a"
+    },
+    {
+      "time": 199.76,
+      "id": "vd3_q"
+    },
+    {
+      "time": 222.32,
+      "id": "vd3_a"
+    },
+    {
+      "time": 271.5,
+      "id": "part4"
+    },
+    {
+      "time": 297.52,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Phân loại 4 vị trí tương đối giữa hai đường thẳng",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Phân biệt Cắt nhau, Chéo nhau & Điều kiện vuông góc",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Bấm Casio 580 kiểm tra chéo nhau",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 15: PHƯƠNG TRÌNH ĐƯỜNG THẲNG",
+      "subtitle": "MỤC 3 • VỊ TRÍ TƯƠNG ĐỐI GIỮA HAI ĐƯỜNG THẲNG",
+      "startTime": 0,
+      "endTime": 39.82,
+      "duration": 39.82,
+      "mascotMode": "pointer",
+      "mascotTip": "Có 4 vị trí: Trùng nhau, Song song, Cắt nhau và Chéo nhau!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Phân loại 4 vị trí tương đối</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho $d_1$ qua $M_1$ có VTCP $\\vec{u}_1$ và $d_2$ qua $M_2$ có VTCP $\\vec{u}_2$:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:12px 0;\">\n                    <b>Trường hợp 1: $\\vec{u}_1$ và $\\vec{u}_2$ cùng phương:</b><br>\n                    • Nếu $M_1 \\in d_2 \\implies d_1 \\equiv d_2$ (Trùng nhau).<br>\n                    • Nếu $M_1 \\notin d_2 \\implies d_1 \\parallel d_2$ (Song song).\n                  </div>\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:12px; margin:12px 0;\">\n                    <b>Trường hợp 2: $\\vec{u}_1$ và $\\vec{u}_2$ không cùng phương:</b><br>\n                    • Xét hệ phương trình tìm giao điểm giữa $d_1$ và $d_2$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "PHÂN BIỆT CẮT NHAU VÀ CHÉO NHAU",
+      "subtitle": "MỤC 3 • HỆ GIAO ĐIỂM & ĐIỀU KIỆN VUÔNG GÓC",
+      "startTime": 39.82,
+      "endTime": 73.85,
+      "duration": 34.03,
+      "mascotMode": "talking",
+      "mascotTip": "Hệ có nghiệm duy nhất -> Cắt nhau. Hệ vô nghiệm -> Chéo nhau!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Cắt nhau, Chéo nhau và Vuông góc</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Khi $\\vec{u}_1, \\vec{u}_2$ không cùng phương, lập hệ PT với 2 tham số $t$ và $t'$:</p>\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:12px; margin:10px 0;\">\n                    • <b>Hệ có nghiệm duy nhất $(t; t')$:</b> $d_1$ và $d_2$ <b>CẮT NHAU</b> tại 1 điểm.<br>\n                    • <b>Hệ vô nghiệm:</b> $d_1$ và $d_2$ <b>CHÉO NHAU</b> trong không gian.\n                  </div>\n                  <div style=\"background:rgba(251,191,36,0.15); border:1.5px solid #fbbf24; border-radius:10px; padding:10px; margin:10px 0;\">\n                    <b>Điều kiện vuông góc:</b> $d_1 \\perp d_2 \\iff \\vec{u}_1 \\cdot \\vec{u}_2 = 0 \\iff a_1a_2 + b_1b_2 + c_1c_2 = 0$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 3 • 3 BÀI TOÁN VỊ TRÍ TƯƠNG ĐỐI TRỌNG TÂM",
+      "startTime": 73.85,
+      "endTime": 86.09,
+      "duration": 12.24,
+      "mascotMode": "thinking",
+      "mascotTip": "Luyện tập xét song song, tìm tham số m vuông góc và phân biệt chéo nhau!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 bài toán trọng tâm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Xét vị trí tương đối giữa hai đường thẳng song song.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Tìm tham số $m$ để hai đường thẳng vuông góc với nhau.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Giải hệ tham số kiểm tra hai đường thẳng chéo nhau.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: XÉT VỊ TRÍ TƯƠNG ĐỐI",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 86.09,
+      "endTime": 107.04,
+      "duration": 20.95,
+      "mascotMode": "thinking",
+      "mascotTip": "So sánh tỉ lệ VTCP trước: u1 và u2 có cùng phương hay không?",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: XÉT VỊ TRÍ TƯƠNG ĐỐI HAI ĐƯỜNG THẲNG</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho hai đường thẳng:\n                  $$d_1: \\frac{x-1}{2} = \\frac{y-2}{-1} = \\frac{z}{3} \\quad \\text{và} \\quad d_2: \\frac{x+2}{-4} = \\frac{y}{2} = \\frac{z-1}{-6}$$\n                  Hỏi $d_1$ và $d_2$ song song, trùng nhau, cắt nhau hay chéo nhau?\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 107.04,
+      "endTime": 141.58,
+      "duration": 34.54,
+      "mascotMode": "talking",
+      "mascotTip": "u2 = -2*u1 nên cùng phương. Lấy M1(1; 2; 0) thay vào d2 thấy không thoả -> song song!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $d_1$ có $\\vec{u}_1 = (2; -1; 3)$ và đi qua $M_1(1; 2; 0)$.</p>\n                  <p>• $d_2$ có $\\vec{u}_2 = (-4; 2; -6) = -2\\vec{u}_1 \\implies \\vec{u}_1$ cùng phương với $\\vec{u}_2$.</p>\n                  <p>• Thay toạ độ $M_1(1; 2; 0)$ vào phương trình $d_2$:</p>\n                  <p>$$\\frac{1+2}{-4} = -\\frac{3}{4}; \\quad \\frac{2}{2} = 1 \\ne -\\frac{3}{4} \\implies M_1 \\notin d_2$$</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Kết luận:</b> $d_1 \\parallel d_2$ (Song song).\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: TÌM m ĐỂ HAI ĐƯỜNG THẲNG VUÔNG GÓC",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 141.58,
+      "endTime": 170.24,
+      "duration": 28.66,
+      "mascotMode": "thinking",
+      "mascotTip": "d1 vuông góc d2 khi và chỉ khi tích vô hướng u1 * u2 = 0!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: TÌM m ĐỂ HAI ĐƯỜNG THẲNG VUÔNG GÓC</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho hai đường thẳng:\n                  $$d_1: \\begin{cases} x = 1 + t \\\\ y = 2 - t \\\\ z = 3 + 2t \\end{cases} \\quad \\text{và} \\quad d_2: \\begin{cases} x = 2 - 2t' \\\\ y = 1 + mt' \\\\ z = 4 + t' \\end{cases}$$\n                  Tìm giá trị của tham số $m$ để $d_1 \\perp d_2$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 170.24,
+      "endTime": 199.76,
+      "duration": 29.52,
+      "mascotMode": "talking",
+      "mascotTip": "1*(-2) + (-1)*m + 2*1 = 0 -> -2 - m + 2 = 0 -> m = 0. Cực nhanh!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Vectơ chỉ phương của $d_1$ là $\\vec{u}_1 = (1; -1; 2)$.</p>\n                  <p>• Vectơ chỉ phương của $d_2$ là $\\vec{u}_2 = (-2; m; 1)$.</p>\n                  <p>• Hai đường thẳng $d_1 \\perp d_2 \\iff \\vec{u}_1 \\cdot \\vec{u}_2 = 0$:</p>\n                  <p>$$1(-2) + (-1)(m) + 2(1) = 0 \\iff -2 - m + 2 = 0 \\iff m = 0$$</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Giá trị cần tìm:</b> $m = 0$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: HAI ĐƯỜNG THẲNG CHÉO NHAU",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 199.76,
+      "endTime": 222.32,
+      "duration": 22.56,
+      "mascotMode": "thinking",
+      "mascotTip": "Đổi sang tham số t và t'. Lập hệ 3 phương trình 2 ẩn và kiểm tra nghiệm!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: XÉT VỊ TRÍ TƯƠNG ĐỐI QUA HỆ PHƯƠNG TRÌNH</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, xét vị trí tương đối giữa hai đường thẳng:\n                  $$d_1: \\frac{x-1}{1} = \\frac{y-2}{2} = \\frac{z-3}{3} \\quad \\text{và} \\quad d_2: \\frac{x-2}{2} = \\frac{y-4}{1} = \\frac{z-5}{1}$$\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 222.32,
+      "endTime": 271.5,
+      "duration": 49.18,
+      "mascotMode": "talking",
+      "mascotTip": "Giải 2 phương trình sau ra t = 0, t' = -2. Thay vào PT đầu thấy mâu thuẫn 1 ≠ -2 -> Chéo nhau!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $\\vec{u}_1 = (1; 2; 3)$ và $\\vec{u}_2 = (2; 1; 1)$ không cùng phương vì $\\frac{1}{2} \\ne \\frac{2}{1}$.</p>\n                  <p>• Chuyển sang dạng tham số: $d_1$ theo $t$ và $d_2$ theo $t'$. Xét hệ:</p>\n                  <p>$$\\begin{cases} 1 + t = 2 + 2t' \\\\ 2 + 2t = 4 + t' \\\\ 3 + 3t = 5 + t' \\end{cases} \\iff \\begin{cases} t - 2t' = 1 \\\\ 2t - t' = 2 \\\\ 3t - t' = 2 \\end{cases}$$</p>\n                  <p>• Lấy PT(3) trừ PT(2) được $t = 0 \\implies t' = -2$. Thay vào PT(1): $0 - 2(-2) = 4 \\ne 1$ (Vô nghiệm)!</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Kết luận:</b> Hai đường thẳng $d_1$ và $d_2$ <b>CHÉO NHAU</b> trong không gian.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY DÙNG CHUNG THAM SỐ t KHI GIẢI HỆ",
+      "startTime": 271.5,
+      "endTime": 297.52,
+      "duration": 26.02,
+      "mascotMode": "magnifier",
+      "mascotTip": "Hai đường thẳng có tham số độc lập! Phải đặt t và t' (hoặc s).",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">⚠️ BẪY CHẾT NGƯỜI: DÙNG CHUNG THAM SỐ t</div>\n                  <p style=\"margin:6px 0 0 0; font-size:16.5px; color:#fecaca;\">\n                    Khi lập hệ phương trình giao điểm, rất nhiều bạn viết:<br>\n                    $1 + t = 2 + 2t$ và $2 + 2t = 4 + t$ ❌ SAI HOÀN TOÀN!<br>\n                    <b>Chuẩn xác:</b> Hai điểm trên hai đường thẳng di chuyển với tốc độ tham số khác nhau, bắt buộc phải dùng 2 ẩn số độc lập: $t$ và $t'$!\n                  </p>\n                </div>\n                <div style=\"background:rgba(244,63,94,0.15); border:1.5px solid #f43f5e; border-radius:10px; padding:12px;\">\n                  <b style=\"color:#fda4af;\">⚠️ BẪY 2: QUÊN THỬ LẠI PHƯƠNG TRÌNH THỨ BA</b>\n                  <p style=\"margin:4px 0 0 0; font-size:15px; color:#f8fafc;\">\n                    Hệ có 3 phương trình 2 ẩn. Giải $t, t'$ từ 2 phương trình đầu bắt buộc phải thay vào phương trình thứ 3 để kiểm tra!\n                  </p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: TUYỆT KỸ TÍCH HỖN TẠP KIỂM TRA CHÉO NHAU",
+      "startTime": 297.52,
+      "endTime": 330.06,
+      "duration": 32.54,
+      "mascotMode": "talking",
+      "mascotTip": "Tính [u1, u2] * M1M2 trên Casio 580. = 0 thì cắt nhau, khác 0 thì chéo nhau!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX kiểm tra Chéo nhau</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Khi $\\vec{u}_1$ và $\\vec{u}_2$ không cùng phương:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Quy tắc Tích hỗn tạp:</b> Nhập $\\vec{u}_1$ (VctA), $\\vec{u}_2$ (VctB) và $\\vec{M_1M_2}$ (VctC).<br>\n                    Bấm: <code>(OPTN 3 \\times OPTN 4) \\cdot OPTN 5</code><br>\n                    • Nếu kết quả <b>bằng 0</b> $\\implies$ Hai đường thẳng <b>CẮT NHAU</b>.<br>\n                    • Nếu kết quả <b>khác 0</b> $\\implies$ Hai đường thẳng <b>CHÉO NHAU</b>.\n                  </div>\n                  <p>👉 Chỉ mất đúng 10 giây trên máy tính cầm tay, giải quyết triệt để câu hỏi trắc nghiệm!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = window.CHAPTER5_DATA;
 }

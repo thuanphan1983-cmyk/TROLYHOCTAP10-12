@@ -790,9 +790,9 @@
       lessonTitle: "Bài 15: Phương trình đường thẳng trong không gian",
       lessonBadge: "Bài 15",
       sections: [
-        { key: "bai15_muc1", title: "Mục 1: Vectơ chỉ phương & PT tham số đường thẳng", time: "05:00", icon: "↗️" },
-        { key: "bai15_muc2", title: "Mục 2: Phương trình chính tắc của đường thẳng", time: "05:00", icon: "📏" },
-        { key: "bai15_muc3", title: "Mục 3: Vị trí tương đối giữa hai đường thẳng", time: "05:00", icon: "✂️" }
+        { key: "bai15_muc1", title: "Mục 1: Vectơ chỉ phương & PT tham số đường thẳng", time: "05:24", icon: "↗️" },
+        { key: "bai15_muc2", title: "Mục 2: Phương trình chính tắc của đường thẳng", time: "04:51", icon: "📏" },
+        { key: "bai15_muc3", title: "Mục 3: Vị trí tương đối giữa hai đường thẳng", time: "05:30", icon: "✂️" }
       ]
     },
     {
