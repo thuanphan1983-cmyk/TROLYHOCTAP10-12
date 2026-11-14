@@ -802,9 +802,9 @@
       lessonTitle: "Bài 16: Công thức tính góc trong không gian",
       lessonBadge: "Bài 16",
       sections: [
-        { key: "bai16_muc1", title: "Mục 1: Góc giữa hai đường thẳng", time: "05:00", icon: "📐" },
-        { key: "bai16_muc2", title: "Mục 2: Góc giữa đường thẳng và mặt phẳng", time: "05:00", icon: "📐" },
-        { key: "bai16_muc3", title: "Mục 3: Góc giữa hai mặt phẳng", time: "05:00", icon: "📐" }
+        { key: "bai16_muc1", title: "Mục 1: Góc giữa hai đường thẳng", time: "05:52", icon: "📐" },
+        { key: "bai16_muc2", title: "Mục 2: Góc giữa đường thẳng và mặt phẳng", time: "05:07", icon: "📐" },
+        { key: "bai16_muc3", title: "Mục 3: Góc giữa hai mặt phẳng", time: "05:52", icon: "📐" }
       ]
     },
     {

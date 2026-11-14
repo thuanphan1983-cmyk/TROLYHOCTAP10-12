@@ -2,6 +2,7 @@
    CHƯƠNG V: PHƯƠNG PHÁP TOẠ ĐỘ TRONG KHÔNG GIAN - TOÁN 12 KNTT
    Bài 14: Phương trình mặt phẳng (Mục 1, 2, 3, 4)
    Bài 15: Phương trình đường thẳng trong không gian (Mục 1, 2, 3)
+   Bài 16: Công thức tính góc trong không gian (Mục 1, 2, 3)
    Rich Interactive Slides & Audio chuẩn SGK Kết Nối Tri Thức
    ========================================================================= */
 
@@ -1593,6 +1594,687 @@ if (typeof window !== 'undefined') {
       "mascotMode": "talking",
       "mascotTip": "Tính [u1, u2] * M1M2 trên Casio 580. = 0 thì cắt nhau, khác 0 thì chéo nhau!",
       "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX kiểm tra Chéo nhau</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Khi $\\vec{u}_1$ và $\\vec{u}_2$ không cùng phương:</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Quy tắc Tích hỗn tạp:</b> Nhập $\\vec{u}_1$ (VctA), $\\vec{u}_2$ (VctB) và $\\vec{M_1M_2}$ (VctC).<br>\n                    Bấm: <code>(OPTN 3 \\times OPTN 4) \\cdot OPTN 5</code><br>\n                    • Nếu kết quả <b>bằng 0</b> $\\implies$ Hai đường thẳng <b>CẮT NHAU</b>.<br>\n                    • Nếu kết quả <b>khác 0</b> $\\implies$ Hai đường thẳng <b>CHÉO NHAU</b>.\n                  </div>\n                  <p>👉 Chỉ mất đúng 10 giây trên máy tính cầm tay, giải quyết triệt để câu hỏi trắc nghiệm!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER5_DATA.bai16_muc1 = {
+  "lessonId": "bai16",
+  "lessonTitle": "Bài 16: Công thức tính góc trong không gian",
+  "sectionId": "bai16_muc1",
+  "sectionTitle": "Mục 1: Góc giữa hai đường thẳng",
+  "audio": "/audio/bai16_muc1.mp3",
+  "audioSrc": "./audio/bai16_muc1.mp3",
+  "audio_src": "./audio/bai16_muc1.mp3",
+  "timestamp_src": "timestamps/bai16_muc1.json",
+  "totalDuration": 352.41,
+  "duration": 352.41,
+  "title": "Mục 1: Góc giữa hai đường thẳng",
+  "owl_tip": "cos φ = |u1 * u2| / (|u1| * |u2|). Luôn có dấu giá trị tuyệt đối trên tử!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 64.42,
+      "id": "part2"
+    },
+    {
+      "time": 102.75,
+      "id": "part3"
+    },
+    {
+      "time": 115.06,
+      "id": "vd1_q"
+    },
+    {
+      "time": 131.93,
+      "id": "vd1_a"
+    },
+    {
+      "time": 170.21,
+      "id": "vd2_q"
+    },
+    {
+      "time": 188.52,
+      "id": "vd2_a"
+    },
+    {
+      "time": 218.11,
+      "id": "vd3_q"
+    },
+    {
+      "time": 244.25,
+      "id": "vd3_a"
+    },
+    {
+      "time": 290.4,
+      "id": "part4"
+    },
+    {
+      "time": 321.86,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Định nghĩa & Công thức góc giữa hai đường thẳng",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Điều kiện vuông góc & Bản chất dấu GTTĐ",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Bấm Casio 580 tính góc",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 16: CÔNG THỨC TÍNH GÓC TRONG KHÔNG GIAN",
+      "subtitle": "MỤC 1 • GÓC GIỮA HAI ĐƯỜNG THẲNG",
+      "startTime": 0,
+      "endTime": 64.42,
+      "duration": 64.42,
+      "mascotMode": "pointer",
+      "mascotTip": "Góc giữa 2 đường thẳng luôn thoả mãn 0° ≤ φ ≤ 90°!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Định nghĩa và công thức tính góc</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Trong không gian $Oxyz$, cho $d_1$ có VTCP $\\vec{u}_1=(a_1; b_1; c_1)$ và $d_2$ có VTCP $\\vec{u}_2=(a_2; b_2; c_2)$.</p>\n                  <p>• Góc $\\varphi = (d_1, d_2)$ thỏa mãn $0^\\circ \\le \\varphi \\le 90^\\circ$.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:14px; margin:12px 0; text-align:center; font-size:18px;\">\n                    $$\\cos \\varphi = \\frac{|\\vec{u}_1 \\cdot \\vec{u}_2|}{|\\vec{u}_1| \\cdot |\\vec{u}_2|} = \\frac{|a_1a_2 + b_1b_2 + c_1c_2|}{\\sqrt{a_1^2+b_1^2+c_1^2} \\cdot \\sqrt{a_2^2+b_2^2+c_2^2}}$$\n                  </div>\n                  <p>👉 Trên tử số <b>bắt buộc có dấu giá trị tuyệt đối</b> để đảm bảo $\\cos \\varphi \\ge 0$.</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "ĐIỀU KIỆN VUÔNG GÓC & BẢN CHẤT DẤU GTTĐ",
+      "subtitle": "MỤC 1 • PHÂN BIỆT GÓC GIỮA HAI ĐƯỜNG THẲNG VÀ GÓC HAI VECTƠ",
+      "startTime": 64.42,
+      "endTime": 102.75,
+      "duration": 38.33,
+      "mascotMode": "talking",
+      "mascotTip": "d1 ⊥ d2 khi và chỉ khi tích vô hướng u1 * u2 = 0!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Điều kiện vuông góc & Bản chất hình học</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Điều kiện vuông góc:</b>\n                    $$d_1 \\perp d_2 \\iff \\vec{u}_1 \\cdot \\vec{u}_2 = 0 \\iff a_1a_2 + b_1b_2 + c_1c_2 = 0$$\n                  </div>\n                  <div style=\"background:rgba(251,191,36,0.15); border:1.5px solid #fbbf24; border-radius:10px; padding:12px; margin:10px 0;\">\n                    ⚠️ <b>So sánh then chốt:</b><br>\n                    • Góc giữa hai vectơ $(\\vec{u}_1, \\vec{u}_2) \\in [0^\\circ; 180^\\circ]$ (có thể tù, $\\cos$ không có GTTĐ).<br>\n                    • Góc giữa hai đường thẳng $(d_1, d_2) \\in [0^\\circ; 90^\\circ]$ (luôn là góc nhọn hoặc vuông, $\\cos$ bắt buộc có GTTĐ).\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 1 • 3 BÀI TOÁN TÍNH GÓC VÀ TÌM THAM SỐ",
+      "startTime": 102.75,
+      "endTime": 115.06,
+      "duration": 12.31,
+      "mascotMode": "thinking",
+      "mascotTip": "Cùng bấm đồng hồ 15s và 30s rèn luyện phản xạ tính góc chính xác!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 dạng toán trọng tâm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Tính côsin và số đo góc giữa hai đường thẳng chính tắc.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Tính góc giữa trục toạ độ $Oz$ và đường thẳng tham số.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Tìm tham số $m$ để góc giữa hai đường thẳng bằng $60^\\circ$.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: TÍNH CÔSIN GÓC GIỮA HAI ĐƯỜNG THẲNG",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 115.06,
+      "endTime": 131.93,
+      "duration": 16.87,
+      "mascotMode": "thinking",
+      "mascotTip": "Đọc VTCP từ mẫu số: u1 = (1; -1; 2) và u2 = (2; 1; 1). Tính tích vô hướng!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: TÍNH CÔSIN GÓC GIỮA HAI ĐƯỜNG THẲNG</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, tính côsin của góc giữa hai đường thẳng:\n                  $$d_1: \\frac{x-1}{1} = \\frac{y+2}{-1} = \\frac{z}{2} \\quad \\text{và} \\quad d_2: \\frac{x+1}{2} = \\frac{y-3}{1} = \\frac{z-1}{1}$$\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 131.93,
+      "endTime": 170.21,
+      "duration": 38.28,
+      "mascotMode": "talking",
+      "mascotTip": "Tích vô hướng bằng 3, độ dài mỗi vectơ là căn 6. cos = 3/6 = 1/2!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $d_1$ có $\\vec{u}_1 = (1; -1; 2) \\implies |\\vec{u}_1| = \\sqrt{1^2+(-1)^2+2^2} = \\sqrt{6}$.</p>\n                  <p>• $d_2$ có $\\vec{u}_2 = (2; 1; 1) \\implies |\\vec{u}_2| = \\sqrt{2^2+1^2+1^2} = \\sqrt{6}$.</p>\n                  <p>• Tích vô hướng: $\\vec{u}_1 \\cdot \\vec{u}_2 = 1(2) + (-1)(1) + 2(1) = 2 - 1 + 2 = 3$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center; font-size:17px;\">\n                    $$\\cos(d_1, d_2) = \\frac{|3|}{\\sqrt{6} \\cdot \\sqrt{6}} = \\frac{3}{6} = \\frac{1}{2} \\implies (d_1, d_2) = 60^\\circ$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: GÓC GIỮA TRỤC Oz VÀ ĐƯỜNG THẲNG",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 170.21,
+      "endTime": 188.52,
+      "duration": 18.31,
+      "mascotMode": "thinking",
+      "mascotTip": "Trục Oz có VTCP là k(0; 0; 1)! Đường thẳng d có u(1; -1; 0).",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: GÓC GIỮA TRỤC Oz VÀ ĐƯỜNG THẲNG</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, tính góc giữa trục $Oz$ và đường thẳng $d$ có phương trình tham số:\n                  $$\\begin{cases} x = 1 + t \\\\ y = 2 - t \\\\ z = 3 \\end{cases}$$\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 188.52,
+      "endTime": 218.11,
+      "duration": 29.59,
+      "mascotMode": "talking",
+      "mascotTip": "Tích vô hướng k * u = 0, suy ra d vuông góc Oz, góc bằng 90°!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Trục $Oz$ nhận $\\vec{k} = (0; 0; 1)$ làm VTCP ($|\\vec{k}| = 1$).</p>\n                  <p>• Đường thẳng $d$ có VTCP $\\vec{u} = (1; -1; 0)$ ($|\\vec{u}| = \\sqrt{1^2+(-1)^2+0^2} = \\sqrt{2}$).</p>\n                  <p>• Tích vô hướng: $\\vec{k} \\cdot \\vec{u} = 0\\cdot 1 + 0(-1) + 1\\cdot 0 = 0$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center;\">\n                    Vì $\\vec{k} \\cdot \\vec{u} = 0 \\implies d \\perp Oz \\implies (d, Oz) = 90^\\circ$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TÌM THAM SỐ m ĐỂ GÓC BẰNG 60°",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 218.11,
+      "endTime": 244.25,
+      "duration": 26.14,
+      "mascotMode": "thinking",
+      "mascotTip": "u1 = (1; m; 1), u2 = (2; 1; -1). cos 60° = 1/2. Bình phương giải PT bậc 2!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: TÌM m ĐỂ GÓC BẰNG 60°</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho hai đường thẳng:\n                  $$d_1: \\frac{x}{1} = \\frac{y-1}{m} = \\frac{z+2}{1} \\quad \\text{và} \\quad d_2: \\frac{x+1}{2} = \\frac{y}{1} = \\frac{z-3}{-1}$$\n                  Tìm tất cả các giá trị của tham số $m$ để góc giữa $d_1$ và $d_2$ bằng $60^\\circ$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 244.25,
+      "endTime": 290.4,
+      "duration": 46.15,
+      "mascotMode": "talking",
+      "mascotTip": "2|m+1| = sqrt(6(m^2+2)) -> 2(m-2)^2 = 0 -> m = 2!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $\\vec{u}_1 = (1; m; 1) \\implies |\\vec{u}_1| = \\sqrt{m^2+2}$; $\\vec{u}_2 = (2; 1; -1) \\implies |\\vec{u}_2| = \\sqrt{6}$.</p>\n                  <p>• $\\vec{u}_1 \\cdot \\vec{u}_2 = 1(2) + m(1) + 1(-1) = m + 1$.</p>\n                  <p>• Vì $(d_1, d_2) = 60^\\circ \\implies \\cos 60^\\circ = \\frac{1}{2}$:</p>\n                  <p>$$\\frac{|m+1|}{\\sqrt{m^2+2}\\cdot \\sqrt{6}} = \\frac{1}{2} \\iff 2|m+1| = \\sqrt{6(m^2+2)}$$</p>\n                  <p>• Bình phương hai vế: $4(m^2+2m+1) = 6(m^2+2) \\iff 2m^2 - 8m + 8 = 0 \\iff 2(m-2)^2 = 0 \\iff m = 2$.</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Giá trị cần tìm:</b> $m = 2$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY QUÊN DẤU GIÁ TRỊ TUYỆT ĐỐI",
+      "startTime": 290.4,
+      "endTime": 321.86,
+      "duration": 31.46,
+      "mascotMode": "magnifier",
+      "mascotTip": "Góc giữa hai đường thẳng luôn ≤ 90°! Không bao giờ được ra cos âm.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">⚠️ BẪY: QUÊN DẤU GIÁ TRỊ TUYỆT ĐỐI TRÊN TỬ SỐ</div>\n                  <p style=\"margin:6px 0 0 0; font-size:16.5px; color:#fecaca;\">\n                    Giả sử tính ra tích vô hướng $\\vec{u}_1 \\cdot \\vec{u}_2 = -3$.<br>\n                    Nhiều bạn viết: $\\cos(d_1, d_2) = \\frac{-3}{6} = -\\frac{1}{2} \\implies (d_1, d_2) = 120^\\circ$ ❌ SAI HOÀN TOÀN!<br>\n                    <b>Chuẩn xác:</b> Góc giữa hai đường thẳng luôn là góc nhọn hoặc vuông ($0^\\circ \\le \\varphi \\le 90^\\circ$), nên bắt buộc phải có giá trị tuyệt đối: $\\cos \\varphi = \\frac{|-3|}{6} = \\frac{1}{2} \\implies \\varphi = 60^\\circ$ ✅!\n                  </p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: TÍNH GÓC TRỰC TIẾP BẰNG LỆNH ANGLE",
+      "startTime": 321.86,
+      "endTime": 352.41,
+      "duration": 30.55,
+      "mascotMode": "talking",
+      "mascotTip": "Menu 5 nhập VctA, VctB -> OPTN mũi tên xuống 3 Angle(VctA, VctB)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX tính góc trong 5 giây</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• <b>Bước 1:</b> <code>MENU 5</code> $\\rightarrow$ Nhập $\\vec{u}_1$ vào <b>VctA</b>, nhập $\\vec{u}_2$ vào <b>VctB</b>.</p>\n                  <p>• <b>Bước 2:</b> Bấm <code>AC</code> $\\rightarrow$ <code>OPTN</code> $\\rightarrow$ Bấm mũi tên xuống $\\rightarrow$ Chọn <code>3: Angle</code>.</p>\n                  <p>• <b>Bước 3:</b> Bấm <code>OPTN 3</code> (VctA) $\\rightarrow$ phím phẩy <code>Shift )</code> $\\rightarrow$ <code>OPTN 4</code> (VctB) $\\rightarrow$ <code>=</code>.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Quy tắc góc nhọn:</b> Màn hình hiện số đo góc $\\theta$.<br>\n                    • Nếu $\\theta \\le 90^\\circ \\implies$ Kết quả chính là $\\theta$.<br>\n                    • Nếu $\\theta > 90^\\circ \\implies$ Lấy $180^\\circ - \\theta$ là ra ngay góc giữa hai đường thẳng!\n                  </div>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER5_DATA.bai16_muc2 = {
+  "lessonId": "bai16",
+  "lessonTitle": "Bài 16: Công thức tính góc trong không gian",
+  "sectionId": "bai16_muc2",
+  "sectionTitle": "Mục 2: Góc giữa đường thẳng và mặt phẳng",
+  "audio": "/audio/bai16_muc2.mp3",
+  "audioSrc": "./audio/bai16_muc2.mp3",
+  "audio_src": "./audio/bai16_muc2.mp3",
+  "timestamp_src": "timestamps/bai16_muc2.json",
+  "totalDuration": 306.88,
+  "duration": 306.88,
+  "title": "Mục 2: Góc giữa đường thẳng và mặt phẳng",
+  "owl_tip": "KHÁC LOẠI DÙNG SIN: sin α = |u * n| / (|u| * |n|). Không được nhầm với cos!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 28.63,
+      "id": "part2"
+    },
+    {
+      "time": 68.33,
+      "id": "part3"
+    },
+    {
+      "time": 79.87,
+      "id": "vd1_q"
+    },
+    {
+      "time": 95.61,
+      "id": "vd1_a"
+    },
+    {
+      "time": 133.46,
+      "id": "vd2_q"
+    },
+    {
+      "time": 147.57,
+      "id": "vd2_a"
+    },
+    {
+      "time": 183.35,
+      "id": "vd3_q"
+    },
+    {
+      "time": 202.89,
+      "id": "vd3_a"
+    },
+    {
+      "time": 255.4,
+      "id": "part4"
+    },
+    {
+      "time": 279.95,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Định nghĩa góc giữa đường thẳng và mặt phẳng",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Công thức sin & Bản chất hình học",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Casio fx-580VNX",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 16: CÔNG THỨC TÍNH GÓC TRONG KHÔNG GIAN",
+      "subtitle": "MỤC 2 • GÓC GIỮA ĐƯỜNG THẲNG VÀ MẶT PHẲNG",
+      "startTime": 0,
+      "endTime": 28.63,
+      "duration": 28.63,
+      "mascotMode": "pointer",
+      "mascotTip": "Góc giữa d và (P) là góc giữa d và hình chiếu vuông góc d' của nó trên (P)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Định nghĩa góc giữa đường thẳng và mặt phẳng</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Góc giữa đường thẳng $d$ và mặt phẳng $(P)$ là góc giữa $d$ và hình chiếu vuông góc $d'$ của nó trên $(P)$.</p>\n                  <p>• Ký hiệu: $\\alpha = (d, (P))$, thỏa mãn $0^\\circ \\le \\alpha \\le 90^\\circ$.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:12px 0;\">\n                    <b>Các trường hợp đặc biệt:</b><br>\n                    • Nếu $d \\perp (P) \\implies (d, (P)) = 90^\\circ$.<br>\n                    • Nếu $d \\parallel (P)$ hoặc $d \\subset (P) \\implies (d, (P)) = 0^\\circ$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÔNG THỨC SIN & BẢN CHẤT HÌNH HỌC",
+      "subtitle": "MỤC 2 • CỰC KỲ QUAN TRỌNG: DÙNG HÀM SIN THAY VÌ COS",
+      "startTime": 28.63,
+      "endTime": 68.33,
+      "duration": 39.7,
+      "mascotMode": "talking",
+      "mascotTip": "Khác loại (Đường thẳng và Mặt phẳng) bắt buộc phải dùng hàm SIN!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Công thức tính sin của góc giữa $d$ và $(P)$</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho đường thẳng $d$ có VTCP $\\vec{u}=(a; b; c)$ và mặt phẳng $(P)$ có VTPT $\\vec{n}=(A; B; C)$:</p>\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:14px; margin:12px 0; text-align:center; font-size:18px;\">\n                    $$\\sin \\alpha = \\frac{|\\vec{u} \\cdot \\vec{n}|}{|\\vec{u}| \\cdot |\\vec{n}|} = \\frac{|aA + bB + cC|}{\\sqrt{a^2+b^2+c^2} \\cdot \\sqrt{A^2+B^2+C^2}}$$\n                  </div>\n                  <p>💡 <b>Tại sao lại là hàm $\\sin$ mà không phải $\\cos$?</b><br>\n                  Vì $\\vec{n} \\perp (P)$, nên góc giữa $\\vec{u}$ và $\\vec{n}$ phụ nhau với góc giữa $d$ và $(P)$ ($\\cos(90^\\circ - \\alpha) = \\sin \\alpha$).</p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 2 • 3 BÀI TOÁN TÍNH SIN VÀ TÌM THAM SỐ GÓC",
+      "startTime": 68.33,
+      "endTime": 79.87,
+      "duration": 11.54,
+      "mascotMode": "thinking",
+      "mascotTip": "Cùng rèn luyện kỹ năng đọc VTCP, VTPT và ráp công thức sin chuẩn xác!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 bài toán trọng tâm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Tính $\\sin$ và số đo góc giữa đường thẳng và mặt phẳng tổng quát.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Tính góc giữa đường thẳng tham số và mặt phẳng toạ độ $(Oxy)$.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Tìm tham số $m$ để góc giữa đường thẳng và mặt phẳng bằng $30^\\circ$.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: TÍNH SIN GÓC GIỮA d VÀ MẶT PHẲNG (P)",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 79.87,
+      "endTime": 95.61,
+      "duration": 15.74,
+      "mascotMode": "thinking",
+      "mascotTip": "u = (2; -1; 1) và n = (1; 1; 2). Áp dụng công thức sin = |u*n| / (|u|*|n|)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: TÍNH SIN GÓC GIỮA d VÀ (P)</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, tính $\\sin$ của góc giữa đường thẳng $d$ và mặt phẳng $(P)$:\n                  $$d: \\frac{x-1}{2} = \\frac{y+1}{-1} = \\frac{z-2}{1} \\quad \\text{và} \\quad (P): x + y + 2z - 5 = 0$$\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 95.61,
+      "endTime": 133.46,
+      "duration": 37.85,
+      "mascotMode": "talking",
+      "mascotTip": "|u| = căn 6, |n| = căn 6. u*n = 3. sin = 3/6 = 1/2 -> góc bằng 30°!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $d$ có VTCP $\\vec{u} = (2; -1; 1) \\implies |\\vec{u}| = \\sqrt{2^2+(-1)^2+1^2} = \\sqrt{6}$.</p>\n                  <p>• $(P)$ có VTPT $\\vec{n} = (1; 1; 2) \\implies |\\vec{n}| = \\sqrt{1^2+1^2+2^2} = \\sqrt{6}$.</p>\n                  <p>• Tích vô hướng: $\\vec{u} \\cdot \\vec{n} = 2(1) + (-1)(1) + 1(2) = 2 - 1 + 2 = 3$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center; font-size:17px;\">\n                    $$\\sin(d, (P)) = \\frac{|3|}{\\sqrt{6} \\cdot \\sqrt{6}} = \\frac{3}{6} = \\frac{1}{2} \\implies (d, (P)) = 30^\\circ$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: GÓC GIỮA ĐƯỜNG THẲNG VÀ MẶT PHẲNG (Oxy)",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 133.46,
+      "endTime": 147.57,
+      "duration": 14.11,
+      "mascotMode": "thinking",
+      "mascotTip": "Mặt phẳng (Oxy) có VTPT k(0; 0; 1)! Tính tích vô hướng u * k.",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: GÓC GIỮA ĐƯỜNG THẲNG VÀ MP (Oxy)</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, tính góc giữa đường thẳng $\\Delta$ và mặt phẳng toạ độ $(Oxy)$:\n                  $$\\Delta: \\begin{cases} x = 1 + \\sqrt{2}t \\\\ y = 2 - \\sqrt{2}t \\\\ z = 3 \\end{cases}$$\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 147.57,
+      "endTime": 183.35,
+      "duration": 35.78,
+      "mascotMode": "talking",
+      "mascotTip": "Tích vô hướng u * k = 0 -> sin = 0 -> góc bằng 0°. Delta song song với (Oxy)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Đường thẳng $\\Delta$ có VTCP $\\vec{u} = (\\sqrt{2}; -\\sqrt{2}; 0) \\implies |\\vec{u}| = \\sqrt{2+2+0} = 2$.</p>\n                  <p>• Mặt phẳng toạ độ $(Oxy)$ có phương trình $z = 0$, VTPT $\\vec{k} = (0; 0; 1)$ ($|\\vec{k}| = 1$).</p>\n                  <p>• Tích vô hướng: $\\vec{u} \\cdot \\vec{k} = \\sqrt{2}\\cdot 0 + (-\\sqrt{2})\\cdot 0 + 0\\cdot 1 = 0$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center;\">\n                    $$\\sin(\\Delta, (Oxy)) = \\frac{|0|}{2 \\cdot 1} = 0 \\implies (\\Delta, (Oxy)) = 0^\\circ$$\n                    <i>(Do $\\Delta$ song song với mặt phẳng $(Oxy)$ vì cao độ $z = 3 \\ne 0$).</i>\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TÌM THAM SỐ m ĐỂ GÓC BẰNG 30°",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 183.35,
+      "endTime": 202.89,
+      "duration": 19.54,
+      "mascotMode": "thinking",
+      "mascotTip": "u = (1; 0; 1), n = (1; m; 0). sin 30° = 1/2. Lập phương trình tìm m!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: TÌM m ĐỂ GÓC BẰNG 30°</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho đường thẳng $d: \\begin{cases} x = 1 + t \\\\ y = 2 \\\\ z = t \\end{cases}$ và mặt phẳng $(P): x + my - 3 = 0$. Tìm tất cả các giá trị của tham số $m$ để góc giữa đường thẳng $d$ và mặt phẳng $(P)$ bằng $30^\\circ$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 202.89,
+      "endTime": 255.4,
+      "duration": 52.51,
+      "mascotMode": "talking",
+      "mascotTip": "1 / (sqrt(2)*sqrt(m^2+1)) = 1/2 -> m^2+1 = 2 -> m = ±1!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $d$ có VTCP $\\vec{u} = (1; 0; 1) \\implies |\\vec{u}| = \\sqrt{1^2+0^2+1^2} = \\sqrt{2}$.</p>\n                  <p>• $(P)$ có VTPT $\\vec{n} = (1; m; 0) \\implies |\\vec{n}| = \\sqrt{1^2+m^2+0^2} = \\sqrt{m^2+1}$.</p>\n                  <p>• $\\vec{u} \\cdot \\vec{n} = 1\\cdot 1 + 0\\cdot m + 1\\cdot 0 = 1$.</p>\n                  <p>• Vì $(d, (P)) = 30^\\circ \\implies \\sin 30^\\circ = \\frac{1}{2}$:</p>\n                  <p>$$\\frac{1}{\\sqrt{2}\\cdot \\sqrt{m^2+1}} = \\frac{1}{2} \\iff \\sqrt{2(m^2+1)} = 2 \\iff 2(m^2+1) = 4 \\iff m^2 = 1 \\iff m = \\pm 1$$</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Giá trị cần tìm:</b> $m = 1$ hoặc $m = -1$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: BẪY KINH ĐIỂN DÙNG NHẦM HÀM COS",
+      "startTime": 255.4,
+      "endTime": 279.95,
+      "duration": 24.55,
+      "mascotMode": "magnifier",
+      "mascotTip": "Đường thẳng và Mặt phẳng là KHÁC LOẠI -> Bắt buộc dùng hàm SIN!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">⚠️ BẪY: ÁP DỤNG NHẦM HÀM COS THAY VÌ SIN</div>\n                  <p style=\"margin:6px 0 0 0; font-size:16.5px; color:#fecaca;\">\n                    Rất nhiều bạn có thói quen: Cứ tính góc trong không gian là bấm $\\cos$!<br>\n                    Ví dụ khi tính ra phân số $\\frac{1}{2}$, nếu bấm $\\arccos(1/2) = 60^\\circ$ ❌ SAI HOÀN TOÀN!<br>\n                    <b>Chuẩn xác:</b> Giữa đường thẳng và mặt phẳng là hàm $\\sin$! Phải lấy $\\arcsin(1/2) = 30^\\circ$ ✅!\n                  </p>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: BẤM GÓC ĐƯỜNG THẲNG VÀ MẶT PHẲNG",
+      "startTime": 279.95,
+      "endTime": 306.88,
+      "duration": 26.93,
+      "mascotMode": "talking",
+      "mascotTip": "Bấm Angle(u, n) được θ -> Góc cần tìm = |90° - θ|!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX tính góc với mặt phẳng</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• Khi tính góc giữa $\\vec{u}$ (VctA) và $\\vec{n}$ (VctB) bằng lệnh <code>Angle(VctA, VctB)</code>:</p>\n                  <p>• Máy tính sẽ trả về góc $\\theta$ giữa hai vectơ.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    <b>Quy tắc góc phụ nhau:</b><br>\n                    Góc $\\alpha$ giữa đường thẳng và mặt phẳng chính là:\n                    $$\\alpha = |90^\\circ - \\theta|$$\n                    <i>(Ví dụ máy ra $\\theta = 60^\\circ \\implies \\alpha = 90^\\circ - 60^\\circ = 30^\\circ$).</i>\n                  </div>\n                  <p>👉 Nhanh như chớp, không bao giờ nhầm lẫn giữa sin và cos!</p>\n                </div>\n            \n    </div>\n    "
+    }
+  ]
+};
+
+  window.CHAPTER5_DATA.bai16_muc3 = {
+  "lessonId": "bai16",
+  "lessonTitle": "Bài 16: Công thức tính góc trong không gian",
+  "sectionId": "bai16_muc3",
+  "sectionTitle": "Mục 3: Góc giữa hai mặt phẳng",
+  "audio": "/audio/bai16_muc3.mp3",
+  "audioSrc": "./audio/bai16_muc3.mp3",
+  "audio_src": "./audio/bai16_muc3.mp3",
+  "timestamp_src": "timestamps/bai16_muc3.json",
+  "totalDuration": 352.14,
+  "duration": 352.14,
+  "title": "Mục 3: Góc giữa hai mặt phẳng",
+  "owl_tip": "CÙNG LOẠI DÙNG COS: cos β = |n1 * n2| / (|n1| * |n2|). Thần chú: CÙNG COS - KHÁC SIN!",
+  "timeline": [
+    {
+      "time": 0,
+      "id": "part1"
+    },
+    {
+      "time": 29.23,
+      "id": "part2"
+    },
+    {
+      "time": 84.89,
+      "id": "part3"
+    },
+    {
+      "time": 96.87,
+      "id": "vd1_q"
+    },
+    {
+      "time": 115.66,
+      "id": "vd1_a"
+    },
+    {
+      "time": 154.42,
+      "id": "vd2_q"
+    },
+    {
+      "time": 165.32,
+      "id": "vd2_a"
+    },
+    {
+      "time": 205.76,
+      "id": "vd3_q"
+    },
+    {
+      "time": 229.71,
+      "id": "vd3_a"
+    },
+    {
+      "time": 287.72,
+      "id": "part4"
+    },
+    {
+      "time": 316.76,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Định nghĩa góc giữa hai mặt phẳng",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Công thức cos & Điều kiện vuông góc",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 3 Ví dụ rèn luyện điển hình (Đồng hồ 15s - 30s)",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Mascot Cú Thông Thái soi bẫy sai lầm",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Mẹo Thầy Cú & Casio fx-580VNX",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "BÀI 16: CÔNG THỨC TÍNH GÓC TRONG KHÔNG GIAN",
+      "subtitle": "MỤC 3 • GÓC GIỮA HAI MẶT PHẲNG",
+      "startTime": 0,
+      "endTime": 29.23,
+      "duration": 29.23,
+      "mascotMode": "pointer",
+      "mascotTip": "Góc giữa 2 mặt phẳng là góc giữa 2 đường thẳng vuông góc với chúng!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">1. Định nghĩa góc giữa hai mặt phẳng</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• Góc giữa hai mặt phẳng $(P)$ và $(Q)$ là góc giữa hai đường thẳng lần lượt vuông góc với $(P)$ và $(Q)$.</p>\n                  <p>• Ký hiệu: $\\beta = ((P), (Q))$, thỏa mãn $0^\\circ \\le \\beta \\le 90^\\circ$.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:12px 0;\">\n                    <b>Các trường hợp đặc biệt:</b><br>\n                    • Nếu $(P) \\parallel (Q)$ hoặc $(P) \\equiv (Q) \\implies ((P), (Q)) = 0^\\circ$.<br>\n                    • Nếu $(P) \\perp (Q) \\implies ((P), (Q)) = 90^\\circ$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "CÔNG THỨC COS GÓC GIỮA HAI MẶT PHẲNG",
+      "subtitle": "MỤC 3 • ĐIỀU KIỆN HAI MẶT PHẲNG VUÔNG GÓC",
+      "startTime": 29.23,
+      "endTime": 84.89,
+      "duration": 55.66,
+      "mascotMode": "talking",
+      "mascotTip": "Hai mặt phẳng là CÙNG LOẠI -> Dùng hàm COS!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#34d399; font-size:22px; margin-bottom:12px;\">2. Công thức cos góc giữa hai mặt phẳng</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>Cho $(P)$ có VTPT $\\vec{n}_1=(A_1; B_1; C_1)$ và $(Q)$ có VTPT $\\vec{n}_2=(A_2; B_2; C_2)$:</p>\n                  <div style=\"background:rgba(52,211,153,0.15); border:1.5px solid #34d399; border-radius:10px; padding:14px; margin:12px 0; text-align:center; font-size:18px;\">\n                    $$\\cos \\beta = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1| \\cdot |\\vec{n}_2|} = \\frac{|A_1A_2 + B_1B_2 + C_1C_2|}{\\sqrt{A_1^2+B_1^2+C_1^2} \\cdot \\sqrt{A_2^2+B_2^2+C_2^2}}$$\n                  </div>\n                  <div style=\"background:rgba(251,191,36,0.15); border:1.5px solid #fbbf24; border-radius:10px; padding:10px; margin:10px 0;\">\n                    <b>Điều kiện vuông góc:</b> $(P) \\perp (Q) \\iff \\vec{n}_1 \\cdot \\vec{n}_2 = 0 \\iff A_1A_2 + B_1B_2 + C_1C_2 = 0$.\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "VÍ DỤ RÈN LUYỆN ĐIỂN HÌNH",
+      "subtitle": "MỤC 3 • 3 BÀI TOÁN TÍNH GÓC GIỮA HAI MẶT PHẲNG",
+      "startTime": 84.89,
+      "endTime": 96.87,
+      "duration": 11.98,
+      "mascotMode": "thinking",
+      "mascotTip": "Cùng rèn luyện tính côsin, góc với mặt phẳng toạ độ và tìm m góc 45°!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#fbbf24; font-size:22px; margin-bottom:12px;\">Khám phá 3 bài toán trọng tâm</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <ul style=\"list-style-type:none; padding-left:0; space-y:8px;\">\n                    <li>📌 <b>Ví dụ 1 (15s):</b> Tính côsin của góc giữa hai mặt phẳng có dạng tổng quát.</li>\n                    <li>📌 <b>Ví dụ 2 (15s):</b> Tính góc giữa mặt phẳng bất kỳ và mặt phẳng toạ độ $(Oxy)$.</li>\n                    <li>📌 <b>Ví dụ 3 (30s):</b> Tìm tham số $m$ để góc giữa hai mặt phẳng bằng $45^\\circ$.</li>\n                  </ul>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "VÍ DỤ 1: TÍNH CÔSIN GÓC GIỮA (P) VÀ (Q)",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 96.87,
+      "endTime": 115.66,
+      "duration": 18.79,
+      "mascotMode": "thinking",
+      "mascotTip": "n1 = (1; 2; -2) và n2 = (2; -2; 1). Tính độ dài mỗi vectơ và tích vô hướng!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 1: TÍNH CÔSIN GÓC GIỮA (P) VÀ (Q)</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Nhận biết)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, tính côsin của góc giữa hai mặt phẳng:\n                  $$(P): x + 2y - 2z + 1 = 0 \\quad \\text{và} \\quad (Q): 2x - 2y + z - 3 = 0$$\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "VÍ DỤ 1: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 115.66,
+      "endTime": 154.42,
+      "duration": 38.76,
+      "mascotMode": "talking",
+      "mascotTip": "|n1| = 3, |n2| = 3. n1*n2 = -4. Nhớ lấy giá trị tuyệt đối |-4| = 4 -> cos = 4/9!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 1</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $(P)$ có VTPT $\\vec{n}_1 = (1; 2; -2) \\implies |\\vec{n}_1| = \\sqrt{1^2+2^2+(-2)^2} = \\sqrt{9} = 3$.</p>\n                  <p>• $(Q)$ có VTPT $\\vec{n}_2 = (2; -2; 1) \\implies |\\vec{n}_2| = \\sqrt{2^2+(-2)^2+1^2} = \\sqrt{9} = 3$.</p>\n                  <p>• Tích vô hướng: $\\vec{n}_1 \\cdot \\vec{n}_2 = 1(2) + 2(-2) + (-2)(1) = 2 - 4 - 2 = -4$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center; font-size:17px;\">\n                    $$\\cos((P), (Q)) = \\frac{|-4|}{3 \\cdot 3} = \\frac{4}{9}$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "VÍ DỤ 2: GÓC GIỮA (P) VÀ MẶT PHẲNG TOẠ ĐỘ (Oxy)",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 154.42,
+      "endTime": 165.32,
+      "duration": 10.9,
+      "mascotMode": "thinking",
+      "mascotTip": "(P) có n1 = (1; 0; -1). Mặt phẳng (Oxy) có k = (0; 0; 1)!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 2: GÓC GIỮA (P) VÀ MẶT PHẲNG (Oxy)</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#34d399;\">15 giây</b> (Thông hiểu)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#34d399; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, tính góc giữa mặt phẳng $(P): x - z + 2 = 0$ và mặt phẳng toạ độ $(Oxy)$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "VÍ DỤ 2: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI & BÌNH LUẬN",
+      "startTime": 165.32,
+      "endTime": 205.76,
+      "duration": 40.44,
+      "mascotMode": "talking",
+      "mascotTip": "n1*k = -1 -> cos = |-1| / (căn 2 * 1) = căn 2 / 2 -> góc bằng 45°!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#10b981; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 2</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $(P)$ có VTPT $\\vec{n}_1 = (1; 0; -1) \\implies |\\vec{n}_1| = \\sqrt{1^2+0^2+(-1)^2} = \\sqrt{2}$.</p>\n                  <p>• Mặt phẳng toạ độ $(Oxy)$ có phương trình $z = 0$, VTPT $\\vec{k} = (0; 0; 1)$ ($|\\vec{k}| = 1$).</p>\n                  <p>• Tích vô hướng: $\\vec{n}_1 \\cdot \\vec{k} = 1\\cdot 0 + 0\\cdot 0 + (-1)\\cdot 1 = -1$.</p>\n                  <div style=\"background:rgba(16,185,129,0.15); border:1.5px solid #10b981; border-radius:10px; padding:12px; margin:8px 0; text-align:center; font-size:17px;\">\n                    $$\\cos((P), (Oxy)) = \\frac{|-1|}{\\sqrt{2} \\cdot 1} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2} \\implies ((P), (Oxy)) = 45^\\circ$$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "VÍ DỤ 3: TÌM THAM SỐ m ĐỂ GÓC BẰNG 45°",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 205.76,
+      "endTime": 229.71,
+      "duration": 23.95,
+      "mascotMode": "thinking",
+      "mascotTip": "n1 = (2; -1; 2), n2 = (1; 1; m). cos 45° = 1/căn 2. Bình phương giải PT!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">VÍ DỤ 3: TÌM m ĐỂ GÓC BẰNG 45°</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#fbbf24;\">30 giây</b> (Vận dụng)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(245,158,11,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#fbbf24; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n                <div style=\"font-size:16.5px; line-height:1.7; color:#f8fafc;\">\n                  <b>Đề bài:</b> Trong không gian $Oxyz$, cho hai mặt phẳng:\n                  $$(P): 2x - y + 2z - 1 = 0 \\quad \\text{và} \\quad (Q): x + y + mz + 5 = 0$$\n                  Tìm tất cả các giá trị của tham số $m$ để góc giữa hai mặt phẳng $(P)$ và $(Q)$ bằng $45^\\circ$.\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "VÍ DỤ 3: LỜI GIẢI CHI TIẾT",
+      "subtitle": "HƯỚNG DẪN GIẢI TỪNG BƯỚC",
+      "startTime": 229.71,
+      "endTime": 287.72,
+      "duration": 58.01,
+      "mascotMode": "talking",
+      "mascotTip": "căn 2 * |2m+1| = 3 * sqrt(m^2+2) -> (m-4)^2 = 0 -> m = 4!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#f59e0b; font-size:21px; margin-bottom:12px;\">Lời giải chi tiết Ví dụ 3</h3>\n                <div style=\"font-size:16px; line-height:1.65; color:#f8fafc;\">\n                  <p>• $\\vec{n}_1 = (2; -1; 2) \\implies |\\vec{n}_1| = 3$; $\\vec{n}_2 = (1; 1; m) \\implies |\\vec{n}_2| = \\sqrt{m^2+2}$.</p>\n                  <p>• $\\vec{n}_1 \\cdot \\vec{n}_2 = 2(1) + (-1)(1) + 2(m) = 2m + 1$.</p>\n                  <p>• Vì $((P), (Q)) = 45^\\circ \\implies \\cos 45^\\circ = \\frac{1}{\\sqrt{2}}$:</p>\n                  <p>$$\\frac{|2m+1|}{3\\sqrt{m^2+2}} = \\frac{1}{\\sqrt{2}} \\iff \\sqrt{2}|2m+1| = 3\\sqrt{m^2+2}$$</p>\n                  <p>• Bình phương hai vế: $2(4m^2+4m+1) = 9(m^2+2) \\iff m^2 - 8m + 16 = 0 \\iff (m-4)^2 = 0 \\iff m = 4$.</p>\n                  <div style=\"background:rgba(245,158,11,0.15); border:1.5px solid #f59e0b; border-radius:10px; padding:10px; margin:8px 0; text-align:center;\">\n                    <b>Giá trị cần tìm:</b> $m = 4$\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "CÚ THÔNG THÁI SOI BẪY SAI LẦM",
+      "subtitle": "PHẦN 4: THẦN CHÚ 'CÙNG COS - KHÁC SIN'",
+      "startTime": 287.72,
+      "endTime": 316.76,
+      "duration": 29.04,
+      "mascotMode": "magnifier",
+      "mascotTip": "Cùng loại (Đường-Đường, Mặt-Mặt) dùng COS. Khác loại (Đường-Mặt) dùng SIN!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <div class=\"trap-warning-box\" style=\"margin-bottom:14px;\">\n                  <div class=\"trap-title\">🦉 THẦN CHÚ BẤT HỦ: CÙNG COS - KHÁC SIN</div>\n                  <div style=\"margin:8px 0 0 0; font-size:16px; color:#f8fafc; line-height:1.7;\">\n                    <p>• <b>Đường thẳng & Đường thẳng:</b> Cùng loại $\\implies \\cos \\varphi = \\frac{|\\vec{u}_1 \\cdot \\vec{u}_2|}{|\\vec{u}_1| \\cdot |\\vec{u}_2|}$</p>\n                    <p>• <b>Mặt phẳng & Mặt phẳng:</b> Cùng loại $\\implies \\cos \\beta = \\frac{|\\vec{n}_1 \\cdot \\vec{n}_2|}{|\\vec{n}_1| \\cdot |\\vec{n}_2|}$</p>\n                    <p>• <b>Đường thẳng & Mặt phẳng:</b> Khác loại $\\implies \\sin \\alpha = \\frac{|\\vec{u} \\cdot \\vec{n}|}{|\\vec{u}| \\cdot |\\vec{n}|}$</p>\n                    <p style=\"color:#fecaca;\"><b>Quy ước chung:</b> Cả ba công thức trên tử số LUÔN CÓ dấu giá trị tuyệt đối!</p>\n                  </div>\n                </div>\n            \n    </div>\n    "
+    },
+    {
+      "sceneIndex": 11,
+      "title": "MẸO THẦY CÚ & BẤM CASIO 580",
+      "subtitle": "PHẦN 5: BẤM GÓC GIỮA HAI MẶT PHẲNG TRONG 5 GIÂY",
+      "startTime": 316.76,
+      "endTime": 352.14,
+      "duration": 35.38,
+      "mascotMode": "talking",
+      "mascotTip": "Nhập n1 vào VctA, n2 vào VctB -> Angle(VctA, VctB) -> Nhọn lấy luôn, Tù lấy 180° - Ans!",
+      "bodyHtml": "\n    <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n      \n                <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px;\">🦉 Tuyệt kỹ Casio fx-580VNX tính góc 2 mặt phẳng</h3>\n                <div style=\"font-size:16px; line-height:1.7; color:#f8fafc;\">\n                  <p>• <b>Bước 1:</b> <code>MENU 5</code> $\\rightarrow$ Nhập $\\vec{n}_1$ vào <b>VctA</b>, nhập $\\vec{n}_2$ vào <b>VctB</b>.</p>\n                  <p>• <b>Bước 2:</b> Bấm <code>AC</code> $\\rightarrow$ <code>OPTN</code> $\\rightarrow$ Mũi tên xuống $\\rightarrow$ Chọn <code>3: Angle</code>.</p>\n                  <p>• <b>Bước 3:</b> Bấm <code>OPTN 3</code> (VctA) $\\rightarrow$ <code>Shift )</code> $\\rightarrow$ <code>OPTN 4</code> (VctB) $\\rightarrow$ <code>=</code>.</p>\n                  <div style=\"background:rgba(56,189,248,0.15); border:1.5px solid #38bdf8; border-radius:10px; padding:12px; margin:10px 0;\">\n                    • Nếu màn hình hiển thị góc $\\le 90^\\circ \\implies$ Đó chính là số đo góc giữa hai mặt phẳng.<br>\n                    • Nếu góc $> 90^\\circ \\implies$ Bấm tiếp <code>180 - Ans =</code> là ra ngay kết quả chính xác 100%!\n                  </div>\n                </div>\n            \n    </div>\n    "
     }
   ]
 };
