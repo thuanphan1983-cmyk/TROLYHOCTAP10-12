@@ -20,12 +20,31 @@
       if (window.CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.CHAPTER4_DATA);
       if (window.CHAPTER5_DATA) Object.assign(LECTURE_DATA, window.CHAPTER5_DATA);
       if (window.CHAPTER6_DATA) Object.assign(LECTURE_DATA, window.CHAPTER6_DATA);
+      if (window.G11_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER1_DATA);
     }
   }
 
   // Dynamic script loader for Chapter data scaffolds
   (function tryLoadChapterData() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      if (!window.G11_CHAPTER1_DATA) {
+        const sg11 = document.createElement('script');
+        sg11.src = (window.location.protocol === 'file:') ? 'js/g11_chapter1_data.js' : '/js/g11_chapter1_data.js';
+        sg11.onload = function() {
+          if (window.G11_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER1_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        sg11.onerror = function() {
+          const sg11b = document.createElement('script');
+          sg11b.src = 'public/js/g11_chapter1_data.js';
+          sg11b.onload = function() {
+            if (window.G11_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER1_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(sg11b);
+        };
+        document.head.appendChild(sg11);
+      }
       if (!window.CHAPTER6_DATA) {
         const s6 = document.createElement('script');
         s6.src = (window.location.protocol === 'file:') ? 'js/chapter6_data.js' : '/js/chapter6_data.js';
@@ -890,12 +909,38 @@
     }
   ];
 
+  const SGK11_MENU_CONFIG = [
+    {
+      chapterNumber: 1101,
+      chapterTitle: "Toán 11 - Chương I: Hàm số lượng giác và phương trình lượng giác",
+      lessonId: "toan11_bai1",
+      lessonTitle: "Bài 1: Giá trị lượng giác của góc lượng giác (Lớp 11 KNTT)",
+      lessonBadge: "Toán 11 • Bài 1",
+      sections: [
+        { key: "g11_bai1_muc1", title: "Mục 1: Góc lượng giác, đơn vị radian và độ dài cung tròn", time: "05:04", icon: "📐" },
+        { key: "g11_bai1_muc2", title: "Mục 2: Đường tròn lượng giác & Điểm biểu diễn góc lượng giác", time: "05:10", icon: "⭕" },
+        { key: "g11_bai1_muc3", title: "Mục 3: Giá trị lượng giác của góc lượng giác & Dấu theo các góc phần tư", time: "05:25", icon: "🎯" },
+        { key: "g11_bai1_muc4", title: "Mục 4: Các hệ thức lượng giác cơ bản & Cung liên quan đặc biệt", time: "05:35", icon: "✨" }
+      ]
+    }
+  ];
+
   // Backwards compatibility alias
   const CHAPTER1_MENU_CONFIG = SGK12_MENU_CONFIG;
-  const TOTAL_SECTIONS_COUNT = SGK12_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0);
+  const TOTAL_SECTIONS_COUNT = SGK12_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0) + SGK11_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0);
 
   function buildOptionsHtml() {
     let html = '';
+    // Grade 11 Option Group
+    html += `<optgroup label="━━━━━━━━ TOÁN 11 - KẾT NỐI TRI THỨC ━━━━━━━━" style="background:#090d16; color:#a7f3d0; font-weight:900;"></optgroup>`;
+    SGK11_MENU_CONFIG.forEach(grp => {
+      html += `<optgroup label="${grp.lessonTitle}" style="background:#064e3b; color:#6ee7b7; font-weight:bold;">`;
+      grp.sections.forEach(s => {
+        html += `<option value="${s.key}" style="background:#022c22; color:#f0fdf4;">${s.icon} ${grp.lessonBadge} - ${s.title} (${s.time})</option>`;
+      });
+      html += `</optgroup>`;
+    });
+
     let currentCh = -1;
     SGK12_MENU_CONFIG.forEach(grp => {
       if (grp.chapterNumber !== currentCh) {
@@ -1185,6 +1230,29 @@
           const sm = activePill.textContent.match(/Mục\s*(\d+)/i);
           if (sm) sectionNum = parseInt(sm[1]) || 1;
         }
+      }
+    }
+
+    // Check if Grade 11
+    let isGrade11 = false;
+    if (al) {
+      if (al.grade == 11 || (typeof al.id === 'string' && al.id.includes('toan11')) || (typeof al.grade === 'string' && al.grade.includes('11'))) isGrade11 = true;
+    }
+    if (!isGrade11 && typeof window !== 'undefined' && window.studentInfo && (window.studentInfo.grade == 11 || String(window.studentInfo.grade).includes('11'))) {
+      isGrade11 = true;
+    }
+    if (!isGrade11 && typeof localStorage !== 'undefined' && (localStorage.getItem('STUDENT_GRADE') === '11' || localStorage.getItem('student_grade') === '11')) {
+      isGrade11 = true;
+    }
+    if (!isGrade11 && typeof document !== 'undefined') {
+      const gEl = document.getElementById('setup-grade-select') || document.getElementById('badge-grade');
+      if (gEl && (gEl.value === '11' || gEl.textContent?.includes('11'))) isGrade11 = true;
+    }
+
+    if (isGrade11) {
+      if (lessonNum === 1 || lessonNum === null) {
+        const s = Math.min(4, Math.max(1, sectionNum));
+        return `g11_bai1_muc${s}`;
       }
     }
 
