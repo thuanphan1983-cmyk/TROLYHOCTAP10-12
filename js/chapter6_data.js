@@ -2,6 +2,7 @@
    CHƯƠNG VI: XÁC SUẤT CÓ ĐIỀU KIỆN - TOÁN 12 KNTT
    Bài 18: Xác suất có điều kiện (Mục 1, 2, 3)
    Bài 19: Công thức xác suất toàn phần và công thức Bayes (Mục 1, 2, 3)
+   Bài tập cuối chương VI: Xác suất có điều kiện (Mục 1, 2, 3)
    Rich Interactive Slides & Audio chuẩn SGK Kết Nối Tri Thức
    ========================================================================= */
 
@@ -704,7 +705,7 @@ if (typeof window !== 'undefined') {
   "owl_tip": "P(B) = ∑ P(Ai) · P(B|Ai): Gom tất cả các con đường dẫn đến biến cố B!",
   "timeline": [
     {
-      "time": 0.0,
+      "time": 0,
       "id": "part1"
     },
     {
@@ -796,7 +797,7 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 0,
       "title": "Mục 1: Công thức xác suất toàn phần",
       "subtitle": "Phần 1: Khái niệm hệ biến cố đầy đủ",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 40.8,
       "duration": 40.8,
       "mascotMode": "explaining",
@@ -931,7 +932,7 @@ if (typeof window !== 'undefined') {
   "owl_tip": "P(Ak|B) = [P(Ak) · P(B|Ak)] / P(B): Nhánh muốn tính chia cho tổng tất cả các nhánh!",
   "timeline": [
     {
-      "time": 0.0,
+      "time": 0,
       "id": "part1"
     },
     {
@@ -1023,7 +1024,7 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 0,
       "title": "Mục 2: Công thức Bayes & Ý nghĩa",
       "subtitle": "Phần 1: Đặt vấn đề và bài toán truy ngược nguyên nhân",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 25.27,
       "duration": 25.27,
       "mascotMode": "explaining",
@@ -1158,7 +1159,7 @@ if (typeof window !== 'undefined') {
   "owl_tip": "4 bước giải bài toán thực tế: Gọi hệ Ai -> Ghi xác suất nhánh -> Tính mẫu P(B) -> Tính Bayes P(Ak|B)!",
   "timeline": [
     {
-      "time": 0.0,
+      "time": 0,
       "id": "part1"
     },
     {
@@ -1250,7 +1251,7 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 0,
       "title": "Mục 3: Rèn luyện bài toán thực tế chuẩn Bộ GD",
       "subtitle": "Phần 1: Giới thiệu định dạng câu hỏi thực tế trong đề thi",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 16.61,
       "duration": 16.61,
       "mascotMode": "explaining",
@@ -1366,6 +1367,687 @@ if (typeof window !== 'undefined') {
       "mascotMode": "summary",
       "mascotTip": "Chúc mừng bạn đã làm chủ hoàn toàn Bài 19! Hãy chuẩn bị cho bài Ôn tập cuối chương 6 để tổng duyệt toàn bộ chuyên đề xác suất!",
       "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:14px; font-weight:700;\">🎓 Tổng kết toàn diện Bài 19: Xác suất toàn phần & Bayes</h3>\n              <div style=\"display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:14px;\">\n                <div style=\"background:rgba(56,189,248,0.1); border:1px solid #38bdf8; border-radius:8px; padding:12px;\">\n                  <b style=\"color:#38bdf8; font-size:15px;\">Mục 1: Toàn phần</b>\n                  <p style=\"font-size:13px; line-height:1.6; color:#cbd5e1; margin:4px 0 0 0;\">\n                    $P(B) = \\sum P(A_i)P(B \\mid A_i)$<br>\n                    Cộng tất cả các nhánh kịch bản dẫn đến kết quả $B$.\n                  </p>\n                </div>\n                <div style=\"background:rgba(16,185,129,0.1); border:1px solid #10b981; border-radius:8px; padding:12px;\">\n                  <b style=\"color:#10b981; font-size:15px;\">Mục 2: Công thức Bayes</b>\n                  <p style=\"font-size:13px; line-height:1.6; color:#cbd5e1; margin:4px 0 0 0;\">\n                    $P(A_k \\mid B) = \\frac{P(A_k \\cap B)}{P(B)}$<br>\n                    Truy ngược nguyên nhân sau khi đã biết kết quả.\n                  </p>\n                </div>\n                <div style=\"background:rgba(245,158,11,0.1); border:1px solid #f59e0b; border-radius:8px; padding:12px;\">\n                  <b style=\"color:#f59e0b; font-size:15px;\">Mục 3: Thực tế chuẩn Bộ</b>\n                  <p style=\"font-size:13px; line-height:1.6; color:#cbd5e1; margin:4px 0 0 0;\">\n                    4 bước giải chuẩn mực.<br>\n                    Bấm STO A, B, C trên Casio fx-580VNX.\n                  </p>\n                </div>\n              </div>\n              <div style=\"background:rgba(56,189,248,0.15); border:1.5px dashed #38bdf8; border-radius:8px; padding:12px; display:flex; align-items:center; gap:12px;\">\n                <span style=\"font-size:28px;\">🦉</span>\n                <span style=\"font-size:15px; color:#38bdf8; line-height:1.5;\">\n                  <b>Cú Thông Thái:</b> \"Các em đã xuất sắc chinh phục hai trụ cột toán học tinh hoa nhất của lớp 12. Hãy tiếp tục với <b>Bài tập cuối chương VI</b> để hoàn thiện bộ đề ôn tập xuất sắc!\"\n                </span>\n              </div>\n            </div>\n            "
+    }
+  ]
+};
+
+  window.CHAPTER6_DATA.ontap_c6_muc1 = {
+  "lessonId": "ontap_c6",
+  "lessonTitle": "Bài tập cuối chương VI: Xác suất có điều kiện",
+  "sectionId": "ontap_c6_muc1",
+  "sectionTitle": "Mục 1: Hệ thống hoá Xác suất có điều kiện, Toàn phần & Bayes",
+  "audio": "/audio/ontap_c6_muc1.mp3",
+  "audioSrc": "./audio/ontap_c6_muc1.mp3",
+  "audio_src": "./audio/ontap_c6_muc1.mp3",
+  "timestamp_src": "timestamps/ontap_c6_muc1.json",
+  "totalDuration": 276.96,
+  "duration": 276.96,
+  "title": "Mục 1: Hệ thống hoá Xác suất có điều kiện, Toàn phần & Bayes",
+  "owl_tip": "3 công thức vàng: Nhân xác suất -> Toàn phần -> Bayes!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 24.55,
+      "id": "part2"
+    },
+    {
+      "time": 66.5,
+      "id": "part3"
+    },
+    {
+      "time": 84.74,
+      "id": "vd1_q"
+    },
+    {
+      "time": 100.68,
+      "id": "vd1_a"
+    },
+    {
+      "time": 128.83,
+      "id": "vd2_q"
+    },
+    {
+      "time": 144.89,
+      "id": "vd2_a"
+    },
+    {
+      "time": 178.32,
+      "id": "vd3_q"
+    },
+    {
+      "time": 198.14,
+      "id": "vd3_a"
+    },
+    {
+      "time": 243.22,
+      "id": "part4"
+    },
+    {
+      "time": 261.36,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Giới thiệu 3 trụ cột xác suất lớp 12",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Mối quan hệ tương hỗ giữa các công thức",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Luyện tập ví dụ minh họa tương tác",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Bảng tổng hợp vai trò 3 công thức",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Tổng kết Mục 1 & Lời khuyên Cú Thông Thái",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 0,
+      "title": "Mục 1: Hệ thống hoá công thức xác suất",
+      "subtitle": "Phần 1: Giới thiệu 3 trụ cột xác suất lớp 12",
+      "startTime": 0.0,
+      "endTime": 24.55,
+      "duration": 24.55,
+      "mascotMode": "explaining",
+      "mascotTip": "Chương 6 gồm 3 công thức không thể tách rời: Xác suất có điều kiện, Xác suất toàn phần và Công thức Bayes!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">1. Hệ thống kiến thức trọng tâm Chương VI</h3>\n              <p style=\"font-size:16px; line-height:1.7; color:#e2e8f0;\">\n                Chương VI - Xác suất có điều kiện là nội dung cốt lõi của môn Toán 12, được liên kết chặt chẽ bởi <b>3 công thức trụ cột</b>:\n              </p>\n              <div style=\"display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin:14px 0;\">\n                <div style=\"background:rgba(56,189,248,0.12); border:1px solid #38bdf8; border-radius:8px; padding:12px;\">\n                  <b style=\"color:#38bdf8;\">1. Có điều kiện $P(A \\mid B)$</b>\n                  <p style=\"font-size:13px; line-height:1.6; color:#cbd5e1; margin:4px 0 0 0;\">Thu hẹp không gian mẫu vào điều kiện $B$ đã xảy ra.</p>\n                </div>\n                <div style=\"background:rgba(16,185,129,0.12); border:1px solid #10b981; border-radius:8px; padding:12px;\">\n                  <b style=\"color:#10b981;\">2. Toàn phần $P(B)$</b>\n                  <p style=\"font-size:13px; line-height:1.6; color:#cbd5e1; margin:4px 0 0 0;\">Tổng hợp tất cả các kịch bản nguyên nhân dẫn tới kết quả $B$.</p>\n                </div>\n                <div style=\"background:rgba(245,158,11,0.12); border:1px solid #f59e0b; border-radius:8px; padding:12px;\">\n                  <b style=\"color:#f59e0b;\">3. Công thức Bayes</b>\n                  <p style=\"font-size:13px; line-height:1.6; color:#cbd5e1; margin:4px 0 0 0;\">Lật ngược điều kiện: Truy nguyên nhân $A_k$ khi đã thấy kết quả $B$.</p>\n                </div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 1,
+      "title": "Mục 1: Hệ thống hoá công thức xác suất",
+      "subtitle": "Phần 2: Mối quan hệ tương hỗ giữa các công thức",
+      "startTime": 24.55,
+      "endTime": 66.5,
+      "duration": 41.95,
+      "mascotMode": "explaining",
+      "mascotTip": "Nhớ thứ tự: Định nghĩa -> Nhân chéo P(AB) -> Cộng toàn phần P(B) -> Chia theo tỉ số Bayes P(Ak|B)!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">2. Mối liên kết logic giữa 3 công thức vàng</h3>\n              <div style=\"background:rgba(30,41,59,0.85); border:1px solid rgba(56,189,248,0.3); border-radius:8px; padding:14px; font-size:15px; line-height:1.8; color:#f8fafc;\">\n                <div><b>1. Công thức nhân:</b> $P(A \\cap B) = P(B) \\cdot P(A \\mid B) = P(A) \\cdot P(B \\mid A)$</div>\n                <div style=\"margin-top:6px;\"><b>2. Xác suất toàn phần:</b> $P(B) = \\sum_{i=1}^n P(A_i) \\cdot P(B \\mid A_i)$</div>\n                <div style=\"margin-top:6px; color:#38bdf8; font-weight:700;\">\n                  3. Công thức Bayes: $P(A_k \\mid B) = \\frac{P(A_k \\cap B)}{P(B)} = \\frac{P(A_k) \\cdot P(B \\mid A_k)}{\\sum_{i=1}^n P(A_i) \\cdot P(B \\mid A_i)}$\n                </div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "Mục 1: Hệ thống hoá công thức xác suất",
+      "subtitle": "Phần 3: Luyện tập ví dụ minh họa tương tác",
+      "startTime": 66.5,
+      "endTime": 84.74,
+      "duration": 18.24,
+      "mascotMode": "reading",
+      "mascotTip": "3 bài tập củng cố: Công thức nhân (15s), Đảo điều kiện (15s), và Bayes dạng phân số (30s)!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4); text-align:center;\">\n              <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:16px; font-weight:700;\">🚀 Luyện tập biến đổi công thức xác suất</h3>\n              <p style=\"font-size:17px; line-height:1.7; color:#cbd5e1; max-width:680px; margin:0 auto 20px auto;\">\n                Kiểm tra khả năng phân biệt và áp dụng chính xác các công thức tính xác suất.\n              </p>\n              <div style=\"display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; text-align:left;\">\n                <div style=\"background:rgba(16,185,129,0.15); border:1px solid #10b981; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#10b981; font-size:16px;\">Ví dụ 1 (15s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">Tính xác suất biến cố giao $P(A \\cap B)$ khi biết $P(A)$ và $P(B|A)$.</p>\n                </div>\n                <div style=\"background:rgba(56,189,248,0.15); border:1px solid #38bdf8; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#38bdf8; font-size:16px;\">Ví dụ 2 (15s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">Tính xác suất có điều kiện đảo $P(A \\mid B)$.</p>\n                </div>\n                <div style=\"background:rgba(245,158,11,0.15); border:1px solid #f59e0b; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#f59e0b; font-size:16px;\">Ví dụ 3 (30s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">Áp dụng công thức Bayes phân số cho hệ hai biến cố đối.</p>\n                </div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "Ví dụ 1: Tính xác suất biến cố giao",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 84.74,
+      "endTime": 100.67999999999999,
+      "duration": 15.94,
+      "mascotMode": "question",
+      "mascotTip": "P(A ∩ B) = P(A) · P(B|A) = 0,6 * 0,4. Nhớ là P(B) = 0,5 là dữ kiện thừa thử thách sự tỉnh táo!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Tính xác suất biến cố giao P(A ∩ B)</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#10b981;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#10b981; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Cho hai biến cố $A$ và $B$ thỏa mãn $P(A) = 0{,}6$; $P(B) = 0{,}5$ và $P(B \\mid A) = 0{,}4$. Tính xác suất của biến cố giao <b>$P(A \\cap B)$</b>.\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $0{,}24$</div>\n                <div><b>B.</b> $0{,}30$</div>\n                <div><b>C.</b> $0{,}20$</div>\n                <div><b>D.</b> $0{,}10$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "Ví dụ 1: Tính xác suất biến cố giao",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 100.68,
+      "endTime": 128.83,
+      "duration": 28.15,
+      "mascotMode": "success",
+      "mascotTip": "Chính xác! P(A ∩ B) = P(A) · P(B|A) = 0,6 * 0,4 = 0,24. Đáp án A!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 1</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Áp dụng trực tiếp công thức nhân xác suất:</b></p>\n                <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:10px 14px; margin:10px 0; border-radius:4px;\">\n                  $$P(A \\cap B) = P(A) \\cdot P(B \\mid A) = 0{,}6 \\cdot 0{,}4 = 0{,}24$$\n                </div>\n                <p style=\"color:#94a3b8; font-size:14px; margin:4px 0 0 0;\">\n                  ⚠️ <i>Lưu ý:</i> Dữ kiện $P(B) = 0{,}5$ là thông tin phụ của đề bài để kiểm tra tính độc lập (ở đây $P(A) \\cdot P(B) = 0{,}30 \\ne 0{,}24$ nên $A$ và $B$ không độc lập).\n                </p>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "Ví dụ 2: Tính xác suất có điều kiện đảo",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 128.83,
+      "endTime": 144.89000000000001,
+      "duration": 16.06,
+      "mascotMode": "question",
+      "mascotTip": "P(A|B) = P(A ∩ B) / P(B) = 0,24 / 0,5. Tính nhanh nào!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Tính xác suất có điều kiện đảo P(A | B)</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#10b981;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#10b981; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Tiếp tục từ dữ liệu Ví dụ 1, với $P(A) = 0{,}6$; $P(B) = 0{,}5$ và $P(A \\cap B) = 0{,}24$. Hãy tính xác suất có điều kiện đảo <b>$P(A \\mid B)$</b>.\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $0{,}48$</div>\n                <div><b>B.</b> $0{,}40$</div>\n                <div><b>C.</b> $0{,}50$</div>\n                <div><b>D.</b> $0{,}36$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "Ví dụ 2: Tính xác suất có điều kiện đảo",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 144.89,
+      "endTime": 178.32,
+      "duration": 33.43,
+      "mascotMode": "success",
+      "mascotTip": "0,24 / 0,5 = 0,48! Rất chuẩn! Thấy rõ P(A|B) = 0,48 khác hẳn P(B|A) = 0,40!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 2</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Theo định nghĩa xác suất có điều kiện:</b></p>\n                <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:10px 14px; margin:10px 0; border-radius:4px;\">\n                  $$P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{0{,}24}{0{,}5} = 0{,}48$$\n                </div>\n                <p style=\"color:#fbbf24; font-size:14px; margin:4px 0 0 0;\">\n                  💡 <i>Cú nhắc nhở:</i> $P(A \\mid B) = 0{,}48 \\ne P(B \\mid A) = 0{,}40$. Thứ tự đứng trước hay sau dấu gạch $|$ làm thay đổi hoàn toàn giá trị xác suất!\n                </p>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "Ví dụ 3: Công thức Bayes cho 2 biến cố đối",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 178.32,
+      "endTime": 198.14,
+      "duration": 19.82,
+      "mascotMode": "question",
+      "mascotTip": "Mẫu số P(B) = 0,7*0,8 + 0,3*0,3 = 0,56 + 0,09 = 0,65. Tử số là 0,56. Tính 0,56 / 0,65!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #f59e0b; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Tính xác suất hậu nghiệm P(A | B)</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#f59e0b;\">30 giây</b> (Vận dụng / Nâng cao)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#f59e0b; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Cho hai biến cố $A$ và $B$ thỏa mãn $P(A) = 0{,}7$; $P(B \\mid A) = 0{,}8$ và $P(B \\mid \\overline{A}) = 0{,}3$. Tính xác suất <b>$P(A \\mid B)$</b>.\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $\\frac{56}{65}$</div>\n                <div><b>B.</b> $\\frac{9}{65}$</div>\n                <div><b>C.</b> $\\frac{4}{5}$</div>\n                <div><b>D.</b> $\\frac{7}{10}$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "Ví dụ 3: Công thức Bayes cho 2 biến cố đối",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 198.14,
+      "endTime": 243.20999999999998,
+      "duration": 45.07,
+      "mascotMode": "success",
+      "mascotTip": "P(B) = 0,65. Tử số = 0,56. Tỉ số = 56/65 ≈ 0,8615. Tuyệt vời!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 3</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Bước 1:</b> Tìm xác suất biến cố đối: $P(\\overline{A}) = 1 - P(A) = 1 - 0{,}7 = 0{,}3$.</p>\n                <p><b>Bước 2:</b> Tính mẫu số bằng công thức xác suất toàn phần:\n                  $$P(B) = P(A)P(B \\mid A) + P(\\overline{A})P(B \\mid \\overline{A}) = 0{,}7 \\cdot 0{,}8 + 0{,}3 \\cdot 0{,}3 = 0{,}56 + 0{,}09 = 0{,}65$$\n                </p>\n                <p><b>Bước 3:</b> Áp dụng công thức Bayes:\n                  $$P(A \\mid B) = \\frac{P(A)P(B \\mid A)}{P(B)} = \\frac{0{,}56}{0{,}65} = \\frac{56}{65} \\approx 0{,}8615$$\n                </p>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "Mục 1: Hệ thống hoá công thức xác suất",
+      "subtitle": "Phần 4: Bảng tổng hợp vai trò 3 công thức",
+      "startTime": 243.22,
+      "endTime": 261.36,
+      "duration": 18.14,
+      "mascotMode": "explaining",
+      "mascotTip": "Nhân xác suất: Tính từng nhánh. Toàn phần: Gom các nhánh. Bayes: Tỉ lệ 1 nhánh trên tổng số!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">4. Bảng tổng hợp vai trò 3 công thức vàng</h3>\n              <div style=\"background:rgba(15,23,42,0.9); border:1px solid rgba(56,189,248,0.3); border-radius:8px; padding:14px; font-family:monospace; font-size:14px; line-height:1.7;\">\n                <div>• <b>CÔNG THỨC NHÂN:</b> $P(A \\cap B) = P(A) \\cdot P(B|A)$ ───► Tính xác suất TỪNG NHÁNH</div>\n                <div style=\"margin-top:6px;\">• <b>XÁC SUẤT TOÀN PHẦN:</b> $P(B) = \\sum P(A_i)P(B|A_i)$ ───► GOM TẤT CẢ CÁC NHÁNH</div>\n                <div style=\"margin-top:6px; color:#38bdf8;\">• <b>CÔNG THỨC BAYES:</b> $P(A_k|B) = \\frac{\\text{Nhánh } k}{\\text{Tổng các nhánh}}$ ───► TỈ LỆ 1 NHÁNH TRÊN TỔNG</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "Mục 1: Hệ thống hoá công thức xác suất",
+      "subtitle": "Phần 5: Tổng kết Mục 1 & Lời khuyên Cú Thông Thái",
+      "startTime": 261.36,
+      "endTime": 276.96000000000004,
+      "duration": 15.6,
+      "mascotMode": "summary",
+      "mascotTip": "Làm chủ 3 công thức này sẽ giúp các em tự tin giải quyết 100% câu hỏi xác suất trong mọi đề thi!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:14px; font-weight:700;\">🎯 Tổng kết Mục 1: Hệ thống hóa công thức</h3>\n              <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:14px; border-radius:4px; margin-bottom:14px;\">\n                <ul style=\"font-size:16px; line-height:1.8; color:#f8fafc; margin:0 0 0 20px;\">\n                  <li><b>Công thức nhân:</b> $P(A \\cap B) = P(A) \\cdot P(B \\mid A)$.</li>\n                  <li><b>Xác suất toàn phần:</b> $P(B) = P(A)P(B \\mid A) + P(\\overline{A})P(B \\mid \\overline{A})$.</li>\n                  <li><b>Công thức Bayes:</b> $P(A \\mid B) = \\frac{P(A)P(B \\mid A)}{P(B)}$.</li>\n                </ul>\n              </div>\n              <div style=\"background:rgba(245,158,11,0.1); border:1px dashed #f59e0b; border-radius:8px; padding:12px; display:flex; align-items:center; gap:12px;\">\n                <span style=\"font-size:28px;\">🦉</span>\n                <span style=\"font-size:15px; color:#fbbf24; line-height:1.5;\">\n                  <b>Cú Thông Thái:</b> \"Hãy chuyển sang Mục 2 để ứng dụng <b>Sơ đồ hình cây</b> vào các bài toán thực tế nông nghiệp và truyền tin kỹ thuật số!\"\n                </span>\n              </div>\n            </div>\n            "
+    }
+  ]
+};
+
+  window.CHAPTER6_DATA.ontap_c6_muc2 = {
+  "lessonId": "ontap_c6",
+  "lessonTitle": "Bài tập cuối chương VI: Xác suất có điều kiện",
+  "sectionId": "ontap_c6_muc2",
+  "sectionTitle": "Mục 2: Rèn luyện các dạng bài thực tế then chốt & Sơ đồ cây",
+  "audio": "/audio/ontap_c6_muc2.mp3",
+  "audioSrc": "./audio/ontap_c6_muc2.mp3",
+  "audio_src": "./audio/ontap_c6_muc2.mp3",
+  "timestamp_src": "timestamps/ontap_c6_muc2.json",
+  "totalDuration": 308.66,
+  "duration": 308.66,
+  "title": "Mục 2: Rèn luyện các dạng bài thực tế then chốt & Sơ đồ cây",
+  "owl_tip": "Sơ đồ cây 2 tầng: Tầng 1 kịch bản nguyên nhân, tầng 2 kết quả kiểm tra!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 19.92,
+      "id": "part2"
+    },
+    {
+      "time": 45.26,
+      "id": "part3"
+    },
+    {
+      "time": 64.39,
+      "id": "vd1_q"
+    },
+    {
+      "time": 89.52,
+      "id": "vd1_a"
+    },
+    {
+      "time": 142.87,
+      "id": "vd2_q"
+    },
+    {
+      "time": 157.44,
+      "id": "vd2_a"
+    },
+    {
+      "time": 201.19,
+      "id": "vd3_q"
+    },
+    {
+      "time": 231.67,
+      "id": "vd3_a"
+    },
+    {
+      "time": 277.85,
+      "id": "part4"
+    },
+    {
+      "time": 290.26,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Sức mạnh trực quan của sơ đồ cây",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Quy tắc tính toán trên các nhánh cây",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Luyện tập ví dụ minh họa tương tác",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Sức mạnh đồng dạng của mô hình sơ đồ cây",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Tổng kết Mục 2 & Lời khuyên Cú Thông Thái",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 0,
+      "title": "Mục 2: Bài toán thực tế & Sơ đồ cây",
+      "subtitle": "Phần 1: Sức mạnh trực quan của sơ đồ cây",
+      "startTime": 0.0,
+      "endTime": 19.92,
+      "duration": 19.92,
+      "mascotMode": "explaining",
+      "mascotTip": "Khi gặp bài toán xác suất thực tế nhiều giai đoạn, sơ đồ hình cây giúp các em không bao giờ bị nhầm lẫn!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">1. Mô hình hóa bài toán thực tế bằng sơ đồ cây</h3>\n              <p style=\"font-size:16px; line-height:1.7; color:#e2e8f0;\">\n                Trong các đề thi chính thức, bài toán xác suất thường được đặt trong các bối cảnh đời sống cụ thể (chọn hạt giống nảy mầm, kiểm tra dây chuyền sản xuất hay truyền tín hiệu số).\n              </p>\n              <div style=\"background:rgba(56,189,248,0.12); border-left:4px solid #38bdf8; padding:14px; margin:14px 0; border-radius:4px;\">\n                <b style=\"color:#38bdf8; font-size:16px;\">3 tầng cấu trúc sơ đồ cây:</b>\n                <ul style=\"font-size:15px; line-height:1.7; color:#cbd5e1; margin:6px 0 0 20px;\">\n                  <li><b>Tầng 1 (Nút gốc):</b> Điểm bắt đầu của thí nghiệm.</li>\n                  <li><b>Tầng 2 (Kịch bản nguyên nhân):</b> Phân chia thành các nhánh với xác suất tiên nghiệm $P(A_1), P(A_2)$.</li>\n                  <li><b>Tầng 3 (Kết quả kiểm tra):</b> Nhánh con gắn xác suất có điều kiện $P(B \\mid A_1), P(B \\mid A_2)$.</li>\n                </ul>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 1,
+      "title": "Mục 2: Bài toán thực tế & Sơ đồ cây",
+      "subtitle": "Phần 2: Quy tắc tính toán trên các nhánh cây",
+      "startTime": 19.92,
+      "endTime": 45.260000000000005,
+      "duration": 25.34,
+      "mascotMode": "explaining",
+      "mascotTip": "Nhân dọc theo nhánh để tính P(Ai ∩ B), cộng các nhánh để tính P(B), và chia nhánh trên tổng để tính Bayes!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">2. Quy tắc tính toán trên sơ đồ cây</h3>\n              <div style=\"display:grid; grid-template-columns:1fr 1fr; gap:14px;\">\n                <div style=\"background:rgba(30,41,59,0.8); border:1px solid rgba(56,189,248,0.3); border-radius:8px; padding:14px;\">\n                  <b style=\"color:#38bdf8; font-size:16px;\">🌿 Nhân dọc theo nhánh:</b>\n                  <p style=\"font-size:14px; line-height:1.6; color:#e2e8f0; margin:6px 0 0 0;\">\n                    $$P(A_i \\cap B) = P(A_i) \\cdot P(B \\mid A_i)$$\n                  </p>\n                </div>\n                <div style=\"background:rgba(30,41,59,0.8); border:1px solid rgba(16,185,129,0.3); border-radius:8px; padding:14px;\">\n                  <b style=\"color:#10b981; font-size:16px;\">🌱 Tỉ số Bayes:</b>\n                  <p style=\"font-size:14px; line-height:1.6; color:#e2e8f0; margin:6px 0 0 0;\">\n                    $$P(A_k \\mid B) = \\frac{\\text{Nhánh } k}{\\sum \\text{các nhánh}}$$\n                  </p>\n                </div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "Mục 2: Bài toán thực tế & Sơ đồ cây",
+      "subtitle": "Phần 3: Luyện tập ví dụ minh họa tương tác",
+      "startTime": 45.26,
+      "endTime": 64.39,
+      "duration": 19.13,
+      "mascotMode": "reading",
+      "mascotTip": "3 bài toán thực tế: Trộn bao hạt giống (15s), Truy ngược nguồn gốc bao giống (15s), và Kênh truyền tin nhị phân (30s)!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4); text-align:center;\">\n              <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:16px; font-weight:700;\">⚡ Luyện tập Sơ đồ hình cây & Thực tế</h3>\n              <p style=\"font-size:17px; line-height:1.7; color:#cbd5e1; max-width:680px; margin:0 auto 20px auto;\">\n                Áp dụng sơ đồ hình cây để giải nhanh các bài toán xác suất thực tế nhiều giai đoạn.\n              </p>\n              <div style=\"display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; text-align:left;\">\n                <div style=\"background:rgba(16,185,129,0.15); border:1px solid #10b981; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#10b981; font-size:16px;\">Ví dụ 1 (15s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">Hai bao hạt giống: 80 hạt (80%) và 120 hạt (90%). Tính tỷ lệ nảy mầm chung.</p>\n                </div>\n                <div style=\"background:rgba(56,189,248,0.15); border:1px solid #38bdf8; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#38bdf8; font-size:16px;\">Ví dụ 2 (15s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">Hạt nảy mầm: Tính xác suất hạt giống có nguồn gốc từ Bao 1.</p>\n                </div>\n                <div style=\"background:rgba(245,158,11,0.15); border:1px solid #f59e0b; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#f59e0b; font-size:16px;\">Ví dụ 3 (30s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">Kênh truyền tin nhị phân phát 0 (60%) và phát 1 (40%).</p>\n                </div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "Ví dụ 1: Tỷ lệ nảy mầm hai bao hạt giống",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 64.39,
+      "endTime": 89.52,
+      "duration": 25.13,
+      "mascotMode": "question",
+      "mascotTip": "Bao 1 có 80/200 = 0,40. Bao 2 có 120/200 = 0,60. Tính 0,40*0,80 + 0,60*0,90!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Xác suất nảy mầm khi trộn 2 bao hạt giống</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#10b981;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#10b981; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Một cơ sở nông nghiệp có hai bao hạt giống: <b>Bao 1</b> có $80$ hạt với tỷ lệ nảy mầm $80\\%$; <b>Bao 2</b> có $120$ hạt với tỷ lệ nảy mầm $90\\%$. Trộn đều hai bao vào một thùng rồi gieo ngẫu nhiên một hạt. Tính xác suất để <b>hạt đó nảy mầm</b>.\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $0{,}86$</div>\n                <div><b>B.</b> $0{,}85$</div>\n                <div><b>C.</b> $0{,}88$</div>\n                <div><b>D.</b> $0{,}82$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "Ví dụ 1: Tỷ lệ nảy mầm hai bao hạt giống",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 89.52,
+      "endTime": 142.87,
+      "duration": 53.35,
+      "mascotMode": "success",
+      "mascotTip": "0,32 + 0,54 = 0,86 (86%)! Kiểm tra trực tiếp: (64 + 108)/200 = 172/200 = 0,86. Tuyệt đối chính xác!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 1</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Phân tích tỷ lệ nguồn hạt giống:</b> Tổng số hạt là $80 + 120 = 200$ hạt.</p>\n                <ul style=\"margin:4px 0 8px 20px;\">\n                  <li>Tỷ lệ hạt từ Bao 1: $P(B_1) = \\frac{80}{200} = 0{,}40$; tỷ lệ nảy mầm: $P(N \\mid B_1) = 0{,}80$.</li>\n                  <li>Tỷ lệ hạt từ Bao 2: $P(B_2) = \\frac{120}{200} = 0{,}60$; tỷ lệ nảy mầm: $P(N \\mid B_2) = 0{,}90$.</li>\n                </ul>\n                <p><b>Theo công thức xác suất toàn phần:</b>\n                  $$P(N) = P(B_1)P(N \\mid B_1) + P(B_2)P(N \\mid B_2) = 0{,}40 \\cdot 0{,}80 + 0{,}60 \\cdot 0{,}90 = 0{,}32 + 0{,}54 = 0{,}86$$\n                </p>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "Ví dụ 2: Truy ngược nguồn gốc bao giống",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 142.87,
+      "endTime": 157.44,
+      "duration": 14.57,
+      "mascotMode": "question",
+      "mascotTip": "Tử số là nhánh Bao 1 nảy mầm: 0,32. Mẫu số là P(N) = 0,86. Tính 0,32 / 0,86!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Xác suất hạt nảy mầm thuộc Bao 1</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#10b981;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#10b981; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Tiếp tục từ dữ liệu Ví dụ 1: Một hạt được lấy ngẫu nhiên đem gieo thấy <b>nảy mầm</b>. Tính xác suất để hạt giống đó có <b>nguồn gốc từ Bao 1</b>.\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $\\frac{16}{43}$</div>\n                <div><b>B.</b> $\\frac{27}{43}$</div>\n                <div><b>C.</b> $\\frac{2}{5}$</div>\n                <div><b>D.</b> $\\frac{1}{3}$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "Ví dụ 2: Truy ngược nguồn gốc bao giống",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 157.44,
+      "endTime": 201.19,
+      "duration": 43.75,
+      "mascotMode": "success",
+      "mascotTip": "0,32 / 0,86 = 32/86 = 16/43 ≈ 37,21%! Kiểm tra: 64 hạt Bao 1 / 172 tổng hạt nảy mầm = 16/43!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 2</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Áp dụng công thức Bayes:</b></p>\n                <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:10px 14px; margin:10px 0; border-radius:4px;\">\n                  $$P(B_1 \\mid N) = \\frac{P(B_1 \\cap N)}{P(N)} = \\frac{0{,}32}{0{,}86} = \\frac{32}{86} = \\frac{16}{43} \\approx 0{,}3721$$\n                </div>\n                <p style=\"color:#94a3b8; font-size:14px; margin:4px 0 0 0;\">\n                  💡 <i>Kiểm tra bằng số lượng phần tử:</i> Bao 1 có $80 \\cdot 0{,}8 = 64$ hạt nảy mầm. Toàn bộ thùng có $64 + 108 = 172$ hạt nảy mầm. Xác suất: $\\frac{64}{172} = \\frac{16}{43}$. Hai cách giải hoàn toàn khớp nhau!\n                </p>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "Ví dụ 3: Kênh truyền tin nhị phân",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 201.19,
+      "endTime": 231.67,
+      "duration": 30.48,
+      "mascotMode": "question",
+      "mascotTip": "Phát 0 nhận 1: 0,60*0,05 = 0,030. Phát 1 nhận 1: 0,40*0,90 = 0,360. Tổng nhận 1 là 0,390. Tính 0,360 / 0,390!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #f59e0b; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Giải mã tín hiệu kênh truyền số nhị phân</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#f59e0b;\">30 giây</b> (Vận dụng / Nâng cao)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#f59e0b; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Một kênh truyền tin nhị phân phát ký hiệu 0 với xác suất $60\\%$, ký hiệu 1 với xác suất $40\\%$. Do nhiễu, khi phát 0 thì xác suất <b>nhận nhầm thành 1 là $0{,}05$</b>; khi phát 1 thì xác suất <b>nhận đúng 1 là $0{,}90$</b>. Bên nhận nhận được ký hiệu <b>1</b>. Tính xác suất để bên phát <b>thực sự đã phát ký hiệu 1</b>.\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $\\frac{12}{13}$</div>\n                <div><b>B.</b> $\\frac{9}{10}$</div>\n                <div><b>C.</b> $\\frac{1}{13}$</div>\n                <div><b>D.</b> $\\frac{4}{5}$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "Ví dụ 3: Kênh truyền tin nhị phân",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 231.67,
+      "endTime": 277.84999999999997,
+      "duration": 46.18,
+      "mascotMode": "success",
+      "mascotTip": "0,360 / 0,390 = 36/39 = 12/13 ≈ 92,31%! Dù có nhiễu đường truyền nhưng bên nhận có tới 92,3% độ tin cậy!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 3</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Thiết lập biến cố:</b> $X_0$: \"Phát 0\" ($P=0{,}60$), $X_1$: \"Phát 1\" ($P=0{,}40$), $Y_1$: \"Bên nhận nhận được 1\".</p>\n                <p><b>Tính xác suất các nhánh:</b></p>\n                <ul style=\"margin:4px 0 8px 20px;\">\n                  <li>Phát 0 nhưng nhận nhầm thành 1: $P(X_0 \\cap Y_1) = 0{,}60 \\cdot 0{,}05 = 0{,}030$.</li>\n                  <li>Phát 1 và nhận đúng 1: $P(X_1 \\cap Y_1) = 0{,}40 \\cdot 0{,}90 = 0{,}360$.</li>\n                  <li>Tổng xác suất nhận được ký hiệu 1: $P(Y_1) = 0{,}030 + 0{,}360 = 0{,}390$.</li>\n                </ul>\n                <p><b>Áp dụng công thức Bayes:</b>\n                  $$P(X_1 \\mid Y_1) = \\frac{P(X_1 \\cap Y_1)}{P(Y_1)} = \\frac{0{,}360}{0{,}390} = \\frac{36}{39} = \\frac{12}{13} \\approx 0{,}9231$$\n                </p>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "Mục 2: Bài toán thực tế & Sơ đồ cây",
+      "subtitle": "Phần 4: Sức mạnh đồng dạng của mô hình sơ đồ cây",
+      "startTime": 277.85,
+      "endTime": 290.26000000000005,
+      "duration": 12.41,
+      "mascotMode": "explaining",
+      "mascotTip": "Tất cả bài toán xác suất thực tế đều quy về sơ đồ cây 2 tầng: Nhân dọc rồi cộng ngang!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">4. Sức mạnh đồng dạng của mô hình sơ đồ cây</h3>\n              <p style=\"font-size:15px; color:#cbd5e1;\">Dù là nông nghiệp hay viễn thông, mọi bài toán đều tuân theo mô hình chuẩn:</p>\n              <div style=\"background:rgba(15,23,42,0.9); border:1px solid rgba(56,189,248,0.3); border-radius:8px; padding:14px; font-family:monospace; font-size:14px; line-height:1.7;\">\n                <div>GỐC ───[Tầng 1: Kịch bản A_i]───► [Tầng 2: Kết quả B] ───► Tích nhánh = P(A_i) · P(B|A_i)</div>\n                <div style=\"color:#10b981; margin-top:4px;\">• Toàn phần: Cộng tất cả các tích nhánh cùng dẫn tới B.</div>\n                <div style=\"color:#f59e0b; margin-top:4px;\">• Bayes: Lấy tích nhánh mong muốn chia cho tổng vừa cộng.</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "Mục 2: Bài toán thực tế & Sơ đồ cây",
+      "subtitle": "Phần 5: Tổng kết Mục 2 & Lời khuyên Cú Thông Thái",
+      "startTime": 290.26,
+      "endTime": 308.67,
+      "duration": 18.41,
+      "mascotMode": "summary",
+      "mascotTip": "Phác thảo sơ đồ cây ra nháp giúp tiết kiệm 50% thời gian làm bài thi và triệt tiêu mọi sai sót!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:14px; font-weight:700;\">🎯 Tổng kết Mục 2: Sơ đồ hình cây thực tế</h3>\n              <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:14px; border-radius:4px; margin-bottom:14px;\">\n                <ul style=\"font-size:16px; line-height:1.8; color:#f8fafc; margin:0 0 0 20px;\">\n                  <li><b>Vũ khí đắc lực:</b> Vẽ sơ đồ cây 2 tầng với đầy đủ xác suất trên mỗi nhánh.</li>\n                  <li><b>Quy tắc 2 bước:</b> Tính mẫu số bằng tổng các nhánh; tính xác suất Bayes bằng tỉ số nhánh tương ứng.</li>\n                </ul>\n              </div>\n              <div style=\"background:rgba(245,158,11,0.1); border:1px dashed #f59e0b; border-radius:8px; padding:12px; display:flex; align-items:center; gap:12px;\">\n                <span style=\"font-size:28px;\">🦉</span>\n                <span style=\"font-size:15px; color:#fbbf24; line-height:1.5;\">\n                  <b>Cú Thông Thái:</b> \"Hãy chuyển sang Mục 3 để giải mã <b>3 cái bẫy đề thi kinh điển</b> và học kỹ thuật bấm máy Casio fx-580VNX đỉnh cao!\"\n                </span>\n              </div>\n            </div>\n            "
+    }
+  ]
+};
+
+  window.CHAPTER6_DATA.ontap_c6_muc3 = {
+  "lessonId": "ontap_c6",
+  "lessonTitle": "Bài tập cuối chương VI: Xác suất có điều kiện",
+  "sectionId": "ontap_c6_muc3",
+  "sectionTitle": "Mục 3: Bẫy đề thi xác suất, Nhận diện công thức & Kỹ thuật Casio",
+  "audio": "/audio/ontap_c6_muc3.mp3",
+  "audioSrc": "./audio/ontap_c6_muc3.mp3",
+  "audio_src": "./audio/ontap_c6_muc3.mp3",
+  "timestamp_src": "timestamps/ontap_c6_muc3.json",
+  "totalDuration": 266.93,
+  "duration": 266.93,
+  "title": "Mục 3: Bẫy đề thi xác suất, Nhận diện công thức & Kỹ thuật Casio",
+  "owl_tip": "Bẫy điều kiện: Nhận diện 'Biết rằng...' -> điều kiện nằm ở mẫu số! Bấm STO trên fx-580VNX!",
+  "timeline": [
+    {
+      "time": 0.0,
+      "id": "part1"
+    },
+    {
+      "time": 17.83,
+      "id": "part2"
+    },
+    {
+      "time": 38.28,
+      "id": "part3"
+    },
+    {
+      "time": 55.99,
+      "id": "vd1_q"
+    },
+    {
+      "time": 75.34,
+      "id": "vd1_a"
+    },
+    {
+      "time": 108.65,
+      "id": "vd2_q"
+    },
+    {
+      "time": 121.9,
+      "id": "vd2_a"
+    },
+    {
+      "time": 151.49,
+      "id": "vd3_q"
+    },
+    {
+      "time": 174.98,
+      "id": "vd3_a"
+    },
+    {
+      "time": 221.66,
+      "id": "part4"
+    },
+    {
+      "time": 247.66,
+      "id": "part5"
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Cảnh giác trước các phương án nhiễu tinh vi",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Phương pháp hóa giải mọi bẫy đề thi",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Luyện tập ví dụ minh họa tương tác",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Kỹ thuật Casio fx-580VNX tối ưu",
+      "scenes": [
+        10
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Chúc mừng hoàn thành toàn bộ Chương VI",
+      "scenes": [
+        11
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "sceneIndex": 0,
+      "title": "Mục 3: Bẫy đề thi & Kỹ thuật Casio",
+      "subtitle": "Phần 1: Cảnh giác trước các phương án nhiễu tinh vi",
+      "startTime": 0.0,
+      "endTime": 17.83,
+      "duration": 17.83,
+      "mascotMode": "explaining",
+      "mascotTip": "Đề thi hay bẫy ở chỗ: Cho xác suất giao nhưng hỏi có điều kiện, hoặc lật ngược điều kiện P(A|B) vs P(B|A)!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">1. Các bẫy đề thi trắc nghiệm xác suất phổ biến</h3>\n              <p style=\"font-size:16px; line-height:1.7; color:#e2e8f0;\">\n                Trong các kỳ thi trắc nghiệm THPT, người ra đề thường cài cắm các phương án nhiễu bẫy học sinh không nắm vững bản chất toán học:\n              </p>\n              <div style=\"background:rgba(239,68,68,0.1); border-left:4px solid #ef4444; padding:14px; margin:14px 0; border-radius:4px;\">\n                <b style=\"color:#f87171; font-size:16px;\">3 cạm bẫy dễ mất điểm nhất:</b>\n                <ul style=\"font-size:15px; line-height:1.7; color:#cbd5e1; margin:6px 0 0 20px;\">\n                  <li><b>Bẫy 1:</b> Nhầm giữa xác suất đồng thời $P(A \\cap B)$ và xác suất có điều kiện $P(A \\mid B)$.</li>\n                  <li><b>Bẫy 2:</b> Nhầm giữa $P(A \\mid B)$ và $P(B \\mid A)$. Biến cố sau dấu gạch $|$ mới là điều kiện!</li>\n                  <li><b>Bẫy 3:</b> Nhầm tính chất biến cố đối có điều kiện: $P(\\overline{A} \\mid B) = 1 - P(A \\mid B)$, điều kiện $B$ phải giữ nguyên!</li>\n                </ul>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 1,
+      "title": "Mục 3: Bẫy đề thi & Kỹ thuật Casio",
+      "subtitle": "Phần 2: Phương pháp hóa giải mọi bẫy đề thi",
+      "startTime": 17.83,
+      "endTime": 38.28,
+      "duration": 20.45,
+      "mascotMode": "explaining",
+      "mascotTip": "Quy tắc vàng: Đọc kỹ từ 'Biết rằng...' -> đó là biến cố điều kiện nằm ở mẫu số!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">2. Nguyên tắc vàng hóa giải cạm bẫy</h3>\n              <div style=\"background:rgba(30,41,59,0.85); border:1px solid rgba(56,189,248,0.3); border-radius:8px; padding:14px; font-size:15px; line-height:1.8; color:#f8fafc;\">\n                <div>🔍 <b>Từ khóa nhận diện điều kiện:</b> Cụm từ <i>\"Biết rằng...\"</i>, <i>\"Với điều kiện...\"</i>, <i>\"Trong số những người...\"</i> chỉ ra biến cố điều kiện phải đặt sau dấu $|$ và nằm ở mẫu số!</div>\n                <div style=\"margin-top:8px;\">⚖️ <b>Kiểm tra tính logic:</b> $0 \\le P(A \\mid B) \\le 1$. Nếu kết quả tính ra lớn hơn 1 hoặc âm thì chắc chắn đã nhầm tử mẫu!</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 2,
+      "title": "Mục 3: Bẫy đề thi & Kỹ thuật Casio",
+      "subtitle": "Phần 3: Luyện tập ví dụ minh họa tương tác",
+      "startTime": 38.28,
+      "endTime": 55.99,
+      "duration": 17.71,
+      "mascotMode": "reading",
+      "mascotTip": "3 thử thách phản xạ: Bẫy Giao vs Có điều kiện (15s), Bẫy Biến cố đối (15s), và Chuyển bóng giữa hai hộp bi (30s)!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4); text-align:center;\">\n              <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:16px; font-weight:700;\">🎯 Thực chiến giải mã bẫy đề thi</h3>\n              <p style=\"font-size:17px; line-height:1.7; color:#cbd5e1; max-width:680px; margin:0 auto 20px auto;\">\n                Luyện phản xạ nhanh trước các phương án nhiễu tinh vi thường gặp trong kỳ thi THPT.\n              </p>\n              <div style=\"display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; text-align:left;\">\n                <div style=\"background:rgba(16,185,129,0.15); border:1px solid #10b981; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#10b981; font-size:16px;\">Ví dụ 1 (15s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">100 học sinh: 70 Anh, 40 Pháp, 25 cả hai. Tính P(Pháp | Anh).</p>\n                </div>\n                <div style=\"background:rgba(56,189,248,0.15); border:1px solid #38bdf8; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#38bdf8; font-size:16px;\">Ví dụ 2 (15s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">Khẳng định đúng về biến cố đối có điều kiện P(A ngang | B).</p>\n                </div>\n                <div style=\"background:rgba(245,158,11,0.15); border:1px solid #f59e0b; border-radius:8px; padding:14px;\">\n                  <b style=\"color:#f59e0b; font-size:16px;\">Ví dụ 3 (30s)</b>\n                  <p style=\"font-size:14px; color:#94a3b8; margin:6px 0 0 0;\">Chuyển 1 viên bi từ Hộp 1 sang Hộp 2 rồi rút 1 bi đỏ.</p>\n                </div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 3,
+      "title": "Ví dụ 1: Phân biệt Giao và Có điều kiện",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 55.99,
+      "endTime": 75.33,
+      "duration": 19.34,
+      "mascotMode": "question",
+      "mascotTip": "Không gian mẫu thu hẹp: Có 70 bạn học tiếng Anh. Trong đó có 25 bạn học tiếng Pháp. Lấy 25 chia 70!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 1: Nhận diện biến cố điều kiện thu hẹp</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#10b981;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#10b981; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Khảo sát $100$ học sinh có $70$ bạn học tiếng Anh, $40$ bạn học tiếng Pháp và $25$ bạn học cả hai môn. Chọn ngẫu nhiên một bạn. <b>Biết bạn đó học tiếng Anh</b>, tính xác suất để bạn đó <b>học tiếng Pháp</b>.\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $\\frac{5}{14}$</div>\n                <div><b>B.</b> $\\frac{1}{4}$</div>\n                <div><b>C.</b> $\\frac{5}{8}$</div>\n                <div><b>D.</b> $\\frac{2}{5}$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 4,
+      "title": "Ví dụ 1: Phân biệt Giao và Có điều kiện",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 75.34,
+      "endTime": 108.65,
+      "duration": 33.31,
+      "mascotMode": "success",
+      "mascotTip": "25/70 = 5/14 ≈ 0,357! Bẫy 25/100 = 1/4 là xác suất giao cả 2 môn, không phải xác suất có điều kiện!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 1</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Gọi biến cố:</b> $E$: \"Học tiếng Anh\" ($n=70$), $F$: \"Học tiếng Pháp\" ($n=40$), $E \\cap F$: \"Học cả hai\" ($n=25$).</p>\n                <p><b>Phân tích cạm bẫy:</b></p>\n                <ul style=\"margin:4px 0 8px 20px;\">\n                  <li>Nếu hỏi: <i>\"Xác suất chọn bạn học cả tiếng Anh và tiếng Pháp\"</i> $\\implies P(E \\cap F) = \\frac{25}{100} = \\frac{1}{4} = 0{,}25$ (Đáp án B là bẫy!).</li>\n                  <li>Đề bài hỏi: <i>\"<b>Biết</b> bạn đó học tiếng Anh, tính xác suất học tiếng Pháp\"</i> $\\implies$ Đây là xác suất có điều kiện $P(F \\mid E)$:\n                    $$P(F \\mid E) = \\frac{n(E \\cap F)}{n(E)} = \\frac{25}{70} = \\frac{5}{14} \\approx 0{,}357$$\n                  </li>\n                </ul>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 5,
+      "title": "Ví dụ 2: Bẫy biến cố đối có điều kiện",
+      "subtitle": "ĐỀ BÀI (15 GIÂY SUY NGHĨ)",
+      "startTime": 108.65,
+      "endTime": 121.9,
+      "duration": 13.25,
+      "mascotMode": "question",
+      "mascotTip": "Tính chất biến cố đối có điều kiện: P(A ngang | B) = 1 - P(A | B). Điều kiện B giữ nguyên!",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 2: Tính chất biến cố đối có điều kiện</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#10b981;\">15 giây</b> (Nhận biết / Dễ)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-15s\" data-seconds=\"15\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #10b981; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#10b981; font-family:monospace; min-width:28px;\">15s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Cho hai biến cố $A$ và $B$ với $P(B) = 0{,}4$ và $P(A \\mid B) = 0{,}7$. Khẳng định nào sau đây là <b>ĐÚNG</b>?\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $P(\\overline{A} \\mid B) = 0{,}3$</div>\n                <div><b>B.</b> $P(A \\mid \\overline{B}) = 0{,}3$</div>\n                <div><b>C.</b> $P(\\overline{A} \\mid \\overline{B}) = 0{,}3$</div>\n                <div><b>D.</b> $P(\\overline{B} \\mid A) = 0{,}6$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 6,
+      "title": "Ví dụ 2: Bẫy biến cố đối có điều kiện",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 121.9,
+      "endTime": 151.49,
+      "duration": 29.59,
+      "mascotMode": "success",
+      "mascotTip": "Chính xác! P(A ngang | B) = 1 - P(A | B) = 1 - 0,7 = 0,3. Điều kiện B giữ nguyên!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 2</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Định lý về biến cố đối có điều kiện:</b></p>\n                <div style=\"background:rgba(56,189,248,0.1); border-left:4px solid #38bdf8; padding:10px 14px; margin:10px 0; border-radius:4px;\">\n                  $$P(\\overline{A} \\mid B) = 1 - P(A \\mid B) = 1 - 0{,}7 = 0{,}3$$\n                </div>\n                <p style=\"color:#f87171; font-size:14px; margin:4px 0 0 0;\">\n                  ⚠️ <i>Cảnh báo bẫy B:</i> $P(A \\mid \\overline{B})$ hoàn toàn không liên quan trực tiếp đến $1 - P(A \\mid B)$. Muốn tính $P(A \\mid \\overline{B})$ phải biết $P(A \\cap \\overline{B})$ và $P(\\overline{B})$, không được lấy 1 trừ bừa bãi!\n                </p>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 7,
+      "title": "Ví dụ 3: Chuyển bóng giữa hai hộp bi",
+      "subtitle": "ĐỀ BÀI (30 GIÂY SUY NGHĨ)",
+      "startTime": 151.49,
+      "endTime": 174.99,
+      "duration": 23.5,
+      "mascotMode": "question",
+      "mascotTip": "Chuyển đỏ: (4/6)*(4/9) = 8/27. Chuyển xanh: (2/6)*(3/9) = 3/27. Cộng lại ra bao nhiêu?",
+      "bodyHtml": "<div class=\"slide\" style=\"border:2px solid #f59e0b; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n    <div style=\"display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.25);\">\n      <div style=\"flex:1; min-width:0;\">\n        <h3 style=\"color:#38bdf8; font-size:21px; margin:0 0 4px 0; line-height:1.3; font-weight:700;\">Ví dụ 3: Bài toán chuyển bóng giữa hai hộp bi</h3>\n        <span style=\"font-size:13px; color:#94a3b8; font-weight:500;\">⏱️ Thời gian suy nghĩ: <b style=\"color:#f59e0b;\">30 giây</b> (Vận dụng / Nâng cao)</span>\n      </div>\n      <div class=\"countdown-clock-widget cd-30s\" data-seconds=\"30\" style=\"flex-shrink:0; display:inline-flex; align-items:center; gap:8px; background:rgba(15,23,42,0.95); border:1.5px solid #f59e0b; border-radius:24px; padding:4px 12px; box-shadow:0 0 12px rgba(16,185,129,0.35);\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 36 36\" style=\"display:block;\">\n          <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/>\n          <circle class=\"countdown-circle-svg\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-dasharray=\"97.4\" stroke-dashoffset=\"0\" stroke-linecap=\"round\" style=\"transform:rotate(-90deg); transform-origin:50% 50%;\"/>\n        </svg>\n        <div style=\"display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;\">\n          <span style=\"font-size:9px; color:#94a3b8; text-transform:uppercase; font-weight:700; letter-spacing:0.5px;\">Suy nghĩ</span>\n          <span class=\"countdown-number-val\" style=\"font-size:15px; font-weight:800; color:#f59e0b; font-family:monospace; min-width:28px;\">30s</span>\n        </div>\n      </div>\n    </div>\n    \n              <p style=\"font-size:17px; line-height:1.7; color:#f8fafc;\">\n                Hộp 1 có $4$ bi đỏ và $2$ bi xanh; Hộp 2 có $3$ bi đỏ và $5$ bi xanh. Lấy ngẫu nhiên $1$ viên bi từ Hộp 1 bỏ sang Hộp 2. Sau đó từ Hộp 2 lấy ngẫu nhiên $1$ viên bi. Tính xác suất để viên bi lấy ra từ Hộp 2 có <b>màu đỏ</b>.\n              </p>\n              <div style=\"font-size:16px; line-height:1.8; margin:16px 0 0 10px; color:#cbd5e1; display:grid; grid-template-columns:1fr 1fr; gap:10px;\">\n                <div><b>A.</b> $\\frac{11}{27}$</div>\n                <div><b>B.</b> $\\frac{8}{27}$</div>\n                <div><b>C.</b> $\\frac{1}{3}$</div>\n                <div><b>D.</b> $\\frac{4}{9}$</div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 8,
+      "title": "Ví dụ 3: Chuyển bóng giữa hai hộp bi",
+      "subtitle": "HƯỚNG DẪN GIẢI CHI TIẾT",
+      "startTime": 174.98,
+      "endTime": 221.66,
+      "duration": 46.68,
+      "mascotMode": "success",
+      "mascotTip": "8/27 + 3/27 = 11/27 ≈ 0,4074! Một bài toán kinh điển giải quyết trọn vẹn trong 30 giây!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #10b981; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid rgba(16,185,129,0.3); padding-bottom:8px;\">\n                <h3 style=\"color:#10b981; font-size:20px; margin:0; font-weight:700;\">✅ Lời giải Ví dụ 3</h3>\n                <span style=\"background:#10b981; color:#0f172a; padding:4px 10px; border-radius:16px; font-weight:700; font-size:13px;\">Đáp án đúng: A</span>\n              </div>\n              <div style=\"font-size:15px; line-height:1.7; color:#e2e8f0;\">\n                <p><b>Giai đoạn 1:</b> Lấy 1 viên từ Hộp 1 (có 6 viên: 4 đỏ, 2 xanh):</p>\n                <ul style=\"margin:4px 0 6px 20px;\">\n                  <li>Chuyển viên bi đỏ: $P(D_1) = \\frac{4}{6} = \\frac{2}{3}$.</li>\n                  <li>Chuyển viên bi xanh: $P(X_1) = \\frac{2}{6} = \\frac{1}{3}$.</li>\n                </ul>\n                <p><b>Giai đoạn 2:</b> Rút 1 viên từ Hộp 2 (ban đầu 8 viên, sau khi nhận có 9 viên):</p>\n                <ul style=\"margin:4px 0 6px 20px;\">\n                  <li>Nếu nhận viên đỏ: Hộp 2 có $4$ đỏ, $5$ xanh $\\implies P(D_2 \\mid D_1) = \\frac{4}{9}$.</li>\n                  <li>Nếu nhận viên xanh: Hộp 2 có $3$ đỏ, $6$ xanh $\\implies P(D_2 \\mid X_1) = \\frac{3}{9}$.</li>\n                </ul>\n                <p><b>Xác suất toàn phần viên bi thứ hai màu đỏ:</b>\n                  $$P(D_2) = \\frac{2}{3} \\cdot \\frac{4}{9} + \\frac{1}{3} \\cdot \\frac{3}{9} = \\frac{8}{27} + \\frac{3}{27} = \\frac{11}{27} \\approx 0{,}4074$$\n                </p>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 9,
+      "title": "Mục 3: Bẫy đề thi & Kỹ thuật Casio",
+      "subtitle": "Phần 4: Kỹ thuật Casio fx-580VNX tối ưu",
+      "startTime": 221.66,
+      "endTime": 247.65,
+      "duration": 25.99,
+      "mascotMode": "explaining",
+      "mascotTip": "Phím STO lưu biến nhớ và phím S<=>D chuyển đổi số thập phân: Bộ đôi hủy diệt câu hỏi Phần III!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4);\">\n              <h3 style=\"color:#38bdf8; font-size:22px; margin-bottom:12px; font-weight:700;\">4. Kỹ thuật Casio fx-580VNX cho đề thi xác suất</h3>\n              <div style=\"display:grid; grid-template-columns:1fr 1fr; gap:16px;\">\n                <div style=\"background:rgba(30,41,59,0.8); border:1px solid rgba(56,189,248,0.25); border-radius:8px; padding:14px;\">\n                  <b style=\"color:#38bdf8; font-size:16px;\">💾 Lưu biến nhớ nhánh bằng STO:</b>\n                  <p style=\"font-size:14px; line-height:1.7; color:#cbd5e1; margin:6px 0 0 0;\">\n                    • Nhập <code>(2/3)*(4/9) [STO] [A]</code><br>\n                    • Nhập <code>(1/3)*(3/9) [STO] [B]</code><br>\n                    • Bấm <code>[A] + [B] = 11/27</code> (Toàn phần)<br>\n                    • Bấm <code>[A] / ([A] + [B]) = 8/11</code> (Bayes)\n                  </p>\n                </div>\n                <div style=\"background:rgba(30,41,59,0.8); border:1px solid rgba(16,185,129,0.25); border-radius:8px; padding:14px;\">\n                  <b style=\"color:#10b981; font-size:16px;\">🎯 Làm tròn cho Phần III (Trả lời ngắn):</b>\n                  <p style=\"font-size:14px; line-height:1.7; color:#cbd5e1; margin:6px 0 0 0;\">\n                    • Nhấn <kbd style=\"background:#0f172a; border:1px solid #64748b; padding:1px 6px; border-radius:4px;\">S<=>D</kbd> chuyển $\\frac{11}{27}$ thành $0{,}4074$.<br>\n                    • Quy tròn đến hàng phần trăm: <code>0.41</code>; đến hàng phần nghìn: <code>0.407</code> theo đúng yêu cầu đề bài!\n                  </p>\n                </div>\n              </div>\n            </div>\n            "
+    },
+    {
+      "sceneIndex": 10,
+      "title": "Mục 3: Bẫy đề thi & Kỹ thuật Casio",
+      "subtitle": "Phần 5: Chúc mừng hoàn thành toàn bộ Chương VI",
+      "startTime": 247.66,
+      "endTime": 266.93,
+      "duration": 19.27,
+      "mascotMode": "summary",
+      "mascotTip": "Chúc mừng bạn đã xuất sắc hoàn thành trọn vẹn toàn bộ Chương VI: Xác suất có điều kiện! Chúc các bạn đạt điểm 10 môn Toán!",
+      "bodyHtml": "\n            <div class=\"slide\" style=\"border:2px solid #38bdf8; border-radius:12px; padding:20px; background:linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); box-shadow:0 6px 20px rgba(0,0,0,0.4); text-align:center;\">\n              <h3 style=\"color:#38bdf8; font-size:24px; margin-bottom:12px; font-weight:800;\">🎉 CHÚC MỪNG HOÀN THÀNH TOÀN BỘ CHƯƠNG VI</h3>\n              <p style=\"font-size:16px; line-height:1.7; color:#e2e8f0; max-width:640px; margin:0 auto 16px auto;\">\n                Các em đã trang bị đầy đủ kiến thức từ Khái niệm xác suất có điều kiện, Công thức nhân, Sơ đồ hình cây, Xác suất toàn phần, Công thức Bayes đến các kỹ thuật Casio fx-580VNX đỉnh cao!\n              </p>\n              <div style=\"background:rgba(16,185,129,0.15); border:1.5px dashed #10b981; border-radius:8px; padding:14px; max-width:540px; margin:0 auto; display:flex; align-items:center; gap:14px; text-align:left;\">\n                <span style=\"font-size:36px;\">🏆</span>\n                <span style=\"font-size:15px; color:#34d399; line-height:1.5;\">\n                  <b>Cú Thông Thái:</b> \"Chúc các em luôn tự tin, bình tĩnh và gặt hái điểm số cao nhất trong các kỳ thi sắp tới. Hẹn gặp lại các em trong các chuyên đề ôn thi đại học tiếp theo!\"\n                </span>\n              </div>\n            </div>\n            "
     }
   ]
 };

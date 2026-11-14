@@ -883,9 +883,9 @@
       lessonTitle: "Bài tập cuối chương VI: Xác suất có điều kiện",
       lessonBadge: "Ôn tập C6",
       sections: [
-        { key: "ontap_c6_muc1", title: "Mục 1: Hệ thống hoá Xác suất có điều kiện, Toàn phần & Bayes", time: "05:00", icon: "🧠" },
-        { key: "ontap_c6_muc2", title: "Mục 2: Rèn luyện các dạng bài thực tế then chốt & Sơ đồ cây", time: "05:00", icon: "📝" },
-        { key: "ontap_c6_muc3", title: "Mục 3: Bẫy đề thi xác suất, Nhận diện công thức & Kỹ thuật Casio", time: "05:00", icon: "💡" }
+        { key: "ontap_c6_muc1", title: "Mục 1: Hệ thống hoá Xác suất có điều kiện, Toàn phần & Bayes", time: "04:37", icon: "🧠" },
+        { key: "ontap_c6_muc2", title: "Mục 2: Rèn luyện các dạng bài thực tế then chốt & Sơ đồ cây", time: "05:09", icon: "📝" },
+        { key: "ontap_c6_muc3", title: "Mục 3: Bẫy đề thi xác suất, Nhận diện công thức & Kỹ thuật Casio", time: "04:27", icon: "💡" }
       ]
     }
   ];
