@@ -22,6 +22,7 @@
       if (window.CHAPTER6_DATA) Object.assign(LECTURE_DATA, window.CHAPTER6_DATA);
       if (window.G11_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER1_DATA);
       if (window.G11_CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER2_DATA);
+      if (window.G11_CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER3_DATA);
 
       // Normalize all sections in LECTURE_DATA so they render 100% reliably
       try {
@@ -111,6 +112,24 @@
           document.head.appendChild(sg11_c2b);
         };
         document.head.appendChild(sg11_c2);
+      }
+      if (!window.G11_CHAPTER3_DATA) {
+        const sg11_c3 = document.createElement('script');
+        sg11_c3.src = (window.location.protocol === 'file:') ? 'js/g11_chapter3_data.js' : '/js/g11_chapter3_data.js';
+        sg11_c3.onload = function() {
+          if (window.G11_CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER3_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        sg11_c3.onerror = function() {
+          const sg11_c3b = document.createElement('script');
+          sg11_c3b.src = 'public/js/g11_chapter3_data.js';
+          sg11_c3b.onload = function() {
+            if (window.G11_CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER3_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(sg11_c3b);
+        };
+        document.head.appendChild(sg11_c3);
       }
       if (!window.CHAPTER6_DATA) {
         const s6 = document.createElement('script');
@@ -1139,6 +1158,42 @@
         { key: "g11_ontap_c2_muc2", title: "Mục 2: Rèn luyện 4 dạng toán trọng tâm & Phương pháp giải", time: "06:00", icon: "🎯" },
         { key: "g11_ontap_c2_muc3", title: "Mục 3: Cảnh báo bẫy trắc nghiệm, Kỹ năng Casio 580 & Đề tổng ôn", time: "05:30", icon: "💡" }
       ]
+    },
+    {
+      chapterNumber: 1103,
+      chapterTitle: "Toán 11 - Chương III: Các số đặc trưng đo xu thế trung tâm của mẫu số liệu ghép nhóm",
+      lessonId: "toan11_bai8",
+      lessonTitle: "Bài 8: Mẫu số liệu ghép nhóm",
+      lessonBadge: "Toán 11 • Bài 8",
+      sections: [
+        { key: "g11_bai8_muc1", title: "Mục 1: Khái niệm về mẫu số liệu ghép nhóm & Giá trị đại diện", time: "05:30", icon: "📊" },
+        { key: "g11_bai8_muc2", title: "Mục 2: Kỹ thuật ghép nhóm mẫu số liệu & Bảng tần số ghép nhóm", time: "05:20", icon: "📈" },
+        { key: "g11_bai8_muc3", title: "Mục 3: Tần số tích lũy & Ý nghĩa xác định phân vị dữ liệu", time: "05:15", icon: "🔢" }
+      ]
+    },
+    {
+      chapterNumber: 1103,
+      chapterTitle: "Toán 11 - Chương III: Các số đặc trưng đo xu thế trung tâm của mẫu số liệu ghép nhóm",
+      lessonId: "toan11_bai9",
+      lessonTitle: "Bài 9: Các số đặc trưng đo xu thế trung tâm",
+      lessonBadge: "Toán 11 • Bài 9",
+      sections: [
+        { key: "g11_bai9_muc1", title: "Mục 1: Số trung bình của mẫu số liệu ghép nhóm & Ý nghĩa thực tiễn", time: "05:35", icon: "➗" },
+        { key: "g11_bai9_muc2", title: "Mục 2: Trung vị và Tứ phân vị của mẫu số liệu ghép nhóm", time: "06:10", icon: "🎯" },
+        { key: "g11_bai9_muc3", title: "Mục 3: Mốt của mẫu số liệu ghép nhóm & Lựa chọn số đặc trưng phù hợp", time: "05:45", icon: "🏆" }
+      ]
+    },
+    {
+      chapterNumber: 1103,
+      chapterTitle: "Toán 11 - Chương III: Các số đặc trưng đo xu thế trung tâm của mẫu số liệu ghép nhóm",
+      lessonId: "toan11_ontap_c3",
+      lessonTitle: "Bài tập cuối chương III (Ôn tập chương 3)",
+      lessonBadge: "Toán 11 • Ôn tập C3",
+      sections: [
+        { key: "g11_ontap_c3_muc1", title: "Mục 1: Hệ thống hóa lý thuyết & Sơ đồ tư duy toàn bộ Chương 3", time: "05:40", icon: "🧠" },
+        { key: "g11_ontap_c3_muc2", title: "Mục 2: Rèn luyện 4 dạng toán trọng tâm & Bài toán thực tế thống kê", time: "06:15", icon: "🎯" },
+        { key: "g11_ontap_c3_muc3", title: "Mục 3: Cảnh báo bẫy trắc nghiệm, Kỹ năng Casio 580 & Đề tổng ôn", time: "06:00", icon: "💡" }
+      ]
     }
   ];
 
@@ -1473,11 +1528,12 @@
     }
 
     if (isGrade11) {
-      if (isReview || lessonNum === 'ontap' || lessonNum === 'cuoichuong1' || lessonNum === 'ontap_c1' || lessonNum === 'cuoichuong2' || lessonNum === 'ontap_c2') {
+      if (isReview || lessonNum === 'ontap' || lessonNum === 'cuoichuong1' || lessonNum === 'ontap_c1' || lessonNum === 'cuoichuong2' || lessonNum === 'ontap_c2' || lessonNum === 'cuoichuong3' || lessonNum === 'ontap_c3') {
         let ch = chapterNum;
         if (!ch) {
           const al = (typeof window !== 'undefined' && window.activeLesson) ? window.activeLesson : null;
-          if (al && (al.chapterNumber == 1102 || al.chapter == 2 || (typeof al.id === 'string' && al.id.includes('c2')))) ch = 2;
+          if (al && (al.chapterNumber == 1103 || al.chapter == 3 || (typeof al.id === 'string' && al.id.includes('c3')))) ch = 3;
+          else if (al && (al.chapterNumber == 1102 || al.chapter == 2 || (typeof al.id === 'string' && al.id.includes('c2')))) ch = 2;
           else ch = 1;
         }
         const s = Math.min(3, Math.max(1, sectionNum));
@@ -1510,6 +1566,14 @@
       if (lessonNum === 7) {
         const s = Math.min(3, Math.max(1, sectionNum));
         return `g11_bai7_muc${s}`;
+      }
+      if (lessonNum === 8) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai8_muc${s}`;
+      }
+      if (lessonNum === 9) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai9_muc${s}`;
       }
     }
 

@@ -5,6 +5,7 @@ __pycache__/
 *.pyc
 
 _video_temp/
+temp_audio_*/
 public/*
 !public/js/
 !public/index.html
