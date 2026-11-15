@@ -21,6 +21,37 @@
       if (window.CHAPTER5_DATA) Object.assign(LECTURE_DATA, window.CHAPTER5_DATA);
       if (window.CHAPTER6_DATA) Object.assign(LECTURE_DATA, window.CHAPTER6_DATA);
       if (window.G11_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER1_DATA);
+
+      // Normalize all sections in LECTURE_DATA so they render 100% reliably
+      try {
+        Object.keys(LECTURE_DATA).forEach(k => {
+          const sec = LECTURE_DATA[k];
+          if (sec && Array.isArray(sec.scenes)) {
+            sec.scenes.forEach((sc, idx) => {
+              if (!sc.bodyHtml && sc.content) sc.bodyHtml = sc.content;
+              if (!sc.content && sc.bodyHtml) sc.content = sc.bodyHtml;
+              if (!sc.sceneIndex) sc.sceneIndex = idx + 1;
+              if (!sc.subtitle) sc.subtitle = sec.sectionTitle || sec.title || `Cảnh ${idx + 1}`;
+              if (!sc.mascotTip) sc.mascotTip = sec.owl_tip || 'Lắng nghe kỹ bài giảng và quan sát từng bước biến đổi!';
+              if (!sc.mascotMode) sc.mascotMode = (idx === 10 ? 'magnifier' : (idx >= 2 && idx <= 9 ? 'thinking' : 'talking'));
+            });
+            if (Array.isArray(sec.parts)) {
+              sec.parts.forEach((p, pIdx) => {
+                if (!p.partTitle && p.title) p.partTitle = p.title;
+                if (!p.partNumber) p.partNumber = pIdx + 1;
+                if (!p.scenes || !p.scenes.length) {
+                  if (pIdx === 0) p.scenes = [1, 2];
+                  else if (pIdx === 1) p.scenes = (sec.scenes.length >= 10) ? [1, 2] : [2];
+                  else if (pIdx === 2) p.scenes = [3, 4, 5, 6, 7, 8, 9, 10];
+                  else if (pIdx === 3) p.scenes = [11, 12];
+                }
+              });
+            }
+          }
+        });
+      } catch (e) {
+        console.warn('ensureMergedData normalization warning:', e);
+      }
     }
   }
 
@@ -174,6 +205,7 @@
 
   // Mascot SVG generator
   function getOwlSvg(mode, tipText) {
+    tipText = tipText || 'Lắng nghe kỹ bài giảng và quan sát từng bước biến đổi!';
     let badgeColor = '#38bdf8';
     let badgeTitle = 'Thầy Cú Hướng Dẫn';
     if (mode === 'magnifier') {
@@ -182,6 +214,9 @@
     } else if (mode === 'cheer') {
       badgeColor = '#4ade80';
       badgeTitle = 'Cú Đồng Hành & Khen Ngợi';
+    } else if (mode === 'thinking') {
+      badgeColor = '#fbbf24';
+      badgeTitle = 'Cú Cùng Suy Nghĩ';
     }
 
     return `
@@ -279,10 +314,10 @@
     const bodyEl = document.getElementById('il-stage-body');
     const mascotContainer = document.getElementById('il-stage-mascot');
 
-    if (titleEl) titleEl.textContent = scene.title;
-    if (subtitleEl) subtitleEl.textContent = scene.subtitle;
+    if (titleEl) titleEl.textContent = scene.title || '';
+    if (subtitleEl) subtitleEl.textContent = scene.subtitle || (data.sectionTitle ? `${data.sectionTitle} • Cảnh ${sceneIdx}` : `Cảnh ${sceneIdx}`);
     if (bodyEl) {
-      bodyEl.innerHTML = scene.bodyHtml;
+      bodyEl.innerHTML = scene.bodyHtml || scene.content || scene.html || '';
       // Trigger KaTeX rendering
       if (typeof window.renderMathInElement === 'function') {
         window.renderMathInElement(bodyEl, {
@@ -301,7 +336,9 @@
     }
 
     if (mascotContainer) {
-      mascotContainer.innerHTML = getOwlSvg(scene.mascotMode, scene.mascotTip);
+      const tipText = scene.mascotTip || scene.tip || data.owl_tip || 'Lắng nghe kỹ bài giảng và quan sát từng bước biến đổi!';
+      const mode = scene.mascotMode || (sceneIdx === 11 ? 'magnifier' : (sceneIdx >= 3 && sceneIdx <= 10 ? 'thinking' : 'talking'));
+      mascotContainer.innerHTML = getOwlSvg(mode, tipText);
       if (typeof window.renderMathInElement === 'function') {
         window.renderMathInElement(mascotContainer, {
           macros: {
@@ -387,7 +424,7 @@
       html += `
         <button type="button" onclick="window.seekLectureToScene(${firstScene})"
           class="px-2.5 py-1 rounded-lg text-xs font-medium border transition cursor-pointer whitespace-nowrap ${activeClass}">
-          ${p.partTitle || ('Phần ' + (p.partNumber || 1))}
+          ${p.partTitle || p.title || ('Phần ' + (p.partNumber || 1))}
         </button>
       `;
     });
