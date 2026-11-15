@@ -813,92 +813,197 @@
     sections: [
       {
         sectionNumber: 1,
-        sectionTitle: "Mục 1: Phương trình sin x = m và cos x = m",
+        sectionTitle: "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m",
         theory: createStandardTheoryHTML(
           "Bài 4: Phương trình lượng giác cơ bản", "Lớp 11", 1,
-          "Phương trình sin x = m và cos x = m",
-          `<p>Điều kiện có nghiệm và công thức nghiệm của phương trình $\\sin$ và $\\cos$:</p>
+          "Khái niệm phương trình tương đương & Phương trình sin x = m",
+          `<p>Kiến thức trọng tâm về phương trình tương đương và phương trình $\\sin x = m$:</p>
           <ul class="list-disc ml-5 space-y-1.5">
-            <li>Điều kiện có nghiệm: $-1 \\le m \\le 1$.</li>
-            <li>$\\sin x = \\sin \\alpha \\Leftrightarrow \\begin{bmatrix} x = \\alpha + k2\\pi \\\\ x = \\pi - \\alpha + k2\\pi \\end{bmatrix}$ ($k \\in \\mathbb{Z}$).</li>
-            <li>$\\cos x = \\cos \\alpha \\Leftrightarrow x = \\pm \\alpha + k2\\pi$ ($k \\in \\mathbb{Z}$).</li>
-            <li>Trường hợp đặc biệt: $\\sin x = 0 \\Leftrightarrow x = k\\pi$; $\\cos x = 0 \\Leftrightarrow x = \\frac{\\pi}{2} + k\\pi$.</li>
+            <li><strong>Phương trình tương đương:</strong> Hai phương trình được gọi là tương đương trên tập xác định $D$ nếu chúng có cùng tập nghiệm (ký hiệu $\\Leftrightarrow$). Phép biến đổi tương đương bao gồm cộng/trừ cùng biểu thức xác định, nhân/chia với biểu thức luôn khác 0.</li>
+            <li><strong>Điều kiện có nghiệm của $\\sin x = m$:</strong> Phương trình có nghiệm khi và chỉ khi $-1 \\le m \\le 1$ ($|m| \\le 1$). Nếu $|m| > 1$, phương trình vô nghiệm.</li>
+            <li><strong>Công thức nghiệm tổng quát:</strong> Khi $|m| \\le 1$, gọi $\\alpha$ là một góc thỏa mãn $\\sin\\alpha = m$:
+              $$\\sin x = \\sin\\alpha \\Leftrightarrow \\begin{bmatrix} x = \\alpha + k2\\pi \\\\ x = \\pi - \\alpha + k2\\pi \\end{bmatrix} \\quad (k \\in \\mathbb{Z})$$
+            </li>
+            <li><strong>Đơn vị độ:</strong> $\\sin x = \\sin\\alpha^\\circ \\Leftrightarrow \\begin{bmatrix} x = \\alpha^\\circ + k360^\\circ \\\\ x = 180^\\circ - \\alpha^\\circ + k360^\\circ \\end{bmatrix}$.</li>
+            <li><strong>3 trường hợp đặc biệt:</strong>
+              <br/>• $\\sin x = 0 \\Leftrightarrow x = k\\pi$ ($k \\in \\mathbb{Z}$).
+              <br/>• $\\sin x = 1 \\Leftrightarrow x = \\frac{\\pi}{2} + k2\\pi$ ($k \\in \\mathbb{Z}$).
+              <br/>• $\\sin x = -1 \\Leftrightarrow x = -\\frac{\\pi}{2} + k2\\pi$ ($k \\in \\mathbb{Z}$).
+            </li>
           </ul>`,
-          `<li>Đuôi nghiệm bằng 0 là $k\\pi$, bằng $\\pm 1$ là $k2\\pi$.</li>`,
-          `<li>Quên họ nghiệm $\\pi - \\alpha + k2\\pi$ của phương trình $\\sin$.</li>`,
-          `<li><em>"Sin: alpha và pi trừ alpha – Cos: cộng trừ alpha!"</em></li>`
+          `<li>Nghiệm của $\\sin$ gồm 2 nhánh: $\\alpha$ và $\\pi - \\alpha$ (đuôi $k2\\pi$).</li>
+          <li>Khi $m = 0$, đuôi nghiệm rút gọn thành $k\\pi$.</li>
+          <li>Khi $|m| > 1$, phương trình vô nghiệm ngay lập tức.</li>`,
+          `<li>Quên nhánh nghiệm bù $\\pi - \\alpha + k2\\pi$.</li>
+          <li>Nhầm đuôi $k2\\pi$ thành $k\\pi$ cho nghiệm $\\sin x = 1$ hoặc $-1$.</li>`,
+          `<li><em>"Sin: alpha và pi trừ alpha – Chu kỳ k hai pi!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Nghiệm của phương trình $\\sin x = \\frac{1}{2}$ là:",
+            question: "Tất cả các nghiệm của phương trình $\\sin x = \\frac{\\sqrt{3}}{2}$ là:",
             options: [
-              "A. $x = \\frac{\\pi}{6} + k2\\pi$ hoặc $x = \\frac{5\\pi}{6} + k2\\pi$",
-              "B. $x = \\pm \\frac{\\pi}{6} + k2\\pi$",
-              "C. $x = \\frac{\\pi}{3} + k2\\pi$",
-              "D. $x = \\frac{\\pi}{6} + k\\pi$"
+              "A. $x = \\frac{\\pi}{3} + k2\\pi$ hoặc $x = \\frac{2\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "B. $x = \\pm \\frac{\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "C. $x = \\frac{\\pi}{6} + k2\\pi$ hoặc $x = \\frac{5\\pi}{6} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "D. $x = \\frac{\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$)"
             ],
             correct: "A",
-            explanation: "$\\sin x = \\sin\\frac{\\pi}{6} \\Leftrightarrow x = \\frac{\\pi}{6} + k2\\pi$ hoặc $x = \\frac{5\\pi}{6} + k2\\pi$.",
-            hint1: "$\\sin(\\pi/6) = 1/2$.",
-            hint2: "Họ nghiệm $\\alpha$ và $\\pi - \\alpha$."
+            explanation: "Vì $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$ nên nghiệm là $x = \\frac{\\pi}{3} + k2\\pi$ hoặc $x = \\pi - \\frac{\\pi}{3} + k2\\pi = \\frac{2\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$).",
+            hint1: "Tìm góc $\\alpha$ sao cho $\\sin\\alpha = \\frac{\\sqrt{3}}{2}$.",
+            hint2: "Áp dụng $\\sin x = \\sin\\alpha \\Leftrightarrow x = \\alpha + k2\\pi \\lor x = \\pi - \\alpha + k2\\pi$."
           },
           {
-            question: "Nghiệm của phương trình $\\cos x = 0$ là:",
-            options: ["A. $x = \\frac{\\pi}{2} + k\\pi$", "B. $x = k\\pi$", "C. $x = \\frac{\\pi}{2} + k2\\pi$", "D. $x = k2\\pi$"],
+            question: "Nghiệm của phương trình $\\sin x = -1$ là:",
+            options: [
+              "A. $x = -\\frac{\\pi}{2} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "B. $x = \\frac{\\pi}{2} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "C. $x = -\\frac{\\pi}{2} + k\\pi$ ($k \\in \\mathbb{Z}$)",
+              "D. $x = \\pi + k2\\pi$ ($k \\in \\mathbb{Z}$)"
+            ],
             correct: "A",
-            explanation: "$\\cos x = 0 \\Leftrightarrow x = \\frac{\\pi}{2} + k\\pi$.",
-            hint1: "Hai điểm trên trục tung của đường tròn.",
-            hint2: "Đuôi $k\\pi$."
+            explanation: "Điểm biểu diễn $\\sin x = -1$ trên đường tròn lượng giác là điểm cực nam $B'(0; -1)$, tương ứng góc $-\\frac{\\pi}{2} + k2\\pi$.",
+            hint1: "Trường hợp đặc biệt điểm đáy của đường tròn.",
+            hint2: "Đuôi nghiệm là $k2\\pi$."
           },
           {
-            question: "Phương trình $\\cos x = 2$ có bao nhiêu nghiệm?",
-            options: ["A. 0 nghiệm", "B. 1 nghiệm", "C. 2 nghiệm", "D. Vô số nghiệm"],
+            question: "Số nghiệm của phương trình $\\sin\\left(2x - \\frac{\\pi}{4}\\right) = 0$ trên đoạn $[0; \\pi]$ là:",
+            options: ["A. 2", "B. 1", "C. 3", "D. 4"],
             correct: "A",
-            explanation: "Vì $-1 \\le \\cos x \\le 1$ mà $2 > 1$ nên phương trình vô nghiệm.",
-            hint1: "Kiểm tra điều kiện $|m| \\le 1$.",
-            hint2: "$2 > 1$ nên vô nghiệm."
+            explanation: "$2x - \\frac{\\pi}{4} = k\\pi \\Leftrightarrow x = \\frac{\\pi}{8} + \\frac{k\\pi}{2}$. Với $x \\in [0; \\pi] \\Rightarrow 0 \\le \\frac{\\pi}{8} + \\frac{k\\pi}{2} \\le \\pi \\Leftrightarrow -\\frac{1}{4} \\le k \\le \\frac{7}{4}$. Do $k \\in \\mathbb{Z} \\Rightarrow k \\in \\{0; 1\\}$. Có đúng 2 nghiệm là $x = \\frac{\\pi}{8}$ và $x = \\frac{5\\pi}{8}$.",
+            hint1: "$\\sin u = 0 \\Leftrightarrow u = k\\pi$.",
+            hint2: "Giải bất phương trình tìm số nguyên $k$."
           }
         ]
       },
       {
         sectionNumber: 2,
-        sectionTitle: "Mục 2: Phương trình tan x = m và cot x = m",
+        sectionTitle: "Mục 2: Phương trình lượng giác cos x = m",
         theory: createStandardTheoryHTML(
           "Bài 4: Phương trình lượng giác cơ bản", "Lớp 11", 2,
-          "Phương trình tan x = m và cot x = m",
-          `<p>Nghiệm của phương trình $\\tan$ và $\\cot$:</p>
+          "Phương trình lượng giác cos x = m",
+          `<p>Kiến thức trọng tâm về phương trình lượng giác $\\cos x = m$:</p>
           <ul class="list-disc ml-5 space-y-1.5">
-            <li>$\\tan x = \\tan \\alpha \\Leftrightarrow x = \\alpha + k\\pi$ ($k \\in \\mathbb{Z}$). Luôn có nghiệm với mọi $m \\in \\mathbb{R}$.</li>
-            <li>$\\cot x = \\cot \\alpha \\Leftrightarrow x = \\alpha + k\\pi$ ($k \\in \\mathbb{Z}$). Luôn có nghiệm với mọi $m \\in \\mathbb{R}$.</li>
+            <li><strong>Điều kiện có nghiệm:</strong> $-1 \\le m \\le 1$ ($|m| \\le 1$). Nếu $|m| > 1$, phương trình vô nghiệm.</li>
+            <li><strong>Công thức nghiệm tổng quát:</strong> Khi $|m| \\le 1$, gọi $\\alpha$ là một góc thỏa mãn $\\cos\\alpha = m$:
+              $$\\cos x = \\cos\\alpha \\Leftrightarrow x = \\pm\\alpha + k2\\pi \\quad (k \\in \\mathbb{Z})$$
+            </li>
+            <li><strong>Đơn vị độ:</strong> $\\cos x = \\cos\\alpha^\\circ \\Leftrightarrow x = \\pm\\alpha^\\circ + k360^\\circ$.</li>
+            <li><strong>3 trường hợp đặc biệt:</strong>
+              <br/>• $\\cos x = 0 \\Leftrightarrow x = \\frac{\\pi}{2} + k\\pi$ ($k \\in \\mathbb{Z}$).
+              <br/>• $\\cos x = 1 \\Leftrightarrow x = k2\\pi$ ($k \\in \\mathbb{Z}$).
+              <br/>• $\\cos x = -1 \\Leftrightarrow x = \\pi + k2\\pi$ ($k \\in \\mathbb{Z}$).
+            </li>
+            <li><strong>Kỹ thuật biến đổi đưa về $\\cos$:</strong>
+              <br/>• $-\\cos\\alpha = \\cos(\\pi - \\alpha)$.
+              <br/>• $\\sin\\alpha = \\cos\\left(\\frac{\\pi}{2} - \\alpha\\right)$.
+            </li>
           </ul>`,
-          `<li>Chỉ có DUY NHẤT một họ nghiệm, đuôi $k\\pi$.</li>`,
-          `<li>Tưởng phương trình $\\tan x = 5$ vô nghiệm.</li>`,
-          `<li><em>"Tan và Cot luôn có nghiệm – Đuôi cộng k pi!"</em></li>`
+          `<li>Nghiệm của $\\cos$ có tính đối xứng: $x = \\pm\\alpha + k2\\pi$.</li>
+          <li>Khi $m = 0$, nghiệm là $x = \\frac{\\pi}{2} + k\\pi$ (đuôi $k\\pi$).</li>
+          <li>Muốn đổi $-\\cos u$ về $\\cos$, dùng góc bù $\\pi - u$.</li>`,
+          `<li>Nhầm công thức cos thành $x = \\pi - \\alpha$ giống như sin.</li>
+          <li>Quên đuôi $k\\pi$ khi $\\cos x = 0$, viết nhầm thành $k2\\pi$.</li>`,
+          `<li><em>"Cos đối: cộng trừ alpha – Bằng không: nửa pi cộng k pi!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Nghiệm của phương trình $\\tan x = 1$ là:",
-            options: ["A. $x = \\frac{\\pi}{4} + k\\pi$", "B. $x = \\pm \\frac{\\pi}{4} + k2\\pi$", "C. $x = \\frac{\\pi}{4} + k2\\pi$", "D. $x = k\\pi$"],
+            question: "Nghiệm của phương trình $\\cos x = -\\frac{1}{2}$ là:",
+            options: [
+              "A. $x = \\pm \\frac{2\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "B. $x = \\pm \\frac{\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "C. $x = \\frac{2\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "D. $x = \\pm \\frac{2\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$)"
+            ],
             correct: "A",
-            explanation: "$1 = \\tan\\frac{\\pi}{4} \\Rightarrow x = \\frac{\\pi}{4} + k\\pi$.",
-            hint1: "$\\tan(\\pi/4) = 1$.",
-            hint2: "Đuôi $k\\pi$."
+            explanation: "Vì $\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$ nên $\\cos x = \\cos\\frac{2\\pi}{3} \\Leftrightarrow x = \\pm \\frac{2\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$).",
+            hint1: "Bấm $\\arccos(-1/2) = 2\\pi/3$.",
+            hint2: "Nghiệm đối xứng $x = \\pm \\alpha + k2\\pi$."
           },
           {
-            question: "Nghiệm của phương trình $\\cot x = \\sqrt{3}$ là:",
-            options: ["A. $x = \\frac{\\pi}{6} + k\\pi$", "B. $x = \\frac{\\pi}{3} + k\\pi$", "C. $x = \\pm \\frac{\\pi}{6} + k2\\pi$", "D. $x = \\frac{\\pi}{6} + k2\\pi$"],
+            question: "Tất cả các nghiệm của phương trình $\\cos x = 0$ là:",
+            options: [
+              "A. $x = \\frac{\\pi}{2} + k\\pi$ ($k \\in \\mathbb{Z}$)",
+              "B. $x = k\\pi$ ($k \\in \\mathbb{Z}$)",
+              "C. $x = \\frac{\\pi}{2} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "D. $x = \\pi + k2\\pi$ ($k \\in \\mathbb{Z}$)"
+            ],
             correct: "A",
-            explanation: "$\\cot x = \\cot\\frac{\\pi}{6} \\Rightarrow x = \\frac{\\pi}{6} + k\\pi$.",
-            hint1: "$\\cot(\\pi/6) = \\sqrt{3}$.",
-            hint2: "$x = \\frac{\\pi}{6} + k\\pi$."
+            explanation: "Trên đường tròn lượng giác, $\\cos x = 0$ tại 2 điểm cực bắc và cực nam: $x = \\frac{\\pi}{2} + k\\pi$ ($k \\in \\mathbb{Z}$).",
+            hint1: "Điểm trên trục tung.",
+            hint2: "Đuôi chu kỳ là $k\\pi$."
           },
           {
-            question: "Số nghiệm của phương trình $\\tan x = -\\sqrt{3}$ trong khoảng $(0; 2\\pi)$ là:",
+            question: "Phương trình $\\cos\\left(x + \\frac{\\pi}{6}\\right) = 2$ có bao nhiêu nghiệm?",
+            options: ["A. 0 nghiệm", "B. 1 nghiệm", "C. 2 nghiệm", "D. Vô số nghiệm"],
+            correct: "A",
+            explanation: "Vì $-1 \\le \\cos u \\le 1$ với mọi $u$ mà $2 > 1$ nên phương trình vô nghiệm.",
+            hint1: "Kiểm tra tập giá trị của hàm cosin.",
+            hint2: "$|m| > 1$ thì vô nghiệm."
+          }
+        ]
+      },
+      {
+        sectionNumber: 3,
+        sectionTitle: "Mục 3: Phương trình lượng giác tan x = m và cot x = m",
+        theory: createStandardTheoryHTML(
+          "Bài 4: Phương trình lượng giác cơ bản", "Lớp 11", 3,
+          "Phương trình lượng giác tan x = m và cot x = m",
+          `<p>Kiến thức trọng tâm về phương trình lượng giác $\\tan x = m$ và $\\cot x = m$:</p>
+          <ul class="list-disc ml-5 space-y-1.5">
+            <li><strong>Điều kiện có nghiệm:</strong> Cả hai phương trình $\\tan x = m$ và $\\cot x = m$ luôn CÓ NGHIỆM với mọi $m \\in \\mathbb{R}$!</li>
+            <li><strong>Công thức nghiệm của $\\tan x = m$:</strong>
+              <br/>• Điều kiện xác định: $x \\ne \\frac{\\pi}{2} + k\\pi$ ($k \\in \\mathbb{Z}$).
+              <br/>• Gọi $\\alpha$ là một góc thỏa mãn $\\tan\\alpha = m$:
+              $$\\tan x = \\tan\\alpha \\Leftrightarrow x = \\alpha + k\\pi \\quad (k \\in \\mathbb{Z})$$
+            </li>
+            <li><strong>Công thức nghiệm của $\\cot x = m$:</strong>
+              <br/>• Điều kiện xác định: $x \\ne k\\pi$ ($k \\in \\mathbb{Z}$).
+              <br/>• Gọi $\\alpha$ là một góc thỏa mãn $\\cot\\alpha = m$:
+              $$\\cot x = \\cot\\alpha \\Leftrightarrow x = \\alpha + k\\pi \\quad (k \\in \\mathbb{Z})$$
+            </li>
+            <li><strong>Đặc điểm nổi bật:</strong> Cả $\\tan$ và $\\cot$ chỉ có DUY NHẤT một họ nghiệm với chu kỳ là $\\pi$ (đuôi $+ k\\pi$).</li>
+          </ul>`,
+          `<li>Tan và Cot luôn có nghiệm với mọi $m \\in \\mathbb{R}$.</li>
+          <li>Chỉ có 1 nhánh nghiệm, đuôi $k\\pi$.</li>
+          <li>Luôn nhớ đặt điều kiện xác định khi bài toán có $\\tan$ hoặc $\\cot$.</li>`,
+          `<li>Nhầm đuôi nghiệm của tan và cot thành $k2\\pi$.</li>
+          <li>Tưởng nhầm $\\tan x = 5$ vô nghiệm vì nhầm sang điều kiện của sin và cos.</li>`,
+          `<li><em>"Tan và Cot: Nghiệm luôn tồn tại – Đuôi cộng k pi duy nhất một nhánh!"</em></li>`
+        ),
+        mcqs: [
+          {
+            question: "Nghiệm của phương trình $\\tan x = \\sqrt{3}$ là:",
+            options: [
+              "A. $x = \\frac{\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$)",
+              "B. $x = \\frac{\\pi}{6} + k\\pi$ ($k \\in \\mathbb{Z}$)",
+              "C. $x = \\pm \\frac{\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "D. $x = \\frac{\\pi}{3} + k2\\pi$ ($k \\in \\mathbb{Z}$)"
+            ],
+            correct: "A",
+            explanation: "Vì $\\tan\\frac{\\pi}{3} = \\sqrt{3}$ nên $\\tan x = \\tan\\frac{\\pi}{3} \\Leftrightarrow x = \\frac{\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$).",
+            hint1: "$\\tan(\\pi/3) = \\sqrt{3}$.",
+            hint2: "Đuôi nghiệm là $k\\pi$."
+          },
+          {
+            question: "Nghiệm của phương trình $\\cot x = -1$ là:",
+            options: [
+              "A. $x = -\\frac{\\pi}{4} + k\\pi$ ($k \\in \\mathbb{Z}$)",
+              "B. $x = \\frac{\\pi}{4} + k\\pi$ ($k \\in \\mathbb{Z}$)",
+              "C. $x = \\pm \\frac{\\pi}{4} + k2\\pi$ ($k \\in \\mathbb{Z}$)",
+              "D. $x = -\\frac{\\pi}{4} + k2\\pi$ ($k \\in \\mathbb{Z}$)"
+            ],
+            correct: "A",
+            explanation: "Ta có $\\cot\\left(-\\frac{\\pi}{4}\\right) = -1 \\Rightarrow x = -\\frac{\\pi}{4} + k\\pi$ ($k \\in \\mathbb{Z}$).",
+            hint1: "$\\cot(-\\pi/4) = -1$.",
+            hint2: "Duy nhất một họ nghiệm đuôi $k\\pi$."
+          },
+          {
+            question: "Số nghiệm của phương trình $\\tan\\left(2x - \\frac{\\pi}{6}\\right) = 1$ trên khoảng $(0; \\pi)$ là:",
             options: ["A. 2", "B. 1", "C. 3", "D. 4"],
             correct: "A",
-            explanation: "$x = -\\pi/3 + k\\pi$. Với $k = 1 \\Rightarrow 2\\pi/3$, $k = 2 \\Rightarrow 5\\pi/3$. Có 2 nghiệm.",
-            hint1: "$x = -\\pi/3 + k\\pi$.",
-            hint2: "Hai nghiệm trong $(0; 2\\pi)$."
+            explanation: "Phương trình $\\Leftrightarrow 2x - \\frac{\\pi}{6} = \\frac{\\pi}{4} + k\\pi \\Leftrightarrow 2x = \\frac{5\\pi}{12} + k\\pi \\Leftrightarrow x = \\frac{5\\pi}{24} + \\frac{k\\pi}{2}$. Vì $x \\in (0; \\pi) \\Rightarrow 0 < \\frac{5\\pi}{24} + \\frac{k\\pi}{2} < \\pi \\Leftrightarrow -\\frac{5}{12} < k < \\frac{19}{12}$. Do $k \\in \\mathbb{Z} \\Rightarrow k \\in \\{0; 1\\}$ (2 nghiệm). Cả 2 nghiệm đều thỏa mãn ĐKXĐ $\\cos\\left(2x - \\frac{\\pi}{6}\\right) \\ne 0$.",
+            hint1: "$\\tan u = 1 = \\tan(\\pi/4) \\Rightarrow u = \\pi/4 + k\\pi$.",
+            hint2: "Chặn khoảng $(0; \\pi)$ tìm các số nguyên $k$."
           }
         ]
       }
@@ -908,66 +1013,66 @@
         id: 1,
         title: "Câu 1: Xét phương trình $\\sin 2x = \\sin x$.",
         items: [
-          { key: "a", text: "Tương đương $2x = x + k2\\pi$ hoặc $2x = \\pi - x + k2\\pi$.", correct: "true", explain: "Công thức chuẩn." },
-          { key: "b", text: "Họ nghiệm 1 là $x = k2\\pi$.", correct: "true", explain: "Chuẩn." },
-          { key: "c", text: "Họ nghiệm 2 là $x = \\pi/3 + k2\\pi/3$.", correct: "true", explain: "Chuẩn." },
-          { key: "d", text: "Trong đoạn $[0; \\pi]$ có đúng 2 nghiệm.", correct: "false", explain: "Có 3 nghiệm là $0, \\pi/3, \\pi$." }
+          { key: "a", text: "Phương trình tương đương $2x = x + k2\\pi$ hoặc $2x = \\pi - x + k2\\pi$ ($k \\in \\mathbb{Z}$).", correct: "true", explain: "Áp dụng chuẩn công thức nghiệm của phương trình sin." },
+          { key: "b", text: "Họ nghiệm thứ nhất là $x = k2\\pi$ ($k \\in \\mathbb{Z}$).", correct: "true", explain: "$2x - x = k2\\pi \\Leftrightarrow x = k2\\pi$." },
+          { key: "c", text: "Họ nghiệm thứ hai là $x = \\frac{\\pi}{3} + \\frac{k2\\pi}{3}$ ($k \\in \\mathbb{Z}$).", correct: "true", explain: "$3x = \\pi + k2\\pi \\Leftrightarrow x = \\pi/3 + k2\\pi/3$." },
+          { key: "d", text: "Trên đoạn $[0; \\pi]$, phương trình có đúng 2 nghiệm phân biệt.", correct: "false", explain: "Có đúng 3 nghiệm: $x = 0$ (từ họ 1), $x = \\pi/3$ (từ họ 2), $x = \\pi$ (từ họ 1 & 2)." }
         ]
       },
       {
         id: 2,
-        title: "Câu 2: Về điều kiện có nghiệm:",
+        title: "Câu 2: Về điều kiện có nghiệm của các phương trình lượng giác cơ bản:",
         items: [
-          { key: "a", text: "$\\sin x = m$ có nghiệm khi $-1 \\le m \\le 1$.", correct: "true", explain: "Chuẩn." },
-          { key: "b", text: "$\\cos x = m$ có nghiệm khi $-1 \\le m \\le 1$.", correct: "true", explain: "Chuẩn." },
-          { key: "c", text: "$\\tan x = m$ có nghiệm với mọi $m$.", correct: "true", explain: "Chuẩn." },
-          { key: "d", text: "$\\sin x = 1.5$ có nghiệm.", correct: "false", explain: "Vô nghiệm." }
+          { key: "a", text: "Phương trình $\\sin x = m$ có nghiệm khi và chỉ khi $-1 \\le m \\le 1$.", correct: "true", explain: "Tập giá trị của sin là $[-1; 1]$." },
+          { key: "b", text: "Phương trình $\\cos x = m$ có nghiệm khi và chỉ khi $-1 \\le m \\le 1$.", correct: "true", explain: "Tập giá trị của cos là $[-1; 1]$." },
+          { key: "c", text: "Phương trình $\\tan x = m$ luôn có nghiệm với mọi $m \\in \\mathbb{R}$.", correct: "true", explain: "Tập giá trị của tan là $\\mathbb{R}$." },
+          { key: "d", text: "Phương trình $\\sin x = \\sqrt{2}$ có nghiệm thực.", correct: "false", explain: "Vì $\\sqrt{2} \\approx 1.414 > 1$ nên phương trình vô nghiệm." }
         ]
       },
       {
         id: 3,
-        title: "Câu 3: Xét phương trình $\\cos 2x = -1$.",
+        title: "Câu 3: Xét phương trình $\\cos\\left(2x + \\frac{\\pi}{3}\\right) = 0$.",
         items: [
-          { key: "a", text: "$2x = \\pi + k2\\pi$.", correct: "true", explain: "Chuẩn." },
-          { key: "b", text: "Nghiệm $x = \\pi/2 + k\\pi$.", correct: "true", explain: "Chia đôi." },
-          { key: "c", text: "Nghiệm dương nhỏ nhất là $\\pi/2$.", correct: "true", explain: "Tại $k = 0$." },
-          { key: "d", text: "Phương trình vô nghiệm.", correct: "false", explain: "Có nghiệm." }
+          { key: "a", text: "Phương trình tương đương $2x + \\frac{\\pi}{3} = \\frac{\\pi}{2} + k\\pi$ ($k \\in \\mathbb{Z}$).", correct: "true", explain: "Trường hợp đặc biệt cos = 0 có đuôi $k\\pi$." },
+          { key: "b", text: "Nghiệm tổng quát là $x = \\frac{\\pi}{12} + \\frac{k\\pi}{2}$ ($k \\in \\mathbb{Z}$).", correct: "true", explain: "$2x = \\pi/2 - \\pi/3 + k\\pi = \\pi/6 + k\\pi \\Leftrightarrow x = \\pi/12 + k\\pi/2$." },
+          { key: "c", text: "Nghiệm dương nhỏ nhất của phương trình là $x = \\frac{\\pi}{12}$.", correct: "true", explain: "Tại $k = 0$, $x = \\pi/12 > 0$ là nhỏ nhất." },
+          { key: "d", text: "Trên khoảng $(0; \\pi)$, phương trình có đúng 1 nghiệm.", correct: "false", explain: "Có 2 nghiệm: $\\pi/12$ ($k=0$) và $7\\pi/12$ ($k=1$)." }
         ]
       },
       {
         id: 4,
-        title: "Câu 4: Xét $\\sqrt{3}\\tan x - 3 = 0$.",
+        title: "Câu 4: Xét phương trình $\\sqrt{3}\\tan x - 3 = 0$.",
         items: [
-          { key: "a", text: "$\\tan x = \\sqrt{3}$.", correct: "true", explain: "Rút gọn." },
-          { key: "b", text: "Nghiệm $x = \\pi/3 + k\\pi$.", correct: "true", explain: "Chuẩn." },
-          { key: "c", text: "Nghiệm âm lớn nhất là $-2\\pi/3$.", correct: "true", explain: "Tại $k = -1$." },
-          { key: "d", text: "Phương trình vô nghiệm.", correct: "false", explain: "Có nghiệm." }
+          { key: "a", text: "Phương trình tương đương với $\\tan x = \\sqrt{3}$.", correct: "true", explain: "$3 / \\sqrt{3} = \\sqrt{3}$." },
+          { key: "b", text: "Nghiệm tổng quát là $x = \\frac{\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$).", correct: "true", explain: "Vì $\\tan(\\pi/3) = \\sqrt{3}$." },
+          { key: "c", text: "Nghiệm âm lớn nhất của phương trình là $x = -\\frac{2\\pi}{3}$.", correct: "true", explain: "Tại $k = -1$, $x = \\pi/3 - \\pi = -2\\pi/3$." },
+          { key: "d", text: "Phương trình vô nghiệm vì $\\sqrt{3} > 1$.", correct: "false", explain: "Sai, hàm tang nhận mọi giá trị thực nên phương trình luôn có nghiệm." }
         ]
       },
       {
         id: 5,
-        title: "Câu 5: Cho $\\sin(x - \\pi/3) = 0$.",
+        title: "Câu 5: Cho phương trình $\\sin\\left(x - \\frac{\\pi}{3}\\right) = 0$.",
         items: [
-          { key: "a", text: "$x - \\pi/3 = k\\pi$.", correct: "true", explain: "Trường hợp sin = 0." },
-          { key: "b", text: "Nghiệm $x = \\pi/3 + k\\pi$.", correct: "true", explain: "Chuyển vế." },
-          { key: "c", text: "Trong đoạn $[0; 2\\pi]$ có 2 nghiệm.", correct: "true", explain: "$\\pi/3$ và $4\\pi/3$." },
-          { key: "d", text: "Tổng nghiệm trong $[0; 2\\pi]$ bằng $5\\pi/3$.", correct: "true", explain: "$\\pi/3 + 4\\pi/3 = 5\\pi/3$." }
+          { key: "a", text: "Phương trình tương đương $x - \\frac{\\pi}{3} = k\\pi$ ($k \\in \\mathbb{Z}$).", correct: "true", explain: "Trường hợp sin = 0." },
+          { key: "b", text: "Nghiệm tổng quát là $x = \\frac{\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$).", correct: "true", explain: "Chuyển vế đổi dấu chính xác." },
+          { key: "c", text: "Trong đoạn $[0; 2\\pi]$, phương trình có đúng 2 nghiệm phân biệt.", correct: "true", explain: "Hai nghiệm là $x = \\pi/3$ ($k=0$) và $x = 4\\pi/3$ ($k=1$)." },
+          { key: "d", text: "Tổng các nghiệm của phương trình trong đoạn $[0; 2\\pi]$ bằng $\\frac{5\\pi}{3}$.", correct: "true", explain: "$\\pi/3 + 4\\pi/3 = 5\\pi/3$." }
         ]
       },
       {
         id: 6,
-        title: "Câu 6: Về quy tắc giải phương trình:",
+        title: "Câu 6: Về quy tắc giải và cạm bẫy khi giải phương trình lượng giác:",
         items: [
-          { key: "a", text: "Có tan/cot hoặc mẫu thì cần đặt ĐKXĐ.", correct: "true", explain: "Bắt buộc." },
-          { key: "b", text: "Đối chiếu nghiệm với ĐKXĐ để loại nghiệm ngoại lai.", correct: "true", explain: "Bắt buộc." },
-          { key: "c", text: "Họ nghiệm $x = k\\pi$ biểu diễn bởi 2 điểm trên đường tròn.", correct: "true", explain: "Đúng." },
-          { key: "d", text: "Họ nghiệm $x = k2\\pi$ biểu diễn bởi 2 điểm trên đường tròn.", correct: "false", explain: "Chỉ biểu diễn bởi 1 điểm duy nhất $A(1; 0)$." }
+          { key: "a", text: "Khi giải phương trình chứa $\\tan x$ hoặc $\\cot x$ bắt buộc phải đặt điều kiện xác định.", correct: "true", explain: "ĐKXĐ là bắt buộc để loại trừ các nghiệm vi phạm tập xác định." },
+          { key: "b", text: "Đối chiếu nghiệm tìm được với điều kiện xác định để loại bỏ các nghiệm ngoại lai.", correct: "true", explain: "Bước kiểm tra đối chiếu là bắt buộc trong giải toán." },
+          { key: "c", text: "Họ nghiệm $x = \\frac{\\pi}{2} + k\\pi$ được biểu diễn bởi đúng 2 điểm trên đường tròn lượng giác.", correct: "true", explain: "Điểm cực bắc $(0; 1)$ ứng với $k$ chẵn và cực nam $(0; -1)$ ứng với $k$ lẻ." },
+          { key: "d", text: "Họ nghiệm $x = k2\\pi$ được biểu diễn bởi 2 điểm phân biệt trên đường tròn lượng giác.", correct: "false", explain: "Chỉ biểu diễn bởi đúng 1 điểm duy nhất $A(1; 0)$ trên đường tròn lượng giác." }
         ]
       }
     ]
   };
 
-  // BÀI 5: DÃY SỐ
+
   window.DEDICATED_LESSONS_DB["toan11_bai5"] = {
     id: "toan11_bai5",
     lessonTitle: "Bài 5: Dãy số",

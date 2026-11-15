@@ -946,6 +946,18 @@
         { key: "g11_bai3_muc2", title: "Mục 2: Đồ thị và tính chất của hàm số sin và côsin", time: "05:20", icon: "📈" },
         { key: "g11_bai3_muc3", title: "Mục 3: Đồ thị và tính chất của hàm số tang và côtang", time: "05:25", icon: "📐" }
       ]
+    },
+    {
+      chapterNumber: 1101,
+      chapterTitle: "Toán 11 - Chương I: Hàm số lượng giác và phương trình lượng giác",
+      lessonId: "toan11_bai4",
+      lessonTitle: "Bài 4: Phương trình lượng giác cơ bản",
+      lessonBadge: "Toán 11 • Bài 4",
+      sections: [
+        { key: "g11_bai4_muc1", title: "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m", time: "05:15", icon: "⚡" },
+        { key: "g11_bai4_muc2", title: "Mục 2: Phương trình lượng giác cos x = m", time: "05:15", icon: "🎯" },
+        { key: "g11_bai4_muc3", title: "Mục 3: Phương trình lượng giác tan x = m và cot x = m", time: "05:20", icon: "📐" }
+      ]
     }
   ];
 
@@ -1285,6 +1297,10 @@
       if (lessonNum === 3) {
         const s = Math.min(3, Math.max(1, sectionNum));
         return `g11_bai3_muc${s}`;
+      }
+      if (lessonNum === 4) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai4_muc${s}`;
       }
     }
 
