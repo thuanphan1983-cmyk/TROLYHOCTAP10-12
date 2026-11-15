@@ -23,7 +23,8 @@ const data = global.window.G11_CHAPTER2_DATA;
 const expectedSections = [
   'g11_bai5_muc1', 'g11_bai5_muc2', 'g11_bai5_muc3',
   'g11_bai6_muc1', 'g11_bai6_muc2', 'g11_bai6_muc3',
-  'g11_bai7_muc1', 'g11_bai7_muc2', 'g11_bai7_muc3'
+  'g11_bai7_muc1', 'g11_bai7_muc2', 'g11_bai7_muc3',
+  'g11_ontap_c2_muc1', 'g11_ontap_c2_muc2', 'g11_ontap_c2_muc3'
 ];
 
 let totalScenes = 0;
@@ -71,7 +72,7 @@ for (const secKey of expectedSections) {
 
 console.log(`\n========================================`);
 console.log(`Tổng số mục kiểm tra: ${expectedSections.length}`);
-console.log(`Tổng số scenes hợp lệ: ${totalScenes} / 108`);
+console.log(`Tổng số scenes hợp lệ: ${totalScenes} / 144`);
 console.log(`Số lỗi phát hiện: ${errors}`);
 console.log(`========================================`);
 

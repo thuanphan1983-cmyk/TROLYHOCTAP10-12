@@ -1097,6 +1097,18 @@
         { key: "g11_bai7_muc2", title: "Mục 2: Số hạng tổng quát của cấp số nhân & Tính chất ba số hạng liên tiếp", time: "05:20", icon: "🚀" },
         { key: "g11_bai7_muc3", title: "Mục 3: Tổng n số hạng đầu tiên của cấp số nhân & Bài toán lãi kép", time: "05:35", icon: "💰" }
       ]
+    },
+    {
+      chapterNumber: 1102,
+      chapterTitle: "Toán 11 - Chương II: Dãy số. Cấp số cộng và cấp số nhân",
+      lessonId: "toan11_ontap_c2",
+      lessonTitle: "Bài tập cuối chương II (Ôn tập chương 2)",
+      lessonBadge: "Toán 11 • Ôn tập C2",
+      sections: [
+        { key: "g11_ontap_c2_muc1", title: "Mục 1: Hệ thống hóa lý thuyết & Sơ đồ tư duy toàn bộ Chương 2", time: "05:30", icon: "🧠" },
+        { key: "g11_ontap_c2_muc2", title: "Mục 2: Rèn luyện 4 dạng toán trọng tâm & Phương pháp giải", time: "06:00", icon: "🎯" },
+        { key: "g11_ontap_c2_muc3", title: "Mục 3: Cảnh báo bẫy trắc nghiệm, Kỹ năng Casio 580 & Đề tổng ôn", time: "05:30", icon: "💡" }
+      ]
     }
   ];
 
@@ -1431,8 +1443,13 @@
     }
 
     if (isGrade11) {
-      if (isReview || lessonNum === 'ontap' || lessonNum === 'cuoichuong1' || lessonNum === 'ontap_c1') {
-        const ch = chapterNum || 1;
+      if (isReview || lessonNum === 'ontap' || lessonNum === 'cuoichuong1' || lessonNum === 'ontap_c1' || lessonNum === 'cuoichuong2' || lessonNum === 'ontap_c2') {
+        let ch = chapterNum;
+        if (!ch) {
+          const al = (typeof window !== 'undefined' && window.activeLesson) ? window.activeLesson : null;
+          if (al && (al.chapterNumber == 1102 || al.chapter == 2 || (typeof al.id === 'string' && al.id.includes('c2')))) ch = 2;
+          else ch = 1;
+        }
         const s = Math.min(3, Math.max(1, sectionNum));
         return `g11_ontap_c${ch}_muc${s}`;
       }
