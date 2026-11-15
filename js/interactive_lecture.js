@@ -21,6 +21,7 @@
       if (window.CHAPTER5_DATA) Object.assign(LECTURE_DATA, window.CHAPTER5_DATA);
       if (window.CHAPTER6_DATA) Object.assign(LECTURE_DATA, window.CHAPTER6_DATA);
       if (window.G11_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER1_DATA);
+      if (window.G11_CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER2_DATA);
 
       // Normalize all sections in LECTURE_DATA so they render 100% reliably
       try {
@@ -92,6 +93,24 @@
           document.head.appendChild(sg11b);
         };
         document.head.appendChild(sg11);
+      }
+      if (!window.G11_CHAPTER2_DATA) {
+        const sg11_c2 = document.createElement('script');
+        sg11_c2.src = (window.location.protocol === 'file:') ? 'js/g11_chapter2_data.js' : '/js/g11_chapter2_data.js';
+        sg11_c2.onload = function() {
+          if (window.G11_CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER2_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        sg11_c2.onerror = function() {
+          const sg11_c2b = document.createElement('script');
+          sg11_c2b.src = 'public/js/g11_chapter2_data.js';
+          sg11_c2b.onload = function() {
+            if (window.G11_CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER2_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(sg11_c2b);
+        };
+        document.head.appendChild(sg11_c2);
       }
       if (!window.CHAPTER6_DATA) {
         const s6 = document.createElement('script');
@@ -1042,6 +1061,42 @@
         { key: "g11_ontap_c1_muc2", title: "Mục 2: Rèn luyện 4 dạng toán trọng tâm & Phương pháp giải", time: "05:30", icon: "🎯" },
         { key: "g11_ontap_c1_muc3", title: "Mục 3: Cảnh báo bẫy trắc nghiệm, Kỹ năng Casio 580 & Đề tổng ôn", time: "05:15", icon: "💡" }
       ]
+    },
+    {
+      chapterNumber: 1102,
+      chapterTitle: "Toán 11 - Chương II: Dãy số. Cấp số cộng và cấp số nhân",
+      lessonId: "toan11_bai5",
+      lessonTitle: "Bài 5: Dãy số",
+      lessonBadge: "Toán 11 • Bài 5",
+      sections: [
+        { key: "g11_bai5_muc1", title: "Mục 1: Khái niệm dãy số & Các cách cho một dãy số", time: "05:33", icon: "🔢" },
+        { key: "g11_bai5_muc2", title: "Mục 2: Dãy số tăng, dãy số giảm & Phương pháp xét tính đơn điệu", time: "05:20", icon: "📈" },
+        { key: "g11_bai5_muc3", title: "Mục 3: Dãy số bị chặn & Nhận biết tính bị chặn trên, bị chặn dưới", time: "05:15", icon: "🧱" }
+      ]
+    },
+    {
+      chapterNumber: 1102,
+      chapterTitle: "Toán 11 - Chương II: Dãy số. Cấp số cộng và cấp số nhân",
+      lessonId: "toan11_bai6",
+      lessonTitle: "Bài 6: Cấp số cộng",
+      lessonBadge: "Toán 11 • Bài 6",
+      sections: [
+        { key: "g11_bai6_muc1", title: "Mục 1: Định nghĩa cấp số cộng & Công sai d", time: "05:10", icon: "➕" },
+        { key: "g11_bai6_muc2", title: "Mục 2: Số hạng tổng quát của cấp số cộng & Tính chất ba số hạng liên tiếp", time: "05:15", icon: "🎯" },
+        { key: "g11_bai6_muc3", title: "Mục 3: Tổng n số hạng đầu tiên của cấp số cộng & Bài toán thực tế", time: "05:30", icon: "📊" }
+      ]
+    },
+    {
+      chapterNumber: 1102,
+      chapterTitle: "Toán 11 - Chương II: Dãy số. Cấp số cộng và cấp số nhân",
+      lessonId: "toan11_bai7",
+      lessonTitle: "Bài 7: Cấp số nhân",
+      lessonBadge: "Toán 11 • Bài 7",
+      sections: [
+        { key: "g11_bai7_muc1", title: "Mục 1: Định nghĩa cấp số nhân & Công bội q", time: "05:15", icon: "✖️" },
+        { key: "g11_bai7_muc2", title: "Mục 2: Số hạng tổng quát của cấp số nhân & Tính chất ba số hạng liên tiếp", time: "05:20", icon: "🚀" },
+        { key: "g11_bai7_muc3", title: "Mục 3: Tổng n số hạng đầu tiên của cấp số nhân & Bài toán lãi kép", time: "05:35", icon: "💰" }
+      ]
     }
   ];
 
@@ -1396,6 +1451,18 @@
       if (lessonNum === 4) {
         const s = Math.min(3, Math.max(1, sectionNum));
         return `g11_bai4_muc${s}`;
+      }
+      if (lessonNum === 5) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai5_muc${s}`;
+      }
+      if (lessonNum === 6) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai6_muc${s}`;
+      }
+      if (lessonNum === 7) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai7_muc${s}`;
       }
     }
 
