@@ -336,6 +336,33 @@
     }
   }
 
+  function sanitizeLatexString(str) {
+    if (!str || typeof str !== 'string') return str;
+    return str
+      .replace(/\x0crac/g, '\\frac')
+      .replace(/\x0corall/g, '\\forall')
+      .replace(/\x08egin/g, '\\begin')
+      .replace(/\x08end/g, '\\end')
+      .replace(/\x08ar/g, '\\bar')
+      .replace(/\x08eta/g, '\\beta')
+      .replace(/\x09ext/g, '\\text')
+      .replace(/\x09imes/g, '\\times')
+      .replace(/\x09an/g, '\\tan')
+      .replace(/\x09heta/g, '\\theta')
+      .replace(/\x09au/g, '\\tau')
+      .replace(/\x09o\s+/g, '\\to ')
+      .replace(/\x0dight/g, '\\right')
+      .replace(/\x07lpha/g, '\\alpha')
+      .replace(/\x07pprox/g, '\\approx')
+      .replace(/\x07ngle/g, '\\angle')
+      .replace(/\x0bec/g, '\\vec')
+      .replace(/\x0b/g, '\\vec')
+      .replace(/\x0c/g, '\\f')
+      .replace(/\x08/g, '\\b')
+      .replace(/\x07/g, '\\a')
+      .replace(/\n\s*e([^\w]|$)/g, ' \\ne$1');
+  }
+
   function renderSlide(sceneIdx) {
     currentSceneIndex = sceneIdx;
     const data = LECTURE_DATA[currentSection];
@@ -362,6 +389,8 @@
           </div>
         `;
       }
+      // Sanitize LaTeX in slide HTML before injecting
+      slideHtml = sanitizeLatexString(slideHtml);
       bodyEl.innerHTML = slideHtml;
 
       // Trigger KaTeX rendering safely
@@ -387,7 +416,8 @@
 
     if (mascotContainer) {
       try {
-        const tipText = scene.mascotTip || scene.tip || data.owl_tip || 'Lắng nghe kỹ bài giảng và quan sát từng bước biến đổi!';
+        let tipText = scene.mascotTip || scene.tip || data.owl_tip || 'Lắng nghe kỹ bài giảng và quan sát từng bước biến đổi!';
+        tipText = sanitizeLatexString(tipText);
         const mode = scene.mascotMode || (sceneIdx === 11 ? 'magnifier' : (sceneIdx >= 3 && sceneIdx <= 10 ? 'thinking' : 'talking'));
         mascotContainer.innerHTML = getOwlSvg(mode, tipText);
         if (typeof window.renderMathInElement === 'function') {

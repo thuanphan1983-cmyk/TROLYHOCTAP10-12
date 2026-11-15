@@ -18,7 +18,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "pointer",
         "mascotTip": "Chương 2 liên kết chặt chẽ: Khái niệm Dãy số -> Cấp số cộng (cộng dồn d) -> Cấp số nhân (nhân dồn q)!",
         "narration": "Chào mừng các em học sinh đến với bài ôn tập toàn diện Chương 2 môn Toán lớp 11: Dãy số, Cấp số cộng và Cấp số nhân. Chương học này mở ra một thế giới toán học rời rạc vô cùng sinh động, kết nối ba mắt xích logic cốt lõi: Bài 5 là nền tảng về khái niệm dãy số, tính tăng giảm và bị chặn; Bài 6 là mô hình cấp số cộng với bước nhảy không đổi thông qua phép cộng dồn công sai d; và Bài 7 là mô hình cấp số nhân với sự tăng trưởng theo cấp số nhân thông qua phép nhân dồn công bội q. Nắm chắc bản chất và sự tương đồng giữa hai mô hình này sẽ giúp các em giải quyết mọi bài toán từ nhận biết đến ứng dụng thực tế phân hóa cao.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/30">
     <div class="flex items-center gap-3 mb-2">
@@ -52,7 +52,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "Ghi nhớ thần chú đối xứng: Cấp số cộng gắn với CỘNG & NHÂN ĐÔI, Cấp số nhân gắn với NHÂN & BÌNH PHƯƠNG!",
         "narration": "Để không bao giờ bị nhầm lẫn giữa cấp số cộng và cấp số nhân, các em hãy ghi nhớ bản đồ đối xứng tuyệt đẹp này: Về định nghĩa: cấp số cộng lấy số sau bằng số trước cộng d, còn cấp số nhân lấy số sau bằng số trước nhân q. Về số hạng tổng quát: cấp số cộng dùng phép nhân n trừ một nhân d, còn cấp số nhân nâng lên lũy thừa q mũ n trừ một. Về tính chất 3 số hạng liên tiếp: cấp số cộng là trung bình cộng, tổng hai số biên bằng hai lần số giữa; cấp số nhân là trung bình nhân, tích hai số biên bằng bình phương số giữa. Nắm vững sự đối xứng này sẽ giúp các em nhẩm công thức siêu nhanh và chính xác tuyệt đối.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-teal-500/30">
     <div class="flex items-center gap-2 mb-2">
@@ -108,7 +108,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Nếu $u_{n+1} - u_n = d$ là hằng số -> CSC; nếu $u_{n+1} / u_n = q$ là hằng số -> CSN!",
         "narration": "Chúng ta cùng bắt đầu với Ví dụ 1: Nhận diện dãy số. Trong các dãy số sau đây, dãy số nào là cấp số cộng, dãy số nào là cấp số nhân? Xác định công sai hoặc công bội tương ứng: Câu a: u n bằng ba n trừ năm. Câu b: v n bằng hai nhân ba mũ n. Câu c: w n bằng n bình phương cộng một. Các em có 15 giây để quan sát và xác định bản chất của từng dãy.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-indigo-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -144,9 +144,9 @@ ONTAP_C2_MUC1_SCENES = [
         "title": "4. VÍ DỤ 1 - LỜI GIẢI CHI TIẾT",
         "subtitle": "PHƯƠNG PHÁP XÉT HIỆU $u_{n+1}-u_n$ VÀ TỈ SỐ $v_{n+1}/v_n$",
         "mascotMode": "happy",
-        "mascotTip": "Ghi nhớ nhanh: Dãy bậc nhất $an+b$ luôn là CSC với công sai $d=a$. Dãy hàm mũ $a \cdot b^n$ luôn là CSN với công bội $q=b$!",
+        "mascotTip": r"Ghi nhớ nhanh: Dãy bậc nhất $an+b$ luôn là CSC với công sai $d=a$. Dãy hàm mũ $a \cdot b^n$ luôn là CSN với công bội $q=b$!",
         "narration": "Hết 15 giây! Lời giải chi tiết như sau: Ở câu a, ta xét hiệu u n cộng 1 trừ u n: bằng ba nhân n cộng một trừ năm, trừ đi mở ngoặc ba n trừ năm. Rút gọn được đúng bằng 3 không đổi với mọi n. Do đó, u n là cấp số cộng có số hạng đầu u 1 bằng âm 2 và công sai d bằng 3. Ở câu b, ta xét tỉ số v n cộng 1 chia v n: bằng hai nhân ba mũ n cộng một chia cho hai nhân ba mũ n, rút gọn được đúng bằng 3 không đổi. Do đó, v n là cấp số nhân có số hạng đầu v 1 bằng 6 và công bội q bằng 3. Ở câu c, xét w 1 bằng 2, w 2 bằng 5, w 3 bằng 10. Hiệu w 2 trừ w 1 bằng 3, nhưng w 3 trừ w 2 lại bằng 5; tỉ số cũng không bằng nhau. Do đó w n không phải là cấp số cộng, cũng không phải cấp số nhân.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -190,7 +190,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Biểu diễn tất cả các số hạng theo $u_1$ và $d$ bằng công thức $u_n = u_1 + (n - 1)d$!",
         "narration": "Chúng ta cùng đến với Ví dụ 2: Cho cấp số cộng u n thỏa mãn hệ phương trình: u 3 cộng u 5 bằng 14, và u 2 cộng u 7 bằng 16. Yêu cầu: Tìm số hạng đầu u 1, công sai d và tính số hạng thứ hai mươi u 20. Các em có 15 giây suy nghĩ để lập hệ phương trình hai ẩn u 1 và d.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-emerald-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -218,9 +218,9 @@ ONTAP_C2_MUC1_SCENES = [
         "title": "6. VÍ DỤ 2 - LỜI GIẢI CHI TIẾT",
         "subtitle": "GIẢI HỆ PHƯƠNG TRÌNH BẬC NHẤT HAI ẨN $u_1$ VÀ $d$",
         "mascotMode": "explaining",
-        "mascotTip": "Nhận xét nhanh: $u_3 + u_5 = 2u_4 = 14 \implies u_4 = 7$!",
+        "mascotTip": r"Nhận xét nhanh: $u_3 + u_5 = 2u_4 = 14 \implies u_4 = 7$!",
         "narration": "Hết 15 giây! Lời giải như sau: Sử dụng công thức số hạng tổng quát u n bằng u 1 cộng n trừ 1 nhân d. Ta có: u 3 bằng u 1 cộng hai d, u 5 bằng u 1 cộng bốn d; nên u 3 cộng u 5 bằng hai u 1 cộng sáu d bằng 14. Tương tự: u 2 bằng u 1 cộng d, u 7 bằng u 1 cộng sáu d; nên u 2 cộng u 7 bằng hai u 1 cộng bảy d bằng 16. Trừ phương trình dưới cho phương trình trên, ta được ngay: d bằng 16 trừ 14 bằng 2. Thay d bằng 2 vào phương trình đầu, ta tìm được hai u 1 cộng 12 bằng 14, suy ra u 1 bằng 1. Từ đó, số hạng thứ hai mươi là: u 20 bằng u 1 cộng 19 d, bằng 1 cộng 19 nhân 2 bằng 39.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -250,7 +250,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Đặt nhân tử chung để xuất hiện thừa số giống nhau rồi lập tỉ số triệt tiêu $u_1$!",
         "narration": "Chúng ta tiếp tục với Ví dụ 3: Cho cấp số nhân u n có công bội q dương thỏa mãn hệ phương trình: u 1 cộng u 3 bằng 10, và u 2 cộng u 4 bằng 20. Yêu cầu: Tìm số hạng đầu u 1, công bội q và tính tổng mười số hạng đầu tiên S 10 của cấp số nhân. Các em có 15 giây suy nghĩ.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-amber-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -278,9 +278,9 @@ ONTAP_C2_MUC1_SCENES = [
         "title": "8. VÍ DỤ 3 - LỜI GIẢI CHI TIẾT",
         "subtitle": "PHƯƠNG PHÁP CHIA VẾ THEO VẾ TÌM CÔNG BỘI $q$",
         "mascotMode": "happy",
-        "mascotTip": "Lưu ý công thức tổng: $S_{10} = \frac{u_1(1 - q^{10})}{1 - q}$. Với $q=2$, mẫu là $1 - 2 = -1$!",
+        "mascotTip": r"Lưu ý công thức tổng: $S_{10} = \frac{u_1(1 - q^{10})}{1 - q}$. Với $q=2$, mẫu là $1 - 2 = -1$!",
         "narration": "Hết 15 giây! Lời giải như sau: Sử dụng công thức số hạng tổng quát u n bằng u 1 nhân q mũ n trừ một. Phương trình thứ nhất trở thành: u 1 cộng u 1 nhân q bình phương, đặt u 1 làm nhân tử chung được u 1 nhân mở ngoặc 1 cộng q bình đóng ngoặc bằng 10. Phương trình thứ hai trở thành: u 1 nhân q cộng u 1 nhân q mũ ba, đặt u 1 nhân q làm nhân tử chung được u 1 nhân q nhân mở ngoặc 1 cộng q bình đóng ngoặc bằng 20. Chia phương trình hai cho phương trình một vế theo vế, ta triệt tiêu được u 1 nhân mở ngoặc 1 cộng q bình, thu được ngay q bằng 20 chia 10 bằng 2. Thay q bằng 2 vào phương trình một: u 1 nhân mở ngoặc 1 cộng 4 đóng ngoặc bằng 10, suy ra u 1 bằng 2. Tổng mười số hạng đầu tiên là: S 10 bằng 2 nhân mở ngoặc 1 trừ hai mũ mười đóng ngoặc chia cho 1 trừ 2, bằng 2 nhân 1023 bằng 2046.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -311,7 +311,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Ba số lập thành CSC có tổng bằng 15 thì gọi là $a - d, a, a + d$ để tìm ngay $a = 5$!",
         "narration": "Chúng ta đến với bài toán kinh điển kết hợp cả hai mô hình ở Ví dụ 4: Cho ba số x, y, z theo thứ tự lập thành một cấp số cộng có tổng bằng 15. Nếu lần lượt cộng thêm 1, 4, 19 vào ba số đó thì được ba số mới x cộng 1, y cộng 4, z cộng 19 theo thứ tự lập thành một cấp số nhân. Tìm ba số x, y, z ban đầu biết công sai d dương. Các em có 30 giây để tìm ra đáp án.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-rose-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -338,7 +338,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "happy",
         "mascotTip": "Kỹ thuật vàng: Đặt 3 số CSC là $y-d, y, y+d$ triệt tiêu ngay $d$ khi lấy tổng!",
         "narration": "Hết 30 giây! Lời giải như sau: Vì ba số x, y, z lập thành cấp số cộng nên ta đặt: x bằng y trừ d, z bằng y cộng d. Tổng ba số là: y trừ d cộng y cộng y cộng d bằng ba y bằng 15, suy ra ngay y bằng 5. Do đó ba số là 5 trừ d, 5, và 5 cộng d. Khi cộng thêm 1, 4, 19, ta được ba số mới là: số thứ nhất là 6 trừ d; số thứ hai là 5 cộng 4 bằng 9; số thứ ba là 24 cộng d. Vì ba số mới lập thành cấp số nhân nên tích hai số biên bằng bình phương số giữa: mở ngoặc 6 trừ d đóng ngoặc nhân mở ngoặc 24 cộng d đóng ngoặc bằng 9 bình phương bằng 81. Khai triển ta được phương trình bậc hai: âm d bình trừ 18 d cộng 144 bằng 81, hay d bình cộng 18 d trừ 63 bằng không. Giải phương trình ta được hai nghiệm: d bằng 3 hoặc d bằng âm 21. Vì đề bài cho d dương nên ta nhận d bằng 3. Với y bằng 5 và d bằng 3, ta tìm được: x bằng 2, y bằng 5, z bằng 8.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-rose-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -378,7 +378,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "warning",
         "mascotTip": "Ghi nhớ: Cấp số nhân $u_n = u_1 q^{n-1}$, số mũ luôn là $n-1$, không bao giờ là $n$!",
         "narration": "Trước khi kết thúc Mục 1, Thầy Cú có 4 cảnh báo cạm bẫy đặc biệt quan trọng: Thứ nhất, khi tính số hạng tổng quát của cấp số nhân, rất nhiều bạn viết nhầm thành u n bằng u 1 nhân q mũ n thay vì n trừ 1. Thứ hai, nhầm lẫn giữa tính chất cấp số cộng và cấp số nhân: cấp số cộng là u k trừ một cộng u k cộng một bằng hai u k; còn cấp số nhân là tích bằng bình phương. Thứ ba, khi tính tổng cấp số nhân lùi vô hạn S bằng u 1 chia cho 1 trừ q, bắt buộc điều kiện là trị tuyệt đối của q phải nhỏ hơn 1. Nếu trị tuyệt đối của q lớn hơn hoặc bằng 1 mà vẫn áp dụng công thức này là sai hoàn toàn. Thứ tư, nhầm lẫn giữa số thứ tự n và giá trị số hạng u n.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-amber-950/30 p-3.5 rounded-xl border border-amber-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -414,7 +414,7 @@ ONTAP_C2_MUC1_SCENES = [
         "mascotMode": "happy",
         "mascotTip": "Chìa khóa vàng: Luôn quy mọi bài toán CSC về $(u_1, d)$ và CSN về $(u_1, q)$!",
         "narration": "Chúc mừng các em đã hoàn thành xuất sắc Mục 1 của bài ôn tập Chương 2! Chúng ta đã hệ thống hóa toàn bộ lý thuyết, so sánh đối xứng song song hai mô hình cấp số cộng và cấp số nhân, đồng thời rèn luyện 4 bài toán nhận diện và biến đổi nền tảng. Bây giờ, hãy chuẩn bị giấy bút để bước sang Mục 2: nơi chúng ta cùng giải quyết 4 dạng toán trọng tâm và các mô hình thực tế phân hóa cao xuất hiện trong các đề thi tuyển sinh.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-emerald-900/50 to-teal-900/50 p-4 rounded-xl border border-emerald-500/40 text-center">
     <div class="inline-flex p-2 bg-emerald-500/20 rounded-full text-emerald-300 mb-2">
@@ -447,7 +447,7 @@ ONTAP_C2_MUC2_SCENES = [
         "mascotMode": "pointer",
         "mascotTip": "4 dạng toán cốt lõi: Tính đơn điệu & bị chặn -> Bài toán thực tế CSC -> Tổng CSN lùi vô hạn -> Lãi kép & Tăng trưởng!",
         "narration": "Chào mừng các em đến với Mục 2: Rèn luyện 4 dạng toán trọng tâm và bài toán thực tế Chương 2. Trong các đề thi học kỳ và kỳ thi đánh giá năng lực, phần Dãy số - Cấp số thường tập trung vào 4 dạng toán chủ lực: Dạng 1 là xét tính tăng giảm và tính bị chặn của dãy phân thức hữu tỉ; Dạng 2 là bài toán thực tế áp dụng cấp số cộng vào quy luật xếp hàng, chia tiền hay khán đài; Dạng 3 là ứng dụng cấp số nhân lùi vô hạn để chuyển đổi số thập phân vô hạn tuần hoàn sang phân số tối giản; và Dạng 4 là bài toán tăng trưởng mũ, lãi kép và trả góp phân hóa sâu sắc.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-teal-500/30">
     <div class="flex items-center gap-3 mb-2">
@@ -483,9 +483,9 @@ ONTAP_C2_MUC2_SCENES = [
         "title": "2. CÔNG CỤ VÀ CHIẾN LƯỢC XỬ LÝ NHANH",
         "subtitle": "KỸ THUẬT PHÂN TÍCH VÀ CÔNG THỨC GIẢI NHANH",
         "mascotMode": "explain",
-        "mascotTip": "Phân thức bậc nhất $u_n = \frac{an+b}{cn+d}$: Tính tăng giảm phụ thuộc vào dấu của định thức $ad - bc$!",
+        "mascotTip": r"Phân thức bậc nhất $u_n = \frac{an+b}{cn+d}$: Tính tăng giảm phụ thuộc vào dấu của định thức $ad - bc$!",
         "narration": "Hãy lưu ý kỹ thuật giải nhanh tuyệt vời cho dãy phân thức bậc nhất u n bằng a n cộng b chia c n cộng d: Hiệu u n cộng 1 trừ u n luôn có dấu cùng với dấu của định thức a d trừ b c. Nếu a d trừ b c dương thì dãy luôn tăng; nếu âm thì dãy luôn giảm. Ngoài ra, giới hạn khi n tiến ra vô cực của dãy chính là tỉ số a chia c, đây cũng chính là một cận chặn tự nhiên của dãy số. Nắm chắc mẹo này giúp các em kết luận tính bị chặn chỉ trong 3 giây.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-cyan-500/30">
     <div class="flex items-center gap-2 mb-2">
@@ -522,7 +522,7 @@ ONTAP_C2_MUC2_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Lập hiệu $u_{n+1} - u_n$ và tách phần nguyên của phân thức!",
         "narration": "Chúng ta cùng làm Ví dụ 1: Xét tính tăng, giảm và tính bị chặn của dãy số u n cho bởi công thức: u n bằng hai n trừ một chia cho n cộng hai. Các em có 15 giây suy nghĩ.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-indigo-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -547,9 +547,9 @@ ONTAP_C2_MUC2_SCENES = [
         "title": "4. VÍ DỤ 1 - LỜI GIẢI CHI TIẾT",
         "subtitle": "CHỨNG MINH DÃY TĂNG VÀ BỊ CHẶN TOÀN DIỆN",
         "mascotMode": "happy",
-        "mascotTip": "Tách phần nguyên: $u_n = \frac{2(n+2) - 5}{n+2} = 2 - \frac{5}{n+2}$!",
+        "mascotTip": r"Tách phần nguyên: $u_n = \frac{2(n+2) - 5}{n+2} = 2 - \frac{5}{n+2}$!",
         "narration": "Hết 15 giây! Lời giải như sau: Thứ nhất, về tính đơn điệu: ta xét hiệu u n cộng 1 trừ u n. Bằng hai nhân n cộng 1 trừ 1 chia cho n cộng 1 cộng 2, trừ đi hai n trừ 1 chia cho n cộng 2. Bằng hai n cộng 1 chia cho n cộng 3 trừ đi hai n trừ 1 chia cho n cộng 2. Quy đồng mẫu số, tử số là: mở ngoặc hai n cộng 1 đóng ngoặc nhân mở ngoặc n cộng 2 đóng ngoặc, trừ đi mở ngoặc hai n trừ 1 đóng ngoặc nhân mở ngoặc n cộng 3 đóng ngoặc, rút gọn đúng bằng 5. Vì 5 dương và mẫu luôn dương với mọi n thuộc N sao, nên hiệu này luôn lớn hơn không. Vậy u n là dãy số tăng. Thứ hai, về tính bị chặn: vì dãy tăng nên số hạng đầu tiên là số nhỏ nhất: u n lớn hơn hoặc bằng u 1 bằng một phần ba. Mặt khác, tách phần nguyên ta có u n bằng 2 trừ 5 chia cho n cộng 2. Vì 5 chia n cộng 2 luôn dương nên u n luôn nhỏ hơn 2. Vậy một phần ba nhỏ hơn hoặc bằng u n nhỏ hơn 2 với mọi n, kết luận dãy số bị chặn.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -581,7 +581,7 @@ ONTAP_C2_MUC2_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Quy về CSC với $u_1 = 20, d = 4$. Dùng $u_{15}$ cho hàng 15 và $S_{25}$ cho tổng khán giả!",
         "narration": "Chúng ta cùng đến với bài toán thực tế ở Ví dụ 2: Một rạp hát có các hàng ghế được xếp thành hình vòng cung mở rộng dần. Hàng ghế đầu tiên có 20 ghế, mỗi hàng ghế tiếp theo có nhiều hơn hàng liền trước 4 ghế. Hỏi: Câu a: Hàng ghế thứ 15 có bao nhiêu ghế? Câu b: Nếu rạp hát có tất cả 25 hàng ghế thì tổng sức chứa của rạp là bao nhiêu khán giả? Các em có 15 giây suy nghĩ.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-emerald-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -611,9 +611,9 @@ ONTAP_C2_MUC2_SCENES = [
         "title": "6. VÍ DỤ 2 - LỜI GIẢI CHI TIẾT",
         "subtitle": "MÔ HÌNH HÓA TOÁN HỌC VÀ TÍNH TỔNG $S_{25}$",
         "mascotMode": "happy",
-        "mascotTip": "Tính nhanh: $S_{25} = \frac{25 \times [2(20) + 24(4)]}{2} = \frac{25 \times 136}{2} = 25 \times 68 = 1700$!",
+        "mascotTip": r"Tính nhanh: $S_{25} = \frac{25 \times [2(20) + 24(4)]}{2} = \frac{25 \times 136}{2} = 25 \times 68 = 1700$!",
         "narration": "Hết 15 giây! Lời giải như sau: Số ghế ở mỗi hàng lập thành một cấp số cộng với số hạng đầu u 1 bằng 20 và công sai d bằng 4. Ở câu a: Số ghế của hàng thứ 15 là số hạng thứ 15: u 15 bằng u 1 cộng 14 d, bằng 20 cộng 14 nhân 4, bằng 20 cộng 56 bằng 76 chiếc ghế. Ở câu b: Tổng số ghế của toàn bộ 25 hàng ghế chính là tổng 25 số hạng đầu tiên của cấp số cộng: S 25 bằng 25 nhân mở ngoặc vuông hai lần u 1 cộng 24 nhân d đóng ngoặc vuông chia 2. Thay số vào: bằng 25 nhân mở ngoặc hai nhân 20 cộng 24 nhân 4 đóng ngoặc chia 2, bằng 25 nhân 136 chia 2, bằng 25 nhân 68 bằng 1700 ghế. Vậy rạp hát chứa được tối đa 1700 khán giả.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -646,9 +646,9 @@ ONTAP_C2_MUC2_SCENES = [
         "title": "7. VÍ DỤ 3 - ĐỀ BÀI: CHUYỂN SỐ THẬP PHÂN VÔ HẠN TUẦN HOÀN SANG PHÂN SỐ",
         "subtitle": "DẠNG 3 • TỔNG CẤP SỐ NHÂN LÙI VÔ HẠN (15 GIÂY SUY NGHĨ)",
         "mascotMode": "think",
-        "mascotTip": "Phân tích: $0,(23) = \frac{23}{100} + \frac{23}{100^2} + ...$ có $u_1 = \frac{23}{100}, q = \frac{1}{100}$!",
+        "mascotTip": r"Phân tích: $0,(23) = \frac{23}{100} + \frac{23}{100^2} + ...$ có $u_1 = \frac{23}{100}, q = \frac{1}{100}$!",
         "narration": "Chúng ta cùng đến với dạng toán rất hay gặp ở Ví dụ 3: Biểu diễn số thập phân vô hạn tuần hoàn sau đây dưới dạng phân số tối giản bằng cách sử dụng tổng của cấp số nhân lùi vô hạn: Số A bằng không phẩy chu kỳ hai mươi ba, tức là không phẩy hai ba hai ba hai ba kéo dài vô tận. Các em có 15 giây để xác định số hạng đầu và công bội.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-amber-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -673,9 +673,9 @@ ONTAP_C2_MUC2_SCENES = [
         "title": "8. VÍ DỤ 3 - LỜI GIẢI CHI TIẾT",
         "subtitle": "ÁP DỤNG CÔNG THỨC $S = \frac{u_1}{1 - q}$",
         "mascotMode": "happy",
-        "mascotTip": "Mẹo tổng quát: $0,(abc...) = \frac{abc...}{999...}$ (mẫu có số chữ số 9 bằng độ dài chu kỳ)!",
+        "mascotTip": r"Mẹo tổng quát: $0,(abc...) = \frac{abc...}{999...}$ (mẫu có số chữ số 9 bằng độ dài chu kỳ)!",
         "narration": "Hết 15 giây! Lời giải như sau: Ta viết số A dưới dạng tổng của các phân số thập phân: A bằng không phẩy hai ba cộng không phẩy không không hai ba cộng không phẩy không không không không hai ba, kéo dài vô tận. Tức là bằng hai mươi ba phần một trăm cộng hai mươi ba phần một trăm bình phương cộng hai mươi ba phần một trăm mũ ba, vân vân. Đây chính là tổng của một cấp số nhân lùi vô hạn có số hạng đầu u 1 bằng hai mươi ba phần một trăm và công bội q bằng một phần một trăm. Do trị tuyệt đối của q bằng không phẩy không một nhỏ hơn một, nên áp dụng công thức tổng cấp số nhân lùi vô hạn: A bằng u 1 chia cho 1 trừ q, bằng hai mươi ba phần một trăm chia cho một trừ một phần một trăm, bằng hai mươi ba phần một trăm chia cho chín mươi chín phần một trăm, rút gọn được đúng bằng hai mươi ba phần chín mươi chín.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -711,7 +711,7 @@ ONTAP_C2_MUC2_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Công thức lãi kép: $T = A(1 + r)^n$. Đặt $A(1 + r)^n > 350$ triệu để tìm $n$ nguyên nhỏ nhất!",
         "narration": "Chúng ta đến với bài toán thực tế Vận dụng cao ở Ví dụ 4: Bác An gửi tiết kiệm số tiền 200 triệu đồng vào ngân hàng với lãi suất 6 phần trăm một năm theo hình thức lãi kép, tức là tiền lãi của mỗi năm được gộp vào vốn để tính lãi cho năm tiếp theo. Giả sử lãi suất không thay đổi trong suốt quá trình gửi và bác An không rút tiền ra. Hỏi sau ít nhất bao nhiêu năm thì tổng số tiền cả gốc lẫn lãi bác An nhận được sẽ vượt quá 350 triệu đồng? Các em có 30 giây suy nghĩ.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-rose-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -742,7 +742,7 @@ ONTAP_C2_MUC2_SCENES = [
         "mascotMode": "happy",
         "mascotTip": "Khi $n > 9,59$, vì số năm gửi phải là số nguyên nên phải làm tròn lên thành 10 năm!",
         "narration": "Hết 30 giây! Lời giải như sau: Gọi n là số năm bác An gửi tiền. Số tiền nhận được sau n năm theo công thức lãi kép là: T n bằng A nhân mở ngoặc 1 cộng r đóng ngoặc mũ n, bằng 200 nhân mở ngoặc 1 cộng không phẩy không sáu đóng ngoặc mũ n, bằng 200 nhân một phẩy không sáu mũ n triệu đồng. Để số tiền vượt quá 350 triệu đồng, ta có bất phương trình: 200 nhân một phẩy không sáu mũ n lớn hơn 350. Chia hai vế cho 200, ta được: một phẩy không sáu mũ n lớn hơn một phẩy bảy lăm. Lấy logarit cơ số một phẩy không sáu của hai vế, ta được: n lớn hơn logarit cơ số một phẩy không sáu của một phẩy bảy lăm, xấp xỉ 9 phẩy 59 năm. Vì số năm gửi ngân hàng phải là một số nguyên dương, nên sau ít nhất 10 năm, số tiền bác An nhận được sẽ vượt quá 350 triệu đồng.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-rose-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -778,7 +778,7 @@ ONTAP_C2_MUC2_SCENES = [
         "mascotMode": "warning",
         "mascotTip": "Quy tắc bắt buộc: Bài toán thực tế tìm số lần/số năm thì $n > 9,01$ vẫn phải làm tròn lên thành 10!",
         "narration": "Trước khi kết thúc Mục 2, Thầy Cú có 3 lưu ý đắt giá về bài toán thực tế: Một là: quy tắc làm tròn thời gian. Khi giải ra n lớn hơn 9 phẩy 01 thì bắt buộc phải làm tròn lên thành 10 năm, vì hết năm thứ 9 số tiền vẫn chưa đủ vượt ngưỡng. Hai là: đồng nhất đơn vị lãi suất và kỳ hạn. Nếu lãi suất cho theo năm nhưng gửi theo kỳ hạn quý hoặc tháng thì phải chia tỉ lệ tương ứng. Ba là: phân biệt lãi đơn và lãi kép. Lãi đơn chỉ sinh lãi trên vốn ban đầu; còn lãi kép thì lãi nhập vào vốn để tiếp tục sinh lãi.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-amber-950/30 p-3.5 rounded-xl border border-amber-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -810,7 +810,7 @@ ONTAP_C2_MUC2_SCENES = [
         "mascotMode": "happy",
         "mascotTip": "Chuyển sang Mục 3: Học bí kíp bấm máy Casio fx-580VN X giải đề trắc nghiệm chuẩn Bộ GD&ĐT!",
         "narration": "Chúc mừng các em đã làm chủ 4 dạng toán trọng tâm của Chương 2! Chúng ta đã nắm vững phương pháp chứng minh tính đơn điệu và bị chặn, giải quyết bài toán rạp hát với cấp số cộng, chuyển đổi số thập phân vô hạn tuần hoàn bằng cấp số nhân lùi vô hạn, và xử lý bài toán lãi kép bằng bất phương trình mũ. Bây giờ, chúng ta sẽ bước sang Mục 3: Cảnh báo bẫy trắc nghiệm, Kỹ năng Casio fx 580VN X và thực chiến đề tổng ôn theo đúng cấu trúc đề thi của Bộ Giáo dục và Đào tạo.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-emerald-900/50 to-teal-900/50 p-4 rounded-xl border border-emerald-500/40 text-center">
     <div class="inline-flex p-2 bg-emerald-500/20 rounded-full text-emerald-300 mb-2">
@@ -843,7 +843,7 @@ ONTAP_C2_MUC3_SCENES = [
         "mascotMode": "pointer",
         "mascotTip": "3 phím chức năng thần thánh: [TABLE] Menu 8 quét dãy số; [Ans] tính dãy truy hồi; [Shift][x] tính tổng xích-ma!",
         "narration": "Chào mừng các em đến với Mục 3: Kỹ năng máy tính Casio fx 580VN X và Đề tổng ôn chuẩn cấu trúc Bộ Giáo dục và Đào tạo. Máy tính cầm tay là một trợ thủ đắc lực giúp các em kiểm tra kết quả và giải nhanh trắc nghiệm trong phòng thi. Trong Chương 2, có ba tính năng vượt trội: Một là chức năng bảng giá trị Bảng Menu 8 để quét bảng giá trị tính tăng giảm và bị chặn; Hai là phím Ans kết hợp hai chấm để lập trình vòng lặp giải dãy số truy hồi; và Ba là phím tính tổng chuỗi xích-ma để tính tổng n số hạng của cấp số cộng và cấp số nhân chỉ trong hai giây.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-cyan-500/30">
     <div class="flex items-center gap-3 mb-2">
@@ -877,7 +877,7 @@ ONTAP_C2_MUC3_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "Phần II (Đúng/Sai) có 4 ý a, b, c, d với thang điểm lũy tiến 0.1 - 0.25 - 0.5 - 1.0 điểm!",
         "narration": "Kỳ thi tốt nghiệp Trung học phổ thông và các bài kiểm tra định kỳ hiện nay áp dụng cấu trúc đề chuẩn mới gồm 3 phần rõ rệt: Phần 1 gồm các câu trắc nghiệm nhiều lựa chọn 4 phương án A, B, C, D quen thuộc. Phần 2 là dạng câu hỏi Trắc nghiệm Đúng Sai: mỗi câu có 4 mệnh đề a, b, c, d; học sinh cần phân tích tính đúng sai của từng ý, thang điểm lũy tiến tối đa 1 điểm cho một câu nếu trả lời đúng cả 4 ý. Phần 3 là dạng câu hỏi Trắc nghiệm Trả lời ngắn: học sinh tự tính toán và điền đáp số vào phiếu, không có gợi ý phương án. Ngay sau đây, chúng ta sẽ thực hành các dạng bài chuẩn này.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/30">
     <div class="flex items-center gap-2 mb-2">
@@ -909,7 +909,7 @@ ONTAP_C2_MUC3_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Bấm: 2 [=], sau đó gõ: 3 x Ans - 2 rồi bấm [=] liên tiếp để ra $u_2, u_3...$!",
         "narration": "Chúng ta bắt đầu với Ví dụ 1: Cho dãy số u n xác định bởi công thức truy hồi: u 1 bằng 2, và u n cộng 1 bằng 3 lần u n trừ 2 với mọi n lớn hơn hoặc bằng 1. Yêu cầu: Hãy tìm số hạng thứ 6 của dãy số u 6. Các em có 15 giây suy nghĩ.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-cyan-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -937,9 +937,9 @@ ONTAP_C2_MUC3_SCENES = [
         "title": "4. VÍ DỤ 1 - LỜI GIẢI CHI TIẾT",
         "subtitle": "KẾT HỢP BẤM MÁY VÀ CÔNG THỨC TỔNG QUÁT",
         "mascotMode": "happy",
-        "mascotTip": "Quy luật: $u_{n+1} - 1 = 3(u_n - 1) \implies u_n - 1 = (u_1 - 1) \cdot 3^{n-1} \implies u_n = 3^{n-1} + 1$!",
+        "mascotTip": r"Quy luật: $u_{n+1} - 1 = 3(u_n - 1) \implies u_n - 1 = (u_1 - 1) \cdot 3^{n-1} \implies u_n = 3^{n-1} + 1$!",
         "narration": "Hết 15 giây! Lời giải như sau: Cách một bấm máy Casio siêu tốc: Bước một, bấm 2 rồi ấn phím bằng để gán giá trị 2 vào biến Ans. Bước hai, gõ biểu thức 3 nhân Ans trừ 2. Bước ba, ấn dấu bằng lần thứ nhất ta được u 2 bằng 4; ấn dấu bằng lần hai được u 3 bằng 10; lần ba được u 4 bằng 28; lần bốn được u 5 bằng 82; và ấn dấu bằng lần thứ năm ta thu được u 6 bằng 244. Cách hai dùng công thức: Ta biến đổi u n cộng 1 trừ 1 bằng 3 lần mở ngoặc u n trừ 1 đóng ngoặc. Đặt v n bằng u n trừ 1 thì v n là cấp số nhân có v 1 bằng 1 và công bội q bằng 3. Do đó v n bằng 3 mũ n trừ một, suy ra u n bằng 3 mũ n trừ một cộng một. Với n bằng 6, ta có u 6 bằng 3 mũ 5 cộng một, bằng 243 cộng 1 bằng 244.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-cyan-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -982,9 +982,9 @@ ONTAP_C2_MUC3_SCENES = [
         "title": "5. VÍ DỤ 2 - ĐỀ BÀI: TÍNH TỔNG DÃY SỐ BẰNG PHÍM XÍCH-MA",
         "subtitle": "KỸ THUẬT TÍNH NHANH TỔNG BẰNG PHÍM $\sum$ (15 GIÂY SUY NGHĨ)",
         "mascotMode": "think",
-        "mascotTip": "Phím [SHIFT] [x] cho phép tính $\sum_{x=1}^{50} u_x$. Với CSC: $u_x = 5 + (x - 1) \cdot 3$!",
+        "mascotTip": r"Phím [SHIFT] [x] cho phép tính $\sum_{x=1}^{50} u_x$. Với CSC: $u_x = 5 + (x - 1) \cdot 3$!",
         "narration": "Chúng ta tiếp tục với Ví dụ 2: Cho cấp số cộng u n có số hạng đầu u 1 bằng 5 và công sai d bằng 3. Hãy tính tổng của 50 số hạng đầu tiên: S 50 bằng u 1 cộng u 2 cộng chấm chấm cộng u 50. Các em có 15 giây suy nghĩ để tính nhẩm bằng công thức hoặc thiết lập phép tính trên máy tính.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-emerald-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -1014,7 +1014,7 @@ ONTAP_C2_MUC3_SCENES = [
         "mascotMode": "happy",
         "mascotTip": "Bấm phím: [SHIFT] [x] nhập (5 + (x - 1) * 3) với x chạy từ 1 đến 50 -> Kết quả: 3925!",
         "narration": "Hết 15 giây! Lời giải như sau: Cách một dùng công thức toán học: Áp dụng công thức S n bằng n nhân mở ngoặc vuông hai lần u 1 cộng n trừ 1 nhân d đóng ngoặc vuông chia 2. Ta có: S 50 bằng 50 nhân mở ngoặc vuông hai nhân 5 cộng 49 nhân 3 đóng ngoặc vuông chia 2, bằng 25 nhân mở ngoặc 10 cộng 147 đóng ngoặc, bằng 25 nhân 157 bằng 3925. Cách hai dùng phím xích-ma trên Casio: Ta ấn Shift phím x dưới nút nguồn. Trên màn hình hiện ra ký hiệu xích-ma. Ta nhập biểu thức số hạng tổng quát: 5 cộng mở ngoặc x trừ 1 đóng ngoặc nhân 3; cận dưới nhập x bằng 1; cận trên nhập 50. Nhấn dấu bằng, máy tính xuất ngay kết quả chính xác 3925 chỉ trong một giây.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -1055,7 +1055,7 @@ ONTAP_C2_MUC3_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Phần II: Xét tính đúng sai của từng ý độc lập: ý a tính $u_5$; ý b tìm $u_n$; ý c giải $u_n = 2023$; ý d tính $S_{20}$!",
         "narration": "Chúng ta đến với câu hỏi dạng Đúng Sai theo chuẩn đề thi của Bộ Giáo dục và Đào tạo ở Ví dụ 3: Cho cấp số cộng u n có số hạng đầu u 1 bằng 3 và công sai d bằng 4. Xét tính Đúng hoặc Sai của bốn mệnh đề sau: Ý a: Số hạng thứ năm u 5 bằng 19. Ý b: Số hạng tổng quát u n bằng bốn n trừ một. Ý c: Số 2023 là một số hạng của cấp số cộng đã cho. Ý d: Tổng hai mươi số hạng đầu tiên S 20 bằng 820. Các em có 30 giây để xác định tính đúng sai của cả 4 mệnh đề.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-indigo-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -1095,9 +1095,9 @@ ONTAP_C2_MUC3_SCENES = [
         "title": "8. VÍ DỤ 3 - LỜI GIẢI CHI TIẾT",
         "subtitle": "KẾT QUẢ: a) ĐÚNG • b) ĐÚNG • c) ĐÚNG • d) ĐÚNG",
         "mascotMode": "happy",
-        "mascotTip": "Thẩm định: $u_5 = 3 + 4(4) = 19$; $4n-1=2023 \implies 4n=2024 \implies n=506 \in \mathbb{N}^*$; $S_{20} = 20[6 + 19(4)]/2 = 820$!",
+        "mascotTip": r"Thẩm định: $u_5 = 3 + 4(4) = 19$; $4n-1=2023 \implies 4n=2024 \implies n=506 \in \mathbb{N}^*$; $S_{20} = 20[6 + 19(4)]/2 = 820$!",
         "narration": "Hết 30 giây! Chúng ta cùng thẩm định từng mệnh đề: Ở ý a: u 5 bằng u 1 cộng 4 d, bằng 3 cộng 4 nhân 4 bằng 19. Mệnh đề a là ĐÚNG. Ở ý b: u n bằng u 1 cộng n trừ 1 nhân d, bằng 3 cộng n trừ 1 nhân 4, bằng 4 n trừ 1. Mệnh đề b là ĐÚNG. Ở ý c: Giả sử 2023 là số hạng thứ n, ta có phương trình: 4 n trừ 1 bằng 2023, suy ra 4 n bằng 2024, tương đương n bằng 506. Vì 506 là số nguyên dương nên 2023 chính là số hạng thứ 506 của dãy. Mệnh đề c là ĐÚNG. Ở ý d: Tổng hai mươi số hạng đầu là S 20 bằng 20 nhân mở ngoặc vuông hai lần u 1 cộng 19 d đóng ngoặc vuông chia 2, bằng 10 nhân mở ngoặc 6 cộng 19 nhân 4 đóng ngoặc, bằng 10 nhân mở ngoặc 6 cộng 76 đóng ngoặc, bằng 10 nhân 82 bằng 820. Mệnh đề d là ĐÚNG. Cả bốn mệnh đề đều đúng, đạt trọn vẹn 1 điểm.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -1139,9 +1139,9 @@ ONTAP_C2_MUC3_SCENES = [
         "title": "9. VÍ DỤ 4 - ĐỀ BÀI: CÂU HỎI TRẢ LỜI NGẮN (SINH HỌC & CSN)",
         "subtitle": "PHẦN III • CÂU HỎI TRẢ LỜI NGẮN (30 GIÂY SUY NGHĨ)",
         "mascotMode": "think",
-        "mascotTip": "4 giờ = 240 phút = 12 chu kỳ phân đôi. Sau 12 chu kỳ: $N = 100 \times 2^{12}$!",
+        "mascotTip": r"4 giờ = 240 phút = 12 chu kỳ phân đôi. Sau 12 chu kỳ: $N = 100 \times 2^{12}$!",
         "narration": "Chúng ta đến với câu hỏi dạng Trả lời ngắn theo chuẩn Phần 3 ở Ví dụ 4: Trong một phòng thí nghiệm sinh học, người ta nghiên cứu sự sinh trưởng của một loài vi khuẩn. Biết rằng cứ sau 20 phút thì mỗi tế bào vi khuẩn lại nhân đôi một lần. Giả sử ban đầu có đúng 100 tế bào vi khuẩn và các điều kiện môi trường đều tối ưu để toàn bộ tế bào đều phân chia bình thường. Hỏi sau đúng 4 giờ, số lượng vi khuẩn trong môi trường nuôi cấy là bao nhiêu tế bào? Các em có 30 giây để tính toán đáp số.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-rose-500/40">
     <div class="flex items-center justify-between border-b border-slate-700 pb-2 mb-3">
@@ -1170,9 +1170,9 @@ ONTAP_C2_MUC3_SCENES = [
         "title": "10. VÍ DỤ 4 - LỜI GIẢI CHI TIẾT",
         "subtitle": "KẾT QUẢ: 409600 TẾ BÀO VI KHUẨN",
         "mascotMode": "happy",
-        "mascotTip": "Tính: $2^{12} = 4096 \implies N = 100 \times 4096 = 409600$ tế bào!",
+        "mascotTip": r"Tính: $2^{12} = 4096 \implies N = 100 \times 4096 = 409600$ tế bào!",
         "narration": "Hết 30 giây! Lời giải chi tiết như sau: Đổi 4 giờ bằng 240 phút. Vì cứ sau 20 phút vi khuẩn lại phân đôi một lần, nên sau 4 giờ số chu kỳ phân đôi là: 240 chia 20 bằng 12 chu kỳ. Số lượng vi khuẩn sau mỗi chu kỳ lập thành một cấp số nhân: Ban đầu có N 0 bằng 100; sau chu kỳ thứ nhất có N 1 bằng 100 nhân 2; sau chu kỳ thứ hai có N 2 bằng 100 nhân hai mũ hai. Do đó, sau chu kỳ thứ 12, số lượng vi khuẩn là: N 12 bằng N 0 nhân hai mũ 12, bằng 100 nhân 4096, bằng 409600 tế bào vi khuẩn. Đáp số học sinh tô vào phiếu trả lời là 409600.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-slate-800/90 p-3.5 rounded-xl border border-rose-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -1205,7 +1205,7 @@ ONTAP_C2_MUC3_SCENES = [
         "mascotMode": "warning",
         "mascotTip": "Ghi nhớ: Đề thi thường gài bẫy công sai âm $d < 0$, công bội âm $q < 0$ và số hạng không xác định!",
         "narration": "Để bảo toàn điểm số tuyệt đối trong kỳ thi, các em hãy ghi nhớ 5 chiếc bẫy tinh vi thường được người ra đề gài vào: Một là: công bội q âm. Khi q âm, các số hạng của cấp số nhân sẽ đan dấu âm dương xen kẽ, nếu đề bài hỏi số hạng thứ mấy mang dấu dương thì phải xét số mũ chẵn lẻ cẩn thận. Hai là: bài toán ba số lập thành cấp số nhân có tích bằng hằng số, luôn tồn tại hai trường hợp của công bội q. Ba là: bẫy điều kiện công sai d bằng 0. Khi d bằng 0, cấp số cộng là một dãy hằng số. Bốn là: quên điều kiện n thuộc N sao khi giải phương trình tìm vị trí số hạng. Năm là: nhầm lẫn giữa chu kỳ phân chia ban đầu và số hạng thứ n của dãy số.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-3">
   <div class="bg-amber-950/30 p-3.5 rounded-xl border border-amber-500/40">
     <div class="flex items-center gap-2 mb-2">
@@ -1241,7 +1241,7 @@ ONTAP_C2_MUC3_SCENES = [
         "mascotMode": "happy",
         "mascotTip": "Thầy chúc các em tự tin bứt phá điểm 9, 10 trong tất cả các bài kiểm tra và kỳ thi sắp tới!",
         "narration": "Chúc mừng tất cả các em học sinh thân yêu đã hoàn thành trọn vẹn toàn bộ Chương 2: Dãy số, Cấp số cộng và Cấp số nhân! Qua bài học này, các em đã sở hữu trong tay toàn bộ hệ thống lý thuyết, phương pháp giải 4 dạng toán cốt lõi, thành thạo các kỹ năng bấm máy tính Casio fx 580VN X và làm quen với cấu trúc đề thi 3 phần chuẩn của Bộ Giáo dục và Đào tạo. Hãy tự tin áp dụng những bí kíp này để bứt phá điểm số cao trong các bài kiểm tra định kỳ và kỳ thi sắp tới. Hẹn gặp lại các em ở Chương 3: Các số đặc trưng đo xu thế trung tâm của mẫu số liệu ghép nhóm!",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-emerald-900/60 via-teal-900/60 to-cyan-900/60 p-4 rounded-xl border border-emerald-500/40 text-center">
     <div class="inline-flex p-3 bg-emerald-500/20 rounded-full text-emerald-300 mb-2">

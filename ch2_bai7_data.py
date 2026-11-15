@@ -19,7 +19,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "pointer",
         "mascotTip": "Quy tắc: Kể từ số hạng thứ hai, mỗi số hạng bằng số hạng trước NHÂN với công bội q không đổi!",
         "narration": "Chào mừng các em đến với Bài bảy: Cấp số nhân, bài học trọng tâm cuối cùng của Chương hai. Ở Mục một, chúng ta cùng tìm hiểu về định nghĩa cấp số nhân và tính chất của ba số hạng liên tiếp. Trong toán học, một dãy số vô hạn hoặc hữu hạn được gọi là cấp số nhân nếu kể từ số hạng thứ hai, mỗi số hạng đều bằng số hạng đứng ngay trước nó nhân với một số không đổi q. Số q được gọi là công bội của cấp số nhân. Nếu công bội q bằng một, cấp số nhân là một dãy số không đổi. Nếu q lớn hơn một, dãy số tăng trưởng rất nhanh theo hàm mũ. Nếu q âm, các số hạng sẽ đan dấu âm dương luân phiên.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/30">
     <div class="flex items-center gap-3 mb-2">
@@ -58,7 +58,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "Tính chất vàng của CSN: u_k^2 = u_{k-1} * u_{k+1} hay a * c = b^2!",
         "narration": "Cấp số nhân có một tính chất trung bình nhân rất đặc sắc: Trong một cấp số nhân, bình phương của mỗi số hạng kể từ số hạng thứ hai luôn bằng tích của hai số hạng kề bên nó. Tức là u k bình phương bằng u k trừ một nhân u k cộng một. Nếu ba số a, b, c theo thứ tự lập thành một cấp số nhân thì ta luôn có hệ thức kinh điển: a nhân c bằng b bình phương. Khi cả ba số đều dương thì b chính là trung bình nhân của a và c.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-teal-500/30">
     <div class="flex items-center gap-2 mb-3">
@@ -86,7 +86,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "think",
         "mascotTip": "u_{n+1} / u_n = [3 * 2^{n+1}] / [3 * 2^n] = 2 (hằng số) => CSN có u_1 = 6, q = 2!",
         "narration": "Ví dụ số một: Khẳng định nào sau đây là đúng về dãy số u n có số hạng tổng quát u n bằng ba nhân hai mũ n? Tìm số hạng đầu u một và công bội q của dãy số đó. Các em có mười lăm giây để suy luận.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-emerald-950/80 to-slate-900 p-5 rounded-2xl border-2 border-emerald-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -114,7 +114,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "cheer",
         "mascotTip": "u_1 = 3 * 2^1 = 6. Tỉ số u_{n+1} / u_n = 2 (hằng số). Rất nhiều học sinh nhầm u_1 = 3!",
         "narration": "Hết thời gian. Ta xét tỉ số u n cộng một chia cho u n: u n cộng một bằng ba nhân hai mũ n cộng một. Chia cho u n bằng ba nhân hai mũ n. Rút gọn số ba ở tử và mẫu, hai mũ n cộng một chia hai mũ n bằng hai, là một hằng số không đổi với mọi n. Do đó dãy số u n là một cấp số nhân có công bội q bằng hai. Chú ý số hạng đầu tiên: thay n bằng một vào công thức, ta có u một bằng ba nhân hai mũ một bằng sáu. Rất nhiều bạn nhìn vào số ba tưởng u một bằng ba là sai. Đáp án chính xác là A.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-emerald-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -144,7 +144,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Công bội q = u_2 / u_1 = -6 / 2 = -3. Nhân q liên tiếp: u_3 = (-6)(-3) = 18!",
         "narration": "Ví dụ số hai: Cho cấp số nhân u n có số hạng đầu u một bằng hai và số hạng thứ hai u hai bằng trừ sáu. Hãy tìm công bội q và tính hai số hạng tiếp theo là u ba và u bốn. Các em có ba mươi giây để tính toán.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-teal-950/80 to-slate-900 p-5 rounded-2xl border-2 border-teal-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -172,7 +172,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "q = -3 âm nên dãy đan dấu: 2, -6, 18, -54... Chúc mừng các em chọn B!",
         "narration": "Hết ba mươi giây. Lời giải rất dễ dàng: Công bội q bằng u hai chia cho u một: q bằng trừ sáu chia cho hai bằng trừ ba. Vì q âm nên các số hạng đan dấu: u ba bằng u hai nhân q, bằng trừ sáu nhân trừ ba bằng dương mười tám. u bốn bằng u ba nhân q, bằng mười tám nhân trừ ba bằng trừ năm mươi tư. Bốn số hạng đầu tiên là hai, trừ sáu, mười tám, trừ năm mươi tư. Đáp án chính xác là B.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-teal-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -202,7 +202,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "think",
         "mascotTip": "(x + 1)^2 = (x - 2)(3x + 3). Khai triển giải phương trình bậc hai tìm x!",
         "narration": "Ví dụ số ba: Tìm tất cả các giá trị của x để ba số: x trừ hai, x cộng một, và ba x cộng ba theo thứ tự lập thành một cấp số nhân. Các em có mười lăm giây để thiết lập phương trình và tìm nghiệm.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-cyan-950/80 to-slate-900 p-5 rounded-2xl border-2 border-cyan-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -230,7 +230,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "(x+1)^2 = (x-2)(3x+3) <=> x^2 + 2x + 1 = 3x^2 - 3x - 6 <=> 2x^2 - 5x - 7 = 0!",
         "narration": "Hết thời gian. Áp dụng tính chất ba số liên tiếp của cấp số nhân: tích số đầu và số cuối bằng bình phương số ở giữa. Ta có: mở ngoặc x trừ hai đóng ngoặc nhân mở ngoặc ba x cộng ba đóng ngoặc, bằng mở ngoặc x cộng một đóng ngoặc bình phương. Khai triển vế trái: ba x bình trừ ba x trừ sáu. Khai triển vế phải: x bình cộng hai x cộng một. Chuyển vế rút gọn, ta được phương trình bậc hai: hai x bình trừ năm x trừ bảy bằng không. Phương trình này có dạng a trừ b cộng c bằng không, cho ta hai nghiệm: x bằng trừ một và x bằng trừ c chia a bằng bảy phần hai. Cả hai giá trị x này đều thỏa mãn. Đáp án chính xác là C.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-cyan-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -258,7 +258,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Tích a * b * c = (a * c) * b = b^2 * b = b^3 = 216 => b = căn bậc ba của 216!",
         "narration": "Ví dụ số bốn: Ba số thực dương a, b, c theo thứ tự lập thành một cấp số nhân. Biết rằng tích của ba số đó bằng hai trăm mười sáu. Hãy tìm giá trị của số đứng ở giữa là số b. Các em có ba mươi giây để suy luận.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-amber-950/80 to-slate-900 p-5 rounded-2xl border-2 border-amber-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -286,7 +286,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "Tích của 3 số liên tiếp luôn bằng lập phương số ở giữa: b^3 = 216 => b = 6!",
         "narration": "Thời gian đã hết. Đây là bài toán kinh điển áp dụng tính chất trung bình nhân: Vì a, b, c lập thành cấp số nhân nên tích của số đầu và số cuối bằng bình phương số ở giữa: a nhân c bằng b bình phương. Khi đó, tích của cả ba số là: a nhân b nhân c, ta nhóm a nhân c lại được b bình phương nhân với b, bằng b mũ ba. Theo đề bài, tích này bằng hai trăm mười sáu. Ta có phương trình: b mũ ba bằng hai trăm mười sáu. Lấy căn bậc ba hai vế, ta tìm được ngay b bằng sáu. Đáp án chính xác là B.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-amber-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -317,7 +317,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "Khi q < 0, dãy đan dấu (+, -, +, -) nên không phải dãy tăng cũng không phải dãy giảm!",
         "narration": "Thầy Nam Minh lưu ý hai bẫy thi trắc nghiệm rất dễ mất điểm: Thứ nhất, khi công bội q âm, cấp số nhân sẽ luân phiên đổi dấu giữa dương và âm. Khi đó dãy số này là dãy số không tăng, không giảm. Đừng nhầm lẫn cứ công bội q âm là dãy giảm. Thứ hai, khi tính công bội q từ phương trình b bình bằng a nhân c, ta phải lấy căn bậc hai, luôn có hai trường hợp cộng trừ căn bậc hai. Nếu đề bài không cho giả thiết các số dương thì các em phải xét cả hai trường hợp q dương và q âm để không bị sót nghiệm.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-rose-950/60 p-5 rounded-2xl border-2 border-rose-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -352,7 +352,7 @@ BAI7_MUC1_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "Làm chủ định nghĩa và hệ thức trung bình nhân! Chuyển sang Mục 2 để lập công thức u_n = u_1 * q^{n-1}!",
         "narration": "Chúc mừng các em đã hoàn thành xuất sắc Mục một của Bài bảy. Chúng ta đã làm chủ định nghĩa cấp số nhân, công bội q và tính chất trung bình nhân tuyệt vời. Ngay bây giờ, mời các em cùng chuyển sang Mục hai để khám phá công thức số hạng tổng quát u n, chìa khóa để tính nhanh số hạng bất kỳ theo cấp số nhân.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-br from-emerald-900/80 via-teal-900/60 to-slate-900 p-6 rounded-2xl border-2 border-emerald-400/40 text-center shadow-2xl">
     <div class="inline-block p-3 bg-emerald-500/20 rounded-full mb-3 text-3xl">🦉✨</div>
@@ -384,7 +384,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "pointer",
         "mascotTip": "Quy tắc vàng: Để đi từ u_1 đến u_n, ta nhân thêm (n - 1) lần công bội q: u_n = u_1 * q^{n-1}!",
         "narration": "Chào mừng các em đến với Mục hai: Số hạng tổng quát của cấp số nhân. Nếu biết số hạng đầu u một và công bội q, ta có thể tính ngay lập tức bất kỳ số hạng u n nào mà không cần nhân liên tiếp từng bước. Định lý nêu rõ: Nếu cấp số nhân u n có số hạng đầu u một và công bội q thì số hạng tổng quát u n được xác định bởi công thức: u n bằng u một nhân q mũ n trừ một, với mọi n lớn hơn hoặc bằng hai. Hãy đặc biệt lưu ý số mũ của q là n trừ một chứ không phải n, vì từ số hạng thứ nhất đến số hạng thứ n, ta chỉ cần nhân qua n trừ một lần công bội q.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-blue-900/60 to-indigo-900/40 p-4 rounded-xl border border-blue-500/30">
     <div class="flex items-center gap-3 mb-2">
@@ -423,7 +423,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "Hệ phương trình CSN giải bằng cách CHIA hai vế cho nhau để triệt tiêu u_1, tìm ra q^{m-n}!",
         "narration": "Khi gặp bài toán cho biết hai số hạng bất kỳ của cấp số nhân, ví dụ u hai và u năm, phương pháp giải tối ưu nhất là chia phương trình thứ hai cho phương trình thứ nhất. Khi đó số hạng đầu u một ở cả tử và mẫu bị triệt tiêu hoàn toàn, ta chỉ còn lại q mũ năm trừ hai bằng q mũ ba. Từ đó ta giải tìm được q, rồi thay ngược lại để tìm u một. Phương pháp chia vế này giúp đơn giản hóa mọi bài toán hệ phương trình cấp số nhân.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-blue-500/30">
     <div class="flex items-center gap-2 mb-3">
@@ -448,7 +448,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "think",
         "mascotTip": "u_8 = u_1 * q^7 = 3 * 2^7 = 3 * 128. Tính cẩn thận lũy thừa!",
         "narration": "Ví dụ số một: Cho cấp số nhân u n có số hạng đầu u một bằng ba và công bội q bằng hai. Hãy tính số hạng thứ tám u tám của cấp số nhân đó. Các em có mười lăm giây để tính toán.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-blue-950/80 to-slate-900 p-5 rounded-2xl border-2 border-blue-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -476,7 +476,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "cheer",
         "mascotTip": "u_8 = 3 * 2^7 = 3 * 128 = 384. Chúc mừng các em chọn A!",
         "narration": "Hết thời gian. Áp dụng công thức số hạng tổng quát: u n bằng u một nhân q mũ n trừ một. Với n bằng tám, ta có: u tám bằng u một nhân q mũ tám trừ một, tức bằng u một nhân q mũ bảy. Thay số vào: u một bằng ba, q bằng hai, ta có ba nhân hai mũ bảy. Hai mũ bảy bằng một trăm hai mươi tám; ba nhân một trăm hai mươi tám bằng ba trăm tám mươi tư. Đáp án chính xác là A.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-blue-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -505,7 +505,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "think",
         "mascotTip": "u_5 / u_2 = q^3 = 48 / 6 = 8 => q = 2. Sau đó u_1 = u_2 / q = 6 / 2 = 3!",
         "narration": "Ví dụ số hai: Cho cấp số nhân u n có số hạng thứ hai u hai bằng sáu và số hạng thứ năm u năm bằng bốn mươi tám. Hãy tìm số hạng đầu u một và công bội q của cấp số nhân này. Các em có ba mươi giây để tính toán.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-indigo-950/80 to-slate-900 p-5 rounded-2xl border-2 border-indigo-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -533,7 +533,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "q^3 = 48 / 6 = 8 => q = 2. u_1 = 6 / 2 = 3. Hoàn toàn chuẩn xác!",
         "narration": "Hết ba mươi giây. Ta có hệ phương trình: u hai bằng u một nhân q bằng sáu. u năm bằng u một nhân q mũ bốn bằng bốn mươi tám. Lấy phương trình dưới chia cho phương trình trên: u một nhân q mũ bốn chia cho u một nhân q bằng q mũ ba. Bốn mươi tám chia sáu bằng tám. Ta có phương trình: q mũ ba bằng tám, suy ra q bằng căn bậc ba của tám bằng hai. Thay q bằng hai vào phương trình đầu tiên: u một nhân hai bằng sáu, suy ra u một bằng sáu chia hai bằng ba. Như vậy, số hạng đầu u một bằng ba và công bội q bằng hai. Đáp án chính xác là B.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-indigo-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -563,7 +563,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "think",
         "mascotTip": "(1/2) * 3^{n-1} = 729/2 <=> 3^{n-1} = 729 = 3^6 <=> n - 1 = 6 <=> n = 7!",
         "narration": "Ví dụ số ba: Cho cấp số nhân u n có số hạng đầu u một bằng một phần hai và công bội q bằng ba. Hỏi số bảy trăm hai mươi chín phần hai là số hạng thứ bao nhiêu của cấp số nhân đó? Các em có mười lăm giây để giải phương trình mũ.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-purple-950/80 to-slate-900 p-5 rounded-2xl border-2 border-purple-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -591,7 +591,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "3^{n-1} = 729 = 3^6 => n - 1 = 6 => n = 7 (u_7 = 729/2)!",
         "narration": "Hết thời gian. Ta giải phương trình u n bằng bảy trăm hai mươi chín phần hai: một phần hai nhân ba mũ n trừ một bằng bảy trăm hai mươi chín phần hai. Nhân cả hai vế với hai để triệt tiêu mẫu số, ta được: ba mũ n trừ một bằng bảy trăm hai mươi chín. Ta biết rằng bảy trăm hai mươi chín chính là ba mũ sáu: ba mũ hai là chín, chín mũ ba là bảy trăm hai mươi chín. Do đó n trừ một bằng sáu, suy ra n bằng sáu cộng một bằng bảy. Vậy số bảy trăm hai mươi chín phần hai chính là số hạng thứ bảy u bảy của cấp số nhân. Đáp án chọn là A.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-purple-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -619,7 +619,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Ban đầu có 1000 con. Sau mỗi giờ nhân đôi (q = 2). Sau 6 giờ: N(6) = 1000 * 2^6!",
         "narration": "Ví dụ số bốn là bài toán sinh học thực tế tiêu biểu: Một quần thể vi khuẩn ban đầu có một nghìn cá thể. Trong điều kiện nuôi cấy lý tưởng, cứ sau mỗi giờ số lượng vi khuẩn lại nhân đôi. Hỏi sau sáu giờ, quần thể đó có tất cả bao nhiêu con vi khuẩn? Các em có ba mươi giây để tính toán.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-emerald-950/80 to-slate-900 p-5 rounded-2xl border-2 border-emerald-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -647,7 +647,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "N = 1000 * 2^6 = 1000 * 64 = 64000 con. Tăng trưởng hàm mũ cực nhanh!",
         "narration": "Thời gian đã hết. Ban đầu tại thời điểm không giờ, số lượng vi khuẩn là một nghìn con. Sau một giờ, số lượng là một nghìn nhân hai bằng hai nghìn con. Sau hai giờ, số lượng là một nghìn nhân hai mũ hai bằng bốn nghìn con. Tổng quát, sau t giờ số lượng vi khuẩn được mô hình bởi công thức: N theo t bằng một nghìn nhân hai mũ t con. Với t bằng sáu giờ, ta có: N tại sáu bằng một nghìn nhân hai mũ sáu. Hai mũ sáu bằng sáu mươi tư; một nghìn nhân sáu mươi tư bằng sáu mươi tư nghìn con vi khuẩn. Đáp án chính xác là B.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-emerald-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -678,7 +678,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "Luôn viết u_n = u_1 * q^{n-1} (số mũ n-1). Khi q âm, bắt buộc phải để trong ngoặc: (-q)^{n-1}!",
         "narration": "Thầy Nam Minh lưu ý hai lỗi sai rất hay gặp khi làm bài tập số hạng tổng quát cấp số nhân: Thứ nhất là nhầm số mũ của q thành n thay vì n trừ một. Ví dụ số hạng thứ mười là u một nhân q mũ chín chứ không phải q mũ mười. Thứ hai, khi công bội q là số âm hoặc phân số, các em bắt buộc phải để q trong dấu ngoặc tròn trước khi nâng lên lũy thừa. Ví dụ trừ ba tất cả mũ bốn bằng dương tám mươi mốt, nhưng nếu không viết ngoặc thì máy tính sẽ hiểu là trừ của ba mũ bốn bằng trừ tám mươi mốt, dẫn đến sai dấu hoàn toàn.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-rose-950/60 p-5 rounded-2xl border-2 border-rose-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -713,7 +713,7 @@ BAI7_MUC2_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "Ghi nhớ công thức u_n = u_1 * q^{n-1}! Sẵn sàng bước sang Mục 3 để tính tổng S_n và bài toán lãi kép!",
         "narration": "Chúc mừng các em đã hoàn thành xuất sắc Mục hai. Chúng ta đã làm chủ công thức số hạng tổng quát của cấp số nhân, phương pháp chia vế tìm u một và q, cùng bài toán tăng trưởng vi khuẩn thực tế. Ngay bây giờ, mời các em bước sang Mục ba: Tổng n số hạng đầu tiên của cấp số nhân và bài toán gửi tiết kiệm lãi kép ngân hàng.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-br from-blue-900/80 via-indigo-900/60 to-slate-900 p-6 rounded-2xl border-2 border-blue-400/40 text-center shadow-2xl">
     <div class="inline-block p-3 bg-blue-500/20 rounded-full mb-3 text-3xl">🎯🚀</div>
@@ -743,7 +743,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "pointer",
         "mascotTip": "Quy tắc vàng: S_n = u_1 * (1 - q^n) / (1 - q) với q khác 1. Nếu q = 1 thì S_n = n * u_1!",
         "narration": "Chào mừng các em đến với Mục ba: Tổng n số hạng đầu tiên của cấp số nhân. Cho cấp số nhân u n có số hạng đầu u một và công bội q. Nếu công bội q khác một, tổng của n số hạng đầu tiên S n bằng u một cộng u hai cộng chấm chấm chấm cộng u n được tính bởi công thức: S n bằng u một nhân mở ngoặc một trừ q mũ n đóng ngoặc, tất cả chia cho một trừ q; hoặc có thể viết tương đương là u một nhân mở ngoặc q mũ n trừ một đóng ngoặc chia cho q trừ một. Nếu công bội q bằng một thì tất cả các số hạng đều bằng u một, khi đó tổng S n đơn giản bằng n nhân u một.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-purple-900/60 to-pink-900/40 p-4 rounded-xl border border-purple-500/30">
     <div class="flex items-center gap-3 mb-2">
@@ -775,7 +775,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "Khi |q| < 1, q^n tiến về 0 khi n ra vô cùng. Tổng vô hạn là: S = u_1 / (1 - q)!",
         "narration": "Một trường hợp đặc biệt và vô cùng kỳ thú của cấp số nhân là Cấp số nhân lùi vô hạn. Đó là cấp số nhân có trị tuyệt đối của công bội q nhỏ hơn một. Khi số lượng số hạng n tăng lên vô hạn, q mũ n sẽ dần tiến về số không. Khi đó, tổng của toàn bộ vô hạn các số hạng trong dãy số sẽ hội tụ về một số hữu hạn duy nhất: S bằng u một chia cho một trừ q. Công thức này giúp chúng ta tính được các tổng vô hạn như một cộng một phần hai cộng một phần tư cộng một phần tám chấm chấm chấm có kết quả đúng bằng hai.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-4 rounded-xl border border-purple-500/30">
     <div class="flex items-center gap-2 mb-3">
@@ -800,7 +800,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "think",
         "mascotTip": "S_8 = 2 * (1 - 3^8) / (1 - 3) = 2 * (1 - 6561) / (-2) = 6561 - 1 = 6560!",
         "narration": "Ví dụ số một: Tính tổng của tám số hạng đầu tiên của cấp số nhân u n, biết số hạng đầu u một bằng hai và công bội q bằng ba. Các em có mười lăm giây để tính ra kết quả.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-purple-950/80 to-slate-900 p-5 rounded-2xl border-2 border-purple-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -828,7 +828,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "cheer",
         "mascotTip": "S_8 = 2 * (3^8 - 1)/(3 - 1) = 3^8 - 1 = 6561 - 1 = 6560. Chúc mừng các em chọn A!",
         "narration": "Hết thời gian. Áp dụng công thức tính tổng: S n bằng u một nhân mở ngoặc q mũ n trừ một đóng ngoặc chia cho q trừ một. Với n bằng tám, ta có: S tám bằng hai nhân mở ngoặc ba mũ tám trừ một đóng ngoặc chia cho ba trừ một. Ở mẫu số, ba trừ một bằng hai, triệt tiêu với số hai ở tử số. Kết quả còn lại đúng ba mũ tám trừ một. Ta tính: ba mũ tám bằng sáu nghìn năm trăm sáu mươi mốt; trừ đi một bằng sáu nghìn năm trăm sáu mươi. Đáp án chính xác là A.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-purple-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -856,7 +856,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "think",
         "mascotTip": "5 * [1 - (-2)^n] / [1 - (-2)] = -105 <=> 1 - (-2)^n = -63 <=> (-2)^n = 64 => n = 6!",
         "narration": "Ví dụ số hai: Cho cấp số nhân u n có số hạng đầu u một bằng năm và công bội q bằng trừ hai. Biết rằng tổng n số hạng đầu tiên S n bằng trừ một trăm lẻ năm. Hỏi n bằng bao nhiêu? Các em có ba mươi giây để giải phương trình tìm n.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-pink-950/80 to-slate-900 p-5 rounded-2xl border-2 border-pink-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -884,7 +884,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "(-2)^n = 64 = (-2)^6 => n = 6. Vì 6 là số chẵn nên (-2)^6 ra dương 64!",
         "narration": "Hết ba mươi giây. Ta áp dụng công thức: S n bằng u một nhân mở ngoặc một trừ q mũ n đóng ngoặc chia cho một trừ q. Thay số vào: năm nhân mở ngoặc một trừ trừ hai tất cả mũ n đóng ngoặc, chia cho một trừ đi trừ hai, bằng trừ một trăm lẻ năm. Ở mẫu số: một trừ đi trừ hai bằng ba. Nhân ba sang vế phải và chia cho năm: trừ một trăm lẻ năm nhân ba chia năm bằng trừ sáu mươi ba. Ta có phương trình: một trừ trừ hai mũ n bằng trừ sáu mươi ba, suy ra trừ hai tất cả mũ n bằng sáu mươi tư. Vì sáu mươi tư bằng hai mũ sáu, và cũng bằng trừ hai tất cả mũ sáu, nên ta suy ra n bằng sáu. Đáp án chính xác là B.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-pink-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -915,7 +915,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "think",
         "mascotTip": "u_1 = 1, q = 1/2. Số cuối 1/256 = (1/2)^8 => Có 9 số hạng (n = 9). Tính S!",
         "narration": "Ví dụ số ba: Tính tổng S bằng một cộng một phần hai cộng một phần tư cộng chấm chấm chấm cộng một phần hai trăm năm mươi sáu. Các em có mười lăm giây để tính tổng cấp số nhân này.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-amber-950/80 to-slate-900 p-5 rounded-2xl border-2 border-amber-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -943,7 +943,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "S = 1 * [1 - (1/2)^9] / (1 - 1/2) = 2 * (1 - 1/512) = 511/256!",
         "narration": "Hết thời gian. Ta nhận thấy đây là tổng của một cấp số nhân có số hạng đầu u một bằng một, công bội q bằng một phần hai. Số hạng cuối cùng là một phần hai trăm năm mươi sáu, bằng một phần hai tất cả mũ tám. Vì số hạng thứ n có số mũ là n trừ một, nên n trừ một bằng tám, suy ra tổng này có tất cả n bằng chín số hạng. Áp dụng công thức tính tổng: S bằng một nhân mở ngoặc một trừ mở ngoặc một phần hai đóng ngoặc mũ chín, tất cả chia cho một trừ một phần hai. Ở mẫu số: một trừ một phần hai bằng một phần hai. Chia cho một phần hai tức là nhân với hai: hai nhân mở ngoặc một trừ một phần năm trăm mười hai đóng ngoặc, bằng hai nhân năm trăm mười một phần năm trăm mười hai, rút gọn được năm trăm mười một phần hai trăm năm mươi sáu. Đáp án chính xác là C.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-amber-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -972,7 +972,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "think",
         "mascotTip": "Gửi 50 triệu lãi 7%/năm. Cần số tiền >= 100 triệu: 50 * (1.07)^n >= 100 <=> 1.07^n >= 2!",
         "narration": "Ví dụ số bốn là bài toán tài chính ứng dụng cấp số nhân: Bác An gửi tiết kiệm năm mươi triệu đồng vào ngân hàng với lãi suất bảy phần trăm một năm theo thể thức lãi kép. Hỏi sau ít nhất bao nhiêu năm thì bác An nhận được tổng số tiền cả gốc lẫn lãi lớn hơn hoặc bằng một trăm triệu đồng, tức là gấp đôi số tiền ban đầu? Các em có ba mươi giây để tính toán số năm.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-r from-emerald-950/80 to-slate-900 p-5 rounded-2xl border-2 border-emerald-500/40 shadow-xl">
     <div class="flex items-center justify-between mb-3">
@@ -1000,7 +1000,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "n >= log_{1.07}(2) = 10.24 năm. Vì n là số nguyên năm nên cần ít nhất 11 năm!",
         "narration": "Thời gian đã hết. Lời giải chi tiết: Số tiền bác An nhận được sau n năm được tính theo công thức lãi kép: T n bằng năm mươi nhân mở ngoặc một cộng không phẩy không bảy đóng ngoặc mũ n, tức bằng năm mươi nhân một phẩy không bảy mũ n triệu đồng. Để số tiền gấp đôi, ta có bất phương trình: năm mươi nhân một phẩy không bảy mũ n lớn hơn hoặc bằng một trăm. Chia cả hai vế cho năm mươi, ta được: một phẩy không bảy mũ n lớn hơn hoặc bằng hai. Lấy logarit cơ số một phẩy không bảy cả hai vế, ta được n lớn hơn hoặc bằng logarit cơ số một phẩy không bảy của hai, xấp xỉ mười phẩy hai mươi tư năm. Vì kỳ hạn tính lãi là theo năm nguyên vẹn nên sau mười năm số tiền vẫn chưa đủ gấp đôi. Do đó bác An cần ít nhất mười một năm để số tiền nhận được vượt qua mốc một trăm triệu đồng. Đáp án chính xác là B.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-slate-800/90 p-5 rounded-2xl border-2 border-emerald-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -1032,7 +1032,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "explain",
         "mascotTip": "Ở công thức tính tổng S_n, số mũ của q là ĐÚNG n: (1 - q^n). Đừng nhầm thành n - 1!",
         "narration": "Thầy Nam Minh lưu ý hai bẫy thi trắc nghiệm thường gặp khi tính tổng cấp số nhân: Thứ nhất là sự nhầm lẫn giữa công thức số hạng tổng quát và công thức tính tổng: Ở số hạng tổng quát u n thì số mũ của q là n trừ một, nhưng ở công thức tính tổng S n thì số mũ của q là n nguyên vẹn. Nhớ rằng có n số hạng thì số mũ là n. Thứ hai là khi công bội q bằng một thì mẫu số một trừ q bằng không, phân thức không xác định. Khi đó ta không dùng công thức phân thức mà dùng công thức S n bằng n nhân u một. Hãy ghi nhớ để không bao giờ bị nhầm lẫn.",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-rose-950/60 p-5 rounded-2xl border-2 border-rose-500/50 shadow-xl">
     <div class="flex items-center gap-2 mb-3">
@@ -1068,7 +1068,7 @@ BAI7_MUC3_SCENES = [
         "mascotMode": "celebrate",
         "mascotTip": "Chúc mừng em đã làm chủ trọn vẹn 3 bài học Chương 2: Dãy số, Cấp số cộng và Cấp số nhân!",
         "narration": "Chúc mừng tất cả các em học sinh thân mến đã hoàn thành trọn vẹn toàn bộ ba bài học trọng tâm của Chương hai: Bài năm Dãy số, Bài sáu Cấp số cộng và Bài bảy Cấp số nhân. Các em đã làm chủ đầy đủ chín mục bài giảng với ba mươi sáu ví dụ mẫu mực, các bẫy trắc nghiệm và các bài toán thực tế sinh động. Thầy Nam Minh và Cú Thông Thái tin tưởng rằng các em sẽ hoàn toàn tự tin đạt điểm mười tuyệt đối trong các bài kiểm tra và bài thi sắp tới. Chúc các em luôn học giỏi và đam mê môn Toán!",
-        "bodyHtml": """
+        "bodyHtml": r"""
 <div class="space-y-4">
   <div class="bg-gradient-to-br from-purple-900/80 via-pink-900/60 to-slate-900 p-6 rounded-2xl border-2 border-purple-400/40 text-center shadow-2xl">
     <div class="inline-block p-3 bg-purple-500/20 rounded-full mb-3 text-3xl">🎓🏆⭐🎉</div>
