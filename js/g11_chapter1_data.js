@@ -2746,7 +2746,7 @@ if (typeof window !== 'undefined') {
   "parts": [
     {
       "partNumber": 1,
-      "partTitle": "Khái niệm phương trình tương đương & ĐKXĐ",
+      "partTitle": "Phần 1: Khái niệm & Công thức nghiệm tổng quát",
       "scenes": [
         1,
         2
@@ -2775,7 +2775,7 @@ if (typeof window !== 'undefined') {
     },
     {
       "partNumber": 4,
-      "partTitle": "Phần 4: Tổng kết & Bí kíp Cú Thông Thái",
+      "partTitle": "Phần 4: Tổng kết bài học & Bí kíp Cú Thông Thái",
       "scenes": [
         12
       ]
@@ -2787,14 +2787,14 @@ if (typeof window !== 'undefined') {
       "title": "1. KHÁI NIỆM PHƯƠNG TRÌNH TƯƠNG ĐƯƠNG & PHÉP BIẾN ĐỔI",
       "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/30\">\n    <h3 class=\"text-emerald-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-emerald-500/20 rounded text-emerald-300 text-sm\">Trọng tâm</span>\n      PHƯƠNG TRÌNH TƯƠNG ĐƯƠNG VÀ PHÉP BIẾN ĐỔI HỢP PHÁP\n    </h3>\n    <p class=\"text-slate-200 mt-2 text-sm leading-relaxed\">\n      Hai phương trình $f(x) = g(x)$ và $f_1(x) = g_1(x)$ được gọi là <strong>tương đương</strong> trên tập xác định $D$ nếu chúng có <strong>cùng tập nghiệm</strong>.\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-sm\">\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">1. Phép cộng/trừ:</span><br/>\n        Cộng hoặc trừ hai vế với cùng một biểu thức xác định $h(x)$ trên $D$ bảo toàn tập nghiệm:\n        <p class=\"text-center font-bold text-amber-300 mt-1\">$$f(x) = g(x) \\Leftrightarrow f(x) \\pm h(x) = g(x) \\pm h(x)$$</p>\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">2. Phép nhân/chia:</span><br/>\n        Nhân hoặc chia hai vế với biểu thức $h(x)$ luôn khác 0 trên $D$:\n        <p class=\"text-center font-bold text-sky-300 mt-1\">$$f(x) = g(x) \\Leftrightarrow f(x) \\cdot h(x) = g(x) \\cdot h(x) \\quad (h(x) \\ne 0)$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "narration": "Chào mừng các em học sinh lớp 11 đến với bài học số 4: Phương trình lượng giác cơ bản. Trong mục đầu tiên này, thầy và các em sẽ cùng tìm hiểu khái niệm phương trình tương đương và trọng tâm là phương trình sin x bằng m. Hai phương trình được gọi là tương đương khi và chỉ khi chúng có cùng chung tập hợp nghiệm trên tập xác định. Để biến đổi tương đương, các em có thể cộng trừ cùng một biểu thức, hoặc nhân chia hai vế với một biểu thức luôn khác không.",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 24.29,
       "duration": 24.29,
       "sceneIndex": 1,
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 1",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/30\">\n    <h3 class=\"text-emerald-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-emerald-500/20 rounded text-emerald-300 text-sm\">Trọng tâm</span>\n      PHƯƠNG TRÌNH TƯƠNG ĐƯƠNG VÀ PHÉP BIẾN ĐỔI HỢP PHÁP\n    </h3>\n    <p class=\"text-slate-200 mt-2 text-sm leading-relaxed\">\n      Hai phương trình $f(x) = g(x)$ và $f_1(x) = g_1(x)$ được gọi là <strong>tương đương</strong> trên tập xác định $D$ nếu chúng có <strong>cùng tập nghiệm</strong>.\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-sm\">\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">1. Phép cộng/trừ:</span><br/>\n        Cộng hoặc trừ hai vế với cùng một biểu thức xác định $h(x)$ trên $D$ bảo toàn tập nghiệm:\n        <p class=\"text-center font-bold text-amber-300 mt-1\">$$f(x) = g(x) \\Leftrightarrow f(x) \\pm h(x) = g(x) \\pm h(x)$$</p>\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">2. Phép nhân/chia:</span><br/>\n        Nhân hoặc chia hai vế với biểu thức $h(x)$ luôn khác 0 trên $D$:\n        <p class=\"text-center font-bold text-sky-300 mt-1\">$$f(x) = g(x) \\Leftrightarrow f(x) \\cdot h(x) = g(x) \\cdot h(x) \\quad (h(x) \\ne 0)$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "talking",
-      "mascotTip": "Nhớ thật kỹ quy tắc vàng: Phương trình sin x = m chỉ có nghiệm khi m nằm trong đoạn từ -1 đến 1. Khi có nghiệm, luôn có hai họ nghiệm là alpha và pi trừ alpha, với chu kỳ là k 2 pi!"
+      "mascotTip": "Ghi nhớ: Phép biến đổi tương đương đòi hỏi giữ nguyên tập xác định D của phương trình ban đầu!"
     },
     {
       "id": "scene_2",
@@ -2808,7 +2808,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 2",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-sky-500/30\">\n      <h4 class=\"text-sky-300 font-bold text-base mb-2\">🎯 ĐIỀU KIỆN CÓ NGHIỆM & CÔNG THỨC CHUẨN</h4>\n      <p class=\"text-slate-300 text-sm leading-relaxed\">\n        Phương trình $\\sin x = m$:\n      </p>\n      <div class=\"mt-2 space-y-1.5 text-sm bg-slate-800/80 p-3 rounded-lg border border-slate-700\">\n        <p class=\"text-rose-400 font-bold\">• Nếu $|m| > 1$: Phương trình VÔ NGHIỆM.</p>\n        <p class=\"text-emerald-300 font-bold\">• Nếu $|m| \\le 1$: Gọi $\\alpha$ sao cho $\\sin\\alpha = m$:</p>\n        <div class=\"p-2 bg-slate-950/70 rounded border border-emerald-500/40 text-center font-bold text-yellow-300 text-sm\">\n          $$\\sin x = \\sin\\alpha \\Leftrightarrow \\begin{cases} x = \\alpha + k2\\pi \\\\ x = \\pi - \\alpha + k2\\pi \\end{cases} \\quad (k \\in \\mathbb{Z})$$\n        </div>\n        <p class=\"text-slate-400 text-xs\">Theo đơn vị độ: $x = \\alpha^\\circ + k360^\\circ$ hoặc $x = 180^\\circ - \\alpha^\\circ + k360^\\circ$.</p>\n      </div>\n    </div>\n\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-amber-500/30\">\n      <h4 class=\"text-amber-300 font-bold text-base mb-2\">⭐ 3 TRƯỜNG HỢP ĐẶC BIỆT (GHI NHỚ NHANH)</h4>\n      <div class=\"space-y-2 text-sm\">\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-amber-400 font-bold\">1. $\\sin x = 0$:</span>\n          <p class=\"text-slate-200 mt-1\">$$x = k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n          <p class=\"text-slate-400 text-xs\">Hai điểm đối xứng trên trục hoành $(A, A')$. Đuôi là $k\\pi$.</p>\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-emerald-400 font-bold\">2. $\\sin x = 1$:</span>\n          <p class=\"text-slate-200 mt-1\">$$x = \\frac{\\pi}{2} + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n          <p class=\"text-slate-400 text-xs\">Điểm cực bắc $B(0; 1)$ của đường tròn lượng giác.</p>\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-rose-400 font-bold\">3. $\\sin x = -1$:</span>\n          <p class=\"text-slate-200 mt-1\">$$x = -\\frac{\\pi}{2} + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n          <p class=\"text-slate-400 text-xs\">Điểm cực nam $B'(0; -1)$ của đường tròn lượng giác.</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "talking",
-      "mascotTip": "Nhớ thật kỹ quy tắc vàng: Phương trình sin x = m chỉ có nghiệm khi m nằm trong đoạn từ -1 đến 1. Khi có nghiệm, luôn có hai họ nghiệm là alpha và pi trừ alpha, với chu kỳ là k 2 pi!"
+      "mascotTip": "Phương trình sin x = m có nghiệm khi và chỉ khi m nằm trong đoạn [-1; 1]. Nhớ 2 họ nghiệm alpha và pi - alpha!"
     },
     {
       "id": "scene_3",
@@ -2822,7 +2822,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 3",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/50 to-indigo-900/40 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-blue-500 text-white text-xs font-bold rounded\">VÍ DỤ 1 • NHẬN BIẾT</span>\n      <span class=\"text-slate-400 text-xs\">Mục 1 • Phương trình sin x = m</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải các phương trình lượng giác sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $\\sin x = \\frac{\\sqrt{3}}{2}$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $\\sin x = -1$</p>\n      <p><strong class=\"text-rose-400\">c)</strong> $\\sin x = 1.5$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Thử sức tự giải nhanh phương trình sin x = sqrt(3)/2 và sin x = -1 trong 15 giây nhé!"
     },
     {
       "id": "scene_4",
@@ -2835,8 +2835,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 4,
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 4",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-blue-500/30\">\n    <h4 class=\"text-blue-300 font-bold text-sm mb-3\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 1</h4>\n    <div class=\"space-y-3 text-sm text-slate-200\">\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-amber-400\">a) $\\sin x = \\frac{\\sqrt{3}}{2}$</p>\n        <p class=\"mt-1\">Vì $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$ nên ta có:</p>\n        <p class=\"mt-1 font-semibold text-yellow-300\">$$\\sin x = \\sin\\frac{\\pi}{3} \\Leftrightarrow \\begin{cases} x = \\frac{\\pi}{3} + k2\\pi \\\\ x = \\pi - \\frac{\\pi}{3} + k2\\pi = \\frac{2\\pi}{3} + k2\\pi \\end{cases} \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-sky-400\">b) $\\sin x = -1$</p>\n        <p class=\"mt-1\">Đây là trường hợp đặc biệt tại điểm cực nam của đường tròn:</p>\n        <p class=\"mt-1 font-semibold text-sky-300\">$$x = -\\frac{\\pi}{2} + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-rose-400\">c) $\\sin x = 1.5$</p>\n        <p class=\"mt-1\">Vì $1.5 > 1$, vượt quá miền giá trị $[-1; 1]$ của hàm sin, nên phương trình <strong>vô nghiệm</strong>.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Quan sát kỹ cách đổi sqrt(3)/2 = sin(pi/3) và áp dụng công thức 2 họ nghiệm chuẩn SGK!"
     },
     {
       "id": "scene_5",
@@ -2850,7 +2850,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 5",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/50 to-teal-900/40 p-4 rounded-xl border border-emerald-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-emerald-500 text-white text-xs font-bold rounded\">VÍ DỤ 2 • THÔNG HIỂU</span>\n      <span class=\"text-slate-400 text-xs\">Mục 1 • Phương trình sin f(x) = sin g(x)</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải phương trình lượng giác:</h4>\n    <div class=\"mt-2 p-3 bg-slate-900/80 rounded-lg border border-emerald-500/30 text-center font-bold text-emerald-300 text-base\">\n      $$\\sin\\left(2x - \\frac{\\pi}{3}\\right) = \\sin\\left(x + \\frac{\\pi}{6}\\right)$$\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Dạng sin f(x) = sin g(x): f(x) = g(x) + k2pi hoặc f(x) = pi - g(x) + k2pi, tuyệt đối không được quên họ nghiệm thứ hai!"
     },
     {
       "id": "scene_6",
@@ -2863,8 +2863,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 6,
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 6",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-emerald-500/30\">\n    <h4 class=\"text-emerald-300 font-bold text-sm mb-3\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 2</h4>\n    <p class=\"text-slate-300 text-sm\">Phương trình $\\sin\\left(2x - \\frac{\\pi}{3}\\right) = \\sin\\left(x + \\frac{\\pi}{6}\\right)$ tương đương với:</p>\n    <div class=\"mt-2 space-y-3 text-sm text-slate-200\">\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">• Nhánh 1 (Hai góc bằng nhau):</span>\n        <p class=\"mt-1 text-slate-100\">$$2x - \\frac{\\pi}{3} = x + \\frac{\\pi}{6} + k2\\pi \\Leftrightarrow 2x - x = \\frac{\\pi}{6} + \\frac{\\pi}{3} + k2\\pi$$</p>\n        <p class=\"mt-1 font-bold text-yellow-300\">$$\\Leftrightarrow x = \\frac{\\pi}{2} + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">• Nhánh 2 (Hai góc bù nhau):</span>\n        <p class=\"mt-1 text-slate-100\">$$2x - \\frac{\\pi}{3} = \\pi - \\left(x + \\frac{\\pi}{6}\\right) + k2\\pi \\Leftrightarrow 2x + x = \\pi - \\frac{\\pi}{6} + \\frac{\\pi}{3} + k2\\pi$$</p>\n        <p class=\"mt-1 text-slate-100\">$$3x = \\frac{7\\pi}{6} + k2\\pi \\Leftrightarrow x = \\frac{7\\pi}{18} + \\frac{k2\\pi}{3} \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n    </div>\n    <p class=\"text-emerald-400 text-sm mt-2 font-semibold\">Vậy tập nghiệm là: $x = \\frac{\\pi}{2} + k2\\pi$ hoặc $x = \\frac{7\\pi}{18} + \\frac{k2\\pi}{3}$ ($k \\in \\mathbb{Z}$).</p>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Lưu ý khi chuyển vế đổi dấu và chia cho hệ số của x ở cả 2 vế, nhớ chia cả số hạng k2pi!"
     },
     {
       "id": "scene_7",
@@ -2878,7 +2878,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 7",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-900/50 to-indigo-900/40 p-4 rounded-xl border border-purple-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-purple-500 text-white text-xs font-bold rounded\">VÍ DỤ 3 • VẬN DỤNG</span>\n      <span class=\"text-slate-400 text-xs\">Mục 1 • Nghiệm trên khoảng</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Tìm tất cả các nghiệm của phương trình sau thuộc khoảng $(-\\pi; \\pi)$:</h4>\n    <div class=\"mt-2 p-3 bg-slate-900/80 rounded-lg border border-purple-500/30 text-center font-bold text-purple-300 text-base\">\n      $$\\sin\\left(3x + \\frac{\\pi}{4}\\right) = -\\frac{\\sqrt{2}}{2}$$\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Phương trình dạng tích hoặc chuyển vế: Đưa về sin x = m cơ bản rồi chặn nghiệm k trên khoảng [0; 2pi]!"
     },
     {
       "id": "scene_8",
@@ -2891,8 +2891,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 8,
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 8",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-purple-500/30\">\n    <h4 class=\"text-purple-300 font-bold text-sm mb-2\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 3</h4>\n    <p class=\"text-slate-300 text-xs\">Vì $-\\frac{\\sqrt{2}}{2} = \\sin\\left(-\\frac{\\pi}{4}\\right)$, ta có hai nhánh nghiệm:</p>\n    <div class=\"mt-2 space-y-2 text-xs text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">• Họ 1:</span> $3x + \\frac{\\pi}{4} = -\\frac{\\pi}{4} + k2\\pi \\Leftrightarrow 3x = -\\frac{\\pi}{2} + k2\\pi \\Leftrightarrow x = -\\frac{\\pi}{6} + \\frac{k2\\pi}{3}$.<br/>\n        Điều kiện $x \\in (-\\pi; \\pi) \\Leftrightarrow -\\pi < -\\frac{\\pi}{6} + \\frac{k2\\pi}{3} < \\pi \\Leftrightarrow -\\frac{5}{4} < k < \\frac{7}{4}$.<br/>\n        Vì $k \\in \\mathbb{Z} \\Rightarrow k \\in \\{-1; 0; 1\\}$, tương ứng:\n        <span class=\"text-yellow-300 font-semibold\"> $x = -\\frac{5\\pi}{6}; x = -\\frac{\\pi}{6}; x = \\frac{\\pi}{2}$.</span>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">• Họ 2:</span> $3x + \\frac{\\pi}{4} = \\pi - \\left(-\\frac{\\pi}{4}\\right) + k2\\pi = \\frac{5\\pi}{4} + k2\\pi \\Leftrightarrow 3x = \\pi + k2\\pi \\Leftrightarrow x = \\frac{\\pi}{3} + \\frac{k2\\pi}{3}$.<br/>\n        Điều kiện $x \\in (-\\pi; \\pi) \\Leftrightarrow -\\pi < \\frac{\\pi}{3} + \\frac{k2\\pi}{3} < \\pi \\Leftrightarrow -2 < k < 1$.<br/>\n        Vì $k \\in \\mathbb{Z} \\Rightarrow k \\in \\{-1; 0\\}$, tương ứng:\n        <span class=\"text-sky-300 font-semibold\"> $x = -\\frac{\\pi}{3}; x = \\frac{\\pi}{3}$.</span>\n      </div>\n    </div>\n    <div class=\"p-2 bg-purple-950/60 rounded border border-purple-500/40 mt-2 text-xs\">\n      <strong class=\"text-purple-300\">Kết luận:</strong> Phương trình có <strong>5 nghiệm</strong> trên $(-\\pi; \\pi)$ là:\n      $x \\in \\left\\{-\\frac{5\\pi}{6}; -\\frac{\\pi}{3}; -\\frac{\\pi}{6}; \\frac{\\pi}{3}; \\frac{\\pi}{2}\\right\\}$.\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Đếm số nguyên k thỏa mãn điều kiện kẹp giữa hai đầu mút khoảng để tìm chính xác số nghiệm!"
     },
     {
       "id": "scene_9",
@@ -2906,7 +2906,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 9",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-rose-900/50 to-orange-900/40 p-4 rounded-xl border border-rose-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-rose-500 text-white text-xs font-bold rounded\">VÍ DỤ 4 • VẬN DỤNG CAO / THỰC TẾ</span>\n      <span class=\"text-slate-400 text-xs\">Mục 1 • Động cơ đốt trong</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Vận tốc chuyển động của piston trong xi lanh:</h4>\n    <p class=\"text-slate-200 text-sm mt-1 leading-relaxed\">\n      Vận tốc tức thời $v(t)$ (cm/s) của một piston sau thời gian $t$ giây ($t \\ge 0$) được xác định bởi công thức:\n    </p>\n    <div class=\"p-2.5 bg-slate-900/80 rounded-lg border border-rose-500/30 text-center font-bold text-amber-300 text-base my-2\">\n      $$v(t) = 40\\sin\\left(10\\pi t - \\frac{\\pi}{3}\\right)$$\n    </div>\n    <p class=\"text-slate-300 text-sm\">\n      Xác định <strong>hai thời điểm đầu tiên</strong> ($t_1 > 0$ và $t_2 > t_1$) mà piston đạt vận tốc bằng $20\\sqrt{3}$ cm/s.\n    </p>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Bài toán thực tế chuyển động piston: Thiết lập phương trình h(t) = m, giải tìm thời điểm t >= 0!"
     },
     {
       "id": "scene_10",
@@ -2919,8 +2919,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 10,
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 10",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-rose-500/30\">\n    <h4 class=\"text-rose-300 font-bold text-sm mb-2\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 4</h4>\n    <p class=\"text-slate-300 text-xs\">Thiết lập phương trình vận tốc: $40\\sin\\left(10\\pi t - \\frac{\\pi}{3}\\right) = 20\\sqrt{3} \\Leftrightarrow \\sin\\left(10\\pi t - \\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2} = \\sin\\frac{\\pi}{3}$.</p>\n    <div class=\"mt-2 space-y-2 text-xs text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">• Nhánh 1:</span> $10\\pi t - \\frac{\\pi}{3} = \\frac{\\pi}{3} + k2\\pi \\Leftrightarrow 10\\pi t = \\frac{2\\pi}{3} + k2\\pi \\Leftrightarrow t = \\frac{1}{15} + \\frac{k}{5}$ ($k \\in \\mathbb{Z}$).<br/>\n        Với $t > 0$, lấy $k = 0 \\Rightarrow t = \\frac{1}{15} \\approx 0.0667$ (s); $k = 1 \\Rightarrow t = \\frac{4}{15} \\approx 0.2667$ (s).\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">• Nhánh 2:</span> $10\\pi t - \\frac{\\pi}{3} = \\pi - \\frac{\\pi}{3} + k2\\pi = \\frac{2\\pi}{3} + k2\\pi \\Leftrightarrow 10\\pi t = \\pi + k2\\pi \\Leftrightarrow t = \\frac{1}{10} + \\frac{k}{5}$ ($k \\in \\mathbb{Z}$).<br/>\n        Với $t > 0$, lấy $k = 0 \\Rightarrow t = \\frac{1}{10} = 0.1$ (s).\n      </div>\n    </div>\n    <div class=\"p-2.5 bg-rose-950/60 rounded border border-rose-500/40 mt-2 text-xs\">\n      <strong class=\"text-rose-300\">So sánh thứ tự thời gian ($t > 0$):</strong><br/>\n      $$t_1 = \\frac{1}{15}\\text{ s} \\approx 0.067\\text{ s} < t_2 = \\frac{1}{10}\\text{ s} = 0.1\\text{ s} < \\frac{4}{15}\\text{ s}$$\n      Vậy thời điểm đầu tiên là <strong class=\"text-yellow-300\">$t_1 = \\frac{1}{15}$ giây</strong>, và thời điểm thứ hai là <strong class=\"text-yellow-300\">$t_2 = \\frac{1}{10}$ giây</strong>.\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Ý nghĩa thực tế: Chú ý đơn vị thời gian (giây) và lấy nghiệm dương nhỏ nhất phù hợp đề bài!"
     },
     {
       "id": "scene_11",
@@ -2934,7 +2934,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 11",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-red-950/60 to-rose-900/40 p-4 rounded-xl border border-red-500/40\">\n    <h3 class=\"text-rose-300 font-bold text-base flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-rose-500/20 text-rose-300 rounded text-xs font-bold\">CẢNH BÁO</span>\n      3 CẠM BẪY ĐIỂN HÌNH CẦN TRÁNH TUYỆT ĐỐI\n    </h3>\n    <div class=\"mt-3 space-y-2.5 text-sm\">\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-rose-400 font-bold\">1. BẪY QUÊN HỌ NGHIỆM BÙ:</span>\n        <p class=\"text-slate-300 mt-1\">Nhiều bạn chỉ viết $x = \\alpha + k2\\pi$ mà quên mất nhánh $x = \\pi - \\alpha + k2\\pi$. Điều này làm mất một nửa số nghiệm của phương trình!</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-amber-400 font-bold\">2. BẪY ĐUÔI CHU KỲ $k\\pi$ VÀ $k2\\pi$:</span>\n        <p class=\"text-slate-300 mt-1\">Chỉ duy nhất trường hợp $\\sin x = 0$ mới có đuôi là $k\\pi$. Còn $\\sin x = 1$ và $\\sin x = -1$ bắt buộc đuôi là $k2\\pi$ vì chỉ có 1 điểm trên đường tròn!</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-sky-400 font-bold\">3. BẪY MIỀN GIÁ TRỊ $|m| \\le 1$:</span>\n        <p class=\"text-slate-300 mt-1\">Khi gặp phương trình như $\\sin x = \\sqrt{2}$ hay $\\sin x = -1.2$, hãy kết luận ngay phương trình vô nghiệm mà không cần mất công bấm máy tính!</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "magnifier",
-      "mascotTip": "Cảnh giác cao độ với các bẫy trắc nghiệm phổ biến của Bộ Giáo Dục!"
+      "mascotTip": "Cú Cảnh Báo: Quên họ nghiệm pi - alpha là lỗi sai 90% học sinh mắc phải! Luôn kiểm tra điều kiện |m| <= 1!"
     },
     {
       "id": "scene_12",
@@ -2948,12 +2948,100 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 1: Khái niệm phương trình tương đương & Phương trình sin x = m • Cảnh 12",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-950/60 to-yellow-900/40 p-4 rounded-xl border border-amber-500/40\">\n    <div class=\"flex items-center gap-3\">\n      <span class=\"text-3xl\">🦉</span>\n      <div>\n        <h3 class=\"text-amber-300 font-bold text-base\">BÍ KÍP CÚ THÔNG THÁI • MỤC 1</h3>\n        <p class=\"text-slate-300 text-xs mt-0.5\">Thơ vàng phương trình Sin</p>\n      </div>\n    </div>\n    <div class=\"mt-3 p-3 bg-slate-900/80 rounded-lg border border-amber-400/30 text-amber-200 text-sm font-semibold space-y-1 text-center\">\n      <p>\"Giải phương trình Sin: nhớ alpha và pi trừ alpha,</p>\n      <p>Chu kỳ lặp lại: đuôi là k hai pi!</p>\n      <p>Bằng không: k pi chớ quên ghi,</p>\n      <p>Lớn hơn một: vô nghiệm tức thì đừng lo!\"</p>\n    </div>\n    <div class=\"mt-3 grid grid-cols-3 gap-2 text-center text-xs text-slate-300\">\n      <div class=\"p-2 bg-slate-800/80 rounded border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">Điều kiện:</span><br/>$-1 \\le m \\le 1$\n      </div>\n      <div class=\"p-2 bg-slate-800/80 rounded border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">Hai nhánh:</span><br/>$\\alpha$ & $\\pi - \\alpha$\n      </div>\n      <div class=\"p-2 bg-slate-800/80 rounded border border-slate-700\">\n        <span class=\"text-emerald-400 font-bold\">Đặc biệt 0:</span><br/>$x = k\\pi$\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "cheer",
-      "mascotTip": "Nhớ thật kỹ quy tắc vàng: Phương trình sin x = m chỉ có nghiệm khi m nằm trong đoạn từ -1 đến 1. Khi có nghiệm, luôn có hai họ nghiệm là alpha và pi trừ alpha, với chu kỳ là k 2 pi!"
+      "mascotTip": "Tuyệt vời! Em đã nắm vững 100% bí kíp giải phương trình sin x = m. Sẵn sàng làm bài tập củng cố!"
+    }
+  ],
+  "duration": 320.38,
+  "totalDuration": 320.38,
+  "timeline": [
+    {
+      "sceneId": "scene_1",
+      "title": "1. KHÁI NIỆM PHƯƠNG TRÌNH TƯƠNG ĐƯƠNG & PHÉP BIẾN ĐỔI",
+      "startTime": 0,
+      "endTime": 24.29,
+      "duration": 24.29
+    },
+    {
+      "sceneId": "scene_2",
+      "title": "2. CÔNG THỨC NGHIỆM CỦA PHƯƠNG TRÌNH SIN X = M",
+      "startTime": 24.29,
+      "endTime": 58.68,
+      "duration": 34.39
+    },
+    {
+      "sceneId": "scene_3",
+      "title": "Ví dụ 1: Giải phương trình sin cơ bản (Mức Nhận biết)",
+      "startTime": 58.68,
+      "endTime": 77.62,
+      "duration": 18.94
+    },
+    {
+      "sceneId": "scene_4",
+      "title": "Ví dụ 1: Hướng dẫn giải chi tiết",
+      "startTime": 77.62,
+      "endTime": 102.55,
+      "duration": 24.94
+    },
+    {
+      "sceneId": "scene_5",
+      "title": "Ví dụ 2: Phương trình dạng sin f(x) = sin g(x) (Mức Thông hiểu)",
+      "startTime": 102.55,
+      "endTime": 120.26,
+      "duration": 17.71
+    },
+    {
+      "sceneId": "scene_6",
+      "title": "Ví dụ 2: Hướng dẫn giải chi tiết",
+      "startTime": 120.26,
+      "endTime": 153.48,
+      "duration": 33.22
+    },
+    {
+      "sceneId": "scene_7",
+      "title": "Ví dụ 3: Tìm số nghiệm thuộc khoảng cho trước (Mức Vận dụng)",
+      "startTime": 153.48,
+      "endTime": 172.42,
+      "duration": 18.94
+    },
+    {
+      "sceneId": "scene_8",
+      "title": "Ví dụ 3: Hướng dẫn giải chi tiết",
+      "startTime": 172.42,
+      "endTime": 209.16,
+      "duration": 36.74
+    },
+    {
+      "sceneId": "scene_9",
+      "title": "Ví dụ 4: Bài toán thực tế chuyển động Piston (Mức Vận dụng cao)",
+      "startTime": 209.16,
+      "endTime": 232.92,
+      "duration": 23.76
+    },
+    {
+      "sceneId": "scene_10",
+      "title": "Ví dụ 4: Hướng dẫn giải chi tiết",
+      "startTime": 232.92,
+      "endTime": 270.29,
+      "duration": 37.37
+    },
+    {
+      "sceneId": "scene_11",
+      "title": "Bẫy trắc nghiệm & Sai lầm phổ biến khi giải sin x = m",
+      "startTime": 270.29,
+      "endTime": 297.31,
+      "duration": 27.02
+    },
+    {
+      "sceneId": "scene_12",
+      "title": "Tổng kết Mục 1 & Bí kíp Cú Thông Thái",
+      "startTime": 297.31,
+      "endTime": 320.38,
+      "duration": 23.06
     }
   ]
 };
 
-  window.G11_CHAPTER1_DATA.g11_bai4_muc2 = {
+window.G11_CHAPTER1_DATA.g11_bai4_muc2 = {
   "key": "g11_bai4_muc2",
   "lessonId": "toan11_bai4",
   "lessonTitle": "Bài 4: Phương trình lượng giác cơ bản",
@@ -2967,7 +3055,7 @@ if (typeof window !== 'undefined') {
   "parts": [
     {
       "partNumber": 1,
-      "partTitle": "Công thức nghiệm tổng quát cos x = m",
+      "partTitle": "Phần 1: Khái niệm & Công thức nghiệm tổng quát",
       "scenes": [
         1,
         2
@@ -2996,7 +3084,7 @@ if (typeof window !== 'undefined') {
     },
     {
       "partNumber": 4,
-      "partTitle": "Phần 4: Tổng kết & Bí kíp Cú Thông Thái",
+      "partTitle": "Phần 4: Tổng kết bài học & Bí kíp Cú Thông Thái",
       "scenes": [
         12
       ]
@@ -3008,14 +3096,14 @@ if (typeof window !== 'undefined') {
       "title": "1. CÔNG THỨC NGHIỆM TỔNG QUÁT CỦA PHƯƠNG TRÌNH COS X = M",
       "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-sky-900/60 to-blue-900/40 p-4 rounded-xl border border-sky-500/30\">\n    <h3 class=\"text-sky-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-sky-500/20 rounded text-sky-300 text-sm\">Trọng tâm</span>\n      CÔNG THỨC NGHIỆM ĐỐI XỨNG CỦA HÀM COSIN\n    </h3>\n    <p class=\"text-slate-200 mt-2 text-sm leading-relaxed\">\n      Tương tự hàm sin, phương trình $\\cos x = m$ chỉ có nghiệm khi và chỉ khi <strong>$|m| \\le 1$</strong>.\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-sm\">\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">1. Công thức nghiệm Radian:</span><br/>\n        Khi $|m| \\le 1$, gọi $\\alpha$ sao cho $\\cos\\alpha = m$:\n        <p class=\"text-center font-bold text-yellow-300 text-base mt-1\">$$\\cos x = \\cos\\alpha \\Leftrightarrow x = \\pm\\alpha + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n        <span class=\"text-slate-400 text-xs\">Hai nghiệm đối nhau qua trục hoành $Ox$.</span>\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-emerald-400 font-bold\">2. Công thức nghiệm theo Độ:</span><br/>\n        Khi $\\alpha$ đo bằng độ ($^\\circ$):\n        <p class=\"text-center font-bold text-emerald-300 text-base mt-1\">$$\\cos x = \\cos\\alpha^\\circ \\Leftrightarrow x = \\pm\\alpha^\\circ + k360^\\circ \\quad (k \\in \\mathbb{Z})$$</p>\n        <span class=\"text-slate-400 text-xs\">Tuyệt đối không trộn lẫn đơn vị radian và độ!</span>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "narration": "Chào mừng các em đến với mục số 2: Phương trình lượng giác cos x bằng m. Vì đồ thị hàm cosin và các điểm trên đường tròn lượng giác có tính đối xứng qua trục hoành, nên khi trị tuyệt đối của m bé hơn hoặc bằng một, phương trình cos x bằng cos alpha sẽ có hai họ nghiệm đối xứng nhau rất gọn gàng: x bằng cộng trừ alpha cộng k 2 pi. Nếu đề bài cho đơn vị độ, nghiệm sẽ là cộng trừ alpha độ cộng k 360 độ.",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 24.14,
       "duration": 24.14,
       "sceneIndex": 1,
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 1",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-sky-900/60 to-blue-900/40 p-4 rounded-xl border border-sky-500/30\">\n    <h3 class=\"text-sky-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-sky-500/20 rounded text-sky-300 text-sm\">Trọng tâm</span>\n      CÔNG THỨC NGHIỆM ĐỐI XỨNG CỦA HÀM COSIN\n    </h3>\n    <p class=\"text-slate-200 mt-2 text-sm leading-relaxed\">\n      Tương tự hàm sin, phương trình $\\cos x = m$ chỉ có nghiệm khi và chỉ khi <strong>$|m| \\le 1$</strong>.\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-sm\">\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">1. Công thức nghiệm Radian:</span><br/>\n        Khi $|m| \\le 1$, gọi $\\alpha$ sao cho $\\cos\\alpha = m$:\n        <p class=\"text-center font-bold text-yellow-300 text-base mt-1\">$$\\cos x = \\cos\\alpha \\Leftrightarrow x = \\pm\\alpha + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n        <span class=\"text-slate-400 text-xs\">Hai nghiệm đối nhau qua trục hoành $Ox$.</span>\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-emerald-400 font-bold\">2. Công thức nghiệm theo Độ:</span><br/>\n        Khi $\\alpha$ đo bằng độ ($^\\circ$):\n        <p class=\"text-center font-bold text-emerald-300 text-base mt-1\">$$\\cos x = \\cos\\alpha^\\circ \\Leftrightarrow x = \\pm\\alpha^\\circ + k360^\\circ \\quad (k \\in \\mathbb{Z})$$</p>\n        <span class=\"text-slate-400 text-xs\">Tuyệt đối không trộn lẫn đơn vị radian và độ!</span>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "talking",
-      "mascotTip": "Hàm số cosin có tính chất đối xứng qua trục hoành, nên phương trình cos x = m khi có nghiệm sẽ cho hai họ nghiệm đối nhau là cộng trừ alpha cộng k 2 pi. Riêng cos x = 0 thì nghiệm là pi chia 2 cộng k pi!"
+      "mascotTip": "Phương trình cos x = m có nghiệm khi và chỉ khi |m| <= 1. Hai họ nghiệm đối nhau: x = alpha + k2pi hoặc x = -alpha + k2pi!"
     },
     {
       "id": "scene_2",
@@ -3029,7 +3117,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 2",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-amber-500/30\">\n      <h4 class=\"text-amber-300 font-bold text-base mb-2\">⭐ 3 ĐIỂM CHỐT ĐẶC BIỆT CỦA COSIN</h4>\n      <div class=\"space-y-2 text-sm\">\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-amber-400 font-bold\">1. $\\cos x = 0$:</span>\n          <p class=\"text-slate-200 mt-1\">$$x = \\frac{\\pi}{2} + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n          <p class=\"text-slate-400 text-xs\">Cực bắc và cực nam của trục tung. Đuôi là $k\\pi$.</p>\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-emerald-400 font-bold\">2. $\\cos x = 1$:</span>\n          <p class=\"text-slate-200 mt-1\">$$x = k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n          <p class=\"text-slate-400 text-xs\">Điểm gốc $A(1; 0)$ phía cực đông.</p>\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-rose-400 font-bold\">3. $\\cos x = -1$:</span>\n          <p class=\"text-slate-200 mt-1\">$$x = \\pi + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n          <p class=\"text-slate-400 text-xs\">Điểm đối cực $A'(-1; 0)$ phía cực tây.</p>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-purple-500/30\">\n      <h4 class=\"text-purple-300 font-bold text-base mb-2\">🔄 KỸ THUẬT ĐƯA VỀ CÙNG HÀM COSIN</h4>\n      <div class=\"space-y-2 text-sm\">\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-pink-400 font-bold\">Xử lý dấu trừ $-\\cos u$:</span>\n          <p class=\"text-slate-200 mt-1\">$$-\\cos u = \\cos(\\pi - u)$$</p>\n          <p class=\"text-slate-400 text-xs\">Sử dụng tính chất hai góc bù nhau.</p>\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-indigo-400 font-bold\">Chuyển từ $\\sin u$ sang $\\cos$:</span>\n          <p class=\"text-slate-200 mt-1\">$$\\sin u = \\cos\\left(\\frac{\\pi}{2} - u\\right)$$</p>\n          <p class=\"text-slate-400 text-xs\">Sử dụng tính chất hai góc phụ nhau.</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "talking",
-      "mascotTip": "Hàm số cosin có tính chất đối xứng qua trục hoành, nên phương trình cos x = m khi có nghiệm sẽ cho hai họ nghiệm đối nhau là cộng trừ alpha cộng k 2 pi. Riêng cos x = 0 thì nghiệm là pi chia 2 cộng k pi!"
+      "mascotTip": "Nhớ 3 trường hợp đặc biệt của cos: cos x = 0 (k pi), cos x = 1 (k2pi), cos x = -1 (pi + k2pi)!"
     },
     {
       "id": "scene_3",
@@ -3037,27 +3125,27 @@ if (typeof window !== 'undefined') {
       "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/50 to-indigo-900/40 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-blue-500 text-white text-xs font-bold rounded\">VÍ DỤ 1 • NHẬN BIẾT</span>\n      <span class=\"text-slate-400 text-xs\">Mục 2 • Phương trình cos x = m</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải các phương trình lượng giác sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $\\cos x = -\\frac{1}{2}$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $\\cos x = 1$</p>\n      <p><strong class=\"text-rose-400\">c)</strong> $\\cos x = -\\sqrt{2}$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
       "narration": "Hãy cùng rèn luyện với ví dụ 1 ở mức nhận biết. Tìm nghiệm của ba phương trình: câu a cos x bằng trừ một phần hai, câu b cos x bằng một, và câu c cos x bằng trừ căn hai. Mười lăm giây suy nghĩ dành cho các em.",
       "startTime": 54.26,
-      "endTime": 69.0,
+      "endTime": 69,
       "duration": 14.74,
       "sceneIndex": 3,
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 3",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/50 to-indigo-900/40 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-blue-500 text-white text-xs font-bold rounded\">VÍ DỤ 1 • NHẬN BIẾT</span>\n      <span class=\"text-slate-400 text-xs\">Mục 2 • Phương trình cos x = m</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải các phương trình lượng giác sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $\\cos x = -\\frac{1}{2}$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $\\cos x = 1$</p>\n      <p><strong class=\"text-rose-400\">c)</strong> $\\cos x = -\\sqrt{2}$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Thử sức giải các phương trình cos cơ bản trong 15 giây trước khi xem lời giải chi tiết!"
     },
     {
       "id": "scene_4",
       "title": "Ví dụ 1: Hướng dẫn giải chi tiết",
       "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-blue-500/30\">\n    <h4 class=\"text-blue-300 font-bold text-sm mb-3\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 1</h4>\n    <div class=\"space-y-3 text-sm text-slate-200\">\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-amber-400\">a) $\\cos x = -\\frac{1}{2}$</p>\n        <p class=\"mt-1\">Vì $\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$ nên ta có công thức nghiệm đối xứng:</p>\n        <p class=\"mt-1 font-semibold text-yellow-300\">$$\\cos x = \\cos\\frac{2\\pi}{3} \\Leftrightarrow x = \\pm\\frac{2\\pi}{3} + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-sky-400\">b) $\\cos x = 1$</p>\n        <p class=\"mt-1\">Trường hợp đặc biệt tại điểm gốc $A(1; 0)$:</p>\n        <p class=\"mt-1 font-semibold text-sky-300\">$$x = k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-rose-400\">c) $\\cos x = -\\sqrt{2}$</p>\n        <p class=\"mt-1\">Vì $-\\sqrt{2} \\approx -1.414 < -1$ nên phương trình <strong>vô nghiệm</strong>.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "narration": "Lời giải chi tiết: Ở câu a, góc có cosin bằng trừ một phần hai là hai pi trên ba. Do tính đối xứng của cos, ta viết gọn nghiệm là x bằng cộng trừ hai pi trên ba cộng k 2 pi. Ở câu b, cos x bằng một tại điểm gốc A, nghiệm duy nhất là x bằng k 2 pi. Ở câu c, trừ căn hai xấp xỉ trừ một phẩy bốn mươi mốt, nhỏ hơn trừ một nên phương trình vô nghiệm.",
-      "startTime": 69.0,
+      "startTime": 69,
       "endTime": 93.65,
       "duration": 24.65,
       "sceneIndex": 4,
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 4",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-blue-500/30\">\n    <h4 class=\"text-blue-300 font-bold text-sm mb-3\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 1</h4>\n    <div class=\"space-y-3 text-sm text-slate-200\">\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-amber-400\">a) $\\cos x = -\\frac{1}{2}$</p>\n        <p class=\"mt-1\">Vì $\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$ nên ta có công thức nghiệm đối xứng:</p>\n        <p class=\"mt-1 font-semibold text-yellow-300\">$$\\cos x = \\cos\\frac{2\\pi}{3} \\Leftrightarrow x = \\pm\\frac{2\\pi}{3} + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-sky-400\">b) $\\cos x = 1$</p>\n        <p class=\"mt-1\">Trường hợp đặc biệt tại điểm gốc $A(1; 0)$:</p>\n        <p class=\"mt-1 font-semibold text-sky-300\">$$x = k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-rose-400\">c) $\\cos x = -\\sqrt{2}$</p>\n        <p class=\"mt-1\">Vì $-\\sqrt{2} \\approx -1.414 < -1$ nên phương trình <strong>vô nghiệm</strong>.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Áp dụng công thức cộng trừ alpha: cos x = cos(pi/4) <=> x = +-pi/4 + k2pi!"
     },
     {
       "id": "scene_5",
@@ -3071,7 +3159,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 5",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/50 to-teal-900/40 p-4 rounded-xl border border-emerald-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-emerald-500 text-white text-xs font-bold rounded\">VÍ DỤ 2 • THÔNG HIỂU</span>\n      <span class=\"text-slate-400 text-xs\">Mục 2 • Phương trình cos f(x) = cos g(x)</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải phương trình lượng giác sau:</h4>\n    <div class=\"mt-2 p-3 bg-slate-900/80 rounded-lg border border-emerald-500/30 text-center font-bold text-emerald-300 text-base\">\n      $$\\cos\\left(2x - \\frac{\\pi}{4}\\right) = \\cos\\left(x + \\frac{\\pi}{3}\\right)$$\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Dạng cos f(x) = cos g(x): f(x) = +-g(x) + k2pi. Tách làm 2 trường hợp giải độc lập!"
     },
     {
       "id": "scene_6",
@@ -3084,8 +3172,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 6,
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 6",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-emerald-500/30\">\n    <h4 class=\"text-emerald-300 font-bold text-sm mb-3\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 2</h4>\n    <p class=\"text-slate-300 text-sm\">Phương trình $\\cos\\left(2x - \\frac{\\pi}{4}\\right) = \\cos\\left(x + \\frac{\\pi}{3}\\right)$ tương đương với:</p>\n    <div class=\"mt-2 space-y-3 text-sm text-slate-200\">\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">• Nhánh dấu cộng ($+$):</span>\n        <p class=\"mt-1 text-slate-100\">$$2x - \\frac{\\pi}{4} = x + \\frac{\\pi}{3} + k2\\pi \\Leftrightarrow 2x - x = \\frac{\\pi}{3} + \\frac{\\pi}{4} + k2\\pi$$</p>\n        <p class=\"mt-1 font-bold text-yellow-300\">$$\\Leftrightarrow x = \\frac{7\\pi}{12} + k2\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">• Nhánh dấu trừ ($-$, đối nhau):</span>\n        <p class=\"mt-1 text-slate-100\">$$2x - \\frac{\\pi}{4} = -\\left(x + \\frac{\\pi}{3}\\right) + k2\\pi = -x - \\frac{\\pi}{3} + k2\\pi$$</p>\n        <p class=\"mt-1 text-slate-100\">$$3x = \\frac{\\pi}{4} - \\frac{\\pi}{3} + k2\\pi = -\\frac{\\pi}{12} + k2\\pi \\Leftrightarrow x = -\\frac{\\pi}{36} + \\frac{k2\\pi}{3} \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n    </div>\n    <p class=\"text-emerald-400 text-sm mt-2 font-semibold\">Vậy tập nghiệm là: $x = \\frac{7\\pi}{12} + k2\\pi$ hoặc $x = -\\frac{\\pi}{36} + \\frac{k2\\pi}{3}$ ($k \\in \\mathbb{Z}$).</p>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Cẩn thận với dấu trừ khi giải phương trình: -g(x) sẽ đổi dấu toàn bộ các số hạng của g(x)!"
     },
     {
       "id": "scene_7",
@@ -3099,7 +3187,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 7",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-900/50 to-indigo-900/40 p-4 rounded-xl border border-purple-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-purple-500 text-white text-xs font-bold rounded\">VÍ DỤ 3 • VẬN DỤNG</span>\n      <span class=\"text-slate-400 text-xs\">Mục 2 • Đổi hàm sin sang cos</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải phương trình và đếm số nghiệm trên đoạn $[0; 2\\pi]$:</h4>\n    <div class=\"mt-2 p-3 bg-slate-900/80 rounded-lg border border-purple-500/30 text-center font-bold text-purple-300 text-base\">\n      $$\\cos 2x = \\sin\\left(x - \\frac{\\pi}{6}\\right)$$\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Dạng phương trình khác hàm cos f(x) = sin g(x): Dùng góc phụ biến đổi sin g(x) = cos(pi/2 - g(x))!"
     },
     {
       "id": "scene_8",
@@ -3112,8 +3200,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 8,
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 8",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-purple-500/30\">\n    <h4 class=\"text-purple-300 font-bold text-sm mb-2\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 3</h4>\n    <p class=\"text-slate-300 text-xs\">Dùng góc phụ: $\\sin\\left(x - \\frac{\\pi}{6}\\right) = \\cos\\left[\\frac{\\pi}{2} - \\left(x - \\frac{\\pi}{6}\\right)\\right] = \\cos\\left(\\frac{2\\pi}{3} - x\\right)$.</p>\n    <p class=\"text-slate-300 text-xs mt-1\">Phương trình trở thành: $\\cos 2x = \\cos\\left(\\frac{2\\pi}{3} - x\\right)$:</p>\n    <div class=\"mt-1 space-y-2 text-xs text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">• Nhánh 1:</span> $2x = \\frac{2\\pi}{3} - x + k2\\pi \\Leftrightarrow 3x = \\frac{2\\pi}{3} + k2\\pi \\Leftrightarrow x = \\frac{2\\pi}{9} + \\frac{k2\\pi}{3}$.<br/>\n        Với $x \\in [0; 2\\pi] \\Leftrightarrow 0 \\le \\frac{2\\pi}{9} + \\frac{k2\\pi}{3} \\le 2\\pi \\Leftrightarrow -\\frac{1}{3} \\le k \\le \\frac{8}{3} \\Rightarrow k \\in \\{0; 1; 2\\}$ (3 nghiệm).\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">• Nhánh 2:</span> $2x = -\\left(\\frac{2\\pi}{3} - x\\right) + k2\\pi = -\\frac{2\\pi}{3} + x + k2\\pi \\Leftrightarrow x = -\\frac{2\\pi}{3} + k2\\pi$.<br/>\n        Với $x \\in [0; 2\\pi] \\Leftrightarrow 0 \\le -\\frac{2\\pi}{3} + k2\\pi \\le 2\\pi \\Leftrightarrow \\frac{1}{3} \\le k \\le \\frac{4}{3} \\Rightarrow k = 1 \\Rightarrow x = \\frac{4\\pi}{3}$ (1 nghiệm).\n      </div>\n    </div>\n    <div class=\"p-2 bg-purple-950/60 rounded border border-purple-500/40 mt-2 text-xs\">\n      <strong class=\"text-purple-300\">Kết luận:</strong> So sánh thấy nghiệm $\\frac{4\\pi}{3}$ không trùng với 3 nghiệm ở nhánh 1. Vậy phương trình có <strong>đúng 4 nghiệm phân biệt</strong> trên đoạn $[0; 2\\pi]$.\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Tuyệt kỹ góc phụ: Luôn đưa về cùng hàm cos để áp dụng công thức nghiệm một cách tự nhiên nhất!"
     },
     {
       "id": "scene_9",
@@ -3127,7 +3215,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 9",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-rose-900/50 to-orange-900/40 p-4 rounded-xl border border-rose-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-rose-500 text-white text-xs font-bold rounded\">VÍ DỤ 4 • VẬN DỤNG CAO / THỰC TẾ</span>\n      <span class=\"text-slate-400 text-xs\">Mục 2 • Đồng hồ quả lắc</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Dao động góc của con lắc đồng hồ quả lắc:</h4>\n    <p class=\"text-slate-200 text-sm mt-1 leading-relaxed\">\n      Li độ góc $\\theta(t)$ (đơn vị radian) của một con lắc đồng hồ quả lắc theo thời gian $t$ (giây, $t \\ge 0$) tuân theo quy luật:\n    </p>\n    <div class=\"p-2.5 bg-slate-900/80 rounded-lg border border-rose-500/30 text-center font-bold text-amber-300 text-base my-2\">\n      $$\\theta(t) = 0.08\\cos\\left(2\\pi t + \\frac{\\pi}{4}\\right)$$\n    </div>\n    <p class=\"text-slate-300 text-sm\">\n      Tìm <strong>tất cả các thời điểm</strong> trong 2 giây đầu tiên ($0 \\le t \\le 2$) mà con lắc đi qua vị trí cân bằng ($\\\\theta = 0$).\n    </p>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Bài toán thực tế con lắc: Li độ góc li độ s(t) đạt cực đại khi hàm cos bằng 1!"
     },
     {
       "id": "scene_10",
@@ -3140,8 +3228,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 10,
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 10",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-rose-500/30\">\n    <h4 class=\"text-rose-300 font-bold text-sm mb-2\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 4</h4>\n    <p class=\"text-slate-300 text-xs\">Con lắc qua vị trí cân bằng khi $\\theta(t) = 0 \\Leftrightarrow 0.08\\cos\\left(2\\pi t + \\frac{\\pi}{4}\\right) = 0 \\Leftrightarrow \\cos\\left(2\\pi t + \\frac{\\pi}{4}\\right) = 0$.</p>\n    <div class=\"mt-2 space-y-2 text-xs text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">• Giải phương trình trường hợp đặc biệt $\\cos u = 0$:</span>\n        <p class=\"mt-1\">$$2\\pi t + \\frac{\\pi}{4} = \\frac{\\pi}{2} + k\\pi \\Leftrightarrow 2\\pi t = \\frac{\\pi}{4} + k\\pi \\Leftrightarrow t = \\frac{1}{8} + \\frac{k}{2} \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">• Chặn thời gian trong 2 giây đầu ($0 \\le t \\le 2$):</span>\n        <p class=\"mt-1\">$$0 \\le \\frac{1}{8} + \\frac{k}{2} \\le 2 \\Leftrightarrow -\\frac{1}{8} \\le \\frac{k}{2} \\le \\frac{15}{8} \\Leftrightarrow -\\frac{1}{4} \\le k \\le \\frac{15}{4} = 3.75$$</p>\n        <p class=\"mt-1\">Vì $k \\in \\mathbb{Z} \\Rightarrow k \\in \\{0; 1; 2; 3\\}$. Ta tìm được 4 thời điểm:</p>\n        <p class=\"mt-1 font-semibold text-yellow-300\">\n          $k = 0 \\Rightarrow t_1 = \\frac{1}{8} = 0.125\\text{ s}$; \n          $k = 1 \\Rightarrow t_2 = \\frac{5}{8} = 0.625\\text{ s}$; \n          $k = 2 \\Rightarrow t_3 = \\frac{9}{8} = 1.125\\text{ s}$; \n          $k = 3 \\Rightarrow t_4 = \\frac{13}{8} = 1.625\\text{ s}$.\n        </p>\n      </div>\n    </div>\n    <div class=\"p-2.5 bg-rose-950/60 rounded border border-rose-500/40 mt-2 text-xs\">\n      <strong class=\"text-rose-300\">Kết luận:</strong> Trong 2 giây đầu, quả lắc đi qua vị trí cân bằng <strong>đúng 4 lần</strong> tại các thời điểm $0.125$s, $0.625$s, $1.125$s và $1.625$s.\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Kết hợp máy tính Casio fx-580VNX bấm shift cos để tìm góc alpha chuẩn xác nhất!"
     },
     {
       "id": "scene_11",
@@ -3155,7 +3243,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 11",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-red-950/60 to-rose-900/40 p-4 rounded-xl border border-red-500/40\">\n    <h3 class=\"text-rose-300 font-bold text-base flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-rose-500/20 text-rose-300 rounded text-xs font-bold\">CẢNH BÁO</span>\n      3 SAI LẦM PHỔ BIẾN KHI GIẢI PHƯƠNG TRÌNH COSIN\n    </h3>\n    <div class=\"mt-3 space-y-2.5 text-sm\">\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-rose-400 font-bold\">1. NHẦM CÔNG THỨC COS THÀNH SIN:</span>\n        <p class=\"text-slate-300 mt-1\">Nhiều bạn máy móc viết nghiệm của cos là $x = \\pi - \\alpha$ giống như hàm sin! Hãy nhớ: <strong>Cos là cộng trừ alpha ($\\\\pm\\\\alpha$)</strong>, không phải $\\pi - \\alpha$!</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-amber-400 font-bold\">2. SAI ĐUÔI KHI $\\cos x = 0$:</span>\n        <p class=\"text-slate-300 mt-1\">Nghiệm của $\\cos x = 0$ là $x = \\frac{\\pi}{2} + k\\pi$. Rất nhiều bạn viết nhầm đuôi thành $k2\\pi$, dẫn đến thiếu mất một nửa số điểm nghiệm cực nam!</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-sky-400 font-bold\">3. SAI DẤU KHI ĐƯA $-\\cos u$ VỀ $\\cos$:</span>\n        <p class=\"text-slate-300 mt-1\">Viết $-\\cos u = \\cos(-u)$ là sai hoàn toàn (vì $\\cos(-u) = \\cos u$). Đúng chuẩn phải là: $-\\cos u = \\cos(\\pi - u)$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "magnifier",
-      "mascotTip": "Cảnh giác cao độ với các bẫy trắc nghiệm phổ biến của Bộ Giáo Dục!"
+      "mascotTip": "Cú Cảnh Báo: Đừng nhầm lẫn giữa chu kỳ của cos (k2pi) với chu kỳ của tan/cot (k pi)!"
     },
     {
       "id": "scene_12",
@@ -3169,12 +3257,100 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 2: Phương trình lượng giác cos x = m • Cảnh 12",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-950/60 to-yellow-900/40 p-4 rounded-xl border border-amber-500/40\">\n    <div class=\"flex items-center gap-3\">\n      <span class=\"text-3xl\">🦉</span>\n      <div>\n        <h3 class=\"text-amber-300 font-bold text-base\">BÍ KÍP CÚ THÔNG THÁI • MỤC 2</h3>\n        <p class=\"text-slate-300 text-xs mt-0.5\">Khắc sâu công thức Cosin</p>\n      </div>\n    </div>\n    <div class=\"mt-3 p-3 bg-slate-900/80 rounded-lg border border-amber-400/30 text-amber-200 text-sm font-semibold space-y-1 text-center\">\n      <p>\"Cosin đối xứng hai bên,</p>\n      <p>Cộng trừ alpha chớ quên dấu này!</p>\n      <p>Bằng không: nửa pi thẳng ngay,</p>\n      <p>Cộng thêm đuôi k pi, bài hay điểm mười!\"</p>\n    </div>\n    <div class=\"mt-3 grid grid-cols-3 gap-2 text-center text-xs text-slate-300\">\n      <div class=\"p-2 bg-slate-800/80 rounded border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">Nghiệm Cos:</span><br/>$x = \\pm\\alpha + k2\\pi$\n      </div>\n      <div class=\"p-2 bg-slate-800/80 rounded border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">Cos = 0:</span><br/>$x = \\frac{\\pi}{2} + k\\pi$\n      </div>\n      <div class=\"p-2 bg-slate-800/80 rounded border border-slate-700\">\n        <span class=\"text-emerald-400 font-bold\">Đổi dấu:</span><br/>$-\\cos u = \\cos(\\pi - u)$\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "cheer",
-      "mascotTip": "Hàm số cosin có tính chất đối xứng qua trục hoành, nên phương trình cos x = m khi có nghiệm sẽ cho hai họ nghiệm đối nhau là cộng trừ alpha cộng k 2 pi. Riêng cos x = 0 thì nghiệm là pi chia 2 cộng k pi!"
+      "mascotTip": "Hoàn thành xuất sắc Mục 2: Phương trình cos x = m. Chúc mừng các em!"
+    }
+  ],
+  "duration": 296.18,
+  "totalDuration": 296.18,
+  "timeline": [
+    {
+      "sceneId": "scene_1",
+      "title": "1. CÔNG THỨC NGHIỆM TỔNG QUÁT CỦA PHƯƠNG TRÌNH COS X = M",
+      "startTime": 0,
+      "endTime": 24.14,
+      "duration": 24.14
+    },
+    {
+      "sceneId": "scene_2",
+      "title": "2. CÁC TRƯỜNG HỢP ĐẶC BIỆT & KỸ THUẬT ĐỔI DẤU",
+      "startTime": 24.14,
+      "endTime": 54.26,
+      "duration": 30.12
+    },
+    {
+      "sceneId": "scene_3",
+      "title": "Ví dụ 1: Giải phương trình cos cơ bản (Mức Nhận biết)",
+      "startTime": 54.26,
+      "endTime": 69,
+      "duration": 14.74
+    },
+    {
+      "sceneId": "scene_4",
+      "title": "Ví dụ 1: Hướng dẫn giải chi tiết",
+      "startTime": 69,
+      "endTime": 93.65,
+      "duration": 24.65
+    },
+    {
+      "sceneId": "scene_5",
+      "title": "Ví dụ 2: Phương trình dạng cos f(x) = cos g(x) (Mức Thông hiểu)",
+      "startTime": 93.65,
+      "endTime": 111.05,
+      "duration": 17.4
+    },
+    {
+      "sceneId": "scene_6",
+      "title": "Ví dụ 2: Hướng dẫn giải chi tiết",
+      "startTime": 111.05,
+      "endTime": 138.22,
+      "duration": 27.17
+    },
+    {
+      "sceneId": "scene_7",
+      "title": "Ví dụ 3: Phương trình khác hàm cos f(x) = sin g(x) (Mức Vận dụng)",
+      "startTime": 138.22,
+      "endTime": 154.99,
+      "duration": 16.78
+    },
+    {
+      "sceneId": "scene_8",
+      "title": "Ví dụ 3: Hướng dẫn giải chi tiết",
+      "startTime": 154.99,
+      "endTime": 191.4,
+      "duration": 36.41
+    },
+    {
+      "sceneId": "scene_9",
+      "title": "Ví dụ 4: Bài toán dao động con lắc quả lắc (Mức Vận dụng cao)",
+      "startTime": 191.4,
+      "endTime": 215.04,
+      "duration": 23.64
+    },
+    {
+      "sceneId": "scene_10",
+      "title": "Ví dụ 4: Hướng dẫn giải chi tiết",
+      "startTime": 215.04,
+      "endTime": 256.03,
+      "duration": 40.99
+    },
+    {
+      "sceneId": "scene_11",
+      "title": "Bẫy trắc nghiệm & Sai lầm phổ biến khi giải cos x = m",
+      "startTime": 256.03,
+      "endTime": 280.7,
+      "duration": 24.67
+    },
+    {
+      "sceneId": "scene_12",
+      "title": "Tổng kết Mục 2 & Bí kíp Cú Thông Thái",
+      "startTime": 280.7,
+      "endTime": 296.18,
+      "duration": 15.48
     }
   ]
 };
 
-  window.G11_CHAPTER1_DATA.g11_bai4_muc3 = {
+window.G11_CHAPTER1_DATA.g11_bai4_muc3 = {
   "key": "g11_bai4_muc3",
   "lessonId": "toan11_bai4",
   "lessonTitle": "Bài 4: Phương trình lượng giác cơ bản",
@@ -3188,7 +3364,7 @@ if (typeof window !== 'undefined') {
   "parts": [
     {
       "partNumber": 1,
-      "partTitle": "Công thức nghiệm phương trình tan x = m",
+      "partTitle": "Phần 1: Khái niệm & Công thức nghiệm tổng quát",
       "scenes": [
         1,
         2
@@ -3217,7 +3393,7 @@ if (typeof window !== 'undefined') {
     },
     {
       "partNumber": 4,
-      "partTitle": "Phần 4: Tổng kết & Bí kíp Cú Thông Thái",
+      "partTitle": "Phần 4: Tổng kết bài học & Bí kíp Cú Thông Thái",
       "scenes": [
         12
       ]
@@ -3229,14 +3405,14 @@ if (typeof window !== 'undefined') {
       "title": "1. PHƯƠNG TRÌNH TAN X = M & ĐIỀU KIỆN XÁC ĐỊNH",
       "content": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/30\">\n    <h3 class=\"text-emerald-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-emerald-500/20 rounded text-emerald-300 text-sm\">Trọng tâm</span>\n      PHƯƠNG TRÌNH TANG & CÔNG THỨC DUY NHẤT 1 HỌ NGHIỆM\n    </h3>\n    <p class=\"text-slate-200 mt-2 text-sm leading-relaxed\">\n      Hàm số tang có tập giá trị là $\\mathbb{R}$, nên phương trình $\\tan x = m$ <strong>LUÔN CÓ NGHIỆM VỚI MỌI $m \\in \\mathbb{R}$</strong>!\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-sm\">\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">1. Điều kiện xác định:</span><br/>\n        Vì $\\tan x = \\frac{\\sin x}{\\cos x}$ nên mẫu thức $\\cos x \\ne 0$:\n        <p class=\"text-center font-bold text-rose-300 text-sm mt-1\">$$x \\ne \\frac{\\pi}{2} + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">2. Công thức nghiệm chuẩn:</span><br/>\n        Với mọi $m \\in \\mathbb{R}$, tồn tại góc $\\alpha$ sao cho $\\tan\\alpha = m$:\n        <p class=\"text-center font-bold text-yellow-300 text-base mt-1\">$$\\tan x = \\tan\\alpha \\Leftrightarrow x = \\alpha + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n        <span class=\"text-slate-400 text-xs\">Chỉ có duy nhất 1 họ nghiệm với đuôi chu kỳ là $+ k\\pi$!</span>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "narration": "Chào mừng các em đến với mục số 3: Phương trình lượng giác tan x bằng m và cot x bằng m. Khác biệt lớn nhất của tang và côtang so với sin và cos là chúng nhận mọi giá trị từ âm vô cùng đến dương vô cùng. Do đó, phương trình tan x bằng m luôn luôn có nghiệm với mọi m thực. Khi giải, đầu tiên các em phải đặt điều kiện xác định là cos x khác không, tức x khác pi trên hai cộng k pi. Sau đó, ta tìm góc alpha và viết công thức nghiệm duy nhất: x bằng alpha cộng k pi.",
-      "startTime": 0.0,
+      "startTime": 0,
       "endTime": 29.3,
       "duration": 29.3,
       "sceneIndex": 1,
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 1",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/60 to-teal-900/40 p-4 rounded-xl border border-emerald-500/30\">\n    <h3 class=\"text-emerald-300 font-bold text-lg flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-emerald-500/20 rounded text-emerald-300 text-sm\">Trọng tâm</span>\n      PHƯƠNG TRÌNH TANG & CÔNG THỨC DUY NHẤT 1 HỌ NGHIỆM\n    </h3>\n    <p class=\"text-slate-200 mt-2 text-sm leading-relaxed\">\n      Hàm số tang có tập giá trị là $\\mathbb{R}$, nên phương trình $\\tan x = m$ <strong>LUÔN CÓ NGHIỆM VỚI MỌI $m \\in \\mathbb{R}$</strong>!\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-sm\">\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">1. Điều kiện xác định:</span><br/>\n        Vì $\\tan x = \\frac{\\sin x}{\\cos x}$ nên mẫu thức $\\cos x \\ne 0$:\n        <p class=\"text-center font-bold text-rose-300 text-sm mt-1\">$$x \\ne \\frac{\\pi}{2} + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"bg-slate-900/80 p-3 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">2. Công thức nghiệm chuẩn:</span><br/>\n        Với mọi $m \\in \\mathbb{R}$, tồn tại góc $\\alpha$ sao cho $\\tan\\alpha = m$:\n        <p class=\"text-center font-bold text-yellow-300 text-base mt-1\">$$\\tan x = \\tan\\alpha \\Leftrightarrow x = \\alpha + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n        <span class=\"text-slate-400 text-xs\">Chỉ có duy nhất 1 họ nghiệm với đuôi chu kỳ là $+ k\\pi$!</span>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "talking",
-      "mascotTip": "Phương trình tan x = m và cot x = m luôn có nghiệm với mọi giá trị của m! Điểm mấu chốt là chỉ có duy nhất một họ nghiệm với chu kỳ pi (đuôi cộng k pi), và đừng bao giờ quên đặt điều kiện xác định!"
+      "mascotTip": "Phương trình tan x = m LUÔN CÓ NGHIỆM với mọi m in R! Điều kiện xác định: x != pi/2 + k pi!"
     },
     {
       "id": "scene_2",
@@ -3250,7 +3426,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 2",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-sky-500/30\">\n      <h4 class=\"text-sky-300 font-bold text-base mb-2\">📐 PHƯƠNG TRÌNH $\\cot x = m$</h4>\n      <div class=\"space-y-2 text-sm\">\n        <p class=\"text-slate-300\">Luôn có nghiệm với mọi $m \\in \\mathbb{R}$.</p>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-amber-400 font-bold\">• Điều kiện xác định:</span>\n          <p class=\"text-slate-200 mt-0.5\">$\\sin x \\ne 0 \\Leftrightarrow x \\ne k\\pi \\quad (k \\in \\mathbb{Z})$.</p>\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-emerald-400 font-bold\">• Công thức nghiệm:</span>\n          <p class=\"text-center font-bold text-yellow-300 text-base mt-1\">$$\\cot x = \\cot\\alpha \\Leftrightarrow x = \\alpha + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n          <span class=\"text-slate-400 text-xs\">Theo độ: $x = \\alpha^\\circ + k180^\\circ$.</span>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"bg-slate-900/80 p-4 rounded-xl border border-purple-500/30\">\n      <h4 class=\"text-purple-300 font-bold text-base mb-2\">🔄 KỸ THUẬT ĐỔI VỀ CÙNG HÀM TANG</h4>\n      <div class=\"space-y-2 text-sm\">\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-pink-400 font-bold\">Đổi dấu $-\\tan u$:</span>\n          <p class=\"text-slate-200 mt-1\">$$-\\tan u = \\tan(-u)$$</p>\n          <p class=\"text-slate-400 text-xs\">Vì tang là hàm số lẻ nên đưa dấu trừ vào trong góc.</p>\n        </div>\n        <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n          <span class=\"text-indigo-400 font-bold\">Chuyển từ $\\cot u$ sang $\\tan$:</span>\n          <p class=\"text-slate-200 mt-1\">$$\\cot u = \\tan\\left(\\frac{\\pi}{2} - u\\right)$$</p>\n          <p class=\"text-slate-400 text-xs\">Áp dụng tính chất hai góc phụ nhau.</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "talking",
-      "mascotTip": "Phương trình tan x = m và cot x = m luôn có nghiệm với mọi giá trị của m! Điểm mấu chốt là chỉ có duy nhất một họ nghiệm với chu kỳ pi (đuôi cộng k pi), và đừng bao giờ quên đặt điều kiện xác định!"
+      "mascotTip": "Phương trình cot x = m LUÔN CÓ NGHIỆM với mọi m in R! Điều kiện xác định: x != k pi!"
     },
     {
       "id": "scene_3",
@@ -3264,7 +3440,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 3",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/50 to-indigo-900/40 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-blue-500 text-white text-xs font-bold rounded\">VÍ DỤ 1 • NHẬN BIẾT</span>\n      <span class=\"text-slate-400 text-xs\">Mục 3 • Tan và Cot cơ bản</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải các phương trình lượng giác sau:</h4>\n    <div class=\"mt-3 space-y-2 text-sm text-slate-200\">\n      <p><strong class=\"text-amber-400\">a)</strong> $\\tan x = \\sqrt{3}$</p>\n      <p><strong class=\"text-sky-400\">b)</strong> $\\tan x = -1$</p>\n      <p><strong class=\"text-emerald-400\">c)</strong> $\\cot x = \\frac{\\sqrt{3}}{3}$</p>\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Thử sức tìm nghiệm của tan x = 1, tan x = -sqrt(3) và cot x = 1 trong 15 giây!"
     },
     {
       "id": "scene_4",
@@ -3277,8 +3453,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 4,
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 4",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-blue-500/30\">\n    <h4 class=\"text-blue-300 font-bold text-sm mb-3\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 1</h4>\n    <div class=\"space-y-3 text-sm text-slate-200\">\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-amber-400\">a) $\\tan x = \\sqrt{3}$</p>\n        <p class=\"mt-1\">Điều kiện: $x \\ne \\frac{\\pi}{2} + k\\pi$. Vì $\\tan\\frac{\\pi}{3} = \\sqrt{3}$ nên:</p>\n        <p class=\"mt-1 font-semibold text-yellow-300\">$$\\tan x = \\tan\\frac{\\pi}{3} \\Leftrightarrow x = \\frac{\\pi}{3} + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-sky-400\">b) $\\tan x = -1$</p>\n        <p class=\"mt-1\">Vì $\\tan\\left(-\\frac{\\pi}{4}\\right) = -1$ nên ta có:</p>\n        <p class=\"mt-1 font-semibold text-sky-300\">$$x = -\\frac{\\pi}{4} + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <p class=\"font-bold text-emerald-400\">c) $\\cot x = \\frac{\\sqrt{3}}{3}$</p>\n        <p class=\"mt-1\">Điều kiện: $x \\ne k\\pi$. Vì $\\cot\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{3}$ nên:</p>\n        <p class=\"mt-1 font-semibold text-emerald-300\">$$x = \\frac{\\pi}{3} + k\\pi \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Họ nghiệm của tan và cot chỉ có DUY NHẤT một họ nghiệm: x = alpha + k pi (đuôi cộng k pi)!"
     },
     {
       "id": "scene_5",
@@ -3292,7 +3468,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 5",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-900/50 to-teal-900/40 p-4 rounded-xl border border-emerald-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-emerald-500 text-white text-xs font-bold rounded\">VÍ DỤ 2 • THÔNG HIỂU</span>\n      <span class=\"text-slate-400 text-xs\">Mục 3 • Biến đổi góc</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải phương trình lượng giác sau:</h4>\n    <div class=\"mt-2 p-3 bg-slate-900/80 rounded-lg border border-emerald-500/30 text-center font-bold text-emerald-300 text-base\">\n      $$\\tan\\left(2x + \\frac{\\pi}{4}\\right) = \\sqrt{3}$$\n    </div>\n    <div class=\"countdown-clock-widget cd-15s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 15 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Phương trình tan f(x) = tan g(x): Nhớ đặt ĐKXĐ cho ít nhất một trong hai biểu thức f(x) hoặc g(x)!"
     },
     {
       "id": "scene_6",
@@ -3305,8 +3481,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 6,
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 6",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-emerald-500/30\">\n    <h4 class=\"text-emerald-300 font-bold text-sm mb-3\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 2</h4>\n    <div class=\"space-y-3 text-sm text-slate-200\">\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">1. Điều kiện xác định:</span>\n        <p class=\"mt-1 text-slate-300\">$$2x + \\frac{\\pi}{4} \\ne \\frac{\\pi}{2} + k\\pi \\Leftrightarrow 2x \\ne \\frac{\\pi}{4} + k\\pi \\Leftrightarrow x \\ne \\frac{\\pi}{8} + \\frac{k\\pi}{2} \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-3 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">2. Giải phương trình:</span>\n        <p class=\"mt-1 text-slate-100\">Vì $\\tan\\frac{\\pi}{3} = \\sqrt{3}$ nên phương trình tương đương:</p>\n        <p class=\"mt-1 text-slate-100\">$$2x + \\frac{\\pi}{4} = \\frac{\\pi}{3} + k\\pi \\Leftrightarrow 2x = \\frac{\\pi}{3} - \\frac{\\pi}{4} + k\\pi = \\frac{\\pi}{12} + k\\pi$$</p>\n        <p class=\"mt-1 font-bold text-yellow-300\">$$\\Leftrightarrow x = \\frac{\\pi}{24} + \\frac{k\\pi}{2} \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n    </div>\n    <p class=\"text-emerald-400 text-sm mt-2 font-semibold\">Đối chiếu điều kiện: Thỏa mãn. Vậy nghiệm là $x = \\frac{\\pi}{24} + \\frac{k\\pi}{2}$ ($k \\in \\mathbb{Z}$).</p>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Sau khi giải ra nghiệm x, bắt buộc phải đối chiếu với điều kiện xác định để loại nghiệm ngoại lai!"
     },
     {
       "id": "scene_7",
@@ -3320,7 +3496,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 7",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-900/50 to-indigo-900/40 p-4 rounded-xl border border-purple-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-purple-500 text-white text-xs font-bold rounded\">VÍ DỤ 3 • VẬN DỤNG</span>\n      <span class=\"text-slate-400 text-xs\">Mục 3 • Biến đổi phương trình tích</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Giải phương trình lượng giác sau:</h4>\n    <div class=\"mt-2 p-3 bg-slate-900/80 rounded-lg border border-purple-500/30 text-center font-bold text-purple-300 text-base\">\n      $$\\tan x \\cdot \\tan 2x = 1$$\n    </div>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Dạng tích tan x . tan 2x = 1 <=> tan 2x = cot x = tan(pi/2 - x). Cực kỳ cẩn thận với tập xác định!"
     },
     {
       "id": "scene_8",
@@ -3333,8 +3509,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 8,
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 8",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-purple-500/30\">\n    <h4 class=\"text-purple-300 font-bold text-sm mb-2\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 3</h4>\n    <div class=\"space-y-2 text-xs text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">• Điều kiện:</span> $\\cos x \\ne 0$ và $\\cos 2x \\ne 0$ $\\Leftrightarrow x \\ne \\frac{\\pi}{2} + k\\pi$ và $x \\ne \\frac{\\pi}{4} + \\frac{k\\pi}{2}$.\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">• Biến đổi phương trình:</span> Với $\\tan x \\ne 0$, ta có:<br/>\n        $$\\tan 2x = \\frac{1}{\\tan x} = \\cot x = \\tan\\left(\\frac{\\pi}{2} - x\\right)$$\n        $$\\Leftrightarrow 2x = \\frac{\\pi}{2} - x + k\\pi \\Leftrightarrow 3x = \\frac{\\pi}{2} + k\\pi \\Leftrightarrow x = \\frac{\\pi}{6} + \\frac{k\\pi}{3} \\quad (k \\in \\mathbb{Z})$$\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-emerald-400 font-bold\">• Đối chiếu điều kiện xác định:</span><br/>\n        Với $k = 1 \\Rightarrow x = \\frac{\\pi}{6} + \\frac{\\pi}{3} = \\frac{\\pi}{2}$ (loại vì $\\cos\\frac{\\pi}{2} = 0$).<br/>\n        Tổng quát loại $k = 3m + 1$. Các giá trị còn lại $k = 3m$ hoặc $k = 3m - 1$ thỏa mãn:\n        <span class=\"text-yellow-300 font-bold\">$$x = \\pm\\frac{\\pi}{6} + k\\pi \\quad (k \\in \\mathbb{Z})$$</span>\n      </div>\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Giao thoa điều kiện xác định trên đường tròn lượng giác giúp loại nghiệm nhanh chóng và chính xác!"
     },
     {
       "id": "scene_9",
@@ -3348,7 +3524,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 9",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-rose-900/50 to-orange-900/40 p-4 rounded-xl border border-rose-500/40\">\n    <div class=\"flex items-center justify-between\">\n      <span class=\"px-2.5 py-1 bg-rose-500 text-white text-xs font-bold rounded\">VÍ DỤ 4 • VẬN DỤNG CAO / THỰC TẾ</span>\n      <span class=\"text-slate-400 text-xs\">Mục 3 • Năng lượng mặt trời</span>\n    </div>\n    <h4 class=\"text-white font-bold text-base mt-2\">Góc nghiêng tối ưu của tấm pin năng lượng mặt trời:</h4>\n    <p class=\"text-slate-200 text-sm mt-1 leading-relaxed\">\n      Để tấm pin năng lượng mặt trời trên mái dốc hấp thụ bức xạ hiệu quả nhất theo chu kỳ chiếu sáng, góc nghiêng lắp đặt $\\alpha$ ($0^\\circ < \\alpha < 90^\\circ$) thỏa mãn hệ thức cân bằng quang học:\n    </p>\n    <div class=\"p-2.5 bg-slate-900/80 rounded-lg border border-rose-500/30 text-center font-bold text-amber-300 text-base my-2\">\n      $$\\tan(2\\alpha - 15^\\circ) = \\cot(30^\\circ + \\alpha)$$\n    </div>\n    <p class=\"text-slate-300 text-sm\">\n      Xác định <strong>tất cả các giá trị góc $\\alpha$ hợp lệ</strong> (tính theo đơn vị độ) thỏa mãn yêu cầu thiết kế.\n    </p>\n    <div class=\"countdown-clock-widget cd-30s flex items-center gap-3 bg-amber-500/10 border border-amber-400/30 rounded-xl px-4 py-2 mt-3 w-fit\"><svg class=\"w-7 h-7 text-amber-500 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke-dasharray=\"60\" stroke-dashoffset=\"20\"></circle></svg><span class=\"text-amber-300 font-bold text-sm tracking-wide\">THỜI GIAN SUY NGHĨ: 30 GIÂY</span></div>\n  </div>\n</div>\n",
       "mascotMode": "thinking",
-      "mascotTip": "Thử sức suy nghĩ và phán đoán đáp án trước khi đồng hồ đếm ngược kết thúc!"
+      "mascotTip": "Bài toán thực tế góc nghiêng pin mặt trời: Góc chiếu tối ưu đạt khi tan alpha = h/d!"
     },
     {
       "id": "scene_10",
@@ -3361,8 +3537,8 @@ if (typeof window !== 'undefined') {
       "sceneIndex": 10,
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 10",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-slate-900/90 p-4 rounded-xl border border-rose-500/30\">\n    <h4 class=\"text-rose-300 font-bold text-sm mb-2\">✅ LỜI GIẢI CHI TIẾT VÍ DỤ 4</h4>\n    <p class=\"text-slate-300 text-xs\">Sử dụng công thức hai góc phụ nhau theo độ: $\\cot(30^\\circ + \\alpha) = \\tan[90^\\circ - (30^\\circ + \\alpha)] = \\tan(60^\\circ - \\alpha)$.</p>\n    <p class=\"text-slate-300 text-xs mt-1\">Phương trình tương đương với: $\\tan(2\\alpha - 15^\\circ) = \\tan(60^\\circ - \\alpha)$:</p>\n    <div class=\"mt-2 space-y-2 text-xs text-slate-200\">\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-amber-400 font-bold\">• Giải theo công thức nghiệm tang:</span>\n        <p class=\"mt-1\">$$2\\alpha - 15^\\circ = 60^\\circ - \\alpha + k180^\\circ \\Leftrightarrow 3\\alpha = 75^\\circ + k180^\\circ$$</p>\n        <p class=\"mt-1 font-bold text-yellow-300\">$$\\Leftrightarrow \\alpha = 25^\\circ + k60^\\circ \\quad (k \\in \\mathbb{Z})$$</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-800/80 rounded-lg border border-slate-700\">\n        <span class=\"text-sky-400 font-bold\">• Chặn điều kiện thiết kế kỹ thuật $0^\\circ < \\alpha < 90^\\circ$:</span>\n        <p class=\"mt-1\">$$0^\\circ < 25^\\circ + k60^\\circ < 90^\\circ \\Leftrightarrow -25^\\circ < k60^\\circ < 65^\\circ \\Leftrightarrow -\\frac{5}{12} < k < \\frac{13}{12}$$</p>\n        <p class=\"mt-1\">Vì $k \\in \\mathbb{Z} \\Rightarrow k \\in \\{0; 1\\}$. Ta thu được 2 giá trị:</p>\n        <p class=\"mt-1 font-semibold text-emerald-300\">\n          • Với $k = 0 \\Rightarrow \\alpha_1 = 25^\\circ$ (thỏa mãn điều kiện xác định).<br/>\n          • Với $k = 1 \\Rightarrow \\alpha_2 = 25^\\circ + 60^\\circ = 85^\\circ$ (thỏa mãn điều kiện xác định).\n        </p>\n      </div>\n    </div>\n    <div class=\"p-2.5 bg-rose-950/60 rounded border border-rose-500/40 mt-2 text-xs\">\n      <strong class=\"text-rose-300\">Kết luận kỹ thuật:</strong> Có đúng <strong>2 góc lắp đặt khả thi</strong> là <strong class=\"text-yellow-300\">$\\alpha = 25^\\circ$</strong> và <strong class=\"text-yellow-300\">$\\alpha = 85^\\circ$</strong>.\n    </div>\n  </div>\n</div>\n",
-      "mascotMode": "cheer",
-      "mascotTip": "Đối chiếu từng bước biến đổi tự luận để khắc sâu phương pháp giải!"
+      "mascotMode": "talking",
+      "mascotTip": "Mô hình hóa thực tế: Luôn quy đổi góc về radian hoặc độ tùy theo yêu cầu của bài toán!"
     },
     {
       "id": "scene_11",
@@ -3376,7 +3552,7 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 11",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-red-950/60 to-rose-900/40 p-4 rounded-xl border border-red-500/40\">\n    <h3 class=\"text-rose-300 font-bold text-base flex items-center gap-2\">\n      <span class=\"px-2 py-0.5 bg-rose-500/20 text-rose-300 rounded text-xs font-bold\">CẢNH BÁO</span>\n      3 SAI LẦM PHỔ BIẾN KHI GIẢI PHƯƠNG TRÌNH TANG & CÔTANG\n    </h3>\n    <div class=\"mt-3 space-y-2.5 text-sm\">\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-rose-400 font-bold\">1. NHẦM ĐUÔI CHU KỲ $k2\\pi$:</span>\n        <p class=\"text-slate-300 mt-1\">Hàm tang và côtang chỉ có chu kỳ là $\\pi$. Do đó nghiệm chỉ có đuôi là <strong>$+ k\\pi$</strong>, tuyệt đối không viết $+ k2\\pi$!</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-amber-400 font-bold\">2. TƯỞNG NHẦM PHƯƠNG TRÌNH VÔ NGHIỆM:</span>\n        <p class=\"text-slate-300 mt-1\">Nhiều bạn nhớ nhầm điều kiện của sin/cos nên cho rằng $\\tan x = 5$ hay $\\tan x = -10$ là vô nghiệm! Thực tế tang và côtang luôn có nghiệm với mọi giá trị $m$.</p>\n      </div>\n      <div class=\"p-3 bg-slate-900/80 rounded-lg border border-red-500/30\">\n        <span class=\"text-sky-400 font-bold\">3. QUÊN ĐẶT ĐIỀU KIỆN XÁC ĐỊNH:</span>\n        <p class=\"text-slate-300 mt-1\">Khi bài toán có $\\tan$ hay $\\cot$ ở cả hai vế hoặc trong phương trình tích, bắt buộc phải đặt ĐKXĐ để loại bỏ nghiệm ngoại lai.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "magnifier",
-      "mascotTip": "Cảnh giác cao độ với các bẫy trắc nghiệm phổ biến của Bộ Giáo Dục!"
+      "mascotTip": "Cú Cảnh Báo Bẫy: Quên đặt điều kiện xác định của tan và cot sẽ bị trừ điểm hoặc chọn sai phương án nhiễu!"
     },
     {
       "id": "scene_12",
@@ -3390,7 +3566,95 @@ if (typeof window !== 'undefined') {
       "subtitle": "Mục 3: Phương trình lượng giác tan x = m và cot x = m • Cảnh 12",
       "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-950/60 to-yellow-900/40 p-4 rounded-xl border border-amber-500/40\">\n    <div class=\"flex items-center gap-3\">\n      <span class=\"text-3xl\">🦉</span>\n      <div>\n        <h3 class=\"text-amber-300 font-bold text-base\">BÍ KÍP CÚ THÔNG THÁI • TỔNG KẾT BÀI 4</h3>\n        <p class=\"text-slate-300 text-xs mt-0.5\">Bảng vàng 4 phương trình lượng giác cơ bản</p>\n      </div>\n    </div>\n    <div class=\"mt-3 grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-xs text-slate-200\">\n      <div class=\"p-2.5 bg-slate-900/80 rounded border border-emerald-500/40\">\n        <span class=\"text-emerald-400 font-bold text-sm\">$\\sin x = \\sin\\alpha$</span>\n        <p class=\"mt-1\">$x = \\alpha + k2\\pi$</p>\n        <p>$x = \\pi - \\alpha + k2\\pi$</p>\n        <span class=\"text-slate-400 text-[10px]\">ĐK: $|m| \\le 1$</span>\n      </div>\n      <div class=\"p-2.5 bg-slate-900/80 rounded border border-sky-500/40\">\n        <span class=\"text-sky-400 font-bold text-sm\">$\\cos x = \\cos\\alpha$</span>\n        <p class=\"mt-1\">$x = \\pm\\alpha + k2\\pi$</p>\n        <span class=\"text-slate-400 text-[10px]\">ĐK: $|m| \\le 1$</span>\n      </div>\n      <div class=\"p-2.5 bg-slate-900/80 rounded border border-amber-500/40\">\n        <span class=\"text-amber-400 font-bold text-sm\">$\\tan x = \\tan\\alpha$</span>\n        <p class=\"mt-1\">$x = \\alpha + k\\pi$</p>\n        <span class=\"text-slate-400 text-[10px]\">Luôn có nghiệm</span>\n      </div>\n      <div class=\"p-2.5 bg-slate-900/80 rounded border border-rose-500/40\">\n        <span class=\"text-rose-400 font-bold text-sm\">$\\cot x = \\cot\\alpha$</span>\n        <p class=\"mt-1\">$x = \\alpha + k\\pi$</p>\n        <span class=\"text-slate-400 text-[10px]\">Luôn có nghiệm</span>\n      </div>\n    </div>\n    <div class=\"mt-3 p-2 bg-slate-900/80 rounded-lg border border-amber-400/30 text-amber-200 text-xs text-center font-semibold\">\n      Chúc các em nắm chắc 100% bí kíp 4 phương trình lượng giác cơ bản để tự tin chinh phục mọi bài thi trắc nghiệm!\n    </div>\n  </div>\n</div>\n",
       "mascotMode": "cheer",
-      "mascotTip": "Phương trình tan x = m và cot x = m luôn có nghiệm với mọi giá trị của m! Điểm mấu chốt là chỉ có duy nhất một họ nghiệm với chu kỳ pi (đuôi cộng k pi), và đừng bao giờ quên đặt điều kiện xác định!"
+      "mascotTip": "Chúc mừng em đã hoàn thành trọn vẹn toàn bộ 4 bài học Chương I Toán 11 KNTT!"
+    }
+  ],
+  "duration": 288.55,
+  "totalDuration": 288.55,
+  "timeline": [
+    {
+      "sceneId": "scene_1",
+      "title": "1. PHƯƠNG TRÌNH TAN X = M & ĐIỀU KIỆN XÁC ĐỊNH",
+      "startTime": 0,
+      "endTime": 29.3,
+      "duration": 29.3
+    },
+    {
+      "sceneId": "scene_2",
+      "title": "2. PHƯƠNG TRÌNH COT X = M & CÔNG THỨC CHUYỂN ĐỔI",
+      "startTime": 29.3,
+      "endTime": 54.91,
+      "duration": 25.61
+    },
+    {
+      "sceneId": "scene_3",
+      "title": "Ví dụ 1: Giải phương trình tan và cot cơ bản (Mức Nhận biết)",
+      "startTime": 54.91,
+      "endTime": 70.01,
+      "duration": 15.1
+    },
+    {
+      "sceneId": "scene_4",
+      "title": "Ví dụ 1: Hướng dẫn giải chi tiết",
+      "startTime": 70.01,
+      "endTime": 95.26,
+      "duration": 25.25
+    },
+    {
+      "sceneId": "scene_5",
+      "title": "Ví dụ 2: Phương trình tan(u) = c có đặt ĐKXĐ (Mức Thông hiểu)",
+      "startTime": 95.26,
+      "endTime": 107.04,
+      "duration": 11.78
+    },
+    {
+      "sceneId": "scene_6",
+      "title": "Ví dụ 2: Hướng dẫn giải chi tiết",
+      "startTime": 107.04,
+      "endTime": 136.37,
+      "duration": 29.33
+    },
+    {
+      "sceneId": "scene_7",
+      "title": "Ví dụ 3: Phương trình tích tan x . tan 2x = 1 (Mức Vận dụng)",
+      "startTime": 136.37,
+      "endTime": 154.08,
+      "duration": 17.71
+    },
+    {
+      "sceneId": "scene_8",
+      "title": "Ví dụ 3: Hướng dẫn giải chi tiết",
+      "startTime": 154.08,
+      "endTime": 189.38,
+      "duration": 35.3
+    },
+    {
+      "sceneId": "scene_9",
+      "title": "Ví dụ 4: Bài toán góc nghiêng giàn pin năng lượng mặt trời (Vận dụng cao)",
+      "startTime": 189.38,
+      "endTime": 208.58,
+      "duration": 19.2
+    },
+    {
+      "sceneId": "scene_10",
+      "title": "Ví dụ 4: Hướng dẫn giải chi tiết",
+      "startTime": 208.58,
+      "endTime": 245.09,
+      "duration": 36.5
+    },
+    {
+      "sceneId": "scene_11",
+      "title": "Bẫy trắc nghiệm & Sai lầm phổ biến khi giải tan và cot",
+      "startTime": 245.09,
+      "endTime": 265.94,
+      "duration": 20.86
+    },
+    {
+      "sceneId": "scene_12",
+      "title": "Tổng kết Toàn bài Bài 4 & Sơ đồ Cú Thông Thái",
+      "startTime": 265.94,
+      "endTime": 288.55,
+      "duration": 22.61
     }
   ]
 };
