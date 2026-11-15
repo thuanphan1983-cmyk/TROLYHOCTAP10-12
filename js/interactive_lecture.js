@@ -1030,6 +1030,18 @@
         { key: "g11_bai4_muc2", title: "Mục 2: Phương trình lượng giác cos x = m", time: "05:15", icon: "🎯" },
         { key: "g11_bai4_muc3", title: "Mục 3: Phương trình lượng giác tan x = m và cot x = m", time: "05:20", icon: "📐" }
       ]
+    },
+    {
+      chapterNumber: 1101,
+      chapterTitle: "Toán 11 - Chương I: Hàm số lượng giác và phương trình lượng giác",
+      lessonId: "toan11_ontap_c1",
+      lessonTitle: "Bài tập cuối chương I (Ôn tập chương 1)",
+      lessonBadge: "Toán 11 • Ôn tập C1",
+      sections: [
+        { key: "g11_ontap_c1_muc1", title: "Mục 1: Hệ thống hóa lý thuyết & Sơ đồ tư duy 4 bài học Chương 1", time: "05:25", icon: "🧠" },
+        { key: "g11_ontap_c1_muc2", title: "Mục 2: Rèn luyện 4 dạng toán trọng tâm & Phương pháp giải", time: "05:30", icon: "🎯" },
+        { key: "g11_ontap_c1_muc3", title: "Mục 3: Cảnh báo bẫy trắc nghiệm, Kỹ năng Casio 580 & Đề tổng ôn", time: "05:15", icon: "💡" }
+      ]
     }
   ];
 
@@ -1364,6 +1376,11 @@
     }
 
     if (isGrade11) {
+      if (isReview || lessonNum === 'ontap' || lessonNum === 'cuoichuong1' || lessonNum === 'ontap_c1') {
+        const ch = chapterNum || 1;
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_ontap_c${ch}_muc${s}`;
+      }
       if (lessonNum === 1 || lessonNum === null) {
         const s = Math.min(4, Math.max(1, sectionNum));
         return `g11_bai1_muc${s}`;
