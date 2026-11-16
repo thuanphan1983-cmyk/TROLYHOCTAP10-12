@@ -131,6 +131,24 @@
         };
         document.head.appendChild(sg11_c3);
       }
+      if (!window.G11_CHAPTER4_DATA) {
+        const sg11_c4 = document.createElement('script');
+        sg11_c4.src = (window.location.protocol === 'file:') ? 'js/g11_chapter4_data.js' : '/js/g11_chapter4_data.js';
+        sg11_c4.onload = function() {
+          if (window.G11_CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER4_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        sg11_c4.onerror = function() {
+          const sg11_c4b = document.createElement('script');
+          sg11_c4b.src = 'public/js/g11_chapter4_data.js';
+          sg11_c4b.onload = function() {
+            if (window.G11_CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER4_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(sg11_c4b);
+        };
+        document.head.appendChild(sg11_c4);
+      }
       if (!window.CHAPTER6_DATA) {
         const s6 = document.createElement('script');
         s6.src = (window.location.protocol === 'file:') ? 'js/chapter6_data.js' : '/js/chapter6_data.js';
@@ -1194,6 +1212,42 @@
         { key: "g11_ontap_c3_muc2", title: "Mục 2: Rèn luyện 4 dạng toán trọng tâm & Bài toán thực tế thống kê", time: "06:15", icon: "🎯" },
         { key: "g11_ontap_c3_muc3", title: "Mục 3: Cảnh báo bẫy trắc nghiệm, Kỹ năng Casio 580 & Đề tổng ôn", time: "06:00", icon: "💡" }
       ]
+    },
+    {
+      chapterNumber: 1104,
+      chapterTitle: "Toán 11 - Chương IV: Quan hệ song song trong không gian",
+      lessonId: "toan11_bai10",
+      lessonTitle: "Bài 10: Đường thẳng và mặt phẳng trong không gian",
+      lessonBadge: "Toán 11 • Bài 10",
+      sections: [
+        { key: "g11_bai10_muc1", title: "Mục 1: Khái niệm mở đầu, 6 tính chất thừa nhận & 3 cách xác định mặt phẳng", time: "07:16", icon: "📐" },
+        { key: "g11_bai10_muc2", title: "Mục 2: Hình chóp, hình tứ diện & Kỹ thuật tìm giao tuyến của hai mặt phẳng", time: "05:22", icon: "🔺" },
+        { key: "g11_bai10_muc3", title: "Mục 3: Giao điểm đường thẳng và mặt phẳng & Thiết diện của hình chóp", time: "07:47", icon: "✂️" }
+      ]
+    },
+    {
+      chapterNumber: 1104,
+      chapterTitle: "Toán 11 - Chương IV: Quan hệ song song trong không gian",
+      lessonId: "toan11_bai11",
+      lessonTitle: "Bài 11: Hai đường thẳng song song trong không gian",
+      lessonBadge: "Toán 11 • Bài 11",
+      sections: [
+        { key: "g11_bai11_muc1", title: "Mục 1: Vị trí tương đối của hai đường thẳng (chéo nhau, cắt nhau, song song, trùng nhau)", time: "06:17", icon: "⏸️" },
+        { key: "g11_bai11_muc2", title: "Mục 2: Tính chất hai đường thẳng song song & Định lí ba giao tuyến", time: "07:17", icon: "📏" },
+        { key: "g11_bai11_muc3", title: "Mục 3: Kỹ thuật chứng minh hai đường thẳng song song & Thiết diện song song", time: "08:21", icon: "📐" }
+      ]
+    },
+    {
+      chapterNumber: 1104,
+      chapterTitle: "Toán 11 - Chương IV: Quan hệ song song trong không gian",
+      lessonId: "toan11_bai12",
+      lessonTitle: "Bài 12: Đường thẳng và mặt phẳng song song",
+      lessonBadge: "Toán 11 • Bài 12",
+      sections: [
+        { key: "g11_bai12_muc1", title: "Mục 1: Vị trí tương đối của đường thẳng và mặt phẳng & Điều kiện d // (P)", time: "06:13", icon: "🛡️" },
+        { key: "g11_bai12_muc2", title: "Mục 2: Tính chất của đường thẳng song song mặt phẳng & Định lí giao tuyến song song", time: "04:04", icon: "🔍" },
+        { key: "g11_bai12_muc3", title: "Mục 3: Phương pháp chứng minh d // (P) & Kỹ thuật dựng thiết diện song song", time: "07:12", icon: "💎" }
+      ]
     }
   ];
 
@@ -1574,6 +1628,10 @@
       if (lessonNum === 9) {
         const s = Math.min(3, Math.max(1, sectionNum));
         return `g11_bai9_muc${s}`;
+      }
+      if (lessonNum >= 10 && lessonNum <= 12) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g11_bai${lessonNum}_muc${s}`;
       }
     }
 
