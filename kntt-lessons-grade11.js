@@ -4165,34 +4165,42 @@
       sections: [
         {
           sectionNumber: 1,
-          sectionTitle: "Mục 1: Các khái niệm mở đầu và Các cách xác định một mặt phẳng",
+          sectionTitle: "Mục 1: Khái niệm mở đầu, 6 tính chất thừa nhận & 3 cách xác định mặt phẳng",
           theory: createStandardTheoryHTML(
             "Bài 10: Đường thẳng và mặt phẳng trong không gian", "Lớp 11", 1,
-            "Các khái niệm mở đầu và Các cách xác định một mặt phẳng",
+            "Khái niệm mở đầu, 6 tính chất thừa nhận & 3 cách xác định mặt phẳng",
             `<p>Các tiên đề và cách xác định mặt phẳng chuẩn SGK Hình học 11 KNTT:</p>
             <ul class="list-disc ml-5 space-y-1.5">
-              <li><strong>Mặt phẳng:</strong> Là một khái niệm nguyên thuỷ không định nghĩa, phẳng và kéo dài vô tận về mọi phía. Ký hiệu: $(P), (Q), (\\alpha), (\\beta)$ hoặc $(ABC)$.</li>
-              <li><strong>Quy tắc biểu diễn hình không gian:</strong>
-                <br/>• Đường nhìn thấy vẽ nét liền (—), đường bị che khuất vẽ nét đứt (- - -).
-                <br/>• Hình biểu diễn giữ nguyên quan hệ song song và tỉ lệ đoạn thẳng song song.
+              <li><strong>Mặt phẳng:</strong> Khái niệm nguyên thuỷ không định nghĩa, bề mặt phẳng kéo dài vô tận về mọi phía. Ký hiệu: $(P), (Q), (\\alpha), (\\beta)$ hoặc $(ABC)$.</li>
+              <li><strong>Điểm thuộc mặt phẳng:</strong> Điểm $A$ thuộc $(P)$ ký hiệu $A \\in (P)$. Điểm $B$ không thuộc $(P)$ ký hiệu $B \\notin (P)$.</li>
+              <li><strong>6 tính chất thừa nhận cốt lõi (Tiên đề Hilbert):</strong>
+                <br/>• <em>Tính chất 1:</em> Có một và chỉ một đường thẳng đi qua hai điểm phân biệt cho trước.
+                <br/>• <em>Tính chất 2:</em> Có một và chỉ một mặt phẳng đi qua ba điểm không thẳng hàng cho trước.
+                <br/>• <em>Tính chất 3:</em> Nếu một đường thẳng có hai điểm phân biệt thuộc một mặt phẳng thì mọi điểm của đường thẳng đều thuộc mặt phẳng đó ($d \\subset (P)$).
+                <br/>• <em>Tính chất 4:</em> Tồn tại bốn điểm không cùng thuộc một mặt phẳng (bốn điểm không đồng phẳng tạo thành hình tứ diện).
+                <br/>• <em>Tính chất 5:</em> Nếu hai mặt phẳng phân biệt có một điểm chung thì chúng có một đường thẳng chung duy nhất đi qua điểm đó (gọi là <em>giao tuyến</em>).
+                <br/>• <em>Tính chất 6:</em> Trên mỗi mặt phẳng, các kết quả đã biết của hình học phẳng đều đúng.
               </li>
-              <li><strong>Bốn cách xác định một mặt phẳng duy nhất:</strong>
-                <br/>1. Qua <strong>ba điểm không thẳng hàng</strong>.
-                <br/>2. Qua <strong>một điểm và một đường thẳng</strong> không đi qua điểm đó.
-                <br/>3. Qua <strong>hai đường thẳng cắt nhau</strong>.
-                <br/>4. Qua <strong>hai đường thẳng song song</strong>.
+              <li><strong>Ba cách xác định một mặt phẳng duy nhất:</strong>
+                <br/>1. Qua <strong>ba điểm không thẳng hàng</strong>: Ký hiệu $(ABC)$.
+                <br/>2. Qua <strong>một điểm và một đường thẳng</strong> không đi qua điểm đó: Ký hiệu $(A, d)$.
+                <br/>3. Qua <strong>hai đường thẳng cắt nhau</strong>: Ký hiệu $(a, b)$.
+                <br/><em>(Mở rộng: Qua hai đường thẳng song song phân biệt cũng xác định duy nhất một mặt phẳng).</em>
               </li>
-              <li><strong>Tính chất giao tuyến:</strong> Nếu hai mặt phẳng phân biệt có một điểm chung thì chúng có một đường thẳng chung duy nhất đi qua điểm đó (gọi là <em>giao tuyến</em>).</li>
+              <li><strong>Quy ước vẽ hình không gian chuẩn Bộ GD&ĐT:</strong>
+                <br/>• Đường nhìn thấy vẽ <strong>nét liền</strong> (—), đường bị che khuất vẽ <strong>nét đứt đoạn</strong> (- - -).
+                <br/>• Giữ nguyên quan hệ song song và tỉ lệ độ dài giữa các đoạn thẳng nằm trên hai đường thẳng song song.
+              </li>
             </ul>`,
-            `<li>Muốn tìm giao tuyến của hai mặt phẳng: Chỉ cần tìm HAI ĐIỂM CHUNG phân biệt của chúng.</li>
-            <li>Ba điểm thẳng hàng KHÔNG xác định được một mặt phẳng duy nhất (có vô số mặt phẳng xoay quanh đường thẳng đó như các trang sách).</li>`,
-            `<li>Vẽ nét liền cho đường bị khuất trong hình không gian.</li>
-            <li>Ngộ nhận hai đường thẳng cùng nằm trong không gian luôn cắt nhau hoặc song song (có thể chéo nhau).</li>`,
+            `<li>Ba điểm thẳng hàng KHÔNG xác định được một mặt phẳng duy nhất (có vô số mặt phẳng xoay quanh đường thẳng đó như các trang sách).</li>
+            <li>Muốn chứng minh đường thẳng $d$ nằm trong $(P)$: Chỉ cần chỉ ra hai điểm phân biệt của $d$ đều thuộc $(P)$.</li>`,
+            `<li>Vẽ nét liền cho các cạnh bị che khuất ở mặt sau hoặc mặt đáy.</li>
+            <li>Ngộ nhận hai đường thẳng trong không gian luôn cắt nhau hoặc song song (có thể chéo nhau).</li>`,
             `<li><em>"Ba điểm không thẳng hàng – Điểm với đường rời nhau – Hai đường cắt hoặc song song: Duy nhất một mặt phẳng!"</em></li>`
           ),
           mcqs: [
             {
-              question: "Có bao nhiêu mặt phẳng đi qua ba điểm không thẳng hàng?",
+              question: "Có bao nhiêu mặt phẳng đi qua ba điểm không thẳng hàng cho trước?",
               options: ["A. 1", "B. 2", "C. Vô số", "D. 0"],
               correct: "A",
               explanation: "Theo tính chất thừa nhận 2 trong SGK Toán 11: Có một và chỉ một mặt phẳng đi qua ba điểm không thẳng hàng.",
@@ -4200,25 +4208,139 @@
               hint2: "Có duy nhất 1 mặt phẳng."
             },
             {
-              question: "Hình biểu diễn của một hình vuông trong không gian có thể là hình gì?",
-              options: ["A. Hình bình hành", "B. Hình thang cân", "C. Hình chữ nhật duy nhất", "D. Tam giác"],
+              question: "Cho điểm $A$ không thuộc đường thẳng $d$. Có bao nhiêu mặt phẳng đi qua $A$ và chứa đường thẳng $d$?",
+              options: ["A. 1", "B. 2", "C. Vô số", "D. 0"],
               correct: "A",
-              explanation: "Phép chiếu song song bảo toàn tính song song nên hình vuông được biểu diễn bởi một hình bình hành.",
-              hint1: "Quan hệ song song được bảo toàn.",
-              hint2: "Hình bình hành."
+              explanation: "Một điểm và một đường thẳng không đi qua điểm đó xác định duy nhất một mặt phẳng.",
+              hint1: "Cách xác định mặt phẳng thứ 2.",
+              hint2: "Duy nhất một mặt phẳng."
             },
             {
-              question: "Nếu hai mặt phẳng phân biệt có một điểm chung thì giao tuyến của chúng là:",
+              question: "Hình biểu diễn của một hình vuông trong hình học không gian có thể là hình gì?",
+              options: ["A. Hình bình hành", "B. Hình thang cân", "C. Hình chữ nhật duy nhất", "D. Tam giác"],
+              correct: "A",
+              explanation: "Phép chiếu song song bảo toàn tính song song và tỉ lệ đoạn thẳng song song nên hình vuông được biểu diễn bởi một hình bình hành.",
+              hint1: "Quan hệ song song được bảo toàn.",
+              hint2: "Hình bình hành."
+            }
+          ]
+        },
+        {
+          sectionNumber: 2,
+          sectionTitle: "Mục 2: Hình chóp, hình tứ diện & Kỹ thuật tìm giao tuyến của hai mặt phẳng",
+          theory: createStandardTheoryHTML(
+            "Bài 10: Đường thẳng và mặt phẳng trong không gian", "Lớp 11", 2,
+            "Hình chóp, hình tứ diện & Kỹ thuật tìm giao tuyến của hai mặt phẳng",
+            `<p>Các khối đa diện mở đầu và kỹ thuật tìm giao tuyến chuẩn SGK:</p>
+            <ul class="list-disc ml-5 space-y-1.5">
+              <li><strong>Hình chóp $S.A_1A_2\\dots A_n$:</strong>
+                <br/>• Đỉnh $S$, mặt đáy là đa giác lồi $A_1A_2\\dots A_n$.
+                <br/>• Các mặt bên là các tam giác $SA_1A_2, SA_2A_3, \\dots, SA_nA_1$.
+                <br/>• Các đoạn thẳng $SA_1, SA_2, \\dots, SA_n$ là các cạnh bên; $A_1A_2, \\dots$ là các cạnh đáy.
+              </li>
+              <li><strong>Hình tứ diện $ABCD$:</strong> Khối hình có 4 đỉnh, 6 cạnh và 4 mặt đều là tam giác. Hai cạnh không có đỉnh chung gọi là <em>cặp cạnh đối diện</em> (ví dụ: $AB$ và $CD$, $AC$ và $BD$, $AD$ và $BC$).</li>
+              <li><strong>Quy trình 2 bước vàng tìm giao tuyến của hai mặt phẳng $(\\alpha)$ và $(\\beta)$ phân biệt:</strong>
+                <br/>• <strong>Bước 1 (Điểm chung thứ nhất):</strong> Tìm một điểm chung $S$ đã có sẵn hoặc dễ thấy trong giả thiết.
+                <br/>• <strong>Bước 2 (Điểm chung thứ hai):</strong> Tìm trong $(\\alpha)$ đường thẳng $a$, tìm trong $(\\beta)$ đường thẳng $b$ sao cho $a$ và $b$ cùng nằm trong một mặt phẳng thứ ba (đồng phẳng) và cắt nhau tại $O$. Khi đó $O \\in a \\subset (\\alpha)$ và $O \\in b \\subset (\\beta) \\implies O$ là điểm chung thứ hai.
+                <br/>• <strong>Kết luận:</strong> Đường thẳng nối hai điểm chung $SO = (\\alpha) \\cap (\\beta)$ chính là giao tuyến cần tìm.
+              </li>
+            </ul>`,
+            `<li>Muốn tìm giao điểm của hai đường thẳng trong không gian: Bắt buộc hai đường thẳng đó phải CÙNG NẰM TRONG MỘT MẶT PHẲNG (đồng phẳng).</li>
+            <li>Hình tứ diện có đúng 3 cặp cạnh đối diện chéo nhau.</li>`,
+            `<li>Kéo dài hai đường thẳng chéo nhau (không đồng phẳng) cho cắt nhau (sai lầm nghiêm trọng).</li>
+            <li>Nhầm lẫn giữa đường cao hình chóp và cạnh bên hình chóp.</li>`,
+            `<li><em>"Giao tuyến là một đường chung – Điểm một thấy sẵn, điểm hai tìm kĩ – Đồng phẳng cắt nhau tức thì – Nối hai điểm lại phẳng nào cũng xong!"</em></li>`
+          ),
+          mcqs: [
+            {
+              question: "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành tâm $O$. Giao tuyến của hai mặt phẳng $(SAC)$ và $(SBD)$ là đường thẳng:",
+              options: ["A. $SO$", "B. $SA$", "C. $AC$", "D. $BD$"],
+              correct: "A",
+              explanation: "Điểm $S$ là điểm chung thứ nhất. Trong mặt phẳng đáy $(ABCD)$, hai đường chéo $AC$ và $BD$ cắt nhau tại tâm $O$, suy ra $O$ là điểm chung thứ hai. Vậy giao tuyến là $SO$.",
+              hint1: "Tìm 2 điểm chung của hai mặt phẳng.",
+              hint2: "Điểm S và giao điểm O của AC và BD."
+            },
+            {
+              question: "Cho tứ diện $ABCD$. Giao tuyến của hai mặt phẳng $(ABC)$ và $(BCD)$ là đường thẳng:",
+              options: ["A. $BC$", "B. $AB$", "C. $CD$", "D. $AD$"],
+              correct: "A",
+              explanation: "Hai điểm $B$ và $C$ cùng thuộc cả hai mặt phẳng $(ABC)$ và $(BCD)$, do đó giao tuyến là đường thẳng $BC$.",
+              hint1: "Điểm chung nhìn thấy ngay ở tên hai mặt phẳng.",
+              hint2: "Đường thẳng BC."
+            },
+            {
+              question: "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang với hai đáy $AB$ và $CD$ không song song, cắt nhau tại $E$. Giao tuyến của $(SAB)$ và $(SCD)$ là:",
+              options: ["A. $SE$", "B. $SO$", "C. $SC$", "D. $SD$"],
+              correct: "A",
+              explanation: "$S$ là điểm chung thứ nhất. Trong mặt đáy $(ABCD)$, $AB$ cắt $CD$ tại $E$, suy ra $E$ là điểm chung thứ hai. Giao tuyến là $SE$.",
+              hint1: "Kéo dài AB và CD cắt nhau tại E.",
+              hint2: "Đường thẳng SE."
+            }
+          ]
+        },
+        {
+          sectionNumber: 3,
+          sectionTitle: "Mục 3: Giao điểm đường thẳng và mặt phẳng & Thiết diện của hình chóp",
+          theory: createStandardTheoryHTML(
+            "Bài 10: Đường thẳng và mặt phẳng trong không gian", "Lớp 11", 3,
+            "Giao điểm đường thẳng và mặt phẳng & Thiết diện của hình chóp",
+            `<p>Phương pháp tìm giao điểm và dựng thiết diện không gian chuẩn mực:</p>
+            <ul class="list-disc ml-5 space-y-1.5">
+              <li><strong>Phương pháp tìm giao điểm của đường thẳng $d$ và mặt phẳng $(\\alpha)$:</strong>
+                <br/>• <em>Trường hợp trực tiếp:</em> Nếu trong $(\\alpha)$ có sẵn đường thẳng $a$ đồng phẳng với $d$ và cắt $d$ tại $M$, thì $d \\cap (\\alpha) = \\{M\\}$.
+                <br/>• <em>Trường hợp gián tiếp (qua mặt phẳng phụ):</em>
+                <br/>1. Tìm/chọn mặt phẳng phụ $(\\beta)$ chứa đường thẳng $d$.
+                <br/>2. Tìm giao tuyến $a = (\\alpha) \\cap (\\beta)$.
+                <br/>3. Trong $(\\beta)$, tìm giao điểm $M = d \\cap a$. Khi đó $M$ chính là giao điểm của $d$ và $(\\alpha)$.
+              </li>
+              <li><strong>Khái niệm Thiết diện (Mặt cắt):</strong> Khi cắt khối chóp hoặc tứ diện bởi một mặt phẳng $(\\alpha)$, các đoạn giao tuyến của $(\\alpha)$ với các mặt của khối đa diện tạo thành một đa giác phẳng khép kín gọi là <em>thiết diện</em>.
+              </li>
+              <li><strong>Quy tắc dựng thiết diện:</strong>
+                <br/>• Tìm các đoạn giao tuyến của $(\\alpha)$ lần lượt với từng mặt của khối đa diện.
+                <br/>• Kéo dài các đoạn giao tuyến để cắt các cạnh viền nhằm tạo điểm chung mới sang các mặt liền kề.
+                <br/>• Nối tất cả các đoạn giao tuyến khép kín thành đa giác thiết diện.
+              </li>
+            </ul>`,
+            `<li>Thiết diện của hình tứ diện chỉ có thể là TAM GIÁC hoặc TỨ GIÁC.</li>
+            <li>Thiết diện của hình chóp tứ giác có tối đa 5 cạnh (ngũ giác).</li>`,
+            `<li>Kéo dài giao tuyến vượt ra ngoài khối đa diện rồi lấy cả phần bên ngoài làm thiết diện.</li>
+            <li>Thiết diện phải là đa giác PHẲNG khép kín, không thể là đường gấp khúc hở.</li>`,
+            `<li><em>"Mặt phẳng phụ chứa đường thẳng – Giao tuyến sinh ra điểm vàng – Thiết diện khép kín rõ ràng – Không thừa ra ngoài, chuẩn mực điểm mười!"</em></li>`
+          ),
+          mcqs: [
+            {
+              question: "Thiết diện của một hình tứ diện cắt bởi một mặt phẳng bất kì có thể là hình gì?",
               options: [
-                "A. Một đường thẳng duy nhất đi qua điểm chung đó",
-                "B. Một đoạn thẳng",
-                "C. Một điểm duy nhất",
-                "D. Một tia"
+                "A. Tam giác hoặc tứ giác",
+                "B. Ngũ giác",
+                "C. Lục giác",
+                "D. Luôn luôn là tam giác"
               ],
               correct: "A",
-              explanation: "Theo tính chất thừa nhận trong SGK: Hai mặt phẳng phân biệt có một điểm chung thì có chung một đường thẳng duy nhất chứa tất cả các điểm chung.",
-              hint1: "Định nghĩa đường giao tuyến.",
-              hint2: "Một đường thẳng duy nhất."
+              explanation: "Hình tứ diện có 4 mặt tam giác, mặt phẳng cắt tối đa 4 mặt nên thiết diện chỉ có thể là tam giác (cắt 3 mặt) hoặc tứ giác (cắt cả 4 mặt).",
+              hint1: "Đếm số mặt tối đa của hình tứ diện.",
+              hint2: "Tam giác hoặc tứ giác."
+            },
+            {
+              question: "Cho hình chóp $S.ABCD$ đáy hình bình hành tâm $O$. Gọi $M$ là trung điểm cạnh $SC$. Giao điểm của đường thẳng $AM$ và mặt phẳng $(SBD)$ là:",
+              options: [
+                "A. Giao điểm của $AM$ và $SO$",
+                "B. Giao điểm của $AM$ và $BD$",
+                "C. Giao điểm của $AM$ và $SB$",
+                "D. Điểm $M$"
+              ],
+              correct: "A",
+              explanation: "Chọn mặt phẳng phụ $(SAC)$ chứa $AM$. Giao tuyến của $(SAC)$ và $(SBD)$ là đường thẳng $SO$. Trong $(SAC)$, $AM$ cắt $SO$ tại $I$, do đó $I = AM \\cap (SBD)$.",
+              hint1: "Xét mặt phẳng phụ (SAC) chứa AM.",
+              hint2: "Giao điểm của AM và SO."
+            },
+            {
+              question: "Thiết diện của hình chóp tứ giác $S.ABCD$ cắt bởi một mặt phẳng có tối đa bao nhiêu cạnh?",
+              options: ["A. 5 cạnh (ngũ giác)", "B. 4 cạnh (tứ giác)", "C. 6 cạnh (lục giác)", "D. 3 cạnh (tam giác)"],
+              correct: "A",
+              explanation: "Hình chóp tứ giác có 1 mặt đáy và 4 mặt bên (tổng cộng 5 mặt). Do đó thiết diện có tối đa 5 cạnh (ngũ giác).",
+              hint1: "Hình chóp tứ giác có tổng cộng bao nhiêu mặt?",
+              hint2: "Tối đa 5 cạnh."
             }
           ]
         }
@@ -4228,9 +4350,9 @@
           id: 1,
           title: "Câu 1: Cho tứ diện $ABCD$. Gọi $M, N$ lần lượt là trung điểm của $AB$ và $AC$:",
           items: [
-            { key: "a", text: "Tứ diện $ABCD$ có 4 đỉnh, 6 cạnh và 4 mặt.", correct: "true", explain: "Cấu trúc tứ diện." },
-            { key: "b", text: "Đường thẳng $MN$ nằm trong mặt phẳng $(ABC)$.", correct: "true", explain: "Vì $M, N \\in (ABC)$." },
-            { key: "c", text: "Giao tuyến của hai mặt phẳng $(DMN)$ và $(BCD)$ đi qua $D$.", correct: "true", explain: "Vì $D$ là điểm chung của hai mặt phẳng." },
+            { key: "a", text: "Tứ diện $ABCD$ có 4 đỉnh, 6 cạnh và 4 mặt.", correct: "true", explain: "Cấu trúc tứ diện gồm 4 đỉnh, 6 cạnh và 4 mặt tam giác." },
+            { key: "b", text: "Đường thẳng $MN$ nằm trong mặt phẳng $(ABC)$.", correct: "true", explain: "Vì $M, N \\in (ABC)$ nên đường thẳng $MN \\subset (ABC)$." },
+            { key: "c", text: "Giao tuyến của hai mặt phẳng $(DMN)$ và $(BCD)$ đi qua $D$.", correct: "true", explain: "Vì $D$ là điểm chung của hai mặt phẳng $(DMN)$ và $(BCD)$." },
             { key: "d", text: "Bốn điểm $A, B, C, D$ cùng thuộc một mặt phẳng.", correct: "false", explain: "Tứ diện gồm 4 điểm KHÔNG đồng phẳng." }
           ]
         },
@@ -4238,28 +4360,28 @@
           id: 2,
           title: "Câu 2: Về các cách xác định mặt phẳng trong không gian:",
           items: [
-            { key: "a", text: "Qua hai đường thẳng cắt nhau có duy nhất một mặt phẳng.", correct: "true", explain: "Cách xác định chuẩn." },
-            { key: "b", text: "Qua hai đường thẳng chéo nhau có duy nhất một mặt phẳng.", correct: "false", explain: "Hai đường thẳng chéo nhau không cùng thuộc mặt phẳng nào." },
-            { key: "c", text: "Qua hai đường thẳng song song có duy nhất một mặt phẳng.", correct: "true", explain: "Cách xác định chuẩn." },
-            { key: "d", text: "Một điểm và một đường thẳng luôn xác định duy nhất một mặt phẳng.", correct: "false", explain: "Điểm đó phải KHÔNG THUỘC đường thẳng." }
+            { key: "a", text: "Qua hai đường thẳng cắt nhau có duy nhất một mặt phẳng.", correct: "true", explain: "Cách xác định chuẩn SGK." },
+            { key: "b", text: "Qua hai đường thẳng chéo nhau có duy nhất một mặt phẳng.", correct: "false", explain: "Hai đường thẳng chéo nhau không cùng thuộc bất kì mặt phẳng nào." },
+            { key: "c", text: "Qua hai đường thẳng song song có duy nhất một mặt phẳng.", correct: "true", explain: "Cách xác định chuẩn SGK." },
+            { key: "d", text: "Một điểm và một đường thẳng luôn xác định duy nhất một mặt phẳng.", correct: "false", explain: "Điểm đó phải KHÔNG THUỘC đường thẳng mới xác định duy nhất mặt phẳng." }
           ]
         },
         {
           id: 3,
           title: "Câu 3: Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành với tâm $O$:",
           items: [
-            { key: "a", text: "Giao tuyến của hai mặt phẳng $(SAC)$ và $(SBD)$ là đường thẳng $SO$.", correct: "true", explain: "$S$ và $O$ là 2 điểm chung." },
+            { key: "a", text: "Giao tuyến của hai mặt phẳng $(SAC)$ và $(SBD)$ là đường thẳng $SO$.", correct: "true", explain: "$S$ và $O$ là 2 điểm chung phân biệt." },
             { key: "b", text: "Giao điểm của đường thẳng $SO$ và mặt đáy là điểm $O$.", correct: "true", explain: "$O$ là tâm đáy." },
-            { key: "c", text: "Đường thẳng $SA$ cắt mặt phẳng $(SBC)$ tại điểm $S$.", correct: "true", explain: "$S \\in (SBC)$." },
-            { key: "d", text: "Hai đường thẳng $AB$ và $CD$ cắt nhau tại điểm $O$.", correct: "false", explain: "$AB \\parallel CD$, chúng không cắt nhau." }
+            { key: "c", text: "Đường thẳng $SA$ cắt mặt phẳng $(SBC)$ tại điểm $S$.", correct: "true", explain: "$S \\in (SBC)$ và $A \\notin (SBC)$." },
+            { key: "d", text: "Hai đường thẳng $AB$ và $CD$ cắt nhau tại điểm $O$.", correct: "false", explain: "$AB \\parallel CD$, chúng song song không cắt nhau." }
           ]
         },
         {
           id: 4,
           title: "Câu 4: Về các quy ước vẽ hình không gian trong SGK:",
           items: [
-            { key: "a", text: "Đường nhìn thấy vẽ nét liền.", correct: "true", explain: "Quy ước." },
-            { key: "b", text: "Đường bị che khuất vẽ nét đứt.", correct: "true", explain: "Quy ước." },
+            { key: "a", text: "Đường nhìn thấy vẽ nét liền.", correct: "true", explain: "Quy chuẩn Bộ GD&ĐT." },
+            { key: "b", text: "Đường bị che khuất vẽ nét đứt.", correct: "true", explain: "Quy chuẩn Bộ GD&ĐT." },
             { key: "c", text: "Tỉ số độ dài hai đoạn thẳng nằm trên hai đường thẳng song song được bảo toàn.", correct: "true", explain: "Tính chất phép chiếu song song." },
             { key: "d", text: "Góc vuông trong không gian luôn được vẽ thành góc vuông trên hình vẽ.", correct: "false", explain: "Góc không được bảo toàn độ lớn, thường vẽ thành góc nhọn hoặc tù." }
           ]
@@ -4278,11 +4400,37 @@
           id: 6,
           title: "Câu 6: Về vị trí tương đối giữa đường thẳng $d$ và mặt phẳng $(\\alpha)$:",
           items: [
-            { key: "a", text: "$d$ cắt $(\\alpha)$ tại duy nhất một điểm.", correct: "true", explain: "Trường hợp 1." },
-            { key: "b", text: "$d$ song song với $(\\alpha)$ khi chúng không có điểm chung.", correct: "true", explain: "Trường hợp 2." },
-            { key: "c", text: "$d$ nằm trong $(\\alpha)$ khi mọi điểm của $d$ đều thuộc $(\\alpha)$.", correct: "true", explain: "Trường hợp 3." },
+            { key: "a", text: "$d$ cắt $(\\alpha)$ tại duy nhất một điểm.", correct: "true", explain: "Trường hợp có 1 điểm chung." },
+            { key: "b", text: "$d$ song song với $(\\alpha)$ khi chúng không có điểm chung.", correct: "true", explain: "Định nghĩa đường song song mặt phẳng." },
+            { key: "c", text: "$d$ nằm trong $(\\alpha)$ khi mọi điểm của $d$ đều thuộc $(\\alpha)$.", correct: "true", explain: "Trường hợp có vô số điểm chung." },
             { key: "d", text: "Nếu $d$ có 2 điểm phân biệt thuộc $(\\alpha)$ thì $d$ có thể không nằm trong $(\\alpha)$.", correct: "false", explain: "Nếu có 2 điểm chung thì TOÀN BỘ đường thẳng phải nằm trong mặt phẳng." }
           ]
+        }
+      ],
+      saQuestions: [
+        {
+          id: 1,
+          question: "Cho khối tứ diện $ABCD$. Số cặp cạnh đối diện chéo nhau của khối tứ diện bằng bao nhiêu?",
+          answer: "3",
+          explain: "Có 3 cặp cạnh đối diện chéo nhau là: (AB, CD), (AC, BD), (AD, BC)."
+        },
+        {
+          id: 2,
+          question: "Cho 5 điểm phân biệt trong không gian sao cho không có 4 điểm nào đồng phẳng. Có bao nhiêu mặt phẳng đi qua 3 trong số 5 điểm đã cho?",
+          answer: "10",
+          explain: "Số mặt phẳng xác định bởi 3 điểm không thẳng hàng là C(5, 3) = 10 mặt phẳng."
+        },
+        {
+          id: 3,
+          question: "Một hình chóp có đáy là đa giác 6 cạnh (lục giác). Hỏi hình chóp đó có tổng cộng bao nhiêu mặt (kể cả mặt đáy)?",
+          answer: "7",
+          explain: "Hình chóp lục giác có 6 mặt bên tam giác và 1 mặt đáy, tổng cộng có 7 mặt."
+        },
+        {
+          id: 4,
+          question: "Mặt phẳng $(\\alpha)$ cắt tất cả các cạnh bên của một hình chóp tứ giác. Thiết diện tạo thành là một đa giác có bao nhiêu đỉnh?",
+          answer: "4",
+          explain: "Mặt phẳng cắt 4 cạnh bên tại 4 điểm phân biệt tạo thành một tứ giác có 4 đỉnh."
         }
       ]
     }
@@ -4313,65 +4461,177 @@
       sections: [
         {
           sectionNumber: 1,
-          sectionTitle: "Mục 1: Vị trí tương đối giữa hai đường thẳng và Tính chất hai đường thẳng song song",
+          sectionTitle: "Mục 1: Vị trí tương đối của hai đường thẳng (chéo nhau, cắt nhau, song song, trùng nhau)",
           theory: createStandardTheoryHTML(
             "Bài 11: Hai đường thẳng song song", "Lớp 11", 1,
-            "Vị trí tương đối giữa hai đường thẳng và Tính chất hai đường thẳng song song",
+            "Vị trí tương đối của hai đường thẳng (chéo nhau, cắt nhau, song song, trùng nhau)",
             `<p>Vị trí tương đối giữa hai đường thẳng $a$ và $b$ trong không gian chuẩn SGK Toán 11 KNTT:</p>
             <ul class="list-disc ml-5 space-y-1.5">
               <li><strong>Trường hợp 1 (Cùng thuộc một mặt phẳng - đồng phẳng):</strong>
-                <br/>• Cắt nhau: Có đúng 1 điểm chung.
-                <br/>• Song song ($a \\parallel b$): Cùng nằm trong một mặt phẳng và không có điểm chung.
-                <br/>• Trùng nhau ($a \\equiv b$): Có vô số điểm chung.
+                <br/>• <strong>Cắt nhau:</strong> $a$ và $b$ có đúng 1 điểm chung duy nhất: $a \\cap b = \\{M\\}$.
+                <br/>• <strong>Song song:</strong> $a$ và $b$ cùng nằm trong một mặt phẳng và không có điểm chung nào: $a \\parallel b \\iff a, b \\subset (P)$ và $a \\cap b = \\emptyset$.
+                <br/>• <strong>Trùng nhau:</strong> $a$ và $b$ có từ hai điểm chung phân biệt trở lên $\\implies a \\equiv b$ (vô số điểm chung).
               </li>
               <li><strong>Trường hợp 2 (Không cùng thuộc bất kỳ mặt phẳng nào):</strong>
-                <br/>• <strong>Chéo nhau:</strong> Hai đường thẳng không đồng phẳng và không có điểm chung.
+                <br/>• <strong>Chéo nhau:</strong> Hai đường thẳng không đồng phẳng và không có điểm chung nào.
               </li>
-              <li><strong>Tính chất bắc cầu:</strong> Trong không gian, hai đường thẳng phân biệt cùng song song với đường thẳng thứ ba thì song song với nhau:
-                $$\\begin{cases} a \\parallel c \\\\ b \\parallel c \\end{cases} \\Rightarrow a \\parallel b$$
+              <li><strong>Dấu hiệu nhận biết hai đường thẳng chéo nhau:</strong> Nếu đường thẳng $a$ nằm trong mặt phẳng $(P)$ và đường thẳng $b$ cắt $(P)$ tại một điểm $A$ không thuộc $a$, thì $a$ và $b$ chéo nhau.
               </li>
-              <li><strong>Định lý giao tuyến của ba mặt phẳng:</strong> Nếu ba mặt phẳng đôi một cắt nhau theo ba giao tuyến phân biệt thì ba giao tuyến đó hoặc <strong>đồng quy</strong> hoặc <strong>đôi một song song</strong>.</li>
             </ul>`,
-            `<li>Định nghĩa song song: Phải có 2 yếu tố: CÙNG NẰM TRONG MỘT MẶT PHẲNG và KHÔNG CÓ ĐIỂM CHUNG. Nếu chỉ không có điểm chung thì chúng có thể chéo nhau.</li>
-            <li>Định lý giao tuyến song song: Nếu hai mặt phẳng chứa hai đường thẳng song song thì giao tuyến của chúng (nếu có) cũng song song với hai đường thẳng đó.</li>`,
-            `<li>Khẳng định: \"Hai đường thẳng không có điểm chung thì song song\" (sai, vì có thể chéo nhau).</li>
-            <li>Khẳng định: \"Hai đường thẳng chéo nhau thì vuông góc\" (sai).</li>`,
-            `<li><em>"Đồng phẳng không điểm chung là Song Song – Không đồng phẳng là Chéo Nhau – Giao tuyến ba mặt phẳng: Hoặc đồng quy hoặc đôi một song song!"</em></li>`
+            `<li>Trong không gian, hai đường thẳng không có điểm chung thì có thể SONG SONG hoặc CHÉO NHAU (khác với hình phẳng).</li>
+            <li>Hai đường thẳng chéo nhau thì KHÔNG THỂ cùng thuộc bất kì một mặt phẳng nào.</li>`,
+            `<li>Khẳng định "hai đường thẳng không có điểm chung thì song song" là SAI vì có thể chéo nhau.</li>
+            <li>Nhầm lẫn giữa chéo nhau và cắt nhau vuông góc.</li>`,
+            `<li><em>"Cùng mặt phẳng: cắt, song song, trùng – Khác mặt phẳng: chéo nhau cùng không gian!"</em></li>`
           ),
           mcqs: [
             {
-              question: "Hai đường thẳng được gọi là **chéo nhau** khi nào?",
+              question: "Trong không gian, cho hai đường thẳng phân biệt $a$ và $b$ không có điểm chung. Khi đó:",
               options: [
-                "A. Chúng không cùng nằm trong bất kì mặt phẳng nào",
-                "B. Chúng không có điểm chung và cùng nằm trong một mặt phẳng",
-                "C. Chúng vuông góc với nhau",
-                "D. Chúng cắt nhau tại một điểm"
+                "A. $a$ và $b$ song song hoặc chéo nhau",
+                "B. $a$ và $b$ luôn luôn song song",
+                "C. $a$ và $b$ luôn luôn chéo nhau",
+                "D. $a$ và $b$ cắt nhau"
               ],
               correct: "A",
-              explanation: "Định nghĩa chuẩn SGK Toán 11 KNTT: Hai đường thẳng chéo nhau là hai đường thẳng không cùng nằm trong bất kì mặt phẳng nào.",
-              hint1: "Hai đường thẳng không đồng phẳng.",
-              hint2: "Không cùng nằm trong bất kì mặt phẳng nào."
+              explanation: "Trong không gian, nếu hai đường thẳng không có điểm chung thì chúng có thể cùng thuộc một mặt phẳng (song song) hoặc không cùng thuộc mặt phẳng nào (chéo nhau).",
+              hint1: "Xem hai trường hợp đồng phẳng và không đồng phẳng.",
+              hint2: "Song song hoặc chéo nhau."
             },
             {
-              question: "Trong không gian, cho ba đường thẳng phân biệt $a, b, c$. Biết $a \\parallel c$ và $b \\parallel c$. Kết luận nào sau đây là **ĐÚNG**?",
-              options: ["A. $a \\parallel b$", "B. $a$ và $b$ chéo nhau", "C. $a$ cắt $b$", "D. $a$ trùng $b$"],
+              question: "Cho tứ diện $ABCD$. Cặp đường thẳng nào sau đây CHÉO NHAU?",
+              options: ["A. $AB$ và $CD$", "B. $AB$ và $BC$", "C. $AC$ và $AD$", "D. $BD$ và $CD$"],
               correct: "A",
-              explanation: "Theo tính chất bắc cầu của quan hệ song song trong không gian: Hai đường thẳng phân biệt cùng song song với đường thẳng thứ ba thì song song với nhau.",
-              hint1: "Tính chất bắc cầu của 2 đường thẳng song song.",
-              hint2: "$a \\parallel b$."
+              explanation: "Trong tứ diện $ABCD$, cặp cạnh đối diện $AB$ và $CD$ không đồng phẳng nên chúng chéo nhau.",
+              hint1: "Cặp cạnh đối diện của tứ diện.",
+              hint2: "AB và CD."
             },
+            {
+              question: "Cho đường thẳng $a$ nằm trong mặt phẳng $(P)$ và đường thẳng $b$ cắt $(P)$ tại $M \\notin a$. Vị trí tương đối của $a$ và $b$ là:",
+              options: ["A. Chéo nhau", "B. Song song", "C. Cắt nhau", "D. Trùng nhau"],
+              correct: "A",
+              explanation: "Theo định lý nhận biết hai đường thẳng chéo nhau: $a \\subset (P), b \\cap (P) = M \\notin a \\implies a$ và $b$ chéo nhau.",
+              hint1: "Dấu hiệu nhận biết hai đường thẳng chéo nhau.",
+              hint2: "Chéo nhau."
+            }
+          ]
+        },
+        {
+          sectionNumber: 2,
+          sectionTitle: "Mục 2: Tính chất hai đường thẳng song song & Định lí ba giao tuyến",
+          theory: createStandardTheoryHTML(
+            "Bài 11: Hai đường thẳng song song", "Lớp 11", 2,
+            "Tính chất hai đường thẳng song song & Định lí ba giao tuyến",
+            `<p>Các định lí và tính chất cơ bản của hai đường thẳng song song trong không gian:</p>
+            <ul class="list-disc ml-5 space-y-1.5">
+              <li><strong>Tính chất 1 (Tiên đề Ơ-clit trong không gian):</strong> Trong không gian, qua một điểm không thuộc đường thẳng cho trước, có một và chỉ một đường thẳng song song với đường thẳng đó.</li>
+              <li><strong>Tính chất 2 (Tính chất bắc cầu):</strong> Trong không gian, hai đường thẳng phân biệt cùng song song với một đường thẳng thứ ba thì song song với nhau:
+                $$\\begin{cases} a \\parallel c \\\\ b \\parallel c \\\\ a \\ne b \\end{cases} \\implies a \\parallel b$$
+              </li>
+              <li><strong>Định lí ba giao tuyến (Định lí Monge):</strong> Nếu ba mặt phẳng phân biệt đôi một cắt nhau theo ba giao tuyến phân biệt thì ba giao tuyến đó hoặc đôi một song song hoặc đồng quy tại một điểm:
+                $$\\begin{cases} (P) \\cap (Q) = d_1 \\\\ (Q) \\cap (R) = d_2 \\\\ (R) \\cap (P) = d_3 \\end{cases} \\implies \\left[\\begin{aligned} &d_1 \\parallel d_2 \\parallel d_3 \\\\ &d_1 \\cap d_2 \\cap d_3 = \\{I\\} \\end{aligned}\\right.$$
+              </li>
+              <li><strong>Hệ quả giao tuyến song song:</strong> Nếu hai mặt phẳng phân biệt lần lượt chứa hai đường thẳng song song thì giao tuyến của chúng (nếu có) song song với hai đường thẳng đó (hoặc trùng với một trong hai đường thẳng):
+                $$\\begin{cases} a \\subset (P), b \\subset (Q) \\\\ a \\parallel b \\\\ (P) \\cap (Q) = d \\end{cases} \\implies d \\parallel a \\parallel b$$
+              </li>
+            </ul>`,
+            `<li>Hệ quả giao tuyến song song là phương pháp hàng đầu để tìm giao tuyến của hai mặt phẳng khi biết chúng lần lượt chứa hai đường thẳng song song.</li>
+            <li>Ba giao tuyến chỉ có hai trạng thái: Hoặc ĐÔI MỘT SONG SONG, hoặc ĐỒNG QUY TẠI MỘT ĐIỂM.</li>`,
+            `<li>Nghĩ rằng ba giao tuyến có thể vừa cắt vừa song song hỗn tạp.</li>
+            <li>Quên điều kiện hai mặt phẳng phải phân biệt.</li>`,
+            `<li><em>"Ba mặt phẳng cắt ba đường – Hoặc cùng song song chạy dài muôn phương – Hoặc cùng tụ lại một điểm – Định lí ba giao tuyến rõ ràng khắc ghi!"</em></li>`
+          ),
+          mcqs: [
             {
               question: "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Giao tuyến của hai mặt phẳng $(SAB)$ và $(SCD)$ là:",
               options: [
                 "A. Đường thẳng đi qua $S$ và song song với $AB$ và $CD$",
                 "B. Đường thẳng $SO$ với $O$ là tâm đáy",
-                "C. Đoạn thẳng $AC$",
-                "D. Đường thẳng $SA$"
+                "C. Đường thẳng đi qua $S$ và cắt $AB$",
+                "D. Không có giao tuyến"
               ],
               correct: "A",
-              explanation: "Hai mặt phẳng $(SAB)$ và $(SCD)$ có điểm chung $S$ và lần lượt chứa hai đường thẳng song song $AB \\parallel CD$. Do đó giao tuyến của chúng là đường thẳng qua $S$ song song với $AB$ và $CD$.",
-              hint1: "Áp dụng định lí giao tuyến của 2 mặt phẳng chứa 2 đường thẳng song song.",
-              hint2: "Giao tuyến đi qua $S$ và song song với $AB, CD$."
+              explanation: "Hai mặt phẳng $(SAB)$ và $(SCD)$ có điểm chung $S$, lần lượt chứa hai đường thẳng song song $AB$ và $CD$. Theo hệ quả giao tuyến song song, giao tuyến là đường thẳng qua $S$ song song với $AB$ và $CD$.",
+              hint1: "Áp dụng hệ quả giao tuyến song song.",
+              hint2: "Đường thẳng qua S song song với AB và CD."
+            },
+            {
+              question: "Trong không gian, cho ba đường thẳng phân biệt $a, b, c$. Nếu $a \\parallel b$ và $b \\parallel c$ thì:",
+              options: ["A. $a \\parallel c$", "B. $a$ và $c$ chéo nhau", "C. $a$ cắt $c$", "D. $a \\equiv c$"],
+              correct: "A",
+              explanation: "Theo tính chất bắc cầu: Hai đường thẳng phân biệt cùng song song với đường thẳng thứ ba thì song song với nhau.",
+              hint1: "Tính chất bắc cầu.",
+              hint2: "a song song c."
+            },
+            {
+              question: "Ba mặt phẳng phân biệt cắt nhau từng đôi một theo ba giao tuyến phân biệt $d_1, d_2, d_3$. Biết $d_1$ cắt $d_2$ tại $I$. Khi đó:",
+              options: [
+                "A. $d_3$ phải đi qua điểm $I$",
+                "B. $d_3 \\parallel d_1$",
+                "C. $d_3$ chéo $d_2$",
+                "D. $d_3 \\subset d_1$"
+              ],
+              correct: "A",
+              explanation: "Theo định lí ba giao tuyến: Ba giao tuyến hoặc đôi một song song hoặc đồng quy. Vì $d_1$ cắt $d_2$ tại $I$ nên ba giao tuyến phải đồng quy tại $I$, do đó $d_3$ đi qua $I$.",
+              hint1: "Định lí ba giao tuyến.",
+              hint2: "Ba đường đồng quy tại I."
+            }
+          ]
+        },
+        {
+          sectionNumber: 3,
+          sectionTitle: "Mục 3: Kỹ thuật chứng minh hai đường thẳng song song & Thiết diện song song",
+          theory: createStandardTheoryHTML(
+            "Bài 11: Hai đường thẳng song song", "Lớp 11", 3,
+            "Kỹ thuật chứng minh hai đường thẳng song song & Thiết diện song song",
+            `<p>Các phương pháp chứng minh song song và dựng thiết diện song song chuẩn mực:</p>
+            <ul class="list-disc ml-5 space-y-1.5">
+              <li><strong>4 phương pháp chứng minh hai đường thẳng song song trong không gian:</strong>
+                <br/>• <em>Phương pháp 1 (Đồng phẳng & Hình học phẳng):</em> Chứng minh $a$ và $b$ cùng thuộc một mặt phẳng rồi dùng: Đường trung bình tam giác/hình thang, định lí Ta-lét đảo, hai cạnh đối hình bình hành.
+                <br/>• <em>Phương pháp 2 (Bắc cầu):</em> Tìm đường thẳng thứ ba $c$ sao cho $a \\parallel c$ và $b \\parallel c$.
+                <br/>• <em>Phương pháp 3 (Hệ quả giao tuyến song song):</em> $\\begin{cases} a \\subset (P), b \\subset (Q) \\\\ a \\parallel b \\\\ (P) \\cap (Q) = d \\end{cases} \\implies d \\parallel a \\parallel b$.
+                <br/>• <em>Phương pháp 4 (Định lí ba giao tuyến):</em> Chứng minh hai giao tuyến song song suy ra giao tuyến thứ ba song song.
+              </li>
+              <li><strong>Dựng thiết diện song song với một đường thẳng $d$:</strong>
+                <br/>• Khi mặt phẳng cắt $(\\alpha)$ song song với đường thẳng $d$, giao tuyến của $(\\alpha)$ với bất kì mặt phẳng nào chứa $d$ đều phải song song với $d$.
+                <br/>• Từ các điểm đã biết của thiết diện, kẻ các đoạn thẳng song song với $d$ trên các mặt chứa đường thẳng song song hoặc chứa $d$.
+              </li>
+            </ul>`,
+            `<li>Đoạn nối hai trung điểm trong một tam giác luôn bằng một nửa và song song với cạnh thứ ba (đường trung bình).</li>
+            <li>Khi kẻ giao tuyến song song, phải xác định rõ đoạn giao tuyến nằm trên mặt nào để kẻ chính xác.</li>`,
+            `<li>Kẻ đường song song cắt qua miền không gian mà không nằm trên mặt nào của hình chóp.</li>
+            <li>Nhầm lẫn giữa tỉ số đoạn thẳng trong định lí Ta-lét thuận và đảo.</li>`,
+            `<li><em>"Trung điểm nối lại trung bình – Song song một nửa cạnh đáy hiển nhiên – Ta-lét tỉ số bằng nhau – Thiết diện song song kẻ đường thẳng ngay!"</em></li>`
+          ),
+          mcqs: [
+            {
+              question: "Cho tứ diện $ABCD$. Gọi $M, N, P, Q$ lần lượt là trung điểm của $AB, BC, CD, DA$. Tứ giác $MNPQ$ là hình gì?",
+              options: ["A. Hình bình hành", "B. Hình thang cân", "C. Hình thoi", "D. Tứ giác không đặc biệt"],
+              correct: "A",
+              explanation: "Trong tam giác $ABC$, $MN$ là đường trung bình nên $MN \\parallel AC$ và $MN = \\frac{1}{2}AC$. Trong tam giác $ADC$, $QP$ là đường trung bình nên $QP \\parallel AC$ và $QP = \\frac{1}{2}AC$. Do đó $MN \\parallel QP$ và $MN = QP$, suy ra $MNPQ$ là hình bình hành.",
+              hint1: "Áp dụng tính chất đường trung bình tam giác.",
+              hint2: "Hình bình hành."
+            },
+            {
+              question: "Cho hình chóp $S.ABCD$ có đáy là hình bình hành. Mặt phẳng $(\\alpha)$ đi qua điểm $M$ trên cạnh $SA$ và song song với $AB$ và $AD$. Thiết diện của $(\\alpha)$ với hình chóp là:",
+              options: [
+                "A. Hình bình hành",
+                "B. Tam giác",
+                "C. Hình thang vuông",
+                "D. Ngũ giác"
+              ],
+              correct: "A",
+              explanation: "Mặt phẳng $(\\alpha)$ song song với hai cạnh đáy $AB$ và $AD$ nên các đoạn giao tuyến trên các mặt bên đều song song với các cạnh đáy tương ứng. Do đó thiết diện tạo thành là một hình bình hành đồng dạng với đáy.",
+              hint1: "Các giao tuyến song song với cạnh đáy.",
+              hint2: "Hình bình hành."
+            },
+            {
+              question: "Cho tứ diện $ABCD$. Lấy điểm $M \\in AB$ sao cho $AM = 2MB$. Mặt phẳng $(\\alpha)$ qua $M$ song song với $BC$ và $CD$. Thiết diện của tứ diện cắt bởi $(\\alpha)$ là hình gì?",
+              options: ["A. Tam giác", "B. Tứ giác", "C. Hình bình hành", "D. Hình thang"],
+              correct: "A",
+              explanation: "Mặt phẳng $(\\alpha)$ qua $M$ kẻ đoạn song song $BC$ cắt $AC$ tại $N$, kẻ đoạn song song $CD$ qua $N$ cắt $AD$ tại $P$. Nối $M$ và $P$ ta được tam giác $MNP$.",
+              hint1: "Đếm số mặt mà mặt phẳng cắt qua.",
+              hint2: "Tam giác."
             }
           ]
         }
@@ -4379,63 +4639,89 @@
       tfQuestions: [
         {
           id: 1,
-          title: "Câu 1: Cho tứ diện $ABCD$. Gọi $M, N, P, Q$ lần lượt là trung điểm của các cạnh $AB, BC, CD, DA$:",
+          title: "Câu 1: Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành tâm $O$:",
           items: [
-            { key: "a", text: "$MN$ là đường trung bình của tam giác $ABC$ nên $MN \\parallel AC$ và $MN = \\frac{1}{2} AC$.", correct: "true", explain: "Đường trung bình tam giác." },
-            { key: "b", text: "$PQ$ là đường trung bình của tam giác $ACD$ nên $PQ \\parallel AC$ và $PQ = \\frac{1}{2} AC$.", correct: "true", explain: "Đường trung bình tam giác." },
-            { key: "c", text: "Tứ giác $MNPQ$ là một hình bình hành.", correct: "true", explain: "Vì $MN \\parallel PQ$ và $MN = PQ$." },
-            { key: "d", text: "Hai đường thẳng $AB$ và $CD$ cắt nhau.", correct: "false", explain: "Trong tứ diện, hai cạnh đối diện $AB$ và $CD$ chéo nhau." }
+            { key: "a", text: "Hai đường thẳng $AB$ và $CD$ song song với nhau.", correct: "true", explain: "Do đáy $ABCD$ là hình bình hành." },
+            { key: "b", text: "Hai đường thẳng $SA$ và $CD$ chéo nhau.", correct: "true", explain: "Vì $CD \\subset (ABCD)$ và $SA$ cắt $(ABCD)$ tại $A \\notin CD$." },
+            { key: "c", text: "Giao tuyến của hai mặt phẳng $(SAB)$ và $(SCD)$ là đường thẳng đi qua $S$ và song song với $AB$.", correct: "true", explain: "Theo hệ quả giao tuyến song song." },
+            { key: "d", text: "Hai đường thẳng $AC$ và $BD$ song song với nhau.", correct: "false", explain: "Chúng cắt nhau tại tâm $O$ của hình bình hành." }
           ]
         },
         {
           id: 2,
-          title: "Câu 2: Xét tính đúng sai của các khẳng định về vị trí tương đối giữa hai đường thẳng trong không gian:",
+          title: "Câu 2: Về vị trí tương đối của hai đường thẳng trong không gian:",
           items: [
-            { key: "a", text: "Hai đường thẳng phân biệt không song song thì chéo nhau.", correct: "false", explain: "Chúng có thể cắt nhau." },
-            { key: "b", text: "Hai đường thẳng chéo nhau thì không có điểm chung.", correct: "true", explain: "Đặc trưng chéo nhau." },
-            { key: "c", text: "Hai đường thẳng không có điểm chung thì song song hoặc chéo nhau.", correct: "true", explain: "Phân loại chuẩn." },
-            { key: "d", text: "Nếu $a \\parallel b$ và $b$ chéo $c$ thì $a$ chắc chắn chéo $c$.", correct: "false", explain: "$a$ có thể cắt $c$." }
+            { key: "a", text: "Hai đường thẳng chéo nhau thì không cùng nằm trên một mặt phẳng.", correct: "true", explain: "Định nghĩa chuẩn." },
+            { key: "b", text: "Hai đường thẳng song song thì cùng nằm trên một mặt phẳng.", correct: "true", explain: "Định nghĩa chuẩn." },
+            { key: "c", text: "Hai đường thẳng không có điểm chung thì bắt buộc phải song song.", correct: "false", explain: "Có thể chéo nhau." },
+            { key: "d", text: "Qua một điểm nằm ngoài đường thẳng cho trước có duy nhất một đường thẳng song song với đường thẳng đó.", correct: "true", explain: "Tiên đề Ơ-clit trong không gian." }
           ]
         },
         {
           id: 3,
-          title: "Câu 3: Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang ($AB \\parallel CD, AB > CD$):",
+          title: "Câu 3: Cho tứ diện $ABCD$. Gọi $M, N, P, Q$ lần lượt là trung điểm của $AB, BC, CD, DA$:",
           items: [
-            { key: "a", text: "Giao tuyến của $(SAD)$ và $(SBC)$ là đường thẳng đi qua $S$ và giao điểm $I$ của $AD$ và $BC$.", correct: "true", explain: "Vì $AD$ và $BC$ không song song nên cắt nhau tại $I$." },
-            { key: "b", text: "Giao tuyến của $(SAB)$ và $(SCD)$ là đường thẳng đi qua $S$ song song với $AB$ và $CD$.", correct: "true", explain: "Định lí giao tuyến song song." },
-            { key: "c", text: "Hai đường thẳng $SA$ và $CD$ chéo nhau.", correct: "true", explain: "Không đồng phẳng." },
-            { key: "d", text: "Hai đường thẳng $AD$ và $BC$ song song nhau.", correct: "false", explain: "Đáy là hình thang đáy $AB, CD$ nên hai cạnh bên $AD, BC$ không song song." }
+            { key: "a", text: "Đoạn thẳng $MN$ song song với $AC$.", correct: "true", explain: "Đường trung bình tam giác $ABC$." },
+            { key: "b", text: "Đoạn thẳng $PQ$ song song với $AC$.", correct: "true", explain: "Đường trung bình tam giác $ADC$." },
+            { key: "c", text: "Tứ giác $MNPQ$ là hình bình hành.", correct: "true", explain: "Vì $MN \\parallel PQ$ và $MN = PQ = \\frac{1}{2}AC$." },
+            { key: "d", text: "Hai đường chéo $MP$ và $NQ$ chéo nhau trong không gian.", correct: "false", explain: "Chúng cắt nhau tại trung điểm mỗi đường vì $MNPQ$ là hình bình hành phẳng." }
           ]
         },
         {
           id: 4,
-          title: "Câu 4: Về định lý giao tuyến của ba mặt phẳng:",
+          title: "Câu 4: Về định lí ba giao tuyến trong không gian:",
           items: [
-            { key: "a", text: "Nếu ba mặt phẳng cắt nhau theo ba giao tuyến thì ba giao tuyến đó hoặc đồng quy hoặc đôi một song song.", correct: "true", explain: "Định lý chuẩn SGK." },
-            { key: "b", text: "Mô hình mái ngói nhà là hình ảnh của ba giao tuyến đôi một song song.", correct: "true", explain: "Thực tế hình học." },
-            { key: "c", text: "Mô hình đỉnh góc tường là hình ảnh của ba giao tuyến đồng quy tại một điểm.", correct: "true", explain: "Góc 3 mặt phẳng vuông góc." },
-            { key: "d", text: "Ba giao tuyến của ba mặt phẳng có thể chéo nhau.", correct: "false", explain: "Chỉ có thể đồng quy hoặc đôi một song song." }
+            { key: "a", text: "Nếu ba mặt phẳng đôi một cắt nhau theo ba giao tuyến phân biệt thì ba giao tuyến đó hoặc đôi một song song hoặc đồng quy.", correct: "true", explain: "Nội dung định lí ba giao tuyến." },
+            { key: "b", text: "Nếu hai trong ba giao tuyến cắt nhau tại $I$ thì giao tuyến thứ ba cũng đi qua $I$.", correct: "true", explain: "Trường hợp đồng quy." },
+            { key: "c", text: "Ba giao tuyến luôn luôn đôi một song song với nhau trong mọi trường hợp.", correct: "false", explain: "Có thể đồng quy." },
+            { key: "d", text: "Hệ quả giao tuyến song song là trường hợp đặc biệt của định lí ba giao tuyến.", correct: "true", explain: "Chuẩn kiến thức SGK." }
           ]
         },
         {
           id: 5,
-          title: "Câu 5: Cho hình hộp $ABCD.A'B'C'D'$:",
+          title: "Câu 5: Cho hình chóp $S.ABCD$ đáy hình thang ($AB \\parallel CD$ và $AB = 2CD$):",
           items: [
-            { key: "a", text: "Các cạnh bên $AA', BB', CC', DD'$ đôi một song song và bằng nhau.", correct: "true", explain: "Tính chất hình hộp." },
-            { key: "b", text: "Hai đường thẳng $AB$ và $C'D'$ song song với nhau.", correct: "true", explain: "$AB \\parallel CD \\parallel C'D'$." },
-            { key: "c", text: "Hai đường thẳng $AC$ và $A'C'$ song song với nhau.", correct: "true", explain: "Đường chéo hai đáy." },
-            { key: "d", text: "Hai đường thẳng $AB'$ và $CD'$ chéo nhau.", correct: "false", explain: "$AB' \\parallel DC'$ nên chúng đồng phẳng và song song, không chéo." }
+            { key: "a", text: "Giao tuyến của $(SAB)$ và $(SCD)$ đi qua $S$ và song song với $AB$.", correct: "true", explain: "Do $AB \\parallel CD$." },
+            { key: "b", text: "Hai đường thẳng $AD$ và $BC$ cắt nhau tại một điểm nằm trong mặt đáy.", correct: "true", explain: "Do hình thang có hai cạnh bên không song song." },
+            { key: "c", text: "Giao tuyến của $(SAD)$ và $(SBC)$ song song với $AB$.", correct: "false", explain: "Giao tuyến này đi qua $S$ và giao điểm của $AD, BC$ (cắt đáy)." },
+            { key: "d", text: "Hai đường thẳng $SA$ và $CD$ là hai đường thẳng chéo nhau.", correct: "true", explain: "Không đồng phẳng." }
           ]
         },
         {
           id: 6,
-          title: "Câu 6: Về phương pháp chứng minh hai đường thẳng song song trong không gian:",
+          title: "Câu 6: Về thiết diện song song với một đường thẳng:",
           items: [
-            { key: "a", text: "Chứng minh cùng thuộc một mặt phẳng và áp dụng định lí Ta-lét hoặc đường trung bình.", correct: "true", explain: "Phương pháp 1." },
-            { key: "b", text: "Chứng minh cùng song song với đường thẳng thứ ba.", correct: "true", explain: "Phương pháp 2." },
-            { key: "c", text: "Sử dụng định lý giao tuyến của hai mặt phẳng lần lượt chứa hai đường thẳng song song.", correct: "true", explain: "Phương pháp 3." },
-            { key: "d", text: "Chỉ cần chỉ ra chúng không cắt nhau là đủ kết luận song song.", correct: "false", explain: "Không cắt nhau có thể chéo nhau." }
+            { key: "a", text: "Mặt phẳng song song với một đường thẳng thì cắt các mặt phẳng chứa đường thẳng đó theo các giao tuyến song song với đường thẳng đó.", correct: "true", explain: "Tính chất giao tuyến song song." },
+            { key: "b", text: "Thiết diện của một khối đa diện là một đa giác phẳng khép kín.", correct: "true", explain: "Định nghĩa thiết diện." },
+            { key: "c", text: "Thiết diện của hình tứ diện có thể có 5 cạnh.", correct: "false", explain: "Tối đa chỉ có 4 cạnh." },
+            { key: "d", text: "Một mặt phẳng song song với một cạnh của tứ diện thì thiết diện tạo thành có ít nhất một cạnh song song với cạnh đó.", correct: "true", explain: "Đúng theo tính chất giao tuyến." }
           ]
+        }
+      ],
+      saQuestions: [
+        {
+          id: 1,
+          question: "Cho hình chóp $S.ABCD$ có đáy là hình bình hành. Có bao nhiêu cặp cạnh đối diện của hình chóp là hai đường thẳng chéo nhau?",
+          answer: "4",
+          explain: "Các cặp cạnh chéo nhau là (SA, CD), (SB, AD), (SC, AB), (SD, BC)."
+        },
+        {
+          id: 2,
+          question: "Cho tứ diện $ABCD$ có tất cả các cạnh bằng 6 cm. Gọi $M, N, P, Q$ lần lượt là trung điểm của $AB, BC, CD, DA$. Chu vi của hình bình hành $MNPQ$ bằng bao nhiêu cm?",
+          answer: "12",
+          explain: "MN = PQ = AC/2 = 3 cm, MQ = NP = BD/2 = 3 cm. Chu vi = 2*(3 + 3) = 12 cm."
+        },
+        {
+          id: 3,
+          question: "Trong không gian cho 4 đường thẳng đôi một song song, không có 3 đường thẳng nào cùng thuộc một mặt phẳng. Có bao nhiêu mặt phẳng xác định bởi từng cặp đường thẳng song song đó?",
+          answer: "6",
+          explain: "Số mặt phẳng là C(4, 2) = 6 mặt phẳng."
+        },
+        {
+          id: 4,
+          question: "Cho hình chóp tam giác $S.ABC$. Cắt hình chóp bởi một mặt phẳng song song với $BC$. Thiết diện tạo thành là một đa giác có tối đa bao nhiêu cạnh?",
+          answer: "3",
+          explain: "Hình chóp tam giác có 4 mặt, mặt phẳng cắt các mặt bên tạo thành thiết diện là tam giác (3 cạnh) hoặc tứ giác hình thang (3 hoặc 4 cạnh). Với chóp tam giác, thiết diện song song BC cắt 3 mặt quanh đỉnh S tạo thành tam giác hoặc tứ giác hình thang."
         }
       ]
     },
@@ -4454,54 +4740,165 @@
       sections: [
         {
           sectionNumber: 1,
-          sectionTitle: "Mục 1: Điều kiện để đường thẳng song song với mặt phẳng và Tính chất",
+          sectionTitle: "Mục 1: Vị trí tương đối của đường thẳng và mặt phẳng & Điều kiện d // (P)",
           theory: createStandardTheoryHTML(
             "Bài 12: Đường thẳng và mặt phẳng song song", "Lớp 11", 1,
-            "Điều kiện để đường thẳng song song với mặt phẳng và Tính chất",
+            "Vị trí tương đối của đường thẳng và mặt phẳng & Điều kiện d // (P)",
             `<p>Quan hệ giữa đường thẳng $d$ và mặt phẳng $(\\alpha)$ song song chuẩn SGK Toán 11 KNTT:</p>
             <ul class="list-disc ml-5 space-y-1.5">
-              <li><strong>Định nghĩa:</strong> Đường thẳng $d$ và mặt phẳng $(\\alpha)$ được gọi là song song với nhau nếu chúng <strong>không có điểm chung</strong>. Ký hiệu: $d \\parallel (\\alpha)$.</li>
-              <li><strong>Dấu hiệu nhận biết (Định lý 1):</strong> Nếu đường thẳng $d$ không nằm trong mặt phẳng $(\\alpha)$ và song song với một đường thẳng $d'$ nằm trong $(\\alpha)$ thì $d$ song song với $(\\alpha)$:
-                $$\\begin{cases} d \\not\\subset (\\alpha) \\\\ d \\parallel d' \\\\ d' \\subset (\\alpha) \\end{cases} \\Rightarrow d \\parallel (\\alpha)$$
+              <li><strong>Ba vị trí tương đối giữa đường thẳng $d$ và mặt phẳng $(\\alpha)$:</strong>
+                <br/>• <strong>$d$ nằm trong $(\\alpha)$:</strong> Mọi điểm của $d$ đều thuộc $(\\alpha)$ ($d \\subset (\\alpha)$). Số điểm chung: Vô số ($d \\cap (\\alpha) = d$).
+                <br/>• <strong>$d$ cắt $(\\alpha)$ tại $M$:</strong> $d$ và $(\\alpha)$ có duy nhất 1 điểm chung ($d \\cap (\\alpha) = \\{M\\}$).
+                <br/>• <strong>$d$ song song với $(\\alpha)$:</strong> $d$ và $(\\alpha)$ <strong>không có điểm chung</strong> nào: $d \\parallel (\\alpha) \\iff d \\cap (\\alpha) = \\emptyset$.
               </li>
-              <li><strong>Tính chất giao tuyến (Định lý 2):</strong> Nếu đường thẳng $d$ song song với mặt phẳng $(\\alpha)$ và mặt phẳng $(\\beta)$ chứa $d$ cắt $(\\alpha)$ theo giao tuyến $d'$ thì $d \\parallel d'$.</li>
-              <li><strong>Hệ quả:</strong> Nếu hai mặt phẳng phân biệt cùng song song với một đường thẳng thì giao tuyến của chúng (nếu có) cũng song song với đường thẳng đó.</li>
+              <li><strong>Điều kiện để đường thẳng song song với mặt phẳng (Định lí 1):</strong> Nếu đường thẳng $a$ không nằm trong mặt phẳng $(P)$ và song song với một đường thẳng $b$ nằm trong $(P)$ thì $a$ song song với mặt phẳng $(P)$:
+                $$\\begin{cases} a \\not\\subset (P) \\\\ b \\subset (P) \\\\ a \\parallel b \\end{cases} \\implies a \\parallel (P)$$
+              </li>
+              <li><strong>Quy trình 3 bước vàng chứng minh $a \\parallel (P)$:</strong>
+                <br/>• <em>Bước 1:</em> Tìm trong mặt phẳng $(P)$ một đường thẳng $b$ thích hợp.
+                <br/>• <em>Bước 2:</em> Chứng minh $a \\parallel b$ (dùng đường trung bình, định lí Ta-lét đảo, hình bình hành).
+                <br/>• <em>Bước 3:</em> Kiểm tra điều kiện $a \\not\\subset (P)$ và kết luận $a \\parallel (P)$.
+              </li>
             </ul>`,
-            `<li>Muốn chứng minh đường thẳng $d$ song song với mặt phẳng $(\\alpha)$: Tìm trong $(\\alpha)$ một đường thẳng $d'$ sao cho $d \\parallel d'$.</li>
-            <li>Đừng quên kiểm tra điều kiện $d$ KHÔNG NẰM TRONG $(\\alpha)$.</li>`,
-            `<li>Quên điều kiện $d \\not\\subset (\\alpha)$ (nếu $d$ nằm trong mặt phẳng thì không thể song song).</li>
-            <li>Ngộ nhận: Nếu $d \\parallel (\\alpha)$ thì $d$ song song với mọi đường thẳng nằm trong $(\\alpha)$ (sai, $d$ chỉ chéo nhau hoặc song song với các đường trong $(\\alpha)$, không cắt).</li>`,
-            `<li><em>"Đường ngoài song song một đường trong – Suy ra Đường song song Mặt phẳng!"</em></li>`
+            `<li>Muốn chứng minh $a \\parallel (P)$, chỉ cần tìm MỘT đường thẳng $b \\subset (P)$ sao cho $a \\parallel b$ và $a \\not\\subset (P)$.</li>
+            <li>Điều kiện $a \\not\\subset (P)$ là BẮT BUỘC để tránh trường hợp $a$ nằm sẵn trong $(P)$.</li>`,
+            `<li>Quên kiểm tra điều kiện $a \\not\\subset (P)$.</li>
+            <li>Nghĩ rằng muốn $a \\parallel (P)$ thì $a$ phải song song với mọi đường thẳng trong $(P)$ (thực tế $a$ chỉ chéo hoặc song song với các đường trong $P$).</li>`,
+            `<li><em>"Muốn chứng minh đường song song mặt – Tìm một đường thẳng nằm trong mặt này – Hai đường song song thấy ngay – Đường không nằm trong, mặt phẳng song song liền!"</em></li>`
           ),
           mcqs: [
             {
-              question: "Để chứng minh đường thẳng $d$ song song với mặt phẳng $(\\alpha)$, ta cần chứng minh:",
+              question: "Cho đường thẳng $a$ song song với đường thẳng $b$ nằm trong mặt phẳng $(P)$. Khẳng định nào sau đây ĐÚNG và ĐẦY ĐỦ nhất?",
               options: [
-                "A. $d$ không nằm trong $(\\alpha)$ và song song với một đường thẳng $a$ nằm trong $(\\alpha)$",
-                "B. $d$ vuông góc với $(\\alpha)$",
-                "C. $d$ cắt một đường thẳng nằm trong $(\\alpha)$",
-                "D. $d$ và $(\\alpha)$ có 1 điểm chung"
+                "A. $a \\parallel (P)$ hoặc $a \\subset (P)$",
+                "B. $a \\parallel (P)$",
+                "C. $a \\subset (P)$",
+                "D. $a$ cắt $(P)$"
               ],
               correct: "A",
-              explanation: "Định lý 1 chuẩn SGK: Đường thẳng không nằm trong mặt phẳng và song song với một đường thẳng thuộc mặt phẳng thì song song với mặt phẳng đó.",
-              hint1: "Tìm 1 đường thẳng trong mặt phẳng song song với $d$.",
-              hint2: "Dấu hiệu nhận biết đường thẳng song song mặt phẳng."
+              explanation: "Nếu chưa biết $a$ có nằm trong $(P)$ hay không, thì $a$ có thể song song với $(P)$ (nếu $a \\not\\subset (P)$) hoặc $a$ nằm trong $(P)$ (nếu $a \\subset (P)$).",
+              hint1: "Xem lại điều kiện Định lí 1.",
+              hint2: "a // (P) hoặc a nằm trong (P)."
             },
             {
-              question: "Cho đường thẳng $d$ song song với mặt phẳng $(\\alpha)$. Nếu mặt phẳng $(\\beta)$ chứa $d$ và cắt $(\\alpha)$ theo giao tuyến $a$ thì:",
-              options: ["A. $d \\parallel a$", "B. $d$ cắt $a$", "C. $d$ chéo $a$", "D. $d \\perp a$"],
+              question: "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành tâm $O$. Gọi $M$ là trung điểm cạnh $SC$. Đường thẳng $OM$ song song với mặt phẳng nào sau đây?",
+              options: ["A. $(SAB)$ và $(SAD)$", "B. $(SBC)$", "C. $(SCD)$", "D. $(ABCD)$"],
               correct: "A",
-              explanation: "Theo định lý 2 (tính chất): Nếu một mặt phẳng qua $d$ cắt $(\\alpha)$ theo giao tuyến $a$ thì giao tuyến đó song song với $d$.",
-              hint1: "Tính chất giao tuyến song song.",
-              hint2: "$d \\parallel a$."
+              explanation: "Trong tam giác $SAC$, $O$ là trung điểm $AC$, $M$ là trung điểm $SC \\implies OM$ là đường trung bình $\\implies OM \\parallel SA$. Do $SA \\subset (SAB)$ và $SA \\subset (SAD)$ nên $OM \\parallel (SAB)$ và $OM \\parallel (SAD)$.",
+              hint1: "Xét tam giác SAC, OM là đường gì?",
+              hint2: "OM // SA."
             },
             {
-              question: "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Đường thẳng $AB$ song song với mặt phẳng nào sau đây?",
-              options: ["A. $(SCD)$", "B. $(SAD)$", "C. $(SBC)$", "D. $(SAC)$"],
+              question: "Cho tứ diện $ABCD$. Gọi $M, N$ lần lượt là trung điểm của $AB$ và $AC$. Khẳng định nào sau đây ĐÚNG?",
+              options: ["A. $MN \\parallel (BCD)$", "B. $MN \\subset (BCD)$", "C. $MN$ cắt $(BCD)$", "D. $MN \\parallel (ACD)$"],
               correct: "A",
-              explanation: "Vì $AB \\not\\subset (SCD)$ và $AB \\parallel CD$ (với $CD \\subset (SCD)$) nên $AB \\parallel (SCD)$.",
-              hint1: "$AB$ song song với cạnh nào của đáy?",
-              hint2: "$AB \\parallel CD \\subset (SCD) \\implies AB \\parallel (SCD)$."
+              explanation: "$MN$ là đường trung bình tam giác $ABC \\implies MN \\parallel BC$. Mà $BC \\subset (BCD)$ và $MN \\not\\subset (BCD) \\implies MN \\parallel (BCD)$.",
+              hint1: "MN là đường trung bình của tam giác ABC.",
+              hint2: "MN // (BCD)."
+            }
+          ]
+        },
+        {
+          sectionNumber: 2,
+          sectionTitle: "Mục 2: Tính chất của đường thẳng song song mặt phẳng & Định lí giao tuyến song song",
+          theory: createStandardTheoryHTML(
+            "Bài 12: Đường thẳng và mặt phẳng song song", "Lớp 11", 2,
+            "Tính chất của đường thẳng song song mặt phẳng & Định lí giao tuyến song song",
+            `<p>Các tính chất và định lí giao tuyến then chốt của quan hệ song song:</p>
+            <ul class="list-disc ml-5 space-y-1.5">
+              <li><strong>Định lí 2 (Định lí giao tuyến song song):</strong> Cho đường thẳng $a$ song song với mặt phẳng $(P)$. Nếu mặt phẳng $(Q)$ chứa $a$ và cắt $(P)$ theo giao tuyến $b$ thì $b$ song song với $a$:
+                $$\\begin{cases} a \\parallel (P) \\\\ a \\subset (Q) \\\\ (P) \\cap (Q) = b \\end{cases} \\implies b \\parallel a$$
+              </li>
+              <li><strong>Hệ quả:</strong> Nếu hai mặt phẳng phân biệt cùng song song với một đường thẳng thì giao tuyến của chúng (nếu có) song song với đường thẳng đó:
+                $$\\begin{cases} (P) \\parallel a \\\\ (Q) \\parallel a \\\\ (P) \\cap (Q) = d \\end{cases} \\implies d \\parallel a$$
+              </li>
+              <li><strong>Định lí tồn tại duy nhất mặt phẳng:</strong> Cho hai đường thẳng chéo nhau. Có <strong>duy nhất</strong> một mặt phẳng chứa đường thẳng này và song song với đường thẳng kia.
+                <br/>• <em>Cách dựng:</em> Lấy điểm $A \\in a$, qua $A$ kẻ $b' \\parallel b$. Khi đó $(a, b')$ là mặt phẳng duy nhất chứa $a$ và song song với $b$.
+              </li>
+            </ul>`,
+            `<li>Định lí 2 là chìa khóa vàng để dựng giao tuyến và thiết diện khi có yếu tố song song.</li>
+            <li>Hai mặt phẳng cùng song song với một đường thẳng thì giao tuyến của chúng song song với đường thẳng đó.</li>`,
+            `<li>Áp dụng Định lí 2 nhưng mặt phẳng $(Q)$ không chứa đường thẳng $a$.</li>
+            <li>Nhầm lẫn giữa điều kiện cần và điều kiện đủ.</li>`,
+            `<li><em>"Đường thẳng song song mặt phẳng kia – Mặt phẳng thứ hai chứa đường này – Cắt mặt ban đầu sinh giao tuyến – Giao tuyến song song với đường ban đầu!"</em></li>`
+          ),
+          mcqs: [
+            {
+              question: "Cho đường thẳng $a$ song song với mặt phẳng $(P)$. Mặt phẳng $(Q)$ chứa $a$ và cắt $(P)$ theo giao tuyến $b$. Khi đó vị trí tương đối giữa $a$ và $b$ là:",
+              options: ["A. $b \\parallel a$", "B. $b$ cắt $a$", "C. $b$ chéo $a$", "D. $b \\equiv a$"],
+              correct: "A",
+              explanation: "Theo định lí 2 về giao tuyến song song: Nếu mặt phẳng $(Q)$ chứa $a \\parallel (P)$ và cắt $(P)$ theo giao tuyến $b$ thì $b \\parallel a$.",
+              hint1: "Nội dung Định lí 2.",
+              hint2: "b song song a."
+            },
+            {
+              question: "Cho hai đường thẳng chéo nhau $a$ và $b$. Có bao nhiêu mặt phẳng chứa đường thẳng $a$ và song song với đường thẳng $b$?",
+              options: ["A. Duy nhất 1", "B. 2", "C. Vô số", "D. 0"],
+              correct: "A",
+              explanation: "Theo định lí: Cho hai đường thẳng chéo nhau, có duy nhất một mặt phẳng chứa đường thẳng này và song song với đường thẳng kia.",
+              hint1: "Định lí tồn tại duy nhất mặt phẳng.",
+              hint2: "Duy nhất 1 mặt phẳng."
+            },
+            {
+              question: "Cho tứ diện đều $ABCD$ có tất cả các cạnh bằng $a$. Mặt phẳng $(P)$ song song với $AB$ và $CD$, cắt các cạnh $AC, BC, BD, AD$ lần lượt tại $M, N, P, Q$. Thiết diện $MNPQ$ là hình gì?",
+              options: ["A. Hình chữ nhật", "B. Tam giác đều", "C. Hình thang cân", "D. Hình thoi"],
+              correct: "A",
+              explanation: "Do $(P) \\parallel AB \\implies MN \\parallel AB, PQ \\parallel AB \\implies MN \\parallel PQ$. Tương tự $MQ \\parallel NP \\parallel CD \\implies MNPQ$ là hình bình hành. Hơn nữa trong tứ diện đều $AB \\perp CD \\implies MN \\perp MQ$, vậy $MNPQ$ là hình chữ nhật.",
+              hint1: "Chú ý trong tứ diện đều, hai cạnh đối vuông góc với nhau.",
+              hint2: "Hình chữ nhật."
+            }
+          ]
+        },
+        {
+          sectionNumber: 3,
+          sectionTitle: "Mục 3: Phương pháp chứng minh d // (P) & Kỹ thuật dựng thiết diện song song",
+          theory: createStandardTheoryHTML(
+            "Bài 12: Đường thẳng và mặt phẳng song song", "Lớp 11", 3,
+            "Phương pháp chứng minh d // (P) & Kỹ thuật dựng thiết diện song song",
+            `<p>Các phương pháp giải toán hình học không gian nâng cao và bài toán thiết diện:</p>
+            <ul class="list-disc ml-5 space-y-1.5">
+              <li><strong>Kỹ thuật chứng minh $d \\parallel (P)$ nâng cao:</strong>
+                <br/>• Kết hợp định lí Ta-lét đảo trong tam giác: Nếu $\\frac{AM}{AB} = \\frac{AN}{AC} \\implies MN \\parallel BC \\implies MN \\parallel (BCD)$.
+                <br/>• Sử dụng tính chất trọng tâm tam giác với tỉ số $\\frac{2}{3}$.
+              </li>
+              <li><strong>Quy trình 4 bước dựng thiết diện song song với một đường thẳng:</strong>
+                <br/>• <em>Bước 1:</em> Xác định điểm chung xuất phát của mặt phẳng cắt với một mặt bất kì của hình khối.
+                <br/>• <em>Bước 2:</em> Qua điểm chung đó, kẻ đoạn giao tuyến song song với đường thẳng đã cho.
+                <br/>• <em>Bước 3:</em> Lan tỏa sang các mặt liền kề bằng cách kẻ tiếp các đoạn giao tuyến song song tương ứng.
+                <br/>• <em>Bước 4:</em> Khép kín đa giác và kết luận hình dạng thiết diện (hình tam giác, hình thang, hình bình hành, hình chữ nhật...).
+              </li>
+              <li><strong>Bài toán cực trị diện tích thiết diện:</strong> Đặt độ dài ẩn $x$, lập hàm số diện tích $S(x)$ và áp dụng bất đẳng thức AM-GM (Cô-si) để tìm diện tích lớn nhất.</li>
+            </ul>`,
+            `<li>Thiết diện song song với 2 cạnh đối vuông góc của tứ diện đều luôn có CHU VI KHÔNG ĐỔI bằng $2a$.</li>
+            <li>Diện tích thiết diện lớn nhất khi thiết diện là HÌNH VUÔNG cạnh $a/2$, diện tích bằng $a^2/4$.</li>`,
+            `<li>Quên kiểm tra tính đồng phẳng của các đỉnh thiết diện.</li>
+            <li>Nhầm lẫn giữa diện tích mặt bên và diện tích thiết diện.</li>`,
+            `<li><em>"Điểm chung xuất phát làm mốc – Kẻ đường song song cắt qua cạnh – Lan tỏa khép kín đa giác – Tính diện tích, cực trị đỉnh cao!"</em></li>`
+          ),
+          mcqs: [
+            {
+              question: "Cho hình chóp $S.ABCD$ đáy hình bình hành tâm $O$. Gọi $G_1, G_2$ lần lượt là trọng tâm của tam giác $SAB$ và tam giác $SCD$. Đường thẳng $G_1G_2$ song song với mặt phẳng nào sau đây?",
+              options: ["A. $(ABCD)$", "B. $(SAC)$", "C. $(SAD)$", "D. $(SBD)$"],
+              correct: "A",
+              explanation: "Gọi $M, N$ lần lượt là trung điểm của $AB$ và $CD$. Ta có $\\frac{SG_1}{SM} = \\frac{SG_2}{SN} = \\frac{2}{3} \\implies G_1G_2 \\parallel MN$. Do $MN \\subset (ABCD)$ nên $G_1G_2 \\parallel (ABCD)$.",
+              hint1: "Xét tỉ số trọng tâm trong tam giác SMN.",
+              hint2: "G1G2 song song với (ABCD)."
+            },
+            {
+              question: "Cho tứ diện đều $ABCD$ cạnh $a$. Mặt phẳng $(\\alpha)$ song song với $AB$ và $CD$, cắt cạnh $AC$ tại $M$ với $AM = x$ ($0 < x < a$). Chu vi của thiết diện tạo bởi $(\\alpha)$ và tứ diện bằng:",
+              options: ["A. $2a$", "B. $a$", "C. $4a$", "D. $x(a-x)$"],
+              correct: "A",
+              explanation: "Thiết diện $MNPQ$ là hình chữ nhật có kích thước $MN = a - x$ và $MQ = x$. Chu vi $P = 2(MN + MQ) = 2(a - x + x) = 2a$ không đổi.",
+              hint1: "Tính kích thước 2 cạnh theo định lí Ta-lét.",
+              hint2: "Chu vi bằng 2a."
+            },
+            {
+              question: "Tiếp tục bài toán tứ diện đều trên, diện tích thiết diện $MNPQ$ đạt giá trị lớn nhất bằng bao nhiêu?",
+              options: ["A. $\\frac{a^2}{4}$", "B. $\\frac{a^2}{2}$", "C. $a^2$", "D. $\\frac{a^2\\sqrt{3}}{4}$"],
+              correct: "A",
+              explanation: "Diện tích $S(x) = x(a - x) \\le \\left(\\frac{x + a - x}{2}\\right)^2 = \\frac{a^2}{4}$. Dấu bằng xảy ra khi $x = a/2$ (khi đó thiết diện là hình vuông cạnh $a/2$).",
+              hint1: "Áp dụng bất đẳng thức AM-GM: x(a - x) <= [(x + a - x)/2]^2.",
+              hint2: "Max diện tích bằng a^2 / 4."
             }
           ]
         }
@@ -4509,63 +4906,89 @@
       tfQuestions: [
         {
           id: 1,
-          title: "Câu 1: Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Gọi $M, N$ lần lượt là trung điểm của $SA$ và $SB$:",
+          title: "Câu 1: Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành tâm $O$:",
           items: [
-            { key: "a", text: "$MN$ là đường trung bình của tam giác $SAB$ nên $MN \\parallel AB$.", correct: "true", explain: "Đường trung bình tam giác." },
-            { key: "b", text: "$MN$ song song với mặt phẳng đáy $(ABCD)$.", correct: "true", explain: "Vì $MN \\parallel AB \\subset (ABCD)$ và $MN \\not\\subset (ABCD)$." },
-            { key: "c", text: "$MN$ song song với mặt phẳng $(SCD)$.", correct: "true", explain: "Vì $MN \\parallel CD \\subset (SCD)$." },
-            { key: "d", text: "Đường thẳng $MN$ cắt mặt phẳng $(SBC)$.", correct: "false", explain: "$N \\in (SBC)$ nên $MN$ cắt $(SBC)$ tại $N$ (Đúng là cắt, vậy khẳng định đúng!). Sửa explain: $N \\in MN$ và $N \\in (SBC)$ nên $MN$ cắt $(SBC)$ tại $N$. Đáp án True." }
+            { key: "a", text: "Đường thẳng $AB$ song song với mặt phẳng $(SCD)$.", correct: "true", explain: "Vì $AB \\parallel CD$ và $CD \\subset (SCD)$ nên $AB \\parallel (SCD)$." },
+            { key: "b", text: "Đường thẳng $SA$ song song với mặt phẳng $(ABCD)$.", correct: "false", explain: "Vì $SA$ cắt $(ABCD)$ tại điểm $A$." },
+            { key: "c", text: "Gọi $M$ là trung điểm $SC$, đường thẳng $OM$ song song với $(SAB)$.", correct: "true", explain: "Do $OM$ là đường trung bình $\\triangle SAC \\implies OM \\parallel SA \\subset (SAB)$." },
+            { key: "d", text: "Đường thẳng $SO$ song song với mặt phẳng $(ABCD)$.", correct: "false", explain: "$SO$ cắt $(ABCD)$ tại tâm $O$." }
           ]
         },
         {
           id: 2,
-          title: "Câu 2: Về mối quan hệ giữa đường thẳng và mặt phẳng song song:",
+          title: "Câu 2: Về điều kiện và tính chất của đường thẳng song song với mặt phẳng:",
           items: [
-            { key: "a", text: "Nếu $d \\parallel (\\alpha)$ thì $d$ không cắt bất kì đường thẳng nào nằm trong $(\\alpha)$.", correct: "true", explain: "Nếu cắt thì đã có điểm chung với mặt phẳng." },
-            { key: "b", text: "Nếu $d \\parallel (\\alpha)$ thì trong $(\\alpha)$ có vô số đường thẳng song song với $d$.", correct: "true", explain: "Mọi đường thẳng trong $(\\alpha)$ song song với hình chiếu của $d$." },
-            { key: "c", text: "Nếu $d \\parallel (\\alpha)$ thì $d$ song song với mọi đường thẳng nằm trong $(\\alpha)$.", correct: "false", explain: "$d$ có thể chéo nhau với các đường thẳng trong $(\\alpha)$." },
-            { key: "d", text: "Nếu hai đường thẳng phân biệt cùng song song với một mặt phẳng thì chúng song song với nhau.", correct: "false", explain: "Chúng có thể cắt nhau hoặc chéo nhau." }
+            { key: "a", text: "Nếu $a \\not\\subset (P)$ và $a$ song song với một đường thẳng $b \\subset (P)$ thì $a \\parallel (P)$.", correct: "true", explain: "Định lí 1 chuẩn SGK." },
+            { key: "b", text: "Nếu $a \\parallel (P)$ thì $a$ song song với mọi đường thẳng nằm trong $(P)$.", correct: "false", explain: "$a$ chỉ song song hoặc chéo với các đường trong $(P)$." },
+            { key: "c", text: "Nếu $a \\parallel (P)$ và mặt phẳng $(Q)$ chứa $a$ cắt $(P)$ theo giao tuyến $b$ thì $b \\parallel a$.", correct: "true", explain: "Định lí 2 chuẩn SGK." },
+            { key: "d", text: "Nếu hai mặt phẳng phân biệt cùng song song với một đường thẳng thì giao tuyến của chúng (nếu có) song song với đường thẳng đó.", correct: "true", explain: "Hệ quả chuẩn SGK." }
           ]
         },
         {
           id: 3,
-          title: "Câu 3: Cho tứ diện $ABCD$. Gọi $G$ là trọng tâm tam giác $ABD$, $M$ là điểm trên cạnh $BC$ sao cho $BM = 2MC$:",
+          title: "Câu 3: Cho tứ diện $ABCD$. Gọi $M, N$ lần lượt là trung điểm của $AB$ và $AC$:",
           items: [
-            { key: "a", text: "Đường thẳng $AB$ chéo nhau với đường thẳng $CD$.", correct: "true", explain: "Hai cạnh đối tứ diện." },
-            { key: "b", text: "Đoạn thẳng nối $M$ và trung điểm $BC$ chia đoạn theo tỉ số $2/3$.", correct: "true", explain: "Định lí Ta-lét." },
-            { key: "c", text: "Đường thẳng $MG$ song song với mặt phẳng $(ACD)$.", correct: "true", explain: "Áp dụng định lý Ta-lét đảo." },
-            { key: "d", text: "Đường thẳng $MG$ nằm trong mặt phẳng $(BCD)$.", correct: "false", explain: "$G$ nằm trên $(ABD)$, không thuộc $(BCD)$." }
+            { key: "a", text: "Đường thẳng $MN$ song song với mặt phẳng $(BCD)$.", correct: "true", explain: "Do $MN \\parallel BC \\subset (BCD)$." },
+            { key: "b", text: "Đường thẳng $MN$ song song với mặt phẳng $(ACD)$.", correct: "false", explain: "$MN$ cắt $(ACD)$ tại điểm $N$." },
+            { key: "c", text: "Mọi mặt phẳng chứa $MN$ và cắt $(BCD)$ thì giao tuyến đều song song với $BC$.", correct: "true", explain: "Theo Định lí 2." },
+            { key: "d", text: "Đường thẳng $MN$ chéo nhau với đường thẳng $CD$.", correct: "true", explain: "Hai đường thẳng này không cùng nằm trong bất kì mặt phẳng nào." }
           ]
         },
         {
           id: 4,
-          title: "Câu 4: Về các tính chất liên hệ giữa đường thẳng song song và mặt phẳng:",
+          title: "Câu 4: Về mặt phẳng song song qua các đường thẳng chéo nhau:",
           items: [
-            { key: "a", text: "Nếu đường thẳng $a$ song song với $(\\alpha)$ thì qua $a$ có vô số mặt phẳng cắt $(\\alpha)$.", correct: "true", explain: "Xoay mặt phẳng quanh $a$." },
-            { key: "b", text: "Mọi giao tuyến của các mặt phẳng qua $a$ với $(\\alpha)$ đều song song với $a$.", correct: "true", explain: "Định lý 2 SGK." },
-            { key: "c", text: "Qua một điểm cho trước ở ngoài mặt phẳng $(\\alpha)$ có vô số đường thẳng song song với $(\\alpha)$.", correct: "true", explain: "Tất cả các đường thẳng này nằm trong mặt phẳng qua điểm đó song song với $(\\alpha)$." },
-            { key: "d", text: "Qua một điểm cho trước ở ngoài mặt phẳng $(\\alpha)$ chỉ có duy nhất một đường thẳng song song với $(\\alpha)$.", correct: "false", explain: "Có vô số đường thẳng." }
+            { key: "a", text: "Cho hai đường thẳng chéo nhau $a$ và $b$, có duy nhất một mặt phẳng chứa $a$ và song song với $b$.", correct: "true", explain: "Định lí tồn tại duy nhất." },
+            { key: "b", text: "Qua một điểm nằm ngoài mặt phẳng $(P)$, có duy nhất một đường thẳng song song với $(P)$.", correct: "false", explain: "Có VÔ SỐ đường thẳng (chúng cùng nằm trong mặt phẳng qua điểm đó $\\parallel (P)$)." },
+            { key: "c", text: "Nếu $a \\parallel (P)$ thì trong $(P)$ có vô số đường thẳng song song với $a$.", correct: "true", explain: "Qua mỗi điểm trong $(P)$ đều kẻ được 1 đường song song với $a$." },
+            { key: "d", text: "Nếu $a \\parallel (P)$ và $b \\subset (P)$ thì $a$ và $b$ không bao giờ cắt nhau.", correct: "true", explain: "Vì nếu cắt nhau thì $a$ và $(P)$ có điểm chung, mâu thuẫn." }
           ]
         },
         {
           id: 5,
-          title: "Câu 5: Trong kiến trúc và xây dựng, thanh xà gồ mái nhà được đặt song song với mặt sàn:",
+          title: "Câu 5: Cho hình chóp $S.ABCD$ đáy hình thang ($AB \\parallel CD, AB = 2CD$). Mặt phẳng $(\\alpha)$ song song với $AB$:",
           items: [
-            { key: "a", text: "Thanh xà gồ song song với mặt sàn là một ứng dụng của đường thẳng song song mặt phẳng.", correct: "true", explain: "Ứng dụng xây dựng." },
-            { key: "b", text: "Mọi điểm trên thanh xà gồ đều có khoảng cách bằng nhau đến mặt sàn.", correct: "true", explain: "Khoảng cách từ đường thẳng song song đến mặt phẳng." },
-            { key: "c", text: "Mặt phẳng mái chứa xà gồ cắt mặt sàn theo giao tuyến song song với xà gồ.", correct: "true", explain: "Định lý giao tuyến." },
-            { key: "d", text: "Thanh xà gồ có thể cắt mặt sàn tại một điểm ở vô cực.", correct: "false", explain: "Trong hình học Euclid chúng không có điểm chung." }
+            { key: "a", text: "Mặt phẳng $(\\alpha)$ cắt $(ABCD)$ theo giao tuyến song song với $AB$.", correct: "true", explain: "Do $(\\alpha) \\parallel AB$ và $AB \\subset (ABCD)$." },
+            { key: "b", text: "Mặt phẳng $(\\alpha)$ cắt $(SAB)$ theo giao tuyến song song với $AB$.", correct: "true", explain: "Theo Định lí 2." },
+            { key: "c", text: "Mặt phẳng $(\\alpha)$ cũng song song với đường thẳng $CD$ (nếu không chứa $CD$).", correct: "true", explain: "Vì $CD \\parallel AB$ nên $(\\alpha) \\parallel CD$." },
+            { key: "d", text: "Thiết diện của $(\\alpha)$ cắt các cạnh bên $SA, SB, SC, SD$ luôn luôn là hình bình hành.", correct: "false", explain: "Thiết diện là hình thang, nói chung không phải hình bình hành." }
           ]
         },
         {
           id: 6,
-          title: "Câu 6: Về bài toán thiết diện song song với một đường thẳng:",
+          title: "Câu 6: Cho tứ diện đều $ABCD$ cạnh $a$. Mặt phẳng $(\\alpha)$ song song với $AB$ và $CD$ cắt các cạnh của tứ diện:",
           items: [
-            { key: "a", text: "Mặt phẳng cắt hình chóp theo các đoạn giao tuyến song song với đường thẳng đã cho.", correct: "true", explain: "Định lý giao tuyến." },
-            { key: "b", text: "Thiết diện có thể là tam giác, tứ giác, ngũ giác tuỳ số mặt bị cắt.", correct: "true", explain: "Hình dạng thiết diện." },
-            { key: "c", text: "Thiết diện của hình chóp tứ giác với mặt phẳng song song với một cạnh đáy có thể là hình thang.", correct: "true", explain: "Hình thang có 2 đáy song song với cạnh đáy đó." },
-            { key: "d", text: "Diện tích thiết diện luôn không đổi khi mặt phẳng di động song song với chính nó.", correct: "false", explain: "Diện tích thay đổi tuỳ theo vị trí cắt gần đỉnh hay gần đáy." }
+            { key: "a", text: "Thiết diện tạo thành luôn là một hình chữ nhật.", correct: "true", explain: "Do $AB \\perp CD$ nên hai cặp cạnh song song tạo thành hình chữ nhật." },
+            { key: "b", text: "Chu vi của thiết diện luôn bằng $2a$ không phụ thuộc vào vị trí cắt.", correct: "true", explain: "Chu vi $P = 2(x + a - x) = 2a$ là hằng số." },
+            { key: "c", text: "Diện tích thiết diện lớn nhất khi thiết diện là hình vuông cạnh $a/2$.", correct: "true", explain: "Đẳng thức xảy ra khi $x = a - x = a/2$." },
+            { key: "d", text: "Giá trị lớn nhất của diện tích thiết diện bằng $a^2/2$.", correct: "false", explain: "Giá trị lớn nhất bằng $a^2/4$." }
           ]
+        }
+      ],
+      saQuestions: [
+        {
+          id: 1,
+          question: "Cho hình chóp $S.ABCD$ đáy hình bình hành. Gọi $M, N$ lần lượt là trung điểm của $SA, SB$. Có bao nhiêu mặt của hình chóp mà đường thẳng $MN$ song song?",
+          answer: "2",
+          explain: "MN // AB nên MN // (ABCD) và MN // (SCD) (vì AB // CD). Do đó MN song song với 2 mặt của hình chóp."
+        },
+        {
+          id: 2,
+          question: "Cho tứ diện đều $ABCD$ cạnh bằng 10 cm. Mặt phẳng $(P)$ song song với $AB$ và $CD$ cắt các cạnh của tứ diện. Chu vi của thiết diện tạo thành bằng bao nhiêu cm?",
+          answer: "20",
+          explain: "Chu vi thiết diện hình chữ nhật luôn bằng 2a = 2 * 10 = 20 cm."
+        },
+        {
+          id: 3,
+          question: "Tiếp tục với tứ diện đều cạnh 10 cm ở trên, diện tích lớn nhất của thiết diện bằng bao nhiêu cm²?",
+          answer: "25",
+          explain: "Diện tích lớn nhất đạt được khi thiết diện là hình vuông cạnh a/2 = 5 cm, diện tích = 5^2 = 25 cm²."
+        },
+        {
+          id: 4,
+          question: "Cho hình chóp $S.ABCD$ đáy là hình bình hành tâm $O$. Gọi $G$ là trọng tâm tam giác $SAB$. Điểm $M$ trên cạnh $SC$ sao cho $SM = 2MC$. Đường thẳng $GM$ song song với mặt đáy $(ABCD)$ đúng hay sai? Nhập 1 nếu đúng, 0 nếu sai.",
+          answer: "1",
+          explain: "Gọi I là trung điểm AB, O là tâm đáy. Trong tam giác SIC, SG/SI = 2/3 và SM/SC = 2/3 => GM // IC. Do IC nằm trong đáy nên GM // (ABCD). Đáp án là 1 (đúng)."
         }
       ]
     },
