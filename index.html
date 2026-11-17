@@ -20258,7 +20258,7 @@
         <div class="a4-page font-serif">
           <div>
             <!-- Header chuẩn Bộ GD&ĐT gọn gàng -->
-            <div class="border-b border-black pb-1 mb-1.5 text-[9pt]">
+            <div class="pb-1 mb-1.5 text-[9pt]">
               <table class="w-full border-collapse mb-1 text-center">
                 <tr>
                   <td class="w-[48%] align-top text-center pb-0.5">
@@ -20271,20 +20271,20 @@
                     <div class="font-bold uppercase text-[11.5pt] text-indigo-950">NĂM HỌC 2026 - 2027</div>
                     <div class="font-bold uppercase text-[11pt]">BÀI THI: TOÁN — ${topic.code}: ${topic.title}</div>
                     <div class="text-[9.5pt] my-0.5">Thời gian làm bài: 90 phút, không kể thời gian phát đề</div>
-                    <div class="inline-block border border-black px-3 py-0.5 font-bold text-[10.5pt] font-mono leading-none bg-white">
+                    <div class="font-bold text-[10.5pt] font-mono leading-none">
                       MÃ ĐỀ THI: ${exam.code}
                     </div>
                   </td>
                 </tr>
               </table>
-              <div class="border-t border-black pt-1 flex justify-between text-[10pt]">
+              <div class="pt-1 flex justify-between text-[10pt]">
                 <div>Họ và tên thí sinh: ................................................................................</div>
                 <div>Số báo danh: .............................</div>
               </div>
             </div>
 
             <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn - 1 Cột) -->
-            <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+            <div class="font-bold text-[11pt] mt-1.5 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
               <span>PHẦN I. Câu trắc nghiệm nhiều lựa chọn</span>
               <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
             </div>
@@ -20300,7 +20300,7 @@
             </div>
           </div>
 
-          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 flex justify-between mt-auto">
             <span>Mã đề ${exam.code}</span>
             <span>Trang 1/2</span>
           </div>
@@ -20314,14 +20314,14 @@
         <div class="a4-page font-serif">
           <div>
             <!-- Header trang 2 -->
-            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[10.5pt]">
+            <div class="pb-1 mb-2 flex justify-between items-center text-[10.5pt]">
               <div><strong>MÃ ĐỀ THI: ${exam.code}</strong> • BÀI THI: TOÁN — ${topic.code}: ${topic.title}</div>
             </div>
 
             <div class="space-y-2 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
               <!-- PHẦN II -->
               <div>
-                <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <div class="font-bold text-[11pt] mt-1.5 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
                   <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
                   <span class="text-[9.5pt] font-normal italic lowercase font-serif">(4,0 điểm)</span>
                 </div>
@@ -20342,7 +20342,7 @@
 
               <!-- PHẦN III -->
               <div>
-                <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+                <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
                   <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
                   <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
                 </div>
@@ -20360,7 +20360,7 @@
                 </div>
               </div>
 
-              <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+              <div class="mt-4 pt-2 text-center">
                 <div class="font-bold text-[10.5pt] tracking-widest">------------------ HẾT ------------------</div>
                 <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
                   (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
@@ -20369,7 +20369,7 @@
             </div>
           </div>
 
-          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 flex justify-between mt-auto">
             <span>Mã đề ${exam.code}</span>
             <span>Trang 2/2</span>
           </div>
@@ -20381,7 +20381,7 @@
         page3Html = `
           <div class="a4-page font-serif">
             <div>
-              <div class="border-b-2 border-indigo-950 pb-1.5 mb-2.5 text-center">
+              <div class="pb-1.5 mb-2.5 text-center">
                 <div class="font-bold uppercase text-[12pt] text-indigo-950 tracking-wider">HƯỚNG DẪN CHẤM & ĐÁP ÁN CHI TIẾT</div>
                 <div class="text-[9.5pt] font-semibold text-slate-700">MÔN TOÁN — ${topic.code}: ${topic.title} • MÃ ĐỀ: ${exam.code}</div>
               </div>
@@ -20443,7 +20443,7 @@
               </div>
             </div>
 
-            <div class="pt-1 border-t border-slate-300 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
+            <div class="pt-1 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
               <div>Trang 3/3 (Hướng dẫn chấm)</div>
               <div>Mã đề thi: ${exam.code}</div>
             </div>
@@ -20487,7 +20487,7 @@
         <div class="a4-page font-serif">
           <div>
             <!-- Header chuẩn Bộ GD&ĐT gọn gàng -->
-            <div class="border-b border-black pb-1 mb-1.5 text-[9pt]">
+            <div class="pb-1 mb-1.5 text-[9pt]">
               <table class="w-full border-collapse mb-1 text-center">
                 <tr>
                   <td class="w-[48%] align-top text-center pb-0.5">
@@ -20500,20 +20500,20 @@
                     <div class="font-bold uppercase text-[11.5pt] text-teal-950">NĂM HỌC 2026 - 2027</div>
                     <div class="font-bold uppercase text-[11pt]">MÔN: TOÁN — KHỐI ${meta.grade}</div>
                     <div class="text-[9.5pt] my-0.5">Thời gian làm bài: ${exam.durationMinutes || 90} phút, không kể phát đề</div>
-                    <div class="inline-block border border-black px-3 py-0.5 font-bold text-[10.5pt] font-mono leading-none bg-white">
+                    <div class="font-bold text-[10.5pt] font-mono leading-none">
                       MÃ ĐỀ THI: ${examCode}
                     </div>
                   </td>
                 </tr>
               </table>
-              <div class="border-t border-black pt-1 flex justify-between text-[10pt]">
+              <div class="pt-1 flex justify-between text-[10pt]">
                 <div>Họ và tên thí sinh: ................................................................................</div>
                 <div>Số báo danh: .............................</div>
               </div>
             </div>
 
             <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn - 1 Cột) -->
-            <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+            <div class="font-bold text-[11pt] mt-1.5 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
               <span>PHẦN I. Câu trắc nghiệm nhiều lựa chọn</span>
               <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
             </div>
@@ -20529,7 +20529,7 @@
             </div>
           </div>
 
-          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 flex justify-between mt-auto">
             <span>Mã đề ${examCode}</span>
             <span>Trang 1/2</span>
           </div>
@@ -20546,7 +20546,7 @@
           <div class="space-y-2 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
             <!-- PHẦN II -->
             <div>
-              <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[11pt] mt-1.5 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
                 <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
                 <span class="text-[9.5pt] font-normal italic lowercase font-serif">(4,0 điểm)</span>
               </div>
@@ -20567,7 +20567,7 @@
 
             <!-- PHẦN III -->
             <div>
-              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
                 <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
                 <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
               </div>
@@ -20585,7 +20585,7 @@
               </div>
             </div>
 
-            <div class="mt-4 pt-2 border-t border-dashed border-slate-400 text-center">
+            <div class="mt-4 pt-2 text-center">
               <div class="font-bold text-[10.5pt] tracking-widest">------------------ HẾT ------------------</div>
               <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
                 (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
@@ -20599,7 +20599,7 @@
           <div class="space-y-2 text-[12pt] leading-normal font-['Times_New_Roman',serif]">
             <!-- PHẦN II -->
             <div>
-              <div class="font-bold text-[11pt] mt-1 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[11pt] mt-1.5 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
                 <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
                 <span class="text-[9.5pt] font-normal italic lowercase font-serif">(2,0 điểm)</span>
               </div>
@@ -20620,7 +20620,7 @@
 
             <!-- PHẦN III -->
             <div>
-              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
                 <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
                 <span class="text-[9.5pt] font-normal italic lowercase font-serif">(2,0 điểm)</span>
               </div>
@@ -20640,7 +20640,7 @@
 
             <!-- PHẦN IV -->
             <div>
-              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[11pt] mt-2 mb-0.5 flex justify-between items-baseline uppercase tracking-wide">
                 <span>PHẦN IV. Tự luận</span>
                 <span class="text-[9.5pt] font-normal italic lowercase font-serif">(3,0 điểm)</span>
               </div>
@@ -20655,7 +20655,7 @@
               </div>
             </div>
 
-            <div class="mt-3 pt-2 border-t border-dashed border-slate-400 text-center">
+            <div class="mt-3 pt-2 text-center">
               <div class="font-bold text-[10.5pt] tracking-widest">------------------ HẾT ------------------</div>
               <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
                 (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
@@ -20669,14 +20669,14 @@
         <div class="a4-page font-serif">
           <div>
             <!-- Header trang 2 -->
-            <div class="border-b border-black pb-1 mb-2 flex justify-between items-center text-[10.5pt]">
+            <div class="pb-1 mb-2 flex justify-between items-center text-[10.5pt]">
               <div><strong>MÃ ĐỀ THI: ${examCode}</strong> • MÔN TOÁN ${meta.grade} — ${pName}</div>
             </div>
 
             ${page2Content}
           </div>
 
-          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+          <div class="page-footer text-[9.5pt] text-slate-600 pt-1 flex justify-between mt-auto">
             <span>Mã đề ${examCode}</span>
             <span>Trang 2/2</span>
           </div>
@@ -20689,7 +20689,7 @@
           page3Html = `
             <div class="a4-page font-serif">
               <div>
-                <div class="border-b-2 border-teal-950 pb-1.5 mb-2.5 text-center">
+                <div class="pb-1.5 mb-2.5 text-center">
                   <div class="font-bold uppercase text-[12pt] text-teal-950 tracking-wider">HƯỚNG DẪN CHẤM & ĐÁP ÁN CHI TIẾT</div>
                   <div class="text-[9.5pt] font-semibold text-slate-700">MÔN TOÁN 12 — ${pName.toUpperCase()} • MÃ ĐỀ: ${examCode}</div>
                 </div>
@@ -20751,7 +20751,7 @@
                 </div>
               </div>
 
-              <div class="pt-1 border-t border-slate-300 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
+              <div class="pt-1 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
                 <div>Trang 3/3 (Hướng dẫn chấm)</div>
                 <div>Mã đề thi: ${examCode}</div>
               </div>
@@ -20762,7 +20762,7 @@
           page3Html = `
             <div class="a4-page font-serif">
               <div>
-                <div class="border-b-2 border-teal-950 pb-1.5 mb-2.5 text-center">
+                <div class="pb-1.5 mb-2.5 text-center">
                   <div class="font-bold uppercase text-[12pt] text-teal-950 tracking-wider">HƯỚNG DẪN CHẤM & ĐÁP ÁN CHI TIẾT</div>
                   <div class="text-[9.5pt] font-semibold text-slate-700">MÔN TOÁN ${meta.grade} — ${pName.toUpperCase()} • MÃ ĐỀ: ${examCode}</div>
                 </div>
@@ -20824,7 +20824,7 @@
                 </div>
               </div>
 
-              <div class="pt-1 border-t border-slate-300 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
+              <div class="pt-1 flex justify-between text-[10pt] text-slate-600 font-mono mt-auto">
                 <div>Trang 3/3 (Hướng dẫn chấm)</div>
                 <div>Mã đề thi: ${examCode}</div>
               </div>
@@ -21320,7 +21320,7 @@
         <div class="a4-page font-serif">
           <div>
             <!-- Header đơn giản chuẩn theo yêu cầu: ĐỀ ÔN TẬP THEO BÀI HỌC: BÀI ...... -->
-            <div class="border-b-2 border-black pb-1.5 mb-2">
+            <div class="pb-1.5 mb-2">
               <div class="text-center">
                 <div class="font-extrabold uppercase text-[12pt] sm:text-[12.5pt] tracking-tight leading-snug text-black">
                   ${mainHeaderTitle}
@@ -21328,12 +21328,12 @@
                 <div class="flex justify-between items-center text-[9.5pt] font-semibold mt-1 px-1 text-slate-800">
                   <div>Môn: <strong class="uppercase">Toán — Khối ${meta.grade}</strong></div>
                   <div>Thời gian làm bài: <strong>${exam.durationMinutes || (isGrade12 ? 90 : 90)} phút</strong> <span class="text-[8.5pt] font-normal italic">(không kể phát đề)</span></div>
-                  <div class="border border-black px-2.5 py-0.5 bg-slate-50 font-mono font-bold text-[10pt]">
+                  <div class="font-bold text-[10pt] font-mono">
                     MÃ ĐỀ THI: ${exam.code}
                   </div>
                 </div>
               </div>
-              <div class="border-t border-dashed border-slate-400 mt-1.5 pt-1 flex justify-between text-[9.5pt] text-slate-800">
+              <div class="mt-1.5 pt-1 flex justify-between text-[9.5pt] text-slate-800">
                 <div>Họ và tên thí sinh: ....................................................................................</div>
                 <div>Số báo danh: .............................</div>
                 <div class="italic text-[8.5pt] text-slate-600">(Đề thi gồm 02 trang)</div>
@@ -21341,7 +21341,7 @@
             </div>
 
             <!-- PHẦN I (12 Câu Trắc Nghiệm Nhiều Lựa Chọn - 1 Cột) -->
-            <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1 mb-0.5 flex justify-between items-center border-b border-black pb-0.5 uppercase tracking-wide">
+            <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1.5 mb-0.5 flex justify-between items-center uppercase tracking-wide">
               <span>PHẦN I. Câu trắc nghiệm nhiều lựa chọn</span>
               <span class="text-[9pt] font-normal italic font-serif lowercase text-slate-700">(3,0 điểm)</span>
             </div>
@@ -21357,7 +21357,7 @@
             </div>
           </div>
 
-          <div class="page-footer text-[9pt] text-slate-700 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+          <div class="page-footer text-[9pt] text-slate-700 pt-1 flex justify-between mt-auto">
             <span>Mã đề ${exam.code}</span>
             <span>Trang 1/2</span>
           </div>
@@ -21374,7 +21374,7 @@
           <div class="space-y-1.5 text-[10.5pt] sm:text-[11pt] leading-snug font-['Times_New_Roman',serif]">
             <!-- PHẦN II -->
             <div>
-              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1 mb-0.5 flex justify-between items-center border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1.5 mb-0.5 flex justify-between items-center uppercase tracking-wide">
                 <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
                 <span class="text-[9pt] font-normal italic font-serif lowercase text-slate-700">(4,0 điểm)</span>
               </div>
@@ -21395,7 +21395,7 @@
 
             <!-- PHẦN III -->
             <div>
-              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1.5 mb-0.5 flex justify-between items-center border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-2 mb-0.5 flex justify-between items-center uppercase tracking-wide">
                 <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
                 <span class="text-[9pt] font-normal italic font-serif lowercase text-slate-700">(3,0 điểm)</span>
               </div>
@@ -21413,7 +21413,7 @@
               </div>
             </div>
 
-            <div class="mt-3 pt-1.5 border-t border-dashed border-slate-400 text-center">
+            <div class="mt-3 pt-1.5 text-center">
               <div class="font-bold text-[10pt] tracking-widest">------------------ HẾT ------------------</div>
               <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
                 (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
@@ -21427,7 +21427,7 @@
           <div class="space-y-1.5 text-[10.5pt] sm:text-[11pt] leading-snug font-['Times_New_Roman',serif]">
             <!-- PHẦN II -->
             <div>
-              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1 mb-0.5 flex justify-between items-center border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1.5 mb-0.5 flex justify-between items-center uppercase tracking-wide">
                 <span>PHẦN II. Câu trắc nghiệm đúng sai</span>
                 <span class="text-[9pt] font-normal italic font-serif lowercase text-slate-700">(2,0 điểm)</span>
               </div>
@@ -21448,7 +21448,7 @@
 
             <!-- PHẦN III -->
             <div>
-              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1.5 mb-0.5 flex justify-between items-center border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-2 mb-0.5 flex justify-between items-center uppercase tracking-wide">
                 <span>PHẦN III. Câu trắc nghiệm trả lời ngắn</span>
                 <span class="text-[9pt] font-normal italic font-serif lowercase text-slate-700">(3,0 điểm)</span>
               </div>
@@ -21468,7 +21468,7 @@
 
             <!-- PHẦN IV -->
             <div>
-              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-1.5 mb-0.5 flex justify-between items-center border-b border-black pb-0.5 uppercase tracking-wide">
+              <div class="font-bold text-[10.5pt] sm:text-[11pt] mt-2 mb-0.5 flex justify-between items-center uppercase tracking-wide">
                 <span>PHẦN IV. Tự luận</span>
                 <span class="text-[9pt] font-normal italic font-serif lowercase text-slate-700">(2,0 điểm)</span>
               </div>
@@ -21483,7 +21483,7 @@
               </div>
             </div>
 
-            <div class="mt-2.5 pt-1.5 border-t border-dashed border-slate-400 text-center">
+            <div class="mt-2.5 pt-1.5 text-center">
               <div class="font-bold text-[10pt] tracking-widest">------------------ HẾT ------------------</div>
               <div class="italic text-[8.5pt] text-slate-600 mt-0.5">
                 (Thí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm)
@@ -21497,7 +21497,7 @@
         <div class="a4-page font-serif">
           <div>
             <!-- Header trang 2 -->
-            <div class="border-b border-black pb-1 mb-1.5 flex justify-between items-center text-[9.5pt]">
+            <div class="pb-1 mb-1.5 flex justify-between items-center text-[9.5pt]">
               <div class="font-bold uppercase tracking-tight">${mainHeaderTitle}</div>
               <div class="font-mono text-slate-800">Mã đề: <strong>${exam.code}</strong> • Môn Toán ${meta.grade}</div>
             </div>
@@ -21505,7 +21505,7 @@
             ${page2Content}
           </div>
 
-          <div class="page-footer text-[9pt] text-slate-700 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+          <div class="page-footer text-[9pt] text-slate-700 pt-1 flex justify-between mt-auto">
             <span>Mã đề ${exam.code}</span>
             <span>Trang 2/2</span>
           </div>
@@ -21517,7 +21517,7 @@
         page3Html = `
           <div class="a4-page font-serif">
             <div>
-              <div class="border-b-2 border-indigo-900 pb-1.5 mb-2.5 text-center">
+              <div class="pb-1.5 mb-2.5 text-center">
                 <div class="font-black text-sm uppercase text-indigo-950">HƯỚNG DẪN CHẤM & ĐÁP ÁN CHI TIẾT</div>
                 <div class="text-xs text-slate-600">${mainHeaderTitle} • Mã Đề: ${exam.code} (Toán ${meta.grade})</div>
               </div>
@@ -21591,7 +21591,7 @@
               ` : ''}
             </div>
 
-            <div class="page-footer text-[9pt] text-slate-500 pt-1 border-t border-slate-300 flex justify-between mt-auto">
+            <div class="page-footer text-[9pt] text-slate-500 pt-1 flex justify-between mt-auto">
               <span>Mã đề ${exam.code}</span>
               <span>Trang 3/3 (Đáp án)</span>
             </div>
