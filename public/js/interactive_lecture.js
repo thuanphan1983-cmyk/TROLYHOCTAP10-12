@@ -23,6 +23,7 @@
       if (window.G11_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER1_DATA);
       if (window.G11_CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER2_DATA);
       if (window.G11_CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER3_DATA);
+      if (window.G11_CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER4_DATA);
 
       // Normalize all sections in LECTURE_DATA so they render 100% reliably
       try {
@@ -1259,7 +1260,12 @@
     let html = '';
     // Grade 11 Option Group
     html += `<optgroup label="━━━━━━━━ TOÁN 11 - KẾT NỐI TRI THỨC ━━━━━━━━" style="background:#090d16; color:#a7f3d0; font-weight:900;"></optgroup>`;
+    let currentCh11 = -1;
     SGK11_MENU_CONFIG.forEach(grp => {
+      if (grp.chapterNumber !== currentCh11) {
+        currentCh11 = grp.chapterNumber;
+        html += `<optgroup label="━━━━ ${grp.chapterTitle.toUpperCase()} ━━━━" style="background:#022c22; color:#34d399; font-weight:900;"></optgroup>`;
+      }
       html += `<optgroup label="${grp.lessonTitle}" style="background:#064e3b; color:#6ee7b7; font-weight:bold;">`;
       grp.sections.forEach(s => {
         html += `<option value="${s.key}" style="background:#022c22; color:#f0fdf4;">${s.icon} ${grp.lessonBadge} - ${s.title} (${s.time})</option>`;
@@ -1286,11 +1292,18 @@
   function filterDrawerChapter(chNum) {
     const cards = document.querySelectorAll('.il-drawer-lesson-card');
     cards.forEach(c => {
-      if (!chNum || chNum === 'all' || c.getAttribute('data-chapter') === String(chNum)) {
-        c.style.display = 'flex';
+      const cardCh = c.getAttribute('data-chapter');
+      let show = false;
+      if (!chNum || chNum === 'all') {
+        show = true;
+      } else if (chNum === 'g11' || chNum === 11 || chNum === 'toan11') {
+        show = cardCh && cardCh.startsWith('11');
+      } else if (chNum === 'g12' || chNum === 12 || chNum === 'toan12') {
+        show = cardCh && !cardCh.startsWith('11');
       } else {
-        c.style.display = 'none';
+        show = (cardCh === String(chNum));
       }
+      c.style.display = show ? 'flex' : 'none';
     });
 
     const filterBtns = document.querySelectorAll('.il-drawer-filter-btn');
@@ -1338,7 +1351,7 @@
           <div class="il-drawer-lesson-card bg-slate-900/90 rounded-2xl p-4 border border-indigo-900/60 shadow-lg flex flex-col gap-2.5 transition-all" data-chapter="${grp.chapterNumber}">
             <div class="flex items-center justify-between border-b border-slate-800 pb-2">
               <div class="flex items-center gap-1.5 truncate">
-                <span class="text-[10px] font-black uppercase px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 shrink-0">C${grp.chapterNumber}</span>
+                <span class="text-[10px] font-black uppercase px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 shrink-0">${grp.chapterNumber >= 1100 ? ('Lớp 11 • C' + (grp.chapterNumber - 1100)) : ('Lớp 12 • C' + grp.chapterNumber)}</span>
                 <span class="text-xs sm:text-sm font-black text-amber-300 uppercase tracking-wide truncate" title="${grp.lessonTitle}">${grp.lessonTitle}</span>
               </div>
               <span class="text-[11px] font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded-full shrink-0">${grp.sections.length} mục</span>
@@ -1370,26 +1383,41 @@
             <button type="button" onclick="window.filterDrawerChapter('all')" data-filter-chapter="all" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 border border-amber-300 shadow-sm cursor-pointer transition">
               Tất cả (${TOTAL_SECTIONS_COUNT})
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(1101)" data-filter-chapter="1101" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-900/90 text-emerald-300 hover:text-white hover:bg-emerald-800 border border-emerald-700 cursor-pointer transition">
-              Toán 11 (13)
+            <button type="button" onclick="window.filterDrawerChapter('g11')" data-filter-chapter="g11" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-900/90 text-emerald-300 hover:text-white hover:bg-emerald-800 border border-emerald-700 cursor-pointer transition">
+              Toán 11 (${SGK11_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0)})
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(1101)" data-filter-chapter="1101" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
+              Toán 11 - C1
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(1102)" data-filter-chapter="1102" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
+              Toán 11 - C2
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(1103)" data-filter-chapter="1103" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
+              Toán 11 - C3
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(1104)" data-filter-chapter="1104" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
+              Toán 11 - C4 (Bài 10, 11, 12)
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter('g12')" data-filter-chapter="g12" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-indigo-900/90 text-indigo-300 hover:text-white hover:bg-indigo-800 border border-indigo-700 cursor-pointer transition">
+              Toán 12 (${SGK12_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0)})
             </button>
             <button type="button" onclick="window.filterDrawerChapter(1)" data-filter-chapter="1" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
-              Chương I (17)
+              Toán 12 - C1
             </button>
             <button type="button" onclick="window.filterDrawerChapter(2)" data-filter-chapter="2" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
-              Chương II (12)
+              Toán 12 - C2
             </button>
             <button type="button" onclick="window.filterDrawerChapter(3)" data-filter-chapter="3" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
-              Chương III (9)
+              Toán 12 - C3
             </button>
             <button type="button" onclick="window.filterDrawerChapter(4)" data-filter-chapter="4" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
-              Chương IV (12)
+              Toán 12 - C4
             </button>
             <button type="button" onclick="window.filterDrawerChapter(5)" data-filter-chapter="5" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
-              Chương V (16)
+              Toán 12 - C5
             </button>
             <button type="button" onclick="window.filterDrawerChapter(6)" data-filter-chapter="6" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
-              Chương VI (9)
+              Toán 12 - C6
             </button>
           </div>
 
