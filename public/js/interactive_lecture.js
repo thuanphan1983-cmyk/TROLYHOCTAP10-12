@@ -20,6 +20,7 @@
       if (window.CHAPTER4_DATA) Object.assign(LECTURE_DATA, window.CHAPTER4_DATA);
       if (window.CHAPTER5_DATA) Object.assign(LECTURE_DATA, window.CHAPTER5_DATA);
       if (window.CHAPTER6_DATA) Object.assign(LECTURE_DATA, window.CHAPTER6_DATA);
+      if (window.G10_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G10_CHAPTER1_DATA);
       if (window.G11_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER1_DATA);
       if (window.G11_CHAPTER2_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER2_DATA);
       if (window.G11_CHAPTER3_DATA) Object.assign(LECTURE_DATA, window.G11_CHAPTER3_DATA);
@@ -78,6 +79,24 @@
   // Dynamic script loader for Chapter data scaffolds
   (function tryLoadChapterData() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      if (!window.G10_CHAPTER1_DATA) {
+        const sg10 = document.createElement('script');
+        sg10.src = (window.location.protocol === 'file:') ? 'js/g10_chapter1_data.js' : '/js/g10_chapter1_data.js';
+        sg10.onload = function() {
+          if (window.G10_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G10_CHAPTER1_DATA);
+          if (typeof initSectionSelector === 'function') initSectionSelector();
+        };
+        sg10.onerror = function() {
+          const sg10b = document.createElement('script');
+          sg10b.src = 'public/js/g10_chapter1_data.js';
+          sg10b.onload = function() {
+            if (window.G10_CHAPTER1_DATA) Object.assign(LECTURE_DATA, window.G10_CHAPTER1_DATA);
+            if (typeof initSectionSelector === 'function') initSectionSelector();
+          };
+          document.head.appendChild(sg10b);
+        };
+        document.head.appendChild(sg10);
+      }
       if (!window.G11_CHAPTER1_DATA) {
         const sg11 = document.createElement('script');
         sg11.src = (window.location.protocol === 'file:') ? 'js/g11_chapter1_data.js' : '/js/g11_chapter1_data.js';
@@ -1068,6 +1087,46 @@
     }
   ];
 
+  const SGK10_MENU_CONFIG = [
+    // ----------------- TOÁN 10 - CHƯƠNG I -----------------
+    {
+      chapterNumber: 1001,
+      chapterTitle: "Toán 10 - Chương I: Mệnh đề và tập hợp",
+      lessonId: "toan10_bai1",
+      lessonTitle: "Bài 1: Mệnh đề",
+      lessonBadge: "Toán 10 • Bài 1",
+      sections: [
+        { key: "g10_bai1_muc1", title: "Mục 1: Mệnh đề, mệnh đề chứa biến & Mệnh đề phủ định", time: "05:00", icon: "✨" },
+        { key: "g10_bai1_muc2", title: "Mục 2: Mệnh đề kéo theo, mệnh đề đảo & Điều kiện cần và đủ", time: "05:00", icon: "⚡" },
+        { key: "g10_bai1_muc3", title: "Mục 3: Mệnh đề chứa lượng từ 'Với mọi' (∀) và 'Tồn tại' (∃)", time: "05:00", icon: "🎯" }
+      ]
+    },
+    {
+      chapterNumber: 1001,
+      chapterTitle: "Toán 10 - Chương I: Mệnh đề và tập hợp",
+      lessonId: "toan10_bai2",
+      lessonTitle: "Bài 2: Tập hợp và các phép toán trên tập hợp",
+      lessonBadge: "Toán 10 • Bài 2",
+      sections: [
+        { key: "g10_bai2_muc1", title: "Mục 1: Khái niệm tập hợp, phần tử, tập con & Hai tập hợp bằng nhau", time: "05:00", icon: "📦" },
+        { key: "g10_bai2_muc2", title: "Mục 2: Các phép toán trên tập hợp (Giao, Hợp, Hiệu, Phần bù) & Biểu đồ Ven", time: "05:00", icon: "🔄" },
+        { key: "g10_bai2_muc3", title: "Mục 3: Các tập con của số thực (Khoảng, Đoạn, Nửa khoảng) & Bài toán ứng dụng", time: "05:00", icon: "📏" }
+      ]
+    },
+    {
+      chapterNumber: 1001,
+      chapterTitle: "Toán 10 - Chương I: Mệnh đề và tập hợp",
+      lessonId: "toan10_ontap_c1",
+      lessonTitle: "Bài ôn tập Chương 1: Mệnh đề và tập hợp",
+      lessonBadge: "Toán 10 • Ôn tập C1",
+      sections: [
+        { key: "g10_ontap_c1_muc1", title: "Mục 1: Hệ thống hóa lý thuyết & Sơ đồ tư duy toàn bộ Chương 1", time: "05:00", icon: "🧠" },
+        { key: "g10_ontap_c1_muc2", title: "Mục 2: Các dạng bài tập trắc nghiệm trọng tâm & Kỹ thuật giải nhanh", time: "05:00", icon: "📝" },
+        { key: "g10_ontap_c1_muc3", title: "Mục 3: Bài toán thực tế sơ đồ Ven & Bài toán tham số m phân hóa cao", time: "05:00", icon: "💡" }
+      ]
+    }
+  ];
+
   const SGK11_MENU_CONFIG = [
     {
       chapterNumber: 1101,
@@ -1290,10 +1349,27 @@
 
   // Backwards compatibility alias
   const CHAPTER1_MENU_CONFIG = SGK12_MENU_CONFIG;
-  const TOTAL_SECTIONS_COUNT = SGK12_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0) + SGK11_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0);
+  const TOTAL_SECTIONS_COUNT = SGK12_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0) + SGK11_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0) + (typeof SGK10_MENU_CONFIG !== 'undefined' ? SGK10_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0) : 0);
 
   function buildOptionsHtml() {
     let html = '';
+    // Grade 10 Option Group
+    if (typeof SGK10_MENU_CONFIG !== 'undefined') {
+      html += `<optgroup label="━━━━━━━━ TOÁN 10 - KẾT NỐI TRI THỨC ━━━━━━━━" style="background:#090d16; color:#fca5a5; font-weight:900;"></optgroup>`;
+      let currentCh10 = -1;
+      SGK10_MENU_CONFIG.forEach(grp => {
+        if (grp.chapterNumber !== currentCh10) {
+          currentCh10 = grp.chapterNumber;
+          html += `<optgroup label="━━━━ ${grp.chapterTitle.toUpperCase()} ━━━━" style="background:#450a0a; color:#f87171; font-weight:900;"></optgroup>`;
+        }
+        html += `<optgroup label="${grp.lessonTitle}" style="background:#7f1d1d; color:#fca5a5; font-weight:bold;">`;
+        grp.sections.forEach(s => {
+          html += `<option value="${s.key}" style="background:#450a0a; color:#fef2f2;">${s.icon} ${grp.lessonBadge} - ${s.title} (${s.time})</option>`;
+        });
+        html += `</optgroup>`;
+      });
+    }
+
     // Grade 11 Option Group
     html += `<optgroup label="━━━━━━━━ TOÁN 11 - KẾT NỐI TRI THỨC ━━━━━━━━" style="background:#090d16; color:#a7f3d0; font-weight:900;"></optgroup>`;
     let currentCh11 = -1;
@@ -1324,18 +1400,188 @@
     return html;
   }
 
+  // Helper to remove accents for robust title and search matching
+  function stripAccents(str) {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/Đ/g, 'D')
+      .toLowerCase()
+      .trim();
+  }
+
+  // Convert Roman numerals (I, II, III, IV, V, VI...) to Arabic integer
+  function romanToArabic(r) {
+    if (!r) return null;
+    const map = { 'i': 1, 'ii': 2, 'iii': 3, 'iv': 4, 'v': 5, 'vi': 6, 'vii': 7, 'viii': 8, 'ix': 9, 'x': 10, 'xi': 11, 'xii': 12 };
+    return map[String(r).toLowerCase().trim()] || parseInt(r) || null;
+  }
+
+  // Universal Video Section Resolver: takes ANY section key, lesson ID, or lesson title and resolves 100% to valid section key
+  function resolveVideoSectionKey(input, gradeHint) {
+    ensureMergedData();
+    if (!input) return 'muc1';
+    const str = String(input).trim();
+    const lower = str.toLowerCase();
+
+    // 1. Exact match in LECTURE_DATA
+    if (LECTURE_DATA[str]) return str;
+    for (const k of Object.keys(LECTURE_DATA)) {
+      if (k.toLowerCase() === lower) return k;
+    }
+
+    const allConfigs = (typeof SGK10_MENU_CONFIG !== 'undefined')
+      ? [...SGK10_MENU_CONFIG, ...(typeof SGK11_MENU_CONFIG !== 'undefined' ? SGK11_MENU_CONFIG : []), ...SGK12_MENU_CONFIG]
+      : ((typeof SGK11_MENU_CONFIG !== 'undefined') ? [...SGK11_MENU_CONFIG, ...SGK12_MENU_CONFIG] : SGK12_MENU_CONFIG);
+
+    // 2. Direct section key match in menu configs
+    for (const grp of allConfigs) {
+      for (const s of grp.sections) {
+        if (s.key.toLowerCase() === lower) return s.key;
+      }
+    }
+
+    // 3. Direct lessonId match
+    for (const grp of allConfigs) {
+      if (grp.lessonId && grp.lessonId.toLowerCase() === lower) {
+        return grp.sections[0].key;
+      }
+    }
+
+    // Determine target grade configs
+    let targetConfigs = allConfigs;
+    let gNum = null;
+    if (gradeHint) {
+      gNum = String(gradeHint).replace(/\D/g, '');
+    } else if (typeof window !== 'undefined' && window.studentInfo && window.studentInfo.grade) {
+      gNum = String(window.studentInfo.grade).replace(/\D/g, '');
+    }
+    if (gNum === '10' && typeof SGK10_MENU_CONFIG !== 'undefined') targetConfigs = SGK10_MENU_CONFIG;
+    else if (gNum === '11' && typeof SGK11_MENU_CONFIG !== 'undefined') targetConfigs = SGK11_MENU_CONFIG;
+    else if (gNum === '12') targetConfigs = SGK12_MENU_CONFIG;
+
+    const clean = stripAccents(str);
+
+    // 4. Exact title match (stripped accents)
+    for (const grp of targetConfigs) {
+      if (stripAccents(grp.lessonTitle) === clean) return grp.sections[0].key;
+    }
+
+    // 5. Substring title match
+    for (const grp of targetConfigs) {
+      const tClean = stripAccents(grp.lessonTitle);
+      if (tClean.includes(clean) || clean.includes(tClean)) return grp.sections[0].key;
+    }
+
+    // 6. Match lesson number (e.g. Bài 10)
+    const mNum = clean.match(/bai\s*(\d+)/);
+    if (mNum) {
+      const num = parseInt(mNum[1]);
+      for (const grp of targetConfigs) {
+        if (grp.lessonId && (grp.lessonId.endsWith('_bai' + num) || grp.lessonId === 'bai' + num)) {
+          return grp.sections[0].key;
+        }
+      }
+    }
+
+    // 7. Match chapter review (e.g. cuối chương, ôn tập)
+    if (clean.includes('cuoi chuong') || clean.includes('on tap')) {
+      const mCh = clean.match(/chuong\s*([ivx\d]+)/);
+      if (mCh) {
+        const chArabic = romanToArabic(mCh[1]);
+        for (const grp of targetConfigs) {
+          if (grp.lessonId && (grp.lessonId.includes('ontap') || grp.lessonId.includes('cuoichuong') || stripAccents(grp.lessonTitle).includes('cuoi chuong') || stripAccents(grp.lessonTitle).includes('on tap'))) {
+            const grpChArabic = grp.chapterNumber >= 1000 ? (grp.chapterNumber % 100) : grp.chapterNumber;
+            if (grpChArabic === chArabic) {
+              return grp.sections[0].key;
+            }
+          }
+        }
+      }
+    }
+
+    // 8. Global search if targetConfigs didn't match
+    if (targetConfigs !== allConfigs) {
+      for (const grp of allConfigs) {
+        if (stripAccents(grp.lessonTitle) === clean) return grp.sections[0].key;
+      }
+      for (const grp of allConfigs) {
+        const tClean = stripAccents(grp.lessonTitle);
+        if (tClean.includes(clean) || clean.includes(tClean)) return grp.sections[0].key;
+      }
+    }
+
+    return targetConfigs[0]?.sections[0]?.key || 'muc1';
+  }
+  if (typeof window !== 'undefined') window.resolveVideoSectionKey = resolveVideoSectionKey;
+
+  // Open exact video for a given lesson title and grade
+  function openInteractiveLectureForLesson(lessonTitle, grade) {
+    const secKey = resolveVideoSectionKey(lessonTitle, grade);
+    if (typeof openInteractiveLecture === 'function') {
+      openInteractiveLecture(secKey);
+    }
+  }
+  if (typeof window !== 'undefined') window.openInteractiveLectureForLesson = openInteractiveLectureForLesson;
+
+  // Update Drawer Count Badge
+  function updateDrawerCountBadge() {
+    const badge = document.getElementById('il-drawer-count-badge');
+    if (!badge) return;
+    const cards = document.querySelectorAll('.il-drawer-lesson-card');
+    let visibleLessons = 0;
+    let visibleSecs = 0;
+    cards.forEach(c => {
+      if (c.style.display !== 'none') {
+        visibleLessons++;
+        const secs = c.querySelectorAll('.il-drawer-sec-btn');
+        visibleSecs += secs.length;
+      }
+    });
+    badge.textContent = `Hiển thị: ${visibleLessons} bài • ${visibleSecs} mục video`;
+  }
+
+  // Instant Search filter in Video Table of Contents Drawer
+  function filterDrawerBySearch(query) {
+    const qClean = stripAccents(query);
+    const cards = document.querySelectorAll('.il-drawer-lesson-card');
+
+    if (qClean) {
+      document.querySelectorAll('.il-drawer-filter-btn').forEach(btn => {
+        btn.className = 'il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition shrink-0';
+      });
+    }
+
+    cards.forEach(c => {
+      const title = stripAccents(c.getAttribute('data-lesson-title') || '');
+      const secTexts = stripAccents(c.getAttribute('data-sec-titles') || '');
+      const badgeText = stripAccents(c.getAttribute('data-badge') || '');
+
+      const match = !qClean || title.includes(qClean) || secTexts.includes(qClean) || badgeText.includes(qClean);
+      c.style.display = match ? 'flex' : 'none';
+    });
+    updateDrawerCountBadge();
+  }
+  if (typeof window !== 'undefined') window.filterDrawerBySearch = filterDrawerBySearch;
+
   // Filter drawer cards by chapter
   function filterDrawerChapter(chNum) {
+    const sInput = document.getElementById('il-drawer-search-input');
+    if (sInput) sInput.value = '';
+
     const cards = document.querySelectorAll('.il-drawer-lesson-card');
     cards.forEach(c => {
       const cardCh = c.getAttribute('data-chapter');
       let show = false;
       if (!chNum || chNum === 'all') {
         show = true;
+      } else if (chNum === 'g10' || chNum === 10 || chNum === 'toan10') {
+        show = cardCh && cardCh.startsWith('10');
       } else if (chNum === 'g11' || chNum === 11 || chNum === 'toan11') {
         show = cardCh && cardCh.startsWith('11');
       } else if (chNum === 'g12' || chNum === 12 || chNum === 'toan12') {
-        show = cardCh && !cardCh.startsWith('11');
+        show = cardCh && !cardCh.startsWith('11') && !cardCh.startsWith('10');
       } else {
         show = (cardCh === String(chNum));
       }
@@ -1346,34 +1592,38 @@
     filterBtns.forEach(btn => {
       const match = (String(chNum) === btn.getAttribute('data-filter-chapter'));
       if (match) {
-        btn.className = 'il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 border border-amber-300 shadow-sm cursor-pointer transition';
+        btn.className = 'il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 border border-amber-300 shadow-sm cursor-pointer transition shrink-0';
       } else {
-        btn.className = 'il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition';
+        btn.className = 'il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition shrink-0';
       }
     });
+    updateDrawerCountBadge();
   }
   if (typeof window !== 'undefined') window.filterDrawerChapter = filterDrawerChapter;
 
-  // Visual Drawer Modal with 25 Lesson Cards & 75 Sections (All 6 Chapters)
+  // Visual Drawer Modal: Full Table of Contents for Math Grades 10 - 11 - 12 (139 Video Sections)
   function toggleLectureDrawer(show) {
     let drawer = document.getElementById('il-chapter1-drawer');
     if (!drawer) {
       drawer = document.createElement('div');
       drawer.id = 'il-chapter1-drawer';
-      drawer.className = 'fixed inset-0 z-[120] bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 transition-opacity';
+      drawer.className = 'fixed inset-0 z-[120] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-5 transition-opacity';
       drawer.onclick = function(e) {
         if (e.target === drawer) toggleLectureDrawer(false);
       };
 
       let cardsHtml = '';
-      const allDrawerConfigs = (typeof SGK11_MENU_CONFIG !== 'undefined')
-        ? [...SGK11_MENU_CONFIG, ...SGK12_MENU_CONFIG]
-        : SGK12_MENU_CONFIG;
+      const allDrawerConfigs = (typeof SGK10_MENU_CONFIG !== 'undefined')
+        ? [...SGK10_MENU_CONFIG, ...(typeof SGK11_MENU_CONFIG !== 'undefined' ? SGK11_MENU_CONFIG : []), ...SGK12_MENU_CONFIG]
+        : ((typeof SGK11_MENU_CONFIG !== 'undefined') ? [...SGK11_MENU_CONFIG, ...SGK12_MENU_CONFIG] : SGK12_MENU_CONFIG);
+
       allDrawerConfigs.forEach(grp => {
         let secButtons = '';
+        let secTitlesArr = [];
         grp.sections.forEach(s => {
+          secTitlesArr.push(s.title);
           secButtons += `
-            <button type="button" onclick="window.openInteractiveLecture('${s.key}'); window.toggleLectureDrawer(false);" class="w-full text-left p-2.5 rounded-xl bg-slate-800/80 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700/80 hover:border-amber-300 transition group flex items-center justify-between gap-2 shadow-xs cursor-pointer">
+            <button type="button" onclick="window.openInteractiveLecture('${s.key}'); window.toggleLectureDrawer(false);" class="w-full text-left p-2.5 rounded-xl bg-slate-800/85 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700/80 hover:border-amber-300 transition group flex items-center justify-between gap-2 shadow-xs cursor-pointer il-drawer-sec-btn">
               <div class="flex items-center gap-2 truncate">
                 <span class="text-base">${s.icon}</span>
                 <span class="text-xs sm:text-sm font-semibold truncate group-hover:font-black">${s.title}</span>
@@ -1383,14 +1633,30 @@
           `;
         });
 
+        // Determine grade styling
+        const isG10 = grp.chapterNumber >= 1000 && grp.chapterNumber < 1100;
+        const isG11 = grp.chapterNumber >= 1100;
+        const borderClass = isG10 ? 'border-rose-900/60 hover:border-rose-500/80' : (isG11 ? 'border-emerald-900/60 hover:border-emerald-500/80' : 'border-indigo-900/60 hover:border-amber-500/80');
+        const badgeBg = isG10 ? 'bg-rose-500/20 text-rose-300 border-rose-500/40' : (isG11 ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' : 'bg-amber-400/20 text-amber-300 border-amber-400/40');
+        const badgeText = isG11 ? ('Lớp 11 • C' + (grp.chapterNumber - 1100)) : (isG10 ? ('Lớp 10 • C' + (grp.chapterNumber - 1000)) : ('Lớp 12 • C' + grp.chapterNumber));
+
         cardsHtml += `
-          <div class="il-drawer-lesson-card bg-slate-900/90 rounded-2xl p-4 border border-indigo-900/60 shadow-lg flex flex-col gap-2.5 transition-all" data-chapter="${grp.chapterNumber}">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-              <div class="flex items-center gap-1.5 truncate">
-                <span class="text-[10px] font-black uppercase px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 shrink-0">${grp.chapterNumber >= 1100 ? ('Lớp 11 • C' + (grp.chapterNumber - 1100)) : ('Lớp 12 • C' + grp.chapterNumber)}</span>
+          <div class="il-drawer-lesson-card bg-slate-900/90 rounded-2xl p-4 border ${borderClass} shadow-lg flex flex-col gap-2.5 transition-all" 
+               data-chapter="${grp.chapterNumber}" 
+               data-lesson-title="${grp.lessonTitle.replace(/"/g, '&quot;')}"
+               data-sec-titles="${secTitlesArr.join(' | ').replace(/"/g, '&quot;')}"
+               data-badge="${badgeText}">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 gap-2">
+              <div class="flex items-center gap-2 truncate">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded-md border ${badgeBg} shrink-0">${badgeText}</span>
                 <span class="text-xs sm:text-sm font-black text-amber-300 uppercase tracking-wide truncate" title="${grp.lessonTitle}">${grp.lessonTitle}</span>
               </div>
-              <span class="text-[11px] font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded-full shrink-0">${grp.sections.length} mục</span>
+              <button type="button" onclick="window.openInteractiveLecture('${grp.sections[0].key}'); window.toggleLectureDrawer(false);" 
+                      class="px-2.5 py-1 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-black text-[11px] rounded-lg shadow-sm flex items-center gap-1.5 shrink-0 cursor-pointer transition active:scale-95" 
+                      title="Phát video bài giảng của bài học này">
+                <i class="fa-solid fa-play text-[9px]"></i>
+                <span>Xem bài này</span>
+              </button>
             </div>
             <div class="flex flex-col gap-1.5">
               ${secButtons}
@@ -1401,12 +1667,13 @@
 
       drawer.innerHTML = `
         <div class="bg-slate-950 border-2 border-indigo-800 rounded-3xl w-full max-w-6xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden font-serif">
+          <!-- Header -->
           <div class="p-4 sm:p-5 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border-b border-indigo-900 flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center text-xl font-black shadow-md">🦉</div>
+              <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-300 text-slate-950 flex items-center justify-center text-xl font-black shadow-md shrink-0">🦉</div>
               <div>
-                <h2 class="text-base sm:text-xl font-black text-amber-300 tracking-wide uppercase">MỤC LỤC BÀI GIẢNG TƯƠNG TÁC TOÁN 11 & 12 KNTT</h2>
-                <p class="text-xs text-slate-400">SGK Kết nối tri thức với cuộc sống • Trọn bộ Video AI chuẩn hoá từng cảnh • ${TOTAL_SECTIONS_COUNT} Mục</p>
+                <h2 class="text-base sm:text-xl font-black text-amber-300 tracking-wide uppercase">MỤC LỤC VIDEO BÀI GIẢNG TOÁN 10 - 11 - 12 (KNTT)</h2>
+                <p class="text-xs text-slate-400">SGK Kết nối tri thức với cuộc sống • Trọn bộ 139 Video AI Microlearning chuẩn Bộ GD&ĐT • Thầy Thuấn Phan & Thầy Nam Minh</p>
               </div>
             </div>
             <button type="button" onclick="window.toggleLectureDrawer(false)" class="w-8 h-8 rounded-xl bg-slate-800 hover:bg-rose-600 text-slate-300 hover:text-white flex items-center justify-center font-bold text-sm transition cursor-pointer">
@@ -1414,54 +1681,77 @@
             </button>
           </div>
 
+          <!-- Instant Search Box & Stats -->
+          <div class="px-4 py-2.5 bg-slate-900/95 border-b border-slate-800 flex items-center justify-between gap-3">
+            <div class="relative flex-1">
+              <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+              <input type="text" id="il-drawer-search-input" oninput="window.filterDrawerBySearch(this.value)" 
+                     placeholder="🔍 Tìm nhanh bài học, chuyên đề (Ví dụ: Mệnh đề, Vectơ, Đạo hàm, Tích phân, Song song, Khảo sát...)" 
+                     class="w-full pl-8 pr-3 py-1.5 rounded-xl bg-slate-800 text-white placeholder-slate-400 text-xs sm:text-sm border border-slate-700 focus:border-amber-400 focus:outline-none transition">
+            </div>
+            <span id="il-drawer-count-badge" class="px-3 py-1 bg-indigo-950 text-amber-300 border border-indigo-800 rounded-xl text-xs font-bold shrink-0">
+              ${allDrawerConfigs.length} bài • ${TOTAL_SECTIONS_COUNT} mục video
+            </span>
+          </div>
+
           <!-- Chapter Filter Tabs -->
-          <div class="px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 flex items-center gap-2 overflow-x-auto">
-            <button type="button" onclick="window.filterDrawerChapter('all')" data-filter-chapter="all" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 border border-amber-300 shadow-sm cursor-pointer transition">
+          <div class="px-4 py-2 bg-slate-900/90 border-b border-slate-800 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+            <button type="button" onclick="window.filterDrawerChapter('all')" data-filter-chapter="all" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 border border-amber-300 shadow-sm cursor-pointer transition shrink-0">
               Tất cả (${TOTAL_SECTIONS_COUNT})
             </button>
-            <button type="button" onclick="window.filterDrawerChapter('g11')" data-filter-chapter="g11" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-900/90 text-emerald-300 hover:text-white hover:bg-emerald-800 border border-emerald-700 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter('g10')" data-filter-chapter="g10" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-rose-900/90 text-rose-300 hover:text-white hover:bg-rose-800 border border-rose-700 cursor-pointer transition shrink-0">
+              Toán 10 (${typeof SGK10_MENU_CONFIG !== 'undefined' ? SGK10_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0) : 0})
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter(1001)" data-filter-chapter="1001" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-rose-950 text-rose-400 hover:text-white hover:bg-rose-800 border border-rose-800 cursor-pointer transition shrink-0">
+              Toán 10 - C1
+            </button>
+            <button type="button" onclick="window.filterDrawerChapter('g11')" data-filter-chapter="g11" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-900/90 text-emerald-300 hover:text-white hover:bg-emerald-800 border border-emerald-700 cursor-pointer transition shrink-0">
               Toán 11 (${SGK11_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0)})
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(1101)" data-filter-chapter="1101" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(1101)" data-filter-chapter="1101" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition shrink-0">
               Toán 11 - C1
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(1102)" data-filter-chapter="1102" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(1102)" data-filter-chapter="1102" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition shrink-0">
               Toán 11 - C2
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(1103)" data-filter-chapter="1103" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(1103)" data-filter-chapter="1103" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition shrink-0">
               Toán 11 - C3
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(1104)" data-filter-chapter="1104" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(1104)" data-filter-chapter="1104" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition shrink-0">
               Toán 11 - C4
             </button>
-            <button type="button" onclick="window.filterDrawerChapter('g12')" data-filter-chapter="g12" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-indigo-900/90 text-indigo-300 hover:text-white hover:bg-indigo-800 border border-indigo-700 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter('g12')" data-filter-chapter="g12" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-indigo-900/90 text-indigo-300 hover:text-white hover:bg-indigo-800 border border-indigo-700 cursor-pointer transition shrink-0">
               Toán 12 (${SGK12_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0)})
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(1)" data-filter-chapter="1" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(1)" data-filter-chapter="1" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition shrink-0">
               Toán 12 - C1
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(2)" data-filter-chapter="2" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(2)" data-filter-chapter="2" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition shrink-0">
               Toán 12 - C2
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(3)" data-filter-chapter="3" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(3)" data-filter-chapter="3" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition shrink-0">
               Toán 12 - C3
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(4)" data-filter-chapter="4" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(4)" data-filter-chapter="4" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition shrink-0">
               Toán 12 - C4
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(5)" data-filter-chapter="5" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(5)" data-filter-chapter="5" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition shrink-0">
               Toán 12 - C5
             </button>
-            <button type="button" onclick="window.filterDrawerChapter(6)" data-filter-chapter="6" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition">
+            <button type="button" onclick="window.filterDrawerChapter(6)" data-filter-chapter="6" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 cursor-pointer transition shrink-0">
               Toán 12 - C6
             </button>
           </div>
 
+          <!-- Cards Grid -->
           <div class="p-4 sm:p-6 overflow-y-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             ${cardsHtml}
           </div>
-          <div class="p-3 bg-slate-900/80 border-t border-slate-800 text-center text-xs text-slate-400">
-            Bấm chọn mục bất kỳ để học bài giảng trực quan cùng Thầy Thuấn Phan & Mascot Cú Thông Thái.
+
+          <!-- Footer -->
+          <div class="p-3 bg-slate-900/80 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <span>Bấm nút <b>"Xem bài này"</b> để phát toàn bộ bài học, hoặc bấm từng <b>Mục</b> để học ngay nội dung cụ thể.</span>
+            <span class="text-amber-400 font-bold hidden sm:inline">Phím tắt: ESC để đóng</span>
           </div>
         </div>
       `;
@@ -1470,12 +1760,24 @@
 
     if (show === false) {
       drawer.classList.add('hidden');
+      drawer.style.display = 'none';
     } else if (show === true) {
       drawer.classList.remove('hidden');
+      drawer.style.display = 'flex';
+      updateDrawerCountBadge();
     } else {
-      drawer.classList.toggle('hidden');
+      const isHidden = drawer.classList.contains('hidden') || drawer.style.display === 'none';
+      if (isHidden) {
+        drawer.classList.remove('hidden');
+        drawer.style.display = 'flex';
+        updateDrawerCountBadge();
+      } else {
+        drawer.classList.add('hidden');
+        drawer.style.display = 'none';
+      }
     }
   }
+  if (typeof window !== 'undefined') window.openLectureDrawer = toggleLectureDrawer;
 
   // Inject the pulse animation CSS into the document head
   (function ensurePulseStyle() {
@@ -1629,6 +1931,37 @@
       }
     }
 
+    // Check if Grade 10
+    let isGrade10 = false;
+    if (al) {
+      if (al.grade == 10 || (typeof al.id === 'string' && al.id.includes('toan10')) || (typeof al.grade === 'string' && al.grade.includes('10'))) isGrade10 = true;
+    }
+    if (!isGrade10 && typeof window !== 'undefined' && window.studentInfo && (window.studentInfo.grade == 10 || String(window.studentInfo.grade).includes('10'))) {
+      isGrade10 = true;
+    }
+    if (!isGrade10 && typeof localStorage !== 'undefined' && (localStorage.getItem('STUDENT_GRADE') === '10' || localStorage.getItem('student_grade') === '10')) {
+      isGrade10 = true;
+    }
+    if (!isGrade10 && typeof document !== 'undefined') {
+      const gEl = document.getElementById('setup-grade-select') || document.getElementById('badge-grade');
+      if (gEl && (gEl.value === '10' || gEl.textContent?.includes('10'))) isGrade10 = true;
+    }
+
+    if (isGrade10) {
+      if (isReview || lessonNum === 'ontap' || lessonNum === 'cuoichuong1' || lessonNum === 'ontap_c1') {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g10_ontap_c1_muc${s}`;
+      }
+      if (lessonNum === 1 || lessonNum === null) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g10_bai1_muc${s}`;
+      }
+      if (lessonNum === 2) {
+        const s = Math.min(3, Math.max(1, sectionNum));
+        return `g10_bai2_muc${s}`;
+      }
+    }
+
     // Check if Grade 11
     let isGrade11 = false;
     if (al) {
@@ -1757,12 +2090,12 @@
       
       const labelSpan = topBtn.querySelector('span:not(.bg-white\\/20)');
       if (labelSpan) {
-        labelSpan.textContent = `▶ Videos tương tác: ${shortLabel}`;
+        labelSpan.textContent = `▶ Video: ${shortLabel}`;
       } else {
         topBtn.innerHTML = `
           <i class="fa-solid fa-circle-play text-white animate-pulse"></i>
-          <span>▶ Videos tương tác: ${shortLabel}</span>
-          <span class="bg-white/20 text-white text-[10px] px-1.5 py-0.2 rounded-full font-black">HD</span>
+          <span>▶ Video: ${shortLabel}</span>
+          <span class="bg-white/20 text-white text-[10px] px-1 py-0.2 rounded-full font-black">HD</span>
         `;
       }
     }
@@ -1992,43 +2325,18 @@
       secKey = getCurrentLessonAndSectionKey();
     } else if (typeof secKey === 'number' || (typeof secKey === 'string' && (secKey.match(/^(video)?\d+$/i) || secKey === 'video1' || secKey === 'video2' || secKey === 'video3' || secKey === 'video4'))) {
       const num = typeof secKey === 'number' ? secKey : (parseInt(secKey.replace(/\D/g, '')) || 1);
-      const curKey = getCurrentLessonAndSectionKey();
+      const curKey = currentSection || getCurrentLessonAndSectionKey();
       secKey = curKey.replace(/_muc\d+$/, `_muc${num}`);
-    } else if (typeof secKey === 'string' && secKey.match(/^bai\d+$/i)) {
-      secKey = secKey.toLowerCase() + '_muc1';
-    } else if (typeof secKey === 'string' && secKey.match(/^ontap_c\d+$/i)) {
-      secKey = secKey.toLowerCase() + '_muc1';
-    } else if (secKey === 'ontap' || secKey === 'ontap_c1' || secKey === 'ontap_chuong1') {
-      secKey = 'ontap_muc1';
-    } else if (secKey === 'ontap_c2' || secKey === 'ontap_chuong2') {
-      secKey = 'ontap_c2_muc1';
-    } else if (secKey === 'ontap_c3' || secKey === 'ontap_chuong3') {
-      secKey = 'ontap_c3_muc1';
-    } else if (secKey === 'ontap_c4' || secKey === 'ontap_chuong4') {
-      secKey = 'ontap_c4_muc1';
-    } else if (secKey === 'ontap_c5' || secKey === 'ontap_chuong5') {
-      secKey = 'ontap_c5_muc1';
-    } else if (typeof secKey === 'string') {
-      if (LECTURE_DATA[secKey]) {
-        // secKey is valid
-      } else {
-        const clean = secKey.replace(/^video_?/, '');
-        if (LECTURE_DATA[clean]) {
-          secKey = clean;
-        } else {
-          const keys = Object.keys(LECTURE_DATA);
-          const found = keys.find(k => k === secKey || (LECTURE_DATA[k] && (LECTURE_DATA[k].lessonId === secKey || LECTURE_DATA[k].sectionId === secKey)));
-          if (found) secKey = found;
-        }
-      }
+    } else {
+      secKey = resolveVideoSectionKey(secKey, (typeof window !== 'undefined' && window.studentInfo) ? window.studentInfo.grade : null);
     }
 
     if (!LECTURE_DATA[secKey]) {
       let matchedSec = null;
       let matchedGrp = null;
-      const allMenuConfigs = (typeof SGK11_MENU_CONFIG !== 'undefined')
-        ? [...SGK11_MENU_CONFIG, ...SGK12_MENU_CONFIG]
-        : SGK12_MENU_CONFIG;
+      const allMenuConfigs = (typeof SGK10_MENU_CONFIG !== 'undefined')
+        ? [...SGK10_MENU_CONFIG, ...(typeof SGK11_MENU_CONFIG !== 'undefined' ? SGK11_MENU_CONFIG : []), ...SGK12_MENU_CONFIG]
+        : ((typeof SGK11_MENU_CONFIG !== 'undefined') ? [...SGK11_MENU_CONFIG, ...SGK12_MENU_CONFIG] : SGK12_MENU_CONFIG);
       for (const grp of allMenuConfigs) {
         for (const s of grp.sections) {
           if (s.key === secKey) {
@@ -2043,6 +2351,27 @@
         LECTURE_DATA[secKey] = createPlaceholderLecture(matchedGrp, matchedSec);
       } else {
         secKey = (LECTURE_DATA['g11_bai4_muc1']) ? 'g11_bai4_muc1' : 'muc1';
+      }
+    }
+
+    // Sync activeLesson and studentInfo so other app panels match this lesson
+    const allConfigs = (typeof SGK10_MENU_CONFIG !== 'undefined')
+      ? [...SGK10_MENU_CONFIG, ...(typeof SGK11_MENU_CONFIG !== 'undefined' ? SGK11_MENU_CONFIG : []), ...SGK12_MENU_CONFIG]
+      : ((typeof SGK11_MENU_CONFIG !== 'undefined') ? [...SGK11_MENU_CONFIG, ...SGK12_MENU_CONFIG] : SGK12_MENU_CONFIG);
+    for (const grp of allConfigs) {
+      if (grp.sections.some(s => s.key === secKey)) {
+        if (typeof window !== 'undefined' && window.studentInfo) {
+          const gStr = grp.chapterNumber >= 1100 ? 'Lớp 11' : (grp.chapterNumber >= 1000 ? 'Lớp 10' : 'Lớp 12');
+          window.studentInfo.grade = gStr;
+          window.studentInfo.lesson = grp.lessonTitle;
+          try {
+            localStorage.setItem('student_grade', gStr);
+            localStorage.setItem('STUDENT_GRADE', gStr);
+            localStorage.setItem('student_lesson', grp.lessonTitle);
+            localStorage.setItem('STUDENT_LESSON', grp.lessonTitle);
+          } catch(e) {}
+        }
+        break;
       }
     }
 
@@ -2409,6 +2738,9 @@
   window.toggleLessonVideo = window.toggleModalVideo;
 
   window.toggleLectureDrawer = toggleLectureDrawer;
+  window.openLectureDrawer = toggleLectureDrawer;
+  window.openInteractiveLectureForLesson = openInteractiveLectureForLesson;
+  window.resolveVideoSectionKey = resolveVideoSectionKey;
   window.openLectureModal = openInteractiveLecture;
   window.injectActiveLectureButton = injectActiveLectureButton;
   window.updateActiveLessonVideoUI = updateActiveLessonVideoUI;

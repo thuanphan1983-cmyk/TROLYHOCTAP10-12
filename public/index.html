@@ -863,6 +863,7 @@
   <script src="public/js/chapter4_data.js" defer></script>
   <script src="public/js/chapter5_data.js" defer></script>
   <script src="public/js/chapter6_data.js" defer></script>
+  <script src="public/js/g10_chapter1_data.js?v=10.1.0" defer></script>
   <script src="public/js/g11_chapter1_data.js?v=11.4.2" defer></script>
   <script src="public/js/g11_chapter2_data.js?v=11.4.2" defer></script>
   <script src="public/js/g11_chapter3_data.js?v=11.4.2" defer></script>
@@ -873,6 +874,7 @@
   <script src="js/chapter4_data.js" defer></script>
   <script src="js/chapter5_data.js" defer></script>
   <script src="js/chapter6_data.js" defer></script>
+  <script src="js/g10_chapter1_data.js?v=10.1.0" defer></script>
   <script src="js/g11_chapter1_data.js?v=11.4.2" defer></script>
   <script src="js/g11_chapter2_data.js?v=11.4.2" defer></script>
   <script src="js/g11_chapter3_data.js?v=11.4.2" defer></script>
@@ -941,18 +943,18 @@
   </header>
 
   <!-- Study Navigation Tabs (Tối ưu tuyệt đối cho Điện Thoại & Máy Tính) -->
-  <!-- Study Navigation Header Bar: 4 NÚT ĐIỀU HƯỚNG CHÍNH CĂN GIỮA -->
-  <div id="study-mode-tabs" class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white px-2 sm:px-3 py-2 sm:py-2.5 shrink-0 flex items-center justify-center shadow-md border-b border-indigo-800/60 font-serif z-20">
-    <div class="flex items-center justify-center gap-1.5 sm:gap-3 max-w-6xl mx-auto w-full">
+  <!-- Study Navigation Header Bar: 5 NÚT ĐIỀU HƯỚNG CHÍNH CĂN GIỮA -->
+  <div id="study-mode-tabs" class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white px-2 sm:px-3 py-1.5 sm:py-2 shrink-0 flex items-center justify-center shadow-md border-b border-indigo-800/60 font-serif z-20">
+    <div class="flex items-center justify-center gap-1 sm:gap-2 max-w-6xl mx-auto w-full">
       
       <!-- Nút 1: 📖 HỌC BÀI THEO SGK -->
       <button 
         id="nav-btn-sgk" 
         onclick="handleNavButtonClick('sgk')" 
-        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400"
+        class="nav-mode-btn flex-1 py-1.5 sm:py-2 px-1 sm:px-2 rounded-xl font-bold text-xs sm:text-[11pt] md:text-[11.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400"
         title="Học kiến thức sách giáo khoa Kết Nối Tri Thức Khối 10, 11, 12"
       >
-        <span class="text-sm sm:text-base">📖</span>
+        <span class="text-xs sm:text-sm">📖</span>
         <span class="tracking-wide">HỌC BÀI THEO SGK</span>
       </button>
 
@@ -960,10 +962,10 @@
       <button 
         id="nav-btn-periodic" 
         onclick="handleNavButtonClick('periodic')" 
-        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        class="nav-mode-btn flex-1 py-1.5 sm:py-2 px-1 sm:px-2 rounded-xl font-bold text-xs sm:text-[11pt] md:text-[11.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
         title="Luyện đề ôn thi Giữa kỳ & Cuối kỳ Khối 10, 11, 12"
       >
-        <span class="text-sm sm:text-base">📝</span>
+        <span class="text-xs sm:text-sm">📝</span>
         <span class="tracking-wide">ÔN THI ĐỊNH KỲ</span>
       </button>
 
@@ -971,10 +973,10 @@
       <button 
         id="nav-btn-graduation" 
         onclick="handleNavButtonClick('graduation')" 
-        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        class="nav-mode-btn flex-1 py-1.5 sm:py-2 px-1 sm:px-2 rounded-xl font-bold text-xs sm:text-[11pt] md:text-[11.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
         title="Luyện đề thi tốt nghiệp THPT chuẩn cấu trúc Bộ GD&ĐT"
       >
-        <span class="text-sm sm:text-base">🎯</span>
+        <span class="text-xs sm:text-sm">🎯</span>
         <span class="tracking-wide">ÔN THI TỐT NGHIỆP THPT</span>
       </button>
 
@@ -982,23 +984,34 @@
       <button 
         id="nav-btn-topic" 
         onclick="handleNavButtonClick('topic')" 
-        class="nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        class="nav-mode-btn flex-1 py-1.5 sm:py-2 px-1 sm:px-2 rounded-xl font-bold text-xs sm:text-[11pt] md:text-[11.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
         title="Ôn tập tốt nghiệp theo 9 chuyên đề trọng tâm: Tóm tắt lý thuyết và 45 đề chuẩn cấu trúc Bộ GD&ĐT"
       >
-        <span class="text-sm sm:text-base">📚</span>
+        <span class="text-xs sm:text-sm">📚</span>
         <span class="tracking-wide">ÔN THI TN THEO CHỦ ĐỀ</span>
+      </button>
+
+      <!-- Nút 5: 📊 THỐNG KÊ (THEO TRƯỜNG & THEO LỚP) -->
+      <button 
+        id="nav-btn-stats" 
+        onclick="handleNavButtonClick('stats')" 
+        class="nav-mode-btn flex-1 py-1.5 sm:py-2 px-1 sm:px-2 rounded-xl font-bold text-xs sm:text-[11pt] md:text-[11.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20"
+        title="Xem Bảng Thống Kê Học Tập: Theo Trường THPT và Theo Lớp Học"
+      >
+        <span class="text-xs sm:text-sm">📊</span>
+        <span class="tracking-wide">THỐNG KÊ</span>
       </button>
 
     </div>
   </div>
 
   <!-- SGK Sub Navigation Bar (Chỉ hiển thị khi đang ở chế độ Học SGK) -->
-  <div id="sgk-sub-nav" class="bg-indigo-900/90 text-white px-2 py-1.5 shrink-0 flex items-center justify-between gap-1 shadow-xs border-b border-indigo-950/40 font-serif z-10">
-    <div class="flex items-center gap-1 sm:gap-2 flex-1 max-w-7xl mx-auto overflow-x-auto no-scrollbar">
+  <div id="sgk-sub-nav" class="bg-indigo-900/90 text-white px-2 py-1 shrink-0 flex items-center justify-between gap-1 shadow-xs border-b border-indigo-950/40 font-serif z-10">
+    <div class="flex items-center gap-1 sm:gap-1.5 flex-1 max-w-7xl mx-auto overflow-x-auto no-scrollbar">
       <button 
         id="tab-btn-theory" 
         onclick="switchStudyTab('theory')" 
-        class="flex-1 py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white text-indigo-950 shadow-sm cursor-pointer whitespace-nowrap"
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 bg-white text-indigo-950 shadow-xs cursor-pointer whitespace-nowrap"
       >
         <i id="tab-icon-theory" class="fa-solid fa-book-open text-amber-500"></i>
         <span id="tab-label-theory">1. Lý Thuyết</span>
@@ -1008,7 +1021,7 @@
       <button 
         id="tab-btn-mcq" 
         onclick="switchStudyTab('mcq')" 
-        class="flex-1 py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
       >
         <i class="fa-solid fa-circle-question text-emerald-400"></i>
         <span id="tab-label-mcq">2. Trắc Nghiệm</span>
@@ -1018,7 +1031,7 @@
       <button 
         id="tab-btn-tf" 
         onclick="switchStudyTab('tf')" 
-        class="flex-1 py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
       >
         <i class="fa-solid fa-list-check text-amber-400"></i>
         <span id="tab-label-tf">3. Phiếu 24 Ý</span>
@@ -1028,44 +1041,77 @@
       <button 
         id="tab-btn-chat" 
         onclick="switchStudyTab('chat')" 
-        class="py-1.5 sm:py-2 px-2 sm:px-2.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap"
         title="Trò chuyện hoặc hỏi ý kiến Thầy/Cô Trợ lý"
       >
         <i class="fa-solid fa-comments text-sky-400"></i>
-        <span class="hidden sm:inline">Hỏi Thầy/Cô</span>
+        <span>Hỏi Thầy/Cô</span>
       </button>
 
-            <button 
+      <button 
         id="btn-open-lesson1-video" 
         onclick="if(typeof openInteractiveLecture==='function'){openInteractiveLecture(getCurrentLessonAndSectionKey());}else{openMicrolearningVideoModal();}" 
-        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-black text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-rose-600 via-rose-500 to-red-600 text-white shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 bg-gradient-to-r from-rose-600 via-rose-500 to-red-600 text-white shadow-xs hover:shadow-md cursor-pointer whitespace-nowrap"
         title="Xem video bài giảng tương tác chuẩn Bộ GD&ĐT bám sát bài học"
       >
         <i class="fa-solid fa-circle-play text-white animate-pulse"></i>
-        <span id="btn-open-lesson-video-label">▶ Videos tương tác</span>
-        <span class="bg-white/20 text-white text-[10px] px-1.5 py-0.2 rounded-full font-black">HD</span>
+        <span id="btn-open-lesson-video-label">▶ Video bài học</span>
+        <span class="bg-white/20 text-white text-[10px] px-1 py-0.2 rounded-full font-black">HD</span>
+      </button>
+
+      <button 
+        id="btn-open-lecture-drawer" 
+        type="button" 
+        onclick="if(typeof toggleLectureDrawer==='function'){toggleLectureDrawer(true);}else if(typeof openLectureDrawer==='function'){openLectureDrawer(true);}" 
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 text-slate-950 shadow-xs hover:shadow-md cursor-pointer whitespace-nowrap"
+        title="Mở Mục Lục Video Bài Giảng Toàn Diện (Toán 10 - 11 - 12: 139 Video HD)"
+      >
+        <i class="fa-solid fa-layer-group text-slate-950"></i>
+        <span>Mục Lục Video</span>
+        <span class="bg-slate-950 text-amber-300 text-[10px] px-1.5 py-0.2 rounded-full font-black">139</span>
       </button>
 
       <button 
         id="tab-btn-lesson-exams" 
         onclick="openLessonPracticeModal()" 
-        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-black text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 shadow-xs hover:shadow-md cursor-pointer whitespace-nowrap"
         title="Mở 2 Đề Ôn Tập bài học chuẩn Bộ GD&ĐT (Làm online & In/Xuất PDF)"
       >
         <i class="fa-solid fa-file-signature text-indigo-950"></i>
         <span>2 Đề Ôn Tập</span>
-        <span class="bg-indigo-950 text-amber-300 text-[10px] px-1.5 py-0.2 rounded-full font-black">Mới</span>
+        <span class="bg-indigo-950 text-amber-300 text-[10px] px-1 py-0.2 rounded-full font-black">Mới</span>
       </button>
 
       <button 
         id="tab-btn-finish" 
         onclick="handleFinishLesson()" 
-        class="py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-rose-600 hover:bg-rose-700 text-white shadow-xs cursor-pointer whitespace-nowrap"
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 bg-rose-600 hover:bg-rose-700 text-white shadow-xs cursor-pointer whitespace-nowrap"
         title="Kết thúc buổi học để xem Bảng đánh giá 5 mức & Thống kê lớp"
       >
         <i class="fa-solid fa-flag-checkered text-amber-300"></i>
-        <span>Kết thúc bài học</span>
+        <span>Kết thúc</span>
       </button>
+
+      <button 
+        id="btn-export-pdf-header" 
+        onclick="openEvaluationSheetModal()" 
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 bg-white/10 hover:bg-white/20 text-rose-200 hover:text-white border border-rose-300/40 cursor-pointer whitespace-nowrap shadow-xs"
+        title="Xem và Xuất Phiếu đánh giá buổi học ra file PDF"
+      >
+        <i class="fa-solid fa-file-pdf text-rose-300 text-sm"></i>
+        <span class="hidden xl:inline">Xuất Phiếu PDF</span>
+      </button>
+
+      <button 
+        onclick="openCurriculumPicker()" 
+        class="py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-xs cursor-pointer whitespace-nowrap"
+        title="Chọn bài học SGK khác"
+      >
+        <i class="fa-solid fa-book-bookmark"></i>
+        <span>Đổi Bài SGK</span>
+      </button>
+    </div>
+  </div>
 
       <button 
         id="btn-export-pdf-header" 
@@ -4930,25 +4976,34 @@
           const escapedTitle = lesTitle.replace(/'/g, "\\'");
 
           html += `
-            <button 
-              type="button" 
+            <div 
               onclick="selectSgkLesson('${escapedTitle}', '${activeG}')"
-              class="text-left p-3 rounded-xl border transition-all duration-150 flex items-start gap-3 group cursor-pointer ${isCurrent ? 'bg-indigo-50 border-indigo-500 shadow-xs ring-1 ring-indigo-500' : 'bg-white hover:bg-indigo-50/50 hover:border-indigo-300 border-slate-200 shadow-xs active:scale-[0.99]'}"
+              class="text-left p-3 rounded-xl border transition-all duration-150 flex items-center justify-between gap-2.5 group cursor-pointer ${isCurrent ? 'bg-indigo-50 border-indigo-500 shadow-xs ring-1 ring-indigo-500' : 'bg-white hover:bg-indigo-50/50 hover:border-indigo-300 border-slate-200 shadow-xs active:scale-[0.99]'}"
             >
-              <div class="w-8 h-8 rounded-lg ${isCurrent ? 'bg-indigo-600 text-white' : 'bg-indigo-100 text-indigo-700 group-hover:bg-indigo-600 group-hover:text-white'} flex items-center justify-center shrink-0 transition text-sm">
-                <i class="fa-solid fa-book-open"></i>
+              <div class="flex items-start gap-2.5 min-w-0 flex-1">
+                <div class="w-8 h-8 rounded-lg ${isCurrent ? 'bg-indigo-600 text-white' : 'bg-indigo-100 text-indigo-700 group-hover:bg-indigo-600 group-hover:text-white'} flex items-center justify-center shrink-0 transition text-sm">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-indigo-950 leading-snug">
+                    ${lesTitle}
+                  </p>
+                  <p class="text-[11px] text-slate-500 mt-0.5 flex items-center gap-1">
+                    <span>Lớp ${activeG}</span>
+                    ${isCurrent ? '<span class="text-emerald-600 font-bold ml-1">• Đang học</span>' : ''}
+                  </p>
+                </div>
               </div>
-              <div class="flex-1 min-w-0">
-                <p class="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-indigo-950 leading-snug">
-                  ${lesTitle}
-                </p>
-                <p class="text-[11px] text-slate-500 mt-0.5 flex items-center gap-1">
-                  <span>Lớp ${activeG}</span>
-                  ${isCurrent ? '<span class="text-emerald-600 font-bold ml-1">• Đang học</span>' : ''}
-                </p>
+              <div class="flex items-center gap-1.5 shrink-0">
+                <button type="button" onclick="event.stopPropagation(); window.openInteractiveLectureForLesson('${escapedTitle}', '${activeG}');" 
+                        class="px-2.5 py-1.5 rounded-lg bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white text-[11px] font-black flex items-center gap-1 shadow-sm transition active:scale-95 cursor-pointer" 
+                        title="Xem video bài giảng của bài này">
+                  <i class="fa-solid fa-circle-play text-[11px]"></i>
+                  <span>Video</span>
+                </button>
+                <i class="fa-solid fa-chevron-right text-xs text-slate-400 group-hover:text-indigo-600 shrink-0"></i>
               </div>
-              <i class="fa-solid fa-chevron-right text-xs text-slate-400 group-hover:text-indigo-600 mt-2 shrink-0"></i>
-            </button>
+            </div>
           `;
         });
 
@@ -4998,6 +5053,21 @@
         window.updateActiveLessonVideoUI();
       }
     }
+
+    // Kích hoạt phát video bài giảng trực tiếp cho một bài học bất kỳ từ Bảng chọn bài
+    function openInteractiveLectureForLesson(lessonTitle, grade) {
+      selectSgkLesson(lessonTitle, grade);
+      if (typeof closeSgkLessonSelectorModal === 'function') {
+        closeSgkLessonSelectorModal();
+      }
+      if (typeof window.openInteractiveLecture === 'function') {
+        const secKey = (typeof window.resolveVideoSectionKey === 'function')
+          ? window.resolveVideoSectionKey(lessonTitle, grade)
+          : (typeof getCurrentLessonAndSectionKey === 'function' ? getCurrentLessonAndSectionKey() : 'muc1');
+        window.openInteractiveLecture(secKey);
+      }
+    }
+    window.openInteractiveLectureForLesson = openInteractiveLectureForLesson;
 
     // Kích hoạt Chế Độ Học Tập Toàn Màn Hình (Focus Mode)
     function enterSgkFocusMode(lessonTitle, grade) {
@@ -5227,14 +5297,16 @@
       const btnPeriodic = document.getElementById('nav-btn-periodic');
       const btnGrad = document.getElementById('nav-btn-graduation');
       const btnTopic = document.getElementById('nav-btn-topic');
+      const btnStats = document.getElementById('nav-btn-stats');
 
-      const activeClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400 ring-2 ring-amber-400/50';
-      const inactiveClass = 'nav-mode-btn flex-1 py-2 sm:py-2.5 px-1.5 sm:px-3 rounded-2xl font-black text-[11px] sm:text-xs md:text-[12.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20';
+      const activeClass = 'nav-mode-btn flex-1 py-1.5 sm:py-2 px-1 sm:px-2 rounded-xl font-bold text-xs sm:text-[11pt] md:text-[11.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-white text-indigo-950 border-amber-400 ring-2 ring-amber-400/50';
+      const inactiveClass = 'nav-mode-btn flex-1 py-1.5 sm:py-2 px-1 sm:px-2 rounded-xl font-bold text-xs sm:text-[11pt] md:text-[11.5pt] flex items-center justify-center gap-1 sm:gap-1.5 transition-all duration-200 active:scale-95 shadow-md border cursor-pointer whitespace-nowrap bg-indigo-900/80 hover:bg-white/10 text-indigo-100 hover:text-white border-white/20';
 
       if (btnSgk) btnSgk.className = (mode === 'sgk') ? activeClass : inactiveClass;
       if (btnPeriodic) btnPeriodic.className = (mode === 'periodic') ? activeClass : inactiveClass;
       if (btnGrad) btnGrad.className = (mode === 'graduation' || (mode === 'exam' && (!activeLesson || !activeLesson.isTopicExam))) ? activeClass : inactiveClass;
       if (btnTopic) btnTopic.className = (mode === 'topic' || (mode === 'exam' && activeLesson && activeLesson.isTopicExam)) ? activeClass : inactiveClass;
+      if (btnStats) btnStats.className = (mode === 'stats') ? activeClass : inactiveClass;
     }
 
     // Điều hướng theo đúng mục học sau khi xác nhận thông tin
@@ -5355,6 +5427,11 @@
 
         // Mở danh sách 9 chuyên đề Ôn Thi Tốt Nghiệp THPT
         openTopicReviewModal();
+      } else if (mode === 'stats') {
+        // Mở Bảng Thống Kê Điểm Số & Đánh Giá Theo Trường THPT và Theo Lớp Học
+        if (typeof openClassStatsModal === 'function') {
+          openClassStatsModal('all', 'school');
+        }
       }
     }
 
@@ -33939,10 +34016,10 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         if (t.el) {
           const isAct = (t.key === tab);
           if (isAct) {
-            t.el.className = 'flex-1 py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 bg-white text-indigo-950 shadow-sm cursor-pointer whitespace-nowrap';
+            t.el.className = 'py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 bg-white text-indigo-950 shadow-xs cursor-pointer whitespace-nowrap';
           } else {
             const isHiddenSa = (t.key === 'sa' && (!activeLesson || !activeLesson.isChapterReview));
-            t.el.className = (isHiddenSa ? 'hidden ' : 'flex-1 ') + 'py-1.5 sm:py-2 px-1.5 rounded-xl font-bold text-xs sm:text-[12pt] flex items-center justify-center gap-1.5 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap';
+            t.el.className = (isHiddenSa ? 'hidden ' : '') + 'py-1 sm:py-1.5 px-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1 transition active:scale-95 text-indigo-200 hover:text-white hover:bg-white/10 cursor-pointer whitespace-nowrap';
           }
         }
       });
@@ -40403,6 +40480,9 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
       const modal = document.getElementById('modal-class-stats');
       if (!modal) return;
       modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.style.setProperty('display', 'flex', 'important');
+      document.body.classList.add('overflow-hidden');
 
       if (viewMode) {
         currentStatsViewMode = viewMode;
@@ -40426,8 +40506,19 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
 
     function closeClassStatsModal() {
       const modal = document.getElementById('modal-class-stats');
-      if (modal) modal.classList.add('hidden');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.style.setProperty('display', 'none', 'important');
+      }
+      document.body.classList.remove('overflow-hidden');
+      if (typeof updateNavButtonsActiveUI === 'function') {
+        updateNavButtonsActiveUI(currentAppMode || 'sgk');
+      }
     }
+
+    window.openClassStatsModal = openClassStatsModal;
+    window.closeClassStatsModal = closeClassStatsModal;
 
     // Modal Class Stats Event Listeners
     const btnClassStats = document.getElementById('btn-class-stats');
@@ -40620,6 +40711,18 @@ YÊU CẦU BẮT BUỘC VỀ SƯ PHẠM:
         <button type="button" onclick="renderSgkLessonsByGrade('10')" id="btn-sgk-grade-10" class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer flex items-center gap-2 bg-white text-slate-700 hover:bg-slate-200">
           <i class="fa-solid fa-shapes"></i>
           <span>Khối 10 (27 bài)</span>
+        </button>
+      </div>
+
+      <!-- Quick Access Banner to 139 Video Lectures -->
+      <div class="px-4 py-2.5 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border-b border-indigo-900 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2 text-xs sm:text-sm text-indigo-100">
+          <span class="text-base">🎬</span>
+          <span>Trọn bộ <b>139 Video bài giảng tương tác</b> Toán 10 - 11 - 12 kèm âm thanh AI chuẩn Bộ GD&ĐT!</span>
+        </div>
+        <button type="button" onclick="closeSgkLessonSelectorModal(); if(typeof toggleLectureDrawer==='function') toggleLectureDrawer(true);" class="px-3.5 py-1.5 rounded-xl font-black text-xs bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 shadow-md flex items-center gap-1.5 shrink-0 cursor-pointer transition active:scale-95">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Mở Mục Lục 139 Video</span>
         </button>
       </div>
 
