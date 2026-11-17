@@ -1249,6 +1249,42 @@
         { key: "g11_bai12_muc2", title: "Mục 2: Tính chất của đường thẳng song song mặt phẳng & Định lí giao tuyến song song", time: "04:04", icon: "🔍" },
         { key: "g11_bai12_muc3", title: "Mục 3: Phương pháp chứng minh d // (P) & Kỹ thuật dựng thiết diện song song", time: "07:12", icon: "💎" }
       ]
+    },
+    {
+      chapterNumber: 1104,
+      chapterTitle: "Toán 11 - Chương IV: Quan hệ song song trong không gian",
+      lessonId: "toan11_bai13",
+      lessonTitle: "Bài 13: Hai mặt phẳng song song",
+      lessonBadge: "Toán 11 • Bài 13",
+      sections: [
+        { key: "g11_bai13_muc1", title: "Mục 1: Khái niệm & Điều kiện để hai mặt phẳng song song", time: "03:25", icon: "📖" },
+        { key: "g11_bai13_muc2", title: "Mục 2: Tính chất của hai mặt phẳng song song & Định lí Ta-lét trong không gian", time: "04:37", icon: "📐" },
+        { key: "g11_bai13_muc3", title: "Mục 3: Hình lăng trụ, hình hộp và hình chóp cụt", time: "03:33", icon: "🏛️" }
+      ]
+    },
+    {
+      chapterNumber: 1104,
+      chapterTitle: "Toán 11 - Chương IV: Quan hệ song song trong không gian",
+      lessonId: "toan11_bai14",
+      lessonTitle: "Bài 14: Phép chiếu song song",
+      lessonBadge: "Toán 11 • Bài 14",
+      sections: [
+        { key: "g11_bai14_muc1", title: "Mục 1: Khái niệm & Các tính chất cơ bản của phép chiếu song song", time: "04:56", icon: "☀️" },
+        { key: "g11_bai14_muc2", title: "Mục 2: Hình biểu diễn của một hình không gian trên mặt phẳng", time: "05:18", icon: "🎨" },
+        { key: "g11_bai14_muc3", title: "Mục 3: Kỹ năng vẽ hình không gian chuẩn xác & Giải toán bằng phép chiếu", time: "06:12", icon: "✏️" }
+      ]
+    },
+    {
+      chapterNumber: 1104,
+      chapterTitle: "Toán 11 - Chương IV: Quan hệ song song trong không gian",
+      lessonId: "toan11_ontap_c4",
+      lessonTitle: "Bài tập cuối chương IV: Quan hệ song song trong không gian",
+      lessonBadge: "Toán 11 • Ôn tập C4",
+      sections: [
+        { key: "g11_ontap_c4_muc1", title: "Mục 1: Hệ thống hóa kiến thức toàn chương & Sơ đồ tư duy 4 quan hệ song song", time: "05:50", icon: "🧠" },
+        { key: "g11_ontap_c4_muc2", title: "Mục 2: 4 Dạng toán cốt lõi & Phương pháp giải kinh điển", time: "07:26", icon: "🎯" },
+        { key: "g11_ontap_c4_muc3", title: "Mục 3: Luyện đề tổng hợp chuẩn cấu trúc Bộ GD&ĐT 2025", time: "06:38", icon: "📝" }
+      ]
     }
   ];
 
@@ -1396,7 +1432,7 @@
               Toán 11 - C3
             </button>
             <button type="button" onclick="window.filterDrawerChapter(1104)" data-filter-chapter="1104" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 hover:text-white hover:bg-emerald-800 border border-emerald-800 cursor-pointer transition">
-              Toán 11 - C4 (Bài 10, 11, 12)
+              Toán 11 - C4
             </button>
             <button type="button" onclick="window.filterDrawerChapter('g12')" data-filter-chapter="g12" class="il-drawer-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-indigo-900/90 text-indigo-300 hover:text-white hover:bg-indigo-800 border border-indigo-700 cursor-pointer transition">
               Toán 12 (${SGK12_MENU_CONFIG.reduce((acc, grp) => acc + grp.sections.length, 0)})
@@ -1610,11 +1646,12 @@
     }
 
     if (isGrade11) {
-      if (isReview || lessonNum === 'ontap' || lessonNum === 'cuoichuong1' || lessonNum === 'ontap_c1' || lessonNum === 'cuoichuong2' || lessonNum === 'ontap_c2' || lessonNum === 'cuoichuong3' || lessonNum === 'ontap_c3') {
+      if (isReview || lessonNum === 'ontap' || lessonNum === 'cuoichuong1' || lessonNum === 'ontap_c1' || lessonNum === 'cuoichuong2' || lessonNum === 'ontap_c2' || lessonNum === 'cuoichuong3' || lessonNum === 'ontap_c3' || lessonNum === 'cuoichuong4' || lessonNum === 'ontap_c4') {
         let ch = chapterNum;
         if (!ch) {
           const al = (typeof window !== 'undefined' && window.activeLesson) ? window.activeLesson : null;
-          if (al && (al.chapterNumber == 1103 || al.chapter == 3 || (typeof al.id === 'string' && al.id.includes('c3')))) ch = 3;
+          if (al && (al.chapterNumber == 1104 || al.chapter == 4 || (typeof al.id === 'string' && al.id.includes('c4')))) ch = 4;
+          else if (al && (al.chapterNumber == 1103 || al.chapter == 3 || (typeof al.id === 'string' && al.id.includes('c3')))) ch = 3;
           else if (al && (al.chapterNumber == 1102 || al.chapter == 2 || (typeof al.id === 'string' && al.id.includes('c2')))) ch = 2;
           else ch = 1;
         }
@@ -1657,7 +1694,7 @@
         const s = Math.min(3, Math.max(1, sectionNum));
         return `g11_bai9_muc${s}`;
       }
-      if (lessonNum >= 10 && lessonNum <= 12) {
+      if (lessonNum >= 10 && lessonNum <= 14) {
         const s = Math.min(3, Math.max(1, sectionNum));
         return `g11_bai${lessonNum}_muc${s}`;
       }

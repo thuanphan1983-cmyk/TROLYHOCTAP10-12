@@ -1,9 +1,13 @@
 /* =========================================================================
-   CHƯƠNG IV: QUAN HỆ SONG SONG TRONG KHÔNG GIAN
+   CHƯƠNG IV: QUAN HỆ SONG SONG TRONG KHÔNG GIAN (HOÀN CHỈNH TOÀN CHƯƠNG)
    MÔN TOÁN LỚP 11 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG
    Bài 10: Đường thẳng và mặt phẳng trong không gian (Mục 1, 2, 3)
    Bài 11: Hai đường thẳng song song trong không gian (Mục 1, 2, 3)
    Bài 12: Đường thẳng và mặt phẳng song song (Mục 1, 2, 3)
+   Bài 13: Hai mặt phẳng song song (Mục 1, 2, 3)
+   Bài 14: Phép chiếu song song (Mục 1, 2, 3)
+   Bài tập cuối chương IV: Ôn tập chương IV (Mục 1, 2, 3)
+   Tổng cộng: 6 bài/chuyên đề × 3 mục = 18 mục (216 scenes chuẩn SGK)
    Mỗi mục gồm 12 scenes, 4 ví dụ minh họa kèm đồng hồ đếm ngược 15s/30s
    Hệ thống Trợ lý Học tập Toán 10-12 Chuẩn Bộ GD&ĐT
    ========================================================================= */
@@ -1982,6 +1986,1977 @@
   ]
 };
   root.G11_CHAPTER4_DATA.toan11_bai12_muc3 = root.G11_CHAPTER4_DATA.g11_bai12_muc3;
+
+  root.G11_CHAPTER4_DATA.g11_bai13_muc1 = {
+  "lessonId": "toan11_bai13",
+  "lessonTitle": "Bài 13: Hai mặt phẳng song song",
+  "sectionId": "g11_bai13_muc1",
+  "sectionTitle": "Mục 1: Khái niệm & Điều kiện để hai mặt phẳng song song",
+  "audio": "/audio/g11_bai13_muc1.mp3",
+  "audioSrc": "./audio/g11_bai13_muc1.mp3",
+  "audio_src": "./audio/g11_bai13_muc1.mp3",
+  "title": "Mục 1: Khái niệm & Điều kiện để hai mặt phẳng song song",
+  "owl_tip": "Định lí 1: Nếu mặt phẳng (P) chứa hai đường thẳng cắt nhau a, b và a, b cùng song song với (Q) thì (P) // (Q)!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. ĐỊNH NGHĨA HAI MẶT PHẲNG SONG SONG",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. ĐỊNH LÍ 1: ĐIỀU KIỆN ĐỂ HAI MẶT PHẲNG SONG SONG",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI CHUẨN BỘ GD&ĐT 2025",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & TỔNG KẾT MỤC 1",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 205.06,
+  "formattedDuration": "03:25",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. ĐỊNH NGHĨA HAI MẶT PHẲNG SONG SONG",
+      "subtitle": "BÀI 13 • MỤC 1 • VỊ TRÍ TƯƠNG ĐỐI CỦA HAI MẶT PHẲNG",
+      "mascotMode": "pointer",
+      "mascotTip": "Hai mặt phẳng song song nếu chúng không có bất kì điểm chung nào: $(P) \\parallel (Q) \\iff (P) \\cap (Q) = \\emptyset$!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-950 to-teal-900/60 p-4 rounded-xl border border-emerald-500/40\">\n    <div class=\"flex items-center gap-3 mb-2\">\n      <span class=\"px-2.5 py-1 bg-emerald-500/20 text-emerald-300 font-bold text-xs rounded-lg uppercase tracking-wider\">Định nghĩa cơ bản</span>\n      <h3 class=\"text-xl font-black text-emerald-200\">Hai Mặt Phẳng Song Song</h3>\n    </div>\n    <p class=\"text-sm text-slate-200 leading-relaxed\">\n      • Hai mặt phẳng được gọi là <b>song song</b> với nhau nếu chúng không có điểm chung nào.<br/>\n      • Kí hiệu: $(P) \\parallel (Q) \\iff (P) \\cap (Q) = \\emptyset$.\n    </p>\n  </div>\n\n  <div class=\"grid grid-cols-2 gap-3 text-xs\">\n    <div class=\"bg-slate-800/80 p-3.5 rounded-lg border-l-4 border-emerald-400 shadow-md\">\n      <h4 class=\"font-bold text-emerald-300 text-sm mb-1\">📍 Vị trí tương đối của hai mặt phẳng</h4>\n      <p class=\"text-slate-300 leading-relaxed\">\n        1. <b>Cắt nhau:</b> $(P) \\cap (Q) = d$ (giao tuyến chung).<br/>\n        2. <b>Song song:</b> $(P) \\cap (Q) = \\emptyset$.<br/>\n        3. <b>Trùng nhau:</b> $(P) \\equiv (Q)$.\n      </p>\n    </div>\n    <div class=\"bg-slate-800/80 p-3.5 rounded-lg border-l-4 border-amber-400 shadow-md\">\n      <h4 class=\"font-bold text-amber-300 text-sm mb-1\">💡 Hình ảnh thực tế</h4>\n      <p class=\"text-slate-300 leading-relaxed\">\n        • Mặt sàn và trần nhà của phòng học.<br/>\n        • Hai mặt đối diện của cuốn sách khi gấp lại.<br/>\n        • Hai mặt đối diện của thùng carton, viên gạch.\n      </p>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Bài 13: Hai mặt phẳng song song trong Chương 4 Toán 11 Kết Nối Tri Thức. Trong không gian, hai mặt phẳng phân biệt có thể cắt nhau theo một đường giao tuyến duy nhất, hoặc không có bất kì điểm chung nào. Ta định nghĩa: Hai mặt phẳng được gọi là song song với nhau nếu chúng không có điểm chung. Khi đó ta ký hiệu mặt phẳng P song song với mặt phẳng Q.",
+      "startTime": 0.0,
+      "endTime": 9.26,
+      "duration": 9.26
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. ĐỊNH LÍ 1: ĐIỀU KIỆN ĐỂ HAI MẶT PHẲNG SONG SONG",
+      "subtitle": "BÀI 13 • MỤC 1 • ĐỊNH LÍ TRỌNG TÂM CẦN GHI NHỚ",
+      "mascotMode": "explaining",
+      "mascotTip": "Bắt buộc phải là hai đường thẳng CẮT NHAU cùng song song với mặt phẳng kia!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-900/60 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center gap-3 mb-2\">\n      <span class=\"px-2.5 py-1 bg-blue-500/20 text-blue-300 font-bold text-xs rounded-lg uppercase tracking-wider\">Định lí 1 (Điều kiện đủ)</span>\n      <h3 class=\"text-xl font-black text-blue-200\">Dấu Hiệu Nhận Biết $(P) \\parallel (Q)$</h3>\n    </div>\n    <div class=\"p-3 bg-slate-900/90 rounded-lg border border-blue-400/30 font-serif text-sm text-amber-300\">\n      $$\\begin{cases} a \\subset (P), \\ b \\subset (P) \\\\ a \\cap b = \\{I\\} \\\\ a \\parallel (Q), \\ b \\parallel (Q) \\end{cases} \\implies (P) \\parallel (Q)$$\n    </div>\n  </div>\n\n  <div class=\"bg-rose-950/40 p-3 rounded-xl border border-rose-500/30 text-xs text-rose-200\">\n    <b class=\"text-rose-400 uppercase tracking-wide\">⚠️ Cảnh báo bẫy thi thường gặp:</b><br/>\n    Nếu mặt phẳng $(P)$ chứa hai đường thẳng $a, b$ cùng song song với $(Q)$ nhưng $a \\parallel b$, thì $(P)$ có thể vẫn cắt $(Q)$ theo một giao tuyến song song với $a$ và $b$! Do đó, giả thiết $a \\cap b = \\{I\\}$ là <b>bắt buộc</b>.\n  </div>\n</div>\n",
+      "narration": "Làm thế nào để chứng minh hai mặt phẳng song song? Ta sử dụng Định lí 1: Nếu mặt phẳng P chứa hai đường thẳng cắt nhau a và b, và hai đường thẳng này cùng song song với mặt phẳng Q, thì mặt phẳng P song song với mặt phẳng Q. Chú ý từ khóa cốt lõi: hai đường thẳng a và b phải cắt nhau. Nếu a và b song song với nhau thì hai mặt phẳng vẫn có thể cắt nhau.",
+      "startTime": 9.26,
+      "endTime": 26.98,
+      "duration": 17.71
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: NHẬN BIẾT ĐIỀU KIỆN HAI MẶT PHẲNG SONG SONG",
+      "subtitle": "BÀI 13 • MỤC 1 • CÂU HỎI TRẮC NGHIỆM ĐỊNH TÍNH 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Hãy đọc thật kỹ điều kiện cắt nhau của 2 đường thẳng!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-xs text-slate-200 leading-relaxed mb-3\">\n      <b>Câu hỏi:</b> Cho hai mặt phẳng phân biệt $(P)$ và $(Q)$. Khẳng định nào sau đây là <b>đúng</b>?\n    </p>\n\n    <div class=\"space-y-1.5 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Nếu $(P)$ và $(Q)$ cùng song song với một đường thẳng $d$ thì $(P) \\parallel (Q)$.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Nếu $(P)$ chứa hai đường thẳng phân biệt cùng song song với $(Q)$ thì $(P) \\parallel (Q)$.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> Nếu $(P)$ chứa hai đường thẳng cắt nhau cùng song song với $(Q)$ thì $(P) \\parallel (Q)$.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Nếu hai mặt phẳng không cắt nhau thì chúng trùng nhau.</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian chọn đáp án:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Mời các em làm Ví dụ 1: Trong các mệnh đề sau, mệnh đề nào sau đây là đúng? Mệnh đề A: Nếu hai mặt phẳng cùng song song với một đường thẳng thì chúng song song với nhau. Mệnh đề B: Nếu mặt phẳng P chứa hai đường thẳng phân biệt cùng song song với mặt phẳng Q thì P song song với Q. Mệnh đề C: Nếu mặt phẳng P chứa hai đường thẳng cắt nhau cùng song song với mặt phẳng Q thì P song song với Q. Mệnh đề D: Hai mặt phẳng không cắt nhau thì trùng nhau. Các em có 15 giây chọn đáp án.",
+      "startTime": 26.98,
+      "endTime": 58.42,
+      "duration": 31.44
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: ĐÁP ÁN C CHÍNH XÁC",
+      "subtitle": "BÀI 13 • MỤC 1 • GIẢI MÃ BẪY THI ĐỊNH LÍ 1",
+      "mascotMode": "celebrating",
+      "mascotTip": "Phương án B thiếu điều kiện 'cắt nhau' nên hoàn toàn có thể sai!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải chi tiết Ví dụ 1:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>Phương án A sai:</b> Hai mặt phẳng cắt nhau vẫn có thể cùng song song với đường thẳng $d$ (giao tuyến của chúng song song với $d$).</p>\n      <p>• <b>Phương án B sai:</b> Nếu hai đường thẳng phân biệt đó song song với nhau thì $(P)$ vẫn có thể cắt $(Q)$.</p>\n      <p>• <b>Phương án C đúng:</b> Đây chính là phát biểu chuẩn xác $100\\%$ của Định lí 1 SGK KNTT.</p>\n      <p>• <b>Phương án D sai:</b> Hai mặt phẳng không cắt nhau thì chúng song song với nhau (vì đề bài cho phân biệt).</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án chính xác là C. Tại sao phương án A sai? Vì hai mái nhà cùng song song với cây đòn dông nhưng chúng cắt nhau tại cây đòn dông đó. Tại sao B sai? Vì hai đường thẳng phân biệt có thể song song với nhau, khi đó P và Q vẫn có thể cắt nhau theo giao tuyến song song với chúng. Do đó, chỉ có C là đúng chuẩn theo Định lí 1.",
+      "startTime": 58.42,
+      "endTime": 70.82,
+      "duration": 12.41
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. TÍNH CHẤT 1: SỰ DUY NHẤT CỦA MẶT PHẲNG SONG SONG",
+      "subtitle": "BÀI 13 • MỤC 1 • TIÊN ĐỀ Ơ-CLÍT TRONG KHÔNG GIAN",
+      "mascotMode": "explaining",
+      "mascotTip": "Qua điểm $M \\notin (P)$, chỉ có DUY NHẤT 1 mặt phẳng song song với $(P)$!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-950 to-slate-900 p-4 rounded-xl border border-purple-500/40 text-xs\">\n    <div class=\"font-bold text-purple-300 text-sm mb-2\">Tính Chất 1 (Sự tồn tại và duy nhất)</div>\n    <p class=\"text-slate-200 leading-relaxed text-sm\">\n      Qua một điểm $M$ ở ngoài một mặt phẳng $(\\alpha)$, có <b>một và chỉ một</b> mặt phẳng $(\\beta)$ song song với mặt phẳng $(\\alpha)$.\n    </p>\n    \n    <div class=\"mt-3 grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2.5 bg-slate-900 rounded border border-purple-400/30\">\n        <b class=\"text-purple-300\">Hệ quả 1:</b><br/>\n        Nếu $d \\parallel (\\alpha)$ thì qua $d$ có duy nhất một mặt phẳng $(\\beta) \\parallel (\\alpha)$.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border border-purple-400/30\">\n        <b class=\"text-purple-300\">Hệ quả 2:</b><br/>\n        Hai mặt phẳng phân biệt cùng song song với mặt phẳng thứ ba thì song song với nhau: $(\\alpha) \\parallel (\\gamma) \\land (\\beta) \\parallel (\\gamma) \\implies (\\alpha) \\parallel (\\beta)$.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúng ta tìm hiểu tiếp Tính chất 1. Qua một điểm nằm ngoài một mặt phẳng cho trước, có một và chỉ một mặt phẳng song song với mặt phẳng đã cho. Tính chất này tương tự như tiên đề Ơ clít trong hình học phẳng. Từ tính chất này dẫn đến hệ quả rất hữu ích: Nếu đường thẳng d song song với mặt phẳng P thì qua d có duy nhất một mặt phẳng song song với P nếu d không thuộc P.",
+      "startTime": 70.82,
+      "endTime": 81.53,
+      "duration": 10.7
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: CHỨNG MINH HAI MẶT PHẲNG SONG SONG TRONG HÌNH CHÓP",
+      "subtitle": "BÀI 13 • MỤC 1 • BÀI TOÁN ÁP DỤNG TRỌNG TÂM 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Hãy tìm 2 đường thẳng trung bình cắt nhau cùng song song mặt phẳng đối diện!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-cyan-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Thông hiểu</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành tâm $O$. Gọi $M, N$ lần lượt là trung điểm của $SA, SB$. Mặt phẳng $(OMN)$ song song với mặt phẳng nào?\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> $(SBC)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> $(SCD)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> $(SAB)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $(SAD)$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Cho hình chóp S.ABCD có đáy ABCD là hình bình hành tâm O. Gọi M, N lần lượt là trung điểm của SA và SB. Mặt phẳng OMN song song với mặt phẳng nào sau đây? Phương án A: Mặt phẳng SBC; Phương án B: Mặt phẳng SCD; Phương án C: Mặt phẳng SAB; Phương án D: Mặt phẳng SAD. Các em có 15 giây xác định đáp án.",
+      "startTime": 81.53,
+      "endTime": 101.53,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: $(OMN) \\parallel (SCD)$",
+      "subtitle": "BÀI 13 • MỤC 1 • KỸ THUẬT DÙNG ĐƯỜNG TRUNG BÌNH",
+      "mascotMode": "celebrating",
+      "mascotTip": "$MN \\parallel CD$ và $OM \\parallel SC \\implies (OMN) \\parallel (SCD)$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Chứng minh hình học chuẩn mực:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>1. Trong $\\triangle SAB$: $MN$ là đường trung bình $\\implies MN \\parallel AB$. Lại có $AB \\parallel CD \\implies MN \\parallel CD \\subset (SCD) \\implies MN \\parallel (SCD)$.</p>\n      <p>2. Trong $\\triangle SAC$: $O$ là trung điểm $AC$, $M$ là trung điểm $SA \\implies OM$ là đường trung bình $\\implies OM \\parallel SC \\subset (SCD) \\implies OM \\parallel (SCD)$.</p>\n      <p>3. Vì $MN \\cap OM = \\{M\\}$ trong $(OMN)$ nên theo Định lí 1: $(OMN) \\parallel (SCD)$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án chính xác là B: Mặt phẳng OMN song song với mặt phẳng SCD. Chứng minh rất đơn giản: Trong tam giác SAB, MN là đường trung bình nên MN song song AB. Do ABCD là hình bình hành nên AB song song CD. Suy ra MN song song CD, mà CD nằm trong SCD nên MN song song SCD. Mặt khác, trong tam giác SAC, O là trung điểm AC, M là trung điểm SA nên OM là đường trung bình, suy ra OM song song SC. Do đó OM song song SCD. Hai đường cắt nhau MN và OM cùng song song với SCD nên mặt phẳng OMN song song SCD.",
+      "startTime": 101.53,
+      "endTime": 121.53,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. QUY TRÌNH 3 BƯỚC CHỨNG MINH $(P) \\parallel (Q)$",
+      "subtitle": "BÀI 13 • MỤC 1 • CẨM NANG PHƯƠNG PHÁP TƯ DUY",
+      "mascotMode": "pointer",
+      "mascotTip": "Luôn chọn mặt phẳng có sẵn 2 đường trung bình hoặc 2 đường thẳng song song cạnh đáy!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-900/60 to-indigo-950 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Quy Trình 3 Bước Chứng Minh $(P) \\parallel (Q)$ Chuẩn Mực</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900/90 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Bước 1: Tìm 2 đường thẳng cắt nhau trong $(P)$</b>\n        <p class=\"text-slate-300 mt-0.5\">Xác định $a, b \\subset (P)$ sao cho $a \\cap b = \\{I\\}$. Thường ưu tiên các đường trung bình hoặc đường song song với các cạnh đã biết.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900/90 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Bước 2: Chứng minh $a \\parallel (Q)$ và $b \\parallel (Q)$</b>\n        <p class=\"text-slate-300 mt-0.5\">Chỉ ra $a \\parallel a' \\subset (Q)$ và $b \\parallel b' \\subset (Q)$.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900/90 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Bước 3: Kết luận theo Định lí 1</b>\n        <p class=\"text-slate-300 mt-0.5\">Vì $a, b \\subset (P), a \\cap b = \\{I\\}$ và $a, b \\parallel (Q) \\implies (P) \\parallel (Q)$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Để giải quyết nhanh các bài toán chứng minh hai mặt phẳng song song, các em hãy ghi nhớ quy trình 3 bước chuẩn mực sau: Bước 1: Chọn trong mặt phẳng P hai đường thẳng a và b cắt nhau. Thông thường đó là các đường trung bình trong tam giác, hoặc các cạnh đáy hình bình hành. Bước 2: Chứng minh đường thẳng a song song với mặt phẳng Q và đường thẳng b song song với mặt phẳng Q. Bước 3: Kết luận mặt phẳng P song song với mặt phẳng Q theo Định lí 1.",
+      "startTime": 121.53,
+      "endTime": 141.53,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: TÌM MẶT PHẲNG SONG SONG TRONG TỨ DIỆN",
+      "subtitle": "BÀI 13 • MỤC 1 • BÀI TOÁN VẬN DỤNG VỚI TRỌNG TÂM TAM GIÁC 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Nhớ tính chất trọng tâm: tỉ số $\\frac{2}{3}$ tạo nên các đường song song Ta-lét!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (30s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho tứ diện $ABCD$. Gọi $G_1, G_2, G_3$ lần lượt là trọng tâm của các tam giác $ABC, ACD, ADB$. Khẳng định nào sau đây là <b>đúng</b>?\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>A.</b> $(G_1G_2G_3) \\parallel (BCD)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> $(G_1G_2G_3) \\parallel (ABC)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> $(G_1G_2G_3) \\parallel (ACD)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $(G_1G_2G_3) \\parallel (ABD)$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho tứ diện ABCD. Gọi G1, G2, G3 lần lượt là trọng tâm của các tam giác ABC, ACD, ADB. Hỏi mặt phẳng G1 G2 G3 song song với mặt phẳng nào sau đây? Phương án A: Mặt phẳng BCD; Phương án B: Mặt phẳng ABC; Phương án C: Mặt phẳng ACD; Phương án D: Mặt phẳng ABD. Các em có 30 giây lập luận.",
+      "startTime": 141.53,
+      "endTime": 145.06,
+      "duration": 3.53
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: $(G_1G_2G_3) \\parallel (BCD)$",
+      "subtitle": "BÀI 13 • MỤC 1 • ÁP DỤNG ĐỊNH LÍ TA-LÉT ĐẢO",
+      "mascotMode": "celebrating",
+      "mascotTip": "$\\frac{AG_1}{AM} = \\frac{AG_2}{AN} = \\frac{AG_3}{AP} = \\frac{2}{3} \\implies (G_1G_2G_3) \\parallel (MNP) \\equiv (BCD)$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Chứng minh hình học chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Gọi $M, N, P$ lần lượt là trung điểm của $BC, CD, DB$.</p>\n      <p>• Do $G_1, G_2, G_3$ là trọng tâm nên: $\\frac{AG_1}{AM} = \\frac{AG_2}{AN} = \\frac{AG_3}{AP} = \\frac{2}{3}$.</p>\n      <p>• Trong $\\triangle AMN$: $\\frac{AG_1}{AM} = \\frac{AG_2}{AN} \\implies G_1G_2 \\parallel MN \\subset (BCD) \\implies G_1G_2 \\parallel (BCD)$.</p>\n      <p>• Trong $\\triangle ANP$: $\\frac{AG_2}{AN} = \\frac{AG_3}{AP} \\implies G_2G_3 \\parallel NP \\subset (BCD) \\implies G_2G_3 \\parallel (BCD)$.</p>\n      <p>• Vì $G_1G_2 \\cap G_2G_3 = \\{G_2\\}$ nên $(G_1G_2G_3) \\parallel (BCD)$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án A.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là A: Mặt phẳng G1 G2 G3 song song với mặt phẳng BCD. Lời giải: Gọi M, N, P lần lượt là trung điểm của BC, CD, DB. Khi đó AM, AN, AP lần lượt là các đường trung tuyến. Do tính chất trọng tâm tam giác, ta có tỉ số AG1 trên AM bằng AG2 trên AN bằng AG3 trên AP và cùng bằng hai phần ba. Theo định lí Ta-lét đảo trong tam giác AMN, G1 G2 song song với MN, mà MN nằm trong BCD nên G1 G2 song song BCD. Tương tự, G2 G3 song song NP nằm trong BCD. Do đó mặt phẳng G1 G2 G3 song song mặt phẳng BCD.",
+      "startTime": 145.06,
+      "endTime": 165.06,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI CHUẨN BỘ GD&ĐT 2025",
+      "subtitle": "BÀI 13 • MỤC 1 • 4 MỆNH ĐỀ TOÀN DIỆN 30 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Xét kỹ từng mệnh đề và cẩn thận với trường hợp trùng hoặc chéo nhau!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded\">Ví dụ 4 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Định dạng thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình hộp $ABCD.A'B'C'D'$. Xét tính Đúng / Sai của các khẳng định sau:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> Mặt phẳng $(AB'D') \\parallel (BDC')$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Mặt phẳng $(ABCD) \\parallel (A'B'C'D')$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Đường thẳng $AC' \\parallel (BDC')$.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Giao tuyến của $(ACC'A')$ với hai đáy là hai đường thẳng chéo nhau.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Cho hình hộp ABCD.A'B'C'D'. Xét tính Đúng hay Sai của các mệnh đề sau: Mệnh đề a: Mặt phẳng A B' D' song song với mặt phẳng B D C'. Mệnh đề b: Mặt phẳng A B C D song song với mặt phẳng A' B' C' D'. Mệnh đề c: Đường thẳng A C' song song với mặt phẳng B D C'. Mệnh đề d: Giao tuyến của mặt phẳng A C C' A' với hai đáy là hai đường thẳng chéo nhau. Các em có 30 giây suy nghĩ.",
+      "startTime": 165.06,
+      "endTime": 185.06,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & TỔNG KẾT MỤC 1",
+      "subtitle": "BÀI 13 • MỤC 1 • HOÀN TẤT KIẾN THỨC NỀN TẢNG",
+      "mascotMode": "celebrating",
+      "mascotTip": "Ghi nhớ: 2 đáy hình hộp luôn song song, và $(AB'D') \\parallel (BDC')$ là cặp mặt phẳng kinh điển!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Đáp án phân tích chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>a) ĐÚNG:</b> $BD \\parallel B'D'$ và $BC' \\parallel AD' \\implies (AB'D') \\parallel (BDC')$.</p>\n      <p>• <b>b) ĐÚNG:</b> Hai mặt đáy của hình hộp luôn song song theo định nghĩa.</p>\n      <p>• <b>c) SAI:</b> Vì $C' \\in (BDC')$ nên $AC' \\cap (BDC') = \\{C'\\}$ (cắt nhau, không thể song song).</p>\n      <p>• <b>d) SAI:</b> Hai giao tuyến là $AC$ và $A'C'$ song song với nhau trong mặt chéo $(ACC'A')$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">⭐ TỔNG KẾT MỤC 1: Nắm chắc $(P) \\parallel (Q) \\iff$ chứa 2 đường cắt nhau cùng song song mặt phẳng kia!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúc mừng các em đã hoàn thành Mục 1. Giải thích chi tiết Ví dụ 4: Mệnh đề a ĐÚNG vì B D song song B' D' và B C' song song A D', hai cặp đường cắt nhau này làm hai mặt phẳng song song. Mệnh đề b ĐÚNG vì hai đáy của hình hộp luôn song song. Mệnh đề c SAI vì điểm C' thuộc cả hai đối tượng nên A C' cắt mặt phẳng B D C' tại C'. Mệnh đề d SAI vì hai giao tuyến là A C và A' C' cùng nằm trong mặt phẳng chéo A C C' A' và song song với nhau chứ không chéo nhau.",
+      "startTime": 185.06,
+      "endTime": 205.06,
+      "duration": 20.0
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_bai13_muc1 = root.G11_CHAPTER4_DATA.g11_bai13_muc1;
+
+  root.G11_CHAPTER4_DATA.g11_bai13_muc2 = {
+  "lessonId": "toan11_bai13",
+  "lessonTitle": "Bài 13: Hai mặt phẳng song song",
+  "sectionId": "g11_bai13_muc2",
+  "sectionTitle": "Mục 2: Tính chất của hai mặt phẳng song song & Định lí Ta-lét trong không gian",
+  "audio": "/audio/g11_bai13_muc2.mp3",
+  "audioSrc": "./audio/g11_bai13_muc2.mp3",
+  "audio_src": "./audio/g11_bai13_muc2.mp3",
+  "title": "Mục 2: Tính chất của hai mặt phẳng song song & Định lí Ta-lét trong không gian",
+  "owl_tip": "Qua một điểm ngoài mặt phẳng có duy nhất 1 mặt phẳng song song với nó. Định lí Ta-lét: Ba mặt phẳng song song chắn trên hai cát tuyến bất kì những đoạn thẳng tương ứng tỉ lệ!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. ĐỊNH LÍ 2: ĐỊNH LÍ GIAO TUYẾN SONG SONG",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. ĐỊNH LÍ TA-LÉT TRONG KHÔNG GIAN",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ ĐỊNH LÍ TA-LÉT VÀ TÍNH CHẤT",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & TỔNG KẾT MỤC 2",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 277.69,
+  "formattedDuration": "04:37",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. ĐỊNH LÍ 2: ĐỊNH LÍ GIAO TUYẾN SONG SONG",
+      "subtitle": "BÀI 13 • MỤC 2 • MẶT PHẲNG CẮT HAI MẶT PHẲNG SONG SONG",
+      "mascotMode": "pointer",
+      "mascotTip": "Nếu $(P) \\parallel (Q)$ và $(R)$ cắt cả hai thì hai giao tuyến $a, b$ bắt buộc phải song song: $a \\parallel b$!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-cyan-950 to-blue-900/60 p-4 rounded-xl border border-cyan-500/40\">\n    <div class=\"flex items-center gap-3 mb-2\">\n      <span class=\"px-2.5 py-1 bg-cyan-500/20 text-cyan-300 font-bold text-xs rounded-lg uppercase tracking-wider\">Định lí 2</span>\n      <h3 class=\"text-xl font-black text-cyan-200\">Định Lí Giao Tuyến Song Song</h3>\n    </div>\n    <div class=\"p-3 bg-slate-900/90 rounded-lg border border-cyan-400/30 font-serif text-sm text-amber-300\">\n      $$\\begin{cases} (P) \\parallel (Q) \\\\ (R) \\cap (P) = a \\\\ (R) \\cap (Q) = b \\end{cases} \\implies a \\parallel b$$\n    </div>\n  </div>\n\n  <div class=\"p-3 bg-slate-800/80 rounded-xl border-l-4 border-emerald-400 text-xs text-slate-300\">\n    <b class=\"text-emerald-300 text-sm\">Hệ quả: Các đoạn thẳng song song chắn giữa</b><br/>\n    Hai mặt phẳng song song chắn trên hai đường thẳng song song những đoạn thẳng bằng nhau:\n    $$d_1 \\parallel d_2, \\ (P) \\parallel (Q) \\implies A_1B_1 = A_2B_2 \\quad (A_1, A_2 \\in (P); \\ B_1, B_2 \\in (Q))$$\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Mục 2: Tính chất của hai mặt phẳng song song và Định lí Ta-lét trong không gian. Định lí 2 phát biểu: Cho hai mặt phẳng song song. Nếu một mặt phẳng thứ ba cắt cả hai mặt phẳng đã cho thì hai giao tuyến tạo thành bắt buộc phải song song với nhau. Đây là công cụ cực kì mạnh mẽ để xác định giao tuyến song song trong các bài toán thiết diện.",
+      "startTime": 0.0,
+      "endTime": 27.65,
+      "duration": 27.65
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. ĐỊNH LÍ TA-LÉT TRONG KHÔNG GIAN",
+      "subtitle": "BÀI 13 • MỤC 2 • BẢO TOÀN TỈ SỐ TRÊN CÁC CÁT TUYẾN",
+      "mascotMode": "explaining",
+      "mascotTip": "Ba mặt phẳng song song chia các cát tuyến theo các đoạn thẳng tương ứng tỉ lệ!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-indigo-950 to-purple-950 p-4 rounded-xl border border-indigo-500/40 text-xs\">\n    <div class=\"font-bold text-indigo-300 text-sm mb-2\">Định Lí Ta-lét Thuận Trong Không Gian</div>\n    <p class=\"text-slate-200 leading-relaxed text-sm\">\n      Ba mặt phẳng đôi một song song $(\\alpha) \\parallel (\\beta) \\parallel (\\gamma)$ chắn trên hai cát tuyến $d_1, d_2$ các đoạn thẳng tương ứng tỉ lệ:\n    </p>\n    \n    <div class=\"p-3 my-2 bg-slate-900 rounded border border-indigo-400/30 text-center font-serif text-base text-amber-300\">\n      $$\\frac{AB}{A'B'} = \\frac{BC}{B'C'} = \\frac{CA}{C'A'} \\quad \\text{hay} \\quad \\frac{AB}{BC} = \\frac{A'B'}{B'C'}$$\n    </div>\n\n    <p class=\"text-slate-400 text-xs\">\n      • $(A, B, C$ là giao điểm của $d_1$ với $(\\alpha), (\\beta), (\\gamma)$).<br/>\n      • $(A', B', C'$ là giao điểm của $d_2$ với $(\\alpha), (\\beta), (\\gamma)$).\n    </p>\n  </div>\n</div>\n",
+      "narration": "Định lí Ta-lét trong không gian mở rộng định lí Ta-lét hình học phẳng lên một tầm cao mới: Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì các đoạn thẳng tương ứng tỉ lệ. Cụ thể, nếu ba mặt phẳng P, Q, R song song lần lượt cắt cát tuyến a tại A, B, C và cắt cát tuyến b tại A', B', C' thì tỉ số AB trên A'B' bằng BC trên B'C' bằng AC trên A'C'.",
+      "startTime": 27.65,
+      "endTime": 52.75,
+      "duration": 25.1
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: TÍNH CHẤT GIAO TUYẾN HAI MẶT PHẲNG SONG SONG",
+      "subtitle": "BÀI 13 • MỤC 2 • NHẬN DIỆN MỐI QUAN HỆ GIAO TUYẾN 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Áp dụng trực tiếp Định lí 2: giao tuyến luôn luôn song song!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho $(P) \\parallel (Q)$. Mặt phẳng $(R)$ cắt $(P)$ và $(Q)$ theo hai giao tuyến $a$ và $b$. Khi đó:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> $a$ và $b$ chéo nhau</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> $a$ và $b$ cắt nhau</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> $a \\parallel b$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $a \\equiv b$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1: Cho hai mặt phẳng P và Q song song với nhau. Một mặt phẳng R cắt P và Q lần lượt theo hai giao tuyến a và b. Vị trí tương đối của hai đường thẳng a và b là gì? Phương án A: a và b chéo nhau; Phương án B: a và b cắt nhau; Phương án C: a và b song song với nhau; Phương án D: a và b trùng nhau. Các em có 15 giây chọn đáp án.",
+      "startTime": 52.75,
+      "endTime": 69.53,
+      "duration": 16.78
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: ĐÁP ÁN C CHÍNH XÁC",
+      "subtitle": "BÀI 13 • MỤC 2 • CHỨNG MINH TÍNH SONG SONG CỦA HAI GIAO TUYẾN",
+      "mascotMode": "celebrating",
+      "mascotTip": "$a$ và $b$ cùng thuộc $(R)$ và không có điểm chung nên $a \\parallel b$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Chứng minh toán học:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• $a = (R) \\cap (P) \\implies a \\subset (R)$ và $a \\subset (P)$.</p>\n      <p>• $b = (R) \\cap (Q) \\implies b \\subset (R)$ và $b \\subset (Q)$.</p>\n      <p>• Vì $a, b \\subset (R)$ nên $a$ và $b$ đồng phẳng.</p>\n      <p>• Nếu $a \\cap b = \\{M\\} \\implies M \\in (P) \\cap (Q) = \\emptyset$ (vô lí vì $(P) \\parallel (Q)$).</p>\n      <p>• Vậy $a \\parallel b$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: hai giao tuyến a và b song song với nhau. Chứng minh phản chứng rất đơn giản: Vì a và b cùng nằm trong mặt phẳng R, nếu a và b có điểm chung K thì K vừa thuộc P vừa thuộc Q, mâu thuẫn với giả thiết P và Q song song không có điểm chung. Do đó a và b đồng phẳng và không cắt nhau, suy ra a song song với b.",
+      "startTime": 69.53,
+      "endTime": 87.74,
+      "duration": 18.22
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. ỨNG DỤNG TÍNH ĐỘ DÀI THEO ĐỊNH LÍ TA-LÉT",
+      "subtitle": "BÀI 13 • MỤC 2 • PHƯƠNG PHÁP TÍNH TOÁN ĐOẠN THẲNG TRÊN CÁT TUYẾN",
+      "mascotMode": "pointer",
+      "mascotTip": "Lập tỉ số đồng dạng giống hệt Ta-lét lớp 8 nhưng áp dụng trong không gian!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-teal-950 to-slate-900 p-4 rounded-xl border border-teal-500/40 text-xs\">\n    <div class=\"font-bold text-teal-300 text-sm mb-2\">Mô Hình Tính Toán Đoạn Thẳng Ta-lét</div>\n    <p class=\"text-slate-300 leading-relaxed\">\n      Cho ba mặt phẳng song song $(\\alpha) \\parallel (\\beta) \\parallel (\\gamma)$ cắt đường thẳng $d_1$ tại $A, B, C$ và $d_2$ tại $A', B', C'$.\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-3 mt-2 text-xs\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Công thức 1:</b><br/>\n        $$\\frac{AB}{BC} = \\frac{A'B'}{B'C'}$$\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Công thức 2:</b><br/>\n        $$\\frac{AB}{AC} = \\frac{A'B'}{A'C'}$$\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Định lí Ta-lét trong không gian giúp chúng ta tính toán độ dài các đoạn thẳng bị chắn bởi các mặt phẳng song song một cách nhanh chóng. Khi gặp bài toán có các mặt phẳng song song cắt hai đường thẳng chéo nhau, ta lập tỉ lệ thức: đoạn ngắn trên đoạn ngắn bằng đoạn dài trên đoạn dài.",
+      "startTime": 87.74,
+      "endTime": 97.18,
+      "duration": 9.43
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: TÍNH ĐỘ DÀI ĐOẠN THẲNG THEO TA-LÉT",
+      "subtitle": "BÀI 13 • MỤC 2 • BÀI TOÁN SỐ HỌC 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Lập tỉ số: $\\frac{AB}{BC} = \\frac{A'B'}{B'C'} \\implies B'C' = \\frac{BC \\cdot A'B'}{AB}$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-teal-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-teal-500/20 text-teal-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Thông hiểu</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho ba mặt phẳng song song cắt $d_1$ tại $A, B, C$ và $d_2$ tại $A', B', C'$. Biết $AB = 4\\text{ cm}, BC = 6\\text{ cm}$ và $A'B' = 6\\text{ cm}$. Độ dài đoạn thẳng $B'C'$ là:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> $4\\text{ cm}$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> $8\\text{ cm}$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> $9\\text{ cm}$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $10\\text{ cm}$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian tính toán:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Ba mặt phẳng song song P, Q, R lần lượt cắt đường thẳng d1 tại A, B, C và cắt d2 tại A', B', C'. Biết AB bằng 4 cm, BC bằng 6 cm, và A'B' bằng 6 cm. Tính độ dài đoạn thẳng B'C'. Phương án A: 4 cm; Phương án B: 8 cm; Phương án C: 9 cm; Phương án D: 10 cm. Các em có 15 giây tính toán.",
+      "startTime": 97.18,
+      "endTime": 118.63,
+      "duration": 21.46
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: $B'C' = 9\\text{ cm}$",
+      "subtitle": "BÀI 13 • MỤC 2 • BƯỚC BIẾN ĐỔI TỈ SỐ CHUẨN XÁC",
+      "mascotMode": "celebrating",
+      "mascotTip": "$B'C' = \\frac{6 \\times 6}{4} = 9\\text{ cm}$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải số học chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>Theo Định lí Ta-lét trong không gian cho ba mặt phẳng song song:</p>\n      $$\\frac{AB}{BC} = \\frac{A'B'}{B'C'} \\iff \\frac{4}{6} = \\frac{6}{B'C'}$$\n      $$\\implies B'C' = \\frac{6 \\cdot 6}{4} = \\frac{36}{4} = 9\\text{ (cm)}$$\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: 9 cm. Áp dụng định lí Ta-lét trong không gian với ba mặt phẳng song song, ta có tỉ lệ thức: AB chia BC bằng A'B' chia B'C'. Thay số: 4 chia 6 bằng 6 chia B'C'. Từ đó suy ra B'C' bằng 6 nhân 6 chia 4, kết quả bằng 9 cm.",
+      "startTime": 118.63,
+      "endTime": 134.59,
+      "duration": 15.96
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. KỸ THUẬT DỰNG THIẾT DIỆN SONG SONG VỚI MỘT MẶT PHẲNG",
+      "subtitle": "BÀI 13 • MỤC 2 • DỰNG CÁC ĐOẠN GIAO TUYẾN SONG SONG",
+      "mascotMode": "pointer",
+      "mascotTip": "Cắt các mặt của hình chóp theo các đường thẳng song song với các cạnh của tam giác thiết diện!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-900 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Thuật Toán Dựng Thiết Diện Song Song $(Q)$</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Quy tắc giao tuyến song song:</b>\n        <p class=\"text-slate-300 mt-1\">Nếu $(\\alpha) \\parallel (Q)$ thì $(\\alpha)$ cắt bất kì mặt nào $(F)$ theo giao tuyến $d \\parallel (F \\cap Q)$.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Tính chất đồng dạng:</b>\n        <p class=\"text-slate-300 mt-1\">Thiết diện của hình chóp cắt bởi mặt phẳng song song với đáy luôn là một đa giác <b>đồng dạng</b> với đa giác đáy.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Một ứng dụng thực tế quan trọng của Định lí 2 là kỹ thuật dựng thiết diện song song với một mặt phẳng cho trước. Khi mặt phẳng alpha song song với mặt phẳng Q, alpha sẽ cắt tất cả các mặt của hình chóp hoặc hình hộp theo các giao tuyến song song với các giao tuyến của Q trên các mặt đó. Do đó, thiết diện thu được là một đa giác đồng dạng với đa giác của mặt phẳng Q.",
+      "startTime": 134.59,
+      "endTime": 153.31,
+      "duration": 18.72
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: TÌM THIẾT DIỆN SONG SONG TRONG HÌNH CHÓP",
+      "subtitle": "BÀI 13 • MỤC 2 • BÀI TOÁN HÌNH THANG / HÌNH BÌNH HÀNH 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Mặt phẳng qua trung điểm song song đáy tạo ra thiết diện đồng dạng với đáy theo tỉ số 1/2!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (30s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình chóp $S.ABCD$ có đáy là hình bình hành. Gọi $M$ là trung điểm $SA$. Mặt phẳng $(P)$ qua $M$ và song song với $(ABCD)$ cắt $SB, SC, SD$ tại $N, P, Q$. Thiết diện $MNPQ$ là:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Hình thang không cân</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> Hình bình hành</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> Tam giác</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Hình vuông</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho hình chóp S.ABCD có đáy ABCD là hình bình hành. Gọi M là trung điểm của cạnh bên SA. Mặt phẳng P đi qua M và song song với đáy ABCD cắt các cạnh bên SB, SC, SD lần lượt tại N, P, Q. Thiết diện MNPQ là hình gì? Phương án A: Hình thang không cân; Phương án B: Hình bình hành; Phương án C: Tam giác; Phương án D: Hình thoi. Các em có 30 giây suy nghĩ.",
+      "startTime": 153.31,
+      "endTime": 173.31,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: THIẾT DIỆN LÀ HÌNH BÌNH HÀNH",
+      "subtitle": "BÀI 13 • MỤC 2 • ĐỒNG DẠNG VỚI ĐÁY THEO TỈ SỐ 1/2",
+      "mascotMode": "celebrating",
+      "mascotTip": "$MN \\parallel AB$, $PQ \\parallel CD$, $MQ \\parallel AD$, $NP \\parallel BC \\implies MNPQ$ là hình bình hành!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Chứng minh hình học:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• $(MNPQ) \\parallel (ABCD) \\implies$ các giao tuyến với các mặt bên phải song song với các cạnh đáy tương ứng:</p>\n      <p>• $(MNPQ) \\cap (SAB) = MN \\implies MN \\parallel AB$.</p>\n      <p>• $(MNPQ) \\cap (SCD) = PQ \\implies PQ \\parallel CD$.</p>\n      <p>• Vì $AB \\parallel CD \\implies MN \\parallel PQ$. Tương tự: $MQ \\parallel NP \\parallel AD$.</p>\n      <p>• Tứ giác $MNPQ$ có hai cặp cạnh đối song song nên là <b>hình bình hành</b>.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là B: Thiết diện MNPQ là hình bình hành. Giải thích: Vì mặt phẳng P song song với đáy ABCD, theo Định lí 2 về giao tuyến song song, giao tuyến của P với mặt SAB là MN song song AB. Giao tuyến với SCD là PQ song song CD. Giao tuyến với SAD là MQ song song AD, và giao tuyến với SBC là NP song song BC. Do ABCD là hình bình hành có các cặp cạnh đối song song nên tứ giác MNPQ cũng có các cặp cạnh đối song song. Vậy MNPQ là hình bình hành, hơn nữa kích thước bằng một nửa đáy ABCD.",
+      "startTime": 173.31,
+      "endTime": 201.22,
+      "duration": 27.91
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ ĐỊNH LÍ TA-LÉT VÀ TÍNH CHẤT",
+      "subtitle": "BÀI 13 • MỤC 2 • 4 MỆNH ĐỀ THI TỐT NGHIỆP 30 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Đọc kĩ từng mệnh đề, cẩn thận câu chữ về tính chất vuông góc hoặc góc!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-cyan-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-bold rounded\">Ví dụ 4 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Định dạng thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hai mặt phẳng song song $(P) \\parallel (Q)$. Xét tính Đúng / Sai của các khẳng định:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> Nếu $a \\subset (P)$ và $b \\subset (Q)$ thì $a \\parallel b$.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Mọi đường thẳng song song với $(P)$ đều song song với $(Q)$.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Hai mặt phẳng song song chắn trên hai cát tuyến song song những đoạn thẳng bằng nhau.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Mặt phẳng $(R)$ cắt $(P)$ thì bắt buộc $(R)$ cũng cắt $(Q)$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-cyan-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-cyan-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Cho hai mặt phẳng song song P và Q. Xét tính Đúng hay Sai của các mệnh đề sau: Mệnh đề a: Nếu đường thẳng a nằm trong P và đường thẳng b nằm trong Q thì a và b luôn luôn song song với nhau. Mệnh đề b: Mọi đường thẳng song song với P đều song song với Q. Mệnh đề c: Hai mặt phẳng song song chắn trên hai cát tuyến song song những đoạn thẳng bằng nhau. Mệnh đề d: Nếu một mặt phẳng cắt P thì mặt phẳng đó cũng bắt buộc phải cắt Q. Các em có 30 giây suy nghĩ.",
+      "startTime": 201.22,
+      "endTime": 240.39,
+      "duration": 39.17
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & TỔNG KẾT MỤC 2",
+      "subtitle": "BÀI 13 • MỤC 2 • PHÂN TÍCH BẪY TÍNH CHẤT KINH ĐIỂN",
+      "mascotMode": "celebrating",
+      "mascotTip": "$a \\subset (P), b \\subset (Q)$ thì $a$ và $b$ có thể CHÉO NHAU chứ không nhất thiết song song!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Phân tích sai lầm kinh điển:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>a) SAI:</b> $a$ và $b$ không có điểm chung nên có thể <b>chéo nhau</b> hoặc song song.</p>\n      <p>• <b>b) SAI:</b> Đường thẳng đó có thể nằm trong $(Q)$ ($d \\subset (Q)$).</p>\n      <p>• <b>c) ĐÚNG:</b> Tứ giác tạo bởi 4 đỉnh là hình bình hành nên 2 cạnh đối bằng nhau.</p>\n      <p>• <b>d) ĐÚNG:</b> Nếu $(R)$ không cắt $(Q)$ thì $(R) \\parallel (Q) \\implies (R) \\parallel (P)$ (mâu thuẫn việc $(R)$ cắt $(P)$).</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">⭐ TỔNG KẾT MỤC 2: Nhớ kỹ Định lí 2 giao tuyến song song và tỉ số Ta-lét trên cát tuyến!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Giải thích chi tiết Ví dụ 4: Mệnh đề a SAI vì a và b hoàn toàn có thể chéo nhau, ví dụ mép bàn mặt trên và mép đối diện ở mặt dưới theo hướng vuông góc. Mệnh đề b SAI vì đường thẳng đó có thể nằm trọn vẹn trong mặt phẳng Q. Mệnh đề c ĐÚNG vì đây là hệ quả của định lí 2, tạo thành hình bình hành. Mệnh đề d ĐÚNG vì nếu R không cắt Q thì R song song hoặc trùng Q, mà P song song Q nên R phải song song P, mâu thuẫn với giả thiết R cắt P.",
+      "startTime": 240.39,
+      "endTime": 277.69,
+      "duration": 37.3
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_bai13_muc2 = root.G11_CHAPTER4_DATA.g11_bai13_muc2;
+
+  root.G11_CHAPTER4_DATA.g11_bai13_muc3 = {
+  "lessonId": "toan11_bai13",
+  "lessonTitle": "Bài 13: Hai mặt phẳng song song",
+  "sectionId": "g11_bai13_muc3",
+  "sectionTitle": "Mục 3: Hình lăng trụ, hình hộp và hình chóp cụt",
+  "audio": "/audio/g11_bai13_muc3.mp3",
+  "audioSrc": "./audio/g11_bai13_muc3.mp3",
+  "audio_src": "./audio/g11_bai13_muc3.mp3",
+  "title": "Mục 3: Hình lăng trụ, hình hộp và hình chóp cụt",
+  "owl_tip": "Lăng trụ có 2 đáy song song và bằng nhau, các cạnh bên song song và bằng nhau, các mặt bên là hình bình hành!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. ĐỊNH NGHĨA HÌNH LĂNG TRỤ",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. HÌNH HỘP VÀ CÁC TÍNH CHẤT ĐẶC BIỆT",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ HÌNH LĂNG TRỤ VÀ HÌNH HỘP",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC TOÀN KHÓA BÀI 13",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 213.18,
+  "formattedDuration": "03:33",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. ĐỊNH NGHĨA HÌNH LĂNG TRỤ",
+      "subtitle": "BÀI 13 • MỤC 3 • CẤU TRÚC ĐA DIỆN CƠ BẢN",
+      "mascotMode": "pointer",
+      "mascotTip": "Hai đáy là hai đa giác bằng nhau và song song, các mặt bên là các hình bình hành!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-amber-950 to-orange-950 p-4 rounded-xl border border-amber-500/40\">\n    <div class=\"flex items-center gap-3 mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 font-bold text-xs rounded-lg uppercase tracking-wider\">Cấu trúc đa diện</span>\n      <h3 class=\"text-xl font-black text-amber-200\">Hình Lăng Trụ $A_1A_2\\dots A_n.A'_1A'_2\\dots A'_n$</h3>\n    </div>\n    <div class=\"grid grid-cols-2 gap-3 text-xs text-slate-300\">\n      <div class=\"p-2.5 bg-slate-900 rounded border border-amber-400/30\">\n        <b class=\"text-amber-300\">1. Hai mặt đáy:</b><br/>\n        Là hai đa giác bằng nhau và nằm trên hai mặt phẳng song song: $(A_1A_2\\dots A_n) \\parallel (A'_1A'_2\\dots A'_n)$.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border border-amber-400/30\">\n        <b class=\"text-amber-300\">2. Các mặt bên:</b><br/>\n        Là các <b>hình bình hành</b> ($A_1A_2A'_2A'_1, A_2A_3A'_3A'_2\\dots$).\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border border-amber-400/30\">\n        <b class=\"text-amber-300\">3. Các cạnh bên:</b><br/>\n        Song song và bằng nhau từng đôi một ($A_1A'_1 \\parallel A_2A'_2 \\parallel \\dots$ và $A_1A'_1 = A_2A'_2 = \\dots$).\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border border-amber-400/30\">\n        <b class=\"text-amber-300\">4. Đỉnh:</b><br/>\n        Các đỉnh của hai đa giác đáy là các đỉnh của hình lăng trụ.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Mục 3: Hình lăng trụ, hình hộp và thiết diện của đa diện. Cho hai mặt phẳng song song alpha và alpha phẩy. Trên alpha cho đa giác lồi A1 A2 An. Qua các đỉnh này vẽ các đường thẳng song song cắt alpha phẩy tại A1 phẩy, A2 phẩy, An phẩy. Hình gồm hai đa giác đáy và các tứ giác mặt bên được gọi là hình lăng trụ.",
+      "startTime": 0.0,
+      "endTime": 28.63,
+      "duration": 28.63
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. HÌNH HỘP VÀ CÁC TÍNH CHẤT ĐẶC BIỆT",
+      "subtitle": "BÀI 13 • MỤC 3 • HÌNH LĂNG TRỤ TỨ GIÁC CÓ ĐÁY LÀ HÌNH BÌNH HÀNH",
+      "mascotMode": "explaining",
+      "mascotTip": "Hình hộp có 6 mặt đều là hình bình hành, 4 đường chéo cắt nhau tại trung điểm mỗi đường!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-slate-900 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Đặc Điểm Hình Học Của Hình Hộp $ABCD.A'B'C'D'$</div>\n    <div class=\"grid grid-cols-2 gap-2.5\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">6 Mặt bình hành:</b><br/>\n        Tất cả 6 mặt đều là hình bình hành. Có 3 cặp mặt đối diện song song và bằng nhau.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">4 Đường chéo đồng quy:</b><br/>\n        $AC', BD', CA', DB'$ cắt nhau tại trung điểm $O$ của mỗi đường ($O$ là tâm hình hộp).\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-purple-400\">\n        <b class=\"text-purple-300\">12 Cạnh:</b><br/>\n        Chia thành 3 nhóm, mỗi nhóm gồm 4 cạnh song song và bằng nhau.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">8 Đỉnh:</b><br/>\n        4 đỉnh đáy dưới và 4 đỉnh đáy trên.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hình lăng trụ tứ giác có đáy là hình bình hành được gọi là hình hộp. Hình hộp có các tính chất cực kì đẹp mắt: Thứ nhất: Cả sáu mặt của hình hộp đều là các hình bình hành. Hai mặt không có đỉnh chung gọi là hai mặt đối diện, và hai mặt đối diện luôn song song và bằng nhau. Thứ hai: Bốn đường chéo của hình hộp cắt nhau tại trung điểm của mỗi đường, điểm này được gọi là tâm đối xứng của hình hộp.",
+      "startTime": 28.63,
+      "endTime": 58.32,
+      "duration": 29.69
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: CÔNG THỨC ĐẾM SỐ ĐỈNH, CẠNH, MẶT CỦA HÌNH LĂNG TRỤ",
+      "subtitle": "BÀI 13 • MỤC 3 • BÀI TOÁN TỔNG QUÁT 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Lăng trụ $n$-giác có $2n$ đỉnh, $3n$ cạnh và $n+2$ mặt!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Một hình lăng trụ có đáy là đa giác $n$ cạnh ($n \\ge 3$). Số cạnh của hình lăng trụ đó là:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> $2n$ cạnh</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> $3n$ cạnh</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> $n + 2$ cạnh</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $4n$ cạnh</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian chọn đáp án:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1: Một hình lăng trụ có đáy là đa giác n cạnh. Hỏi hình lăng trụ đó có tất cả bao nhiêu cạnh? Phương án A: 2n cạnh; Phương án B: 3n cạnh; Phương án C: n cộng 2 cạnh; Phương án D: 4n cạnh. Các em có 15 giây chọn đáp án.",
+      "startTime": 58.32,
+      "endTime": 82.37,
+      "duration": 24.05
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: ĐÁP ÁN B CHÍNH XÁC",
+      "subtitle": "BÀI 13 • MỤC 3 • CÔNG THỨC Ơ-LE CHO HÌNH LĂNG TRỤ",
+      "mascotMode": "celebrating",
+      "mascotTip": "$n$ cạnh đáy dưới $+ n$ cạnh đáy trên $+ n$ cạnh bên $= 3n$ cạnh!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Bảng tổng kết chỉ số hình lăng trụ $n$-giác:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>Số đỉnh ($V$):</b> $2n$ đỉnh ($n$ đỉnh đáy dưới $+ n$ đỉnh đáy trên).</p>\n      <p>• <b>Số cạnh ($E$):</b> $3n$ cạnh ($n$ cạnh đáy dưới $+ n$ cạnh đáy trên $+ n$ cạnh bên).</p>\n      <p>• <b>Số mặt ($F$):</b> $n + 2$ mặt ($2$ mặt đáy $+ n$ mặt bên).</p>\n      <p>• <b>Kiểm tra công thức Ơ-le:</b> $V - E + F = 2n - 3n + (n + 2) = 2$ (luôn đúng!).</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là B: 3n cạnh. Giải thích: Hình lăng trụ có đáy n cạnh gồm có: n cạnh ở đáy dưới, n cạnh ở đáy trên, và n cạnh bên nối các đỉnh tương ứng. Tổng cộng có n cộng n cộng n bằng 3n cạnh. Ngoài ra, hình lăng trụ có 2n đỉnh và n cộng 2 mặt.",
+      "startTime": 82.37,
+      "endTime": 109.75,
+      "duration": 27.38
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. HÌNH CHÓP CỤT VÀ CÁC TÍNH CHẤT",
+      "subtitle": "BÀI 13 • MỤC 3 • HÌNH TẠO THÀNH KHI CẮT HÌNH CHÓP BỞI MẶT PHẲNG SONG SONG ĐÁY",
+      "mascotMode": "pointer",
+      "mascotTip": "Hai đáy là 2 đa giác đồng dạng, các mặt bên là các hình thang!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-950 to-indigo-950 p-4 rounded-xl border border-purple-500/40 text-xs\">\n    <div class=\"font-bold text-purple-300 text-sm mb-2\">Cấu Trúc Hình Chóp Cụt $A_1A_2\\dots A_n.B_1B_2\\dots B_n$</div>\n    <div class=\"grid grid-cols-2 gap-2.5\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">1. Hai mặt đáy:</b><br/>\n        Là hai đa giác <b>đồng dạng</b> nằm trong hai mặt phẳng song song.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">2. Các mặt bên:</b><br/>\n        Tất cả các mặt bên là các <b>hình thang</b>.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">3. Cạnh bên đồng quy:</b><br/>\n        Các đường thẳng chứa cạnh bên đồng quy tại đỉnh $S$ của hình chóp ban đầu.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-rose-400\">\n        <b class=\"text-rose-300\">4. Chiều cao:</b><br/>\n        Khoảng cách giữa hai mặt phẳng đáy.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Khi cắt một hình chóp bởi một mặt phẳng song song với đáy, phần hình chóp nằm giữa mặt phẳng đáy và mặt phẳng cắt được gọi là hình chóp cụt. Các tính chất quan trọng của hình chóp cụt: Hai đáy là hai đa giác có các cạnh tương ứng song song và tỉ số các cạnh tương ứng bằng nhau, tức là hai đa giác đồng dạng. Các mặt bên của hình chóp cụt đều là các hình thang. Các đường thẳng chứa các cạnh bên đồng quy tại một điểm, chính là đỉnh của hình chóp ban đầu.",
+      "startTime": 109.75,
+      "endTime": 143.78,
+      "duration": 34.03
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: TÍNH CHẤT MẶT BÊN CỦA HÌNH LĂNG TRỤ VÀ HÌNH CHÓP CỤT",
+      "subtitle": "BÀI 13 • MỤC 3 • PHÂN BIỆT RÕ RÀNG 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Mặt bên lăng trụ là hình bình hành, mặt bên chóp cụt là hình thang!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-rose-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-rose-500/20 text-rose-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Khẳng định nào sau đây là <b>SAI</b>?\n    </p>\n\n    <div class=\"space-y-1.5 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Các mặt bên của hình lăng trụ luôn là các hình bình hành.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Các cạnh bên của hình lăng trụ song song và bằng nhau.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-rose-500 font-bold text-rose-300\"><b>C.</b> Các mặt bên của hình chóp cụt luôn là các hình bình hành.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Hai đáy của hình chóp cụt là hai đa giác đồng dạng.</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Khẳng định nào sau đây là sai khi nói về hình lăng trụ và hình chóp cụt? Khẳng định A: Các mặt bên của hình lăng trụ là các hình bình hành. Khẳng định B: Các cạnh bên của hình lăng trụ song song và bằng nhau. Khẳng định C: Các mặt bên của hình chóp cụt là các hình bình hành. Khẳng định D: Hai đáy của hình chóp cụt là hai đa giác đồng dạng. Các em có 15 giây tìm khẳng định sai.",
+      "startTime": 143.78,
+      "endTime": 155.93,
+      "duration": 12.14
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: ĐÁP ÁN C LÀ KHẲNG ĐỊNH SAI",
+      "subtitle": "BÀI 13 • MỤC 3 • HÌNH THANG KHÔNG THỂ LÀ HÌNH BÌNH HÀNH",
+      "mascotMode": "celebrating",
+      "mascotTip": "Mặt bên chóp cụt chỉ là hình thang vì 2 cạnh bên cắt nhau tại đỉnh hình chóp!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Phân tích bản chất:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>Khẳng định A, B:</b> ĐÚNG theo định nghĩa và tính chất của hình lăng trụ.</p>\n      <p>• <b>Khẳng định C:</b> <b>SAI</b> vì các cạnh bên của hình chóp cụt không song song mà đồng quy tại đỉnh $S$. Do đó mặt bên là <b>hình thang</b>, không thể là hình bình hành.</p>\n      <p>• <b>Khẳng định D:</b> ĐÚNG theo tính chất mặt cắt song song đáy của hình chóp.</p>\n      <div class=\"mt-2 text-rose-300 font-bold font-mono\">➔ Chọn đáp án C (khẳng định sai).</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án sai cần chọn là C. Các mặt bên của hình chóp cụt là các hình thang chứ không phải là hình bình hành, vì hai cạnh bên của mỗi mặt bên kéo dài sẽ cắt nhau tại đỉnh của hình chóp ban đầu. Do đó khẳng định C là sai.",
+      "startTime": 155.93,
+      "endTime": 159.91,
+      "duration": 3.98
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. KỸ THUẬT DỰNG THIẾT DIỆN CỦA HÌNH HỘP",
+      "subtitle": "BÀI 13 • MỤC 3 • SỬ DỤNG TÍNH CHẤT CÁC MẶT ĐỐI DIỆN SONG SONG",
+      "mascotMode": "pointer",
+      "mascotTip": "Mặt phẳng cắt 2 mặt đối diện của hình hộp theo 2 đoạn giao tuyến SONG SONG!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-950 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Kỹ Thuật Kẻ Giao Tuyến Song Song Trên Hình Hộp</div>\n    <p class=\"text-slate-300 leading-relaxed\">\n      Hình hộp có 3 cặp mặt đối diện song song:\n      $$(ABCD) \\parallel (A'B'C'D'), \\quad (ABB'A') \\parallel (CDD'C'), \\quad (ADD'A') \\parallel (BCC'B')$$\n    </p>\n\n    <div class=\"p-3 my-2 bg-slate-900 rounded border-l-4 border-emerald-400\">\n      <b class=\"text-emerald-300\">Quy tắc vàng:</b><br/>\n      Nếu mặt phẳng $(\\alpha)$ cắt $(ABCD)$ theo đoạn $IJ$ thì $(\\alpha)$ sẽ cắt $(A'B'C'D')$ theo đoạn $I'J' \\parallel IJ$.<br/>\n      Thiết diện của hình hộp chỉ có thể là: <b>tam giác, tứ giác, ngũ giác hoặc lục giác</b> (tối đa 6 cạnh vì có 6 mặt).\n    </div>\n  </div>\n</div>\n",
+      "narration": "Khi tìm thiết diện của hình hộp cắt bởi một mặt phẳng P, các em hãy áp dụng triệt để Định lí 2: Vì hình hộp có các cặp mặt đối diện song song, nên mặt phẳng P sẽ cắt hai mặt đối diện theo hai đoạn giao tuyến song song với nhau. Nhờ tính chất này, chỉ cần tìm được một giao tuyến ở mặt này, ta có thể kẻ đường thẳng song song ở mặt đối diện.",
+      "startTime": 159.91,
+      "endTime": 164.45,
+      "duration": 4.54
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: THIẾT DIỆN HÌNH HỘP QUA TRUNG ĐIỂM CÁC CẠNH",
+      "subtitle": "BÀI 13 • MỤC 3 • BÀI TOÁN XÁC ĐỊNH ĐA GIÁC THIẾT DIỆN 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Mặt phẳng cắt cả 6 mặt tạo thành lục giác có các cạnh đối song song!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (30s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình lập phương $ABCD.A'B'C'D'$. Gọi $M, N, P$ lần lượt là trung điểm của $AB, B'C', D'D$. Thiết diện cắt bởi mặt phẳng $(MNP)$ là hình gì?\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Tam giác</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Hình bình hành</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> Ngũ giác</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>D.</b> Lục giác đều</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian tư duy:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho hình lập phương ABCD.A'B'C'D'. Gọi M, N, P lần lượt là trung điểm của các cạnh AB, B'C' và D'D. Thiết diện của hình lập phương cắt bởi mặt phẳng MNP là hình gì? Phương án A: Tam giác; Phương án B: Tứ giác; Phương án C: Ngũ giác; Phương án D: Lục giác đều. Các em có 30 giây phân tích.",
+      "startTime": 164.45,
+      "endTime": 170.4,
+      "duration": 5.95
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: THIẾT DIỆN LÀ LỤC GIÁC ĐỀU",
+      "subtitle": "BÀI 13 • MỤC 3 • THIẾT DIỆN KINH ĐIỂN CỦA HÌNH LẬP PHƯƠNG",
+      "mascotMode": "celebrating",
+      "mascotTip": "Mặt phẳng đi qua tâm hình lập phương và cắt cả 6 mặt theo các cạnh bằng $\\frac{a\\sqrt{2}}{2}$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải chi tiết bài toán thiết diện:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Dựng giao tuyến bằng quy tắc song song trên các cặp mặt đối diện:</p>\n      <p>• Mặt phẳng $(MNP)$ cắt 6 mặt của hình lập phương tại 6 trung điểm của 6 cạnh:</p>\n      <p class=\"font-mono text-amber-300 text-center\">$$M \\in AB, \\ E \\in BC, \\ F \\in CC', \\ N \\in C'D', \\ G \\in D'A', \\ P \\in A'A$$</p>\n      <p>• Độ dài 6 cạnh thiết diện đều bằng $\\frac{a\\sqrt{2}}{2}$ (đường trung bình của tam giác vuông cân cạnh $a$).</p>\n      <p>• Cả 6 góc đều bằng $120^\\circ \\implies$ Thiết diện là <b>lục giác đều</b>.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án D.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án chính xác là D: Lục giác đều. Lời giải: Bằng cách kéo dài các đoạn thẳng và dựng các giao tuyến song song trên các mặt đối diện, mặt phẳng MNP cắt 6 cạnh của hình lập phương tại 6 trung điểm: trung điểm AB, trung điểm BC, trung điểm CC', trung điểm C'D', trung điểm D'A' và trung điểm A'A. Cả 6 đoạn giao tuyến này đều bằng nhau và bằng cạnh của hình vuông nhân căn hai chia hai. Hơn nữa các góc của lục giác đều bằng 120 độ. Vậy thiết diện là một lục giác đều.",
+      "startTime": 170.4,
+      "endTime": 171.7,
+      "duration": 1.3
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ HÌNH LĂNG TRỤ VÀ HÌNH HỘP",
+      "subtitle": "BÀI 13 • MỤC 3 • 4 MỆNH ĐỀ TỔNG HỢP 30 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Đọc thật kĩ: Hình lăng trụ đứng khác hình lăng trụ tổng quát xiên!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded\">Ví dụ 4 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Định dạng thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Xét tính Đúng / Sai của các khẳng định sau:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> Hình lăng trụ tam giác có $5$ mặt, $6$ đỉnh và $9$ cạnh.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Các mặt bên của hình lăng trụ luôn vuông góc với mặt phẳng đáy.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Bốn đường chéo của hình hộp cắt nhau tại trung điểm mỗi đường.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Thiết diện của hình hộp có thể là một đa giác $7$ cạnh.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Xét tính Đúng hay Sai của các khẳng định sau về hình lăng trụ và hình hộp: Mệnh đề a: Một hình lăng trụ tam giác có tổng cộng 5 mặt, 6 đỉnh và 9 cạnh. Mệnh đề b: Các mặt bên của hình lăng trụ luôn vuông góc với hai mặt phẳng đáy. Mệnh đề c: Bốn đường chéo của hình hộp cắt nhau tại trung điểm của mỗi đường. Mệnh đề d: Thiết diện của hình hộp có thể là một thất giác, tức là đa giác 7 cạnh. Các em có 30 giây suy nghĩ.",
+      "startTime": 171.7,
+      "endTime": 191.7,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC TOÀN KHÓA BÀI 13",
+      "subtitle": "BÀI 13 • MỤC 3 • TỔNG KẾT TOÀN DIỆN HAI MẶT PHẲNG SONG SONG",
+      "mascotMode": "celebrating",
+      "mascotTip": "Hình hộp chỉ có 6 mặt nên thiết diện tối đa chỉ có 6 cạnh (lục giác)!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Đáp án và giải thích chuẩn mực:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>a) ĐÚNG:</b> Với $n = 3$: $V = 2n = 6, \\ E = 3n = 9, \\ F = n + 2 = 5$.</p>\n      <p>• <b>b) SAI:</b> Lăng trụ tổng quát có thể là <b>lăng trụ xiên</b> (chỉ có lăng trụ đứng mới vuông góc đáy).</p>\n      <p>• <b>c) ĐÚNG:</b> Tâm hình hộp là trung điểm của cả 4 đường chéo.</p>\n      <p>• <b>d) SAI:</b> Hình hộp chỉ có 6 mặt $\\implies$ Số cạnh thiết diện tối đa là $6$ (lục giác).</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">🎉 CHÚC MỪNG CÁC EM ĐÃ HOÀN THÀNH TOÀN BỘ BÀI 13 TOÁN 11 KNTT!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúc mừng các em đã xuất sắc hoàn thành trọn bộ Bài 13: Hai mặt phẳng song song. Phân tích Ví dụ 4: Mệnh đề a ĐÚNG vì lăng trụ tam giác có n bằng 3, số đỉnh là 2 nhân 3 bằng 6, số cạnh là 3 nhân 3 bằng 9, số mặt là 3 cộng 2 bằng 5. Mệnh đề b SAI vì lăng trụ tổng quát có thể là lăng trụ xiên, mặt bên không nhất thiết vuông góc đáy. Mệnh đề c ĐÚNG vì đây là tính chất hình hộp. Mệnh đề d SAI vì hình hộp chỉ có 6 mặt, mỗi mặt cắt nhiều nhất cho 1 đoạn giao tuyến, do đó thiết diện tối đa chỉ có 6 cạnh, không thể có 7 cạnh. Hẹn gặp lại các em ở Bài 14: Phép chiếu song song!",
+      "startTime": 191.7,
+      "endTime": 213.18,
+      "duration": 21.48
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_bai13_muc3 = root.G11_CHAPTER4_DATA.g11_bai13_muc3;
+
+  root.G11_CHAPTER4_DATA.g11_bai14_muc1 = {
+  "lessonId": "toan11_bai14",
+  "lessonTitle": "Bài 14: Phép chiếu song song",
+  "sectionId": "g11_bai14_muc1",
+  "sectionTitle": "Mục 1: Khái niệm & Các tính chất cơ bản của phép chiếu song song",
+  "audio": "/audio/g11_bai14_muc1.mp3",
+  "audioSrc": "./audio/g11_bai14_muc1.mp3",
+  "audio_src": "./audio/g11_bai14_muc1.mp3",
+  "title": "Mục 1: Khái niệm & Các tính chất cơ bản của phép chiếu song song",
+  "owl_tip": "Phép chiếu song song bảo toàn tính thẳng hàng, thứ tự các điểm, tính song song và tỉ số độ dài của hai đoạn thẳng cùng phương!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. ĐỊNH NGHĨA PHÉP CHIẾU SONG SONG",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. HÌNH CHIẾU SONG SONG CỦA MỘT HÌNH",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ ĐỊNH NGHĨA PHÉP CHIẾU SONG SONG",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & TỔNG KẾT MỤC 1",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 296.24,
+  "formattedDuration": "04:56",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. ĐỊNH NGHĨA PHÉP CHIẾU SONG SONG",
+      "subtitle": "BÀI 14 • MỤC 1 • MÔ HÌNH HÌNH HỌC TẠO ẢNH BÓNG ĐỔ",
+      "mascotMode": "pointer",
+      "mascotTip": "Mặt phẳng chiếu $(P)$ và phương chiếu $\\Delta$ ($\\Delta$ phải cắt $(P)$)!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-teal-950 to-emerald-950 p-4 rounded-xl border border-teal-500/40\">\n    <div class=\"flex items-center gap-3 mb-2\">\n      <span class=\"px-2.5 py-1 bg-teal-500/20 text-teal-300 font-bold text-xs rounded-lg uppercase tracking-wider\">Định nghĩa chính thức</span>\n      <h3 class=\"text-xl font-black text-teal-200\">Phép Chiếu Song Song</h3>\n    </div>\n    <p class=\"text-sm text-slate-200 leading-relaxed\">\n      • Cho mặt phẳng $(P)$ gọi là <b>mặt phẳng chiếu</b>.<br/>\n      • Đường thẳng $\\Delta$ cắt $(P)$ gọi là <b>phương chiếu</b>.<br/>\n      • Phép đặt tương ứng mỗi điểm $M$ với điểm $M' = d_M \\cap (P)$ (với $d_M \\parallel \\Delta$ hoặc $d_M \\equiv \\Delta$) gọi là <b>phép chiếu song song</b> lên $(P)$ theo phương $\\Delta$.\n    </p>\n  </div>\n\n  <div class=\"grid grid-cols-2 gap-3 text-xs\">\n    <div class=\"bg-slate-800/80 p-3.5 rounded-lg border-l-4 border-cyan-400 shadow-md\">\n      <h4 class=\"font-bold text-cyan-300 text-sm mb-1\">📍 Ký hiệu & Điểm ảnh</h4>\n      <p class=\"text-slate-300 leading-relaxed\">\n        • Điểm $M'$ gọi là <b>hình chiếu song song</b> của $M$.<br/>\n        • Ký hiệu: $M' = \\text{pr}_{(P, \\Delta)}(M)$ hoặc đơn giản là hình chiếu của $M$.\n      </p>\n    </div>\n    <div class=\"bg-slate-800/80 p-3.5 rounded-lg border-l-4 border-amber-400 shadow-md\">\n      <h4 class=\"font-bold text-amber-300 text-sm mb-1\">💡 Hiện tượng thực tế</h4>\n      <p class=\"text-slate-300 leading-relaxed\">\n        • Bóng của cột cờ, cây cối trên sân trường dưới ánh nắng mặt trời (các tia sáng song song).<br/>\n        • Bản vẽ kỹ thuật trong cơ khí và xây dựng.\n      </p>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Bài 14: Phép chiếu song song. Trong đời sống hàng ngày, dưới ánh nắng mặt trời buổi sáng hay buổi chiều, bóng của các đồ vật in trên mặt đất chính là hình ảnh trực quan của phép chiếu song song. Trong toán học, cho mặt phẳng P và một đường thẳng delta cắt mặt phẳng P. Với mỗi điểm M trong không gian, đường thẳng đi qua M song song hoặc trùng với delta sẽ cắt mặt phẳng P tại một điểm M phẩy duy nhất. Điểm M phẩy được gọi là hình chiếu song song của điểm M lên mặt phẳng P theo phương delta.",
+      "startTime": 0.0,
+      "endTime": 33.43,
+      "duration": 33.43
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. HÌNH CHIẾU SONG SONG CỦA MỘT HÌNH",
+      "subtitle": "BÀI 14 • MỤC 1 • TẬP HỢP TẤT CẢ CÁC ĐIỂM ẢNH",
+      "mascotMode": "explaining",
+      "mascotTip": "Hình chiếu của hình $\\mathcal{H}$ là tập hợp hình chiếu của tất cả các điểm thuộc $\\mathcal{H}$!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-950 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Hình Chiếu Của Một Hình $\\mathcal{H}$</div>\n    <p class=\"text-slate-200 leading-relaxed text-sm\">\n      Tập hợp $\\mathcal{H}' = \\{M' \\mid M' = \\text{hình chiếu của } M \\in \\mathcal{H}\\}$ được gọi là <b>hình chiếu song song</b> của hình $\\mathcal{H}$ lên $(P)$ theo phương $\\Delta$.\n    </p>\n\n    <div class=\"mt-3 grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2.5 bg-slate-900 rounded border border-blue-400/30\">\n        <b class=\"text-blue-300\">Điểm bất động:</b><br/>\n        Nếu $M \\in (P)$ thì hình chiếu của $M$ là chính nó: $M' \\equiv M$.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border border-blue-400/30\">\n        <b class=\"text-blue-300\">Phương chiếu không song song $(P)$:</b><br/>\n        Điều kiện bắt buộc là phương chiếu $\\Delta$ phải cắt mặt phẳng $(P)$, không được $\\Delta \\parallel (P)$.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Tiếp theo, ta tìm hiểu về hình chiếu của một hình bất kì. Giả sử ta có một hình H trong không gian như một đoạn thẳng, một tam giác hay một hình tròn. Tập hợp tất cả các điểm M phẩy là hình chiếu của các điểm M thuộc hình H được gọi là hình chiếu song song của hình H lên mặt phẳng P theo phương delta. Nếu điểm M đã nằm sẵn trên mặt phẳng P thì hình chiếu của nó trùng với chính nó.",
+      "startTime": 33.43,
+      "endTime": 34.46,
+      "duration": 1.03
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: ĐIỀU KIỆN CỦA PHƯƠNG CHIẾU TRONG KHÔNG GIAN",
+      "subtitle": "BÀI 14 • MỤC 1 • CÂU HỎI NHẬN BIẾT 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Phương chiếu $\\Delta$ bắt buộc phải cắt mặt phẳng chiếu $(P)$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Để xác định một phép chiếu song song lên mặt phẳng $(P)$ theo phương $\\Delta$, điều kiện bắt buộc đối với $\\Delta$ là:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> $\\Delta \\parallel (P)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> $\\Delta \\perp (P)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> $\\Delta$ cắt $(P)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $\\Delta \\subset (P)$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian chọn đáp án:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1: Trong định nghĩa phép chiếu song song lên mặt phẳng P theo phương delta, điều kiện cần và đủ đối với đường thẳng delta là gì? Phương án A: delta song song với mặt phẳng P; Phương án B: delta vuông góc với mặt phẳng P; Phương án C: delta cắt mặt phẳng P; Phương án D: delta nằm trong mặt phẳng P. Các em có 15 giây chọn đáp án.",
+      "startTime": 34.46,
+      "endTime": 61.75,
+      "duration": 27.29
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: ĐÁP ÁN C CHÍNH XÁC",
+      "subtitle": "BÀI 14 • MỤC 1 • BẢN CHẤT HÌNH HỌC CỦA PHƯƠNG CHIẾU",
+      "mascotMode": "celebrating",
+      "mascotTip": "Nếu $\\Delta \\parallel (P)$ thì đường thẳng qua $M$ song song $\\Delta$ sẽ không bao giờ cắt $(P)$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Giải thích chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Nếu $\\Delta \\parallel (P)$ hoặc $\\Delta \\subset (P)$ thì với mọi điểm $M \\notin (P)$, đường thẳng qua $M$ song song với $\\Delta$ sẽ song song với $(P)$, do đó không bao giờ cắt $(P) \\implies$ không có điểm chiếu $M'$.</p>\n      <p>• Do đó, điều kiện tiên quyết để tồn tại phép chiếu song song là <b>$\\Delta$ phải cắt $(P)$</b>.</p>\n      <p>• Khi $\\Delta \\perp (P)$, phép chiếu được gọi là <b>phép chiếu vuông góc</b> (trường hợp đặc biệt).</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: delta cắt mặt phẳng P. Tại sao delta không thể song song với P? Vì nếu delta song song với P thì đường thẳng đi qua điểm M song song với delta cũng sẽ song song với P, nghĩa là nó không bao giờ cắt P, do đó không thể xác định được điểm ảnh M phẩy. Vì vậy, bắt buộc delta phải cắt mặt phẳng P.",
+      "startTime": 61.75,
+      "endTime": 81.75,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. TRƯỜNG HỢP SUY BIẾN ĐẶC BIỆT KHI CHIẾU ĐƯỜNG THẲNG",
+      "subtitle": "BÀI 14 • MỤC 1 • KHI ĐƯỜNG THẲNG SONG SONG VỚI PHƯƠNG CHIẾU",
+      "mascotMode": "explaining",
+      "mascotTip": "Nếu đường thẳng $d \\parallel \\Delta$ hoặc $d \\equiv \\Delta$ thì hình chiếu của $d$ chỉ là MỘT ĐIỂM!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-rose-950 to-slate-900 p-4 rounded-xl border border-rose-500/40 text-xs\">\n    <div class=\"font-bold text-rose-300 text-sm mb-2\">Trường Hợp Suy Biến (Cực Kì Quan Trọng)</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-rose-400\">\n        <b class=\"text-rose-300\">Khi $d \\parallel \\Delta$ hoặc $d \\equiv \\Delta$:</b>\n        <p class=\"text-slate-300 mt-1\">\n          Tất cả các điểm trên đường thẳng $d$ đều chiếu về giao điểm $A = d \\cap (P)$.<br/>\n          $\\implies$ Hình chiếu của đường thẳng $d$ là <b>một điểm duy nhất</b>!\n        </p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Khi $d$ không song song $\\Delta$:</b>\n        <p class=\"text-slate-300 mt-1\">\n          Hình chiếu của đường thẳng $d$ luôn luôn là một <b>đường thẳng</b> $d'$.\n        </p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Một tình huống đặc biệt các em cần hết sức lưu ý: Đó là khi đường thẳng d song song hoặc trùng với phương chiếu delta. Khi đó, tất cả các điểm thuộc đường thẳng d khi chiếu xuống mặt phẳng P đều rơi vào đúng một điểm duy nhất, chính là giao điểm của d với mặt phẳng P. Khi đó ta nói hình chiếu của đường thẳng d bị suy biến thành một điểm.",
+      "startTime": 81.75,
+      "endTime": 92.22,
+      "duration": 10.46
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: HÌNH CHIẾU CỦA ĐOẠN THẲNG SONG SONG PHƯƠNG CHIẾU",
+      "subtitle": "BÀI 14 • MỤC 1 • CÂU HỎI THÔNG HIỂU 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Đoạn thẳng song song phương chiếu thì mọi điểm trên đoạn thẳng chiếu về cùng 1 điểm!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-cyan-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Thông hiểu</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho đoạn thẳng $AB$ song song với phương chiếu $\\Delta$. Hình chiếu song song của đoạn thẳng $AB$ lên $(P)$ là:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Đoạn thẳng bằng $AB$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Một đường thẳng</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> Một điểm duy nhất</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Một tia</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Cho đoạn thẳng AB song song với phương chiếu delta. Hình chiếu song song của đoạn thẳng AB lên mặt phẳng chiếu P là gì? Phương án A: Một đoạn thẳng có độ dài bằng AB; Phương án B: Một đường thẳng; Phương án C: Một điểm duy nhất; Phương án D: Một tia. Các em có 15 giây chọn đáp án.",
+      "startTime": 92.22,
+      "endTime": 118.86,
+      "duration": 26.64
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: ĐÁP ÁN C CHÍNH XÁC",
+      "subtitle": "BÀI 14 • MỤC 1 • ĐIỂM CHIẾU SUY BIẾN",
+      "mascotMode": "celebrating",
+      "mascotTip": "Tia sáng đi dọc theo thân que gậy cắm thẳng đứng $\\implies$ bóng của que gậy chỉ là 1 chấm tròn!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Đường thẳng $AB \\parallel \\Delta \\implies$ đường thẳng qua bất kì điểm $M \\in AB$ song song với $\\Delta$ chính là đường thẳng $AB$.</p>\n      <p>• Đường thẳng $AB$ cắt $(P)$ tại điểm $I = AB \\cap (P)$.</p>\n      <p>• Khi đó, với mọi $M \\in AB$, hình chiếu của $M$ đều là điểm $I$.</p>\n      <p>• Vậy hình chiếu của cả đoạn thẳng $AB$ là <b>một điểm duy nhất</b> $I$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: Một điểm duy nhất. Giải thích: Vì đường thẳng chứa đoạn thẳng AB song song với phương chiếu delta, nên đường thẳng chiếu đi qua mọi điểm trên đoạn thẳng AB đều trùng với đường thẳng AB. Đường thẳng này cắt mặt phẳng P tại đúng một giao điểm duy nhất. Do đó, hình chiếu của toàn bộ đoạn thẳng AB suy biến thành một điểm duy nhất.",
+      "startTime": 118.86,
+      "endTime": 141.58,
+      "duration": 22.73
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. SO SÁNH PHÉP CHIẾU SONG SONG VÀ PHÉP CHIẾU XUYÊN TÂM",
+      "subtitle": "BÀI 14 • MỤC 1 • MỞ RỘNG TƯ DUY HÌNH HỌC PHẲNG & KHÔNG GIAN",
+      "mascotMode": "pointer",
+      "mascotTip": "Phép chiếu song song có các tia chiếu song song, còn chiếu xuyên tâm các tia chiếu xuất phát từ một điểm!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-slate-900 to-indigo-950 p-4 rounded-xl border border-indigo-500/40 text-xs\">\n    <div class=\"font-bold text-indigo-300 text-sm mb-2\">Bảng Đối Chiếu Hai Loại Phép Chiếu</div>\n    <div class=\"grid grid-cols-2 gap-3\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300 text-sm\">1. Phép chiếu song song</b>\n        <p class=\"text-slate-300 mt-1\">\n          • Các tia chiếu <b>song song</b> với nhau.<br/>\n          • Bảo toàn tính song song của hai đường thẳng.<br/>\n          • Mô hình: Ánh sáng mặt trời, bản vẽ kỹ thuật.\n        </p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300 text-sm\">2. Phép chiếu xuyên tâm</b>\n        <p class=\"text-slate-300 mt-1\">\n          • Các tia chiếu cùng đi qua <b>tâm chiếu $S$</b>.<br/>\n          • KHÔNG bảo toàn tính song song (đường ray hội tụ tại chân trời).<br/>\n          • Mô hình: Đèn pin, máy chiếu, camera, mắt nhìn.\n        </p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Để hiểu sâu hơn, chúng ta hãy so sánh hai loại phép chiếu phổ biến trong cuộc sống: Phép chiếu song song có các tia chiếu song song với nhau theo phương delta, ví dụ bóng đổ dưới ánh nắng mặt trời ở xa vô cực. Còn phép chiếu xuyên tâm có các tia chiếu cùng xuất phát từ một tâm chiếu S, ví dụ bóng đổ dưới ánh đèn bàn trong phòng hoặc hình ảnh thu nhận qua võng mạc mắt người và ống kính máy ảnh.",
+      "startTime": 141.58,
+      "endTime": 171.92,
+      "duration": 30.34
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: TÌM HÌNH CHIẾU CỦA ĐỈNH HÌNH CHÓP LÊN ĐÁY",
+      "subtitle": "BÀI 14 • MỤC 1 • BÀI TOÁN HÌNH CHIẾU THEO PHƯƠNG CẠNH BÊN 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Phương chiếu là cạnh bên $SA \\implies$ hình chiếu của $S$ chính là điểm $A$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (30s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình chóp $S.ABC$. Hình chiếu song song của tam giác $SBC$ lên mặt phẳng $(ABC)$ theo phương chiếu $SA$ là:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Đoạn thẳng $BC$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> Tam giác $ABC$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> Điểm $A$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Tam giác $SBC$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho hình chóp S.ABC. Tìm hình chiếu song song của tam giác SBC lên mặt phẳng đáy ABC theo phương chiếu của đường thẳng SA. Phương án A: Đoạn thẳng BC; Phương án B: Tam giác ABC; Phương án C: Điểm A; Phương án D: Tam giác SBC. Các em có 30 giây suy nghĩ.",
+      "startTime": 171.92,
+      "endTime": 199.42,
+      "duration": 27.5
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: HÌNH CHIẾU LÀ TAM GIÁC $ABC$",
+      "subtitle": "BÀI 14 • MỤC 1 • TÌM HÌNH CHIẾU TỪNG ĐỈNH",
+      "mascotMode": "celebrating",
+      "mascotTip": "$S \\to A$, $B \\to B$, $C \\to C \\implies \\triangle SBC \\to \\triangle ABC$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Quy trình tìm hình chiếu từng điểm:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Hình chiếu của đỉnh $S$ theo phương $SA$ là giao điểm của đường thẳng $SA$ với $(ABC) \\implies S \\mapsto A$.</p>\n      <p>• Vì $B \\in (ABC) \\implies B \\mapsto B$.</p>\n      <p>• Vì $C \\in (ABC) \\implies C \\mapsto C$.</p>\n      <p>• Vậy hình chiếu của $\\triangle SBC$ gồm 3 đỉnh $S, B, C$ chính là tam giác tạo bởi $A, B, C$, tức là $\\triangle ABC$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là B: Tam giác ABC. Cách tìm hình chiếu của một tam giác: Ta chỉ cần tìm hình chiếu của ba đỉnh S, B và C. Đỉnh S: Đường thẳng qua S song song hoặc trùng phương chiếu SA cắt mặt đáy ABC tại điểm A, vậy hình chiếu của S là A. Đỉnh B và C: Vì B và C đã nằm sẵn trên mặt đáy ABC nên hình chiếu của B là chính nó B, hình chiếu của C là chính nó C. Kết nối ba điểm ảnh A, B, C ta được hình chiếu là tam giác ABC.",
+      "startTime": 199.42,
+      "endTime": 224.65,
+      "duration": 25.22
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ ĐỊNH NGHĨA PHÉP CHIẾU SONG SONG",
+      "subtitle": "BÀI 14 • MỤC 1 • 4 MỆNH ĐỀ ĐÁNH GIÁ NĂNG LỰC 30 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Cẩn thận các trường hợp điểm thuộc mặt phẳng chiếu và đường thẳng song song phương chiếu!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded\">Ví dụ 4 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Định dạng thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Xét tính Đúng / Sai của các khẳng định sau:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> Hình chiếu của một điểm $M \\in (P)$ là chính nó.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Hình chiếu của một đường thẳng bất kì luôn là một đường thẳng.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Khi $\\Delta \\perp (P)$, phép chiếu được gọi là phép chiếu vuông góc.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Phương chiếu $\\Delta$ có thể song song với $(P)$.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Cho phép chiếu song song lên mặt phẳng P theo phương delta. Xét tính Đúng hay Sai của các khẳng định sau: Mệnh đề a: Hình chiếu của một điểm thuộc mặt phẳng P là chính nó. Mệnh đề b: Hình chiếu của một đường thẳng bất kì luôn luôn là một đường thẳng. Mệnh đề c: Nếu phương chiếu delta vuông góc với mặt phẳng P thì phép chiếu được gọi là phép chiếu vuông góc. Mệnh đề d: Phương chiếu delta có thể song song với mặt phẳng chiếu P. Các em có 30 giây suy nghĩ.",
+      "startTime": 224.65,
+      "endTime": 262.26,
+      "duration": 37.61
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & TỔNG KẾT MỤC 1",
+      "subtitle": "BÀI 14 • MỤC 1 • BÀN GIAO TOÀN DIỆN KIẾN THỨC",
+      "mascotMode": "celebrating",
+      "mascotTip": "Mệnh đề b SAI vì nếu $d \\parallel \\Delta$ thì hình chiếu suy biến thành 1 điểm!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Đáp án phân tích:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>a) ĐÚNG:</b> Mọi điểm thuộc $(P)$ đều có hình chiếu là chính nó.</p>\n      <p>• <b>b) SAI:</b> Khi $d \\parallel \\Delta$, hình chiếu là <b>một điểm</b>.</p>\n      <p>• <b>c) ĐÚNG:</b> Khi $\\Delta \\perp (P)$ ta có phép chiếu vuông góc.</p>\n      <p>• <b>d) SAI:</b> $\\Delta$ bắt buộc phải cắt $(P)$ (không được song song).</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">⭐ TỔNG KẾT MỤC 1: Hiểu sâu mô hình phép chiếu song song và trường hợp suy biến thành điểm!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúc mừng các em đã hoàn thành Mục 1. Giải thích chi tiết Ví dụ 4: Mệnh đề a ĐÚNG vì điểm nằm trên mặt phẳng chiếu là điểm bất động. Mệnh đề b SAI vì nếu đường thẳng song song với phương chiếu delta thì hình chiếu của nó suy biến thành một điểm. Mệnh đề c ĐÚNG vì đây là định nghĩa phép chiếu vuông góc. Mệnh đề d SAI vì phương chiếu delta bắt buộc phải cắt mặt phẳng P. Hẹn gặp lại các em ở Mục 2: Các tính chất của phép chiếu song song.",
+      "startTime": 262.26,
+      "endTime": 296.24,
+      "duration": 33.98
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_bai14_muc1 = root.G11_CHAPTER4_DATA.g11_bai14_muc1;
+
+  root.G11_CHAPTER4_DATA.g11_bai14_muc2 = {
+  "lessonId": "toan11_bai14",
+  "lessonTitle": "Bài 14: Phép chiếu song song",
+  "sectionId": "g11_bai14_muc2",
+  "sectionTitle": "Mục 2: Hình biểu diễn của một hình không gian trên mặt phẳng",
+  "audio": "/audio/g11_bai14_muc2.mp3",
+  "audioSrc": "./audio/g11_bai14_muc2.mp3",
+  "audio_src": "./audio/g11_bai14_muc2.mp3",
+  "title": "Mục 2: Hình biểu diễn của một hình không gian trên mặt phẳng",
+  "owl_tip": "Hình biểu diễn của đường tròn là elip hoặc hình tròn (đặc biệt đoạn thẳng nếu mặt phẳng chứa đường tròn song song phương chiếu)!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. TÍNH CHẤT BIẾN ĐƯỜNG THẲNG, TIA VÀ ĐOẠN THẲNG",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. TÍNH CHẤT BẢO TOÀN QUAN HỆ SONG SONG",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ TÍNH CHẤT PHÉP CHIẾU SONG SONG",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & TỔNG KẾT MỤC 2",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 318.25,
+  "formattedDuration": "05:18",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. TÍNH CHẤT BIẾN ĐƯỜNG THẲNG, TIA VÀ ĐOẠN THẲNG",
+      "subtitle": "BÀI 14 • MỤC 2 • CÁC TÍNH CHẤT NỀN TẢNG",
+      "mascotMode": "pointer",
+      "mascotTip": "Đường thẳng $\\to$ Đường thẳng, Tia $\\to$ Tia, Đoạn thẳng $\\to$ Đoạn thẳng!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-950 p-4 rounded-xl border border-blue-500/40\">\n    <div class=\"flex items-center gap-3 mb-2\">\n      <span class=\"px-2.5 py-1 bg-blue-500/20 text-blue-300 font-bold text-xs rounded-lg uppercase tracking-wider\">Tính chất 1 & 2</span>\n      <h3 class=\"text-xl font-black text-blue-200\">Bảo Toàn Tính Thẳng Hàng & Đoạn Thẳng</h3>\n    </div>\n    <div class=\"grid grid-cols-2 gap-3 text-xs text-slate-300\">\n      <div class=\"p-2.5 bg-slate-900 rounded border border-blue-400/30\">\n        <b class=\"text-blue-300\">Tính chất 1:</b><br/>\n        • $A, B, C$ thẳng hàng $\\implies A', B', C'$ thẳng hàng.<br/>\n        • Nếu $B$ nằm giữa $A$ và $C$ thì $B'$ nằm giữa $A'$ và $C'$.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border border-blue-400/30\">\n        <b class=\"text-blue-300\">Tính chất 2:</b><br/>\n        • Đường thẳng $d \\not\\parallel \\Delta \\implies$ Đường thẳng $d'$.<br/>\n        • Tia $Ax \\implies$ Tia $A'x'$.<br/>\n        • Đoạn thẳng $AB \\implies$ Đoạn thẳng $A'B'$.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Mục 2: Các tính chất của phép chiếu song song và bảo toàn tỉ số. Phép chiếu song song có 3 tính chất hình học nền tảng sau: Tính chất 1: Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng và bảo toàn thứ tự giữa các điểm đó. Tính chất 2: Phép chiếu song song biến đường thẳng không song song với phương chiếu thành đường thẳng; biến tia thành tia; biến đoạn thẳng thành đoạn thẳng.",
+      "startTime": 0.0,
+      "endTime": 32.35,
+      "duration": 32.35
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. TÍNH CHẤT BẢO TOÀN QUAN HỆ SONG SONG",
+      "subtitle": "BÀI 14 • MỤC 2 • BẢO TOÀN SONG SONG VÀ BẢO TOÀN TỈ SỐ ĐỘ DÀI",
+      "mascotMode": "explaining",
+      "mascotTip": "Hai đường thẳng song song chiếu thành 2 đường thẳng song song hoặc trùng nhau!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-950 to-teal-950 p-4 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"font-bold text-emerald-300 text-sm mb-2\">Tính Chất 3 & 4 (Tính Chất Cốt Lõi)</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Bảo toàn tính song song:</b><br/>\n        $$a \\parallel b \\implies a' \\parallel b' \\quad \\text{hoặc} \\quad a' \\equiv b'$$\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Bảo toàn tỉ số độ dài song song:</b><br/>\n        Nếu $AB \\parallel CD$ (hoặc $A, B, C, D$ thẳng hàng) thì:\n        $$\\frac{A'B'}{C'D'} = \\frac{AB}{CD}$$\n        Đặc biệt: Nếu $M$ là <b>trung điểm</b> $AB$ thì $M'$ là <b>trung điểm</b> $A'B'$!\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Tính chất 3 là tính chất đặc sắc nhất của phép chiếu song song: Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng song song hoặc trùng nhau. Tính chất 4: Phép chiếu song song giữ nguyên tỉ số độ dài của hai đoạn thẳng cùng nằm trên một đường thẳng hoặc nằm trên hai đường thẳng song song. Hệ quả tuyệt vời là: hình chiếu của trung điểm đoạn thẳng chính là trung điểm của đoạn thẳng hình chiếu.",
+      "startTime": 32.35,
+      "endTime": 61.78,
+      "duration": 29.42
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: HÌNH CHIẾU CỦA HAI ĐƯỜNG THẲNG SONG SONG",
+      "subtitle": "BÀI 14 • MỤC 2 • CÂU HỎI TRẮC NGHIỆM ĐỊNH TÍNH 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Hai đường thẳng song song chiếu xuống có thể TRÙNG NHAU nếu cùng nằm trong mặt phẳng chứa phương chiếu!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Hình chiếu song song của hai đường thẳng song song $a$ và $b$ lên $(P)$ là:\n    </p>\n\n    <div class=\"space-y-1.5 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Hai đường thẳng cắt nhau</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Hai đường thẳng chéo nhau</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> Hai đường thẳng song song hoặc trùng nhau</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Hai đường thẳng vuông góc</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1: Cho hai đường thẳng song song a và b không song song với phương chiếu delta. Hình chiếu song song của a và b lên mặt phẳng P có thể là: Phương án A: Hai đường thẳng cắt nhau; Phương án B: Hai đường thẳng chéo nhau; Phương án C: Hai đường thẳng song song hoặc trùng nhau; Phương án D: Hai đoạn thẳng vuông góc. Các em có 15 giây chọn đáp án.",
+      "startTime": 61.78,
+      "endTime": 91.68,
+      "duration": 29.9
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: ĐÁP ÁN C CHÍNH XÁC",
+      "subtitle": "BÀI 14 • MỤC 2 • PHÂN TÍCH TÍNH CHẤT 3",
+      "mascotMode": "celebrating",
+      "mascotTip": "Khi mặt phẳng $(a, b) \\parallel \\Delta$ thì hình chiếu $a'$ và $b'$ TRÙNG NHAU!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Giải thích chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Theo Tính chất 3 của phép chiếu song song: $a \\parallel b \\implies a' \\parallel b'$ hoặc $a' \\equiv b'$.</p>\n      <p>• <b>Trường hợp $a' \\equiv b'$:</b> Xảy ra khi mặt phẳng chứa $a$ và $b$ song song với phương chiếu $\\Delta$.</p>\n      <p>• <b>Trường hợp $a' \\parallel b'$:</b> Xảy ra khi mặt phẳng chứa $a$ và $b$ không song song với $\\Delta$.</p>\n      <p>• Hình chiếu không bao giờ cắt nhau hay chéo nhau.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: Hai đường thẳng song song hoặc trùng nhau. Theo tính chất 3 của phép chiếu song song: Hình chiếu của hai đường thẳng song song là hai đường thẳng song song hoặc trùng nhau. Trường hợp trùng nhau xảy ra khi mặt phẳng chứa hai đường thẳng a và b song song với phương chiếu delta, khi đó cả hai đường thẳng cùng chiếu lên một giao tuyến duy nhất trên mặt phẳng P.",
+      "startTime": 91.68,
+      "endTime": 121.18,
+      "duration": 29.5
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. CÁC ĐẠI LƯỢNG KHÔNG ĐƯỢC BẢO TOÀN",
+      "subtitle": "BÀI 14 • MỤC 2 • BẪY THI CỰC KÌ PHỔ BIẾN",
+      "mascotMode": "explaining",
+      "mascotTip": "Độ lớn góc, độ dài đoạn thẳng và tính vuông góc KHÔNG được bảo toàn!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-rose-950 to-slate-900 p-4 rounded-xl border border-rose-500/40 text-xs\">\n    <div class=\"font-bold text-rose-300 text-sm mb-2\">⚠️ Các Đại Lượng KHÔNG Được Bảo Toàn (Bẫy Thi)</div>\n    <div class=\"grid grid-cols-3 gap-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-rose-400\">\n        <b class=\"text-rose-300\">1. Độ lớn góc:</b><br/>\n        Góc vuông, nhọn, tù đều có thể biến đổi thành góc bất kì.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-rose-400\">\n        <b class=\"text-rose-300\">2. Tính vuông góc:</b><br/>\n        $a \\perp b \\not\\implies a' \\perp b'$.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-rose-400\">\n        <b class=\"text-rose-300\">3. Độ dài:</b><br/>\n        $AB$ và $A'B'$ nói chung không bằng nhau.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Các em hãy đặc biệt lưu ý: Phép chiếu song song bảo toàn tính thẳng hàng, tính song song và tỉ số đoạn thẳng song song. Nhưng nó KHÔNG bảo toàn các đại lượng sau: Thứ nhất: Độ lớn của góc nói chung không được bảo toàn. Góc vuông có thể chiếu thành góc nhọn hoặc góc tù. Thứ hai: Độ dài của đoạn thẳng nói chung không được bảo toàn. Thứ ba: Tính vuông góc không được bảo toàn. Hai đường thẳng vuông góc có thể chiếu thành hai đường thẳng không vuông góc.",
+      "startTime": 121.18,
+      "endTime": 149.78,
+      "duration": 28.61
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: HÌNH CHIẾU CỦA TAM GIÁC ĐỀU LÀ HÌNH GÌ?",
+      "subtitle": "BÀI 14 • MỤC 2 • CÂU HỎI THÔNG HIỂU 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Tam giác đều, cân, vuông đều chiếu thành một tam giác bất kì!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-teal-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-teal-500/20 text-teal-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Thông hiểu</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Hình chiếu song song của một tam giác đều $ABC$ lên một mặt phẳng chiếu $(P)$ nói chung là:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Luôn là tam giác đều</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Luôn là tam giác cân</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> Một tam giác bất kì</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Luôn là tam giác vuông</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian tính toán:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Cho tam giác đều ABC. Hình chiếu song song của tam giác ABC lên một mặt phẳng bất kì không song song với các cạnh của nó là hình gì? Phương án A: Bắt buộc là tam giác đều; Phương án B: Bắt buộc là tam giác vuông; Phương án C: Một tam giác bất kì; Phương án D: Một đoạn thẳng. Các em có 15 giây suy nghĩ.",
+      "startTime": 149.78,
+      "endTime": 166.15,
+      "duration": 16.37
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: ĐÁP ÁN C CHÍNH XÁC",
+      "subtitle": "BÀI 14 • MỤC 2 • KHÔNG BẢO TOÀN ĐỘ DÀI CẠNH VÀ GÓC",
+      "mascotMode": "celebrating",
+      "mascotTip": "Góc $60^\\circ$ và ba cạnh bằng nhau bị biến dạng tùy thuộc góc nghiêng của phương chiếu!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Phân tích tính chất:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Phép chiếu song song biến 3 điểm không thẳng hàng $A, B, C$ thành 3 điểm không thẳng hàng $A', B', C'$.</p>\n      <p>• Do không bảo toàn độ dài và góc nên $A'B', B'C', C'A'$ nói chung không bằng nhau, và các góc không bằng $60^\\circ$.</p>\n      <p>• Vậy hình chiếu của một tam giác đều là một <b>tam giác bất kì</b>.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: Một tam giác bất kì. Vì phép chiếu song song không bảo toàn độ lớn của góc và độ dài các cạnh, nên ba góc 60 độ của tam giác đều và ba cạnh bằng nhau sẽ bị biến dạng. Do đó, hình chiếu của tam giác đều có thể là một tam giác nhọn, tam giác vuông hoặc tam giác tù tùy theo góc chiếu.",
+      "startTime": 166.15,
+      "endTime": 183.77,
+      "duration": 17.62
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. BẢO TOÀN TRỌNG TÂM VÀ TRUNG ĐIỂM",
+      "subtitle": "BÀI 14 • MỤC 2 • ỨNG DỤNG BẢO TOÀN TỈ SỐ ĐOẠN THẲNG",
+      "mascotMode": "pointer",
+      "mascotTip": "Trung điểm chiếu thành trung điểm, trọng tâm chiếu thành trọng tâm!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-950 to-indigo-950 p-4 rounded-xl border border-purple-500/40 text-xs\">\n    <div class=\"font-bold text-purple-300 text-sm mb-2\">Các Bất Biến Về Tỉ Số Của Phép Chiếu Song Song</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">1. Trung điểm:</b>\n        <p class=\"text-slate-300 mt-1\">$M$ là trung điểm $AB \\implies M'$ là trung điểm $A'B'$.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">2. Trọng tâm tam giác:</b>\n        <p class=\"text-slate-300 mt-1\">$G$ là trọng tâm $\\triangle ABC \\implies G'$ là trọng tâm $\\triangle A'B'C'$.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">3. Tỉ số điểm chia:</b>\n        <p class=\"text-slate-300 mt-1\">$\\vec{MA} = k \\vec{MB} \\implies \\vec{M'A'} = k \\vec{M'B'}$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Mặc dù không bảo toàn góc và độ dài, nhưng vì phép chiếu song song bảo toàn tỉ số của các đoạn thẳng thẳng hàng, nên nó bảo toàn các điểm đặc biệt sau: Trung điểm của đoạn thẳng chiếu thành trung điểm của đoạn thẳng hình chiếu. Trọng tâm của tam giác chiếu thành trọng tâm của tam giác hình chiếu. Tỉ số chia đoạn thẳng k luôn được giữ nguyên.",
+      "startTime": 183.77,
+      "endTime": 203.77,
+      "duration": 20.0
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: HÌNH CHIẾU CỦA TRỌNG TÂM TAM GIÁC",
+      "subtitle": "BÀI 14 • MỤC 2 • BÀI TOÁN TỈ SỐ ĐOẠN THẲNG 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Tỉ số $\\frac{AG}{AM} = \\frac{2}{3} \\implies \\frac{A'G'}{A'M'} = \\frac{2}{3}$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (30s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho $\\triangle ABC$ có trọng tâm $G$, trung tuyến $AM$. Gọi $A', B', C', G', M'$ là hình chiếu song song lên $(P)$. Khẳng định nào <b>SAI</b>?\n    </p>\n\n    <div class=\"space-y-1.5 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> $M'$ là trung điểm của đoạn thẳng $B'C'$.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> $G'$ là trọng tâm của tam giác $A'B'C'$.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> $\\frac{A'G'}{A'M'} = \\frac{2}{3}$.</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-rose-500 font-bold text-rose-300\"><b>D.</b> $G'$ là trực tâm của tam giác $A'B'C'$.</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho tam giác ABC có trọng tâm G và trung tuyến AM. Qua phép chiếu song song lên mặt phẳng P, tam giác ABC biến thành tam giác A'B'C'. Khẳng định nào sau đây là sai? Khẳng định A: Hình chiếu của M là trung điểm M' của B'C'. Khẳng định B: Hình chiếu của G là trọng tâm G' của tam giác A'B'C'. Khẳng định C: Tỉ số A'G' trên A'M' bằng hai phần ba. Khẳng định D: G' là trực tâm của tam giác A'B'C'. Các em có 30 giây tìm khẳng định sai.",
+      "startTime": 203.77,
+      "endTime": 233.74,
+      "duration": 29.98
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: ĐÁP ÁN D LÀ KHẲNG ĐỊNH SAI",
+      "subtitle": "BÀI 14 • MỤC 2 • BẢO TOÀN TRỌNG TÂM NHƯNG KHÔNG BẢO TOÀN TRỰC TÂM",
+      "mascotMode": "celebrating",
+      "mascotTip": "Trực tâm liên quan đến góc vuông, mà góc vuông không được bảo toàn nên $G'$ không thể là trực tâm!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Phân tích bản chất:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>Khẳng định A, B, C:</b> ĐÚNG do tính chất bảo toàn trung điểm và tỉ số chia đoạn thẳng $\\frac{2}{3}$.</p>\n      <p>• <b>Khẳng định D:</b> <b>SAI</b> vì trực tâm là giao điểm 3 đường cao (vuông góc). Phép chiếu song song không bảo toàn tính vuông góc nên trực tâm không được bảo toàn.</p>\n      <div class=\"mt-2 text-rose-300 font-bold font-mono\">➔ Chọn đáp án D (khẳng định sai).</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Khẳng định sai là D. Tại sao? Trực tâm là giao điểm của ba đường cao, tức là liên quan chặt chẽ đến tính vuông góc. Vì phép chiếu song song không bảo toàn tính vuông góc nên đường cao không chiếu thành đường cao, và trực tâm không bảo toàn. Ngược lại, trọng tâm và trung điểm chỉ phụ thuộc vào tỉ số đoạn thẳng nên được bảo toàn nguyên vẹn.",
+      "startTime": 233.74,
+      "endTime": 253.16,
+      "duration": 19.42
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ TÍNH CHẤT PHÉP CHIẾU SONG SONG",
+      "subtitle": "BÀI 14 • MỤC 2 • 4 MỆNH ĐỀ CHUẨN ĐỊNH DẠNG 2025",
+      "mascotMode": "thinking",
+      "mascotTip": "Đọc kĩ từng mệnh đề: Song song có bảo toàn không? Vuông góc có bảo toàn không?",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded\">Ví dụ 4 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Định dạng thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Xét tính Đúng / Sai của các khẳng định:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> Phép chiếu song song biến 2 đường thẳng song song thành 2 đường song song hoặc trùng nhau.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Hình chiếu của hình bình hành là hình bình hành hoặc đoạn thẳng.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Phép chiếu song song luôn bảo toàn diện tích của tam giác.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Phép chiếu song song biến 2 đường thẳng vuông góc thành 2 đường vuông góc.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Xét tính Đúng hay Sai của các khẳng định sau về phép chiếu song song: Mệnh đề a: Phép chiếu song song luôn bảo toàn tính song song của hai đường thẳng. Mệnh đề b: Phép chiếu song song biến hình bình hành thành hình bình hành hoặc một đoạn thẳng. Mệnh đề c: Phép chiếu song song luôn giữ nguyên diện tích của tam giác. Mệnh đề d: Phép chiếu song song biến hai đường thẳng vuông góc thành hai đường thẳng vuông góc. Các em có 30 giây kiểm tra.",
+      "startTime": 253.16,
+      "endTime": 288.06,
+      "duration": 34.9
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & TỔNG KẾT MỤC 2",
+      "subtitle": "BÀI 14 • MỤC 2 • BẢNG TỔNG KẾT ĐẠI LƯỢNG BẢO TOÀN",
+      "mascotMode": "celebrating",
+      "mascotTip": "Ghi nhớ: Bảo toàn song song, thẳng hàng, tỉ số. KHÔNG bảo toàn góc, vuông góc, diện tích!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Bảng tổng kết bảo toàn của phép chiếu song song:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• ✅ <b>ĐƯỢC BẢO TOÀN:</b> Tính thẳng hàng, thứ tự điểm, tính song song, tỉ số độ dài của các đoạn thẳng song song (trung điểm, trọng tâm).</p>\n      <p>• ❌ <b>KHÔNG ĐƯỢC BẢO TOÀN:</b> Độ lớn góc, tính vuông góc, độ dài đoạn thẳng bất kì, diện tích hình phẳng.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">⭐ TỔNG KẾT MỤC 2: Nắm vững các bất biến để vẽ hình biểu diễn chính xác ở Mục 3!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Giải thích chi tiết Ví dụ 4: Mệnh đề a ĐÚNG theo tính chất 3. Mệnh đề b ĐÚNG vì các cặp cạnh đối song song chiếu thành các cặp cạnh đối song song (hình bình hành) hoặc suy biến thành đoạn thẳng nếu mặt phẳng hình bình hành song song với phương chiếu. Mệnh đề c SAI vì diện tích bị co giãn $S' = S \\cdot \\cos \u000barphi$. Mệnh đề d SAI vì tính vuông góc không được bảo toàn.",
+      "startTime": 288.06,
+      "endTime": 318.25,
+      "duration": 30.19
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_bai14_muc2 = root.G11_CHAPTER4_DATA.g11_bai14_muc2;
+
+  root.G11_CHAPTER4_DATA.g11_bai14_muc3 = {
+  "lessonId": "toan11_bai14",
+  "lessonTitle": "Bài 14: Phép chiếu song song",
+  "sectionId": "g11_bai14_muc3",
+  "sectionTitle": "Mục 3: Kỹ năng vẽ hình không gian chuẩn xác & Giải toán bằng phép chiếu",
+  "audio": "/audio/g11_bai14_muc3.mp3",
+  "audioSrc": "./audio/g11_bai14_muc3.mp3",
+  "audio_src": "./audio/g11_bai14_muc3.mp3",
+  "title": "Mục 3: Kỹ năng vẽ hình không gian chuẩn xác & Giải toán bằng phép chiếu",
+  "owl_tip": "Quy ước vẽ hình không gian: Nhìn thấy vẽ nét liền, bị che khuất bắt buộc vẽ nét đứt đoạn!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. KHÁI NIỆM HÌNH BIỂU DIỄN CỦA MỘT HÌNH KHÔNG GIAN",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. QUY CHUẨN BIỂU DIỄN CÁC HÌNH PHẲNG CƠ BẢN",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ HÌNH BIỂU DIỄN HÌNH HỌC",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC TOÀN KHÓA BÀI 14",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 372.82,
+  "formattedDuration": "06:12",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. KHÁI NIỆM HÌNH BIỂU DIỄN CỦA MỘT HÌNH KHÔNG GIAN",
+      "subtitle": "BÀI 14 • MỤC 3 • CẦU NỐI GIỮA KHÔNG GIAN VÀ TRANG GIẤY PHẲNG",
+      "mascotMode": "pointer",
+      "mascotTip": "Hình biểu diễn là hình chiếu song song của hình không gian lên trang giấy!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-teal-950 to-blue-950 p-4 rounded-xl border border-teal-500/40\">\n    <div class=\"flex items-center gap-3 mb-2\">\n      <span class=\"px-2.5 py-1 bg-teal-500/20 text-teal-300 font-bold text-xs rounded-lg uppercase tracking-wider\">Khái niệm cốt lõi</span>\n      <h3 class=\"text-xl font-black text-teal-200\">Hình Biểu Diễn</h3>\n    </div>\n    <p class=\"text-sm text-slate-200 leading-relaxed\">\n      • <b>Hình biểu diễn</b> của một hình $\\mathcal{H}$ trong không gian là hình chiếu song song của hình $\\mathcal{H}$ trên một mặt phẳng, hoặc hình đồng dạng với hình chiếu đó.<br/>\n      • Mọi quy tắc vẽ hình trong SGK đều bắt nguồn trực tiếp từ <b>tính chất của phép chiếu song song</b>!\n    </p>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Mục 3: Hình biểu diễn của các hình không gian. Một vật thể ba chiều trong không gian khi ta vẽ lên mặt phẳng trang giấy hai chiều hay bảng đen thì hình vẽ đó được gọi là hình biểu diễn. Định nghĩa: Hình biểu diễn của một hình H trong không gian là hình chiếu song song của hình H lên một mặt phẳng chiếu, hoặc là hình đồng dạng với hình chiếu đó.",
+      "startTime": 0.0,
+      "endTime": 27.12,
+      "duration": 27.12
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. QUY CHUẨN BIỂU DIỄN CÁC HÌNH PHẲNG CƠ BẢN",
+      "subtitle": "BÀI 14 • MỤC 3 • BẢNG QUY ĐỔI CHUẨN MỰC BỘ GD&ĐT",
+      "mascotMode": "explaining",
+      "mascotTip": "Hình tròn vẽ thành Elip! Vuông, chữ nhật, thoi vẽ thành hình bình hành!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-indigo-950 to-slate-900 p-4 rounded-xl border border-indigo-500/40 text-xs\">\n    <div class=\"font-bold text-indigo-300 text-sm mb-2\">Bảng Quy Chuẩn Hình Biểu Diễn SGK KNTT</div>\n    <div class=\"grid grid-cols-2 gap-2.5\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">1. Tam giác bất kì (đều, cân, vuông):</b><br/>\n        Biểu diễn bằng một <b>tam giác</b>.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">2. Hình vuông, chữ nhật, thoi:</b><br/>\n        Đều biểu diễn bằng một <b>hình bình hành</b>.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">3. Hình thang:</b><br/>\n        Biểu diễn bằng <b>hình thang</b> (phải giữ nguyên tỉ số hai đáy $\\frac{a}{b}$).\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-purple-400\">\n        <b class=\"text-purple-300\">4. Hình tròn:</b><br/>\n        Biểu diễn bằng một <b>hình elip</b>.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Dựa trên tính chất bảo toàn tính song song và tỉ số, ta có bảng quy chuẩn vẽ hình biểu diễn cho các hình phẳng cơ bản như sau: Thứ nhất: Tam giác đều, tam giác cân, tam giác vuông đều được biểu diễn bằng một tam giác bất kì. Thứ hai: Hình vuông, hình chữ nhật, hình thoi, hình bình hành đều được biểu diễn bằng một hình bình hành. Thứ ba: Hình thang có hai đáy song song được biểu diễn bằng một hình thang và bắt buộc phải bảo toàn tỉ số độ dài hai đáy. Thứ tư: Hình tròn được biểu diễn bằng một hình elip.",
+      "startTime": 27.12,
+      "endTime": 63.19,
+      "duration": 36.07
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: HÌNH BIỂU DIỄN CỦA HÌNH CHỮ NHẬT LÀ HÌNH GÌ?",
+      "subtitle": "BÀI 14 • MỤC 3 • CÂU HỎI NHẬN BIẾT 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Hình chữ nhật có 2 cặp cạnh đối song song nên biểu diễn bằng hình bình hành!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Hình biểu diễn của một hình chữ nhật trên mặt phẳng chiếu nói chung là:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Hình chữ nhật</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Hình thoi</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> Hình bình hành</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Hình thang vuông</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1: Hình biểu diễn của một hình chữ nhật trong không gian lên mặt phẳng trang giấy là hình gì? Phương án A: Hình chữ nhật; Phương án B: Hình thoi; Phương án C: Hình bình hành; Phương án D: Hình thang vuông. Các em có 15 giây chọn đáp án.",
+      "startTime": 63.19,
+      "endTime": 84.12,
+      "duration": 20.93
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: ĐÁP ÁN C CHÍNH XÁC",
+      "subtitle": "BÀI 14 • MỤC 3 • NGUYÊN TẮC BẢO TOÀN SONG SONG",
+      "mascotMode": "celebrating",
+      "mascotTip": "Vì góc vuông bị biến dạng thành góc nhọn hoặc tù nên hình chữ nhật trở thành hình bình hành!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Hình chữ nhật $ABCD$ có $AB \\parallel CD$ và $AD \\parallel BC$.</p>\n      <p>• Phép chiếu song song bảo toàn tính song song $\\implies A'B' \\parallel C'D'$ và $A'D' \\parallel B'C'$.</p>\n      <p>• Góc vuông $\\widehat{A} = 90^\\circ$ không được bảo toàn $\\implies \\widehat{A'}$ có thể là góc nhọn hoặc góc tù.</p>\n      <p>• Do đó, hình biểu diễn của hình chữ nhật là <b>hình bình hành</b>.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: Hình bình hành. Giải thích: Hình chữ nhật có hai cặp cạnh đối song song. Phép chiếu song song bảo toàn tính song song nên hình biểu diễn phải có hai cặp cạnh đối song song, tức là một hình bình hành. Góc vuông 90 độ của hình chữ nhật không được bảo toàn nên trên hình vẽ biểu diễn nó trở thành góc nhọn hoặc góc tù.",
+      "startTime": 84.12,
+      "endTime": 110.66,
+      "duration": 26.54
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. QUY TẮC BIỂU DIỄN TÂM ĐỐI XỨNG VÀ TRỌNG TÂM",
+      "subtitle": "BÀI 14 • MỤC 3 • XÁC ĐỊNH CHÍNH XÁC CÁC ĐIỂM ĐẶC BIỆT",
+      "mascotMode": "pointer",
+      "mascotTip": "Tâm hình vuông là giao điểm 2 đường chéo của hình bình hành biểu diễn!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-950 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Cách Xác Định Điểm Đặc Biệt Trên Hình Biểu Diễn</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Tâm hình vuông / chữ nhật / hình thoi:</b><br/>\n        Giao điểm hai đường chéo của <b>hình bình hành</b> biểu diễn.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Trọng tâm tam giác:</b><br/>\n        Giao điểm hai đường trung tuyến của tam giác biểu diễn (lấy tỉ số $\\frac{2}{3}$).\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Tâm đường tròn ngoại tiếp / nội tiếp:</b><br/>\n        Phải dựng qua các đường trung tuyến hoặc tỉ số, không được dùng tính vuông góc thông thường.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Khi vẽ các bài toán hình chóp có đáy là hình vuông tâm O, hay hình bình hành tâm O: Điểm O trên hình biểu diễn được xác định chính xác bằng giao điểm của hai đường chéo hình bình hành biểu diễn, vì phép chiếu song song bảo toàn tính trung điểm. Tương tự, trọng tâm G của tam giác đáy được xác định bằng giao điểm của hai đường trung tuyến trên hình biểu diễn.",
+      "startTime": 110.66,
+      "endTime": 137.69,
+      "duration": 27.02
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: HÌNH BIỂU DIỄN CỦA HÌNH THANG CÂN",
+      "subtitle": "BÀI 14 • MỤC 3 • BÀI TOÁN BẢO TOÀN TỈ SỐ ĐÁY 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Đáy lớn gấp đôi đáy nhỏ thì trên hình vẽ đáy lớn cũng BẮT BUỘC gấp đôi đáy nhỏ!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-cyan-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Thông hiểu</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình thang $ABCD$ có đáy $AB = 2 CD$. Trên hình biểu diễn $A'B'C'D'$, khẳng định nào <b>bắt buộc đúng</b>?\n    </p>\n\n    <div class=\"space-y-1.5 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Hai cạnh bên $A'D' = B'C'$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> Đoạn $A'B' = 2 C'D'$ và $A'B' \\parallel C'D'$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> $\\widehat{A'} = \\widehat{B'}$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $A'C' \\perp B'D'$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Cho hình thang ABCD có đáy lớn AB gấp đôi đáy nhỏ CD. Trên hình biểu diễn của hình thang ABCD, khẳng định nào sau đây bắt buộc phải đúng? Phương án A: Hai cạnh bên bằng nhau; Phương án B: Đoạn đáy lớn A'B' gấp đôi đoạn đáy nhỏ C'D'; Phương án C: Góc A' bằng góc B'; Phương án D: Hai đường chéo vuông góc với nhau. Các em có 15 giây chọn đáp án.",
+      "startTime": 137.69,
+      "endTime": 164.23,
+      "duration": 26.54
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: ĐÁP ÁN B CHÍNH XÁC",
+      "subtitle": "BÀI 14 • MỤC 3 • BẢO TOÀN TỈ SỐ HAI ĐÁY SONG SONG",
+      "mascotMode": "celebrating",
+      "mascotTip": "Vì $AB \\parallel CD$ nên tỉ số $\\frac{A'B'}{C'D'} = \\frac{AB}{CD} = 2$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Giải thích chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Vì $AB \\parallel CD$ nên theo Tính chất 4: $\\frac{A'B'}{C'D'} = \\frac{AB}{CD} = 2$.</p>\n      <p>• Hai đáy $A'B'$ và $C'D'$ vẫn song song với nhau.</p>\n      <p>• Các phương án A, C, D sai vì phép chiếu song song không bảo toàn độ lớn góc và độ dài cạnh không song song.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là B: Đoạn đáy lớn A'B' gấp đôi đoạn đáy nhỏ C'D' và A'B' song song C'D'. Giải thích: Hai đáy AB và CD là hai đoạn thẳng nằm trên hai đường thẳng song song. Theo Tính chất 4 của phép chiếu song song, tỉ số độ dài của hai đoạn thẳng song song phải được bảo toàn nguyên vẹn. Do đó tỉ số A'B' chia C'D' bắt buộc phải bằng hai. Còn góc và độ dài cạnh bên không được bảo toàn.",
+      "startTime": 164.23,
+      "endTime": 198.31,
+      "duration": 34.08
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. KỸ THUẬT VẼ HÌNH KHÔNG GIAN BẰNG NÉT LIỀN VÀ NÉT ĐỨT",
+      "subtitle": "BÀI 14 • MỤC 3 • NGUYÊN TẮC BẮT BUỘC CỦA BỘ GIÁO DỤC",
+      "mascotMode": "pointer",
+      "mascotTip": "Cạnh nhìn thấy: Nét liền (Solid). Cạnh bị khuất: Nét đứt (Dashed)!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-teal-950 to-slate-900 p-4 rounded-xl border border-teal-500/40 text-xs\">\n    <div class=\"font-bold text-teal-300 text-sm mb-2\">Quy Ước Vẽ Hình Không Gian Chuẩn Bộ GD&ĐT</div>\n    <div class=\"grid grid-cols-2 gap-2.5\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Nét liền (Solid):</b><br/>\n        Vẽ các đường biên và các cạnh nhìn thấy được trực tiếp từ hướng nhìn.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-rose-400\">\n        <b class=\"text-rose-300\">Nét đứt (Dashed):</b><br/>\n        Vẽ các cạnh nằm phía sau, bị các mặt phía trước che khuất.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Đường cao:</b><br/>\n        Đỉnh nào vuông góc mặt phẳng đáy thì dựng thẳng đứng góc $90^\\circ$.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Nhãn đỉnh:</b><br/>\n        Chữ in hoa $S, A, B, C, D$, đặt phía ngoài hình, không để nét vẽ đè lên chữ.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Khi vẽ một hình không gian như hình chóp, hình lăng trụ, hình hộp: Các cạnh nhìn thấy từ góc quan sát phải vẽ bằng nét liền. Các cạnh bị các mặt khác che khuất bắt buộc phải vẽ bằng nét đứt đoạn. Đường cao vuông góc với đáy nếu có phải dựng thẳng đứng chuẩn xác. Tên các đỉnh ghi bằng chữ in hoa, in nghiêng, đặt cách đỉnh từ sáu đến mười pixel.",
+      "startTime": 198.31,
+      "endTime": 225.65,
+      "duration": 27.34
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: HÌNH BIỂU DIỄN CỦA HÌNH TRÒN VÀ CẶP ĐƯỜNG KÍNH VUÔNG GÓC",
+      "subtitle": "BÀI 14 • MỤC 3 • BÀI TOÁN HÌNH ELIP NÂNG CAO 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Hình tròn biến thành Elip, hai đường kính vuông góc biến thành hai dây cung liên hợp!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (30s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình tròn tâm $O$ có $AB \\perp CD$ tại $O$. Trên hình biểu diễn elip tâm $O'$, hình ảnh của $AB$ và $CD$ là:\n    </p>\n\n    <div class=\"space-y-1.5 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Luôn là hai trục lớn và trục bé của elip</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Hai đường kính vuông góc với nhau của elip</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> Hai dây cung đi qua tâm $O'$, nói chung không vuông góc</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Hai tiếp tuyến của elip</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian tư duy:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho hình tròn tâm O có hai đường kính AB và CD vuông góc với nhau. Hình biểu diễn của hình tròn là một hình elip tâm O'. Khi đó, hình biểu diễn của hai đường kính AB và CD là gì? Phương án A: Hai đường kính vuông góc của hình elip; Phương án B: Hai trục lớn và trục bé của hình elip; Phương án C: Hai dây cung cắt nhau tại O' và không nhất thiết vuông góc; Phương án D: Hai tiếp tuyến song song. Các em có 30 giây suy nghĩ.",
+      "startTime": 225.65,
+      "endTime": 259.66,
+      "duration": 34.01
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: HAI ĐƯỜNG KÍNH LIÊN HỢP CỦA ELIP",
+      "subtitle": "BÀI 14 • MỤC 3 • KHÔNG BẢO TOÀN TÍNH VUÔNG GÓC",
+      "mascotMode": "celebrating",
+      "mascotTip": "$AB \\perp CD$ nhưng $A'B'$ và $C'D'$ nói chung KHÔNG vuông góc trên Elip!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Giải thích chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Hình tròn chiếu thành hình elip tâm $O'$.</p>\n      <p>• Điểm $O$ là trung điểm $AB$ và $CD \\implies O'$ là trung điểm $A'B'$ và $C'D'$.</p>\n      <p>• Do đó $A'B'$ và $C'D'$ là hai đường kính (dây cung qua tâm) của elip.</p>\n      <p>• Vì tính vuông góc không được bảo toàn nên $A'B'$ và $C'D'$ nói chung <b>không vuông góc</b> với nhau (không nhất thiết là trục lớn và trục bé).</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: Hai dây cung đi qua tâm O' và nói chung không vuông góc với nhau. Giải thích: Vì O là trung điểm của cả AB và CD nên O' cũng là trung điểm của cả A'B' và C'D'. Do đó A'B' và C'D' là hai dây cung đi qua tâm của hình elip (gọi là hai đường kính liên hợp). Tuy nhiên, vì phép chiếu song song không bảo toàn tính vuông góc nên hai dây cung này nói chung không vuông góc với nhau, trừ trường hợp góc chiếu rất đặc biệt.",
+      "startTime": 259.66,
+      "endTime": 296.88,
+      "duration": 37.22
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ HÌNH BIỂU DIỄN HÌNH HỌC",
+      "subtitle": "BÀI 14 • MỤC 3 • 4 MỆNH ĐỀ THỰC CHIẾN 30 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Rà soát kĩ: Tam giác vuông vẽ thành tam giác thường, hình vuông vẽ thành hình bình hành!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded\">Ví dụ 4 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Định dạng thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Xét tính Đúng / Sai của các khẳng định:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> Hình biểu diễn của một tam giác vuông cân có thể là một tam giác tù.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Hình biểu diễn của hình vuông bắt buộc phải là hình chữ nhật.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Đáy của hình chóp tứ giác đều được biểu diễn bằng hình bình hành.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Cạnh bị che khuất trong không gian vẽ bằng nét liền.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Xét tính Đúng hay Sai của các khẳng định sau về hình biểu diễn: Mệnh đề a: Hình biểu diễn của một tam giác vuông cân có thể là một tam giác tù. Mệnh đề b: Hình biểu diễn của một hình vuông bắt buộc phải là một hình chữ nhật. Mệnh đề c: Hình biểu diễn của hình chóp tứ giác đều là một hình chóp có đáy là hình bình hành. Mệnh đề d: Cạnh bị che khuất trong không gian bắt buộc phải vẽ bằng nét liền. Các em có 30 giây kiểm tra.",
+      "startTime": 296.88,
+      "endTime": 331.82,
+      "duration": 34.94
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC TOÀN KHÓA BÀI 14",
+      "subtitle": "BÀI 14 • MỤC 3 • TỔNG KẾT TOÀN DIỆN PHÉP CHIẾU SONG SONG",
+      "mascotMode": "celebrating",
+      "mascotTip": "Nắm vững các quy tắc vẽ hình để tự tin vẽ đúng chuẩn mọi bài toán hình học không gian!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Đáp án và giải thích chuẩn mực:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>a) ĐÚNG:</b> Góc vuông có thể biến thành góc nhọn hoặc góc tù.</p>\n      <p>• <b>b) SAI:</b> Hình vuông được biểu diễn bằng <b>hình bình hành</b> tổng quát.</p>\n      <p>• <b>c) ĐÚNG:</b> Đáy là hình vuông nên vẽ thành hình bình hành tâm $O$.</p>\n      <p>• <b>d) SAI:</b> Cạnh bị che khuất bắt buộc phải vẽ bằng <b>nét đứt</b> (dashed line).</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">🎉 CHÚC MỪNG CÁC EM ĐÃ HOÀN THÀNH TOÀN BỘ BÀI 14 TOÁN 11 KNTT!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúc mừng các em đã hoàn thành xuất sắc toàn bộ Bài 14: Phép chiếu song song. Phân tích Ví dụ 4: Mệnh đề a ĐÚNG vì góc vuông không bảo toàn, có thể biến thành góc tù. Mệnh đề b SAI vì hình vuông biểu diễn tổng quát bằng hình bình hành, góc không nhất thiết 90 độ. Mệnh đề c ĐÚNG vì đáy hình vuông của chóp tứ giác đều vẽ thành hình bình hành. Mệnh đề d SAI vì cạnh bị che khuất bắt buộc vẽ nét đứt. Như vậy chúng ta đã trang bị đầy đủ kiến thức của cả Chương 4. Hẹn gặp lại các em ở Bài Ôn tập cuối chương 4!",
+      "startTime": 331.82,
+      "endTime": 372.82,
+      "duration": 40.99
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_bai14_muc3 = root.G11_CHAPTER4_DATA.g11_bai14_muc3;
+
+  root.G11_CHAPTER4_DATA.g11_ontap_c4_muc1 = {
+  "lessonId": "toan11_ontap_c4",
+  "lessonTitle": "Bài tập cuối chương IV: Quan hệ song song trong không gian",
+  "sectionId": "g11_ontap_c4_muc1",
+  "sectionTitle": "Mục 1: Hệ thống hóa kiến thức toàn chương & Sơ đồ tư duy 4 quan hệ song song",
+  "audio": "/audio/g11_ontap_c4_muc1.mp3",
+  "audioSrc": "./audio/g11_ontap_c4_muc1.mp3",
+  "audio_src": "./audio/g11_ontap_c4_muc1.mp3",
+  "title": "Mục 1: Hệ thống hóa kiến thức toàn chương & Sơ đồ tư duy 4 quan hệ song song",
+  "owl_tip": "Nắm chắc 4 quan hệ then chốt: Đường // Đường, Đường // Mặt, Mặt // Mặt và Phép chiếu song song!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. TOÀN CẢNH CHƯƠNG IV: QUAN HỆ SONG SONG TRONG KHÔNG GIAN",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. SƠ ĐỒ TƯ DUY: CÁC VỊ TRÍ TƯƠNG ĐỐI TRONG KHÔNG GIAN",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI TỔNG HỢP LÝ THUYẾT CHƯƠNG IV",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC MỤC 1",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 350.18,
+  "formattedDuration": "05:50",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. TOÀN CẢNH CHƯƠNG IV: QUAN HỆ SONG SONG TRONG KHÔNG GIAN",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • HỆ THỐNG HOÁ LÝ THUYẾT NỀN TẢNG",
+      "mascotMode": "pointer",
+      "mascotTip": "Nắm vững 5 trụ cột: Điểm & mp, 2 đường song song, đường song song mp, 2 mp song song, phép chiếu song song!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-indigo-950 via-purple-950 to-indigo-950 p-4 rounded-xl border border-indigo-500/40\">\n    <div class=\"flex items-center gap-3 mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 font-bold text-xs rounded-lg uppercase tracking-wider\">Tổng quan chương IV</span>\n      <h3 class=\"text-xl font-black text-amber-200\">5 Trụ Cột Quan Hệ Song Song Trong Không Gian</h3>\n    </div>\n    <div class=\"grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs text-slate-300 mt-2\">\n      <div class=\"p-2 bg-slate-900 rounded border border-indigo-500/30\">\n        <b class=\"text-indigo-300\">Bài 10: Điểm & Mặt phẳng</b><br/>6 tính chất thừa nhận, 3 cách xác định mặt phẳng.\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500/30\">\n        <b class=\"text-emerald-300\">Bài 11: 2 Đường thẳng</b><br/>Cắt nhau, song song, chéo nhau, trùng nhau, 3 giao tuyến.\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-cyan-500/30\">\n        <b class=\"text-cyan-300\">Bài 12: Đường $\\parallel$ Mp</b><br/>Điều kiện $d \\parallel (P)$ và định lý giao tuyến song song.\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-purple-500/30\">\n        <b class=\"text-purple-300\">Bài 13: 2 Mp song song</b><br/>$(P) \\parallel (Q)$, định lý Ta-lét, hình lăng trụ, hình hộp.\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-teal-500/30\">\n        <b class=\"text-teal-300\">Bài 14: Phép chiếu song song</b><br/>Bảo toàn song song, tỉ số, quy tắc vẽ hình biểu diễn.\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-amber-500/30\">\n        <b class=\"text-amber-300\">Thiết diện đa diện</b><br/>Thiết diện chóp, lăng trụ, hình hộp.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Bài ôn tập cuối chương 4: Quan hệ song song trong không gian môn Toán lớp 11 Kết Nối Tri Thức. Trong chương học này, chúng ta đã xây dựng toàn bộ nền móng của hình học không gian 3 chiều qua 5 bài học cốt lõi: từ khái niệm mở đầu và các cách xác định mặt phẳng, hai đường thẳng song song và chéo nhau, đường thẳng song song với mặt phẳng, hai mặt phẳng song song cùng hình lăng trụ, hình hộp, cho đến phép chiếu song song và hình biểu diễn. Hôm nay chúng ta sẽ xâu chuỗi toàn bộ kiến thức thành một sơ đồ tư duy hoàn chỉnh.",
+      "startTime": 0.0,
+      "endTime": 34.44,
+      "duration": 34.44
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. SƠ ĐỒ TƯ DUY: CÁC VỊ TRÍ TƯƠNG ĐỐI TRONG KHÔNG GIAN",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • BẢNG PHÂN LOẠI TOÀN DIỆN",
+      "mascotMode": "explaining",
+      "mascotTip": "Đường với đường có 4 vị trí! Đường với mặt có 3 vị trí! Mặt với mặt có 3 vị trí!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-slate-900 to-indigo-950 p-4 rounded-xl border border-indigo-500/40 text-xs\">\n    <div class=\"font-bold text-indigo-300 text-sm mb-2\">Bảng Tổng Hợp Vị Trí Tương Đối</div>\n    <div class=\"grid grid-cols-3 gap-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">1. Hai đường thẳng $a$ và $b$:</b><br/>\n        • <b>Cắt nhau:</b> $a \\cap b = \\{I\\}$.<br/>\n        • <b>Song song:</b> $a \\parallel b$ (đồng phẳng, rời nhau).<br/>\n        • <b>Chéo nhau:</b> không đồng phẳng.<br/>\n        • <b>Trùng nhau:</b> $a \\equiv b$.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">2. Đường thẳng $d$ và mp $(P)$:</b><br/>\n        • <b>Nằm trong:</b> $d \\subset (P)$ ($\\infty$ điểm chung).<br/>\n        • <b>Cắt nhau:</b> $d \\cap (P) = \\{M\\}$ ($1$ điểm chung).<br/>\n        • <b>Song song:</b> $d \\parallel (P)$ ($0$ điểm chung).\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-purple-400\">\n        <b class=\"text-purple-300\">3. Hai mặt phẳng $(P)$ và $(Q)$:</b><br/>\n        • <b>Cắt nhau:</b> $(P) \\cap (Q) = d$ (giao tuyến).<br/>\n        • <b>Song song:</b> $(P) \\parallel (Q)$ ($0$ điểm chung).<br/>\n        • <b>Trùng nhau:</b> $(P) \\equiv (Q)$.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Trước hết, các em cần nắm chắc bảng phân loại tất cả các vị trí tương đối: Giữa hai đường thẳng phân biệt: có 3 vị trí là cắt nhau, song song và chéo nhau. Chú ý: chéo nhau là không cùng nằm trong bất kì mặt phẳng nào. Giữa đường thẳng và mặt phẳng: có 3 vị trí là đường thẳng nằm trong mặt phẳng, đường thẳng cắt mặt phẳng và đường thẳng song song với mặt phẳng. Giữa hai mặt phẳng: có 2 vị trí phân biệt là cắt nhau theo một giao tuyến và song song không có điểm chung.",
+      "startTime": 34.44,
+      "endTime": 62.93,
+      "duration": 28.49
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: ĐẾM SỐ VỊ TRÍ TƯƠNG ĐỐI TRONG KHÔNG GIAN",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • CÂU HỎI NHẬN BIẾT 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Đọc kĩ đề bài: 'hai đường thẳng phân biệt' thì không tính trường hợp trùng nhau!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Trong không gian, cho hai đường thẳng <b>phân biệt</b> $a$ và $b$. Giữa chúng có tất cả bao nhiêu vị trí tương đối?\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> 2 vị trí</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> 3 vị trí</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> 4 vị trí</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> 1 vị trí</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian chọn đáp án:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1: Trong không gian, giữa hai đường thẳng phân biệt có tất cả bao nhiêu vị trí tương đối? Phương án A: 2 vị trí; Phương án B: 3 vị trí; Phương án C: 4 vị trí; Phương án D: 1 vị trí. Các em có 15 giây chọn đáp án.",
+      "startTime": 62.93,
+      "endTime": 84.98,
+      "duration": 22.06
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: ĐÁP ÁN B (3 VỊ TRÍ TƯƠNG ĐỐI)",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • CẮT NHAU, SONG SONG, CHÉO NHAU",
+      "mascotMode": "celebrating",
+      "mascotTip": "Vì đề bài cho 'phân biệt' nên chỉ có: Cắt nhau, Song song và Chéo nhau!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Phân tích chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Vì $a$ và $b$ <b>phân biệt</b> ($a \\not\\equiv b$), nên giữa chúng có đúng <b>3 vị trí tương đối</b>:</p>\n      <p>1. <b>Cắt nhau:</b> $a$ và $b$ đồng phẳng và có 1 điểm chung duy nhất.</p>\n      <p>2. <b>Song song:</b> $a$ và $b$ đồng phẳng và không có điểm chung nào ($a \\parallel b$).</p>\n      <p>3. <b>Chéo nhau:</b> $a$ và $b$ không cùng nằm trong bất kì mặt phẳng nào.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là B: 3 vị trí tương đối. Đó là: cắt nhau (có 1 điểm chung), song song (cùng thuộc một mặt phẳng và không có điểm chung), và chéo nhau (không cùng thuộc bất kì mặt phẳng nào). Nếu đề bài không có chữ phân biệt thì sẽ có 4 vị trí, tính thêm trường hợp trùng nhau.",
+      "startTime": 84.98,
+      "endTime": 102.7,
+      "duration": 17.71
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. BỘ BA ĐỊNH LÍ GIAO TUYẾN KINH ĐIỂN",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • VŨ KHÍ TỐI THƯỢNG TÌM THIẾT DIỆN",
+      "mascotMode": "explaining",
+      "mascotTip": "Giao tuyến của 2 mặt phẳng qua 2 đường song song thì luôn song song với chúng!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-950 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Bộ Ba Định Lí Giao Tuyến Cốt Lõi</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">1. Định lí Giao tuyến 1 (Bài 11):</b><br/>\n        $$\\begin{cases} a \\subset (P), \\ b \\subset (Q) \\\\ a \\parallel b \\\\ (P) \\cap (Q) = d \\end{cases} \\implies d \\parallel a \\parallel b$$\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">2. Định lí Giao tuyến 2 (Bài 12):</b><br/>\n        $$\\begin{cases} a \\parallel (P) \\\\ a \\subset (Q) \\\\ (P) \\cap (Q) = d \\end{cases} \\implies d \\parallel a$$\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-purple-400\">\n        <b class=\"text-purple-300\">3. Định lí Giao tuyến 3 (Bài 13):</b><br/>\n        $$\\begin{cases} (P) \\parallel (Q) \\\\ (R) \\cap (P) = a \\\\ (R) \\cap (Q) = b \\end{cases} \\implies a \\parallel b$$\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Một trong những kỹ năng quan trọng nhất của Chương 4 là tìm giao tuyến bằng Bộ ba Định lí giao tuyến: Định lí 1: Nếu hai mặt phẳng lần lượt chứa hai đường thẳng song song thì giao tuyến của chúng nếu có sẽ song song với hai đường thẳng đó. Định lí 2: Nếu đường thẳng d song song với mặt phẳng alpha thì mặt phẳng nào chứa d cắt alpha theo giao tuyến song song với d. Định lí 3: Hai mặt phẳng song song bị cắt bởi mặt phẳng thứ ba theo hai giao tuyến song song.",
+      "startTime": 102.7,
+      "endTime": 136.97,
+      "duration": 34.27
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: TÌM GIAO TUYẾN THEO ĐỊNH LÍ 1",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • CÂU HỎI THÔNG HIỂU 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Mặt phẳng $(SAB)$ và $(SCD)$ cùng đi qua đỉnh $S$ và chứa $AB \\parallel CD$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-cyan-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Thông hiểu</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Giao tuyến của $(SAB)$ và $(SCD)$ là:\n    </p>\n\n    <div class=\"space-y-1.5 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Đường thẳng $SO$ với $O$ là tâm hình bình hành</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Đường thẳng qua $S$ và song song với $AD$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> Đường thẳng $d$ đi qua $S$ và $d \\parallel AB \\parallel CD$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Đường thẳng $AC$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Cho hình chóp S.ABCD có đáy ABCD là hình bình hành. Giao tuyến của hai mặt phẳng SAB và SCD là: Phương án A: Đường thẳng SO với O là tâm hình bình hành; Phương án B: Đường thẳng đi qua S và song song với AD; Phương án C: Đường thẳng đi qua S và song song với AB và CD; Phương án D: Đường thẳng AC. Các em có 15 giây chọn đáp án.",
+      "startTime": 136.97,
+      "endTime": 170.45,
+      "duration": 33.48
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: GIAO TUYẾN QUA $S$ VÀ SONG SONG $AB$",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • ÁP DỤNG ĐỊNH LÍ GIAO TUYẾN 1",
+      "mascotMode": "celebrating",
+      "mascotTip": "$S$ là điểm chung, $AB \\subset (SAB), CD \\subset (SCD), AB \\parallel CD \\implies d$ qua $S$ và $d \\parallel AB \\parallel CD$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Chứng minh chuẩn SGK:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Điểm $S \\in (SAB) \\cap (SCD) \\implies S$ là điểm chung.</p>\n      <p>• Có $AB \\subset (SAB)$ và $CD \\subset (SCD)$ mà $AB \\parallel CD$ (do $ABCD$ là hình bình hành).</p>\n      <p>• Theo Định lí giao tuyến 1, giao tuyến của $(SAB)$ và $(SCD)$ là đường thẳng $d$ đi qua $S$ và:</p>\n      <p class=\"font-mono text-center text-amber-300\">$$d \\parallel AB \\parallel CD$$</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: Đường thẳng d đi qua S và song song với AB và CD. Lời giải: Ta có S là một điểm chung của hai mặt phẳng SAB và SCD. Mặt phẳng SAB chứa đường thẳng AB, mặt phẳng SCD chứa đường thẳng CD. Vì ABCD là hình bình hành nên AB song song CD. Áp dụng Định lí giao tuyến 1, giao tuyến của hai mặt phẳng này là đường thẳng d đi qua điểm chung S và song song với AB và CD.",
+      "startTime": 170.45,
+      "endTime": 199.08,
+      "duration": 28.63
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. CÔNG THỨC ĐẾM VÀ TÍNH CHẤT CỦA CÁC KHỐI ĐA DIỆN",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • HÌNH CHÓP, TỨ DIỆN, LĂNG TRỤ, HÌNH HỘP",
+      "mascotMode": "pointer",
+      "mascotTip": "Ghi nhớ bảng chỉ số: Hình hộp có 8 đỉnh, 12 cạnh, 6 mặt, 4 đường chéo!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-950 to-slate-900 p-4 rounded-xl border border-purple-500/40 text-xs\">\n    <div class=\"font-bold text-purple-300 text-sm mb-2\">Bảng Tổng Kết Đa Diện Chương IV</div>\n    <div class=\"grid grid-cols-2 gap-2.5\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Hình chóp $n$-giác:</b><br/>\n        • Đỉnh ($V$): $n + 1$<br/>\n        • Cạnh ($E$): $2n$ ($n$ cạnh đáy $+ n$ cạnh bên)<br/>\n        • Mặt ($F$): $n + 1$ ($1$ đáy $+ n$ mặt bên)\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Hình lăng trụ $n$-giác:</b><br/>\n        • Đỉnh ($V$): $2n$<br/>\n        • Cạnh ($E$): $3n$ ($2n$ cạnh đáy $+ n$ cạnh bên)<br/>\n        • Mặt ($F$): $n + 2$ ($2$ đáy $+ n$ mặt bên)\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Hình hộp:</b><br/>\n        • 8 đỉnh, 12 cạnh, 6 mặt bình hành.<br/>\n        • 4 đường chéo cắt nhau tại tâm $O$.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-rose-400\">\n        <b class=\"text-rose-300\">Hình tứ diện:</b><br/>\n        • 4 đỉnh, 6 cạnh, 4 mặt tam giác.<br/>\n        • Có 3 cặp cạnh đối diện chéo nhau.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúng ta cùng tổng kết bảng chỉ số của các khối đa diện thường gặp: Tứ diện có 4 đỉnh, 6 cạnh và 4 mặt. Hình chóp n giác có n cộng 1 đỉnh, 2n cạnh và n cộng 1 mặt. Hình lăng trụ n giác có 2n đỉnh, 3n cạnh và n cộng 2 mặt. Đặc biệt, hình hộp có 8 đỉnh, 12 cạnh, 6 mặt hình bình hành và 4 đường chéo đồng quy tại trung điểm mỗi đường.",
+      "startTime": 199.08,
+      "endTime": 223.75,
+      "duration": 24.67
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: TÍNH SỐ ĐƯỜNG CHÉO VÀ CẶP MẶT SONG SONG CỦA HÌNH HỘP",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • BÀI TOÁN TÍNH TOÁN HÌNH HỌP 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Hình hộp có 6 mặt tạo thành 3 cặp mặt đối diện song song, và đúng 4 đường chéo!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (30s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Một hình hộp $ABCD.A'B'C'D'$ có tất cả bao nhiêu đường chéo và bao nhiêu cặp mặt đối diện song song?\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>A.</b> 4 đường chéo, 3 cặp mặt song song</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> 6 đường chéo, 3 cặp mặt song song</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> 4 đường chéo, 6 cặp mặt song song</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> 8 đường chéo, 4 cặp mặt song song</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho một hình hộp ABCD.A'B'C'D'. Hỏi hình hộp này có tất cả bao nhiêu đường chéo và có bao nhiêu cặp mặt phẳng đối diện song song với nhau? Phương án A: 4 đường chéo và 3 cặp mặt đối diện song song; Phương án B: 6 đường chéo và 3 cặp mặt đối diện song song; Phương án C: 4 đường chéo và 6 cặp mặt đối diện song song; Phương án D: 8 đường chéo và 4 cặp mặt đối diện song song. Các em có 30 giây suy nghĩ.",
+      "startTime": 223.75,
+      "endTime": 247.8,
+      "duration": 24.05
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: 4 ĐƯỜNG CHÉO VÀ 3 CẶP MẶT SONG SONG",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • CẤU TRÚC ĐỐI XỨNG HÌNH HỘP",
+      "mascotMode": "celebrating",
+      "mascotTip": "4 đường chéo là $AC', BD', CA', DB'$. 3 cặp mặt đối diện là đáy trên-dưới và 2 cặp mặt bên đối diện!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>4 đường chéo của hình hộp:</b> $AC', BD', CA', DB'$ (chúng cắt nhau tại trung điểm của mỗi đường).</p>\n      <p>• <b>3 cặp mặt đối diện song song:</b></p>\n      <p class=\"font-mono text-cyan-300\">1. $(ABCD) \\parallel (A'B'C'D')$<br/>2. $(ABB'A') \\parallel (CDD'C')$<br/>3. $(ADD'A') \\parallel (BCC'B')$</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án A.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là A: 4 đường chéo và 3 cặp mặt phẳng đối diện song song. Bốn đường chéo nối các đỉnh đối diện là AC', BD', CA' và DB', cả bốn đoạn thẳng này đồng quy tại trung điểm của mỗi đường. Sáu mặt của hình hộp chia thành 3 cặp mặt đối diện song song: cặp thứ nhất là hai đáy ABCD và A'B'C'D'; cặp thứ hai là ABB'A' và CDD'C'; cặp thứ ba là ADD'A' và BCC'B'.",
+      "startTime": 247.8,
+      "endTime": 271.58,
+      "duration": 23.78
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI TỔNG HỢP LÝ THUYẾT CHƯƠNG IV",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • 4 MỆNH ĐỀ ĐÁNH GIÁ NĂNG LỰC TOÀN CHƯƠNG",
+      "mascotMode": "thinking",
+      "mascotTip": "Rà soát kĩ từng mệnh đề quan hệ song song trong không gian!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded\">Ví dụ 4 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Định dạng thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Xét tính Đúng / Sai của các khẳng định toàn chương:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> Nếu $a \\parallel (P)$ thì qua $a$ có duy nhất một mặt phẳng song song với $(P)$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Hai đường thẳng phân biệt không cắt nhau thì song song với nhau.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Phép chiếu song song bảo toàn tỉ số độ dài của hai đoạn thẳng cùng thuộc một đường thẳng.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Thiết diện của hình chóp tứ giác luôn luôn là một tứ giác.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Xét tính Đúng hay Sai của các khẳng định sau về toàn bộ lý thuyết Chương 4: Mệnh đề a: Nếu đường thẳng a song song với mặt phẳng P thì có duy nhất một mặt phẳng chứa a và song song với P. Mệnh đề b: Hai đường thẳng phân biệt không cắt nhau thì luôn luôn song song với nhau. Mệnh đề c: Phép chiếu song song luôn bảo toàn tỉ số độ dài của hai đoạn thẳng cùng nằm trên một đường thẳng. Mệnh đề d: Thiết diện của hình chóp tứ giác cắt bởi một mặt phẳng bất kì luôn là một tứ giác. Các em có 30 giây suy nghĩ.",
+      "startTime": 271.58,
+      "endTime": 311.38,
+      "duration": 39.79
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC MỤC 1",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 1 • CỦNG CỐ CHẮC CHẮN NỀN TẢNG",
+      "mascotMode": "celebrating",
+      "mascotTip": "Thiết diện chóp tứ giác có thể là tam giác, tứ giác hoặc ngũ giác!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Đáp án và phân tích:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>a) ĐÚNG:</b> Hệ quả tính chất duy nhất của mặt phẳng song song.</p>\n      <p>• <b>b) SAI:</b> Hai đường thẳng không cắt nhau có thể <b>chéo nhau</b>.</p>\n      <p>• <b>c) ĐÚNG:</b> Bảo toàn tỉ số đoạn thẳng thẳng hàng hoặc song song.</p>\n      <p>• <b>d) SAI:</b> Thiết diện chóp tứ giác có thể là <b>tam giác, tứ giác hoặc ngũ giác</b>.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">⭐ TỔNG KẾT MỤC 1: Đã hệ thống hóa toàn bộ sơ đồ tư duy lý thuyết Chương IV!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chúc mừng các em đã hoàn thành Mục 1 Ôn tập chương 4. Giải thích chi tiết Ví dụ 4: Mệnh đề a ĐÚNG vì đây là hệ quả của tính chất 1 Bài 13. Mệnh đề b SAI vì hai đường thẳng không cắt nhau có thể chéo nhau. Mệnh đề c ĐÚNG theo tính chất 4 của phép chiếu song song. Mệnh đề d SAI vì thiết diện của hình chóp tứ giác có thể là tam giác (nếu chỉ cắt 3 mặt) hoặc ngũ giác (nếu cắt cả 4 mặt bên và mặt đáy). Hẹn gặp lại các em ở Mục 2: Các phương pháp giải toán trọng tâm.",
+      "startTime": 311.38,
+      "endTime": 350.18,
+      "duration": 38.81
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_ontap_c4_muc1 = root.G11_CHAPTER4_DATA.g11_ontap_c4_muc1;
+
+  root.G11_CHAPTER4_DATA.g11_ontap_c4_muc2 = {
+  "lessonId": "toan11_ontap_c4",
+  "lessonTitle": "Bài tập cuối chương IV: Quan hệ song song trong không gian",
+  "sectionId": "g11_ontap_c4_muc2",
+  "sectionTitle": "Mục 2: 4 Dạng toán cốt lõi & Phương pháp giải kinh điển",
+  "audio": "/audio/g11_ontap_c4_muc2.mp3",
+  "audioSrc": "./audio/g11_ontap_c4_muc2.mp3",
+  "audio_src": "./audio/g11_ontap_c4_muc2.mp3",
+  "title": "Mục 2: 4 Dạng toán cốt lõi & Phương pháp giải kinh điển",
+  "owl_tip": "4 dạng cốt lõi: Giao tuyến, Giao điểm, Chứng minh song song và Xác định thiết diện!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. DẠNG TOÁN 1: TÌM GIAO TUYẾN CỦA HAI MẶT PHẲNG",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. DẠNG TOÁN 2: TÌM GIAO ĐIỂM CỦA ĐƯỜNG THẲNG VÀ MẶT PHẲNG",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ QUAN HỆ SONG SONG HÌNH CHÓP",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC MỤC 2",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 446.83,
+  "formattedDuration": "07:26",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. DẠNG TOÁN 1: TÌM GIAO TUYẾN CỦA HAI MẶT PHẲNG",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • PHƯƠNG PHÁP 2 ĐIỂM CHUNG VÀ PHƯƠNG SONG SONG",
+      "mascotMode": "pointer",
+      "mascotTip": "Cách 1: Tìm 2 điểm chung phân biệt. Cách 2: Tìm 1 điểm chung và phương giao tuyến song song!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-950 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Chiến Thuật 2 Hướng Tìm Giao Tuyến Chuẩn Mực</div>\n    <div class=\"grid grid-cols-2 gap-3\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Hướng 1: Hai điểm chung phân biệt</b>\n        <p class=\"text-slate-300 mt-1\">\n          • Tìm $A \\in (P) \\cap (Q)$.<br/>\n          • Tìm $B \\in (P) \\cap (Q)$.<br/>\n          $\\implies$ Giao tuyến là đường thẳng $AB$.\n        </p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Hướng 2: Một điểm chung + Phương song song</b>\n        <p class=\"text-slate-300 mt-1\">\n          • Điểm chung $S \\in (P) \\cap (Q)$.<br/>\n          • $a \\subset (P), b \\subset (Q)$ với $a \\parallel b$.<br/>\n          $\\implies$ Giao tuyến $d$ qua $S$ và $d \\parallel a \\parallel b$.\n        </p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Mục 2: Phương pháp giải các dạng toán trọng tâm của Chương 4. Dạng toán số 1 là Tìm giao tuyến của hai mặt phẳng: Ta có hai chiến thuật: Chiến thuật 1: Tìm hai điểm chung phân biệt A và B, giao tuyến là đường thẳng AB. Chiến thuật 2: Khi chỉ thấy một điểm chung duy nhất S, nhưng hai mặt phẳng lần lượt chứa hai đường thẳng song song a và b, ta áp dụng Định lí giao tuyến 1 để kết luận giao tuyến là đường thẳng đi qua S và song song với a và b.",
+      "startTime": 0.0,
+      "endTime": 37.58,
+      "duration": 37.58
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. DẠNG TOÁN 2: TÌM GIAO ĐIỂM CỦA ĐƯỜNG THẲNG VÀ MẶT PHẲNG",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • PHƯƠNG PHÁP MẶT PHẲNG PHỤ TRỢ",
+      "mascotMode": "explaining",
+      "mascotTip": "Quy trình 3 bước: Chọn mp phụ $(\\beta) \\supset d \\to$ Tìm giao tuyến $a = (\\beta) \\cap (\\alpha) \\to$ Giao điểm $I = d \\cap a$!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-emerald-950 to-teal-950 p-4 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"font-bold text-emerald-300 text-sm mb-2\">Thuật Toán 3 Bước Tìm Giao Điểm $d \\cap (\\alpha)$</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Bước 1: Chọn mặt phẳng phụ $(\\beta)$ chứa $d$</b>\n        <p class=\"text-slate-300 mt-0.5\">Ưu tiên mặt phẳng đi qua đỉnh hoặc chứa đường chéo đáy dễ tìm giao tuyến.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Bước 2: Tìm giao tuyến $a = (\\beta) \\cap (\\alpha)$</b>\n        <p class=\"text-slate-300 mt-0.5\">Sử dụng phương pháp 2 điểm chung hoặc định lí giao tuyến song song.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Bước 3: Lấy giao điểm trong $(\\beta)$</b>\n        <p class=\"text-slate-300 mt-0.5\">Trong $(\\beta)$, gọi $I = d \\cap a \\implies I$ chính là giao điểm cần tìm: $I = d \\cap (\\alpha)$.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Dạng toán số 2: Tìm giao điểm của đường thẳng d và mặt phẳng alpha. Nếu đường thẳng d và một đường thẳng a trong alpha đồng phẳng và cắt nhau thì giao điểm I chính là giao điểm cần tìm. Nếu chưa thấy đường thẳng a, ta sử dụng mặt phẳng phụ: Bước 1: Chọn mặt phẳng phụ beta chứa d. Bước 2: Tìm giao tuyến a của beta với alpha. Bước 3: Trong mặt phẳng beta, cho d cắt a tại điểm I. Điểm I chính là giao điểm của đường thẳng d với mặt phẳng alpha.",
+      "startTime": 37.58,
+      "endTime": 74.86,
+      "duration": 37.27
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: TÌM GIAO ĐIỂM ĐƯỜNG THẲNG VÀ MẶT PHẲNG",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • BÀI TOÁN TỨ DIỆN 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Chọn mặt phẳng phụ $(BCD)$ chứa đường thẳng $MN$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Nhận biết</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho tứ diện $ABCD$. Lấy $M \\in BC, N \\in CD$ sao cho $MN \\not\\parallel BD$. Giao điểm của $MN$ với $(ABD)$ là giao điểm của $MN$ với:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Đường thẳng $AB$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> Đường thẳng $AD$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>C.</b> Đường thẳng $BD$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Đường thẳng $BC$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1: Cho tứ diện ABCD. Gọi M, N lần lượt là hai điểm trên cạnh BC và CD sao cho MN không song song với BD. Giao điểm của đường thẳng MN với mặt phẳng ABD là giao điểm của MN với đường thẳng nào sau đây? Phương án A: Đường thẳng AB; Phương án B: Đường thẳng AD; Phương án C: Đường thẳng BD; Phương án D: Đường thẳng BC. Các em có 15 giây chọn đáp án.",
+      "startTime": 74.86,
+      "endTime": 109.78,
+      "duration": 34.92
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: ĐÁP ÁN C (GIAO ĐIỂM VỚI $BD$)",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • XÉT TRONG MẶT PHẲNG ĐÁY $(BCD)$",
+      "mascotMode": "celebrating",
+      "mascotTip": "$MN$ và $BD$ cùng nằm trong mặt phẳng $(BCD)$ và cắt nhau tại $I \\in (ABD)$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Chứng minh chuẩn xác:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Trong mặt phẳng $(BCD)$: có $MN \\subset (BCD)$ và $BD \\subset (BCD)$.</p>\n      <p>• Vì $MN \\not\\parallel BD$ nên trong $(BCD)$, kéo dài $MN$ cắt $BD$ tại $I = MN \\cap BD$.</p>\n      <p>• Do $I \\in BD$ mà $BD \\subset (ABD) \\implies I \\in (ABD)$.</p>\n      <p>• Vậy $I = MN \\cap (ABD)$ chính là giao điểm của $MN$ với đường thẳng $BD$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án C.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là C: Đường thẳng BD. Lời giải: Vì M thuộc BC và N thuộc CD nên đường thẳng MN nằm trọn vẹn trong mặt phẳng BCD. Trong mặt phẳng BCD, vì MN không song song với BD nên hai đường thẳng này kéo dài sẽ cắt nhau tại một điểm I. Do I thuộc đường thẳng BD, mà BD nằm trong mặt phẳng ABD, nên điểm I thuộc mặt phẳng ABD. Vậy I chính là giao điểm của đường thẳng MN với mặt phẳng ABD.",
+      "startTime": 109.78,
+      "endTime": 147.53,
+      "duration": 37.75
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. DẠNG TOÁN 3: CHỨNG MINH ĐƯỜNG THẲNG SONG SONG MẶT PHẲNG",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • PHƯƠNG PHÁP ĐƯỜNG THẲNG PHỤ ĐỒNG PHẲNG",
+      "mascotMode": "explaining",
+      "mascotTip": "Muốn $d \\parallel (P)$: Chứng minh $d \\not\\subset (P)$ và tìm $d' \\subset (P)$ sao cho $d \\parallel d'$!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-indigo-950 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Quy Trình Chứng Minh $d \\parallel (P)$ Chuẩn Mực</div>\n    <div class=\"p-3 bg-slate-900 rounded border border-blue-400/30 text-amber-300 font-serif text-sm\">\n      $$\\begin{cases} d \\not\\subset (P) \\\\ d' \\subset (P) \\\\ d \\parallel d' \\end{cases} \\implies d \\parallel (P)$$\n    </div>\n    <div class=\"space-y-1 text-slate-300 mt-2\">\n      <p>• <b>Kỹ thuật tìm $d'$:</b> Thường là cạnh đối diện trong hình bình hành, đường trung bình trong tam giác, hoặc sử dụng tỉ số định lí Ta-lét.</p>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Dạng toán số 3: Chứng minh đường thẳng d song song với mặt phẳng alpha. Phương pháp chuẩn: Bước 1: Khẳng định đường thẳng d không nằm trong mặt phẳng alpha. Bước 2: Tìm hoặc dựng trong mặt phẳng alpha một đường thẳng d phẩy song song với d. Thông thường d phẩy là đường trung bình, cạnh đối của hình bình hành hoặc áp dụng định lí Ta-lét. Bước 3: Kết luận d song song với mặt phẳng alpha.",
+      "startTime": 147.53,
+      "endTime": 178.32,
+      "duration": 30.79
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: CHỨNG MINH ĐƯỜNG THẲNG SONG SONG VỚI MẶT PHẲNG",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • BÀI TOÁN HÌNH CHÓP TỨ GIÁC 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "$M, N$ là trung điểm $SA, SB \\implies MN \\parallel AB \\parallel CD \\implies MN \\parallel (SCD)$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-teal-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-teal-500/20 text-teal-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Thông hiểu</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình chóp $S.ABCD$ đáy hình bình hành. Gọi $M, N$ là trung điểm $SA, SB$. Khẳng định nào <b>đúng</b>?\n    </p>\n\n    <div class=\"space-y-1.5 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> $MN \\parallel (SAB)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> $MN \\parallel (SCD)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> $MN \\parallel (SBC)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $MN$ cắt $(SCD)$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian tính toán:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Cho hình chóp S.ABCD có đáy ABCD là hình bình hành. Gọi M, N lần lượt là trung điểm của SA và SB. Khẳng định nào sau đây là đúng? Phương án A: MN song song mặt phẳng SAB; Phương án B: MN song song mặt phẳng SCD; Phương án C: MN song song mặt phẳng SBC; Phương án D: MN cắt mặt phẳng SCD. Các em có 15 giây suy nghĩ.",
+      "startTime": 178.32,
+      "endTime": 210.43,
+      "duration": 32.11
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: $MN \\parallel (SCD)$",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • BƯỚC NỐI TÍNH CHẤT TRUNG BÌNH",
+      "mascotMode": "celebrating",
+      "mascotTip": "$MN \\not\\subset (SCD)$ và $MN \\parallel CD \\subset (SCD) \\implies MN \\parallel (SCD)$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Chứng minh chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Trong $\\triangle SAB$: $MN$ là đường trung bình $\\implies MN \\parallel AB$.</p>\n      <p>• Do $ABCD$ là hình bình hành $\\implies AB \\parallel CD$.</p>\n      <p>• Suy ra $MN \\parallel CD$.</p>\n      <p>• Vì $MN \\not\\subset (SCD)$ và $CD \\subset (SCD)$ nên $MN \\parallel (SCD)$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là B: MN song song mặt phẳng SCD. Lời giải: Trong tam giác SAB, M và N là trung điểm của SA và SB nên MN là đường trung bình, suy ra MN song song AB. Vì ABCD là hình bình hành nên AB song song CD. Từ đó suy ra MN song song CD. Vì CD nằm trong mặt phẳng SCD còn MN không nằm trong SCD, nên theo dấu hiệu nhận biết, MN song song với mặt phẳng SCD.",
+      "startTime": 210.43,
+      "endTime": 248.52,
+      "duration": 38.09
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. DẠNG TOÁN 4: CHỨNG MINH HAI MẶT PHẲNG SONG SONG",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • BẢN ĐỒ TƯ DUY 2 ĐƯỜNG CẮT NHAU",
+      "mascotMode": "pointer",
+      "mascotTip": "Tìm 2 đường cắt nhau trong $(P)$ cùng song song $(Q)$ $\\implies (P) \\parallel (Q)$!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-950 to-indigo-950 p-4 rounded-xl border border-purple-500/40 text-xs\">\n    <div class=\"font-bold text-purple-300 text-sm mb-2\">Bản Đồ Chứng Minh $(P) \\parallel (Q)$</div>\n    <div class=\"p-3 bg-slate-900 rounded border border-purple-400/30 text-amber-300 font-serif text-sm\">\n      $$\\begin{cases} a \\subset (P), \\ b \\subset (P) \\\\ a \\cap b = \\{I\\} \\\\ a \\parallel a' \\subset (Q) \\implies a \\parallel (Q) \\\\ b \\parallel b' \\subset (Q) \\implies b \\parallel (Q) \\end{cases} \\implies (P) \\parallel (Q)$$\n    </div>\n  </div>\n</div>\n",
+      "narration": "Dạng toán số 4: Chứng minh hai mặt phẳng song song. Phương pháp cốt lõi: Ta tìm trong mặt phẳng P hai đường thẳng a và b cắt nhau tại một điểm. Sau đó chứng minh a song song với mặt phẳng Q và b song song với mặt phẳng Q. Từ đó kết luận mặt phẳng P song song với mặt phẳng Q theo Định lí 1. Đây là câu hỏi rất hay xuất hiện trong các đề thi THPT.",
+      "startTime": 248.52,
+      "endTime": 277.06,
+      "duration": 28.54
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: CHỨNG MINH HAI MẶT PHẲNG SONG SONG TRONG HÌNH HỘP",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • CẶP MẶT PHẲNG CHÉO KINH ĐIỂN 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Mặt phẳng $(B D A')$ và mặt phẳng $(B' D' C)$ luôn song song với nhau!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (30s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình hộp $ABCD.A'B'C'D'$. Mặt phẳng $(BDA')$ song song với mặt phẳng nào?\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>A.</b> $(B'D'C)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>B.</b> $(ABCD)$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> $(A'B'C'D')$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $(ACC'A')$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian tư duy:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho hình hộp ABCD.A'B'C'D'. Mặt phẳng B D A' song song với mặt phẳng nào sau đây? Phương án A: Mặt phẳng B' D' C; Phương án B: Mặt phẳng A B C D; Phương án C: Mặt phẳng A' B' C' D'; Phương án D: Mặt phẳng A C C' A'. Các em có 30 giây suy nghĩ.",
+      "startTime": 277.06,
+      "endTime": 307.68,
+      "duration": 30.62
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: $(BDA') \\parallel (B'D'C)$",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • CHỨNG MINH 2 CẶP ĐƯỜNG THẲNG SONG SONG",
+      "mascotMode": "celebrating",
+      "mascotTip": "$BD \\parallel B'D'$ và $BA' \\parallel CD' \\implies (BDA') \\parallel (B'D'C)$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải hình học chuẩn mực:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Trong hình hộp: $BD \\parallel B'D' \\subset (B'D'C) \\implies BD \\parallel (B'D'C)$.</p>\n      <p>• Tứ giác $A'BCD'$ là hình bình hành vì $A'B \\parallel D'C$ (do $A'B \\parallel D'C'$ và cạnh bên) $\\implies A'B \\parallel D'C \\subset (B'D'C) \\implies A'B \\parallel (B'D'C)$.</p>\n      <p>• Trong $(BDA')$ có $BD \\cap A'B = \\{B\\}$ nên $(BDA') \\parallel (B'D'C)$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án A.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là A: Mặt phẳng B' D' C. Chứng minh: Thứ nhất, tứ giác B D D' B' là hình bình hành nên BD song song B' D', mà B' D' nằm trong mặt phẳng B' D' C nên BD song song với B' D' C. Thứ hai, tứ giác A B C D' là hình bình hành do có AB song song và bằng C D' (do cùng song song và bằng A' B'). Do đó B A' song song C D', mà C D' nằm trong B' D' C nên B A' song song với B' D' C. Vì BD và B A' cắt nhau tại B nên mặt phẳng B D A' song song với mặt phẳng B' D' C.",
+      "startTime": 307.68,
+      "endTime": 359.86,
+      "duration": 52.18
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: ĐỀ THI ĐÚNG / SAI VỀ QUAN HỆ SONG SONG HÌNH CHÓP",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • 4 MỆNH ĐỀ PHÂN HÓA 30 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Kiểm tra kĩ từng mệnh đề giao tuyến và song song!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded\">Ví dụ 4 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Định dạng thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang ($AB \\parallel CD, AB > CD$). Xét tính Đúng / Sai:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> $(SAB) \\cap (SCD) = d$ qua $S$ và $d \\parallel AB \\parallel CD$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Giao tuyến của $(SAD)$ và $(SBC)$ là đường thẳng đi qua $S$ và giao điểm $E = AD \\cap BC$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Đường thẳng $DM$ cắt mặt phẳng $(SAB)$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Đường thẳng $AB \\parallel (SCD)$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Cho hình chóp S.ABCD có đáy ABCD là hình thang với đáy lớn AB song song đáy nhỏ CD. Gọi M là trung điểm của cạnh SC. Xét tính Đúng hay Sai của các khẳng định sau: Mệnh đề a: Giao tuyến của hai mặt phẳng SAB và SCD là đường thẳng đi qua S và song song với AB. Mệnh đề b: Giao tuyến của hai mặt phẳng SAD và SBC là đường thẳng đi qua S. Mệnh đề c: Đường thẳng DM cắt mặt phẳng SAB. Mệnh đề d: Đường thẳng AB song song với mặt phẳng SCD. Các em có 30 giây suy nghĩ.",
+      "startTime": 359.86,
+      "endTime": 404.35,
+      "duration": 44.5
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC MỤC 2",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 2 • KẾT QUẢ ĐỐI CHIẾU 4 Ý ĐỀU ĐÚNG",
+      "mascotMode": "celebrating",
+      "mascotTip": "Cả 4 mệnh đề đều ĐÚNG $100\\%$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Đáp án và giải thích chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>a) ĐÚNG:</b> Định lí giao tuyến 1 vì $AB \\parallel CD$.</p>\n      <p>• <b>b) ĐÚNG:</b> $E = AD \\cap BC$ trong đáy $\\implies SE = (SAD) \\cap (SBC)$.</p>\n      <p>• <b>c) ĐÚNG:</b> Trong $(SCD)$, $DM$ cắt giao tuyến $d \\implies DM$ cắt $(SAB)$.</p>\n      <p>• <b>d) ĐÚNG:</b> $AB \\not\\subset (SCD)$ và $AB \\parallel CD \\subset (SCD) \\implies AB \\parallel (SCD)$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">⭐ TỔNG KẾT MỤC 2: Thành thạo trọn bộ 4 dạng toán trọng tâm của quan hệ song song!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Giải thích chi tiết Ví dụ 4: Cả bốn mệnh đề đều ĐÚNG. Mệnh đề a ĐÚNG vì AB song song CD theo định lí giao tuyến 1. Mệnh đề b ĐÚNG vì hai cạnh bên AD và BC của hình thang cắt nhau tại E, điểm chung thứ nhất là S, điểm chung thứ hai là E, giao tuyến là SE. Mệnh đề c ĐÚNG vì DM kéo dài cắt giao tuyến của mặt phẳng phụ SCD với SAB. Mệnh đề d ĐÚNG vì AB song song CD nằm trong SCD và AB không thuộc SCD. Hẹn gặp lại các em ở Mục 3: Kỹ thuật xác định thiết diện nâng cao.",
+      "startTime": 404.35,
+      "endTime": 446.83,
+      "duration": 42.48
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_ontap_c4_muc2 = root.G11_CHAPTER4_DATA.g11_ontap_c4_muc2;
+
+  root.G11_CHAPTER4_DATA.g11_ontap_c4_muc3 = {
+  "lessonId": "toan11_ontap_c4",
+  "lessonTitle": "Bài tập cuối chương IV: Quan hệ song song trong không gian",
+  "sectionId": "g11_ontap_c4_muc3",
+  "sectionTitle": "Mục 3: Luyện đề tổng hợp chuẩn cấu trúc Bộ GD&ĐT 2025",
+  "audio": "/audio/g11_ontap_c4_muc3.mp3",
+  "audioSrc": "./audio/g11_ontap_c4_muc3.mp3",
+  "audio_src": "./audio/g11_ontap_c4_muc3.mp3",
+  "title": "Mục 3: Luyện đề tổng hợp chuẩn cấu trúc Bộ GD&ĐT 2025",
+  "owl_tip": "Luyện đề theo ma trận 3 phần: Trắc nghiệm 4 lựa chọn, Trắc nghiệm Đúng/Sai và Trả lời ngắn!",
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: 1. CHIẾN LƯỢC TỔNG QUÁT TÌM THIẾT DIỆN NÂNG CAO",
+      "scenes": [
+        1
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: 2. BÀI TOÁN KINH ĐIỂN: THIẾT DIỆN SONG SONG HAI ĐƯỜNG THẲNG CHÉO NHAU",
+      "scenes": [
+        2
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: 4 Ví dụ minh họa trọng tâm & Đồng hồ bấm giờ",
+      "scenes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: 11. VÍ DỤ 4: CÂU HỎI TRẢ LỜI NGẮN (ĐIỀN ĐÁP SỐ CHUẨN TNMAKER)",
+      "scenes": [
+        11
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: 12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC TOÀN KHÓA CHƯƠNG IV",
+      "scenes": [
+        12
+      ]
+    }
+  ],
+  "timeline": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "totalDuration": 398.5,
+  "formattedDuration": "06:38",
+  "scenes": [
+    {
+      "sceneIndex": 1,
+      "title": "1. CHIẾN LƯỢC TỔNG QUÁT TÌM THIẾT DIỆN NÂNG CAO",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • BƯỚC ĐỘT PHÁ TÌM ĐA GIÁC THIẾT DIỆN",
+      "mascotMode": "pointer",
+      "mascotTip": "Tìm các đoạn giao tuyến khép kín của mặt phẳng cắt với tất cả các mặt của hình đa diện!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-teal-950 to-indigo-950 p-4 rounded-xl border border-teal-500/40 text-xs\">\n    <div class=\"font-bold text-teal-300 text-sm mb-2\">Quy Trình Tìm Thiết Diện Khép Kín</div>\n    <div class=\"space-y-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">1. Xác định giao tuyến trực tiếp:</b>\n        <p class=\"text-slate-300 mt-1\">Tìm các đoạn giao tuyến có sẵn trên các mặt chứa 2 điểm chung.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">2. Kẻ giao tuyến song song (nếu có):</b>\n        <p class=\"text-slate-300 mt-1\">Nếu mặt phẳng cắt song song với một đường thẳng hoặc một mặt phẳng, lập tức áp dụng Định lí giao tuyến để kẻ các đoạn song song.</p>\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">3. Kéo dài cắt cạnh:</b>\n        <p class=\"text-slate-300 mt-1\">Kéo dài các đoạn giao tuyến để cắt các cạnh kéo dài của đa diện, tạo điểm chung mới cho các mặt còn lại.</p>\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Chào mừng các em đến với Mục 3: Kỹ thuật xác định thiết diện nâng cao và Đề rèn luyện trắc nghiệm chuẩn cấu trúc Bộ Giáo dục. Thiết diện của một hình đa diện khi cắt bởi một mặt phẳng alpha là đa giác phẳng giới hạn bởi các đoạn giao tuyến của alpha với các mặt của hình đa diện. Để tìm thiết diện nâng cao, ta kết hợp linh hoạt hai công cụ: kéo dài đường thẳng để tìm giao điểm mới trên các mặt phẳng phụ, và sử dụng các định lí giao tuyến song song để kẻ các đường song song.",
+      "startTime": 0.0,
+      "endTime": 35.5,
+      "duration": 35.5
+    },
+    {
+      "sceneIndex": 2,
+      "title": "2. BÀI TOÁN KINH ĐIỂN: THIẾT DIỆN SONG SONG HAI ĐƯỜNG THẲNG CHÉO NHAU",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • HÌNH BÌNH HÀNH THIẾT DIỆN",
+      "mascotMode": "explaining",
+      "mascotTip": "Mặt phẳng song song với 2 cạnh đối diện của tứ diện cắt tứ diện theo thiết diện là HÌNH BÌNH HÀNH!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-purple-950 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Định Lí Thiết Diện Song Song Hai Cạnh Đối Của Tứ Diện</div>\n    <div class=\"p-3 bg-slate-900 rounded border border-blue-400/30 font-serif text-sm text-amber-300\">\n      $$\\begin{cases} (\\alpha) \\parallel AB \\\\ (\\alpha) \\parallel CD \\end{cases} \\implies \\begin{cases} MN \\parallel PQ \\parallel AB \\\\ MQ \\parallel NP \\parallel CD \\end{cases} \\implies MNPQ \\text{ là hình bình hành}$$\n    </div>\n    <div class=\"p-2.5 bg-slate-800 rounded border-l-4 border-emerald-400 mt-2\">\n      <b class=\"text-emerald-300\">Đặc biệt:</b> Nếu $AB \\perp CD$ thì thiết diện là <b>hình chữ nhật</b>.<br/>\n      Nếu $AB \\perp CD$ và khoảng cách chia đều thì thiết diện là <b>hình vuông</b>.\n    </div>\n  </div>\n</div>\n",
+      "narration": "Một dạng bài toán kinh điển thường xuất hiện trong đề thi phân hóa cao: Cho tứ diện ABCD. Một mặt phẳng alpha song song với hai cạnh đối diện AB và CD cắt các cạnh AC, BC, BD, AD lần lượt tại M, N, P, Q. Khi đó, thiết diện MNPQ luôn luôn là một hình bình hành. Nếu tứ diện đều và mặt phẳng alpha đi qua trung điểm các cạnh thì thiết diện trở thành hình vuông.",
+      "startTime": 35.5,
+      "endTime": 69.1,
+      "duration": 33.6
+    },
+    {
+      "sceneIndex": 3,
+      "title": "3. VÍ DỤ 1: XÁC ĐỊNH HÌNH DẠNG THIẾT DIỆN CỦA TỨ DIỆN ĐỀU",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • BÀI TOÁN THIẾT DIỆN 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Tứ diện đều có các cạnh đối vuông góc nhau $\\implies$ thiết diện song song 2 cạnh đối là hình chữ nhật!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-amber-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded\">Ví dụ 1 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Thông hiểu</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho tứ diện đều $ABCD$ cạnh $a$. Mặt phẳng $(\\alpha)$ song song với $AB$ và $CD$. Thiết diện cắt bởi $(\\alpha)$ là hình gì?\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> Hình thang cân</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> Hình chữ nhật</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> Tam giác đều</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> Hình thoi</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian suy nghĩ:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 1: Cho tứ diện đều ABCD có tất cả các cạnh bằng a. Mặt phẳng alpha song song với hai cạnh đối diện AB và CD. Thiết diện của tứ diện cắt bởi mặt phẳng alpha luôn là hình gì? Phương án A: Hình thang cân; Phương án B: Hình chữ nhật; Phương án C: Tam giác đều; Phương án D: Hình thoi. Các em có 15 giây suy nghĩ.",
+      "startTime": 69.1,
+      "endTime": 98.69,
+      "duration": 29.59
+    },
+    {
+      "sceneIndex": 4,
+      "title": "4. LỜI GIẢI VÍ DỤ 1: THIẾT DIỆN LÀ HÌNH CHỮ NHẬT",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • TÍNH CHẤT VUÔNG GÓC CỦA CẶP CẠNH ĐỐI TỨ DIỆN ĐỀU",
+      "mascotMode": "celebrating",
+      "mascotTip": "Trong tứ diện đều, hai cạnh đối luôn vuông góc $AB \\perp CD \\implies$ hình bình hành có 1 góc vuông là hình chữ nhật!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Chứng minh hình học:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• $(\\alpha) \\parallel AB \\implies MN \\parallel PQ \\parallel AB$.</p>\n      <p>• $(\\alpha) \\parallel CD \\implies MQ \\parallel NP \\parallel CD$.</p>\n      <p>• Tứ giác $MNPQ$ có hai cặp cạnh đối song song $\\implies MNPQ$ là <b>hình bình hành</b>.</p>\n      <p>• Trong tứ diện đều $ABCD$, ta có tính chất $AB \\perp CD$.</p>\n      <p>• Vì $MN \\parallel AB$ và $MQ \\parallel CD \\implies MN \\perp MQ \\implies \\widehat{NMQ} = 90^\\circ$.</p>\n      <p>• Vậy thiết diện $MNPQ$ là <b>hình chữ nhật</b>.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là B: Hình chữ nhật. Lời giải: Vì mặt phẳng alpha song song với AB và CD nên thiết diện MNPQ có MN song song PQ song song AB, và MQ song song NP song song CD. Do đó MNPQ là hình bình hành. Mặt khác, trong tứ diện đều ABCD, hai cạnh đối diện AB và CD vuông góc với nhau. Vì MN song song AB và MQ song song CD nên MN cũng vuông góc với MQ. Hình bình hành MNPQ có một góc vuông nên là một hình chữ nhật.",
+      "startTime": 98.69,
+      "endTime": 140.88,
+      "duration": 42.19
+    },
+    {
+      "sceneIndex": 5,
+      "title": "5. CHU VI THIẾT DIỆN KHÔNG ĐỔI TRONG TỨ DIỆN ĐỀU",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • ĐỊNH LÍ BẢO TOÀN CHU VI KINH ĐIỂN",
+      "mascotMode": "explaining",
+      "mascotTip": "Chu vi thiết diện hình chữ nhật luôn bằng $2a$, không phụ thuộc vào vị trí mặt phẳng $(\\alpha)$!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-purple-950 to-slate-900 p-4 rounded-xl border border-purple-500/40 text-xs\">\n    <div class=\"font-bold text-purple-300 text-sm mb-2\">Định Lí Chu Vi Thiết Diện Bất Biến</div>\n    <p class=\"text-slate-300 leading-relaxed text-sm\">\n      Cho tứ diện đều $ABCD$ cạnh $a$. Mặt phẳng $(\\alpha) \\parallel AB, CD$ cắt $AC$ theo tỉ số $\\frac{AM}{AC} = x \\ (0 < x < 1)$.\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-3 mt-2 text-xs\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Độ dài các cạnh:</b><br/>\n        $MN = x \\cdot a$<br/>\n        $MQ = (1 - x) \\cdot a$\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Chu vi bất biến:</b><br/>\n        $$2(MN + MQ) = 2(xa + (1 - x)a) = 2a$$\n        (Không phụ thuộc vị trí $x$!).\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Một kết quả toán học vô cùng kì diệu của bài toán trên: Dù mặt phẳng alpha di chuyển ở bất kì vị trí nào song song với AB và CD, thì chu vi của hình chữ nhật thiết diện MNPQ luôn luôn là một hằng số không đổi và bằng hai lần độ dài cạnh a. Ta có MN bằng k lần AB, còn MQ bằng một trừ k lần CD. Tổng hai cạnh liên tiếp luôn bằng a, do đó chu vi luôn bằng 2a.",
+      "startTime": 140.88,
+      "endTime": 172.87,
+      "duration": 31.99
+    },
+    {
+      "sceneIndex": 6,
+      "title": "6. VÍ DỤ 2: DIỆN TÍCH THIẾT DIỆN LỚN NHẤT KHI NÀO?",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • BÀI TOÁN TỐI ƯU HÓA HÌNH HỌC 15 GIÂY",
+      "mascotMode": "thinking",
+      "mascotTip": "Bất đẳng thức Cauchy: $S = x(1-x)a^2 \\le \\frac{a^2}{4}$, đạt được khi $x = 1/2$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-teal-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-teal-500/20 text-teal-300 text-xs font-bold rounded\">Ví dụ 2 (15s)</span>\n      <span class=\"text-xs text-slate-400\">Mức độ: Vận dụng</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho tứ diện đều $ABCD$ cạnh $a$. Diện tích thiết diện $MNPQ$ lớn nhất bằng:\n    </p>\n\n    <div class=\"grid grid-cols-2 gap-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>A.</b> $\\frac{a^2}{2}$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-emerald-500 font-bold text-emerald-300\"><b>B.</b> $\\frac{a^2}{4}$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>C.</b> $\\frac{a^2}{8}$</div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700\"><b>D.</b> $\\frac{a^2\\sqrt{3}}{4}$</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-15s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian tính toán:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">15 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 2: Vẫn với tứ diện đều ABCD cạnh a và mặt phẳng alpha song song AB, CD. Diện tích thiết diện MNPQ đạt giá trị lớn nhất bằng bao nhiêu? Phương án A: a bình phương chia 2; Phương án B: a bình phương chia 4; Phương án C: a bình phương chia 8; Phương án D: a bình phương căn 3 chia 4. Các em có 15 giây tính toán.",
+      "startTime": 172.87,
+      "endTime": 201.48,
+      "duration": 28.61
+    },
+    {
+      "sceneIndex": 7,
+      "title": "7. LỜI GIẢI VÍ DỤ 2: $S_{\\max} = \\frac{a^2}{4}$",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • ÁP DỤNG BẤT ĐẲNG THỨC CAUCHY",
+      "mascotMode": "celebrating",
+      "mascotTip": "Diện tích lớn nhất khi thiết diện là HÌNH VUÔNG cạnh $\\frac{a}{2}$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải tối ưu chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Diện tích hình chữ nhật: $S(x) = MN \\cdot MQ = (x a) \\cdot ((1 - x) a) = a^2 \\cdot x(1 - x)$.</p>\n      <p>• Áp dụng BĐT Cauchy: $x(1 - x) \\le \\left(\\frac{x + 1 - x}{2}\\right)^2 = \\frac{1}{4}$.</p>\n      <p>• Dấu bằng xảy ra $\\iff x = 1 - x \\iff x = \\frac{1}{2}$ ($M, N, P, Q$ là trung điểm các cạnh).</p>\n      <p>• Khi đó thiết diện là <b>hình vuông</b> và $S_{\\max} = \\frac{a^2}{4}$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ Chọn đáp án B.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án đúng là B: a bình phương chia 4. Lời giải: Gọi x là tỉ số AM trên AC với x nằm trong khoảng từ 0 đến 1. Khi đó hai kích thước của hình chữ nhật thiết diện là MN bằng x nhân a và MQ bằng một trừ x nhân a. Diện tích hình chữ nhật là S bằng MN nhân MQ bằng x nhân một trừ x nhân a bình phương. Áp dụng bất đẳng thức Cô-si cho hai số dương x và một trừ x, ta có tích của chúng nhỏ hơn hoặc bằng tổng chia đôi tất cả bình phương, tức là 1 phần 4. Dấu bằng xảy ra khi x bằng một nửa, tức là M là trung điểm AC, khi đó thiết diện là hình vuông cạnh a chia 2.",
+      "startTime": 201.48,
+      "endTime": 234.55,
+      "duration": 33.07
+    },
+    {
+      "sceneIndex": 8,
+      "title": "8. CẤU TRÚC ĐỀ THI TỐT NGHIỆP THPT CHUẨN 2025",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • ĐỊNH HƯỚNG ÔN LUYỆN 3 PHẦN",
+      "mascotMode": "pointer",
+      "mascotTip": "Nắm chắc cấu trúc: Phần I (4 lựa chọn), Phần II (Đúng/Sai 4 ý), Phần III (Trả lời ngắn điền số)!",
+      "bodyHtml": "\n<div class=\"space-y-4\">\n  <div class=\"bg-gradient-to-r from-blue-950 to-slate-900 p-4 rounded-xl border border-blue-500/40 text-xs\">\n    <div class=\"font-bold text-blue-300 text-sm mb-2\">Đặc Tả Đề Thi Môn Toán Chuẩn 2025 Của Bộ GD&ĐT</div>\n    <div class=\"grid grid-cols-3 gap-2\">\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-cyan-400\">\n        <b class=\"text-cyan-300\">Phần I: 4 Lựa chọn</b><br/>\n        • 12 câu hỏi.<br/>\n        • Mỗi câu đúng được 0.25 điểm.<br/>\n        • Nhận biết & Thông hiểu.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-amber-400\">\n        <b class=\"text-amber-300\">Phần II: Đúng / Sai</b><br/>\n        • 4 câu hỏi (16 ý $a, b, c, d$).<br/>\n        • Đúng 1 ý: 0.1đ; 2 ý: 0.25đ; 3 ý: 0.5đ; 4 ý: 1.0đ.<br/>\n        • Vận dụng phân hóa.\n      </div>\n      <div class=\"p-2.5 bg-slate-900 rounded border-l-4 border-emerald-400\">\n        <b class=\"text-emerald-300\">Phần III: Trả lời ngắn</b><br/>\n        • 6 câu hỏi điền số.<br/>\n        • Mỗi câu đúng được 0.5 điểm.<br/>\n        • Vận dụng cao & Thực tế.\n      </div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Trước khi bước vào bài tập thực chiến cuối cùng, thầy muốn nhắc lại cấu trúc đề thi tốt nghiệp THPT theo chương trình giáo dục phổ thông 2018: Đề thi gồm 3 phần: Phần I gồm các câu trắc nghiệm nhiều lựa chọn 4 phương án. Phần II gồm các câu trắc nghiệm Đúng/Sai, mỗi câu có 4 ý a, b, c, d phân hóa sâu sắc. Phần III gồm các câu hỏi trả lời ngắn, học sinh tự giải và điền kết quả số học vào phiếu trả lời.",
+      "startTime": 234.55,
+      "endTime": 259.51,
+      "duration": 24.96
+    },
+    {
+      "sceneIndex": 9,
+      "title": "9. VÍ DỤ 3: CÂU TRẮC NGHIỆM ĐÚNG / SAI PHÂN HÓA",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • TÍNH CHẤT LĂNG TRỤ VÀ TỈ SỐ ĐOẠN THẲNG 30S",
+      "mascotMode": "thinking",
+      "mascotTip": "Lăng trụ tam giác $ABC.A'B'C'$, các mặt bên là hình bình hành nên các cạnh bên song song và bằng nhau!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-purple-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-purple-500/20 text-purple-300 text-xs font-bold rounded\">Ví dụ 3 (Đúng / Sai)</span>\n      <span class=\"text-xs text-slate-400\">Phần II đề thi 2025</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho lăng trụ $ABC.A'B'C'$. Gọi $I, K$ là trọng tâm $\\triangle ABC$ và $\\triangle A'B'C'$. Xét tính Đúng / Sai:\n    </p>\n\n    <div class=\"space-y-2 text-xs\">\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>a)</b> Đường thẳng $IK \\parallel AA'$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>b)</b> Độ dài đoạn thẳng $IK = AA'$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>c)</b> Mặt phẳng $(AIB) \\parallel (A'KB')$.</span>\n        <span class=\"font-bold text-emerald-400\">[ ĐÚNG ]</span>\n      </div>\n      <div class=\"p-2 bg-slate-900 rounded border border-slate-700 flex justify-between\">\n        <span><b>d)</b> Đường thẳng $IK$ luôn vuông góc với hai đáy.</span>\n        <span class=\"font-bold text-rose-400\">[ SAI ]</span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-purple-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-purple-300 font-medium\">Thời gian kiểm tra:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 3: Cho hình lăng trụ tam giác ABC.A'B'C'. Gọi I, K lần lượt là trọng tâm của hai tam giác ABC và A'B'C'. Xét tính Đúng hay Sai của các khẳng định sau: Mệnh đề a: Đoạn thẳng IK song song với cạnh bên AA'. Mệnh đề b: Đoạn thẳng IK có độ dài bằng cạnh bên AA'. Mệnh đề c: Mặt phẳng A I B song song với mặt phẳng A' K B'. Mệnh đề d: Đường thẳng IK vuông góc với hai mặt phẳng đáy. Các em có 30 giây suy nghĩ.",
+      "startTime": 259.51,
+      "endTime": 285.6,
+      "duration": 26.09
+    },
+    {
+      "sceneIndex": 10,
+      "title": "10. LỜI GIẢI VÍ DỤ 3: PHÂN TÍCH TỪNG MỆNH ĐỀ",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • HÌNH BÌNH HÀNH VÀ LĂNG TRỤ XIÊN",
+      "mascotMode": "celebrating",
+      "mascotTip": "$IK$ song song cạnh bên, nhưng lăng trụ xiên thì cạnh bên không vuông góc đáy!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Đáp án phân tích chuẩn xác:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• <b>a, b) ĐÚNG:</b> Tứ giác tạo bởi hai trung tuyến là hình bình hành $\\implies IK \\parallel AA'$ và $IK = AA'$.</p>\n      <p>• <b>c) ĐÚNG:</b> Vì $(AIB) \\equiv (ABC)$ và $(A'KB') \\equiv (A'B'C')$, mà hai đáy lăng trụ luôn song song.</p>\n      <p>• <b>d) SAI:</b> Lăng trụ tổng quát có thể là <b>lăng trụ xiên</b>, khi đó cạnh bên không vuông góc mặt đáy.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">➔ 3 ý ĐÚNG, 1 ý SAI.</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Giải thích chi tiết Ví dụ 3: Mệnh đề a và b ĐÚNG vì gọi M, M' là trung điểm BC và B'C' thì tứ giác AMM'A' là hình bình hành. Do I và K chia AM và A'M' theo cùng tỉ số 2/3 nên tứ giác II'KK' hay AIKA' tương ứng là hình bình hành, suy ra IK song song và bằng AA'. Mệnh đề c ĐÚNG vì mặt phẳng AIB chính là mặt đáy ABC, còn A'KB' chính là mặt đáy A'B'C', mà hai đáy lăng trụ luôn song song. Mệnh đề d SAI vì lăng trụ tổng quát có thể là lăng trụ xiên, khi đó cạnh bên và IK không vuông góc với đáy.",
+      "startTime": 285.6,
+      "endTime": 318.96,
+      "duration": 33.36
+    },
+    {
+      "sceneIndex": 11,
+      "title": "11. VÍ DỤ 4: CÂU HỎI TRẢ LỜI NGẮN (ĐIỀN ĐÁP SỐ CHUẨN TNMAKER)",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • PHẦN III ĐỀ THI 2025 (30 GIÂY)",
+      "mascotMode": "thinking",
+      "mascotTip": "Tính toán cẩn thận và trả lời đúng duy nhất 1 số học!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-indigo-500/30 text-xs\">\n    <div class=\"flex items-center justify-between mb-2\">\n      <span class=\"px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded\">Ví dụ 4 (Trả lời ngắn)</span>\n      <span class=\"text-xs text-slate-400\">Phần III đề thi tốt nghiệp</span>\n    </div>\n    <p class=\"text-slate-200 leading-relaxed mb-3\">\n      Cho hình chóp $S.ABCD$ đáy hình bình hành diện tích $S_{ABCD} = 48\\text{ cm}^2$. Mặt phẳng $(P)$ qua trọng tâm $G$ của $\\triangle SAB$ và song song với đáy $(ABCD)$ cắt hình chóp tạo thành thiết diện. Diện tích thiết diện đó bằng bao nhiêu $\\text{cm}^2$?\n    </p>\n\n    <div class=\"p-3 bg-slate-900 rounded border border-amber-400/30 text-center\">\n      <span class=\"text-xs text-slate-400\">Điền số đáp án vào ô:</span>\n      <div class=\"text-2xl font-black text-amber-400 font-mono mt-1\">Đáp số: ?</div>\n    </div>\n  </div>\n\n  <div class=\"countdown-clock-widget cd-30s flex items-center justify-between p-2.5 bg-slate-900/80 rounded-lg border border-indigo-500/30\">\n    <div class=\"flex items-center gap-2\">\n      <span class=\"text-lg\">⏳</span>\n      <span class=\"text-xs text-indigo-300 font-medium\">Thời gian tính toán:</span>\n    </div>\n    <span class=\"text-base font-black text-amber-400 font-mono tracking-wider\">30 GIÂY</span>\n  </div>\n</div>\n",
+      "narration": "Ví dụ 4: Câu hỏi trả lời ngắn theo định dạng Phần 3: Cho hình chóp S.ABCD có đáy ABCD là hình bình hành diện tích bằng 48 cm vuông. Mặt phẳng P đi qua trọng tâm G của tam giác SAB và song song với mặt phẳng đáy ABCD cắt các cạnh bên SA, SB, SC, SD tạo thành một đa giác thiết diện. Tính diện tích của đa giác thiết diện đó theo đơn vị cm vuông. Các em có 30 giây tính toán.",
+      "startTime": 318.96,
+      "endTime": 354.34,
+      "duration": 35.38
+    },
+    {
+      "sceneIndex": 12,
+      "title": "12. LỜI GIẢI VÍ DỤ 4 & BẾ MẠC TOÀN KHÓA CHƯƠNG IV",
+      "subtitle": "ÔN TẬP CHƯƠNG IV • MỤC 3 • TỈ SỐ DIỆN TÍCH BẰNG BÌNH PHƯƠNG TỈ SỐ ĐỒNG DẠNG",
+      "mascotMode": "celebrating",
+      "mascotTip": "$k = \\frac{SG}{SM} = \\frac{2}{3} \\implies \\frac{S_{td}}{S_{ABCD}} = k^2 = \\frac{4}{9} \\implies S_{td} = \\frac{4}{9} \\times 48 \\approx 21.33$!",
+      "bodyHtml": "\n<div class=\"space-y-3\">\n  <div class=\"bg-slate-800/90 p-3.5 rounded-xl border border-emerald-500/40 text-xs\">\n    <div class=\"text-xs font-bold text-emerald-300 uppercase mb-2\">Lời giải số học chi tiết:</div>\n    <div class=\"space-y-1.5 text-slate-300\">\n      <p>• Mặt phẳng $(P) \\parallel (ABCD) \\implies$ Thiết diện là hình bình hành $MNPQ$ đồng dạng với $ABCD$.</p>\n      <p>• Do $G$ là trọng tâm $\\triangle SAB$ nên tỉ số vị tự / đồng dạng là:</p>\n      <p class=\"font-mono text-center text-amber-300\">$$k = \\frac{SG}{SM'} = \\frac{2}{3} \\quad (M' \\text{ là trung điểm } AB)$$</p>\n      <p>• Tỉ số diện tích bằng bình phương tỉ số đồng dạng:</p>\n      <p class=\"font-mono text-center text-emerald-300\">$$\\frac{S_{MNPQ}}{S_{ABCD}} = k^2 = \\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9}$$</p>\n      <p>• Diện tích thiết diện là: $S_{MNPQ} = \\frac{4}{9} \\cdot 48 = \\frac{64}{3} \\approx \\mathbf{21.33}\\text{ (cm}^2)$.</p>\n      <div class=\"mt-2 text-emerald-300 font-bold font-mono\">🎉 ĐÁP SỐ: 21.33 (hoặc 64/3). BẾ MẠC TOÀN KHÓA CHƯƠNG IV TOÁN 11 KNTT!</div>\n    </div>\n  </div>\n</div>\n",
+      "narration": "Hết thời gian. Đáp án chính xác là 21.33. Lời giải: Vì mặt phẳng P song song với đáy ABCD nên thiết diện cắt các cạnh bên tạo thành hình bình hành M N P Q đồng dạng với đáy ABCD. Gọi M' là trung điểm AB, vì G là trọng tâm tam giác SAB nên tỉ số đồng dạng k bằng SG trên SM' bằng 2 phần 3. Tỉ số diện tích của hai đa giác đồng dạng bằng bình phương tỉ số đồng dạng, tức là k bình phương bằng 4 phần 9. Do đó diện tích thiết diện bằng 4 phần 9 nhân với 48, bằng 64 chia 3, xấp xỉ 21.33 cm vuông. Chúc mừng các em đã hoàn thành xuất sắc toàn bộ Chương 4!",
+      "startTime": 354.34,
+      "endTime": 398.5,
+      "duration": 44.16
+    }
+  ]
+};
+  root.G11_CHAPTER4_DATA.toan11_ontap_c4_muc3 = root.G11_CHAPTER4_DATA.g11_ontap_c4_muc3;
 
   // Auto merge into global LECTURE_DATA
   if (typeof LECTURE_DATA !== 'undefined') {
