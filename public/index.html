@@ -420,38 +420,75 @@
     .a4-page .font-mono {
       font-family: "Courier New", Courier, monospace !important;
     }
-    /* Bảo tồn font và glyph KaTeX chuẩn xác tuyệt đối trong khổ giấy in A4 */
+    /* ==========================================================================
+       ĐÓNG KHUNG & BẢO TOÀN CÔNG THỨC TOÁN KATEX CHUẨN XÁC KHI XUẤT PDF / IN ẤN
+       Triệt tiêu hoàn toàn lỗi mất nét gạch phân số, lỗi ký tự dagger (†), lỗi vỡ dòng
+       ========================================================================== */
+    .katex-mathml {
+      display: none !important;
+      visibility: hidden !important;
+      width: 0 !important;
+      height: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+    }
     .a4-page .katex {
-      font-family: KaTeX_Main, "Times New Roman", serif !important;
-      font-size: 1.02em !important;
+      font-size: 1.03em !important;
       line-height: normal !important;
       white-space: nowrap !important;
+      display: inline-block !important;
+      text-indent: 0 !important;
+      vertical-align: baseline !important;
+      padding: 0 1.5px !important;
+      box-sizing: border-box !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+    .a4-page .katex-html {
+      display: inline-block !important;
+      white-space: nowrap !important;
+      line-height: normal !important;
     }
     .a4-page .katex * {
-      font-family: inherit !important;
       line-height: normal !important;
     }
     .a4-page .katex .mathnormal {
-      font-family: KaTeX_Math !important;
+      font-family: KaTeX_Math, serif !important;
       font-style: italic !important;
     }
     .a4-page .katex .amsrm {
-      font-family: KaTeX_AMS !important;
+      font-family: KaTeX_AMS, serif !important;
     }
     .a4-page .katex .mainrm {
-      font-family: KaTeX_Main !important;
+      font-family: KaTeX_Main, "Times New Roman", serif !important;
     }
     .a4-page .katex .vlist-t {
       border-collapse: separate !important;
     }
-    .a4-page .katex .frac-line {
+    .a4-page .katex .frac-line,
+    .katex .frac-line {
       border-bottom-style: solid !important;
+      border-bottom-width: 1.2px !important;
+      border-bottom-color: currentColor !important;
+      min-height: 1.2px !important;
+      display: block !important;
       box-sizing: content-box !important;
     }
     .a4-page .katex-display {
-      margin: 0.3em 0 !important;
-      padding: 0.1em 0 !important;
-      font-size: 1.05em !important;
+      display: block !important;
+      margin: 0.25em auto !important;
+      padding: 0.15em 0.35em !important;
+      text-align: center !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      overflow: visible !important;
+    }
+    .a4-page .katex-display > .katex {
+      display: inline-block !important;
+      text-align: center !important;
+      white-space: nowrap !important;
     }
     .a4-page:last-child {
       margin-bottom: 0;
@@ -521,32 +558,59 @@
       .a4-page strong:not(.katex):not(.katex *) {
         font-family: "Times New Roman", Times, "Liberation Serif", serif !important;
       }
+      .katex-mathml {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
       .a4-page .katex {
-        font-family: KaTeX_Main, "Times New Roman", serif !important;
-        font-size: 1.02em !important;
+        font-size: 1.03em !important;
         line-height: normal !important;
+        white-space: nowrap !important;
+        display: inline-block !important;
+        text-indent: 0 !important;
+        vertical-align: baseline !important;
+        padding: 0 1.5px !important;
+        box-sizing: border-box !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      .a4-page .katex-html {
+        display: inline-block !important;
         white-space: nowrap !important;
       }
       .a4-page .katex * {
-        font-family: inherit !important;
         line-height: normal !important;
       }
       .a4-page .katex .mathnormal {
-        font-family: KaTeX_Math !important;
+        font-family: KaTeX_Math, serif !important;
         font-style: italic !important;
       }
       .a4-page .katex .mainrm {
-        font-family: KaTeX_Main !important;
+        font-family: KaTeX_Main, "Times New Roman", serif !important;
       }
       .a4-page .katex .amsrm {
-        font-family: KaTeX_AMS !important;
+        font-family: KaTeX_AMS, serif !important;
       }
       .a4-page .katex .vlist-t {
         border-collapse: separate !important;
       }
       .a4-page .katex .frac-line {
         border-bottom-style: solid !important;
+        border-bottom-width: 1.2px !important;
+        border-bottom-color: currentColor !important;
+        min-height: 1.2px !important;
+        display: block !important;
         box-sizing: content-box !important;
+      }
+      .a4-page .katex-display {
+        display: block !important;
+        margin: 0.25em auto !important;
+        padding: 0.15em 0.35em !important;
+        text-align: center !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
       }
       .a4-page .font-mono {
         font-family: "Courier New", Courier, monospace !important;
@@ -20153,15 +20217,19 @@
         opts = letters.map(l => ({ letter: l, text: options[l] || '' }));
       }
       
-      const hasCases = opts.some(o => o.text && (o.text.includes('cases') || (o.text.match(/\\/g) || []).length >= 2));
+      // Chỉ khi có môi trường nhiều dòng thực sự (cases, aligned, \\) mới coi là multiline
+      const hasMultiline = opts.some(o => {
+        const t = o.text || '';
+        return t.includes('cases') || t.includes('\\\\') || t.includes('aligned');
+      });
       const maxVisual = Math.max(...opts.map(o => getEstimatedVisualLength(o.text)));
       
-      // Quy chuẩn Rule 4:
-      // - 1 hàng (4 cột) nếu độ dài hiển thị <= 18 ký tự
-      // - 2 hàng (2 cột) nếu độ dài hiển thị <= 50 ký tự
-      // - 1 cột nếu phương án rất dài (> 50 ký tự) hoặc có hệ phương trình
+      // Quy chuẩn phân bố dòng đáp án trắc nghiệm chuẩn Bộ GD&ĐT & tối ưu tiết kiệm giấy:
+      // - 1 DÒNG (4 cột): áp dụng cho các câu có phương án ngắn (<= 18 ký tự hiển thị)
+      // - 2 DÒNG (2 cột): áp dụng cho các câu có phương án trung bình (<= 48 ký tự hiển thị)
+      // - 1 CỘT (4 dòng): chỉ áp dụng khi phương án rất dài (> 48 ký tự) hoặc có hệ phương trình nhiều dòng
       let gridCols = 'grid-cols-4';
-      if (hasCases || maxVisual > 50) {
+      if (hasMultiline || maxVisual > 48) {
         gridCols = 'grid-cols-1';
       } else if (maxVisual > 18) {
         gridCols = 'grid-cols-2';
@@ -20173,7 +20241,7 @@
             const isCorrect = (showPrintSolutions && o.letter === correctLetter);
             const highlight = isCorrect ? 'font-bold text-red-700 underline decoration-red-600 decoration-1.5' : '';
             return `
-              <div class="${highlight}">
+              <div class="${highlight} break-inside-avoid">
                 <strong class="font-bold">${o.letter}.</strong> ${o.text}${isCorrect ? ' <span class="text-[8.5pt] text-red-600 font-sans font-bold">✓</span>' : ''}
               </div>
             `;
@@ -20185,10 +20253,13 @@
     const formatTfItemsPrint = (items) => {
       if (!items || items.length === 0) return '';
       const maxVisual = Math.max(...items.map(it => getEstimatedVisualLength(it.content || it.text || '')));
-      const hasMultiline = items.some(it => (it.content || it.text || '').includes('\\'));
-      // Bố trí 2 cột khi các ý ngắn (<= 36 ký tự).
-      // Khi ý dài > 36 ký tự, dùng 1 cột để văn bản liền mạch, không ngắt cụt chữ lẻ tẻ sang dòng 2.
-      const gridClass = (hasMultiline || maxVisual > 36) ? 'space-y-0.5' : 'grid grid-cols-2 gap-x-6 gap-y-0.5';
+      const hasMultiline = items.some(it => {
+        const t = it.content || it.text || '';
+        return t.includes('cases') || t.includes('\\\\') || t.includes('aligned');
+      });
+      // Bố trí 2 cột khi các ý ngắn (<= 32 ký tự) và không có công thức xuống dòng.
+      // Khi ý dài > 32 ký tự, dùng 1 cột để văn bản liền mạch, không ngắt cụt chữ lẻ tẻ sang dòng 2.
+      const gridClass = (hasMultiline || maxVisual > 32) ? 'space-y-0.5' : 'grid grid-cols-2 gap-x-4 gap-y-0.5';
       
       return `
         <div class="${gridClass} pl-3 mt-0.5 text-[10.5pt] sm:text-[11pt] leading-tight">
@@ -20202,7 +20273,7 @@
                 ? ' <span class="text-[8.5pt] text-emerald-800 font-bold ml-1 font-mono">[ĐÚNG]</span>' 
                 : ' <span class="text-[8.5pt] text-rose-800 font-bold ml-1 font-mono">[SAI]</span>';
             }
-            return `<div><strong class="font-bold">${label}</strong> ${content}${badge}</div>`;
+            return `<div class="break-inside-avoid"><strong class="font-bold">${label}</strong> ${content}${badge}</div>`;
           }).join('')}
         </div>
       `;
@@ -20234,6 +20305,7 @@
         renderMath(container);
       } else if (typeof renderMathInElement === 'function') {
         renderMathInElement(container, {
+          output: 'html',
           delimiters: [
             {left: '$$', right: '$$', display: true},
             {left: '$', right: '$', display: false}
@@ -20841,6 +20913,7 @@
         if (typeof renderMath === 'function') renderMath(container);
         else if (typeof renderMathInElement === 'function') {
           renderMathInElement(container, {
+            output: 'html',
             delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}],
             throwOnError: false
           });
@@ -20930,6 +21003,20 @@
                   p.style.boxSizing = 'border-box';
                   p.style.overflow = 'hidden';
                 });
+
+                // Xử lý đóng khung và bảo toàn công thức toán khi chụp PDF (triệt tiêu daggers, mất nét phân số)
+                clonedDoc.querySelectorAll('.katex-mathml').forEach(el => el.remove());
+                clonedDoc.querySelectorAll('.a4-page .katex').forEach(k => {
+                  k.style.display = 'inline-block';
+                  k.style.whiteSpace = 'nowrap';
+                  k.style.lineHeight = 'normal';
+                  k.style.verticalAlign = 'baseline';
+                });
+                clonedDoc.querySelectorAll('.a4-page .katex .frac-line').forEach(fl => {
+                  fl.style.borderBottom = '1.2px solid #000000';
+                  fl.style.minHeight = '1.2px';
+                  fl.style.display = 'block';
+                });
               }
             });
 
@@ -20966,7 +21053,21 @@
             letterRendering: true,
             scrollX: 0,
             scrollY: 0,
-            backgroundColor: '#ffffff'
+            backgroundColor: '#ffffff',
+            onclone: (clonedDoc) => {
+              clonedDoc.querySelectorAll('.katex-mathml').forEach(el => el.remove());
+              clonedDoc.querySelectorAll('.a4-page .katex').forEach(k => {
+                k.style.display = 'inline-block';
+                k.style.whiteSpace = 'nowrap';
+                k.style.lineHeight = 'normal';
+                k.style.verticalAlign = 'baseline';
+              });
+              clonedDoc.querySelectorAll('.a4-page .katex .frac-line').forEach(fl => {
+                fl.style.borderBottom = '1.2px solid #000000';
+                fl.style.minHeight = '1.2px';
+                fl.style.display = 'block';
+              });
+            }
           },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
           pagebreak: { mode: ['css', 'legacy'] }
@@ -32913,6 +33014,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       try {
         if (typeof window.renderMathInElement === 'function') {
           window.renderMathInElement(element, {
+            output: 'html',
             macros: {
               "\\vec": "\\overrightarrow"
             },
