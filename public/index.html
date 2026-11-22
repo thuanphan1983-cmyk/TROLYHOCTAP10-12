@@ -183,6 +183,16 @@
     .katex * {
       letter-spacing: normal !important;
     }
+    /* Chuẩn hóa hiển thị phân số KaTeX: Giữ nguyên inline-block và height: 0 để vạch phân số nằm chính xác giữa tử và mẫu, không đè lên chữ/số */
+    .katex .frac-line {
+      display: inline-block !important;
+      border-bottom-style: solid !important;
+      border-bottom-width: 1.2px !important;
+      border-bottom-color: currentColor !important;
+      min-height: 0 !important;
+      height: 0 !important;
+      box-sizing: border-box !important;
+    }
     .katex-display {
       display: block !important;
       margin: 0.85em 0 !important;
@@ -467,14 +477,14 @@
     .a4-page .katex .vlist-t {
       border-collapse: separate !important;
     }
-    .a4-page .katex .frac-line,
-    .katex .frac-line {
+    .a4-page .katex .frac-line {
+      display: inline-block !important;
       border-bottom-style: solid !important;
       border-bottom-width: 1.2px !important;
       border-bottom-color: currentColor !important;
-      min-height: 1.2px !important;
-      display: block !important;
-      box-sizing: content-box !important;
+      min-height: 0 !important;
+      height: 0 !important;
+      box-sizing: border-box !important;
     }
     .a4-page .katex-display {
       display: block !important;
@@ -597,12 +607,13 @@
         border-collapse: separate !important;
       }
       .a4-page .katex .frac-line {
+        display: inline-block !important;
         border-bottom-style: solid !important;
         border-bottom-width: 1.2px !important;
         border-bottom-color: currentColor !important;
-        min-height: 1.2px !important;
-        display: block !important;
-        box-sizing: content-box !important;
+        min-height: 0 !important;
+        height: 0 !important;
+        box-sizing: border-box !important;
       }
       .a4-page .katex-display {
         display: block !important;
@@ -21091,8 +21102,10 @@
                 });
                 clonedDoc.querySelectorAll('.a4-page .katex .frac-line').forEach(fl => {
                   fl.style.borderBottom = '1.2px solid #000000';
-                  fl.style.minHeight = '1.2px';
-                  fl.style.display = 'block';
+                  fl.style.minHeight = '0px';
+                  fl.style.height = '0px';
+                  fl.style.display = 'inline-block';
+                  fl.style.boxSizing = 'border-box';
                 });
               }
             });
@@ -21141,8 +21154,10 @@
               });
               clonedDoc.querySelectorAll('.a4-page .katex .frac-line').forEach(fl => {
                 fl.style.borderBottom = '1.2px solid #000000';
-                fl.style.minHeight = '1.2px';
-                fl.style.display = 'block';
+                fl.style.minHeight = '0px';
+                fl.style.height = '0px';
+                fl.style.display = 'inline-block';
+                fl.style.boxSizing = 'border-box';
               });
             }
           },
