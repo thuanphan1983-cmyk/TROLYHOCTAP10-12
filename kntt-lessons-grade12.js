@@ -3183,7 +3183,7 @@
                             "D. Không xác định"
                         ],
                         "correct": "A",
-                        "explanation": "Khi tất cả số liệu bằng nhau thì không có sự phân tán nào xung quanh số trung bình ($c_i = \\overline{x} \\ \forall i$), do đó phương sai $s^2 = 0$.",
+                        "explanation": "Khi tất cả số liệu bằng nhau thì không có sự phân tán nào xung quanh số trung bình ($c_i = \\overline{x} \\ \\forall i$), do đó phương sai $s^2 = 0$.",
                         "hint1": "Mọi số liệu đều trùng với số trung bình.",
                         "hint2": "$c_i - \\overline{x} = 0 \\implies s^2 = 0$."
                     },

@@ -4101,7 +4101,7 @@ window.TOPIC_EXAMS_DB = [
               },
               {
                 "id": "d",
-                "text": "Khoảng cách từ đỉnh tháp $S$ đến đoạn thẳng $AB$ bằng $80\text{ m}$.",
+                "text": "Khoảng cách từ đỉnh tháp $S$ đến đoạn thẳng $AB$ bằng $80\\text{ m}$.",
                 "correct": false,
                 "explanation": "Chiều cao từ $O$ đến $AB$: $OH = \\frac{OA \\cdot OB}{AB} = \\frac{60 \\times 60\\sqrt{3}}{120} = 30\\sqrt{3}$. Khi đó $SH = \\sqrt{SO^2 + OH^2} = \\sqrt{3600 + 2700} = \\sqrt{6300} = 30\\sqrt{7}\\text{ m}$. Khẳng định này là ĐÚNG. Sửa text thành 'bằng 80 m' -> SAI."
               }

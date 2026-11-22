@@ -1285,7 +1285,7 @@
               question: "Cho hình chữ nhật $ABCD$ có $AB = 3, BC = 4$. Độ dài của vectơ $\\vec{AC}$ bằng:",
               options: ["A. 5", "B. 7", "C. 1", "D. 25"],
               correct: "A",
-              explanation: "Độ dài $|\vec{AC}| = AC = \\sqrt{AB^2 + BC^2} = \\sqrt{3^2 + 4^2} = 5$.",
+              explanation: "Độ dài $|\\vec{AC}| = AC = \\sqrt{AB^2 + BC^2} = \\sqrt{3^2 + 4^2} = 5$.",
               hint1: "Độ dài vectơ $\\vec{AC}$ chính là độ dài đoạn thẳng $AC$.",
               hint2: "Áp dụng định lí Pythagore: $\\sqrt{3^2 + 4^2} = 5$."
             },
@@ -1294,7 +1294,7 @@
               options: [
                 "A. Hai vectơ $\\vec{AB}$ và $\\vec{AC}$ cùng phương",
                 "B. $\\vec{AB} = \\vec{AC}$",
-                "C. $|\vec{AB}| = |\\vec{AC}|$",
+                "C. $|\\vec{AB}| = |\\vec{AC}|$",
                 "D. $\\vec{AB}$ và $\\vec{AC}$ cùng hướng"
               ],
               correct: "A",
@@ -1351,7 +1351,7 @@
             {
               question: "Cho tam giác đều $ABC$ cạnh $a$. Khẳng định nào sau đây là **ĐÚNG**?",
               options: [
-                "A. $|\vec{AB}| = |\\vec{BC}| = |\\vec{CA}| = a$",
+                "A. $|\\vec{AB}| = |\\vec{BC}| = |\\vec{CA}| = a$",
                 "B. $\\vec{AB} = \\vec{BC}$",
                 "C. $\\vec{AB}$ cùng hướng với $\\vec{AC}$",
                 "D. $\\vec{AB} = \\vec{0}$"
@@ -1372,7 +1372,7 @@
             { key: "a", text: "Vectơ $\\vec{AB}$ bằng vectơ $\\vec{ED}$.", correct: "true", explain: "Cùng hướng và cùng độ dài cạnh lục giác đều." },
             { key: "b", text: "Vectơ $\\vec{AB}$ bằng vectơ $\\vec{OC}$.", correct: "true", explain: "Tứ giác $ABCO$ là hình bình hành nên $\\vec{AB} = \\vec{OC}$." },
             { key: "c", text: "Có tất cả 3 vectơ (khác $\\vec{0}$) có điểm đầu và điểm cuối là các đỉnh của lục giác và tâm $O$ bằng với $\\vec{AB}$.", correct: "true", explain: "Gồm $\\vec{FO}, \\vec{OC}, \\vec{ED}$." },
-            { key: "d", text: "Độ dài $|\vec{AD}| = 2|\vec{AB}|$.", correct: "true", explain: "Đường chéo chính dài gấp đôi cạnh." }
+            { key: "d", text: "Độ dài $|\\vec{AD}| = 2|\\vec{AB}|$.", correct: "true", explain: "Đường chéo chính dài gấp đôi cạnh." }
           ]
         },
         {
@@ -1381,7 +1381,7 @@
           items: [
             { key: "a", text: "Hai vectơ có cùng độ dài và cùng phương thì bằng nhau.", correct: "false", explain: "Có thể ngược hướng nhau." },
             { key: "b", text: "Vectơ $\\vec{0}$ cùng hướng với mọi vectơ.", correct: "true", explain: "Quy ước chuẩn SGK." },
-            { key: "c", text: "Nếu $\\vec{a} = \\vec{b}$ thì $|\vec{a}| = |\\vec{b}|$.", correct: "true", explain: "Bằng nhau thì chắc chắn cùng độ dài." },
+            { key: "c", text: "Nếu $\\vec{a} = \\vec{b}$ thì $|\\vec{a}| = |\\vec{b}|$.", correct: "true", explain: "Bằng nhau thì chắc chắn cùng độ dài." },
             { key: "d", text: "Mọi vectơ đều có giá duy nhất.", correct: "false", explain: "Vectơ $\\vec{0}$ có vô số giá đi qua một điểm." }
           ]
         },
@@ -1391,7 +1391,7 @@
           items: [
             { key: "a", text: "Hai vectơ $\\vec{IA}$ và $\\vec{IB}$ cùng phương.", correct: "true", explain: "Cùng nằm trên đường thẳng $AB$." },
             { key: "b", text: "Hai vectơ $\\vec{IA}$ và $\\vec{IB}$ ngược hướng.", correct: "true", explain: "Từ $I$ toả ra hai phía đối diện." },
-            { key: "c", text: "Độ dài $|\vec{IA}| = |\\vec{IB}|$.", correct: "true", explain: "Vì $I$ là trung điểm." },
+            { key: "c", text: "Độ dài $|\\vec{IA}| = |\\vec{IB}|$.", correct: "true", explain: "Vì $I$ là trung điểm." },
             { key: "d", text: "Hai vectơ $\\vec{IA}$ và $\\vec{IB}$ bằng nhau.", correct: "false", explain: "Ngược hướng nên không bằng nhau." }
           ]
         },
@@ -1401,7 +1401,7 @@
           items: [
             { key: "a", text: "Từ 3 điểm đó có thể tạo thành 6 vectơ khác $\\vec{0}$ có điểm đầu và cuối là các điểm đã cho.", correct: "true", explain: "$A_3^2 = 6$ vectơ: $\\vec{AB}, \\vec{BA}, \\vec{BC}, \\vec{CB}, \\vec{CA}, \\vec{AC}$." },
             { key: "b", text: "Nếu $\\vec{AB}$ và $\\vec{BC}$ cùng hướng thì $B$ nằm giữa $A$ và $C$.", correct: "true", explain: "Tính chất hướng trên đoạn thẳng." },
-            { key: "c", text: "Nếu $|\vec{AB}| + |\\vec{BC}| = |\\vec{AC}|$ thì $A, B, C$ thẳng hàng.", correct: "true", explain: "Dấu bằng bất đẳng thức tam giác." },
+            { key: "c", text: "Nếu $|\\vec{AB}| + |\\vec{BC}| = |\\vec{AC}|$ thì $A, B, C$ thẳng hàng.", correct: "true", explain: "Dấu bằng bất đẳng thức tam giác." },
             { key: "d", text: "Vectơ $\\vec{AB}$ và $\\vec{BA}$ là hai vectơ bằng nhau.", correct: "false", explain: "Chúng là hai vectơ đối nhau, không bằng nhau." }
           ]
         },
@@ -1419,7 +1419,7 @@
           id: 6,
           title: "Câu 6: Về quy ước ký hiệu vectơ trong SGK Toán 10:",
           items: [
-            { key: "a", text: "Độ dài vectơ $\\vec{a}$ được ký hiệu là $|\vec{a}|$.", correct: "true", explain: "Ký hiệu chuẩn." },
+            { key: "a", text: "Độ dài vectơ $\\vec{a}$ được ký hiệu là $|\\vec{a}|$.", correct: "true", explain: "Ký hiệu chuẩn." },
             { key: "b", text: "Điểm đầu viết trước, điểm cuối viết sau dưới mũi tên: $\\vec{AB}$.", correct: "true", explain: "Quy ước." },
             { key: "c", text: "Đoạn thẳng $AB$ và vectơ $\\vec{AB}$ là một khái niệm toán học.", correct: "false", explain: "Khác nhau hoàn toàn: đoạn thẳng vô hướng, vectơ có hướng." },
             { key: "d", text: "Ký hiệu $\\vec{a} = 0$ là đúng về mặt toán học.", correct: "false", explain: "Phải viết là $\\vec{a} = \\vec{0}$ (vectơ bằng vectơ, không bằng số 0)." }
@@ -1459,12 +1459,12 @@
                 <br/>• Kết hợp: $(\\vec{a} + \\vec{b}) + \\vec{c} = \\vec{a} + (\\vec{b} + \\vec{c})$.
                 <br/>• Cộng với $\\vec{0}$: $\\vec{a} + \\vec{0} = \\vec{a}$.
               </li>
-              <li><strong>Bất đẳng thức tam giác:</strong> Với hai vectơ $\\vec{a}, \\vec{b}$ bất kì, ta có $|\vec{a} + \\vec{b}| \\le |\\vec{a}| + |\\vec{b}|$. Dấu bằng xảy ra khi và chỉ khi $\\vec{a}$ và $\\vec{b}$ cùng hướng.</li>
+              <li><strong>Bất đẳng thức tam giác:</strong> Với hai vectơ $\\vec{a}, \\vec{b}$ bất kì, ta có $|\\vec{a} + \\vec{b}| \\le |\\vec{a}| + |\\vec{b}|$. Dấu bằng xảy ra khi và chỉ khi $\\vec{a}$ và $\\vec{b}$ cùng hướng.</li>
             </ul>`,
             `<li>Quy tắc ba điểm: Điểm cuối của vectơ thứ nhất PHẢI TRÙNG điểm đầu của vectơ thứ hai (chữ ở giữa giống nhau thì triệt tiêu: $A\\mathbf{B} + \\mathbf{B}C = AC$).</li>
             <li>Quy tắc hình bình hành: Hai vectơ xuất phát từ CÙNG MỘT GỐC thì tổng bằng vectơ đường chéo.</li>`,
             `<li>Áp dụng quy tắc hình bình hành khi các vectơ không chung gốc.</li>
-            <li>Ngộ nhận độ dài của tổng bằng tổng độ dài: $|\vec{a} + \\vec{b}| = |\\vec{a}| + |\\vec{b}|$ (sai, chỉ đúng khi cùng hướng).</li>`,
+            <li>Ngộ nhận độ dài của tổng bằng tổng độ dài: $|\\vec{a} + \\vec{b}| = |\\vec{a}| + |\\vec{b}|$ (sai, chỉ đúng khi cùng hướng).</li>`,
             `<li><em>"Nối đuôi nhau thì triệt tiêu ở giữa: AB + BC = AC – Chung gốc hình bình hành: AB + AD = AC!"</em></li>`
           ),
           mcqs: [
@@ -1493,7 +1493,7 @@
               question: "Cho hình vuông $ABCD$ cạnh $a$. Độ dài của vectơ tổng $\\vec{AB} + \\vec{AD}$ bằng:",
               options: ["A. $a\\sqrt{2}$", "B. $2a$", "C. $a$", "D. $\\frac{a\\sqrt{2}}{2}$"],
               correct: "A",
-              explanation: "Ta có $\\vec{AB} + \\vec{AD} = \\vec{AC}$. Do đó $|\vec{AB} + \\vec{AD}| = |\\vec{AC}| = AC = a\\sqrt{2}$.",
+              explanation: "Ta có $\\vec{AB} + \\vec{AD} = \\vec{AC}$. Do đó $|\\vec{AB} + \\vec{AD}| = |\\vec{AC}| = AC = a\\sqrt{2}$.",
               hint1: "Tổng $\\vec{AB} + \\vec{AD} = \\vec{AC}$.",
               hint2: "Đường chéo hình vuông cạnh $a$ dài $a\\sqrt{2}$."
             }
@@ -1552,7 +1552,7 @@
               question: "Cho hình vuông $ABCD$ cạnh $a$. Độ dài của vectơ hiệu $\\vec{AB} - \\vec{AD}$ bằng:",
               options: ["A. $a\\sqrt{2}$", "B. $2a$", "C. $a$", "D. $0$"],
               correct: "A",
-              explanation: "$\\vec{AB} - \\vec{AD} = \\vec{DB}$. Độ dài $|\vec{DB}| = DB = a\\sqrt{2}$ (đường chéo hình vuông).",
+              explanation: "$\\vec{AB} - \\vec{AD} = \\vec{DB}$. Độ dài $|\\vec{DB}| = DB = a\\sqrt{2}$ (đường chéo hình vuông).",
               hint1: "$\\vec{AB} - \\vec{AD} = \\vec{DB}$.",
               hint2: "Độ dài đường chéo $DB$ bằng $a\\sqrt{2}$."
             }
@@ -1585,8 +1585,8 @@
           title: "Câu 3: Cho hình thoi $ABCD$ có cạnh bằng $a$ và $\\widehat{BAD} = 60^\\circ$:",
           items: [
             { key: "a", text: "Tam giác $ABD$ là tam giác đều cạnh $a$.", correct: "true", explain: "Hình thoi có góc 60 độ." },
-            { key: "b", text: "Độ dài $|\vec{AB} - \\vec{AD}| = a$.", correct: "true", explain: "$|\\vec{DB}| = DB = a$." },
-            { key: "c", text: "Độ dài $|\vec{AB} + \\vec{AD}| = a\\sqrt{3}$.", correct: "true", explain: "$|\\vec{AC}| = 2 \\times \\frac{a\\sqrt{3}}{2} = a\\sqrt{3}$." },
+            { key: "b", text: "Độ dài $|\\vec{AB} - \\vec{AD}| = a$.", correct: "true", explain: "$|\\vec{DB}| = DB = a$." },
+            { key: "c", text: "Độ dài $|\\vec{AB} + \\vec{AD}| = a\\sqrt{3}$.", correct: "true", explain: "$|\\vec{AC}| = 2 \\times \\frac{a\\sqrt{3}}{2} = a\\sqrt{3}$." },
             { key: "d", text: "Vectơ $\\vec{AB} + \\vec{BC} = \\vec{BD}$.", correct: "false", explain: "$\\vec{AB} + \\vec{BC} = \\vec{AC}$." }
           ]
         },
@@ -1596,8 +1596,8 @@
           items: [
             { key: "a", text: "Vectơ đối của $\\vec{0}$ là chính nó: $-\\vec{0} = \\vec{0}$.", correct: "true", explain: "Tính chất vectơ-không." },
             { key: "b", text: "$\\vec{a} - \\vec{b} = \\vec{0} \\Leftrightarrow \\vec{a} = \\vec{b}$.", correct: "true", explain: "Hai vectơ bằng nhau." },
-            { key: "c", text: "Độ dài của hiệu luôn bằng hiệu độ dài: $|\vec{a} - \\vec{b}| = |\\vec{a}| - |\\vec{b}|$.", correct: "false", explain: "Chỉ đúng trong trường hợp đặc biệt cùng hướng và $|\vec{a}| \\ge |\\vec{b}|$, tổng quát là sai." },
-            { key: "d", text: "Bất đẳng thức $|\vec{a} - \\vec{b}| \\ge ||\\vec{a}| - |\\vec{b}||$ luôn đúng.", correct: "true", explain: "Bất đẳng thức độ dài vectơ." }
+            { key: "c", text: "Độ dài của hiệu luôn bằng hiệu độ dài: $|\\vec{a} - \\vec{b}| = |\\vec{a}| - |\\vec{b}|$.", correct: "false", explain: "Chỉ đúng trong trường hợp đặc biệt cùng hướng và $|\\vec{a}| \\ge |\\vec{b}|$, tổng quát là sai." },
+            { key: "d", text: "Bất đẳng thức $|\\vec{a} - \\vec{b}| \\ge ||\\vec{a}| - |\\vec{b}||$ luôn đúng.", correct: "true", explain: "Bất đẳng thức độ dài vectơ." }
           ]
         },
         {
@@ -2000,8 +2000,8 @@
           items: [
             { key: "a", text: "$\\vec{u} + \\vec{v} = (1; -2)$.", correct: "true", explain: "$-1+2=1, 3-5=-2$." },
             { key: "b", text: "$\\vec{u} - \\vec{v} = (-3; 8)$.", correct: "true", explain: "$-1-2=-3, 3-(-5)=8$." },
-            { key: "c", text: "Độ dài $|\vec{u}| = \\sqrt{10}$.", correct: "true", explain: "$\\sqrt{1+9} = \\sqrt{10}$." },
-            { key: "d", text: "Độ dài $|\vec{v}| = 7$.", correct: "false", explain: "$|\\vec{v}| = \\sqrt{4+25} = \\sqrt{29} \\neq 7$." }
+            { key: "c", text: "Độ dài $|\\vec{u}| = \\sqrt{10}$.", correct: "true", explain: "$\\sqrt{1+9} = \\sqrt{10}$." },
+            { key: "d", text: "Độ dài $|\\vec{v}| = 7$.", correct: "false", explain: "$|\\vec{v}| = \\sqrt{4+25} = \\sqrt{29} \\neq 7$." }
           ]
         },
         {

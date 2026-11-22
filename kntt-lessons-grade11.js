@@ -70,40 +70,40 @@
           `<p>Khái niệm mở rộng từ hình học phẳng sang lượng giác:</p>
           <ul class="list-disc ml-5 space-y-1.5">
             <li><strong>Khái niệm góc lượng giác:</strong> Khi một tia quay quanh gốc $O$ từ tia đầu $Ou$ đến tia cuối $Ov$, nó quét nên một góc lượng giác, ký hiệu là $(Ou, Ov)$. Chiều quay ngược chiều kim đồng hồ là <em>chiều dương</em>; chiều cùng chiều kim đồng hồ là <em>chiều âm</em>.</li>
-            <li><strong>Họ số đo góc lượng giác:</strong> Một cặp tia đầu $Ou$ và tia cuối $Ov$ xác định vô số góc lượng giác sai khác nhau số nguyên lần $360^\circ$ (hoặc $2\pi\text{ rad}$): $\text{sđ}(Ou, Ov) = \alpha + k360^\circ$ hay $\alpha + k2\pi$ ($k \in \mathbb{Z}$).</li>
-            <li><strong>Đơn vị radian:</strong> Góc ở tâm chắn một cung có độ dài bằng đúng bán kính đường tròn gọi là góc có số đo $1\text{ radian}$ ($1\text{ rad}$). Công thức chuyển đổi: $1^\circ = \frac{\pi}{180}\text{ rad}, \quad 1\text{ rad} = \left(\frac{180}{\pi}\right)^\circ$.</li>
-            <li><strong>Độ dài cung tròn:</strong> Cung tròn có số đo $\alpha\text{ rad}$ trên đường tròn bán kính $R$ có độ dài là $l = R\alpha$.</li>
+            <li><strong>Họ số đo góc lượng giác:</strong> Một cặp tia đầu $Ou$ và tia cuối $Ov$ xác định vô số góc lượng giác sai khác nhau số nguyên lần $360^\\circ$ (hoặc $2\\pi\\text{ rad}$): $\\text{sđ}(Ou, Ov) = \\alpha + k360^\\circ$ hay $\\alpha + k2\\pi$ ($k \\in \\mathbb{Z}$).</li>
+            <li><strong>Đơn vị radian:</strong> Góc ở tâm chắn một cung có độ dài bằng đúng bán kính đường tròn gọi là góc có số đo $1\\text{ radian}$ ($1\\text{ rad}$). Công thức chuyển đổi: $1^\\circ = \\frac{\\pi}{180}\\text{ rad}, \\quad 1\\text{ rad} = \\left(\\frac{180}{\\pi}\\right)^\\circ$.</li>
+            <li><strong>Độ dài cung tròn:</strong> Cung tròn có số đo $\\alpha\\text{ rad}$ trên đường tròn bán kính $R$ có độ dài là $l = R\\alpha$.</li>
           </ul>`,
-          `<li>Các mốc góc đặc biệt cần nhớ ngay: $30^\circ = \frac{\pi}{6}$, $45^\circ = \frac{\pi}{4}$, $60^\circ = \frac{\pi}{3}$, $90^\circ = \frac{\pi}{2}$, $180^\circ = \pi$, $360^\circ = 2\pi$.</li>
-          <li>Khi áp dụng công thức tính độ dài cung $l = R\alpha$, số đo góc $\alpha$ bắt buộc phải ở đơn vị <strong>radian</strong>! Nếu đề bài cho số đo theo độ $a^\circ$, phải đổi sang radian bằng công thức $\alpha = a \times \frac{\pi}{180}$ trước khi nhân.</li>`,
-          `<li>Quên đổi đơn vị góc từ độ sang radian trước khi dùng $l = R\alpha$ (lấy trực tiếp $R \times a^\circ$).</li>
+          `<li>Các mốc góc đặc biệt cần nhớ ngay: $30^\\circ = \\frac{\\pi}{6}$, $45^\\circ = \\frac{\\pi}{4}$, $60^\\circ = \\frac{\\pi}{3}$, $90^\\circ = \\frac{\\pi}{2}$, $180^\\circ = \\pi$, $360^\\circ = 2\\pi$.</li>
+          <li>Khi áp dụng công thức tính độ dài cung $l = R\\alpha$, số đo góc $\\alpha$ bắt buộc phải ở đơn vị <strong>radian</strong>! Nếu đề bài cho số đo theo độ $a^\\circ$, phải đổi sang radian bằng công thức $\\alpha = a \\times \\frac{\\pi}{180}$ trước khi nhân.</li>`,
+          `<li>Quên đổi đơn vị góc từ độ sang radian trước khi dùng $l = R\\alpha$ (lấy trực tiếp $R \\times a^\\circ$).</li>
           <li>Nhầm dấu của góc khi tia quay cùng chiều kim đồng hồ (cùng chiều kim đồng hồ là chiều ÂM, mang dấu $-$).</li>`,
           `<li><em>"Độ sang Rad nhân Pi chia một trăm tám - Ngược chiều đồng hồ là chiều DƯƠNG!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Góc có số đo $150^\circ$ đổi sang đơn vị radian bằng:",
-            options: ["A. $\frac{5\pi}{6}$", "B. $\frac{2\pi}{3}$", "C. $\frac{3\pi}{4}$", "D. $\frac{7\pi}{6}$"],
+            question: "Góc có số đo $150^\\circ$ đổi sang đơn vị radian bằng:",
+            options: ["A. $\\frac{5\\pi}{6}$", "B. $\\frac{2\\pi}{3}$", "C. $\\frac{3\\pi}{4}$", "D. $\\frac{7\\pi}{6}$"],
             correct: "A",
-            explanation: "$150^\circ = 150 \times \frac{\pi}{180} = \frac{5\pi}{6}\text{ rad}$.",
-            hint1: "Nhân số độ với $\frac{\pi}{180}$.",
-            hint2: "$\frac{150}{180} = \frac{5}{6}$."
+            explanation: "$150^\\circ = 150 \\times \\frac{\\pi}{180} = \\frac{5\\pi}{6}\\text{ rad}$.",
+            hint1: "Nhân số độ với $\\frac{\\pi}{180}$.",
+            hint2: "$\\frac{150}{180} = \\frac{5}{6}$."
           },
           {
-            question: "Trên đường tròn bán kính $R = 8\text{ cm}$, độ dài cung tròn có số đo $\alpha = \frac{3\pi}{4}\text{ rad}$ bằng:",
-            options: ["A. $6\pi\text{ cm}$", "B. $8\pi\text{ cm}$", "C. $12\pi\text{ cm}$", "D. $4\pi\text{ cm}$"],
+            question: "Trên đường tròn bán kính $R = 8\\text{ cm}$, độ dài cung tròn có số đo $\\alpha = \\frac{3\\pi}{4}\\text{ rad}$ bằng:",
+            options: ["A. $6\\pi\\text{ cm}$", "B. $8\\pi\\text{ cm}$", "C. $12\\pi\\text{ cm}$", "D. $4\\pi\\text{ cm}$"],
             correct: "A",
-            explanation: "Độ dài cung tròn là: $l = R\alpha = 8 \times \frac{3\pi}{4} = 6\pi\text{ cm}$.",
-            hint1: "Áp dụng công thức $l = R\alpha$.",
-            hint2: "$8 \times \frac{3}{4} = 6$."
+            explanation: "Độ dài cung tròn là: $l = R\\alpha = 8 \\times \\frac{3\\pi}{4} = 6\\pi\\text{ cm}$.",
+            hint1: "Áp dụng công thức $l = R\\alpha$.",
+            hint2: "$8 \\times \\frac{3}{4} = 6$."
           },
           {
             question: "Một bánh xe quay được 3,5 vòng ngược chiều kim đồng hồ. Góc lượng giác quét được có số đo bằng:",
-            options: ["A. $7\pi\text{ rad}$", "B. $-7\pi\text{ rad}$", "C. $\frac{7\pi}{2}\text{ rad}$", "D. $14\pi\text{ rad}$"],
+            options: ["A. $7\\pi\\text{ rad}$", "B. $-7\\pi\\text{ rad}$", "C. $\\frac{7\\pi}{2}\\text{ rad}$", "D. $14\\pi\\text{ rad}$"],
             correct: "A",
-            explanation: "Một vòng quay trọn vẹn ngược chiều kim đồng hồ (chiều dương) tương ứng góc $+2\pi\text{ rad}$. Vậy 3,5 vòng quét được $3,5 \times 2\pi = 7\pi\text{ rad}$.",
-            hint1: "1 vòng quay ngược chiều kim đồng hồ là $+2\pi$.",
-            hint2: "$3,5 \times 2\pi = 7\pi$."
+            explanation: "Một vòng quay trọn vẹn ngược chiều kim đồng hồ (chiều dương) tương ứng góc $+2\\pi\\text{ rad}$. Vậy 3,5 vòng quét được $3,5 \\times 2\\pi = 7\\pi\\text{ rad}$.",
+            hint1: "1 vòng quay ngược chiều kim đồng hồ là $+2\\pi$.",
+            hint2: "$3,5 \\times 2\\pi = 7\\pi$."
           }
         ]
       },
@@ -116,39 +116,39 @@
           `<p>Mô hình biểu diễn góc trên mặt phẳng toạ độ Oxy:</p>
           <ul class="list-disc ml-5 space-y-1.5">
             <li><strong>Đường tròn lượng giác:</strong> Là đường tròn tâm tại gốc toạ độ $O(0;0)$, bán kính $R = 1$, được định hướng (chiều dương ngược chiều kim đồng hồ) và lấy điểm $A(1;0)$ làm điểm gốc.</li>
-            <li><strong>Bốn điểm mốc chính:</strong> $A(1; 0)$ ứng với góc $0$, $B(0; 1)$ ứng với $\frac{\pi}{2}$, $A'(-1; 0)$ ứng với $\pi$, $B'(0; -1)$ ứng với $\frac{3\pi}{2}$ (hoặc $-\frac{\pi}{2}$).</li>
-            <li><strong>Điểm biểu diễn góc lượng giác:</strong> Với mỗi góc lượng giác có số đo $\alpha$, có duy nhất một điểm $M$ trên đường tròn lượng giác sao cho $\text{sđ}(OA, OM) = \alpha$. Ta gọi $M$ là điểm biểu diễn của góc lượng giác số đo $\alpha$.</li>
-            <li><strong>Số điểm biểu diễn của họ góc:</strong> Họ góc lượng giác dạng $\alpha + k\frac{2\pi}{n}$ ($k \in \mathbb{Z}$) được biểu diễn bởi đúng $n$ điểm phân biệt trên đường tròn lượng giác, tạo thành các đỉnh của một đa giác đều $n$ cạnh.</li>
+            <li><strong>Bốn điểm mốc chính:</strong> $A(1; 0)$ ứng với góc $0$, $B(0; 1)$ ứng với $\\frac{\\pi}{2}$, $A'(-1; 0)$ ứng với $\\pi$, $B'(0; -1)$ ứng với $\\frac{3\\pi}{2}$ (hoặc $-\\frac{\\pi}{2}$).</li>
+            <li><strong>Điểm biểu diễn góc lượng giác:</strong> Với mỗi góc lượng giác có số đo $\\alpha$, có duy nhất một điểm $M$ trên đường tròn lượng giác sao cho $\\text{sđ}(OA, OM) = \\alpha$. Ta gọi $M$ là điểm biểu diễn của góc lượng giác số đo $\\alpha$.</li>
+            <li><strong>Số điểm biểu diễn của họ góc:</strong> Họ góc lượng giác dạng $\\alpha + k\\frac{2\\pi}{n}$ ($k \\in \\mathbb{Z}$) được biểu diễn bởi đúng $n$ điểm phân biệt trên đường tròn lượng giác, tạo thành các đỉnh của một đa giác đều $n$ cạnh.</li>
           </ul>`,
-          `<li>Khi tìm điểm biểu diễn góc lớn hơn $2\pi$ hoặc âm, hãy phân tích $\alpha = \alpha_0 + k2\pi$ với $\alpha_0 \in [0; 2\pi)$ để xác định vị trí tức thì.</li>
-          <li>Họ góc $\alpha + k\pi$ ($k \in \mathbb{Z}$) có 2 điểm biểu diễn đối xứng nhau qua tâm toạ độ $O$.</li>`,
-          `<li>Quên triệt tiêu chu kỳ $k2\pi$ dẫn đến xoay quá nhiều vòng gây nhầm lẫn toạ độ.</li>
-          <li>Nhầm lẫn giữa các góc phần tư: I (góc từ $0$ đến $\frac{\pi}{2}$), II (từ $\frac{\pi}{2}$ đến $\pi$), III (từ $\pi$ đến $\frac{3\pi}{2}$), IV (từ $\frac{3\pi}{2}$ đến $2\pi$).</li>`,
-          `<li><em>"Chu kỳ $k2\pi$ trùng điểm cũ – Chia bước nhảy cho $2\pi$ ra ngay số điểm biểu diễn!"</em></li>`
+          `<li>Khi tìm điểm biểu diễn góc lớn hơn $2\\pi$ hoặc âm, hãy phân tích $\\alpha = \\alpha_0 + k2\\pi$ với $\\alpha_0 \\in [0; 2\\pi)$ để xác định vị trí tức thì.</li>
+          <li>Họ góc $\\alpha + k\\pi$ ($k \\in \\mathbb{Z}$) có 2 điểm biểu diễn đối xứng nhau qua tâm toạ độ $O$.</li>`,
+          `<li>Quên triệt tiêu chu kỳ $k2\\pi$ dẫn đến xoay quá nhiều vòng gây nhầm lẫn toạ độ.</li>
+          <li>Nhầm lẫn giữa các góc phần tư: I (góc từ $0$ đến $\\frac{\\pi}{2}$), II (từ $\\frac{\\pi}{2}$ đến $\\pi$), III (từ $\\pi$ đến $\\frac{3\\pi}{2}$), IV (từ $\\frac{3\\pi}{2}$ đến $2\\pi$).</li>`,
+          `<li><em>"Chu kỳ $k2\\pi$ trùng điểm cũ – Chia bước nhảy cho $2\\pi$ ra ngay số điểm biểu diễn!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Điểm biểu diễn của góc lượng giác $\alpha = \frac{7\pi}{2}$ trùng với điểm nào sau đây trên đường tròn lượng giác?",
+            question: "Điểm biểu diễn của góc lượng giác $\\alpha = \\frac{7\\pi}{2}$ trùng với điểm nào sau đây trên đường tròn lượng giác?",
             options: ["A. $B'(0; -1)$", "B. $B(0; 1)$", "C. $A'( -1; 0)$", "D. $A(1; 0)$"],
             correct: "A",
-            explanation: "Ta có $\frac{7\pi}{2} = 4\pi - \frac{\pi}{2} = -\frac{\pi}{2} + 2 \times 2\pi$. Điểm biểu diễn trùng với điểm biểu diễn góc $-\frac{\pi}{2}$, tức là $B'(0; -1)$.",
-            hint1: "Tách $\frac{7\pi}{2} = 4\pi - \frac{\pi}{2}$.",
-            hint2: "Bỏ $4\pi = 2 \times 2\pi$, còn lại góc $-\frac{\pi}{2}$ tương ứng trục tung âm."
+            explanation: "Ta có $\\frac{7\\pi}{2} = 4\\pi - \\frac{\\pi}{2} = -\\frac{\\pi}{2} + 2 \\times 2\\pi$. Điểm biểu diễn trùng với điểm biểu diễn góc $-\\frac{\\pi}{2}$, tức là $B'(0; -1)$.",
+            hint1: "Tách $\\frac{7\\pi}{2} = 4\\pi - \\frac{\\pi}{2}$.",
+            hint2: "Bỏ $4\\pi = 2 \\times 2\\pi$, còn lại góc $-\\frac{\\pi}{2}$ tương ứng trục tung âm."
           },
           {
-            question: "Số điểm biểu diễn của họ góc lượng giác $\alpha = \frac{\pi}{3} + k\frac{\pi}{2}$ ($k \in \mathbb{Z}$) trên đường tròn lượng giác là:",
+            question: "Số điểm biểu diễn của họ góc lượng giác $\\alpha = \\frac{\\pi}{3} + k\\frac{\\pi}{2}$ ($k \\in \\mathbb{Z}$) trên đường tròn lượng giác là:",
             options: ["A. 4 điểm", "B. 2 điểm", "C. 3 điểm", "D. 6 điểm"],
             correct: "A",
-            explanation: "Khoảng cách bước nhảy chu kỳ là $\frac{\pi}{2}$. Số điểm biểu diễn phân biệt trên đường tròn lượng giác là $\frac{2\pi}{\pi/2} = 4$ điểm, tạo thành một hình vuông.",
-            hint1: "Áp dụng quy tắc họ góc $\alpha + k\frac{2\pi}{n}$ có $n$ điểm biểu diễn.",
-            hint2: "Ta có $\frac{\pi}{2} = \frac{2\pi}{4} \Rightarrow n = 4$."
+            explanation: "Khoảng cách bước nhảy chu kỳ là $\\frac{\\pi}{2}$. Số điểm biểu diễn phân biệt trên đường tròn lượng giác là $\\frac{2\\pi}{\\pi/2} = 4$ điểm, tạo thành một hình vuông.",
+            hint1: "Áp dụng quy tắc họ góc $\\alpha + k\\frac{2\\pi}{n}$ có $n$ điểm biểu diễn.",
+            hint2: "Ta có $\\frac{\\pi}{2} = \\frac{2\\pi}{4} \\Rightarrow n = 4$."
           },
           {
-            question: "Góc lượng giác $\alpha = -\frac{2\pi}{3}$ có điểm biểu diễn thuộc góc phần tư thứ mấy?",
+            question: "Góc lượng giác $\\alpha = -\\frac{2\\pi}{3}$ có điểm biểu diễn thuộc góc phần tư thứ mấy?",
             options: ["A. Góc phần tư thứ III", "B. Góc phần tư thứ II", "C. Góc phần tư thứ IV", "D. Góc phần tư thứ I"],
             correct: "A",
-            explanation: "Ta có $-\frac{2\pi}{3} = -120^\circ$. Quay từ tia $OA(1;0)$ theo chiều âm góc $120^\circ$ sẽ vượt qua $-\frac{\pi}{2}$ ($-90^\circ$) và rơi vào góc phần tư thứ III ($-\pi < -\frac{2\pi}{3} < -\frac{\pi}{2}$).",
-            hint1: "$-\frac{2\pi}{3} = -120^\circ$.",
+            explanation: "Ta có $-\\frac{2\\pi}{3} = -120^\\circ$. Quay từ tia $OA(1;0)$ theo chiều âm góc $120^\\circ$ sẽ vượt qua $-\\frac{\\pi}{2}$ ($-90^\\circ$) và rơi vào góc phần tư thứ III ($-\\pi < -\\frac{2\\pi}{3} < -\\frac{\\pi}{2}$).",
+            hint1: "$-\\frac{2\\pi}{3} = -120^\\circ$.",
             hint2: "Điểm nằm ở góc phần tư III (phía dưới bên trái)."
           }
         ]
@@ -161,45 +161,45 @@
           "Giá trị lượng giác của góc lượng giác & Dấu theo các góc phần tư",
           `<p>Định nghĩa 4 giá trị lượng giác theo toạ độ điểm $M(x_M; y_M)$ trên đường tròn lượng giác:</p>
           <ul class="list-disc ml-5 space-y-1.5">
-            <li><strong>Sin và Cos:</strong> $\cos \alpha = x_M$ (hoành độ), $\quad \sin \alpha = y_M$ (tung độ). Ta luôn có: $-1 \le \sin\alpha \le 1, \quad -1 \le \cos\alpha \le 1$.</li>
-            <li><strong>Tang và Cô-tang:</strong> $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y_M}{x_M}$ $(\alpha \ne \frac{\pi}{2} + k\pi)$, $\quad \cot \alpha = \frac{\cos \alpha}{\sin \alpha} = \frac{x_M}{y_M}$ $(\alpha \ne k\pi)$.</li>
+            <li><strong>Sin và Cos:</strong> $\\cos \\alpha = x_M$ (hoành độ), $\\quad \\sin \\alpha = y_M$ (tung độ). Ta luôn có: $-1 \\le \\sin\\alpha \\le 1, \\quad -1 \\le \\cos\\alpha \\le 1$.</li>
+            <li><strong>Tang và Cô-tang:</strong> $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} = \\frac{y_M}{x_M}$ $(\\alpha \\ne \\frac{\\pi}{2} + k\\pi)$, $\\quad \\cot \\alpha = \\frac{\\cos \\alpha}{\\sin \\alpha} = \\frac{x_M}{y_M}$ $(\\alpha \\ne k\\pi)$.</li>
             <li><strong>Dấu theo 4 góc phần tư:</strong>
-              <br/>• Góc phần tư I ($0 < \alpha < \frac{\pi}{2}$): $\sin > 0, \cos > 0, \tan > 0, \cot > 0$ (tất cả đều dương).
-              <br/>• Góc phần tư II ($\frac{\pi}{2} < \alpha < \pi$): $\sin > 0$, còn $\cos < 0, \tan < 0, \cot < 0$.
-              <br/>• Góc phần tư III ($\pi < \alpha < \frac{3\pi}{2}$): $\tan > 0, \cot > 0$, còn $\sin < 0, \cos < 0$.
-              <br/>• Góc phần tư IV ($\frac{3\pi}{2} < \alpha < 2\pi$): $\cos > 0$, còn $\sin < 0, \tan < 0, \cot < 0$.
+              <br/>• Góc phần tư I ($0 < \\alpha < \\frac{\\pi}{2}$): $\\sin > 0, \\cos > 0, \\tan > 0, \\cot > 0$ (tất cả đều dương).
+              <br/>• Góc phần tư II ($\\frac{\\pi}{2} < \\alpha < \\pi$): $\\sin > 0$, còn $\\cos < 0, \\tan < 0, \\cot < 0$.
+              <br/>• Góc phần tư III ($\\pi < \\alpha < \\frac{3\\pi}{2}$): $\\tan > 0, \\cot > 0$, còn $\\sin < 0, \\cos < 0$.
+              <br/>• Góc phần tư IV ($\\frac{3\\pi}{2} < \\alpha < 2\\pi$): $\\cos > 0$, còn $\\sin < 0, \\tan < 0, \\cot < 0$.
             </li>
           </ul>`,
           `<li>Thần chú xét dấu siêu tốc: <em>"Nhất cả - Nhì sin - Tam tang cot - Tứ cos"</em> (ở góc phần tư nào thì hàm đó mang dấu dương, còn lại mang dấu âm).</li>
           <li>Trục hoành $Ox$ là trục Cosin ("Cos nằm"), trục tung $Oy$ là trục Sin ("Sin đứng").</li>`,
-          `<li>Quên lấy dấu âm khi khai căn trong các góc phần tư II, III, IV (chẳng hạn ở góc phần tư II thì $\cos\alpha = -\sqrt{1 - \sin^2\alpha}$).</li>
+          `<li>Quên lấy dấu âm khi khai căn trong các góc phần tư II, III, IV (chẳng hạn ở góc phần tư II thì $\\cos\\alpha = -\\sqrt{1 - \\sin^2\\alpha}$).</li>
           <li>Bấm máy tính tính lượng giác mà quên kiểm tra chế độ Radian (chữ R) hay Độ (chữ D).</li>`,
           `<li><em>"Sin đứng, Cos nằm - Nhất cả, Nhì sin, Tam tang cot, Tứ cos!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Cho góc lượng giác $\alpha$ thoả mãn $\frac{\pi}{2} < \alpha < \pi$. Khẳng định nào sau đây là ĐÚNG?",
-            options: ["A. $\sin \alpha > 0, \cos \alpha < 0$", "B. $\sin \alpha < 0, \cos \alpha > 0$", "C. $\sin \alpha > 0, \cos \alpha > 0$", "D. $\sin \alpha < 0, \cos \alpha < 0$"],
+            question: "Cho góc lượng giác $\\alpha$ thoả mãn $\\frac{\\pi}{2} < \\alpha < \\pi$. Khẳng định nào sau đây là ĐÚNG?",
+            options: ["A. $\\sin \\alpha > 0, \\cos \\alpha < 0$", "B. $\\sin \\alpha < 0, \\cos \\alpha > 0$", "C. $\\sin \\alpha > 0, \\cos \\alpha > 0$", "D. $\\sin \\alpha < 0, \\cos \\alpha < 0$"],
             correct: "A",
-            explanation: "Góc $\alpha$ thuộc góc phần tư thứ II. Theo quy tắc 'Nhì sin', tại đây chỉ có $\sin \alpha > 0$, còn $\cos \alpha < 0$.",
+            explanation: "Góc $\\alpha$ thuộc góc phần tư thứ II. Theo quy tắc 'Nhì sin', tại đây chỉ có $\\sin \\alpha > 0$, còn $\\cos \\alpha < 0$.",
             hint1: "Góc phần tư thứ II nằm ở phía trên bên trái trục toạ độ.",
             hint2: "Tung độ dương ($y > 0$), hoành độ âm ($x < 0$)."
           },
           {
-            question: "Cho $\cos \alpha = -\frac{3}{5}$ với $\pi < \alpha < \frac{3\pi}{2}$. Giá trị của $\sin \alpha$ bằng:",
-            options: ["A. $-\frac{4}{5}$", "B. $\frac{4}{5}$", "C. $-\frac{2}{5}$", "D. $\frac{16}{25}$"],
+            question: "Cho $\\cos \\alpha = -\\frac{3}{5}$ với $\\pi < \\alpha < \\frac{3\\pi}{2}$. Giá trị của $\\sin \\alpha$ bằng:",
+            options: ["A. $-\\frac{4}{5}$", "B. $\\frac{4}{5}$", "C. $-\\frac{2}{5}$", "D. $\\frac{16}{25}$"],
             correct: "A",
-            explanation: "Vì $\pi < \alpha < \frac{3\pi}{2}$ (góc phần tư thứ III) nên $\sin \alpha < 0$. Áp dụng $\sin^2 \alpha = 1 - \cos^2 \alpha = 1 - \frac{9}{25} = \frac{16}{25} \Rightarrow \sin \alpha = -\sqrt{\frac{16}{25}} = -\frac{4}{5}$.",
-            hint1: "Ở góc phần tư thứ III thì $\sin \alpha < 0$.",
-            hint2: "$\sin \alpha = -\sqrt{1 - (-3/5)^2} = -4/5$."
+            explanation: "Vì $\\pi < \\alpha < \\frac{3\\pi}{2}$ (góc phần tư thứ III) nên $\\sin \\alpha < 0$. Áp dụng $\\sin^2 \\alpha = 1 - \\cos^2 \\alpha = 1 - \\frac{9}{25} = \\frac{16}{25} \\Rightarrow \\sin \\alpha = -\\sqrt{\\frac{16}{25}} = -\\frac{4}{5}$.",
+            hint1: "Ở góc phần tư thứ III thì $\\sin \\alpha < 0$.",
+            hint2: "$\\sin \\alpha = -\\sqrt{1 - (-3/5)^2} = -4/5$."
           },
           {
-            question: "Giá trị của $\tan\left(-\frac{\pi}{4}\right)$ bằng:",
-            options: ["A. $-1$", "B. $1$", "C. $0$", "D. $-\sqrt{3}$"],
+            question: "Giá trị của $\\tan\\left(-\\frac{\\pi}{4}\\right)$ bằng:",
+            options: ["A. $-1$", "B. $1$", "C. $0$", "D. $-\\sqrt{3}$"],
             correct: "A",
-            explanation: "Góc đối: $\tan(-\alpha) = -\tan \alpha$. Do đó $\tan\left(-\frac{\pi}{4}\right) = -\tan\left(\frac{\pi}{4}\right) = -1$.",
-            hint1: "Áp dụng tính chất góc đối: $\tan(-x) = -\tan x$.",
-            hint2: "$\tan(\pi/4) = 1$."
+            explanation: "Góc đối: $\\tan(-\\alpha) = -\\tan \\alpha$. Do đó $\\tan\\left(-\\frac{\\pi}{4}\\right) = -\\tan\\left(\\frac{\\pi}{4}\\right) = -1$.",
+            hint1: "Áp dụng tính chất góc đối: $\\tan(-x) = -\\tan x$.",
+            hint2: "$\\tan(\\pi/4) = 1$."
           }
         ]
       },
@@ -212,48 +212,48 @@
           `<p>Bốn hệ thức lượng giác cốt lõi và các góc liên quan đặc biệt:</p>
           <ul class="list-disc ml-5 space-y-1.5">
             <li><strong>4 Hệ thức lượng giác cơ bản:</strong>
-              <br/>1) $\sin^2 \alpha + \cos^2 \alpha = 1$.
-              <br/>2) $1 + \tan^2 \alpha = \frac{1}{\cos^2 \alpha} \quad (\alpha \ne \frac{\pi}{2} + k\pi)$.
-              <br/>3) $1 + \cot^2 \alpha = \frac{1}{\sin^2 \alpha} \quad (\alpha \ne k\pi)$.
-              <br/>4) $\tan \alpha \cdot \cot \alpha = 1 \quad (\alpha \ne k\frac{\pi}{2})$.
+              <br/>1) $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$.
+              <br/>2) $1 + \\tan^2 \\alpha = \\frac{1}{\\cos^2 \\alpha} \\quad (\\alpha \\ne \\frac{\\pi}{2} + k\\pi)$.
+              <br/>3) $1 + \\cot^2 \\alpha = \\frac{1}{\\sin^2 \\alpha} \\quad (\\alpha \\ne k\\pi)$.
+              <br/>4) $\\tan \\alpha \\cdot \\cot \\alpha = 1 \\quad (\\alpha \\ne k\\frac{\\pi}{2})$.
             </li>
             <li><strong>Giá trị lượng giác các cung có liên quan đặc biệt:</strong>
-              <br/>• <em>Góc đối nhau ($\alpha$ và $-\alpha$):</em> $\cos(-\alpha) = \cos\alpha$, còn $\sin, \tan, \cot$ đều đổi dấu.
-              <br/>• <em>Góc bù nhau ($\alpha$ và $\pi - \alpha$):</em> $\sin(\pi - \alpha) = \sin\alpha$, còn $\cos, \tan, \cot$ đều đổi dấu.
-              <br/>• <em>Góc phụ nhau ($\alpha$ và $\frac{\pi}{2} - \alpha$):</em> Chéo hàm $\sin \leftrightarrow \cos$ và $\tan \leftrightarrow \cot$.
-              <br/>• <em>Góc hơn kém $\pi$ ($\alpha$ và $\alpha + \pi$):</em> $\tan(\alpha + \pi) = \tan\alpha, \cot(\alpha + \pi) = \cot\alpha$, còn $\sin, \cos$ đổi dấu.
+              <br/>• <em>Góc đối nhau ($\\alpha$ và $-\\alpha$):</em> $\\cos(-\\alpha) = \\cos\\alpha$, còn $\\sin, \\tan, \\cot$ đều đổi dấu.
+              <br/>• <em>Góc bù nhau ($\\alpha$ và $\\pi - \\alpha$):</em> $\\sin(\\pi - \\alpha) = \\sin\\alpha$, còn $\\cos, \\tan, \\cot$ đều đổi dấu.
+              <br/>• <em>Góc phụ nhau ($\\alpha$ và $\\frac{\\pi}{2} - \\alpha$):</em> Chéo hàm $\\sin \\leftrightarrow \\cos$ và $\\tan \\leftrightarrow \\cot$.
+              <br/>• <em>Góc hơn kém $\\pi$ ($\\alpha$ và $\\alpha + \\pi$):</em> $\\tan(\\alpha + \\pi) = \\tan\\alpha, \\cot(\\alpha + \\pi) = \\cot\\alpha$, còn $\\sin, \\cos$ đổi dấu.
             </li>
           </ul>`,
-          `<li>Bài toán tính biểu thức phân thức đồng bậc đối với $\sin\alpha$ và $\cos\alpha$ khi biết $\tan\alpha$: Hãy chia cả tử và mẫu cho $\cos\alpha$ (hoặc $\cos^2\alpha$) để chuyển toàn bộ biểu thức về $\tan\alpha$.</li>
-          <li>Khi biết $\sin\alpha + \cos\alpha = S$, bình phương hai vế: $S^2 = 1 + 2\sin\alpha\cos\alpha \Rightarrow \sin\alpha\cos\alpha = \frac{S^2 - 1}{2}$.</li>`,
-          `<li>Nhầm dấu giữa Sin bù và Cos bù: Hai góc bù nhau thì CHỈ CÓ Sin giữ nguyên dấu dương; $\cos(\pi - \alpha) = -\cos\alpha$!</li>
-          <li>Quên chéo hàm khi gặp góc phụ $\frac{\pi}{2} - \alpha$ (chẳng hạn $\sin(\pi/2 - x) = \cos x$).</li>`,
+          `<li>Bài toán tính biểu thức phân thức đồng bậc đối với $\\sin\\alpha$ và $\\cos\\alpha$ khi biết $\\tan\\alpha$: Hãy chia cả tử và mẫu cho $\\cos\\alpha$ (hoặc $\\cos^2\\alpha$) để chuyển toàn bộ biểu thức về $\\tan\\alpha$.</li>
+          <li>Khi biết $\\sin\\alpha + \\cos\\alpha = S$, bình phương hai vế: $S^2 = 1 + 2\\sin\\alpha\\cos\\alpha \\Rightarrow \\sin\\alpha\\cos\\alpha = \\frac{S^2 - 1}{2}$.</li>`,
+          `<li>Nhầm dấu giữa Sin bù và Cos bù: Hai góc bù nhau thì CHỈ CÓ Sin giữ nguyên dấu dương; $\\cos(\\pi - \\alpha) = -\\cos\\alpha$!</li>
+          <li>Quên chéo hàm khi gặp góc phụ $\\frac{\\pi}{2} - \\alpha$ (chẳng hạn $\\sin(\\pi/2 - x) = \\cos x$).</li>`,
           `<li><em>"Cos đối - Sin bù - Phụ chéo - Hơn kém Pi tang cot!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Cho $\tan \alpha = 3$. Giá trị của biểu thức $P = \frac{3\sin \alpha - 2\cos \alpha}{\sin \alpha + \cos \alpha}$ bằng:",
-            options: ["A. $\frac{7}{4}$", "B. $\frac{5}{4}$", "C. $1$", "D. $\frac{9}{4}$"],
+            question: "Cho $\\tan \\alpha = 3$. Giá trị của biểu thức $P = \\frac{3\\sin \\alpha - 2\\cos \\alpha}{\\sin \\alpha + \\cos \\alpha}$ bằng:",
+            options: ["A. $\\frac{7}{4}$", "B. $\\frac{5}{4}$", "C. $1$", "D. $\\frac{9}{4}$"],
             correct: "A",
-            explanation: "Vì $\tan\alpha$ xác định nên $\cos\alpha \ne 0$. Chia cả tử và mẫu cho $\cos \alpha$:\n$$P = \frac{3\tan \alpha - 2}{\tan \alpha + 1} = \frac{3(3) - 2}{3 + 1} = \frac{7}{4}.$$",
-            hint1: "Chia cả tử và mẫu cho $\cos \alpha$.",
-            hint2: "Thay $\tan \alpha = 3$ vào biểu thức vừa rút gọn."
+            explanation: "Vì $\\tan\\alpha$ xác định nên $\\cos\\alpha \\ne 0$. Chia cả tử và mẫu cho $\\cos \\alpha$:\n$$P = \\frac{3\\tan \\alpha - 2}{\\tan \\alpha + 1} = \\frac{3(3) - 2}{3 + 1} = \\frac{7}{4}.$$",
+            hint1: "Chia cả tử và mẫu cho $\\cos \\alpha$.",
+            hint2: "Thay $\\tan \\alpha = 3$ vào biểu thức vừa rút gọn."
           },
           {
-            question: "Rút gọn biểu thức $A = \cos(\pi - x) + \sin\left(\frac{\pi}{2} - x\right)$ ta được kết quả là:",
-            options: ["A. $0$", "B. $2\cos x$", "C. $-2\cos x$", "D. $2\sin x$"],
+            question: "Rút gọn biểu thức $A = \\cos(\\pi - x) + \\sin\\left(\\frac{\\pi}{2} - x\\right)$ ta được kết quả là:",
+            options: ["A. $0$", "B. $2\\cos x$", "C. $-2\\cos x$", "D. $2\\sin x$"],
             correct: "A",
-            explanation: "Theo công thức góc bù và góc phụ:\n$\cos(\pi - x) = -\cos x$ và $\sin\left(\frac{\pi}{2} - x\right) = \cos x$.\nDo đó $A = -\cos x + \cos x = 0$.",
+            explanation: "Theo công thức góc bù và góc phụ:\n$\\cos(\\pi - x) = -\\cos x$ và $\\sin\\left(\\frac{\\pi}{2} - x\\right) = \\cos x$.\nDo đó $A = -\\cos x + \\cos x = 0$.",
             hint1: "Áp dụng công thức Sin bù và Phụ chéo.",
-            hint2: "$-\cos x + \cos x = 0$."
+            hint2: "$-\\cos x + \\cos x = 0$."
           },
           {
-            question: "Cho $\sin \alpha + \cos \alpha = \frac{1}{2}$. Giá trị của tích $\sin \alpha \cos \alpha$ bằng:",
-            options: ["A. $-\frac{3}{8}$", "B. $\frac{3}{8}$", "C. $-\frac{3}{4}$", "D. $\frac{1}{4}$"],
+            question: "Cho $\\sin \\alpha + \\cos \\alpha = \\frac{1}{2}$. Giá trị của tích $\\sin \\alpha \\cos \\alpha$ bằng:",
+            options: ["A. $-\\frac{3}{8}$", "B. $\\frac{3}{8}$", "C. $-\\frac{3}{4}$", "D. $\\frac{1}{4}$"],
             correct: "A",
-            explanation: "Bình phương hai vế ta có:\n$(\sin \alpha + \cos \alpha)^2 = \sin^2 \alpha + \cos^2 \alpha + 2\sin \alpha \cos \alpha = 1 + 2\sin \alpha \cos \alpha = \left(\frac{1}{2}\right)^2 = \frac{1}{4}$.\nSuy ra $2\sin \alpha \cos \alpha = \frac{1}{4} - 1 = -\frac{3}{4} \Rightarrow \sin \alpha \cos \alpha = -\frac{3}{8}$.",
-            hint1: "Bình phương hai vế $(\sin \alpha + \cos \alpha)^2$.",
-            hint2: "$1 + 2\sin \alpha \cos \alpha = 1/4$."
+            explanation: "Bình phương hai vế ta có:\n$(\\sin \\alpha + \\cos \\alpha)^2 = \\sin^2 \\alpha + \\cos^2 \\alpha + 2\\sin \\alpha \\cos \\alpha = 1 + 2\\sin \\alpha \\cos \\alpha = \\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$.\nSuy ra $2\\sin \\alpha \\cos \\alpha = \\frac{1}{4} - 1 = -\\frac{3}{4} \\Rightarrow \\sin \\alpha \\cos \\alpha = -\\frac{3}{8}$.",
+            hint1: "Bình phương hai vế $(\\sin \\alpha + \\cos \\alpha)^2$.",
+            hint2: "$1 + 2\\sin \\alpha \\cos \\alpha = 1/4$."
           }
         ]
       }
@@ -340,48 +340,48 @@
           `<p>Bộ công thức cộng mở rộng cho sin, cosin và tang:</p>
           <ul class="list-disc ml-5 space-y-1.5">
             <li><strong>Công thức cộng của Cosin:</strong><br/>
-              • $\cos(a - b) = \cos a \cos b + \sin a \sin b$<br/>
-              • $\cos(a + b) = \cos a \cos b - \sin a \sin b$
+              • $\\cos(a - b) = \\cos a \\cos b + \\sin a \\sin b$<br/>
+              • $\\cos(a + b) = \\cos a \\cos b - \\sin a \\sin b$
             </li>
             <li><strong>Công thức cộng của Sin:</strong><br/>
-              • $\sin(a - b) = \sin a \cos b - \cos a \sin b$<br/>
-              • $\sin(a + b) = \sin a \cos b + \cos a \sin b$
+              • $\\sin(a - b) = \\sin a \\cos b - \\cos a \\sin b$<br/>
+              • $\\sin(a + b) = \\sin a \\cos b + \\cos a \\sin b$
             </li>
             <li><strong>Công thức cộng của Tang:</strong><br/>
-              • $\tan(a - b) = \dfrac{\tan a - \tan b}{1 + \tan a \tan b}$<br/>
-              • $\tan(a + b) = \dfrac{\tan a + \tan b}{1 - \tan a \tan b}$
+              • $\\tan(a - b) = \\dfrac{\\tan a - \\tan b}{1 + \\tan a \\tan b}$<br/>
+              • $\\tan(a + b) = \\dfrac{\\tan a + \\tan b}{1 - \\tan a \\tan b}$
             </li>
           </ul>`,
           `<li>Thần chú ghi nhớ: <em>"Cos cos sin sin dấu đổi - Sin cos cos sin dấu cùng"</em>.</li>
           <li>Với tang: Tử số cùng dấu với vế trái, mẫu số đổi dấu và có số 1 đứng đầu!</li>`,
-          `<li>Quên đổi dấu trong công thức cosin của tổng: $\cos(a+b) = \cos a\cos b - \sin a\sin b$ (dấu TRỪ chứ không phải dấu CỘNG).</li>
-          <li>Nhầm dấu ở mẫu số của $\tan(a+b)$ thành $1 + \tan a\tan b$.</li>`,
+          `<li>Quên đổi dấu trong công thức cosin của tổng: $\\cos(a+b) = \\cos a\\cos b - \\sin a\\sin b$ (dấu TRỪ chứ không phải dấu CỘNG).</li>
+          <li>Nhầm dấu ở mẫu số của $\\tan(a+b)$ thành $1 + \\tan a\\tan b$.</li>`,
           `<li><em>"Cos thì cos cos sin sin dấu đổi - Sin thì sin cos cos sin dấu cùng!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Giá trị chính xác của $\cos 75^\circ$ bằng:",
-            options: ["A. $\frac{\sqrt{6} - \sqrt{2}}{4}$", "B. $\frac{\sqrt{6} + \sqrt{2}}{4}$", "C. $\frac{\sqrt{2} - \sqrt{6}}{4}$", "D. $\frac{\sqrt{3} - 1}{2}$"],
+            question: "Giá trị chính xác của $\\cos 75^\\circ$ bằng:",
+            options: ["A. $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$", "B. $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$", "C. $\\frac{\\sqrt{2} - \\sqrt{6}}{4}$", "D. $\\frac{\\sqrt{3} - 1}{2}$"],
             correct: "A",
-            explanation: "Tách $75^\circ = 45^\circ + 30^\circ$:\n$$\cos 75^\circ = \cos(45^\circ + 30^\circ) = \cos 45^\circ\cos 30^\circ - \sin 45^\circ\sin 30^\circ = \frac{\sqrt{2}}{2}\frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2}\frac{1}{2} = \frac{\sqrt{6} - \sqrt{2}}{4}.$$",
-            hint1: "Áp dụng công thức cộng $\cos(45^\circ + 30^\circ)$.",
-            hint2: "$\cos 45^\circ\cos 30^\circ - \sin 45^\circ\sin 30^\circ$."
+            explanation: "Tách $75^\\circ = 45^\\circ + 30^\\circ$:\n$$\\cos 75^\\circ = \\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ\\cos 30^\\circ - \\sin 45^\\circ\\sin 30^\\circ = \\frac{\\sqrt{2}}{2}\\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2}\\frac{1}{2} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}.$$",
+            hint1: "Áp dụng công thức cộng $\\cos(45^\\circ + 30^\\circ)$.",
+            hint2: "$\\cos 45^\\circ\\cos 30^\\circ - \\sin 45^\\circ\\sin 30^\\circ$."
           },
           {
-            question: "Cho $\sin a = \frac{3}{5}$ (với $\frac{\pi}{2} < a < \pi$) và $\cos b = \frac{12}{13}$ (với $0 < b < \frac{\pi}{2}$). Giá trị của $\sin(a + b)$ bằng:",
-            options: ["A. $\frac{16}{65}$", "B. $\frac{56}{65}$", "C. $-\frac{16}{65}$", "D. $\frac{33}{65}$"],
+            question: "Cho $\\sin a = \\frac{3}{5}$ (với $\\frac{\\pi}{2} < a < \\pi$) và $\\cos b = \\frac{12}{13}$ (với $0 < b < \\frac{\\pi}{2}$). Giá trị của $\\sin(a + b)$ bằng:",
+            options: ["A. $\\frac{16}{65}$", "B. $\\frac{56}{65}$", "C. $-\\frac{16}{65}$", "D. $\\frac{33}{65}$"],
             correct: "A",
-            explanation: "Vì $\frac{\pi}{2} < a < \pi$ nên $\cos a = -\sqrt{1 - 9/25} = -\frac{4}{5}$.\nVì $0 < b < \frac{\pi}{2}$ nên $\sin b = \sqrt{1 - 144/169} = \frac{5}{13}$.\n$$\sin(a + b) = \sin a\cos b + \cos a\sin b = \frac{3}{5}\frac{12}{13} + \left(-\frac{4}{5}\right)\frac{5}{13} = \frac{36 - 20}{65} = \frac{16}{65}.$$",
-            hint1: "Tìm $\cos a = -4/5$ và $\sin b = 5/13$.",
-            hint2: "$\sin(a+b) = \sin a\cos b + \cos a\sin b$."
+            explanation: "Vì $\\frac{\\pi}{2} < a < \\pi$ nên $\\cos a = -\\sqrt{1 - 9/25} = -\\frac{4}{5}$.\nVì $0 < b < \\frac{\\pi}{2}$ nên $\\sin b = \\sqrt{1 - 144/169} = \\frac{5}{13}$.\n$$\\sin(a + b) = \\sin a\\cos b + \\cos a\\sin b = \\frac{3}{5}\\frac{12}{13} + \\left(-\\frac{4}{5}\\right)\\frac{5}{13} = \\frac{36 - 20}{65} = \\frac{16}{65}.$$",
+            hint1: "Tìm $\\cos a = -4/5$ và $\\sin b = 5/13$.",
+            hint2: "$\\sin(a+b) = \\sin a\\cos b + \\cos a\\sin b$."
           },
           {
-            question: "Cho $\tan a = 2$ và $\tan b = 3$. Giá trị của $\tan(a + b)$ bằng:",
-            options: ["A. $-1$", "B. $1$", "C. $5$", "D. $-\frac{5}{7}$"],
+            question: "Cho $\\tan a = 2$ và $\\tan b = 3$. Giá trị của $\\tan(a + b)$ bằng:",
+            options: ["A. $-1$", "B. $1$", "C. $5$", "D. $-\\frac{5}{7}$"],
             correct: "A",
-            explanation: "Áp dụng công thức cộng tang:\n$$\tan(a + b) = \frac{\tan a + \tan b}{1 - \tan a\tan b} = \frac{2 + 3}{1 - 2 \times 3} = \frac{5}{-5} = -1.$$",
-            hint1: "Áp dụng công thức $\tan(a+b) = \frac{\tan a + \tan b}{1 - \tan a\tan b}$.",
-            hint2: "$\frac{2+3}{1 - 6} = \frac{5}{-5} = -1$."
+            explanation: "Áp dụng công thức cộng tang:\n$$\\tan(a + b) = \\frac{\\tan a + \\tan b}{1 - \\tan a\\tan b} = \\frac{2 + 3}{1 - 2 \\times 3} = \\frac{5}{-5} = -1.$$",
+            hint1: "Áp dụng công thức $\\tan(a+b) = \\frac{\\tan a + \\tan b}{1 - \\tan a\\tan b}$.",
+            hint2: "$\\frac{2+3}{1 - 6} = \\frac{5}{-5} = -1$."
           }
         ]
       },
@@ -394,45 +394,45 @@
           `<p>Hệ thống công thức nhân đôi và hạ bậc then chốt:</p>
           <ul class="list-disc ml-5 space-y-1.5">
             <li><strong>Công thức nhân đôi:</strong><br/>
-              • $\sin 2a = 2\sin a \cos a$<br/>
-              • $\cos 2a = \cos^2 a - \sin^2 a = 2\cos^2 a - 1 = 1 - 2\sin^2 a$<br/>
-              • $\tan 2a = \dfrac{2\tan a}{1 - \tan^2 a}$
+              • $\\sin 2a = 2\\sin a \\cos a$<br/>
+              • $\\cos 2a = \\cos^2 a - \\sin^2 a = 2\\cos^2 a - 1 = 1 - 2\\sin^2 a$<br/>
+              • $\\tan 2a = \\dfrac{2\\tan a}{1 - \\tan^2 a}$
             </li>
             <li><strong>Công thức hạ bậc:</strong><br/>
-              • $\sin^2 a = \dfrac{1 - \cos 2a}{2}$<br/>
-              • $\cos^2 a = \dfrac{1 + \cos 2a}{2}$
+              • $\\sin^2 a = \\dfrac{1 - \\cos 2a}{2}$<br/>
+              • $\\cos^2 a = \\dfrac{1 + \\cos 2a}{2}$
             </li>
           </ul>`,
-          `<li>$\cos 2a$ có 3 dạng biến đổi tương đương linh hoạt.</li>
+          `<li>$\\cos 2a$ có 3 dạng biến đổi tương đương linh hoạt.</li>
           <li>Hạ bậc làm giảm số mũ từ 2 xuống 1 và làm tăng góc lên gấp đôi.</li>`,
-          `<li>Nhầm lẫn tự tiện ném hệ số 2 ra ngoài: $\sin 2a \neq 2\sin a$!</li>
-          <li>Nhầm dấu giữa hai dạng hạ bậc: $\sin^2$ mang dấu TRỪ, $\cos^2$ mang dấu CỘNG.</li>`,
+          `<li>Nhầm lẫn tự tiện ném hệ số 2 ra ngoài: $\\sin 2a \\neq 2\\sin a$!</li>
+          <li>Nhầm dấu giữa hai dạng hạ bậc: $\\sin^2$ mang dấu TRỪ, $\\cos^2$ mang dấu CỘNG.</li>`,
           `<li><em>"Sin gấp đôi bằng hai sin cos - Hạ bậc góc nhân đôi: Sin trừ, Cos cộng!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Cho $\cos a = -\frac{3}{5}$ với $\pi < a < \frac{3\pi}{2}$. Giá trị của $\sin 2a$ bằng:",
-            options: ["A. $\frac{24}{25}$", "B. $-\frac{24}{25}$", "C. $\frac{7}{25}$", "D. $-\frac{7}{25}$"],
+            question: "Cho $\\cos a = -\\frac{3}{5}$ với $\\pi < a < \\frac{3\\pi}{2}$. Giá trị của $\\sin 2a$ bằng:",
+            options: ["A. $\\frac{24}{25}$", "B. $-\\frac{24}{25}$", "C. $\\frac{7}{25}$", "D. $-\\frac{7}{25}$"],
             correct: "A",
-            explanation: "Vì $\pi < a < \frac{3\pi}{2}$ nên $\sin a = -\sqrt{1 - 9/25} = -\frac{4}{5}$.\nDo đó $\sin 2a = 2\sin a\cos a = 2\left(-\frac{4}{5}\right)\left(-\frac{3}{5}\right) = \frac{24}{25}$.",
-            hint1: "Tìm $\sin a = -4/5$.",
-            hint2: "$\sin 2a = 2(-4/5)(-3/5) = 24/25$."
+            explanation: "Vì $\\pi < a < \\frac{3\\pi}{2}$ nên $\\sin a = -\\sqrt{1 - 9/25} = -\\frac{4}{5}$.\nDo đó $\\sin 2a = 2\\sin a\\cos a = 2\\left(-\\frac{4}{5}\\right)\\left(-\\frac{3}{5}\\right) = \\frac{24}{25}$.",
+            hint1: "Tìm $\\sin a = -4/5$.",
+            hint2: "$\\sin 2a = 2(-4/5)(-3/5) = 24/25$."
           },
           {
-            question: "Giá trị của $\cos^2\frac{\pi}{8}$ tính theo công thức hạ bậc bằng:",
-            options: ["A. $\frac{2 + \sqrt{2}}{4}$", "B. $\frac{2 - \sqrt{2}}{4}$", "C. $\frac{\sqrt{2 + \sqrt{2}}}{2}$", "D. $\frac{1 + \sqrt{2}}{2}$"],
+            question: "Giá trị của $\\cos^2\\frac{\\pi}{8}$ tính theo công thức hạ bậc bằng:",
+            options: ["A. $\\frac{2 + \\sqrt{2}}{4}$", "B. $\\frac{2 - \\sqrt{2}}{4}$", "C. $\\frac{\\sqrt{2 + \\sqrt{2}}}{2}$", "D. $\\frac{1 + \\sqrt{2}}{2}$"],
             correct: "A",
-            explanation: "Áp dụng công thức hạ bậc:\n$$\cos^2\frac{\pi}{8} = \frac{1 + \cos\frac{\pi}{4}}{2} = \frac{1 + \frac{\sqrt{2}}{2}}{2} = \frac{2 + \sqrt{2}}{4}.$$",
-            hint1: "Áp dụng $\cos^2 x = \frac{1 + \cos 2x}{2}$.",
-            hint2: "Góc nhân đôi là $\frac{\pi}{4}$ có $\cos\frac{\pi}{4} = \frac{\sqrt{2}}{2}$."
+            explanation: "Áp dụng công thức hạ bậc:\n$$\\cos^2\\frac{\\pi}{8} = \\frac{1 + \\cos\\frac{\\pi}{4}}{2} = \\frac{1 + \\frac{\\sqrt{2}}{2}}{2} = \\frac{2 + \\sqrt{2}}{4}.$$",
+            hint1: "Áp dụng $\\cos^2 x = \\frac{1 + \\cos 2x}{2}$.",
+            hint2: "Góc nhân đôi là $\\frac{\\pi}{4}$ có $\\cos\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$."
           },
           {
-            question: "Rút gọn biểu thức $B = \frac{1 - \cos 2x + \sin 2x}{1 + \cos 2x + \sin 2x}$ ta được:",
-            options: ["A. $\tan x$", "B. $\cot x$", "C. $\sin x$", "D. $\cos x$"],
+            question: "Rút gọn biểu thức $B = \\frac{1 - \\cos 2x + \\sin 2x}{1 + \\cos 2x + \\sin 2x}$ ta được:",
+            options: ["A. $\\tan x$", "B. $\\cot x$", "C. $\\sin x$", "D. $\\cos x$"],
             correct: "A",
-            explanation: "Biến đổi tử số: $(1 - \cos 2x) + \sin 2x = 2\sin^2 x + 2\sin x\cos x = 2\sin x(\sin x + \cos x)$.\nBiến đổi mẫu số: $(1 + \cos 2x) + \sin 2x = 2\cos^2 x + 2\sin x\cos x = 2\cos x(\cos x + \sin x)$.\nRút gọn ta được $\frac{\sin x}{\cos x} = \tan x$.",
-            hint1: "Thay $1 - \cos 2x = 2\sin^2 x$ và $1 + \cos 2x = 2\cos^2 x$.",
-            hint2: "Đặt nhân tử chung và triệt tiêu $(\sin x + \cos x)$."
+            explanation: "Biến đổi tử số: $(1 - \\cos 2x) + \\sin 2x = 2\\sin^2 x + 2\\sin x\\cos x = 2\\sin x(\\sin x + \\cos x)$.\nBiến đổi mẫu số: $(1 + \\cos 2x) + \\sin 2x = 2\\cos^2 x + 2\\sin x\\cos x = 2\\cos x(\\cos x + \\sin x)$.\nRút gọn ta được $\\frac{\\sin x}{\\cos x} = \\tan x$.",
+            hint1: "Thay $1 - \\cos 2x = 2\\sin^2 x$ và $1 + \\cos 2x = 2\\cos^2 x$.",
+            hint2: "Đặt nhân tử chung và triệt tiêu $(\\sin x + \\cos x)$."
           }
         ]
       },
@@ -445,46 +445,46 @@
           `<p>Hệ thống công thức biến đổi tích - tổng trong giải toán lượng giác:</p>
           <ul class="list-disc ml-5 space-y-1.5">
             <li><strong>Biến đổi tích thành tổng:</strong><br/>
-              • $\cos a \cos b = \dfrac{1}{2}\left[\cos(a - b) + \cos(a + b)\right]$<br/>
-              • $\sin a \sin b = \dfrac{1}{2}\left[\cos(a - b) - \cos(a + b)\right]$<br/>
-              • $\sin a \cos b = \dfrac{1}{2}\left[\sin(a - b) + \sin(a + b)\right]$
+              • $\\cos a \\cos b = \\dfrac{1}{2}\\left[\\cos(a - b) + \\cos(a + b)\\right]$<br/>
+              • $\\sin a \\sin b = \\dfrac{1}{2}\\left[\\cos(a - b) - \\cos(a + b)\\right]$<br/>
+              • $\\sin a \\cos b = \\dfrac{1}{2}\\left[\\sin(a - b) + \\sin(a + b)\\right]$
             </li>
             <li><strong>Biến đổi tổng thành tích:</strong><br/>
-              • $\cos u + \cos v = 2\cos\dfrac{u+v}{2} \cos\dfrac{u-v}{2}$<br/>
-              • $\cos u - \cos v = -2\sin\dfrac{u+v}{2} \sin\dfrac{u-v}{2}$<br/>
-              • $\sin u + \sin v = 2\sin\dfrac{u+v}{2} \cos\dfrac{u-v}{2}$<br/>
-              • $\sin u - \sin v = 2\cos\dfrac{u+v}{2} \sin\dfrac{u-v}{2}$
+              • $\\cos u + \\cos v = 2\\cos\\dfrac{u+v}{2} \\cos\\dfrac{u-v}{2}$<br/>
+              • $\\cos u - \\cos v = -2\\sin\\dfrac{u+v}{2} \\sin\\dfrac{u-v}{2}$<br/>
+              • $\\sin u + \\sin v = 2\\sin\\dfrac{u+v}{2} \\cos\\dfrac{u-v}{2}$<br/>
+              • $\\sin u - \\sin v = 2\\cos\\dfrac{u+v}{2} \\sin\\dfrac{u-v}{2}$
             </li>
           </ul>`,
           `<li>Bài ca lượng giác: <em>"Cos cộng cos bằng hai cos cos - Cos trừ cos bằng trừ hai sin sin - Sin cộng sin bằng hai sin cos - Sin trừ sin bằng hai cos sin"</em>.</li>
-          <li>Khi tích thành tổng: Luôn có $\frac{1}{2}$ phía trước và viết góc hiệu $(a-b)$ trước góc tổng $(a+b)$.</li>`,
-          `<li>Quên dấu trừ phía trước ở công thức $\cos u - \cos v = -2\sin\frac{u+v}{2}\sin\frac{u-v}{2}$.</li>
+          <li>Khi tích thành tổng: Luôn có $\\frac{1}{2}$ phía trước và viết góc hiệu $(a-b)$ trước góc tổng $(a+b)$.</li>`,
+          `<li>Quên dấu trừ phía trước ở công thức $\\cos u - \\cos v = -2\\sin\\frac{u+v}{2}\\sin\\frac{u-v}{2}$.</li>
           <li>Quên chia đôi góc khi chuyển từ tổng thành tích.</li>`,
           `<li><em>"Cos cộng cos bằng hai cos cos - Cos trừ cos bằng trừ hai sin sin!"</em></li>`
         ),
         mcqs: [
           {
-            question: "Giá trị chính xác của biểu thức $P = \sin 75^\circ \cos 15^\circ$ bằng:",
-            options: ["A. $\frac{2 + \sqrt{3}}{4}$", "B. $\frac{2 - \sqrt{3}}{4}$", "C. $\frac{1}{4}$", "D. $\frac{\sqrt{3}}{4}$"],
+            question: "Giá trị chính xác của biểu thức $P = \\sin 75^\\circ \\cos 15^\\circ$ bằng:",
+            options: ["A. $\\frac{2 + \\sqrt{3}}{4}$", "B. $\\frac{2 - \\sqrt{3}}{4}$", "C. $\\frac{1}{4}$", "D. $\\frac{\\sqrt{3}}{4}$"],
             correct: "A",
-            explanation: "Áp dụng biến đổi tích thành tổng:\n$$P = \frac{1}{2}[\sin(75^\circ - 15^\circ) + \sin(75^\circ + 15^\circ)] = \frac{1}{2}[\sin 60^\circ + \sin 90^\circ] = \frac{1}{2}\left(\frac{\sqrt{3}}{2} + 1\right) = \frac{2 + \sqrt{3}}{4}.$$",
-            hint1: "Áp dụng $\sin a\cos b = \frac{1}{2}[\sin(a-b) + \sin(a+b)]$.",
-            hint2: "$\frac{1}{2}(\sin 60^\circ + \sin 90^\circ)$."
+            explanation: "Áp dụng biến đổi tích thành tổng:\n$$P = \\frac{1}{2}[\\sin(75^\\circ - 15^\\circ) + \\sin(75^\\circ + 15^\\circ)] = \\frac{1}{2}[\\sin 60^\\circ + \\sin 90^\\circ] = \\frac{1}{2}\\left(\\frac{\\sqrt{3}}{2} + 1\\right) = \\frac{2 + \\sqrt{3}}{4}.$$",
+            hint1: "Áp dụng $\\sin a\\cos b = \\frac{1}{2}[\\sin(a-b) + \\sin(a+b)]$.",
+            hint2: "$\\frac{1}{2}(\\sin 60^\\circ + \\sin 90^\\circ)$."
           },
           {
-            question: "Rút gọn biểu thức $K = \frac{\sin x + \sin 3x + \sin 5x}{\cos x + \cos 3x + \cos 5x}$ ta được:",
-            options: ["A. $\tan 3x$", "B. $\cot 3x$", "C. $\tan x$", "D. $\tan 5x$"],
+            question: "Rút gọn biểu thức $K = \\frac{\\sin x + \\sin 3x + \\sin 5x}{\\cos x + \\cos 3x + \\cos 5x}$ ta được:",
+            options: ["A. $\\tan 3x$", "B. $\\cot 3x$", "C. $\\tan x$", "D. $\\tan 5x$"],
             correct: "A",
-            explanation: "Ghép đối xứng:\n$$\sin 5x + \sin x = 2\sin 3x\cos 2x \Rightarrow \text{Tử} = \sin 3x(2\cos 2x + 1).$$" + "\n" + "$$\cos 5x + \cos x = 2\cos 3x\cos 2x \Rightarrow \text{Mẫu} = \cos 3x(2\cos 2x + 1).$$" + "\n" + "Rút gọn được $\frac{\sin 3x}{\cos 3x} = \tan 3x$.",
-            hint1: "Ghép $\sin 5x$ với $\sin x$ và $\cos 5x$ với $\cos x$.",
-            hint2: "Đặt nhân tử chung $2\cos 2x + 1$."
+            explanation: "Ghép đối xứng:\n$$\\sin 5x + \\sin x = 2\\sin 3x\\cos 2x \\Rightarrow \\text{Tử} = \\sin 3x(2\\cos 2x + 1).$$" + "\n" + "$$\\cos 5x + \\cos x = 2\\cos 3x\\cos 2x \\Rightarrow \\text{Mẫu} = \\cos 3x(2\\cos 2x + 1).$$" + "\n" + "Rút gọn được $\\frac{\\sin 3x}{\\cos 3x} = \\tan 3x$.",
+            hint1: "Ghép $\\sin 5x$ với $\\sin x$ và $\\cos 5x$ với $\\cos x$.",
+            hint2: "Đặt nhân tử chung $2\\cos 2x + 1$."
           },
           {
-            question: "Giá trị của tích chuỗi $T = \cos\frac{\pi}{7}\cos\frac{2\pi}{7}\cos\frac{4\pi}{7}$ bằng:",
-            options: ["A. $-\frac{1}{8}$", "B. $\frac{1}{8}$", "C. $-\frac{1}{4}$", "D. $\frac{1}{16}$"],
+            question: "Giá trị của tích chuỗi $T = \\cos\\frac{\\pi}{7}\\cos\\frac{2\\pi}{7}\\cos\\frac{4\\pi}{7}$ bằng:",
+            options: ["A. $-\\frac{1}{8}$", "B. $\\frac{1}{8}$", "C. $-\\frac{1}{4}$", "D. $\\frac{1}{16}$"],
             correct: "A",
-            explanation: "Nhân hai vế với $\sin\frac{\pi}{7}$:\n$$T\sin\frac{\pi}{7} = \frac{1}{8}\sin\frac{8\pi}{7} = -\frac{1}{8}\sin\frac{\pi}{7} \implies T = -\frac{1}{8}.$$",
-            hint1: "Nhân hai vế với $\sin\frac{\pi}{7}$.",
+            explanation: "Nhân hai vế với $\\sin\\frac{\\pi}{7}$:\n$$T\\sin\\frac{\\pi}{7} = \\frac{1}{8}\\sin\\frac{8\\pi}{7} = -\\frac{1}{8}\\sin\\frac{\\pi}{7} \\implies T = -\\frac{1}{8}.$$",
+            hint1: "Nhân hai vế với $\\sin\\frac{\\pi}{7}$.",
             hint2: "Áp dụng liên tiếp công thức nhân đôi sin."
           }
         ]
@@ -705,7 +705,7 @@
             question: "Tập xác định của hàm số $y = \\tan 2x$ là:",
             options: [
               "A. $D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{4} + k\\frac{\\pi}{2}, k \\in \\mathbb{Z}\\right\\}$",
-              "B. $D = \\mathbb{R} \\setminus \\left\\{\\frac{\pi}{2} + k\\pi, k \\in \\mathbb{Z}\\right\\}$",
+              "B. $D = \\mathbb{R} \\setminus \\left\\{\\frac{\\pi}{2} + k\\pi, k \\in \\mathbb{Z}\\right\\}$",
               "C. $D = \\mathbb{R} \\setminus \\left\\{k\\frac{\\pi}{2}, k \\in \\mathbb{Z}\\right\\}$",
               "D. $D = \\mathbb{R}$"
             ],
@@ -5013,12 +5013,12 @@
             "Mục 1: Khái niệm & Điều kiện để hai mặt phẳng song song",
             `<p>Nội dung cốt lõi Mục 1 Sách giáo khoa Toán 11 Kết Nối Tri Thức:</p>
 <ul class="list-disc ml-5 space-y-1.5">
-  <li><strong>1. Định nghĩa hai mặt phẳng song song:</strong> Hai mặt phẳng được gọi là song song với nhau nếu chúng không có điểm chung. Kí hiệu: $(P) \parallel (Q) \iff (P) \cap (Q) = \emptyset$.</li>
-  <li><strong>2. Điều kiện để hai mặt phẳng song song (Định lí 1):</strong> Nếu mặt phẳng $(\alpha)$ chứa hai đường thẳng cắt nhau $a, b$ và $a, b$ cùng song song với mặt phẳng $(\beta)$ thì $(\alpha) \parallel (\beta)$.</li>
-  <li><strong>3. Công thức suy luận ngắn gọn:</strong> $\begin{cases} a \subset (\alpha), b \subset (\alpha) \\ a \cap b = \{I\} \\ a \parallel (\beta), b \parallel (\beta) \end{cases} \implies (\alpha) \parallel (\beta)$.</li>
+  <li><strong>1. Định nghĩa hai mặt phẳng song song:</strong> Hai mặt phẳng được gọi là song song với nhau nếu chúng không có điểm chung. Kí hiệu: $(P) \\parallel (Q) \\iff (P) \\cap (Q) = \\emptyset$.</li>
+  <li><strong>2. Điều kiện để hai mặt phẳng song song (Định lí 1):</strong> Nếu mặt phẳng $(\\alpha)$ chứa hai đường thẳng cắt nhau $a, b$ và $a, b$ cùng song song với mặt phẳng $(\\beta)$ thì $(\\alpha) \\parallel (\\beta)$.</li>
+  <li><strong>3. Công thức suy luận ngắn gọn:</strong> $\\begin{cases} a \\subset (\\alpha), b \\subset (\\alpha) \\ a \\cap b = \\{I\\} \\ a \\parallel (\\beta), b \\parallel (\\beta) \\end{cases} \\implies (\\alpha) \\parallel (\\beta)$.</li>
 </ul>`,
-            `Hai đường thẳng $a, b$ trong $(\alpha)$ <strong>bắt buộc phải cắt nhau</strong>. Nếu $a \parallel b$ thì dù cả hai cùng song song với $(\beta)$, ta vẫn chưa thể kết luận $(\alpha) \parallel (\beta)$ (khi đó $(\alpha)$ có thể cắt $(\beta)$).`,
-            `Chỉ chỉ ra 1 đường thẳng trong $(\alpha)$ song song với $(\beta)$ rồi vội vã kết luận hai mặt phẳng song song là sai lầm phổ biến nhất!`,
+            `Hai đường thẳng $a, b$ trong $(\\alpha)$ <strong>bắt buộc phải cắt nhau</strong>. Nếu $a \\parallel b$ thì dù cả hai cùng song song với $(\\beta)$, ta vẫn chưa thể kết luận $(\\alpha) \\parallel (\\beta)$ (khi đó $(\\alpha)$ có thể cắt $(\\beta)$).`,
+            `Chỉ chỉ ra 1 đường thẳng trong $(\\alpha)$ song song với $(\\beta)$ rồi vội vã kết luận hai mặt phẳng song song là sai lầm phổ biến nhất!`,
             `Tìm 2 đường thẳng cắt nhau trong mặt phẳng này lần lượt song song với 2 đường thẳng cắt nhau trong mặt phẳng kia là phương pháp chứng minh nhanh nhất!`
           ),
           mcqs: [
@@ -5073,10 +5073,10 @@
 <ul class="list-disc ml-5 space-y-1.5">
   <li><strong>1. Tính chất tồn tại và duy nhất:</strong> Qua một điểm nằm ngoài một mặt phẳng cho trước, có một và chỉ một mặt phẳng song song với mặt phẳng đã cho.</li>
   <li><strong>2. Hệ quả quan trọng:</strong> Hai mặt phẳng phân biệt cùng song song với một mặt phẳng thứ ba thì song song với nhau.</li>
-  <li><strong>3. Định lí 2 (Giao tuyến song song):</strong> Cho hai mặt phẳng song song. Nếu một mặt phẳng thứ ba cắt cả hai mặt phẳng đó thì hai giao tuyến phải song song với nhau: $\begin{cases} (\alpha) \parallel (\beta) \\ (\gamma) \cap (\alpha) = a \\ (\gamma) \cap (\beta) = b \end{cases} \implies a \parallel b$.</li>
-  <li><strong>4. Định lí Ta-lét trong không gian:</strong> Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì các đoạn thẳng tương ứng tỉ lệ: $\frac{A_1B_1}{A_2B_2} = \frac{B_1C_1}{B_2C_2} = \frac{A_1C_1}{A_2C_2}$.</li>
+  <li><strong>3. Định lí 2 (Giao tuyến song song):</strong> Cho hai mặt phẳng song song. Nếu một mặt phẳng thứ ba cắt cả hai mặt phẳng đó thì hai giao tuyến phải song song với nhau: $\\begin{cases} (\\alpha) \\parallel (\\beta) \\ (\\gamma) \\cap (\\alpha) = a \\ (\\gamma) \\cap (\\beta) = b \\end{cases} \\implies a \\parallel b$.</li>
+  <li><strong>4. Định lí Ta-lét trong không gian:</strong> Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì các đoạn thẳng tương ứng tỉ lệ: $\\frac{A_1B_1}{A_2B_2} = \\frac{B_1C_1}{B_2C_2} = \\frac{A_1C_1}{A_2C_2}$.</li>
 </ul>`,
-            `Hai đường thẳng song song chắn giữa hai mặt phẳng song song thì bằng nhau: Nếu $(\alpha) \parallel (\beta)$ và $a \parallel b$ cắt $(\alpha), (\beta)$ tại $A, B$ và $A', B'$ thì $AB = A'B'$.`,
+            `Hai đường thẳng song song chắn giữa hai mặt phẳng song song thì bằng nhau: Nếu $(\\alpha) \\parallel (\\beta)$ và $a \\parallel b$ cắt $(\\alpha), (\\beta)$ tại $A, B$ và $A', B'$ thì $AB = A'B'$.`,
             `Nhầm lẫn rằng hai cát tuyến trong định lí Ta-lét phải cùng nằm trên một mặt phẳng. Trong không gian, hai cát tuyến có thể chéo nhau định lí Ta-lét vẫn hoàn toàn đúng!`,
             `Vận dụng Định lí giao tuyến song song để dựng nhanh thiết diện: Khi mặt phẳng cắt qua hai mặt đối diện song song, hai giao tuyến tạo ra luôn song song với nhau!`
           ),
@@ -5411,7 +5411,7 @@
             "Mục 1: Khái niệm & Các tính chất cơ bản của phép chiếu song song",
             `<p>Nội dung cốt lõi Mục 1 Sách giáo khoa Toán 11 Kết Nối Tri Thức:</p>
 <ul class="list-disc ml-5 space-y-1.5">
-  <li><strong>1. Định nghĩa phép chiếu song song:</strong> Cho mặt phẳng $(\alpha)$ và đường thẳng $\Delta$ cắt $(\alpha)$. Phép đặt tương ứng mỗi điểm $M$ với giao điểm $M'$ của đường thẳng qua $M$ song song với $\Delta$ (hoặc trùng $\Delta$) với $(\alpha)$ gọi là phép chiếu song song lên $(\alpha)$ theo phương $\Delta$.</li>
+  <li><strong>1. Định nghĩa phép chiếu song song:</strong> Cho mặt phẳng $(\\alpha)$ và đường thẳng $\\Delta$ cắt $(\\alpha)$. Phép đặt tương ứng mỗi điểm $M$ với giao điểm $M'$ của đường thẳng qua $M$ song song với $\\Delta$ (hoặc trùng $\\Delta$) với $(\\alpha)$ gọi là phép chiếu song song lên $(\\alpha)$ theo phương $\\Delta$.</li>
   <li><strong>2. Tính chất 1 (Thẳng hàng):</strong> Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng và bảo toàn thứ tự giữa các điểm đó.</li>
   <li><strong>3. Tính chất 2 (Hình dạng cơ bản):</strong> Biến đường thẳng thành đường thẳng, biến tia thành tia, biến đoạn thẳng thành đoạn thẳng.</li>
   <li><strong>4. Tính chất 3 (Tính song song):</strong> Biến hai đường thẳng song song thành hai đường thẳng song song hoặc trùng nhau.</li>
@@ -5532,11 +5532,11 @@
             `<p>Nội dung cốt lõi Mục 3 Sách giáo khoa Toán 11 Kết Nối Tri Thức:</p>
 <ul class="list-disc ml-5 space-y-1.5">
   <li><strong>1. Quy ước đường nét:</strong> Đường nhìn thấy vẽ nét liền (solid), đường bị che khuất vẽ nét đứt đoạn (dashed).</li>
-  <li><strong>2. Biểu diễn trọng tâm:</strong> Trọng tâm $G$ của $\triangle ABC$ chiếu thành trọng tâm $G'$ của tam giác ảnh $\triangle A'B'C'$.</li>
+  <li><strong>2. Biểu diễn trọng tâm:</strong> Trọng tâm $G$ của $\\triangle ABC$ chiếu thành trọng tâm $G'$ của tam giác ảnh $\\triangle A'B'C'$.</li>
   <li><strong>3. Ứng dụng giải toán:</strong> Sử dụng phép chiếu song song để tính tỉ số đoạn thẳng, xác định giao điểm của đường thẳng và mặt phẳng, và tìm thiết diện.</li>
   <li><strong>4. Hiện tượng thực tế:</strong> Bóng của vật thể dưới ánh sáng mặt trời là một ví dụ trực quan về phép chiếu song song trên mặt đất.</li>
 </ul>`,
-            `Đỉnh của hình chóp có đường cao vuông góc với đáy (như $SA \perp (ABCD)$) phải được dựng thẳng đứng vuông góc với mép dưới của trang giấy để tạo góc nhìn trực quan.`,
+            `Đỉnh của hình chóp có đường cao vuông góc với đáy (như $SA \\perp (ABCD)$) phải được dựng thẳng đứng vuông góc với mép dưới của trang giấy để tạo góc nhìn trực quan.`,
             `Quên chuyển cạnh khuất thành nét đứt đoạn, khiến hình vẽ trở thành khối trong suốt hoặc sai chiều sâu không gian.`,
             `Khi vẽ hình chóp, hãy vẽ mặt phẳng đáy trước, xác định tâm hoặc chân đường cao rồi dựng thẳng đứng lên đỉnh $S$!`
           ),
@@ -5815,10 +5815,10 @@
 <ul class="list-disc ml-5 space-y-1.5">
   <li><strong>1. Đường thẳng và mặt phẳng trong không gian (Bài 10):</strong> 6 tính chất thừa nhận, 3 cách xác định mặt phẳng (3 điểm không thẳng hàng, 1 đường và 1 điểm ngoài, 2 đường cắt nhau), kỹ thuật tìm giao tuyến và thiết diện.</li>
   <li><strong>2. Hai đường thẳng song song (Bài 11):</strong> 4 vị trí tương đối (trùng nhau, song song, cắt nhau, chéo nhau), Định lí ba giao tuyến song song hoặc đồng quy.</li>
-  <li><strong>3. Đường thẳng và mặt phẳng song song (Bài 12):</strong> Điều kiện $d \not\subset (P), d \parallel a \subset (P) \implies d \parallel (P)$; định lí giao tuyến song song.</li>
+  <li><strong>3. Đường thẳng và mặt phẳng song song (Bài 12):</strong> Điều kiện $d \\not\\subset (P), d \\parallel a \\subset (P) \\implies d \\parallel (P)$; định lí giao tuyến song song.</li>
   <li><strong>4. Hai mặt phẳng song song & Phép chiếu (Bài 13, 14):</strong> Điều kiện chứa 2 đường cắt nhau; Định lí Ta-lét trong không gian; Hình lăng trụ, hình hộp, hình chóp cụt; Các tính chất bảo toàn của phép chiếu song song.</li>
 </ul>`,
-            `Sơ đồ tư duy mắt xích: Muốn chứng minh mặt // mặt $\to$ đưa về đường // mặt $\to$ đưa về đường // đường $\to$ dùng định lí phẳng (đường trung bình, Ta-lét).`,
+            `Sơ đồ tư duy mắt xích: Muốn chứng minh mặt // mặt $\\to$ đưa về đường // mặt $\\to$ đưa về đường // đường $\\to$ dùng định lí phẳng (đường trung bình, Ta-lét).`,
             `Nhầm lẫn giữa quan hệ chéo nhau và quan hệ song song trong không gian. Hai đường thẳng không có điểm chung có thể song song hoặc chéo nhau!`,
             `Khi làm bài thi, luôn xác định rõ bài toán thuộc quan hệ nào trong 4 quan hệ chính để chọn định lí tương ứng!`
           ),
@@ -5873,13 +5873,13 @@
             `<p>Nội dung cốt lõi Mục 2 Sách giáo khoa Toán 11 Kết Nối Tri Thức:</p>
 <ul class="list-disc ml-5 space-y-1.5">
   <li><strong>1. Dạng 1 - Tìm giao tuyến hai mặt phẳng:</strong> Tìm 2 điểm chung phân biệt, hoặc 1 điểm chung và phương song song (dùng định lí giao tuyến song song).</li>
-  <li><strong>2. Dạng 2 - Tìm giao điểm của đường thẳng $d$ và mặt phẳng $(P)$:</strong> Chọn mặt phẳng phụ $(Q) \supset d$, tìm giao tuyến $a = (P) \cap (Q)$, khi đó giao điểm $M = d \cap a$.</li>
+  <li><strong>2. Dạng 2 - Tìm giao điểm của đường thẳng $d$ và mặt phẳng $(P)$:</strong> Chọn mặt phẳng phụ $(Q) \\supset d$, tìm giao tuyến $a = (P) \\cap (Q)$, khi đó giao điểm $M = d \\cap a$.</li>
   <li><strong>3. Dạng 3 - Chứng minh quan hệ song song:</strong> Sử dụng đường trung bình, Ta-lét, hình bình hành hoặc định lí ba giao tuyến.</li>
   <li><strong>4. Dạng 4 - Xác định thiết diện:</strong> Tìm giao tuyến của mặt phẳng cắt với tất cả các mặt của hình chóp hoặc hình lăng trụ, khép kín thành đa giác.</li>
 </ul>`,
             `Khi hai mặt phẳng chứa hai đường thẳng song song, giao tuyến của chúng (nếu có) phải đi qua điểm chung và song song với hai đường thẳng đó!`,
             `Kéo dài hai đường thẳng chéo nhau (không đồng phẳng) cho cắt nhau. Luôn kiểm tra xem hai đường thẳng có nằm trong cùng một mặt phẳng trước khi lấy giao điểm!`,
-            `Quy tắc 4 bước dựng thiết diện: 1. Tìm điểm chung sẵn có $\to$ 2. Kẻ đường song song $\to$ 3. Cắt các cạnh bên $\to$ 4. Nối kín đa giác!`
+            `Quy tắc 4 bước dựng thiết diện: 1. Tìm điểm chung sẵn có $\\to$ 2. Kẻ đường song song $\\to$ 3. Cắt các cạnh bên $\\to$ 4. Nối kín đa giác!`
           ),
           mcqs: [
           {

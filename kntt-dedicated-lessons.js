@@ -1102,9 +1102,9 @@
               question: "Cho tứ diện đều $ABCD$ có cạnh bằng $a$. Giá trị của tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ bằng:",
               options: ["A. $\\frac{a^2}{2}$", "B. $-\\frac{a^2}{2}$", "C. $\\frac{a^2\\sqrt{3}}{2}$", "D. $a^2$"],
               correct: "A",
-              explanation: "Tam giác $ABC$ là tam giác đều cạnh $a$ nên $|\vec{AB}| = a, |\vec{AC}| = a$ và góc $(\vec{AB}, \vec{AC}) = \widehat{BAC} = 60^\circ$. Áp dụng công thức: $\vec{AB} \cdot \vec{AC} = |\vec{AB}| \cdot |\vec{AC}| \cdot \cos 60^\circ = a \cdot a \cdot \frac{1}{2} = \frac{a^2}{2}$.",
+              explanation: "Tam giác $ABC$ là tam giác đều cạnh $a$ nên $|\\vec{AB}| = a, |\\vec{AC}| = a$ và góc $(\\vec{AB}, \\vec{AC}) = \\widehat{BAC} = 60^\\circ$. Áp dụng công thức: $\\vec{AB} \\cdot \\vec{AC} = |\\vec{AB}| \\cdot |\\vec{AC}| \\cdot \\cos 60^\\circ = a \\cdot a \\cdot \\frac{1}{2} = \\frac{a^2}{2}$.",
               hint1: "Tam giác $ABC$ là tam giác đều vì tứ diện $ABCD$ là tứ diện đều cạnh $a$.",
-              hint2: "Góc giữa hai vectơ chung gốc $A$ là góc $\widehat{BAC} = 60^\circ$. Tính $a \cdot a \cdot \cos 60^\circ$."
+              hint2: "Góc giữa hai vectơ chung gốc $A$ là góc $\\widehat{BAC} = 60^\\circ$. Tính $a \\cdot a \\cdot \\cos 60^\\circ$."
             },
             {
               question: "Cho tứ diện đều $ABCD$. Góc giữa hai vectơ $\\vec{AB}$ và $\\vec{CD}$ bằng:",
@@ -1118,9 +1118,9 @@
               question: "Cho hai vectơ $\\vec{u}, \\vec{v}$ thỏa mãn $|\\vec{u}| = 2, |\\vec{v}| = 3$ và góc $(\\vec{u}, \\vec{v}) = 120^\\circ$. Độ dài của vectơ $\\vec{u} + \\vec{v}$ bằng:",
               options: ["A. $\\sqrt{7}$", "B. $\\sqrt{19}$", "C. $\\sqrt{13}$", "D. $5$"],
               correct: "A",
-              explanation: "Ta có $|\vec{u} + \vec{v}|^2 = (\vec{u} + \vec{v})^2 = \vec{u}^2 + 2\vec{u}\cdot\vec{v} + \vec{v}^2 = |\vec{u}|^2 + 2|\vec{u}||\vec{v}|\cos 120^\circ + |\vec{v}|^2 = 2^2 + 2(2)(3)(-\frac{1}{2}) + 3^2 = 4 - 6 + 9 = 7$. Suy ra $|\vec{u} + \vec{v}| = \sqrt{7}$.",
-              hint1: "Khai triển bình phương vô hướng $|\vec{u} + \vec{v}|^2 = |\vec{u}|^2 + 2\vec{u} \cdot \vec{v} + |\vec{v}|^2$.",
-              hint2: "Thay số: $4 + 2(2)(3)(-\frac{1}{2}) + 9 = 7$. Lấy căn bậc hai."
+              explanation: "Ta có $|\\vec{u} + \\vec{v}|^2 = (\\vec{u} + \\vec{v})^2 = \\vec{u}^2 + 2\\vec{u}\\cdot\\vec{v} + \\vec{v}^2 = |\\vec{u}|^2 + 2|\\vec{u}||\\vec{v}|\\cos 120^\\circ + |\\vec{v}|^2 = 2^2 + 2(2)(3)(-\\frac{1}{2}) + 3^2 = 4 - 6 + 9 = 7$. Suy ra $|\\vec{u} + \\vec{v}| = \\sqrt{7}$.",
+              hint1: "Khai triển bình phương vô hướng $|\\vec{u} + \\vec{v}|^2 = |\\vec{u}|^2 + 2\\vec{u} \\cdot \\vec{v} + |\\vec{v}|^2$.",
+              hint2: "Thay số: $4 + 2(2)(3)(-\\frac{1}{2}) + 9 = 7$. Lấy căn bậc hai."
             }
           ]
         }

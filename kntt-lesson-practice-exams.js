@@ -5671,22 +5671,22 @@
             "level": "NB",
             "question": "**Câu 2:** Vectơ có điểm đầu là $A$ và điểm cuối là $B$ được kí hiệu là",
             "options": {
-              "A": "$|\u000bec{AB}|$",
-              "B": "$\u000bec{BA}$",
-              "C": "$\u000bec{AB}$",
+              "A": "$|\\vec{AB}|$",
+              "B": "$\\vec{BA}$",
+              "C": "$\\vec{AB}$",
               "D": "$AB$"
             },
             "correct": "C",
-            "explanation": "Kí hiệu vectơ có gốc $A$ ngọn $B$ là $\u000bec{AB}$."
+            "explanation": "Kí hiệu vectơ có gốc $A$ ngọn $B$ là $\\vec{AB}$."
           },
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Độ dài của vectơ $\u000bec{AB}$ là",
+            "question": "**Câu 3:** Độ dài của vectơ $\\vec{AB}$ là",
             "options": {
               "A": "Góc tạo bởi đoạn thẳng $AB$ và trục hoành",
               "B": "Hiệu toạ độ $B - A$",
-              "C": "Khoảng cách giữa hai điểm $A$ và $B$, kí hiệu $|\u000bec{AB}| = AB$",
+              "C": "Khoảng cách giữa hai điểm $A$ và $B$, kí hiệu $|\\vec{AB}| = AB$",
               "D": "Toạ độ của điểm $B$"
             },
             "correct": "C",
@@ -5697,7 +5697,7 @@
             "level": "NB",
             "question": "**Câu 4:** Vectơ-không là vectơ có",
             "options": {
-              "A": "Điểm đầu và điểm cuối trùng nhau, kí hiệu $\u000bec{0}$",
+              "A": "Điểm đầu và điểm cuối trùng nhau, kí hiệu $\\vec{0}$",
               "B": "Hướng xác định duy nhất",
               "C": "Phương luôn vuông góc với mọi vectơ",
               "D": "Độ dài bằng 1"
@@ -5708,7 +5708,7 @@
           {
             "id": 5,
             "level": "TH",
-            "question": "**Câu 5:** Giá của vectơ $\u000bec{AB}$ ($A \ne B$) là",
+            "question": "**Câu 5:** Giá của vectơ $\\vec{AB}$ ($A \\ne B$) là",
             "options": {
               "A": "Đoạn thẳng nối $A$ và $B$",
               "B": "Tia xuất phát từ $A$ qua $B$",
@@ -5734,33 +5734,33 @@
           {
             "id": 7,
             "level": "TH",
-            "question": "**Câu 7:** Cho hình bình hành $ABCD$. Vectơ cùng hướng với $\u000bec{AB}$ là",
+            "question": "**Câu 7:** Cho hình bình hành $ABCD$. Vectơ cùng hướng với $\\vec{AB}$ là",
             "options": {
-              "A": "$\u000bec{CD}$",
-              "B": "$\u000bec{DC}$",
-              "C": "$\u000bec{BA}$",
-              "D": "$\u000bec{BC}$"
+              "A": "$\\vec{CD}$",
+              "B": "$\\vec{DC}$",
+              "C": "$\\vec{BA}$",
+              "D": "$\\vec{BC}$"
             },
             "correct": "B",
-            "explanation": "Trong hình bình hành $ABCD$, $\u000bec{AB}$ và $\u000bec{DC}$ cùng hướng và cùng độ dài."
+            "explanation": "Trong hình bình hành $ABCD$, $\\vec{AB}$ và $\\vec{DC}$ cùng hướng và cùng độ dài."
           },
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho tam giác đều $ABC$ cạnh $a$. Độ dài của vectơ $\u000bec{AB}$ bằng",
+            "question": "**Câu 8:** Cho tam giác đều $ABC$ cạnh $a$. Độ dài của vectơ $\\vec{AB}$ bằng",
             "options": {
               "A": "$a\\sqrt{3}$",
               "B": "$2a$",
-              "C": "$\frac{a\\sqrt{3}}{2}$",
+              "C": "$\\frac{a\\sqrt{3}}{2}$",
               "D": "$a$"
             },
             "correct": "D",
-            "explanation": "$|\u000bec{AB}| = AB = a$."
+            "explanation": "$|\\vec{AB}| = AB = a$."
           },
           {
             "id": 9,
             "level": "VD",
-            "question": "**Câu 9:** Cho tứ giác $ABCD$. Điều kiện cần và đủ để $\u000bec{AB} = \u000bec{DC}$ là",
+            "question": "**Câu 9:** Cho tứ giác $ABCD$. Điều kiện cần và đủ để $\\vec{AB} = \\vec{DC}$ là",
             "options": {
               "A": "$ABCD$ là hình bình hành",
               "B": "$ABCD$ là hình thang cân",
@@ -5768,12 +5768,12 @@
               "D": "$ABCD$ là hình vuông"
             },
             "correct": "A",
-            "explanation": "$\u000bec{AB} = \u000bec{DC} \\Leftrightarrow AB \\parallel DC$ và $AB = DC \\Leftrightarrow ABCD$ là hình bình hành."
+            "explanation": "$\\vec{AB} = \\vec{DC} \\Leftrightarrow AB \\parallel DC$ và $AB = DC \\Leftrightarrow ABCD$ là hình bình hành."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Cho hình vuông $ABCD$ cạnh $4$. Độ dài của vectơ $\u000bec{AC}$ bằng",
+            "question": "**Câu 10:** Cho hình vuông $ABCD$ cạnh $4$. Độ dài của vectơ $\\vec{AC}$ bằng",
             "options": {
               "A": "$4\\sqrt{2}$",
               "B": "$4$",
@@ -5781,12 +5781,12 @@
               "D": "$8$"
             },
             "correct": "A",
-            "explanation": "$|\u000bec{AC}| = AC = \\sqrt{4^2 + 4^2} = 4\\sqrt{2}$."
+            "explanation": "$|\\vec{AC}| = AC = \\sqrt{4^2 + 4^2} = 4\\sqrt{2}$."
           },
           {
             "id": 11,
             "level": "VDC",
-            "question": "**Câu 11:** Cho lục giác đều $ABCDEF$ tâm $O$. Có bao nhiêu vectơ khác $\u000bec{0}$ có điểm đầu và điểm cuối là các đỉnh của lục giác hoặc tâm $O$ và bằng vectơ $\u000bec{AB}$?",
+            "question": "**Câu 11:** Cho lục giác đều $ABCDEF$ tâm $O$. Có bao nhiêu vectơ khác $\\vec{0}$ có điểm đầu và điểm cuối là các đỉnh của lục giác hoặc tâm $O$ và bằng vectơ $\\vec{AB}$?",
             "options": {
               "A": "2",
               "B": "6",
@@ -5794,20 +5794,20 @@
               "D": "3"
             },
             "correct": "D",
-            "explanation": "Các vectơ bằng $\u000bec{AB}$ là: $\u000bec{ED}, \u000bec{FO}, \u000bec{OC}$ (tổng cộng có 3 vectơ)."
+            "explanation": "Các vectơ bằng $\\vec{AB}$ là: $\\vec{ED}, \\vec{FO}, \\vec{OC}$ (tổng cộng có 3 vectơ)."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Một chất điểm đứng yên chịu tác dụng của hai lực $\u000bec{F}_1$ và $\u000bec{F}_2$. Khẳng định nào sau đây đúng?",
+            "question": "**Câu 12:** Một chất điểm đứng yên chịu tác dụng của hai lực $\\vec{F}_1$ và $\\vec{F}_2$. Khẳng định nào sau đây đúng?",
             "options": {
               "A": "Độ lớn hai lực tỉ lệ với khối lượng chất điểm",
-              "B": "$\u000bec{F}_1$ và $\u000bec{F}_2$ có giá vuông góc nhau",
-              "C": "$\u000bec{F}_1$ và $\u000bec{F}_2$ là hai vectơ đối nhau (cùng độ lớn, ngược hướng)",
-              "D": "$\u000bec{F}_1$ và $\u000bec{F}_2$ cùng hướng"
+              "B": "$\\vec{F}_1$ và $\\vec{F}_2$ có giá vuông góc nhau",
+              "C": "$\\vec{F}_1$ và $\\vec{F}_2$ là hai vectơ đối nhau (cùng độ lớn, ngược hướng)",
+              "D": "$\\vec{F}_1$ và $\\vec{F}_2$ cùng hướng"
             },
             "correct": "C",
-            "explanation": "Vật đứng yên khi tổng hợp lực bằng $\u000bec{0}$, tức $\u000bec{F}_1 + \u000bec{F}_2 = \u000bec{0} \\Leftrightarrow \u000bec{F}_1 = -\u000bec{F}_2$."
+            "explanation": "Vật đứng yên khi tổng hợp lực bằng $\\vec{0}$, tức $\\vec{F}_1 + \\vec{F}_2 = \\vec{0} \\Leftrightarrow \\vec{F}_1 = -\\vec{F}_2$."
           }
         ],
         "tfQuestions": [
@@ -5818,28 +5818,28 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Vectơ $\u000bec{AB}$ và $\u000bec{AC}$ cùng phương.",
+                "content": "Vectơ $\\vec{AB}$ và $\\vec{AC}$ cùng phương.",
                 "correct": false,
                 "explanation": "Hai giá $AB$ và $AC$ cắt nhau tại $A$ nên không cùng phương."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài vectơ $\u000bec{BC}$ bằng 6.",
+                "content": "Độ dài vectơ $\\vec{BC}$ bằng 6.",
                 "correct": true,
-                "explanation": "$|\u000bec{BC}| = BC = 6$."
+                "explanation": "$|\\vec{BC}| = BC = 6$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Độ dài vectơ $\u000bec{AH}$ bằng $3\\sqrt{3}$.",
+                "content": "Độ dài vectơ $\\vec{AH}$ bằng $3\\sqrt{3}$.",
                 "correct": true,
-                "explanation": "$AH = \frac{6\\sqrt{3}}{2} = 3\\sqrt{3}$."
+                "explanation": "$AH = \\frac{6\\sqrt{3}}{2} = 3\\sqrt{3}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{HB}$ và $\u000bec{HC}$ là hai vectơ bằng nhau.",
+                "content": "Vectơ $\\vec{HB}$ và $\\vec{HC}$ là hai vectơ bằng nhau.",
                 "correct": false,
                 "explanation": "Hai vectơ này ngược hướng nên là hai vectơ đối nhau, không bằng nhau."
               }
@@ -5852,14 +5852,14 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} = \u000bec{CD}$.",
+                "content": "$\\vec{AB} = \\vec{CD}$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB}$ và $\u000bec{CD}$ ngược hướng, đúng ra phải là $\u000bec{AB} = \u000bec{DC}$."
+                "explanation": "$\\vec{AB}$ và $\\vec{CD}$ ngược hướng, đúng ra phải là $\\vec{AB} = \\vec{DC}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{AO}| = \frac{a\\sqrt{2}}{2}$.",
+                "content": "Độ dài $|\\vec{AO}| = \\frac{a\\sqrt{2}}{2}$.",
                 "correct": true,
                 "explanation": "Nửa đường chéo hình vuông."
               },
@@ -5868,14 +5868,14 @@
                 "subLabel": "c)",
                 "content": "Có đúng 4 vectơ có điểm đầu và điểm cuối phân biệt lập từ các đỉnh $A, B, C, D$ có độ dài bằng $a\\sqrt{2}$.",
                 "correct": false,
-                "explanation": "Có 4 vectơ là $\u000bec{AC}, \u000bec{CA}, \u000bec{BD}, \u000bec{DB}$."
+                "explanation": "Có 4 vectơ là $\\vec{AC}, \\vec{CA}, \\vec{BD}, \\vec{DB}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{OA}$ và $\u000bec{OC}$ là hai vectơ đối nhau.",
+                "content": "Vectơ $\\vec{OA}$ và $\\vec{OC}$ là hai vectơ đối nhau.",
                 "correct": true,
-                "explanation": "$O$ là trung điểm $AC$ nên $\u000bec{OA} = -\u000bec{OC}$."
+                "explanation": "$O$ là trung điểm $AC$ nên $\\vec{OA} = -\\vec{OC}$."
               }
             ]
           }
@@ -5888,28 +5888,28 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Vectơ $\u000bec{AB}$ và $\u000bec{AC}$ cùng phương.",
+                "content": "Vectơ $\\vec{AB}$ và $\\vec{AC}$ cùng phương.",
                 "correct": false,
                 "explanation": "Hai giá $AB$ và $AC$ cắt nhau tại $A$ nên không cùng phương."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài vectơ $\u000bec{BC}$ bằng 6.",
+                "content": "Độ dài vectơ $\\vec{BC}$ bằng 6.",
                 "correct": true,
-                "explanation": "$|\u000bec{BC}| = BC = 6$."
+                "explanation": "$|\\vec{BC}| = BC = 6$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Độ dài vectơ $\u000bec{AH}$ bằng $3\\sqrt{3}$.",
+                "content": "Độ dài vectơ $\\vec{AH}$ bằng $3\\sqrt{3}$.",
                 "correct": true,
-                "explanation": "$AH = \frac{6\\sqrt{3}}{2} = 3\\sqrt{3}$."
+                "explanation": "$AH = \\frac{6\\sqrt{3}}{2} = 3\\sqrt{3}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{HB}$ và $\u000bec{HC}$ là hai vectơ bằng nhau.",
+                "content": "Vectơ $\\vec{HB}$ và $\\vec{HC}$ là hai vectơ bằng nhau.",
                 "correct": false,
                 "explanation": "Hai vectơ này ngược hướng nên là hai vectơ đối nhau, không bằng nhau."
               }
@@ -5922,14 +5922,14 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} = \u000bec{CD}$.",
+                "content": "$\\vec{AB} = \\vec{CD}$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB}$ và $\u000bec{CD}$ ngược hướng, đúng ra phải là $\u000bec{AB} = \u000bec{DC}$."
+                "explanation": "$\\vec{AB}$ và $\\vec{CD}$ ngược hướng, đúng ra phải là $\\vec{AB} = \\vec{DC}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{AO}| = \frac{a\\sqrt{2}}{2}$.",
+                "content": "Độ dài $|\\vec{AO}| = \\frac{a\\sqrt{2}}{2}$.",
                 "correct": true,
                 "explanation": "Nửa đường chéo hình vuông."
               },
@@ -5938,14 +5938,14 @@
                 "subLabel": "c)",
                 "content": "Có đúng 4 vectơ có điểm đầu và điểm cuối phân biệt lập từ các đỉnh $A, B, C, D$ có độ dài bằng $a\\sqrt{2}$.",
                 "correct": false,
-                "explanation": "Có 4 vectơ là $\u000bec{AC}, \u000bec{CA}, \u000bec{BD}, \u000bec{DB}$."
+                "explanation": "Có 4 vectơ là $\\vec{AC}, \\vec{CA}, \\vec{BD}, \\vec{DB}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{OA}$ và $\u000bec{OC}$ là hai vectơ đối nhau.",
+                "content": "Vectơ $\\vec{OA}$ và $\\vec{OC}$ là hai vectơ đối nhau.",
                 "correct": true,
-                "explanation": "$O$ là trung điểm $AC$ nên $\u000bec{OA} = -\u000bec{OC}$."
+                "explanation": "$O$ là trung điểm $AC$ nên $\\vec{OA} = -\\vec{OC}$."
               }
             ]
           }
@@ -5954,17 +5954,17 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 8. Độ dài của vectơ $\u000bec{AB}$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 8. Độ dài của vectơ $\\vec{AB}$ bằng bao nhiêu?",
             "correctAnswer": "8",
             "acceptedAnswers": [
               "8"
             ],
-            "explanation": "$|\u000bec{AB}| = 8$."
+            "explanation": "$|\\vec{AB}| = 8$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho hình chữ nhật $ABCD$ có $AB = 6, AD = 8$. Tính độ dài vectơ $\u000bec{BD}$.",
+            "question": "**Câu 2:** Cho hình chữ nhật $ABCD$ có $AB = 6, AD = 8$. Tính độ dài vectơ $\\vec{BD}$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
@@ -5974,7 +5974,7 @@
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho hình thoi $ABCD$ cạnh 5 có góc $\\widehat{ABC} = 60^\\circ$. Tính độ dài vectơ $\u000bec{AC}$.",
+            "question": "**Câu 3:** Cho hình thoi $ABCD$ cạnh 5 có góc $\\widehat{ABC} = 60^\\circ$. Tính độ dài vectơ $\\vec{AC}$.",
             "correctAnswer": "5",
             "acceptedAnswers": [
               "5"
@@ -5984,7 +5984,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho đoạn thẳng $AB = 12$. Gọi $M$ là trung điểm $AB$. Độ dài vectơ $\u000bec{AM}$ bằng bao nhiêu?",
+            "question": "**Câu 4:** Cho đoạn thẳng $AB = 12$. Gọi $M$ là trung điểm $AB$. Độ dài vectơ $\\vec{AM}$ bằng bao nhiêu?",
             "correctAnswer": "6",
             "acceptedAnswers": [
               "6"
@@ -5994,7 +5994,7 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho hình vuông $ABCD$ cạnh 10. Gọi $M$ là trung điểm $CD$. Tính độ dài vectơ $\u000bec{AM}$ (làm tròn số thập phân 1 chữ số).",
+            "question": "**Câu 5:** Cho hình vuông $ABCD$ cạnh 10. Gọi $M$ là trung điểm $CD$. Tính độ dài vectơ $\\vec{AM}$ (làm tròn số thập phân 1 chữ số).",
             "correctAnswer": "11.2",
             "acceptedAnswers": [
               "11.2"
@@ -6004,29 +6004,29 @@
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một người chèo thuyền xuất phát từ điểm $A$ bên bờ này bơi thẳng vuông góc sang điểm $B$ bên bờ kia của dòng sông rộng $60\text{ m}$. Do nước chảy nên thuyền bị dạt tới điểm $C$ cách $B$ là $25\text{ m}$. Tính quãng đường thực tế thuyền đã đi được theo đường thẳng $AC$ (làm tròn đến hàng đơn vị).",
+            "question": "**Câu 6:** Một người chèo thuyền xuất phát từ điểm $A$ bên bờ này bơi thẳng vuông góc sang điểm $B$ bên bờ kia của dòng sông rộng $60\\text{ m}$. Do nước chảy nên thuyền bị dạt tới điểm $C$ cách $B$ là $25\\text{ m}$. Tính quãng đường thực tế thuyền đã đi được theo đường thẳng $AC$ (làm tròn đến hàng đơn vị).",
             "correctAnswer": "65",
             "acceptedAnswers": [
               "65"
             ],
-            "explanation": "$AC = \\sqrt{60^2 + 25^2} = \\sqrt{3600 + 625} = \\sqrt{4225} = 65\text{ m}$."
+            "explanation": "$AC = \\sqrt{60^2 + 25^2} = \\sqrt{3600 + 625} = \\sqrt{4225} = 65\\text{ m}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 8. Độ dài của vectơ $\u000bec{AB}$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 8. Độ dài của vectơ $\\vec{AB}$ bằng bao nhiêu?",
             "correctAnswer": "8",
             "acceptedAnswers": [
               "8"
             ],
-            "explanation": "$|\u000bec{AB}| = 8$."
+            "explanation": "$|\\vec{AB}| = 8$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho hình chữ nhật $ABCD$ có $AB = 6, AD = 8$. Tính độ dài vectơ $\u000bec{BD}$.",
+            "question": "**Câu 2:** Cho hình chữ nhật $ABCD$ có $AB = 6, AD = 8$. Tính độ dài vectơ $\\vec{BD}$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
@@ -6036,7 +6036,7 @@
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho hình thoi $ABCD$ cạnh 5 có góc $\\widehat{ABC} = 60^\\circ$. Tính độ dài vectơ $\u000bec{AC}$.",
+            "question": "**Câu 3:** Cho hình thoi $ABCD$ cạnh 5 có góc $\\widehat{ABC} = 60^\\circ$. Tính độ dài vectơ $\\vec{AC}$.",
             "correctAnswer": "5",
             "acceptedAnswers": [
               "5"
@@ -6046,7 +6046,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho đoạn thẳng $AB = 12$. Gọi $M$ là trung điểm $AB$. Độ dài vectơ $\u000bec{AM}$ bằng bao nhiêu?",
+            "question": "**Câu 4:** Cho đoạn thẳng $AB = 12$. Gọi $M$ là trung điểm $AB$. Độ dài vectơ $\\vec{AM}$ bằng bao nhiêu?",
             "correctAnswer": "6",
             "acceptedAnswers": [
               "6"
@@ -6056,7 +6056,7 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho hình vuông $ABCD$ cạnh 10. Gọi $M$ là trung điểm $CD$. Tính độ dài vectơ $\u000bec{AM}$ (làm tròn số thập phân 1 chữ số).",
+            "question": "**Câu 5:** Cho hình vuông $ABCD$ cạnh 10. Gọi $M$ là trung điểm $CD$. Tính độ dài vectơ $\\vec{AM}$ (làm tròn số thập phân 1 chữ số).",
             "correctAnswer": "11.2",
             "acceptedAnswers": [
               "11.2"
@@ -6066,12 +6066,12 @@
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một người chèo thuyền xuất phát từ điểm $A$ bên bờ này bơi thẳng vuông góc sang điểm $B$ bên bờ kia của dòng sông rộng $60\text{ m}$. Do nước chảy nên thuyền bị dạt tới điểm $C$ cách $B$ là $25\text{ m}$. Tính quãng đường thực tế thuyền đã đi được theo đường thẳng $AC$ (làm tròn đến hàng đơn vị).",
+            "question": "**Câu 6:** Một người chèo thuyền xuất phát từ điểm $A$ bên bờ này bơi thẳng vuông góc sang điểm $B$ bên bờ kia của dòng sông rộng $60\\text{ m}$. Do nước chảy nên thuyền bị dạt tới điểm $C$ cách $B$ là $25\\text{ m}$. Tính quãng đường thực tế thuyền đã đi được theo đường thẳng $AC$ (làm tròn đến hàng đơn vị).",
             "correctAnswer": "65",
             "acceptedAnswers": [
               "65"
             ],
-            "explanation": "$AC = \\sqrt{60^2 + 25^2} = \\sqrt{3600 + 625} = \\sqrt{4225} = 65\text{ m}$."
+            "explanation": "$AC = \\sqrt{60^2 + 25^2} = \\sqrt{3600 + 625} = \\sqrt{4225} = 65\\text{ m}$."
           }
         ],
         "essayQuestions": [
@@ -6081,7 +6081,7 @@
             "title": "Khái niệm vectơ và phương của vectơ",
             "maxScore": 0.5,
             "question": "**Bài 1 (0.50 điểm):** Định nghĩa vectơ và hai vectơ cùng phương. Cho ví dụ minh hoạ từ hình bình hành $ABCD$.",
-            "explanation": "1. Định nghĩa vectơ: Vectơ là một đoạn thẳng có hướng, nghĩa là trong hai điểm mút đã xác định điểm nào là điểm đầu (gốc), điểm nào là điểm cuối (ngọn).\n2. Hai vectơ cùng phương: Là hai vectơ có giá song song hoặc trùng nhau.\n3. Ví dụ trong hình bình hành $ABCD$: Vectơ $\u000bec{AB}$ và $\u000bec{CD}$ cùng phương vì hai đường thẳng $AB$ và $CD$ song song. Vectơ $\u000bec{AB}$ và $\u000bec{DC}$ cùng hướng và cùng độ dài nên bằng nhau: $\u000bec{AB} = \u000bec{DC}$."
+            "explanation": "1. Định nghĩa vectơ: Vectơ là một đoạn thẳng có hướng, nghĩa là trong hai điểm mút đã xác định điểm nào là điểm đầu (gốc), điểm nào là điểm cuối (ngọn).\n2. Hai vectơ cùng phương: Là hai vectơ có giá song song hoặc trùng nhau.\n3. Ví dụ trong hình bình hành $ABCD$: Vectơ $\\vec{AB}$ và $\\vec{CD}$ cùng phương vì hai đường thẳng $AB$ và $CD$ song song. Vectơ $\\vec{AB}$ và $\\vec{DC}$ cùng hướng và cùng độ dài nên bằng nhau: $\\vec{AB} = \\vec{DC}$."
           },
           {
             "id": 2,
@@ -6089,23 +6089,23 @@
             "title": "So sánh vectơ bằng nhau và vectơ đối nhau",
             "maxScore": 0.5,
             "question": "**Bài 2 (0.50 điểm):** Nêu định nghĩa hai vectơ bằng nhau và hai vectơ đối nhau. Cho tam giác $ABC$, gọi $M, N$ lần lượt là trung điểm của $AB, AC$. Chỉ ra các cặp vectơ bằng nhau và đối nhau tạo bởi các đoạn thẳng nối các điểm này.",
-            "explanation": "1. Hai vectơ bằng nhau khi chúng có cùng hướng và cùng độ dài: $\u000bec{a} = \u000bec{b}$.\n2. Hai vectơ đối nhau khi chúng ngược hướng và có cùng độ dài: $\u000bec{a} = -\u000bec{b}$.\n3. Trong tam giác $ABC$, $MN$ là đường trung bình song song và bằng nửa $BC$. Do đó: Các cặp vectơ bằng nhau: $\u000bec{AM} = \u000bec{MB}$, $\u000bec{AN} = \u000bec{NC}$, $\u000bec{MN} = \frac{1}{2}\u000bec{BC}$. Các cặp vectơ đối nhau: $\u000bec{AM}$ và $\u000bec{BM}$, $\u000bec{AN}$ và $\u000bec{CN}$, $\u000bec{MN}$ và $\u000bec{NM}$."
+            "explanation": "1. Hai vectơ bằng nhau khi chúng có cùng hướng và cùng độ dài: $\\vec{a} = \\vec{b}$.\n2. Hai vectơ đối nhau khi chúng ngược hướng và có cùng độ dài: $\\vec{a} = -\\vec{b}$.\n3. Trong tam giác $ABC$, $MN$ là đường trung bình song song và bằng nửa $BC$. Do đó: Các cặp vectơ bằng nhau: $\\vec{AM} = \\vec{MB}$, $\\vec{AN} = \\vec{NC}$, $\\vec{MN} = \\frac{1}{2}\\vec{BC}$. Các cặp vectơ đối nhau: $\\vec{AM}$ và $\\vec{BM}$, $\\vec{AN}$ và $\\vec{CN}$, $\\vec{MN}$ và $\\vec{NM}$."
           },
           {
             "id": 3,
             "level": "VD",
             "title": "Xác định các vectơ trong hình vuông",
             "maxScore": 0.5,
-            "question": "**Bài 3 (0.50 điểm):** Cho hình vuông $ABCD$ tâm $O$ cạnh bằng $a$. Liệt kê tất cả các vectơ khác $\u000bec{0}$ có điểm đầu và điểm cuối chọn từ các điểm $A, B, C, D, O$ mà:\na) Cùng phương với $\u000bec{AB}$.\nb) Có độ dài bằng $\frac{a\\sqrt{2}}{2}$.",
-            "explanation": "a) Các vectơ cùng phương với $\u000bec{AB}$ (giá song song hoặc trùng $AB$): $\u000bec{AB}, \u000bec{BA}, \u000bec{CD}, \u000bec{DC}$. (Tổng cộng 4 vectơ).\nb) Độ dài $\frac{a\\sqrt{2}}{2}$ chính là độ dài đoạn thẳng nối tâm $O$ với các đỉnh $A, B, C, D$. Các vectơ đó là: $\u000bec{OA}, \u000bec{AO}, \u000bec{OB}, \u000bec{BO}, \u000bec{OC}, \u000bec{CO}, \u000bec{OD}, \u000bec{DO}$. (Tổng cộng 8 vectơ)."
+            "question": "**Bài 3 (0.50 điểm):** Cho hình vuông $ABCD$ tâm $O$ cạnh bằng $a$. Liệt kê tất cả các vectơ khác $\\vec{0}$ có điểm đầu và điểm cuối chọn từ các điểm $A, B, C, D, O$ mà:\na) Cùng phương với $\\vec{AB}$.\nb) Có độ dài bằng $\\frac{a\\sqrt{2}}{2}$.",
+            "explanation": "a) Các vectơ cùng phương với $\\vec{AB}$ (giá song song hoặc trùng $AB$): $\\vec{AB}, \\vec{BA}, \\vec{CD}, \\vec{DC}$. (Tổng cộng 4 vectơ).\nb) Độ dài $\\frac{a\\sqrt{2}}{2}$ chính là độ dài đoạn thẳng nối tâm $O$ với các đỉnh $A, B, C, D$. Các vectơ đó là: $\\vec{OA}, \\vec{AO}, \\vec{OB}, \\vec{BO}, \\vec{OC}, \\vec{CO}, \\vec{OD}, \\vec{DO}$. (Tổng cộng 8 vectơ)."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Mô hình hoá chuyển động thực tế bằng vectơ",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Một chiếc tàu chở khách di chuyển từ bến cảng $A$ sang bến cảng $B$. Biết vị trí địa lý của $B$ nằm ở hướng chính Đông cách $A$ một khoảng $40\text{ km}$, sau đó tàu đổi hành trình chạy theo hướng chính Bắc đến đảo du lịch $C$ cách bến $B$ một khoảng $30\text{ km}$.\na) Biểu diễn hành trình chuyển động của tàu bằng các vectơ và tính tổng quãng đường mà tàu đã di chuyển.\nb) Tính độ dài của vectơ độ dời tổng hợp $\u000bec{AC}$ từ điểm xuất phát đến đảo $C$.",
-            "explanation": "a) Hành trình gồm hai vectơ chuyển động vuông góc: $\u000bec{d}_1 = \u000bec{AB}$ hướng Đông độ dài $40\text{ km}$, $\u000bec{d}_2 = \u000bec{BC}$ hướng Bắc độ dài $30\text{ km}$. Tổng quãng đường di chuyển: $S = AB + BC = 40 + 30 = 70\text{ km}$.\nb) Độ dời tổng hợp được biểu diễn bởi vectơ $\u000bec{AC}$. Do hướng Đông và hướng Bắc vuông góc nhau tại $B$ nên tam giác $ABC$ vuông tại $B$. Theo định lí Pythagore: $|\u000bec{AC}| = AC = \\sqrt{AB^2 + BC^2} = \\sqrt{40^2 + 30^2} = \\sqrt{1600 + 900} = \\sqrt{2500} = 50\text{ km}$."
+            "question": "**Bài 4 (0.50 điểm):** Một chiếc tàu chở khách di chuyển từ bến cảng $A$ sang bến cảng $B$. Biết vị trí địa lý của $B$ nằm ở hướng chính Đông cách $A$ một khoảng $40\\text{ km}$, sau đó tàu đổi hành trình chạy theo hướng chính Bắc đến đảo du lịch $C$ cách bến $B$ một khoảng $30\\text{ km}$.\na) Biểu diễn hành trình chuyển động của tàu bằng các vectơ và tính tổng quãng đường mà tàu đã di chuyển.\nb) Tính độ dài của vectơ độ dời tổng hợp $\\vec{AC}$ từ điểm xuất phát đến đảo $C$.",
+            "explanation": "a) Hành trình gồm hai vectơ chuyển động vuông góc: $\\vec{d}_1 = \\vec{AB}$ hướng Đông độ dài $40\\text{ km}$, $\\vec{d}_2 = \\vec{BC}$ hướng Bắc độ dài $30\\text{ km}$. Tổng quãng đường di chuyển: $S = AB + BC = 40 + 30 = 70\\text{ km}$.\nb) Độ dời tổng hợp được biểu diễn bởi vectơ $\\vec{AC}$. Do hướng Đông và hướng Bắc vuông góc nhau tại $B$ nên tam giác $ABC$ vuông tại $B$. Theo định lí Pythagore: $|\\vec{AC}| = AC = \\sqrt{AB^2 + BC^2} = \\sqrt{40^2 + 30^2} = \\sqrt{1600 + 900} = \\sqrt{2500} = 50\\text{ km}$."
           }
         ]
       },
@@ -6127,9 +6127,9 @@
             "question": "**Câu 1:** Vectơ có điểm đầu là $M$ và điểm cuối là $N$ được kí hiệu là",
             "options": {
               "A": "$MN$",
-              "B": "$\u000bec{NM}$",
-              "C": "$\u000bec{MN}$",
-              "D": "$|\u000bec{MN}|$"
+              "B": "$\\vec{NM}$",
+              "C": "$\\vec{MN}$",
+              "D": "$|\\vec{MN}|$"
             },
             "correct": "C",
             "explanation": "Kí hiệu chuẩn: điểm đầu viết trước, điểm cuối viết sau có mũi tên trên đầu."
@@ -6137,7 +6137,7 @@
           {
             "id": 2,
             "level": "NB",
-            "question": "**Câu 2:** Độ dài của vectơ $\u000bec{0}$ bằng",
+            "question": "**Câu 2:** Độ dài của vectơ $\\vec{0}$ bằng",
             "options": {
               "A": "$\\infty$",
               "B": "1",
@@ -6163,7 +6163,7 @@
           {
             "id": 4,
             "level": "NB",
-            "question": "**Câu 4:** Cho ba điểm phân biệt $A, B, C$ thẳng hàng. Hai vectơ $\u000bec{AB}$ và $\u000bec{AC}$ luôn",
+            "question": "**Câu 4:** Cho ba điểm phân biệt $A, B, C$ thẳng hàng. Hai vectơ $\\vec{AB}$ và $\\vec{AC}$ luôn",
             "options": {
               "A": "Bằng nhau",
               "B": "Ngược hướng",
@@ -6176,20 +6176,20 @@
           {
             "id": 5,
             "level": "TH",
-            "question": "**Câu 5:** Cho hình thoi $ABCD$ tâm $O$. Vectơ cùng hướng với $\u000bec{AO}$ là",
+            "question": "**Câu 5:** Cho hình thoi $ABCD$ tâm $O$. Vectơ cùng hướng với $\\vec{AO}$ là",
             "options": {
-              "A": "$\u000bec{BO}$",
-              "B": "$\u000bec{OC}$",
-              "C": "$\u000bec{CO}$",
-              "D": "$\u000bec{OA}$"
+              "A": "$\\vec{BO}$",
+              "B": "$\\vec{OC}$",
+              "C": "$\\vec{CO}$",
+              "D": "$\\vec{OA}$"
             },
             "correct": "B",
-            "explanation": "$O$ là trung điểm $AC$ nên $\u000bec{AO}$ và $\u000bec{OC}$ cùng hướng."
+            "explanation": "$O$ là trung điểm $AC$ nên $\\vec{AO}$ và $\\vec{OC}$ cùng hướng."
           },
           {
             "id": 6,
             "level": "TH",
-            "question": "**Câu 6:** Cho đoạn thẳng $AB$ có độ dài 10. Vectơ đối của $\u000bec{AB}$ có độ dài là",
+            "question": "**Câu 6:** Cho đoạn thẳng $AB$ có độ dài 10. Vectơ đối của $\\vec{AB}$ có độ dài là",
             "options": {
               "A": "10",
               "B": "5",
@@ -6202,20 +6202,20 @@
           {
             "id": 7,
             "level": "TH",
-            "question": "**Câu 7:** Cho tứ giác $ABCD$. Nếu $\u000bec{AB} = \u000bec{DC}$ thì mệnh đề nào sau đây đúng?",
+            "question": "**Câu 7:** Cho tứ giác $ABCD$. Nếu $\\vec{AB} = \\vec{DC}$ thì mệnh đề nào sau đây đúng?",
             "options": {
               "A": "$AC = BD$",
-              "B": "$\u000bec{AD} = \u000bec{CB}$",
+              "B": "$\\vec{AD} = \\vec{CB}$",
               "C": "$ABCD$ là hình bình hành",
               "D": "$ABCD$ là hình thang vuông"
             },
             "correct": "C",
-            "explanation": "$\u000bec{AB} = \u000bec{DC} \\Rightarrow ABCD$ là hình bình hành."
+            "explanation": "$\\vec{AB} = \\vec{DC} \\Rightarrow ABCD$ là hình bình hành."
           },
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho hình chữ nhật $ABCD$ có $AB = 3, BC = 4$. Độ dài vectơ $\u000bec{AC}$ bằng",
+            "question": "**Câu 8:** Cho hình chữ nhật $ABCD$ có $AB = 3, BC = 4$. Độ dài vectơ $\\vec{AC}$ bằng",
             "options": {
               "A": "25",
               "B": "5",
@@ -6228,7 +6228,7 @@
           {
             "id": 9,
             "level": "VD",
-            "question": "**Câu 9:** Cho tam giác đều $ABC$ cạnh 4. Gọi $M$ là trung điểm $BC$. Độ dài của vectơ $\u000bec{AM}$ bằng",
+            "question": "**Câu 9:** Cho tam giác đều $ABC$ cạnh 4. Gọi $M$ là trung điểm $BC$. Độ dài của vectơ $\\vec{AM}$ bằng",
             "options": {
               "A": "$2\\sqrt{3}$",
               "B": "$4\\sqrt{3}$",
@@ -6236,25 +6236,25 @@
               "D": "$3\\sqrt{2}$"
             },
             "correct": "A",
-            "explanation": "Đường cao tam giác đều: $AM = \frac{4\\sqrt{3}}{2} = 2\\sqrt{3}$."
+            "explanation": "Đường cao tam giác đều: $AM = \\frac{4\\sqrt{3}}{2} = 2\\sqrt{3}$."
           },
           {
             "id": 10,
             "level": "VD",
             "question": "**Câu 10:** Cho hình vuông $ABCD$ cạnh $a$. Khẳng định nào sau đây SAI?",
             "options": {
-              "A": "$|\u000bec{AD}| = a$",
-              "B": "$\u000bec{BC}$ cùng hướng với $\u000bec{AD}$",
-              "C": "$\u000bec{AB} = \u000bec{DC}$",
-              "D": "$|\u000bec{AB}| = |\u000bec{AC}|$"
+              "A": "$|\\vec{AD}| = a$",
+              "B": "$\\vec{BC}$ cùng hướng với $\\vec{AD}$",
+              "C": "$\\vec{AB} = \\vec{DC}$",
+              "D": "$|\\vec{AB}| = |\\vec{AC}|$"
             },
             "correct": "D",
-            "explanation": "$|\u000bec{AB}| = a \ne |\u000bec{AC}| = a\\sqrt{2}$."
+            "explanation": "$|\\vec{AB}| = a \\ne |\\vec{AC}| = a\\sqrt{2}$."
           },
           {
             "id": 11,
             "level": "VDC",
-            "question": "**Câu 11:** Cho ngũ giác đều $ABCDE$ tâm $O$. Số các vectơ khác $\u000bec{0}$ có điểm đầu và điểm cuối là các đỉnh của ngũ giác hoặc tâm $O$ và cùng phương với $\u000bec{OA}$ là",
+            "question": "**Câu 11:** Cho ngũ giác đều $ABCDE$ tâm $O$. Số các vectơ khác $\\vec{0}$ có điểm đầu và điểm cuối là các đỉnh của ngũ giác hoặc tâm $O$ và cùng phương với $\\vec{OA}$ là",
             "options": {
               "A": "2",
               "B": "4",
@@ -6262,20 +6262,20 @@
               "D": "10"
             },
             "correct": "A",
-            "explanation": "Vì số đỉnh là lẻ (5 đỉnh), không có đỉnh nào đối xứng với $A$ qua $O$. Do đó chỉ có đường thẳng $OA$ chứa $O$ và $A$, nên chỉ có 2 vectơ là $\u000bec{OA}$ và $\u000bec{AO}$."
+            "explanation": "Vì số đỉnh là lẻ (5 đỉnh), không có đỉnh nào đối xứng với $A$ qua $O$. Do đó chỉ có đường thẳng $OA$ chứa $O$ và $A$, nên chỉ có 2 vectơ là $\\vec{OA}$ và $\\vec{AO}$."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Hai con tàu cùng rời một cảng $O$: tàu thứ nhất đi theo hướng Đông với vận tốc $30\text{ km/h}$, tàu thứ hai đi theo hướng Bắc với vận tốc $40\text{ km/h}$. Khoảng cách giữa hai con tàu sau 2 giờ bằng",
+            "question": "**Câu 12:** Hai con tàu cùng rời một cảng $O$: tàu thứ nhất đi theo hướng Đông với vận tốc $30\\text{ km/h}$, tàu thứ hai đi theo hướng Bắc với vận tốc $40\\text{ km/h}$. Khoảng cách giữa hai con tàu sau 2 giờ bằng",
             "options": {
-              "A": "$70\text{ km}$",
-              "B": "$100\text{ km}$",
-              "C": "$140\text{ km}$",
-              "D": "$50\text{ km}$"
+              "A": "$70\\text{ km}$",
+              "B": "$100\\text{ km}$",
+              "C": "$140\\text{ km}$",
+              "D": "$50\\text{ km}$"
             },
             "correct": "B",
-            "explanation": "Sau 2h: $OA = 30 \times 2 = 60\text{ km}, OB = 40 \times 2 = 80\text{ km}$. Khoảng cách $AB = \\sqrt{60^2 + 80^2} = 100\text{ km}$."
+            "explanation": "Sau 2h: $OA = 30 \\times 2 = 60\\text{ km}, OB = 40 \\times 2 = 80\\text{ km}$. Khoảng cách $AB = \\sqrt{60^2 + 80^2} = 100\\text{ km}$."
           }
         ],
         "tfQuestions": [
@@ -6293,23 +6293,23 @@
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{BD}| = 10$.",
+                "content": "Độ dài $|\\vec{BD}| = 10$.",
                 "correct": true,
-                "explanation": "Vì $\triangle ABD$ đều nên $BD = 10$."
+                "explanation": "Vì $\\triangle ABD$ đều nên $BD = 10$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Độ dài $|\u000bec{AC}| = 10\\sqrt{3}$.",
+                "content": "Độ dài $|\\vec{AC}| = 10\\sqrt{3}$.",
                 "correct": true,
-                "explanation": "$AC = 2 \times AO = 2 \times \frac{10\\sqrt{3}}{2} = 10\\sqrt{3}$."
+                "explanation": "$AC = 2 \\times AO = 2 \\times \\frac{10\\sqrt{3}}{2} = 10\\sqrt{3}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{AB} = \u000bec{CD}$.",
+                "content": "Vectơ $\\vec{AB} = \\vec{CD}$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB}$ và $\u000bec{CD}$ ngược hướng nên không thể bằng nhau (phải là $\u000bec{AB} = \u000bec{DC}$)."
+                "explanation": "$\\vec{AB}$ và $\\vec{CD}$ ngược hướng nên không thể bằng nhau (phải là $\\vec{AB} = \\vec{DC}$)."
               }
             ]
           },
@@ -6320,28 +6320,28 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Độ dài của vectơ $\u000bec{AC}$ bằng 10.",
+                "content": "Độ dài của vectơ $\\vec{AC}$ bằng 10.",
                 "correct": true,
                 "explanation": "$AC = \\sqrt{8^2 + 6^2} = 10$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Vectơ $\u000bec{AO}$ và $\u000bec{OC}$ cùng hướng và cùng độ dài.",
+                "content": "Vectơ $\\vec{AO}$ và $\\vec{OC}$ cùng hướng và cùng độ dài.",
                 "correct": true,
-                "explanation": "$O$ là trung điểm $AC$ nên $\u000bec{AO} = \u000bec{OC}$."
+                "explanation": "$O$ là trung điểm $AC$ nên $\\vec{AO} = \\vec{OC}$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Vectơ $\u000bec{AD}$ cùng phương với $\u000bec{BC}$.",
+                "content": "Vectơ $\\vec{AD}$ cùng phương với $\\vec{BC}$.",
                 "correct": true,
                 "explanation": "Vì $AD \\parallel BC$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "$\u000bec{AC} = \u000bec{BD}$.",
+                "content": "$\\vec{AC} = \\vec{BD}$.",
                 "correct": false,
                 "explanation": "Hai đường chéo tuy cùng độ dài nhưng khác phương hướng, không bằng nhau."
               }
@@ -6363,23 +6363,23 @@
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{BD}| = 10$.",
+                "content": "Độ dài $|\\vec{BD}| = 10$.",
                 "correct": true,
-                "explanation": "Vì $\triangle ABD$ đều nên $BD = 10$."
+                "explanation": "Vì $\\triangle ABD$ đều nên $BD = 10$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Độ dài $|\u000bec{AC}| = 10\\sqrt{3}$.",
+                "content": "Độ dài $|\\vec{AC}| = 10\\sqrt{3}$.",
                 "correct": true,
-                "explanation": "$AC = 2 \times AO = 2 \times \frac{10\\sqrt{3}}{2} = 10\\sqrt{3}$."
+                "explanation": "$AC = 2 \\times AO = 2 \\times \\frac{10\\sqrt{3}}{2} = 10\\sqrt{3}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{AB} = \u000bec{CD}$.",
+                "content": "Vectơ $\\vec{AB} = \\vec{CD}$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB}$ và $\u000bec{CD}$ ngược hướng nên không thể bằng nhau (phải là $\u000bec{AB} = \u000bec{DC}$)."
+                "explanation": "$\\vec{AB}$ và $\\vec{CD}$ ngược hướng nên không thể bằng nhau (phải là $\\vec{AB} = \\vec{DC}$)."
               }
             ]
           },
@@ -6390,28 +6390,28 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Độ dài của vectơ $\u000bec{AC}$ bằng 10.",
+                "content": "Độ dài của vectơ $\\vec{AC}$ bằng 10.",
                 "correct": true,
                 "explanation": "$AC = \\sqrt{8^2 + 6^2} = 10$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Vectơ $\u000bec{AO}$ và $\u000bec{OC}$ cùng hướng và cùng độ dài.",
+                "content": "Vectơ $\\vec{AO}$ và $\\vec{OC}$ cùng hướng và cùng độ dài.",
                 "correct": true,
-                "explanation": "$O$ là trung điểm $AC$ nên $\u000bec{AO} = \u000bec{OC}$."
+                "explanation": "$O$ là trung điểm $AC$ nên $\\vec{AO} = \\vec{OC}$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Vectơ $\u000bec{AD}$ cùng phương với $\u000bec{BC}$.",
+                "content": "Vectơ $\\vec{AD}$ cùng phương với $\\vec{BC}$.",
                 "correct": true,
                 "explanation": "Vì $AD \\parallel BC$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "$\u000bec{AC} = \u000bec{BD}$.",
+                "content": "$\\vec{AC} = \\vec{BD}$.",
                 "correct": false,
                 "explanation": "Hai đường chéo tuy cùng độ dài nhưng khác phương hướng, không bằng nhau."
               }
@@ -6422,17 +6422,17 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho hình vuông $ABCD$ cạnh bằng 5. Độ dài vectơ $\u000bec{CD}$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho hình vuông $ABCD$ cạnh bằng 5. Độ dài vectơ $\\vec{CD}$ bằng bao nhiêu?",
             "correctAnswer": "5",
             "acceptedAnswers": [
               "5"
             ],
-            "explanation": "$|\u000bec{CD}| = 5$."
+            "explanation": "$|\\vec{CD}| = 5$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho lục giác đều $ABCDEF$ cạnh 3. Độ dài vectơ $\u000bec{BC}$ bằng bao nhiêu?",
+            "question": "**Câu 2:** Cho lục giác đều $ABCDEF$ cạnh 3. Độ dài vectơ $\\vec{BC}$ bằng bao nhiêu?",
             "correctAnswer": "3",
             "acceptedAnswers": [
               "3"
@@ -6442,7 +6442,7 @@
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho tam giác vuông $ABC$ tại $A$ có $AB = 9, AC = 12$. Tính độ dài vectơ $\u000bec{BC}$.",
+            "question": "**Câu 3:** Cho tam giác vuông $ABC$ tại $A$ có $AB = 9, AC = 12$. Tính độ dài vectơ $\\vec{BC}$.",
             "correctAnswer": "15",
             "acceptedAnswers": [
               "15"
@@ -6452,7 +6452,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho hình thoi $ABCD$ có đường chéo $AC = 8, BD = 6$. Tính độ dài vectơ $\u000bec{AB}$.",
+            "question": "**Câu 4:** Cho hình thoi $ABCD$ có đường chéo $AC = 8, BD = 6$. Tính độ dài vectơ $\\vec{AB}$.",
             "correctAnswer": "5",
             "acceptedAnswers": [
               "5"
@@ -6462,7 +6462,7 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho hình chữ nhật $ABCD$ có diện tích bằng 24, chiều dài $AB = 6$. Tính độ dài vectơ $\u000bec{AC}$ (làm tròn số thập phân 1 chữ số).",
+            "question": "**Câu 5:** Cho hình chữ nhật $ABCD$ có diện tích bằng 24, chiều dài $AB = 6$. Tính độ dài vectơ $\\vec{AC}$ (làm tròn số thập phân 1 chữ số).",
             "correctAnswer": "7.2",
             "acceptedAnswers": [
               "7.2"
@@ -6472,29 +6472,29 @@
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một máy bay bay thẳng về hướng Tây $120\text{ km}$, sau đó bay tiếp về hướng Nam $50\text{ km}$. Khoảng cách theo đường chim bay từ vị trí ban đầu đến vị trí hạ cánh bằng bao nhiêu km?",
+            "question": "**Câu 6:** Một máy bay bay thẳng về hướng Tây $120\\text{ km}$, sau đó bay tiếp về hướng Nam $50\\text{ km}$. Khoảng cách theo đường chim bay từ vị trí ban đầu đến vị trí hạ cánh bằng bao nhiêu km?",
             "correctAnswer": "130",
             "acceptedAnswers": [
               "130"
             ],
-            "explanation": "$d = \\sqrt{120^2 + 50^2} = 130\text{ km}$."
+            "explanation": "$d = \\sqrt{120^2 + 50^2} = 130\\text{ km}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho hình vuông $ABCD$ cạnh bằng 5. Độ dài vectơ $\u000bec{CD}$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho hình vuông $ABCD$ cạnh bằng 5. Độ dài vectơ $\\vec{CD}$ bằng bao nhiêu?",
             "correctAnswer": "5",
             "acceptedAnswers": [
               "5"
             ],
-            "explanation": "$|\u000bec{CD}| = 5$."
+            "explanation": "$|\\vec{CD}| = 5$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho lục giác đều $ABCDEF$ cạnh 3. Độ dài vectơ $\u000bec{BC}$ bằng bao nhiêu?",
+            "question": "**Câu 2:** Cho lục giác đều $ABCDEF$ cạnh 3. Độ dài vectơ $\\vec{BC}$ bằng bao nhiêu?",
             "correctAnswer": "3",
             "acceptedAnswers": [
               "3"
@@ -6504,7 +6504,7 @@
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho tam giác vuông $ABC$ tại $A$ có $AB = 9, AC = 12$. Tính độ dài vectơ $\u000bec{BC}$.",
+            "question": "**Câu 3:** Cho tam giác vuông $ABC$ tại $A$ có $AB = 9, AC = 12$. Tính độ dài vectơ $\\vec{BC}$.",
             "correctAnswer": "15",
             "acceptedAnswers": [
               "15"
@@ -6514,7 +6514,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho hình thoi $ABCD$ có đường chéo $AC = 8, BD = 6$. Tính độ dài vectơ $\u000bec{AB}$.",
+            "question": "**Câu 4:** Cho hình thoi $ABCD$ có đường chéo $AC = 8, BD = 6$. Tính độ dài vectơ $\\vec{AB}$.",
             "correctAnswer": "5",
             "acceptedAnswers": [
               "5"
@@ -6524,7 +6524,7 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho hình chữ nhật $ABCD$ có diện tích bằng 24, chiều dài $AB = 6$. Tính độ dài vectơ $\u000bec{AC}$ (làm tròn số thập phân 1 chữ số).",
+            "question": "**Câu 5:** Cho hình chữ nhật $ABCD$ có diện tích bằng 24, chiều dài $AB = 6$. Tính độ dài vectơ $\\vec{AC}$ (làm tròn số thập phân 1 chữ số).",
             "correctAnswer": "7.2",
             "acceptedAnswers": [
               "7.2"
@@ -6534,12 +6534,12 @@
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một máy bay bay thẳng về hướng Tây $120\text{ km}$, sau đó bay tiếp về hướng Nam $50\text{ km}$. Khoảng cách theo đường chim bay từ vị trí ban đầu đến vị trí hạ cánh bằng bao nhiêu km?",
+            "question": "**Câu 6:** Một máy bay bay thẳng về hướng Tây $120\\text{ km}$, sau đó bay tiếp về hướng Nam $50\\text{ km}$. Khoảng cách theo đường chim bay từ vị trí ban đầu đến vị trí hạ cánh bằng bao nhiêu km?",
             "correctAnswer": "130",
             "acceptedAnswers": [
               "130"
             ],
-            "explanation": "$d = \\sqrt{120^2 + 50^2} = 130\text{ km}$."
+            "explanation": "$d = \\sqrt{120^2 + 50^2} = 130\\text{ km}$."
           }
         ],
         "essayQuestions": [
@@ -6548,32 +6548,32 @@
             "level": "NB",
             "title": "Phân biệt đoạn thẳng và đoạn thẳng có hướng",
             "maxScore": 0.5,
-            "question": "**Bài 1 (0.50 điểm):** Nêu sự khác nhau cơ bản giữa đoạn thẳng $AB$ và vectơ $\u000bec{AB}$.",
-            "explanation": "1. Đoạn thẳng $AB$: Là hình học gồm điểm $A$, điểm $B$ và tất cả các điểm nằm giữa $A$ và $B$. Đoạn thẳng không có hướng (đoạn $AB$ và đoạn $BA$ là một).\n2. Vectơ $\u000bec{AB}$: Là đoạn thẳng đã được định hướng, trong đó điểm $A$ là điểm đầu (gốc) và điểm $B$ là điểm cuối (ngọn). Vectơ $\u000bec{AB}$ có hướng từ $A$ đến $B$, phân biệt rõ ràng với vectơ $\u000bec{BA}$ có hướng từ $B$ đến $A$."
+            "question": "**Bài 1 (0.50 điểm):** Nêu sự khác nhau cơ bản giữa đoạn thẳng $AB$ và vectơ $\\vec{AB}$.",
+            "explanation": "1. Đoạn thẳng $AB$: Là hình học gồm điểm $A$, điểm $B$ và tất cả các điểm nằm giữa $A$ và $B$. Đoạn thẳng không có hướng (đoạn $AB$ và đoạn $BA$ là một).\n2. Vectơ $\\vec{AB}$: Là đoạn thẳng đã được định hướng, trong đó điểm $A$ là điểm đầu (gốc) và điểm $B$ là điểm cuối (ngọn). Vectơ $\\vec{AB}$ có hướng từ $A$ đến $B$, phân biệt rõ ràng với vectơ $\\vec{BA}$ có hướng từ $B$ đến $A$."
           },
           {
             "id": 2,
             "level": "TH",
             "title": "Tính chất vectơ trong hình bình hành",
             "maxScore": 0.5,
-            "question": "**Bài 2 (0.50 điểm):** Cho hình bình hành $ABCD$. Hãy chỉ ra: a) Các vectơ bằng vectơ $\u000bec{AB}$. b) Các vectơ đối của vectơ $\u000bec{AD}$. c) Các cặp vectơ cùng phương nhưng ngược hướng.",
-            "explanation": "Trong hình bình hành $ABCD$:\na) Vectơ bằng $\u000bec{AB}$ là: $\u000bec{DC}$ (do $AB \\parallel DC$, cùng độ dài và cùng hướng từ trái sang phải).\nb) Vectơ đối của $\u000bec{AD}$ là: $-\u000bec{AD} = \u000bec{DA}$ và $\u000bec{CB}$.\nc) Các cặp vectơ cùng phương nhưng ngược hướng: - $\u000bec{AB}$ và $\u000bec{CD}$. - $\u000bec{AD}$ và $\u000bec{CB}$. - $\u000bec{BA}$ và $\u000bec{DC}$."
+            "question": "**Bài 2 (0.50 điểm):** Cho hình bình hành $ABCD$. Hãy chỉ ra: a) Các vectơ bằng vectơ $\\vec{AB}$. b) Các vectơ đối của vectơ $\\vec{AD}$. c) Các cặp vectơ cùng phương nhưng ngược hướng.",
+            "explanation": "Trong hình bình hành $ABCD$:\na) Vectơ bằng $\\vec{AB}$ là: $\\vec{DC}$ (do $AB \\parallel DC$, cùng độ dài và cùng hướng từ trái sang phải).\nb) Vectơ đối của $\\vec{AD}$ là: $-\\vec{AD} = \\vec{DA}$ và $\\vec{CB}$.\nc) Các cặp vectơ cùng phương nhưng ngược hướng: - $\\vec{AB}$ và $\\vec{CD}$. - $\\vec{AD}$ và $\\vec{CB}$. - $\\vec{BA}$ và $\\vec{DC}$."
           },
           {
             "id": 3,
             "level": "VD",
             "title": "Tính độ dài vectơ trong tam giác đều",
             "maxScore": 0.5,
-            "question": "**Bài 3 (0.50 điểm):** Cho tam giác $ABC$ đều cạnh $a$. Gọi $H$ là trung điểm của cạnh $BC$.\na) Tính độ dài của vectơ $\u000bec{AH}$.\nb) Lấy điểm $D$ đối xứng với $A$ qua $H$. Tứ giác $ABDC$ là hình gì? Tìm các vectơ bằng vectơ $\u000bec{AB}$ trong hình đó.",
-            "explanation": "a) Vì tam giác $ABC$ đều cạnh $a$ nên đường trung tuyến $AH$ đồng thời là đường cao. Áp dụng định lí Pythagore trong tam giác vuông $ABH$: $AH = \\sqrt{AB^2 - BH^2} = \\sqrt{a^2 - (a/2)^2} = \frac{a\\sqrt{3}}{2}$. Do đó độ dài vectơ là $|\u000bec{AH}| = AH = \frac{a\\sqrt{3}}{2}$.\nb) Tứ giác $ABDC$ có hai đường chéo $BC$ và $AD$ cắt nhau tại trung điểm $H$ của mỗi đường, đồng thời $AD \\perp BC$ tại $H$ và $AB = AC = a$. Do đó $ABDC$ là hình thoi. Vectơ bằng $\u000bec{AB}$ là $\u000bec{CD}$."
+            "question": "**Bài 3 (0.50 điểm):** Cho tam giác $ABC$ đều cạnh $a$. Gọi $H$ là trung điểm của cạnh $BC$.\na) Tính độ dài của vectơ $\\vec{AH}$.\nb) Lấy điểm $D$ đối xứng với $A$ qua $H$. Tứ giác $ABDC$ là hình gì? Tìm các vectơ bằng vectơ $\\vec{AB}$ trong hình đó.",
+            "explanation": "a) Vì tam giác $ABC$ đều cạnh $a$ nên đường trung tuyến $AH$ đồng thời là đường cao. Áp dụng định lí Pythagore trong tam giác vuông $ABH$: $AH = \\sqrt{AB^2 - BH^2} = \\sqrt{a^2 - (a/2)^2} = \\frac{a\\sqrt{3}}{2}$. Do đó độ dài vectơ là $|\\vec{AH}| = AH = \\frac{a\\sqrt{3}}{2}$.\nb) Tứ giác $ABDC$ có hai đường chéo $BC$ và $AD$ cắt nhau tại trung điểm $H$ của mỗi đường, đồng thời $AD \\perp BC$ tại $H$ và $AB = AC = a$. Do đó $ABDC$ là hình thoi. Vectơ bằng $\\vec{AB}$ là $\\vec{CD}$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Mô hình hoá chuyển động hai chiều của máy bay không người lái",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Một chiếc drone điều khiển từ xa bay khảo sát địa hình xuất phát từ trạm điều khiển $O$. Drone bay theo phương ngang sang phía Đông $600\text{ m}$, sau đó bay chếch lên hướng Bắc $800\text{ m}$.\na) Xác định độ dài vectơ vị trí của drone so với trạm xuất phát $O$.\nb) Nếu drone bay với tốc độ không đổi $20\text{ m/s}$ theo đường thẳng trực tiếp từ $O$ đến vị trí cuối cùng thì mất bao nhiêu giây?",
-            "explanation": "a) Độ dời về phía Đông là $x = 600\text{ m}$, độ dời về phía Bắc là $y = 800\text{ m}$. Hai phương Đông và Bắc vuông góc với nhau. Độ dài vectơ vị trí tổng hợp là khoảng cách từ $O$ đến vị trí hiện tại của drone: $d = \\sqrt{x^2 + y^2} = \\sqrt{600^2 + 800^2} = \\sqrt{360\\,000 + 640\\,000} = \\sqrt{1\\,000\\,000} = 1000\text{ m} = 1\text{ km}$.\nb) Thời gian bay trực tiếp từ $O$ đến đích với tốc độ $v = 20\text{ m/s}$ là: $t = \frac{d}{v} = \frac{1000}{20} = 50\text{ giây}$."
+            "question": "**Bài 4 (0.50 điểm):** Một chiếc drone điều khiển từ xa bay khảo sát địa hình xuất phát từ trạm điều khiển $O$. Drone bay theo phương ngang sang phía Đông $600\\text{ m}$, sau đó bay chếch lên hướng Bắc $800\\text{ m}$.\na) Xác định độ dài vectơ vị trí của drone so với trạm xuất phát $O$.\nb) Nếu drone bay với tốc độ không đổi $20\\text{ m/s}$ theo đường thẳng trực tiếp từ $O$ đến vị trí cuối cùng thì mất bao nhiêu giây?",
+            "explanation": "a) Độ dời về phía Đông là $x = 600\\text{ m}$, độ dời về phía Bắc là $y = 800\\text{ m}$. Hai phương Đông và Bắc vuông góc với nhau. Độ dài vectơ vị trí tổng hợp là khoảng cách từ $O$ đến vị trí hiện tại của drone: $d = \\sqrt{x^2 + y^2} = \\sqrt{600^2 + 800^2} = \\sqrt{360\\,000 + 640\\,000} = \\sqrt{1\\,000\\,000} = 1000\\text{ m} = 1\\text{ km}$.\nb) Thời gian bay trực tiếp từ $O$ đến đích với tốc độ $v = 20\\text{ m/s}$ là: $t = \\frac{d}{v} = \\frac{1000}{20} = 50\\text{ giây}$."
           }
         ]
       }
@@ -6596,83 +6596,83 @@
             "level": "NB",
             "question": "**Câu 1:** Với ba điểm bất kì $A, B, C$, khẳng định nào sau đây luôn đúng (Quy tắc ba điểm)?",
             "options": {
-              "A": "$\u000bec{AB} - \u000bec{BC} = \u000bec{AC}$",
-              "B": "$\u000bec{AB} + \u000bec{BC} = \u000bec{AC}$",
-              "C": "$\u000bec{AB} + \u000bec{AC} = \u000bec{BC}$",
-              "D": "$\u000bec{BA} + \u000bec{BC} = \u000bec{AC}$"
+              "A": "$\\vec{AB} - \\vec{BC} = \\vec{AC}$",
+              "B": "$\\vec{AB} + \\vec{BC} = \\vec{AC}$",
+              "C": "$\\vec{AB} + \\vec{AC} = \\vec{BC}$",
+              "D": "$\\vec{BA} + \\vec{BC} = \\vec{AC}$"
             },
             "correct": "B",
-            "explanation": "Quy tắc ba điểm phép cộng: $\u000bec{AB} + \u000bec{BC} = \u000bec{AC}$."
+            "explanation": "Quy tắc ba điểm phép cộng: $\\vec{AB} + \\vec{BC} = \\vec{AC}$."
           },
           {
             "id": 2,
             "level": "NB",
             "question": "**Câu 2:** Cho hình bình hành $ABCD$. Theo quy tắc hình bình hành ta có",
             "options": {
-              "A": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$",
-              "B": "$\u000bec{BA} + \u000bec{BC} = \u000bec{CA}$",
-              "C": "$\u000bec{AB} + \u000bec{AD} = \u000bec{BD}$",
-              "D": "$\u000bec{AB} + \u000bec{CD} = \u000bec{0}$"
+              "A": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$",
+              "B": "$\\vec{BA} + \\vec{BC} = \\vec{CA}$",
+              "C": "$\\vec{AB} + \\vec{AD} = \\vec{BD}$",
+              "D": "$\\vec{AB} + \\vec{CD} = \\vec{0}$"
             },
             "correct": "A",
-            "explanation": "Quy tắc hình bình hành: $\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$."
+            "explanation": "Quy tắc hình bình hành: $\\vec{AB} + \\vec{AD} = \\vec{AC}$."
           },
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Vectơ đối của vectơ $\u000bec{AB}$ là",
+            "question": "**Câu 3:** Vectơ đối của vectơ $\\vec{AB}$ là",
             "options": {
-              "A": "$\u000bec{AB}$",
-              "B": "$\u000bec{0}$",
-              "C": "$-\u000bec{BA}$",
-              "D": "$\u000bec{BA}$"
+              "A": "$\\vec{AB}$",
+              "B": "$\\vec{0}$",
+              "C": "$-\\vec{BA}$",
+              "D": "$\\vec{BA}$"
             },
             "correct": "D",
-            "explanation": "Vectơ đối của $\u000bec{AB}$ là $-\u000bec{AB} = \u000bec{BA}$."
+            "explanation": "Vectơ đối của $\\vec{AB}$ là $-\\vec{AB} = \\vec{BA}$."
           },
           {
             "id": 4,
             "level": "NB",
-            "question": "**Câu 4:** Với ba điểm phân biệt $A, B, C$, hiệu $\u000bec{AB} - \u000bec{AC}$ bằng",
+            "question": "**Câu 4:** Với ba điểm phân biệt $A, B, C$, hiệu $\\vec{AB} - \\vec{AC}$ bằng",
             "options": {
-              "A": "$\u000bec{BC}$",
-              "B": "$\u000bec{BA}$",
-              "C": "$\u000bec{CB}$",
-              "D": "$\u000bec{CA}$"
+              "A": "$\\vec{BC}$",
+              "B": "$\\vec{BA}$",
+              "C": "$\\vec{CB}$",
+              "D": "$\\vec{CA}$"
             },
             "correct": "C",
-            "explanation": "Quy tắc hiệu chung gốc: $\u000bec{AB} - \u000bec{AC} = \u000bec{CB}$."
+            "explanation": "Quy tắc hiệu chung gốc: $\\vec{AB} - \\vec{AC} = \\vec{CB}$."
           },
           {
             "id": 5,
             "level": "TH",
             "question": "**Câu 5:** Cho $I$ là trung điểm của đoạn thẳng $AB$. Khẳng định nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{IA} + \u000bec{IB} = \u000bec{AB}$",
-              "B": "$\u000bec{IA} + \u000bec{IB} = \u000bec{0}$",
-              "C": "$\u000bec{AI} + \u000bec{BI} = \u000bec{AB}$",
-              "D": "$\u000bec{IA} = \u000bec{IB}$"
+              "A": "$\\vec{IA} + \\vec{IB} = \\vec{AB}$",
+              "B": "$\\vec{IA} + \\vec{IB} = \\vec{0}$",
+              "C": "$\\vec{AI} + \\vec{BI} = \\vec{AB}$",
+              "D": "$\\vec{IA} = \\vec{IB}$"
             },
             "correct": "B",
-            "explanation": "$I$ là trung điểm của $AB \\Leftrightarrow \u000bec{IA} + \u000bec{IB} = \u000bec{0}$."
+            "explanation": "$I$ là trung điểm của $AB \\Leftrightarrow \\vec{IA} + \\vec{IB} = \\vec{0}$."
           },
           {
             "id": 6,
             "level": "TH",
             "question": "**Câu 6:** Cho tam giác $ABC$ có trọng tâm $G$. Với điểm $M$ tuỳ ý, khẳng định nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{MA} + \u000bec{MB} + \u000bec{MC} = \u000bec{MG}$",
-              "B": "$\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = 3\u000bec{MG}$",
-              "C": "$\u000bec{MA} + \u000bec{MB} + \u000bec{MC} = \u000bec{0}$",
-              "D": "$\u000bec{MA} + \u000bec{MB} + \u000bec{MC} = 3\u000bec{MG}$"
+              "A": "$\\vec{MA} + \\vec{MB} + \\vec{MC} = \\vec{MG}$",
+              "B": "$\\vec{GA} + \\vec{GB} + \\vec{GC} = 3\\vec{MG}$",
+              "C": "$\\vec{MA} + \\vec{MB} + \\vec{MC} = \\vec{0}$",
+              "D": "$\\vec{MA} + \\vec{MB} + \\vec{MC} = 3\\vec{MG}$"
             },
             "correct": "D",
-            "explanation": "Tính chất trọng tâm: $\u000bec{MA} + \u000bec{MB} + \u000bec{MC} = 3\u000bec{MG}$."
+            "explanation": "Tính chất trọng tâm: $\\vec{MA} + \\vec{MB} + \\vec{MC} = 3\\vec{MG}$."
           },
           {
             "id": 7,
             "level": "TH",
-            "question": "**Câu 7:** Cho hình vuông $ABCD$ cạnh $a$. Độ dài của vectơ $\u000bec{u} = \u000bec{AB} + \u000bec{AD}$ bằng",
+            "question": "**Câu 7:** Cho hình vuông $ABCD$ cạnh $a$. Độ dài của vectơ $\\vec{u} = \\vec{AB} + \\vec{AD}$ bằng",
             "options": {
               "A": "$a\\sqrt{2}$",
               "B": "$2a$",
@@ -6680,12 +6680,12 @@
               "D": "$a\\sqrt{3}$"
             },
             "correct": "A",
-            "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$, có độ dài $|\u000bec{AC}| = a\\sqrt{2}$."
+            "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$, có độ dài $|\\vec{AC}| = a\\sqrt{2}$."
           },
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho hình vuông $ABCD$ cạnh $a$. Độ dài của vectơ $\u000bec{v} = \u000bec{AB} - \u000bec{AD}$ bằng",
+            "question": "**Câu 8:** Cho hình vuông $ABCD$ cạnh $a$. Độ dài của vectơ $\\vec{v} = \\vec{AB} - \\vec{AD}$ bằng",
             "options": {
               "A": "$a$",
               "B": "$2a$",
@@ -6693,25 +6693,25 @@
               "D": "$0$"
             },
             "correct": "C",
-            "explanation": "$\u000bec{AB} - \u000bec{AD} = \u000bec{DB}$, có độ dài $|\u000bec{DB}| = a\\sqrt{2}$."
+            "explanation": "$\\vec{AB} - \\vec{AD} = \\vec{DB}$, có độ dài $|\\vec{DB}| = a\\sqrt{2}$."
           },
           {
             "id": 9,
             "level": "VD",
-            "question": "**Câu 9:** Cho tam giác đều $ABC$ cạnh $a$. Độ dài của vectơ $\u000bec{AB} + \u000bec{AC}$ bằng",
+            "question": "**Câu 9:** Cho tam giác đều $ABC$ cạnh $a$. Độ dài của vectơ $\\vec{AB} + \\vec{AC}$ bằng",
             "options": {
-              "A": "$\frac{a\\sqrt{3}}{2}$",
+              "A": "$\\frac{a\\sqrt{3}}{2}$",
               "B": "$a\\sqrt{3}$",
               "C": "$a$",
               "D": "$2a$"
             },
             "correct": "B",
-            "explanation": "Gọi $M$ là trung điểm $BC$, $\u000bec{AB} + \u000bec{AC} = 2\u000bec{AM}$. Độ dài $2 \times \frac{a\\sqrt{3}}{2} = a\\sqrt{3}$."
+            "explanation": "Gọi $M$ là trung điểm $BC$, $\\vec{AB} + \\vec{AC} = 2\\vec{AM}$. Độ dài $2 \\times \\frac{a\\sqrt{3}}{2} = a\\sqrt{3}$."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Cho hình chữ nhật $ABCD$ có $AB = 3, AD = 4$. Độ dài của vectơ $\u000bec{AB} + \u000bec{BC} + \u000bec{CD}$ bằng",
+            "question": "**Câu 10:** Cho hình chữ nhật $ABCD$ có $AB = 3, AD = 4$. Độ dài của vectơ $\\vec{AB} + \\vec{BC} + \\vec{CD}$ bằng",
             "options": {
               "A": "4",
               "B": "3",
@@ -6719,12 +6719,12 @@
               "D": "7"
             },
             "correct": "A",
-            "explanation": "$\u000bec{AB} + \u000bec{BC} + \u000bec{CD} = \u000bec{AD}$, có độ dài bằng $AD = 4$."
+            "explanation": "$\\vec{AB} + \\vec{BC} + \\vec{CD} = \\vec{AD}$, có độ dài bằng $AD = 4$."
           },
           {
             "id": 11,
             "level": "VDC",
-            "question": "**Câu 11:** Cho tam giác $ABC$. Tập hợp các điểm $M$ thoả mãn $|\u000bec{MA} + \u000bec{MB}| = |\u000bec{MA} - \u000bec{MB}|$ là",
+            "question": "**Câu 11:** Cho tam giác $ABC$. Tập hợp các điểm $M$ thoả mãn $|\\vec{MA} + \\vec{MB}| = |\\vec{MA} - \\vec{MB}|$ là",
             "options": {
               "A": "Đường trung trực của đoạn thẳng $AB$",
               "B": "Đường thẳng song song với $AB$",
@@ -6732,20 +6732,20 @@
               "D": "Tập rỗng"
             },
             "correct": "C",
-            "explanation": "Gọi $I$ là trung điểm $AB$, VT $= |2\u000bec{MI}| = 2MI$. VP $= |\u000bec{BA}| = AB$. Do đó $MI = \frac{AB}{2}$, tức $M$ thuộc đường tròn đường kính $AB$."
+            "explanation": "Gọi $I$ là trung điểm $AB$, VT $= |2\\vec{MI}| = 2MI$. VP $= |\\vec{BA}| = AB$. Do đó $MI = \\frac{AB}{2}$, tức $M$ thuộc đường tròn đường kính $AB$."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Hai lực $\u000bec{F}_1$ và $\u000bec{F}_2$ có cùng điểm đặt tại $O$, có phương vuông góc với nhau và có độ lớn lần lượt là $30\text{ N}$ và $40\text{ N}$. Độ lớn hợp lực của chúng bằng",
+            "question": "**Câu 12:** Hai lực $\\vec{F}_1$ và $\\vec{F}_2$ có cùng điểm đặt tại $O$, có phương vuông góc với nhau và có độ lớn lần lượt là $30\\text{ N}$ và $40\\text{ N}$. Độ lớn hợp lực của chúng bằng",
             "options": {
-              "A": "$10\text{ N}$",
-              "B": "$70\text{ N}$",
-              "C": "$1200\text{ N}$",
-              "D": "$50\text{ N}$"
+              "A": "$10\\text{ N}$",
+              "B": "$70\\text{ N}$",
+              "C": "$1200\\text{ N}$",
+              "D": "$50\\text{ N}$"
             },
             "correct": "D",
-            "explanation": "$|\u000bec{F}| = \\sqrt{F_1^2 + F_2^2} = \\sqrt{30^2 + 40^2} = 50\text{ N}$."
+            "explanation": "$|\\vec{F}| = \\sqrt{F_1^2 + F_2^2} = \\sqrt{30^2 + 40^2} = 50\\text{ N}$."
           }
         ],
         "tfQuestions": [
@@ -6756,30 +6756,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} + \u000bec{AC} = 2\u000bec{AM}$.",
+                "content": "$\\vec{AB} + \\vec{AC} = 2\\vec{AM}$.",
                 "correct": true,
                 "explanation": "Hệ thức trung điểm."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{AB} + \u000bec{AC}| = 6\\sqrt{3}$.",
+                "content": "Độ dài $|\\vec{AB} + \\vec{AC}| = 6\\sqrt{3}$.",
                 "correct": true,
-                "explanation": "$2 \times AM = 2 \times \frac{6\\sqrt{3}}{2} = 6\\sqrt{3}$."
+                "explanation": "$2 \\times AM = 2 \\times \\frac{6\\sqrt{3}}{2} = 6\\sqrt{3}$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AB} - \u000bec{AC} = \u000bec{CB}$.",
+                "content": "$\\vec{AB} - \\vec{AC} = \\vec{CB}$.",
                 "correct": true,
-                "explanation": "Quy tắc hiệu chung gốc: $\u000bec{AB} - \u000bec{AC} = \u000bec{CB}$."
+                "explanation": "Quy tắc hiệu chung gốc: $\\vec{AB} - \\vec{AC} = \\vec{CB}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Độ dài $|\u000bec{AB} - \u000bec{AC}| = 6\\sqrt{3}$.",
+                "content": "Độ dài $|\\vec{AB} - \\vec{AC}| = 6\\sqrt{3}$.",
                 "correct": false,
-                "explanation": "$|\u000bec{CB}| = BC = 6$, không phải $6\\sqrt{3}$."
+                "explanation": "$|\\vec{CB}| = BC = 6$, không phải $6\\sqrt{3}$."
               }
             ]
           },
@@ -6790,30 +6790,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{OA} + \u000bec{OB} + \u000bec{OC} + \u000bec{OD} = \u000bec{0}$.",
+                "content": "$\\vec{OA} + \\vec{OB} + \\vec{OC} + \\vec{OD} = \\vec{0}$.",
                 "correct": true,
-                "explanation": "Do $O$ là trung điểm của $AC$ và $BD$ nên $\u000bec{OA} + \u000bec{OC} = \u000bec{0}$ và $\u000bec{OB} + \u000bec{OD} = \u000bec{0}$."
+                "explanation": "Do $O$ là trung điểm của $AC$ và $BD$ nên $\\vec{OA} + \\vec{OC} = \\vec{0}$ và $\\vec{OB} + \\vec{OD} = \\vec{0}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{AB} + \u000bec{BC}| = 4$.",
+                "content": "Độ dài $|\\vec{AB} + \\vec{BC}| = 4$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} + \u000bec{BC} = \u000bec{AC}$ có độ dài $4\\sqrt{2}$."
+                "explanation": "$\\vec{AB} + \\vec{BC} = \\vec{AC}$ có độ dài $4\\sqrt{2}$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AB} + \u000bec{AD} = 2\u000bec{AC}$.",
+                "content": "$\\vec{AB} + \\vec{AD} = 2\\vec{AC}$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$, không phải $2\u000bec{AC}$."
+                "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$, không phải $2\\vec{AC}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Độ dài $|\u000bec{AB} - \u000bec{AD}| = 4\\sqrt{2}$.",
+                "content": "Độ dài $|\\vec{AB} - \\vec{AD}| = 4\\sqrt{2}$.",
                 "correct": true,
-                "explanation": "$\u000bec{AB} - \u000bec{AD} = \u000bec{DB}$ có độ dài đường chéo $4\\sqrt{2}$."
+                "explanation": "$\\vec{AB} - \\vec{AD} = \\vec{DB}$ có độ dài đường chéo $4\\sqrt{2}$."
               }
             ]
           }
@@ -6826,30 +6826,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} + \u000bec{AC} = 2\u000bec{AM}$.",
+                "content": "$\\vec{AB} + \\vec{AC} = 2\\vec{AM}$.",
                 "correct": true,
                 "explanation": "Hệ thức trung điểm."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{AB} + \u000bec{AC}| = 6\\sqrt{3}$.",
+                "content": "Độ dài $|\\vec{AB} + \\vec{AC}| = 6\\sqrt{3}$.",
                 "correct": true,
-                "explanation": "$2 \times AM = 2 \times \frac{6\\sqrt{3}}{2} = 6\\sqrt{3}$."
+                "explanation": "$2 \\times AM = 2 \\times \\frac{6\\sqrt{3}}{2} = 6\\sqrt{3}$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AB} - \u000bec{AC} = \u000bec{CB}$.",
+                "content": "$\\vec{AB} - \\vec{AC} = \\vec{CB}$.",
                 "correct": true,
-                "explanation": "Quy tắc hiệu chung gốc: $\u000bec{AB} - \u000bec{AC} = \u000bec{CB}$."
+                "explanation": "Quy tắc hiệu chung gốc: $\\vec{AB} - \\vec{AC} = \\vec{CB}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Độ dài $|\u000bec{AB} - \u000bec{AC}| = 6\\sqrt{3}$.",
+                "content": "Độ dài $|\\vec{AB} - \\vec{AC}| = 6\\sqrt{3}$.",
                 "correct": false,
-                "explanation": "$|\u000bec{CB}| = BC = 6$, không phải $6\\sqrt{3}$."
+                "explanation": "$|\\vec{CB}| = BC = 6$, không phải $6\\sqrt{3}$."
               }
             ]
           },
@@ -6860,30 +6860,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{OA} + \u000bec{OB} + \u000bec{OC} + \u000bec{OD} = \u000bec{0}$.",
+                "content": "$\\vec{OA} + \\vec{OB} + \\vec{OC} + \\vec{OD} = \\vec{0}$.",
                 "correct": true,
-                "explanation": "Do $O$ là trung điểm của $AC$ và $BD$ nên $\u000bec{OA} + \u000bec{OC} = \u000bec{0}$ và $\u000bec{OB} + \u000bec{OD} = \u000bec{0}$."
+                "explanation": "Do $O$ là trung điểm của $AC$ và $BD$ nên $\\vec{OA} + \\vec{OC} = \\vec{0}$ và $\\vec{OB} + \\vec{OD} = \\vec{0}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{AB} + \u000bec{BC}| = 4$.",
+                "content": "Độ dài $|\\vec{AB} + \\vec{BC}| = 4$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} + \u000bec{BC} = \u000bec{AC}$ có độ dài $4\\sqrt{2}$."
+                "explanation": "$\\vec{AB} + \\vec{BC} = \\vec{AC}$ có độ dài $4\\sqrt{2}$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AB} + \u000bec{AD} = 2\u000bec{AC}$.",
+                "content": "$\\vec{AB} + \\vec{AD} = 2\\vec{AC}$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$, không phải $2\u000bec{AC}$."
+                "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$, không phải $2\\vec{AC}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Độ dài $|\u000bec{AB} - \u000bec{AD}| = 4\\sqrt{2}$.",
+                "content": "Độ dài $|\\vec{AB} - \\vec{AD}| = 4\\sqrt{2}$.",
                 "correct": true,
-                "explanation": "$\u000bec{AB} - \u000bec{AD} = \u000bec{DB}$ có độ dài đường chéo $4\\sqrt{2}$."
+                "explanation": "$\\vec{AB} - \\vec{AD} = \\vec{DB}$ có độ dài đường chéo $4\\sqrt{2}$."
               }
             ]
           }
@@ -6892,124 +6892,124 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 10. Độ dài vectơ $\u000bec{AB} - \u000bec{AC}$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 10. Độ dài vectơ $\\vec{AB} - \\vec{AC}$ bằng bao nhiêu?",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
             ],
-            "explanation": "$|\u000bec{CB}| = 10$."
+            "explanation": "$|\\vec{CB}| = 10$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho hình vuông $ABCD$ cạnh 6. Tính độ dài vectơ tổng $\u000bec{AB} + \u000bec{AD}$ (làm tròn số thập phân 1 chữ số).",
+            "question": "**Câu 2:** Cho hình vuông $ABCD$ cạnh 6. Tính độ dài vectơ tổng $\\vec{AB} + \\vec{AD}$ (làm tròn số thập phân 1 chữ số).",
             "correctAnswer": "8.5",
             "acceptedAnswers": [
               "8.5"
             ],
-            "explanation": "$|\u000bec{AC}| = 6\\sqrt{2} \u0007pprox 8.49 \u0007pprox 8.5$."
+            "explanation": "$|\\vec{AC}| = 6\\sqrt{2} \u0007pprox 8.49 \u0007pprox 8.5$."
           },
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho hình thoi $ABCD$ có đường chéo $AC = 16, BD = 12$. Tính độ dài vectơ $\u000bec{AB} + \u000bec{AD}$.",
+            "question": "**Câu 3:** Cho hình thoi $ABCD$ có đường chéo $AC = 16, BD = 12$. Tính độ dài vectơ $\\vec{AB} + \\vec{AD}$.",
             "correctAnswer": "16",
             "acceptedAnswers": [
               "16"
             ],
-            "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$, độ dài bằng 16."
+            "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$, độ dài bằng 16."
           },
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho ba điểm $A, B, C$ thẳng hàng, $B$ nằm giữa $A$ và $C$ với $AB = 4, BC = 7$. Độ dài vectơ $\u000bec{AB} + \u000bec{CB}$ bằng bao nhiêu?",
+            "question": "**Câu 4:** Cho ba điểm $A, B, C$ thẳng hàng, $B$ nằm giữa $A$ và $C$ với $AB = 4, BC = 7$. Độ dài vectơ $\\vec{AB} + \\vec{CB}$ bằng bao nhiêu?",
             "correctAnswer": "3",
             "acceptedAnswers": [
               "3"
             ],
-            "explanation": "Vì $B$ ở giữa nên $\u000bec{AB}$ và $\u000bec{CB}$ ngược hướng, độ dài tổng $= |4 - 7| = 3$."
+            "explanation": "Vì $B$ ở giữa nên $\\vec{AB}$ và $\\vec{CB}$ ngược hướng, độ dài tổng $= |4 - 7| = 3$."
           },
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho tam giác $ABC$ có trọng tâm $G$. Điểm $M$ thoả mãn $\u000bec{MA} + \u000bec{MB} + \u000bec{MC} = \u000bec{0}$. Khoảng cách $MG$ bằng bao nhiêu?",
+            "question": "**Câu 5:** Cho tam giác $ABC$ có trọng tâm $G$. Điểm $M$ thoả mãn $\\vec{MA} + \\vec{MB} + \\vec{MC} = \\vec{0}$. Khoảng cách $MG$ bằng bao nhiêu?",
             "correctAnswer": "0",
             "acceptedAnswers": [
               "0"
             ],
-            "explanation": "Vì $\u000bec{MA} + \u000bec{MB} + \u000bec{MC} = 3\u000bec{MG} = \u000bec{0} \\Rightarrow M \\equiv G$, nên $MG = 0$."
+            "explanation": "Vì $\\vec{MA} + \\vec{MB} + \\vec{MC} = 3\\vec{MG} = \\vec{0} \\Rightarrow M \\equiv G$, nên $MG = 0$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Hai người cùng kéo một chiếc thuyền nhỏ bằng hai sợi dây với lực $F_1 = 400\text{ N}$ và $F_2 = 300\text{ N}$. Góc giữa hai sợi dây kéo bằng $90^\\circ$. Độ lớn hợp lực tác dụng lên thuyền bằng bao nhiêu Newton?",
+            "question": "**Câu 6:** Hai người cùng kéo một chiếc thuyền nhỏ bằng hai sợi dây với lực $F_1 = 400\\text{ N}$ và $F_2 = 300\\text{ N}$. Góc giữa hai sợi dây kéo bằng $90^\\circ$. Độ lớn hợp lực tác dụng lên thuyền bằng bao nhiêu Newton?",
             "correctAnswer": "500",
             "acceptedAnswers": [
               "500"
             ],
-            "explanation": "$F = \\sqrt{400^2 + 300^2} = 500\text{ N}$."
+            "explanation": "$F = \\sqrt{400^2 + 300^2} = 500\\text{ N}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 10. Độ dài vectơ $\u000bec{AB} - \u000bec{AC}$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 10. Độ dài vectơ $\\vec{AB} - \\vec{AC}$ bằng bao nhiêu?",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
             ],
-            "explanation": "$|\u000bec{CB}| = 10$."
+            "explanation": "$|\\vec{CB}| = 10$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho hình vuông $ABCD$ cạnh 6. Tính độ dài vectơ tổng $\u000bec{AB} + \u000bec{AD}$ (làm tròn số thập phân 1 chữ số).",
+            "question": "**Câu 2:** Cho hình vuông $ABCD$ cạnh 6. Tính độ dài vectơ tổng $\\vec{AB} + \\vec{AD}$ (làm tròn số thập phân 1 chữ số).",
             "correctAnswer": "8.5",
             "acceptedAnswers": [
               "8.5"
             ],
-            "explanation": "$|\u000bec{AC}| = 6\\sqrt{2} \u0007pprox 8.49 \u0007pprox 8.5$."
+            "explanation": "$|\\vec{AC}| = 6\\sqrt{2} \u0007pprox 8.49 \u0007pprox 8.5$."
           },
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho hình thoi $ABCD$ có đường chéo $AC = 16, BD = 12$. Tính độ dài vectơ $\u000bec{AB} + \u000bec{AD}$.",
+            "question": "**Câu 3:** Cho hình thoi $ABCD$ có đường chéo $AC = 16, BD = 12$. Tính độ dài vectơ $\\vec{AB} + \\vec{AD}$.",
             "correctAnswer": "16",
             "acceptedAnswers": [
               "16"
             ],
-            "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$, độ dài bằng 16."
+            "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$, độ dài bằng 16."
           },
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho ba điểm $A, B, C$ thẳng hàng, $B$ nằm giữa $A$ và $C$ với $AB = 4, BC = 7$. Độ dài vectơ $\u000bec{AB} + \u000bec{CB}$ bằng bao nhiêu?",
+            "question": "**Câu 4:** Cho ba điểm $A, B, C$ thẳng hàng, $B$ nằm giữa $A$ và $C$ với $AB = 4, BC = 7$. Độ dài vectơ $\\vec{AB} + \\vec{CB}$ bằng bao nhiêu?",
             "correctAnswer": "3",
             "acceptedAnswers": [
               "3"
             ],
-            "explanation": "Vì $B$ ở giữa nên $\u000bec{AB}$ và $\u000bec{CB}$ ngược hướng, độ dài tổng $= |4 - 7| = 3$."
+            "explanation": "Vì $B$ ở giữa nên $\\vec{AB}$ và $\\vec{CB}$ ngược hướng, độ dài tổng $= |4 - 7| = 3$."
           },
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho tam giác $ABC$ có trọng tâm $G$. Điểm $M$ thoả mãn $\u000bec{MA} + \u000bec{MB} + \u000bec{MC} = \u000bec{0}$. Khoảng cách $MG$ bằng bao nhiêu?",
+            "question": "**Câu 5:** Cho tam giác $ABC$ có trọng tâm $G$. Điểm $M$ thoả mãn $\\vec{MA} + \\vec{MB} + \\vec{MC} = \\vec{0}$. Khoảng cách $MG$ bằng bao nhiêu?",
             "correctAnswer": "0",
             "acceptedAnswers": [
               "0"
             ],
-            "explanation": "Vì $\u000bec{MA} + \u000bec{MB} + \u000bec{MC} = 3\u000bec{MG} = \u000bec{0} \\Rightarrow M \\equiv G$, nên $MG = 0$."
+            "explanation": "Vì $\\vec{MA} + \\vec{MB} + \\vec{MC} = 3\\vec{MG} = \\vec{0} \\Rightarrow M \\equiv G$, nên $MG = 0$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Hai người cùng kéo một chiếc thuyền nhỏ bằng hai sợi dây với lực $F_1 = 400\text{ N}$ và $F_2 = 300\text{ N}$. Góc giữa hai sợi dây kéo bằng $90^\\circ$. Độ lớn hợp lực tác dụng lên thuyền bằng bao nhiêu Newton?",
+            "question": "**Câu 6:** Hai người cùng kéo một chiếc thuyền nhỏ bằng hai sợi dây với lực $F_1 = 400\\text{ N}$ và $F_2 = 300\\text{ N}$. Góc giữa hai sợi dây kéo bằng $90^\\circ$. Độ lớn hợp lực tác dụng lên thuyền bằng bao nhiêu Newton?",
             "correctAnswer": "500",
             "acceptedAnswers": [
               "500"
             ],
-            "explanation": "$F = \\sqrt{400^2 + 300^2} = 500\text{ N}$."
+            "explanation": "$F = \\sqrt{400^2 + 300^2} = 500\\text{ N}$."
           }
         ],
         "essayQuestions": [
@@ -7019,31 +7019,31 @@
             "title": "Quy tắc cộng vectơ và hình bình hành",
             "maxScore": 0.5,
             "question": "**Bài 1 (0.50 điểm):** Phát biểu quy tắc ba điểm và quy tắc hình bình hành đối với phép cộng vectơ. Vẽ hình minh hoạ cho mỗi quy tắc.",
-            "explanation": "1. Quy tắc ba điểm: Với ba điểm bất kì $A, B, C$, ta có $\u000bec{AB} + \u000bec{BC} = \u000bec{AC}$. Điểm cuối của vectơ thứ nhất trùng với điểm đầu của vectơ thứ hai.\n2. Quy tắc hình bình hành: Nếu $ABCD$ là hình bình hành thì $\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$. Hai vectơ chung gốc được cộng lại thành vectơ đường chéo xuất phát từ gốc chung đó."
+            "explanation": "1. Quy tắc ba điểm: Với ba điểm bất kì $A, B, C$, ta có $\\vec{AB} + \\vec{BC} = \\vec{AC}$. Điểm cuối của vectơ thứ nhất trùng với điểm đầu của vectơ thứ hai.\n2. Quy tắc hình bình hành: Nếu $ABCD$ là hình bình hành thì $\\vec{AB} + \\vec{AD} = \\vec{AC}$. Hai vectơ chung gốc được cộng lại thành vectơ đường chéo xuất phát từ gốc chung đó."
           },
           {
             "id": 2,
             "level": "TH",
             "title": "Phép trừ vectơ và tính chất trung điểm",
             "maxScore": 0.5,
-            "question": "**Bài 2 (0.50 điểm):** Cho đoạn thẳng $AB$ có trung điểm $I$. Chứng minh rằng với mọi điểm $M$ bất kì, ta luôn có:\na) $\u000bec{IA} + \u000bec{IB} = \u000bec{0}$.\nb) $\u000bec{MA} + \u000bec{MB} = 2\u000bec{MI}$.",
-            "explanation": "a) Vì $I$ là trung điểm của $AB$ nên hai đoạn $IA = IB$, và hai vectơ $\u000bec{IA}, \u000bec{IB}$ ngược hướng. Do đó $\u000bec{IA}$ và $\u000bec{IB}$ là hai vectơ đối nhau, suy ra $\u000bec{IA} + \u000bec{IB} = \u000bec{0}$.\nb) Theo quy tắc ba điểm: $\u000bec{MA} = \u000bec{MI} + \u000bec{IA}$ và $\u000bec{MB} = \u000bec{MI} + \u000bec{IB}$. Cộng hai vế ta được: $\u000bec{MA} + \u000bec{MB} = (\u000bec{MI} + \u000bec{IA}) + (\u000bec{MI} + \u000bec{IB}) = 2\u000bec{MI} + (\u000bec{IA} + \u000bec{IB}) = 2\u000bec{MI} + \u000bec{0} = 2\u000bec{MI}$ (đpcm)."
+            "question": "**Bài 2 (0.50 điểm):** Cho đoạn thẳng $AB$ có trung điểm $I$. Chứng minh rằng với mọi điểm $M$ bất kì, ta luôn có:\na) $\\vec{IA} + \\vec{IB} = \\vec{0}$.\nb) $\\vec{MA} + \\vec{MB} = 2\\vec{MI}$.",
+            "explanation": "a) Vì $I$ là trung điểm của $AB$ nên hai đoạn $IA = IB$, và hai vectơ $\\vec{IA}, \\vec{IB}$ ngược hướng. Do đó $\\vec{IA}$ và $\\vec{IB}$ là hai vectơ đối nhau, suy ra $\\vec{IA} + \\vec{IB} = \\vec{0}$.\nb) Theo quy tắc ba điểm: $\\vec{MA} = \\vec{MI} + \\vec{IA}$ và $\\vec{MB} = \\vec{MI} + \\vec{IB}$. Cộng hai vế ta được: $\\vec{MA} + \\vec{MB} = (\\vec{MI} + \\vec{IA}) + (\\vec{MI} + \\vec{IB}) = 2\\vec{MI} + (\\vec{IA} + \\vec{IB}) = 2\\vec{MI} + \\vec{0} = 2\\vec{MI}$ (đpcm)."
           },
           {
             "id": 3,
             "level": "VD",
             "title": "Tính độ dài vectơ tổng và hiệu trong hình học",
             "maxScore": 0.5,
-            "question": "**Bài 3 (0.50 điểm):** Cho hình chữ nhật $ABCD$ có các cạnh $AB = 4a, AD = 3a$.\na) Tính độ dài vectơ $\u000bec{u} = \u000bec{AB} + \u000bec{AD}$.\nb) Tính độ dài vectơ $\u000bec{v} = \u000bec{AB} - \u000bec{AD}$.\nc) So sánh độ dài của hai vectơ $\u000bec{u}$ và $\u000bec{v}$.",
-            "explanation": "a) Theo quy tắc hình bình hành (áp dụng cho hình chữ nhật $ABCD$): $\u000bec{u} = \u000bec{AB} + \u000bec{AD} = \u000bec{AC}$. Độ dài $|\u000bec{u}| = AC = \\sqrt{AB^2 + AD^2} = \\sqrt{(4a)^2 + (3a)^2} = \\sqrt{25a^2} = 5a$.\nb) Theo quy tắc hiệu chung gốc: $\u000bec{v} = \u000bec{AB} - \u000bec{AD} = \u000bec{DB}$. Độ dài $|\u000bec{v}| = DB = \\sqrt{DA^2 + AB^2} = \\sqrt{(3a)^2 + (4a)^2} = 5a$.\nc) Hai vectơ $\u000bec{u}$ và $\u000bec{v}$ có phương khác nhau (là phương hai đường chéo cắt nhau) nhưng có độ dài bằng nhau: $|\u000bec{u}| = |\u000bec{v}| = 5a$."
+            "question": "**Bài 3 (0.50 điểm):** Cho hình chữ nhật $ABCD$ có các cạnh $AB = 4a, AD = 3a$.\na) Tính độ dài vectơ $\\vec{u} = \\vec{AB} + \\vec{AD}$.\nb) Tính độ dài vectơ $\\vec{v} = \\vec{AB} - \\vec{AD}$.\nc) So sánh độ dài của hai vectơ $\\vec{u}$ và $\\vec{v}$.",
+            "explanation": "a) Theo quy tắc hình bình hành (áp dụng cho hình chữ nhật $ABCD$): $\\vec{u} = \\vec{AB} + \\vec{AD} = \\vec{AC}$. Độ dài $|\\vec{u}| = AC = \\sqrt{AB^2 + AD^2} = \\sqrt{(4a)^2 + (3a)^2} = \\sqrt{25a^2} = 5a$.\nb) Theo quy tắc hiệu chung gốc: $\\vec{v} = \\vec{AB} - \\vec{AD} = \\vec{DB}$. Độ dài $|\\vec{v}| = DB = \\sqrt{DA^2 + AB^2} = \\sqrt{(3a)^2 + (4a)^2} = 5a$.\nc) Hai vectơ $\\vec{u}$ và $\\vec{v}$ có phương khác nhau (là phương hai đường chéo cắt nhau) nhưng có độ dài bằng nhau: $|\\vec{u}| = |\\vec{v}| = 5a$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Bài toán thực tế cân bằng lực vật lý",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Một chiếc đèn trang trí nặng $6\text{ kg}$ ($P \u0007pprox 60\text{ N}$) được treo cố định vào trần nhà nhờ hai sợi dây cáp mảnh không giãn $OA$ và $OB$. Hai dây hợp với trần nhà các góc bằng nhau là $30^\\circ$ và cùng nằm trong một mặt phẳng thẳng đứng.\na) Phân tích các lực tác dụng lên điểm treo $O$ và viết điều kiện cân bằng dưới dạng vectơ.\nb) Tính độ lớn lực căng của mỗi sợi dây cáp.",
-            "explanation": "a) Điểm $O$ chịu tác dụng của 3 lực: trọng lực $\u000bec{P}$ thẳng đứng hướng xuống dưới độ lớn $P = 60\text{ N}$; lực căng $\u000bec{T}_1$ dọc theo dây $OA$; lực căng $\u000bec{T}_2$ dọc theo dây $OB$. Điều kiện cân bằng là: $\u000bec{T}_1 + \u000bec{T}_2 + \u000bec{P} = \u000bec{0} \\Leftrightarrow \u000bec{T}_1 + \u000bec{T}_2 = -\u000bec{P}$.\nb) Gọi $\u000bec{T} = \u000bec{T}_1 + \u000bec{T}_2$. Hợp lực $\u000bec{T}$ thẳng đứng hướng lên và có độ lớn $T = P = 60\text{ N}$. Do tính đối xứng nên $T_1 = T_2$. Hình chiếu lên phương thẳng đứng: $T_1 \\sin 30^\\circ + T_2 \\sin 30^\\circ = P \\Leftrightarrow 2 T_1 \times \frac{1}{2} = 60 \\Rightarrow T_1 = T_2 = 60\text{ N}$."
+            "question": "**Bài 4 (0.50 điểm):** Một chiếc đèn trang trí nặng $6\\text{ kg}$ ($P \u0007pprox 60\\text{ N}$) được treo cố định vào trần nhà nhờ hai sợi dây cáp mảnh không giãn $OA$ và $OB$. Hai dây hợp với trần nhà các góc bằng nhau là $30^\\circ$ và cùng nằm trong một mặt phẳng thẳng đứng.\na) Phân tích các lực tác dụng lên điểm treo $O$ và viết điều kiện cân bằng dưới dạng vectơ.\nb) Tính độ lớn lực căng của mỗi sợi dây cáp.",
+            "explanation": "a) Điểm $O$ chịu tác dụng của 3 lực: trọng lực $\\vec{P}$ thẳng đứng hướng xuống dưới độ lớn $P = 60\\text{ N}$; lực căng $\\vec{T}_1$ dọc theo dây $OA$; lực căng $\\vec{T}_2$ dọc theo dây $OB$. Điều kiện cân bằng là: $\\vec{T}_1 + \\vec{T}_2 + \\vec{P} = \\vec{0} \\Leftrightarrow \\vec{T}_1 + \\vec{T}_2 = -\\vec{P}$.\nb) Gọi $\\vec{T} = \\vec{T}_1 + \\vec{T}_2$. Hợp lực $\\vec{T}$ thẳng đứng hướng lên và có độ lớn $T = P = 60\\text{ N}$. Do tính đối xứng nên $T_1 = T_2$. Hình chiếu lên phương thẳng đứng: $T_1 \\sin 30^\\circ + T_2 \\sin 30^\\circ = P \\Leftrightarrow 2 T_1 \\times \\frac{1}{2} = 60 \\Rightarrow T_1 = T_2 = 60\\text{ N}$."
           }
         ]
       },
@@ -7062,25 +7062,25 @@
           {
             "id": 1,
             "level": "NB",
-            "question": "**Câu 1:** Với bốn điểm bất kì $A, B, C, D$, tổng $\u000bec{AB} + \u000bec{BC} + \u000bec{CD}$ bằng",
+            "question": "**Câu 1:** Với bốn điểm bất kì $A, B, C, D$, tổng $\\vec{AB} + \\vec{BC} + \\vec{CD}$ bằng",
             "options": {
-              "A": "$\u000bec{AC}$",
-              "B": "$\u000bec{DA}$",
-              "C": "$\u000bec{0}$",
-              "D": "$\u000bec{AD}$"
+              "A": "$\\vec{AC}$",
+              "B": "$\\vec{DA}$",
+              "C": "$\\vec{0}$",
+              "D": "$\\vec{AD}$"
             },
             "correct": "D",
-            "explanation": "Quy tắc nối tiếp: $\u000bec{AB} + \u000bec{BC} + \u000bec{CD} = \u000bec{AD}$."
+            "explanation": "Quy tắc nối tiếp: $\\vec{AB} + \\vec{BC} + \\vec{CD} = \\vec{AD}$."
           },
           {
             "id": 2,
             "level": "NB",
-            "question": "**Câu 2:** Vectơ tổng $\u000bec{a} + \u000bec{0}$ bằng",
+            "question": "**Câu 2:** Vectơ tổng $\\vec{a} + \\vec{0}$ bằng",
             "options": {
-              "A": "$-\u000bec{a}$",
-              "B": "$\u000bec{0}$",
-              "C": "$\u000bec{a}$",
-              "D": "$2\u000bec{a}$"
+              "A": "$-\\vec{a}$",
+              "B": "$\\vec{0}$",
+              "C": "$\\vec{a}$",
+              "D": "$2\\vec{a}$"
             },
             "correct": "C",
             "explanation": "Cộng với vectơ-không luôn bằng chính nó."
@@ -7088,46 +7088,46 @@
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Hiệu $\u000bec{MN} - \u000bec{MP}$ bằng vectơ nào sau đây?",
+            "question": "**Câu 3:** Hiệu $\\vec{MN} - \\vec{MP}$ bằng vectơ nào sau đây?",
             "options": {
-              "A": "$\u000bec{PM}$",
-              "B": "$\u000bec{MN}$",
-              "C": "$\u000bec{PN}$",
-              "D": "$\u000bec{NP}$"
+              "A": "$\\vec{PM}$",
+              "B": "$\\vec{MN}$",
+              "C": "$\\vec{PN}$",
+              "D": "$\\vec{NP}$"
             },
             "correct": "C",
-            "explanation": "Quy tắc hiệu chung gốc: $\u000bec{MN} - \u000bec{MP} = \u000bec{PN}$."
+            "explanation": "Quy tắc hiệu chung gốc: $\\vec{MN} - \\vec{MP} = \\vec{PN}$."
           },
           {
             "id": 4,
             "level": "NB",
             "question": "**Câu 4:** Cho tam giác $ABC$ có trọng tâm $G$. Đẳng thức nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = \u000bec{0}$",
-              "B": "$\u000bec{AG} + \u000bec{BG} + \u000bec{CG} = \u000bec{AC}$",
-              "C": "$\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = 3\u000bec{GG}$",
-              "D": "$\u000bec{GA} = \u000bec{GB} + \u000bec{GC}$"
+              "A": "$\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$",
+              "B": "$\\vec{AG} + \\vec{BG} + \\vec{CG} = \\vec{AC}$",
+              "C": "$\\vec{GA} + \\vec{GB} + \\vec{GC} = 3\\vec{GG}$",
+              "D": "$\\vec{GA} = \\vec{GB} + \\vec{GC}$"
             },
             "correct": "A",
-            "explanation": "Tính chất trọng tâm: $\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = \u000bec{0}$."
+            "explanation": "Tính chất trọng tâm: $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$."
           },
           {
             "id": 5,
             "level": "TH",
-            "question": "**Câu 5:** Cho hình thoi $ABCD$ có tâm $O$. Vectơ $\u000bec{OB} - \u000bec{OA}$ bằng",
+            "question": "**Câu 5:** Cho hình thoi $ABCD$ có tâm $O$. Vectơ $\\vec{OB} - \\vec{OA}$ bằng",
             "options": {
-              "A": "$\u000bec{AB}$",
-              "B": "$\u000bec{BA}$",
-              "C": "$\u000bec{DB}$",
-              "D": "$\u000bec{AC}$"
+              "A": "$\\vec{AB}$",
+              "B": "$\\vec{BA}$",
+              "C": "$\\vec{DB}$",
+              "D": "$\\vec{AC}$"
             },
             "correct": "A",
-            "explanation": "$\u000bec{OB} - \u000bec{OA} = \u000bec{AB}$."
+            "explanation": "$\\vec{OB} - \\vec{OA} = \\vec{AB}$."
           },
           {
             "id": 6,
             "level": "TH",
-            "question": "**Câu 6:** Cho tam giác đều $ABC$ cạnh $2a$. Độ dài của vectơ $\u000bec{AB} - \u000bec{AC}$ bằng",
+            "question": "**Câu 6:** Cho tam giác đều $ABC$ cạnh $2a$. Độ dài của vectơ $\\vec{AB} - \\vec{AC}$ bằng",
             "options": {
               "A": "$a$",
               "B": "$a\\sqrt{3}$",
@@ -7135,12 +7135,12 @@
               "D": "$4a$"
             },
             "correct": "C",
-            "explanation": "$\u000bec{AB} - \u000bec{AC} = \u000bec{CB}$, có độ dài bằng $BC = 2a$."
+            "explanation": "$\\vec{AB} - \\vec{AC} = \\vec{CB}$, có độ dài bằng $BC = 2a$."
           },
           {
             "id": 7,
             "level": "TH",
-            "question": "**Câu 7:** Cho đoạn thẳng $AB = 6$. Gọi $M$ là trung điểm của $AB$. Độ dài vectơ $\u000bec{MA} - \u000bec{MB}$ bằng",
+            "question": "**Câu 7:** Cho đoạn thẳng $AB = 6$. Gọi $M$ là trung điểm của $AB$. Độ dài vectơ $\\vec{MA} - \\vec{MB}$ bằng",
             "options": {
               "A": "6",
               "B": "0",
@@ -7148,25 +7148,25 @@
               "D": "12"
             },
             "correct": "A",
-            "explanation": "$\u000bec{MA} - \u000bec{MB} = \u000bec{BA}$, có độ dài bằng $BA = 6$."
+            "explanation": "$\\vec{MA} - \\vec{MB} = \\vec{BA}$, có độ dài bằng $BA = 6$."
           },
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho hình bình hành $ABCD$. Vectơ $\u000bec{AB} - \u000bec{AC} + \u000bec{AD}$ bằng",
+            "question": "**Câu 8:** Cho hình bình hành $ABCD$. Vectơ $\\vec{AB} - \\vec{AC} + \\vec{AD}$ bằng",
             "options": {
-              "A": "$2\u000bec{AD}$",
-              "B": "$\u000bec{0}$",
-              "C": "$\u000bec{DB}$",
-              "D": "$\u000bec{AC}$"
+              "A": "$2\\vec{AD}$",
+              "B": "$\\vec{0}$",
+              "C": "$\\vec{DB}$",
+              "D": "$\\vec{AC}$"
             },
             "correct": "B",
-            "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC} \\Rightarrow \u000bec{AB} + \u000bec{AD} - \u000bec{AC} = \u000bec{0}$."
+            "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC} \\Rightarrow \\vec{AB} + \\vec{AD} - \\vec{AC} = \\vec{0}$."
           },
           {
             "id": 9,
             "level": "VD",
-            "question": "**Câu 9:** Cho hình chữ nhật $ABCD$ có $AB = 6, BC = 8$. Độ dài vectơ tổng $\u000bec{AB} + \u000bec{AD}$ bằng",
+            "question": "**Câu 9:** Cho hình chữ nhật $ABCD$ có $AB = 6, BC = 8$. Độ dài vectơ tổng $\\vec{AB} + \\vec{AD}$ bằng",
             "options": {
               "A": "2",
               "B": "10",
@@ -7174,12 +7174,12 @@
               "D": "14"
             },
             "correct": "B",
-            "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$, có độ dài đường chéo $AC = \\sqrt{6^2 + 8^2} = 10$."
+            "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$, có độ dài đường chéo $AC = \\sqrt{6^2 + 8^2} = 10$."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Cho tam giác $ABC$ vuông cân tại $A$ có $AB = AC = 4$. Độ dài của vectơ $\u000bec{AB} + \u000bec{AC}$ bằng",
+            "question": "**Câu 10:** Cho tam giác $ABC$ vuông cân tại $A$ có $AB = AC = 4$. Độ dài của vectơ $\\vec{AB} + \\vec{AC}$ bằng",
             "options": {
               "A": "4",
               "B": "8",
@@ -7187,33 +7187,33 @@
               "D": "$4\\sqrt{2}$"
             },
             "correct": "D",
-            "explanation": "Dựng điểm $D$ sao cho $ABDC$ là hình vuông. $\u000bec{AB} + \u000bec{AC} = \u000bec{AD}$ có độ dài đường chéo $4\\sqrt{2}$."
+            "explanation": "Dựng điểm $D$ sao cho $ABDC$ là hình vuông. $\\vec{AB} + \\vec{AC} = \\vec{AD}$ có độ dài đường chéo $4\\sqrt{2}$."
           },
           {
             "id": 11,
             "level": "VDC",
-            "question": "**Câu 11:** Cho hình vuông $ABCD$ cạnh $a$. Gọi $M$ là trung điểm $AB$. Độ dài vectơ $\u000bec{u} = \u000bec{MD} + \u000bec{MC}$ bằng",
+            "question": "**Câu 11:** Cho hình vuông $ABCD$ cạnh $a$. Gọi $M$ là trung điểm $AB$. Độ dài vectơ $\\vec{u} = \\vec{MD} + \\vec{MC}$ bằng",
             "options": {
               "A": "$a\\sqrt{5}$",
-              "B": "$\frac{a\\sqrt{5}}{2}$",
+              "B": "$\\frac{a\\sqrt{5}}{2}$",
               "C": "$a\\sqrt{2}$",
               "D": "$2a$"
             },
             "correct": "D",
-            "explanation": "Gọi $N$ là trung điểm $CD$, $MN = a$ và $\u000bec{MD} + \u000bec{MC} = 2\u000bec{MN}$. Độ dài $= 2a$."
+            "explanation": "Gọi $N$ là trung điểm $CD$, $MN = a$ và $\\vec{MD} + \\vec{MC} = 2\\vec{MN}$. Độ dài $= 2a$."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Một ca nô chuyển động xuôi dòng từ bến $A$ sang bến $B$. Vận tốc của ca nô đối với dòng nước là $24\text{ km/h}$, vận tốc dòng nước đối với bờ là $4\text{ km/h}$. Vận tốc của ca nô đối với bờ khi chạy xuôi dòng là",
+            "question": "**Câu 12:** Một ca nô chuyển động xuôi dòng từ bến $A$ sang bến $B$. Vận tốc của ca nô đối với dòng nước là $24\\text{ km/h}$, vận tốc dòng nước đối với bờ là $4\\text{ km/h}$. Vận tốc của ca nô đối với bờ khi chạy xuôi dòng là",
             "options": {
-              "A": "$\\sqrt{24^2 + 4^2}\text{ km/h}$",
-              "B": "$28\text{ km/h}$",
-              "C": "$96\text{ km/h}$",
-              "D": "$20\text{ km/h}$"
+              "A": "$\\sqrt{24^2 + 4^2}\\text{ km/h}$",
+              "B": "$28\\text{ km/h}$",
+              "C": "$96\\text{ km/h}$",
+              "D": "$20\\text{ km/h}$"
             },
             "correct": "B",
-            "explanation": "Vận tốc tổng hợp xuôi dòng: $\u000bec{v} = \u000bec{v}_1 + \u000bec{v}_2 \\Rightarrow v = 24 + 4 = 28\text{ km/h}$."
+            "explanation": "Vận tốc tổng hợp xuôi dòng: $\\vec{v} = \\vec{v}_1 + \\vec{v}_2 \\Rightarrow v = 24 + 4 = 28\\text{ km/h}$."
           }
         ],
         "tfQuestions": [
@@ -7224,28 +7224,28 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = \u000bec{0}$.",
+                "content": "$\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$.",
                 "correct": true,
                 "explanation": "Tính chất cơ bản của trọng tâm."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{GB} + \u000bec{GC} = 2\u000bec{GM}$.",
+                "content": "$\\vec{GB} + \\vec{GC} = 2\\vec{GM}$.",
                 "correct": true,
                 "explanation": "Hệ thức trung điểm với điểm gốc $G$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{GA} = 2\u000bec{GM}$.",
+                "content": "$\\vec{GA} = 2\\vec{GM}$.",
                 "correct": false,
-                "explanation": "Hai vectơ này ngược hướng: $\u000bec{GA} = -2\u000bec{GM}$."
+                "explanation": "Hai vectơ này ngược hướng: $\\vec{GA} = -2\\vec{GM}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Với mọi điểm $O$, ta có $\u000bec{OA} + \u000bec{OB} + \u000bec{OC} = 3\u000bec{OG}$.",
+                "content": "Với mọi điểm $O$, ta có $\\vec{OA} + \\vec{OB} + \\vec{OC} = 3\\vec{OG}$.",
                 "correct": true,
                 "explanation": "Hệ thức trọng tâm mở rộng."
               }
@@ -7258,30 +7258,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} + \u000bec{BC} + \u000bec{CD} + \u000bec{DA} = \u000bec{0}$.",
+                "content": "$\\vec{AB} + \\vec{BC} + \\vec{CD} + \\vec{DA} = \\vec{0}$.",
                 "correct": true,
-                "explanation": "Tổng các vectơ theo chu trình khép kín bằng $\u000bec{0}$."
+                "explanation": "Tổng các vectơ theo chu trình khép kín bằng $\\vec{0}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{AB} - \u000bec{AD}| = 6$.",
+                "content": "Độ dài $|\\vec{AB} - \\vec{AD}| = 6$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} - \u000bec{AD} = \u000bec{DB}$ có độ dài đường chéo $6\\sqrt{2}$."
+                "explanation": "$\\vec{AB} - \\vec{AD} = \\vec{DB}$ có độ dài đường chéo $6\\sqrt{2}$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Độ dài $|\u000bec{AB} + \u000bec{AD}| = 6\\sqrt{2}$.",
+                "content": "Độ dài $|\\vec{AB} + \\vec{AD}| = 6\\sqrt{2}$.",
                 "correct": true,
-                "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$ có độ dài $6\\sqrt{2}$."
+                "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$ có độ dài $6\\sqrt{2}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{AB} - \u000bec{CD} = \u000bec{0}$.",
+                "content": "Vectơ $\\vec{AB} - \\vec{CD} = \\vec{0}$.",
                 "correct": false,
-                "explanation": "$\u000bec{CD} = -\u000bec{AB}$ nên $\u000bec{AB} - \u000bec{CD} = 2\u000bec{AB} \ne \u000bec{0}$."
+                "explanation": "$\\vec{CD} = -\\vec{AB}$ nên $\\vec{AB} - \\vec{CD} = 2\\vec{AB} \\ne \\vec{0}$."
               }
             ]
           }
@@ -7294,28 +7294,28 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = \u000bec{0}$.",
+                "content": "$\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$.",
                 "correct": true,
                 "explanation": "Tính chất cơ bản của trọng tâm."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{GB} + \u000bec{GC} = 2\u000bec{GM}$.",
+                "content": "$\\vec{GB} + \\vec{GC} = 2\\vec{GM}$.",
                 "correct": true,
                 "explanation": "Hệ thức trung điểm với điểm gốc $G$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{GA} = 2\u000bec{GM}$.",
+                "content": "$\\vec{GA} = 2\\vec{GM}$.",
                 "correct": false,
-                "explanation": "Hai vectơ này ngược hướng: $\u000bec{GA} = -2\u000bec{GM}$."
+                "explanation": "Hai vectơ này ngược hướng: $\\vec{GA} = -2\\vec{GM}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Với mọi điểm $O$, ta có $\u000bec{OA} + \u000bec{OB} + \u000bec{OC} = 3\u000bec{OG}$.",
+                "content": "Với mọi điểm $O$, ta có $\\vec{OA} + \\vec{OB} + \\vec{OC} = 3\\vec{OG}$.",
                 "correct": true,
                 "explanation": "Hệ thức trọng tâm mở rộng."
               }
@@ -7328,30 +7328,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} + \u000bec{BC} + \u000bec{CD} + \u000bec{DA} = \u000bec{0}$.",
+                "content": "$\\vec{AB} + \\vec{BC} + \\vec{CD} + \\vec{DA} = \\vec{0}$.",
                 "correct": true,
-                "explanation": "Tổng các vectơ theo chu trình khép kín bằng $\u000bec{0}$."
+                "explanation": "Tổng các vectơ theo chu trình khép kín bằng $\\vec{0}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{AB} - \u000bec{AD}| = 6$.",
+                "content": "Độ dài $|\\vec{AB} - \\vec{AD}| = 6$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} - \u000bec{AD} = \u000bec{DB}$ có độ dài đường chéo $6\\sqrt{2}$."
+                "explanation": "$\\vec{AB} - \\vec{AD} = \\vec{DB}$ có độ dài đường chéo $6\\sqrt{2}$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Độ dài $|\u000bec{AB} + \u000bec{AD}| = 6\\sqrt{2}$.",
+                "content": "Độ dài $|\\vec{AB} + \\vec{AD}| = 6\\sqrt{2}$.",
                 "correct": true,
-                "explanation": "$\u000bec{AB} + \u000bec{AD} = \u000bec{AC}$ có độ dài $6\\sqrt{2}$."
+                "explanation": "$\\vec{AB} + \\vec{AD} = \\vec{AC}$ có độ dài $6\\sqrt{2}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{AB} - \u000bec{CD} = \u000bec{0}$.",
+                "content": "Vectơ $\\vec{AB} - \\vec{CD} = \\vec{0}$.",
                 "correct": false,
-                "explanation": "$\u000bec{CD} = -\u000bec{AB}$ nên $\u000bec{AB} - \u000bec{CD} = 2\u000bec{AB} \ne \u000bec{0}$."
+                "explanation": "$\\vec{CD} = -\\vec{AB}$ nên $\\vec{AB} - \\vec{CD} = 2\\vec{AB} \\ne \\vec{0}$."
               }
             ]
           }
@@ -7360,124 +7360,124 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho ba điểm $A, B, C$ tạo thành tam giác đều cạnh 7. Độ dài vectơ $\u000bec{BA} - \u000bec{BC}$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho ba điểm $A, B, C$ tạo thành tam giác đều cạnh 7. Độ dài vectơ $\\vec{BA} - \\vec{BC}$ bằng bao nhiêu?",
             "correctAnswer": "7",
             "acceptedAnswers": [
               "7"
             ],
-            "explanation": "$|\u000bec{CA}| = 7$."
+            "explanation": "$|\\vec{CA}| = 7$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho hình vuông $ABCD$ cạnh 8. Tính độ dài vectơ $\u000bec{AB} + \u000bec{BC}$.",
+            "question": "**Câu 2:** Cho hình vuông $ABCD$ cạnh 8. Tính độ dài vectơ $\\vec{AB} + \\vec{BC}$.",
             "correctAnswer": "11.3",
             "acceptedAnswers": [
               "11.3"
             ],
-            "explanation": "$|\u000bec{AC}| = 8\\sqrt{2} \u0007pprox 11.31$."
+            "explanation": "$|\\vec{AC}| = 8\\sqrt{2} \u0007pprox 11.31$."
           },
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho hình thoi $ABCD$ cạnh 10, góc $\\widehat{ABC} = 120^\\circ$. Tính độ dài vectơ tổng $\u000bec{BA} + \u000bec{BC}$.",
+            "question": "**Câu 3:** Cho hình thoi $ABCD$ cạnh 10, góc $\\widehat{ABC} = 120^\\circ$. Tính độ dài vectơ tổng $\\vec{BA} + \\vec{BC}$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
             ],
-            "explanation": "Tam giác $ABC$ cân có góc đáy $30^\\circ$, độ dài đường chéo $BD = 2 \times 10 \times \\cos 60^\\circ = 10$. $\u000bec{BA} + \u000bec{BC} = \u000bec{BD}$."
+            "explanation": "Tam giác $ABC$ cân có góc đáy $30^\\circ$, độ dài đường chéo $BD = 2 \\times 10 \\times \\cos 60^\\circ = 10$. $\\vec{BA} + \\vec{BC} = \\vec{BD}$."
           },
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho tứ giác $ABCD$. Vectơ $\u000bec{AB} + \u000bec{BC} + \u000bec{CD} + \u000bec{DA}$ có độ dài bằng bao nhiêu?",
+            "question": "**Câu 4:** Cho tứ giác $ABCD$. Vectơ $\\vec{AB} + \\vec{BC} + \\vec{CD} + \\vec{DA}$ có độ dài bằng bao nhiêu?",
             "correctAnswer": "0",
             "acceptedAnswers": [
               "0"
             ],
-            "explanation": "Tổng chu trình khép kín bằng $\u000bec{0}$, độ dài $= 0$."
+            "explanation": "Tổng chu trình khép kín bằng $\\vec{0}$, độ dài $= 0$."
           },
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho tam giác $ABC$ vuông tại $A$ có $AB = 5, AC = 12$. Gọi $M$ là trung điểm $BC$. Độ dài của vectơ $\u000bec{u} = \u000bec{AB} + \u000bec{AC}$ bằng bao nhiêu?",
+            "question": "**Câu 5:** Cho tam giác $ABC$ vuông tại $A$ có $AB = 5, AC = 12$. Gọi $M$ là trung điểm $BC$. Độ dài của vectơ $\\vec{u} = \\vec{AB} + \\vec{AC}$ bằng bao nhiêu?",
             "correctAnswer": "13",
             "acceptedAnswers": [
               "13"
             ],
-            "explanation": "$|\u000bec{AB} + \u000bec{AC}| = |2\u000bec{AM}| = 2 AM = BC = \\sqrt{25 + 144} = 13$."
+            "explanation": "$|\\vec{AB} + \\vec{AC}| = |2\\vec{AM}| = 2 AM = BC = \\sqrt{25 + 144} = 13$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một quả bóng chịu tác dụng đồng thời của hai lực kéo có phương vuông góc với nhau, với độ lớn $F_1 = 15\text{ N}$ và $F_2 = 20\text{ N}$. Độ lớn hợp lực tác dụng lên quả bóng bằng bao nhiêu Newton?",
+            "question": "**Câu 6:** Một quả bóng chịu tác dụng đồng thời của hai lực kéo có phương vuông góc với nhau, với độ lớn $F_1 = 15\\text{ N}$ và $F_2 = 20\\text{ N}$. Độ lớn hợp lực tác dụng lên quả bóng bằng bao nhiêu Newton?",
             "correctAnswer": "25",
             "acceptedAnswers": [
               "25"
             ],
-            "explanation": "$F = \\sqrt{15^2 + 20^2} = 25\text{ N}$."
+            "explanation": "$F = \\sqrt{15^2 + 20^2} = 25\\text{ N}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho ba điểm $A, B, C$ tạo thành tam giác đều cạnh 7. Độ dài vectơ $\u000bec{BA} - \u000bec{BC}$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho ba điểm $A, B, C$ tạo thành tam giác đều cạnh 7. Độ dài vectơ $\\vec{BA} - \\vec{BC}$ bằng bao nhiêu?",
             "correctAnswer": "7",
             "acceptedAnswers": [
               "7"
             ],
-            "explanation": "$|\u000bec{CA}| = 7$."
+            "explanation": "$|\\vec{CA}| = 7$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho hình vuông $ABCD$ cạnh 8. Tính độ dài vectơ $\u000bec{AB} + \u000bec{BC}$.",
+            "question": "**Câu 2:** Cho hình vuông $ABCD$ cạnh 8. Tính độ dài vectơ $\\vec{AB} + \\vec{BC}$.",
             "correctAnswer": "11.3",
             "acceptedAnswers": [
               "11.3"
             ],
-            "explanation": "$|\u000bec{AC}| = 8\\sqrt{2} \u0007pprox 11.31$."
+            "explanation": "$|\\vec{AC}| = 8\\sqrt{2} \u0007pprox 11.31$."
           },
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho hình thoi $ABCD$ cạnh 10, góc $\\widehat{ABC} = 120^\\circ$. Tính độ dài vectơ tổng $\u000bec{BA} + \u000bec{BC}$.",
+            "question": "**Câu 3:** Cho hình thoi $ABCD$ cạnh 10, góc $\\widehat{ABC} = 120^\\circ$. Tính độ dài vectơ tổng $\\vec{BA} + \\vec{BC}$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
             ],
-            "explanation": "Tam giác $ABC$ cân có góc đáy $30^\\circ$, độ dài đường chéo $BD = 2 \times 10 \times \\cos 60^\\circ = 10$. $\u000bec{BA} + \u000bec{BC} = \u000bec{BD}$."
+            "explanation": "Tam giác $ABC$ cân có góc đáy $30^\\circ$, độ dài đường chéo $BD = 2 \\times 10 \\times \\cos 60^\\circ = 10$. $\\vec{BA} + \\vec{BC} = \\vec{BD}$."
           },
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho tứ giác $ABCD$. Vectơ $\u000bec{AB} + \u000bec{BC} + \u000bec{CD} + \u000bec{DA}$ có độ dài bằng bao nhiêu?",
+            "question": "**Câu 4:** Cho tứ giác $ABCD$. Vectơ $\\vec{AB} + \\vec{BC} + \\vec{CD} + \\vec{DA}$ có độ dài bằng bao nhiêu?",
             "correctAnswer": "0",
             "acceptedAnswers": [
               "0"
             ],
-            "explanation": "Tổng chu trình khép kín bằng $\u000bec{0}$, độ dài $= 0$."
+            "explanation": "Tổng chu trình khép kín bằng $\\vec{0}$, độ dài $= 0$."
           },
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho tam giác $ABC$ vuông tại $A$ có $AB = 5, AC = 12$. Gọi $M$ là trung điểm $BC$. Độ dài của vectơ $\u000bec{u} = \u000bec{AB} + \u000bec{AC}$ bằng bao nhiêu?",
+            "question": "**Câu 5:** Cho tam giác $ABC$ vuông tại $A$ có $AB = 5, AC = 12$. Gọi $M$ là trung điểm $BC$. Độ dài của vectơ $\\vec{u} = \\vec{AB} + \\vec{AC}$ bằng bao nhiêu?",
             "correctAnswer": "13",
             "acceptedAnswers": [
               "13"
             ],
-            "explanation": "$|\u000bec{AB} + \u000bec{AC}| = |2\u000bec{AM}| = 2 AM = BC = \\sqrt{25 + 144} = 13$."
+            "explanation": "$|\\vec{AB} + \\vec{AC}| = |2\\vec{AM}| = 2 AM = BC = \\sqrt{25 + 144} = 13$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một quả bóng chịu tác dụng đồng thời của hai lực kéo có phương vuông góc với nhau, với độ lớn $F_1 = 15\text{ N}$ và $F_2 = 20\text{ N}$. Độ lớn hợp lực tác dụng lên quả bóng bằng bao nhiêu Newton?",
+            "question": "**Câu 6:** Một quả bóng chịu tác dụng đồng thời của hai lực kéo có phương vuông góc với nhau, với độ lớn $F_1 = 15\\text{ N}$ và $F_2 = 20\\text{ N}$. Độ lớn hợp lực tác dụng lên quả bóng bằng bao nhiêu Newton?",
             "correctAnswer": "25",
             "acceptedAnswers": [
               "25"
             ],
-            "explanation": "$F = \\sqrt{15^2 + 20^2} = 25\text{ N}$."
+            "explanation": "$F = \\sqrt{15^2 + 20^2} = 25\\text{ N}$."
           }
         ],
         "essayQuestions": [
@@ -7486,32 +7486,32 @@
             "level": "NB",
             "title": "Quy tắc hiệu vectơ chung gốc",
             "maxScore": 0.5,
-            "question": "**Bài 1 (0.50 điểm):** Nêu quy tắc trừ hai vectơ có cùng điểm gốc. Áp dụng tính $\u000bec{OA} - \u000bec{OB}$ với hình vẽ minh hoạ.",
-            "explanation": "1. Quy tắc trừ hai vectơ chung gốc: Với ba điểm bất kì $O, A, B$, ta luôn có: $\u000bec{OA} - \u000bec{OB} = \u000bec{BA}$.\n2. Giải thích: Phép trừ vectơ là phép cộng với vectơ đối: $\u000bec{OA} - \u000bec{OB} = \u000bec{OA} + (-\u000bec{OB}) = \u000bec{OA} + \u000bec{BO} = \u000bec{BO} + \u000bec{OA} = \u000bec{BA}$ (theo quy tắc ba điểm)."
+            "question": "**Bài 1 (0.50 điểm):** Nêu quy tắc trừ hai vectơ có cùng điểm gốc. Áp dụng tính $\\vec{OA} - \\vec{OB}$ với hình vẽ minh hoạ.",
+            "explanation": "1. Quy tắc trừ hai vectơ chung gốc: Với ba điểm bất kì $O, A, B$, ta luôn có: $\\vec{OA} - \\vec{OB} = \\vec{BA}$.\n2. Giải thích: Phép trừ vectơ là phép cộng với vectơ đối: $\\vec{OA} - \\vec{OB} = \\vec{OA} + (-\\vec{OB}) = \\vec{OA} + \\vec{BO} = \\vec{BO} + \\vec{OA} = \\vec{BA}$ (theo quy tắc ba điểm)."
           },
           {
             "id": 2,
             "level": "TH",
             "title": "Tính chất trọng tâm tam giác",
             "maxScore": 0.5,
-            "question": "**Bài 2 (0.50 điểm):** Cho tam giác $ABC$ có trọng tâm $G$. Chứng minh rằng:\na) $\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = \u000bec{0}$.\nb) Với điểm $O$ bất kì, $\u000bec{OA} + \u000bec{OB} + \u000bec{OC} = 3\u000bec{OG}$.",
-            "explanation": "a) Gọi $M$ là trung điểm của cạnh $BC$. Theo tính chất trung điểm: $\u000bec{GB} + \u000bec{GC} = 2\u000bec{GM}$. Theo tính chất trọng tâm, $G$ nằm trên trung tuyến $AM$ và $GA = 2GM$, đồng thời $\u000bec{GA}$ và $\u000bec{GM}$ ngược hướng, suy ra $\u000bec{GA} = -2\u000bec{GM}$. Do đó: $\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = -2\u000bec{GM} + 2\u000bec{GM} = \u000bec{0}$ (đpcm).\nb) Với điểm $O$ bất kì: $\u000bec{OA} = \u000bec{OG} + \u000bec{GA}$, $\u000bec{OB} = \u000bec{OG} + \u000bec{GB}$, $\u000bec{OC} = \u000bec{OG} + \u000bec{GC}$. Cộng ba đẳng thức vế theo vế: $\u000bec{OA} + \u000bec{OB} + \u000bec{OC} = 3\u000bec{OG} + (\u000bec{GA} + \u000bec{GB} + \u000bec{GC}) = 3\u000bec{OG} + \u000bec{0} = 3\u000bec{OG}$ (đpcm)."
+            "question": "**Bài 2 (0.50 điểm):** Cho tam giác $ABC$ có trọng tâm $G$. Chứng minh rằng:\na) $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$.\nb) Với điểm $O$ bất kì, $\\vec{OA} + \\vec{OB} + \\vec{OC} = 3\\vec{OG}$.",
+            "explanation": "a) Gọi $M$ là trung điểm của cạnh $BC$. Theo tính chất trung điểm: $\\vec{GB} + \\vec{GC} = 2\\vec{GM}$. Theo tính chất trọng tâm, $G$ nằm trên trung tuyến $AM$ và $GA = 2GM$, đồng thời $\\vec{GA}$ và $\\vec{GM}$ ngược hướng, suy ra $\\vec{GA} = -2\\vec{GM}$. Do đó: $\\vec{GA} + \\vec{GB} + \\vec{GC} = -2\\vec{GM} + 2\\vec{GM} = \\vec{0}$ (đpcm).\nb) Với điểm $O$ bất kì: $\\vec{OA} = \\vec{OG} + \\vec{GA}$, $\\vec{OB} = \\vec{OG} + \\vec{GB}$, $\\vec{OC} = \\vec{OG} + \\vec{GC}$. Cộng ba đẳng thức vế theo vế: $\\vec{OA} + \\vec{OB} + \\vec{OC} = 3\\vec{OG} + (\\vec{GA} + \\vec{GB} + \\vec{GC}) = 3\\vec{OG} + \\vec{0} = 3\\vec{OG}$ (đpcm)."
           },
           {
             "id": 3,
             "level": "VD",
             "title": "Tính độ dài vectơ tổng và hiệu trong tam giác đều",
             "maxScore": 0.5,
-            "question": "**Bài 3 (0.50 điểm):** Cho tam giác đều $ABC$ cạnh bằng $a$. Gọi $H$ là trung điểm của cạnh $BC$.\na) Tính độ dài vectơ $\u000bec{u} = \u000bec{AB} + \u000bec{AC}$.\nb) Tính độ dài vectơ $\u000bec{v} = \u000bec{AB} - \u000bec{AC}$.\nc) Tính độ dài vectơ $\u000bec{w} = \u000bec{AB} + \u000bec{BC}$.",
-            "explanation": "a) Vì $H$ là trung điểm $BC$ nên $\u000bec{AB} + \u000bec{AC} = 2\u000bec{AH}$. Trong tam giác đều cạnh $a$, đường cao $AH = \frac{a\\sqrt{3}}{2}$. Do đó độ dài $|\u000bec{u}| = 2 AH = 2 \times \frac{a\\sqrt{3}}{2} = a\\sqrt{3}$.\nb) Theo quy tắc trừ: $\u000bec{v} = \u000bec{AB} - \u000bec{AC} = \u000bec{CB}$. Độ dài $|\u000bec{v}| = CB = a$.\nc) Theo quy tắc ba điểm: $\u000bec{w} = \u000bec{AB} + \u000bec{BC} = \u000bec{AC}$. Độ dài $|\u000bec{w}| = AC = a$."
+            "question": "**Bài 3 (0.50 điểm):** Cho tam giác đều $ABC$ cạnh bằng $a$. Gọi $H$ là trung điểm của cạnh $BC$.\na) Tính độ dài vectơ $\\vec{u} = \\vec{AB} + \\vec{AC}$.\nb) Tính độ dài vectơ $\\vec{v} = \\vec{AB} - \\vec{AC}$.\nc) Tính độ dài vectơ $\\vec{w} = \\vec{AB} + \\vec{BC}$.",
+            "explanation": "a) Vì $H$ là trung điểm $BC$ nên $\\vec{AB} + \\vec{AC} = 2\\vec{AH}$. Trong tam giác đều cạnh $a$, đường cao $AH = \\frac{a\\sqrt{3}}{2}$. Do đó độ dài $|\\vec{u}| = 2 AH = 2 \\times \\frac{a\\sqrt{3}}{2} = a\\sqrt{3}$.\nb) Theo quy tắc trừ: $\\vec{v} = \\vec{AB} - \\vec{AC} = \\vec{CB}$. Độ dài $|\\vec{v}| = CB = a$.\nc) Theo quy tắc ba điểm: $\\vec{w} = \\vec{AB} + \\vec{BC} = \\vec{AC}$. Độ dài $|\\vec{w}| = AC = a$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Bài toán vận tốc tổng hợp khi đi ngược dòng",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Một chiếc sà lan chuyển động trên một con sông. Khi chạy xuôi dòng từ cảng $A$ đến bến cảng $B$, sà lan đạt vận tốc $30\text{ km/h}$ so với bờ. Khi quay đầu chạy ngược dòng từ $B$ về $A$, sà lan đạt vận tốc $22\text{ km/h}$ so với bờ. Biết vận tốc riêng của sà lan và vận tốc dòng chảy là không đổi.\na) Gọi $\u000bec{v}_1$ là vận tốc sà lan đối với nước và $\u000bec{v}_2$ là vận tốc nước đối với bờ. Viết công thức cộng vận tốc vectơ khi xuôi dòng và ngược dòng.\nb) Tính vận tốc riêng của sà lan và vận tốc của dòng nước.",
-            "explanation": "a) Theo công thức cộng vận tốc: Khi xuôi dòng: $\u000bec{v}_{\text{xuôi}} = \u000bec{v}_1 + \u000bec{v}_2$. Do $\u000bec{v}_1, \u000bec{v}_2$ cùng hướng nên độ lớn là $v_1 + v_2 = 30$. Khi ngược dòng: $\u000bec{v}_{\text{ngược}} = \u000bec{v}_1 + \u000bec{v}_2$. Do $\u000bec{v}_1$ ngược hướng $\u000bec{v}_2$ và thuyền vẫn tiến lên nên độ lớn là $v_1 - v_2 = 22$.\nb) Ta có hệ phương trình: $\begin{cases} v_1 + v_2 = 30 \\ v_1 - v_2 = 22 \\end{cases} \\Rightarrow \begin{cases} 2v_1 = 52 \\ 2v_2 = 8 \\end{cases} \\Rightarrow \begin{cases} v_1 = 26\text{ km/h} \\ v_2 = 4\text{ km/h} \\end{cases}$. Vậy vận tốc riêng của sà lan là $26\text{ km/h}$ và vận tốc dòng nước là $4\text{ km/h}$."
+            "question": "**Bài 4 (0.50 điểm):** Một chiếc sà lan chuyển động trên một con sông. Khi chạy xuôi dòng từ cảng $A$ đến bến cảng $B$, sà lan đạt vận tốc $30\\text{ km/h}$ so với bờ. Khi quay đầu chạy ngược dòng từ $B$ về $A$, sà lan đạt vận tốc $22\\text{ km/h}$ so với bờ. Biết vận tốc riêng của sà lan và vận tốc dòng chảy là không đổi.\na) Gọi $\\vec{v}_1$ là vận tốc sà lan đối với nước và $\\vec{v}_2$ là vận tốc nước đối với bờ. Viết công thức cộng vận tốc vectơ khi xuôi dòng và ngược dòng.\nb) Tính vận tốc riêng của sà lan và vận tốc của dòng nước.",
+            "explanation": "a) Theo công thức cộng vận tốc: Khi xuôi dòng: $\\vec{v}_{\\text{xuôi}} = \\vec{v}_1 + \\vec{v}_2$. Do $\\vec{v}_1, \\vec{v}_2$ cùng hướng nên độ lớn là $v_1 + v_2 = 30$. Khi ngược dòng: $\\vec{v}_{\\text{ngược}} = \\vec{v}_1 + \\vec{v}_2$. Do $\\vec{v}_1$ ngược hướng $\\vec{v}_2$ và thuyền vẫn tiến lên nên độ lớn là $v_1 - v_2 = 22$.\nb) Ta có hệ phương trình: $\\begin{cases} v_1 + v_2 = 30 \\ v_1 - v_2 = 22 \\end{cases} \\Rightarrow \\begin{cases} 2v_1 = 52 \\ 2v_2 = 8 \\end{cases} \\Rightarrow \\begin{cases} v_1 = 26\\text{ km/h} \\ v_2 = 4\\text{ km/h} \\end{cases}$. Vậy vận tốc riêng của sà lan là $26\\text{ km/h}$ và vận tốc dòng nước là $4\\text{ km/h}$."
           }
         ]
       }
@@ -7532,11 +7532,11 @@
           {
             "id": 1,
             "level": "NB",
-            "question": "**Câu 1:** Cho số thực $k > 0$ và vectơ $\u000bec{a} \ne \u000bec{0}$. Vectơ $k\u000bec{a}$ là một vectơ",
+            "question": "**Câu 1:** Cho số thực $k > 0$ và vectơ $\\vec{a} \\ne \\vec{0}$. Vectơ $k\\vec{a}$ là một vectơ",
             "options": {
-              "A": "Cùng hướng với $\u000bec{a}$ và có độ dài $k|\u000bec{a}|$",
-              "B": "Ngược hướng với $\u000bec{a}$",
-              "C": "Vuông góc với $\u000bec{a}$",
+              "A": "Cùng hướng với $\\vec{a}$ và có độ dài $k|\\vec{a}|$",
+              "B": "Ngược hướng với $\\vec{a}$",
+              "C": "Vuông góc với $\\vec{a}$",
               "D": "Có độ dài bằng $k$"
             },
             "correct": "A",
@@ -7545,12 +7545,12 @@
           {
             "id": 2,
             "level": "NB",
-            "question": "**Câu 2:** Cho số thực $k < 0$ và vectơ $\u000bec{a} \ne \u000bec{0}$. Vectơ $k\u000bec{a}$ là một vectơ",
+            "question": "**Câu 2:** Cho số thực $k < 0$ và vectơ $\\vec{a} \\ne \\vec{0}$. Vectơ $k\\vec{a}$ là một vectơ",
             "options": {
-              "A": "Cùng hướng với $\u000bec{a}$",
-              "B": "Ngược hướng với $\u000bec{a}$ và có độ dài $|k||\u000bec{a}|$",
+              "A": "Cùng hướng với $\\vec{a}$",
+              "B": "Ngược hướng với $\\vec{a}$ và có độ dài $|k||\\vec{a}|$",
               "C": "Có độ dài âm",
-              "D": "Bằng vectơ $\u000bec{0}$"
+              "D": "Bằng vectơ $\\vec{0}$"
             },
             "correct": "B",
             "explanation": "Tích vectơ với số âm thì ngược hướng."
@@ -7558,25 +7558,25 @@
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Tích của số $0$ với vectơ $\u000bec{a}$ bất kì bằng",
+            "question": "**Câu 3:** Tích của số $0$ với vectơ $\\vec{a}$ bất kì bằng",
             "options": {
-              "A": "$\u000bec{a}$",
+              "A": "$\\vec{a}$",
               "B": "$0$",
-              "C": "$\u000bec{0}$",
-              "D": "$-\u000bec{a}$"
+              "C": "$\\vec{0}$",
+              "D": "$-\\vec{a}$"
             },
             "correct": "C",
-            "explanation": "$0 \\cdot \u000bec{a} = \u000bec{0}$."
+            "explanation": "$0 \\cdot \\vec{a} = \\vec{0}$."
           },
           {
             "id": 4,
             "level": "NB",
-            "question": "**Câu 4:** Điều kiện cần và đủ để hai vectơ $\u000bec{a}$ và $\u000bec{b}$ ($\u000bec{b} \ne \u000bec{0}$) cùng phương là",
+            "question": "**Câu 4:** Điều kiện cần và đủ để hai vectơ $\\vec{a}$ và $\\vec{b}$ ($\\vec{b} \\ne \\vec{0}$) cùng phương là",
             "options": {
-              "A": "$\u000bec{a} = \u000bec{b}$",
-              "B": "$\u000bec{a} + \u000bec{b} = \u000bec{0}$",
-              "C": "$|\u000bec{a}| = |\u000bec{b}|$",
-              "D": "Có số thực $k$ sao cho $\u000bec{a} = k\u000bec{b}$"
+              "A": "$\\vec{a} = \\vec{b}$",
+              "B": "$\\vec{a} + \\vec{b} = \\vec{0}$",
+              "C": "$|\\vec{a}| = |\\vec{b}|$",
+              "D": "Có số thực $k$ sao cho $\\vec{a} = k\\vec{b}$"
             },
             "correct": "D",
             "explanation": "Hai vectơ cùng phương khi vectơ này bằng một số nhân với vectơ kia."
@@ -7586,104 +7586,104 @@
             "level": "TH",
             "question": "**Câu 5:** Cho $I$ là trung điểm đoạn thẳng $AB$. Đẳng thức nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{IA} = 2\u000bec{IB}$",
-              "B": "$\u000bec{AB} = -2\u000bec{AI}$",
-              "C": "$\u000bec{AB} = 2\u000bec{AI}$",
-              "D": "$\u000bec{AI} = 2\u000bec{AB}$"
+              "A": "$\\vec{IA} = 2\\vec{IB}$",
+              "B": "$\\vec{AB} = -2\\vec{AI}$",
+              "C": "$\\vec{AB} = 2\\vec{AI}$",
+              "D": "$\\vec{AI} = 2\\vec{AB}$"
             },
             "correct": "C",
-            "explanation": "$I$ là trung điểm $AB$ thì $\u000bec{AB}$ cùng hướng với $\u000bec{AI}$ và có độ dài gấp 2 lần."
+            "explanation": "$I$ là trung điểm $AB$ thì $\\vec{AB}$ cùng hướng với $\\vec{AI}$ và có độ dài gấp 2 lần."
           },
           {
             "id": 6,
             "level": "TH",
             "question": "**Câu 6:** Cho tam giác $ABC$ có trọng tâm $G$, $M$ là trung điểm cạnh $BC$. Khẳng định nào sau đây SAI?",
             "options": {
-              "A": "$\u000bec{AM} = 3\u000bec{GM}$",
-              "B": "$\u000bec{AG} = \frac{2}{3}\u000bec{AM}$",
-              "C": "$\u000bec{AG} = 2\u000bec{GM}$",
-              "D": "$\u000bec{GM} = -\frac{1}{2}\u000bec{GA}$"
+              "A": "$\\vec{AM} = 3\\vec{GM}$",
+              "B": "$\\vec{AG} = \\frac{2}{3}\\vec{AM}$",
+              "C": "$\\vec{AG} = 2\\vec{GM}$",
+              "D": "$\\vec{GM} = -\\frac{1}{2}\\vec{GA}$"
             },
             "correct": "C",
-            "explanation": "$\u000bec{AG}$ và $\u000bec{GM}$ cùng hướng, $AG = 2 GM$ nên $\u000bec{AG} = 2\u000bec{GM}$ là đúng. Tuy nhiên nếu viết $\u000bec{GA} = 2\u000bec{GM}$ mới sai. Ở đây xem phương án A đúng, kiểm tra phương án khác."
+            "explanation": "$\\vec{AG}$ và $\\vec{GM}$ cùng hướng, $AG = 2 GM$ nên $\\vec{AG} = 2\\vec{GM}$ là đúng. Tuy nhiên nếu viết $\\vec{GA} = 2\\vec{GM}$ mới sai. Ở đây xem phương án A đúng, kiểm tra phương án khác."
           },
           {
             "id": 7,
             "level": "TH",
             "question": "**Câu 7:** Cho tam giác $ABC$. Gọi $M, N$ lần lượt là trung điểm của $AB$ và $AC$. Khẳng định nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{MN} = \frac{1}{2}\u000bec{BC}$",
-              "B": "$\u000bec{MN} = 2\u000bec{BC}$",
-              "C": "$\u000bec{BC} = \frac{1}{2}\u000bec{MN}$",
-              "D": "$\u000bec{MN} = -\frac{1}{2}\u000bec{BC}$"
+              "A": "$\\vec{MN} = \\frac{1}{2}\\vec{BC}$",
+              "B": "$\\vec{MN} = 2\\vec{BC}$",
+              "C": "$\\vec{BC} = \\frac{1}{2}\\vec{MN}$",
+              "D": "$\\vec{MN} = -\\frac{1}{2}\\vec{BC}$"
             },
             "correct": "A",
-            "explanation": "Đường trung bình: $\u000bec{MN} = \frac{1}{2}\u000bec{BC}$."
+            "explanation": "Đường trung bình: $\\vec{MN} = \\frac{1}{2}\\vec{BC}$."
           },
           {
             "id": 8,
             "level": "TH",
             "question": "**Câu 8:** Cho đoạn thẳng $AB$. Điểm $C$ nằm trên đoạn $AB$ sao cho $AC = 3 CB$. Khẳng định nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{AC} = \frac{3}{4}\u000bec{AB}$",
-              "B": "$\u000bec{AC} = 3\u000bec{AB}$",
-              "C": "$\u000bec{AC} = -\frac{3}{4}\u000bec{AB}$",
-              "D": "$\u000bec{AC} = \frac{1}{3}\u000bec{AB}$"
+              "A": "$\\vec{AC} = \\frac{3}{4}\\vec{AB}$",
+              "B": "$\\vec{AC} = 3\\vec{AB}$",
+              "C": "$\\vec{AC} = -\\frac{3}{4}\\vec{AB}$",
+              "D": "$\\vec{AC} = \\frac{1}{3}\\vec{AB}$"
             },
             "correct": "A",
-            "explanation": "$AC = 3 CB \\Rightarrow AB = 4 CB \\Rightarrow AC = \frac{3}{4} AB$. Cùng hướng nên $\u000bec{AC} = \frac{3}{4}\u000bec{AB}$."
+            "explanation": "$AC = 3 CB \\Rightarrow AB = 4 CB \\Rightarrow AC = \\frac{3}{4} AB$. Cùng hướng nên $\\vec{AC} = \\frac{3}{4}\\vec{AB}$."
           },
           {
             "id": 9,
             "level": "VD",
-            "question": "**Câu 9:** Cho tam giác $ABC$. Gọi $G$ là trọng tâm và $D$ là điểm đối xứng của $G$ qua $C$. Biểu diễn $\u000bec{GD}$ theo $\u000bec{GA}, \u000bec{GB}$ là",
+            "question": "**Câu 9:** Cho tam giác $ABC$. Gọi $G$ là trọng tâm và $D$ là điểm đối xứng của $G$ qua $C$. Biểu diễn $\\vec{GD}$ theo $\\vec{GA}, \\vec{GB}$ là",
             "options": {
-              "A": "$\u000bec{GD} = 2(\u000bec{GA} + \u000bec{GB})$",
-              "B": "$\u000bec{GD} = -(\u000bec{GA} + \u000bec{GB})$",
-              "C": "$\u000bec{GD} = \u000bec{GA} + \u000bec{GB}$",
-              "D": "$\u000bec{GD} = -2(\u000bec{GA} + \u000bec{GB})$"
+              "A": "$\\vec{GD} = 2(\\vec{GA} + \\vec{GB})$",
+              "B": "$\\vec{GD} = -(\\vec{GA} + \\vec{GB})$",
+              "C": "$\\vec{GD} = \\vec{GA} + \\vec{GB}$",
+              "D": "$\\vec{GD} = -2(\\vec{GA} + \\vec{GB})$"
             },
             "correct": "D",
-            "explanation": "Vì $C$ là trung điểm $GD$ nên $\u000bec{GC} = \frac{1}{2}\u000bec{GD} \\Rightarrow \u000bec{GD} = 2\u000bec{GC}$. Mặt khác $\u000bec{GC} = -(\u000bec{GA} + \u000bec{GB})$ nên $\u000bec{GD} = -2(\u000bec{GA} + \u000bec{GB})$."
+            "explanation": "Vì $C$ là trung điểm $GD$ nên $\\vec{GC} = \\frac{1}{2}\\vec{GD} \\Rightarrow \\vec{GD} = 2\\vec{GC}$. Mặt khác $\\vec{GC} = -(\\vec{GA} + \\vec{GB})$ nên $\\vec{GD} = -2(\\vec{GA} + \\vec{GB})$."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Cho đoạn thẳng $AB$ và điểm $I$ thoả mãn $2\u000bec{IA} + 3\u000bec{IB} = \u000bec{0}$. Điểm $I$ được xác định bởi",
+            "question": "**Câu 10:** Cho đoạn thẳng $AB$ và điểm $I$ thoả mãn $2\\vec{IA} + 3\\vec{IB} = \\vec{0}$. Điểm $I$ được xác định bởi",
             "options": {
               "A": "$I$ nằm ngoài đoạn $AB$",
-              "B": "$I$ nằm trên đoạn $AB$ và $IA = \frac{3}{5}AB$",
-              "C": "$IA = \frac{2}{3}IB$",
+              "B": "$I$ nằm trên đoạn $AB$ và $IA = \\frac{3}{5}AB$",
+              "C": "$IA = \\frac{2}{3}IB$",
               "D": "$I$ là trung điểm $AB$"
             },
             "correct": "B",
-            "explanation": "$2\u000bec{IA} = -3\u000bec{IB} \\Rightarrow I$ nằm giữa $A, B$ và $2 IA = 3 IB \\Rightarrow IA = \frac{3}{5}AB$."
+            "explanation": "$2\\vec{IA} = -3\\vec{IB} \\Rightarrow I$ nằm giữa $A, B$ và $2 IA = 3 IB \\Rightarrow IA = \\frac{3}{5}AB$."
           },
           {
             "id": 11,
             "level": "VDC",
-            "question": "**Câu 11:** Cho tam giác $ABC$. Điểm $M$ trên cạnh $BC$ sao cho $BM = 2 MC$. Biểu diễn vectơ $\u000bec{AM}$ theo $\u000bec{AB}$ và $\u000bec{AC}$ là",
+            "question": "**Câu 11:** Cho tam giác $ABC$. Điểm $M$ trên cạnh $BC$ sao cho $BM = 2 MC$. Biểu diễn vectơ $\\vec{AM}$ theo $\\vec{AB}$ và $\\vec{AC}$ là",
             "options": {
-              "A": "$\u000bec{AM} = \frac{2}{3}\u000bec{AB} + \frac{1}{3}\u000bec{AC}$",
-              "B": "$\u000bec{AM} = 2\u000bec{AB} + 3\u000bec{AC}$",
-              "C": "$\u000bec{AM} = \frac{1}{2}\u000bec{AB} + \frac{1}{2}\u000bec{AC}$",
-              "D": "$\u000bec{AM} = \frac{1}{3}\u000bec{AB} + \frac{2}{3}\u000bec{AC}$"
+              "A": "$\\vec{AM} = \\frac{2}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC}$",
+              "B": "$\\vec{AM} = 2\\vec{AB} + 3\\vec{AC}$",
+              "C": "$\\vec{AM} = \\frac{1}{2}\\vec{AB} + \\frac{1}{2}\\vec{AC}$",
+              "D": "$\\vec{AM} = \\frac{1}{3}\\vec{AB} + \\frac{2}{3}\\vec{AC}$"
             },
             "correct": "D",
-            "explanation": "$\u000bec{BM} = \frac{2}{3}\u000bec{BC} = \frac{2}{3}(\u000bec{AC} - \u000bec{AB}) \\Rightarrow \u000bec{AM} = \u000bec{AB} + \u000bec{BM} = \frac{1}{3}\u000bec{AB} + \frac{2}{3}\u000bec{AC}$."
+            "explanation": "$\\vec{BM} = \\frac{2}{3}\\vec{BC} = \\frac{2}{3}(\\vec{AC} - \\vec{AB}) \\Rightarrow \\vec{AM} = \\vec{AB} + \\vec{BM} = \\frac{1}{3}\\vec{AB} + \\frac{2}{3}\\vec{AC}$."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Cho tam giác $ABC$. Gọi $I$ là điểm thoả mãn $\u000bec{IA} + 2\u000bec{IB} = \u000bec{0}$ và $J$ thoả mãn $3\u000bec{JA} + 2\u000bec{JC} = \u000bec{0}$. Khi biểu diễn vectơ $\u000bec{IJ}$ theo $\u000bec{AB}$ và $\u000bec{AC}$, hệ số của $\u000bec{AC}$ bằng",
+            "question": "**Câu 12:** Cho tam giác $ABC$. Gọi $I$ là điểm thoả mãn $\\vec{IA} + 2\\vec{IB} = \\vec{0}$ và $J$ thoả mãn $3\\vec{JA} + 2\\vec{JC} = \\vec{0}$. Khi biểu diễn vectơ $\\vec{IJ}$ theo $\\vec{AB}$ và $\\vec{AC}$, hệ số của $\\vec{AC}$ bằng",
             "options": {
-              "A": "$\frac{2}{3}$",
-              "B": "$\frac{2}{5}$",
-              "C": "$-\frac{2}{3}$",
-              "D": "$-\frac{2}{5}$"
+              "A": "$\\frac{2}{3}$",
+              "B": "$\\frac{2}{5}$",
+              "C": "$-\\frac{2}{3}$",
+              "D": "$-\\frac{2}{5}$"
             },
             "correct": "B",
-            "explanation": "$\u000bec{AI} = \frac{2}{3}\u000bec{AB}$, $\u000bec{AJ} = \frac{2}{5}\u000bec{AC}$. Do đó $\u000bec{IJ} = \u000bec{AJ} - \u000bec{AI} = -\frac{2}{3}\u000bec{AB} + \frac{2}{5}\u000bec{AC}$. Hệ số của $\u000bec{AC}$ là $\frac{2}{5}$."
+            "explanation": "$\\vec{AI} = \\frac{2}{3}\\vec{AB}$, $\\vec{AJ} = \\frac{2}{5}\\vec{AC}$. Do đó $\\vec{IJ} = \\vec{AJ} - \\vec{AI} = -\\frac{2}{3}\\vec{AB} + \\frac{2}{5}\\vec{AC}$. Hệ số của $\\vec{AC}$ là $\\frac{2}{5}$."
           }
         ],
         "tfQuestions": [
@@ -7694,30 +7694,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AG} = \frac{2}{3}\u000bec{AM}$.",
+                "content": "$\\vec{AG} = \\frac{2}{3}\\vec{AM}$.",
                 "correct": true,
                 "explanation": "Tính chất trọng tâm."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{AM} = \frac{1}{2}(\u000bec{AB} + \u000bec{AC})$.",
+                "content": "$\\vec{AM} = \\frac{1}{2}(\\vec{AB} + \\vec{AC})$.",
                 "correct": true,
                 "explanation": "Hệ thức trung điểm."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AG} = \frac{1}{3}\u000bec{AB} + \frac{1}{3}\u000bec{AC}$.",
+                "content": "$\\vec{AG} = \\frac{1}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC}$.",
                 "correct": true,
-                "explanation": "$\u000bec{AG} = \frac{2}{3} \times \frac{1}{2}(\u000bec{AB} + \u000bec{AC}) = \frac{1}{3}\u000bec{AB} + \frac{1}{3}\u000bec{AC}$."
+                "explanation": "$\\vec{AG} = \\frac{2}{3} \\times \\frac{1}{2}(\\vec{AB} + \\vec{AC}) = \\frac{1}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "$\u000bec{GB} + \u000bec{GC} = \u000bec{GA}$.",
+                "content": "$\\vec{GB} + \\vec{GC} = \\vec{GA}$.",
                 "correct": false,
-                "explanation": "$\u000bec{GB} + \u000bec{GC} = -\u000bec{GA}$."
+                "explanation": "$\\vec{GB} + \\vec{GC} = -\\vec{GA}$."
               }
             ]
           },
@@ -7728,23 +7728,23 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AM} = \frac{1}{2}\u000bec{AB}$.",
+                "content": "$\\vec{AM} = \\frac{1}{2}\\vec{AB}$.",
                 "correct": true,
                 "explanation": "$M$ là trung điểm $AB$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{NC} = \frac{1}{2}\u000bec{DC}$.",
+                "content": "$\\vec{NC} = \\frac{1}{2}\\vec{DC}$.",
                 "correct": true,
                 "explanation": "$N$ là trung điểm $CD$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AM} = \u000bec{NC}$.",
+                "content": "$\\vec{AM} = \\vec{NC}$.",
                 "correct": true,
-                "explanation": "Vì $\u000bec{AB} = \u000bec{DC}$ nên $\frac{1}{2}\u000bec{AB} = \frac{1}{2}\u000bec{DC}$."
+                "explanation": "Vì $\\vec{AB} = \\vec{DC}$ nên $\\frac{1}{2}\\vec{AB} = \\frac{1}{2}\\vec{DC}$."
               },
               {
                 "label": "d",
@@ -7764,30 +7764,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AG} = \frac{2}{3}\u000bec{AM}$.",
+                "content": "$\\vec{AG} = \\frac{2}{3}\\vec{AM}$.",
                 "correct": true,
                 "explanation": "Tính chất trọng tâm."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{AM} = \frac{1}{2}(\u000bec{AB} + \u000bec{AC})$.",
+                "content": "$\\vec{AM} = \\frac{1}{2}(\\vec{AB} + \\vec{AC})$.",
                 "correct": true,
                 "explanation": "Hệ thức trung điểm."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AG} = \frac{1}{3}\u000bec{AB} + \frac{1}{3}\u000bec{AC}$.",
+                "content": "$\\vec{AG} = \\frac{1}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC}$.",
                 "correct": true,
-                "explanation": "$\u000bec{AG} = \frac{2}{3} \times \frac{1}{2}(\u000bec{AB} + \u000bec{AC}) = \frac{1}{3}\u000bec{AB} + \frac{1}{3}\u000bec{AC}$."
+                "explanation": "$\\vec{AG} = \\frac{2}{3} \\times \\frac{1}{2}(\\vec{AB} + \\vec{AC}) = \\frac{1}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "$\u000bec{GB} + \u000bec{GC} = \u000bec{GA}$.",
+                "content": "$\\vec{GB} + \\vec{GC} = \\vec{GA}$.",
                 "correct": false,
-                "explanation": "$\u000bec{GB} + \u000bec{GC} = -\u000bec{GA}$."
+                "explanation": "$\\vec{GB} + \\vec{GC} = -\\vec{GA}$."
               }
             ]
           },
@@ -7798,23 +7798,23 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AM} = \frac{1}{2}\u000bec{AB}$.",
+                "content": "$\\vec{AM} = \\frac{1}{2}\\vec{AB}$.",
                 "correct": true,
                 "explanation": "$M$ là trung điểm $AB$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{NC} = \frac{1}{2}\u000bec{DC}$.",
+                "content": "$\\vec{NC} = \\frac{1}{2}\\vec{DC}$.",
                 "correct": true,
                 "explanation": "$N$ là trung điểm $CD$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AM} = \u000bec{NC}$.",
+                "content": "$\\vec{AM} = \\vec{NC}$.",
                 "correct": true,
-                "explanation": "Vì $\u000bec{AB} = \u000bec{DC}$ nên $\frac{1}{2}\u000bec{AB} = \frac{1}{2}\u000bec{DC}$."
+                "explanation": "Vì $\\vec{AB} = \\vec{DC}$ nên $\\frac{1}{2}\\vec{AB} = \\frac{1}{2}\\vec{DC}$."
               },
               {
                 "label": "d",
@@ -7830,12 +7830,12 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho đoạn thẳng $AB = 18$. Điểm $M$ thoả mãn $\u000bec{AM} = \frac{2}{3}\u000bec{AB}$. Tính độ dài đoạn thẳng $AM$.",
+            "question": "**Câu 1:** Cho đoạn thẳng $AB = 18$. Điểm $M$ thoả mãn $\\vec{AM} = \\frac{2}{3}\\vec{AB}$. Tính độ dài đoạn thẳng $AM$.",
             "correctAnswer": "12",
             "acceptedAnswers": [
               "12"
             ],
-            "explanation": "$AM = \frac{2}{3} \times 18 = 12$."
+            "explanation": "$AM = \\frac{2}{3} \\times 18 = 12$."
           },
           {
             "id": 2,
@@ -7845,22 +7845,22 @@
             "acceptedAnswers": [
               "6"
             ],
-            "explanation": "$AG = \frac{2}{3} \times 9 = 6$."
+            "explanation": "$AG = \\frac{2}{3} \\times 9 = 6$."
           },
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho vectơ $\u000bec{u}$ có độ dài bằng 4. Tính độ dài của vectơ $\u000bec{v} = -3\u000bec{u}$.",
+            "question": "**Câu 3:** Cho vectơ $\\vec{u}$ có độ dài bằng 4. Tính độ dài của vectơ $\\vec{v} = -3\\vec{u}$.",
             "correctAnswer": "12",
             "acceptedAnswers": [
               "12"
             ],
-            "explanation": "$|\u000bec{v}| = |-3| \times 4 = 12$."
+            "explanation": "$|\\vec{v}| = |-3| \\times 4 = 12$."
           },
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho đoạn thẳng $AB = 20$. Điểm $C$ nằm trên đường thẳng $AB$ thoả mãn $\u000bec{CA} = -3\u000bec{CB}$. Tính độ dài đoạn thẳng $CB$.",
+            "question": "**Câu 4:** Cho đoạn thẳng $AB = 20$. Điểm $C$ nằm trên đường thẳng $AB$ thoả mãn $\\vec{CA} = -3\\vec{CB}$. Tính độ dài đoạn thẳng $CB$.",
             "correctAnswer": "5",
             "acceptedAnswers": [
               "5"
@@ -7870,7 +7870,7 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho tam giác $ABC$. Gọi $M$ là điểm trên cạnh $BC$ sao cho $BM = 3MC$. Biểu diễn $\u000bec{AM} = x\u000bec{AB} + y\u000bec{AC}$. Tính giá trị của biểu thức $4x + 4y$.",
+            "question": "**Câu 5:** Cho tam giác $ABC$. Gọi $M$ là điểm trên cạnh $BC$ sao cho $BM = 3MC$. Biểu diễn $\\vec{AM} = x\\vec{AB} + y\\vec{AC}$. Tính giá trị của biểu thức $4x + 4y$.",
             "correctAnswer": "4",
             "acceptedAnswers": [
               "4"
@@ -7880,24 +7880,24 @@
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một lực kéo $\u000bec{F}$ có độ lớn $150\text{ N}$. Người ta thay thế lực $\u000bec{F}$ bằng một lực $\u000bec{F}'$ cùng phương nhưng ngược chiều và có độ lớn gấp $2.5$ lần. Độ lớn của lực $\u000bec{F}'$ bằng bao nhiêu Newton?",
+            "question": "**Câu 6:** Một lực kéo $\\vec{F}$ có độ lớn $150\\text{ N}$. Người ta thay thế lực $\\vec{F}$ bằng một lực $\\vec{F}'$ cùng phương nhưng ngược chiều và có độ lớn gấp $2.5$ lần. Độ lớn của lực $\\vec{F}'$ bằng bao nhiêu Newton?",
             "correctAnswer": "375",
             "acceptedAnswers": [
               "375"
             ],
-            "explanation": "$F' = 2.5 \times 150 = 375\text{ N}$."
+            "explanation": "$F' = 2.5 \\times 150 = 375\\text{ N}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho đoạn thẳng $AB = 18$. Điểm $M$ thoả mãn $\u000bec{AM} = \frac{2}{3}\u000bec{AB}$. Tính độ dài đoạn thẳng $AM$.",
+            "question": "**Câu 1:** Cho đoạn thẳng $AB = 18$. Điểm $M$ thoả mãn $\\vec{AM} = \\frac{2}{3}\\vec{AB}$. Tính độ dài đoạn thẳng $AM$.",
             "correctAnswer": "12",
             "acceptedAnswers": [
               "12"
             ],
-            "explanation": "$AM = \frac{2}{3} \times 18 = 12$."
+            "explanation": "$AM = \\frac{2}{3} \\times 18 = 12$."
           },
           {
             "id": 2,
@@ -7907,22 +7907,22 @@
             "acceptedAnswers": [
               "6"
             ],
-            "explanation": "$AG = \frac{2}{3} \times 9 = 6$."
+            "explanation": "$AG = \\frac{2}{3} \\times 9 = 6$."
           },
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho vectơ $\u000bec{u}$ có độ dài bằng 4. Tính độ dài của vectơ $\u000bec{v} = -3\u000bec{u}$.",
+            "question": "**Câu 3:** Cho vectơ $\\vec{u}$ có độ dài bằng 4. Tính độ dài của vectơ $\\vec{v} = -3\\vec{u}$.",
             "correctAnswer": "12",
             "acceptedAnswers": [
               "12"
             ],
-            "explanation": "$|\u000bec{v}| = |-3| \times 4 = 12$."
+            "explanation": "$|\\vec{v}| = |-3| \\times 4 = 12$."
           },
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho đoạn thẳng $AB = 20$. Điểm $C$ nằm trên đường thẳng $AB$ thoả mãn $\u000bec{CA} = -3\u000bec{CB}$. Tính độ dài đoạn thẳng $CB$.",
+            "question": "**Câu 4:** Cho đoạn thẳng $AB = 20$. Điểm $C$ nằm trên đường thẳng $AB$ thoả mãn $\\vec{CA} = -3\\vec{CB}$. Tính độ dài đoạn thẳng $CB$.",
             "correctAnswer": "5",
             "acceptedAnswers": [
               "5"
@@ -7932,7 +7932,7 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho tam giác $ABC$. Gọi $M$ là điểm trên cạnh $BC$ sao cho $BM = 3MC$. Biểu diễn $\u000bec{AM} = x\u000bec{AB} + y\u000bec{AC}$. Tính giá trị của biểu thức $4x + 4y$.",
+            "question": "**Câu 5:** Cho tam giác $ABC$. Gọi $M$ là điểm trên cạnh $BC$ sao cho $BM = 3MC$. Biểu diễn $\\vec{AM} = x\\vec{AB} + y\\vec{AC}$. Tính giá trị của biểu thức $4x + 4y$.",
             "correctAnswer": "4",
             "acceptedAnswers": [
               "4"
@@ -7942,12 +7942,12 @@
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một lực kéo $\u000bec{F}$ có độ lớn $150\text{ N}$. Người ta thay thế lực $\u000bec{F}$ bằng một lực $\u000bec{F}'$ cùng phương nhưng ngược chiều và có độ lớn gấp $2.5$ lần. Độ lớn của lực $\u000bec{F}'$ bằng bao nhiêu Newton?",
+            "question": "**Câu 6:** Một lực kéo $\\vec{F}$ có độ lớn $150\\text{ N}$. Người ta thay thế lực $\\vec{F}$ bằng một lực $\\vec{F}'$ cùng phương nhưng ngược chiều và có độ lớn gấp $2.5$ lần. Độ lớn của lực $\\vec{F}'$ bằng bao nhiêu Newton?",
             "correctAnswer": "375",
             "acceptedAnswers": [
               "375"
             ],
-            "explanation": "$F' = 2.5 \times 150 = 375\text{ N}$."
+            "explanation": "$F' = 2.5 \\times 150 = 375\\text{ N}$."
           }
         ],
         "essayQuestions": [
@@ -7956,32 +7956,32 @@
             "level": "NB",
             "title": "Định nghĩa tích của một vectơ với một số",
             "maxScore": 0.5,
-            "question": "**Bài 1 (0.50 điểm):** Nêu định nghĩa tích của một số thực $k$ với vectơ $\u000bec{a}$. Nêu rõ hướng và độ dài trong hai trường hợp $k > 0$ và $k < 0$.",
-            "explanation": "Tích của một số thực $k$ với một vectơ $\u000bec{a}$ là một vectơ, kí hiệu là $k\u000bec{a}$, được xác định như sau:\n1. Hướng:\n- Cùng hướng với $\u000bec{a}$ nếu $k > 0$.\n- Ngược hướng với $\u000bec{a}$ nếu $k < 0$.\n- Bằng vectơ $\u000bec{0}$ nếu $k = 0$ hoặc $\u000bec{a} = \u000bec{0}$.\n2. Độ dài: $|k\u000bec{a}| = |k| \\cdot |\u000bec{a}|$."
+            "question": "**Bài 1 (0.50 điểm):** Nêu định nghĩa tích của một số thực $k$ với vectơ $\\vec{a}$. Nêu rõ hướng và độ dài trong hai trường hợp $k > 0$ và $k < 0$.",
+            "explanation": "Tích của một số thực $k$ với một vectơ $\\vec{a}$ là một vectơ, kí hiệu là $k\\vec{a}$, được xác định như sau:\n1. Hướng:\n- Cùng hướng với $\\vec{a}$ nếu $k > 0$.\n- Ngược hướng với $\\vec{a}$ nếu $k < 0$.\n- Bằng vectơ $\\vec{0}$ nếu $k = 0$ hoặc $\\vec{a} = \\vec{0}$.\n2. Độ dài: $|k\\vec{a}| = |k| \\cdot |\\vec{a}|$."
           },
           {
             "id": 2,
             "level": "TH",
             "title": "Điều kiện ba điểm thẳng hàng bằng vectơ",
             "maxScore": 0.5,
-            "question": "**Bài 2 (0.50 điểm):** Nêu điều kiện cần và đủ để ba điểm phân biệt $A, B, C$ thẳng hàng bằng ngôn ngữ vectơ. Cho tam giác $ABC$, lấy điểm $M$ thoả mãn $\u000bec{AM} = 2\u000bec{AB}$. Ba điểm $A, B, M$ có thẳng hàng không? Vì sao?",
-            "explanation": "1. Điều kiện cần và đủ: Ba điểm phân biệt $A, B, C$ thẳng hàng khi và chỉ khi hai vectơ $\u000bec{AB}$ và $\u000bec{AC}$ cùng phương, tức là tồn tại số thực $k \ne 0$ sao cho $\u000bec{AB} = k\u000bec{AC}$.\n2. Với $\u000bec{AM} = 2\u000bec{AB}$: Tồn tại số thực $k = 2$ liên hệ giữa hai vectơ có chung gốc $A$. Do đó hai vectơ $\u000bec{AM}$ và $\u000bec{AB}$ cùng phương (cùng giá là đường thẳng $AB$). Suy ra ba điểm $A, B, M$ thẳng hàng (điểm $B$ là trung điểm của đoạn thẳng $AM$)."
+            "question": "**Bài 2 (0.50 điểm):** Nêu điều kiện cần và đủ để ba điểm phân biệt $A, B, C$ thẳng hàng bằng ngôn ngữ vectơ. Cho tam giác $ABC$, lấy điểm $M$ thoả mãn $\\vec{AM} = 2\\vec{AB}$. Ba điểm $A, B, M$ có thẳng hàng không? Vì sao?",
+            "explanation": "1. Điều kiện cần và đủ: Ba điểm phân biệt $A, B, C$ thẳng hàng khi và chỉ khi hai vectơ $\\vec{AB}$ và $\\vec{AC}$ cùng phương, tức là tồn tại số thực $k \\ne 0$ sao cho $\\vec{AB} = k\\vec{AC}$.\n2. Với $\\vec{AM} = 2\\vec{AB}$: Tồn tại số thực $k = 2$ liên hệ giữa hai vectơ có chung gốc $A$. Do đó hai vectơ $\\vec{AM}$ và $\\vec{AB}$ cùng phương (cùng giá là đường thẳng $AB$). Suy ra ba điểm $A, B, M$ thẳng hàng (điểm $B$ là trung điểm của đoạn thẳng $AM$)."
           },
           {
             "id": 3,
             "level": "VD",
             "title": "Phân tích một vectơ theo hai vectơ không cùng phương",
             "maxScore": 0.5,
-            "question": "**Bài 3 (0.50 điểm):** Cho tam giác $ABC$. Gọi $M$ là trung điểm của cạnh $AB$ và $N$ là điểm trên cạnh $AC$ sao cho $AN = 2 NC$.\na) Biểu diễn vectơ $\u000bec{MN}$ theo hai vectơ $\u000bec{AB}$ và $\u000bec{AC}$.\nb) Gọi $K$ là trung điểm của $MN$. Biểu diễn $\u000bec{AK}$ theo $\u000bec{AB}$ và $\u000bec{AC}$.",
-            "explanation": "a) Ta có: $\u000bec{MN} = \u000bec{AN} - \u000bec{AM}$. Do $M$ là trung điểm $AB$ nên $\u000bec{AM} = \frac{1}{2}\u000bec{AB}$. Do $AN = 2 NC$ nên $AN = \frac{2}{3} AC$, suy ra $\u000bec{AN} = \frac{2}{3}\u000bec{AC}$. Do đó: $\u000bec{MN} = -\frac{1}{2}\u000bec{AB} + \frac{2}{3}\u000bec{AC}$.\nb) Vì $K$ là trung điểm của $MN$ nên $\u000bec{AK} = \frac{1}{2}(\u000bec{AM} + \u000bec{AN}) = \frac{1}{2}\\left(\frac{1}{2}\u000bec{AB} + \frac{2}{3}\u000bec{AC}\right) = \frac{1}{4}\u000bec{AB} + \frac{1}{3}\u000bec{AC}$."
+            "question": "**Bài 3 (0.50 điểm):** Cho tam giác $ABC$. Gọi $M$ là trung điểm của cạnh $AB$ và $N$ là điểm trên cạnh $AC$ sao cho $AN = 2 NC$.\na) Biểu diễn vectơ $\\vec{MN}$ theo hai vectơ $\\vec{AB}$ và $\\vec{AC}$.\nb) Gọi $K$ là trung điểm của $MN$. Biểu diễn $\\vec{AK}$ theo $\\vec{AB}$ và $\\vec{AC}$.",
+            "explanation": "a) Ta có: $\\vec{MN} = \\vec{AN} - \\vec{AM}$. Do $M$ là trung điểm $AB$ nên $\\vec{AM} = \\frac{1}{2}\\vec{AB}$. Do $AN = 2 NC$ nên $AN = \\frac{2}{3} AC$, suy ra $\\vec{AN} = \\frac{2}{3}\\vec{AC}$. Do đó: $\\vec{MN} = -\\frac{1}{2}\\vec{AB} + \\frac{2}{3}\\vec{AC}$.\nb) Vì $K$ là trung điểm của $MN$ nên $\\vec{AK} = \\frac{1}{2}(\\vec{AM} + \\vec{AN}) = \\frac{1}{2}\\left(\\frac{1}{2}\\vec{AB} + \\frac{2}{3}\\vec{AC}\\right) = \\frac{1}{4}\\vec{AB} + \\frac{1}{3}\\vec{AC}$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Bài toán phân tích lực tổng hợp và cánh tay đòn",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Một đòn bẩy bằng kim loại dài $1.2\text{ m}$ có điểm tựa $O$ nằm ở giữa. Một vật nặng $m_1 = 30\text{ kg}$ đặt ở đầu $A$ cách $O$ một khoảng $0.4\text{ m}$. Hỏi phải đặt vật nặng $m_2$ ở đầu $B$ (cách $O$ một khoảng $0.8\text{ m}$) có khối lượng bằng bao nhiêu kg để đòn bẩy thăng bằng?\na) Mô hình hoá bài toán bằng quy tắc cân bằng lực và quy tắc mômen.\nb) Tính khối lượng $m_2$.",
-            "explanation": "a) Các trọng lực $\u000bec{P}_1$ và $\u000bec{P}_2$ cùng song song hướng xuống vuông góc với thanh đòn: $P_1 = 10 m_1 = 300\text{ N}$. Để thanh thăng bằng quanh điểm tựa $O$, theo quy tắc mômen lực: $P_1 \\cdot OA = P_2 \\cdot OB$.\nb) Thay số vào ta có: $300 \times 0.4 = P_2 \times 0.8 \\Leftrightarrow 120 = 0.8 P_2 \\Rightarrow P_2 = \frac{120}{0.8} = 150\text{ N}$. Suy ra khối lượng $m_2 = \frac{P_2}{10} = \frac{150}{10} = 15\text{ kg}$."
+            "question": "**Bài 4 (0.50 điểm):** Một đòn bẩy bằng kim loại dài $1.2\\text{ m}$ có điểm tựa $O$ nằm ở giữa. Một vật nặng $m_1 = 30\\text{ kg}$ đặt ở đầu $A$ cách $O$ một khoảng $0.4\\text{ m}$. Hỏi phải đặt vật nặng $m_2$ ở đầu $B$ (cách $O$ một khoảng $0.8\\text{ m}$) có khối lượng bằng bao nhiêu kg để đòn bẩy thăng bằng?\na) Mô hình hoá bài toán bằng quy tắc cân bằng lực và quy tắc mômen.\nb) Tính khối lượng $m_2$.",
+            "explanation": "a) Các trọng lực $\\vec{P}_1$ và $\\vec{P}_2$ cùng song song hướng xuống vuông góc với thanh đòn: $P_1 = 10 m_1 = 300\\text{ N}$. Để thanh thăng bằng quanh điểm tựa $O$, theo quy tắc mômen lực: $P_1 \\cdot OA = P_2 \\cdot OB$.\nb) Thay số vào ta có: $300 \\times 0.4 = P_2 \\times 0.8 \\Leftrightarrow 120 = 0.8 P_2 \\Rightarrow P_2 = \\frac{120}{0.8} = 150\\text{ N}$. Suy ra khối lượng $m_2 = \\frac{P_2}{10} = \\frac{150}{10} = 15\\text{ kg}$."
           }
         ]
       },
@@ -8000,25 +8000,25 @@
           {
             "id": 1,
             "level": "NB",
-            "question": "**Câu 1:** Vectơ đối của vectơ $5\u000bec{a}$ là",
+            "question": "**Câu 1:** Vectơ đối của vectơ $5\\vec{a}$ là",
             "options": {
-              "A": "$5\u000bec{a}$",
-              "B": "$\u000bec{0}$",
-              "C": "$-5\u000bec{a}$",
-              "D": "$\frac{1}{5}\u000bec{a}$"
+              "A": "$5\\vec{a}$",
+              "B": "$\\vec{0}$",
+              "C": "$-5\\vec{a}$",
+              "D": "$\\frac{1}{5}\\vec{a}$"
             },
             "correct": "C",
-            "explanation": "Vectơ đối của $k\u000bec{a}$ là $-k\u000bec{a}$."
+            "explanation": "Vectơ đối của $k\\vec{a}$ là $-k\\vec{a}$."
           },
           {
             "id": 2,
             "level": "NB",
             "question": "**Câu 2:** Cho tam giác $ABC$ có trọng tâm $G$. Đẳng thức nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{GA} + \u000bec{GB} = 2\u000bec{GC}$",
-              "B": "$\u000bec{AG} = 3\u000bec{AM}$",
-              "C": "$\u000bec{GA} + \u000bec{GB} + \u000bec{GC} = \u000bec{0}$",
-              "D": "$\u000bec{GA} = \u000bec{GB} + \u000bec{GC}$"
+              "A": "$\\vec{GA} + \\vec{GB} = 2\\vec{GC}$",
+              "B": "$\\vec{AG} = 3\\vec{AM}$",
+              "C": "$\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$",
+              "D": "$\\vec{GA} = \\vec{GB} + \\vec{GC}$"
             },
             "correct": "C",
             "explanation": "Tính chất trọng tâm."
@@ -8026,12 +8026,12 @@
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Nếu $\u000bec{b} = -3\u000bec{a}$ (với $\u000bec{a} \ne \u000bec{0}$) thì khẳng định nào sau đây đúng?",
+            "question": "**Câu 3:** Nếu $\\vec{b} = -3\\vec{a}$ (với $\\vec{a} \\ne \\vec{0}$) thì khẳng định nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{b}$ cùng hướng với $\u000bec{a}$",
-              "B": "$\u000bec{b}$ ngược hướng với $\u000bec{a}$ và $|\u000bec{b}| = 3|\u000bec{a}|$",
-              "C": "$\u000bec{b} = \u000bec{0}$",
-              "D": "$|\u000bec{b}| = -3|\u000bec{a}|$"
+              "A": "$\\vec{b}$ cùng hướng với $\\vec{a}$",
+              "B": "$\\vec{b}$ ngược hướng với $\\vec{a}$ và $|\\vec{b}| = 3|\\vec{a}|$",
+              "C": "$\\vec{b} = \\vec{0}$",
+              "D": "$|\\vec{b}| = -3|\\vec{a}|$"
             },
             "correct": "B",
             "explanation": "Hệ số âm nên ngược hướng và độ dài nhân 3."
@@ -8039,7 +8039,7 @@
           {
             "id": 4,
             "level": "NB",
-            "question": "**Câu 4:** Cho ba điểm $A, B, C$. Điều kiện để $\u000bec{AB}$ và $\u000bec{AC}$ cùng phương là",
+            "question": "**Câu 4:** Cho ba điểm $A, B, C$. Điều kiện để $\\vec{AB}$ và $\\vec{AC}$ cùng phương là",
             "options": {
               "A": "$A$ là trung điểm $BC$",
               "B": "Tam giác $ABC$ đều",
@@ -8052,7 +8052,7 @@
           {
             "id": 5,
             "level": "TH",
-            "question": "**Câu 5:** Cho đoạn thẳng $AB$. Điểm $M$ thoả mãn $\u000bec{MA} + \u000bec{MB} = \u000bec{0}$. Khi đó điểm $M$ là",
+            "question": "**Câu 5:** Cho đoạn thẳng $AB$. Điểm $M$ thoả mãn $\\vec{MA} + \\vec{MB} = \\vec{0}$. Khi đó điểm $M$ là",
             "options": {
               "A": "Điểm trùng với $B$",
               "B": "Trung điểm của đoạn thẳng $AB$",
@@ -8060,17 +8060,17 @@
               "D": "Điểm trùng với $A$"
             },
             "correct": "B",
-            "explanation": "$\u000bec{MA} + \u000bec{MB} = \u000bec{0} \\Leftrightarrow M$ là trung điểm $AB$."
+            "explanation": "$\\vec{MA} + \\vec{MB} = \\vec{0} \\Leftrightarrow M$ là trung điểm $AB$."
           },
           {
             "id": 6,
             "level": "TH",
             "question": "**Câu 6:** Cho tam giác $ABC$ có trung tuyến $AM$. Đẳng thức nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{AM} = \frac{1}{2}(\u000bec{AB} + \u000bec{AC})$",
-              "B": "$\u000bec{AM} = \u000bec{AB} + \u000bec{AC}$",
-              "C": "$\u000bec{AM} = \frac{1}{3}(\u000bec{AB} + \u000bec{AC})$",
-              "D": "$\u000bec{AM} = 2(\u000bec{AB} + \u000bec{AC})$"
+              "A": "$\\vec{AM} = \\frac{1}{2}(\\vec{AB} + \\vec{AC})$",
+              "B": "$\\vec{AM} = \\vec{AB} + \\vec{AC}$",
+              "C": "$\\vec{AM} = \\frac{1}{3}(\\vec{AB} + \\vec{AC})$",
+              "D": "$\\vec{AM} = 2(\\vec{AB} + \\vec{AC})$"
             },
             "correct": "A",
             "explanation": "Công thức trung tuyến dạng vectơ."
@@ -8078,59 +8078,59 @@
           {
             "id": 7,
             "level": "TH",
-            "question": "**Câu 7:** Cho hình bình hành $ABCD$. Điểm $M$ trên cạnh $AB$ thoả mãn $AM = \frac{1}{3}AB$. Khẳng định nào sau đây đúng?",
+            "question": "**Câu 7:** Cho hình bình hành $ABCD$. Điểm $M$ trên cạnh $AB$ thoả mãn $AM = \\frac{1}{3}AB$. Khẳng định nào sau đây đúng?",
             "options": {
-              "A": "$\u000bec{AM} = 3\u000bec{AB}$",
-              "B": "$\u000bec{AM} = \frac{2}{3}\u000bec{AB}$",
-              "C": "$\u000bec{AM} = -\frac{1}{3}\u000bec{AB}$",
-              "D": "$\u000bec{AM} = \frac{1}{3}\u000bec{AB}$"
+              "A": "$\\vec{AM} = 3\\vec{AB}$",
+              "B": "$\\vec{AM} = \\frac{2}{3}\\vec{AB}$",
+              "C": "$\\vec{AM} = -\\frac{1}{3}\\vec{AB}$",
+              "D": "$\\vec{AM} = \\frac{1}{3}\\vec{AB}$"
             },
             "correct": "D",
-            "explanation": "Cùng hướng nên hệ số dương $\frac{1}{3}$."
+            "explanation": "Cùng hướng nên hệ số dương $\\frac{1}{3}$."
           },
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho tam giác $ABC$. Gọi $I$ là điểm trên cạnh $AC$ sao cho $AI = 2 IC$. Biểu diễn $\u000bec{AI}$ theo $\u000bec{AC}$ là",
+            "question": "**Câu 8:** Cho tam giác $ABC$. Gọi $I$ là điểm trên cạnh $AC$ sao cho $AI = 2 IC$. Biểu diễn $\\vec{AI}$ theo $\\vec{AC}$ là",
             "options": {
-              "A": "$\u000bec{AI} = 2\u000bec{AC}$",
-              "B": "$\u000bec{AI} = \frac{1}{3}\u000bec{AC}$",
-              "C": "$\u000bec{AI} = \frac{1}{2}\u000bec{AC}$",
-              "D": "$\u000bec{AI} = \frac{2}{3}\u000bec{AC}$"
+              "A": "$\\vec{AI} = 2\\vec{AC}$",
+              "B": "$\\vec{AI} = \\frac{1}{3}\\vec{AC}$",
+              "C": "$\\vec{AI} = \\frac{1}{2}\\vec{AC}$",
+              "D": "$\\vec{AI} = \\frac{2}{3}\\vec{AC}$"
             },
             "correct": "D",
-            "explanation": "$AI = 2 IC \\Rightarrow AC = 3 IC \\Rightarrow AI = \frac{2}{3} AC$."
+            "explanation": "$AI = 2 IC \\Rightarrow AC = 3 IC \\Rightarrow AI = \\frac{2}{3} AC$."
           },
           {
             "id": 9,
             "level": "VD",
-            "question": "**Câu 9:** Cho tam giác $ABC$. Gọi $M$ là trung điểm $BC$. Biểu diễn $\u000bec{AB}$ theo $\u000bec{AM}$ và $\u000bec{BC}$ là",
+            "question": "**Câu 9:** Cho tam giác $ABC$. Gọi $M$ là trung điểm $BC$. Biểu diễn $\\vec{AB}$ theo $\\vec{AM}$ và $\\vec{BC}$ là",
             "options": {
-              "A": "$\u000bec{AB} = \u000bec{AM} - \frac{1}{2}\u000bec{BC}$",
-              "B": "$\u000bec{AB} = \u000bec{AM} - \u000bec{BC}$",
-              "C": "$\u000bec{AB} = 2\u000bec{AM} - \u000bec{BC}$",
-              "D": "$\u000bec{AB} = \u000bec{AM} + \frac{1}{2}\u000bec{BC}$"
+              "A": "$\\vec{AB} = \\vec{AM} - \\frac{1}{2}\\vec{BC}$",
+              "B": "$\\vec{AB} = \\vec{AM} - \\vec{BC}$",
+              "C": "$\\vec{AB} = 2\\vec{AM} - \\vec{BC}$",
+              "D": "$\\vec{AB} = \\vec{AM} + \\frac{1}{2}\\vec{BC}$"
             },
             "correct": "A",
-            "explanation": "$\u000bec{AB} = \u000bec{AM} + \u000bec{MB} = \u000bec{AM} - \frac{1}{2}\u000bec{BC}$."
+            "explanation": "$\\vec{AB} = \\vec{AM} + \\vec{MB} = \\vec{AM} - \\frac{1}{2}\\vec{BC}$."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Cho tam giác $ABC$ có trọng tâm $G$. Biểu diễn $\u000bec{CG}$ theo hai vectơ $\u000bec{CA}$ và $\u000bec{CB}$ là",
+            "question": "**Câu 10:** Cho tam giác $ABC$ có trọng tâm $G$. Biểu diễn $\\vec{CG}$ theo hai vectơ $\\vec{CA}$ và $\\vec{CB}$ là",
             "options": {
-              "A": "$\u000bec{CG} = \frac{2}{3}(\u000bec{CA} + \u000bec{CB})$",
-              "B": "$\u000bec{CG} = \frac{1}{3}(\u000bec{CA} + \u000bec{CB})$",
-              "C": "$\u000bec{CG} = \frac{1}{2}(\u000bec{CA} + \u000bec{CB})$",
-              "D": "$\u000bec{CG} = -(\u000bec{CA} + \u000bec{CB})$"
+              "A": "$\\vec{CG} = \\frac{2}{3}(\\vec{CA} + \\vec{CB})$",
+              "B": "$\\vec{CG} = \\frac{1}{3}(\\vec{CA} + \\vec{CB})$",
+              "C": "$\\vec{CG} = \\frac{1}{2}(\\vec{CA} + \\vec{CB})$",
+              "D": "$\\vec{CG} = -(\\vec{CA} + \\vec{CB})$"
             },
             "correct": "B",
-            "explanation": "$\u000bec{CG} = \frac{2}{3}\u000bec{CM} = \frac{2}{3} \\cdot \frac{1}{2}(\u000bec{CA} + \u000bec{CB}) = \frac{1}{3}(\u000bec{CA} + \u000bec{CB})$."
+            "explanation": "$\\vec{CG} = \\frac{2}{3}\\vec{CM} = \\frac{2}{3} \\cdot \\frac{1}{2}(\\vec{CA} + \\vec{CB}) = \\frac{1}{3}(\\vec{CA} + \\vec{CB})$."
           },
           {
             "id": 11,
             "level": "VDC",
-            "question": "**Câu 11:** Cho hình bình hành $ABCD$. Điểm $M$ thoả mãn $\u000bec{AM} = \frac{1}{3}\u000bec{AB}$, điểm $N$ thoả mãn $\u000bec{AN} = \frac{1}{4}\u000bec{AC}$. Khi đó ba điểm $D, N, M$",
+            "question": "**Câu 11:** Cho hình bình hành $ABCD$. Điểm $M$ thoả mãn $\\vec{AM} = \\frac{1}{3}\\vec{AB}$, điểm $N$ thoả mãn $\\vec{AN} = \\frac{1}{4}\\vec{AC}$. Khi đó ba điểm $D, N, M$",
             "options": {
               "A": "Tạo thành tam giác vuông",
               "B": "Không cùng phương",
@@ -8138,12 +8138,12 @@
               "D": "Tạo thành tam giác đều"
             },
             "correct": "C",
-            "explanation": "Phân tích theo $\u000bec{AB}$ và $\u000bec{AD}$: $\u000bec{DM} = \u000bec{AM} - \u000bec{AD} = \frac{1}{3}\u000bec{AB} - \u000bec{AD}$. $\u000bec{DN} = \u000bec{AN} - \u000bec{AD} = \frac{1}{4}(\u000bec{AB} + \u000bec{AD}) - \u000bec{AD} = \frac{1}{4}\u000bec{AB} - \frac{3}{4}\u000bec{AD} = \frac{3}{4}\\left(\frac{1}{3}\u000bec{AB} - \u000bec{AD}\right) = \frac{3}{4}\u000bec{DM}$. Do đó $D, N, M$ thẳng hàng."
+            "explanation": "Phân tích theo $\\vec{AB}$ và $\\vec{AD}$: $\\vec{DM} = \\vec{AM} - \\vec{AD} = \\frac{1}{3}\\vec{AB} - \\vec{AD}$. $\\vec{DN} = \\vec{AN} - \\vec{AD} = \\frac{1}{4}(\\vec{AB} + \\vec{AD}) - \\vec{AD} = \\frac{1}{4}\\vec{AB} - \\frac{3}{4}\\vec{AD} = \\frac{3}{4}\\left(\\frac{1}{3}\\vec{AB} - \\vec{AD}\\right) = \\frac{3}{4}\\vec{DM}$. Do đó $D, N, M$ thẳng hàng."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Cho tam giác $ABC$. Tìm tập hợp điểm $M$ thoả mãn $|2\u000bec{MA} + 3\u000bec{MB}| = |3\u000bec{MA} + 2\u000bec{MB}|$.",
+            "question": "**Câu 12:** Cho tam giác $ABC$. Tìm tập hợp điểm $M$ thoả mãn $|2\\vec{MA} + 3\\vec{MB}| = |3\\vec{MA} + 2\\vec{MB}|$.",
             "options": {
               "A": "Đường trung trực của đoạn thẳng $AB$",
               "B": "Đường tròn đường kính $AB$",
@@ -8151,7 +8151,7 @@
               "D": "Đường thẳng đi qua trọng tâm tam giác $ABC$"
             },
             "correct": "A",
-            "explanation": "Gọi $I$ thoả $2\u000bec{IA} + 3\u000bec{IB} = \u000bec{0}$ và $J$ thoả $3\u000bec{JA} + 2\u000bec{JB} = \u000bec{0}$. $I, J$ đối xứng nhau qua trung điểm của $AB$, nên tập hợp $M$ là đường trung trực của đoạn thẳng $IJ$, cũng chính là đường trung trực của $AB$."
+            "explanation": "Gọi $I$ thoả $2\\vec{IA} + 3\\vec{IB} = \\vec{0}$ và $J$ thoả $3\\vec{JA} + 2\\vec{JB} = \\vec{0}$. $I, J$ đối xứng nhau qua trung điểm của $AB$, nên tập hợp $M$ là đường trung trực của đoạn thẳng $IJ$, cũng chính là đường trung trực của $AB$."
           }
         ],
         "tfQuestions": [
@@ -8162,30 +8162,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AI} = \frac{2}{3}\u000bec{AB}$.",
+                "content": "$\\vec{AI} = \\frac{2}{3}\\vec{AB}$.",
                 "correct": true,
-                "explanation": "$AI = 2 IB \\Rightarrow AI = \frac{2}{3}AB$."
+                "explanation": "$AI = 2 IB \\Rightarrow AI = \\frac{2}{3}AB$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{AJ} = \frac{2}{3}\u000bec{AC}$.",
+                "content": "$\\vec{AJ} = \\frac{2}{3}\\vec{AC}$.",
                 "correct": true,
-                "explanation": "$AJ = 2 JC \\Rightarrow AJ = \frac{2}{3}AC$."
+                "explanation": "$AJ = 2 JC \\Rightarrow AJ = \\frac{2}{3}AC$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{IJ} = \frac{2}{3}\u000bec{BC}$.",
+                "content": "$\\vec{IJ} = \\frac{2}{3}\\vec{BC}$.",
                 "correct": true,
-                "explanation": "$\u000bec{IJ} = \u000bec{AJ} - \u000bec{AI} = \frac{2}{3}(\u000bec{AC} - \u000bec{AB}) = \frac{2}{3}\u000bec{BC}$."
+                "explanation": "$\\vec{IJ} = \\vec{AJ} - \\vec{AI} = \\frac{2}{3}(\\vec{AC} - \\vec{AB}) = \\frac{2}{3}\\vec{BC}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
                 "content": "Đoạn thẳng $IJ$ gấp đôi đoạn thẳng $BC$.",
                 "correct": false,
-                "explanation": "$IJ = \frac{2}{3}BC$, ngắn hơn $BC$."
+                "explanation": "$IJ = \\frac{2}{3}BC$, ngắn hơn $BC$."
               }
             ]
           },
@@ -8196,30 +8196,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{OM} = \frac{1}{2}\u000bec{AD}$.",
+                "content": "$\\vec{OM} = \\frac{1}{2}\\vec{AD}$.",
                 "correct": false,
-                "explanation": "$\u000bec{OM} = \frac{1}{2}\u000bec{DA} = -\frac{1}{2}\u000bec{AD}$."
+                "explanation": "$\\vec{OM} = \\frac{1}{2}\\vec{DA} = -\\frac{1}{2}\\vec{AD}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{OM}| = \frac{a}{2}$.",
+                "content": "Độ dài $|\\vec{OM}| = \\frac{a}{2}$.",
                 "correct": true,
                 "explanation": "Khoảng cách từ tâm đến cạnh bằng nửa cạnh."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{OA} + \u000bec{OB} = 2\u000bec{OM}$.",
+                "content": "$\\vec{OA} + \\vec{OB} = 2\\vec{OM}$.",
                 "correct": true,
                 "explanation": "Hệ thức trung điểm."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Độ dài $|\u000bec{OA} + \u000bec{OB}| = a$.",
+                "content": "Độ dài $|\\vec{OA} + \\vec{OB}| = a$.",
                 "correct": true,
-                "explanation": "$2 OM = 2 \times \frac{a}{2} = a$."
+                "explanation": "$2 OM = 2 \\times \\frac{a}{2} = a$."
               }
             ]
           }
@@ -8232,30 +8232,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AI} = \frac{2}{3}\u000bec{AB}$.",
+                "content": "$\\vec{AI} = \\frac{2}{3}\\vec{AB}$.",
                 "correct": true,
-                "explanation": "$AI = 2 IB \\Rightarrow AI = \frac{2}{3}AB$."
+                "explanation": "$AI = 2 IB \\Rightarrow AI = \\frac{2}{3}AB$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{AJ} = \frac{2}{3}\u000bec{AC}$.",
+                "content": "$\\vec{AJ} = \\frac{2}{3}\\vec{AC}$.",
                 "correct": true,
-                "explanation": "$AJ = 2 JC \\Rightarrow AJ = \frac{2}{3}AC$."
+                "explanation": "$AJ = 2 JC \\Rightarrow AJ = \\frac{2}{3}AC$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{IJ} = \frac{2}{3}\u000bec{BC}$.",
+                "content": "$\\vec{IJ} = \\frac{2}{3}\\vec{BC}$.",
                 "correct": true,
-                "explanation": "$\u000bec{IJ} = \u000bec{AJ} - \u000bec{AI} = \frac{2}{3}(\u000bec{AC} - \u000bec{AB}) = \frac{2}{3}\u000bec{BC}$."
+                "explanation": "$\\vec{IJ} = \\vec{AJ} - \\vec{AI} = \\frac{2}{3}(\\vec{AC} - \\vec{AB}) = \\frac{2}{3}\\vec{BC}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
                 "content": "Đoạn thẳng $IJ$ gấp đôi đoạn thẳng $BC$.",
                 "correct": false,
-                "explanation": "$IJ = \frac{2}{3}BC$, ngắn hơn $BC$."
+                "explanation": "$IJ = \\frac{2}{3}BC$, ngắn hơn $BC$."
               }
             ]
           },
@@ -8266,30 +8266,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{OM} = \frac{1}{2}\u000bec{AD}$.",
+                "content": "$\\vec{OM} = \\frac{1}{2}\\vec{AD}$.",
                 "correct": false,
-                "explanation": "$\u000bec{OM} = \frac{1}{2}\u000bec{DA} = -\frac{1}{2}\u000bec{AD}$."
+                "explanation": "$\\vec{OM} = \\frac{1}{2}\\vec{DA} = -\\frac{1}{2}\\vec{AD}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{OM}| = \frac{a}{2}$.",
+                "content": "Độ dài $|\\vec{OM}| = \\frac{a}{2}$.",
                 "correct": true,
                 "explanation": "Khoảng cách từ tâm đến cạnh bằng nửa cạnh."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{OA} + \u000bec{OB} = 2\u000bec{OM}$.",
+                "content": "$\\vec{OA} + \\vec{OB} = 2\\vec{OM}$.",
                 "correct": true,
                 "explanation": "Hệ thức trung điểm."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Độ dài $|\u000bec{OA} + \u000bec{OB}| = a$.",
+                "content": "Độ dài $|\\vec{OA} + \\vec{OB}| = a$.",
                 "correct": true,
-                "explanation": "$2 OM = 2 \times \frac{a}{2} = a$."
+                "explanation": "$2 OM = 2 \\times \\frac{a}{2} = a$."
               }
             ]
           }
@@ -8298,7 +8298,7 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho đoạn thẳng $AB = 24$. Điểm $M$ thoả mãn $\u000bec{AM} = \frac{3}{4}\u000bec{AB}$. Độ dài $BM$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho đoạn thẳng $AB = 24$. Điểm $M$ thoả mãn $\\vec{AM} = \\frac{3}{4}\\vec{AB}$. Độ dài $BM$ bằng bao nhiêu?",
             "correctAnswer": "6",
             "acceptedAnswers": [
               "6"
@@ -8313,22 +8313,22 @@
             "acceptedAnswers": [
               "5"
             ],
-            "explanation": "$GM = \frac{1}{3} \times 15 = 5$."
+            "explanation": "$GM = \\frac{1}{3} \\times 15 = 5$."
           },
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho vectơ $\u000bec{a}$ có độ dài 6. Tính độ dài vectơ $\u000bec{b} = -2.5\u000bec{a}$.",
+            "question": "**Câu 3:** Cho vectơ $\\vec{a}$ có độ dài 6. Tính độ dài vectơ $\\vec{b} = -2.5\\vec{a}$.",
             "correctAnswer": "15",
             "acceptedAnswers": [
               "15"
             ],
-            "explanation": "$|\u000bec{b}| = 2.5 \times 6 = 15$."
+            "explanation": "$|\\vec{b}| = 2.5 \\times 6 = 15$."
           },
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho tam giác $ABC$. Gọi $M$ là trung điểm $AB$ và $N$ là trung điểm $AC$. Tỉ số độ dài $|\u000bec{MN}| / |\u000bec{BC}|$ bằng bao nhiêu?",
+            "question": "**Câu 4:** Cho tam giác $ABC$. Gọi $M$ là trung điểm $AB$ và $N$ là trung điểm $AC$. Tỉ số độ dài $|\\vec{MN}| / |\\vec{BC}|$ bằng bao nhiêu?",
             "correctAnswer": "0.5",
             "acceptedAnswers": [
               "0.5"
@@ -8338,29 +8338,29 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho tam giác $ABC$. Gọi $D$ là điểm trên cạnh $BC$ sao cho $BD = \frac{2}{3}CD$. Biểu diễn $\u000bec{AD} = x\u000bec{AB} + y\u000bec{AC}$. Tính giá trị của $5x - 5y$.",
+            "question": "**Câu 5:** Cho tam giác $ABC$. Gọi $D$ là điểm trên cạnh $BC$ sao cho $BD = \\frac{2}{3}CD$. Biểu diễn $\\vec{AD} = x\\vec{AB} + y\\vec{AC}$. Tính giá trị của $5x - 5y$.",
             "correctAnswer": "1",
             "acceptedAnswers": [
               "1"
             ],
-            "explanation": "$BD = \frac{2}{5}BC, CD = \frac{3}{5}BC \\Rightarrow \u000bec{AD} = \frac{3}{5}\u000bec{AB} + \frac{2}{5}\u000bec{AC} \\Rightarrow x = 3/5, y = 2/5 \\Rightarrow 5x - 5y = 3 - 2 = 1$."
+            "explanation": "$BD = \\frac{2}{5}BC, CD = \\frac{3}{5}BC \\Rightarrow \\vec{AD} = \\frac{3}{5}\\vec{AB} + \\frac{2}{5}\\vec{AC} \\Rightarrow x = 3/5, y = 2/5 \\Rightarrow 5x - 5y = 3 - 2 = 1$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một thanh thép nhẹ có chiều dài $2\text{ m}$ treo hai quả cầu kim loại ở hai đầu: đầu $A$ treo quả cầu $4\text{ kg}$, đầu $B$ treo quả cầu $6\text{ kg}$. Để thanh cân bằng nằm ngang, điểm treo $O$ phải cách đầu $A$ một khoảng bằng bao nhiêu mét?",
+            "question": "**Câu 6:** Một thanh thép nhẹ có chiều dài $2\\text{ m}$ treo hai quả cầu kim loại ở hai đầu: đầu $A$ treo quả cầu $4\\text{ kg}$, đầu $B$ treo quả cầu $6\\text{ kg}$. Để thanh cân bằng nằm ngang, điểm treo $O$ phải cách đầu $A$ một khoảng bằng bao nhiêu mét?",
             "correctAnswer": "1.2",
             "acceptedAnswers": [
               "1.2"
             ],
-            "explanation": "$P_1 \\cdot OA = P_2 \\cdot OB \\Leftrightarrow 4 x = 6 (2 - x) \\Leftrightarrow 10x = 12 \\Rightarrow x = 1.2\text{ m}$."
+            "explanation": "$P_1 \\cdot OA = P_2 \\cdot OB \\Leftrightarrow 4 x = 6 (2 - x) \\Leftrightarrow 10x = 12 \\Rightarrow x = 1.2\\text{ m}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho đoạn thẳng $AB = 24$. Điểm $M$ thoả mãn $\u000bec{AM} = \frac{3}{4}\u000bec{AB}$. Độ dài $BM$ bằng bao nhiêu?",
+            "question": "**Câu 1:** Cho đoạn thẳng $AB = 24$. Điểm $M$ thoả mãn $\\vec{AM} = \\frac{3}{4}\\vec{AB}$. Độ dài $BM$ bằng bao nhiêu?",
             "correctAnswer": "6",
             "acceptedAnswers": [
               "6"
@@ -8375,22 +8375,22 @@
             "acceptedAnswers": [
               "5"
             ],
-            "explanation": "$GM = \frac{1}{3} \times 15 = 5$."
+            "explanation": "$GM = \\frac{1}{3} \\times 15 = 5$."
           },
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Cho vectơ $\u000bec{a}$ có độ dài 6. Tính độ dài vectơ $\u000bec{b} = -2.5\u000bec{a}$.",
+            "question": "**Câu 3:** Cho vectơ $\\vec{a}$ có độ dài 6. Tính độ dài vectơ $\\vec{b} = -2.5\\vec{a}$.",
             "correctAnswer": "15",
             "acceptedAnswers": [
               "15"
             ],
-            "explanation": "$|\u000bec{b}| = 2.5 \times 6 = 15$."
+            "explanation": "$|\\vec{b}| = 2.5 \\times 6 = 15$."
           },
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho tam giác $ABC$. Gọi $M$ là trung điểm $AB$ và $N$ là trung điểm $AC$. Tỉ số độ dài $|\u000bec{MN}| / |\u000bec{BC}|$ bằng bao nhiêu?",
+            "question": "**Câu 4:** Cho tam giác $ABC$. Gọi $M$ là trung điểm $AB$ và $N$ là trung điểm $AC$. Tỉ số độ dài $|\\vec{MN}| / |\\vec{BC}|$ bằng bao nhiêu?",
             "correctAnswer": "0.5",
             "acceptedAnswers": [
               "0.5"
@@ -8400,22 +8400,22 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho tam giác $ABC$. Gọi $D$ là điểm trên cạnh $BC$ sao cho $BD = \frac{2}{3}CD$. Biểu diễn $\u000bec{AD} = x\u000bec{AB} + y\u000bec{AC}$. Tính giá trị của $5x - 5y$.",
+            "question": "**Câu 5:** Cho tam giác $ABC$. Gọi $D$ là điểm trên cạnh $BC$ sao cho $BD = \\frac{2}{3}CD$. Biểu diễn $\\vec{AD} = x\\vec{AB} + y\\vec{AC}$. Tính giá trị của $5x - 5y$.",
             "correctAnswer": "1",
             "acceptedAnswers": [
               "1"
             ],
-            "explanation": "$BD = \frac{2}{5}BC, CD = \frac{3}{5}BC \\Rightarrow \u000bec{AD} = \frac{3}{5}\u000bec{AB} + \frac{2}{5}\u000bec{AC} \\Rightarrow x = 3/5, y = 2/5 \\Rightarrow 5x - 5y = 3 - 2 = 1$."
+            "explanation": "$BD = \\frac{2}{5}BC, CD = \\frac{3}{5}BC \\Rightarrow \\vec{AD} = \\frac{3}{5}\\vec{AB} + \\frac{2}{5}\\vec{AC} \\Rightarrow x = 3/5, y = 2/5 \\Rightarrow 5x - 5y = 3 - 2 = 1$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một thanh thép nhẹ có chiều dài $2\text{ m}$ treo hai quả cầu kim loại ở hai đầu: đầu $A$ treo quả cầu $4\text{ kg}$, đầu $B$ treo quả cầu $6\text{ kg}$. Để thanh cân bằng nằm ngang, điểm treo $O$ phải cách đầu $A$ một khoảng bằng bao nhiêu mét?",
+            "question": "**Câu 6:** Một thanh thép nhẹ có chiều dài $2\\text{ m}$ treo hai quả cầu kim loại ở hai đầu: đầu $A$ treo quả cầu $4\\text{ kg}$, đầu $B$ treo quả cầu $6\\text{ kg}$. Để thanh cân bằng nằm ngang, điểm treo $O$ phải cách đầu $A$ một khoảng bằng bao nhiêu mét?",
             "correctAnswer": "1.2",
             "acceptedAnswers": [
               "1.2"
             ],
-            "explanation": "$P_1 \\cdot OA = P_2 \\cdot OB \\Leftrightarrow 4 x = 6 (2 - x) \\Leftrightarrow 10x = 12 \\Rightarrow x = 1.2\text{ m}$."
+            "explanation": "$P_1 \\cdot OA = P_2 \\cdot OB \\Leftrightarrow 4 x = 6 (2 - x) \\Leftrightarrow 10x = 12 \\Rightarrow x = 1.2\\text{ m}$."
           }
         ],
         "essayQuestions": [
@@ -8425,31 +8425,31 @@
             "title": "Các tính chất của phép nhân vectơ với số",
             "maxScore": 0.5,
             "question": "**Bài 1 (0.50 điểm):** Nêu các tính chất cơ bản của phép nhân một vectơ với một số thực (tính phân phối, tính kết hợp).",
-            "explanation": "Với hai vectơ $\u000bec{a}, \u000bec{b}$ bất kì và hai số thực $h, k$:\n1. Tính phân phối đối với phép cộng vectơ: $k(\u000bec{a} + \u000bec{b}) = k\u000bec{a} + k\u000bec{b}$.\n2. Tính phân phối đối với phép cộng số thực: $(h + k)\u000bec{a} = h\u000bec{a} + k\u000bec{a}$.\n3. Tính kết hợp: $h(k\u000bec{a}) = (hk)\u000bec{a}$.\n4. Nhân với số 1 và số $-1$: $1\u000bec{a} = \u000bec{a}$, $(-1)\u000bec{a} = -\u000bec{a}$."
+            "explanation": "Với hai vectơ $\\vec{a}, \\vec{b}$ bất kì và hai số thực $h, k$:\n1. Tính phân phối đối với phép cộng vectơ: $k(\\vec{a} + \\vec{b}) = k\\vec{a} + k\\vec{b}$.\n2. Tính phân phối đối với phép cộng số thực: $(h + k)\\vec{a} = h\\vec{a} + k\\vec{a}$.\n3. Tính kết hợp: $h(k\\vec{a}) = (hk)\\vec{a}$.\n4. Nhân với số 1 và số $-1$: $1\\vec{a} = \\vec{a}$, $(-1)\\vec{a} = -\\vec{a}$."
           },
           {
             "id": 2,
             "level": "TH",
             "title": "Ứng dụng vectơ chứng minh trung điểm",
             "maxScore": 0.5,
-            "question": "**Bài 2 (0.50 điểm):** Cho tam giác $ABC$. Lấy điểm $D$ sao cho $\u000bec{AD} = \u000bec{BC}$.\na) Tứ giác $ABCD$ là hình gì? Chứng minh.\nb) Gọi $M$ là trung điểm của $AC$. Chứng minh $M$ cũng là trung điểm của $BD$.",
-            "explanation": "a) Ta có $\u000bec{AD} = \u000bec{BC} \\Rightarrow AD \\parallel BC$ và $AD = BC$. Do đó tứ giác $ABCD$ có một cặp cạnh đối song song và bằng nhau nên $ABCD$ là hình bình hành.\nb) Trong hình bình hành $ABCD$, hai đường chéo $AC$ và $BD$ cắt nhau tại trung điểm của mỗi đường. Vì $M$ là trung điểm của $AC$ nên $M$ đồng thời là giao điểm của hai đường chéo, suy ra $M$ cũng là trung điểm của $BD$."
+            "question": "**Bài 2 (0.50 điểm):** Cho tam giác $ABC$. Lấy điểm $D$ sao cho $\\vec{AD} = \\vec{BC}$.\na) Tứ giác $ABCD$ là hình gì? Chứng minh.\nb) Gọi $M$ là trung điểm của $AC$. Chứng minh $M$ cũng là trung điểm của $BD$.",
+            "explanation": "a) Ta có $\\vec{AD} = \\vec{BC} \\Rightarrow AD \\parallel BC$ và $AD = BC$. Do đó tứ giác $ABCD$ có một cặp cạnh đối song song và bằng nhau nên $ABCD$ là hình bình hành.\nb) Trong hình bình hành $ABCD$, hai đường chéo $AC$ và $BD$ cắt nhau tại trung điểm của mỗi đường. Vì $M$ là trung điểm của $AC$ nên $M$ đồng thời là giao điểm của hai đường chéo, suy ra $M$ cũng là trung điểm của $BD$."
           },
           {
             "id": 3,
             "level": "VD",
             "title": "Phân tích vectơ trong hình thang",
             "maxScore": 0.5,
-            "question": "**Bài 3 (0.50 điểm):** Cho hình thang $ABCD$ ($AB \\parallel CD$) có đáy lớn $CD = 3 AB$. Gọi $M$ là trung điểm của đáy lớn $CD$.\na) Biểu diễn vectơ $\u000bec{DM}$ theo $\u000bec{AB}$.\nb) Biểu diễn vectơ $\u000bec{AM}$ theo hai vectơ $\u000bec{AD}$ và $\u000bec{AB}$.",
-            "explanation": "a) Do $CD = 3 AB$ và $M$ là trung điểm $CD$ nên $DM = \frac{1}{2} CD = \frac{3}{2} AB$. Vì hai vectơ $\u000bec{DM}$ và $\u000bec{AB}$ cùng hướng (cùng từ trái sang phải) nên: $\u000bec{DM} = \frac{3}{2}\u000bec{AB}$.\nb) Theo quy tắc ba điểm: $\u000bec{AM} = \u000bec{AD} + \u000bec{DM}$. Thay kết quả câu a vào ta được: $\u000bec{AM} = \u000bec{AD} + \frac{3}{2}\u000bec{AB}$."
+            "question": "**Bài 3 (0.50 điểm):** Cho hình thang $ABCD$ ($AB \\parallel CD$) có đáy lớn $CD = 3 AB$. Gọi $M$ là trung điểm của đáy lớn $CD$.\na) Biểu diễn vectơ $\\vec{DM}$ theo $\\vec{AB}$.\nb) Biểu diễn vectơ $\\vec{AM}$ theo hai vectơ $\\vec{AD}$ và $\\vec{AB}$.",
+            "explanation": "a) Do $CD = 3 AB$ và $M$ là trung điểm $CD$ nên $DM = \\frac{1}{2} CD = \\frac{3}{2} AB$. Vì hai vectơ $\\vec{DM}$ và $\\vec{AB}$ cùng hướng (cùng từ trái sang phải) nên: $\\vec{DM} = \\frac{3}{2}\\vec{AB}$.\nb) Theo quy tắc ba điểm: $\\vec{AM} = \\vec{AD} + \\vec{DM}$. Thay kết quả câu a vào ta được: $\\vec{AM} = \\vec{AD} + \\frac{3}{2}\\vec{AB}$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Bài toán thực tế tâm khối (trọng tâm) hệ chất điểm",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Trên một đường thẳng ray thẳng tắp, có ba chiếc xe goòng chở quặng đặt tại các vị trí $A, B, C$ thẳng hàng. Xe tại $A$ nặng $2\text{ tấn}$, xe tại $B$ nặng $3\text{ tấn}$, xe tại $C$ nặng $5\text{ tấn}$. Biết $AB = 6\text{ m}$ và $BC = 4\text{ m}$ ($B$ nằm giữa $A$ và $C$).\na) Viết hệ thức vectơ xác định khối tâm (điểm cân bằng) $G$ của hệ ba xe goòng: $2\u000bec{GA} + 3\u000bec{GB} + 5\u000bec{GC} = \u000bec{0}$.\nb) Tính khoảng cách từ khối tâm $G$ đến vị trí xe $A$.",
-            "explanation": "a) Đặt gốc toạ độ tại $A$ ($x_A = 0$). Khi đó vị trí của $B$ là $x_B = 6\text{ m}$, vị trí của $C$ là $x_C = 6 + 4 = 10\text{ m}$. Hệ thức vectơ: $2\u000bec{GA} + 3\u000bec{GB} + 5\u000bec{GC} = \u000bec{0} \\Leftrightarrow 2(\u000bec{A} - \u000bec{G}) + 3(\u000bec{B} - \u000bec{G}) + 5(\u000bec{C} - \u000bec{G}) = \u000bec{0} \\Rightarrow 10\u000bec{OG} = 2\u000bec{OA} + 3\u000bec{OB} + 5\u000bec{OC}$.\nb) Toạ độ của khối tâm $G$: $x_G = \frac{2 x_A + 3 x_B + 5 x_C}{2 + 3 + 5} = \frac{2(0) + 3(6) + 5(10)}{10} = \frac{0 + 18 + 50}{10} = \frac{68}{10} = 6.8\text{ m}$. Vậy khoảng cách từ khối tâm $G$ đến xe $A$ là $6.8\text{ m}$ (khối tâm nằm giữa $B$ và $C$, cách $B$ $0.8\text{ m}$)."
+            "question": "**Bài 4 (0.50 điểm):** Trên một đường thẳng ray thẳng tắp, có ba chiếc xe goòng chở quặng đặt tại các vị trí $A, B, C$ thẳng hàng. Xe tại $A$ nặng $2\\text{ tấn}$, xe tại $B$ nặng $3\\text{ tấn}$, xe tại $C$ nặng $5\\text{ tấn}$. Biết $AB = 6\\text{ m}$ và $BC = 4\\text{ m}$ ($B$ nằm giữa $A$ và $C$).\na) Viết hệ thức vectơ xác định khối tâm (điểm cân bằng) $G$ của hệ ba xe goòng: $2\\vec{GA} + 3\\vec{GB} + 5\\vec{GC} = \\vec{0}$.\nb) Tính khoảng cách từ khối tâm $G$ đến vị trí xe $A$.",
+            "explanation": "a) Đặt gốc toạ độ tại $A$ ($x_A = 0$). Khi đó vị trí của $B$ là $x_B = 6\\text{ m}$, vị trí của $C$ là $x_C = 6 + 4 = 10\\text{ m}$. Hệ thức vectơ: $2\\vec{GA} + 3\\vec{GB} + 5\\vec{GC} = \\vec{0} \\Leftrightarrow 2(\\vec{A} - \\vec{G}) + 3(\\vec{B} - \\vec{G}) + 5(\\vec{C} - \\vec{G}) = \\vec{0} \\Rightarrow 10\\vec{OG} = 2\\vec{OA} + 3\\vec{OB} + 5\\vec{OC}$.\nb) Toạ độ của khối tâm $G$: $x_G = \\frac{2 x_A + 3 x_B + 5 x_C}{2 + 3 + 5} = \\frac{2(0) + 3(6) + 5(10)}{10} = \\frac{0 + 18 + 50}{10} = \\frac{68}{10} = 6.8\\text{ m}$. Vậy khoảng cách từ khối tâm $G$ đến xe $A$ là $6.8\\text{ m}$ (khối tâm nằm giữa $B$ và $C$, cách $B$ $0.8\\text{ m}$)."
           }
         ]
       }
@@ -8470,7 +8470,7 @@
           {
             "id": 1,
             "level": "NB",
-            "question": "**Câu 1:** Trong mặt phẳng toạ độ $Oxy$, toạ độ của vectơ đơn vị $\u000bec{i}$ trên trục $Ox$ là",
+            "question": "**Câu 1:** Trong mặt phẳng toạ độ $Oxy$, toạ độ của vectơ đơn vị $\\vec{i}$ trên trục $Ox$ là",
             "options": {
               "A": "$(1; 1)$",
               "B": "$(1; 0)$",
@@ -8478,12 +8478,12 @@
               "D": "$(0; 0)$"
             },
             "correct": "B",
-            "explanation": "Vectơ đơn vị trên trục hoành là $\u000bec{i} = (1; 0)$."
+            "explanation": "Vectơ đơn vị trên trục hoành là $\\vec{i} = (1; 0)$."
           },
           {
             "id": 2,
             "level": "NB",
-            "question": "**Câu 2:** Trong mặt phẳng $Oxy$, cho $\u000bec{u} = 2\u000bec{i} - 5\u000bec{j}$. Toạ độ của vectơ $\u000bec{u}$ là",
+            "question": "**Câu 2:** Trong mặt phẳng $Oxy$, cho $\\vec{u} = 2\\vec{i} - 5\\vec{j}$. Toạ độ của vectơ $\\vec{u}$ là",
             "options": {
               "A": "$(-5; 2)$",
               "B": "$(2; 5)$",
@@ -8491,16 +8491,16 @@
               "D": "$(2; -5)$"
             },
             "correct": "D",
-            "explanation": "Toạ độ là hệ số trước $\u000bec{i}$ và $\u000bec{j}$."
+            "explanation": "Toạ độ là hệ số trước $\\vec{i}$ và $\\vec{j}$."
           },
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Cho hai điểm $A(x_A; y_A)$ và $B(x_B; y_B)$. Toạ độ của vectơ $\u000bec{AB}$ là",
+            "question": "**Câu 3:** Cho hai điểm $A(x_A; y_A)$ và $B(x_B; y_B)$. Toạ độ của vectơ $\\vec{AB}$ là",
             "options": {
               "A": "$(x_A + x_B; y_A + y_B)$",
               "B": "$(x_A - x_B; y_A - y_B)$",
-              "C": "$\\left(\frac{x_A+x_B}{2}; \frac{y_A+y_B}{2}\right)$",
+              "C": "$\\left(\\frac{x_A+x_B}{2}; \\frac{y_A+y_B}{2}\\right)$",
               "D": "$(x_B - x_A; y_B - y_A)$"
             },
             "correct": "D",
@@ -8509,7 +8509,7 @@
           {
             "id": 4,
             "level": "NB",
-            "question": "**Câu 4:** Cho hai vectơ $\u000bec{a} = (x_1; y_1)$ và $\u000bec{b} = (x_2; y_2)$. Toạ độ của vectơ $\u000bec{a} + \u000bec{b}$ là",
+            "question": "**Câu 4:** Cho hai vectơ $\\vec{a} = (x_1; y_1)$ và $\\vec{b} = (x_2; y_2)$. Toạ độ của vectơ $\\vec{a} + \\vec{b}$ là",
             "options": {
               "A": "$(x_1 - x_2; y_1 - y_2)$",
               "B": "$(x_1 + x_2; y_1 + y_2)$",
@@ -8522,7 +8522,7 @@
           {
             "id": 5,
             "level": "TH",
-            "question": "**Câu 5:** Cho $\u000bec{a} = (3; -2)$ và $\u000bec{b} = (-1; 4)$. Toạ độ của vectơ $\u000bec{u} = 2\u000bec{a} + \u000bec{b}$ là",
+            "question": "**Câu 5:** Cho $\\vec{a} = (3; -2)$ và $\\vec{b} = (-1; 4)$. Toạ độ của vectơ $\\vec{u} = 2\\vec{a} + \\vec{b}$ là",
             "options": {
               "A": "$(5; 0)$",
               "B": "$(2; 2)$",
@@ -8530,7 +8530,7 @@
               "D": "$(7; -8)$"
             },
             "correct": "A",
-            "explanation": "$2\u000bec{a} = (6; -4) \\Rightarrow 2\u000bec{a} + \u000bec{b} = (6 - 1; -4 + 4) = (5; 0)$."
+            "explanation": "$2\\vec{a} = (6; -4) \\Rightarrow 2\\vec{a} + \\vec{b} = (6 - 1; -4 + 4) = (5; 0)$."
           },
           {
             "id": 6,
@@ -8561,7 +8561,7 @@
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho $\u000bec{u} = (2; -3)$. Độ dài của vectơ $\u000bec{u}$ bằng",
+            "question": "**Câu 8:** Cho $\\vec{u} = (2; -3)$. Độ dài của vectơ $\\vec{u}$ bằng",
             "options": {
               "A": "$5$",
               "B": "$\\sqrt{5}$",
@@ -8569,7 +8569,7 @@
               "D": "$13$"
             },
             "correct": "C",
-            "explanation": "$|\u000bec{u}| = \\sqrt{2^2 + (-3)^2} = \\sqrt{4 + 9} = \\sqrt{13}$."
+            "explanation": "$|\\vec{u}| = \\sqrt{2^2 + (-3)^2} = \\sqrt{4 + 9} = \\sqrt{13}$."
           },
           {
             "id": 9,
@@ -8582,12 +8582,12 @@
               "D": "$(6; 3)$"
             },
             "correct": "A",
-            "explanation": "$\u000bec{AB} = (4; -1)$. $D(x; y) \\Rightarrow \u000bec{DC} = (2 - x; 4 - y)$. $\u000bec{AB} = \u000bec{DC} \\Leftrightarrow 2 - x = 4 \\Rightarrow x = -2; 4 - y = -1 \\Rightarrow y = 5$."
+            "explanation": "$\\vec{AB} = (4; -1)$. $D(x; y) \\Rightarrow \\vec{DC} = (2 - x; 4 - y)$. $\\vec{AB} = \\vec{DC} \\Leftrightarrow 2 - x = 4 \\Rightarrow x = -2; 4 - y = -1 \\Rightarrow y = 5$."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Cho $\u000bec{a} = (2; -1)$ và $\u000bec{b} = (x; 3)$. Hai vectơ $\u000bec{a}$ và $\u000bec{b}$ cùng phương khi $x$ bằng",
+            "question": "**Câu 10:** Cho $\\vec{a} = (2; -1)$ và $\\vec{b} = (x; 3)$. Hai vectơ $\\vec{a}$ và $\\vec{b}$ cùng phương khi $x$ bằng",
             "options": {
               "A": "$1.5$",
               "B": "$-1.5$",
@@ -8595,25 +8595,25 @@
               "D": "$6$"
             },
             "correct": "C",
-            "explanation": "$\frac{x}{2} = \frac{3}{-1} \\Rightarrow x = -6$."
+            "explanation": "$\\frac{x}{2} = \\frac{3}{-1} \\Rightarrow x = -6$."
           },
           {
             "id": 11,
             "level": "VDC",
             "question": "**Câu 11:** Trong mặt phẳng $Oxy$, cho ba điểm $A(1; 1), B(2; 4), C(10; -2)$. Điểm $M$ trên trục hoành sao cho ba điểm $A, B, M$ thẳng hàng có toạ độ là",
             "options": {
-              "A": "$\\left(\frac{2}{3}; 0\right)$",
+              "A": "$\\left(\\frac{2}{3}; 0\\right)$",
               "B": "$(0; -2)$",
               "C": "$(3; 0)$",
               "D": "$(1; 0)$"
             },
             "correct": "A",
-            "explanation": "$\u000bec{AB} = (1; 3)$. $M(m; 0) \\Rightarrow \u000bec{AM} = (m - 1; -1)$. $A, B, M$ thẳng hàng $\\Leftrightarrow \frac{m - 1}{1} = \frac{-1}{3} \\Rightarrow m - 1 = -1/3 \\Rightarrow m = 2/3$."
+            "explanation": "$\\vec{AB} = (1; 3)$. $M(m; 0) \\Rightarrow \\vec{AM} = (m - 1; -1)$. $A, B, M$ thẳng hàng $\\Leftrightarrow \\frac{m - 1}{1} = \\frac{-1}{3} \\Rightarrow m - 1 = -1/3 \\Rightarrow m = 2/3$."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Một chất điểm đang ở vị trí $A(2; 5)$ di chuyển theo hướng của vectơ $\u000bec{v} = (3; 4)$ với tốc độ $10\text{ đơn vị/s}$. Sau $2\text{ giây}$, toạ độ vị trí mới của chất điểm là",
+            "question": "**Câu 12:** Một chất điểm đang ở vị trí $A(2; 5)$ di chuyển theo hướng của vectơ $\\vec{v} = (3; 4)$ với tốc độ $10\\text{ đơn vị/s}$. Sau $2\\text{ giây}$, toạ độ vị trí mới của chất điểm là",
             "options": {
               "A": "$(20; 25)$",
               "B": "$(14; 21)$",
@@ -8621,7 +8621,7 @@
               "D": "$(8; 13)$"
             },
             "correct": "B",
-            "explanation": "Độ dài vectơ hướng: $|\u000bec{v}| = \\sqrt{3^2 + 4^2} = 5$. Vận tốc bằng 10 gấp 2 lần $\u000bec{v}$, tức là vectơ vận tốc $\u000bec{V} = 2\u000bec{v} = (6; 8)$. Sau 2 giây độ dời là $2\u000bec{V} = (12; 16)$. Vị trí mới: $A' = (2 + 12; 5 + 16) = (14; 21)$."
+            "explanation": "Độ dài vectơ hướng: $|\\vec{v}| = \\sqrt{3^2 + 4^2} = 5$. Vận tốc bằng 10 gấp 2 lần $\\vec{v}$, tức là vectơ vận tốc $\\vec{V} = 2\\vec{v} = (6; 8)$. Sau 2 giây độ dời là $2\\vec{V} = (12; 16)$. Vị trí mới: $A' = (2 + 12; 5 + 16) = (14; 21)$."
           }
         ],
         "tfQuestions": [
@@ -8632,7 +8632,7 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Toạ độ của vectơ $\u000bec{AB}$ là $(4; 2)$.",
+                "content": "Toạ độ của vectơ $\\vec{AB}$ là $(4; 2)$.",
                 "correct": true,
                 "explanation": "$(2 - (-2); 3 - 1) = (4; 2)$."
               },
@@ -8648,12 +8648,12 @@
                 "subLabel": "c)",
                 "content": "Ba điểm $A, B, C$ thẳng hàng.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} = (4; 2)$ và $\u000bec{AC} = (2; -4)$, không cùng phương."
+                "explanation": "$\\vec{AB} = (4; 2)$ và $\\vec{AC} = (2; -4)$, không cùng phương."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Toạ độ trọng tâm $G$ của tam giác $ABC$ là $(0; \frac{1}{3})$.",
+                "content": "Toạ độ trọng tâm $G$ của tam giác $ABC$ là $(0; \\frac{1}{3})$.",
                 "correct": true,
                 "explanation": "$((-2+2+0)/3; (1+3-3)/3) = (0; 1/3)$."
               }
@@ -8661,33 +8661,33 @@
           },
           {
             "id": 2,
-            "context": "**Câu 2:** Trong mặt phẳng $Oxy$, cho hai vectơ $\u000bec{a} = (3; -4)$ và $\u000bec{b} = (-6; 8)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "context": "**Câu 2:** Trong mặt phẳng $Oxy$, cho hai vectơ $\\vec{a} = (3; -4)$ và $\\vec{b} = (-6; 8)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Độ dài của vectơ $\u000bec{a}$ bằng 5.",
+                "content": "Độ dài của vectơ $\\vec{a}$ bằng 5.",
                 "correct": true,
-                "explanation": "$|\u000bec{a}| = \\sqrt{9 + 16} = 5$."
+                "explanation": "$|\\vec{a}| = \\sqrt{9 + 16} = 5$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài của vectơ $\u000bec{b}$ bằng 10.",
+                "content": "Độ dài của vectơ $\\vec{b}$ bằng 10.",
                 "correct": true,
-                "explanation": "$|\u000bec{b}| = \\sqrt{36 + 64} = 10$."
+                "explanation": "$|\\vec{b}| = \\sqrt{36 + 64} = 10$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Hai vectơ $\u000bec{a}$ và $\u000bec{b}$ cùng hướng.",
+                "content": "Hai vectơ $\\vec{a}$ và $\\vec{b}$ cùng hướng.",
                 "correct": false,
-                "explanation": "$\u000bec{b} = -2\u000bec{a}$ nên hai vectơ ngược hướng."
+                "explanation": "$\\vec{b} = -2\\vec{a}$ nên hai vectơ ngược hướng."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Toạ độ của vectơ $\u000bec{u} = 2\u000bec{a} + \u000bec{b}$ là $\u000bec{0} = (0; 0)$.",
+                "content": "Toạ độ của vectơ $\\vec{u} = 2\\vec{a} + \\vec{b}$ là $\\vec{0} = (0; 0)$.",
                 "correct": true,
                 "explanation": "$2(3; -4) + (-6; 8) = (6 - 6; -8 + 8) = (0; 0)$."
               }
@@ -8702,7 +8702,7 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Toạ độ của vectơ $\u000bec{AB}$ là $(4; 2)$.",
+                "content": "Toạ độ của vectơ $\\vec{AB}$ là $(4; 2)$.",
                 "correct": true,
                 "explanation": "$(2 - (-2); 3 - 1) = (4; 2)$."
               },
@@ -8718,12 +8718,12 @@
                 "subLabel": "c)",
                 "content": "Ba điểm $A, B, C$ thẳng hàng.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} = (4; 2)$ và $\u000bec{AC} = (2; -4)$, không cùng phương."
+                "explanation": "$\\vec{AB} = (4; 2)$ và $\\vec{AC} = (2; -4)$, không cùng phương."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Toạ độ trọng tâm $G$ của tam giác $ABC$ là $(0; \frac{1}{3})$.",
+                "content": "Toạ độ trọng tâm $G$ của tam giác $ABC$ là $(0; \\frac{1}{3})$.",
                 "correct": true,
                 "explanation": "$((-2+2+0)/3; (1+3-3)/3) = (0; 1/3)$."
               }
@@ -8731,33 +8731,33 @@
           },
           {
             "id": 2,
-            "context": "**Câu 2:** Trong mặt phẳng $Oxy$, cho hai vectơ $\u000bec{a} = (3; -4)$ và $\u000bec{b} = (-6; 8)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "context": "**Câu 2:** Trong mặt phẳng $Oxy$, cho hai vectơ $\\vec{a} = (3; -4)$ và $\\vec{b} = (-6; 8)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Độ dài của vectơ $\u000bec{a}$ bằng 5.",
+                "content": "Độ dài của vectơ $\\vec{a}$ bằng 5.",
                 "correct": true,
-                "explanation": "$|\u000bec{a}| = \\sqrt{9 + 16} = 5$."
+                "explanation": "$|\\vec{a}| = \\sqrt{9 + 16} = 5$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài của vectơ $\u000bec{b}$ bằng 10.",
+                "content": "Độ dài của vectơ $\\vec{b}$ bằng 10.",
                 "correct": true,
-                "explanation": "$|\u000bec{b}| = \\sqrt{36 + 64} = 10$."
+                "explanation": "$|\\vec{b}| = \\sqrt{36 + 64} = 10$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Hai vectơ $\u000bec{a}$ và $\u000bec{b}$ cùng hướng.",
+                "content": "Hai vectơ $\\vec{a}$ và $\\vec{b}$ cùng hướng.",
                 "correct": false,
-                "explanation": "$\u000bec{b} = -2\u000bec{a}$ nên hai vectơ ngược hướng."
+                "explanation": "$\\vec{b} = -2\\vec{a}$ nên hai vectơ ngược hướng."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Toạ độ của vectơ $\u000bec{u} = 2\u000bec{a} + \u000bec{b}$ là $\u000bec{0} = (0; 0)$.",
+                "content": "Toạ độ của vectơ $\\vec{u} = 2\\vec{a} + \\vec{b}$ là $\\vec{0} = (0; 0)$.",
                 "correct": true,
                 "explanation": "$2(3; -4) + (-6; 8) = (6 - 6; -8 + 8) = (0; 0)$."
               }
@@ -8778,7 +8778,7 @@
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho $\u000bec{a} = (4; -2)$ và $\u000bec{b} = (1; 5)$. Tìm hoành độ của vectơ $\u000bec{u} = 3\u000bec{a} - 2\u000bec{b}$.",
+            "question": "**Câu 2:** Cho $\\vec{a} = (4; -2)$ và $\\vec{b} = (1; 5)$. Tìm hoành độ của vectơ $\\vec{u} = 3\\vec{a} - 2\\vec{b}$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
@@ -8798,7 +8798,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Tìm số thực $m$ để hai vectơ $\u000bec{u} = (m; 6)$ và $\u000bec{v} = (2; -3)$ cùng phương.",
+            "question": "**Câu 4:** Tìm số thực $m$ để hai vectơ $\\vec{u} = (m; 6)$ và $\\vec{v} = (2; -3)$ cùng phương.",
             "correctAnswer": "-4",
             "acceptedAnswers": [
               "-4"
@@ -8813,7 +8813,7 @@
             "acceptedAnswers": [
               "5"
             ],
-            "explanation": "$\u000bec{AB} = (3; 3) = \u000bec{DC} = (3 - x; 8 - y) \\Rightarrow x = 0, y = 5 \\Rightarrow x + y = 5$."
+            "explanation": "$\\vec{AB} = (3; 3) = \\vec{DC} = (3 - x; 8 - y) \\Rightarrow x = 0, y = 5 \\Rightarrow x + y = 5$."
           },
           {
             "id": 6,
@@ -8823,7 +8823,7 @@
             "acceptedAnswers": [
               "1000"
             ],
-            "explanation": "$OA = \\sqrt{600^2 + 800^2} = 1000\text{ m}$."
+            "explanation": "$OA = \\sqrt{600^2 + 800^2} = 1000\\text{ m}$."
           }
         ],
         "shortAnswers": [
@@ -8840,7 +8840,7 @@
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho $\u000bec{a} = (4; -2)$ và $\u000bec{b} = (1; 5)$. Tìm hoành độ của vectơ $\u000bec{u} = 3\u000bec{a} - 2\u000bec{b}$.",
+            "question": "**Câu 2:** Cho $\\vec{a} = (4; -2)$ và $\\vec{b} = (1; 5)$. Tìm hoành độ của vectơ $\\vec{u} = 3\\vec{a} - 2\\vec{b}$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
@@ -8860,7 +8860,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Tìm số thực $m$ để hai vectơ $\u000bec{u} = (m; 6)$ và $\u000bec{v} = (2; -3)$ cùng phương.",
+            "question": "**Câu 4:** Tìm số thực $m$ để hai vectơ $\\vec{u} = (m; 6)$ và $\\vec{v} = (2; -3)$ cùng phương.",
             "correctAnswer": "-4",
             "acceptedAnswers": [
               "-4"
@@ -8875,7 +8875,7 @@
             "acceptedAnswers": [
               "5"
             ],
-            "explanation": "$\u000bec{AB} = (3; 3) = \u000bec{DC} = (3 - x; 8 - y) \\Rightarrow x = 0, y = 5 \\Rightarrow x + y = 5$."
+            "explanation": "$\\vec{AB} = (3; 3) = \\vec{DC} = (3 - x; 8 - y) \\Rightarrow x = 0, y = 5 \\Rightarrow x + y = 5$."
           },
           {
             "id": 6,
@@ -8885,7 +8885,7 @@
             "acceptedAnswers": [
               "1000"
             ],
-            "explanation": "$OA = \\sqrt{600^2 + 800^2} = 1000\text{ m}$."
+            "explanation": "$OA = \\sqrt{600^2 + 800^2} = 1000\\text{ m}$."
           }
         ],
         "essayQuestions": [
@@ -8894,8 +8894,8 @@
             "level": "NB",
             "title": "Hệ toạ độ và toạ độ của vectơ",
             "maxScore": 0.5,
-            "question": "**Bài 1 (0.50 điểm):** Định nghĩa toạ độ của một vectơ trong mặt phẳng toạ độ $Oxy$ dựa vào các vectơ đơn vị $\u000bec{i}, \u000bec{j}$. Viết toạ độ của vectơ $\u000bec{u} = 4\u000bec{i} - 7\u000bec{j}$.",
-            "explanation": "1. Định nghĩa: Trong mặt phẳng toạ độ $Oxy$, hệ gồm hai trục toạ độ $Ox$ và $Oy$ vuông góc với nhau tại gốc $O$, với các vectơ đơn vị lần lượt là $\u000bec{i}$ (trên $Ox$) và $\u000bec{j}$ (trên $Oy$). Với mỗi vectơ $\u000bec{u}$ bất kì trong mặt phẳng, luôn tồn tại duy nhất cặp số $(x; y)$ sao cho $\u000bec{u} = x\u000bec{i} + y\u000bec{j}$. Cặp số $(x; y)$ đó được gọi là toạ độ của vectơ $\u000bec{u}$, kí hiệu là $\u000bec{u} = (x; y)$.\n2. Với $\u000bec{u} = 4\u000bec{i} - 7\u000bec{j}$, toạ độ của vectơ là $\u000bec{u} = (4; -7)$."
+            "question": "**Bài 1 (0.50 điểm):** Định nghĩa toạ độ của một vectơ trong mặt phẳng toạ độ $Oxy$ dựa vào các vectơ đơn vị $\\vec{i}, \\vec{j}$. Viết toạ độ của vectơ $\\vec{u} = 4\\vec{i} - 7\\vec{j}$.",
+            "explanation": "1. Định nghĩa: Trong mặt phẳng toạ độ $Oxy$, hệ gồm hai trục toạ độ $Ox$ và $Oy$ vuông góc với nhau tại gốc $O$, với các vectơ đơn vị lần lượt là $\\vec{i}$ (trên $Ox$) và $\\vec{j}$ (trên $Oy$). Với mỗi vectơ $\\vec{u}$ bất kì trong mặt phẳng, luôn tồn tại duy nhất cặp số $(x; y)$ sao cho $\\vec{u} = x\\vec{i} + y\\vec{j}$. Cặp số $(x; y)$ đó được gọi là toạ độ của vectơ $\\vec{u}$, kí hiệu là $\\vec{u} = (x; y)$.\n2. Với $\\vec{u} = 4\\vec{i} - 7\\vec{j}$, toạ độ của vectơ là $\\vec{u} = (4; -7)$."
           },
           {
             "id": 2,
@@ -8903,23 +8903,23 @@
             "title": "Công thức toạ độ trung điểm và trọng tâm",
             "maxScore": 0.5,
             "question": "**Bài 2 (0.50 điểm):** Cho tam giác $ABC$ có toạ độ ba đỉnh là $A(x_A; y_A), B(x_B; y_B), C(x_C; y_C)$.\na) Viết công thức toạ độ trung điểm $M$ của đoạn thẳng $BC$.\nb) Viết công thức toạ độ trọng tâm $G$ của tam giác $ABC$.\nc) Áp dụng với $A(1; 4), B(3; 0), C(-1; 2)$.",
-            "explanation": "a) Toạ độ trung điểm $M$ của $BC$: $x_M = \frac{x_B + x_C}{2}$, $y_M = \frac{y_B + y_C}{2}$.\nb) Toạ độ trọng tâm $G$ của $\triangle ABC$: $x_G = \frac{x_A + x_B + x_C}{3}$, $y_G = \frac{y_A + y_B + y_C}{3}$.\nc) Áp dụng số liệu: $M = \\left(\frac{3 - 1}{2}; \frac{0 + 2}{2}\right) = (1; 1)$. $G = \\left(\frac{1 + 3 - 1}{3}; \frac{4 + 0 + 2}{3}\right) = \\left(\frac{3}{3}; \frac{6}{3}\right) = (1; 2)$."
+            "explanation": "a) Toạ độ trung điểm $M$ của $BC$: $x_M = \\frac{x_B + x_C}{2}$, $y_M = \\frac{y_B + y_C}{2}$.\nb) Toạ độ trọng tâm $G$ của $\\triangle ABC$: $x_G = \\frac{x_A + x_B + x_C}{3}$, $y_G = \\frac{y_A + y_B + y_C}{3}$.\nc) Áp dụng số liệu: $M = \\left(\\frac{3 - 1}{2}; \\frac{0 + 2}{2}\\right) = (1; 1)$. $G = \\left(\\frac{1 + 3 - 1}{3}; \\frac{4 + 0 + 2}{3}\\right) = \\left(\\frac{3}{3}; \\frac{6}{3}\\right) = (1; 2)$."
           },
           {
             "id": 3,
             "level": "VD",
             "title": "Tìm toạ độ đỉnh thứ tư của hình bình hành",
             "maxScore": 0.5,
-            "question": "**Bài 3 (0.50 điểm):** Trong mặt phẳng $Oxy$, cho ba điểm không thẳng hàng $A(2; 3), B(6; 1), C(4; 5)$.\na) Tìm toạ độ các vectơ $\u000bec{AB}$ và $\u000bec{BC}$.\nb) Tìm toạ độ đỉnh $D$ để tứ giác $ABCD$ là một hình bình hành.",
-            "explanation": "a) $\u000bec{AB} = (6 - 2; 1 - 3) = (4; -2)$. $\u000bec{BC} = (4 - 6; 5 - 1) = (-2; 4)$.\nb) Gọi toạ độ đỉnh $D$ là $(x_D; y_D)$. Tứ giác $ABCD$ là hình bình hành khi và chỉ khi $\u000bec{AB} = \u000bec{DC}$. Ta có $\u000bec{DC} = (4 - x_D; 5 - y_D)$. Do đó: $\begin{cases} 4 - x_D = 4 \\ 5 - y_D = -2 \\end{cases} \\Leftrightarrow \begin{cases} x_D = 0 \\ y_D = 7 \\end{cases}$. Vậy đỉnh $D$ có toạ độ là $D(0; 7)$."
+            "question": "**Bài 3 (0.50 điểm):** Trong mặt phẳng $Oxy$, cho ba điểm không thẳng hàng $A(2; 3), B(6; 1), C(4; 5)$.\na) Tìm toạ độ các vectơ $\\vec{AB}$ và $\\vec{BC}$.\nb) Tìm toạ độ đỉnh $D$ để tứ giác $ABCD$ là một hình bình hành.",
+            "explanation": "a) $\\vec{AB} = (6 - 2; 1 - 3) = (4; -2)$. $\\vec{BC} = (4 - 6; 5 - 1) = (-2; 4)$.\nb) Gọi toạ độ đỉnh $D$ là $(x_D; y_D)$. Tứ giác $ABCD$ là hình bình hành khi và chỉ khi $\\vec{AB} = \\vec{DC}$. Ta có $\\vec{DC} = (4 - x_D; 5 - y_D)$. Do đó: $\\begin{cases} 4 - x_D = 4 \\ 5 - y_D = -2 \\end{cases} \\Leftrightarrow \\begin{cases} x_D = 0 \\ y_D = 7 \\end{cases}$. Vậy đỉnh $D$ có toạ độ là $D(0; 7)$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Mô hình hoá chuyển động ra đa hàng hải trên toạ độ Oxy",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Một trạm kiểm soát không lưu đặt tại gốc toạ độ $O(0; 0)$ (đơn vị trên các trục là kilômét). Một máy bay dân dụng đang ở vị trí $M(30; 40)$ và bay thẳng đều theo hướng vectơ vận tốc $\u000bec{v} = (60; 80)$ (đơn vị: $\text{km/h}$).\na) Tính khoảng cách ban đầu từ máy bay đến trạm ra đa $O$.\nb) Tính tốc độ bay của máy bay (độ lớn vectơ vận tốc).\nc) Xác định toạ độ của máy bay sau khi bay được $1.5\text{ giờ}$.",
-            "explanation": "a) Khoảng cách ban đầu từ máy bay đến trạm ra đa: $OM = \\sqrt{30^2 + 40^2} = \\sqrt{900 + 1600} = \\sqrt{2500} = 50\text{ km}$.\nb) Tốc độ bay của máy bay chính là độ dài của vectơ vận tốc $\u000bec{v}$: $v = |\u000bec{v}| = \\sqrt{60^2 + 80^2} = \\sqrt{3600 + 6400} = \\sqrt{10\\,000} = 100\text{ km/h}$.\nc) Sau $t = 1.5\text{ giờ}$, vectơ độ dời của máy bay là: $\u000bec{d} = t \\cdot \u000bec{v} = 1.5 \times (60; 80) = (90; 120)$. Toạ độ vị trí mới $M'$ của máy bay sau 1.5 giờ: $\begin{cases} x_{M'} = x_M + 90 = 30 + 90 = 120 \\ y_{M'} = y_M + 120 = 40 + 120 = 160 \\end{cases}$. Vậy vị trí mới của máy bay là $M'(120; 160)$."
+            "question": "**Bài 4 (0.50 điểm):** Một trạm kiểm soát không lưu đặt tại gốc toạ độ $O(0; 0)$ (đơn vị trên các trục là kilômét). Một máy bay dân dụng đang ở vị trí $M(30; 40)$ và bay thẳng đều theo hướng vectơ vận tốc $\\vec{v} = (60; 80)$ (đơn vị: $\\text{km/h}$).\na) Tính khoảng cách ban đầu từ máy bay đến trạm ra đa $O$.\nb) Tính tốc độ bay của máy bay (độ lớn vectơ vận tốc).\nc) Xác định toạ độ của máy bay sau khi bay được $1.5\\text{ giờ}$.",
+            "explanation": "a) Khoảng cách ban đầu từ máy bay đến trạm ra đa: $OM = \\sqrt{30^2 + 40^2} = \\sqrt{900 + 1600} = \\sqrt{2500} = 50\\text{ km}$.\nb) Tốc độ bay của máy bay chính là độ dài của vectơ vận tốc $\\vec{v}$: $v = |\\vec{v}| = \\sqrt{60^2 + 80^2} = \\sqrt{3600 + 6400} = \\sqrt{10\\,000} = 100\\text{ km/h}$.\nc) Sau $t = 1.5\\text{ giờ}$, vectơ độ dời của máy bay là: $\\vec{d} = t \\cdot \\vec{v} = 1.5 \\times (60; 80) = (90; 120)$. Toạ độ vị trí mới $M'$ của máy bay sau 1.5 giờ: $\\begin{cases} x_{M'} = x_M + 90 = 30 + 90 = 120 \\ y_{M'} = y_M + 120 = 40 + 120 = 160 \\end{cases}$. Vậy vị trí mới của máy bay là $M'(120; 160)$."
           }
         ]
       },
@@ -8940,18 +8940,18 @@
             "level": "NB",
             "question": "**Câu 1:** Vectơ đơn vị trên trục tung $Oy$ là",
             "options": {
-              "A": "$\u000bec{0} = (0; 0)$",
-              "B": "$\u000bec{e} = (1; 1)$",
-              "C": "$\u000bec{i} = (1; 0)$",
-              "D": "$\u000bec{j} = (0; 1)$"
+              "A": "$\\vec{0} = (0; 0)$",
+              "B": "$\\vec{e} = (1; 1)$",
+              "C": "$\\vec{i} = (1; 0)$",
+              "D": "$\\vec{j} = (0; 1)$"
             },
             "correct": "D",
-            "explanation": "Vectơ đơn vị trục tung là $\u000bec{j} = (0; 1)$."
+            "explanation": "Vectơ đơn vị trục tung là $\\vec{j} = (0; 1)$."
           },
           {
             "id": 2,
             "level": "NB",
-            "question": "**Câu 2:** Cho điểm $M(x; y)$. Toạ độ của vectơ $\u000bec{OM}$ là",
+            "question": "**Câu 2:** Cho điểm $M(x; y)$. Toạ độ của vectơ $\\vec{OM}$ là",
             "options": {
               "A": "$(x-1; y-1)$",
               "B": "$(x; y)$",
@@ -8959,12 +8959,12 @@
               "D": "$(y; x)$"
             },
             "correct": "B",
-            "explanation": "Toạ độ điểm chính là toạ độ của vectơ vị trí $\u000bec{OM}$."
+            "explanation": "Toạ độ điểm chính là toạ độ của vectơ vị trí $\\vec{OM}$."
           },
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Cho $\u000bec{u} = (-3; 4)$. Toạ độ của vectơ $-2\u000bec{u}$ là",
+            "question": "**Câu 3:** Cho $\\vec{u} = (-3; 4)$. Toạ độ của vectơ $-2\\vec{u}$ là",
             "options": {
               "A": "$(-6; 8)$",
               "B": "$(6; 8)$",
@@ -8972,12 +8972,12 @@
               "D": "$(-1; 2)$"
             },
             "correct": "C",
-            "explanation": "Nhân toạ độ với $-2$: $(-2 \times (-3); -2 \times 4) = (6; -8)$."
+            "explanation": "Nhân toạ độ với $-2$: $(-2 \\times (-3); -2 \\times 4) = (6; -8)$."
           },
           {
             "id": 4,
             "level": "NB",
-            "question": "**Câu 4:** Cho $\u000bec{a} = (x_1; y_1)$ và $\u000bec{b} = (x_2; y_2)$. Hai vectơ bằng nhau khi và chỉ khi",
+            "question": "**Câu 4:** Cho $\\vec{a} = (x_1; y_1)$ và $\\vec{b} = (x_2; y_2)$. Hai vectơ bằng nhau khi và chỉ khi",
             "options": {
               "A": "$x_1 = x_2$ và $y_1 = y_2$",
               "B": "$x_1 = y_1$ và $x_2 = y_2$",
@@ -8990,7 +8990,7 @@
           {
             "id": 5,
             "level": "TH",
-            "question": "**Câu 5:** Cho hai điểm $A(2; -3)$ và $B(-4; 5)$. Toạ độ của vectơ $\u000bec{AB}$ là",
+            "question": "**Câu 5:** Cho hai điểm $A(2; -3)$ và $B(-4; 5)$. Toạ độ của vectơ $\\vec{AB}$ là",
             "options": {
               "A": "$(-2; 2)$",
               "B": "$(-6; 8)$",
@@ -8998,12 +8998,12 @@
               "D": "$(-1; 1)$"
             },
             "correct": "B",
-            "explanation": "$\u000bec{AB} = (-4 - 2; 5 - (-3)) = (-6; 8)$."
+            "explanation": "$\\vec{AB} = (-4 - 2; 5 - (-3)) = (-6; 8)$."
           },
           {
             "id": 6,
             "level": "TH",
-            "question": "**Câu 6:** Cho $\u000bec{a} = (2; 1)$ và $\u000bec{b} = (-3; 4)$. Toạ độ của vectơ $\u000bec{u} = \u000bec{a} - \u000bec{b}$ là",
+            "question": "**Câu 6:** Cho $\\vec{a} = (2; 1)$ và $\\vec{b} = (-3; 4)$. Toạ độ của vectơ $\\vec{u} = \\vec{a} - \\vec{b}$ là",
             "options": {
               "A": "$(5; 5)$",
               "B": "$(-5; 3)$",
@@ -9011,7 +9011,7 @@
               "D": "$(5; -3)$"
             },
             "correct": "D",
-            "explanation": "$\u000bec{u} = (2 - (-3); 1 - 4) = (5; -3)$."
+            "explanation": "$\\vec{u} = (2 - (-3); 1 - 4) = (5; -3)$."
           },
           {
             "id": 7,
@@ -9029,7 +9029,7 @@
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho $\u000bec{u} = (-6; 8)$. Độ dài của vectơ $\u000bec{u}$ bằng",
+            "question": "**Câu 8:** Cho $\\vec{u} = (-6; 8)$. Độ dài của vectơ $\\vec{u}$ bằng",
             "options": {
               "A": "100",
               "B": "2",
@@ -9037,12 +9037,12 @@
               "D": "14"
             },
             "correct": "C",
-            "explanation": "$|\u000bec{u}| = \\sqrt{(-6)^2 + 8^2} = 10$."
+            "explanation": "$|\\vec{u}| = \\sqrt{(-6)^2 + 8^2} = 10$."
           },
           {
             "id": 9,
             "level": "VD",
-            "question": "**Câu 9:** Cho $A(1; 2), B(-2; 3), C(3; -1)$. Toạ độ điểm $D$ sao cho $\u000bec{AD} = 2\u000bec{BC}$ là",
+            "question": "**Câu 9:** Cho $A(1; 2), B(-2; 3), C(3; -1)$. Toạ độ điểm $D$ sao cho $\\vec{AD} = 2\\vec{BC}$ là",
             "options": {
               "A": "$(10; -8)$",
               "B": "$(11; -6)$",
@@ -9050,12 +9050,12 @@
               "D": "$(9; -4)$"
             },
             "correct": "B",
-            "explanation": "$\u000bec{BC} = (5; -4) \\Rightarrow 2\u000bec{BC} = (10; -8)$. $D(x; y) \\Rightarrow \u000bec{AD} = (x - 1; y - 2) = (10; -8) \\Rightarrow x = 11, y = -6$."
+            "explanation": "$\\vec{BC} = (5; -4) \\Rightarrow 2\\vec{BC} = (10; -8)$. $D(x; y) \\Rightarrow \\vec{AD} = (x - 1; y - 2) = (10; -8) \\Rightarrow x = 11, y = -6$."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Tìm $m$ để hai vectơ $\u000bec{a} = (m - 1; 2)$ và $\u000bec{b} = (3; 1)$ cùng phương.",
+            "question": "**Câu 10:** Tìm $m$ để hai vectơ $\\vec{a} = (m - 1; 2)$ và $\\vec{b} = (3; 1)$ cùng phương.",
             "options": {
               "A": "$m = 6$",
               "B": "$m = -5$",
@@ -9063,7 +9063,7 @@
               "D": "$m = 7$"
             },
             "correct": "D",
-            "explanation": "$\frac{m - 1}{3} = \frac{2}{1} \\Rightarrow m - 1 = 6 \\Rightarrow m = 7$."
+            "explanation": "$\\frac{m - 1}{3} = \\frac{2}{1} \\Rightarrow m - 1 = 6 \\Rightarrow m = 7$."
           },
           {
             "id": 11,
@@ -9076,20 +9076,20 @@
               "D": "$A, B, C$ tạo thành tam giác cân"
             },
             "correct": "C",
-            "explanation": "$\u000bec{AB} = (2; -2), \u000bec{BC} = (4; -4) = 2\u000bec{AB}$. Hơn nữa $x_B = (-1+5)/2 = 2 \ne 1$, kiểm tra lại: $\u000bec{AB} = (2; -2), \u000bec{AC} = (6; -6) = 3\u000bec{AB}$. Vậy $A, B, C$ thẳng hàng."
+            "explanation": "$\\vec{AB} = (2; -2), \\vec{BC} = (4; -4) = 2\\vec{AB}$. Hơn nữa $x_B = (-1+5)/2 = 2 \\ne 1$, kiểm tra lại: $\\vec{AB} = (2; -2), \\vec{AC} = (6; -6) = 3\\vec{AB}$. Vậy $A, B, C$ thẳng hàng."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Trong mặt phẳng $Oxy$, một chiếc tàu kéo đang ở vị trí $P(10; 20)$ cần di chuyển đến vị trí tàu gặp nạn tại $Q(70; 100)$ (đơn vị: hải lý). Biết tàu di chuyển với vận tốc không đổi $25\text{ hải lý/h}$. Thời gian để tàu đến nơi là",
+            "question": "**Câu 12:** Trong mặt phẳng $Oxy$, một chiếc tàu kéo đang ở vị trí $P(10; 20)$ cần di chuyển đến vị trí tàu gặp nạn tại $Q(70; 100)$ (đơn vị: hải lý). Biết tàu di chuyển với vận tốc không đổi $25\\text{ hải lý/h}$. Thời gian để tàu đến nơi là",
             "options": {
-              "A": "$4\text{ giờ}$",
-              "B": "$3.5\text{ giờ}$",
-              "C": "$4.8\text{ giờ}$",
-              "D": "$5\text{ giờ}$"
+              "A": "$4\\text{ giờ}$",
+              "B": "$3.5\\text{ giờ}$",
+              "C": "$4.8\\text{ giờ}$",
+              "D": "$5\\text{ giờ}$"
             },
             "correct": "A",
-            "explanation": "Khoảng cách $PQ = \\sqrt{(70-10)^2 + (100-20)^2} = \\sqrt{60^2 + 80^2} = 100\text{ hải lý}$. Thời gian: $t = 100 / 25 = 4\text{ giờ}$."
+            "explanation": "Khoảng cách $PQ = \\sqrt{(70-10)^2 + (100-20)^2} = \\sqrt{60^2 + 80^2} = 100\\text{ hải lý}$. Thời gian: $t = 100 / 25 = 4\\text{ giờ}$."
           }
         ],
         "tfQuestions": [
@@ -9100,7 +9100,7 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Toạ độ của vectơ $\u000bec{AB}$ là $(2; 4)$.",
+                "content": "Toạ độ của vectơ $\\vec{AB}$ là $(2; 4)$.",
                 "correct": true,
                 "explanation": "$(3 - 1; 6 - 2) = (2; 4)$."
               },
@@ -9123,41 +9123,41 @@
                 "subLabel": "d)",
                 "content": "Ba điểm $A, B, C$ thẳng hàng.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} = (2; 4), \u000bec{AC} = (-2; 6)$, tỉ số $2/(-2) \ne 4/6$ nên không thẳng hàng."
+                "explanation": "$\\vec{AB} = (2; 4), \\vec{AC} = (-2; 6)$, tỉ số $2/(-2) \\ne 4/6$ nên không thẳng hàng."
               }
             ]
           },
           {
             "id": 2,
-            "context": "**Câu 2:** Trong hệ toạ độ $Oxy$, cho vectơ $\u000bec{u} = (-3\u000bec{i} + 4\u000bec{j})$ và điểm $M(2; -1)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "context": "**Câu 2:** Trong hệ toạ độ $Oxy$, cho vectơ $\\vec{u} = (-3\\vec{i} + 4\\vec{j})$ và điểm $M(2; -1)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Toạ độ của vectơ $\u000bec{u}$ là $(-3; 4)$.",
+                "content": "Toạ độ của vectơ $\\vec{u}$ là $(-3; 4)$.",
                 "correct": true,
-                "explanation": "Theo định nghĩa hệ số của $\u000bec{i}, \u000bec{j}$."
+                "explanation": "Theo định nghĩa hệ số của $\\vec{i}, \\vec{j}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{u}| = 5$.",
+                "content": "Độ dài $|\\vec{u}| = 5$.",
                 "correct": true,
                 "explanation": "$\\sqrt{(-3)^2 + 4^2} = 5$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Điểm $N$ thoả mãn $\u000bec{MN} = \u000bec{u}$ có toạ độ là $(-1; 3)$.",
+                "content": "Điểm $N$ thoả mãn $\\vec{MN} = \\vec{u}$ có toạ độ là $(-1; 3)$.",
                 "correct": true,
-                "explanation": "$N = M + \u000bec{u} = (2 - 3; -1 + 4) = (-1; 3)$."
+                "explanation": "$N = M + \\vec{u} = (2 - 3; -1 + 4) = (-1; 3)$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{v} = (6; -8)$ ngược hướng với vectơ $\u000bec{u}$.",
+                "content": "Vectơ $\\vec{v} = (6; -8)$ ngược hướng với vectơ $\\vec{u}$.",
                 "correct": true,
-                "explanation": "$\u000bec{v} = -2\u000bec{u}$ nên ngược hướng."
+                "explanation": "$\\vec{v} = -2\\vec{u}$ nên ngược hướng."
               }
             ]
           }
@@ -9170,7 +9170,7 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Toạ độ của vectơ $\u000bec{AB}$ là $(2; 4)$.",
+                "content": "Toạ độ của vectơ $\\vec{AB}$ là $(2; 4)$.",
                 "correct": true,
                 "explanation": "$(3 - 1; 6 - 2) = (2; 4)$."
               },
@@ -9193,41 +9193,41 @@
                 "subLabel": "d)",
                 "content": "Ba điểm $A, B, C$ thẳng hàng.",
                 "correct": false,
-                "explanation": "$\u000bec{AB} = (2; 4), \u000bec{AC} = (-2; 6)$, tỉ số $2/(-2) \ne 4/6$ nên không thẳng hàng."
+                "explanation": "$\\vec{AB} = (2; 4), \\vec{AC} = (-2; 6)$, tỉ số $2/(-2) \\ne 4/6$ nên không thẳng hàng."
               }
             ]
           },
           {
             "id": 2,
-            "context": "**Câu 2:** Trong hệ toạ độ $Oxy$, cho vectơ $\u000bec{u} = (-3\u000bec{i} + 4\u000bec{j})$ và điểm $M(2; -1)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "context": "**Câu 2:** Trong hệ toạ độ $Oxy$, cho vectơ $\\vec{u} = (-3\\vec{i} + 4\\vec{j})$ và điểm $M(2; -1)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Toạ độ của vectơ $\u000bec{u}$ là $(-3; 4)$.",
+                "content": "Toạ độ của vectơ $\\vec{u}$ là $(-3; 4)$.",
                 "correct": true,
-                "explanation": "Theo định nghĩa hệ số của $\u000bec{i}, \u000bec{j}$."
+                "explanation": "Theo định nghĩa hệ số của $\\vec{i}, \\vec{j}$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{u}| = 5$.",
+                "content": "Độ dài $|\\vec{u}| = 5$.",
                 "correct": true,
                 "explanation": "$\\sqrt{(-3)^2 + 4^2} = 5$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Điểm $N$ thoả mãn $\u000bec{MN} = \u000bec{u}$ có toạ độ là $(-1; 3)$.",
+                "content": "Điểm $N$ thoả mãn $\\vec{MN} = \\vec{u}$ có toạ độ là $(-1; 3)$.",
                 "correct": true,
-                "explanation": "$N = M + \u000bec{u} = (2 - 3; -1 + 4) = (-1; 3)$."
+                "explanation": "$N = M + \\vec{u} = (2 - 3; -1 + 4) = (-1; 3)$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Vectơ $\u000bec{v} = (6; -8)$ ngược hướng với vectơ $\u000bec{u}$.",
+                "content": "Vectơ $\\vec{v} = (6; -8)$ ngược hướng với vectơ $\\vec{u}$.",
                 "correct": true,
-                "explanation": "$\u000bec{v} = -2\u000bec{u}$ nên ngược hướng."
+                "explanation": "$\\vec{v} = -2\\vec{u}$ nên ngược hướng."
               }
             ]
           }
@@ -9236,7 +9236,7 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho hai điểm $A(-2; 5)$ và $B(4; -3)$. Tính độ dài của vectơ $\u000bec{AB}$.",
+            "question": "**Câu 1:** Cho hai điểm $A(-2; 5)$ và $B(4; -3)$. Tính độ dài của vectơ $\\vec{AB}$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
@@ -9246,7 +9246,7 @@
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho $\u000bec{u} = (3; -5)$ và $\u000bec{v} = (-2; 4)$. Tìm tung độ của vectơ $\u000bec{w} = 2\u000bec{u} + 3\u000bec{v}$.",
+            "question": "**Câu 2:** Cho $\\vec{u} = (3; -5)$ và $\\vec{v} = (-2; 4)$. Tìm tung độ của vectơ $\\vec{w} = 2\\vec{u} + 3\\vec{v}$.",
             "correctAnswer": "2",
             "acceptedAnswers": [
               "2"
@@ -9266,7 +9266,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Tìm $x$ để hai vectơ $\u000bec{a} = (x; 8)$ và $\u000bec{b} = (3; 4)$ cùng phương.",
+            "question": "**Câu 4:** Tìm $x$ để hai vectơ $\\vec{a} = (x; 8)$ và $\\vec{b} = (3; 4)$ cùng phương.",
             "correctAnswer": "6",
             "acceptedAnswers": [
               "6"
@@ -9281,7 +9281,7 @@
             "acceptedAnswers": [
               "3"
             ],
-            "explanation": "$\u000bec{AB} = (-3; 3) = \u000bec{DC} = (5 - x; 6 - y) \\Rightarrow x = 8, y = 3$."
+            "explanation": "$\\vec{AB} = (-3; 3) = \\vec{DC} = (5 - x; 6 - y) \\Rightarrow x = 8, y = 3$."
           },
           {
             "id": 6,
@@ -9291,14 +9291,14 @@
             "acceptedAnswers": [
               "250"
             ],
-            "explanation": "$OA = \\sqrt{150^2 + 200^2} = 250\text{ cm}$."
+            "explanation": "$OA = \\sqrt{150^2 + 200^2} = 250\\text{ cm}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho hai điểm $A(-2; 5)$ và $B(4; -3)$. Tính độ dài của vectơ $\u000bec{AB}$.",
+            "question": "**Câu 1:** Cho hai điểm $A(-2; 5)$ và $B(4; -3)$. Tính độ dài của vectơ $\\vec{AB}$.",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
@@ -9308,7 +9308,7 @@
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Cho $\u000bec{u} = (3; -5)$ và $\u000bec{v} = (-2; 4)$. Tìm tung độ của vectơ $\u000bec{w} = 2\u000bec{u} + 3\u000bec{v}$.",
+            "question": "**Câu 2:** Cho $\\vec{u} = (3; -5)$ và $\\vec{v} = (-2; 4)$. Tìm tung độ của vectơ $\\vec{w} = 2\\vec{u} + 3\\vec{v}$.",
             "correctAnswer": "2",
             "acceptedAnswers": [
               "2"
@@ -9328,7 +9328,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Tìm $x$ để hai vectơ $\u000bec{a} = (x; 8)$ và $\u000bec{b} = (3; 4)$ cùng phương.",
+            "question": "**Câu 4:** Tìm $x$ để hai vectơ $\\vec{a} = (x; 8)$ và $\\vec{b} = (3; 4)$ cùng phương.",
             "correctAnswer": "6",
             "acceptedAnswers": [
               "6"
@@ -9343,7 +9343,7 @@
             "acceptedAnswers": [
               "3"
             ],
-            "explanation": "$\u000bec{AB} = (-3; 3) = \u000bec{DC} = (5 - x; 6 - y) \\Rightarrow x = 8, y = 3$."
+            "explanation": "$\\vec{AB} = (-3; 3) = \\vec{DC} = (5 - x; 6 - y) \\Rightarrow x = 8, y = 3$."
           },
           {
             "id": 6,
@@ -9353,7 +9353,7 @@
             "acceptedAnswers": [
               "250"
             ],
-            "explanation": "$OA = \\sqrt{150^2 + 200^2} = 250\text{ cm}$."
+            "explanation": "$OA = \\sqrt{150^2 + 200^2} = 250\\text{ cm}$."
           }
         ],
         "essayQuestions": [
@@ -9363,15 +9363,15 @@
             "title": "Quy tắc toạ độ phép toán vectơ",
             "maxScore": 0.5,
             "question": "**Bài 1 (0.50 điểm):** Nêu các công thức toạ độ đối với phép cộng, phép trừ hai vectơ và phép nhân một số thực với một vectơ trong mặt phẳng toạ độ $Oxy$.",
-            "explanation": "Cho hai vectơ $\u000bec{a} = (x_1; y_1), \u000bec{b} = (x_2; y_2)$ và số thực $k$:\n1. Phép cộng: $\u000bec{a} + \u000bec{b} = (x_1 + x_2; y_1 + y_2)$.\n2. Phép trừ: $\u000bec{a} - \u000bec{b} = (x_1 - x_2; y_1 - y_2)$.\n3. Phép nhân với một số: $k\u000bec{a} = (k x_1; k y_1)$."
+            "explanation": "Cho hai vectơ $\\vec{a} = (x_1; y_1), \\vec{b} = (x_2; y_2)$ và số thực $k$:\n1. Phép cộng: $\\vec{a} + \\vec{b} = (x_1 + x_2; y_1 + y_2)$.\n2. Phép trừ: $\\vec{a} - \\vec{b} = (x_1 - x_2; y_1 - y_2)$.\n3. Phép nhân với một số: $k\\vec{a} = (k x_1; k y_1)$."
           },
           {
             "id": 2,
             "level": "TH",
             "title": "Chứng minh ba điểm thẳng hàng bằng toạ độ",
             "maxScore": 0.5,
-            "question": "**Bài 2 (0.50 điểm):** Trong mặt phẳng toạ độ $Oxy$, cho ba điểm $A(1; 2), B(3; 6), C(5; 10)$.\na) Tính toạ độ các vectơ $\u000bec{AB}$ và $\u000bec{AC}$.\nb) Chứng minh ba điểm $A, B, C$ thẳng hàng.",
-            "explanation": "a) $\u000bec{AB} = (3 - 1; 6 - 2) = (2; 4)$. $\u000bec{AC} = (5 - 1; 10 - 2) = (4; 8)$.\nb) Ta xét tỉ số giữa các toạ độ: $\frac{4}{2} = \frac{8}{4} = 2$. Do đó $\u000bec{AC} = 2\u000bec{AB}$. Hai vectơ $\u000bec{AC}$ và $\u000bec{AB}$ cùng phương và có chung gốc $A$, suy ra ba điểm $A, B, C$ thẳng hàng (và $B$ là trung điểm của $AC$)."
+            "question": "**Bài 2 (0.50 điểm):** Trong mặt phẳng toạ độ $Oxy$, cho ba điểm $A(1; 2), B(3; 6), C(5; 10)$.\na) Tính toạ độ các vectơ $\\vec{AB}$ và $\\vec{AC}$.\nb) Chứng minh ba điểm $A, B, C$ thẳng hàng.",
+            "explanation": "a) $\\vec{AB} = (3 - 1; 6 - 2) = (2; 4)$. $\\vec{AC} = (5 - 1; 10 - 2) = (4; 8)$.\nb) Ta xét tỉ số giữa các toạ độ: $\\frac{4}{2} = \\frac{8}{4} = 2$. Do đó $\\vec{AC} = 2\\vec{AB}$. Hai vectơ $\\vec{AC}$ và $\\vec{AB}$ cùng phương và có chung gốc $A$, suy ra ba điểm $A, B, C$ thẳng hàng (và $B$ là trung điểm của $AC$)."
           },
           {
             "id": 3,
@@ -9379,15 +9379,15 @@
             "title": "Tìm điểm thoả mãn hệ thức vectơ trong mặt phẳng toạ độ",
             "maxScore": 0.5,
             "question": "**Bài 3 (0.50 điểm):** Trong mặt phẳng toạ độ $Oxy$, cho hai điểm $A(-1; 4)$ và $B(5; -2)$.\na) Tìm toạ độ trung điểm $I$ của đoạn thẳng $AB$.\nb) Tìm toạ độ điểm $M$ trên đoạn thẳng $AB$ sao cho $AM = 2 MB$.",
-            "explanation": "a) Toạ độ trung điểm $I$ của $AB$: $x_I = \frac{-1 + 5}{2} = 2, y_I = \frac{4 - 2}{2} = 1 \\Rightarrow I(2; 1)$.\nb) Điểm $M$ nằm trên đoạn $AB$ thoả mãn $AM = 2 MB$, tức là $\u000bec{AM} = 2\u000bec{MB}$. Gọi $M(x; y)$, ta có $\u000bec{AM} = (x + 1; y - 4)$ và $\u000bec{MB} = (5 - x; -2 - y)$. Từ hệ thức $\u000bec{AM} = 2\u000bec{MB}$ ta có hệ phương trình: $\begin{cases} x + 1 = 2(5 - x) \\ y - 4 = 2(-2 - y) \\end{cases} \\Leftrightarrow \begin{cases} 3x = 9 \\ 3y = 0 \\end{cases} \\Leftrightarrow \begin{cases} x = 3 \\ y = 0 \\end{cases}$. Vậy điểm cần tìm là $M(3; 0)$."
+            "explanation": "a) Toạ độ trung điểm $I$ của $AB$: $x_I = \\frac{-1 + 5}{2} = 2, y_I = \\frac{4 - 2}{2} = 1 \\Rightarrow I(2; 1)$.\nb) Điểm $M$ nằm trên đoạn $AB$ thoả mãn $AM = 2 MB$, tức là $\\vec{AM} = 2\\vec{MB}$. Gọi $M(x; y)$, ta có $\\vec{AM} = (x + 1; y - 4)$ và $\\vec{MB} = (5 - x; -2 - y)$. Từ hệ thức $\\vec{AM} = 2\\vec{MB}$ ta có hệ phương trình: $\\begin{cases} x + 1 = 2(5 - x) \\ y - 4 = 2(-2 - y) \\end{cases} \\Leftrightarrow \\begin{cases} 3x = 9 \\ 3y = 0 \\end{cases} \\Leftrightarrow \\begin{cases} x = 3 \\ y = 0 \\end{cases}$. Vậy điểm cần tìm là $M(3; 0)$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Ứng dụng toạ độ định vị trong quy hoạch giao thông",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Trên bản đồ quy hoạch một đô thị mới (sử dụng hệ toạ độ $Oxy$ với đơn vị $1\text{ km}$), có hai khu dân cư nằm tại $A(1; 3)$ và $B(9; 7)$.\na) Tính khoảng cách đường chim bay giữa hai khu dân cư $A$ và $B$ (làm tròn số thập phân 1 chữ số).\nb) Ban quản lý dự án muốn đặt một trạm xe buýt nhanh tại điểm $C$ nằm trên trục đường lớn $Ox$ sao cho tổng khoảng cách từ hai khu dân cư tới trạm xe buýt là nhỏ nhất (tức $CA + CB$ đạt giá trị nhỏ nhất). Tìm toạ độ điểm $C$.",
-            "explanation": "a) Khoảng cách $AB = \\sqrt{(9-1)^2 + (7-3)^2} = \\sqrt{8^2 + 4^2} = \\sqrt{64 + 16} = \\sqrt{80} \u0007pprox 8.9\text{ km}$.\nb) Vì $A(1; 3)$ và $B(9; 7)$ đều nằm cùng phía đối với trục hoành $Ox$ ($y_A > 0, y_B > 0$). Lấy điểm đối xứng của $A$ qua trục $Ox$ là $A'(1; -3)$. Với mọi điểm $C \\in Ox$, ta luôn có $CA = CA'$, do đó $CA + CB = CA' + CB \\ge A'B$. Đẳng thức xảy ra khi và chỉ khi $A', C, B$ thẳng hàng, tức $C$ là giao điểm của đường thẳng $A'B$ với trục hoành $Ox$. Ta có $\u000bec{A'B} = (9 - 1; 7 - (-3)) = (8; 10)$. Điểm $C(x; 0) \\in Ox \\Rightarrow \u000bec{A'C} = (x - 1; 0 - (-3)) = (x - 1; 3)$. $A', C, B$ thẳng hàng $\\Leftrightarrow \frac{x - 1}{8} = \frac{3}{10} \\Rightarrow x - 1 = \frac{24}{10} = 2.4 \\Rightarrow x = 3.4$. Vậy vị trí đặt trạm xe buýt tối ưu là $C(3.4; 0)$."
+            "question": "**Bài 4 (0.50 điểm):** Trên bản đồ quy hoạch một đô thị mới (sử dụng hệ toạ độ $Oxy$ với đơn vị $1\\text{ km}$), có hai khu dân cư nằm tại $A(1; 3)$ và $B(9; 7)$.\na) Tính khoảng cách đường chim bay giữa hai khu dân cư $A$ và $B$ (làm tròn số thập phân 1 chữ số).\nb) Ban quản lý dự án muốn đặt một trạm xe buýt nhanh tại điểm $C$ nằm trên trục đường lớn $Ox$ sao cho tổng khoảng cách từ hai khu dân cư tới trạm xe buýt là nhỏ nhất (tức $CA + CB$ đạt giá trị nhỏ nhất). Tìm toạ độ điểm $C$.",
+            "explanation": "a) Khoảng cách $AB = \\sqrt{(9-1)^2 + (7-3)^2} = \\sqrt{8^2 + 4^2} = \\sqrt{64 + 16} = \\sqrt{80} \u0007pprox 8.9\\text{ km}$.\nb) Vì $A(1; 3)$ và $B(9; 7)$ đều nằm cùng phía đối với trục hoành $Ox$ ($y_A > 0, y_B > 0$). Lấy điểm đối xứng của $A$ qua trục $Ox$ là $A'(1; -3)$. Với mọi điểm $C \\in Ox$, ta luôn có $CA = CA'$, do đó $CA + CB = CA' + CB \\ge A'B$. Đẳng thức xảy ra khi và chỉ khi $A', C, B$ thẳng hàng, tức $C$ là giao điểm của đường thẳng $A'B$ với trục hoành $Ox$. Ta có $\\vec{A'B} = (9 - 1; 7 - (-3)) = (8; 10)$. Điểm $C(x; 0) \\in Ox \\Rightarrow \\vec{A'C} = (x - 1; 0 - (-3)) = (x - 1; 3)$. $A', C, B$ thẳng hàng $\\Leftrightarrow \\frac{x - 1}{8} = \\frac{3}{10} \\Rightarrow x - 1 = \\frac{24}{10} = 2.4 \\Rightarrow x = 3.4$. Vậy vị trí đặt trạm xe buýt tối ưu là $C(3.4; 0)$."
           }
         ]
       }
@@ -9408,12 +9408,12 @@
           {
             "id": 1,
             "level": "NB",
-            "question": "**Câu 1:** Tích vô hướng của hai vectơ $\u000bec{a}$ và $\u000bec{b}$ được định nghĩa bởi công thức",
+            "question": "**Câu 1:** Tích vô hướng của hai vectơ $\\vec{a}$ và $\\vec{b}$ được định nghĩa bởi công thức",
             "options": {
-              "A": "$\u000bec{a} \\cdot \u000bec{b} = |\u000bec{a}||\u000bec{b}|$",
-              "B": "$\u000bec{a} \\cdot \u000bec{b} = |\u000bec{a}||\u000bec{b}|\\cos(\u000bec{a}, \u000bec{b})$",
-              "C": "$\u000bec{a} \\cdot \u000bec{b} = \\cos(\u000bec{a}, \u000bec{b})$",
-              "D": "$\u000bec{a} \\cdot \u000bec{b} = |\u000bec{a}||\u000bec{b}|\\sin(\u000bec{a}, \u000bec{b})$"
+              "A": "$\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|$",
+              "B": "$\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos(\\vec{a}, \\vec{b})$",
+              "C": "$\\vec{a} \\cdot \\vec{b} = \\cos(\\vec{a}, \\vec{b})$",
+              "D": "$\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\sin(\\vec{a}, \\vec{b})$"
             },
             "correct": "B",
             "explanation": "Định nghĩa tích vô hướng SGK."
@@ -9421,7 +9421,7 @@
           {
             "id": 2,
             "level": "NB",
-            "question": "**Câu 2:** Trong mặt phẳng toạ độ $Oxy$, cho $\u000bec{a} = (x_1; y_1)$ và $\u000bec{b} = (x_2; y_2)$. Biểu thức toạ độ của tích vô hướng $\u000bec{a} \\cdot \u000bec{b}$ là",
+            "question": "**Câu 2:** Trong mặt phẳng toạ độ $Oxy$, cho $\\vec{a} = (x_1; y_1)$ và $\\vec{b} = (x_2; y_2)$. Biểu thức toạ độ của tích vô hướng $\\vec{a} \\cdot \\vec{b}$ là",
             "options": {
               "A": "$\\sqrt{x_1^2 + y_1^2} + \\sqrt{x_2^2 + y_2^2}$",
               "B": "$x_1 x_2 + y_1 y_2$",
@@ -9434,12 +9434,12 @@
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Hai vectơ khác $\u000bec{0}$ vuông góc với nhau khi và chỉ khi",
+            "question": "**Câu 3:** Hai vectơ khác $\\vec{0}$ vuông góc với nhau khi và chỉ khi",
             "options": {
-              "A": "$\u000bec{a} + \u000bec{b} = \u000bec{0}$",
-              "B": "$|\u000bec{a}| = |\u000bec{b}|$",
-              "C": "$\u000bec{a} \\cdot \u000bec{b} = 1$",
-              "D": "$\u000bec{a} \\cdot \u000bec{b} = 0$"
+              "A": "$\\vec{a} + \\vec{b} = \\vec{0}$",
+              "B": "$|\\vec{a}| = |\\vec{b}|$",
+              "C": "$\\vec{a} \\cdot \\vec{b} = 1$",
+              "D": "$\\vec{a} \\cdot \\vec{b} = 0$"
             },
             "correct": "D",
             "explanation": "Vuông góc khi tích vô hướng bằng 0."
@@ -9447,20 +9447,20 @@
           {
             "id": 4,
             "level": "NB",
-            "question": "**Câu 4:** Bình phương vô hướng $\u000bec{a}^2$ của vectơ $\u000bec{a}$ bằng",
+            "question": "**Câu 4:** Bình phương vô hướng $\\vec{a}^2$ của vectơ $\\vec{a}$ bằng",
             "options": {
-              "A": "$2|\u000bec{a}|$",
-              "B": "$|\u000bec{a}|$",
-              "C": "$|\u000bec{a}|^2$",
+              "A": "$2|\\vec{a}|$",
+              "B": "$|\\vec{a}|$",
+              "C": "$|\\vec{a}|^2$",
               "D": "0"
             },
             "correct": "C",
-            "explanation": "$\u000bec{a}^2 = |\u000bec{a}|^2$."
+            "explanation": "$\\vec{a}^2 = |\\vec{a}|^2$."
           },
           {
             "id": 5,
             "level": "TH",
-            "question": "**Câu 5:** Cho hai vectơ $\u000bec{a}$ và $\u000bec{b}$ có độ dài lần lượt là $3$ và $4$, góc giữa hai vectơ bằng $60^\\circ$. Tích vô hướng $\u000bec{a} \\cdot \u000bec{b}$ bằng",
+            "question": "**Câu 5:** Cho hai vectơ $\\vec{a}$ và $\\vec{b}$ có độ dài lần lượt là $3$ và $4$, góc giữa hai vectơ bằng $60^\\circ$. Tích vô hướng $\\vec{a} \\cdot \\vec{b}$ bằng",
             "options": {
               "A": "12",
               "B": "$12\\sqrt{3}$",
@@ -9468,12 +9468,12 @@
               "D": "6"
             },
             "correct": "D",
-            "explanation": "$\u000bec{a} \\cdot \u000bec{b} = 3 \times 4 \times \\cos 60^\\circ = 12 \times 0.5 = 6$."
+            "explanation": "$\\vec{a} \\cdot \\vec{b} = 3 \\times 4 \\times \\cos 60^\\circ = 12 \\times 0.5 = 6$."
           },
           {
             "id": 6,
             "level": "TH",
-            "question": "**Câu 6:** Trong mặt phẳng $Oxy$, cho $\u000bec{a} = (1; 3)$ và $\u000bec{b} = (-2; 4)$. Tích vô hướng $\u000bec{a} \\cdot \u000bec{b}$ bằng",
+            "question": "**Câu 6:** Trong mặt phẳng $Oxy$, cho $\\vec{a} = (1; 3)$ và $\\vec{b} = (-2; 4)$. Tích vô hướng $\\vec{a} \\cdot \\vec{b}$ bằng",
             "options": {
               "A": "14",
               "B": "5",
@@ -9481,25 +9481,25 @@
               "D": "-14"
             },
             "correct": "C",
-            "explanation": "$\u000bec{a} \\cdot \u000bec{b} = 1(-2) + 3(4) = -2 + 12 = 10$."
+            "explanation": "$\\vec{a} \\cdot \\vec{b} = 1(-2) + 3(4) = -2 + 12 = 10$."
           },
           {
             "id": 7,
             "level": "TH",
-            "question": "**Câu 7:** Cho tam giác đều $ABC$ cạnh bằng $a$. Tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$ bằng",
+            "question": "**Câu 7:** Cho tam giác đều $ABC$ cạnh bằng $a$. Tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ bằng",
             "options": {
-              "A": "$\frac{a^2}{2}$",
-              "B": "$-\frac{a^2}{2}$",
-              "C": "$\frac{a^2\\sqrt{3}}{2}$",
+              "A": "$\\frac{a^2}{2}$",
+              "B": "$-\\frac{a^2}{2}$",
+              "C": "$\\frac{a^2\\sqrt{3}}{2}$",
               "D": "$a^2$"
             },
             "correct": "A",
-            "explanation": "$AB \\cdot AC \\cdot \\cos 60^\\circ = a \\cdot a \\cdot 0.5 = \frac{a^2}{2}$."
+            "explanation": "$AB \\cdot AC \\cdot \\cos 60^\\circ = a \\cdot a \\cdot 0.5 = \\frac{a^2}{2}$."
           },
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho tam giác vuông $ABC$ tại $A$ có $AB = 3, AC = 4$. Tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$ bằng",
+            "question": "**Câu 8:** Cho tam giác vuông $ABC$ tại $A$ có $AB = 3, AC = 4$. Tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ bằng",
             "options": {
               "A": "25",
               "B": "0",
@@ -9507,12 +9507,12 @@
               "D": "12"
             },
             "correct": "B",
-            "explanation": "Do tam giác vuông tại $A$ nên $\u000bec{AB} \\perp \u000bec{AC} \\Rightarrow \u000bec{AB} \\cdot \u000bec{AC} = 0$."
+            "explanation": "Do tam giác vuông tại $A$ nên $\\vec{AB} \\perp \\vec{AC} \\Rightarrow \\vec{AB} \\cdot \\vec{AC} = 0$."
           },
           {
             "id": 9,
             "level": "VD",
-            "question": "**Câu 9:** Tìm $m$ để hai vectơ $\u000bec{u} = (m; 3)$ và $\u000bec{v} = (2; -4)$ vuông góc với nhau.",
+            "question": "**Câu 9:** Tìm $m$ để hai vectơ $\\vec{u} = (m; 3)$ và $\\vec{v} = (2; -4)$ vuông góc với nhau.",
             "options": {
               "A": "$m = -6$",
               "B": "$m = 12$",
@@ -9520,46 +9520,46 @@
               "D": "$m = 6$"
             },
             "correct": "D",
-            "explanation": "$\u000bec{u} \\perp \u000bec{v} \\Leftrightarrow 2m + 3(-4) = 0 \\Leftrightarrow 2m = 12 \\Rightarrow m = 6$."
+            "explanation": "$\\vec{u} \\perp \\vec{v} \\Leftrightarrow 2m + 3(-4) = 0 \\Leftrightarrow 2m = 12 \\Rightarrow m = 6$."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Cho hai vectơ $\u000bec{a} = (1; 2)$ và $\u000bec{b} = (3; -1)$. Côsin của góc giữa hai vectơ $\u000bec{a}$ và $\u000bec{b}$ bằng",
+            "question": "**Câu 10:** Cho hai vectơ $\\vec{a} = (1; 2)$ và $\\vec{b} = (3; -1)$. Côsin của góc giữa hai vectơ $\\vec{a}$ và $\\vec{b}$ bằng",
             "options": {
-              "A": "$\frac{\\sqrt{2}}{10}$",
-              "B": "$\frac{1}{5\\sqrt{2}}$",
-              "C": "$\frac{\\sqrt{2}}{2}$",
-              "D": "$\frac{1}{2}$"
+              "A": "$\\frac{\\sqrt{2}}{10}$",
+              "B": "$\\frac{1}{5\\sqrt{2}}$",
+              "C": "$\\frac{\\sqrt{2}}{2}$",
+              "D": "$\\frac{1}{2}$"
             },
             "correct": "A",
-            "explanation": "$\\cos\theta = \frac{1(3) + 2(-1)}{\\sqrt{1+4}\\sqrt{9+1}} = \frac{1}{\\sqrt{5}\\sqrt{10}} = \frac{1}{5\\sqrt{2}} = \frac{\\sqrt{2}}{10}$."
+            "explanation": "$\\cos\\theta = \\frac{1(3) + 2(-1)}{\\sqrt{1+4}\\sqrt{9+1}} = \\frac{1}{\\sqrt{5}\\sqrt{10}} = \\frac{1}{5\\sqrt{2}} = \\frac{\\sqrt{2}}{10}$."
           },
           {
             "id": 11,
             "level": "VDC",
-            "question": "**Câu 11:** Cho hình vuông $ABCD$ cạnh bằng $a$. Gọi $M$ là trung điểm cạnh $BC$ và $N$ là điểm trên cạnh $CD$ sao cho $CN = \frac{1}{2}ND$. Tích vô hướng $\u000bec{AM} \\cdot \u000bec{BN}$ bằng",
+            "question": "**Câu 11:** Cho hình vuông $ABCD$ cạnh bằng $a$. Gọi $M$ là trung điểm cạnh $BC$ và $N$ là điểm trên cạnh $CD$ sao cho $CN = \\frac{1}{2}ND$. Tích vô hướng $\\vec{AM} \\cdot \\vec{BN}$ bằng",
             "options": {
               "A": "$a^2$",
-              "B": "$\frac{a^2}{2}$",
+              "B": "$\\frac{a^2}{2}$",
               "C": "0",
-              "D": "$-\frac{a^2}{3}$"
+              "D": "$-\\frac{a^2}{3}$"
             },
             "correct": "C",
-            "explanation": "Chọn hệ trục toạ độ $A(0; 0), B(a; 0), C(a; a), D(0; a)$. Ta có $M(a; a/2), N(a/3; a)$ (vì $CN = a/3, ND = 2a/3$). Khi đó $\u000bec{AM} = (a; a/2)$ và $\u000bec{BN} = (-2a/3; a)$. Tích vô hướng: $\u000bec{AM} \\cdot \u000bec{BN} = a(-2a/3) + (a/2)(a) = -2a^2/3 + a^2/2 = -a^2/6 \ne 0$. Nếu $N$ là trung điểm $CD$ thì vuông góc. Ở đây đề bài hỏi giá trị cụ thể."
+            "explanation": "Chọn hệ trục toạ độ $A(0; 0), B(a; 0), C(a; a), D(0; a)$. Ta có $M(a; a/2), N(a/3; a)$ (vì $CN = a/3, ND = 2a/3$). Khi đó $\\vec{AM} = (a; a/2)$ và $\\vec{BN} = (-2a/3; a)$. Tích vô hướng: $\\vec{AM} \\cdot \\vec{BN} = a(-2a/3) + (a/2)(a) = -2a^2/3 + a^2/2 = -a^2/6 \\ne 0$. Nếu $N$ là trung điểm $CD$ thì vuông góc. Ở đây đề bài hỏi giá trị cụ thể."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Một lực $\u000bec{F}$ có độ lớn $100\text{ N}$ tác dụng làm dịch chuyển một vật một quãng đường $20\text{ m}$ theo hướng hợp với hướng của lực một góc $60^\\circ$. Công sinh bởi lực $\u000bec{F}$ bằng",
+            "question": "**Câu 12:** Một lực $\\vec{F}$ có độ lớn $100\\text{ N}$ tác dụng làm dịch chuyển một vật một quãng đường $20\\text{ m}$ theo hướng hợp với hướng của lực một góc $60^\\circ$. Công sinh bởi lực $\\vec{F}$ bằng",
             "options": {
-              "A": "$1000\text{ J}$",
-              "B": "$2000\text{ J}$",
-              "C": "$500\text{ J}$",
-              "D": "$1000\\sqrt{3}\text{ J}$"
+              "A": "$1000\\text{ J}$",
+              "B": "$2000\\text{ J}$",
+              "C": "$500\\text{ J}$",
+              "D": "$1000\\sqrt{3}\\text{ J}$"
             },
             "correct": "A",
-            "explanation": "$A = F \\cdot s \\cdot \\cos 60^\\circ = 100 \times 20 \times 0.5 = 1000\text{ J}$."
+            "explanation": "$A = F \\cdot s \\cdot \\cos 60^\\circ = 100 \\times 20 \\times 0.5 = 1000\\text{ J}$."
           }
         ],
         "tfQuestions": [
@@ -9570,21 +9570,21 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} = (3; 4)$ và độ dài $AB = 5$.",
+                "content": "$\\vec{AB} = (3; 4)$ và độ dài $AB = 5$.",
                 "correct": true,
                 "explanation": "$\\sqrt{3^2 + 4^2} = 5$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{AC} = (-3; 4)$ và độ dài $AC = 5$.",
+                "content": "$\\vec{AC} = (-3; 4)$ và độ dài $AC = 5$.",
                 "correct": true,
                 "explanation": "$\\sqrt{(-3)^2 + 4^2} = 5$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC} = 7$.",
+                "content": "Tích vô hướng $\\vec{AB} \\cdot \\vec{AC} = 7$.",
                 "correct": true,
                 "explanation": "$3(-3) + 4(4) = -9 + 16 = 7$."
               },
@@ -9593,7 +9593,7 @@
                 "subLabel": "d)",
                 "content": "Tam giác $ABC$ vuông tại $A$.",
                 "correct": false,
-                "explanation": "Tích vô hướng bằng $7 \ne 0$ nên không vuông tại $A$."
+                "explanation": "Tích vô hướng bằng $7 \\ne 0$ nên không vuông tại $A$."
               }
             ]
           },
@@ -9604,30 +9604,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} \\cdot \u000bec{AD} = 0$.",
+                "content": "$\\vec{AB} \\cdot \\vec{AD} = 0$.",
                 "correct": true,
                 "explanation": "Vì $AB \\perp AD$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{AB} \\cdot \u000bec{AC} = 16$.",
+                "content": "$\\vec{AB} \\cdot \\vec{AC} = 16$.",
                 "correct": true,
-                "explanation": "$AB \\cdot AC \\cdot \\cos 45^\\circ = 4 \times 4\\sqrt{2} \times \frac{\\sqrt{2}}{2} = 16$."
+                "explanation": "$AB \\cdot AC \\cdot \\cos 45^\\circ = 4 \\times 4\\sqrt{2} \\times \\frac{\\sqrt{2}}{2} = 16$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AC} \\cdot \u000bec{BD} = 0$.",
+                "content": "$\\vec{AC} \\cdot \\vec{BD} = 0$.",
                 "correct": true,
                 "explanation": "Hai đường chéo hình vuông vuông góc nhau."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "$\u000bec{AB} \\cdot \u000bec{CD} = 16$.",
+                "content": "$\\vec{AB} \\cdot \\vec{CD} = 16$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB}$ và $\u000bec{CD}$ ngược hướng nên tích vô hướng bằng $-16$."
+                "explanation": "$\\vec{AB}$ và $\\vec{CD}$ ngược hướng nên tích vô hướng bằng $-16$."
               }
             ]
           }
@@ -9640,21 +9640,21 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} = (3; 4)$ và độ dài $AB = 5$.",
+                "content": "$\\vec{AB} = (3; 4)$ và độ dài $AB = 5$.",
                 "correct": true,
                 "explanation": "$\\sqrt{3^2 + 4^2} = 5$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{AC} = (-3; 4)$ và độ dài $AC = 5$.",
+                "content": "$\\vec{AC} = (-3; 4)$ và độ dài $AC = 5$.",
                 "correct": true,
                 "explanation": "$\\sqrt{(-3)^2 + 4^2} = 5$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC} = 7$.",
+                "content": "Tích vô hướng $\\vec{AB} \\cdot \\vec{AC} = 7$.",
                 "correct": true,
                 "explanation": "$3(-3) + 4(4) = -9 + 16 = 7$."
               },
@@ -9663,7 +9663,7 @@
                 "subLabel": "d)",
                 "content": "Tam giác $ABC$ vuông tại $A$.",
                 "correct": false,
-                "explanation": "Tích vô hướng bằng $7 \ne 0$ nên không vuông tại $A$."
+                "explanation": "Tích vô hướng bằng $7 \\ne 0$ nên không vuông tại $A$."
               }
             ]
           },
@@ -9674,30 +9674,30 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "$\u000bec{AB} \\cdot \u000bec{AD} = 0$.",
+                "content": "$\\vec{AB} \\cdot \\vec{AD} = 0$.",
                 "correct": true,
                 "explanation": "Vì $AB \\perp AD$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "$\u000bec{AB} \\cdot \u000bec{AC} = 16$.",
+                "content": "$\\vec{AB} \\cdot \\vec{AC} = 16$.",
                 "correct": true,
-                "explanation": "$AB \\cdot AC \\cdot \\cos 45^\\circ = 4 \times 4\\sqrt{2} \times \frac{\\sqrt{2}}{2} = 16$."
+                "explanation": "$AB \\cdot AC \\cdot \\cos 45^\\circ = 4 \\times 4\\sqrt{2} \\times \\frac{\\sqrt{2}}{2} = 16$."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AC} \\cdot \u000bec{BD} = 0$.",
+                "content": "$\\vec{AC} \\cdot \\vec{BD} = 0$.",
                 "correct": true,
                 "explanation": "Hai đường chéo hình vuông vuông góc nhau."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "$\u000bec{AB} \\cdot \u000bec{CD} = 16$.",
+                "content": "$\\vec{AB} \\cdot \\vec{CD} = 16$.",
                 "correct": false,
-                "explanation": "$\u000bec{AB}$ và $\u000bec{CD}$ ngược hướng nên tích vô hướng bằng $-16$."
+                "explanation": "$\\vec{AB}$ và $\\vec{CD}$ ngược hướng nên tích vô hướng bằng $-16$."
               }
             ]
           }
@@ -9706,17 +9706,17 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 6. Tính giá trị tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$.",
+            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 6. Tính giá trị tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
             "correctAnswer": "18",
             "acceptedAnswers": [
               "18"
             ],
-            "explanation": "$6 \times 6 \times \\cos 60^\\circ = 36 \times 0.5 = 18$."
+            "explanation": "$6 \\times 6 \\times \\cos 60^\\circ = 36 \\times 0.5 = 18$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Trong mặt phẳng $Oxy$, cho $\u000bec{a} = (2; -3)$ và $\u000bec{b} = (5; 4)$. Tính tích vô hướng $\u000bec{a} \\cdot \u000bec{b}$.",
+            "question": "**Câu 2:** Trong mặt phẳng $Oxy$, cho $\\vec{a} = (2; -3)$ và $\\vec{b} = (5; 4)$. Tính tích vô hướng $\\vec{a} \\cdot \\vec{b}$.",
             "correctAnswer": "-2",
             "acceptedAnswers": [
               "-2"
@@ -9726,7 +9726,7 @@
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Tìm $m$ để hai vectơ $\u000bec{u} = (m; 4)$ và $\u000bec{v} = (3; -6)$ vuông góc với nhau.",
+            "question": "**Câu 3:** Tìm $m$ để hai vectơ $\\vec{u} = (m; 4)$ và $\\vec{v} = (3; -6)$ vuông góc với nhau.",
             "correctAnswer": "8",
             "acceptedAnswers": [
               "8"
@@ -9736,49 +9736,49 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho hai vectơ $\u000bec{a}, \u000bec{b}$ có độ dài bằng 2 và 5, tích vô hướng $\u000bec{a} \\cdot \u000bec{b} = 5$. Tính số đo góc giữa hai vectơ (đơn vị: độ).",
+            "question": "**Câu 4:** Cho hai vectơ $\\vec{a}, \\vec{b}$ có độ dài bằng 2 và 5, tích vô hướng $\\vec{a} \\cdot \\vec{b} = 5$. Tính số đo góc giữa hai vectơ (đơn vị: độ).",
             "correctAnswer": "60",
             "acceptedAnswers": [
               "60"
             ],
-            "explanation": "$\\cos\theta = 5 / (2 \times 5) = 0.5 \\Rightarrow \theta = 60^\\circ$."
+            "explanation": "$\\cos\\theta = 5 / (2 \\times 5) = 0.5 \\Rightarrow \\theta = 60^\\circ$."
           },
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho hình chữ nhật $ABCD$ có $AB = 6, AD = 8$. Tính giá trị của tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$.",
+            "question": "**Câu 5:** Cho hình chữ nhật $ABCD$ có $AB = 6, AD = 8$. Tính giá trị của tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
             "correctAnswer": "36",
             "acceptedAnswers": [
               "36"
             ],
-            "explanation": "$\u000bec{AB} \\cdot \u000bec{AC} = \u000bec{AB} \\cdot (\u000bec{AB} + \u000bec{AD}) = AB^2 + 0 = 6^2 = 36$."
+            "explanation": "$\\vec{AB} \\cdot \\vec{AC} = \\vec{AB} \\cdot (\\vec{AB} + \\vec{AD}) = AB^2 + 0 = 6^2 = 36$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một đầu tàu hỏa tác dụng một lực kéo $F = 50\\,000\text{ N}$ theo phương chuyển động làm đoàn tàu dịch chuyển quãng đường $200\text{ m}$. Tính công của lực kéo đó sinh ra (đơn vị: triệu Jun, tức $\text{MJ}$).",
+            "question": "**Câu 6:** Một đầu tàu hỏa tác dụng một lực kéo $F = 50\\,000\\text{ N}$ theo phương chuyển động làm đoàn tàu dịch chuyển quãng đường $200\\text{ m}$. Tính công của lực kéo đó sinh ra (đơn vị: triệu Jun, tức $\\text{MJ}$).",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
             ],
-            "explanation": "$A = 50\\,000 \times 200 = 10\\,000\\,000\text{ J} = 10\text{ MJ}$."
+            "explanation": "$A = 50\\,000 \\times 200 = 10\\,000\\,000\\text{ J} = 10\\text{ MJ}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 6. Tính giá trị tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$.",
+            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh bằng 6. Tính giá trị tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
             "correctAnswer": "18",
             "acceptedAnswers": [
               "18"
             ],
-            "explanation": "$6 \times 6 \times \\cos 60^\\circ = 36 \times 0.5 = 18$."
+            "explanation": "$6 \\times 6 \\times \\cos 60^\\circ = 36 \\times 0.5 = 18$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Trong mặt phẳng $Oxy$, cho $\u000bec{a} = (2; -3)$ và $\u000bec{b} = (5; 4)$. Tính tích vô hướng $\u000bec{a} \\cdot \u000bec{b}$.",
+            "question": "**Câu 2:** Trong mặt phẳng $Oxy$, cho $\\vec{a} = (2; -3)$ và $\\vec{b} = (5; 4)$. Tính tích vô hướng $\\vec{a} \\cdot \\vec{b}$.",
             "correctAnswer": "-2",
             "acceptedAnswers": [
               "-2"
@@ -9788,7 +9788,7 @@
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Tìm $m$ để hai vectơ $\u000bec{u} = (m; 4)$ và $\u000bec{v} = (3; -6)$ vuông góc với nhau.",
+            "question": "**Câu 3:** Tìm $m$ để hai vectơ $\\vec{u} = (m; 4)$ và $\\vec{v} = (3; -6)$ vuông góc với nhau.",
             "correctAnswer": "8",
             "acceptedAnswers": [
               "8"
@@ -9798,32 +9798,32 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho hai vectơ $\u000bec{a}, \u000bec{b}$ có độ dài bằng 2 và 5, tích vô hướng $\u000bec{a} \\cdot \u000bec{b} = 5$. Tính số đo góc giữa hai vectơ (đơn vị: độ).",
+            "question": "**Câu 4:** Cho hai vectơ $\\vec{a}, \\vec{b}$ có độ dài bằng 2 và 5, tích vô hướng $\\vec{a} \\cdot \\vec{b} = 5$. Tính số đo góc giữa hai vectơ (đơn vị: độ).",
             "correctAnswer": "60",
             "acceptedAnswers": [
               "60"
             ],
-            "explanation": "$\\cos\theta = 5 / (2 \times 5) = 0.5 \\Rightarrow \theta = 60^\\circ$."
+            "explanation": "$\\cos\\theta = 5 / (2 \\times 5) = 0.5 \\Rightarrow \\theta = 60^\\circ$."
           },
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho hình chữ nhật $ABCD$ có $AB = 6, AD = 8$. Tính giá trị của tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$.",
+            "question": "**Câu 5:** Cho hình chữ nhật $ABCD$ có $AB = 6, AD = 8$. Tính giá trị của tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
             "correctAnswer": "36",
             "acceptedAnswers": [
               "36"
             ],
-            "explanation": "$\u000bec{AB} \\cdot \u000bec{AC} = \u000bec{AB} \\cdot (\u000bec{AB} + \u000bec{AD}) = AB^2 + 0 = 6^2 = 36$."
+            "explanation": "$\\vec{AB} \\cdot \\vec{AC} = \\vec{AB} \\cdot (\\vec{AB} + \\vec{AD}) = AB^2 + 0 = 6^2 = 36$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một đầu tàu hỏa tác dụng một lực kéo $F = 50\\,000\text{ N}$ theo phương chuyển động làm đoàn tàu dịch chuyển quãng đường $200\text{ m}$. Tính công của lực kéo đó sinh ra (đơn vị: triệu Jun, tức $\text{MJ}$).",
+            "question": "**Câu 6:** Một đầu tàu hỏa tác dụng một lực kéo $F = 50\\,000\\text{ N}$ theo phương chuyển động làm đoàn tàu dịch chuyển quãng đường $200\\text{ m}$. Tính công của lực kéo đó sinh ra (đơn vị: triệu Jun, tức $\\text{MJ}$).",
             "correctAnswer": "10",
             "acceptedAnswers": [
               "10"
             ],
-            "explanation": "$A = 50\\,000 \times 200 = 10\\,000\\,000\text{ J} = 10\text{ MJ}$."
+            "explanation": "$A = 50\\,000 \\times 200 = 10\\,000\\,000\\text{ J} = 10\\text{ MJ}$."
           }
         ],
         "essayQuestions": [
@@ -9832,32 +9832,32 @@
             "level": "NB",
             "title": "Định nghĩa góc giữa hai vectơ và tích vô hướng",
             "maxScore": 0.5,
-            "question": "**Bài 1 (0.50 điểm):** Nêu định nghĩa góc giữa hai vectơ khác $\u000bec{0}$. Viết công thức tính tích vô hướng của hai vectơ theo định nghĩa và theo toạ độ.",
-            "explanation": "1. Góc giữa hai vectơ: Cho hai vectơ $\u000bec{a}$ và $\u000bec{b}$ khác $\u000bec{0}$. Từ một điểm $O$ bất kì, vẽ $\u000bec{OA} = \u000bec{a}$ và $\u000bec{OB} = \u000bec{b}$. Khi đó góc $\\widehat{AOB}$ với số đo từ $0^\\circ$ đến $180^\\circ$ được gọi là góc giữa hai vectơ $\u000bec{a}$ và $\u000bec{b}$, kí hiệu là $(\u000bec{a}, \u000bec{b})$.\n2. Định nghĩa tích vô hướng: $\u000bec{a} \\cdot \u000bec{b} = |\u000bec{a}| \\cdot |\u000bec{b}| \\cdot \\cos(\u000bec{a}, \u000bec{b})$.\n3. Biểu thức toạ độ: Trong hệ toạ độ $Oxy$, nếu $\u000bec{a} = (x_1; y_1)$ và $\u000bec{b} = (x_2; y_2)$ thì $\u000bec{a} \\cdot \u000bec{b} = x_1 x_2 + y_1 y_2$."
+            "question": "**Bài 1 (0.50 điểm):** Nêu định nghĩa góc giữa hai vectơ khác $\\vec{0}$. Viết công thức tính tích vô hướng của hai vectơ theo định nghĩa và theo toạ độ.",
+            "explanation": "1. Góc giữa hai vectơ: Cho hai vectơ $\\vec{a}$ và $\\vec{b}$ khác $\\vec{0}$. Từ một điểm $O$ bất kì, vẽ $\\vec{OA} = \\vec{a}$ và $\\vec{OB} = \\vec{b}$. Khi đó góc $\\widehat{AOB}$ với số đo từ $0^\\circ$ đến $180^\\circ$ được gọi là góc giữa hai vectơ $\\vec{a}$ và $\\vec{b}$, kí hiệu là $(\\vec{a}, \\vec{b})$.\n2. Định nghĩa tích vô hướng: $\\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos(\\vec{a}, \\vec{b})$.\n3. Biểu thức toạ độ: Trong hệ toạ độ $Oxy$, nếu $\\vec{a} = (x_1; y_1)$ và $\\vec{b} = (x_2; y_2)$ thì $\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2$."
           },
           {
             "id": 2,
             "level": "TH",
             "title": "Tính góc giữa hai vectơ bằng toạ độ",
             "maxScore": 0.5,
-            "question": "**Bài 2 (0.50 điểm):** Trong mặt phẳng toạ độ $Oxy$, cho hai vectơ $\u000bec{u} = (1; 2)$ và $\u000bec{v} = (-2; 1)$.\na) Tính tích vô hướng $\u000bec{u} \\cdot \u000bec{v}$.\nb) Tính độ dài của hai vectơ $\u000bec{u}$ và $\u000bec{v}$.\nc) Suy ra số đo góc giữa hai vectơ $\u000bec{u}$ và $\u000bec{v}$.",
-            "explanation": "a) $\u000bec{u} \\cdot \u000bec{v} = 1(-2) + 2(1) = -2 + 2 = 0$.\nb) $|\u000bec{u}| = \\sqrt{1^2 + 2^2} = \\sqrt{5}$; $|\u000bec{v}| = \\sqrt{(-2)^2 + 1^2} = \\sqrt{5}$.\nc) Vì tích vô hướng $\u000bec{u} \\cdot \u000bec{v} = 0$ và cả hai vectơ đều khác $\u000bec{0}$ nên $\u000bec{u} \\perp \u000bec{v}$. Do đó góc giữa hai vectơ bằng $90^\\circ$."
+            "question": "**Bài 2 (0.50 điểm):** Trong mặt phẳng toạ độ $Oxy$, cho hai vectơ $\\vec{u} = (1; 2)$ và $\\vec{v} = (-2; 1)$.\na) Tính tích vô hướng $\\vec{u} \\cdot \\vec{v}$.\nb) Tính độ dài của hai vectơ $\\vec{u}$ và $\\vec{v}$.\nc) Suy ra số đo góc giữa hai vectơ $\\vec{u}$ và $\\vec{v}$.",
+            "explanation": "a) $\\vec{u} \\cdot \\vec{v} = 1(-2) + 2(1) = -2 + 2 = 0$.\nb) $|\\vec{u}| = \\sqrt{1^2 + 2^2} = \\sqrt{5}$; $|\\vec{v}| = \\sqrt{(-2)^2 + 1^2} = \\sqrt{5}$.\nc) Vì tích vô hướng $\\vec{u} \\cdot \\vec{v} = 0$ và cả hai vectơ đều khác $\\vec{0}$ nên $\\vec{u} \\perp \\vec{v}$. Do đó góc giữa hai vectơ bằng $90^\\circ$."
           },
           {
             "id": 3,
             "level": "VD",
             "title": "Chứng minh tính chất vuông góc trong hình học bằng tích vô hướng",
             "maxScore": 0.5,
-            "question": "**Bài 3 (0.50 điểm):** Cho tam giác $ABC$ có ba đỉnh $A(1; 3), B(4; 1), C(2; -2)$.\na) Tính toạ độ các vectơ $\u000bec{AB}$ và $\u000bec{BC}$.\nb) Chứng minh rằng tam giác $ABC$ là tam giác vuông tại $B$.\nc) Tính diện tích tam giác $ABC$.",
-            "explanation": "a) $\u000bec{AB} = (4 - 1; 1 - 3) = (3; -2)$. $\u000bec{BC} = (2 - 4; -2 - 1) = (-2; -3)$.\nb) Tính tích vô hướng: $\u000bec{AB} \\cdot \u000bec{BC} = 3(-2) + (-2)(-3) = -6 + 6 = 0$. Vì tích vô hướng bằng 0 nên $\u000bec{AB} \\perp \u000bec{BC}$, suy ra tam giác $ABC$ vuông tại $B$.\nc) Độ dài hai cạnh góc vuông: $AB = \\sqrt{3^2 + (-2)^2} = \\sqrt{13}$; $BC = \\sqrt{(-2)^2 + (-3)^2} = \\sqrt{13}$. Tam giác $ABC$ vuông cân tại $B$. Diện tích tam giác: $S = \frac{1}{2} AB \\cdot BC = \frac{1}{2} \\sqrt{13} \\cdot \\sqrt{13} = \frac{13}{2} = 6.5$."
+            "question": "**Bài 3 (0.50 điểm):** Cho tam giác $ABC$ có ba đỉnh $A(1; 3), B(4; 1), C(2; -2)$.\na) Tính toạ độ các vectơ $\\vec{AB}$ và $\\vec{BC}$.\nb) Chứng minh rằng tam giác $ABC$ là tam giác vuông tại $B$.\nc) Tính diện tích tam giác $ABC$.",
+            "explanation": "a) $\\vec{AB} = (4 - 1; 1 - 3) = (3; -2)$. $\\vec{BC} = (2 - 4; -2 - 1) = (-2; -3)$.\nb) Tính tích vô hướng: $\\vec{AB} \\cdot \\vec{BC} = 3(-2) + (-2)(-3) = -6 + 6 = 0$. Vì tích vô hướng bằng 0 nên $\\vec{AB} \\perp \\vec{BC}$, suy ra tam giác $ABC$ vuông tại $B$.\nc) Độ dài hai cạnh góc vuông: $AB = \\sqrt{3^2 + (-2)^2} = \\sqrt{13}$; $BC = \\sqrt{(-2)^2 + (-3)^2} = \\sqrt{13}$. Tam giác $ABC$ vuông cân tại $B$. Diện tích tam giác: $S = \\frac{1}{2} AB \\cdot BC = \\frac{1}{2} \\sqrt{13} \\cdot \\sqrt{13} = \\frac{13}{2} = 6.5$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Ứng dụng tích vô hướng tính công cơ học trong vật lý",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Một người công nhân dùng một sợi dây cáp kéo một khối gỗ trượt trên sàn nhà nằm ngang một đoạn đường $s = 15\text{ m}$. Lực kéo của dây cáp có độ lớn không đổi $F = 200\text{ N}$ và hợp với phương ngang chuyển động một góc $\u0007lpha = 45^\\circ$. Khối gỗ còn chịu tác dụng của lực ma sát trượt có hướng ngược chiều chuyển động với độ lớn $F_{\text{ms}} = 50\text{ N}$.\na) Tính công sinh bởi lực kéo của người công nhân (lấy $\\sqrt{2} \u0007pprox 1.414$).\nb) Tính công sinh bởi lực ma sát trượt.\nc) Tính tổng công thực hiện lên khối gỗ.",
-            "explanation": "a) Công sinh bởi lực kéo: $A_k = F \\cdot s \\cdot \\cos 45^\\circ = 200 \times 15 \times \frac{\\sqrt{2}}{2} = 1500\\sqrt{2} \u0007pprox 2121.3\text{ J}$.\nb) Lực ma sát ngược chiều chuyển động nên góc hợp giữa lực ma sát và độ dời là $180^\\circ$ ($\\cos 180^\\circ = -1$). Công của lực ma sát là: $A_{\text{ms}} = F_{\text{ms}} \\cdot s \\cdot \\cos 180^\\circ = 50 \times 15 \times (-1) = -750\text{ J}$.\nc) Tổng công thực hiện lên khối gỗ: $A = A_k + A_{\text{ms}} \u0007pprox 2121.3 - 750 = 1371.3\text{ J}$."
+            "question": "**Bài 4 (0.50 điểm):** Một người công nhân dùng một sợi dây cáp kéo một khối gỗ trượt trên sàn nhà nằm ngang một đoạn đường $s = 15\\text{ m}$. Lực kéo của dây cáp có độ lớn không đổi $F = 200\\text{ N}$ và hợp với phương ngang chuyển động một góc $\u0007lpha = 45^\\circ$. Khối gỗ còn chịu tác dụng của lực ma sát trượt có hướng ngược chiều chuyển động với độ lớn $F_{\\text{ms}} = 50\\text{ N}$.\na) Tính công sinh bởi lực kéo của người công nhân (lấy $\\sqrt{2} \u0007pprox 1.414$).\nb) Tính công sinh bởi lực ma sát trượt.\nc) Tính tổng công thực hiện lên khối gỗ.",
+            "explanation": "a) Công sinh bởi lực kéo: $A_k = F \\cdot s \\cdot \\cos 45^\\circ = 200 \\times 15 \\times \\frac{\\sqrt{2}}{2} = 1500\\sqrt{2} \u0007pprox 2121.3\\text{ J}$.\nb) Lực ma sát ngược chiều chuyển động nên góc hợp giữa lực ma sát và độ dời là $180^\\circ$ ($\\cos 180^\\circ = -1$). Công của lực ma sát là: $A_{\\text{ms}} = F_{\\text{ms}} \\cdot s \\cdot \\cos 180^\\circ = 50 \\times 15 \\times (-1) = -750\\text{ J}$.\nc) Tổng công thực hiện lên khối gỗ: $A = A_k + A_{\\text{ms}} \u0007pprox 2121.3 - 750 = 1371.3\\text{ J}$."
           }
         ]
       },
@@ -9902,7 +9902,7 @@
           {
             "id": 3,
             "level": "NB",
-            "question": "**Câu 3:** Cho $\u000bec{a} = (x_1; y_1)$ và $\u000bec{b} = (x_2; y_2)$. Hai vectơ vuông góc nhau khi và chỉ khi",
+            "question": "**Câu 3:** Cho $\\vec{a} = (x_1; y_1)$ và $\\vec{b} = (x_2; y_2)$. Hai vectơ vuông góc nhau khi và chỉ khi",
             "options": {
               "A": "$x_1 x_2 - y_1 y_2 = 0$",
               "B": "$x_1 y_2 - x_2 y_1 = 0$",
@@ -9915,12 +9915,12 @@
           {
             "id": 4,
             "level": "NB",
-            "question": "**Câu 4:** Độ dài của vectơ $\u000bec{a} = (x; y)$ được tính bằng công thức",
+            "question": "**Câu 4:** Độ dài của vectơ $\\vec{a} = (x; y)$ được tính bằng công thức",
             "options": {
-              "A": "$|\u000bec{a}| = x + y$",
-              "B": "$|\u000bec{a}| = \\sqrt{x + y}$",
-              "C": "$|\u000bec{a}| = x^2 + y^2$",
-              "D": "$|\u000bec{a}| = \\sqrt{x^2 + y^2}$"
+              "A": "$|\\vec{a}| = x + y$",
+              "B": "$|\\vec{a}| = \\sqrt{x + y}$",
+              "C": "$|\\vec{a}| = x^2 + y^2$",
+              "D": "$|\\vec{a}| = \\sqrt{x^2 + y^2}$"
             },
             "correct": "D",
             "explanation": "Độ dài vectơ bằng căn bậc hai tổng bình phương các toạ độ."
@@ -9928,7 +9928,7 @@
           {
             "id": 5,
             "level": "TH",
-            "question": "**Câu 5:** Cho hai vectơ $\u000bec{a}, \u000bec{b}$ có độ dài lần lượt là $2$ và $6$, tích vô hướng $\u000bec{a} \\cdot \u000bec{b} = -6$. Góc giữa hai vectơ bằng",
+            "question": "**Câu 5:** Cho hai vectơ $\\vec{a}, \\vec{b}$ có độ dài lần lượt là $2$ và $6$, tích vô hướng $\\vec{a} \\cdot \\vec{b} = -6$. Góc giữa hai vectơ bằng",
             "options": {
               "A": "$150^\\circ$",
               "B": "$120^\\circ$",
@@ -9936,25 +9936,25 @@
               "D": "$60^\\circ$"
             },
             "correct": "B",
-            "explanation": "$\\cos\theta = -6 / (2 \times 6) = -0.5 \\Rightarrow \theta = 120^\\circ$."
+            "explanation": "$\\cos\\theta = -6 / (2 \\times 6) = -0.5 \\Rightarrow \\theta = 120^\\circ$."
           },
           {
             "id": 6,
             "level": "TH",
-            "question": "**Câu 6:** Cho hình vuông $ABCD$ cạnh $a$. Tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$ bằng",
+            "question": "**Câu 6:** Cho hình vuông $ABCD$ cạnh $a$. Tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ bằng",
             "options": {
               "A": "$a^2\\sqrt{2}$",
               "B": "$a^2$",
-              "C": "$\frac{a^2}{2}$",
+              "C": "$\\frac{a^2}{2}$",
               "D": "$2a^2$"
             },
             "correct": "B",
-            "explanation": "$AB \\cdot AC \\cdot \\cos 45^\\circ = a \\cdot a\\sqrt{2} \\cdot \frac{\\sqrt{2}}{2} = a^2$."
+            "explanation": "$AB \\cdot AC \\cdot \\cos 45^\\circ = a \\cdot a\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} = a^2$."
           },
           {
             "id": 7,
             "level": "TH",
-            "question": "**Câu 7:** Trong mặt phẳng $Oxy$, cho $\u000bec{u} = (3; 2)$ và $\u000bec{v} = (-4; 6)$. Tích vô hướng $\u000bec{u} \\cdot \u000bec{v}$ bằng",
+            "question": "**Câu 7:** Trong mặt phẳng $Oxy$, cho $\\vec{u} = (3; 2)$ và $\\vec{v} = (-4; 6)$. Tích vô hướng $\\vec{u} \\cdot \\vec{v}$ bằng",
             "options": {
               "A": "0",
               "B": "-24",
@@ -9967,15 +9967,15 @@
           {
             "id": 8,
             "level": "TH",
-            "question": "**Câu 8:** Cho $\u000bec{a} = (2; 1)$ và $\u000bec{b} = (-1; 3)$. Côsin của góc giữa hai vectơ bằng",
+            "question": "**Câu 8:** Cho $\\vec{a} = (2; 1)$ và $\\vec{b} = (-1; 3)$. Côsin của góc giữa hai vectơ bằng",
             "options": {
-              "A": "$\frac{\\sqrt{2}}{10}$",
-              "B": "$\frac{1}{\\sqrt{50}}$",
+              "A": "$\\frac{\\sqrt{2}}{10}$",
+              "B": "$\\frac{1}{\\sqrt{50}}$",
               "C": "0",
-              "D": "$\frac{1}{2}$"
+              "D": "$\\frac{1}{2}$"
             },
             "correct": "A",
-            "explanation": "$\u000bec{a} \\cdot \u000bec{b} = 2(-1) + 1(3) = 1$. Mẫu: $\\sqrt{5}\\sqrt{10} = \\sqrt{50} = 5\\sqrt{2}$. $\\cos\theta = 1/(5\\sqrt{2}) = \frac{\\sqrt{2}}{10}$."
+            "explanation": "$\\vec{a} \\cdot \\vec{b} = 2(-1) + 1(3) = 1$. Mẫu: $\\sqrt{5}\\sqrt{10} = \\sqrt{50} = 5\\sqrt{2}$. $\\cos\\theta = 1/(5\\sqrt{2}) = \\frac{\\sqrt{2}}{10}$."
           },
           {
             "id": 9,
@@ -9988,46 +9988,46 @@
               "D": "$m = 4$"
             },
             "correct": "C",
-            "explanation": "$\u000bec{BA} = (-2; -1), \u000bec{BC} = (m - 3; 2)$. $\u000bec{BA} \\cdot \u000bec{BC} = 0 \\Leftrightarrow -2(m - 3) + (-1)(2) = 0 \\Leftrightarrow -2m + 6 - 2 = 0 \\Rightarrow m = 2$."
+            "explanation": "$\\vec{BA} = (-2; -1), \\vec{BC} = (m - 3; 2)$. $\\vec{BA} \\cdot \\vec{BC} = 0 \\Leftrightarrow -2(m - 3) + (-1)(2) = 0 \\Leftrightarrow -2m + 6 - 2 = 0 \\Rightarrow m = 2$."
           },
           {
             "id": 10,
             "level": "VD",
-            "question": "**Câu 10:** Cho tam giác đều $ABC$ cạnh $a$. Tích vô hướng $\u000bec{AB} \\cdot \u000bec{BC}$ bằng",
+            "question": "**Câu 10:** Cho tam giác đều $ABC$ cạnh $a$. Tích vô hướng $\\vec{AB} \\cdot \\vec{BC}$ bằng",
             "options": {
               "A": "$a^2$",
-              "B": "$\frac{a^2\\sqrt{3}}{2}$",
-              "C": "$\frac{a^2}{2}$",
-              "D": "$-\frac{a^2}{2}$"
+              "B": "$\\frac{a^2\\sqrt{3}}{2}$",
+              "C": "$\\frac{a^2}{2}$",
+              "D": "$-\\frac{a^2}{2}$"
             },
             "correct": "D",
-            "explanation": "Góc giữa $\u000bec{AB}$ và $\u000bec{BC}$ là góc bù với $\\widehat{B}$, tức $180^\\circ - 60^\\circ = 120^\\circ$. $\u000bec{AB} \\cdot \u000bec{BC} = a \\cdot a \\cdot \\cos 120^\\circ = -\frac{a^2}{2}$."
+            "explanation": "Góc giữa $\\vec{AB}$ và $\\vec{BC}$ là góc bù với $\\widehat{B}$, tức $180^\\circ - 60^\\circ = 120^\\circ$. $\\vec{AB} \\cdot \\vec{BC} = a \\cdot a \\cdot \\cos 120^\\circ = -\\frac{a^2}{2}$."
           },
           {
             "id": 11,
             "level": "VDC",
-            "question": "**Câu 11:** Cho hình thoi $ABCD$ cạnh $a$ có góc $\\widehat{A} = 60^\\circ$. Tích vô hướng $\u000bec{AB} \\cdot \u000bec{CD}$ bằng",
+            "question": "**Câu 11:** Cho hình thoi $ABCD$ cạnh $a$ có góc $\\widehat{A} = 60^\\circ$. Tích vô hướng $\\vec{AB} \\cdot \\vec{CD}$ bằng",
             "options": {
               "A": "$a^2$",
               "B": "0",
               "C": "$-a^2$",
-              "D": "$-\frac{a^2}{2}$"
+              "D": "$-\\frac{a^2}{2}$"
             },
             "correct": "C",
-            "explanation": "$\u000bec{AB}$ và $\u000bec{CD}$ là hai vectơ đối nhau (ngược hướng, cùng độ dài $a$), nên $\u000bec{AB} \\cdot \u000bec{CD} = -a^2$."
+            "explanation": "$\\vec{AB}$ và $\\vec{CD}$ là hai vectơ đối nhau (ngược hướng, cùng độ dài $a$), nên $\\vec{AB} \\cdot \\vec{CD} = -a^2$."
           },
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Một vật chịu tác dụng của lực $\u000bec{F} = (30; 40)$ (đơn vị: N) làm vật dịch chuyển từ điểm $A(1; 2)$ đến điểm $B(5; 6)$ (đơn vị: m). Công của lực $\u000bec{F}$ thực hiện bằng",
+            "question": "**Câu 12:** Một vật chịu tác dụng của lực $\\vec{F} = (30; 40)$ (đơn vị: N) làm vật dịch chuyển từ điểm $A(1; 2)$ đến điểm $B(5; 6)$ (đơn vị: m). Công của lực $\\vec{F}$ thực hiện bằng",
             "options": {
-              "A": "$160\text{ J}$",
-              "B": "$280\text{ J}$",
-              "C": "$120\text{ J}$",
-              "D": "$500\text{ J}$"
+              "A": "$160\\text{ J}$",
+              "B": "$280\\text{ J}$",
+              "C": "$120\\text{ J}$",
+              "D": "$500\\text{ J}$"
             },
             "correct": "B",
-            "explanation": "Vectơ độ dời: $\u000bec{d} = \u000bec{AB} = (5 - 1; 6 - 2) = (4; 4)$. Công $A = \u000bec{F} \\cdot \u000bec{d} = 30(4) + 40(4) = 120 + 160 = 280\text{ J}$."
+            "explanation": "Vectơ độ dời: $\\vec{d} = \\vec{AB} = (5 - 1; 6 - 2) = (4; 4)$. Công $A = \\vec{F} \\cdot \\vec{d} = 30(4) + 40(4) = 120 + 160 = 280\\text{ J}$."
           }
         ],
         "tfQuestions": [
@@ -10052,50 +10052,50 @@
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AM} = (0; -3)$ và $\u000bec{BC} = (6; 0)$.",
+                "content": "$\\vec{AM} = (0; -3)$ và $\\vec{BC} = (6; 0)$.",
                 "correct": true,
-                "explanation": "$A(2; 4), M(2; 1) \\Rightarrow \u000bec{AM} = (0; -3)$."
+                "explanation": "$A(2; 4), M(2; 1) \\Rightarrow \\vec{AM} = (0; -3)$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
                 "content": "Tam giác $ABC$ là tam giác đều.",
                 "correct": false,
-                "explanation": "$AM \\perp BC$ và $M$ là trung điểm $BC$ nên tam giác $ABC$ cân tại $A$. $AM = 3, BM = 3 \\Rightarrow AB = 3\\sqrt{2} \ne BC = 6$, tam giác không đều (là tam giác vuông cân tại $A$)."
+                "explanation": "$AM \\perp BC$ và $M$ là trung điểm $BC$ nên tam giác $ABC$ cân tại $A$. $AM = 3, BM = 3 \\Rightarrow AB = 3\\sqrt{2} \\ne BC = 6$, tam giác không đều (là tam giác vuông cân tại $A$)."
               }
             ]
           },
           {
             "id": 2,
-            "context": "**Câu 2:** Cho hai vectơ $\u000bec{a} = (3; 1)$ và $\u000bec{b} = (-2; 6)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "context": "**Câu 2:** Cho hai vectơ $\\vec{a} = (3; 1)$ và $\\vec{b} = (-2; 6)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Tích vô hướng $\u000bec{a} \\cdot \u000bec{b} = 0$.",
+                "content": "Tích vô hướng $\\vec{a} \\cdot \\vec{b} = 0$.",
                 "correct": true,
                 "explanation": "$3(-2) + 1(6) = -6 + 6 = 0$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Hai vectơ $\u000bec{a}$ và $\u000bec{b}$ vuông góc với nhau.",
+                "content": "Hai vectơ $\\vec{a}$ và $\\vec{b}$ vuông góc với nhau.",
                 "correct": true,
                 "explanation": "Vì tích vô hướng bằng 0."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Độ dài $|\u000bec{a}| = \\sqrt{10}$.",
+                "content": "Độ dài $|\\vec{a}| = \\sqrt{10}$.",
                 "correct": true,
                 "explanation": "$\\sqrt{3^2 + 1^2} = \\sqrt{10}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Độ dài $|\u000bec{b}| = 40$.",
+                "content": "Độ dài $|\\vec{b}| = 40$.",
                 "correct": false,
-                "explanation": "$|\u000bec{b}| = \\sqrt{(-2)^2 + 6^2} = \\sqrt{40} = 2\\sqrt{10}$, không phải 40."
+                "explanation": "$|\\vec{b}| = \\sqrt{(-2)^2 + 6^2} = \\sqrt{40} = 2\\sqrt{10}$, không phải 40."
               }
             ]
           }
@@ -10122,50 +10122,50 @@
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "$\u000bec{AM} = (0; -3)$ và $\u000bec{BC} = (6; 0)$.",
+                "content": "$\\vec{AM} = (0; -3)$ và $\\vec{BC} = (6; 0)$.",
                 "correct": true,
-                "explanation": "$A(2; 4), M(2; 1) \\Rightarrow \u000bec{AM} = (0; -3)$."
+                "explanation": "$A(2; 4), M(2; 1) \\Rightarrow \\vec{AM} = (0; -3)$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
                 "content": "Tam giác $ABC$ là tam giác đều.",
                 "correct": false,
-                "explanation": "$AM \\perp BC$ và $M$ là trung điểm $BC$ nên tam giác $ABC$ cân tại $A$. $AM = 3, BM = 3 \\Rightarrow AB = 3\\sqrt{2} \ne BC = 6$, tam giác không đều (là tam giác vuông cân tại $A$)."
+                "explanation": "$AM \\perp BC$ và $M$ là trung điểm $BC$ nên tam giác $ABC$ cân tại $A$. $AM = 3, BM = 3 \\Rightarrow AB = 3\\sqrt{2} \\ne BC = 6$, tam giác không đều (là tam giác vuông cân tại $A$)."
               }
             ]
           },
           {
             "id": 2,
-            "context": "**Câu 2:** Cho hai vectơ $\u000bec{a} = (3; 1)$ và $\u000bec{b} = (-2; 6)$. Xét tính đúng/sai của các mệnh đề sau:",
+            "context": "**Câu 2:** Cho hai vectơ $\\vec{a} = (3; 1)$ và $\\vec{b} = (-2; 6)$. Xét tính đúng/sai của các mệnh đề sau:",
             "items": [
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Tích vô hướng $\u000bec{a} \\cdot \u000bec{b} = 0$.",
+                "content": "Tích vô hướng $\\vec{a} \\cdot \\vec{b} = 0$.",
                 "correct": true,
                 "explanation": "$3(-2) + 1(6) = -6 + 6 = 0$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Hai vectơ $\u000bec{a}$ và $\u000bec{b}$ vuông góc với nhau.",
+                "content": "Hai vectơ $\\vec{a}$ và $\\vec{b}$ vuông góc với nhau.",
                 "correct": true,
                 "explanation": "Vì tích vô hướng bằng 0."
               },
               {
                 "label": "c",
                 "subLabel": "c)",
-                "content": "Độ dài $|\u000bec{a}| = \\sqrt{10}$.",
+                "content": "Độ dài $|\\vec{a}| = \\sqrt{10}$.",
                 "correct": true,
                 "explanation": "$\\sqrt{3^2 + 1^2} = \\sqrt{10}$."
               },
               {
                 "label": "d",
                 "subLabel": "d)",
-                "content": "Độ dài $|\u000bec{b}| = 40$.",
+                "content": "Độ dài $|\\vec{b}| = 40$.",
                 "correct": false,
-                "explanation": "$|\u000bec{b}| = \\sqrt{(-2)^2 + 6^2} = \\sqrt{40} = 2\\sqrt{10}$, không phải 40."
+                "explanation": "$|\\vec{b}| = \\sqrt{(-2)^2 + 6^2} = \\sqrt{40} = 2\\sqrt{10}$, không phải 40."
               }
             ]
           }
@@ -10174,17 +10174,17 @@
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh 8. Tính tích vô hướng $\u000bec{BA} \\cdot \u000bec{BC}$.",
+            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh 8. Tính tích vô hướng $\\vec{BA} \\cdot \\vec{BC}$.",
             "correctAnswer": "32",
             "acceptedAnswers": [
               "32"
             ],
-            "explanation": "$8 \times 8 \times \\cos 60^\\circ = 64 \times 0.5 = 32$."
+            "explanation": "$8 \\times 8 \\times \\cos 60^\\circ = 64 \\times 0.5 = 32$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Trong mặt phẳng toạ độ $Oxy$, cho $\u000bec{u} = (-4; 3)$ và $\u000bec{v} = (2; 5)$. Tính tích vô hướng $\u000bec{u} \\cdot \u000bec{v}$.",
+            "question": "**Câu 2:** Trong mặt phẳng toạ độ $Oxy$, cho $\\vec{u} = (-4; 3)$ và $\\vec{v} = (2; 5)$. Tính tích vô hướng $\\vec{u} \\cdot \\vec{v}$.",
             "correctAnswer": "7",
             "acceptedAnswers": [
               "7"
@@ -10194,7 +10194,7 @@
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Tìm $x$ để hai vectơ $\u000bec{a} = (x; -2)$ và $\u000bec{b} = (4; 6)$ vuông góc với nhau.",
+            "question": "**Câu 3:** Tìm $x$ để hai vectơ $\\vec{a} = (x; -2)$ và $\\vec{b} = (4; 6)$ vuông góc với nhau.",
             "correctAnswer": "3",
             "acceptedAnswers": [
               "3"
@@ -10204,7 +10204,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho hình vuông $ABCD$ cạnh bằng 5. Tính giá trị tích vô hướng $\u000bec{AC} \\cdot \u000bec{BD}$.",
+            "question": "**Câu 4:** Cho hình vuông $ABCD$ cạnh bằng 5. Tính giá trị tích vô hướng $\\vec{AC} \\cdot \\vec{BD}$.",
             "correctAnswer": "0",
             "acceptedAnswers": [
               "0"
@@ -10214,39 +10214,39 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho hình thoi $ABCD$ có đường chéo $AC = 10, BD = 6$. Tính tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$.",
+            "question": "**Câu 5:** Cho hình thoi $ABCD$ có đường chéo $AC = 10, BD = 6$. Tính tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
             "correctAnswer": "50",
             "acceptedAnswers": [
               "50"
             ],
-            "explanation": "Gọi $O$ là tâm hình thoi, $\u000bec{AB} = \u000bec{AO} + \u000bec{OB}$. $\u000bec{AB} \\cdot \u000bec{AC} = (\u000bec{AO} + \u000bec{OB}) \\cdot \u000bec{AC} = \u000bec{AO} \\cdot \u000bec{AC} + 0 = AO \\cdot AC = 5 \times 10 = 50$."
+            "explanation": "Gọi $O$ là tâm hình thoi, $\\vec{AB} = \\vec{AO} + \\vec{OB}$. $\\vec{AB} \\cdot \\vec{AC} = (\\vec{AO} + \\vec{OB}) \\cdot \\vec{AC} = \\vec{AO} \\cdot \\vec{AC} + 0 = AO \\cdot AC = 5 \\times 10 = 50$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một lực kéo $F = 80\text{ N}$ kéo một chiếc xe đẩy đi một quãng đường $25\text{ m}$ theo phương song song với lực kéo. Tính công mà lực này đã thực hiện (đơn vị: Jun).",
+            "question": "**Câu 6:** Một lực kéo $F = 80\\text{ N}$ kéo một chiếc xe đẩy đi một quãng đường $25\\text{ m}$ theo phương song song với lực kéo. Tính công mà lực này đã thực hiện (đơn vị: Jun).",
             "correctAnswer": "2000",
             "acceptedAnswers": [
               "2000"
             ],
-            "explanation": "$A = 80 \times 25 = 2000\text{ J}$."
+            "explanation": "$A = 80 \\times 25 = 2000\\text{ J}$."
           }
         ],
         "shortAnswers": [
           {
             "id": 1,
             "level": "TH",
-            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh 8. Tính tích vô hướng $\u000bec{BA} \\cdot \u000bec{BC}$.",
+            "question": "**Câu 1:** Cho tam giác đều $ABC$ cạnh 8. Tính tích vô hướng $\\vec{BA} \\cdot \\vec{BC}$.",
             "correctAnswer": "32",
             "acceptedAnswers": [
               "32"
             ],
-            "explanation": "$8 \times 8 \times \\cos 60^\\circ = 64 \times 0.5 = 32$."
+            "explanation": "$8 \\times 8 \\times \\cos 60^\\circ = 64 \\times 0.5 = 32$."
           },
           {
             "id": 2,
             "level": "TH",
-            "question": "**Câu 2:** Trong mặt phẳng toạ độ $Oxy$, cho $\u000bec{u} = (-4; 3)$ và $\u000bec{v} = (2; 5)$. Tính tích vô hướng $\u000bec{u} \\cdot \u000bec{v}$.",
+            "question": "**Câu 2:** Trong mặt phẳng toạ độ $Oxy$, cho $\\vec{u} = (-4; 3)$ và $\\vec{v} = (2; 5)$. Tính tích vô hướng $\\vec{u} \\cdot \\vec{v}$.",
             "correctAnswer": "7",
             "acceptedAnswers": [
               "7"
@@ -10256,7 +10256,7 @@
           {
             "id": 3,
             "level": "VD",
-            "question": "**Câu 3:** Tìm $x$ để hai vectơ $\u000bec{a} = (x; -2)$ và $\u000bec{b} = (4; 6)$ vuông góc với nhau.",
+            "question": "**Câu 3:** Tìm $x$ để hai vectơ $\\vec{a} = (x; -2)$ và $\\vec{b} = (4; 6)$ vuông góc với nhau.",
             "correctAnswer": "3",
             "acceptedAnswers": [
               "3"
@@ -10266,7 +10266,7 @@
           {
             "id": 4,
             "level": "VD",
-            "question": "**Câu 4:** Cho hình vuông $ABCD$ cạnh bằng 5. Tính giá trị tích vô hướng $\u000bec{AC} \\cdot \u000bec{BD}$.",
+            "question": "**Câu 4:** Cho hình vuông $ABCD$ cạnh bằng 5. Tính giá trị tích vô hướng $\\vec{AC} \\cdot \\vec{BD}$.",
             "correctAnswer": "0",
             "acceptedAnswers": [
               "0"
@@ -10276,22 +10276,22 @@
           {
             "id": 5,
             "level": "VDC",
-            "question": "**Câu 5:** Cho hình thoi $ABCD$ có đường chéo $AC = 10, BD = 6$. Tính tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$.",
+            "question": "**Câu 5:** Cho hình thoi $ABCD$ có đường chéo $AC = 10, BD = 6$. Tính tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
             "correctAnswer": "50",
             "acceptedAnswers": [
               "50"
             ],
-            "explanation": "Gọi $O$ là tâm hình thoi, $\u000bec{AB} = \u000bec{AO} + \u000bec{OB}$. $\u000bec{AB} \\cdot \u000bec{AC} = (\u000bec{AO} + \u000bec{OB}) \\cdot \u000bec{AC} = \u000bec{AO} \\cdot \u000bec{AC} + 0 = AO \\cdot AC = 5 \times 10 = 50$."
+            "explanation": "Gọi $O$ là tâm hình thoi, $\\vec{AB} = \\vec{AO} + \\vec{OB}$. $\\vec{AB} \\cdot \\vec{AC} = (\\vec{AO} + \\vec{OB}) \\cdot \\vec{AC} = \\vec{AO} \\cdot \\vec{AC} + 0 = AO \\cdot AC = 5 \\times 10 = 50$."
           },
           {
             "id": 6,
             "level": "VDC",
-            "question": "**Câu 6:** Một lực kéo $F = 80\text{ N}$ kéo một chiếc xe đẩy đi một quãng đường $25\text{ m}$ theo phương song song với lực kéo. Tính công mà lực này đã thực hiện (đơn vị: Jun).",
+            "question": "**Câu 6:** Một lực kéo $F = 80\\text{ N}$ kéo một chiếc xe đẩy đi một quãng đường $25\\text{ m}$ theo phương song song với lực kéo. Tính công mà lực này đã thực hiện (đơn vị: Jun).",
             "correctAnswer": "2000",
             "acceptedAnswers": [
               "2000"
             ],
-            "explanation": "$A = 80 \times 25 = 2000\text{ J}$."
+            "explanation": "$A = 80 \\times 25 = 2000\\text{ J}$."
           }
         ],
         "essayQuestions": [
@@ -10300,16 +10300,16 @@
             "level": "NB",
             "title": "Ý nghĩa hình học của tích vô hướng",
             "maxScore": 0.5,
-            "question": "**Bài 1 (0.50 điểm):** Nêu định nghĩa hình chiếu vuông góc của một vectơ và công thức hình chiếu trong tích vô hướng $\u000bec{a} \\cdot \u000bec{b} = |\u000bec{b}| \\cdot \text{pr}_{\u000bec{b}}(\u000bec{a})$.",
-            "explanation": "1. Khái niệm hình chiếu: Cho hai vectơ $\u000bec{a} = \u000bec{OA}$ và $\u000bec{b} = \u000bec{OB}$. Gọi $A'$ là hình chiếu vuông góc của điểm $A$ lên đường thẳng $OB$. Khi đó vectơ $\u000bec{OA'}$ được gọi là hình chiếu vuông góc của vectơ $\u000bec{a}$ lên phương của vectơ $\u000bec{b}$.\n2. Công thức: Tích vô hướng $\u000bec{a} \\cdot \u000bec{b} = \u000bec{OA'} \\cdot \u000bec{OB}$. Độ lớn đại số của hình chiếu là $|\u000bec{a}|\\cos(\u000bec{a}, \u000bec{b})$. Do đó tích vô hướng bằng độ dài của $\u000bec{b}$ nhân với giá trị đại số hình chiếu của $\u000bec{a}$ lên $\u000bec{b}$."
+            "question": "**Bài 1 (0.50 điểm):** Nêu định nghĩa hình chiếu vuông góc của một vectơ và công thức hình chiếu trong tích vô hướng $\\vec{a} \\cdot \\vec{b} = |\\vec{b}| \\cdot \\text{pr}_{\\vec{b}}(\\vec{a})$.",
+            "explanation": "1. Khái niệm hình chiếu: Cho hai vectơ $\\vec{a} = \\vec{OA}$ và $\\vec{b} = \\vec{OB}$. Gọi $A'$ là hình chiếu vuông góc của điểm $A$ lên đường thẳng $OB$. Khi đó vectơ $\\vec{OA'}$ được gọi là hình chiếu vuông góc của vectơ $\\vec{a}$ lên phương của vectơ $\\vec{b}$.\n2. Công thức: Tích vô hướng $\\vec{a} \\cdot \\vec{b} = \\vec{OA'} \\cdot \\vec{OB}$. Độ lớn đại số của hình chiếu là $|\\vec{a}|\\cos(\\vec{a}, \\vec{b})$. Do đó tích vô hướng bằng độ dài của $\\vec{b}$ nhân với giá trị đại số hình chiếu của $\\vec{a}$ lên $\\vec{b}$."
           },
           {
             "id": 2,
             "level": "TH",
             "title": "Tính góc của tam giác bằng tích vô hướng toạ độ",
             "maxScore": 0.5,
-            "question": "**Bài 2 (0.50 điểm):** Trong mặt phẳng $Oxy$, cho ba điểm $A(1; 2), B(4; 5), C(1; 8)$.\na) Tính toạ độ hai vectơ $\u000bec{AB}$ và $\u000bec{AC}$.\nb) Tính tích vô hướng $\u000bec{AB} \\cdot \u000bec{AC}$.\nc) Tính côsin của góc $\\widehat{BAC}$.",
-            "explanation": "a) $\u000bec{AB} = (4 - 1; 5 - 2) = (3; 3)$. $\u000bec{AC} = (1 - 1; 8 - 2) = (0; 6)$.\nb) $\u000bec{AB} \\cdot \u000bec{AC} = 3(0) + 3(6) = 18$.\nc) Độ dài: $AB = \\sqrt{3^2 + 3^2} = 3\\sqrt{2}$; $AC = \\sqrt{0^2 + 6^2} = 6$. Côsin của góc $\\widehat{BAC}$: $\\cos\\widehat{BAC} = \frac{\u000bec{AB} \\cdot \u000bec{AC}}{AB \\cdot AC} = \frac{18}{3\\sqrt{2} \times 6} = \frac{18}{18\\sqrt{2}} = \frac{1}{\\sqrt{2}} = \frac{\\sqrt{2}}{2}$. Suy ra $\\widehat{BAC} = 45^\\circ$."
+            "question": "**Bài 2 (0.50 điểm):** Trong mặt phẳng $Oxy$, cho ba điểm $A(1; 2), B(4; 5), C(1; 8)$.\na) Tính toạ độ hai vectơ $\\vec{AB}$ và $\\vec{AC}$.\nb) Tính tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.\nc) Tính côsin của góc $\\widehat{BAC}$.",
+            "explanation": "a) $\\vec{AB} = (4 - 1; 5 - 2) = (3; 3)$. $\\vec{AC} = (1 - 1; 8 - 2) = (0; 6)$.\nb) $\\vec{AB} \\cdot \\vec{AC} = 3(0) + 3(6) = 18$.\nc) Độ dài: $AB = \\sqrt{3^2 + 3^2} = 3\\sqrt{2}$; $AC = \\sqrt{0^2 + 6^2} = 6$. Côsin của góc $\\widehat{BAC}$: $\\cos\\widehat{BAC} = \\frac{\\vec{AB} \\cdot \\vec{AC}}{AB \\cdot AC} = \\frac{18}{3\\sqrt{2} \\times 6} = \\frac{18}{18\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$. Suy ra $\\widehat{BAC} = 45^\\circ$."
           },
           {
             "id": 3,
@@ -10317,15 +10317,15 @@
             "title": "Tìm điểm thoả mãn điều kiện trực giao",
             "maxScore": 0.5,
             "question": "**Bài 3 (0.50 điểm):** Trong mặt phẳng toạ độ $Oxy$, cho hai điểm $A(-2; 1)$ và $B(4; 3)$.\na) Tìm toạ độ điểm $M$ trên trục tung $Oy$ sao cho tam giác $ABM$ vuông tại $M$.\nb) Có bao nhiêu điểm $M$ thoả mãn điều kiện trên?",
-            "explanation": "a) Điểm $M$ thuộc trục tung nên $M(0; y)$. Khi đó: $\u000bec{MA} = (-2 - 0; 1 - y) = (-2; 1 - y)$; $\u000bec{MB} = (4 - 0; 3 - y) = (4; 3 - y)$. Tam giác $ABM$ vuông tại $M$ khi và chỉ khi $\u000bec{MA} \\cdot \u000bec{MB} = 0 \\Leftrightarrow (-2)(4) + (1 - y)(3 - y) = 0 \\Leftrightarrow -8 + (3 - 4y + y^2) = 0 \\Leftrightarrow y^2 - 4y - 5 = 0$.\nb) Phương trình bậc hai có $a - b + c = 1 - (-4) - 5 = 0$, có hai nghiệm phân biệt: $y_1 = -1$ và $y_2 = 5$. Vậy có đúng 2 điểm thoả mãn là $M_1(0; -1)$ và $M_2(0; 5)$."
+            "explanation": "a) Điểm $M$ thuộc trục tung nên $M(0; y)$. Khi đó: $\\vec{MA} = (-2 - 0; 1 - y) = (-2; 1 - y)$; $\\vec{MB} = (4 - 0; 3 - y) = (4; 3 - y)$. Tam giác $ABM$ vuông tại $M$ khi và chỉ khi $\\vec{MA} \\cdot \\vec{MB} = 0 \\Leftrightarrow (-2)(4) + (1 - y)(3 - y) = 0 \\Leftrightarrow -8 + (3 - 4y + y^2) = 0 \\Leftrightarrow y^2 - 4y - 5 = 0$.\nb) Phương trình bậc hai có $a - b + c = 1 - (-4) - 5 = 0$, có hai nghiệm phân biệt: $y_1 = -1$ và $y_2 = 5$. Vậy có đúng 2 điểm thoả mãn là $M_1(0; -1)$ và $M_2(0; 5)$."
           },
           {
             "id": 4,
             "level": "VDC",
             "title": "Bài toán thực tế công cơ học kéo sà lan",
             "maxScore": 0.5,
-            "question": "**Bài 4 (0.50 điểm):** Hai chiếc tàu kéo công suất lớn cùng phối hợp kéo một sà lan chở hàng rời cảng. Chiếc tàu thứ nhất kéo bằng dây cáp với lực $F_1 = 30\\,000\text{ N}$ theo hướng lệch góc $30^\\circ$ về phía bên phải so với trục giữa của sà lan. Chiếc tàu thứ hai kéo với lực $F_2 = 30\\,000\text{ N}$ lệch góc $30^\\circ$ về phía bên trái.\na) Tính độ lớn hợp lực của hai lực kéo tác dụng lên sà lan theo phương trục giữa.\nb) Tính công mà hai chiếc tàu thực hiện khi kéo sà lan dịch chuyển thẳng một đoạn đường $500\text{ m}$ dọc theo trục giữa.",
-            "explanation": "a) Do hai lực cùng độ lớn $F_1 = F_2 = 30\\,000\text{ N}$ và góc lệch đối xứng $\u0007lpha = 30^\\circ$ so với trục giữa, nên hợp lực $\u000bec{F} = \u000bec{F}_1 + \u000bec{F}_2$ nằm chính xác trên trục giữa của sà lan. Độ lớn hợp lực: $F = 2 F_1 \\cos 30^\\circ = 2 \times 30\\,000 \times \frac{\\sqrt{3}}{2} = 30\\,000\\sqrt{3} \u0007pprox 51\\,961.5\text{ N}$.\nb) Công thực hiện khi dịch chuyển quãng đường $s = 500\text{ m}$ theo phương trục giữa: $A = F \\cdot s = 30\\,000\\sqrt{3} \times 500 = 15\\,000\\,000\\sqrt{3} \u0007pprox 25\\,980\\,762\text{ J} \u0007pprox 25.98\text{ MJ}$."
+            "question": "**Bài 4 (0.50 điểm):** Hai chiếc tàu kéo công suất lớn cùng phối hợp kéo một sà lan chở hàng rời cảng. Chiếc tàu thứ nhất kéo bằng dây cáp với lực $F_1 = 30\\,000\\text{ N}$ theo hướng lệch góc $30^\\circ$ về phía bên phải so với trục giữa của sà lan. Chiếc tàu thứ hai kéo với lực $F_2 = 30\\,000\\text{ N}$ lệch góc $30^\\circ$ về phía bên trái.\na) Tính độ lớn hợp lực của hai lực kéo tác dụng lên sà lan theo phương trục giữa.\nb) Tính công mà hai chiếc tàu thực hiện khi kéo sà lan dịch chuyển thẳng một đoạn đường $500\\text{ m}$ dọc theo trục giữa.",
+            "explanation": "a) Do hai lực cùng độ lớn $F_1 = F_2 = 30\\,000\\text{ N}$ và góc lệch đối xứng $\u0007lpha = 30^\\circ$ so với trục giữa, nên hợp lực $\\vec{F} = \\vec{F}_1 + \\vec{F}_2$ nằm chính xác trên trục giữa của sà lan. Độ lớn hợp lực: $F = 2 F_1 \\cos 30^\\circ = 2 \\times 30\\,000 \\times \\frac{\\sqrt{3}}{2} = 30\\,000\\sqrt{3} \u0007pprox 51\\,961.5\\text{ N}$.\nb) Công thực hiện khi dịch chuyển quãng đường $s = 500\\text{ m}$ theo phương trục giữa: $A = F \\cdot s = 30\\,000\\sqrt{3} \\times 500 = 15\\,000\\,000\\sqrt{3} \u0007pprox 25\\,980\\,762\\text{ J} \u0007pprox 25.98\\text{ MJ}$."
           }
         ]
       }
@@ -17969,10 +17969,10 @@
             "level": "VD",
             "question": "**Câu 10:** Côsin của góc giữa hai đường thẳng $d_1: 3x + y - 2 = 0$ và $d_2: 2x - y + 4 = 0$ bằng",
             "options": {
-              "A": "$\frac{1}{\\sqrt{2}}$",
+              "A": "$\\frac{1}{\\sqrt{2}}$",
               "B": "0",
-              "C": "$\frac{1}{2}$",
-              "D": "$\frac{\\sqrt{3}}{2}$"
+              "C": "$\\frac{1}{2}$",
+              "D": "$\\frac{\\sqrt{3}}{2}$"
             },
             "correct": "A",
             "explanation": "$\\cos\\varphi = \\frac{|3(2) + 1(-1)|}{\\sqrt{9 + 1}\\sqrt{4 + 1}} = \\frac{5}{\\sqrt{10}\\sqrt{5}} = \\frac{5}{5\\sqrt{2}} = \\frac{1}{\\sqrt{2}}$."
@@ -55983,7 +55983,7 @@
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Một đoàn tàu chở hàng hãm phanh có gia tốc hãm phụ thuộc thời gian $a(t) = -0.2t$ ($\text{m/s}^2$). Biết vận tốc ban đầu $v_0 = 10\\text{ m/s}$. Sau 10 giây hãm phanh, vận tốc của đoàn tàu bằng",
+            "question": "**Câu 12:** Một đoàn tàu chở hàng hãm phanh có gia tốc hãm phụ thuộc thời gian $a(t) = -0.2t$ ($\\text{m/s}^2$). Biết vận tốc ban đầu $v_0 = 10\\text{ m/s}$. Sau 10 giây hãm phanh, vận tốc của đoàn tàu bằng",
             "options": {
               "A": "$2\\text{ m/s}$",
               "B": "$0\\text{ m/s}$",
@@ -66778,7 +66778,7 @@
           {
             "id": 12,
             "level": "VDC",
-            "question": "**Câu 12:** Một vật chịu tác dụng của 3 lực cân bằng $\\vec{F}_1 + \\vec{F}_2 + \\vec{F}_3 = \\vec{0}$. Biết $|\u000bec{F}_1| = 30$ N, $|\u000bec{F}_2| = 40$ N và góc giữa $\\vec{F}_1$ và $\\vec{F}_2$ bằng $90^\\circ$. Độ lớn của lực $\\vec{F}_3$ bằng:",
+            "question": "**Câu 12:** Một vật chịu tác dụng của 3 lực cân bằng $\\vec{F}_1 + \\vec{F}_2 + \\vec{F}_3 = \\vec{0}$. Biết $|\\vec{F}_1| = 30$ N, $|\\vec{F}_2| = 40$ N và góc giữa $\\vec{F}_1$ và $\\vec{F}_2$ bằng $90^\\circ$. Độ lớn của lực $\\vec{F}_3$ bằng:",
             "options": {
               "A": "10 N",
               "B": "70 N",
@@ -67342,7 +67342,7 @@
             {
               "id": 12,
               "level": "VDC",
-              "question": "**Câu 12:** Một vật chịu tác dụng của 3 lực cân bằng $\\vec{F}_1 + \\vec{F}_2 + \\vec{F}_3 = \\vec{0}$. Biết $|\u000bec{F}_1| = 30$ N, $|\u000bec{F}_2| = 40$ N và góc giữa $\\vec{F}_1$ và $\\vec{F}_2$ bằng $90^\\circ$. Độ lớn của lực $\\vec{F}_3$ bằng:",
+              "question": "**Câu 12:** Một vật chịu tác dụng của 3 lực cân bằng $\\vec{F}_1 + \\vec{F}_2 + \\vec{F}_3 = \\vec{0}$. Biết $|\\vec{F}_1| = 30$ N, $|\\vec{F}_2| = 40$ N và góc giữa $\\vec{F}_1$ và $\\vec{F}_2$ bằng $90^\\circ$. Độ lớn của lực $\\vec{F}_3$ bằng:",
               "options": {
                 "A": "50 N",
                 "B": "70 N",
@@ -69658,14 +69658,14 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Độ dài $|\u000bec{u}| = 3$.",
+                "content": "Độ dài $|\\vec{u}| = 3$.",
                 "correct": true,
                 "explanation": "$\\sqrt{4 + 1 + 4} = 3$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{v}| = 3$.",
+                "content": "Độ dài $|\\vec{v}| = 3$.",
                 "correct": true,
                 "explanation": "$\\sqrt{1 + 4 + 4} = 3$."
               },
@@ -69796,14 +69796,14 @@
               {
                 "label": "a",
                 "subLabel": "a)",
-                "content": "Độ dài $|\u000bec{u}| = 3$.",
+                "content": "Độ dài $|\\vec{u}| = 3$.",
                 "correct": true,
                 "explanation": "$\\sqrt{4 + 1 + 4} = 3$."
               },
               {
                 "label": "b",
                 "subLabel": "b)",
-                "content": "Độ dài $|\u000bec{v}| = 3$.",
+                "content": "Độ dài $|\\vec{v}| = 3$.",
                 "correct": true,
                 "explanation": "$\\sqrt{1 + 4 + 4} = 3$."
               },
@@ -70222,14 +70222,14 @@
                 {
                   "label": "a",
                   "subLabel": "a)",
-                  "content": "Độ dài $|\u000bec{u}| = 3$.",
+                  "content": "Độ dài $|\\vec{u}| = 3$.",
                   "correct": true,
                   "explanation": "$\\sqrt{4 + 1 + 4} = 3$."
                 },
                 {
                   "label": "b",
                   "subLabel": "b)",
-                  "content": "Độ dài $|\u000bec{v}| = 3$.",
+                  "content": "Độ dài $|\\vec{v}| = 3$.",
                   "correct": true,
                   "explanation": "$\\sqrt{1 + 4 + 4} = 3$."
                 },

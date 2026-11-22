@@ -25945,7 +25945,7 @@
                 theory: createKNTTTheoryBlockHTML(lessonTitle, grade, 2, "Công thức xác suất toàn phần và công thức Bayes",
                   `<p>Công thức Xác suất toàn phần và Công thức Bayes chuẩn SGK Kết nối tri thức:</p>
                   <ul class="list-disc ml-5 space-y-1">
-                    <li><strong>Hệ biến cố đầy đủ:</strong> Các biến cố $A_1, A_2, ..., A_n$ lập thành hệ đầy đủ nếu đôi một xung khắc ($A_i \\cap A_j = \\emptyset$) và $A_1 \\cup A_2 \\cup ... \\cup A_n = \\Omega$. (Trường hợp hay gặp nhất là cặp $\{A, \\bar{A}\}$).</li>
+                    <li><strong>Hệ biến cố đầy đủ:</strong> Các biến cố $A_1, A_2, ..., A_n$ lập thành hệ đầy đủ nếu đôi một xung khắc ($A_i \\cap A_j = \\emptyset$) và $A_1 \\cup A_2 \\cup ... \\cup A_n = \\Omega$. (Trường hợp hay gặp nhất là cặp $\\{A, \\bar{A}\\}$).</li>
                     <li><strong>Công thức xác suất toàn phần:</strong>
                       <br/>$$P(B) = \\sum_{i=1}^n P(A_i) \\cdot P(B|A_i) = P(A)P(B|A) + P(\\bar{A})P(B|\\bar{A})$$
                     </li>
@@ -25961,7 +25961,7 @@
                 ),
                 mcqs: [
                   {
-                    question: `Cho hệ đầy đủ $\{A, \\bar{A}\}$ với $P(A) = 0.3, P(B|A) = 0.8$ và $P(B|\\bar{A}) = 0.2$. Theo công thức xác suất toàn phần, $P(B)$ bằng:`,
+                    question: `Cho hệ đầy đủ $\\{A, \\bar{A}\\}$ với $P(A) = 0.3, P(B|A) = 0.8$ và $P(B|\\bar{A}) = 0.2$. Theo công thức xác suất toàn phần, $P(B)$ bằng:`,
                     options: ["A. 0.38", "B. 0.50", "C. 0.24", "D. 0.14"],
                     correct: "A",
                     explain: `$P(B) = P(A)P(B|A) + P(\\bar{A})P(B|\\bar{A}) = 0.3(0.8) + 0.7(0.2) = 0.24 + 0.14 = 0.38$.`
@@ -26016,7 +26016,7 @@
                 id: 4,
                 title: "Câu 4: Xét một nhà máy có hai phân xưởng $I$ và $II$ sản xuất bóng đèn. Phân xưởng $I$ sản xuất $60\\%$, tỉ lệ lỗi $2\\%$. Phân xưởng $II$ sản xuất $40\\%$, tỉ lệ lỗi $5\\%$.",
                 items: [
-                  { key: "a", text: "Gọi $A_1, A_2$ lần lượt là biến cố bóng do xưởng $I, II$ sản xuất thì $\{A_1, A_2\}$ là hệ đầy đủ.", correct: "true", explain: "Hai xưởng sản xuất toàn bộ sản phẩm và không trùng nhau." },
+                  { key: "a", text: "Gọi $A_1, A_2$ lần lượt là biến cố bóng do xưởng $I, II$ sản xuất thì $\\{A_1, A_2\\}$ là hệ đầy đủ.", correct: "true", explain: "Hai xưởng sản xuất toàn bộ sản phẩm và không trùng nhau." },
                   { key: "b", text: "Tỉ lệ bóng đèn bị lỗi do xưởng $I$ sản xuất trên toàn nhà máy là $0.012$.", correct: "true", explain: "$P(A_1)P(B|A_1) = 0.6 \\times 0.02 = 0.012$." },
                   { key: "c", text: "Tỉ lệ bóng đèn bị lỗi chung của toàn nhà máy là $P(B) = 3.2\\%$.", correct: "true", explain: "$P(B) = 0.6(0.02) + 0.4(0.05) = 0.012 + 0.020 = 0.032 = 3.2\\%$." },
                   { key: "d", text: "Lấy ngẫu nhiên 1 bóng đèn thấy bị lỗi, xác suất bóng đó do xưởng $I$ sản xuất là $\\frac{3}{8}$.", correct: "true", explain: "$P(A_1|B) = \\frac{0.012}{0.032} = \\frac{12}{32} = \\frac{3}{8}$." }
@@ -27544,12 +27544,12 @@
                   "Mục 1: Khái niệm & Điều kiện để hai mặt phẳng song song",
                   `<p>Nội dung cốt lõi Mục 1 Sách giáo khoa Toán 11 Kết Nối Tri Thức:</p>
 <ul class="list-disc ml-5 space-y-1.5">
-  <li><strong>1. Định nghĩa hai mặt phẳng song song:</strong> Hai mặt phẳng được gọi là song song với nhau nếu chúng không có điểm chung. Kí hiệu: $(P) \parallel (Q) \iff (P) \cap (Q) = \emptyset$.</li>
-  <li><strong>2. Điều kiện để hai mặt phẳng song song (Định lí 1):</strong> Nếu mặt phẳng $(\alpha)$ chứa hai đường thẳng cắt nhau $a, b$ và $a, b$ cùng song song với mặt phẳng $(\beta)$ thì $(\alpha) \parallel (\beta)$.</li>
-  <li><strong>3. Công thức suy luận ngắn gọn:</strong> $\begin{cases} a \subset (\alpha), b \subset (\alpha) \\ a \cap b = \{I\} \\ a \parallel (\beta), b \parallel (\beta) \end{cases} \implies (\alpha) \parallel (\beta)$.</li>
+  <li><strong>1. Định nghĩa hai mặt phẳng song song:</strong> Hai mặt phẳng được gọi là song song với nhau nếu chúng không có điểm chung. Kí hiệu: $(P) \\parallel (Q) \\iff (P) \\cap (Q) = \\emptyset$.</li>
+  <li><strong>2. Điều kiện để hai mặt phẳng song song (Định lí 1):</strong> Nếu mặt phẳng $(\\alpha)$ chứa hai đường thẳng cắt nhau $a, b$ và $a, b$ cùng song song với mặt phẳng $(\\beta)$ thì $(\\alpha) \\parallel (\\beta)$.</li>
+  <li><strong>3. Công thức suy luận ngắn gọn:</strong> $\\begin{cases} a \\subset (\\alpha), b \\subset (\\alpha) \\ a \\cap b = \\{I\\} \\ a \\parallel (\\beta), b \\parallel (\\beta) \\end{cases} \\implies (\\alpha) \\parallel (\\beta)$.</li>
 </ul>`,
-                  `Hai đường thẳng $a, b$ trong $(\alpha)$ <strong>bắt buộc phải cắt nhau</strong>. Nếu $a \parallel b$ thì dù cả hai cùng song song với $(\beta)$, ta vẫn chưa thể kết luận $(\alpha) \parallel (\beta)$ (khi đó $(\alpha)$ có thể cắt $(\beta)$).`,
-                  `Chỉ chỉ ra 1 đường thẳng trong $(\alpha)$ song song với $(\beta)$ rồi vội vã kết luận hai mặt phẳng song song là sai lầm phổ biến nhất!`,
+                  `Hai đường thẳng $a, b$ trong $(\\alpha)$ <strong>bắt buộc phải cắt nhau</strong>. Nếu $a \\parallel b$ thì dù cả hai cùng song song với $(\\beta)$, ta vẫn chưa thể kết luận $(\\alpha) \\parallel (\\beta)$ (khi đó $(\\alpha)$ có thể cắt $(\\beta)$).`,
+                  `Chỉ chỉ ra 1 đường thẳng trong $(\\alpha)$ song song với $(\\beta)$ rồi vội vã kết luận hai mặt phẳng song song là sai lầm phổ biến nhất!`,
                   `Tìm 2 đường thẳng cắt nhau trong mặt phẳng này lần lượt song song với 2 đường thẳng cắt nhau trong mặt phẳng kia là phương pháp chứng minh nhanh nhất!`
                 ),
                 mcqs: [
@@ -27604,10 +27604,10 @@
 <ul class="list-disc ml-5 space-y-1.5">
   <li><strong>1. Tính chất tồn tại và duy nhất:</strong> Qua một điểm nằm ngoài một mặt phẳng cho trước, có một và chỉ một mặt phẳng song song với mặt phẳng đã cho.</li>
   <li><strong>2. Hệ quả quan trọng:</strong> Hai mặt phẳng phân biệt cùng song song với một mặt phẳng thứ ba thì song song với nhau.</li>
-  <li><strong>3. Định lí 2 (Giao tuyến song song):</strong> Cho hai mặt phẳng song song. Nếu một mặt phẳng thứ ba cắt cả hai mặt phẳng đó thì hai giao tuyến phải song song với nhau: $\begin{cases} (\alpha) \parallel (\beta) \\ (\gamma) \cap (\alpha) = a \\ (\gamma) \cap (\beta) = b \end{cases} \implies a \parallel b$.</li>
-  <li><strong>4. Định lí Ta-lét trong không gian:</strong> Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì các đoạn thẳng tương ứng tỉ lệ: $\frac{A_1B_1}{A_2B_2} = \frac{B_1C_1}{B_2C_2} = \frac{A_1C_1}{A_2C_2}$.</li>
+  <li><strong>3. Định lí 2 (Giao tuyến song song):</strong> Cho hai mặt phẳng song song. Nếu một mặt phẳng thứ ba cắt cả hai mặt phẳng đó thì hai giao tuyến phải song song với nhau: $\\begin{cases} (\\alpha) \\parallel (\\beta) \\ (\\gamma) \\cap (\\alpha) = a \\ (\\gamma) \\cap (\\beta) = b \\end{cases} \\implies a \\parallel b$.</li>
+  <li><strong>4. Định lí Ta-lét trong không gian:</strong> Ba mặt phẳng đôi một song song chắn trên hai cát tuyến bất kì các đoạn thẳng tương ứng tỉ lệ: $\\frac{A_1B_1}{A_2B_2} = \\frac{B_1C_1}{B_2C_2} = \\frac{A_1C_1}{A_2C_2}$.</li>
 </ul>`,
-                  `Hai đường thẳng song song chắn giữa hai mặt phẳng song song thì bằng nhau: Nếu $(\alpha) \parallel (\beta)$ và $a \parallel b$ cắt $(\alpha), (\beta)$ tại $A, B$ và $A', B'$ thì $AB = A'B'$.`,
+                  `Hai đường thẳng song song chắn giữa hai mặt phẳng song song thì bằng nhau: Nếu $(\\alpha) \\parallel (\\beta)$ và $a \\parallel b$ cắt $(\\alpha), (\\beta)$ tại $A, B$ và $A', B'$ thì $AB = A'B'$.`,
                   `Nhầm lẫn rằng hai cát tuyến trong định lí Ta-lét phải cùng nằm trên một mặt phẳng. Trong không gian, hai cát tuyến có thể chéo nhau định lí Ta-lét vẫn hoàn toàn đúng!`,
                   `Vận dụng Định lí giao tuyến song song để dựng nhanh thiết diện: Khi mặt phẳng cắt qua hai mặt đối diện song song, hai giao tuyến tạo ra luôn song song với nhau!`
                 ),
@@ -27940,7 +27940,7 @@
                   "Mục 1: Khái niệm & Các tính chất cơ bản của phép chiếu song song",
                   `<p>Nội dung cốt lõi Mục 1 Sách giáo khoa Toán 11 Kết Nối Tri Thức:</p>
 <ul class="list-disc ml-5 space-y-1.5">
-  <li><strong>1. Định nghĩa phép chiếu song song:</strong> Cho mặt phẳng $(\alpha)$ và đường thẳng $\Delta$ cắt $(\alpha)$. Phép đặt tương ứng mỗi điểm $M$ với giao điểm $M'$ của đường thẳng qua $M$ song song với $\Delta$ (hoặc trùng $\Delta$) với $(\alpha)$ gọi là phép chiếu song song lên $(\alpha)$ theo phương $\Delta$.</li>
+  <li><strong>1. Định nghĩa phép chiếu song song:</strong> Cho mặt phẳng $(\\alpha)$ và đường thẳng $\\Delta$ cắt $(\\alpha)$. Phép đặt tương ứng mỗi điểm $M$ với giao điểm $M'$ của đường thẳng qua $M$ song song với $\\Delta$ (hoặc trùng $\\Delta$) với $(\\alpha)$ gọi là phép chiếu song song lên $(\\alpha)$ theo phương $\\Delta$.</li>
   <li><strong>2. Tính chất 1 (Thẳng hàng):</strong> Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng và bảo toàn thứ tự giữa các điểm đó.</li>
   <li><strong>3. Tính chất 2 (Hình dạng cơ bản):</strong> Biến đường thẳng thành đường thẳng, biến tia thành tia, biến đoạn thẳng thành đoạn thẳng.</li>
   <li><strong>4. Tính chất 3 (Tính song song):</strong> Biến hai đường thẳng song song thành hai đường thẳng song song hoặc trùng nhau.</li>
@@ -28061,11 +28061,11 @@
                   `<p>Nội dung cốt lõi Mục 3 Sách giáo khoa Toán 11 Kết Nối Tri Thức:</p>
 <ul class="list-disc ml-5 space-y-1.5">
   <li><strong>1. Quy ước đường nét:</strong> Đường nhìn thấy vẽ nét liền (solid), đường bị che khuất vẽ nét đứt đoạn (dashed).</li>
-  <li><strong>2. Biểu diễn trọng tâm:</strong> Trọng tâm $G$ của $\triangle ABC$ chiếu thành trọng tâm $G'$ của tam giác ảnh $\triangle A'B'C'$.</li>
+  <li><strong>2. Biểu diễn trọng tâm:</strong> Trọng tâm $G$ của $\\triangle ABC$ chiếu thành trọng tâm $G'$ của tam giác ảnh $\\triangle A'B'C'$.</li>
   <li><strong>3. Ứng dụng giải toán:</strong> Sử dụng phép chiếu song song để tính tỉ số đoạn thẳng, xác định giao điểm của đường thẳng và mặt phẳng, và tìm thiết diện.</li>
   <li><strong>4. Hiện tượng thực tế:</strong> Bóng của vật thể dưới ánh sáng mặt trời là một ví dụ trực quan về phép chiếu song song trên mặt đất.</li>
 </ul>`,
-                  `Đỉnh của hình chóp có đường cao vuông góc với đáy (như $SA \perp (ABCD)$) phải được dựng thẳng đứng vuông góc với mép dưới của trang giấy để tạo góc nhìn trực quan.`,
+                  `Đỉnh của hình chóp có đường cao vuông góc với đáy (như $SA \\perp (ABCD)$) phải được dựng thẳng đứng vuông góc với mép dưới của trang giấy để tạo góc nhìn trực quan.`,
                   `Quên chuyển cạnh khuất thành nét đứt đoạn, khiến hình vẽ trở thành khối trong suốt hoặc sai chiều sâu không gian.`,
                   `Khi vẽ hình chóp, hãy vẽ mặt phẳng đáy trước, xác định tâm hoặc chân đường cao rồi dựng thẳng đứng lên đỉnh $S$!`
                 ),
@@ -28342,10 +28342,10 @@
 <ul class="list-disc ml-5 space-y-1.5">
   <li><strong>1. Đường thẳng và mặt phẳng trong không gian (Bài 10):</strong> 6 tính chất thừa nhận, 3 cách xác định mặt phẳng (3 điểm không thẳng hàng, 1 đường và 1 điểm ngoài, 2 đường cắt nhau), kỹ thuật tìm giao tuyến và thiết diện.</li>
   <li><strong>2. Hai đường thẳng song song (Bài 11):</strong> 4 vị trí tương đối (trùng nhau, song song, cắt nhau, chéo nhau), Định lí ba giao tuyến song song hoặc đồng quy.</li>
-  <li><strong>3. Đường thẳng và mặt phẳng song song (Bài 12):</strong> Điều kiện $d \not\subset (P), d \parallel a \subset (P) \implies d \parallel (P)$; định lí giao tuyến song song.</li>
+  <li><strong>3. Đường thẳng và mặt phẳng song song (Bài 12):</strong> Điều kiện $d \\not\\subset (P), d \\parallel a \\subset (P) \\implies d \\parallel (P)$; định lí giao tuyến song song.</li>
   <li><strong>4. Hai mặt phẳng song song & Phép chiếu (Bài 13, 14):</strong> Điều kiện chứa 2 đường cắt nhau; Định lí Ta-lét trong không gian; Hình lăng trụ, hình hộp, hình chóp cụt; Các tính chất bảo toàn của phép chiếu song song.</li>
 </ul>`,
-                  `Sơ đồ tư duy mắt xích: Muốn chứng minh mặt // mặt $\to$ đưa về đường // mặt $\to$ đưa về đường // đường $\to$ dùng định lí phẳng (đường trung bình, Ta-lét).`,
+                  `Sơ đồ tư duy mắt xích: Muốn chứng minh mặt // mặt $\\to$ đưa về đường // mặt $\\to$ đưa về đường // đường $\\to$ dùng định lí phẳng (đường trung bình, Ta-lét).`,
                   `Nhầm lẫn giữa quan hệ chéo nhau và quan hệ song song trong không gian. Hai đường thẳng không có điểm chung có thể song song hoặc chéo nhau!`,
                   `Khi làm bài thi, luôn xác định rõ bài toán thuộc quan hệ nào trong 4 quan hệ chính để chọn định lí tương ứng!`
                 ),
@@ -28400,13 +28400,13 @@
                   `<p>Nội dung cốt lõi Mục 2 Sách giáo khoa Toán 11 Kết Nối Tri Thức:</p>
 <ul class="list-disc ml-5 space-y-1.5">
   <li><strong>1. Dạng 1 - Tìm giao tuyến hai mặt phẳng:</strong> Tìm 2 điểm chung phân biệt, hoặc 1 điểm chung và phương song song (dùng định lí giao tuyến song song).</li>
-  <li><strong>2. Dạng 2 - Tìm giao điểm của đường thẳng $d$ và mặt phẳng $(P)$:</strong> Chọn mặt phẳng phụ $(Q) \supset d$, tìm giao tuyến $a = (P) \cap (Q)$, khi đó giao điểm $M = d \cap a$.</li>
+  <li><strong>2. Dạng 2 - Tìm giao điểm của đường thẳng $d$ và mặt phẳng $(P)$:</strong> Chọn mặt phẳng phụ $(Q) \\supset d$, tìm giao tuyến $a = (P) \\cap (Q)$, khi đó giao điểm $M = d \\cap a$.</li>
   <li><strong>3. Dạng 3 - Chứng minh quan hệ song song:</strong> Sử dụng đường trung bình, Ta-lét, hình bình hành hoặc định lí ba giao tuyến.</li>
   <li><strong>4. Dạng 4 - Xác định thiết diện:</strong> Tìm giao tuyến của mặt phẳng cắt với tất cả các mặt của hình chóp hoặc hình lăng trụ, khép kín thành đa giác.</li>
 </ul>`,
                   `Khi hai mặt phẳng chứa hai đường thẳng song song, giao tuyến của chúng (nếu có) phải đi qua điểm chung và song song với hai đường thẳng đó!`,
                   `Kéo dài hai đường thẳng chéo nhau (không đồng phẳng) cho cắt nhau. Luôn kiểm tra xem hai đường thẳng có nằm trong cùng một mặt phẳng trước khi lấy giao điểm!`,
-                  `Quy tắc 4 bước dựng thiết diện: 1. Tìm điểm chung sẵn có $\to$ 2. Kẻ đường song song $\to$ 3. Cắt các cạnh bên $\to$ 4. Nối kín đa giác!`
+                  `Quy tắc 4 bước dựng thiết diện: 1. Tìm điểm chung sẵn có $\\to$ 2. Kẻ đường song song $\\to$ 3. Cắt các cạnh bên $\\to$ 4. Nối kín đa giác!`
                 ),
                 mcqs: [
           {
@@ -30057,12 +30057,12 @@
               },
               {
                 id: 4,
-                title: "Câu 4: Cho hai vectơ $\\vec{a}$ và $\\vec{b}$ có độ dài lần lượt là $|\vec{a}| = 3$, $|\vec{b}| = 4$ và góc giữa hai vectơ bằng $60^\\circ$.",
+                title: "Câu 4: Cho hai vectơ $\\vec{a}$ và $\\vec{b}$ có độ dài lần lượt là $|\\vec{a}| = 3$, $|\\vec{b}| = 4$ và góc giữa hai vectơ bằng $60^\\circ$.",
                 items: [
                   { key: "a", text: "$\\cos(\\vec{a}, \\vec{b}) = \\frac{1}{2}$.", correct: "true", explain: "$\\cos 60^\\circ = 0.5$." },
                   { key: "b", text: "Tích vô hướng $\\vec{a} \\cdot \\vec{b} = 6$.", correct: "true", explain: "$\\vec{a} \\cdot \\vec{b} = 3 \\times 4 \\times \\cos 60^\\circ = 12 \\times 0.5 = 6$." },
                   { key: "c", text: "Bình phương vô hướng $\\vec{a}^2 = 9$.", correct: "true", explain: "$|\\vec{a}|^2 = 3^2 = 9$." },
-                  { key: "d", text: "Độ dài của vectơ tổng $|\vec{a} + \\vec{b}| = 7$.", correct: "false", explain: "$|\\vec{a} + \\vec{b}|^2 = 3^2 + 4^2 + 2(6) = 25 + 12 = 37 \\Rightarrow |\\vec{a} + \\vec{b}| = \\sqrt{37} \\approx 6.08 \\neq 7$." }
+                  { key: "d", text: "Độ dài của vectơ tổng $|\\vec{a} + \\vec{b}| = 7$.", correct: "false", explain: "$|\\vec{a} + \\vec{b}|^2 = 3^2 + 4^2 + 2(6) = 25 + 12 = 37 \\Rightarrow |\\vec{a} + \\vec{b}| = \\sqrt{37} \\approx 6.08 \\neq 7$." }
                 ]
               },
               {
@@ -33011,8 +33011,8 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         [/\\to\b|\\rightarrow/g, '→'],
         [/\\Rightarrow/g, '⇒'],
         [/\\Leftrightarrow/g, '⇔'],
-        [/\\vec\{([A-Za-z0-9'\s]+)\}/g, '<span class="v-vec">$1</span>'],
-        [/\\overrightarrow\{([A-Za-z0-9'\s]+)\}/g, '<span class="v-vec">$1</span>'],
+        [/\\vec\\{([A-Za-z0-9'\s]+)\\}/g, '<span class="v-vec">$1</span>'],
+        [/\\overrightarrow\\{([A-Za-z0-9'\s]+)\\}/g, '<span class="v-vec">$1</span>'],
         [/\\mathbf\{([^}]+)\}/g, '$1'],
         [/\\mathrm\{([^}]+)\}/g, '$1'],
         [/\\text\{([^}]+)\}/g, '$1'],
@@ -33039,7 +33039,7 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         [/\^3\b/g, '³'],
         [/\^4\b/g, '⁴'],
         [/\^n\b/g, 'ⁿ'],
-        [/\{|\}/g, ''],
+        // [/\{|\}/g, ''], // Preserve curly braces for KaTeX
         [/\\/g, '']
       ];
 
@@ -33086,8 +33086,96 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       }
     }
 
+    // 2.5. Tự động khắc phục và làm sạch ký tự toán trước khi render KaTeX
+    function sanitizeMathContent(element) {
+      if (!element || !(element instanceof Node)) return;
+      try {
+        const walker = document.createTreeWalker(
+          element,
+          NodeFilter.SHOW_TEXT,
+          {
+            acceptNode: function(node) {
+              if (!node || !node.nodeValue) return NodeFilter.FILTER_SKIP;
+              const parent = node.parentElement;
+              if (parent) {
+                const tag = parent.tagName ? parent.tagName.toLowerCase() : '';
+                if (tag === 'script' || tag === 'style' || tag === 'textarea') {
+                  return NodeFilter.FILTER_REJECT;
+                }
+                if (parent.closest && parent.closest('.katex')) {
+                  return NodeFilter.FILTER_REJECT;
+                }
+              }
+              const v = node.nodeValue;
+              if (v.indexOf('\x0c') !== -1 || 
+                  v.indexOf('\x0b') !== -1 || 
+                  v.indexOf('↑rac') !== -1 ||
+                  v.indexOf('^circ') !== -1 ||
+                  v.indexOf('^c irc') !== -1 ||
+                  v.indexOf('\\u000b') !== -1 ||
+                  v.indexOf('$') !== -1) {
+                return NodeFilter.FILTER_ACCEPT;
+              }
+              return NodeFilter.FILTER_SKIP;
+            }
+          }
+        );
+
+        const nodesToFix = [];
+        let currNode;
+        while (currNode = walker.nextNode()) {
+          nodesToFix.push(currNode);
+        }
+
+        for (let i = 0; i < nodesToFix.length; i++) {
+          const node = nodesToFix[i];
+          let val = node.nodeValue;
+          if (!val) continue;
+
+          // 1. Repair control chars and visual arrows
+          val = val.replace(/\\x0c\s*rac/g, '\\frac');
+          val = val.replace(/\x0crac/g, '\\frac');
+          val = val.replace(/\\u000c\s*rac/g, '\\frac');
+          val = val.replace(/\u000crac/g, '\\frac');
+          val = val.replace(/↑rac/g, '\\frac');
+          val = val.replace(/\\u000bec/g, '\\vec');
+          val = val.replace(/\x0bec/g, '\\vec');
+          val = val.replace(/\\u000barphi/g, '\\varphi');
+          val = val.replace(/\x0barphi/g, '\\varphi');
+          val = val.replace(/\x0b/g, '\\v');
+          val = val.replace(/\^c\s*irc\b/g, '^\\circ');
+          val = val.replace(/\^circ\b/g, '^\\circ');
+
+          // 2. Repair inside math delimiters $...$ and $$...$$
+          val = val.replace(/\$([^\$]+)\$/g, function(match, math) {
+            let m = math;
+            m = m.replace(/\\x0c\s*rac/g, '\\frac');
+            m = m.replace(/\x0crac/g, '\\frac');
+            m = m.replace(/\\u000c\s*rac/g, '\\frac');
+            m = m.replace(/\u000crac/g, '\\frac');
+            m = m.replace(/↑rac/g, '\\frac');
+            m = m.replace(/(^|[^\\])\brac\{/g, '$1\\frac{');
+            m = m.replace(/(^|[^\\])\bdf?rac\{/g, '$1\\dfrac{');
+            m = m.replace(/\^c\s*irc\b/g, '^\\circ');
+            m = m.replace(/\^circ\b/g, '^\\circ');
+            m = m.replace(/(^|[^\\])\b(alpha|beta|gamma|delta|Delta|theta|Theta|lambda|Lambda|mu|sigma|Sigma|omega|Omega|pi|Pi)\b/g, '$1\\$2');
+            m = m.replace(/(^|[^\\])\b(sin|cos|tan|cot|lim|ln|log|le|ge|leq|geq|neq|approx|equiv|parallel|perp|subset|supset|cap|cup|in|notin|emptyset|times|pm|mp)\b/g, '$1\\$2');
+            m = m.replace(/(\d+)pi\b/g, '$1\\pi');
+            return '$' + m + '$';
+          });
+
+          if (val !== node.nodeValue) {
+            node.nodeValue = val;
+          }
+        }
+      } catch (err) {
+        console.warn('Lỗi sanitizeMathContent:', err);
+      }
+    }
+
     function executeKaTeX(element) {
       if (!element) return;
+      sanitizeMathContent(element);
       try {
         if (typeof window.renderMathInElement === 'function') {
           window.renderMathInElement(element, {

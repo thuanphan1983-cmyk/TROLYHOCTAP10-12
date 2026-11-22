@@ -896,7 +896,7 @@
           options: ["A. $a\\sqrt{2}$", "B. $2a$", "C. $a$", "D. $a\\sqrt{3}$"],
           correct: "A",
           hint1: "Áp dụng quy tắc trừ chung gốc: $\\vec{AB} - \\vec{AD} = \\vec{DB}$.",
-          hint2: "Độ dài $|\vec{DB}| = DB$ là đường chéo hình vuông cạnh $a$.",
+          hint2: "Độ dài $|\\vec{DB}| = DB$ là đường chéo hình vuông cạnh $a$.",
           explain: "Ta có $\\vec{AB} - \\vec{AD} = \\vec{DB}$. Do đó độ dài $|\\vec{AB} - \\vec{AD}| = |\\vec{DB}| = DB = a\\sqrt{2}$ (độ dài đường chéo hình vuông). Đáp án đúng là A."
         },
         {
@@ -974,7 +974,7 @@
           items: [
             { key: "a", text: "Tích vô hướng $\\vec{u} \\cdot \\vec{v} = 0$.", correct: "true", explain: "$\\vec{u} \\cdot \\vec{v} = 1(-4) + 2(2) = -4 + 4 = 0$, mệnh đề Đúng." },
             { key: "b", text: "Hai vectơ $\\vec{u}$ và $\\vec{v}$ vuông góc với nhau.", correct: "true", explain: "Vì tích vô hướng bằng 0 và hai vectơ khác $\\vec{0}$, mệnh đề Đúng." },
-            { key: "c", text: "Độ dài $|\vec{u}| = \\sqrt{5}$.", correct: "true", explain: "$|\\vec{u}| = \\sqrt{1^2 + 2^2} = \\sqrt{5}$, mệnh đề Đúng." },
+            { key: "c", text: "Độ dài $|\\vec{u}| = \\sqrt{5}$.", correct: "true", explain: "$|\\vec{u}| = \\sqrt{1^2 + 2^2} = \\sqrt{5}$, mệnh đề Đúng." },
             { key: "d", text: "Hai vectơ $\\vec{u}$ và $\\vec{v}$ cùng phương với nhau.", correct: "false", explain: "Hai vectơ vuông góc với nhau nên không thể cùng phương (tỉ số $1/(-4) \\neq 2/2$), mệnh đề Sai." }
           ]
         }
@@ -987,7 +987,7 @@
           correctAnswer: "5",
           acceptedAnswers: ["5", "5.0", "5,0"],
           hint1: "Áp dụng quy tắc hình bình hành: $\\vec{AB} + \\vec{AD} = \\vec{AC}$.",
-          hint2: "Độ dài $|\vec{AB} + \\vec{AD}| = AC = \\sqrt{AB^2 + AD^2} = \\sqrt{3^2 + 4^2}$.",
+          hint2: "Độ dài $|\\vec{AB} + \\vec{AD}| = AC = \\sqrt{AB^2 + AD^2} = \\sqrt{3^2 + 4^2}$.",
           explain: "Theo quy tắc hình bình hành: $\\vec{AB} + \\vec{AD} = \\vec{AC}$. Do đó độ dài $|\\vec{AB} + \\vec{AD}| = AC = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$."
         },
         {
