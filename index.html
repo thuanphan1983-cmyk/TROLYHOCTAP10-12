@@ -5143,6 +5143,9 @@
       window.demoState = demoState;
       renderTheoryPanel();
       updateSgkFocusNav();
+      if (typeof updateInteractivePillsUI === 'function') {
+        updateInteractivePillsUI();
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
       const pTheory = document.getElementById('panel-theory');
       if (pTheory) pTheory.scrollTo({ top: 0, behavior: 'smooth' });
@@ -33476,14 +33479,23 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         return;
       }
 
+      // ĐỒNG BỘ CHÍNH XÁC MỤC HỌC SINH ĐANG HỌC (QUAN TRỌNG)
+      if (typeof activeLesson !== 'undefined' && activeLesson && activeLesson.sections && sectionNumber) {
+        const foundIdx = activeLesson.sections.findIndex(s => s.sectionNumber === sectionNumber);
+        if (foundIdx !== -1) {
+          demoState.sectionIndex = foundIdx;
+          window.demoState = demoState;
+        }
+      }
+
       const secIdx = (typeof demoState !== 'undefined' && demoState && typeof demoState.sectionIndex === 'number') 
         ? demoState.sectionIndex : 0;
-      const sec = (typeof activeLesson !== 'undefined' && activeLesson && activeLesson.sections && sectionNumber)
-        ? (activeLesson.sections.find(s => s.sectionNumber === sectionNumber) || activeLesson.sections[secIdx])
-        : (typeof activeLesson !== 'undefined' && activeLesson && activeLesson.sections ? activeLesson.sections[secIdx] : null);
+      const sec = (typeof activeLesson !== 'undefined' && activeLesson && activeLesson.sections)
+        ? (activeLesson.sections[secIdx] || (sectionNumber ? activeLesson.sections.find(s => s.sectionNumber === sectionNumber) : null))
+        : null;
 
       const secNum = sec ? sec.sectionNumber : (sectionNumber || (secIdx + 1));
-      const secTitle = sec ? sec.sectionTitle : 'Lý thuyết';
+      const secTitle = sec ? sec.sectionTitle : `Mục ${secNum}`;
       const sName = (typeof studentInfo !== 'undefined' && studentInfo && studentInfo.name) ? studentInfo.name : 'em';
       const lessonTitle = (typeof studentInfo !== 'undefined' && studentInfo && studentInfo.lesson) ? studentInfo.lesson : '';
 
@@ -33499,10 +33511,10 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
       }
       const chatHeaderTopic = document.getElementById('chat-header-topic');
       if (chatHeaderTopic) {
-        chatHeaderTopic.textContent = `Chế độ Trợ lý 1-1: Giải đáp thắc mắc Mục ${secNum} - ${secTitle}`;
+        chatHeaderTopic.textContent = `Chế độ Trợ lý 1-1: Giải đáp thắc mắc ${secTitle}`;
       }
 
-      // 3. Cập nhật gợi ý câu hỏi tương tác theo thời gian thực
+      // 3. Cập nhật gợi ý câu hỏi tương tác ĐÚNG 100% THEO MỤC HIỆN TẠI
       if (typeof updateInteractivePillsUI === 'function') {
         updateInteractivePillsUI();
       }
@@ -33557,22 +33569,22 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
         Phản hồi tức thì 0ms (Sẵn đáp án)
       </span>
     </div>
-    <button type="button" onclick="sendQuickReply('Thầy/Cô giảng lại giúp em những điểm cốt lõi nhất của Mục ${secNum} với ạ')" class="px-3 py-1.5 bg-white hover:bg-indigo-50 text-indigo-900 border border-indigo-200 hover:border-indigo-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
+    <button type="button" onclick="sendQuickReply('Thầy/Cô giảng lại giúp em những điểm cốt lõi nhất của ${secTitle} với ạ')" class="px-3 py-1.5 bg-white hover:bg-indigo-50 text-indigo-900 border border-indigo-200 hover:border-indigo-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
       📖 Giảng lại cốt lõi
     </button>
-    <button type="button" onclick="sendQuickReply('Cho em một ví dụ thực tế chuẩn SGK liên quan đến Mục ${secNum} ạ')" class="px-3 py-1.5 bg-white hover:bg-sky-50 text-sky-900 border border-sky-200 hover:border-sky-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
+    <button type="button" onclick="sendQuickReply('Cho em một ví dụ thực tế chuẩn SGK liên quan đến ${secTitle} ạ')" class="px-3 py-1.5 bg-white hover:bg-sky-50 text-sky-900 border border-sky-200 hover:border-sky-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
       🌟 Ví dụ thực tế
     </button>
-    <button type="button" onclick="sendQuickReply('Những lỗi sai và bẫy trắc nghiệm hay gặp nhất ở Mục ${secNum} là gì hả Thầy/Cô?')" class="px-3 py-1.5 bg-white hover:bg-rose-50 text-rose-900 border border-rose-200 hover:border-rose-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
+    <button type="button" onclick="sendQuickReply('Những lỗi sai và bẫy trắc nghiệm hay gặp nhất ở ${secTitle} là gì hả Thầy/Cô?')" class="px-3 py-1.5 bg-white hover:bg-rose-50 text-rose-900 border border-rose-200 hover:border-rose-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
       ⚠️ Bẫy trắc nghiệm
     </button>
-    <button type="button" onclick="sendQuickReply('Thầy/Cô chỉ em mẹo bấm máy tính Casio dạng toán này với ạ')" class="px-3 py-1.5 bg-white hover:bg-emerald-50 text-emerald-900 border border-emerald-200 hover:border-emerald-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
+    <button type="button" onclick="sendQuickReply('Thầy/Cô chỉ em mẹo bấm máy tính Casio cho ${secTitle} với ạ')" class="px-3 py-1.5 bg-white hover:bg-emerald-50 text-emerald-900 border border-emerald-200 hover:border-emerald-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
       📟 Mẹo bấm Casio
     </button>
-    <button type="button" onclick="sendQuickReply('Bí kíp và thần chú ghi nhớ nhanh kiến thức Mục ${secNum} là gì ạ?')" class="px-3 py-1.5 bg-white hover:bg-amber-50 text-amber-900 border border-amber-200 hover:border-amber-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
+    <button type="button" onclick="sendQuickReply('Bí kíp và thần chú ghi nhớ nhanh kiến thức ${secTitle} là gì ạ?')" class="px-3 py-1.5 bg-white hover:bg-amber-50 text-amber-900 border border-amber-200 hover:border-amber-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
       💡 Bí kíp ghi nhớ
     </button>
-    <button type="button" onclick="sendQuickReply('Thầy/Cô gợi ý cách tư duy cho câu hỏi trắc nghiệm hiện tại với ạ')" class="px-3 py-1.5 bg-white hover:bg-purple-50 text-purple-900 border border-purple-200 hover:border-purple-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
+    <button type="button" onclick="sendQuickReply('Thầy/Cô gợi ý cách tư duy cho câu hỏi trắc nghiệm của ${secTitle} với ạ')" class="px-3 py-1.5 bg-white hover:bg-purple-50 text-purple-900 border border-purple-200 hover:border-purple-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
       🎯 Gợi ý câu này
     </button>
     <button type="button" onclick="switchStudyTab('theory')" class="px-3 py-1.5 bg-indigo-100 hover:bg-indigo-200 text-indigo-950 rounded-xl font-bold ml-auto transition cursor-pointer active:scale-95">
@@ -38280,12 +38292,14 @@ function renderSAPanel() {
       return null;
     }
 
-    // 2. Danh sách bong bóng câu hỏi tương tác theo thời gian thực (Interactive Pills phong phú & đa dạng)
+    // 2. Danh sách bong bóng câu hỏi tương tác theo thời gian thực (TẬP TRUNG CHÍNH XÁC VÀO MỤC ĐANG HỌC)
     function getInteractivePillsForCurrentState() {
-      const lessonTitle = (studentInfo.lesson || activeLesson?.lessonTitle || '').toLowerCase();
-      const secIdx = demoState.sectionIndex || 0;
+      const lessonTitle = (studentInfo?.lesson || activeLesson?.lessonTitle || '').toLowerCase();
+      const secIdx = (demoState && typeof demoState.sectionIndex === 'number') ? demoState.sectionIndex : 0;
+      const curSec = (activeLesson && activeLesson.sections) ? activeLesson.sections[secIdx] : null;
+      const secTitle = (curSec ? curSec.sectionTitle : '').toLowerCase();
 
-      if (demoState.isFinishedSections) {
+      if (demoState?.isFinishedSections) {
         return [
           "Thầy/Cô giải thích giúp em cách tính điểm 6 câu Đúng/Sai (24 ý) ạ",
           "Khi nào nút Nộp bài 24 ý mới mở khóa hả Thầy/Cô?",
@@ -38296,17 +38310,58 @@ function renderSAPanel() {
         ];
       }
 
+      // 1. ĐƯỜNG TIỆM CẬN CỦA ĐỒ THỊ HÀM SỐ (TOÁN 12 KNTT)
+      if (lessonTitle.includes('tiệm cận') || lessonTitle.includes('tiem can')) {
+        // MỤC TIỆM CẬN NGANG
+        if (secTitle.includes('ngang') || (!secTitle.includes('đứng') && !secTitle.includes('xiên') && secIdx === 0)) {
+          return [
+            "Thầy/Cô chỉ em mẹo bấm Casio tìm tiệm cận ngang với ạ",
+            "Đồ thị hàm số có thể có tối đa bao nhiêu đường tiệm cận ngang hả Cô?",
+            "Tại sao hàm đa thức bậc 3, bậc 4 không bao giờ có tiệm cận ngang hả Thầy?",
+            "Điều kiện để hàm phân thức bậc nhất trên bậc nhất có tiệm cận ngang là gì ạ?",
+            "Hàm số chứa căn thức khi nào có 2 đường tiệm cận ngang khác nhau ạ?",
+            "Đồ thị hàm số có thể cắt đường tiệm cận ngang không hả Thầy?"
+          ];
+        }
+        // MỤC TIỆM CẬN ĐỨNG (TUYỆT ĐỐI CHỈ HỎI VỀ TIỆM CẬN ĐỨNG)
+        else if (secTitle.includes('đứng') || secIdx === 1) {
+          return [
+            "Tại sao nghiệm của mẫu triệt tiêu với tử lại không là tiệm cận đứng ạ?",
+            "Thầy chỉ em cách bấm Casio kiểm tra tiệm cận đứng với ạ",
+            "Đồ thị hàm số có bao giờ cắt đường tiệm cận đứng không hả Cô?",
+            "Hàm số xác định tại $x = x_0$ thì đường thẳng $x = x_0$ có thể là tiệm cận đứng không ạ?",
+            "Số đường tiệm cận đứng của hàm phân thức bậc 2 trên bậc 2 tối đa là bao nhiêu ạ?",
+            "Mẹo rút gọn nhanh biểu thức chứa căn ở tử để tìm tiệm cận đứng chuẩn xác"
+          ];
+        }
+        // MỤC TIỆM CẬN XIÊN
+        else {
+          return [
+            "Thầy hướng dẫn em cách chia đa thức tìm tiệm cận xiên với ạ",
+            "Khi nào đồ thị hàm phân thức có tiệm cận xiên hả Thầy?",
+            "Giao điểm của tiệm cận đứng và tiệm cận xiên có ý nghĩa gì ạ?",
+            "Đồ thị hàm số có thể vừa có tiệm cận ngang vừa có tiệm cận xiên khi $x \to +\infty$ không ạ?",
+            "Tâm đối xứng của đồ thị hàm phân thức bậc 2 trên bậc 1 xác định thế nào ạ?",
+            "Mẹo bấm máy Casio tìm hệ số $a, b$ của đường tiệm cận xiên $y = ax + b$"
+          ];
+        }
+      }
+
+      // 2. TÍNH ĐƠN ĐIỆU VÀ CỰC TRỊ CỦA HÀM SỐ (TOÁN 12 KNTT)
       if (lessonTitle.includes('đơn điệu') || lessonTitle.includes('cực trị')) {
-        if (secIdx === 0) {
+        // MỤC TÍNH ĐƠN ĐIỆU (CHỈ HỎI VỀ TÍNH ĐỒNG BIẾN / NGHỊCH BIẾN)
+        if (secTitle.includes('đơn điệu') || (!secTitle.includes('cực trị') && secIdx === 0)) {
           return [
             "Thầy ơi, tại sao $f'(x) = 0$ tại hữu hạn điểm hàm số vẫn đồng biến ạ?",
-            "Cô ơi, cho em một ví dụ minh họa về bảng biến thiên ạ",
-            "Tại sao không được dùng ký hiệu hợp ($\\cup$) khi kết luận khoảng đơn điệu?",
+            "Tại sao không được dùng ký hiệu hợp ($\cup$) khi kết luận khoảng đơn điệu?",
+            "Mẹo bấm Casio TABLE kiểm tra tính đồng biến, nghịch biến trong 10 giây",
             "Tìm m để hàm phân thức bậc nhất / bậc nhất đồng biến trên từng khoảng xác định ạ",
-            "Hàm số đồng biến trên $\\mathbb{R}$ thì tam thức bậc hai của đạo hàm có điều kiện gì ạ?",
-            "Mẹo bấm Casio TABLE kiểm tra tính đồng biến, nghịch biến trong 10 giây"
+            "Hàm số đồng biến trên $\mathbb{R}$ thì tam thức bậc hai của đạo hàm có điều kiện gì ạ?",
+            "Thầy/Cô cho em một ví dụ minh họa về các bước xét tính đơn điệu bằng bảng biến thiên ạ"
           ];
-        } else {
+        }
+        // MỤC CỰC TRỊ (CHỈ HỎI VỀ ĐIỂM CỰC TRỊ, CỰC ĐẠI, CỰC TIỂU)
+        else {
           return [
             "Phân biệt \"Điểm cực trị\" và \"Giá trị cực trị\" thế nào để không bị lừa ạ?",
             "Tại sao nghiệm bội chẵn của $f'(x) = 0$ lại không có cực trị hả Thầy?",
@@ -38318,70 +38373,21 @@ function renderSAPanel() {
         }
       }
 
-      if (lessonTitle.includes('tiệm cận') || lessonTitle.includes('tiem can')) {
-        if (secIdx === 0) {
-          return [
-            "Thầy/Cô chỉ em mẹo bấm Casio tìm tiệm cận ngang với ạ",
-            "Đồ thị hàm số có thể có tối đa bao nhiêu đường tiệm cận ngang hả Cô?",
-            "Tại sao hàm đa thức bậc 3, bậc 4 không bao giờ có tiệm cận ngang hả Thầy?",
-            "Điều kiện để hàm phân thức bậc nhất trên bậc nhất có tiệm cận ngang là gì ạ?",
-            "Giới hạn khi $x \\to +\\infty$ và $x \\to -\\infty$ cho ra 2 tiệm cận ngang khác nhau khi nào ạ?",
-            "Cho em một ví dụ đồ thị hàm số chứa căn thức có 2 đường tiệm cận ngang ạ"
-          ];
-        } else if (secIdx === 1) {
-          return [
-            "Tại sao nghiệm của mẫu triệt tiêu với tử lại không là tiệm cận đứng ạ?",
-            "Thầy chỉ em cách bấm Casio kiểm tra tiệm cận đứng với ạ",
-            "Đồ thị hàm số có bao giờ cắt đường tiệm cận đứng không hả Cô?",
-            "Hàm số xác định tại $x = x_0$ thì đường thẳng $x = x_0$ có thể là tiệm cận đứng không ạ?",
-            "Số đường tiệm cận đứng của hàm phân thức bậc 2 trên bậc 2 tối đa là bao nhiêu ạ?",
-            "Mẹo rút gọn nhanh biểu thức chứa căn ở tử để tìm tiệm cận đứng chuẩn xác"
-          ];
-        } else {
-          return [
-            "Thầy hướng dẫn em cách chia đa thức tìm tiệm cận xiên với ạ",
-            "Khi nào đồ thị hàm số có tiệm cận xiên hả Thầy?",
-            "Giao điểm của tiệm cận đứng và tiệm cận xiên có ý nghĩa gì ạ?",
-            "Đồ thị hàm số có thể vừa có tiệm cận ngang vừa có tiệm cận xiên khi $x \\to +\\infty$ không ạ?",
-            "Tâm đối xứng của đồ thị hàm phân thức bậc 2 trên bậc 1 xác định thế nào ạ?",
-            "Mẹo bấm máy Casio tìm hệ số $a, b$ của đường tiệm cận xiên $y = ax + b$"
-          ];
-        }
-      }
-
-      if (lessonTitle.includes('tổng và hiệu') || lessonTitle.includes('vectơ') || lessonTitle.includes('vecto')) {
-        if (secIdx === 0) {
-          return [
-            "Tại sao cộng hai vectơ không bằng cộng hai độ dài hả Thầy?",
-            "Thầy chỉ cho em mẹo nhớ quy tắc 3 điểm khi chữ cái bị đảo với ạ",
-            "Cho em một ví dụ tính độ dài tổng vectơ trong tam giác đều ạ",
-            "Quy tắc hình bình hành áp dụng để tổng hợp hai vectơ chung gốc thế nào ạ?",
-            "Khi nào thì độ dài tổng hai vectơ bằng tổng hai độ dài $|\\vec{a} + \\vec{b}| = |\\vec{a}| + |\\vec{b}|$ ạ?",
-            "Cho em một ví dụ thực tế về lực kéo tổng hợp trong môn Vật lý ạ"
-          ];
-        } else {
-          return [
-            "Thầy ơi, chỉ cho em mẹo nhớ quy tắc trừ chung gốc không bị ngược chữ",
-            "Tại sao $-\\vec{AB} = \\vec{BA}$ hả Cô?",
-            "Tại sao hệ thức trung điểm $\\vec{MA} + \\vec{MB} = 2\\vec{MI}$ lại có số 2 ạ?",
-            "Hệ thức trọng tâm tam giác $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$ chứng minh thế nào ạ?",
-            "Quy tắc hình hộp trong không gian tính tổng 3 vectơ chung gốc xuất phát từ một đỉnh thế nào ạ?",
-            "Điều kiện để 3 vectơ đồng phẳng trong không gian là gì hả Thầy?"
-          ];
-        }
-      }
-
+      // 3. GIÁ TRỊ LỚN NHẤT VÀ GIÁ TRỊ NHỎ NHẤT CỦA HÀM SỐ (TOÁN 12 KNTT)
       if (lessonTitle.includes('lớn nhất') || lessonTitle.includes('nhỏ nhất') || lessonTitle.includes('gtln') || lessonTitle.includes('gtnn')) {
-        if (secIdx === 0) {
+        // MỤC GTLN, GTNN TRÊN ĐOẠN
+        if (secTitle.includes('đoạn') || (!secTitle.includes('khoảng') && !secTitle.includes('thực tế') && secIdx === 0)) {
           return [
             "Tại sao hàm số liên tục trên một đoạn luôn luôn có GTLN và GTNN hả Thầy?",
-            "Có cần lập bảng biến thiên khi tìm GTLN, GTNN trên đoạn không ạ?",
-            "Thầy chỉ em mẹo bấm Casio TABLE tìm min max với ạ",
+            "Có cần lập bảng biến thiên khi tìm GTLN, GTNN trên đoạn $[a; b]$ không ạ?",
+            "Thầy chỉ em mẹo bấm Casio TABLE tìm min max trên đoạn $[a; b]$ với ạ",
             "Quy trình 3 bước tìm GTLN, GTNN của hàm số trên đoạn $[a; b]$ chuẩn SGK ạ",
-            "Hàm số có cực trị trên $[a; b]$ nhưng cực trị đó không phải min max thì sao ạ?",
-            "Tại sao khi tìm min max trên đoạn chỉ lấy nghiệm $f'(x) = 0$ thuộc khoảng $(a; b)$ ạ?"
+            "Hàm số có cực trị trên đoạn nhưng cực trị đó không phải min max thì sao ạ?",
+            "Tại sao khi tìm min max trên đoạn chỉ lấy nghiệm $f'(x) = 0$ thuộc khoảng mở $(a; b)$ ạ?"
           ];
-        } else {
+        }
+        // MỤC GTLN, GTNN TRÊN KHOẢNG & ỨNG DỤNG THỰC TẾ
+        else {
           return [
             "Tại sao trên một khoảng có thể không tồn tại GTLN hoặc GTNN hả Cô?",
             "Các bước mô hình hóa bài toán thực tế tối ưu gồm những gì hả Thầy?",
@@ -38393,30 +38399,62 @@ function renderSAPanel() {
         }
       }
 
+      // 4. VECTƠ TRONG KHÔNG GIAN (TOÁN 12 KNTT)
+      if (lessonTitle.includes('tổng và hiệu') || lessonTitle.includes('vectơ') || lessonTitle.includes('vecto')) {
+        // MỤC PHÉP CỘNG VECTƠ & QUY TẮC HÌNH BÌNH HÀNH
+        if (secTitle.includes('phép toán') || secTitle.includes('tổng và hiệu') || secTitle.includes('cộng') || secIdx === 0) {
+          return [
+            "Tại sao cộng hai vectơ không bằng cộng hai độ dài hả Thầy?",
+            "Thầy chỉ cho em mẹo nhớ quy tắc 3 điểm khi chữ cái bị đảo với ạ",
+            "Cho em một ví dụ tính độ dài tổng vectơ trong tam giác đều ạ",
+            "Quy tắc hình bình hành áp dụng để tổng hợp hai vectơ chung gốc thế nào ạ?",
+            "Khi nào thì độ dài tổng hai vectơ bằng tổng hai độ dài $|\vec{a} + \vec{b}| = |\vec{a}| + |\vec{b}|$ ạ?",
+            "Cho em một ví dụ thực tế về lực kéo tổng hợp trong môn Vật lý ạ"
+          ];
+        }
+        // MỤC QUY TẮC TRỪ, HỆ THỨC TRUNG ĐIỂM & QUY TẮC HÌNH HỘP
+        else {
+          return [
+            "Thầy ơi, chỉ cho em mẹo nhớ quy tắc trừ chung gốc không bị ngược chữ",
+            "Tại sao $-\vec{AB} = \vec{BA}$ hả Cô?",
+            "Tại sao hệ thức trung điểm $\vec{MA} + \vec{MB} = 2\vec{MI}$ lại có số 2 ạ?",
+            "Hệ thức trọng tâm tam giác $\vec{GA} + \vec{GB} + \vec{GC} = \vec{0}$ chứng minh thế nào ạ?",
+            "Quy tắc hình hộp trong không gian tính tổng 3 vectơ chung gốc xuất phát từ một đỉnh thế nào ạ?",
+            "Điều kiện để 3 vectơ đồng phẳng trong không gian là gì hả Thầy?"
+          ];
+        }
+      }
+
+      // 5. NGUYÊN HÀM & TÍCH PHÂN (TOÁN 12 KNTT)
       if (lessonTitle.includes('nguyên hàm') || lessonTitle.includes('tích phân')) {
-        if (secIdx === 0) {
+        // MỤC NGUYÊN HÀM
+        if (secTitle.includes('nguyên hàm') || (!secTitle.includes('tích phân') && secIdx === 0)) {
           return [
             "Tại sao SGK Toán 12 KNTT lại không học tích phân từng phần hả Thầy?",
             "Ý nghĩa hình học của diện tích hình thang cong là gì hả Cô?",
             "Thầy chỉ cho em mẹo nhớ bảng nguyên hàm cơ bản với ạ",
-            "Nguyên hàm của hàm hợp $\\int f(ax+b)dx$ có hệ số $\\frac{1}{a}$ vì sao ạ?",
+            "Nguyên hàm của hàm hợp $\int f(ax+b)dx$ có hệ số $\frac{1}{a}$ vì sao ạ?",
             "Mẹo bấm Casio d/dx để kiểm tra đáp án bài toán tìm nguyên hàm ạ",
             "Cho em một ví dụ thực tế về bài toán tính quãng đường từ hàm vận tốc ạ"
           ];
-        } else {
+        }
+        // MỤC TÍCH PHÂN
+        else {
           return [
             "Thầy hướng dẫn em tính chất chèn cận của tích phân với ạ",
             "Công thức Newton-Leibniz được áp dụng như thế nào hả Thầy?",
             "Làm thế nào để ứng dụng tích phân tính quãng đường chuyển động ạ?",
             "Cách bấm máy Casio tích phân và xử lý các bài toán chống bấm máy ạ",
             "Diện tích hình phẳng giới hạn bởi 2 đồ thị hàm số tính theo công thức nào ạ?",
-            "Thể tích khối tròn xoay quanh trục Ox tính theo công thức $\\pi \\int y^2 dx$ thế nào ạ?"
+            "Thể tích khối tròn xoay quanh trục Ox tính theo công thức $\pi \int y^2 dx$ thế nào ạ?"
           ];
         }
       }
 
+      // 6. PHƯƠNG TRÌNH MẶT PHẲNG, ĐƯỜNG THẲNG, MẶT CẦU (OXYZ)
       if (lessonTitle.includes('mặt phẳng') || lessonTitle.includes('đường thẳng') || lessonTitle.includes('mặt cầu') || lessonTitle.includes('oxyz')) {
-        if (secIdx === 0) {
+        // MỤC MẶT PHẲNG
+        if (secTitle.includes('mặt phẳng') || secIdx === 0) {
           return [
             "Làm thế nào để tìm vectơ pháp tuyến của mặt phẳng nhanh nhất hả Thầy?",
             "Phương trình mặt phẳng đoạn chắn có dạng như thế nào hả Cô?",
@@ -38425,29 +38463,46 @@ function renderSAPanel() {
             "Phương trình mặt phẳng đi qua một điểm và vuông góc với đường thẳng ạ",
             "Khoảng cách giữa hai mặt phẳng song song tính như thế nào hả Thầy?"
           ];
-        } else {
+        }
+        // MỤC ĐƯỜNG THẲNG
+        else if (secTitle.includes('đường thẳng') || secIdx === 1) {
           return [
             "Khoảng cách từ một điểm đến mặt phẳng tính theo công thức nào hả Thầy?",
             "Phương trình chính tắc của đường thẳng khác phương trình tham số thế nào ạ?",
-            "Điều kiện để mặt phẳng tiếp xúc với mặt cầu là gì hả Cô?",
-            "Tích có hướng của hai vectơ ứng dụng tính diện tích và thể tích thế nào ạ?",
-            "Góc giữa hai đường thẳng và góc giữa đường thẳng với mặt phẳng khác nhau thế nào ạ?",
+            "Điều kiện để hai đường thẳng vuông góc hoặc song song trong Oxyz là gì ạ?",
+            "Góc giữa hai đường thẳng trong Oxyz tính theo công thức nào hả Cô?",
+            "Cách tìm giao điểm của đường thẳng và mặt phẳng trong Oxyz ạ",
             "Vị trí tương đối giữa đường thẳng và mặt phẳng trong Oxyz xác định thế nào ạ?"
+          ];
+        }
+        // MỤC MẶT CẦU
+        else {
+          return [
+            "Điều kiện để mặt phẳng tiếp xúc với mặt cầu là gì hả Cô?",
+            "Phương trình mặt cầu tâm I bán kính R có dạng tổng quát thế nào ạ?",
+            "Khoảng cách từ tâm mặt cầu đến mặt phẳng tính theo công thức nào hả Thầy?",
+            "Vị trí tương đối giữa mặt cầu và đường thẳng trong không gian Oxyz ạ",
+            "Giao tuyến của mặt phẳng và mặt cầu khi cắt nhau là hình gì hả Thầy?",
+            "Tích có hướng của hai vectơ ứng dụng tính diện tích và thể tích thế nào ạ?"
           ];
         }
       }
 
+      // 7. XÁC SUẤT CÓ ĐIỀU KIỆN & CÔNG THỨC BAYES (TOÁN 12 KNTT)
       if (lessonTitle.includes('xác suất') || lessonTitle.includes('bayes')) {
-        if (secIdx === 0) {
+        // MỤC XÁC SUẤT CÓ ĐIỀU KIỆN & QUY TẮC NHÂN
+        if (secTitle.includes('có điều kiện') || secTitle.includes('nhân') || secIdx === 0) {
           return [
             "Phân biệt xác suất có điều kiện P(A|B) và P(B|A) thế nào để không bị ngược hả Thầy?",
             "Khi nào hai biến cố được gọi là độc lập hả Cô?",
             "Công thức nhân xác suất áp dụng cho biến cố độc lập thế nào ạ?",
-            "Biến cố đối của xác suất có điều kiện $P(\\bar{A}|B)$ tính thế nào ạ?",
+            "Biến cố đối của xác suất có điều kiện $P(\bar{A}|B)$ tính thế nào ạ?",
             "Mẹo vẽ sơ đồ hình cây để không bao giờ bị tính nhầm xác suất ạ",
             "Cho em một ví dụ thực tế về bài toán rút bài hoặc bắn bia hai phát ạ"
           ];
-        } else {
+        }
+        // MỤC CÔNG THỨC TOÀN PHẦN VÀ CÔNG THỨC BAYES
+        else {
           return [
             "Khi nào thì áp dụng công thức xác suất toàn phần hả Thầy?",
             "Bản chất của công thức Bayes trong việc điều chỉnh xác suất là gì ạ?",
@@ -38459,31 +38514,10 @@ function renderSAPanel() {
         }
       }
 
-      if (lessonTitle.includes('lượng giác') || lessonTitle.includes('sin') || lessonTitle.includes('cos')) {
-        return [
-          "Cô chỉ em mẹo nhớ công thức cộng và công thức nhân đôi lượng giác với ạ",
-          "Tại sao hàm tan x có chu kỳ là pi trong khi sin x có chu kỳ 2pi hả Thầy?",
-          "Phương trình lượng giác sin x = m có nghiệm khi nào hả Cô?",
-          "Công thức biến đổi tích thành tổng và tổng thành tích có thơ nhớ không ạ?",
-          "Đổi từ độ sang radian và ngược lại tính nhanh thế nào hả Thầy?",
-          "Độ dài cung tròn $l = R\\alpha$ thì góc $\\alpha$ bắt buộc đơn vị gì ạ?"
-        ];
-      }
-
-      if (lessonTitle.includes('mũ') || lessonTitle.includes('lôgarit') || lessonTitle.includes('logarit')) {
-        return [
-          "Tại sao khi cơ số a < 1 thì bất phương trình mũ, logarit lại phải đảo chiều hả Thầy?",
-          "Điều kiện xác định của logarit cơ số a của b gồm những điều kiện nào hả Cô?",
-          "Thầy chỉ em mẹo bấm Casio tìm nghiệm phương trình mũ, logarit với ạ",
-          "Công thức đổi cơ số logarit $\\log_a b = \\frac{\\log_c b}{\\log_c a}$ áp dụng khi nào ạ?",
-          "Bài toán lãi kép ngân hàng hoặc tăng trưởng dân số áp dụng công thức mũ nào ạ?",
-          "Mẹo đặt ẩn phụ $t = a^x$ giải phương trình mũ cần chú ý điều kiện gì của $t$ ạ?"
-        ];
-      }
-
-      // Thống kê / Mẫu số liệu ghép nhóm (Toán 11 & Toán 12 KNTT)
+      // 8. THỐNG KÊ / MẪU SỐ LIỆU GHÉP NHÓM (TOÁN 11 & 12 KNTT)
       if (lessonTitle.includes('ghép nhóm') || lessonTitle.includes('thống kê') || lessonTitle.includes('mẫu số liệu')) {
-        if (secIdx === 0) {
+        // MỤC MỐT & SỐ TRUNG BÌNH
+        if (secTitle.includes('mốt') || secTitle.includes('trung bình') || secIdx === 0) {
           return [
             "Thầy/Cô hướng dẫn em cách xác định nhóm chứa mốt và công thức mốt ghép nhóm với ạ",
             "Tại sao phải tính giá trị đại diện khi tính số trung bình ghép nhóm hả Thầy?",
@@ -38492,16 +38526,20 @@ function renderSAPanel() {
             "Nếu nhóm chứa mốt là nhóm đầu tiên hoặc cuối cùng thì $m_{m-1}, m_{m+1}$ lấy bằng mấy ạ?",
             "Ý nghĩa thực tiễn của mốt trong nghiên cứu thị trường và sản xuất hàng hóa ạ"
           ];
-        } else if (secIdx === 1) {
+        }
+        // MỤC TRUNG VỊ & TỨ PHÂN VỊ
+        else if (secTitle.includes('trung vị') || secTitle.includes('tứ phân vị') || secIdx === 1) {
           return [
             "Thầy/Cô chỉ em các bước tìm trung vị và tứ phân vị ghép nhóm với ạ",
             "Nhóm chứa trung vị được xác định bằng tần số tích lũy như thế nào hả Cô?",
             "Thầy chỉ em cách bấm Casio MENU 6 tính nhanh số trung bình và tứ phân vị với ạ",
             "Tứ phân vị $Q_1, Q_2, Q_3$ chia mẫu số liệu thành mấy phần bằng nhau ạ?",
-            "Khoảng tứ phân vị $\\Delta_Q = Q_3 - Q_1$ phản ánh điều gì về mẫu số liệu ạ?",
+            "Khoảng tứ phân vị $\Delta_Q = Q_3 - Q_1$ phản ánh điều gì về mẫu số liệu ạ?",
             "Giá trị ngoại lệ (outlier) trong mẫu số liệu ghép nhóm được phát hiện thế nào ạ?"
           ];
-        } else {
+        }
+        // MỤC PHƯƠNG SAI & ĐỘ LỆCH CHUẨN
+        else {
           return [
             "Công thức tính phương sai và độ lệch chuẩn ghép nhóm thế nào hả Thầy?",
             "Độ lệch chuẩn phản ánh điều gì về mức độ phân tán của dữ liệu ạ?",
@@ -38513,9 +38551,33 @@ function renderSAPanel() {
         }
       }
 
-      // Dãy số, Cấp số cộng & Cấp số nhân (Toán 11 KNTT)
+      // 9. LƯỢNG GIÁC (TOÁN 11 KNTT)
+      if (lessonTitle.includes('lượng giác') || lessonTitle.includes('sin') || lessonTitle.includes('cos')) {
+        return [
+          "Cô chỉ em mẹo nhớ công thức cộng và công thức nhân đôi lượng giác với ạ",
+          "Tại sao hàm tan x có chu kỳ là pi trong khi sin x có chu kỳ 2pi hả Thầy?",
+          "Phương trình lượng giác sin x = m có nghiệm khi nào hả Cô?",
+          "Công thức biến đổi tích thành tổng và tổng thành tích có thơ nhớ không ạ?",
+          "Đổi từ độ sang radian và ngược lại tính nhanh thế nào hả Thầy?",
+          "Độ dài cung tròn $l = R\alpha$ thì góc $\alpha$ bắt buộc đơn vị gì ạ?"
+        ];
+      }
+
+      // 10. HÀM SỐ MŨ & LOGARIT (TOÁN 11 KNTT)
+      if (lessonTitle.includes('mũ') || lessonTitle.includes('lôgarit') || lessonTitle.includes('logarit')) {
+        return [
+          "Tại sao khi cơ số a < 1 thì bất phương trình mũ, logarit lại phải đảo chiều hả Thầy?",
+          "Điều kiện xác định của logarit cơ số a của b gồm những điều kiện nào hả Cô?",
+          "Thầy chỉ em mẹo bấm Casio tìm nghiệm phương trình mũ, logarit với ạ",
+          "Công thức đổi cơ số logarit $\log_a b = \frac{\log_c b}{\log_c a}$ áp dụng khi nào ạ?",
+          "Bài toán lãi kép ngân hàng hoặc tăng trưởng dân số áp dụng công thức mũ nào ạ?",
+          "Mẹo đặt ẩn phụ $t = a^x$ giải phương trình mũ cần chú ý điều kiện gì của $t$ ạ?"
+        ];
+      }
+
+      // 11. CẤP SỐ CỘNG & CẤP SỐ NHÂN (TOÁN 11 KNTT)
       if (lessonTitle.includes('cấp số') || lessonTitle.includes('dãy số')) {
-        if (secIdx === 0) {
+        if (secTitle.includes('cộng') || secIdx === 0) {
           return [
             "Phân biệt công thức số hạng tổng quát của cấp số cộng và cấp số nhân ạ",
             "Thầy chỉ em công thức tính tổng n số hạng đầu của cấp số cộng với ạ",
@@ -38530,13 +38592,13 @@ function renderSAPanel() {
             "Cách giải hệ phương trình tìm số hạng đầu u1 và công bội q hả Cô?",
             "Thầy chỉ em cách bấm Casio tính tổng chuỗi số với ạ",
             "Ba số $a, b, c$ lập thành cấp số nhân khi và chỉ khi có hệ thức gì ạ?",
-            "Công thức tính tổng $n$ số hạng đầu của cấp số nhân $S_n = \\frac{u_1(1-q^n)}{1-q}$ khi nào áp dụng ạ?",
+            "Công thức tính tổng $n$ số hạng đầu của cấp số nhân $S_n = \frac{u_1(1-q^n)}{1-q}$ khi nào áp dụng ạ?",
             "Cho em một ví dụ về bài toán phân rã phóng xạ hoặc bóng nảy giảm dần ạ"
           ];
         }
       }
 
-      // Giới hạn & Đạo hàm (Toán 11 KNTT)
+      // 12. GIỚI HẠN & ĐẠO HÀM (TOÁN 11 KNTT)
       if (lessonTitle.includes('giới hạn') || lessonTitle.includes('đạo hàm')) {
         return [
           "Thầy chỉ em mẹo bấm Casio tính giới hạn dạng 0/0 vô định với ạ",
@@ -38548,7 +38610,7 @@ function renderSAPanel() {
         ];
       }
 
-      // Hình không gian: Quan hệ song song, vuông góc & Thể tích
+      // 13. HÌNH KHÔNG GIAN (TOÁN 11 KNTT)
       if (lessonTitle.includes('vuông góc') || lessonTitle.includes('thể tích') || lessonTitle.includes('khoảng cách')) {
         return [
           "Cách dựng đoạn vuông góc chung giữa hai đường thẳng chéo nhau thế nào hả Thầy?",
@@ -38560,31 +38622,31 @@ function renderSAPanel() {
         ];
       }
 
-      // Hàm số bậc hai & Tam thức bậc hai (Toán 10 KNTT)
+      // 14. TAM THỨC BẬC HAI (TOÁN 10 KNTT)
       if (lessonTitle.includes('bậc hai') || lessonTitle.includes('tam thức')) {
         return [
           "Thần chú xét dấu tam thức bậc hai: 'Trong trái ngoài cùng' áp dụng thế nào ạ?",
           "Tọa độ đỉnh parabol có ý nghĩa gì trong bài toán tìm cực trị thực tế hả Thầy?",
           "Cho em một ví dụ thực tế về quỹ đạo ném bóng hoặc lợi nhuận cực đại ạ",
-          "Điều kiện để tam thức bậc hai $ax^2 + bx + c > 0$ với mọi $x \\in \\mathbb{R}$ là gì ạ?",
+          "Điều kiện để tam thức bậc hai $ax^2 + bx + c > 0$ với mọi $x \in \mathbb{R}$ là gì ạ?",
           "Cách lập bảng xét dấu tích và thương các tam thức bậc hai ạ",
           "Mẹo bấm máy Casio MENU A giải bất phương trình bậc hai trong 3 giây ạ"
         ];
       }
 
-      // Hệ thức lượng trong tam giác (Toán 10 KNTT)
+      // 15. HỆ THỨC LƯỢNG TRONG TAM GIÁC (TOÁN 10 KNTT)
       if (lessonTitle.includes('hệ thức lượng') || lessonTitle.includes('côsin') || lessonTitle.includes('sin')) {
         return [
           "Khi nào nên dùng định lý Côsin, khi nào nên dùng định lý Sin hả Thầy?",
           "Công thức Hê-rông tính diện tích tam giác khi biết 3 cạnh áp dụng thế nào ạ?",
           "Cho em một ví dụ thực tế đo chiều cao ngọn tháp hoặc khoảng cách hồ nước ạ",
-          "Bán kính đường tròn ngoại tiếp $R = \\frac{a}{2\\sin A}$ suy ra từ định lý nào ạ?",
+          "Bán kính đường tròn ngoại tiếp $R = \frac{a}{2\sin A}$ suy ra từ định lý nào ạ?",
           "Công thức tính độ dài đường trung tuyến trong tam giác xuất phát từ đỉnh A ạ",
-          "Bán kính đường tròn nội tiếp $r = \\frac{S}{p}$ áp dụng để giải bài toán nào ạ?"
+          "Bán kính đường tròn nội tiếp $r = \frac{S}{p}$ áp dụng để giải bài toán nào ạ?"
         ];
       }
 
-      // Bất phương trình bậc nhất hai ẩn (Toán 10 KNTT)
+      // 16. BẤT PHƯƠNG TRÌNH BẬC NHẤT HAI ẨN (TOÁN 10 KNTT)
       if (lessonTitle.includes('bất phương trình')) {
         return [
           "Cách xác định miền nghiệm của bất phương trình bậc nhất hai ẩn trên Oxy ạ",
@@ -38596,7 +38658,7 @@ function renderSAPanel() {
         ];
       }
 
-      // Đại số tổ hợp & Nhị thức Newton (Toán 10 KNTT)
+      // 17. ĐẠI SỐ TỔ HỢP & NHỊ THỨC NEWTON (TOÁN 10 KNTT)
       if (lessonTitle.includes('tổ hợp') || lessonTitle.includes('nhị thức')) {
         return [
           "Phân biệt Hoán vị, Chỉnh hợp và Tổ hợp để không bao giờ bị nhầm lẫn ạ",
@@ -38608,14 +38670,14 @@ function renderSAPanel() {
         ];
       }
 
-      // Dynamic general lessons
+      // Mặc định chung bám sát tên mục
       return [
-        "Thầy/Cô cho em một ví dụ minh họa dễ hiểu về phần này ạ",
-        "Phương pháp giải dạng toán này gồm những bước nào hả Thầy/Cô?",
-        "Thầy/Cô chia sẻ cho em bí kíp làm nhanh trắc nghiệm phần này với!",
-        "Những lỗi sai và bẫy trắc nghiệm hay gặp nhất ở phần này là gì ạ?",
-        "Thầy/Cô chỉ em mẹo bấm máy tính Casio dạng toán này với ạ",
-        "Thần chú và cách ghi nhớ nhanh kiến thức phần này là gì ạ?"
+        `Thầy/Cô cho em một ví dụ minh họa dễ hiểu về ${secTitle} ạ`,
+        `Phương pháp giải các dạng toán của ${secTitle} gồm những bước nào hả Thầy/Cô?`,
+        `Thầy/Cô chia sẻ cho em bí kíp làm nhanh trắc nghiệm ${secTitle} với!`,
+        `Những lỗi sai và bẫy trắc nghiệm hay gặp nhất ở ${secTitle} là gì ạ?`,
+        `Thầy/Cô chỉ em mẹo bấm máy tính Casio cho ${secTitle} với ạ`,
+        `Thần chú và cách ghi nhớ nhanh kiến thức ${secTitle} là gì ạ?`
       ];
     }
 
@@ -39094,44 +39156,85 @@ function renderSAPanel() {
       const lowerLesson = (lessonTitle || '').toLowerCase();
       const lowerSec = (secTitle || '').toLowerCase();
 
+      // Tiệm cận đứng (TẬP TRUNG CHÍNH XÁC VÀO TIỆM CẬN ĐỨNG)
+      if (lowerSec.includes('đứng') || (lowerLesson.includes('tiệm cận') && secNum === 2)) {
+        return {
+          title: `Quy trình 3 bước xác định Đường tiệm cận đứng chuẩn SGK`,
+          contentHtml: `
+            <p>Thầy/Cô hướng dẫn quy trình xác định <strong>Đường tiệm cận đứng</strong> chuẩn SGK Toán 12 KNTT:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
+              <p>• <strong>Bước 1 (Tìm nghiệm của mẫu số):</strong> Giải phương trình mẫu số $Q(x) = 0$ tìm các giá trị nghi ngờ $x_0$.</p>
+              <p>• <strong>Bước 2 (Kiểm tra tử số & rút gọn):</strong> Thay nghiệm $x_0$ vào tử số $P(x)$:
+                <br/>- Nếu $P(x_0) \neq 0 \implies$ Đường thẳng $x = x_0$ chắc chắn là <strong>tiệm cận đứng</strong>.
+                <br/>- Nếu $P(x_0) = 0 \implies$ Phân tích nhân tử và rút gọn $(x - x_0)$ trước khi xét giới hạn. Nếu sau khi rút gọn mẫu vẫn còn $(x - x_0)$ thì $x = x_0$ vẫn là tiệm cận đứng; nếu mẫu hết $(x - x_0)$ thì không là tiệm cận đứng.
+              </p>
+              <p>• <strong>Bước 3 (Kết luận giới hạn một bên):</strong> Thỏa mãn ít nhất 1 trong 4 giới hạn $\lim_{x \to x_0^+} f(x) = \pm\infty$ hoặc $\lim_{x \to x_0^-} f(x) = \pm\infty$ thì kết luận phương trình tiệm cận đứng là đường thẳng $x = x_0$.</p>
+            </div>
+          `
+        };
+      }
+
+      // Tiệm cận ngang (TẬP TRUNG CHÍNH XÁC VÀO TIỆM CẬN NGANG)
+      if (lowerSec.includes('ngang') || (lowerLesson.includes('tiệm cận') && secNum === 1)) {
+        return {
+          title: `Quy trình xác định Đường tiệm cận ngang chuẩn SGK`,
+          contentHtml: `
+            <p>Thầy/Cô hướng dẫn quy trình xác định <strong>Đường tiệm cận ngang</strong> chuẩn SGK Toán 12 KNTT:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
+              <p>• <strong>Bước 1:</strong> Tính giới hạn $\lim_{x \to +\infty} f(x)$ và $\lim_{x \to -\infty} f(x)$.</p>
+              <p>• <strong>Bước 2:</strong>
+                <br/>- Bậc tử < bậc mẫu $\implies y = 0$ (trục hoành) là tiệm cận ngang.
+                <br/>- Bậc tử = bậc mẫu $\implies y = \frac{a}{c}$ (tỉ số hệ số bậc cao nhất) là tiệm cận ngang.
+                <br/>- Bậc tử > bậc mẫu $\implies$ Không có tiệm cận ngang.
+              </p>
+              <p>• <strong>Bước 3:</strong> Đối với hàm chứa căn thức bậc hai $\sqrt{x^2}$, chú ý $\sqrt{x^2} = -x$ khi $x \to -\infty$ để không bỏ sót tiệm cận ngang thứ 2 (đồ thị có tối đa 2 tiệm cận ngang).</p>
+            </div>
+          `
+        };
+      }
+
+      // Tiệm cận xiên (TẬP TRUNG CHÍNH XÁC VÀO TIỆM CẬN XIÊN)
+      if (lowerSec.includes('xiên') || (lowerLesson.includes('tiệm cận') && secNum === 3)) {
+        return {
+          title: `Quy trình chia đa thức tìm Đường tiệm cận xiên chuẩn SGK`,
+          contentHtml: `
+            <p>Thầy/Cô hướng dẫn quy trình tìm <strong>Đường tiệm cận xiên</strong> chuẩn SGK Toán 12 KNTT:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
+              <p>• <strong>Bước 1 (Kiểm tra điều kiện bậc):</strong> Đảm bảo hàm phân thức có bậc của tử lớn hơn bậc của mẫu đúng 1 bậc.</p>
+              <p>• <strong>Bước 2 (Chia đa thức tử cho mẫu):</strong> Viết lại hàm số dưới dạng:
+                $$f(x) = ax + b + \frac{r(x)}{Q(x)} \quad (a \neq 0)$$
+              </p>
+              <p>• <strong>Bước 3 (Kết luận):</strong> Do $\lim_{x \to \pm\infty} \frac{r(x)}{Q(x)} = 0$, kết luận đường thẳng $y = ax + b$ là <strong>đường tiệm cận xiên</strong> của đồ thị hàm số.</p>
+            </div>
+          `
+        };
+      }
+
+      // Thống kê ghép nhóm
       if (lowerLesson.includes('ghép nhóm') || lowerLesson.includes('thống kê') || lowerSec.includes('ghép nhóm')) {
         return {
           title: `Phương pháp 4 bước giải Mẫu số liệu ghép nhóm cho ${secTitle}`,
           contentHtml: `
             <p>Thầy/Cô hướng dẫn em <strong>${studentName}</strong> quy trình 4 bước giải chuẩn SGK Toán 11 Kết nối tri thức:</p>
             <div class="p-3 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
-              <p>• <strong>Bước 1 (Tính giá trị đại diện):</strong> Với mỗi nhóm $[a_i; a_{i+1})$, tính $c_i = \\frac{a_i + a_{i+1}}{2}$.</p>
+              <p>• <strong>Bước 1 (Tính giá trị đại diện):</strong> Với mỗi nhóm $[a_i; a_{i+1})$, tính $c_i = \frac{a_i + a_{i+1}}{2}$.</p>
               <p>• <strong>Bước 2 (Tính số trung bình):</strong> Lấy tổng tích tần số và giá trị đại diện chia cho cỡ mẫu $n$:
-                $$\\bar{x} = \\frac{\\sum m_i c_i}{n} \\quad \\left(n = \\sum m_i\\right)$$
+                $$\bar{x} = \frac{\sum m_i c_i}{n} \quad \left(n = \sum m_i\right)$$
               </p>
               <p>• <strong>Bước 3 (Tìm Mốt ghép nhóm):</strong>
                 <br/>1. Tìm nhóm có tần số $m_m$ lớn nhất: $[u_m; u_{m+1})$ với độ dài $g = u_{m+1} - u_m$.
-                <br/>2. Áp dụng công thức SGK: $M_o = u_m + \\frac{m_m - m_{m-1}}{(m_m - m_{m-1}) + (m_m - m_{m+1})} \\cdot g$.
+                <br/>2. Áp dụng công thức SGK: $M_o = u_m + \frac{m_m - m_{m-1}}{(m_m - m_{m-1}) + (m_m - m_{m+1})} \cdot g$.
               </p>
               <p>• <strong>Bước 4 (Tìm Trung vị & Tứ phân vị):</strong>
-                <br/>1. Lập dãy tần số tích lũy $cf_i$. Tìm nhóm đầu tiên có $cf_i \\ge \\frac{n}{2}$ (với trung vị) hoặc $\\ge \\frac{n}{4}$ (với $Q_1$).
-                <br/>2. Áp dụng công thức: $M_e = u_m + \\frac{\\frac{n}{2} - C}{m_m} \\cdot g$ ($C$ là tần số tích lũy nhóm đứng trước).
+                <br/>1. Lập dãy tần số tích lũy $cf_i$. Tìm nhóm đầu tiên có $cf_i \ge \frac{n}{2}$ (với trung vị) hoặc $\ge \frac{n}{4}$ (với $Q_1$).
+                <br/>2. Áp dụng công thức: $M_e = u_m + \frac{\frac{n}{2} - C}{m_m} \cdot g$ ($C$ là tần số tích lũy nhóm đứng trước).
               </p>
             </div>
           `
         };
       }
 
-      if (lowerLesson.includes('tiệm cận') || lowerSec.includes('tiệm cận')) {
-        return {
-          title: `Phương pháp 4 bước tìm mọi đường tiệm cận cho ${secTitle}`,
-          contentHtml: `
-            <p>Thầy/Cô hướng dẫn quy trình 4 bước chuẩn SGK Toán 12 KNTT:</p>
-            <div class="p-3 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
-              <p>• <strong>Bước 1 (Tập xác định):</strong> Tìm TXĐ của hàm số $y = f(x)$.</p>
-              <p>• <strong>Bước 2 (Tiệm cận ngang $y = y_0$):</strong> Tính $\\lim_{x \\to +\\infty} f(x)$ và $\\lim_{x \\to -\\infty} f(x)$. Nếu ra số thực hữu hạn $y_0$ thì $y = y_0$ là tiệm cận ngang (tối đa 2 đường).</p>
-              <p>• <strong>Bước 3 (Tiệm cận đứng $x = x_0$):</strong> Giải mẫu $= 0$ tìm các điểm gián đoạn $x_0$. Rút gọn nghiệm triệt tiêu với tử số (nếu có). Tính $\\lim_{x \\to x_0^\\pm} f(x)$, nếu ra $\\pm\\infty$ thì $x = x_0$ là tiệm cận đứng.</p>
-              <p>• <strong>Bước 4 (Tiệm cận xiên $y = ax + b$):</strong> Dùng cho hàm phân thức có bậc tử lớn hơn bậc mẫu 1 bậc. Chia tử cho mẫu: $f(x) = ax + b + \\frac{r}{Q(x)} \\implies$ Phần thương $y = ax + b$ là tiệm cận xiên.</p>
-            </div>
-          `
-        };
-      }
-
+      // GTLN, GTNN
       if (lowerLesson.includes('lớn nhất') || lowerLesson.includes('nhỏ nhất') || lowerLesson.includes('gtln')) {
         return {
           title: `Phương pháp tìm GTLN, GTNN trên đoạn $[a; b]$ chuẩn SGK`,
@@ -39141,7 +39244,7 @@ function renderSAPanel() {
               <p>• <strong>Bước 1:</strong> Tính đạo hàm $f'(x)$.</p>
               <p>• <strong>Bước 2:</strong> Giải phương trình $f'(x) = 0$, chỉ chọn các nghiệm $x_i$ nằm trong khoảng mở $(a; b)$.</p>
               <p>• <strong>Bước 3:</strong> Tính giá trị của hàm số tại hai đầu mút $f(a), f(b)$ và tại các nghiệm $f(x_i)$.</p>
-              <p>• <strong>Bước 4:</strong> So sánh các giá trị đã tính: Số lớn nhất là $\\max_{[a; b]} f(x)$, số nhỏ nhất là $\\min_{[a; b]} f(x)$.</p>
+              <p>• <strong>Bước 4:</strong> So sánh các giá trị đã tính: Số lớn nhất là $\max_{[a; b]} f(x)$, số nhỏ nhất là $\min_{[a; b]} f(x)$.</p>
             </div>
           `
         };
@@ -39166,6 +39269,64 @@ function renderSAPanel() {
       const lowerLesson = (lessonTitle || '').toLowerCase();
       const lowerSec = (secTitle || '').toLowerCase();
 
+      // Tiệm cận đứng (TẬP TRUNG CHÍNH XÁC VÀO TIỆM CẬN ĐỨNG)
+      if (lowerSec.includes('đứng') || (lowerLesson.includes('tiệm cận') && secNum === 2)) {
+        return {
+          title: "Bí kíp bấm Casio 580VNX / 880BTG kiểm tra Đường tiệm cận đứng",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Thầy/Cô hướng dẫn mẹo bấm máy kiểm tra <strong>Đường tiệm cận đứng</strong> trong 5 giây:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
+              <strong class="text-indigo-950 font-bold">1. Tìm điểm nghi ngờ $x_0$:</strong>
+              <p class="ml-3">• Cho mẫu số $= 0$ tìm các nghiệm $x_0$.</p>
+              <strong class="text-emerald-950 font-bold">2. Nhập hàm và xét giới hạn 1 bên:</strong>
+              <p class="ml-3">• Nhập biểu thức hàm số $f(x)$ vào máy tính.</p>
+              <p class="ml-3">• Bấm phím <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">CALC</kbd> nhập: <code class="font-bold text-indigo-700">x0 + 0.00001</code> (bên phải $x \to x_0^+$).</p>
+              <p class="ml-3">• Bấm phím <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">CALC</kbd> nhập: <code class="font-bold text-indigo-700">x0 - 0.00001</code> (bên trái $x \to x_0^-$).</p>
+              <strong class="text-violet-950 font-bold">3. Đọc kết quả chuẩn xác:</strong>
+              <p class="ml-3">• Nếu kết quả xuất hiện số cực lớn mang dấu dương (ví dụ $10^9, 999999...$) hoặc âm (ví dụ $-10^9, -999999...$) $\implies$ <strong>Đường thẳng $x = x_0$ là tiệm cận đứng</strong>!</p>
+              <p class="ml-3">• Nếu kết quả là số hữu hạn nhỏ $\implies$ <strong>Không phải TCĐ</strong> (nghiệm đã triệt tiêu hết với tử số).</p>
+            </div>
+          `
+        };
+      }
+
+      // Tiệm cận ngang (TẬP TRUNG CHÍNH XÁC VÀO TIỆM CẬN NGANG)
+      if (lowerSec.includes('ngang') || (lowerLesson.includes('tiệm cận') && secNum === 1)) {
+        return {
+          title: "Bí kíp bấm Casio 580VNX / 880BTG tìm Đường tiệm cận ngang",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Thầy/Cô hướng dẫn mẹo bấm máy tìm <strong>Đường tiệm cận ngang</strong>:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
+              <strong class="text-indigo-950 font-bold">1. Nhập hàm số:</strong>
+              <p class="ml-3">• Nhập biểu thức hàm số $f(x)$ vào máy tính.</p>
+              <strong class="text-emerald-950 font-bold">2. Cho x tiến ra vô cực:</strong>
+              <p class="ml-3">• Bấm phím <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">CALC</kbd> nhập: <code class="font-bold text-indigo-700">10^9</code> ($x \to +\infty$).</p>
+              <p class="ml-3">• Bấm phím <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">CALC</kbd> nhập: <code class="font-bold text-indigo-700">-10^9</code> ($x \to -\infty$).</p>
+              <strong class="text-violet-950 font-bold">3. Kết luận:</strong>
+              <p class="ml-3">• Nếu kết quả hội tụ về một số thực $y_0$ $\implies$ <strong>Đường thẳng $y = y_0$ là tiệm cận ngang</strong>!</p>
+            </div>
+          `
+        };
+      }
+
+      // Tiệm cận xiên (TẬP TRUNG CHÍNH XÁC VÀO TIỆM CẬN XIÊN)
+      if (lowerSec.includes('xiên') || (lowerLesson.includes('tiệm cận') && secNum === 3)) {
+        return {
+          title: "Bí kíp bấm Casio 580VNX / 880BTG tìm Đường tiệm cận xiên $y = ax + b$",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Thầy/Cô hướng dẫn mẹo bấm máy tìm <strong>Đường tiệm cận xiên</strong>:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
+              <strong class="text-indigo-950 font-bold">1. Tìm hệ số góc a:</strong>
+              <p class="ml-3">• Nhập biểu thức $\frac{f(x)}{x}$, bấm <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">CALC</kbd> $10^9$. Kết quả chính là hệ số $a$.</p>
+              <strong class="text-emerald-950 font-bold">2. Tìm hệ số tự do b:</strong>
+              <p class="ml-3">• Nhập biểu thức $f(x) - ax$, bấm <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">CALC</kbd> $10^9$. Kết quả chính là hệ số $b$.</p>
+              <strong class="text-violet-950 font-bold">3. Kết luận:</strong>
+              <p class="ml-3">• Phương trình đường tiệm cận xiên là $y = ax + b$.</p>
+            </div>
+          `
+        };
+      }
+
       if (lowerLesson.includes('ghép nhóm') || lowerLesson.includes('thống kê') || lowerSec.includes('ghép nhóm')) {
         return {
           title: "Bí kíp bấm Casio 580VNX / 880BTG tính Thống kê Mẫu số liệu ghép nhóm",
@@ -39173,35 +39334,17 @@ function renderSAPanel() {
             <p>Thầy/Cô hướng dẫn em thao tác Casio 580VNX xuất bảng thống kê trong 10 giây:</p>
             <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
               <strong class="text-indigo-950 font-bold">1. Bật cột tần số (Bắt buộc):</strong>
-              <p class="ml-3">• Bấm: <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">SHIFT</kbd> <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">MENU</kbd> $\\to$ bấm mũi tên xuống $\\to$ chọn <strong>[3: Thống kê]</strong> $\\to$ chọn <strong>[1: Mở (ON)]</strong>.</p>
+              <p class="ml-3">• Bấm: <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">SHIFT</kbd> <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">MENU</kbd> $\to$ bấm mũi tên xuống $\to$ chọn <strong>[3: Thống kê]</strong> $\to$ chọn <strong>[1: Mở (ON)]</strong>.</p>
               <strong class="text-emerald-950 font-bold">2. Nhập dữ liệu 1 biến:</strong>
-              <p class="ml-3">• Bấm: <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">MENU</kbd> <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">6</kbd> (Thống kê) $\\to$ chọn <strong>[1: 1-Variable]</strong>.</p>
-              <p class="ml-3">• Cột $x$: Nhập các <strong>giá trị đại diện</strong> $c_i = \\frac{a_i + a_{i+1}}{2}$.</p>
+              <p class="ml-3">• Bấm: <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">MENU</kbd> <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">6</kbd> (Thống kê) $\to$ chọn <strong>[1: 1-Variable]</strong>.</p>
+              <p class="ml-3">• Cột $x$: Nhập các <strong>giá trị đại diện</strong> $c_i = \frac{a_i + a_{i+1}}{2}$.</p>
               <p class="ml-3">• Cột $FREQ$: Nhập các <strong>tần số</strong> $m_i$ tương ứng của mỗi nhóm.</p>
               <strong class="text-violet-950 font-bold">3. Xuất toàn bộ kết quả:</strong>
-              <p class="ml-3">• Bấm phím <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">OPTN</kbd> $\\to$ chọn <strong>[2: Tính 1 biến]</strong>. Màn hình lập tức hiện:</p>
-              <p class="ml-6">• $\\bar{x}$: Số trung bình của mẫu.</p>
+              <p class="ml-3">• Bấm phím <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">OPTN</kbd> $\to$ chọn <strong>[2: Tính 1 biến]</strong>. Màn hình lập tức hiện:</p>
+              <p class="ml-6">• $\bar{x}$: Số trung bình của mẫu.</p>
               <p class="ml-6">• $s_x^2$: Phương sai mẫu.</p>
               <p class="ml-6">• $s_x$: Độ lệch chuẩn mẫu.</p>
               <p class="ml-6">• $Q_1, Med, Q_3$: Tứ phân vị và Trung vị.</p>
-            </div>
-          `
-        };
-      }
-
-      if (lowerLesson.includes('tiệm cận') || lowerSec.includes('tiệm cận')) {
-        return {
-          title: "Bí quyết bấm Casio (580VNX / 880BTG) tìm mọi đường tiệm cận",
-          contentHtml: `
-            <p>Thầy/Cô hướng dẫn em bí kíp Casio nhanh và chính xác 100%:</p>
-            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-2 font-serif text-[12.5pt]">
-              <strong>1. Tìm tiệm cận ngang ($y = y_0$):</strong>
-              <p>• Nhập biểu thức $f(x)$ vào máy tính.</p>
-              <p>• Bấm [CALC], gán $x = 10^9$ (tiến ra $+\\infty$). Nếu kết quả ra một số hữu hạn (ví dụ $1.999999 \\approx 2$) $\\implies$ Có tiệm cận ngang $y = 2$.</p>
-              <p>• Bấm [CALC], gán $x = -10^9$ (tiến ra $-\\infty$) để kiểm tra tiệm cận ngang thứ 2.</p>
-              <strong class="text-emerald-900">2. Tìm tiệm cận đứng ($x = x_0$):</strong>
-              <p>• Giải mẫu số $= 0$ tìm các giá trị nghi ngờ $x_0$.</p>
-              <p>• Bấm [CALC], gán $x = x_0 + 10^{-6}$ (hoặc $x_0 - 10^{-6}$). Nếu kết quả ra số cực lớn như $\\pm 10^{10}$ $\\implies x = x_0$ là tiệm cận đứng!</p>
             </div>
           `
         };
@@ -39215,8 +39358,8 @@ function renderSAPanel() {
             <div class="p-3 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-1.5 font-serif text-[12.5pt]">
               <p>• Bấm: <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">MENU</kbd> <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">8</kbd> (Bảng giá trị).</p>
               <p>• Nhập hàm $f(x)$ cần khảo sát vào máy.</p>
-              <p>• Thiết lập: Start = $a$, End = $b$, Step = $\\frac{b - a}{29}$ hoặc $\\frac{b - a}{44}$.</p>
-              <p>• Tra cứu cột $f(x)$: Giá trị lớn nhất trong danh sách là $\\max$, giá trị nhỏ nhất là $\\min$.</p>
+              <p>• Thiết lập: Start = $a$, End = $b$, Step = $\frac{b - a}{29}$ hoặc $\frac{b - a}{44}$.</p>
+              <p>• Tra cứu cột $f(x)$: Giá trị lớn nhất trong danh sách là $\max$, giá trị nhỏ nhất là $\min$.</p>
             </div>
           `
         };
@@ -39228,9 +39371,9 @@ function renderSAPanel() {
           contentHtml: `
             <p>Thầy/Cô hướng dẫn em thao tác Casio 580VNX cho Tích phân:</p>
             <div class="p-3 bg-indigo-50/80 rounded-xl border border-indigo-200 space-y-1.5 font-serif text-[12.5pt]">
-              <p>• Bấm trực tiếp phím tích phân <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">$\\int_\\Box^\\Box$</kbd>.</p>
+              <p>• Bấm trực tiếp phím tích phân <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">$\int_\Box^\Box$</kbd>.</p>
               <p>• Nhập hàm $f(x)$, nhập cận dưới $a$ và cận trên $b$ rồi bấm <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">=</kbd>.</p>
-              <p>• Kiểm tra nguyên hàm: Dùng lệnh đạo hàm <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">SHIFT</kbd> <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">$\\frac{d}{dx}$</kbd> tại điểm $x = x_0$ bất kỳ. Lấy $\\left.\\frac{d}{dx}[F(x)]\\right|_{x=x_0} - f(x_0)$, nếu ra bằng $0$ thì $F(x)$ chính xác 100%.</p>
+              <p>• Kiểm tra nguyên hàm: Dùng lệnh đạo hàm <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">SHIFT</kbd> <kbd class="px-1.5 py-0.5 bg-slate-200 border rounded font-mono text-xs">$\frac{d}{dx}$</kbd> tại điểm $x = x_0$ bất kỳ. Lấy $\left.\frac{d}{dx}[F(x)]\right|_{x=x_0} - f(x_0)$, nếu ra bằng $0$ thì $F(x)$ chính xác 100%.</p>
             </div>
           `
         };
@@ -39479,12 +39622,32 @@ function renderSAPanel() {
       };
     }
 
-    // 6. Bộ máy đối thoại sư phạm thông minh (Smart Pedagogical Dialogue Engine Offline - Phản hồi tức thì 0ms)
+    // 6. Bộ máy đối thoại sư phạm thông minh (Smart Pedagogical Dialogue Engine Offline - Phản hồi tức thì 0ms, Chuẩn xác 100% theo Mục)
     function getLocalPedagogicalAnswer(userText, studentName, curSection, curMcq) {
       const lower = (userText || '').toLowerCase();
       const lessonTitle = (studentInfo?.lesson || activeLesson?.lessonTitle || '').toLowerCase();
-      const secTitle = curSection ? curSection.sectionTitle : 'Luyện tập tổng hợp';
-      const secNum = curSection ? (curSection.sectionNumber || 1) : 1;
+
+      // 1. Tự động xác định Section hiện tại chính xác 100%
+      let activeSec = curSection;
+      if (!activeSec && activeLesson && activeLesson.sections) {
+        const secIdx = (demoState && typeof demoState.sectionIndex === 'number') ? demoState.sectionIndex : 0;
+        activeSec = activeLesson.sections[secIdx] || activeLesson.sections[0];
+      }
+      // Ưu tiên nếu trong nội dung câu hỏi có đề cập đích danh một Mục hoặc từ khóa phân biệt mục
+      if (activeLesson && activeLesson.sections) {
+        for (const s of activeLesson.sections) {
+          const sNum = s.sectionNumber;
+          const sTitleLower = (s.sectionTitle || '').toLowerCase();
+          if (lower.includes(`mục ${sNum}`) || (sTitleLower && lower.includes(sTitleLower))) {
+            activeSec = s;
+            break;
+          }
+        }
+      }
+
+      const secTitle = activeSec ? activeSec.sectionTitle : 'Luyện tập tổng hợp';
+      const secNum = activeSec ? (activeSec.sectionNumber || 1) : 1;
+      const lowerSec = secTitle.toLowerCase();
       const grade = studentInfo?.class || activeLesson?.class || 'Lớp 12';
 
       // 0. Xử lý hỏi đáp sư phạm khi đang học Bài Ôn tập cuối chương
@@ -39569,43 +39732,214 @@ function renderSAPanel() {
         };
       }
 
-      // 3. Hỏi về câu hỏi trắc nghiệm hiện tại
-      if (lower.includes('câu này') || lower.includes('câu trắc nghiệm này') || lower.includes('gợi ý câu') || lower.includes('chưa hiểu câu') || lower.includes('làm sao để chọn') || lower.includes('hướng dẫn câu') || lower.includes('trắc nghiệm hiện tại')) {
-        return getAuthenticMCQGuidance(curMcq, studentName, curSection);
+      // =========================================================================
+      // 3. CÁC CÂU HỎI BẢN CHẤT CỤ THỂ ĐƯỢC HỌC SINH HỎI / BẤM TỪ INTERACTIVE PILLS
+      // (ƯU TIÊN BẮT TRƯỚC ĐỂ TRẢ LỜI ĐÚNG 100% CÂU HỎI HỌC SINH ĐANG HỎI)
+      // =========================================================================
+
+      // A. CÁC CÂU HỎI CHUYÊN SÂU VỀ ĐƯỜNG TIỆM CẬN ĐỨNG
+      if (lower.includes('triệt tiêu') || (lower.includes('nghiệm của mẫu') && lower.includes('tử'))) {
+        return {
+          title: "Tại sao nghiệm của mẫu triệt tiêu với tử số lại không là tiệm cận đứng?",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Đây là câu hỏi bản chất rất sâu sắc về <strong>Đường tiệm cận đứng</strong>:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>Khi $x_0$ vừa là nghiệm của mẫu $Q(x_0) = 0$, vừa là nghiệm của tử $P(x_0) = 0$, biểu thức hàm số khi $x \\to x_0$ rơi vào dạng vô định $\\frac{0}{0}$.</p>
+              <ul class="list-disc ml-5 space-y-1.5 text-slate-800">
+                <li><strong>Trường hợp 1 (Bậc của tử $\\ge$ bậc của mẫu):</strong> Nhân tử $(x - x_0)$ ở mẫu bị triệt tiêu hoàn toàn khi rút gọn. Giới hạn $\\lim_{x \\to x_0} f(x)$ là một số thực hữu hạn (đây là điểm gián đoạn bỏ được hay "lỗ thủng" của đồ thị), đồ thị <strong>không tiến ra vô cực</strong>, do đó $x = x_0$ <strong>KHÔNG PHẢI LÀ TIỆM CẬN ĐỨNG</strong>!
+                  <br/><em>Ví dụ:</em> Hàm $y = \\frac{x^2 - 1}{x - 1} = x + 1$ ($x \\neq 1$). Ta có $\\lim_{x \\to 1} y = 2$ (hữu hạn), đồ thị là đường thẳng có lỗ thủng tại $(1; 2)$, không có tiệm cận đứng.
+                </li>
+                <li><strong>Trường hợp 2 (Bậc của mẫu > bậc của tử):</strong> Sau khi rút gọn nhân tử chung, mẫu số vẫn còn chứa $(x - x_0)$, giới hạn $\\lim_{x \\to x_0^\\pm} f(x) = \\pm\\infty$, lúc này $x = x_0$ <strong>VẪN LÀ TIỆM CẬN ĐỨNG</strong>.
+                  <br/><em>Ví dụ:</em> Hàm $y = \\frac{x - 1}{(x - 1)^2} = \\frac{1}{x - 1}$ thì $x = 1$ vẫn là tiệm cận đứng.
+                </li>
+              </ul>
+              <p class="font-bold text-emerald-900 mt-1">📌 Khẩu quyết vàng: <em>"Nghiệm của mẫu muốn là TCĐ thì sau khi rút gọn với tử số, mẫu số bắt buộc vẫn phải còn nghiệm đó!"</em></p>
+            </div>
+          `
+        };
       }
 
-      // 4. Bẫy trắc nghiệm & sai lầm hay gặp
-      if (lower.includes('bẫy') || lower.includes('sai lầm') || lower.includes('lỗi sai') || lower.includes('hay mắc') || lower.includes('bị lừa')) {
-        return getAuthenticPitfalls(curSection, studentName, lessonTitle);
+      if (lower.includes('cắt') && (lower.includes('tiệm cận đứng') || (lowerSec.includes('đứng') && lower.includes('tiệm cận')))) {
+        return {
+          title: "Đồ thị hàm số có bao giờ cắt đường tiệm cận đứng không?",
+          contentHtml: `
+            <p>Thầy/Cô khẳng định dứt khoát với em <strong>${studentName}</strong>: <strong>ĐỒ THỊ HÀM SỐ TUYỆT ĐỐI KHÔNG BAO GIỜ CẮT ĐƯỜNG TIỆM CẬN ĐỨNG!</strong></p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>• <strong>Bản chất toán học:</strong> Đường tiệm cận đứng có phương trình $x = x_0$. Điều kiện tiên quyết là hàm số $f(x)$ <strong>không xác định tại $x_0$</strong> ($x_0$ không thuộc tập xác định $D$).</p>
+              <p>• Nếu đồ thị cắt đường thẳng $x = x_0$ tại điểm $M(x_0; y_0)$ thì hàm số phải nhận giá trị $f(x_0) = y_0$, điều này mâu thuẫn hoàn toàn với việc $x_0 \\notin D$!</p>
+              <p class="text-rose-900 font-bold">• Lưu ý so sánh tránh bẫy:</p>
+              <p class="ml-3 text-slate-800">Đồ thị hàm số <strong>hoàn toàn có thể cắt đường tiệm cận ngang và tiệm cận xiên</strong> tại một hoặc nhiều điểm ở vùng giá trị hữu hạn, nhưng với tiệm cận đứng thì <strong>vĩnh viễn không bao giờ cắt</strong>!</p>
+            </div>
+          `
+        };
       }
 
-      // 5. Bí kíp & Thần chú ghi nhớ nhanh
-      if (lower.includes('bí kíp') || lower.includes('thần chú') || lower.includes('ghi nhớ') || lower.includes('khắc sâu') || lower.includes('mẹo nhớ')) {
-        return getAuthenticTips(curSection, studentName, lessonTitle);
+      if (lower.includes('xác định tại') && lower.includes('tiệm cận đứng')) {
+        return {
+          title: "Hàm số xác định tại $x = x_0$ thì có thể có tiệm cận đứng $x = x_0$ không?",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Thầy/Cô trả lời dứt khoát: <strong>HOÀN TOÀN KHÔNG THỂ!</strong></p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>Nếu hàm số xác định và liên tục tại $x = x_0$ thì theo định nghĩa giới hạn:</p>
+              $$\\lim_{x \\to x_0^+} f(x) = \\lim_{x \\to x_0^-} f(x) = f(x_0)$$
+              <p>Giá trị $f(x_0)$ là một số thực hữu hạn cụ thể, không bao giờ tiến ra $+\\infty$ hay $-\\infty$. Do đó không bao giờ thỏa mãn định nghĩa đường tiệm cận đứng!</p>
+              <p class="font-bold text-emerald-900">👉 Điều kiện cần: Muốn là tiệm cận đứng $x = x_0$, hàm số bắt buộc phải gián đoạn (không xác định) tại điểm $x_0$.</p>
+            </div>
+          `
+        };
       }
 
-      // 6. Giảng lại cốt lõi / Tóm tắt
-      if (lower.includes('giảng lại') || lower.includes('cốt lõi') || lower.includes('tóm tắt') || lower.includes('điểm cốt lõi') || lower.includes('nhắc lại')) {
-        return getAuthenticCoreSummary(curSection, studentName, lessonTitle);
+      if ((lower.includes('bậc 2 trên bậc 2') || lower.includes('bậc hai trên bậc hai')) && lower.includes('tiệm cận đứng')) {
+        return {
+          title: "Số đường tiệm cận đứng của hàm phân thức bậc 2 trên bậc 2 tối đa là bao nhiêu?",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Thầy/Cô phân tích chi tiết cho em:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>Xét hàm phân thức $y = \\frac{a_1 x^2 + b_1 x + c_1}{a_2 x^2 + b_2 x + c_2}$ ($a_2 \\neq 0$):</p>
+              <ul class="list-disc ml-5 space-y-1.5 text-slate-800">
+                <li>Mẫu thức là một tam thức bậc hai $Q(x) = a_2 x^2 + b_2 x + c_2$. Phương trình bậc hai $Q(x) = 0$ có <strong>tối đa 2 nghiệm thực phân biệt</strong> (khi $\\Delta > 0$).</li>
+                <li>Mỗi nghiệm thực sau khi kiểm tra không bị triệt tiêu với tử số sẽ tạo thành 1 đường tiệm cận đứng $x = x_1$ và $x = x_2$.</li>
+              </ul>
+              <p class="font-bold text-indigo-950 mt-1">$\\implies$ Đồ thị hàm phân thức bậc 2 trên bậc 2 có <strong>TỐI ĐA 2 ĐƯỜNG TIỆM CẬN ĐỨNG</strong>.</p>
+              <p class="text-slate-600 text-[12pt] mt-1">• <em>Trường hợp có 1 TCĐ:</em> Khi mẫu có nghiệm kép ($\Delta = 0$) không triệt tiêu với tử, hoặc mẫu có 2 nghiệm nhưng 1 nghiệm bị triệt tiêu với tử.
+              <br/>• <em>Trường hợp có 0 TCĐ:</em> Khi mẫu vô nghiệm ($\Delta < 0$) hoặc cả 2 nghiệm đều triệt tiêu hết với tử.</p>
+            </div>
+          `
+        };
       }
 
-      // 7. Xin ví dụ minh họa / ví dụ thực tế (ĐÚNG THEO BÀI ĐANG HỌC)
-      if (lower.includes('ví dụ') || lower.includes('vi du') || lower.includes('minh họa') || lower.includes('thực tế') || lower.includes('thuc te') || lower.includes('áp dụng') || lower.includes('cho em 1') || lower.includes('cho 1')) {
-        return getAuthenticTopicExample(lessonTitle, secTitle, secNum, grade, studentName);
+      if (lower.includes('rút gọn') && lower.includes('căn') && (lower.includes('tiệm cận đứng') || lowerSec.includes('đứng'))) {
+        return {
+          title: "Mẹo rút gọn biểu thức chứa căn ở tử để tìm tiệm cận đứng chuẩn xác",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Thầy/Cô hướng dẫn phương pháp nhân liên hợp giải quyết dạng căn thức:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p><strong>Ví dụ minh họa:</strong> Tìm TCĐ của hàm số $y = \\frac{\\sqrt{x+3} - 2}{x^2 - 1}$.</p>
+              <div class="space-y-1.5 border-t border-indigo-200 pt-2 text-slate-800">
+                <p>1. Giải mẫu số: $x^2 - 1 = 0 \\iff x = 1$ hoặc $x = -1$.</p>
+                <p>2. Với nghiệm $x = 1$: Thay vào tử ta được $\\sqrt{1+3} - 2 = 0$ (dạng vô định $\\frac{0}{0}$).</p>
+                <p>3. <strong>Nhân lượng liên hợp:</strong> Nhân cả tử và mẫu với $(\\sqrt{x+3} + 2)$:
+                  $$y = \\frac{(x + 3) - 4}{(x - 1)(x + 1)(\\sqrt{x+3} + 2)} = \\frac{x - 1}{(x - 1)(x + 1)(\\sqrt{x+3} + 2)}$$
+                </p>
+                <p>4. Rút gọn nhân tử $(x - 1)$:
+                  $$y = \\frac{1}{(x + 1)(\\sqrt{x+3} + 2)}$$
+                  Mẫu số không còn nhân tử $(x - 1) \\implies x = 1$ <strong>KHÔNG LÀ TIỆM CẬN ĐỨNG</strong>!
+                </p>
+                <p>5. Với nghiệm $x = -1$: Tử khác 0, mẫu bằng 0 $\\implies x = -1$ <strong>LÀ ĐƯỜNG TIỆM CẬN ĐỨNG DUY NHẤT</strong>.</p>
+              </div>
+            </div>
+          `
+        };
       }
 
-      // 8. Hỏi phương pháp giải / các bước làm / cách tính
-      if (lower.includes('phương pháp') || lower.includes('phuong phap') || lower.includes('các bước') || lower.includes('cac buoc') || lower.includes('cách làm') || lower.includes('cách tính') || lower.includes('quy trình') || lower.includes('làm thế nào') || lower.includes('hướng dẫn giải')) {
-        return getAuthenticTopicSteps(lessonTitle, secTitle, secNum, grade, studentName);
+      // B. CÁC CÂU HỎI CHUYÊN SÂU VỀ ĐƯỜNG TIỆM CẬN NGANG
+      if (lower.includes('tối đa') && lower.includes('tiệm cận ngang')) {
+        return {
+          title: "Đồ thị hàm số có thể có tối đa bao nhiêu đường tiệm cận ngang?",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Thầy/Cô trả lời chuẩn xác theo SGK Giải tích 12:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>Đồ thị của một hàm số bất kỳ có <strong>TỐI ĐA 2 ĐƯỜNG TIỆM CẬN NGANG</strong>.</p>
+              <ul class="list-disc ml-5 space-y-1.5 text-slate-800">
+                <li><strong>Lý do toán học:</strong> Tiệm cận ngang là đường thẳng $y = y_0$ xác định bởi giới hạn khi biến số $x$ tiến ra vô cực:
+                  $$\\lim_{x \\to +\\infty} f(x) = y_1 \\quad \\text{và} \\quad \\lim_{x \\to -\\infty} f(x) = y_2$$
+                </li>
+                <li>Vì trục số thực chỉ có đúng hai hướng tiến ra vô cực là $+\\infty$ (bên phải) và $-\\infty$ (bên trái), nên hàm số có nhiều nhất hai giới hạn hữu hạn khác nhau, tương ứng tối đa 2 đường tiệm cận ngang phân biệt.</li>
+                <li><em>Ví dụ:</em> Đồ thị hàm số $y = \\frac{\\sqrt{x^2+1}}{x}$ có 2 tiệm cận ngang là $y = 1$ (khi $x \\to +\\infty$) và $y = -1$ (khi $x \\to -\\infty$).</li>
+              </ul>
+            </div>
+          `
+        };
       }
 
-      // 9. Hỏi mẹo bấm máy tính Casio
-      if (lower.includes('casio') || lower.includes('bấm máy') || lower.includes('bam may') || lower.includes('máy tính') || lower.includes('may tinh') || lower.includes('580') || lower.includes('880') || lower.includes('calc') || lower.includes('table')) {
-        return getAuthenticCasioGuide(lessonTitle, secTitle, secNum, grade, studentName);
+      if (lower.includes('đa thức') && lower.includes('tiệm cận ngang')) {
+        return {
+          title: "Tại sao hàm đa thức không bao giờ có tiệm cận ngang?",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Đây là nhận xét rất then chốt trong các câu hỏi trắc nghiệm nhận biết:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>Cho hàm đa thức $P(x) = a_n x^n + \\dots + a_1 x + a_0$ ($a_n \\neq 0, n \\ge 1$):</p>
+              $$\\lim_{x \\to \\pm\\infty} P(x) = \\lim_{x \\to \\pm\\infty} x^n \\left( a_n + \\frac{a_{n-1}}{x} + \\dots \\right) = \\pm\\infty$$
+              <p>Giới hạn ở vô cực luôn tiến ra vô cực (không bao giờ hội tụ về một số thực hữu hạn). Vì thế, đồ thị hàm đa thức (bậc 1, 2, 3, 4...) <strong>KHÔNG BAO GIỜ CÓ TIỆM CẬN NGANG</strong> (và cũng không bao giờ có tiệm cận đứng)!</p>
+            </div>
+          `
+        };
       }
 
-      // 10. CÁC CÂU HỎI BẢN CHẤT SƯ PHẠM CHUYÊN SÂU (FAQs) TỪ INTERACTIVE PILLS
-      // 10.1. Đơn điệu: f'(x) = 0 tại hữu hạn điểm
+      if (lower.includes('cắt') && lower.includes('tiệm cận ngang')) {
+        return {
+          title: "Đồ thị hàm số có thể cắt đường tiệm cận ngang không?",
+          contentHtml: `
+            <p>Thầy/Cô trả lời em <strong>${studentName}</strong>: <strong>HOÀN TOÀN CÓ THỂ CẮT!</strong></p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>• <strong>Bản chất:</strong> Đường tiệm cận ngang $y = y_0$ chỉ mô tả xu hướng đồ thị khi $x$ tiến ra xa tít tắp ở vô cực ($x \\to +\\infty$ hoặc $x \\to -\\infty$).</p>
+              <p>• Ở vùng giá trị hữu hạn của $x$, đồ thị hoàn toàn có thể cắt đường thẳng $y = y_0$ tại 1 điểm, nhiều điểm, thậm chí vô số điểm (như đồ thị hàm số có dao động tắt dần $y = \\frac{\\sin x}{x}$).</p>
+              <p class="font-bold text-amber-900 mt-1">📌 Ghi nhớ: Tiệm cận ĐỨNG thì KHÔNG BAO GIỜ cắt, nhưng tiệm cận NGANG thì CÓ THỂ CẮT!</p>
+            </div>
+          `
+        };
+      }
+
+      if (lower.includes('căn thức') && lower.includes('tiệm cận ngang')) {
+        return {
+          title: "Tại sao hàm chứa căn thức có thể có 2 đường tiệm cận ngang?",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Quy tắc đưa biến ra ngoài căn bậc hai:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>$$\\sqrt{x^2} = |x| = \\begin{cases} x & \\text{khi } x \\to +\\infty \\\\ -x & \\text{khi } x \\to -\\infty \\end{cases}$$</p>
+              <p>Do dấu của $x$ bị đảo dấu khi $x \\to -\\infty$, tỉ số giới hạn ở hai đầu vô cực sẽ mang dấu đối nhau. Ví dụ $y = \\frac{2x}{\\sqrt{x^2+1}}$ có $\\lim_{x \\to +\\infty} y = 2$ và $\\lim_{x \\to -\\infty} y = -2$, cho ra 2 tiệm cận ngang là $y = 2$ và $y = -2$!</p>
+            </div>
+          `
+        };
+      }
+
+      // C. CÁC CÂU HỎI VỀ TIỆM CẬN XIÊN
+      if (lower.includes('chia đa thức') || (lower.includes('tiệm cận xiên') && lower.includes('cách'))) {
+        return {
+          title: "Cách chia đa thức tử cho mẫu tìm Tiệm cận xiên",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Thầy/Cô hướng dẫn phương pháp chia đa thức:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>Cho hàm số $y = \\frac{P(x)}{Q(x)}$ với bậc tử lớn hơn bậc mẫu 1 bậc.</p>
+              <p>Thực hiện phép chia đa thức $P(x)$ cho $Q(x)$ ta được phần thương $ax + b$ và phần dư $r(x)$:</p>
+              $$y = ax + b + \\frac{r(x)}{Q(x)}$$
+              <p>Do bậc của phần dư nhỏ hơn bậc của mẫu nên $\\lim_{x \\to \\pm\\infty} \\frac{r(x)}{Q(x)} = 0$.</p>
+              <p class="font-bold text-emerald-900">$\\implies$ Phương trình đường tiệm cận xiên chính là phần thương: $y = ax + b$.</p>
+            </div>
+          `
+        };
+      }
+
+      if (lower.includes('giao điểm') && (lower.includes('tiệm cận xiên') || lower.includes('hai tiệm cận') || lower.includes('tâm đối xứng'))) {
+        return {
+          title: "Ý nghĩa hình học của Giao điểm giữa Tiệm cận đứng và Tiệm cận xiên",
+          contentHtml: `
+            <p>Chào em <strong>${studentName}</strong>! Ý nghĩa hình học cực kỳ đẹp mắt trong khảo sát hàm số:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>Đối với hàm phân thức bậc hai trên bậc nhất $y = \\frac{a_1 x^2 + b_1 x + c_1}{a_2 x + b_2}$:</p>
+              <ul class="list-disc ml-5 space-y-1.5 text-slate-800">
+                <li>Giao điểm $I(x_0; y_0)$ của đường tiệm cận đứng ($x = x_0$) và đường tiệm cận xiên ($y = ax + b$) chính là <strong>TÂM ĐỐI XỨNG</strong> của đồ thị hàm số!</li>
+                <li>Đồ thị hàm phân thức nhận điểm $I$ làm tâm đối xứng nghĩa là với mọi điểm $M(x; y)$ thuộc đồ thị thì điểm đối xứng $M'(2x_0 - x; 2y_0 - y)$ cũng thuộc đồ thị.</li>
+              </ul>
+            </div>
+          `
+        };
+      }
+
+      if (lower.includes('vừa có tiệm cận ngang vừa có tiệm cận xiên')) {
+        return {
+          title: "Đồ thị hàm số có thể vừa có tiệm cận ngang vừa có tiệm cận xiên không?",
+          contentHtml: `
+            <p>Thầy/Cô giải đáp cho em <strong>${studentName}</strong>:</p>
+            <div class="p-3.5 bg-indigo-50/80 rounded-xl border border-indigo-200 font-serif space-y-2 text-[12.5pt]">
+              <p>• <strong>Ở cùng một phía vô cực (ví dụ khi $x \\to +\\infty$):</strong> Đồ thị <strong>KHÔNG THỂ</strong> vừa có tiệm cận ngang vừa có tiệm cận xiên, vì giới hạn chỉ có thể là một hằng số hữu hạn hoặc tiến ra vô cực cùng bậc với đường thẳng.</p>
+              <p>• <strong>Ở hai phía khác nhau:</strong> Đồ thị <strong>HOÀN TOÀN CÓ THỂ</strong> có tiệm cận ngang ở một phía và tiệm cận xiên ở phía kia (ví dụ hàm chứa căn thức $y = x + \\sqrt{x^2+1}$).</p>
+            </div>
+          `
+        };
+      }
+
+      // D. CÁC CÂU HỎI VỀ ĐƠN ĐIỆU & CỰC TRỊ
       if (lower.includes('hữu hạn điểm') || (lower.includes('f\'(x) = 0') && lower.includes('đồng biến'))) {
         return {
           title: "Tại sao $f'(x) = 0$ tại hữu hạn điểm thì hàm số vẫn đồng biến?",
@@ -39620,7 +39954,6 @@ function renderSAPanel() {
         };
       }
 
-      // 10.2. Ký hiệu hợp và khoảng đơn điệu
       if (lower.includes('hợp') || lower.includes('dấu hợp') || lower.includes('ký hiệu u') || lower.includes('tai sao khong dung u')) {
         return {
           title: "Tại sao kết luận khoảng đơn điệu cấm dùng ký hiệu hợp $\\cup$?",
@@ -39632,7 +39965,6 @@ function renderSAPanel() {
         };
       }
 
-      // 10.3. Nghiệm bội chẵn
       if (lower.includes('bội chẵn') || lower.includes('boi chan') || lower.includes('nghiệm kép')) {
         return {
           title: "Tại sao nghiệm bội chẵn của $f'(x) = 0$ không tạo thành cực trị?",
@@ -39647,7 +39979,6 @@ function renderSAPanel() {
         };
       }
 
-      // 10.4. Phân biệt 3 khái niệm cực trị
       if (lower.includes('phân biệt') || (lower.includes('điểm cực trị') && lower.includes('giá trị'))) {
         return {
           title: "Bí kíp phân biệt 3 khái niệm cực trị không bao giờ bị lừa",
@@ -39663,7 +39994,6 @@ function renderSAPanel() {
         };
       }
 
-      // 10.5. Cực đại vs Cực tiểu
       if (lower.includes('cực đại') && (lower.includes('nhỏ hơn') || lower.includes('lớn hơn') || lower.includes('cực tiểu'))) {
         return {
           title: "Giá trị cực đại có nhất thiết luôn lớn hơn giá trị cực tiểu?",
@@ -39674,40 +40004,7 @@ function renderSAPanel() {
         };
       }
 
-      // 10.6. Tiệm cận ngang
-      if (lower.includes('tiệm cận ngang') || (lower.includes('ngang') && lower.includes('tiệm cận'))) {
-        return {
-          title: "Bản chất toán học và Cách xác định Đường tiệm cận ngang",
-          contentHtml: `
-            <p>Đường thẳng $y = y_0$ là tiệm cận ngang nếu $\\lim_{x \\to +\\infty} f(x) = y_0$ hoặc $\\lim_{x \\to -\\infty} f(x) = y_0$. Đồ thị hàm số có tối đa 2 đường tiệm cận ngang.</p>
-            <p><strong>Mẹo Casio:</strong> Nhập biểu thức $f(x)$, bấm [CALC] $10^{10}$ và [CALC] $-10^{10}$. Nếu kết quả tiến về một số nguyên hay số thập phân cố định thì đó là tiệm cận ngang.</p>
-          `
-        };
-      }
-
-      // 10.7. Tiệm cận đứng
-      if (lower.includes('tiệm cận đứng') || (lower.includes('đứng') && lower.includes('tiệm cận'))) {
-        return {
-          title: "Bản chất toán học và Bẫy đề thi Đường tiệm cận đứng",
-          contentHtml: `
-            <p>Đường thẳng $x = x_0$ là tiệm cận đứng nếu ít nhất một trong các giới hạn một bên $\\lim_{x \\to x_0^\\pm} f(x) = \\pm\\infty$. Bẫy lớn nhất là nghiệm của mẫu số triệt tiêu với tử số: bắt buộc phải rút gọn trước!</p>
-            <p><strong>Lưu ý:</strong> Đồ thị hàm số <strong>không bao giờ cắt đường tiệm cận đứng</strong> vì hàm số không xác định tại $x = x_0$.</p>
-          `
-        };
-      }
-
-      // 10.8. Tiệm cận xiên
-      if (lower.includes('tiệm cận xiên') || (lower.includes('xiên') && lower.includes('tiệm cận'))) {
-        return {
-          title: "Bản chất toán học và Cách chia đa thức tìm Tiệm cận xiên",
-          contentHtml: `
-            <p>Đường thẳng $y = ax + b$ ($a \\neq 0$) là tiệm cận xiên nếu $\\lim_{x \\to \\pm\\infty} [f(x) - (ax + b)] = 0$.</p>
-            <p>Đối với hàm phân thức hữu tỉ có bậc của tử lớn hơn bậc của mẫu đúng 1 bậc: Dùng phép chia đa thức tử cho mẫu, phần thương bậc nhất chính là phương trình tiệm cận xiên!</p>
-          `
-        };
-      }
-
-      // 10.9. GTLN, GTNN trên đoạn
+      // E. CÁC CÂU HỎI VỀ GTLN, GTNN
       if (lower.includes('liên tục trên một đoạn') || (lower.includes('đoạn') && (lower.includes('gtln') || lower.includes('gtnn')))) {
         return {
           title: "Tại sao hàm số liên tục trên một đoạn luôn có GTLN và GTNN?",
@@ -39718,7 +40015,7 @@ function renderSAPanel() {
         };
       }
 
-      // 10.10. Cộng vectơ vs Cộng độ dài
+      // F. CÁC CÂU HỎI VỀ VECTƠ
       if (lower.includes('cộng độ dài') || (lower.includes('cộng') && lower.includes('vectơ') && lower.includes('độ dài'))) {
         return {
           title: "Tại sao cộng hai vectơ không bằng cộng hai độ dài?",
@@ -39729,7 +40026,6 @@ function renderSAPanel() {
         };
       }
 
-      // 10.11. Mẹo nhớ quy tắc trừ chung gốc
       if (lower.includes('quy tắc trừ') || lower.includes('ngược chữ') || lower.includes('sau trừ trước')) {
         return {
           title: "Bí kíp nhớ Quy tắc trừ chung gốc: 'Ngọn sau về ngọn trước'",
@@ -39743,7 +40039,6 @@ function renderSAPanel() {
         };
       }
 
-      // 10.12. Hệ thức trung điểm có số 2
       if (lower.includes('hệ thức trung điểm') || (lower.includes('trung điểm') && lower.includes('số 2'))) {
         return {
           title: "Tại sao hệ thức trung điểm $\\vec{MA} + \\vec{MB} = 2\\vec{MI}$ lại có số 2?",
@@ -39755,7 +40050,6 @@ function renderSAPanel() {
         };
       }
 
-      // 10.13. Vectơ đối và vectơ không
       if (lower.includes('vectơ không') || lower.includes('vecto 0') || lower.includes('số 0')) {
         return {
           title: "Tại sao tổng hai vectơ đối nhau là vectơ-không $\\vec{0}$ chứ không phải số thực 0?",
@@ -39765,8 +40059,8 @@ function renderSAPanel() {
         };
       }
 
-      // 10.14. Tọa độ Oxyz: Vectơ pháp tuyến & Phương trình đoạn chắn
-      if (lower.includes('pháp tuyến') || lower.includes('đoạn chắn') || lower.includes('oxyz')) {
+      // G. CÁC CÂU HỎI VỀ TỌA ĐỘ OXYZ
+      if (lower.includes('pháp tuyến') || lower.includes('đoạn chắn') || (lower.includes('mặt phẳng') && lower.includes('khoảng cách'))) {
         return {
           title: "Vectơ pháp tuyến và Phương trình mặt phẳng đoạn chắn trong Oxyz",
           contentHtml: `
@@ -39784,7 +40078,7 @@ function renderSAPanel() {
         };
       }
 
-      // 10.15. Xác suất có điều kiện & Bayes
+      // H. CÁC CÂU HỎI VỀ XÁC SUẤT CÓ ĐIỀU KIỆN & BAYES
       if (lower.includes('p(a|b)') || lower.includes('có điều kiện') || lower.includes('độc lập') || lower.includes('bayes') || lower.includes('toàn phần')) {
         return {
           title: "Phân biệt $P(A|B)$ và $P(B|A)$, Công thức nhân và Công thức Bayes",
@@ -39804,7 +40098,7 @@ function renderSAPanel() {
         };
       }
 
-      // 10.16. Thống kê ghép nhóm: Giá trị đại diện, Mốt, Trung vị
+      // I. CÁC CÂU HỎI VỀ THỐNG KÊ GHÉP NHÓM
       if (lower.includes('giá trị đại diện') || lower.includes('nhóm chứa mốt') || lower.includes('nhóm chứa trung vị') || lower.includes('phương sai') || lower.includes('độ lệch chuẩn')) {
         return {
           title: "Giá trị đại diện, Công thức Mốt và Trung vị ghép nhóm",
@@ -39824,112 +40118,50 @@ function renderSAPanel() {
         };
       }
 
-      // 10.17. Lượng giác: Công thức cộng, chu kỳ, phương trình
-      if (lower.includes('lượng giác') || lower.includes('chu kỳ') || lower.includes('công thức cộng') || lower.includes('sin x = m')) {
-        return {
-          title: "Bí kíp lượng giác: Công thức cộng, chu kỳ và điều kiện có nghiệm",
-          contentHtml: `
-            <p>Chào em <strong>${studentName}</strong>! Thơ nhớ công thức cộng lượng giác:</p>
-            <div class="p-3 bg-purple-50 rounded-xl border border-purple-200 font-serif text-slate-800">
-              <p><em>"Cos thì cos cos sin sin (dấu cộng ở giữa đảo ngang thành trừ)</em><br/>
-              <em>Sin thì sin cos cos sin rõ ràng (giữ nguyên dấu đàng hoàng không sai)!"</em></p>
-            </div>
-            <ul class="list-disc ml-5 space-y-1 mt-2 font-serif text-[12.5pt]">
-              <li>Chu kỳ của $\\sin x, \\cos x$ là $2\\pi$; chu kỳ của $\\tan x, \\cot x$ là $\\pi$.</li>
-              <li>Phương trình $\\sin x = m$ và $\\cos x = m$ có nghiệm khi và chỉ khi $-1 \\le m \\le 1$.</li>
-            </ul>
-          `
-        };
+      // =========================================================================
+      // 4. CÁC NÚT HÀNH ĐỘNG SƯ PHẠM (TẬP TRUNG CHÍNH XÁC VÀO MỤC HIỆN TẠI activeSec)
+      // =========================================================================
+
+      // 4.1. Bẫy trắc nghiệm & sai lầm hay gặp (Bám sát mục hiện tại)
+      if (lower.includes('bẫy') || lower.includes('sai lầm') || lower.includes('lỗi sai') || lower.includes('hay mắc') || lower.includes('bị lừa')) {
+        return getAuthenticPitfalls(activeSec, studentName, lessonTitle);
       }
 
-      // 10.18. Bất phương trình mũ, logarit đảo chiều
-      if (lower.includes('đảo chiều') || lower.includes('đổi chiều') || (lower.includes('cơ số') && lower.includes('1'))) {
-        return {
-          title: "Tại sao cơ số $0 < a < 1$ bất phương trình mũ, logarit phải đảo chiều?",
-          contentHtml: `
-            <p>Chào em <strong>${studentName}</strong>! Khi $0 < a < 1$, hàm số $y = a^x$ và $y = \\log_a x$ là <strong>hàm số nghịch biến</strong> trên tập xác định. Đại lượng đầu vào tăng thì giá trị hàm số giảm, do đó khi bỏ cơ số ta <strong>bắt buộc phải đổi chiều bất phương trình</strong>!</p>
-          `
-        };
+      // 4.2. Bí kíp & Thần chú ghi nhớ nhanh (Bám sát mục hiện tại)
+      if (lower.includes('bí kíp') || lower.includes('thần chú') || lower.includes('ghi nhớ') || lower.includes('khắc sâu') || lower.includes('mẹo nhớ')) {
+        return getAuthenticTips(activeSec, studentName, lessonTitle);
       }
 
-      // 10.19. Cấp số cộng & Cấp số nhân
-      if (lower.includes('cấp số cộng') || lower.includes('cấp số nhân') || lower.includes('lùi vô hạn')) {
-        return {
-          title: "Phân biệt Cấp số cộng và Cấp số nhân chuẩn SGK",
-          contentHtml: `
-            <p>Chào em <strong>${studentName}</strong>! Bảng đối chiếu hai cấp số:</p>
-            <ul class="list-disc ml-5 space-y-1.5 font-serif text-[12.5pt]">
-              <li><strong>Cấp số cộng:</strong> $u_{n} = u_1 + (n - 1)d$, Tổng: $S_n = \\frac{n(u_1 + u_n)}{2} = \\frac{n[2u_1 + (n-1)d]}{2}$.</li>
-              <li><strong>Cấp số nhân:</strong> $u_n = u_1 \\cdot q^{n-1}$, Tổng: $S_n = \\frac{u_1(1 - q^n)}{1 - q}$ ($q \\neq 1$).</li>
-              <li><strong>CSN lùi vô hạn ($|q| < 1$):</strong> Tổng hội tụ $S = \\frac{u_1}{1 - q}$.</li>
-            </ul>
-          `
-        };
+      // 4.3. Giảng lại cốt lõi / Tóm tắt (Bám sát mục hiện tại)
+      if (lower.includes('giảng lại') || lower.includes('cốt lõi') || lower.includes('tóm tắt') || lower.includes('điểm cốt lõi') || lower.includes('nhắc lại')) {
+        return getAuthenticCoreSummary(activeSec, studentName, lessonTitle);
       }
 
-      // 10.20. Hình không gian & Thể tích
-      if (lower.includes('vuông góc chung') || lower.includes('thể tích khối chóp') || lower.includes('lăng trụ')) {
-        return {
-          title: "Đoạn vuông góc chung và Công thức thể tích khối đa diện",
-          contentHtml: `
-            <p>Chào em <strong>${studentName}</strong>! Khắc sâu kiến thức hình học không gian:</p>
-            <ul class="list-disc ml-5 space-y-1.5 font-serif text-[12.5pt]">
-              <li><strong>Đoạn vuông góc chung của 2 đường chéo nhau:</strong> Đoạn thẳng $MN$ nối 2 điểm thuộc 2 đường thẳng và vuông góc với cả 2 đường thẳng đó. Độ dài $MN$ chính là khoảng cách giữa 2 đường chéo nhau.</li>
-              <li><strong>Thể tích khối chóp:</strong> $V = \\frac{1}{3} B h$ ($B$ là diện tích đáy, $h$ là chiều cao).</li>
-              <li><strong>Thể tích khối lăng trụ:</strong> $V = B h$ (không có hệ số $\\frac{1}{3}$).</li>
-            </ul>
-          `
-        };
+      // 4.4. Xin ví dụ minh họa / ví dụ thực tế (Bám sát mục hiện tại)
+      if (lower.includes('ví dụ') || lower.includes('vi du') || lower.includes('minh họa') || lower.includes('thực tế') || lower.includes('thuc te') || lower.includes('áp dụng') || lower.includes('cho em 1') || lower.includes('cho 1')) {
+        return getAuthenticTopicExample(lessonTitle, secTitle, secNum, grade, studentName);
       }
 
-      // 10.21. Tam thức bậc hai & "Trong trái ngoài cùng"
-      if (lower.includes('trong trái ngoài cùng') || lower.includes('tam thức bậc hai')) {
-        return {
-          title: "Thần chú xét dấu tam thức bậc hai: 'Trong trái ngoài cùng'",
-          contentHtml: `
-            <p>Chào em <strong>${studentName}</strong>! Cho tam thức bậc hai $f(x) = ax^2 + bx + c$ ($a \\neq 0$):</p>
-            <ul class="list-disc ml-5 space-y-1.5 font-serif text-[12.5pt]">
-              <li>Nếu $\\Delta < 0$: $f(x)$ <strong>luôn cùng dấu với hệ số $a$</strong> với mọi $x \\in \\mathbb{R}$.</li>
-              <li>Nếu $\\Delta = 0$: $f(x)$ cùng dấu với hệ số $a$ với mọi $x \\neq -\\frac{b}{2a}$.</li>
-              <li>Nếu $\\Delta > 0$: Có hai nghiệm phân biệt $x_1 < x_2$. Trong khoảng $(x_1; x_2)$ mang dấu <strong>TRÁI</strong> với $a$; ngoài khoảng mang dấu <strong>CÙNG</strong> với $a$!</li>
-            </ul>
-          `
-        };
+      // 4.5. Hỏi phương pháp giải / các bước làm / cách tính (Bám sát mục hiện tại)
+      if (lower.includes('phương pháp') || lower.includes('phuong phap') || lower.includes('các bước') || lower.includes('cac buoc') || lower.includes('cách làm') || lower.includes('cách tính') || lower.includes('quy trình') || lower.includes('làm thế nào') || lower.includes('hướng dẫn giải')) {
+        return getAuthenticTopicSteps(lessonTitle, secTitle, secNum, grade, studentName);
       }
 
-      // 10.22. Hệ thức lượng trong tam giác: Côsin & Sin
-      if (lower.includes('côsin') || lower.includes('định lý sin') || lower.includes('hê-rông') || lower.includes('he-rong')) {
-        return {
-          title: "Khi nào dùng định lý Côsin, định lý Sin và công thức Hê-rông?",
-          contentHtml: `
-            <p>Chào em <strong>${studentName}</strong>! Quy tắc chọn định lý chuẩn nhất:</p>
-            <ul class="list-disc ml-5 space-y-1.5 font-serif text-[12.5pt]">
-              <li><strong>Định lý Côsin ($a^2 = b^2 + c^2 - 2bc\\cos A$):</strong> Dùng khi biết <strong>2 cạnh và góc xen giữa</strong> (tính cạnh thứ 3), hoặc khi biết <strong>cả 3 cạnh</strong> (tính số đo góc).</li>
-              <li><strong>Định lý Sin ($\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$):</strong> Dùng khi biết <strong>1 cạnh và 2 góc</strong>, hoặc <strong>2 cạnh và 1 góc đối diện</strong>, hoặc liên quan đến bán kính đường tròn ngoại tiếp $R$.</li>
-              <li><strong>Công thức Hê-rông ($S = \\sqrt{p(p-a)(p-b)(p-c)}$):</strong> Dùng để tính diện tích tam giác khi biết độ dài cả 3 cạnh ($p = \\frac{a+b+c}{2}$).</li>
-            </ul>
-          `
-        };
+      // 4.6. Hỏi mẹo bấm máy tính Casio (Bám sát mục hiện tại)
+      if (lower.includes('casio') || lower.includes('bấm máy') || lower.includes('bam may') || lower.includes('máy tính') || lower.includes('may tinh') || lower.includes('580') || lower.includes('880') || lower.includes('calc') || lower.includes('table')) {
+        return getAuthenticCasioGuide(lessonTitle, secTitle, secNum, grade, studentName);
       }
 
-      // 10.23. Hoán vị, Chỉnh hợp và Tổ hợp
-      if (lower.includes('hoán vị') || lower.includes('chỉnh hợp') || lower.includes('tổ hợp') || lower.includes('nhị thức newton')) {
-        return {
-          title: "Phân biệt Hoán vị, Chỉnh hợp và Tổ hợp không bao giờ nhầm lẫn",
-          contentHtml: `
-            <p>Chào em <strong>${studentName}</strong>! Bí kíp phân biệt 3 phép đếm:</p>
-            <ul class="list-disc ml-5 space-y-1.5 font-serif text-[12.5pt]">
-              <li><strong>Hoán vị ($P_n = n!$):</strong> Dùng khi <strong>sắp xếp thứ tự toàn bộ $n$ phần tử</strong> (không bỏ sót phần tử nào).</li>
-              <li><strong>Chỉnh hợp ($A_n^k = \\frac{n!}{(n-k)!}$):</strong> Chọn $k$ phần tử từ $n$ phần tử và <strong>CÓ phân biệt thứ tự / chức danh</strong> (ví dụ bầu lớp trưởng, bí thư, thủ quỹ).</li>
-              <li><strong>Tổ hợp ($C_n^k = \\frac{n!}{k!(n-k)!}$):</strong> Chọn $k$ phần tử từ $n$ phần tử và <strong>KHÔNG phân biệt thứ tự</strong> (chỉ lấy ra một nhóm làm việc chung).</li>
-            </ul>
-          `
-        };
+      // 4.7. Gợi ý câu hỏi trắc nghiệm hiện tại
+      if (lower.includes('câu này') || lower.includes('câu trắc nghiệm này') || lower.includes('gợi ý câu') || lower.includes('chưa hiểu câu') || lower.includes('làm sao để chọn') || lower.includes('hướng dẫn câu') || lower.includes('trắc nghiệm hiện tại')) {
+        return getAuthenticMCQGuidance(curMcq, studentName, activeSec);
       }
 
-      // 11. Fallback thông minh: Dựa vào lý thuyết của section hiện tại
-      return getCurriculumTheoryExplanation(curSection, userText, studentName);
+      // 5. Fallback thông minh: Dựa vào lý thuyết của section hiện tại
+      return getCurriculumTheoryExplanation(activeSec, userText, studentName);
     }
+
+
     // 7. Xử lý tương tác sư phạm (kết hợp Gemini API khi có key, hoặc Local Engine)
     async function handleStudentTeacherInteraction(userText, studentName, curSection, curMcq) {
       // Kiểm tra xác thực bắt buộc trước khi tương tác
