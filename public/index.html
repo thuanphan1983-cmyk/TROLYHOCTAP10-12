@@ -1393,10 +1393,16 @@
               </div>
             </div>
           </div>
-          <button type="button" onclick="switchStudyTab('theory')" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-xs active:scale-95 border border-white/20" title="Quay lại đọc lý thuyết">
-            <i class="fa-solid fa-book-open text-xs"></i>
-            <span class="hidden sm:inline">Quay lại lý thuyết</span>
-          </button>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="handleGoToSectionMCQ()" class="px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 active:scale-95 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-sm border border-emerald-400" title="Chuyển ngay sang làm bài trắc nghiệm củng cố của mục này">
+              <i class="fa-solid fa-pen-to-square text-amber-300 text-xs"></i>
+              <span>Làm trắc nghiệm <span class="hidden sm:inline">mục này</span> →</span>
+            </button>
+            <button type="button" onclick="switchStudyTab('theory')" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-xs active:scale-95 border border-white/20" title="Quay lại đọc lý thuyết">
+              <i class="fa-solid fa-book-open text-xs"></i>
+              <span class="hidden sm:inline">Lý thuyết</span>
+            </button>
+          </div>
         </div>
 
         <!-- Messages List -->
@@ -1419,7 +1425,8 @@
           <button onclick="sendQuickReply('D')" class="px-2.5 py-1 bg-white hover:bg-indigo-50 border border-slate-300 rounded-lg font-bold text-slate-800 shadow-xs cursor-pointer">D</button>
           <button onclick="sendQuickReply('Thầy/Cô có thể giảng lại giúp em phần này được không ạ?')" class="px-2.5 py-1 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-800 rounded-lg font-medium cursor-pointer">Giảng lại</button>
           <button onclick="sendQuickReply('Cho em một ví dụ thực tế liên quan đến bài này ạ!')" class="px-2.5 py-1 bg-sky-50 hover:bg-sky-100 border border-sky-200 text-sky-800 rounded-lg font-medium cursor-pointer">Ví dụ thực tế</button>
-          <button onclick="sendQuickReply('Kết thúc bài học')" class="px-2.5 py-1 bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-800 rounded-lg font-semibold ml-auto cursor-pointer">Kết thúc bài học</button>
+          <button type="button" onclick="handleGoToSectionMCQ()" class="px-3 py-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold rounded-lg text-xs transition flex items-center gap-1.5 shadow-2xs cursor-pointer ml-auto active:scale-95" title="Chuyển ngay sang làm trắc nghiệm của mục này"><i class="fa-solid fa-pen-to-square text-amber-300 text-xs"></i><span>Làm trắc nghiệm →</span></button>
+          <button onclick="sendQuickReply('Kết thúc bài học')" class="px-2.5 py-1 bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-800 rounded-lg font-semibold cursor-pointer">Kết thúc bài học</button>
         </div>
 
         <!-- Input Bar -->
@@ -33473,6 +33480,40 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     window.handleGoToMCQ = handleGoToMCQ;
     window.scrollToSectionMCQ = handleGoToMCQ;
 
+    // CHUYỂN NGAY SANG BÀI TRẮC NGHIỆM CỦA ĐÚNG MỤC ĐANG HỌC HOẶC VỪA HỎI XONG
+    function handleGoToSectionMCQ(sectionNumberOrIndex) {
+      if (typeof activeLesson !== 'undefined' && activeLesson && activeLesson.sections && activeLesson.sections.length > 0) {
+        let targetIdx = (typeof demoState !== 'undefined' && typeof demoState.sectionIndex === 'number') ? demoState.sectionIndex : 0;
+        if (typeof sectionNumberOrIndex === 'number') {
+          const byNum = activeLesson.sections.findIndex(s => s.sectionNumber === sectionNumberOrIndex);
+          if (byNum !== -1) {
+            targetIdx = byNum;
+          } else if (sectionNumberOrIndex >= 0 && sectionNumberOrIndex < activeLesson.sections.length) {
+            targetIdx = sectionNumberOrIndex;
+          }
+        }
+        demoState.sectionIndex = targetIdx;
+        demoState.mcqIndex = 0;
+        demoState.isWaitingSectionFeedback = false;
+        window.demoState = demoState;
+      }
+      if (typeof switchStudyTab === 'function') {
+        switchStudyTab('mcq');
+      }
+      if (typeof renderMCQPanel === 'function') {
+        renderMCQPanel();
+      }
+      setTimeout(() => {
+        const pMcq = document.getElementById('panel-mcq');
+        if (pMcq) {
+          pMcq.scrollTo({ top: 0, behavior: 'smooth' });
+          pMcq.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 60);
+    }
+    window.handleGoToSectionMCQ = handleGoToSectionMCQ;
+
     // XỬ LÝ CHUYỂN SANG CHẾ ĐỘ TRỢ LÝ 1-1 KHI HỌC XONG PHẦN LÝ THUYẾT
     function handleOpenTheoryTutor(sectionNumber) {
       if (typeof enforceAuthentication === 'function' && !enforceAuthentication('hỏi Thầy/Cô Trợ lý')) {
@@ -33586,6 +33627,10 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
     </button>
     <button type="button" onclick="sendQuickReply('Thầy/Cô gợi ý cách tư duy cho câu hỏi trắc nghiệm của ${secTitle} với ạ')" class="px-3 py-1.5 bg-white hover:bg-purple-50 text-purple-900 border border-purple-200 hover:border-purple-400 rounded-xl font-semibold shadow-2xs transition cursor-pointer active:scale-95" title="Phản hồi tức thì 0ms">
       🎯 Gợi ý câu này
+    </button>
+    <button type="button" onclick="handleGoToSectionMCQ(${secNum})" class="px-3.5 py-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-xl font-bold transition cursor-pointer active:scale-95 shadow-sm flex items-center gap-1.5" title="Chuyển ngay sang làm 3 câu trắc nghiệm của Mục ${secNum}">
+      <i class="fa-solid fa-pen-to-square text-amber-300"></i>
+      <span>Làm trắc nghiệm Mục ${secNum} ngay →</span>
     </button>
     <button type="button" onclick="switchStudyTab('theory')" class="px-3 py-1.5 bg-indigo-100 hover:bg-indigo-200 text-indigo-950 rounded-xl font-bold ml-auto transition cursor-pointer active:scale-95">
       ← Quay lại lý thuyết
@@ -37213,7 +37258,16 @@ function renderSAPanel() {
             role: "model",
             parts: [{ text: reply }]
           });
-          appendMessage('assistant', reply);
+          const secIdx = (demoState && typeof demoState.sectionIndex === 'number') ? demoState.sectionIndex : 0;
+          const curSec = (activeLesson && activeLesson.sections) ? activeLesson.sections[secIdx] : null;
+          const secNum = curSec ? curSec.sectionNumber : (secIdx + 1);
+          const sName = studentInfo?.name || 'Em';
+          const dialogueCard = formatTeacherDialogueCardHTML(
+            `Thầy/Cô Trợ lý giải đáp cho em ${sName} (Mục ${secNum}):`,
+            parseMarkdownWithMath(reply),
+            sName
+          );
+          appendMessage('assistant', dialogueCard);
         } else if (!response.ok) {
           if (response.status === 400 || response.status === 403) {
             appendMessage('assistant', '⚠️ API Key không hợp lệ hoặc đã hết hạn mức. Em vui lòng bấm nút "Xác thực Key" ở góc trên để cập nhật API Key mới hoặc chuyển sang Mã VIP: **HOANGGIA2026** nhé!');
@@ -38722,6 +38776,10 @@ function renderSAPanel() {
 
     // 4. Thẻ hội thoại Thầy/Cô Trợ lý giải đáp cho học sinh (Teacher Dialogue Card)
     function formatTeacherDialogueCardHTML(title, contentHtml, studentName) {
+      const secIdx = (typeof demoState !== 'undefined' && demoState && typeof demoState.sectionIndex === 'number') ? demoState.sectionIndex : 0;
+      const curSec = (typeof activeLesson !== 'undefined' && activeLesson && activeLesson.sections) ? activeLesson.sections[secIdx] : null;
+      const secNum = curSec ? curSec.sectionNumber : (secIdx + 1);
+      const secTitle = curSec ? curSec.sectionTitle : `Mục ${secNum}`;
       return `
 <div class="my-3 p-4 sm:p-5 bg-gradient-to-br from-indigo-50/90 via-sky-50/60 to-purple-50/60 border-2 border-indigo-200 rounded-2xl shadow-sm space-y-3.5 font-serif animate-in fade-in">
   <div class="flex items-center gap-3">
@@ -38744,13 +38802,32 @@ function renderSAPanel() {
     ${contentHtml}
   </div>
 
-  <div class="p-3 bg-amber-50/80 rounded-xl border border-amber-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[12pt] text-amber-950">
-    <div class="flex items-center gap-2">
-      <i class="fa-solid fa-circle-check text-amber-600 text-base shrink-0"></i>
-      <span>Em đã nắm rõ phần này chưa? Khi nào sẵn sàng, hãy chọn đáp án cho câu hỏi trắc nghiệm nhé!</span>
+  <!-- Khung chuyển tiếp sang làm trắc nghiệm sau khi hỏi xong -->
+  <div class="p-3.5 bg-gradient-to-r from-emerald-50 via-teal-50 to-indigo-50 rounded-xl border-2 border-emerald-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[12pt] text-emerald-950 shadow-xs">
+    <div class="flex items-center gap-2.5">
+      <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-2xs">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div>
+        <p class="font-bold text-emerald-900 text-xs sm:text-[11.5pt]">Em đã nắm rõ lời giải đáp của Thầy/Cô chưa?</p>
+        <p class="text-slate-600 text-[10.5pt] sm:text-xs">Sau khi hỏi xong, em hãy bấm nút dưới đây để làm bài trắc nghiệm củng cố của <strong>Mục ${secNum}</strong> nhé:</p>
+      </div>
     </div>
-    <div class="flex gap-1.5 shrink-0">
-      <button type="button" onclick="sendQuickReply('Em đã hiểu rồi ạ!')" class="px-3 py-1 bg-white hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-lg text-xs font-bold transition cursor-pointer">
+    <div class="flex flex-wrap sm:flex-nowrap gap-2 shrink-0">
+      <button 
+        type="button" 
+        onclick="handleGoToSectionMCQ(${secNum})" 
+        class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 active:scale-95 text-white rounded-xl text-xs sm:text-[11.5pt] font-extrabold shadow-sm transition flex items-center gap-2 cursor-pointer border border-emerald-500"
+        title="Chuyển ngay sang làm trắc nghiệm Mục ${secNum}"
+      >
+        <i class="fa-solid fa-pen-to-square text-amber-300"></i>
+        <span>Làm trắc nghiệm Mục ${secNum} ngay →</span>
+      </button>
+      <button 
+        type="button" 
+        onclick="sendQuickReply('Em đã hiểu rồi ạ!')" 
+        class="px-3 py-2 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 rounded-xl text-xs sm:text-[11pt] font-bold transition cursor-pointer active:scale-95"
+      >
         Dạ em hiểu rồi!
       </button>
     </div>
@@ -38776,6 +38853,15 @@ function renderSAPanel() {
     </button>
     <button type="button" onclick="sendQuickReply('Thầy/Cô gợi ý cách tư duy cho câu hỏi trắc nghiệm hiện tại với ạ')" class="px-2.5 py-1 bg-white hover:bg-purple-50 text-purple-900 border border-purple-200 hover:border-purple-400 rounded-lg font-medium transition cursor-pointer active:scale-95 shadow-2xs" title="Phản hồi tức thì 0ms">
       🎯 Gợi ý câu này
+    </button>
+    <button 
+      type="button" 
+      onclick="handleGoToSectionMCQ(${secNum})" 
+      class="px-3 py-1 bg-emerald-100 hover:bg-emerald-200 text-emerald-950 border border-emerald-300 rounded-lg font-bold transition cursor-pointer active:scale-95 shadow-2xs ml-auto flex items-center gap-1.5" 
+      title="Chuyển ngay sang làm trắc nghiệm Mục ${secNum}"
+    >
+      <i class="fa-solid fa-pen-to-square text-emerald-700 text-xs"></i>
+      <span>Làm trắc nghiệm Mục ${secNum} →</span>
     </button>
   </div>
 </div>`;
@@ -38815,8 +38901,18 @@ function renderSAPanel() {
     </div>
   </div>
 
-  <div class="flex flex-wrap gap-2 pt-1">
+  <div class="flex flex-wrap gap-2 pt-1 items-center">
     <button 
+      type="button"
+      onclick="handleGoToSectionMCQ(${section.sectionNumber})" 
+      class="px-4 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-xl text-[12pt] font-extrabold transition flex items-center gap-2 shadow-sm cursor-pointer active:scale-95 border border-emerald-500"
+      title="Làm 3 câu trắc nghiệm củng cố của Mục ${section.sectionNumber}"
+    >
+      <i class="fa-solid fa-pen-to-square text-amber-300"></i>
+      <span>Làm 3 câu trắc nghiệm Mục ${section.sectionNumber} ngay →</span>
+    </button>
+    <button 
+      type="button"
       onclick="sendQuickReply('Em không có thắc mắc gì ạ, mời Thầy/Cô qua phần tiếp theo!')" 
       class="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-[12pt] font-bold transition flex items-center gap-2 shadow-sm cursor-pointer"
     >
