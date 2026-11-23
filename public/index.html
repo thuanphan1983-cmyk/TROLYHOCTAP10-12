@@ -33745,60 +33745,26 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
   <div class="bg-white rounded-2xl border-2 border-indigo-200 p-4 sm:p-7 shadow-xs text-slate-800 text-[13.5pt] sm:text-[14pt] leading-relaxed prose-math theory-body theory-content-box space-y-4">
     ${theoryBody}
 
-    <!-- HỘP HỎI ĐÁP & CHUYỂN SANG CHẾ ĐỘ TRỢ LÝ 1-1 KHI HỌC XONG LÝ THUYẾT -->
-    <div class="mt-5 p-4 sm:p-5 bg-gradient-to-r from-amber-50/95 via-orange-50/80 to-indigo-50/90 border-2 border-amber-300 rounded-2xl shadow-xs flex flex-col md:flex-row items-center justify-between gap-3 not-prose animate-in fade-in">
-      <div class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-slate-950 flex items-center justify-center text-xl font-black shadow-sm shrink-0">
-          <i class="fa-solid fa-chalkboard-user"></i>
-        </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="text-[9.5pt] uppercase font-black text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-300">
-              TRỢ LÝ 1-1 • THẦY/CÔ ĐỒNG HÀNH
-            </span>
-          </div>
-          <h4 class="text-sm sm:text-base font-extrabold text-slate-900 mt-0.5">
-            Em có cần hỏi thêm gì về Mục ${section.sectionNumber} không?
-          </h4>
-          <p class="text-xs sm:text-[11.5pt] text-slate-600">
-            Nếu có công thức, dạng toán hay bẫy trắc nghiệm nào em chưa rõ, hãy bấm để hỏi đáp 1-1 cùng Thầy/Cô nhé!
-          </p>
-        </div>
-      </div>
-      <div class="flex items-center gap-2 shrink-0 w-full md:w-auto justify-end">
-        <button 
-          type="button" 
-          onclick="handleOpenTheoryTutor(${section.sectionNumber})" 
-          class="w-full md:w-auto px-4 py-2.5 bg-gradient-to-r from-amber-500 via-amber-600 to-orange-500 hover:from-amber-600 hover:to-orange-600 active:scale-95 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer border border-amber-400"
-          title="Chuyển sang chế độ Trợ lý 1-1 để hỏi Thầy/Cô"
-        >
-          <i class="fa-solid fa-comments text-amber-100 text-base"></i>
-          <span>Em có cần hỏi thêm gì không?</span>
-          <i class="fa-solid fa-arrow-right text-[11px]"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- HÀNG TIẾN TRÌNH: HOÀN THÀNH LÝ THUYẾT & LÀM BÀI TRẮC NGHIỆM CỦNG CỐ -->
-    <div class="mt-3 pt-3 border-t border-indigo-100 flex flex-wrap items-center justify-between gap-2 not-prose">
-      <span class="text-xs sm:text-[11.5pt] text-indigo-900 font-semibold flex items-center gap-1.5">
-        <i class="fa-solid fa-circle-check text-emerald-600"></i>
+    <!-- HÀNG TIẾN TRÌNH: HOÀN THÀNH LÝ THUYẾT & NÚT DUY NHẤT HỎI THẦY/CÔ HOẶC LÀM TRẮC NGHIỆM -->
+    <div class="mt-4 pt-3.5 border-t border-indigo-100 flex flex-wrap items-center justify-between gap-3 not-prose">
+      <span class="text-xs sm:text-[12pt] text-indigo-950 font-semibold flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
         <span>Đã học xong lý thuyết Mục ${section.sectionNumber}. Mời em làm 3 câu trắc nghiệm củng cố ngay dưới đây:</span>
       </span>
       <div class="flex items-center gap-2 flex-wrap">
         <button 
           type="button" 
           onclick="handleOpenTheoryTutor(${section.sectionNumber})" 
-          class="px-3.5 py-2 bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-900 active:scale-95 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 shadow-2xs cursor-pointer" 
-          title="Hỏi Thầy/Cô nếu em còn thắc mắc"
+          class="px-4 py-2.5 bg-gradient-to-r from-amber-500 via-amber-600 to-orange-500 hover:from-amber-600 hover:to-orange-600 active:scale-95 text-white rounded-xl text-xs sm:text-[11.5pt] font-extrabold transition flex items-center gap-2 shadow-sm cursor-pointer border border-amber-400" 
+          title="Chuyển sang chế độ Trợ lý 1-1 để hỏi Thầy/Cô nếu em còn thắc mắc"
         >
-          <i class="fa-solid fa-comments text-amber-600"></i>
+          <i class="fa-solid fa-comments text-amber-100 text-base"></i>
           <span>Em có cần hỏi thêm gì không?</span>
         </button>
         <button 
           type="button" 
           onclick="handleGoToMCQ(0)" 
-          class="px-3.5 py-2 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer" 
+          class="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white rounded-xl text-xs sm:text-[11.5pt] font-extrabold transition flex items-center gap-2 shadow-sm cursor-pointer" 
           title="Làm bài tập trắc nghiệm củng cố ngay"
         >
           <span>Làm câu 1/${(section.mcqs && section.mcqs.length) ? section.mcqs.length : 3} ngay</span>
@@ -34491,15 +34457,6 @@ Giao diện hiển thị tuân thủ quy chuẩn sư phạm: Phông chữ Times 
           </div>
 
           <div class="flex items-center gap-2 flex-wrap justify-end">
-            <button 
-              type="button" 
-              onclick="handleOpenTheoryTutor(${curSec.sectionNumber})" 
-              class="px-3.5 py-2.5 bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-900 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-1.5 transition cursor-pointer shadow-2xs active:scale-95" 
-              title="Chuyển sang chế độ trợ lý 1-1 hỏi đáp cùng Thầy/Cô"
-            >
-              <i class="fa-solid fa-comments text-amber-600"></i>
-              <span>Em có cần hỏi thêm gì không?</span>
-            </button>
             <button 
               type="button" 
               onclick="handleSgkNextSection()" 
